@@ -1,0 +1,53 @@
+## Versions
+## V1.6 - 2026-06-27
+
+- Removed the Project Info button from the Home hero.
+- Removed File Name from the File Info menu and stopped showing file name in the Home hero.
+- Made the Home hero Production Info area blank when no visible production fields have content.
+- Added a red Unpatch Fixture workflow in Fixture Patch with fixture-type tabs and selectable Fix IDs.
+- Changed Add Fixtures so Patch Options opens as a separate modal with quick options for Location, Fix ID, and Universe/Address.
+- Added `published_versions/V1/V1.6.html` for tracking this Fixture Patch workflow update.
+
+## V1.5 - 2026-06-26
+
+- Stacked Version below Project Dates in the Home hero.
+- Changed Home hero project and version date display to `DD/MM/YYYY`.
+- Added `published_versions/V1/V1.5.html` for tracking this Home hero date layout update.
+
+## V1.4 - 2026-06-26
+
+- Changed Production Info visibility checkboxes to be off by default.
+- Automatically turns a Production Info field on for the Home hero when text is entered.
+- Automatically shows vendor-linked fields when the selected vendor fills them.
+- Added `published_versions/V1/V1.4.html` for tracking this Home hero visibility update.
+
+## V1.3 - 2026-06-26
+
+- Moved visible Production Info into the centre of the Home hero.
+- Removed the separate Production Info Home card to avoid duplicate information.
+- Added `published_versions/V1/V1.3.html` for tracking this hero layout refinement.
+
+## V1.2 - 2026-06-26
+
+- Reduced the Home hero height by replacing the large field grid with compact summary chips.
+- Moved detailed Project Info and Production Info into normal Home cards below the stats.
+- Added Production Info visibility checkboxes so each field can be shown or hidden on the Home page.
+- Added `published_versions/V1/V1.2.html` for tracking this layout update.
+
+## V1.1 - 2026-06-26
+
+- Added Universe count to the Home stats.
+- Expanded the Home hero so project and production info, including version, is visible at the top.
+- Restyled Position Summary to match the app's standard white panel/table styling.
+- Added DMX Universe percentage bars and expandable universe channel tables with patched and free address ranges.
+- Added Patched and Library tabs to the Add Fixtures modal, with previously patched fixture types surfaced first.
+- Locked the Fixture Patch Type column in edit mode.
+- Added fitting for Fixture Patch table text so long values shrink toward 10px and wrap where possible.
+
+## V1.0 - 2026-06-26
+
+- Restarted version numbering for Lampy Paperwork as its own new app.
+- Set the visible app version, internal version, JSON filenames, and Excel template filenames to `V1.0`.
+- Added new Lampy Paperwork local storage keys so future progress is tracked separately from the old RCBO Label Generator version sequence.
+- Kept previous RCBO storage keys as legacy fallbacks only.
+- Added `published_versions/V1/V1.0.html` as the new baseline release.
