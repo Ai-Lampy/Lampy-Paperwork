@@ -1,4 +1,12 @@
 ## Versions
+## V1.7 - 2026-06-27
+
+- Paired Project Dates From/To on one row in File Info.
+- Paired Version and Version Date on one row in File Info.
+- Changed the Home hero Production Info into fixed rows for management, lighting team, and vendor details.
+- Fixed the Home tab going blank after adding Fixture Patch data by correcting the DMX Universe summary render path.
+- Added `published_versions/V1/V1.7.html` for tracking this Home and Project Info fix.
+
 ## V1.6 - 2026-06-27
 
 - Removed the Project Info button from the Home hero.
