@@ -4,7 +4,7 @@
       {
         "fixture": "Lyra",
         "watts": 1190,
-        "weight": 0,
+        "weight": 50,
         "modes": {
           "Mode 1": 39,
           "Mode 2": 30,
@@ -16,10 +16,44 @@
       {
         "fixture": "Pixel Line IP",
         "watts": 420,
-        "weight": 0,
+        "weight": 8,
         "modes": {
+          "7 Chan": 7,
+          "15 Chan": 15,
+          "17 Chan": 17,
+          "21 Chan": 21,
+          "33 Chan": 33,
           "39 Chan": 39,
-          "117 Chan": 117
+          "65 Chan": 65,
+          "68 Chan": 68,
+          "70 Chan": 70,
+          "112 Chan": 112,
+          "117 Chan": 117,
+          "119 Chan": 119
+        }
+      },
+      {
+        "fixture": "Super DotLine",
+        "watts": 1155,
+        "weight": 24,
+        "modes": {
+          "17 Chan": 17,
+          "27 Chan": 27,
+          "99 Chan": 99,
+          "108 Chan": 108,
+          "168 Chan": 168
+        }
+      },
+      {
+        "fixture": "Tornado",
+        "watts": 935,
+        "weight": 30,
+        "modes": {
+          "41 Chan": 41,
+          "71 Chan": 71,
+          "75 Chan": 75,
+          "85 Chan": 85,
+          "170 Chan": 180
         }
       }
     ],
