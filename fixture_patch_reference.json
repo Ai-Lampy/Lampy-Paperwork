@@ -3,6 +3,8 @@
     "ACME": [
       {
         "fixture": "Lyra",
+        "watts": 1190,
+        "weight": 0,
         "modes": {
           "Mode 1": 39,
           "Mode 2": 30,
@@ -13,6 +15,8 @@
       },
       {
         "fixture": "Pixel Line IP",
+        "watts": 420,
+        "weight": 0,
         "modes": {
           "39 Chan": 39,
           "117 Chan": 117
@@ -22,6 +26,8 @@
     "Antari": [
       {
         "fixture": "HZ-500 Hazer",
+        "watts": 0,
+        "weight": 0,
         "modes": {
           "1 Chan": 1
         }
@@ -30,6 +36,8 @@
     "Astera": [
       {
         "fixture": "Titan Tube",
+        "watts": 0,
+        "weight": 0,
         "modes": {
           "DIM RGBAW DIM RGBAW - 4 PIX": 24,
           "DIM RGBAW DIM RGBAW - 16 PIX - S/Off": 96
@@ -39,6 +47,8 @@
     "Ayrton": [
       {
         "fixture": "Cobra",
+        "watts": 0,
+        "weight": 0,
         "modes": {
           "Basic": 33,
           "Standard": 36,
