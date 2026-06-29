@@ -85,7 +85,7 @@
         }
       },
       {
-        "Pixel Brick",
+        "fixture": "Pixel Brick",
         "watts": 12,
         "weight": 1.12,
         "modes": {
