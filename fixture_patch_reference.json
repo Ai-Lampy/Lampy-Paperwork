@@ -69,6 +69,30 @@
     ],
     "Astera": [
       {
+        "fixture": "Helios Tube",
+        "watts": 24,
+        "weight": 0.8,
+        "modes": {
+          "?": 1
+        }
+      },
+      {
+        "fixture": "Hyperion Tube",
+        "watts": 92,
+        "weight": 3,
+        "modes": {
+          "?": 1
+        }
+      },
+      {
+        "Pixel Brick",
+        "watts": 12,
+        "weight": 1.12,
+        "modes": {
+          "?": 1
+        }
+      },
+      {
         "fixture": "Titan Tube",
         "watts": 0,
         "weight": 0,
@@ -80,9 +104,19 @@
     ],
     "Ayrton": [
       {
+        "fixture": "Bora",
+        "watts": 1150,
+        "weight": 37.8,
+        "modes": {
+          "Basic": 30,
+          "Standard": 32,
+          "Extended": 52
+        }
+      },
+      {
         "fixture": "Cobra",
-        "watts": 0,
-        "weight": 0,
+        "watts": 480,
+        "weight": 33,
         "modes": {
           "Basic": 33,
           "Standard": 36,
@@ -91,6 +125,8 @@
       },
       {
         "fixture": "Diablo S",
+        "watts": 550,
+        "weight": 22,
         "modes": {
           "Basic": 34,
           "Standard": 36,
@@ -99,13 +135,26 @@
       },
       {
         "fixture": "Domino LT",
+        "watts": 1600,
+        "weight": 60,
         "modes": {
           "Standard": 46,
           "Extended": 70
         }
       },
       {
+        "fixture": "Eagle Strike",
+        "watts": 1295,
+        "weight": 54.7,
+        "modes": {
+          "Basic": 44,
+          "Standard": 66
+        }
+      },
+      {
         "fixture": "Eurus",
+        "watts": 1000,
+        "weight": 33,
         "modes": {
           "Basic": 39,
           "Standard": 41,
@@ -114,6 +163,8 @@
       },
       {
         "fixture": "Karif LT",
+        "watts": 550,
+        "weight": 27,
         "modes": {
           "Basic": 32,
           "Standard": 34,
@@ -122,6 +173,8 @@
       },
       {
         "fixture": "Khamsin",
+        "watts": 1550,
+        "weight": 39.8,
         "modes": {
           "Basic": 40,
           "Standard": 42,
@@ -129,15 +182,26 @@
         }
       },
       {
-        "fixture": "Magic Blade FX",
+        "fixture": "Magic Blade Neo",
+        "watts": 800,
+        "weight": 32.4,
         "modes": {
-          "Basic": 19,
-          "Standard": 22,
-          "Extended": 46
+          "Standard": 175,
+          "Extended": 184
+        }
+      },
+      {
+        "fixture": "Magic Dot Neo",
+        "watts": 160,
+        "weight": 6.6,
+        "modes": {
+          "Standard": 35
         }
       },
       {
         "fixture": "Rivale Profile",
+        "watts": 700,
+        "weight": 30.8,
         "modes": {
           "Standard": 42,
           "Extended": 65
@@ -145,6 +209,8 @@
       },
       {
         "fixture": "Zonda 9 FX",
+        "watts": 1400,
+        "weight": 29.2,
         "modes": {
           "Basic": 26,
           "Standard": 50,
@@ -156,6 +222,8 @@
     "Chauvet": [
       {
         "fixture": "COLORado PXL Curve 12",
+        "watts": 768,
+        "weight": 0,
         "modes": {
           "Single Control ~ Basic": 20,
           "Single Control ~ Basic 2": 53,
