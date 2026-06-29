@@ -223,7 +223,7 @@
       {
         "fixture": "COLORado PXL Curve 12",
         "watts": 768,
-        "weight": 0,
+        "weight": 34.5,
         "modes": {
           "Single Control ~ Basic": 20,
           "Single Control ~ Basic 2": 53,
@@ -236,6 +236,8 @@
       },
       {
         "fixture": "Color Strike M",
+        "watts": 696,
+        "weight": 12.1,
         "modes": {
           "8 Chan": 8,
           "11 Chan": 11,
@@ -248,6 +250,8 @@
       },
       {
         "fixture": "Maverick Storm 1 Flex",
+        "watts": 738,
+        "weight": 28.8,
         "modes": {
           "26 Chan": 26,
           "33 Chan": 33
@@ -255,6 +259,8 @@
       },
       {
         "fixture": "Rogue Outcast 1 BeamWash",
+        "watts": 372,
+        "weight": 9.16,
         "modes": {
           "15 Chan": 15,
           "24 Chan": 24,
@@ -266,7 +272,9 @@
         }
       },
       {
-        "fixture": "Strike 2 Array",
+        "fixture": "Strike Array 2",
+        "watts": 129,
+        "weight": 8,
         "modes": {
           "1 Chan": 1,
           "2 Chan": 2,
@@ -277,7 +285,9 @@
         }
       },
       {
-        "fixture": "Strike 4 Array",
+        "fixture": "Strike Array 4",
+        "watts": 245,
+        "weight": 13,
         "modes": {
           "3 Chan": 3,
           "4 Chan": 4,
