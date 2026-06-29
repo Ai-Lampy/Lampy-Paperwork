@@ -1,4 +1,56 @@
 ## Versions
+## V2 - 2026-06-29
+
+- Published a cleaned V2 baseline for Lampy Paperwork.
+- Removed obsolete Navigation sidebar CSS, functions, and stale update calls from the old RCBO-only layout.
+- Removed unused JSON save/load leftovers, legacy local-storage migration code, and dead helper functions.
+- Removed the internal File Name field from new project info state.
+- Rechecked RCBO Labels, Table View, Power Calculations, Project Info live Home updates, JSON loading, and Export preview in the browser.
+- Added `published_versions/V2/V2.html` for tracking this stable cleanup release.
+
+## V1.13 - 2026-06-29
+
+- Split Socapex blocks in Power Calculations with stronger top and bottom borders for easier reading.
+- Hid Power Calculations watts columns by default.
+- Added a `Show Watts` checkbox in Power Calculations to reveal or hide watts columns.
+- Added `published_versions/V1/V1.13.html` for tracking this power sheet readability update.
+
+## V1.12 - 2026-06-29
+
+- Made Socapex names editable directly in the Power Calculations sheet.
+- Linked Power Calculations Fix ID entries back into the shared RCBO label data.
+- Power Calculations now updates matching Socapex way `Fix ID` and `Fix Type` fields so they appear in RCBO Labels and Table View.
+- Existing filled Power Calculations rows resync when the tab renders without clearing manually entered blank rows.
+- Added `published_versions/V1/V1.12.html` for tracking this power sheet linking update.
+
+## V1.11 - 2026-06-29
+
+- Moved fixture wattage into `json/fixture_patch_reference.json` so fixture patch data, channels, watts, and weight can live in one reference file.
+- Added future-ready `weight` support at fixture and mode level.
+- Removed the unused `json/fixture_watts.json` file and all app references to it.
+- Kept support for existing simple mode values like `"Basic": 54`, while allowing richer mode objects like `{ "channels": 54, "watts": 1500, "weight": 36 }`.
+- Added `published_versions/V1/V1.11.html` for tracking this reference-data cleanup.
+
+## V1.10 - 2026-06-29
+
+- Added per-outlet Text Format controls to Aux Outlets, including font size, bold, underline, outline, and outline colour.
+- Added the `Power Calculations` tab as a spreadsheet-style view per distro.
+- Added power sheet rows in the requested Socapex / Way / Fix ID / Fix Type / Watts / Amps layout.
+- Linked power sheet Fix ID entries to the Fixture Patch data, with invalid Fix IDs highlighted.
+- Added initial fixture wattage support for power calculations.
+- Updated Position Summary syncing so repeated positions are summarized once and patch-sheet location/colour edits update the summary model.
+- Bumped Lampy Paperwork to V1.10 and published `published_versions/V1/V1.10.html`.
+
+## V1.8 - 2026-06-29
+
+- Kept the Patch Options window open after adding fixtures, updating the next Fix ID and address for faster patching.
+- Added linked Positions data so Location quick options can also fill saved Col 1 and Col 2 values.
+- Added colour quick options in Patch Options.
+- Changed Position Summary to show one row per position instead of one row per patched fixture/colour combination.
+- Made blank Col 2 values display blank in Position Summary.
+- Added a Position menu from Home Position Summary and from the Fixture Patch toolbar.
+- Added `published_versions/V1/V1.8.html` for tracking this Fixture Patch and Position workflow update.
+
 ## V1.7 - 2026-06-27
 
 - Paired Project Dates From/To on one row in File Info.
