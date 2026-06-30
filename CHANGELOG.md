@@ -2,6 +2,19 @@
 
 All notable fixes and testing changes should be recorded here before sharing a new test build.
 
+## V4 - 2026-06-30
+
+- Published Lampy Paperwork V4.
+- Reworked label navigation into a Distro Labels tab with Front RCBO Labels, Rear Labels, and Table View sub-tabs.
+- Moved Settings out of the action menu and exposed it as Label Settings inside Distro Labels.
+- Removed the old Label Sheet Preview header.
+- Added Position Summary Colour 3, live colour display in the position editor, and a Position Summary PDF download.
+- Added collapsible Power Calculations supply cards.
+- Added Vendor / Company Logo support, PDF logo inclusion options, and first-page-only logo export behavior.
+- Reduced Fixture Patch Format Bold, Italic, and Underline controls to compact text bubbles.
+- Added an in-app walk-through with workflow tips for first-time users.
+- Syntax-checked the V4 single-file JavaScript.
+
 ## V3.12 - 2026-06-30
 
 - Published Lampy Paperwork V3.12.
