@@ -2,6 +2,59 @@
 
 All notable fixes and testing changes should be recorded here before sharing a new test build.
 
+## V4.7 - 2026-07-01
+
+- Published Lampy Paperwork V4.7.
+- Centred Fixture Patch PDF fallback colour-label text inside the rounded colour boxes using direct PDF stroke/fill text rendering.
+
+## V4.6 - 2026-07-01
+
+- Published Lampy Paperwork V4.6.
+- Added a uniform Position Summary PDF export header with project name, centred `Position Summary` title, version/date metadata, and first-page export logos.
+- Reduced the Position Summary outlined text effect so position names no longer appear doubled or heavily overlapped.
+- Adjusted Position Summary block pagination to preserve the header area on each exported page.
+
+## V4.5 - 2026-07-01
+
+- Published Lampy Paperwork V4.5.
+- Reworked Position Summary PDF export from the compact table into a large two-column block layout inspired by the supplied reference.
+- Added solid and diagonal-striped position colour fills using Colour 1, Colour 2, and Colour 3 values.
+- Added large outlined position text for stronger print readability.
+
+## V4.4 - 2026-07-01
+
+- Published Lampy Paperwork V4.4.
+- Fixed the Fixture Patch measured PDF fallback so fixture titles remain centred on the full page instead of being narrowed around logo placement.
+- Updated Fixture Patch PDF fallback colour cells to draw rounded colour pills with contrasting outlined text, matching the preview more closely when raster preview export is unavailable.
+
+## V4.3 - 2026-06-30
+
+- Published Lampy Paperwork V4.3.
+- Added a current column font-size list to the bottom of the Fixture Patch format menu.
+- Changed Fixture Patch header default font size to 18pt.
+- Changed Fixture Patch body defaults: Fix ID, Universe, and Address to 16pt bold; Col 1 and Col 2 to 14pt with bold off; remaining columns to 14pt.
+- Hid Fixture Patch number-input spinner arrows while the patch sheet is locked, leaving them available in editing mode.
+- Updated Position Summary so Col 3 only appears in the summary and summary PDF when at least one position has a Colour 3 value.
+
+## V4.2 - 2026-06-30
+
+- Published Lampy Paperwork V4.2.
+- Fixed Fixture Patch table headers so per-column format options no longer change them.
+- Updated Fixture Patch headers to follow the fixture-title font family while staying bold, 22pt, and centred.
+- Set Fixture Patch body defaults: Fix ID, Universe, and Address at 20pt bold centred; colour columns at 18pt bold with contrasting text outline; remaining columns at 16pt centred.
+- Changed the Fixture Patch default font to Cochin for new patch-sheet formatting.
+
+## V4.1 - 2026-06-30
+
+- Published Lampy Paperwork V4.1.
+- Moved the in-app walk-through content into `json/walkthrough.json` so instructions can be edited without changing app code.
+- Added automatic walk-through display after the welcome message closes, with a persistent `Do not Show Again` option.
+- Added a top-right `Report Issue` link to the GitHub issues page for bugs, missing fixtures, and fixture requests.
+- Reworked Project Info logo export settings into per-logo checkboxes and widened the modal when the Vendor / Company Logo panel is opened.
+- Fixed Fixture Patch format controls so formatted column font sizes persist instead of being reset by text fitting.
+- Updated Fixture Patch defaults for title, quantity, and column-header typography.
+- Changed Power Calculations supply cards so the entire editable supply card collapses behind a compact summary header.
+
 ## V4 - 2026-06-30
 
 - Published Lampy Paperwork V4.
