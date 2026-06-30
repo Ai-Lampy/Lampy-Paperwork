@@ -5,7 +5,7 @@
     { "label": "63A 3ø", "min": 30.01, "max": 60 },
     { "label": "125A 3ø", "min": 60.01, "max": 120 },
     {"label": "200A Powerlock 3P + N + E", "min": 120.01, "max": 195 },
-    {"label": "400A Powerlock 3P + N + E", "min": 195.01, "max": 395 },
-    { "label": "Custom / Multiple Supply Required", "min": 395.01, "max": 99999 }
+    {"label": "400A Powerlock 3P + N + E", "min": 195.01, "max": 360 },
+    { "label": "Custom / Multiple Supply Required", "min": 360.01, "max": 99999 }
   ]
 }
