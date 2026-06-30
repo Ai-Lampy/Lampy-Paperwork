@@ -1,15 +1,15 @@
 {
-  "title": "Lampy Paperwork Walk-through",
+  "title": "Lampy Paperwork Walk-through (Written by Ai)",
   "sections": [
     {
       "title": "Suggested Workflow",
       "type": "ordered",
       "items": [
         "Start with Project Info: add the project name, dates, production details, revisions, and logos.",
-        "Use Distro Labels to add distros, set Label Settings, and check Front RCBO Labels, Rear Labels, and Table View.",
         "Build the Fixture Patch by importing Excel/CSV or adding fixtures from the library. Use Position Summary to keep colours consistent.",
         "Use Power Calculations after the patch is built. Enter Fix IDs and the fixture type, watts, amps, and label colours will populate from patched data.",
         "Download the project file regularly so the browser state can be reopened and edited later.",
+	 "Use Distro Labels to add distros, set Label Settings, and check Front RCBO Labels, Rear Labels, and Table View.",
         "Use Export for label PDFs and Fixture Patch Export PDF for the patch sheet."
       ]
     },
