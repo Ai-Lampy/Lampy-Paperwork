@@ -298,13 +298,25 @@
     "Chroma Q": [
       {
         "fixture": "CF II 12",
+        "watts": 133,
+        "weight": 5,
         "modes": {
           "RGB X4 Off": 3,
           "RGBA ON TOP RANDOM": 23
         }
       },
       {
+        "fixture": "CF II 48",
+        "watts": 533,
+        "weight": 18,
+        "modes": {
+          "RGB X4 Off": 6,
+        }
+      },
+      {
         "fixture": "CF II 72",
+        "watts": 800,
+        "weight": 24,
         "modes": {
           "RGBA ON TOP RANDOM": 103
         }
@@ -313,6 +325,8 @@
     "Clay Paky": [
       {
         "fixture": "B-Eye K20",
+        "watts": 794,
+        "weight": 21,
         "modes": {
           "Standard": 21,
           "Standard RGB": 132,
@@ -323,12 +337,16 @@
       },
       {
         "fixture": "B-Eye K25",
+        "watts": 288,
+        "weight": 27.5,
         "modes": {
           "Shapes RGB": 35
         }
       },
       {
         "fixture": "Sharpy",
+        "watts": 280,
+        "weight": 19,
         "modes": {
           "Standard": 16,
           "Vector": 20
@@ -336,6 +354,8 @@
       },
       {
         "fixture": "Sharpy Wash",
+        "watts": 280,
+        "weight": 18.5,
         "modes": {
           "Standard": 19,
           "Vector": 22
@@ -343,6 +363,8 @@
       },
       {
         "fixture": "Scenius Unico",
+        "watts": 1400,
+        "weight": 45.6,
         "modes": {
           "Standard": 40,
           "Vector": 44
@@ -350,6 +372,8 @@
       },
       {
         "fixture": "Xtylos",
+        "watts": 1380,
+        "weight": 24,
         "modes": {
           "Standard": 30,
           "Vector": 31
@@ -359,6 +383,8 @@
     "Elation": [
       {
         "fixture": "DTW 350 IP (2 Cell)",
+        "watts": 470,
+        "weight": 8.2,
         "modes": {
           "1 Chan": 1,
           "Standard": 7,
@@ -367,12 +393,16 @@
       },
       {
         "fixture": "Magma Prime Hazer",
+        "watts": 700,
+        "weight": 10.2,
         "modes": {
           "3 Chan": 3
         }
       },
       {
         "fixture": "Smarty Max",
+        "watts": 700,
+        "weight": 27.2,
         "modes": {
           "Standard": 27,
           "Extended": 44
@@ -382,6 +412,8 @@
     "Fine Art": [
       {
         "fixture": "1200C Strobe",
+        "watts": 1250,
+        "weight": 11,
         "modes": {
           "62 Chan": 62,
           "138 Chan": 138
@@ -423,6 +455,8 @@
     "GLP": [
       {
         "fixture": "JDC-1",
+        "watts": 1200,
+        "weight": 12,
         "modes": {
           "Mode 1 - Compressed": 14,
           "Mode 2 - Normal": 23,
@@ -434,6 +468,8 @@
       },
       {
         "fixture": "JDC Burst 1",
+        "watts": 1400,
+        "weight": 14,
         "modes": {
           "Mode 1 - Basic": 19,
           "Mode 2 - FX": 37,
@@ -449,6 +485,8 @@
       },
       {
         "fixture": "X4 Bar 10",
+        "watts": 230,
+        "weight": 8,
         "modes": {
           "Normal": 33,
           "Compressed": 20,
@@ -460,6 +498,8 @@
       },
       {
         "fixture": "X4 Bar 20",
+        "watts": 400,
+        "weight": 14.5,
         "modes": {
           "Normal": 34,
           "Compressed": 20,
@@ -471,6 +511,8 @@
       },
       {
         "fixture": "X4S",
+        "watts": 200,
+        "weight": 5.5,
         "modes": {
           "High Res": 19
         }
@@ -479,6 +521,8 @@
     "Jem": [
       {
         "fixture": "ZR44 Smoke",
+        "watts": 1890,
+        "weight": 28,
         "modes": {
           "1 Chan": 1
         }
@@ -487,12 +531,16 @@
     "Martin": [
       {
         "fixture": "AF 1 Fan",
+        "watts": 120,
+        "weight": 8.5,
         "modes": {
           "1 Chan": 1
         }
       },
       {
         "fixture": "Mac Aura PXL",
+        "watts": 560,
+        "weight": 15.6,
         "modes": {
           "Basic": 32,
           "Extended": 89,
@@ -502,6 +550,8 @@
       },
       {
         "fixture": "Mac Aura Raven XIP",
+        "watts": 1020,
+        "weight": 28.8,
         "modes": {
           "Basic": 38,
           "Extended": 149,
@@ -512,6 +562,8 @@
       },
       {
         "fixture": "Mac Aura XB",
+        "watts": 400,
+        "weight": 6.5,
         "modes": {
           "Standard": 14,
           "Extended": 25
@@ -519,6 +571,8 @@
       },
       {
         "fixture": "Mac Aura XIP",
+        "watts": 340,
+        "weight": 8.6,
         "modes": {
           "Basic": 36,
           "Extended": 57,
@@ -528,18 +582,24 @@
       },
       {
         "fixture": "Mac Axiom Hybrid",
+        "watts": 600,
+        "weight": 24.8,
         "modes": {
           "Basic": 23
         }
       },
       {
         "fixture": "Mac Encore Perf CLD",
+        "watts": 580,
+        "weight": 31,
         "modes": {
           "Basic": 38
         }
       },
       {
         "fixture": "Mac One",
+        "watts": 180,
+        "weight": 4.4,
         "modes": {
           "Basic": 36,
           "Compact": 20,
@@ -548,6 +608,8 @@
       },
       {
         "fixture": "Mac Quantum Profile",
+        "watts": 750,
+        "weight": 23.2,
         "modes": {
           "Basic": 19,
           "Extended": 27
@@ -555,13 +617,17 @@
       },
       {
         "fixture": "Mac Quantum Wash",
+        "watts": 950,
+        "weight": 21,
         "modes": {
           "Basic": 17,
           "Extended": 33
         }
       },
       {
-        "fixture": "Mac Ultra Perf",
+        "fixture": "Mac Ultra Performance",
+        "watts": 1450,
+        "weight": 44,
         "modes": {
           "Basic": 48,
           "Extended": 58
@@ -569,12 +635,16 @@
       },
       {
         "fixture": "Mac Ultra Wash",
+        "watts": 1450,
+        "weight": 39,
         "modes": {
           "Basic": 29
         }
       },
       {
         "fixture": "Mac Viper Air FX",
+        "watts": 1225,
+        "weight": 35.7,
         "modes": {
           "Basic": 20,
           "Extended": 28
@@ -582,6 +652,8 @@
       },
       {
         "fixture": "Mac Viper Perf",
+        "watts": 1225,
+        "weight": 37.9,
         "modes": {
           "Basic": 32,
           "Extended": 40
@@ -589,6 +661,8 @@
       },
       {
         "fixture": "Mac Viper Profile",
+        "watts": 1225,
+        "weight": 37.2,
         "modes": {
           "Basic": 26,
           "Extended": 34
@@ -596,6 +670,8 @@
       },
       {
         "fixture": "Mac Viper Wash DX",
+        "watts": 1225,
+        "weight": 34.1,
         "modes": {
           "Basic": 18,
           "Extended": 24
@@ -603,6 +679,8 @@
       },
       {
         "fixture": "Mac Viper XIP",
+        "watts": 1040,
+        "weight": 37,
         "modes": {
           "Basic": 54,
           "Extended": 64,
