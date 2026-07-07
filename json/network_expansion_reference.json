@@ -1,0 +1,41 @@
+{
+  "networkExpansion": [
+    {
+      "id": "generic-managed-switch-8",
+      "manufacturer": "Generic",
+      "name": "Managed Switch 8 Port",
+      "type": "Network Switch",
+      "ports": "8 x 1GbE",
+      "power": "IEC / PSU dependent",
+      "protocols": [
+        "sACN",
+        "Art-Net",
+        "MA-Net3",
+        "MANet2"
+      ]
+    },
+    {
+      "id": "generic-node-8",
+      "manufacturer": "Generic",
+      "name": "8 Port DMX Node",
+      "type": "Network DMX Node",
+      "ports": "8 x DMX",
+      "power": "PoE / Mains dependent",
+      "protocols": [
+        "sACN",
+        "Art-Net"
+      ]
+    },
+    {
+      "id": "generic-wap",
+      "manufacturer": "Generic",
+      "name": "Wireless Access Point",
+      "type": "Network Access Point",
+      "ports": "1 x 1GbE",
+      "power": "PoE",
+      "protocols": [
+        "TCP/IP"
+      ]
+    }
+  ]
+}

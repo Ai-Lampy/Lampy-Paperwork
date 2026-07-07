@@ -1,0 +1,63 @@
+{
+  "protocols": [
+    "sACN",
+    "Art-Net",
+    "MA-Net3",
+    "MANet2",
+    "KiNET",
+    "Pathport"
+  ],
+  "consoles": [
+    {
+      "id": "grandma3-full-size",
+      "manufacturer": "MA Lighting",
+      "name": "grandMA3 full-size",
+      "softwareModes": [
+        {
+          "name": "grandMA3"
+        },
+        {
+          "name": "Mode2"
+        }
+      ],
+      "parameters": {
+        "realParameters": 20480,
+        "dmxOutputs": 6,
+        "networkPorts": 2,
+        "notes": "Edit this JSON to match your reference data."
+      }
+    },
+    {
+      "id": "grandma3-light",
+      "manufacturer": "MA Lighting",
+      "name": "grandMA3 light",
+      "softwareModes": [
+        {
+          "name": "grandMA3"
+        },
+        {
+          "name": "Mode2"
+        }
+      ],
+      "parameters": {
+        "realParameters": 8192,
+        "dmxOutputs": 6,
+        "networkPorts": 2
+      }
+    },
+    {
+      "id": "apex-20",
+      "manufacturer": "ETC",
+      "name": "Eos Apex 20",
+      "softwareModes": [
+        {
+          "name": "Eos"
+        }
+      ],
+      "parameters": {
+        "outputs": "User licence dependent",
+        "networkPorts": 2
+      }
+    }
+  ]
+}
