@@ -1,40 +1,87 @@
 {
   "networkExpansion": [
     {
-      "id": "generic-managed-switch-8",
-      "manufacturer": "Generic",
-      "name": "Managed Switch 8 Port",
-      "type": "Network Switch",
-      "ports": "8 x 1GbE",
-      "power": "IEC / PSU dependent",
+      "id": "ma-pu-m",
+      "manufacturer": "MA Lighting",
+      "name": "grandMA3 processing unit M",
+      "type": "Processing Unit",
+      "ports": "2 x 1GbE",
+      "power": "IEC",
       "protocols": [
-        "sACN",
-        "Art-Net",
         "MA-Net3",
         "MANet2"
+      ],
+      "softwareModes": [
+        {
+          "name": "Mode 2",
+          "parameterCount": 4096,
+          "parameters": {
+            "Parameters in Mode 2": 4096
+          }
+        },
+        {
+          "name": "Mode 3",
+          "parameterCount": 4096,
+          "parameters": {
+            "Parameters in Mode 3": 4096
+          }
+        }
       ]
     },
     {
-      "id": "generic-node-8",
-      "manufacturer": "Generic",
-      "name": "8 Port DMX Node",
-      "type": "Network DMX Node",
-      "ports": "8 x DMX",
-      "power": "PoE / Mains dependent",
+      "id": "ma-pu-l",
+      "manufacturer": "MA Lighting",
+      "name": "grandMA3 processing unit L",
+      "type": "Processing Unit",
+      "ports": "2 x 1GbE",
+      "power": "IEC",
       "protocols": [
-        "sACN",
-        "Art-Net"
+        "MA-Net3",
+        "MANet2"
+      ],
+      "softwareModes": [
+        {
+          "name": "Mode 2",
+          "parameterCount": 8192,
+          "parameters": {
+            "Parameters in Mode 2": 8192
+          }
+        },
+        {
+          "name": "Mode 3",
+          "parameterCount": 8192,
+          "parameters": {
+            "Parameters in Mode 3": 8192
+          }
+        }
       ]
     },
     {
-      "id": "generic-wap",
-      "manufacturer": "Generic",
-      "name": "Wireless Access Point",
-      "type": "Network Access Point",
-      "ports": "1 x 1GbE",
-      "power": "PoE",
+      "id": "ma-pu-xl",
+      "manufacturer": "MA Lighting",
+      "name": "grandMA3 processing unit XL",
+      "type": "Processing Unit",
+      "ports": "2 x 1GbE",
+      "power": "IEC",
       "protocols": [
-        "TCP/IP"
+        "MA-Net3",
+        "MANet2"
+      ],
+      "softwareModes": [
+        {
+          "name": "Mode 2",
+          "parameterCount": 16384,
+          "parameters": {
+            "Parameters in Mode 2": 16384
+          }
+        },
+        {
+          "name": "Mode 3",
+          "parameterCount": 16384,
+          "parameters": {
+            "Parameters in Mode 3": 16384
+          }
+        }
       ]
     }
   ]

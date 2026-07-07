@@ -14,17 +14,26 @@
       "name": "grandMA3 full-size",
       "softwareModes": [
         {
-          "name": "grandMA3"
+          "name": "Mode 2",
+          "parameterCount": 8192,
+          "parameters": {
+            "Parameters in Mode 2": 8192,
+            "DMX Outputs": 6,
+            "Network Ports": 2
+          }
         },
         {
-          "name": "Mode2"
+          "name": "Mode 3",
+          "parameterCount": 20480,
+          "parameters": {
+            "Parameters in Mode 3": 20480,
+            "DMX Outputs": 6,
+            "Network Ports": 2
+          }
         }
       ],
       "parameters": {
-        "realParameters": 20480,
-        "dmxOutputs": 6,
-        "networkPorts": 2,
-        "notes": "Edit this JSON to match your reference data."
+        "Notes": "Edit this JSON to match your reference data."
       }
     },
     {
@@ -33,17 +42,24 @@
       "name": "grandMA3 light",
       "softwareModes": [
         {
-          "name": "grandMA3"
+          "name": "Mode 2",
+          "parameterCount": 4096,
+          "parameters": {
+            "Parameters in Mode 2": 4096,
+            "DMX Outputs": 6,
+            "Network Ports": 2
+          }
         },
         {
-          "name": "Mode2"
+          "name": "Mode 3",
+          "parameterCount": 8192,
+          "parameters": {
+            "Parameters in Mode 3": 8192,
+            "DMX Outputs": 6,
+            "Network Ports": 2
+          }
         }
-      ],
-      "parameters": {
-        "realParameters": 8192,
-        "dmxOutputs": 6,
-        "networkPorts": 2
-      }
+      ]
     },
     {
       "id": "apex-20",
@@ -51,13 +67,14 @@
       "name": "Eos Apex 20",
       "softwareModes": [
         {
-          "name": "Eos"
+          "name": "Eos",
+          "parameterCount": 0,
+          "parameters": {
+            "Parameters": "User licence dependent",
+            "Network Ports": 2
+          }
         }
-      ],
-      "parameters": {
-        "outputs": "User licence dependent",
-        "networkPorts": 2
-      }
+      ]
     }
   ]
 }
