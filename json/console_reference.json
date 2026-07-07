@@ -16,7 +16,7 @@
         },
         {
           "name": "Mode 3",
-          "parameterCount": 20,480
+          "parameterCount": 20480
         }
       ]
     },
@@ -31,7 +31,7 @@
         },
         {
           "name": "Mode 3",
-          "parameterCount": 16,384
+          "parameterCount": 16384
         }
       ]
     },
