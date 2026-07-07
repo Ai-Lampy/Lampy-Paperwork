@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Lampy Paperwork V4.14</title>
+<title>Lampy Paperwork V4.15</title>
 <style>
 :root{--label-w:18mm;--label-h:34mm;--label-gap:0.5mm;--gap-y:2mm;--radius:3mm;--border:1mm;--border-col:#ffffff;--stripe:4mm;--front-aux-w:18mm;--front-aux-h:34mm;--front-output-w:72mm;--front-output-h:34mm;--rear-soca-w:70mm;--rear-soca-h:50mm;--rear-aux-w:85mm;--rear-aux-h:30mm;--rear-aux-gap:5mm;--rear-output-w:90mm;--rear-output-h:60mm;--top-size:18pt;--bottom-size:14pt;--top-align:center;--bottom-align:center;--top-v-align:center;--bottom-v-align:center;--top-font:Cochin,'Times New Roman',Times,serif;--bottom-font:Cochin,'Times New Roman',Times,serif;--top-weight:700;--bottom-weight:700;--top-transform:none;--bottom-transform:none;--top-text-align:center;--bottom-text-align:center}
 *{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f6f7f9;color:#111}h1{margin:0;font-size:28px}h2,h3{margin:0 0 12px}button,input,select,textarea{font:inherit}.top{display:flex;align-items:center;justify-content:space-between;padding:18px 84px 18px 24px;gap:20px}.topActions{display:flex;align-items:center;justify-content:flex-end;gap:12px}.reportIssueBtn{border:1px solid #111;background:#fff;color:#111;border-radius:999px;padding:9px 14px;font-weight:900;text-decoration:none;white-space:nowrap}.reportIssueBtn:hover{background:#111;color:#fff}.badge{font-size:14px;border:1px solid #e0c64b;background:#fff4bf;border-radius:8px;padding:7px 12px;margin-left:12px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{border:1px solid #d9dee7;background:#fff;border-radius:7px;padding:10px 18px;cursor:pointer}.btn:hover{background:#f7f9fc}.btn.primary{background:#17a957;color:#fff;border-color:#17a957;font-weight:700}.btn.danger{color:#b42318}.btn.add{font-weight:800;font-size:18px;line-height:1;padding:8px 14px;background:#111;color:#fff;border-color:#111}.gear{font-size:24px;border:1px solid #d9dee7;background:#fff;border-radius:999px;width:44px;height:44px;cursor:pointer}.gear:hover{background:#f7f9fc}.tourLogoSlot{display:flex;align-items:center;justify-content:flex-end;min-width:80px;max-width:180px}.tourLogo{display:block;max-width:160px;max-height:54px;object-fit:contain}.tourLogoExport{position:absolute;top:5mm;right:5mm;max-width:34mm;max-height:18mm;object-fit:contain;z-index:3}.tourLogoUploadPreview{border:1px dashed #cfd6e1;border-radius:8px;background:#fff;min-height:130px;display:flex;align-items:center;justify-content:center;padding:14px}.tourLogoUploadPreview img{max-width:260px;max-height:120px;object-fit:contain}.logoActions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}.menuButton{position:fixed;right:18px;top:18px;z-index:18;border:1px solid #d9dee7;background:#111;color:#fff;border-radius:999px;width:46px;height:46px;font-size:24px;font-weight:900;cursor:pointer;box-shadow:0 10px 28px rgba(16,24,40,.18)}.menuButton:hover{background:#2a2a2a}.actionSidebar{position:fixed;right:18px;top:74px;width:min(260px,calc(100vw - 36px));z-index:17;border:1px solid #dfe3ea;border-radius:10px;background:#fff;box-shadow:0 18px 48px rgba(16,24,40,.22);padding:12px;transform:translateX(calc(100% + 28px));transition:transform .18s ease}.actionMenuOpen .actionSidebar{transform:translateX(0)}.actionSidebar h2{font-size:15px;margin:0 0 10px}.actionSidebar .btn{width:100%;margin:0 0 8px;text-align:left;font-weight:800}
@@ -17,7 +17,7 @@
 .welcomeModal{max-width:700px;width:min(90vw,700px);background:#fff;border-radius:12px;padding:24px;box-shadow:0 10px 40px rgba(0,0,0,.25)}
 .welcomeModal h2{margin-top:0}
 .homeView{display:grid;gap:14px}.homeHero{border:1px solid #dfe3ea;border-radius:8px;background:#fff;padding:16px}.homeHero h2{font-size:24px;margin:0 0 6px}.homeMeta{display:flex;gap:10px;flex-wrap:wrap;color:#475467;font-weight:700;font-size:13px}.homeStats{display:grid;grid-template-columns:repeat(4,minmax(130px,1fr));gap:12px}.homeStat{border:1px solid #e6e9ef;border-radius:8px;background:#fafafa;padding:14px}.homeStatValue{font-size:28px;font-weight:900;line-height:1;color:#111}.homeStatLabel{margin-top:6px;color:#667085;font-size:12px;font-weight:800;text-transform:uppercase}.homeGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}.homePanel{border:1px solid #e6e9ef;border-radius:8px;background:#fff;padding:14px}.homePanel h3{font-size:16px;margin-bottom:10px}.homeDistroList{display:grid;gap:8px}.homeDistroItem{border:1px solid #eef1f5;border-radius:7px;background:#fafafa;padding:10px}.homeDistroItem strong{display:block;margin-bottom:3px}.homeDistroMeta{color:#667085;font-size:12px;font-weight:700}.homeActions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.positionSummaryPanel{background:#151922;color:#f2f4f7;border-color:#303848}.positionSummaryPanel h3{font-size:24px}.positionSummaryTable{width:100%;border-collapse:collapse;table-layout:fixed;border:1px solid #000}.positionSummaryTable th{background:#34383f;color:#f2f4f7;font-size:20px;font-weight:900;padding:10px;border:1px solid #000;text-align:center}.positionSummaryTable td{background:#171b24;border:1px solid #000;text-align:center;padding:10px;font-size:18px;font-weight:800;height:58px}.positionSummaryTable .positionName{text-decoration:underline}.positionColourCell{background:var(--pos-colour,#171b24)!important}.positionColourPill{display:flex;align-items:center;justify-content:center;min-height:38px;border:1px solid #3b4658;border-radius:12px;background:#111821;color:var(--pos-text,#f2f4f7);padding:8px 10px;text-transform:capitalize}.homeProductionGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.homeProductionGrid .full{grid-column:1/-1}.homeInfoValue{display:block;font-weight:900;margin-top:2px;white-space:pre-wrap}.fixturePatchAddressWarning{border:1px solid #f79009;background:#fffaeb;color:#7a2e0e;border-radius:8px;padding:10px;margin:0 0 12px;font-weight:700}.fixturePatchRow.patchAddressDuplicate td{box-shadow:inset 0 0 0 2px #f79009;background:#fffaeb}@media(max-width:900px){.homeStats,.homeGrid,.homeProductionGrid{grid-template-columns:1fr}}
-.appShell{grid-template-columns:minmax(0,1fr);padding:0 24px 24px}.distroPreviewHeading{width:calc((18 * var(--label-w)) + (15 * var(--label-gap)) + 23mm);max-width:none;margin-bottom:2mm}.distroPreviewControls{margin-bottom:2mm}.previewWindow{width:max-content;max-width:none;margin-bottom:4mm;gap:2.5mm 4mm}.previewWindowTitle{margin-bottom:1mm}.auxPreviewGroup,.outputPreviewGroup{margin-bottom:4mm}.socaTitle{margin-bottom:1mm}.inlineEditorGroup{margin-top:1.5mm}.exportControls{display:flex;gap:12px;align-items:end;flex-wrap:wrap;margin:10px 0 12px}.exportControls .ctl{min-width:170px}.exportControls label{font-weight:700;color:#111}.exportControls select{height:39px}.zoomControls{display:flex;gap:6px;align-items:center;flex-wrap:wrap}.zoomControls .btn{padding:8px 10px;font-size:13px}.zoomControls .active{background:#111;color:#fff;border-color:#111}.exportPageShell{margin:0 auto 16px;transform-origin:top center}.exportPage{transform-origin:top left}.exportPage .distroPreviewSection{width:100%!important;max-width:100%!important;overflow:visible!important}.exportPage .distroPreviewHeading{width:100%!important;max-width:100%!important;margin-bottom:2mm}.exportPage .exportSocaWindow{gap:5mm 8mm!important;justify-content:start!important;justify-items:start!important;width:100%!important;max-width:100%!important;overflow:visible!important}.exportPage .exportSocaWindow.exportPortrait{gap:3mm 4mm!important;justify-content:start!important}.exportPage .previewWindow>.socaBlock:not(.auxBlock):not(.outputBlock){border-right:0!important;padding-right:0!important}.exportLooseWindow{display:flex;flex-wrap:wrap;gap:2.5mm 8mm;align-items:flex-start;margin:0 0 4mm}.exportLooseWindow.exportPortrait{gap:2mm 6mm}.exportLooseWindow .auxBlock,.exportLooseWindow .outputBlock{margin:0}.exportLooseWindow .outputLabelRow{gap:6mm}.exportLooseWindow .previewWindowTitle{margin-bottom:1mm}.exportLooseWindow .inlineEditorGroup{display:none!important}.projectTabs,.sheetTabs{display:flex;gap:8px;border-bottom:1px solid #e6e9ef;margin:0 0 14px;padding-bottom:10px;flex-wrap:wrap}.projectTab,.sheetTab{border:1px solid #d9dee7;background:#fff;border-radius:7px;padding:9px 14px;cursor:pointer;font-weight:700}.projectTab.active,.sheetTab.active{background:#111;color:#fff;border-color:#111}.projectInfoGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.projectInfoGrid .full{grid-column:1/-1}.projectPanelActions{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 0 12px}.calcSummary{border:1px solid #e6e9ef;border-radius:8px;background:#f7f9fc;padding:12px;font-weight:800}.powerRecommendedSupply{margin-top:10px;border:1px solid #d0d5dd;border-radius:8px;background:#f7f9fc;padding:10px 12px;font-weight:900}.powerRecommendedSupply span{display:block;margin-top:3px;color:#344054}.powerDistroList{display:grid;gap:10px}.powerDistroCard{border:1px solid #e6e9ef;border-radius:8px;background:#fafafa;overflow:hidden}.powerDistroCard summary{cursor:pointer;padding:12px 14px;background:#f7f9fc;font-weight:800;list-style:none;display:flex;justify-content:space-between;gap:12px}.powerDistroCard summary::-webkit-details-marker{display:none}.powerDistroCard summary::before{content:"▶";margin-right:6px}.powerDistroCard[open] summary::before{content:"▼"}.powerDistroBody{padding:12px}.phaseTotals{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}.phaseTotal{border-radius:8px;border:1px solid #d0d5dd;padding:12px;font-weight:900}.phase1{background:#8b5a2b;color:#fff}.phase2{background:#111;color:#fff}.phase3{background:#b9b9b9;color:#111}.linkedSupplySummary{border:2px solid #111;border-radius:8px;background:#fff;padding:12px;margin-top:12px}.blankState{border:1px dashed #cfd6e1;border-radius:8px;padding:28px;text-align:center;background:#fbfcfe;color:#667085;font-weight:700}.rearLabelsBlock{width:max-content;margin:0 0 4mm}.rearLabelsBlock.previewCollapsed .rearLabelGrid,.rearLabelsBlock.previewCollapsed .rearLabelHint{display:none!important}.rearLabelsBlock.previewCollapsed .previewWindowTitle::before{content:"▶ "}.rearLabelsBlock:not(.previewCollapsed) .previewWindowTitle::before{content:"▼ "}.rearLabelGrid{display:grid;grid-template-columns:repeat(3,var(--rear-soca-w));gap:3mm;width:max-content}.rearLabel{width:var(--rear-soca-w);height:var(--rear-soca-h);border:.5mm solid #111;border-radius:2mm;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--top-font);font-weight:800;font-size:14pt;line-height:1;padding:1mm;box-sizing:border-box}.rearLabel .bg{position:absolute;inset:0;z-index:0}.rearLabelText{position:relative;z-index:1;max-width:100%;overflow:hidden;white-space:normal;overflow-wrap:normal;word-break:normal}.rearLabelHint{font-size:11px;color:#667085;margin:1mm 0 2mm}.exportPage .rearLabelsBlock{margin-bottom:4mm}.exportPage .rearLabelGrid{grid-template-columns:repeat(3,var(--rear-soca-w))}.revisionList{display:grid;gap:8px}.revisionItem{border:1px solid #e6e9ef;border-radius:8px;background:#fafafa;padding:10px}.revisionMeta{display:flex;justify-content:space-between;gap:12px;align-items:start;font-weight:800;margin-bottom:6px}.revisionNotes{white-space:pre-wrap;color:#344054}@media(max-width:720px){.projectInfoGrid,.phaseTotals{grid-template-columns:1fr}.projectInfoGrid .full{grid-column:auto}}@media print{.exportPageShell{width:auto!important;height:auto!important;margin:0!important}.exportPage{transform:none!important}}
+.appShell{grid-template-columns:minmax(0,1fr);padding:0 24px 24px}.distroPreviewHeading{width:calc((18 * var(--label-w)) + (15 * var(--label-gap)) + 23mm);max-width:none;margin-bottom:2mm}.distroPreviewControls{margin-bottom:2mm}.previewWindow{width:max-content;max-width:none;margin-bottom:4mm;gap:2.5mm 4mm}.previewWindowTitle{margin-bottom:1mm}.auxPreviewGroup,.outputPreviewGroup{margin-bottom:4mm}.socaTitle{margin-bottom:1mm}.inlineEditorGroup{margin-top:1.5mm}.exportControls{display:flex;gap:12px;align-items:end;flex-wrap:wrap;margin:10px 0 12px}.exportControls .ctl{min-width:170px}.exportControls label{font-weight:700;color:#111}.exportControls select{height:39px}.zoomControls{display:flex;gap:6px;align-items:center;flex-wrap:wrap}.zoomControls .btn{padding:8px 10px;font-size:13px}.zoomControls .active{background:#111;color:#fff;border-color:#111}.exportPageShell{margin:0 auto 16px;transform-origin:top center}.exportPage{transform-origin:top left}.exportPage .distroPreviewSection{width:100%!important;max-width:100%!important;overflow:visible!important}.exportPage .distroPreviewHeading{width:100%!important;max-width:100%!important;margin-bottom:2mm}.exportPage .exportSocaWindow{gap:5mm 8mm!important;justify-content:start!important;justify-items:start!important;width:100%!important;max-width:100%!important;overflow:visible!important}.exportPage .exportSocaWindow.exportPortrait{gap:3mm 4mm!important;justify-content:start!important}.exportPage .previewWindow>.socaBlock:not(.auxBlock):not(.outputBlock){border-right:0!important;padding-right:0!important}.exportLooseWindow{display:flex;flex-wrap:wrap;gap:2.5mm 8mm;align-items:flex-start;margin:0 0 4mm}.exportLooseWindow.exportPortrait{gap:2mm 6mm}.exportLooseWindow .auxBlock,.exportLooseWindow .outputBlock{margin:0}.exportLooseWindow .outputLabelRow{gap:6mm}.exportLooseWindow .previewWindowTitle{margin-bottom:1mm}.exportLooseWindow .inlineEditorGroup{display:none!important}.projectTabs,.sheetTabs{display:flex;gap:8px;border-bottom:1px solid #e6e9ef;margin:0 0 14px;padding-bottom:10px;flex-wrap:wrap}.projectTab,.sheetTab{border:1px solid #d9dee7;background:#fff;border-radius:7px;padding:9px 14px;cursor:pointer;font-weight:700}.projectTab.active,.sheetTab.active{background:#111;color:#fff;border-color:#111}.projectInfoGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.projectInfoGrid .full{grid-column:1/-1}.projectPanelActions{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 0 12px}.calcSummary{border:1px solid #e6e9ef;border-radius:8px;background:#f7f9fc;padding:12px;font-weight:800}.powerRecommendedSupply{margin-top:10px;border:1px solid #d0d5dd;border-radius:8px;background:#f7f9fc;padding:10px 12px;font-weight:900}.powerRecommendedSupply span{display:block;margin-top:3px;color:#344054}.powerDistroList{display:grid;gap:10px}.powerDistroCard{border:1px solid #e6e9ef;border-radius:8px;background:#fafafa;overflow:hidden}.powerDistroCard summary{cursor:pointer;padding:12px 14px;background:#f7f9fc;font-weight:800;list-style:none;display:flex;justify-content:space-between;gap:12px}.powerDistroCard summary::-webkit-details-marker{display:none}.powerDistroCard summary::before{content:"▶";margin-right:6px}.powerDistroCard[open] summary::before{content:"▼"}.powerDistroBody{padding:12px}.phaseTotals{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}.phaseTotal{border-radius:8px;border:1px solid #d0d5dd;padding:12px;font-weight:900}.phase1{background:#8b5a2b;color:#fff}.phase2{background:#111;color:#fff}.phase3{background:#b9b9b9;color:#111}.linkedSupplySummary{border:2px solid #111;border-radius:8px;background:#fff;padding:12px;margin-top:12px}.blankState{border:1px dashed #cfd6e1;border-radius:8px;padding:28px;text-align:center;background:#fbfcfe;color:#667085;font-weight:700}.rearLabelsBlock{width:max-content;margin:0 0 4mm}.rearLabelsBlock.previewCollapsed .rearLabelGrid,.rearLabelsBlock.previewCollapsed .rearLabelHint{display:none!important}.rearLabelsBlock.previewCollapsed .previewWindowTitle::before{content:"▶ "}.rearLabelsBlock:not(.previewCollapsed) .previewWindowTitle::before{content:"▼ "}.rearLabelGrid{display:grid;grid-template-columns:repeat(3,var(--rear-soca-w));gap:3mm;width:max-content}.rearLabel{width:var(--rear-soca-w);height:var(--rear-soca-h);border:.5mm solid #111;border-radius:2mm;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--top-font);font-weight:800;font-size:14pt;line-height:1;padding:1mm;box-sizing:border-box}.rearEditableLabel{cursor:pointer}.rearEditableLabel:hover{box-shadow:0 0 0 1mm rgba(43,120,255,.18)}.rearLabel .bg{position:absolute;inset:0;z-index:0}.rearLabelText{position:relative;z-index:1;max-width:100%;overflow:hidden;white-space:normal;overflow-wrap:normal;word-break:normal}.rearLabelHint{font-size:11px;color:#667085;margin:1mm 0 2mm}.rearFormatDialogGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.rearFormatDialogGrid .wide{grid-column:1/-1}.exportPage .rearLabelsBlock{margin-bottom:4mm}.exportPage .rearLabelGrid{grid-template-columns:repeat(3,var(--rear-soca-w))}.revisionList{display:grid;gap:8px}.revisionItem{border:1px solid #e6e9ef;border-radius:8px;background:#fafafa;padding:10px}.revisionMeta{display:flex;justify-content:space-between;gap:12px;align-items:start;font-weight:800;margin-bottom:6px}.revisionNotes{white-space:pre-wrap;color:#344054}@media(max-width:720px){.projectInfoGrid,.phaseTotals,.rearFormatDialogGrid{grid-template-columns:1fr}.projectInfoGrid .full,.rearFormatDialogGrid .wide{grid-column:auto}}@media print{.exportPageShell{width:auto!important;height:auto!important;margin:0!important}.exportPage{transform:none!important}}
 
 .fixturePatchControlPanel{border:1px solid #e6e9ef;border-radius:8px;background:#fff;overflow:hidden}.fixturePatchControlPanel summary{list-style:none;cursor:pointer;padding:12px 14px;font-weight:900;display:flex;justify-content:space-between;align-items:center;gap:12px}.fixturePatchControlPanel summary::-webkit-details-marker{display:none}.fixturePatchControlPanel summary:before{content:'▸';font-size:16px}.fixturePatchControlPanel[open] summary:before{content:'▾'}.fixturePatchControlSummary{display:flex;align-items:center;gap:10px}.fixturePatchControlBody{border-top:1px solid #eef1f5;padding:12px;display:grid;gap:10px}.fixturePatchControlGrid{display:grid;grid-template-columns:repeat(5,minmax(130px,1fr));gap:10px}.fixturePatchControl label,.patchFormatGrid label,.patchColumnGrid label{display:block;font-size:12px;color:#475467;font-weight:900;margin-bottom:5px}.fixturePatchControl select,.patchFormatGrid select,.patchFormatGrid input{width:100%;height:36px;border:1px solid #d9dee7;border-radius:7px;padding:5px 8px;background:#fff;font-weight:700}.fixturePatchFilterActions{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}.patchColumnGrid{display:grid;grid-template-columns:repeat(2,minmax(170px,1fr));gap:8px}.patchColumnToggle,.patchFormatColumnToggle{display:flex;align-items:center;gap:8px;border:1px solid #e6e9ef;background:#fafafa;border-radius:7px;padding:9px;font-weight:800}.patchFormatGrid{display:grid;grid-template-columns:repeat(4,minmax(130px,1fr));gap:10px}.patchFormatGrid.full{grid-template-columns:repeat(5,minmax(110px,1fr))}.patchFormatCard{border:1px solid #e6e9ef;border-radius:8px;background:#fff;padding:12px;margin-bottom:12px}.patchFormatCard h3{font-size:15px;margin:0 0 10px}.patchFormatChecks{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:22px}.patchFormatColumns{display:grid;grid-template-columns:repeat(5,minmax(110px,1fr));gap:8px;margin:10px 0}.patchFormatActions{display:flex;justify-content:flex-end;gap:10px}.fixturePatchTable input.patchFormatted,.fixturePatchTable select.patchFormatted{font:inherit;text-decoration:inherit;text-align:inherit}@media(max-width:900px){.fixturePatchControlGrid,.patchFormatGrid,.patchFormatGrid.full,.patchFormatColumns,.patchColumnGrid{grid-template-columns:1fr}}
 .unpatchSelectAll{font-weight:900;margin:0 0 8px}.unpatchSelectAll label{display:inline-flex;align-items:center;gap:8px}.customFixtureForm{border:1px solid #e6e9ef;border-radius:8px;background:#fff;padding:12px}.customFixtureRequest{border:1px solid #d1fadf;background:#f6fef9;border-radius:8px;padding:12px;margin-top:12px}.customFixtureActions{display:flex;gap:8px;flex-wrap:wrap}
@@ -26,7 +26,7 @@
 <style id="dynamicPrintPageStyle">@page{size:A4 landscape;margin:5mm}</style>
 </head>
 <body>
-<div class="top"><div><h1>Lampy Paperwork V4.14</h1></div><div class="topActions"><a class="reportIssueBtn" href="https://github.com/Ai-Lampy/Lampy-Paperwork/issues" target="_blank" rel="noopener">Report Issue</a><div id="tourLogoSlot" class="tourLogoSlot"></div></div></div>
+<div class="top"><div><h1>Lampy Paperwork V4.15</h1></div><div class="topActions"><a class="reportIssueBtn" href="https://github.com/Ai-Lampy/Lampy-Paperwork/issues" target="_blank" rel="noopener">Report Issue</a><div id="tourLogoSlot" class="tourLogoSlot"></div></div></div>
 <button class="menuButton" type="button" aria-label="Actions" aria-expanded="false" onclick="toggleActionMenu()">☰</button>
 <aside class="actionSidebar" id="actionSidebar"><h2>Actions</h2><button class="btn" onclick="openProjectInfo();closeActionMenu()">Project Info</button><button class="btn" onclick="newProjectFile();closeActionMenu()">New Project</button><button class="btn" onclick="downloadProjectFile();closeActionMenu()">Download Project</button><button class="btn" onclick="chooseProjectFile();closeActionMenu()">Open Project</button><button class="btn" onclick="openWalkthrough();closeActionMenu()">Walk-through</button><button class="btn primary" onclick="openExportLayout();closeActionMenu()">Export</button></aside>
 <input id="excelFile" type="file" accept=".xlsx,.xls,.xml,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel,text/xml" class="hidden">
@@ -40,6 +40,7 @@
 <div id="patchOptionsModal" class="modal hidden"><div class="modalCard" style="width:min(980px,100%);"><div class="modalHead"><h2>Patch Options</h2><button class="close" onclick="closePatchOptionsModal()">×</button></div><div id="patchOptionsBody"></div></div></div>
 <div id="patchGroupEditModal" class="modal hidden"><div class="modalCard" style="width:min(1050px,100%);"><div class="modalHead"><h2>Fixture Type Options</h2><button class="close" onclick="closePatchGroupEditModal()">×</button></div><div id="patchGroupEditBody"></div></div></div>
 <div id="positionModal" class="modal hidden"><div class="modalCard" style="width:min(860px,100%);"><div class="modalHead"><h2>Positions</h2><button class="close" onclick="closePositionMenu()">×</button></div><div id="positionMenuBody"></div></div></div>
+<div id="rearLabelEditModal" class="modal hidden"><div class="modalCard" style="width:min(620px,100%);"><div class="modalHead"><h2 id="rearLabelEditTitle">Rear Label Format</h2><button class="close" onclick="closeRearLabelEditor()">×</button></div><div id="rearLabelEditBody"></div></div></div>
 <div id="unpatchFixtureModal" class="modal hidden"><div class="modalCard" style="width:min(900px,100%);"><div class="modalHead"><h2>Unpatch Fixture</h2><button class="close" onclick="closeUnpatchFixtureModal()">×</button></div><div id="unpatchFixtureBody"></div></div></div>
 <div id="patchColumnsModal" class="modal hidden"><div class="modalCard" style="width:min(620px,100%);"><div class="modalHead"><h2>Show / Hide Columns</h2><button class="close" onclick="closePatchColumnsModal()">×</button></div><div id="patchColumnsBody"></div></div></div>
 <div id="patchFormatModal" class="modal hidden"><div class="modalCard" style="width:min(900px,100%);"><div class="modalHead"><h2>Patch Sheet Format</h2><button class="close" onclick="closePatchFormatModal()">×</button></div><div id="patchFormatBody"></div></div></div>
@@ -92,7 +93,7 @@
 </style>
 <script>
 'use strict';
-const VERSION='4.14';
+const VERSION='4.15';
 const DEFAULT_FONT="Cochin,'Times New Roman',Times,serif";
 const STORAGE_KEY='lampyPaperworkDataV1';
 const SETTINGS_KEY='lampyPaperworkSettingsV1';
@@ -132,6 +133,7 @@ let patchImportState={headers:[],rows:[],mapping:{},matches:{},newFixtures:{}};
 let activePatchGroupEditKey='';
 let selectedPatchGroupEditIds=new Set();
 let lastCustomFixtureRequest=null;
+let rearLabelEditorOpen=false;
 const PATCH_COLUMNS=[
   {key:'fixId',label:'#',cls:'num',field:'fixId',width:56},
   {key:'universe',label:'Uni',cls:'uni',field:'universe',width:48},
@@ -420,6 +422,7 @@ function updateAuxPreviewLabel(didx,g,j){
     const bg=el.querySelector('.bg'); if(bg)bg.style.background=cssStripe(style.c1,style.c2,style.useC2);
     const text=el.querySelector('.auxText'); if(text){text.textContent=l.top||l.bottom||'';applyAuxTextStyle(text,l);fitAuxText(text);}
   });
+  updateRearAuxLabel(didx,g,j);
 }
 function outputGroupCount(d){return Array.isArray(d.outputGroups)?d.outputGroups.length:0}
 function outputLabelCount(d){return Array.isArray(d.outputGroups)?d.outputGroups.reduce((sum,g)=>sum+(Math.max(1,parseInt(g.qty||1,10)||1)),0):0}
@@ -470,22 +473,31 @@ function makeOutputBlock(d,didx){
 }
 function rearPreviewKey(didx){return 'd'+didx+'_rear'}
 function makeRearLabel(s){
-  const fmt=(app.socaMeta[s]=app.socaMeta[s]||defaultMeta()).rearFormat;
+  const meta=app.socaMeta[s]=app.socaMeta[s]||defaultMeta();
   const el=document.createElement('div');
-  el.className='rearLabel';
+  el.className='rearLabel rearEditableLabel';
   el.dataset.rearSocaId=s;
-  el.innerHTML='<div class="rearLabelText"></div>';
+  el.title='Click to edit rear label text format';
+  el.style.color=meta.text||'#000000';
+  el.innerHTML='<div class="bg"></div><div class="rearLabelText"></div>';
+  el.querySelector('.bg').style.background=cssStripe(meta.c1||'#ffffff',meta.c2||'#ffffff',meta.useC2===true);
+  el.onclick=()=>openRearLabelEditor('soca',{soca:s});
   const text=el.querySelector('.rearLabelText');
   text.textContent=cleanSocaName(app.socaNames[s],s);
-  applyRearTextStyle(text,fmt);
+  applyRearTextStyle(text,meta.rearFormat);
   requestAnimationFrame(()=>fitRearText(text));
   return el;
 }
 function makeRearAuxLabel(l,rearAuxId){
   const el=document.createElement('div');
-  el.className='label auxSingle rearAuxSingle '+($('grid').checked?'gridLine':'');
+  el.className='label auxSingle rearAuxSingle rearEditableLabel '+($('grid').checked?'gridLine':'');
   el.dataset.rearAuxId=rearAuxId;
-  el.innerHTML='<div class="auxText"></div>';
+  const [didx,g,j]=rearAuxId.split('_').map(v=>parseInt(v,10));
+  el.title='Click to edit rear label text format';
+  el.style.color=l.text||'#000000';
+  el.innerHTML='<div class="bg"></div><div class="auxText"></div>';
+  el.querySelector('.bg').style.background=cssStripe(l.c1||'#ffffff',l.c2||'#ffffff',l.useC2===true);
+  el.onclick=()=>openRearLabelEditor('aux',{distro:didx,group:g,way:j});
   const text=el.querySelector('.auxText');
   text.textContent=l.top||l.bottom||'';
   applyRearTextStyle(text,l.rearFormat);
@@ -494,9 +506,14 @@ function makeRearAuxLabel(l,rearAuxId){
 }
 function makeRearOutputLabel(l,rearOutputId){
   const el=document.createElement('div');
-  el.className='label outputWide rearOutputWide '+($('grid').checked?'gridLine':'');
+  el.className='label outputWide rearOutputWide rearEditableLabel '+($('grid').checked?'gridLine':'');
   el.dataset.rearOutputId=rearOutputId;
-  el.innerHTML='<div class="outputText"></div>';
+  const [didx,g,j]=rearOutputId.split('_').map(v=>parseInt(v,10));
+  el.title='Click to edit rear label text format';
+  el.style.color=l.textColour||'#000000';
+  el.innerHTML='<div class="bg"></div><div class="outputText"></div>';
+  el.querySelector('.bg').style.background=cssStripe(l.c1||'#ffffff',l.c2||'#ffffff',l.useC2===true);
+  el.onclick=()=>openRearLabelEditor('output',{distro:didx,group:g,way:j});
   const text=el.querySelector('.outputText');
   text.textContent=l.text||'';
   applyRearTextStyle(text,l.rearFormat);
@@ -521,7 +538,6 @@ function makeRearLabelsBlock(range){
   block.appendChild(title);
   block.appendChild(hint);
   block.appendChild(grid);
-  block.appendChild(buildInlineEditorGroup(inlineEditorKey('rearSoca',range.idx,0),'Rear Socapex Label Formatting',[buildRearSocaEditor(range)]));
   return block;
 }
 function makeRearAuxLabelsBlock(d,didx){
@@ -540,7 +556,6 @@ function makeRearAuxLabelsBlock(d,didx){
     for(let j=0;j<3;j++)row.appendChild(makeRearAuxLabel(auxLabel(d,g,j),didx+'_'+g+'_'+j));
     block.appendChild(title);
     block.appendChild(row);
-    block.appendChild(buildInlineEditorGroup(inlineEditorKey('rearAux',didx,g),'Rear Aux Outlets '+((g*3)+1)+' > '+((g*3)+3)+' Formatting',[buildRearAuxEditor(d,didx,g)]));
     holder.appendChild(block);
   }
   return holder;
@@ -562,7 +577,6 @@ function makeRearOutputLabelsBlock(d,didx){
     for(let j=0;j<group.qty;j++)row.appendChild(makeRearOutputLabel(outputLabel(d,g,j),didx+'_'+g+'_'+j));
     block.appendChild(title);
     block.appendChild(row);
-    block.appendChild(buildInlineEditorGroup(inlineEditorKey('rearOutput',didx,g),'Rear '+group.type+' Outputs Formatting',[buildRearOutputEditor(d,didx,g)]));
     holder.appendChild(block);
   }
   return holder;
@@ -575,6 +589,7 @@ function updateOutputPreviewLabel(didx,g,j){
     const bg=el.querySelector('.bg'); if(bg)bg.style.background=cssStripe(style.c1,style.c2,style.useC2);
     const text=el.querySelector('.outputText'); if(text){text.textContent=l.text||'';applyOutputTextStyle(text,l);fitOutputText(text)}
   });
+  updateRearOutputLabel(didx,g,j);
 }
 function makeSocaBlock(s){const block=document.createElement('div');block.className='socaBlock';const title=document.createElement('div');title.className='socaTitle';title.dataset.socaPreviewTitle=s;title.textContent=cleanSocaName(app.socaNames[s],s);const row=document.createElement('div');row.className='labelRow';for(let j=0;j<6;j++)row.appendChild(makeLabel(s*6+j));block.appendChild(title);block.appendChild(row);return block}
 function addPreviewWindow(host,didx,local,start,end,distroName,rangeStart=0){const key=previewKey(didx,local);const win=document.createElement('div');win.className='previewWindow '+(app.collapsed.previews.has(key)?'previewCollapsed':'');win.dataset.previewKey=key;const title=document.createElement('div');title.className='previewWindowTitle';title.title='Click to collapse / expand preview';title.textContent=(distroName||'Distro')+' - Socapex '+((start-rangeStart)+1)+' > '+(end-rangeStart);title.onclick=()=>togglePreviewRange(key,start,end);win.appendChild(title);host.appendChild(win);return win}
@@ -1226,6 +1241,25 @@ function render(){ensureSocaData();updateTourLogoSlot();applyDesignVars();update
 
 
 function dataAttrs(attrs){return Object.entries(attrs).map(([key,value])=>`data-${key}="${escapeAttr(value)}"`).join(' ')}
+function rearLabelEditorTarget(kind,attrs){
+  if(kind==='soca'){const s=parseInt(attrs.soca,10);app.socaMeta[s]=app.socaMeta[s]||defaultMeta();return {kind,s,title:'Rear '+cleanSocaName(app.socaNames[s],s),text:cleanSocaName(app.socaNames[s],s),fmt:app.socaMeta[s].rearFormat=normaliseRearFormat(app.socaMeta[s].rearFormat),attrs:{soca:s}}}
+  const didx=parseInt(attrs.distro,10),g=parseInt(attrs.group,10),j=parseInt(attrs.way,10),d=app.distros[didx];
+  if(!d)return null;
+  if(kind==='aux'){const l=auxLabel(d,g,j);return {kind,didx,g,j,title:'Rear Aux '+((g*3)+j+1),text:l.top||l.bottom||'',fmt:l.rearFormat=normaliseRearFormat(l.rearFormat),attrs:{distro:didx,group:g,way:j}}}
+  if(kind==='output'){const group=outputGroup(d,g),l=outputLabel(d,g,j);return {kind,didx,g,j,title:'Rear '+group.type+' '+(j+1),text:l.text||'',fmt:l.rearFormat=normaliseRearFormat(l.rearFormat),attrs:{distro:didx,group:g,way:j}}}
+  return null;
+}
+function openRearLabelEditor(kind,attrs){
+  const target=rearLabelEditorTarget(kind,attrs);
+  if(!target)return;
+  const modal=$('rearLabelEditModal'),title=$('rearLabelEditTitle'),body=$('rearLabelEditBody');
+  title.textContent=target.title;
+  body.innerHTML=`<div class="rearFormatDialogGrid"><div class="wide"><label>Label Text</label><textarea data-rear-text="${kind}" ${dataAttrs(target.attrs)}>${escapeHtml(target.text)}</textarea></div>${rearFormatControls(kind,target.attrs,target.fmt)}</div><div style="display:flex;justify-content:flex-end;margin-top:14px"><button class="btn primary" type="button" onclick="closeRearLabelEditor()">Done</button></div>`;
+  bindRearEditorEvents(body);
+  modal.classList.remove('hidden');
+  rearLabelEditorOpen=true;
+}
+function closeRearLabelEditor(){const modal=$('rearLabelEditModal');if(modal)modal.classList.add('hidden');rearLabelEditorOpen=false}
 function rearFormatControls(kind,attrs,fmt){
   fmt=normaliseRearFormat(fmt);
   const data=dataAttrs(attrs);
@@ -1236,42 +1270,6 @@ function rearFormatControls(kind,attrs,fmt){
       <div class="toggle"><input type="checkbox" data-rear-format="${kind}" ${data} data-k="underline" ${fmt.underline?'checked':''}><label>Underline</label></div>
       <div class="toggle"><input type="checkbox" data-rear-format="${kind}" ${data} data-k="outline" ${fmt.outline?'checked':''}><label>Outline</label></div>
     </div>`;
-}
-function buildRearSocaEditor(range){
-  const wrap=document.createElement('div');
-  wrap.className='socaEditor';
-  let cards='';
-  for(let s=range.start;s<range.end;s++){
-    const fmt=(app.socaMeta[s]=app.socaMeta[s]||defaultMeta()).rearFormat;
-    cards+=`<div class="inputCard"><div class="inputCardTitle">Rear ${escapeHtml(cleanSocaName(app.socaNames[s],s))}</div><div class="miniGrid"><textarea class="wide" data-rear-text="soca" data-soca="${s}">${escapeHtml(cleanSocaName(app.socaNames[s],s))}</textarea>${rearFormatControls('soca',{soca:s},fmt)}</div></div>`;
-  }
-  wrap.innerHTML=`<div class="socaInputs">${cards}</div>`;
-  bindRearEditorEvents(wrap);
-  return wrap;
-}
-function buildRearAuxEditor(d,didx,g){
-  const wrap=document.createElement('div');
-  wrap.className='socaEditor';
-  let cards='';
-  for(let j=0;j<3;j++){
-    const l=auxLabel(d,g,j);
-    cards+=`<div class="inputCard"><div class="inputCardTitle">Rear Aux ${(g*3)+j+1}</div><div class="miniGrid"><textarea class="wide" data-rear-text="aux" data-distro="${didx}" data-group="${g}" data-way="${j}">${escapeHtml(l.top||l.bottom||'')}</textarea>${rearFormatControls('aux',{distro:didx,group:g,way:j},l.rearFormat)}</div></div>`;
-  }
-  wrap.innerHTML=`<div class="socaInputs">${cards}</div>`;
-  bindRearEditorEvents(wrap);
-  return wrap;
-}
-function buildRearOutputEditor(d,didx,g){
-  const group=outputGroup(d,g),wrap=document.createElement('div');
-  wrap.className='socaEditor';
-  let cards='';
-  for(let j=0;j<group.qty;j++){
-    const l=outputLabel(d,g,j);
-    cards+=`<div class="inputCard"><div class="inputCardTitle">Rear ${escapeHtml(group.type)} ${j+1}</div><div class="miniGrid"><textarea class="wide" data-rear-text="output" data-distro="${didx}" data-group="${g}" data-way="${j}">${escapeHtml(l.text||'')}</textarea>${rearFormatControls('output',{distro:didx,group:g,way:j},l.rearFormat)}</div></div>`;
-  }
-  wrap.innerHTML=`<div class="socaInputs">${cards}</div>`;
-  bindRearEditorEvents(wrap);
-  return wrap;
 }
 function bindRearEditorEvents(root){
   root.querySelectorAll('[data-rear-text]').forEach(inp=>inp.addEventListener('input',()=>updateRearText(inp)));
@@ -1304,9 +1302,9 @@ function updateRearFormat(inp){
   if(target.kind==='output')updateRearOutputLabel(target.didx,target.g,target.j);
   persist();
 }
-function updateRearSocaLabel(s){document.querySelectorAll('[data-rear-soca-id="'+s+'"]').forEach(el=>{const text=el.querySelector('.rearLabelText');if(text){text.textContent=cleanSocaName(app.socaNames[s],s);applyRearTextStyle(text,(app.socaMeta[s]||defaultMeta()).rearFormat);fitRearText(text)}})}
-function updateRearAuxLabel(didx,g,j){const d=app.distros[didx];if(!d)return;const l=auxLabel(d,g,j);document.querySelectorAll('[data-rear-aux-id="'+didx+'_'+g+'_'+j+'"]').forEach(el=>{const text=el.querySelector('.auxText');if(text){text.textContent=l.top||l.bottom||'';applyRearTextStyle(text,l.rearFormat);fitAuxText(text)}})}
-function updateRearOutputLabel(didx,g,j){const d=app.distros[didx];if(!d)return;const l=outputLabel(d,g,j);document.querySelectorAll('[data-rear-output-id="'+didx+'_'+g+'_'+j+'"]').forEach(el=>{const text=el.querySelector('.outputText');if(text){text.textContent=l.text||'';applyRearTextStyle(text,l.rearFormat);fitOutputText(text)}})}
+function updateRearSocaLabel(s){document.querySelectorAll('[data-rear-soca-id="'+s+'"]').forEach(el=>{const meta=app.socaMeta[s]||defaultMeta(),bg=el.querySelector('.bg'),text=el.querySelector('.rearLabelText');el.style.color=meta.text||'#000000';if(bg)bg.style.background=cssStripe(meta.c1||'#ffffff',meta.c2||'#ffffff',meta.useC2===true);if(text){text.textContent=cleanSocaName(app.socaNames[s],s);applyRearTextStyle(text,meta.rearFormat);fitRearText(text)}})}
+function updateRearAuxLabel(didx,g,j){const d=app.distros[didx];if(!d)return;const l=auxLabel(d,g,j);document.querySelectorAll('[data-rear-aux-id="'+didx+'_'+g+'_'+j+'"]').forEach(el=>{const bg=el.querySelector('.bg'),text=el.querySelector('.auxText');el.style.color=l.text||'#000000';if(bg)bg.style.background=cssStripe(l.c1||'#ffffff',l.c2||'#ffffff',l.useC2===true);if(text){text.textContent=l.top||l.bottom||'';applyRearTextStyle(text,l.rearFormat);fitAuxText(text)}})}
+function updateRearOutputLabel(didx,g,j){const d=app.distros[didx];if(!d)return;const l=outputLabel(d,g,j);document.querySelectorAll('[data-rear-output-id="'+didx+'_'+g+'_'+j+'"]').forEach(el=>{const bg=el.querySelector('.bg'),text=el.querySelector('.outputText');el.style.color=l.textColour||'#000000';if(bg)bg.style.background=cssStripe(l.c1||'#ffffff',l.c2||'#ffffff',l.useC2===true);if(text){text.textContent=l.text||'';applyRearTextStyle(text,l.rearFormat);fitOutputText(text)}})}
 
 
 function buildAuxEditor(d,didx,g){
@@ -1611,7 +1609,7 @@ function updateWayOverride(inp){
   persist();
   updatePreviewLabel(i);
 }
-function updateSocaMeta(inp){const s=parseInt(inp.dataset.soca,10),key=inp.dataset.meta;app.socaMeta[s]=app.socaMeta[s]||defaultMeta();app.socaMeta[s][key]=inp.type==='checkbox'?inp.checked:inp.value;if(key==='useC2'){const colour2=inp.closest('.socaEditor').querySelector('[data-meta="c2"]');if(colour2)colour2.disabled=!inp.checked}persist();updateSocaPreview(s)}
+function updateSocaMeta(inp){const s=parseInt(inp.dataset.soca,10),key=inp.dataset.meta;app.socaMeta[s]=app.socaMeta[s]||defaultMeta();app.socaMeta[s][key]=inp.type==='checkbox'?inp.checked:inp.value;if(key==='useC2'){const colour2=inp.closest('.socaEditor').querySelector('[data-meta="c2"]');if(colour2)colour2.disabled=!inp.checked}persist();updateSocaPreview(s);updateRearSocaLabel(s)}
 function toggleSoca(idx){const body=$('socaBody_'+idx);if(!body)return;if(body.classList.contains('socaCollapsed')){body.classList.remove('socaCollapsed');app.collapsed.soca.delete(idx)}else{body.classList.add('socaCollapsed');app.collapsed.soca.add(idx)}persist()}
 function togglePreviewRange(key,start,end){const collapse=!app.collapsed.previews.has(key);if(collapse)app.collapsed.previews.add(key);else app.collapsed.previews.delete(key);for(let s=start;s<end;s++)collapse?app.collapsed.soca.add(s):app.collapsed.soca.delete(s);persist();render()}
 function togglePreviewBlock(key){if(app.collapsed.previews.has(key))app.collapsed.previews.delete(key);else app.collapsed.previews.add(key);persist();render()}
@@ -1767,10 +1765,10 @@ function attachEvents(){
   });
   document.addEventListener('keydown',e=>{
     if(e.key==='Escape'){
-      closeActionMenu();closeSettings();closeWalkthrough();closeProjectInfo();closeDistroSettings();closeSingleDistroSettings();closeExportLayout();closeFixturePatchPdfPreview();closeOutputModal();closeFixturePatchModal();closePatchImportModal();closePatchOptionsModal();closePatchGroupEditModal();closePositionMenu();closeUnpatchFixtureModal();closePatchColumnsModal();closePatchFormatModal();
+      closeActionMenu();closeSettings();closeWalkthrough();closeProjectInfo();closeDistroSettings();closeSingleDistroSettings();closeExportLayout();closeFixturePatchPdfPreview();closeOutputModal();closeFixturePatchModal();closePatchImportModal();closePatchOptionsModal();closePatchGroupEditModal();closePositionMenu();closeRearLabelEditor();closeUnpatchFixtureModal();closePatchColumnsModal();closePatchFormatModal();
     }
   });
-  ['settingsModal','walkthroughModal','projectInfoModal','revisionModal','distroSettingsModal','singleDistroSettingsModal','exportModal','fixturePatchPdfModal','outputModal','fixturePatchModal','patchImportModal','patchOptionsModal','patchGroupEditModal','positionModal','unpatchFixtureModal','patchColumnsModal','patchFormatModal'].forEach(id=>{
+  ['settingsModal','walkthroughModal','projectInfoModal','revisionModal','distroSettingsModal','singleDistroSettingsModal','exportModal','fixturePatchPdfModal','outputModal','fixturePatchModal','patchImportModal','patchOptionsModal','patchGroupEditModal','positionModal','rearLabelEditModal','unpatchFixtureModal','patchColumnsModal','patchFormatModal'].forEach(id=>{
     const modal=$(id);
     modal.addEventListener('click',e=>{
       if(e.target!==modal)return;
@@ -1779,6 +1777,7 @@ function attachEvents(){
       if(id==='singleDistroSettingsModal')activeSingleDistro=null;
       if(id==='projectInfoModal')closeRevisionModal();
       if(id==='unpatchFixtureModal')selectedUnpatchIds.clear();
+      if(id==='rearLabelEditModal')rearLabelEditorOpen=false;
       if(id==='patchOptionsModal')pendingPatchAdds=null;
       if(id==='patchGroupEditModal'){activePatchGroupEditKey='';selectedPatchGroupEditIds.clear()}
       if(id==='patchImportModal')patchImportState={headers:[],rows:[],mapping:{},matches:{},newFixtures:{}};
