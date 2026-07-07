@@ -1,0 +1,75 @@
+{
+  "schema": "lighting_colour_reference_v1",
+  "description": "Colour reference file. Each HEX code is linked to multiple possible colour names and aliases.",
+  "colours": {
+    "#FF0000": {
+      "names": [
+        "Red",
+        "R"
+      ]
+  },
+    "#EA9B56": {
+      "names": [
+        "Orange",
+        "Oran",
+        "O",
+        "OR"
+      ]
+  },
+    "#FFFF54": {
+      "names": [
+        "Yellow",
+        "Yell",
+        "Y"
+      ]
+    },
+    "#BFBFBF": {
+      "names": [
+        "Grey",
+        "Gray",
+        "GRA"
+      ]
+    },
+    "#4FADEA": {
+      "names": [
+        "Blue",
+        "Cyan",
+        "B",
+        "Blu"
+      ]
+    },
+    "#ED73CF": {
+      "names": [
+        "Pink",
+        "P"
+      ]
+    },
+    "#AEA1C4": {
+      "names": [
+        "Lavender",
+        "Purple",
+        "Purp",
+        "Lav"
+      ]
+    },
+    "#FFFFFF": {
+      "names": [
+        "White",
+        "WH"
+      ]
+    },
+    "#A06640": {
+      "names": [
+        "Brown",
+        "BRO",
+        "Poo"
+      ]
+    },
+    "#000000": {
+      "names": [
+        "Black",
+        "Bla"
+      ]
+    }
+  }
+}
