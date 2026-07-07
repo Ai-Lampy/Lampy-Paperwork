@@ -1,87 +1,63 @@
 {
   "networkExpansion": [
     {
-      "id": "ma-pu-m",
-      "manufacturer": "MA Lighting",
-      "name": "grandMA3 processing unit M",
-      "type": "Processing Unit",
-      "ports": "2 x 1GbE",
-      "power": "IEC",
+      "id": "generic-managed-switch-8",
+      "manufacturer": "Generic",
+      "name": "Managed Switch 8 Port",
+      "type": "Network Switch",
+      "ports": "8 x 1GbE",
+      "power": "IEC / PSU dependent",
       "protocols": [
-        "MA-Net3",
-        "MANet2"
-      ],
-      "softwareModes": [
-        {
-          "name": "Mode 2",
-          "parameterCount": 4096,
-          "parameters": {
-            "Parameters in Mode 2": 4096
-          }
-        },
-        {
-          "name": "Mode 3",
-          "parameterCount": 4096,
-          "parameters": {
-            "Parameters in Mode 3": 4096
-          }
-        }
+        "sACN",
+        "Art-Net",
+        "MA-Net"
       ]
     },
     {
-      "id": "ma-pu-l",
-      "manufacturer": "MA Lighting",
-      "name": "grandMA3 processing unit L",
-      "type": "Processing Unit",
-      "ports": "2 x 1GbE",
-      "power": "IEC",
+      "id": "generic-managed-switch-16",
+      "manufacturer": "Generic",
+      "name": "Managed Switch 16 Port",
+      "type": "Network Switch",
+      "ports": "16 x 1GbE",
+      "power": "IEC / PSU dependent",
       "protocols": [
-        "MA-Net3",
-        "MANet2"
-      ],
-      "softwareModes": [
-        {
-          "name": "Mode 2",
-          "parameterCount": 8192,
-          "parameters": {
-            "Parameters in Mode 2": 8192
-          }
-        },
-        {
-          "name": "Mode 3",
-          "parameterCount": 8192,
-          "parameters": {
-            "Parameters in Mode 3": 8192
-          }
-        }
+        "sACN",
+        "Art-Net",
+        "MA-Net"
       ]
     },
     {
-      "id": "ma-pu-xl",
-      "manufacturer": "MA Lighting",
-      "name": "grandMA3 processing unit XL",
-      "type": "Processing Unit",
-      "ports": "2 x 1GbE",
-      "power": "IEC",
+      "id": "generic-dmx-node-8",
+      "manufacturer": "Generic",
+      "name": "8 Port DMX Node",
+      "type": "Network DMX Node",
+      "ports": "8 x DMX",
+      "power": "PoE / Mains dependent",
       "protocols": [
-        "MA-Net3",
-        "MANet2"
-      ],
-      "softwareModes": [
-        {
-          "name": "Mode 2",
-          "parameterCount": 16384,
-          "parameters": {
-            "Parameters in Mode 2": 16384
-          }
-        },
-        {
-          "name": "Mode 3",
-          "parameterCount": 16384,
-          "parameters": {
-            "Parameters in Mode 3": 16384
-          }
-        }
+        "sACN",
+        "Art-Net"
+      ]
+    },
+    {
+      "id": "generic-wireless-access-point",
+      "manufacturer": "Generic",
+      "name": "Wireless Access Point",
+      "type": "Network Access Point",
+      "ports": "1 x 1GbE",
+      "power": "PoE",
+      "protocols": [
+        "TCP/IP"
+      ]
+    },
+    {
+      "id": "etc-gadget-ii",
+      "manufacturer": "ETC",
+      "name": "Gadget II",
+      "type": "USB DMX Interface",
+      "ports": "2 x DMX",
+      "power": "USB",
+      "protocols": [
+        "DMX"
       ]
     }
   ]
