@@ -24,7 +24,8 @@
             "Parameters in Mode 3": 20480
           }
         }
-      ],
+      ]
+    },
     {
       "id": "grandma3-light",
       "manufacturer": "MA Lighting",
@@ -44,91 +45,12 @@
             "Parameters in Mode 3": 16384
           }
         }
-      ],
+      ]
+    },
     {
-      "id": "grandma3-light",
-      "manufacturer": "MA Lighting",
-      "name": "grandMA3 light",
-      "softwareModes": [
-        {
-          "name": "Mode 2",
-          "parameterCount": 4096,
-          "parameters": {
-            "Parameters in Mode 2": 4096
-          }
-        },
-        {
-          "name": "Mode 3",
-          "parameterCount": 16384,
-          "parameters": {
-            "Parameters in Mode 3": 16384
-          }
-        }
-      ],
-    {
-      "id": "grandma3-light",
-      "manufacturer": "MA Lighting",
-      "name": "grandMA3 light",
-      "softwareModes": [
-        {
-          "name": "Mode 2",
-          "parameterCount": 4096,
-          "parameters": {
-            "Parameters in Mode 2": 4096
-          }
-        },
-        {
-          "name": "Mode 3",
-          "parameterCount": 16384,
-          "parameters": {
-            "Parameters in Mode 3": 16384
-          }
-        }
-      ],
-    {
-      "id": "grandma3-Compact XT",
+      "id": "grandma3-compact-xt",
       "manufacturer": "MA Lighting",
       "name": "grandMA3 Compact XT",
-      "softwareModes": [
-        {
-          "name": "Mode 2",
-          "parameterCount": 4096,
-          "parameters": {
-            "Parameters in Mode 2": 4096
-          }
-        },
-        {
-          "name": "Mode 3",
-          "parameterCount": 8192,
-          "parameters": {
-            "Parameters in Mode 3": 8192
-          }
-        }
-      ],
-    {
-      "id": "grandma3-Compact XT",
-      "manufacturer": "MA Lighting",
-      "name": "grandMA3 Compact XT",
-      "softwareModes": [
-        {
-          "name": "Mode 2",
-          "parameterCount": 4096,
-          "parameters": {
-            "Parameters in Mode 2": 4096
-          }
-        },
-        {
-          "name": "Mode 3",
-          "parameterCount": 8192,
-          "parameters": {
-            "Parameters in Mode 3": 8192
-          }
-        }
-      ],
-    {
-      "id": "grandma3-Compact",
-      "manufacturer": "MA Lighting",
-      "name": "grandMA3 Compact",
       "softwareModes": [
         {
           "name": "Mode 2",
@@ -145,6 +67,24 @@
           }
         }
       ]
+    },
+    {
+      "id": "grandma3-compact",
+      "manufacturer": "MA Lighting",
+      "name": "grandMA3 Compact",
+      "softwareModes": [
+        {
+          "name": "Mode 2",
+          "parameterCount": 4096,
+          "parameters": {
+            "Parameters in Mode 2": 4096
+          }
+        },
+        {
+          "name": "Mode 3",
+          "parameterCount": 8192,
+          "parameters": {
+            "Parameters in Mode 3": 8192
           }
         }
       ]
