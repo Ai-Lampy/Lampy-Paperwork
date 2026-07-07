@@ -5,70 +5,111 @@
     "#FF0000": {
       "names": [
         "Red",
+        "Re",
         "R"
       ]
   },
-    "#EA9B56": {
+    "#FF881A": {
       "names": [
         "Orange",
-        "Oran",
         "O",
-        "OR"
+        "Or",
+        "Ora",
+        "Oran",
+        "Orang"
       ]
   },
-    "#FFFF54": {
+    "#FFFF3D": {
       "names": [
         "Yellow",
+        "Y",
+        "Ye",
+        "Yel",
         "Yell",
-        "Y"
+        "Yello"
       ]
     },
-    "#BFBFBF": {
+    "#9E9D9D": {
       "names": [
         "Grey",
-        "Gray",
-        "GRA"
+        "G",
+        "Gr",
+        "Gre",
+        "Gra"
       ]
     },
-    "#4FADEA": {
+    "#00B311": {
+      "names": [
+        "Green",
+        "G",
+        "Gr",
+        "Gre",
+        "Gre",
+        "Gree"
+      ]
+    },
+    "#008EE6": {
       "names": [
         "Blue",
         "Cyan",
         "B",
-        "Blu"
+        "Bl",
+        "Blu",
+        "C",
+        "Cy",
+        "Cya"
       ]
     },
-    "#ED73CF": {
+    "#FA23C8": {
       "names": [
         "Pink",
-        "P"
+        "P",
+        "Pi",
+        "Pin"
       ]
     },
-    "#AEA1C4": {
+    "#9C54FF": {
       "names": [
         "Lavender",
         "Purple",
+        "L",
+        "La",
+        "Lav",
+        "Lave",
+        "Laven",
+        "Lavend",
+        "Lavende",
+        "P",
+        "Pu",
+        "Pur",
         "Purp",
-        "Lav"
+        "Purpl"
       ]
     },
     "#FFFFFF": {
       "names": [
         "White",
-        "WH"
+        "W",
+        "Wh",
+        "Whi",
+        "Whit"
       ]
     },
-    "#A06640": {
+    "#914F21": {
       "names": [
         "Brown",
-        "BRO",
-        "Poo"
+        "Br",
+        "Bro",
+        "Brow"
       ]
     },
     "#000000": {
       "names": [
         "Black",
-        "Bla"
+        "B",
+        "Bl",
+        "Bla",
+        "Blac"
       ]
     }
   }
