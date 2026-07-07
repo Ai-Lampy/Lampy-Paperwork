@@ -711,19 +711,250 @@
       }
     ],
     "Robe": [
-      {
-        "fixture": "BMFL Followspot",
-        "modes": {
-          "Mode 1": 33,
-          "Mode 2": 27
-        }
-      },
-      {
-        "fixture": "iForte LTX",
-        "modes": {
-          "Mode 1": 54
-        }
-      }
+  {
+  "fixture": "BMFL Blade",
+  "watts": 2000,
+  "weight": 37.9,
+  "modes": {
+    "Mode 1": 49,
+    "Mode 2": 42
+  }
+},
+{
+  "fixture": "BMFL Followspot",
+  "watts": 2000,
+  "weight": 35,
+  "modes": {
+    "Mode 1": 33,
+    "Mode 2": 27
+  }
+},
+{
+  "fixture": "BMFL Followspot LT",
+  "watts": 2000,
+  "weight": 35,
+  "modes": {
+    "Mode 1": 33,
+    "Mode 2": 27
+  }
+},
+{
+  "fixture": "BMFL Spot",
+  "watts": 2000,
+  "weight": 36,
+  "modes": {
+    "Mode 1": 41,
+    "Mode 2": 33
+  }
+},
+{
+  "fixture": "Forte",
+  "watts": 1250,
+  "weight": 41,
+  "modes": {
+    "Mode 1": 54
+  }
+},
+{
+  "fixture": "Giga Pointe",
+  "watts": 500,
+  "weight": 26.5,
+  "modes": {
+    "Mode 1": 39,
+    "Mode 2": 41
+  }
+},
+{
+  "fixture": "iBolt",
+  "watts": 700,
+  "weight": 54.4,
+  "modes": {
+    "Mode 1": 37
+  }
+},
+{
+  "fixture": "iEsprite",
+  "watts": 800,
+  "weight": 30,
+  "modes": {
+    "Mode 1": 49,
+    "Mode 2": 42,
+    "Mode 3": 50,
+    "Mode 4": 43
+  }
+},
+{
+  "fixture": "iEsprite LTL",
+  "watts": 950,
+  "weight": 37.5,
+  "modes": {
+    "Mode 1": 53
+  }
+},
+{
+  "fixture": "iForte",
+  "watts": 1250,
+  "weight": 42.5,
+  "modes": {
+    "Mode 1": 54,
+    "Mode 2": 56
+  }
+},
+{
+  "fixture": "iForte LTX",
+  "watts": 1250,
+  "weight": 49,
+  "modes": {
+    "Mode 1": 54
+  }
+},
+{
+  "fixture": "iPainte",
+  "watts": 440,
+  "weight": 24.5,
+  "modes": {
+    "Mode 1": 44,
+    "Mode 2": 45
+  }
+},
+{
+  "fixture": "iSpiider X",
+  "watts": 660,
+  "weight": 19,
+  "modes": {
+    "Mode 1": 49,
+    "Mode 2": 27,
+    "Mode 3": 33,
+    "Mode 4": 90,
+    "Mode 5": 27,
+    "Mode 6": 47,
+    "Mode 7": 91,
+    "Mode 8": 110,
+    "Mode 9": 104,
+    "Mode 10": 123
+  }
+},
+{
+  "fixture": "iTetra 2",
+  "watts": 600,
+  "weight": 17.5,
+  "modes": {
+    "Mode 1": 34,
+    "Mode 2": 56,
+    "Mode 3": 97,
+    "Mode 4": 115,
+    "Mode 5": 110,
+    "Mode 6": 128
+  }
+},
+{
+  "fixture": "Led Pointe",
+  "watts": 400,
+  "weight": 21,
+  "modes": {
+    "Mode 1": 39
+  }
+},
+{
+  "fixture": "Mega Pointe",
+  "watts": 670,
+  "weight": 22,
+  "modes": {
+    "Mode 1": 34,
+    "Mode 2": 39
+  }
+},
+{
+  "fixture": "Spiider",
+  "watts": 660,
+  "weight": 13.3,
+  "modes": {
+    "Mode 1": 49,
+    "Mode 2": 27,
+    "Mode 3": 33,
+    "Mode 4": 90,
+    "Mode 5": 27,
+    "Mode 6": 47,
+    "Mode 7": 91,
+    "Mode 8": 110,
+    "Mode 9": 104,
+    "Mode 10": 123
+  }
+},
+{
+  "fixture": "SVOPATT",
+  "watts": 2400,
+  "weight": 39.7,
+  "modes": {
+    "Mode 1": 21,
+    "Mode 2": 21,
+    "Mode 3": 124,
+    "Mode 4": 286,
+    "Mode 5": 384
+  }
+},
+{
+  "fixture": "SVOPATT Classic",
+  "watts": 2400,
+  "weight": 36.3,
+  "modes": {
+    "Mode 1": 1,
+    "Mode 2": 5,
+    "Mode 3": 19,
+    "Mode 4": 83
+  }
+},
+{
+  "fixture": "Tarrantula",
+  "watts": 1000,
+  "weight": 21.2,
+  "modes": {
+    "Mode 1": 28,
+    "Mode 2": 48,
+    "Mode 3": 146,
+    "Mode 4": 183,
+    "Mode 5": 159,
+    "Mode 6": 196
+  }
+},
+{
+  "fixture": "Tetra 2",
+  "watts": 600,
+  "weight": 17.5,
+  "modes": {
+    "Mode 1": 34,
+    "Mode 2": 56,
+    "Mode 3": 97,
+    "Mode 4": 115,
+    "Mode 5": 110,
+    "Mode 6": 128
+  }
+},
+{
+  "fixture": "Tetra X",
+  "watts": 320,
+  "weight": 15.7,
+  "modes": {
+    "Mode 1": 41,
+    "Mode 2": 61,
+    "Mode 3": 75,
+    "Mode 4": 84,
+    "Mode 5": 88,
+    "Mode 6": 97
+  }
+},
+{
+  "fixture": "WTF!",
+  "watts": 1400,
+  "weight": 28.5,
+  "modes": {
+    "Mode 1": 32,
+    "Mode 2": 44,
+    "Mode 3": 64,
+    "Mode 4": 106,
+    "Mode 5": 140
+  }
+}
     ],
     "Roxx": [
       {
