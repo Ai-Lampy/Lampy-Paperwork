@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Lampy Paperwork V4.15</title>
+<title>Lampy Paperwork V4.16</title>
 <style>
 :root{--label-w:18mm;--label-h:34mm;--label-gap:0.5mm;--gap-y:2mm;--radius:3mm;--border:1mm;--border-col:#ffffff;--stripe:4mm;--front-aux-w:18mm;--front-aux-h:34mm;--front-output-w:72mm;--front-output-h:34mm;--rear-soca-w:70mm;--rear-soca-h:50mm;--rear-aux-w:85mm;--rear-aux-h:30mm;--rear-aux-gap:5mm;--rear-output-w:90mm;--rear-output-h:60mm;--top-size:18pt;--bottom-size:14pt;--top-align:center;--bottom-align:center;--top-v-align:center;--bottom-v-align:center;--top-font:Cochin,'Times New Roman',Times,serif;--bottom-font:Cochin,'Times New Roman',Times,serif;--top-weight:700;--bottom-weight:700;--top-transform:none;--bottom-transform:none;--top-text-align:center;--bottom-text-align:center}
 *{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f6f7f9;color:#111}h1{margin:0;font-size:28px}h2,h3{margin:0 0 12px}button,input,select,textarea{font:inherit}.top{display:flex;align-items:center;justify-content:space-between;padding:18px 84px 18px 24px;gap:20px}.topActions{display:flex;align-items:center;justify-content:flex-end;gap:12px}.reportIssueBtn{border:1px solid #111;background:#fff;color:#111;border-radius:999px;padding:9px 14px;font-weight:900;text-decoration:none;white-space:nowrap}.reportIssueBtn:hover{background:#111;color:#fff}.badge{font-size:14px;border:1px solid #e0c64b;background:#fff4bf;border-radius:8px;padding:7px 12px;margin-left:12px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{border:1px solid #d9dee7;background:#fff;border-radius:7px;padding:10px 18px;cursor:pointer}.btn:hover{background:#f7f9fc}.btn.primary{background:#17a957;color:#fff;border-color:#17a957;font-weight:700}.btn.danger{color:#b42318}.btn.add{font-weight:800;font-size:18px;line-height:1;padding:8px 14px;background:#111;color:#fff;border-color:#111}.gear{font-size:24px;border:1px solid #d9dee7;background:#fff;border-radius:999px;width:44px;height:44px;cursor:pointer}.gear:hover{background:#f7f9fc}.tourLogoSlot{display:flex;align-items:center;justify-content:flex-end;min-width:80px;max-width:180px}.tourLogo{display:block;max-width:160px;max-height:54px;object-fit:contain}.tourLogoExport{position:absolute;top:5mm;right:5mm;max-width:34mm;max-height:18mm;object-fit:contain;z-index:3}.tourLogoUploadPreview{border:1px dashed #cfd6e1;border-radius:8px;background:#fff;min-height:130px;display:flex;align-items:center;justify-content:center;padding:14px}.tourLogoUploadPreview img{max-width:260px;max-height:120px;object-fit:contain}.logoActions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}.menuButton{position:fixed;right:18px;top:18px;z-index:18;border:1px solid #d9dee7;background:#111;color:#fff;border-radius:999px;width:46px;height:46px;font-size:24px;font-weight:900;cursor:pointer;box-shadow:0 10px 28px rgba(16,24,40,.18)}.menuButton:hover{background:#2a2a2a}.actionSidebar{position:fixed;right:18px;top:74px;width:min(260px,calc(100vw - 36px));z-index:17;border:1px solid #dfe3ea;border-radius:10px;background:#fff;box-shadow:0 18px 48px rgba(16,24,40,.22);padding:12px;transform:translateX(calc(100% + 28px));transition:transform .18s ease}.actionMenuOpen .actionSidebar{transform:translateX(0)}.actionSidebar h2{font-size:15px;margin:0 0 10px}.actionSidebar .btn{width:100%;margin:0 0 8px;text-align:left;font-weight:800}
@@ -26,7 +26,7 @@
 <style id="dynamicPrintPageStyle">@page{size:A4 landscape;margin:5mm}</style>
 </head>
 <body>
-<div class="top"><div><h1>Lampy Paperwork V4.15</h1></div><div class="topActions"><a class="reportIssueBtn" href="https://github.com/Ai-Lampy/Lampy-Paperwork/issues" target="_blank" rel="noopener">Report Issue</a><div id="tourLogoSlot" class="tourLogoSlot"></div></div></div>
+<div class="top"><div><h1>Lampy Paperwork V4.16</h1></div><div class="topActions"><a class="reportIssueBtn" href="https://github.com/Ai-Lampy/Lampy-Paperwork/issues" target="_blank" rel="noopener">Report Issue</a><div id="tourLogoSlot" class="tourLogoSlot"></div></div></div>
 <button class="menuButton" type="button" aria-label="Actions" aria-expanded="false" onclick="toggleActionMenu()">☰</button>
 <aside class="actionSidebar" id="actionSidebar"><h2>Actions</h2><button class="btn" onclick="openProjectInfo();closeActionMenu()">Project Info</button><button class="btn" onclick="newProjectFile();closeActionMenu()">New Project</button><button class="btn" onclick="downloadProjectFile();closeActionMenu()">Download Project</button><button class="btn" onclick="chooseProjectFile();closeActionMenu()">Open Project</button><button class="btn" onclick="openWalkthrough();closeActionMenu()">Walk-through</button><button class="btn primary" onclick="openExportLayout();closeActionMenu()">Export</button></aside>
 <input id="excelFile" type="file" accept=".xlsx,.xls,.xml,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel,text/xml" class="hidden">
@@ -41,6 +41,7 @@
 <div id="patchGroupEditModal" class="modal hidden"><div class="modalCard" style="width:min(1050px,100%);"><div class="modalHead"><h2>Fixture Type Options</h2><button class="close" onclick="closePatchGroupEditModal()">×</button></div><div id="patchGroupEditBody"></div></div></div>
 <div id="positionModal" class="modal hidden"><div class="modalCard" style="width:min(860px,100%);"><div class="modalHead"><h2>Positions</h2><button class="close" onclick="closePositionMenu()">×</button></div><div id="positionMenuBody"></div></div></div>
 <div id="rearLabelEditModal" class="modal hidden"><div class="modalCard" style="width:min(620px,100%);"><div class="modalHead"><h2 id="rearLabelEditTitle">Rear Label Format</h2><button class="close" onclick="closeRearLabelEditor()">×</button></div><div id="rearLabelEditBody"></div></div></div>
+<div id="labelFormatModal" class="modal hidden"><div class="modalCard" style="width:min(820px,100%);"><div class="modalHead"><h2>Label Format</h2><button class="close" onclick="closeLabelFormat()">×</button></div><div class="projectTabs"><button class="projectTab active" type="button" data-label-format-tab="front" onclick="setLabelFormatTab('front')">Front Labels</button><button class="projectTab" type="button" data-label-format-tab="rear" onclick="setLabelFormatTab('rear')">Rear Labels</button></div><div id="labelFormatBody"></div></div></div>
 <div id="unpatchFixtureModal" class="modal hidden"><div class="modalCard" style="width:min(900px,100%);"><div class="modalHead"><h2>Unpatch Fixture</h2><button class="close" onclick="closeUnpatchFixtureModal()">×</button></div><div id="unpatchFixtureBody"></div></div></div>
 <div id="patchColumnsModal" class="modal hidden"><div class="modalCard" style="width:min(620px,100%);"><div class="modalHead"><h2>Show / Hide Columns</h2><button class="close" onclick="closePatchColumnsModal()">×</button></div><div id="patchColumnsBody"></div></div></div>
 <div id="patchFormatModal" class="modal hidden"><div class="modalCard" style="width:min(900px,100%);"><div class="modalHead"><h2>Patch Sheet Format</h2><button class="close" onclick="closePatchFormatModal()">×</button></div><div id="patchFormatBody"></div></div></div>
@@ -93,8 +94,9 @@
 </style>
 <script>
 'use strict';
-const VERSION='4.15';
+const VERSION='4.16';
 const DEFAULT_FONT="Cochin,'Times New Roman',Times,serif";
+const LABEL_FORMAT_SIZES=[8,9,10,11,12,14,16,18,20,22,24,26,28,30];
 const STORAGE_KEY='lampyPaperworkDataV1';
 const SETTINGS_KEY='lampyPaperworkSettingsV1';
 const app={labels:[],socaNames:[],socaMeta:[],distros:[],projectInfo:null,fixturePatch:[],collapsed:{soca:new Set(),previews:new Set(),distros:new Set()}};
@@ -134,6 +136,8 @@ let activePatchGroupEditKey='';
 let selectedPatchGroupEditIds=new Set();
 let lastCustomFixtureRequest=null;
 let rearLabelEditorOpen=false;
+let activeLabelFormatTab='front';
+let labelFormatSettings={front:defaultMasterLabelFormat(),rear:defaultMasterLabelFormat()};
 const PATCH_COLUMNS=[
   {key:'fixId',label:'#',cls:'num',field:'fixId',width:56},
   {key:'universe',label:'Uni',cls:'uni',field:'universe',width:48},
@@ -236,8 +240,10 @@ function recommendedSupply(totals){totals=totals||{};const amps=Math.max(parseFl
 function formatAmps(value){return Number((parseFloat(value||0)||0).toFixed(2))}
 function textAlignFromFlex(v){return v==='flex-start'?'left':v==='flex-end'?'right':'center'}
 function defaultColour(id, fallback){const el=$(id);return el?el.value:fallback}
-function defaultRearFormat(){return {fontSize:28,fontFamily:DEFAULT_FONT,bold:true,underline:false,outline:false}}
-function normaliseRearFormat(fmt){fmt=fmt||{};return {fontSize:Math.max(1,parseFloat(fmt.fontSize||28)||28),fontFamily:fmt.fontFamily||DEFAULT_FONT,bold:fmt.bold!==false,underline:!!fmt.underline,outline:!!fmt.outline}}
+function defaultMasterLabelFormat(){return {fontFamily:DEFAULT_FONT,fontSize:16,bold:true,italic:false,underline:false,outline:true,textColor:'#000000'}}
+function normaliseMasterLabelFormat(fmt){fmt=fmt||{};const size=parseFloat(fmt.fontSize||16)||16;return {fontFamily:fmt.fontFamily||DEFAULT_FONT,fontSize:LABEL_FORMAT_SIZES.includes(size)?size:16,bold:fmt.bold!==false,italic:!!fmt.italic,underline:!!fmt.underline,outline:fmt.outline!==false,textColor:fmt.textColor||'#000000'}}
+function defaultRearFormat(){return {...normaliseMasterLabelFormat(labelFormatSettings?.rear),custom:false}}
+function normaliseRearFormat(fmt){fmt=fmt||{};const base=normaliseMasterLabelFormat(labelFormatSettings?.rear);return {...base,fontSize:Math.max(1,parseFloat(fmt.fontSize||base.fontSize)||base.fontSize),fontFamily:fmt.fontFamily||base.fontFamily,bold:fmt.bold!==undefined?fmt.bold!==false:base.bold,italic:fmt.italic!==undefined?!!fmt.italic:base.italic,underline:fmt.underline!==undefined?!!fmt.underline:base.underline,outline:fmt.outline!==undefined?fmt.outline!==false:base.outline,textColor:fmt.textColor||base.textColor,custom:!!fmt.custom}}
 function blankLabel(){return {top:'',bottom:'',c1:defaultColour('defC1','#ffffff'),c2:defaultColour('defC2','#ffffff'),override:false,useC2:false,text:'#000000',formatOn:false,fontSize:18,fontFamily:DEFAULT_FONT,bold:true,underline:false,outline:false,outlineColour:'#000000',rearFormat:defaultRearFormat()}}
 function defaultMeta(){return {c1:defaultColour('defC1','#ffffff'),c2:defaultColour('defC2','#ffffff'),useC2:false,text:defaultColour('textCol','#000000'),rearFormat:defaultRearFormat()}} 
 function chunkCount(){return Math.ceil(app.labels.length/6)}
@@ -248,8 +254,8 @@ function normaliseAuxGroup(g){
   while(labels.length<3)labels.push(blankLabel());
   return {meta:{c1:g.meta?.c1||'#ffffff',c2:g.meta?.c2||'#ffffff',useC2:g.meta?.useC2===true,text:g.meta?.text||'#000000'},labels:labels.slice(0,3)};
 }
-function blankOutputLabel(text=''){return {text,c1:defaultColour('defC1','#ffffff'),c2:defaultColour('defC2','#ffffff'),useC2:false,textColour:defaultColour('textCol','#000000'),fontSize:18,fontFamily:DEFAULT_FONT,bold:true,underline:false,outline:false,outlineColour:'#000000',rearFormat:defaultRearFormat()}}
-function normaliseOutputLabel(l,fallback=''){l=l||{};return {text:l.text||l.top||fallback,c1:l.c1||'#ffffff',c2:l.c2||'#ffffff',useC2:l.useC2===true,textColour:l.textColour||'#000000',fontSize:Math.max(1,parseFloat(l.fontSize||18)||18),fontFamily:l.fontFamily||DEFAULT_FONT,bold:l.bold!==false,underline:!!l.underline,outline:!!l.outline,outlineColour:l.outlineColour||'#000000',rearFormat:normaliseRearFormat(l.rearFormat)}}
+function blankOutputLabel(text=''){return {text,c1:defaultColour('defC1','#ffffff'),c2:defaultColour('defC2','#ffffff'),useC2:false,textColour:defaultColour('textCol','#000000'),formatOn:false,fontSize:18,fontFamily:DEFAULT_FONT,bold:true,underline:false,outline:false,outlineColour:'#000000',rearFormat:defaultRearFormat()}}
+function normaliseOutputLabel(l,fallback=''){l=l||{};return {text:l.text||l.top||fallback,c1:l.c1||'#ffffff',c2:l.c2||'#ffffff',useC2:l.useC2===true,textColour:l.textColour||'#000000',formatOn:l.formatOn===true,fontSize:Math.max(1,parseFloat(l.fontSize||18)||18),fontFamily:l.fontFamily||DEFAULT_FONT,bold:l.bold!==false,underline:!!l.underline,outline:!!l.outline,outlineColour:l.outlineColour||'#000000',rearFormat:normaliseRearFormat(l.rearFormat)}}
 function normaliseOutputGroup(g){g=g||{};const type=g.type||'Output';const qty=Math.max(1,Math.min(10,parseInt(g.qty||g.quantity||1,10)||1));const labels=Array.isArray(g.labels)?g.labels.map(l=>normaliseOutputLabel(l,type)):[];while(labels.length<qty)labels.push(blankOutputLabel(type));return {type,qty,labels:labels.slice(0,qty)}}
 function groupedOutputGroups(groups){const out=[];(Array.isArray(groups)?groups:[]).forEach(raw=>{const group=normaliseOutputGroup(raw);let existing=out.find(g=>g.type===group.type);if(!existing){out.push(group);return}existing.labels=existing.labels.concat(group.labels.map(l=>normaliseOutputLabel(l,group.type)));existing.qty=existing.labels.length});return out}
 function normaliseDistro(d,idx){
@@ -267,9 +273,9 @@ function clearProjectState(){app.labels=[];app.socaNames=[];app.socaMeta=[];app.
 function appPayload(){return {version:VERSION,labels:app.labels,socaNames:app.socaNames,socaMeta:app.socaMeta,distros:app.distros,projectInfo:ensureProjectInfo(),fixturePatch:app.fixturePatch,collapsed:{soca:[...app.collapsed.soca],previews:[...app.collapsed.previews],distros:[...app.collapsed.distros]}}}
 function persist(){ensureSocaData();try{localStorage.setItem(STORAGE_KEY,JSON.stringify(appPayload()))}catch(e){console.warn('Could not persist project data locally',e)}}
 function settingsIds(){return ['radius','border','borderCol','labelSpacing','topSize','bottomSize','stripe','textCol','grid','topAlign','bottomAlign','topVAlign','bottomVAlign','topFont','bottomFont','topWeight','bottomWeight','topTransform','bottomTransform','defC1','defC2','paperSize','orientation','frontOutputW','frontOutputH','rearSocaW','rearSocaH','rearAuxW','rearAuxH','rearAuxGap','rearOutputW','rearOutputH']}
-function settingsPayload(){const data={labelDefaultsV414:true};settingsIds().forEach(id=>{const el=$(id);if(el)data[id]=el.type==='checkbox'?el.checked:el.value});return data}
+function settingsPayload(){const data={labelDefaultsV414:true,labelFormatSettings:{front:normaliseMasterLabelFormat(labelFormatSettings.front),rear:normaliseMasterLabelFormat(labelFormatSettings.rear)}};settingsIds().forEach(id=>{const el=$(id);if(el)data[id]=el.type==='checkbox'?el.checked:el.value});return data}
 function saveSettings(){localStorage.setItem(SETTINGS_KEY,JSON.stringify(settingsPayload()))}
-function applySettingsPayload(data){Object.entries(data&&typeof data==='object'?data:{}).forEach(([id,val])=>{const el=$(id);if(!el)return;if(el.type==='checkbox')el.checked=!!val;else el.value=val});setTextVars();updatePrintPageStyle()}
+function applySettingsPayload(data){data=data&&typeof data==='object'?data:{};labelFormatSettings={front:normaliseMasterLabelFormat(data.labelFormatSettings?.front),rear:normaliseMasterLabelFormat(data.labelFormatSettings?.rear)};Object.entries(data).forEach(([id,val])=>{const el=$(id);if(!el)return;if(el.type==='checkbox')el.checked=!!val;else el.value=val});setTextVars();updatePrintPageStyle()}
 function migrateSettingsDefaults(data){data=data&&typeof data==='object'?data:{};if(data.labelDefaultsV414)return data;if(String(data.rearSocaW||'54')==='54')data.rearSocaW='70';if(String(data.rearSocaH||'18')==='18')data.rearSocaH='50';if(String(data.rearAuxW||'18')==='18')data.rearAuxW='85';if(String(data.rearAuxH||'34')==='34')data.rearAuxH='30';if(String(data.rearOutputW||'54')==='54')data.rearOutputW='90';if(String(data.rearOutputH||'34')==='34')data.rearOutputH='60';data.frontOutputW=data.frontOutputW||'72';data.frontOutputH=data.frontOutputH||'34';data.rearAuxGap=data.rearAuxGap||'5';data.labelDefaultsV414=true;return data}
 function loadSettings(){const data=migrateSettingsDefaults(safeJSONParse(localStorage.getItem(SETTINGS_KEY)||'{}',{}));applySettingsPayload(data);localStorage.setItem(SETTINGS_KEY,JSON.stringify(settingsPayload()))}
 function loadProjectPayload(data,saveLocal=true){const source=data?.app||data?.project||data||{};app.labels=Array.isArray(source.labels)?source.labels.map(normaliseLabel):[];app.socaNames=Array.isArray(source.socaNames)?source.socaNames.map(v=>String(v||'')):[];app.socaMeta=Array.isArray(source.socaMeta)?source.socaMeta.map(m=>({c1:m?.c1||'#ffffff',c2:m?.c2||'#ffffff',useC2:m?.useC2===true,text:m?.text||'#000000',rearFormat:normaliseRearFormat(m?.rearFormat)})):[];app.distros=Array.isArray(source.distros)?source.distros.map(normaliseDistro):[];app.projectInfo=normaliseProjectInfo(source.projectInfo);app.fixturePatch=Array.isArray(source.fixturePatch)?source.fixturePatch.map(normalisePatchFixture):[];const collapsed=source.collapsed||{};app.collapsed.soca=new Set(Array.isArray(collapsed.soca)?collapsed.soca:[]);app.collapsed.previews=new Set(Array.isArray(collapsed.previews)?collapsed.previews:[]);app.collapsed.distros=new Set(Array.isArray(collapsed.distros)?collapsed.distros:[]);fixturePatchViewOptions=normalisePatchViewOptions(data?.fixturePatchViewOptions||source.fixturePatchViewOptions);if(data?.fixturePatchReference)fixturePatchReference=normaliseFixturePatchReference(data.fixturePatchReference);ensureSocaData();syncPositionsFromPatch();if(data?.settings){applySettingsPayload(data.settings);localStorage.setItem(SETTINGS_KEY,JSON.stringify(settingsPayload()))}if(saveLocal)persist()}
@@ -282,7 +288,7 @@ function setTextVars(){const r=document.documentElement;r.style.setProperty('--t
 function settingMm(id,fallback){const n=parseFloat($(id)?.value||fallback);return Math.max(1,Number.isFinite(n)?n:fallback)+'mm'}
 function applyDesignVars(){const r=document.documentElement;r.style.setProperty('--radius',$('radius').value+'mm');r.style.setProperty('--border',$('border').value+'mm');r.style.setProperty('--border-col',$('borderCol').value);r.style.setProperty('--label-gap',$('labelSpacing').value+'mm');r.style.setProperty('--front-output-w',settingMm('frontOutputW',72));r.style.setProperty('--front-output-h',settingMm('frontOutputH',34));r.style.setProperty('--rear-soca-w',settingMm('rearSocaW',70));r.style.setProperty('--rear-soca-h',settingMm('rearSocaH',50));r.style.setProperty('--rear-aux-w',settingMm('rearAuxW',85));r.style.setProperty('--rear-aux-h',settingMm('rearAuxH',30));r.style.setProperty('--rear-aux-gap',settingMm('rearAuxGap',5));r.style.setProperty('--rear-output-w',settingMm('rearOutputW',90));r.style.setProperty('--rear-output-h',settingMm('rearOutputH',60));r.style.setProperty('--top-size',$('topSize').value+'pt');r.style.setProperty('--bottom-size',$('bottomSize').value+'pt');setTextVars()}
 function cssStripe(c1,c2,useC2=true){if(!useC2||c1===c2)return c1;const w=parseFloat($('stripe').value||4);return `repeating-linear-gradient(135deg, ${c1} 0 ${w}mm, ${c2} ${w}mm ${w*2}mm)`}
-function effectiveSocaStyle(s){const m=app.socaMeta[s]||defaultMeta();return {c1:m.c1||'#ffffff',c2:m.c2||'#ffffff',useC2:m.useC2===true,text:m.text||defaultColour('textCol','#000000')}}
+function effectiveSocaStyle(s){const m=app.socaMeta[s]||defaultMeta();return {c1:m.c1||'#ffffff',c2:m.c2||'#ffffff',useC2:m.useC2===true,text:normaliseMasterLabelFormat(labelFormatSettings.front).textColor}}
 function effectiveLabelStyle(i){const l=app.labels[i]||blankLabel();const m=effectiveSocaStyle(Math.floor(i/6));const bg=l.override?{c1:l.c1||m.c1,c2:l.c2||m.c2,useC2:l.useC2===true}:m;return {...bg,text:l.formatOn?(l.text||m.text):m.text}}
 function distroRanges(){if(!app.distros.length)return[];let start=0;return app.distros.map((d,idx)=>{d.count=Math.max(1,parseInt(d.count||1,10)||1);const range={idx,start,end:Math.min(start+d.count,chunkCount()),count:d.count,d};start+=d.count;return range}).filter(r=>r.start<r.end)}
 function previewKey(didx,local){return 'd'+didx+'_p'+local}
@@ -327,32 +333,45 @@ function fitLabel(label){if(!label)return;label.querySelectorAll('.topHalf,.bott
 function fitOutputText(el){fitTextToBox(el,1)}
 function fitRearText(el){fitTextToBox(el,1)}
 function fitAllLabelText(root=document){root.querySelectorAll('.label').forEach(fitLabel);root.querySelectorAll('.auxText').forEach(fitAuxText);root.querySelectorAll('.outputText').forEach(fitOutputText);root.querySelectorAll('.rearLabelText').forEach(fitRearText)}
-function clearTextStyle(el){el.dataset.basePt='';el.style.fontFamily='';el.style.fontWeight='';el.style.textDecoration='';el.style.webkitTextStroke='';el.style.paintOrder=''}
-function applyWayTextStyle(label,l){if(!label)return;label.querySelectorAll('.topHalf,.bottomHalf').forEach(el=>{clearTextStyle(el);if(!l.formatOn)return;el.dataset.basePt=l.fontSize||18;el.style.fontWeight=l.bold===false?'400':'700';el.style.textDecoration=l.underline?'underline':'none';el.style.webkitTextStroke=l.outline?'1mm '+(l.outlineColour||'#000000'):'0 transparent';el.style.paintOrder='stroke fill'})}
+function hexToRgb(hex){const clean=String(hex||'').replace('#','').trim();if(clean.length===3){return clean.split('').map(c=>parseInt(c+c,16))}return [clean.slice(0,2),clean.slice(2,4),clean.slice(4,6)].map(v=>parseInt(v||'0',16))}
+function autoOutlineColour(textColor){const [r,g,b]=hexToRgb(textColor),lum=(0.2126*r+0.7152*g+0.0722*b)/255;return lum<0.5?'#ffffff':'#000000'}
+function clearTextStyle(el){el.dataset.basePt='';el.style.fontFamily='';el.style.fontWeight='';el.style.fontStyle='';el.style.color='';el.style.textDecoration='';el.style.webkitTextStroke='';el.style.paintOrder=''}
+function applyMasterTextStyle(el,scope){const fmt=normaliseMasterLabelFormat(labelFormatSettings[scope]||labelFormatSettings.front);el.dataset.basePt=fmt.fontSize;el.style.fontFamily=fmt.fontFamily;el.style.fontWeight=fmt.bold?'700':'400';el.style.fontStyle=fmt.italic?'italic':'normal';el.style.color=fmt.textColor;el.style.textDecoration=fmt.underline?'underline':'none';el.style.webkitTextStroke=fmt.outline?'.45mm '+autoOutlineColour(fmt.textColor):'0 transparent';el.style.paintOrder='stroke fill'}
+function applyWayTextStyle(label,l){if(!label)return;label.querySelectorAll('.topHalf,.bottomHalf').forEach(el=>{clearTextStyle(el);applyMasterTextStyle(el,'front');if(!l.formatOn)return;el.dataset.basePt=l.fontSize||16;el.style.fontFamily=l.fontFamily||DEFAULT_FONT;el.style.color=l.text||el.style.color;el.style.fontWeight=l.bold===false?'400':'700';el.style.textDecoration=l.underline?'underline':'none';el.style.webkitTextStroke=l.outline?'1mm '+(l.outlineColour||autoOutlineColour(el.style.color||'#000000')):'0 transparent';el.style.paintOrder='stroke fill'})}
 function applyAuxTextStyle(text,l){
   clearTextStyle(text);
+  applyMasterTextStyle(text,'front');
   if(!l.formatOn)return;
-  text.dataset.basePt=l.fontSize||18;
+  text.dataset.basePt=l.fontSize||16;
+  text.style.fontFamily=l.fontFamily||DEFAULT_FONT;
+  text.style.color=l.text||text.style.color;
   text.style.fontWeight=l.bold===false?'400':'700';
   text.style.textDecoration=l.underline?'underline':'none';
-  text.style.webkitTextStroke=l.outline?'1mm '+(l.outlineColour||'#000000'):'0 transparent';
+  text.style.webkitTextStroke=l.outline?'1mm '+(l.outlineColour||autoOutlineColour(text.style.color||'#000000')):'0 transparent';
   text.style.paintOrder='stroke fill';
 }
 function applyOutputTextStyle(text,l){
-  text.dataset.basePt=l.fontSize||18;
+  clearTextStyle(text);
+  applyMasterTextStyle(text,'front');
+  if(!l.formatOn)return;
+  text.dataset.basePt=l.fontSize||16;
   text.style.fontFamily=l.fontFamily||DEFAULT_FONT;
+  text.style.color=l.textColour||text.style.color;
   text.style.fontWeight=l.bold===false?'400':'700';
   text.style.textDecoration=l.underline?'underline':'none';
-  text.style.webkitTextStroke=l.outline?'1mm '+(l.outlineColour||'#000000'):'0 transparent';
+  text.style.webkitTextStroke=l.outline?'1mm '+(l.outlineColour||autoOutlineColour(text.style.color||'#000000')):'0 transparent';
   text.style.paintOrder='stroke fill';
 }
 function applyRearTextStyle(text,fmt){
   fmt=normaliseRearFormat(fmt);
-  text.dataset.basePt=fmt.fontSize||28;
+  clearTextStyle(text);
+  text.dataset.basePt=fmt.fontSize||16;
   text.style.fontFamily=fmt.fontFamily||DEFAULT_FONT;
   text.style.fontWeight=fmt.bold===false?'400':'700';
+  text.style.fontStyle=fmt.italic?'italic':'normal';
+  text.style.color=fmt.textColor||'#000000';
   text.style.textDecoration=fmt.underline?'underline':'none';
-  text.style.webkitTextStroke=fmt.outline?'0.6mm #000000':'0 transparent';
+  text.style.webkitTextStroke=fmt.outline?'.45mm '+autoOutlineColour(fmt.textColor||'#000000'):'0 transparent';
   text.style.paintOrder='stroke fill';
 }
 function makeAuxLabel(l,style,auxId){
@@ -596,7 +615,15 @@ function addPreviewWindow(host,didx,local,start,end,distroName,rangeStart=0){con
 function setSheetTab(tab){if(['labels','rear','table'].includes(tab)){activeDistroLabelTab=tab;activeSheetTab='distroLabels'}else activeSheetTab=['home','fixturePatch','powerSheet','distroLabels'].includes(tab)?tab:'home';render()}
 function setDistroLabelTab(tab){activeDistroLabelTab=['labels','rear','table'].includes(tab)?tab:'labels';render()}
 function currentLabelRoute(){return activeSheetTab==='distroLabels'?activeDistroLabelTab:activeSheetTab}
-function distroLabelTabsMarkup(){return `<div class="distroLabelNav"><button class="sheetTab ${activeDistroLabelTab==='labels'?'active':''}" type="button" onclick="setDistroLabelTab('labels')">Front RCBO Labels</button><button class="sheetTab ${activeDistroLabelTab==='rear'?'active':''}" type="button" onclick="setDistroLabelTab('rear')">Rear Labels</button><button class="sheetTab ${activeDistroLabelTab==='table'?'active':''}" type="button" onclick="setDistroLabelTab('table')">Table View</button><button class="btn" type="button" onclick="openSettings()">Label Settings</button></div>`}
+function distroLabelTabsMarkup(){return `<div class="distroLabelNav"><button class="sheetTab ${activeDistroLabelTab==='labels'?'active':''}" type="button" onclick="setDistroLabelTab('labels')">Front RCBO Labels</button><button class="sheetTab ${activeDistroLabelTab==='rear'?'active':''}" type="button" onclick="setDistroLabelTab('rear')">Rear Labels</button><button class="sheetTab ${activeDistroLabelTab==='table'?'active':''}" type="button" onclick="setDistroLabelTab('table')">Table View</button><button class="btn" type="button" onclick="openSettings()">Label Settings</button><button class="btn" type="button" onclick="openLabelFormat()">Label Format</button></div>`}
+function labelFormatSizeOptions(current){return LABEL_FORMAT_SIZES.map(size=>`<option value="${size}" ${Number(current)===size?'selected':''}>${size}</option>`).join('')}
+function labelFormatControls(scope){const fmt=normaliseMasterLabelFormat(labelFormatSettings[scope]),label=scope==='front'?'Front Labels':'Rear Labels';return `<div class="settingsCard full"><h3>${label}</h3><p class="hint" style="margin-top:0">${scope==='front'?'Socapex RCBO, Aux Outlet, and Output text defaults.':'Rear Socapex, Aux Outlet, and Output text defaults.'}</p><div class="row"><div><label>Font</label><select data-label-format="${scope}" data-k="fontFamily">${fontOptionsMarkup(fmt.fontFamily)}</select></div><div><label>Font Size pt</label><select data-label-format="${scope}" data-k="fontSize">${labelFormatSizeOptions(fmt.fontSize)}</select></div></div><div class="row"><div><label>Text Colour</label><input class="color" type="color" data-label-format="${scope}" data-k="textColor" value="${escapeAttr(fmt.textColor)}"></div><div><label>Outline Colour</label><input value="${autoOutlineColour(fmt.textColor)}" disabled></div></div><div class="wayFormatChecks wide"><label class="formatBubble"><input type="checkbox" data-label-format="${scope}" data-k="bold" ${fmt.bold?'checked':''}> Bold</label><label class="formatBubble"><input type="checkbox" data-label-format="${scope}" data-k="italic" ${fmt.italic?'checked':''}> Italic</label><label class="formatBubble"><input type="checkbox" data-label-format="${scope}" data-k="underline" ${fmt.underline?'checked':''}> Underline</label><label class="formatBubble"><input type="checkbox" data-label-format="${scope}" data-k="outline" ${fmt.outline?'checked':''}> Outline</label></div></div>`}
+function renderLabelFormatModal(){document.querySelectorAll('[data-label-format-tab]').forEach(btn=>btn.classList.toggle('active',btn.dataset.labelFormatTab===activeLabelFormatTab));const body=$('labelFormatBody');if(!body)return;body.innerHTML=`<div class="settingsGrid">${labelFormatControls(activeLabelFormatTab)}</div>`;body.querySelectorAll('[data-label-format]').forEach(inp=>{inp.addEventListener('input',()=>updateLabelFormatSetting(inp));inp.addEventListener('change',()=>updateLabelFormatSetting(inp))})}
+function openLabelFormat(){activeLabelFormatTab=activeLabelFormatTab||'front';renderLabelFormatModal();$('labelFormatModal').classList.remove('hidden')}
+function closeLabelFormat(){$('labelFormatModal')?.classList.add('hidden')}
+function setLabelFormatTab(tab){activeLabelFormatTab=tab==='rear'?'rear':'front';renderLabelFormatModal()}
+function applyRearMasterFormatToAll(){const master=normaliseMasterLabelFormat(labelFormatSettings.rear);app.socaMeta.forEach(meta=>{meta.rearFormat={...master,custom:false}});app.distros.forEach((d,didx)=>{for(let g=0;g<auxGroupCount(d);g++)for(let j=0;j<3;j++)auxLabel(d,g,j).rearFormat={...master,custom:false};for(let g=0;g<outputGroupCount(d);g++){const group=outputGroup(d,g);for(let j=0;j<group.qty;j++)outputLabel(d,g,j).rearFormat={...master,custom:false}}})}
+function updateLabelFormatSetting(inp){const scope=inp.dataset.labelFormat==='rear'?'rear':'front',key=inp.dataset.k;const fmt=labelFormatSettings[scope]=normaliseMasterLabelFormat(labelFormatSettings[scope]);fmt[key]=inp.type==='checkbox'?inp.checked:(key==='fontSize'?parseFloat(inp.value):inp.value);labelFormatSettings[scope]=normaliseMasterLabelFormat(fmt);if(scope==='rear')applyRearMasterFormatToAll();saveSettings();persist();renderLabelFormatModal();render()}
 function updateSheetTabs(){document.querySelectorAll('[data-sheet-tab]').forEach(btn=>btn.classList.toggle('active',btn.dataset.sheetTab===activeSheetTab));const hint=$('sheetTabHint'),footer=$('sheetFooterHint'),quick=$('quickDistroButton'),route=currentLabelRoute();if(quick)quick.classList.toggle('hidden',!['labels','rear','table','powerSheet','distroLabels'].includes(activeSheetTab));if(activeSheetTab==='home'){if(hint)hint.textContent='Project overview • Project info • Fixture and label counts';if(footer)footer.textContent='Use Project Info to add file details, dates, production info and revisions.'}else if(route==='rear'){if(hint)hint.textContent='Rear labels for Socapex outlets, Aux outlets, and Outputs';if(footer)footer.textContent='Rear Labels use the label names and colour settings.'}else if(route==='table'){if(hint)hint.textContent='Spreadsheet-style data entry • Distro tabs • Edits update the preview data directly';if(footer)footer.textContent='Table View edits Distro names, Socapex names, Aux labels, Output labels, text, and colours.'}else if(activeSheetTab==='fixturePatch'){if(hint)hint.textContent='Fixture patch sheet • Add fixtures from JSON reference • grouped by fixture and mode';if(footer)footer.textContent='Fixture Patch uses json/fixture_patch_reference.json for manufacturer, fixture and mode data.'}else if(activeSheetTab==='powerSheet'){if(hint)hint.textContent='Power calculations • Fix IDs linked to Fixture Patch • watts loaded from JSON';if(footer)footer.textContent='Enter Fix IDs only. Matching patched fixtures fill type, watts, and amps automatically.'}else{if(hint)hint.textContent='Distro labels • Front RCBO labels • Rear labels • Table View';if(footer)footer.textContent='Use Label Settings here to adjust label sizes, design, fonts, and defaults.'}}
 function normaliseHex(value,fallback='#ffffff'){const text=String(value||'').trim();return /^#[0-9a-f]{6}$/i.test(text)?text:fallback}
 function setTableDistro(idx){activeTableDistro=idx;render()}
@@ -1264,9 +1291,11 @@ function rearFormatControls(kind,attrs,fmt){
   fmt=normaliseRearFormat(fmt);
   const data=dataAttrs(attrs);
   return `<div><label>Font</label><select data-rear-format="${kind}" ${data} data-k="fontFamily">${fontOptionsMarkup(fmt.fontFamily)}</select></div>
-    <div><label>Font Size pt</label><input type="number" min="1" max="120" step="0.5" data-rear-format="${kind}" ${data} data-k="fontSize" value="${fmt.fontSize}"></div>
+    <div><label>Font Size pt</label><select data-rear-format="${kind}" ${data} data-k="fontSize">${labelFormatSizeOptions(fmt.fontSize)}</select></div>
+    <div class="wide"><label>Text Colour</label><input class="color" type="color" data-rear-format="${kind}" ${data} data-k="textColor" value="${escapeAttr(fmt.textColor||'#000000')}"></div>
     <div class="wayFormatChecks wide">
       <div class="toggle"><input type="checkbox" data-rear-format="${kind}" ${data} data-k="bold" ${fmt.bold?'checked':''}><label>Bold</label></div>
+      <div class="toggle"><input type="checkbox" data-rear-format="${kind}" ${data} data-k="italic" ${fmt.italic?'checked':''}><label>Italic</label></div>
       <div class="toggle"><input type="checkbox" data-rear-format="${kind}" ${data} data-k="underline" ${fmt.underline?'checked':''}><label>Underline</label></div>
       <div class="toggle"><input type="checkbox" data-rear-format="${kind}" ${data} data-k="outline" ${fmt.outline?'checked':''}><label>Outline</label></div>
     </div>`;
@@ -1297,6 +1326,7 @@ function updateRearFormat(inp){
   if(!target)return;
   const key=inp.dataset.k;
   target.fmt[key]=inp.type==='checkbox'?inp.checked:(key==='fontSize'?Math.max(1,parseFloat(inp.value||1)||1):inp.value);
+  target.fmt.custom=true;
   if(target.kind==='soca')updateRearSocaLabel(target.s);
   if(target.kind==='aux')updateRearAuxLabel(target.didx,target.g,target.j);
   if(target.kind==='output')updateRearOutputLabel(target.didx,target.g,target.j);
@@ -1460,6 +1490,7 @@ function updateOutputField(inp){
   const l=outputLabel(d,g,j);
   const key=inp.dataset.k;
   l[key]=inp.type==='checkbox'?inp.checked:(inp.type==='number'?Math.max(1,parseFloat(inp.value||1)||1):inp.value);
+  if(['fontSize','fontFamily','bold','underline','outline','outlineColour','textColour'].includes(key))l.formatOn=true;
   if(key==='useC2'){
     const colour2=inp.closest('.inputCard').querySelector('[data-k="c2"][data-output="'+didx+'"][data-group="'+g+'"][data-way="'+j+'"]');
     if(colour2)colour2.disabled=!inp.checked;
@@ -1765,10 +1796,10 @@ function attachEvents(){
   });
   document.addEventListener('keydown',e=>{
     if(e.key==='Escape'){
-      closeActionMenu();closeSettings();closeWalkthrough();closeProjectInfo();closeDistroSettings();closeSingleDistroSettings();closeExportLayout();closeFixturePatchPdfPreview();closeOutputModal();closeFixturePatchModal();closePatchImportModal();closePatchOptionsModal();closePatchGroupEditModal();closePositionMenu();closeRearLabelEditor();closeUnpatchFixtureModal();closePatchColumnsModal();closePatchFormatModal();
+      closeActionMenu();closeSettings();closeWalkthrough();closeProjectInfo();closeDistroSettings();closeSingleDistroSettings();closeExportLayout();closeFixturePatchPdfPreview();closeOutputModal();closeFixturePatchModal();closePatchImportModal();closePatchOptionsModal();closePatchGroupEditModal();closePositionMenu();closeRearLabelEditor();closeLabelFormat();closeUnpatchFixtureModal();closePatchColumnsModal();closePatchFormatModal();
     }
   });
-  ['settingsModal','walkthroughModal','projectInfoModal','revisionModal','distroSettingsModal','singleDistroSettingsModal','exportModal','fixturePatchPdfModal','outputModal','fixturePatchModal','patchImportModal','patchOptionsModal','patchGroupEditModal','positionModal','rearLabelEditModal','unpatchFixtureModal','patchColumnsModal','patchFormatModal'].forEach(id=>{
+  ['settingsModal','walkthroughModal','projectInfoModal','revisionModal','distroSettingsModal','singleDistroSettingsModal','exportModal','fixturePatchPdfModal','outputModal','fixturePatchModal','patchImportModal','patchOptionsModal','patchGroupEditModal','positionModal','rearLabelEditModal','labelFormatModal','unpatchFixtureModal','patchColumnsModal','patchFormatModal'].forEach(id=>{
     const modal=$(id);
     modal.addEventListener('click',e=>{
       if(e.target!==modal)return;
