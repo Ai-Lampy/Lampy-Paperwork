@@ -64,6 +64,28 @@
           "parameterCount": 8192
         }
       ]
+    },
+    {
+      "id": "grandma2-full-size",
+      "manufacturer": "MA Lighting",
+      "name": "grandMA2 Full Size",
+      "softwareModes": [
+        {
+          "name": "Mode 2",
+          "parameterCount": 8192
+        }
+      ]
+    },
+    {
+      "id": "grandma2-light",
+      "manufacturer": "MA Lighting",
+      "name": "grandMA2 Light",
+      "softwareModes": [
+        {
+          "name": "Mode 2",
+          "parameterCount": 4096
+        }
+      ]
     }
   ]
 }

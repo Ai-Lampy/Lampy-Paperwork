@@ -31,7 +31,7 @@
       ]
     },
     {
-      "id": "ma-npu-xl",
+      "id": "ma-npu-l",
       "manufacturer": "MA Lighting",
       "name": "grandMA3 NPU XL",
       "softwareModes": [
@@ -42,6 +42,17 @@
         {
           "name": "Mode 3",
           "parameterCount": 16384
+        }
+      ]
+    },
+    {
+      "id": "ma-npu",
+      "manufacturer": "MA Lighting",
+      "name": "grandMA2 NPU",
+      "softwareModes": [
+        {
+          "name": "Mode 2",
+          "parameterCount": 4096
         }
       ]
     }
