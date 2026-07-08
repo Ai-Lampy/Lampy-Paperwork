@@ -2,6 +2,146 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V5.8 - 2026-07-08
+
+- Updated the Home tab stats to remove Front/Rear/Total label counts.
+- Added Console and Parameters stats to the Home tab, with NPU stats shown only when NPUs exist in the project.
+- Made Home panels collapsible and expandable.
+- Added a Console / Network Summary Home panel listing added consoles and NPUs with modes, protocols, and IP addresses.
+- Moved Revision Summary to the bottom of the Home panel grid.
+- Normalised comma-formatted console parameter counts in `json/console_reference.json` to valid JSON numbers.
+
+## V5.7 - 2026-07-08
+
+- Removed duplicated `Parameters in Mode X` display labels from `json/npu_reference.json`.
+- Kept NPU mode `parameterCount` values for parameter-total calculations.
+
+## V5.6 - 2026-07-08
+
+- Removed duplicated `Parameters in Mode X` display labels from `json/console_reference.json`.
+- Kept console mode `parameterCount` values for calculations while hiding internal count keys from the parameter details panel.
+
+## V5.5 - 2026-07-08
+
+- Changed Control/Network parameter totals so consoles contribute only the single highest console parameter count for the selected console modes.
+- Added `+ NPU` to the Consoles tab for adding parameter-expanding processing units.
+- Added `json/npu_reference.json` as the dedicated NPU/processing-unit reference source.
+- Migrated saved processing-unit data from the previous `expansionUnits` field into `npus` for backwards compatibility.
+- Removed the `+ Expansion Unit` workflow from the Network Equipment tab.
+- Restored Network Equipment as a reference-only tab for switches, DMX nodes, ETC, and other network hardware.
+
+## V5.4 - 2026-07-08
+
+- Fixed `json/console_reference.json` so it is valid JSON again.
+- Removed duplicate console reference entries and kept one clean entry per console type.
+- Normalised console IDs while preserving the Mode 2 and Mode 3 parameter counts from the broken reference file.
+
+## V5.3 - 2026-07-08
+
+- Promoted the safe cleanup draft into the main app.
+- Removed the unused Control/Network modal-state variable and obsolete assignments.
+
+## V5.2 - 2026-07-08
+
+- Moved the Control/Network `Parameters Available -` total into the Consoles toolbar beside the console count and `+ Console` button.
+- Removed the separate Control/Network parameter-total toolbar row.
+
+## V5.1 - 2026-07-08
+
+- Updated console reference JSON to include mode-specific parameter counts for Mode 2 and Mode 3.
+- Added a Control/Network parameter total labelled `Parameters Available -`.
+- Added project save/load support for Control/Network expansion units.
+- Added a `+ Expansion Unit` workflow for adding MA Lighting processing units with software mode, IP address, and parameter-count preview.
+- Updated network expansion reference JSON with editable MA Lighting processing unit entries.
+
+## V5 - 2026-07-07
+
+- Added a new top-level `Control/Network` tab after Power Calculations.
+- Added `Consoles` and `Network Equipment` sub-tabs inside Control/Network.
+- Added a `+ Console` workflow with console reference selection, software mode, two protocol selectors, and two IP address fields.
+- Added project save/load support for Control/Network console data.
+- Added `json/console_reference.json` for editable console, software mode, protocol, and parameter reference data.
+- Added `json/network_expansion_reference.json` for editable network expansion equipment reference data.
+
+## V4.27 - 2026-07-07
+
+- Fixed colour-list selections in sheet-preview editors so selected colours reliably write back to the active editor field and trigger preview updates.
+
+## V4.26 - 2026-07-07
+
+- Changed Socapex, Aux, and Output editor Text Format font-size controls to use the same fixed dropdown options as the Front Label Format menu.
+
+## V4.25 - 2026-07-07
+
+- Resized per-way Socapex editor Override Colour 1 and Colour 2 fields so both stay contained within the fixed 223px Way card.
+
+## V4.24 - 2026-07-07
+
+- Fixed the Socapex Way editor cards at 223px wide so colour and text-format controls no longer change the editor layout.
+
+## V4.23 - 2026-07-07
+
+- Reduced the per-way Text Format colour fields in the Socapex editor to compact fixed widths so opening text formatting no longer stretches the way card layout.
+
+## V4.22 - 2026-07-07
+
+- Reduced RCBO per-way Override colour fields to fixed compact widths so Colour 1 and Colour 2 no longer stretch across the Socapex editor card.
+- Moved the per-way Colour 2 toggle onto its own row inside the override controls to keep the colour fields aligned and small.
+
+## V4.21 - 2026-07-07
+
+- Fixed RCBO Socapex editor layout so enabling per-way Override colours no longer widens the editor cards or shifts the sheet preview.
+- Constrained override Colour 1 and Colour 2 text fields to the compact editor sizing used before the typed colour-name controls.
+
+## V4.20 - 2026-07-07
+
+- Changed colour fields and colour summaries to display the first JSON colour name instead of stored hex values where a matching colour exists.
+- Updated Position Summary, Fixture Patch colour cells, Fixture Patch quick options, and fixture-type colour edit fields to use shared colour-name display logic.
+- Kept internal colour values normalised to hex for reliable rendering and exports while keeping user-facing fields readable.
+
+## V4.19 - 2026-07-07
+
+- Restored the Distro Label preview/editor layout by constraining typed colour controls to the compact footprint of the previous colour inputs.
+- Replaced the native colour datalist with a custom colour menu so colour options can show their resolved background colour.
+- Changed the colour menu to show only the first alias/name for each colour in `json/colour_reference_template.json` while keeping all aliases valid when typed manually.
+
+## V4.18 - 2026-07-07
+
+- Replaced all native browser colour pickers with typed colour fields backed by `json/colour_reference_template.json`.
+- Added a shared colour reference datalist so colour fields can show approved colour names while still allowing typed input.
+- Normalised typed colour aliases through the JSON colour resolver before applying label, position, and format colours.
+- Kept colour fields styled as swatches so users can see the resolved colour without opening a colour picker.
+
+## V4.17 - 2026-07-07
+
+- Added rear-label-only font sizes from 34pt to 50pt in the rear label format controls.
+- Made the rear label floating format dialog more transparent and removed its label text editor so it only controls formatting.
+- Changed rear Socapex sheet previews and exports to show 4 Socapex labels per row.
+- Loaded `/json/colour_reference_template.json` as the app colour alias source so named colours resolve to the exact hex values in the JSON file.
+
+## V4.16 - 2026-07-07
+
+- Added a Distro Labels `Label Format` menu with `Front Labels` and `Rear Labels` tabs.
+- Added master text-format settings for front and rear labels: font, fixed font-size dropdown, bold, italic, underline, outline, and text colour.
+- Defaulted master label text to Cochin, 16pt, black text, and outline on with automatic opposite-colour outline.
+- Applied master front formatting to Socapex RCBO, Aux Outlet, and Output label text with shrink-to-fit retained.
+- Applied master rear formatting to rear Socapex, Aux Outlet, and Output label text while preserving the click-to-edit rear label dialog.
+
+## V4.15 - 2026-07-07
+
+- Restored rear label colour backgrounds for Socapex, Aux, and Output rear label views while keeping rear label colour controls hidden.
+- Replaced the large inline rear label formatting editors with a click-to-edit rear label formatting dialog.
+- Wired rear label previews to refresh when related Socapex, Aux, or Output colour/text data changes.
+- Removed the unused rear inline editor builder code.
+
+## V4.14 - 2026-07-07
+
+- Updated default label sizes: front Socapex/Aux labels stay 18mm x 34mm with 0.5mm spacing, front 3-phase output labels default to 72mm x 34mm, rear Socapex labels default to 70mm x 50mm, rear Aux output labels default to 85mm x 30mm with 5mm spacing, and rear 3-phase output labels default to 90mm x 60mm.
+- Split front and rear output sizing so front output labels and rear output labels no longer share the same size variable.
+- Added a settings migration so unchanged old label-size defaults update to the new V4.14 defaults while preserving obvious custom values.
+- Added per-label rear text formatting for rear Socapex, rear Aux, and rear Output labels without exposing rear label colour controls.
+- Syntax-checked `index.html` and validated all JSON files.
+
 ## V4.13 - 2026-07-01
 
 - Fixed Fixture Patch format menu Bold, Italic, and Underline bubbles so they keep the same flex shape and sizing as the column header toggle bubbles.
@@ -36,4 +176,3 @@ All notable fixes, cleanup work, and published version changes should be recorde
 - Kept the app dependency-free with `index.html` and `/json/` reference files at the deploy root.
 - Added `README.md`, `.nojekyll`, and `docs/cleanup-report.md`.
 - Removed old local published-version archives from the live deploy tree.
-

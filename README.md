@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/29527210/README.md)
 # Lampy Paperwork
 
 This folder is the clean GitHub Pages deploy structure for the live app.
