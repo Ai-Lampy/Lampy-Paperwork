@@ -7,17 +7,11 @@
       "softwareModes": [
         {
           "name": "Mode 2",
-          "parameterCount": 4096,
-          "parameters": {
-            "Parameters in Mode 2": 4096
-          }
+          "parameterCount": 4096
         },
         {
           "name": "Mode 3",
-          "parameterCount": 4096,
-          "parameters": {
-            "Parameters in Mode 3": 4096
-          }
+          "parameterCount": 4096
         }
       ]
     },
@@ -28,17 +22,11 @@
       "softwareModes": [
         {
           "name": "Mode 2",
-          "parameterCount": 4096,
-          "parameters": {
-            "Parameters in Mode 2": 4096
-          }
+          "parameterCount": 4096
         },
         {
           "name": "Mode 3",
-          "parameterCount": 8192,
-          "parameters": {
-            "Parameters in Mode 3": 8192
-          }
+          "parameterCount": 8192
         }
       ]
     },
@@ -49,17 +37,11 @@
       "softwareModes": [
         {
           "name": "Mode 2",
-          "parameterCount": 4096,
-          "parameters": {
-            "Parameters in Mode 2": 4096
-          }
+          "parameterCount": 4096
         },
         {
           "name": "Mode 3",
-          "parameterCount": 16384,
-          "parameters": {
-            "Parameters in Mode 3": 16384
-          }
+          "parameterCount": 16384
         }
       ]
     }
