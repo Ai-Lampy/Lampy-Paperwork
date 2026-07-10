@@ -2,6 +2,55 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V6.3 - 2026-07-10
+
+- Fixed Front RCBO side-pane colour inputs so typed letters can be deleted and edited without immediately committing to a colour.
+- Changed colour fields to commit colour values only when a valid colour is selected or entered.
+- Removed the large duplicate `Socapex Editor` title cell from the side-pane Socapex editor body.
+- Updated individual way editor headers to show `Socapex Name - Way x`.
+
+## V6.2 - 2026-07-10
+
+- Split Front RCBO side-pane way text formatting so Fix ID and Fixture Type columns can be formatted independently.
+- Made colour fields open the full colour list on focus while preserving typed filtering.
+- Allowed blank side-pane Colour 1 and Colour 2 fields to stay empty instead of displaying `White`.
+- Made clearing Colour 2 turn Colour 2 off for the selected way or Socapex.
+- Preserved explicit blank colour values when loading saved project data.
+
+## V6.1 - 2026-07-10
+
+- Removed inline Socapex editor blocks from the Front RCBO Labels sheet so the view displays labels only.
+- Added a right-side Front RCBO editor pane that opens from Socapex headers for full Socapex editing.
+- Added way-level side-pane editing when clicking an individual front label, with `< Previous` and `Next >` navigation between ways.
+- Added side-pane close behaviour for Escape, pane close button, app-background clicks, and switching away from Front RCBO Labels.
+- Reworked the side-pane editor layout to match the supplied table-style Socapex Editor and Way section structure.
+- Added italic support for per-way front label formatting alongside bold and underline.
+- Kept duplicated way controls in the side pane synchronised and made the title-section Col 2 selector enable Colour 2 automatically.
+- Reduced the side-pane editor control sizing to fit the pane cleanly while preserving the supplied table layout.
+- Replaced B/I/U checkbox controls in the side pane with compact word-processor-style toggle buttons.
+
+## V5.12 - 2026-07-10
+
+- Fixed Table View colour cells so every visible colour field can receive focus and open the shared colour list without refreshing the browser tab.
+- Made Table View Colour 2 selections automatically enable the relevant Colour 2 state when chosen from the colour list.
+- Set the Power Calculations table Amps column header text to black so it remains visible.
+
+## V5.11 - 2026-07-10
+
+- Updated Table View Socapex colour controls across all Socapex cards with wider swatches, wider colour fields, and a fixed-width remove button.
+- Shortened the Socapex colour toggle label to `Col 2 On` to keep the master colour row compact.
+
+## V5.10 - 2026-07-10
+
+- Reordered JSON reference fallback URLs so local and project-relative `/json/` files are requested before obsolete root-level paths.
+- Preserved the production GitHub Pages `/Lampy-Paperwork/` path fallback for backwards-compatible hosted loading.
+
+## V5.9 - 2026-07-10
+
+- Standardised the Table View grid so Socapex, Aux, and Output table cards use a consistent fixed card width and spacing.
+- Added explicit table column groups for Table View cards to keep headers, inputs, colour fields, and override columns aligned.
+- Constrained Table View colour inputs to their cells so colour fields no longer change the card width or grid layout.
+
 ## V5.8 - 2026-07-08
 
 - Updated the Home tab stats to remove Front/Rear/Total label counts.
