@@ -2,21 +2,270 @@
   "manufacturer": "ACME",
   "fixtures": [
     {
-      "fixture": "Lyra",
-      "watts": 1190,
-      "weight": 50,
+      "fixture": "Aeco 15",
+      "watts": 1555,
+      "weight": 43,
       "modes": {
-        "Mode 1": 39,
-        "Mode 2": 30,
-        "Mode 3": 31,
-        "Mode 4": 22,
-        "Mode 5": 40
+        "22 Chan": 22,
+        "29 Chan": 29,
+        "31 Chan": 31,
+        "38 Chan": 38
       }
     },
     {
-      "fixture": "Pixel Line IP",
+      "fixture": "Aeco 30 Ip",
+      "watts": 2265,
+      "weight": 52.5,
+      "modes": {
+        "23 Chan": 23,
+        "32 Chan": 32,
+        "34 Chan": 34,
+        "43 Chan": 43
+      }
+    },
+    {
+      "fixture": "Aeco 5",
+      "watts": 670,
+      "weight": 26.5,
+      "modes": {
+        "33 Chan": 33,
+        "24 Chan": 24,
+        "28 Chan": 28
+      }
+    },
+    {
+      "fixture": "Autolux",
+      "watts": 865,
+      "weight": 22,
+      "modes": {
+        "25 Chan": 25
+      }
+    },
+    {
+      "fixture": "Blinder Line 10 Ip",
+      "watts": 600,
+      "weight": 13.6,
+      "modes": {
+        "14 Chan": 14,
+        "55 Chan": 55
+      }
+    },
+    {
+      "fixture": "Blinder Line 5 Ip",
+      "watts": 350,
+      "weight": 7.7,
+      "modes": {
+        "14 Chan": 14,
+        "30 Chan": 30
+      }
+    },
+    {
+      "fixture": "Coolie 186",
+      "watts": 55,
+      "weight": 2.2,
+      "modes": {
+        "4 Chan": 4,
+        "5 Chan": 5,
+        "8 Chan": 8,
+        "10 Chan": 10
+      }
+    },
+    {
+      "fixture": "Cyclone",
+      "watts": 260,
+      "weight": null,
+      "modes": {
+        "27 Chan": 27,
+        "50 Chan": 50,
+        "58 Chan": 58
+      }
+    },
+    {
+      "fixture": "Geist Bswf",
+      "watts": 670,
+      "weight": 24.5,
+      "modes": {
+        "25 Chan": 25,
+        "29 Chan": 29,
+        "34 Chan": 34
+      }
+    },
+    {
+      "fixture": "Gemini",
+      "watts": 1240,
+      "weight": 19.5,
+      "modes": {
+        "58 Chan": 58,
+        "25 Chan": 25,
+        "23 Chan": 23,
+        "35+": "35+",
+        "27 Chan": 27,
+        "70 Chan": 70,
+        "55 Chan": 55
+      }
+    },
+    {
+      "fixture": "Hue 6 Ip",
+      "watts": 820,
+      "weight": 32,
+      "modes": {
+        "43 Chan": 43,
+        "45 Chan": 45,
+        "46 Chan": 46,
+        "50 Chan": 50
+      }
+    },
+    {
+      "fixture": "Hueline 16 Ip",
+      "watts": 190,
+      "weight": null,
+      "modes": {
+        "16 Chan": 16,
+        "18 Chan": 18,
+        "133 Chan": 133,
+        "136 Chan": 136
+      }
+    },
+    {
+      "fixture": "Hyperzone",
+      "watts": 1370,
+      "weight": 26.4,
+      "modes": {
+        "19 Chan": 19,
+        "20 Chan": 20,
+        "21 Chan": 21,
+        "41 Chan": 41,
+        "42 Chan": 42,
+        "43 Chan": 43
+      }
+    },
+    {
+      "fixture": "Lightning X",
+      "watts": 1135,
+      "weight": null,
+      "modes": {
+        "31 Chan": 31,
+        "43 Chan": 43,
+        "100 Chan": 100,
+        "230 Chan": 230,
+        "20+80": "20+80",
+        "20+210": "20+210"
+      }
+    },
+    {
+      "fixture": "Lineforce 10 Ip",
+      "watts": 625,
+      "weight": null,
+      "modes": {
+        "10 Chan": 10,
+        "11 Chan": 11,
+        "16 Chan": 16,
+        "17 Chan": 17,
+        "19 Chan": 19,
+        "20 Chan": 20,
+        "79 Chan": 79,
+        "81 Chan": 81
+      }
+    },
+    {
+      "fixture": "Lineforce 5 Ip",
+      "watts": 325,
+      "weight": 8.6,
+      "modes": {
+        "10 Chan": 10,
+        "11 Chan": 11,
+        "16 Chan": 16,
+        "17 Chan": 17,
+        "19 Chan": 19,
+        "20 Chan": 20,
+        "44 Chan": 44,
+        "46 Chan": 46
+      }
+    },
+    {
+      "fixture": "Lyra",
+      "watts": 1190,
+      "weight": 42,
+      "modes": {
+        "22 Chan": 22,
+        "30 Chan": 30,
+        "31 Chan": 31,
+        "39 Chan": 39,
+        "40 Chan": 40
+      }
+    },
+    {
+      "fixture": "Lyra Bw",
+      "watts": 1455,
+      "weight": 42.5,
+      "modes": {
+        "30 Chan": 30,
+        "18 Chan": 18
+      }
+    },
+    {
+      "fixture": "Mana Hybrid",
+      "watts": 910,
+      "weight": null,
+      "modes": {
+        "24 Chan": 24,
+        "30 Chan": 30
+      }
+    },
+    {
+      "fixture": "Mana Profile",
+      "watts": 910,
+      "weight": 32.5,
+      "modes": {
+        "22 Chan": 22,
+        "31 Chan": 31,
+        "31 Chan (Mode 3)": 31,
+        "40 Chan": 40
+      }
+    },
+    {
+      "fixture": "Neozone",
+      "watts": 960,
+      "weight": 20,
+      "modes": {
+        "17 Chan": 17,
+        "21 Chan": 21,
+        "86 Chan": 86,
+        "10+": "10+"
+      }
+    },
+    {
+      "fixture": "Nova Beam",
+      "watts": 425,
+      "weight": 17.2,
+      "modes": {
+        "19 Chan": 19
+      }
+    },
+    {
+      "fixture": "Oxygen",
+      "watts": 335,
+      "weight": 6.3,
+      "modes": {
+        "17 Chan": 17,
+        "37 Chan": 37
+      }
+    },
+    {
+      "fixture": "Pasodoble",
+      "watts": 85,
+      "weight": 3,
+      "modes": {
+        "4 Chan": 4,
+        "5 Chan": 5,
+        "8 Chan": 8,
+        "10 Chan": 10
+      }
+    },
+    {
+      "fixture": "Pixel Line Ip",
       "watts": 420,
-      "weight": 8,
+      "weight": 7.3,
       "modes": {
         "7 Chan": 7,
         "15 Chan": 15,
@@ -27,13 +276,109 @@
         "65 Chan": 65,
         "68 Chan": 68,
         "70 Chan": 70,
+        "70N": "70N",
         "112 Chan": 112,
         "117 Chan": 117,
         "119 Chan": 119
       }
     },
     {
-      "fixture": "Super DotLine",
+      "fixture": "Pixel Line Ip 500",
+      "watts": 875,
+      "weight": 5.1,
+      "modes": {
+        "8 Chan": 8,
+        "10 Chan": 10,
+        "16 Chan": 16,
+        "18 Chan": 18,
+        "22 Chan": 22,
+        "26 Chan": 26,
+        "34 Chan": 34,
+        "37 Chan": 37,
+        "39 Chan": 39,
+        "56 Chan": 56,
+        "62 Chan": 62,
+        "68 Chan": 68
+      }
+    },
+    {
+      "fixture": "Pulsar Plus S2",
+      "watts": 1200,
+      "weight": null,
+      "modes": {
+        "43 Chan": 43,
+        "153 Chan": 153,
+        "163 Chan": 163,
+        "195 Chan": 195,
+        "27+168": "27+168"
+      }
+    },
+    {
+      "fixture": "Pulsar S2",
+      "watts": 600,
+      "weight": null,
+      "modes": {
+        "21+": "21+",
+        "24 Chan": 24,
+        "39 Chan": 39,
+        "97 Chan": 97
+      }
+    },
+    {
+      "fixture": "Sana Beam",
+      "watts": 465,
+      "weight": 23.8,
+      "modes": {
+        "16 Chan": 16,
+        "27 Chan": 27,
+        "27 Chan (Mode 3)": 27,
+        "29 Chan": 29
+      }
+    },
+    {
+      "fixture": "Sana Profile",
+      "watts": 570,
+      "weight": 26,
+      "modes": {
+        "27 Chan": 27,
+        "36 Chan": 36,
+        "36 Chan (Mode 3)": 36,
+        "45 Chan": 45
+      }
+    },
+    {
+      "fixture": "Sandane Frost",
+      "watts": 215,
+      "weight": 5,
+      "modes": {
+        "11 Chan": 11,
+        "9 Chan": 9,
+        "8 Chan": 8,
+        "7 Chan": 7,
+        "6 Chan": 6
+      }
+    },
+    {
+      "fixture": "Solar Wind",
+      "watts": 665,
+      "weight": 25.5,
+      "modes": {
+        "30 Chan": 30,
+        "24 Chan": 24
+      }
+    },
+    {
+      "fixture": "Stage Par 400 Zoom Ip",
+      "watts": 250,
+      "weight": 8.5,
+      "modes": {
+        "5 Chan": 5,
+        "7 Chan": 7,
+        "9 Chan": 9
+      }
+    },
+    {
+      "fixture": "Super Dotline",
       "watts": 1155,
       "weight": 24,
       "modes": {
@@ -41,7 +386,55 @@
         "27 Chan": 27,
         "99 Chan": 99,
         "108 Chan": 108,
-        "168 Chan": 168
+        "168 Chan": 168,
+        "8+100": "8+100",
+        "8+160": "8+160",
+        "21 Chan": 21
+      }
+    },
+    {
+      "fixture": "Supernova",
+      "watts": 2265,
+      "weight": 52.5,
+      "modes": {
+        "23 Chan": 23,
+        "32 Chan": 32,
+        "34 Chan": 34,
+        "43 Chan": 43
+      }
+    },
+    {
+      "fixture": "Supernova Lt",
+      "watts": 2200,
+      "weight": 64.5,
+      "modes": {
+        "23 Chan": 23,
+        "32 Chan": 32,
+        "35 Chan": 35,
+        "44 Chan": 44
+      }
+    },
+    {
+      "fixture": "Tango",
+      "watts": 55,
+      "weight": null,
+      "modes": {
+        "4 Chan": 4,
+        "5 Chan": 5,
+        "8 Chan": 8,
+        "10 Chan": 10
+      }
+    },
+    {
+      "fixture": "Theta",
+      "watts": 1600,
+      "weight": null,
+      "modes": {
+        "19+": "19+",
+        "27 Chan": 27,
+        "29 Chan": 29,
+        "139 Chan": 139,
+        "141 Chan": 141
       }
     },
     {
@@ -53,7 +446,32 @@
         "71 Chan": 71,
         "75 Chan": 75,
         "85 Chan": 85,
-        "170 Chan": 180
+        "170 Chan": 170
+      }
+    },
+    {
+      "fixture": "Tv Light Panel 3000",
+      "watts": 455,
+      "weight": null,
+      "modes": {
+        "10 Chan": 10,
+        "28 Chan": 28
+      }
+    },
+    {
+      "fixture": "Willow 200",
+      "watts": 220,
+      "weight": 9,
+      "modes": {
+        "17 Chan": 17
+      }
+    },
+    {
+      "fixture": "Willow 500",
+      "watts": 460,
+      "weight": 17.5,
+      "modes": {
+        "18 Chan": 18
       }
     }
   ]
