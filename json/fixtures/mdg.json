@@ -1,0 +1,17 @@
+{
+  "manufacturer": "MDG",
+  "fixtures": [
+    {
+      "fixture": "ATME",
+      "modes": {
+        "Standard": 3
+      }
+    },
+    {
+      "fixture": "The ONE",
+      "modes": {
+        "Standard": 3
+      }
+    }
+  ]
+}

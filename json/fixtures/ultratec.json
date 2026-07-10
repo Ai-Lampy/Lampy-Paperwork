@@ -1,0 +1,11 @@
+{
+  "manufacturer": "Ultratec",
+  "fixtures": [
+    {
+      "fixture": "Versa Fan",
+      "modes": {
+        "N/A": 0
+      }
+    }
+  ]
+}

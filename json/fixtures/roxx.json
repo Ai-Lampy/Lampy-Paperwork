@@ -1,0 +1,29 @@
+{
+  "manufacturer": "Roxx",
+  "fixtures": [
+    {
+      "fixture": "Cluster B2 FC",
+      "modes": {
+        "1CH DWE": 1,
+        "2CH DWE": 2,
+        "4CH DWE": 4,
+        "9CH DWE+": 9,
+        "6CH Strobe": 6,
+        "6CH RGB": 6,
+        "10CH Basic RGB": 10,
+        "14CH Basic RGB": 14,
+        "11CH Section RGB": 11,
+        "11CH Comp RGB": 11,
+        "13CH Standard RGB": 13,
+        "22CH Standard RGB": 22,
+        "24CH Extended RGB": 24,
+        "33CH Extended RGB": 33,
+        "10CH Direct": 10,
+        "12CH Direct": 12,
+        "17CH Direct": 17,
+        "24CH Direct": 24,
+        "41CH Direct": 41
+      }
+    }
+  ]
+}

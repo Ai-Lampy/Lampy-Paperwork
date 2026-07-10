@@ -1,0 +1,11 @@
+{
+  "manufacturer": "Portman",
+  "fixtures": [
+    {
+      "fixture": "P1 Mini",
+      "modes": {
+        "Standard": 43
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "manufacturer": "Astera",
+  "fixtures": [
+    {
+      "fixture": "Helios Tube",
+      "watts": 24,
+      "weight": 0.8,
+      "modes": {
+        "?": 1
+      }
+    },
+    {
+      "fixture": "Hyperion Tube",
+      "watts": 92,
+      "weight": 3,
+      "modes": {
+        "?": 1
+      }
+    },
+    {
+      "fixture": "Pixel Brick",
+      "watts": 12,
+      "weight": 1.12,
+      "modes": {
+        "?": 1
+      }
+    },
+    {
+      "fixture": "Titan Tube",
+      "watts": 0,
+      "weight": 0,
+      "modes": {
+        "DIM RGBAW DIM RGBAW - 4 PIX": 24,
+        "DIM RGBAW DIM RGBAW - 16 PIX - S/Off": 96
+      }
+    }
+  ]
+}

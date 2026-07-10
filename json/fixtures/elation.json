@@ -1,0 +1,32 @@
+{
+  "manufacturer": "Elation",
+  "fixtures": [
+    {
+      "fixture": "DTW 350 IP (2 Cell)",
+      "watts": 470,
+      "weight": 8.2,
+      "modes": {
+        "1 Chan": 1,
+        "Standard": 7,
+        "Extended": 9
+      }
+    },
+    {
+      "fixture": "Magma Prime Hazer",
+      "watts": 700,
+      "weight": 10.2,
+      "modes": {
+        "3 Chan": 3
+      }
+    },
+    {
+      "fixture": "Smarty Max",
+      "watts": 700,
+      "weight": 27.2,
+      "modes": {
+        "Standard": 27,
+        "Extended": 44
+      }
+    }
+  ]
+}

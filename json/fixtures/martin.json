@@ -1,0 +1,163 @@
+{
+  "manufacturer": "Martin",
+  "fixtures": [
+    {
+      "fixture": "AF 1 Fan",
+      "watts": 120,
+      "weight": 8.5,
+      "modes": {
+        "1 Chan": 1
+      }
+    },
+    {
+      "fixture": "Mac Aura PXL",
+      "watts": 560,
+      "weight": 15.6,
+      "modes": {
+        "Basic": 32,
+        "Extended": 89,
+        "Compact": 17,
+        "Ludicrous": 512
+      }
+    },
+    {
+      "fixture": "Mac Aura Raven XIP",
+      "watts": 1020,
+      "weight": 28.8,
+      "modes": {
+        "Basic": 38,
+        "Extended": 149,
+        "Compact": 22,
+        "Ludicrous": 266,
+        "Plaid": 851
+      }
+    },
+    {
+      "fixture": "Mac Aura XB",
+      "watts": 400,
+      "weight": 6.5,
+      "modes": {
+        "Standard": 14,
+        "Extended": 25
+      }
+    },
+    {
+      "fixture": "Mac Aura XIP",
+      "watts": 340,
+      "weight": 8.6,
+      "modes": {
+        "Basic": 36,
+        "Extended": 57,
+        "Compact": 20,
+        "Ludicrous": 93
+      }
+    },
+    {
+      "fixture": "Mac Axiom Hybrid",
+      "watts": 600,
+      "weight": 24.8,
+      "modes": {
+        "Basic": 23
+      }
+    },
+    {
+      "fixture": "Mac Encore Perf CLD",
+      "watts": 580,
+      "weight": 31,
+      "modes": {
+        "Basic": 38
+      }
+    },
+    {
+      "fixture": "Mac One",
+      "watts": 180,
+      "weight": 4.4,
+      "modes": {
+        "Basic": 36,
+        "Compact": 20,
+        "Ludicrous": 108
+      }
+    },
+    {
+      "fixture": "Mac Quantum Profile",
+      "watts": 750,
+      "weight": 23.2,
+      "modes": {
+        "Basic": 19,
+        "Extended": 27
+      }
+    },
+    {
+      "fixture": "Mac Quantum Wash",
+      "watts": 950,
+      "weight": 21,
+      "modes": {
+        "Basic": 17,
+        "Extended": 33
+      }
+    },
+    {
+      "fixture": "Mac Ultra Performance",
+      "watts": 1450,
+      "weight": 44,
+      "modes": {
+        "Basic": 48,
+        "Extended": 58
+      }
+    },
+    {
+      "fixture": "Mac Ultra Wash",
+      "watts": 1450,
+      "weight": 39,
+      "modes": {
+        "Basic": 29
+      }
+    },
+    {
+      "fixture": "Mac Viper Air FX",
+      "watts": 1225,
+      "weight": 35.7,
+      "modes": {
+        "Basic": 20,
+        "Extended": 28
+      }
+    },
+    {
+      "fixture": "Mac Viper Perf",
+      "watts": 1225,
+      "weight": 37.9,
+      "modes": {
+        "Basic": 32,
+        "Extended": 40
+      }
+    },
+    {
+      "fixture": "Mac Viper Profile",
+      "watts": 1225,
+      "weight": 37.2,
+      "modes": {
+        "Basic": 26,
+        "Extended": 34
+      }
+    },
+    {
+      "fixture": "Mac Viper Wash DX",
+      "watts": 1225,
+      "weight": 34.1,
+      "modes": {
+        "Basic": 18,
+        "Extended": 24
+      }
+    },
+    {
+      "fixture": "Mac Viper XIP",
+      "watts": 1040,
+      "weight": 37,
+      "modes": {
+        "Basic": 54,
+        "Extended": 64,
+        "Ludicrous": 70
+      }
+    }
+  ]
+}

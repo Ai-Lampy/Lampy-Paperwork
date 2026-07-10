@@ -1,0 +1,69 @@
+{
+  "manufacturer": "GLP",
+  "fixtures": [
+    {
+      "fixture": "JDC-1",
+      "watts": 1200,
+      "weight": 12,
+      "modes": {
+        "Mode 1 - Compressed": 14,
+        "Mode 2 - Normal": 23,
+        "Mode 3 - S Pix": 68,
+        "Mode 4 - S Pix Pro": 62,
+        "Mode 5 - 1 Pix Pro": 17,
+        "Mode 6 - Easy": 11
+      }
+    },
+    {
+      "fixture": "JDC Burst 1",
+      "watts": 1400,
+      "weight": 14,
+      "modes": {
+        "Mode 1 - Basic": 19,
+        "Mode 2 - FX": 37,
+        "Mode 3 - 12 Segments": 87,
+        "Mode 4 - 24 Segments": 135,
+        "Mode 5 - 48 Segments": 231,
+        "Mode 6 - Full 12 Segments": 105,
+        "Mode 7 - Full 24 Segments": 153,
+        "Mode 8 - Full 48 Segments": 249,
+        "Mode 9 - Legacy Spix": 68,
+        "Mode 10 - Legacy SPix Pro": 62
+      }
+    },
+    {
+      "fixture": "X4 Bar 10",
+      "watts": 230,
+      "weight": 8,
+      "modes": {
+        "Normal": 33,
+        "Compressed": 20,
+        "D Pix": 28,
+        "D Pix H-Res": 29,
+        "S Pix": 48,
+        "S Pix H-Res": 49
+      }
+    },
+    {
+      "fixture": "X4 Bar 20",
+      "watts": 400,
+      "weight": 14.5,
+      "modes": {
+        "Normal": 34,
+        "Compressed": 20,
+        "D Pix": 48,
+        "D Pix H-Res": 49,
+        "S Pix": 88,
+        "S Pix H-Res": 89
+      }
+    },
+    {
+      "fixture": "X4S",
+      "watts": 200,
+      "weight": 5.5,
+      "modes": {
+        "High Res": 19
+      }
+    }
+  ]
+}

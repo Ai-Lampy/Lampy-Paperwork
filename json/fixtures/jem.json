@@ -1,0 +1,13 @@
+{
+  "manufacturer": "Jem",
+  "fixtures": [
+    {
+      "fixture": "ZR44 Smoke",
+      "watts": 1890,
+      "weight": 28,
+      "modes": {
+        "1 Chan": 1
+      }
+    }
+  ]
+}

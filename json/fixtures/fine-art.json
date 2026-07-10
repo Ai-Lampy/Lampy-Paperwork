@@ -1,0 +1,14 @@
+{
+  "manufacturer": "Fine Art",
+  "fixtures": [
+    {
+      "fixture": "1200C Strobe",
+      "watts": 1250,
+      "weight": 11,
+      "modes": {
+        "62 Chan": 62,
+        "138 Chan": 138
+      }
+    }
+  ]
+}

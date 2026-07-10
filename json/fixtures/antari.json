@@ -1,0 +1,13 @@
+{
+  "manufacturer": "Antari",
+  "fixtures": [
+    {
+      "fixture": "HZ-500 Hazer",
+      "watts": 0,
+      "weight": 0,
+      "modes": {
+        "1 Chan": 1
+      }
+    }
+  ]
+}

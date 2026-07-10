@@ -1,0 +1,61 @@
+{
+  "manufacturer": "Clay Paky",
+  "fixtures": [
+    {
+      "fixture": "B-Eye K20",
+      "watts": 794,
+      "weight": 21,
+      "modes": {
+        "Standard": 21,
+        "Standard RGB": 132,
+        "Standard RGBW": 169,
+        "Shapes RGB": 146,
+        "Shapes RGBW": 183
+      }
+    },
+    {
+      "fixture": "B-Eye K25",
+      "watts": 288,
+      "weight": 27.5,
+      "modes": {
+        "Shapes RGB": 35
+      }
+    },
+    {
+      "fixture": "Sharpy",
+      "watts": 280,
+      "weight": 19,
+      "modes": {
+        "Standard": 16,
+        "Vector": 20
+      }
+    },
+    {
+      "fixture": "Sharpy Wash",
+      "watts": 280,
+      "weight": 18.5,
+      "modes": {
+        "Standard": 19,
+        "Vector": 22
+      }
+    },
+    {
+      "fixture": "Scenius Unico",
+      "watts": 1400,
+      "weight": 45.6,
+      "modes": {
+        "Standard": 40,
+        "Vector": 44
+      }
+    },
+    {
+      "fixture": "Xtylos",
+      "watts": 1380,
+      "weight": 24,
+      "modes": {
+        "Standard": 30,
+        "Vector": 31
+      }
+    }
+  ]
+}

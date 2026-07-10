@@ -1,0 +1,35 @@
+{
+  "manufacturer": "Generic",
+  "fixtures": [
+    {
+      "fixture": "2-Lite Mole",
+      "modes": {
+        "Dimmer - 1 Chan": 1
+      }
+    },
+    {
+      "fixture": "4-Lite Mole",
+      "modes": {
+        "Dimmer - 1 Chan": 1
+      }
+    },
+    {
+      "fixture": "4-Lite Linear Mole",
+      "modes": {
+        "Dimmer - 1 Chan": 1
+      }
+    },
+    {
+      "fixture": "8-Lite Mole",
+      "modes": {
+        "Dimmer - 2 Chan": 2
+      }
+    },
+    {
+      "fixture": "Omni",
+      "modes": {
+        "Dimmer - 1 Chan": 1
+      }
+    }
+  ]
+}

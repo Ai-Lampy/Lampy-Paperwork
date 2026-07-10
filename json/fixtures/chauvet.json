@@ -1,0 +1,79 @@
+{
+  "manufacturer": "Chauvet",
+  "fixtures": [
+    {
+      "fixture": "COLORado PXL Curve 12",
+      "watts": 768,
+      "weight": 34.5,
+      "modes": {
+        "Single Control ~ Basic": 20,
+        "Single Control ~ Basic 2": 53,
+        "Single Control ~ Standard": 101,
+        "Single Control ~ Advance": 155,
+        "Single Control ~ Advance 2": 169,
+        "Single Control ~ Full PXL": 169,
+        "Single Control ~ Tour": 179
+      }
+    },
+    {
+      "fixture": "Color Strike M",
+      "watts": 696,
+      "weight": 12.1,
+      "modes": {
+        "8 Chan": 8,
+        "11 Chan": 11,
+        "13 Chan": 13,
+        "24 Chan": 24,
+        "30 Chan": 30,
+        "74 Chan": 74,
+        "97 Chan": 97
+      }
+    },
+    {
+      "fixture": "Maverick Storm 1 Flex",
+      "watts": 738,
+      "weight": 28.8,
+      "modes": {
+        "26 Chan": 26,
+        "33 Chan": 33
+      }
+    },
+    {
+      "fixture": "Rogue Outcast 1 BeamWash",
+      "watts": 372,
+      "weight": 9.16,
+      "modes": {
+        "15 Chan": 15,
+        "24 Chan": 24,
+        "30 Chan": 30,
+        "37 Chan": 37,
+        "64 Chan": 64,
+        "111 Chan": 111,
+        "135 Chan": 135
+      }
+    },
+    {
+      "fixture": "Strike Array 2",
+      "watts": 129,
+      "weight": 8,
+      "modes": {
+        "1 Chan": 1,
+        "2 Chan": 2,
+        "3 Chan": 3,
+        "4 Chan": 4,
+        "8 Chan": 8,
+        "9 Chan": 9
+      }
+    },
+    {
+      "fixture": "Strike Array 4",
+      "watts": 245,
+      "weight": 13,
+      "modes": {
+        "3 Chan": 3,
+        "4 Chan": 4,
+        "9 Chan": 9
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "manufacturer": "Chroma Q",
+  "fixtures": [
+    {
+      "fixture": "CF II 12",
+      "watts": 133,
+      "weight": 5,
+      "modes": {
+        "RGB X4 Off": 3,
+        "RGBA ON TOP RANDOM": 23
+      }
+    },
+    {
+      "fixture": "CF II 48",
+      "watts": 533,
+      "weight": 18,
+      "modes": {
+        "RGB X4 Off": 6
+      }
+    },
+    {
+      "fixture": "CF II 72",
+      "watts": 800,
+      "weight": 24,
+      "modes": {
+        "RGBA ON TOP RANDOM": 103
+      }
+    }
+  ]
+}
