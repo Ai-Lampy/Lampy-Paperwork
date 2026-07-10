@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Lampy Paperwork V6.10</title>
+<title>Lampy Paperwork V6.12</title>
 <style>
 :root{--label-w:18mm;--label-h:34mm;--label-gap:0.5mm;--gap-y:2mm;--radius:3mm;--border:1mm;--border-col:#ffffff;--stripe:4mm;--front-aux-w:18mm;--front-aux-h:34mm;--front-output-w:72mm;--front-output-h:34mm;--rear-soca-w:70mm;--rear-soca-h:50mm;--rear-aux-w:85mm;--rear-aux-h:30mm;--rear-aux-gap:5mm;--rear-output-w:90mm;--rear-output-h:60mm;--top-size:18pt;--bottom-size:14pt;--top-align:center;--bottom-align:center;--top-v-align:center;--bottom-v-align:center;--top-font:Cochin,'Times New Roman',Times,serif;--bottom-font:Cochin,'Times New Roman',Times,serif;--top-weight:700;--bottom-weight:700;--top-transform:none;--bottom-transform:none;--top-text-align:center;--bottom-text-align:center}
 *{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f6f7f9;color:#111}h1{margin:0;font-size:28px}h2,h3{margin:0 0 12px}button,input,select,textarea{font:inherit}.top{display:flex;align-items:center;justify-content:space-between;padding:18px 84px 18px 24px;gap:20px}.topActions{display:flex;align-items:center;justify-content:flex-end;gap:12px}.reportIssueBtn{border:1px solid #111;background:#fff;color:#111;border-radius:999px;padding:9px 14px;font-weight:900;text-decoration:none;white-space:nowrap}.reportIssueBtn:hover{background:#111;color:#fff}.badge{font-size:14px;border:1px solid #e0c64b;background:#fff4bf;border-radius:8px;padding:7px 12px;margin-left:12px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{border:1px solid #d9dee7;background:#fff;border-radius:7px;padding:10px 18px;cursor:pointer}.btn:hover{background:#f7f9fc}.btn.primary{background:#17a957;color:#fff;border-color:#17a957;font-weight:700}.btn.danger{color:#b42318}.btn.add{font-weight:800;font-size:18px;line-height:1;padding:8px 14px;background:#111;color:#fff;border-color:#111}.gear{font-size:24px;border:1px solid #d9dee7;background:#fff;border-radius:999px;width:44px;height:44px;cursor:pointer}.gear:hover{background:#f7f9fc}.tourLogoSlot{display:flex;align-items:center;justify-content:flex-end;min-width:80px;max-width:180px}.tourLogo{display:block;max-width:160px;max-height:54px;object-fit:contain}.tourLogoExport{position:absolute;top:5mm;right:5mm;max-width:34mm;max-height:18mm;object-fit:contain;z-index:3}.tourLogoUploadPreview{border:1px dashed #cfd6e1;border-radius:8px;background:#fff;min-height:130px;display:flex;align-items:center;justify-content:center;padding:14px}.tourLogoUploadPreview img{max-width:260px;max-height:120px;object-fit:contain}.logoActions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}.menuButton{position:fixed;right:18px;top:18px;z-index:18;border:1px solid #d9dee7;background:#111;color:#fff;border-radius:999px;width:46px;height:46px;font-size:24px;font-weight:900;cursor:pointer;box-shadow:0 10px 28px rgba(16,24,40,.18)}.menuButton:hover{background:#2a2a2a}.actionSidebar{position:fixed;right:18px;top:74px;width:min(260px,calc(100vw - 36px));z-index:17;border:1px solid #dfe3ea;border-radius:10px;background:#fff;box-shadow:0 18px 48px rgba(16,24,40,.22);padding:12px;transform:translateX(calc(100% + 28px));transition:transform .18s ease}.actionMenuOpen .actionSidebar{transform:translateX(0)}.actionSidebar h2{font-size:15px;margin:0 0 10px}.actionSidebar .btn{width:100%;margin:0 0 8px;text-align:left;font-weight:800}
@@ -28,7 +28,7 @@
 <style id="dynamicPrintPageStyle">@page{size:A4 landscape;margin:5mm}</style>
 </head>
 <body>
-<div class="top"><div><h1>Lampy Paperwork V6.10</h1></div><div class="topActions"><a class="reportIssueBtn" href="https://github.com/Ai-Lampy/Lampy-Paperwork/issues" target="_blank" rel="noopener">Report Issue</a><div id="tourLogoSlot" class="tourLogoSlot"></div></div></div>
+<div class="top"><div><h1>Lampy Paperwork V6.12</h1></div><div class="topActions"><a class="reportIssueBtn" href="https://github.com/Ai-Lampy/Lampy-Paperwork/issues" target="_blank" rel="noopener">Report Issue</a><div id="tourLogoSlot" class="tourLogoSlot"></div></div></div>
 <button class="menuButton" type="button" aria-label="Actions" aria-expanded="false" onclick="toggleActionMenu()">☰</button>
 <aside class="actionSidebar" id="actionSidebar"><h2>Actions</h2><button class="btn" onclick="openProjectInfo();closeActionMenu()">Project Info</button><button class="btn" onclick="newProjectFile();closeActionMenu()">New Project</button><button class="btn" onclick="downloadProjectFile();closeActionMenu()">Download Project</button><button class="btn" onclick="chooseProjectFile();closeActionMenu()">Open Project</button><button class="btn" onclick="openWalkthrough();closeActionMenu()">Walk-through</button><button class="btn primary" onclick="openExportLayout();closeActionMenu()">Export</button></aside>
 <input id="excelFile" type="file" accept=".xlsx,.xls,.xml,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel,text/xml" class="hidden">
@@ -42,7 +42,6 @@
 <div id="patchOptionsModal" class="modal hidden"><div class="modalCard" style="width:min(980px,100%);"><div class="modalHead"><h2>Patch Options</h2><button class="close" onclick="closePatchOptionsModal()">×</button></div><div id="patchOptionsBody"></div></div></div>
 <div id="patchGroupEditModal" class="modal hidden"><div class="modalCard" style="width:min(1050px,100%);"><div class="modalHead"><h2>Fixture Type Options</h2><button class="close" onclick="closePatchGroupEditModal()">×</button></div><div id="patchGroupEditBody"></div></div></div>
 <div id="positionModal" class="modal hidden"><div class="modalCard" style="width:min(860px,100%);"><div class="modalHead"><h2>Positions</h2><button class="close" onclick="closePositionMenu()">×</button></div><div id="positionMenuBody"></div></div></div>
-<div id="rearLabelEditModal" class="modal hidden"><div class="modalCard" style="width:min(620px,100%);"><div class="modalHead"><h2 id="rearLabelEditTitle">Rear Label Format</h2><button class="close" onclick="closeRearLabelEditor()">×</button></div><div id="rearLabelEditBody"></div></div></div>
 <div id="labelFormatModal" class="modal hidden"><div class="modalCard" style="width:min(820px,100%);"><div class="modalHead"><h2>Label Format</h2><button class="close" onclick="closeLabelFormat()">×</button></div><div class="projectTabs"><button class="projectTab active" type="button" data-label-format-tab="front" onclick="setLabelFormatTab('front')">Front Labels</button><button class="projectTab" type="button" data-label-format-tab="rear" onclick="setLabelFormatTab('rear')">Rear Labels</button></div><div id="labelFormatBody"></div></div></div>
 <div id="consoleModal" class="modal hidden"><div class="modalCard" style="width:min(920px,100%);"><div class="modalHead"><h2 id="consoleModalTitle">Add Console</h2><button class="close" onclick="closeConsoleModal()">×</button></div><div id="consoleModalBody"></div></div></div>
 <div id="unpatchFixtureModal" class="modal hidden"><div class="modalCard" style="width:min(900px,100%);"><div class="modalHead"><h2>Unpatch Fixture</h2><button class="close" onclick="closeUnpatchFixtureModal()">×</button></div><div id="unpatchFixtureBody"></div></div></div>
@@ -102,7 +101,7 @@
 </style>
 <script>
 'use strict';
-const VERSION='6.10';
+const VERSION='6.12';
 const DEFAULT_FONT="Cochin,'Times New Roman',Times,serif";
 const LABEL_FORMAT_SIZES=[8,9,10,11,12,14,16,18,20,22,24,26,28,30];
 const REAR_LABEL_FORMAT_SIZES=[...LABEL_FORMAT_SIZES,34,36,38,40,42,44,46,48,50];
@@ -154,7 +153,6 @@ let patchImportState={headers:[],rows:[],mapping:{},matches:{},newFixtures:{}};
 let activePatchGroupEditKey='';
 let selectedPatchGroupEditIds=new Set();
 let lastCustomFixtureRequest=null;
-let rearLabelEditorOpen=false;
 let frontEditorState=null;
 let suppressPowerCheckWarning=false;
 let activeLabelFormatTab='front';
@@ -317,14 +315,17 @@ function projectFileName(ext='lampy'){const name=String(ensureProjectInfo().file
 function projectFilePayload(){return {fileType:'Lampy Paperwork Project',appVersion:VERSION,savedAt:new Date().toISOString(),settings:settingsPayload(),fixturePatchViewOptions:normalisePatchViewOptions(fixturePatchViewOptions),fixturePatchReference,app:appPayload()}}
 function bytesToBase64(bytes){let binary='';bytes.forEach(b=>binary+=String.fromCharCode(b));return btoa(binary)}
 function base64ToBytes(text){return Uint8Array.from(atob(text),c=>c.charCodeAt(0))}
+async function sha256Base64(text){const bytes=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text));return bytesToBase64(new Uint8Array(bytes))}
+async function packageProjectPayload(payload){const json=JSON.stringify(payload),data=bytesToBase64(new TextEncoder().encode(json));return {fileType:'Lampy Paperwork Project Package',format:'lampy-project-package-v2',appVersion:VERSION,savedAt:payload.savedAt,checksum:await sha256Base64(json),data}}
+async function unpackProjectPayload(fileData){const json=new TextDecoder().decode(base64ToBytes(fileData.data||''));if(fileData.checksum&&await sha256Base64(json)!==fileData.checksum)throw new Error('Project file checksum mismatch');return JSON.parse(json)}
 function projectCrypto(){return globalThis.crypto?.subtle?globalThis.crypto:null}
 async function projectCryptoKey(password,salt){const api=projectCrypto(),material=await api.subtle.importKey('raw',new TextEncoder().encode(password),'PBKDF2',false,['deriveKey']);return api.subtle.deriveKey({name:'PBKDF2',salt,iterations:250000,hash:'SHA-256'},material,{name:'AES-GCM',length:256},false,['encrypt','decrypt'])}
 async function encryptProjectPayload(payload,password){const api=projectCrypto(),salt=api.getRandomValues(new Uint8Array(16)),iv=api.getRandomValues(new Uint8Array(12)),key=await projectCryptoKey(password,salt),plain=new TextEncoder().encode(JSON.stringify(payload)),cipher=await api.subtle.encrypt({name:'AES-GCM',iv},key,plain);return {fileType:'Lampy Paperwork Encrypted Project',format:'lampy-project-encrypted-v1',appVersion:VERSION,savedAt:payload.savedAt,kdf:{name:'PBKDF2',hash:'SHA-256',iterations:250000,salt:bytesToBase64(salt)},cipher:{name:'AES-GCM',iv:bytesToBase64(iv)},data:bytesToBase64(new Uint8Array(cipher))}}
 async function decryptProjectPayload(fileData,password){const api=projectCrypto(),salt=base64ToBytes(fileData.kdf?.salt||''),iv=base64ToBytes(fileData.cipher?.iv||''),cipher=base64ToBytes(fileData.data||''),key=await projectCryptoKey(password,salt),plain=await api.subtle.decrypt({name:'AES-GCM',iv},key,cipher);return JSON.parse(new TextDecoder().decode(plain))}
 function promptProjectPassword(action){const password=prompt('Enter a project password to '+action+'. Keep this password safe; it cannot be recovered.');if(password===null)return null;if(password.length<8){alert('Use at least 8 characters for the project password.');return null}return password}
-async function downloadProjectFile(){if(!projectCrypto()){alert('Secure project export needs browser crypto support. Use HTTPS or localhost.');return}const password=promptProjectPassword('secure this project file');if(!password)return;const confirmPassword=prompt('Confirm the project password.');if(confirmPassword===null)return;if(confirmPassword!==password){alert('Passwords did not match. Project download cancelled.');return}persist();const payload=projectFilePayload(),encrypted=await encryptProjectPayload(payload,password),blob=new Blob([JSON.stringify(encrypted)],{type:'application/octet-stream'}),a=document.createElement('a'),url=URL.createObjectURL(blob);a.href=url;a.download=projectFileName('lampy');a.style.display='none';window.lastProjectFilePayload=payload;window.lastProjectFileName=a.download;document.body.appendChild(a);a.click();console.info('Encrypted Lampy Paperwork project file generated',a.download);setTimeout(()=>{URL.revokeObjectURL(url);a.remove()},1000)}
+async function downloadProjectFile(){if(!projectCrypto()){alert('Project export needs browser crypto support for file integrity checks. Use HTTPS or localhost.');return}persist();const payload=projectFilePayload(),packaged=await packageProjectPayload(payload),blob=new Blob([JSON.stringify(packaged)],{type:'application/octet-stream'}),a=document.createElement('a'),url=URL.createObjectURL(blob);a.href=url;a.download=projectFileName('lampy');a.style.display='none';window.lastProjectFilePayload=payload;window.lastProjectFileName=a.download;document.body.appendChild(a);a.click();console.info('Lampy Paperwork project package generated',a.download);setTimeout(()=>{URL.revokeObjectURL(url);a.remove()},1000)}
 function chooseProjectFile(){$('projectFile')?.click()}
-async function readProjectFile(e){const file=e.target.files&&e.target.files[0];if(!file)return;try{let data=JSON.parse(await file.text());if(data?.format==='lampy-project-encrypted-v1'){if(!projectCrypto())throw new Error('Browser crypto unavailable');const password=promptProjectPassword('open this project file');if(!password)return;try{data=await decryptProjectPayload(data,password)}catch(decryptError){throw new Error('Incorrect password or damaged project file')}}if(!data||typeof data!=='object')throw new Error('Invalid project file');if(!data.app&&!data.project&&!Array.isArray(data.labels))throw new Error('Not a Lampy Paperwork project file');if((app.labels.length||app.distros.length||app.fixturePatch.length)&&!confirm('Open this project and replace the current project in the browser?'))return;loadProjectPayload(data,true);activeSheetTab='home';selectedPatchRows.clear();duplicatePatchRows.clear();duplicateAddressRows.clear();confirmedDuplicateAddressKeys.clear();render();alert('Project opened.')}catch(err){console.error(err);alert('Could not open this project file. Use a valid Lampy Paperwork .lampy file or legacy project JSON file.')}finally{e.target.value=''}}
+async function readProjectFile(e){const file=e.target.files&&e.target.files[0];if(!file)return;try{let data=JSON.parse(await file.text());if(data?.format==='lampy-project-package-v2')data=await unpackProjectPayload(data);else if(data?.format==='lampy-project-encrypted-v1'){if(!projectCrypto())throw new Error('Browser crypto unavailable');const password=promptProjectPassword('open this legacy encrypted project file');if(!password)return;try{data=await decryptProjectPayload(data,password)}catch(decryptError){throw new Error('Incorrect password or damaged project file')}}if(!data||typeof data!=='object')throw new Error('Invalid project file');if(!data.app&&!data.project&&!Array.isArray(data.labels))throw new Error('Not a Lampy Paperwork project file');if((app.labels.length||app.distros.length||app.fixturePatch.length)&&!confirm('Open this project and replace the current project in the browser?'))return;loadProjectPayload(data,true);activeSheetTab='home';selectedPatchRows.clear();duplicatePatchRows.clear();duplicateAddressRows.clear();confirmedDuplicateAddressKeys.clear();render();alert('Project opened.')}catch(err){console.error(err);alert('Could not open this project file. Use a valid Lampy Paperwork .lampy file or legacy project JSON file.')}finally{e.target.value=''}}
 function settingValue(id,fallback){const el=$(id);return el?el.value:fallback}
 function setTextVars(){const r=document.documentElement,frontFmt=normaliseMasterLabelFormat(labelFormatSettings.front,'front'),topAlign=settingValue('topAlign','center'),bottomAlign=settingValue('bottomAlign','center');r.style.setProperty('--top-align',topAlign);r.style.setProperty('--bottom-align',bottomAlign);r.style.setProperty('--top-v-align',settingValue('topVAlign','center'));r.style.setProperty('--bottom-v-align',settingValue('bottomVAlign','center'));r.style.setProperty('--top-font',settingValue('topFont',frontFmt.fontFamily));r.style.setProperty('--bottom-font',settingValue('bottomFont',frontFmt.fontFamily));r.style.setProperty('--top-weight',settingValue('topWeight',frontFmt.bold?'700':'400'));r.style.setProperty('--bottom-weight',settingValue('bottomWeight',frontFmt.bold?'700':'400'));r.style.setProperty('--top-transform',settingValue('topTransform','none'));r.style.setProperty('--bottom-transform',settingValue('bottomTransform','none'));r.style.setProperty('--top-text-align',textAlignFromFlex(topAlign));r.style.setProperty('--bottom-text-align',textAlignFromFlex(bottomAlign))}
 function settingMm(id,fallback){const n=parseFloat($(id)?.value||fallback);return Math.max(1,Number.isFinite(n)?n:fallback)+'mm'}
@@ -421,9 +422,11 @@ function makeAuxLabel(l,style,auxId){
   const el=document.createElement('div');
   el.className='label auxSingle '+($('grid').checked?'gridLine':'');
   el.dataset.auxId=auxId;
+  const [didx,g,j]=auxId.split('_').map(v=>parseInt(v,10));
   el.style.color=style.text;
   el.innerHTML='<div class="bg"></div><div class="auxText"></div>';
   el.querySelector('.bg').style.background=cssStripe(style.c1,style.c2,style.useC2);
+  el.addEventListener('click',e=>{e.stopPropagation();openAuxLabelEditor(didx,g,j)});
   const text=el.querySelector('.auxText');
   text.textContent=l.top||l.bottom||'';
   applyAuxTextStyle(text,l);
@@ -448,7 +451,7 @@ function auxGroup(d,g){
 function auxLabel(d,g,j){return auxGroup(d,g).labels[j]}
 function auxStyle(d,g,j){
   const l=auxLabel(d,g,j)||blankLabel();
-  return {c1:l.c1||'#ffffff',c2:l.c2||'#ffffff',useC2:l.useC2===true,text:l.text||'#000000'};
+  return {c1:l.c1||'',c2:l.c2||'',useC2:l.useC2===true,text:l.text||'#000000'};
 }
 function makeAuxBlock(d,didx){
   const holder=document.createElement('div');
@@ -462,7 +465,7 @@ function makeAuxBlock(d,didx){
     title.className='previewWindowTitle';
     title.title='Click to collapse / expand preview';
     title.textContent='Aux Outlets '+((g*3)+1)+' > '+((g*3)+3);
-    title.onclick=()=>togglePreviewBlock(key);
+    title.onclick=e=>{e.stopPropagation();openAuxGroupEditor(didx,g)};
     const row=document.createElement('div');
     row.className='auxLabelRow';
     for(let j=0;j<3;j++){
@@ -470,7 +473,6 @@ function makeAuxBlock(d,didx){
     }
     block.appendChild(title);
     block.appendChild(row);
-    block.appendChild(buildInlineEditorGroup(inlineEditorKey('aux',didx,g),'Editor for Aux Outlets '+((g*3)+1)+' > '+((g*3)+3),[buildAuxEditor(d,didx,g)]));
     holder.appendChild(block);
   }
   return holder;
@@ -495,14 +497,16 @@ function outputGroup(d,g){
   return d.outputGroups[g];
 }
 function outputLabel(d,g,j){return outputGroup(d,g).labels[j]}
-function outputStyle(d,g,j){const l=outputLabel(d,g,j)||blankOutputLabel();return {c1:l.c1||'#ffffff',c2:l.c2||'#ffffff',useC2:l.useC2===true,text:l.textColour||'#000000'}}
+function outputStyle(d,g,j){const l=outputLabel(d,g,j)||blankOutputLabel();return {c1:l.c1||'',c2:l.c2||'',useC2:l.useC2===true,text:l.textColour||'#000000'}}
 function makeOutputLabel(l,style,outputId){
   const el=document.createElement('div');
   el.className='label outputWide '+($('grid').checked?'gridLine':'');
   el.dataset.outputId=outputId;
+  const [didx,g,j]=outputId.split('_').map(v=>parseInt(v,10));
   el.style.color=style.text;
   el.innerHTML='<div class="bg"></div><div class="outputText"></div>';
   el.querySelector('.bg').style.background=cssStripe(style.c1,style.c2,style.useC2);
+  el.addEventListener('click',e=>{e.stopPropagation();openOutputLabelEditor(didx,g,j)});
   const text=el.querySelector('.outputText');
   text.textContent=l.text||'';
   applyOutputTextStyle(text,l);
@@ -521,14 +525,13 @@ function makeOutputBlock(d,didx){
     title.className='previewWindowTitle';
     title.title='Click to collapse / expand preview';
     title.textContent=group.type+' Outputs';
-    title.onclick=()=>togglePreviewBlock(key);
+    title.onclick=e=>{e.stopPropagation();openOutputGroupEditor(didx,g)};
     const row=document.createElement('div');
     row.className='outputLabelRow';
     row.style.gridTemplateColumns='repeat('+group.qty+', var(--front-output-w))';
     for(let j=0;j<group.qty;j++)row.appendChild(makeOutputLabel(outputLabel(d,g,j),outputStyle(d,g,j),didx+'_'+g+'_'+j));
     block.appendChild(title);
     block.appendChild(row);
-    block.appendChild(buildInlineEditorGroup(inlineEditorKey('output',didx,g),'Editor for '+group.type+' Outputs',[buildOutputEditor(d,didx,g)]));
     holder.appendChild(block);
   }
   return holder;
@@ -543,7 +546,7 @@ function makeRearLabel(s){
   el.style.color=meta.text||'#000000';
   el.innerHTML='<div class="bg"></div><div class="rearLabelText"></div>';
   el.querySelector('.bg').style.background=cssStripe(meta.c1||'',meta.c2||'',meta.useC2===true);
-  el.onclick=()=>openRearLabelEditor('soca',{soca:s});
+  el.onclick=e=>{e.stopPropagation();openRearSocaEditor(s)};
   const text=el.querySelector('.rearLabelText');
   text.textContent=cleanSocaName(app.socaNames[s],s);
   applyRearTextStyle(text,meta.rearFormat);
@@ -558,8 +561,8 @@ function makeRearAuxLabel(l,rearAuxId){
   el.title='Click to edit rear label text format';
   el.style.color=l.text||'#000000';
   el.innerHTML='<div class="bg"></div><div class="auxText"></div>';
-  el.querySelector('.bg').style.background=cssStripe(l.c1||'#ffffff',l.c2||'#ffffff',l.useC2===true);
-  el.onclick=()=>openRearLabelEditor('aux',{distro:didx,group:g,way:j});
+  el.querySelector('.bg').style.background=cssStripe(l.c1||'',l.c2||'',l.useC2===true);
+  el.onclick=e=>{e.stopPropagation();openRearAuxEditor(didx,g,j)};
   const text=el.querySelector('.auxText');
   text.textContent=l.top||l.bottom||'';
   applyRearTextStyle(text,l.rearFormat);
@@ -574,8 +577,8 @@ function makeRearOutputLabel(l,rearOutputId){
   el.title='Click to edit rear label text format';
   el.style.color=l.textColour||'#000000';
   el.innerHTML='<div class="bg"></div><div class="outputText"></div>';
-  el.querySelector('.bg').style.background=cssStripe(l.c1||'#ffffff',l.c2||'#ffffff',l.useC2===true);
-  el.onclick=()=>openRearLabelEditor('output',{distro:didx,group:g,way:j});
+  el.querySelector('.bg').style.background=cssStripe(l.c1||'',l.c2||'',l.useC2===true);
+  el.onclick=e=>{e.stopPropagation();openRearOutputEditor(didx,g,j)};
   const text=el.querySelector('.outputText');
   text.textContent=l.text||'';
   applyRearTextStyle(text,l.rearFormat);
@@ -1438,8 +1441,8 @@ function updateRearFormat(inp){
   persist();
 }
 function updateRearSocaLabel(s){document.querySelectorAll('[data-rear-soca-id="'+s+'"]').forEach(el=>{const meta=app.socaMeta[s]||defaultMeta(),bg=el.querySelector('.bg'),text=el.querySelector('.rearLabelText');el.style.color=meta.text||'#000000';if(bg)bg.style.background=cssStripe(meta.c1||'',meta.c2||'',meta.useC2===true);if(text){text.textContent=cleanSocaName(app.socaNames[s],s);applyRearTextStyle(text,meta.rearFormat);fitRearText(text)}})}
-function updateRearAuxLabel(didx,g,j){const d=app.distros[didx];if(!d)return;const l=auxLabel(d,g,j);document.querySelectorAll('[data-rear-aux-id="'+didx+'_'+g+'_'+j+'"]').forEach(el=>{const bg=el.querySelector('.bg'),text=el.querySelector('.auxText');el.style.color=l.text||'#000000';if(bg)bg.style.background=cssStripe(l.c1||'#ffffff',l.c2||'#ffffff',l.useC2===true);if(text){text.textContent=l.top||l.bottom||'';applyRearTextStyle(text,l.rearFormat);fitAuxText(text)}})}
-function updateRearOutputLabel(didx,g,j){const d=app.distros[didx];if(!d)return;const l=outputLabel(d,g,j);document.querySelectorAll('[data-rear-output-id="'+didx+'_'+g+'_'+j+'"]').forEach(el=>{const bg=el.querySelector('.bg'),text=el.querySelector('.outputText');el.style.color=l.textColour||'#000000';if(bg)bg.style.background=cssStripe(l.c1||'#ffffff',l.c2||'#ffffff',l.useC2===true);if(text){text.textContent=l.text||'';applyRearTextStyle(text,l.rearFormat);fitOutputText(text)}})}
+function updateRearAuxLabel(didx,g,j){const d=app.distros[didx];if(!d)return;const l=auxLabel(d,g,j);document.querySelectorAll('[data-rear-aux-id="'+didx+'_'+g+'_'+j+'"]').forEach(el=>{const bg=el.querySelector('.bg'),text=el.querySelector('.auxText');el.style.color=l.text||'#000000';if(bg)bg.style.background=cssStripe(l.c1||'',l.c2||'',l.useC2===true);if(text){text.textContent=l.top||l.bottom||'';applyRearTextStyle(text,l.rearFormat);fitAuxText(text)}})}
+function updateRearOutputLabel(didx,g,j){const d=app.distros[didx];if(!d)return;const l=outputLabel(d,g,j);document.querySelectorAll('[data-rear-output-id="'+didx+'_'+g+'_'+j+'"]').forEach(el=>{const bg=el.querySelector('.bg'),text=el.querySelector('.outputText');el.style.color=l.textColour||'#000000';if(bg)bg.style.background=cssStripe(l.c1||'',l.c2||'',l.useC2===true);if(text){text.textContent=l.text||'';applyRearTextStyle(text,l.rearFormat);fitOutputText(text)}})}
 
 
 function buildAuxEditor(d,didx,g){
@@ -1712,11 +1715,26 @@ function frontEditorPane(){
 }
 function openFrontSocaEditor(s){if(!Number.isInteger(s)||!app.socaMeta[s])return;frontEditorState={mode:'soca',s};renderFrontEditorPane()}
 function openFrontWayEditor(i){if(!Number.isInteger(i)||i<0||i>=app.labels.length)return;frontEditorState={mode:'way',i};renderFrontEditorPane()}
+function openAuxGroupEditor(didx,g){if(!app.distros[didx])return;frontEditorState={mode:'auxGroup',didx,g};renderFrontEditorPane()}
+function openAuxLabelEditor(didx,g,j){if(!app.distros[didx])return;frontEditorState={mode:'auxLabel',didx,g,j};renderFrontEditorPane()}
+function openOutputGroupEditor(didx,g){if(!app.distros[didx])return;frontEditorState={mode:'outputGroup',didx,g};renderFrontEditorPane()}
+function openOutputLabelEditor(didx,g,j){if(!app.distros[didx])return;frontEditorState={mode:'outputLabel',didx,g,j};renderFrontEditorPane()}
+function openRearSocaEditor(s){if(!Number.isInteger(s)||!app.socaMeta[s])return;frontEditorState={mode:'rearSoca',s};renderFrontEditorPane()}
+function openRearAuxEditor(didx,g,j){if(!app.distros[didx])return;frontEditorState={mode:'rearAux',didx,g,j};renderFrontEditorPane()}
+function openRearOutputEditor(didx,g,j){if(!app.distros[didx])return;frontEditorState={mode:'rearOutput',didx,g,j};renderFrontEditorPane()}
 function closeFrontEditorPane(){frontEditorState=null;const pane=$('frontEditorPane');if(pane)pane.classList.remove('open');hideColourMenu()}
 function frontFormatButton(label,key,on,attrs,extra=''){return `<button type="button" class="frontFormatButton" ${attrs}="${key}" ${extra} aria-pressed="${on?'true':'false'}">${label}</button>`}
 function frontPaneColourControl(attrs,value){return colourInputControl(`${attrs} data-allow-blank-colour="1"`,value,'','color','colour',true)}
 function frontPaneTitleSection(s){const meta=app.socaMeta[s]||defaultMeta(),name=cleanSocaName(app.socaNames[s],s),fmt=frontMasterFormatForSoca(s),scopeAttr=`data-front-master-s="${s}"`;return `<div class="frontEditorGrid"><div class="frontEditorCell frontEditorNameLabel">Socapex Name</div><div class="frontEditorCell frontEditorNameCell"><input data-front-soca-name="${s}" value="${escapeAttr(name)}"></div><div class="frontEditorCell frontEditorFontCell"><select data-front-master-format="fontFamily" ${scopeAttr}>${fontOptionsMarkup(fmt.fontFamily)}</select></div><div class="frontEditorCell frontEditorFormatCell" style="grid-column:1 / span 2">${frontFormatButton('B','bold',fmt.bold,'data-front-master-format',scopeAttr)}</div><div class="frontEditorCell frontEditorFormatCell" style="grid-column:3 / span 2">${frontFormatButton('I','italic',fmt.italic,'data-front-master-format',scopeAttr)}</div><div class="frontEditorCell frontEditorFormatCell" style="grid-column:5 / span 2">${frontFormatButton('U','underline',fmt.underline,'data-front-master-format',scopeAttr)}</div><div class="frontEditorCell" style="grid-column:1 / span 3">${frontPaneColourControl(`data-soca="${s}" data-meta="c1"`,meta.c1||'')}</div><div class="frontEditorCell" style="grid-column:4 / span 3">${frontPaneColourControl(`data-soca="${s}" data-meta="c2"`,meta.useC2?meta.c2:'')}</div></div>`}
 function frontPaneWaySection(i){const l=app.labels[i]||blankLabel(),way=(i%6)+1,topFmt=wayTextFormat(l,'top'),bottomFmt=wayTextFormat(l,'bottom'),topAttr=`data-i="${i}" data-way-part="top"`,bottomAttr=`data-i="${i}" data-way-part="bottom"`;return `<div class="frontEditorWay" data-front-way-section="${i}"><div class="frontEditorWayTitle">Way ${way}</div><div class="frontEditorWayCell frontEditorWayField"><input data-i="${i}" data-k="top" value="${escapeAttr(l.top||'')}" placeholder="Fix ID Field"></div><div class="frontEditorWayCell frontEditorWayField"><input data-i="${i}" data-k="bottom" value="${escapeAttr(l.bottom||'')}" placeholder="Fixture Type Field"></div><div class="frontEditorWayCell"><select data-way-format="fontFamily" ${topAttr}>${fontOptionsMarkup(topFmt.fontFamily||DEFAULT_FONT)}</select></div><div class="frontEditorWayCell"><select data-way-format="fontFamily" ${bottomAttr}>${fontOptionsMarkup(bottomFmt.fontFamily||DEFAULT_FONT)}</select></div><div class="frontEditorWayCell"><select data-way-format="fontSize" ${topAttr}>${labelFormatSizeOptions(topFmt.fontSize||18,'front')}</select></div><div class="frontEditorWayCell"><select data-way-format="fontSize" ${bottomAttr}>${labelFormatSizeOptions(bottomFmt.fontSize||18,'front')}</select></div><div class="frontEditorWayCell">${colourInputControl(`data-way-format="text" ${topAttr}`,topFmt.text||'#000000','#000000')}</div><div class="frontEditorWayCell">${colourInputControl(`data-way-format="text" ${bottomAttr}`,bottomFmt.text||'#000000','#000000')}</div><div class="frontEditorWayCell frontEditorWayStyle">${frontFormatButton('B','bold',topFmt.bold,'data-way-format',topAttr)} ${frontFormatButton('I','italic',topFmt.italic,'data-way-format',topAttr)} ${frontFormatButton('U','underline',topFmt.underline,'data-way-format',topAttr)}</div><div class="frontEditorWayCell frontEditorWayStyle">${frontFormatButton('B','bold',bottomFmt.bold,'data-way-format',bottomAttr)} ${frontFormatButton('I','italic',bottomFmt.italic,'data-way-format',bottomAttr)} ${frontFormatButton('U','underline',bottomFmt.underline,'data-way-format',bottomAttr)}</div><div class="frontEditorWayCell full">${frontPaneColourControl(`data-i="${i}" data-way="c1"`,l.override?l.c1:'')}</div><div class="frontEditorWayCell full">${frontPaneColourControl(`data-i="${i}" data-way="c2"`,l.useC2?l.c2:'')}</div></div>`}
+function frontPaneSimpleLabelSection(kind,didx,g,j){
+  const d=app.distros[didx],isOutput=kind==='output',l=isOutput?outputLabel(d,g,j):auxLabel(d,g,j),title=isOutput?(outputGroup(d,g).type+' '+(j+1)):('Aux '+((g*3)+j+1)),textValue=isOutput?(l.text||''):(l.top||l.bottom||''),textKey=isOutput?'text':'top',textColourKey=isOutput?'textColour':'text';
+  return `<div class="frontEditorWay" data-front-simple-section="${kind}_${didx}_${g}_${j}"><div class="frontEditorWayTitle">${escapeHtml(title)}</div><div class="frontEditorWayCell full frontEditorWayField"><input data-front-simple="${kind}" data-distro="${didx}" data-group="${g}" data-way="${j}" data-k="${textKey}" value="${escapeAttr(textValue)}" placeholder="${isOutput?'Output label':'Aux label'}"></div><div class="frontEditorWayCell"><select data-front-simple="${kind}" data-distro="${didx}" data-group="${g}" data-way="${j}" data-k="fontFamily">${fontOptionsMarkup(l.fontFamily||DEFAULT_FONT)}</select></div><div class="frontEditorWayCell"><select data-front-simple="${kind}" data-distro="${didx}" data-group="${g}" data-way="${j}" data-k="fontSize">${labelFormatSizeOptions(l.fontSize||18,'front')}</select></div><div class="frontEditorWayCell full">${colourInputControl(`data-front-simple="${kind}" data-distro="${didx}" data-group="${g}" data-way="${j}" data-k="${textColourKey}"`,l[textColourKey]||'#000000','#000000')}</div><div class="frontEditorWayCell frontEditorWayStyle full">${frontFormatButton('B','bold',l.bold!==false,'data-front-simple',`data-distro="${didx}" data-group="${g}" data-way="${j}" data-k="bold" data-kind="${kind}"`)} ${frontFormatButton('I','italic',!!l.italic,'data-front-simple',`data-distro="${didx}" data-group="${g}" data-way="${j}" data-k="italic" data-kind="${kind}"`)} ${frontFormatButton('U','underline',!!l.underline,'data-front-simple',`data-distro="${didx}" data-group="${g}" data-way="${j}" data-k="underline" data-kind="${kind}"`)}</div><div class="frontEditorWayCell full">${frontPaneColourControl(`data-front-simple="${kind}" data-distro="${didx}" data-group="${g}" data-way="${j}" data-k="c1"`,l.c1||'')}</div><div class="frontEditorWayCell full">${frontPaneColourControl(`data-front-simple="${kind}" data-distro="${didx}" data-group="${g}" data-way="${j}" data-k="c2"`,l.useC2?l.c2:'')}</div></div>`;
+}
+function frontPaneRearSection(kind,attrs){
+  const target=rearLabelEditorTarget(kind,attrs);if(!target)return '';
+  return `<div class="frontEditorGrid"><div class="frontEditorCell frontEditorNameLabel">${escapeHtml(target.title)}</div><div class="frontEditorCell frontEditorNameCell"><input data-rear-text="${kind}" ${dataAttrs(target.attrs)} value="${escapeAttr(target.text)}"></div><div style="grid-column:1/-1" class="rearFormatDialogGrid">${rearFormatControls(kind,target.attrs,target.fmt)}</div></div>`;
+}
 function bindFrontPaneEvents(body){
   body.querySelectorAll('[data-front-soca-name]').forEach(inp=>inp.addEventListener('input',()=>{const s=parseInt(inp.dataset.frontSocaName,10);app.socaNames[s]=inp.value.trim()||('Socapex '+(s+1));const pt=document.querySelector('[data-soca-preview-title="'+s+'"]');if(pt)pt.textContent=cleanSocaName(app.socaNames[s],s);persist()}));
   body.querySelectorAll('[data-front-master-format]').forEach(inp=>{if(inp.tagName==='BUTTON')inp.addEventListener('click',()=>updateFrontMasterFormat(inp));else{inp.addEventListener('input',()=>updateFrontMasterFormat(inp));inp.addEventListener('change',()=>updateFrontMasterFormat(inp))}});
@@ -1724,11 +1742,14 @@ function bindFrontPaneEvents(body){
   body.querySelectorAll('[data-i][data-k]').forEach(inp=>inp.addEventListener('input',()=>updateFrontPaneWayText(inp)));
   body.querySelectorAll('[data-i][data-way-format]').forEach(inp=>{if(inp.tagName==='BUTTON')inp.addEventListener('click',()=>updateFrontPaneWayTextFormat(inp));else if(inp.dataset.colourInput)inp.addEventListener('change',()=>updateFrontPaneWayTextFormat(inp));else{inp.addEventListener('input',()=>updateFrontPaneWayTextFormat(inp));inp.addEventListener('change',()=>updateFrontPaneWayTextFormat(inp))}});
   body.querySelectorAll('[data-i][data-way]').forEach(inp=>{if(inp.tagName==='BUTTON')inp.addEventListener('click',()=>updateFrontPaneWayField(inp));else if(inp.dataset.colourInput)inp.addEventListener('change',()=>updateFrontPaneWayField(inp));else{inp.addEventListener('input',()=>updateFrontPaneWayField(inp));inp.addEventListener('change',()=>updateFrontPaneWayField(inp))}});
+  body.querySelectorAll('[data-front-simple]').forEach(inp=>{if(inp.tagName==='BUTTON')inp.addEventListener('click',()=>updateFrontPaneSimpleField(inp));else if(inp.dataset.colourInput)inp.addEventListener('change',()=>updateFrontPaneSimpleField(inp));else{inp.addEventListener('input',()=>updateFrontPaneSimpleField(inp));inp.addEventListener('change',()=>updateFrontPaneSimpleField(inp))}});
+  bindRearEditorEvents(body);
 }
 function updateFrontPaneWayText(inp){const i=parseInt(inp.dataset.i,10),k=inp.dataset.k;app.labels[i]=app.labels[i]||blankLabel();const l=app.labels[i],oldValue=l[k];l[k]=inp.value;if(k==='top'||k==='bottom')warnPowerCheckForTextEdit(inp,oldValue,l[k]);if(k==='top'){const match=patchPositionColoursForFixId(inp.value),section=inp.closest('[data-front-way-section]'),bottom=section?.querySelector('[data-k="bottom"]'),c1=section?.querySelector('[data-way="c1"]'),c2=section?.querySelector('[data-way="c2"]');if(match){l.bottom=match.patch.fixture||l.bottom;applyFixIdColoursToLabel(l,inp.value);if(bottom)bottom.value=l.bottom||''}else{clearPatchLinkedLabelData(l);if(bottom)bottom.value=''}if(c1)setBlankableColourTextInput(c1,l.override?l.c1:'');if(c2)setBlankableColourTextInput(c2,l.useC2?l.c2:'')}persist();updatePreviewLabel(i)}
 function updateFrontMasterFormat(inp){const s=parseInt(inp.dataset.frontMasterS,10),key=inp.dataset.frontMasterFormat,isButton=inp.tagName==='BUTTON';if(!Number.isInteger(s)||!key)return;app.socaMeta[s]=normaliseSocaMeta(app.socaMeta[s]||defaultMeta());const fmt=app.socaMeta[s].frontFormat=frontMasterFormatForSoca(s);if(isButton)inp.setAttribute('aria-pressed',inp.getAttribute('aria-pressed')==='true'?'false':'true');fmt[key]=isButton?inp.getAttribute('aria-pressed')==='true':(inp.type==='checkbox'?inp.checked:inp.value);app.socaMeta[s].frontFormat=normaliseMasterLabelFormat(fmt,'front');persist();updateSocaPreview(s)}
 function updateFrontPaneWayTextFormat(inp){const i=parseInt(inp.dataset.i,10),part=inp.dataset.wayPart==='bottom'?'bottom':'top',key=inp.dataset.wayFormat,fmtKey=part==='bottom'?'bottomFormat':'topFormat',isButton=inp.tagName==='BUTTON',isColour=['text','outlineColour'].includes(key),raw=String(inp.value||'').trim();app.labels[i]=app.labels[i]||blankLabel();const l=app.labels[i],fmt=l[fmtKey]=normaliseWayTextFormat(l[fmtKey]||l,l);fmt.formatOn=true;if(isButton)inp.setAttribute('aria-pressed',inp.getAttribute('aria-pressed')==='true'?'false':'true');if(isColour&&!colourTextToHex(raw,'')){styleColourTextInput(inp);return}fmt[key]=isButton?inp.getAttribute('aria-pressed')==='true':(inp.type==='checkbox'?inp.checked:(isColour?colourTextToHex(inp.value,key==='text'||key==='outlineColour'?'#000000':'#ffffff'):inp.value));if(isColour)setColourTextInput(inp,fmt[key]);const section=inp.closest('[data-front-way-section]');if(section)section.querySelectorAll(`[data-way-part="${part}"][data-way-format="${key}"]`).forEach(el=>{if(el===inp)return;if(el.tagName==='BUTTON')el.setAttribute('aria-pressed',fmt[key]?'true':'false');else if(el.type==='checkbox')el.checked=!!fmt[key];else if(isColour)setColourTextInput(el,fmt[key]);else el.value=fmt[key]});persist();updatePreviewLabel(i)}
 function updateFrontPaneWayField(inp){const i=parseInt(inp.dataset.i,10);app.labels[i]=app.labels[i]||blankLabel();const l=app.labels[i],key=inp.dataset.way,isColour=['c1','c2','text','outlineColour'].includes(key),isButton=inp.tagName==='BUTTON',raw=String(inp.value||'').trim();if(isButton)inp.setAttribute('aria-pressed',inp.getAttribute('aria-pressed')==='true'?'false':'true');if((key==='c1'||key==='c2')&&raw&&!colourTextToHex(raw,'')){styleColourTextInput(inp);return}if(key==='c1'||key==='c2'){if(!raw){l[key]='';if(key==='c2')l.useC2=false;if(key==='c1'&&!l.c2){l.override=false;l.useC2=false}styleColourTextInput(inp)}else{l.override=true;l[key]=colourTextToHex(inp.value,'#ffffff');if(key==='c2')l.useC2=true;setColourTextInput(inp,l[key])}maybeUpdatePatchColoursFromLabel(l,key)}else{l.formatOn=true;l[key]=isButton?inp.getAttribute('aria-pressed')==='true':(inp.type==='checkbox'?inp.checked:(isColour?colourTextToHex(inp.value,key==='text'||key==='outlineColour'?'#000000':'#ffffff'):inp.value));if(isColour)setColourTextInput(inp,l[key])}const section=inp.closest('[data-front-way-section]');if(section)section.querySelectorAll(`[data-way="${key}"]`).forEach(el=>{if(el===inp)return;if(el.tagName==='BUTTON')el.setAttribute('aria-pressed',l[key]?'true':'false');else if(el.type==='checkbox')el.checked=inp.checked;else if(isColour){if(!l[key]){el.value='';styleColourTextInput(el)}else setColourTextInput(el,l[key])}else el.value=l[key]});persist();updatePreviewLabel(i)}
+function updateFrontPaneSimpleField(inp){const didx=parseInt(inp.dataset.distro,10),g=parseInt(inp.dataset.group,10),j=parseInt(inp.dataset.way,10),kind=inp.dataset.kind||inp.dataset.frontSimple,d=app.distros[didx];if(!d)return;const l=kind==='output'?outputLabel(d,g,j):auxLabel(d,g,j),key=inp.dataset.k||inp.dataset.frontSimple,isColour=['c1','c2','text','textColour','outlineColour'].includes(key),isButton=inp.tagName==='BUTTON',raw=String(inp.value||'').trim();if(isButton)inp.setAttribute('aria-pressed',inp.getAttribute('aria-pressed')==='true'?'false':'true');if((key==='c1'||key==='c2')&&raw&&!colourTextToHex(raw,'')){styleColourTextInput(inp);return}if(key==='top'){l.top=inp.value;l.bottom=''}else if(key==='text'&&kind==='output')l.text=inp.value;else if(key==='c1'||key==='c2'){if(!raw){l[key]='';if(key==='c2')l.useC2=false;styleColourTextInput(inp)}else{l[key]=colourTextToHex(inp.value,'');if(key==='c2')l.useC2=true;setColourTextInput(inp,l[key])}}else{if(['fontFamily','fontSize','bold','italic','underline','outline','outlineColour','text','textColour'].includes(key))l.formatOn=true;l[key]=isButton?inp.getAttribute('aria-pressed')==='true':(key==='fontSize'?Math.max(1,parseFloat(inp.value||1)||1):(isColour?colourTextToHex(inp.value,key==='text'||key==='textColour'||key==='outlineColour'?'#000000':''):inp.value));if(isColour)setColourTextInput(inp,l[key])}persist();if(kind==='output')updateOutputPreviewLabel(didx,g,j);else updateAuxPreviewLabel(didx,g,j)}
 function renderFrontEditorPane(){
   const pane=frontEditorPane(),title=$('frontEditorTitle'),body=$('frontEditorBody');
   if(!frontEditorState||!body||!title){closeFrontEditorPane();return}
@@ -1749,6 +1770,40 @@ function renderFrontEditorPane(){
     const prev=body.querySelector('[data-front-way-prev]'),next=body.querySelector('[data-front-way-next]');
     if(prev)prev.onclick=()=>openFrontWayEditor(i-1);
     if(next)next.onclick=()=>openFrontWayEditor(i+1);
+  }else if(frontEditorState.mode==='auxGroup'){
+    const {didx,g}=frontEditorState,d=app.distros[didx];if(!d){closeFrontEditorPane();return}
+    title.textContent='Aux Outlets '+((g*3)+1)+' - '+((g*3)+3);
+    body.innerHTML=Array.from({length:3},(_,j)=>frontPaneSimpleLabelSection('aux',didx,g,j)).join('');
+  }else if(frontEditorState.mode==='auxLabel'){
+    const {didx,g,j}=frontEditorState,d=app.distros[didx];if(!d){closeFrontEditorPane();return}
+    title.textContent='Aux '+((g*3)+j+1);
+    body.innerHTML=`<div class="frontEditorNav"><button class="btn" type="button" data-front-aux-prev ${j===0?'disabled':''}>&lt; Previous</button><button class="btn" type="button" data-front-aux-next ${j===2?'disabled':''}>Next &gt;</button></div>`+frontPaneSimpleLabelSection('aux',didx,g,j);
+    const prev=body.querySelector('[data-front-aux-prev]'),next=body.querySelector('[data-front-aux-next]');
+    if(prev)prev.onclick=()=>openAuxLabelEditor(didx,g,j-1);
+    if(next)next.onclick=()=>openAuxLabelEditor(didx,g,j+1);
+  }else if(frontEditorState.mode==='outputGroup'){
+    const {didx,g}=frontEditorState,d=app.distros[didx];if(!d){closeFrontEditorPane();return}
+    const group=outputGroup(d,g);title.textContent=(group.type||'Output')+' Outputs';
+    body.innerHTML=Array.from({length:group.qty},(_,j)=>frontPaneSimpleLabelSection('output',didx,g,j)).join('');
+  }else if(frontEditorState.mode==='outputLabel'){
+    const {didx,g,j}=frontEditorState,d=app.distros[didx];if(!d){closeFrontEditorPane();return}
+    const group=outputGroup(d,g);title.textContent=(group.type||'Output')+' '+(j+1);
+    body.innerHTML=`<div class="frontEditorNav"><button class="btn" type="button" data-front-output-prev ${j===0?'disabled':''}>&lt; Previous</button><button class="btn" type="button" data-front-output-next ${j>=group.qty-1?'disabled':''}>Next &gt;</button></div>`+frontPaneSimpleLabelSection('output',didx,g,j);
+    const prev=body.querySelector('[data-front-output-prev]'),next=body.querySelector('[data-front-output-next]');
+    if(prev)prev.onclick=()=>openOutputLabelEditor(didx,g,j-1);
+    if(next)next.onclick=()=>openOutputLabelEditor(didx,g,j+1);
+  }else if(frontEditorState.mode==='rearSoca'){
+    const s=frontEditorState.s;if(!Number.isInteger(s)||!app.socaMeta[s]){closeFrontEditorPane();return}
+    title.textContent='Rear '+cleanSocaName(app.socaNames[s],s);
+    body.innerHTML=frontPaneRearSection('soca',{soca:s});
+  }else if(frontEditorState.mode==='rearAux'){
+    const {didx,g,j}=frontEditorState;if(!app.distros[didx]){closeFrontEditorPane();return}
+    title.textContent='Rear Aux '+((g*3)+j+1);
+    body.innerHTML=frontPaneRearSection('aux',{distro:didx,group:g,way:j});
+  }else if(frontEditorState.mode==='rearOutput'){
+    const {didx,g,j}=frontEditorState,d=app.distros[didx];if(!d){closeFrontEditorPane();return}
+    title.textContent='Rear '+(outputGroup(d,g).type||'Output')+' '+(j+1);
+    body.innerHTML=frontPaneRearSection('output',{distro:didx,group:g,way:j});
   }
   bindFrontPaneEvents(body);
   pane.classList.add('open');
