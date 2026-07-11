@@ -18,7 +18,11 @@
   index.html
   json/
     distro_options.json
-    fixture_patch_reference.json
+    fixture_library_manifest.json
+    fixtures/
+      robe.json
+      martin.json
+      ...
     lighting_vendors.json
     supply_reference.json
     walkthrough.json
