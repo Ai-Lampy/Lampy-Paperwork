@@ -2,6 +2,117 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V7 - 2026-07-11
+
+- Added DMX universe progress bars to the Home tab summary based on occupied addresses out of 512.
+- Changed Home DMX universe rows into clickable summaries that open a right-side universe detail pane.
+- Added universe detail pane tables for patched fixtures and available address ranges.
+- Added a bulk universe renumber action to move all fixtures from one universe to another while preserving addresses.
+
+## V6.20 - 2026-07-11
+
+- Adjusted Power Calculations table Socapex name column sizing and typography.
+- Increased the Power Calculations fixture type column width.
+
+## V6.19 - 2026-07-11
+
+- Changed the Fixture Patch `Show/Hide Columns` control to open a right-side pane instead of a floating modal.
+- Kept the column toggles live-updating the Fixture Patch sheet and PDF preview.
+- Made closing the Fixture Patch PDF preview also close the column side pane.
+
+## V6.18 - 2026-07-11
+
+- Renamed the Fixture Patch manufacturer manifest from `json/fixture_patch_reference.json` to `json/fixture_library_manifest.json`.
+- Updated the app loader, in-app reference hint, and deployment docs to use the clearer manifest filename.
+
+## V6.17 - 2026-07-11
+
+- Split the Fixture Patch reference library into one JSON file per manufacturer under `json/fixtures/`.
+- Changed `json/fixture_patch_reference.json` into a manifest that lists the manufacturer fixture files.
+- Updated the Fixture Patch reference loader to fetch and merge manufacturer files while preserving mode, weight, and wattage data.
+- Improved JSON reference URL fallback handling so nested JSON paths work on local servers and GitHub Pages.
+
+## V6.16 - 2026-07-10
+
+- Made Table View Socapex remove buttons use 900 font weight.
+- Standardised Table View Aux and Output title rows and remove buttons to the requested fixed sizing.
+- Treated legacy stored white values as blank in Table View Aux and Output colour fields so empty labels no longer display `White`.
+
+## V6.15 - 2026-07-10
+
+- Updated Fixture Patch group titles to display `Manufacturer ~ Fixture ~ Mode (Channel count)` on the sheet and PDF preview.
+- Added a `Show/Hide Columns` control directly inside the Fixture Patch PDF preview.
+- Made Fixture Patch column visibility changes refresh the PDF preview immediately.
+- Fixed rear label side-pane B/I/U/Outline buttons so they update the selected rear label text formatting.
+
+## V6.14 - 2026-07-10
+
+- Matched Aux Outlet and Output colour behaviour to Socapex labels so blank Colour 1 and Colour 2 fields stay blank instead of displaying `White`.
+- Updated Table View Aux and Output colour edits to refresh label previews immediately.
+- Changed rear label B/I/U/Outline controls to use the same pressed-button styling as the Socapex editor.
+- Added previous/next navigation to rear Socapex, rear Aux, and rear Output side-pane editors.
+
+## V6.13 - 2026-07-10
+
+- Fixed V6.12 startup so removed modal markup can no longer stop `attachEvents()` and block JSON reference loading.
+- Confirmed local JSON startup loads distro, supply, fixture patch, lighting vendor, console, network, NPU, walkthrough, welcome, and colour reference files.
+- Removed stale rear-label editor close wiring left over after rear labels moved into the side-pane editor.
+
+## V6.12 - 2026-07-10
+
+- Removed the password prompt from project download and open workflows.
+- Changed new `.lampy` project downloads to a passwordless packaged project format with checksum validation.
+- Kept legacy encrypted `.lampy` project import support for files created by V6.10.
+
+## V6.11 - 2026-07-10
+
+- Moved Aux Outlet and Output front-label editing into the right-side editor pane.
+- Removed the front-view inline Aux and Output editor blocks so the label sheet stays label-focused.
+- Routed rear Socapex, Aux, and Output label formatting through the right-side editor pane instead of the rear modal.
+- Added previous/next navigation for individual Aux and Output label pane editing.
+
+## V6.10 - 2026-07-10
+
+- Changed project downloads from plain editable JSON to password-encrypted `.lampy` project files using browser Web Crypto.
+- Added password-based encrypted project import while keeping legacy JSON project imports available.
+- Updated project file input support to accept `.lampy` files.
+
+## V6.9 - 2026-07-10
+
+- Hid the header `+ Distro` quick action on the Power Calculations tab so only the Power Calculations toolbar button remains visible.
+
+## V6.8 - 2026-07-10
+
+- Added `< Previous` and `Next >` navigation to the Front RCBO Socapex side-pane editor.
+- Removed obsolete Label Settings cards for fixture text defaults and new/fill colour defaults.
+- Moved removed text-default dependencies onto safe Label Format fallbacks and made missing/new colour data stay blank by default.
+
+## V6.7 - 2026-07-10
+
+- Preserved blank Socapex Colour 1 and Colour 2 values through render, reload, and rear-label preview paths instead of falling back to `White`.
+- Scoped the Front RCBO side-pane Socapex B/I/U and font controls to the selected Socapex only.
+- Added Socapex-level front text format storage so unchanged ways inherit their own Socapex editor format before falling back to the global front label defaults.
+
+## V6.6 - 2026-07-10
+
+- Added a session-only `Don't Show Me Again` option to the power-calculation warning.
+- Cleared linked Fixture Type and colour data when a Table View or side-pane Fix ID no longer exists in the Fixture Patch.
+- Preserved empty Fixture Patch Colour 2 values during Fix ID autofill instead of copying Colour 1.
+- Added a prompt to optionally update the Fixture Patch row when linked label colours are changed in Table View or the Front RCBO side pane.
+
+## V6.5 - 2026-07-10
+
+- Applied side-pane blank-colour behaviour to Table View colour cells so blanks stay blank instead of displaying `White`.
+- Made blank Table View Colour 2 fields turn Colour 2 off.
+- Made Socapex way colour overrides drop back to the Socapex master colours when both way colour fields are blank.
+- Added a power-calculation warning when Fix ID or Fixture Type is edited from Table View or the Front RCBO side pane.
+
+## V6.4 - 2026-07-10
+
+- Added `Socapex Name` helper text above the Front RCBO side-pane Socapex name field.
+- Reduced side-pane way title text to 18px.
+- Matched Table View Fix ID behavior in the side-pane editor so known patch IDs auto-fill Fixture Type and label colours.
+
 ## V6.3 - 2026-07-10
 
 - Fixed Front RCBO side-pane colour inputs so typed letters can be deleted and edited without immediately committing to a colour.
