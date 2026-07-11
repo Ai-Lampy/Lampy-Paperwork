@@ -22,7 +22,7 @@
       }
     },
     {
-      "fixture": "Diablo S",
+      "fixture": "Diablo Profile S",
       "watts": 550,
       "weight": 22,
       "modes": {
@@ -41,12 +41,32 @@
       }
     },
     {
+      "fixture": "Domino Profile",
+      "watts": 1800,
+      "weight": 52,
+      "modes": {
+        "Basic": 42,
+        "Standard": 44,
+        "Extended": 66
+      }
+    },
+    {
+      "fixture": "Domino Wash",
+      "watts": 1600,
+      "weight": 52,
+      "modes": {
+        "Basic": 37,
+        "Standard": 39,
+        "Extended": 61
+      }
+    },
+    {
       "fixture": "Eagle Strike",
       "watts": 1295,
       "weight": 54.7,
       "modes": {
-        "Basic": 44,
-        "Standard": 66
+        "Standard": 44,
+        "Extended": 66
       }
     },
     {
@@ -57,6 +77,36 @@
         "Basic": 39,
         "Standard": 41,
         "Extended": 62
+      }
+    },
+    {
+      "fixture": "Ghibli",
+      "watts": 800,
+      "weight": 35.6,
+      "modes": {
+        "Basic": 36,
+        "Standard": 38,
+        "Extended": 58
+      }
+    },
+    {
+      "fixture": "Huracan LT",
+      "watts": 1470,
+      "weight": 53.8,
+      "modes": {
+        "Basic": 44,
+        "Standard": 46,
+        "Extended": 70
+      }
+    },
+    {
+      "fixture": "Huracan Profile",
+      "watts": 1470,
+      "weight": 46,
+      "modes": {
+        "Basic": 44,
+        "Standard": 46,
+        "Extended": 70
       }
     },
     {
@@ -80,6 +130,14 @@
       }
     },
     {
+      "fixture": "Kyalami",
+      "watts": 200,
+      "weight": 14.5,
+      "modes": {
+        "Standard": 33
+      }
+    },
+    {
       "fixture": "Magic Blade Neo",
       "watts": 800,
       "weight": 32.4,
@@ -97,6 +155,50 @@
       }
     },
     {
+      "fixture": "Mamba",
+      "watts": 800,
+      "weight": 41,
+      "modes": {
+        "Extended": 47
+      }
+    },
+    {
+      "fixture": "MiniPanel FX",
+      "watts": 220,
+      "weight": 8.9,
+      "modes": {
+        "Basic": 19,
+        "Standard": 22,
+        "Extended": 34
+      }
+    },
+    {
+      "fixture": "Mistral",
+      "watts": 550,
+      "weight": 18.6,
+      "modes": {
+        "Standard": 39
+      }
+    },
+    {
+      "fixture": "Perseo Profile",
+      "watts": 1480,
+      "weight": 38.8,
+      "modes": {
+        "Basic": 38,
+        "Standard": 40,
+        "Extended": 61
+      }
+    },
+    {
+      "fixture": "RawBeam 350",
+      "watts": 660,
+      "weight": 25.4,
+      "modes": {
+        "Extended": 43
+      }
+    },
+    {
       "fixture": "Rivale Profile",
       "watts": 700,
       "weight": 30.8,
@@ -106,14 +208,82 @@
       }
     },
     {
+      "fixture": "Rivale Wash",
+      "watts": 700,
+      "weight": 30.8,
+      "modes": {
+        "Standard": 42,
+        "Extended": 60
+      }
+    },
+    {
+      "fixture": "Stradale Profile",
+      "watts": 630,
+      "weight": 23.5,
+      "modes": {
+        "Standard": 42,
+        "Extended": 65
+      }
+    },
+    {
+      "fixture": "Veloce Profile",
+      "watts": 1300,
+      "weight": 40.5,
+      "modes": {
+        "Standard": 44,
+        "Extended": 67
+      }
+    },
+    {
+      "fixture": "Veloce Wash",
+      "watts": 1300,
+      "weight": 39,
+      "modes": {
+        "Standard": 38,
+        "Extended": 60
+      }
+    },
+    {
+      "fixture": "Zonda 3 FX",
+      "watts": 400,
+      "weight": 11.1,
+      "modes": {
+        "Basic": 26,
+        "Standard": 50,
+        "Extended": 79
+      }
+    },
+    {
+      "fixture": "Zonda 3 Wash",
+      "watts": 400,
+      "weight": 11.1,
+      "modes": {
+        "Basic": 26,
+        "Standard": 30,
+        "Extended Ring": 46,
+        "Extended Pixel": 79
+      }
+    },
+    {
       "fixture": "Zonda 9 FX",
       "watts": 1400,
       "weight": 29.2,
       "modes": {
         "Basic": 26,
-        "Standard": 50,
-        "Extended": 346,
-        "Ext + Liquid": 3874
+        "Standard": 51,
+        "Extended Ring": 54,
+        "Extended Pixel": 199
+      }
+    },
+    {
+      "fixture": "Zonda 9 Wash",
+      "watts": 1400,
+      "weight": 29.2,
+      "modes": {
+        "Basic": 26,
+        "Standard": 51,
+        "Extended Ring": 54,
+        "Extended Pixel": 199
       }
     }
   ]
