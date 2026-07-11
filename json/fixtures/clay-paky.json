@@ -2,6 +2,65 @@
   "manufacturer": "Clay Paky",
   "fixtures": [
     {
+      "fixture": "Arolla Aqua HP",
+      "watts": 1900,
+      "weight": 56.9,
+      "modes": {
+        "43 Chan": 43
+      }
+    },
+    {
+      "fixture": "Arolla Aqua M-LT",
+      "watts": 900,
+      "weight": 31.2,
+      "modes": {
+        "Basic": 44,
+        "Standard": 54
+      }
+    },
+    {
+      "fixture": "Arolla Aqua S-LT",
+      "watts": 600,
+      "weight": 25.9,
+      "modes": {
+        "Basic": 44,
+        "Standard": 54
+      }
+    },
+    {
+      "fixture": "Arolla Aqua Wash HC",
+      "watts": 1580,
+      "weight": 36.0,
+      "modes": {
+        "30 Chan": 30
+      }
+    },
+    {
+      "fixture": "Arolla Profile HP",
+      "watts": 1650,
+      "weight": 44.7,
+      "modes": {
+        "39 Chan": 39
+      }
+    },
+    {
+      "fixture": "Arolla Profile MP",
+      "watts": 740,
+      "weight": 25.0,
+      "modes": {
+        "Basic": 37,
+        "Standard": 39
+      }
+    },
+    {
+      "fixture": "Arolla Spot MP",
+      "watts": 740,
+      "weight": 24.0,
+      "modes": {
+        "29 Chan": 29
+      }
+    },
+    {
       "fixture": "B-Eye K20",
       "watts": 794,
       "weight": 21,
@@ -22,12 +81,78 @@
       }
     },
     {
+      "fixture": "HY B-Eye K15",
+      "watts": 700,
+      "weight": 20.7,
+      "modes": {
+        "Basic Engine 21 Chan": 21,
+        "Basic Engine 22 Chan": 22,
+        "Basic Engine 35 Chan": 35,
+        "Basic Engine 36 Chan": 36,
+        "Pixel Engine 57 Chan": 57,
+        "Pixel Engine 76 Chan": 76
+      }
+    },
+    {
+      "fixture": "HY B-Eye K15 Aqua",
+      "watts": 680,
+      "weight": 27.8,
+      "modes": {
+        "Basic Engine 21 Chan": 21,
+        "Basic Engine 22 Chan": 22,
+        "Basic Engine 35 Chan": 35,
+        "Basic Engine 36 Chan": 36,
+        "Basic Engine 37 Chan": 37,
+        "Pixel Engine 57 Chan": 57,
+        "Pixel Engine 76 Chan": 76
+      }
+    },
+    {
+      "fixture": "Midi-B",
+      "watts": 830,
+      "weight": 17,
+      "modes": {
+        "17 Chan": 17,
+        "21 Chan": 21,
+        "25 Chan": 25,
+        "37 Chan": 37
+      }
+    },
+    {
+      "fixture": "Mini-B",
+      "watts": 375,
+      "weight": 6.5,
+      "modes": {
+        "17 Chan": 17,
+        "21 Chan 1": 21,
+        "21 Chan 2": 21,
+        "29 Chan": 29
+      }
+    },
+    {
+      "fixture": "Scenius Unico",
+      "watts": 1400,
+      "weight": 45.6,
+      "modes": {
+        "Standard": 40,
+        "Vector": 44
+      }
+    },
+    {
       "fixture": "Sharpy",
       "watts": 280,
       "weight": 19,
       "modes": {
         "Standard": 16,
         "Vector": 20
+      }
+    },
+    {
+      "fixture": "Sharpy Plus",
+      "watts": 540,
+      "weight": 23,
+      "modes": {
+        "Single Mode": 31
       }
     },
     {
@@ -40,12 +165,77 @@
       }
     },
     {
-      "fixture": "Scenius Unico",
-      "watts": 1400,
-      "weight": 45.6,
+      "fixture": "Sharpy X Frame",
+      "watts": 750,
+      "weight": 28,
       "modes": {
-        "Standard": 40,
-        "Vector": 44
+        "Single Mode": 43
+      }
+    },
+    {
+      "fixture": "Skylos",
+      "watts": 900,
+      "weight": 60,
+      "modes": {
+        "20 Chan": 20
+      }
+    },
+    {
+      "fixture": "Tambora Glare",
+      "watts": 480,
+      "weight": 13.5,
+      "modes": {
+        "Main Engine 19 Chan": 19,
+        "Main Engine 41 Chan": 41,
+        "Main Engine 52 Chan": 52,
+        "Pixel Engine": 40,
+        "Strobe Engine 50 Chan 1": 50,
+        "Strobe Engine 50 Chan 2": 50,
+        "Strobe Engine 50 Chan 3": 50,
+        "Strobe Engine 100 Chan": 100
+      }
+    },
+    {
+      "fixture": "Ultimo Hybrid",
+      "watts": 850,
+      "weight": 41.9,
+      "modes": {
+        "43 Chan": 43
+      }
+    },
+    {
+      "fixture": "Volero Cube",
+      "watts": 500,
+      "weight": 15.4,
+      "modes": {
+        "Basic Engine 22 Chan": 22,
+        "Basic Engine 41 Chan": 41,
+        "Basic Engine 45 Chan": 45,
+        "Pixel Engine": 16,
+        "Strobe Engine": 8
+      }
+    },
+    {
+      "fixture": "Volero Twins",
+      "watts": 700,
+      "weight": 29.3,
+      "modes": {
+        "Basic Engine 25 Chan": 25,
+        "Basic Engine 43 Chan": 43,
+        "Basic Engine 50 Chan": 50,
+        "Pixel Engine": 32,
+        "Strobe Engine": 20
+      }
+    },
+    {
+      "fixture": "Volero Wave",
+      "watts": 400,
+      "weight": 20.8,
+      "modes": {
+        "23 Chan": 23,
+        "24 Chan": 24,
+        "29 Chan": 29,
+        "32 Chan": 32
       }
     },
     {

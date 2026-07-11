@@ -2,20 +2,6 @@
   "manufacturer": "Chauvet",
   "fixtures": [
     {
-      "fixture": "COLORado PXL Curve 12",
-      "watts": 768,
-      "weight": 34.5,
-      "modes": {
-        "Single Control ~ Basic": 20,
-        "Single Control ~ Basic 2": 53,
-        "Single Control ~ Standard": 101,
-        "Single Control ~ Advance": 155,
-        "Single Control ~ Advance 2": 169,
-        "Single Control ~ Full PXL": 169,
-        "Single Control ~ Tour": 179
-      }
-    },
-    {
       "fixture": "Color Strike M",
       "watts": 696,
       "weight": 12.1,
@@ -30,12 +16,137 @@
       }
     },
     {
+      "fixture": "COLORado PXL Curve 12",
+      "watts": 768,
+      "weight": 34.5,
+      "modes": {
+        "Single Control ~ Basic": 20,
+        "Single Control ~ Basic 2": 53,
+        "Single Control ~ Standard": 101,
+        "Single Control ~ Advance": 155,
+        "Single Control ~ Advance 2": 169,
+        "Single Control ~ Full PXL": 169,
+        "Single Control ~ Tour": 179
+      }
+    },
+    {
+      "fixture": "COLORado PXL Curve 5",
+      "watts": 1113,
+      "weight": 32.4,
+      "modes": {
+        "120 Chan": 120,
+        "155 Chan": 155,
+        "195 Chan": 195,
+        "355 Chan": 355
+      }
+    },
+    {
+      "fixture": "Maverick Storm 1 Beam",
+      "watts": 467,
+      "weight": 23.3,
+      "modes": {
+        "Standard": 19,
+        "Extended": 21
+      }
+    },
+    {
       "fixture": "Maverick Storm 1 Flex",
       "watts": 738,
       "weight": 28.8,
       "modes": {
         "26 Chan": 26,
         "33 Chan": 33
+      }
+    },
+    {
+      "fixture": "Maverick Storm 1 Hybrid",
+      "watts": 647,
+      "weight": 29.2,
+      "modes": {
+        "Standard": 24,
+        "Extended": 29
+      }
+    },
+    {
+      "fixture": "Maverick Storm 2 BeamWash",
+      "watts": 1040,
+      "weight": 23.8,
+      "modes": {
+        "13 Chan": 13,
+        "33 Chan": 33,
+        "36 Chan": 36,
+        "47 Chan": 47,
+        "93 Chan": 93,
+        "112 Chan": 112,
+        "145 Chan": 145,
+        "224 Chan": 224,
+        "265 Chan": 265,
+        "327 Chan": 327
+      }
+    },
+    {
+      "fixture": "Maverick Storm 2 Profile",
+      "watts": 763,
+      "weight": 30.4,
+      "modes": {
+        "Standard": 32,
+        "Extended": 48
+      }
+    },
+    {
+      "fixture": "Maverick Storm 2 Profile M",
+      "watts": 763,
+      "weight": 31.9,
+      "modes": {
+        "Standard": 32,
+        "Extended": 48
+      }
+    },
+    {
+      "fixture": "Maverick Storm 3 BeamWash",
+      "watts": 1442,
+      "weight": 37.4,
+      "modes": {
+        "12 Chan": 12,
+        "20 Chan": 20,
+        "32 Chan": 32,
+        "35 Chan": 35,
+        "38 Chan": 38,
+        "46 Chan": 46,
+        "120 Chan": 120,
+        "148 Chan": 148,
+        "180 Chan": 180,
+        "296 Chan": 296,
+        "336 Chan": 336,
+        "416 Chan": 416,
+        "424 Chan": 424
+      }
+    },
+    {
+      "fixture": "Maverick Storm 3 Profile",
+      "watts": 1010,
+      "weight": 31.3,
+      "modes": {
+        "Standard": 34,
+        "Extended": 50
+      }
+    },
+    {
+      "fixture": "Maverick Storm 4 Profile",
+      "watts": 1760,
+      "weight": 50.6,
+      "modes": {
+        "Standard": 38,
+        "Extended": 55
+      }
+    },
+    {
+      "fixture": "Maverick Storm 4 SoloWash",
+      "watts": 1680,
+      "weight": 45.5,
+      "modes": {
+        "Standard": 31,
+        "Extended": 46
       }
     },
     {
@@ -53,6 +164,24 @@
       }
     },
     {
+      "fixture": "STRIKE Array 1",
+      "watts": 248,
+      "weight": 3.5,
+      "modes": {
+        "1 Chan": 1,
+        "2 Chan": 2,
+        "5 Chan": 5,
+        "4P-5CH": 5,
+        "4P-14CH": 14,
+        "4P-23CH": 23,
+        "4P-26CH": 26,
+        "8P-9CH": 9,
+        "8P-26CH": 26,
+        "8P-43CH": 43,
+        "8P-46CH": 46
+      }
+    },
+    {
       "fixture": "Strike Array 2",
       "watts": 129,
       "weight": 8,
@@ -66,6 +195,22 @@
       }
     },
     {
+      "fixture": "STRIKE Array 2C",
+      "watts": 581,
+      "weight": 9.4,
+      "modes": {
+        "1 Chan": 1,
+        "3 Chan": 3,
+        "5 Chan": 5,
+        "7 Chan": 7,
+        "10 Chan": 10,
+        "12 Chan 1": 12,
+        "12 Chan 2": 12,
+        "13 Chan": 13,
+        "16 Chan": 16
+      }
+    },
+    {
       "fixture": "Strike Array 4",
       "watts": 245,
       "weight": 13,
@@ -73,6 +218,63 @@
         "3 Chan": 3,
         "4 Chan": 4,
         "9 Chan": 9
+      }
+    },
+    {
+      "fixture": "STRIKE Array 4C",
+      "watts": 1140,
+      "weight": 15.4,
+      "modes": {
+        "1 Chan": 1,
+        "3 Chan": 3,
+        "5 Chan": 5,
+        "7 Chan": 7,
+        "10 Chan": 10,
+        "12 Chan": 12,
+        "13 Chan": 13,
+        "16 Chan": 16,
+        "22 Chan": 22
+      }
+    },
+    {
+      "fixture": "STRIKE Bolt 1C",
+      "watts": 323,
+      "weight": 8.7,
+      "modes": {
+        "7 Chan": 7,
+        "10 Chan": 10,
+        "12 Chan": 12,
+        "16 Chan": 16,
+        "19 Chan": 19,
+        "32 Chan": 32,
+        "40 Chan": 40,
+        "53 Chan": 53
+      }
+    },
+    {
+      "fixture": "STRIKE P38",
+      "watts": 58,
+      "weight": 3.8,
+      "modes": {
+        "1 Chan": 1,
+        "3 Chan": 3,
+        "4 Chan": 4,
+        "5 Chan": 5,
+        "6 Chan": 6
+      }
+    },
+    {
+      "fixture": "STRIKE Saber 10",
+      "watts": 177,
+      "weight": 8.0,
+      "modes": {
+        "1 Chan": 1,
+        "3 Chan": 3,
+        "6 Chan": 6,
+        "13 Chan": 13,
+        "22 Chan": 22,
+        "26 Chan 1": 26,
+        "26 Chan 2": 26
       }
     }
   ]
