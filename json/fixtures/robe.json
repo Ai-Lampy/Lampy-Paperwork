@@ -2,6 +2,28 @@
   "manufacturer": "Robe",
   "fixtures": [
     {
+      "fixture": "Arianne 2",
+      "watts": 720,
+      "weight": 22.5,
+      "modes": {
+        "Mode 1": 39,
+        "Mode 2": 63,
+        "Mode 3": 111,
+        "Mode 4": 127
+      }
+    },
+    {
+      "fixture": "Arianne 6",
+      "watts": 1550,
+      "weight": 43.5,
+      "modes": {
+        "Mode 1": 45,
+        "Mode 2": 93,
+        "Mode 3": 189,
+        "Mode 4": 221
+      }
+    },
+    {
       "fixture": "BMFL Blade",
       "watts": 2000,
       "weight": 37.9,
@@ -38,20 +60,81 @@
       }
     },
     {
-      "fixture": "Forte",
-      "watts": 1250,
-      "weight": 41,
+      "fixture": "CUETE",
+      "watts": 440,
+      "weight": 18.2,
       "modes": {
-        "Mode 1": 54
+        "Mode 1": 34,
+        "Mode 2": 27
       }
     },
     {
-      "fixture": "Giga Pointe",
-      "watts": 500,
-      "weight": 26.5,
+      "fixture": "FOOTSIE1",
+      "watts": 130,
+      "weight": 8.2,
+      "modes": {
+        "Mode 1": 11,
+        "Mode 2": 20,
+        "Mode 3": 38,
+        "Mode 4": 74
+      }
+    },
+    {
+      "fixture": "FOOTSIE2",
+      "watts": 260,
+      "weight": 14.6,
+      "modes": {
+        "Mode 1": 11,
+        "Mode 2": 29,
+        "Mode 3": 56,
+        "Mode 4": 110
+      }
+    },
+    {
+      "fixture": "FORTE",
+      "watts": 1250,
+      "weight": 41,
+      "modes": {
+        "Mode 1": 54,
+        "Mode 2": 56
+      }
+    },
+    {
+      "fixture": "GigaPointe",
+      "watts": 550,
+      "weight": 32.5,
       "modes": {
         "Mode 1": 39,
         "Mode 2": 41
+      }
+    },
+    {
+      "fixture": "HolyPATT",
+      "watts": 300,
+      "weight": 14.4,
+      "modes": {
+        "Mode 1": 5
+      }
+    },
+    {
+      "fixture": "iBar 15",
+      "watts": 850,
+      "weight": 22.5,
+      "modes": {
+        "Mode 1": 33,
+        "Mode 2": 63,
+        "Mode 3": 123,
+        "Mode 4": 183
+      }
+    },
+    {
+      "fixture": "iBeam 350",
+      "watts": 450,
+      "weight": 16.5,
+      "modes": {
+        "Mode 1": 22,
+        "Mode 2": 16,
+        "Mode 3": 24
       }
     },
     {
@@ -108,6 +191,24 @@
       }
     },
     {
+      "fixture": "iPAINTE LTM WB",
+      "watts": 950,
+      "weight": 37.5,
+      "modes": {
+        "Mode 1": 53
+      }
+    },
+    {
+      "fixture": "iParFect 150",
+      "watts": 250,
+      "weight": 8.8,
+      "modes": {
+        "Mode 1": 18,
+        "Mode 2": 12,
+        "Mode 3": 20
+      }
+    },
+    {
       "fixture": "iSpiider X",
       "watts": 660,
       "weight": 19,
@@ -125,6 +226,51 @@
       }
     },
     {
+      "fixture": "iT12 Fresnel",
+      "watts": 420,
+      "weight": 20.5,
+      "modes": {
+        "Mode 1": 18,
+        "Mode 2": 9,
+        "Mode 3": 22,
+        "Mode 4": 5,
+        "Mode 5": 1,
+        "Mode 6": 24,
+        "Mode 7": 13,
+        "Mode 8": 28
+      }
+    },
+    {
+      "fixture": "iT12 PC",
+      "watts": 420,
+      "weight": 21.3,
+      "modes": {
+        "Mode 1": 18,
+        "Mode 2": 9,
+        "Mode 3": 22,
+        "Mode 4": 5,
+        "Mode 5": 1,
+        "Mode 6": 24,
+        "Mode 7": 13,
+        "Mode 8": 28
+      }
+    },
+    {
+      "fixture": "iT12 Profile",
+      "watts": 420,
+      "weight": 21.7,
+      "modes": {
+        "Mode 1": 18,
+        "Mode 2": 9,
+        "Mode 3": 22,
+        "Mode 4": 5,
+        "Mode 5": 1,
+        "Mode 6": 24,
+        "Mode 7": 13,
+        "Mode 8": 28
+      }
+    },
+    {
       "fixture": "iTetra 2",
       "watts": 600,
       "weight": 17.5,
@@ -138,7 +284,47 @@
       }
     },
     {
-      "fixture": "Led Pointe",
+      "fixture": "LEDBeam 150",
+      "watts": 220,
+      "weight": 6.0,
+      "modes": {
+        "Mode 1": 18,
+        "Mode 2": 12,
+        "Mode 3": 20
+      }
+    },
+    {
+      "fixture": "LEDBeam 200",
+      "watts": 250,
+      "weight": 7.8,
+      "modes": {
+        "Mode 1": 22,
+        "Mode 2": 16,
+        "Mode 3": 24
+      }
+    },
+    {
+      "fixture": "LEDBeam 350",
+      "watts": 450,
+      "weight": 9.9,
+      "modes": {
+        "Mode 1": 22,
+        "Mode 2": 16,
+        "Mode 3": 24
+      }
+    },
+    {
+      "fixture": "LEDBeam 350 FW",
+      "watts": 450,
+      "weight": 9.9,
+      "modes": {
+        "Mode 1": 22,
+        "Mode 2": 16,
+        "Mode 3": 24
+      }
+    },
+    {
+      "fixture": "LedPOINTE",
       "watts": 400,
       "weight": 21,
       "modes": {
@@ -146,12 +332,89 @@
       }
     },
     {
-      "fixture": "Mega Pointe",
+      "fixture": "MegaPointe",
       "watts": 670,
       "weight": 22,
       "modes": {
         "Mode 1": 34,
         "Mode 2": 39
+      }
+    },
+    {
+      "fixture": "miniPointe",
+      "watts": 280,
+      "weight": 13.0,
+      "modes": {
+        "Mode 1": 20,
+        "Mode 2": 22
+      }
+    },
+    {
+      "fixture": "MolyPATT",
+      "watts": 300,
+      "weight": 11.0,
+      "modes": {
+        "Mode 1": 5
+      }
+    },
+    {
+      "fixture": "onePATT",
+      "watts": 300,
+      "weight": 9.5,
+      "modes": {
+        "Mode 1": 5
+      }
+    },
+    {
+      "fixture": "PAINTE",
+      "watts": 440,
+      "weight": 24.5,
+      "modes": {
+        "Mode 1": 44,
+        "Mode 2": 45
+      }
+    },
+    {
+      "fixture": "ParFect 150",
+      "watts": 250,
+      "weight": 5.7,
+      "modes": {
+        "Mode 1": 18,
+        "Mode 2": 12,
+        "Mode 3": 20
+      }
+    },
+    {
+      "fixture": "PATT 2013",
+      "watts": 750,
+      "weight": 12.0,
+      "modes": {
+        "Mode 1": 1
+      }
+    },
+    {
+      "fixture": "PATT 2017",
+      "watts": 300,
+      "weight": 12.0,
+      "modes": {
+        "Mode 1": 5
+      }
+    },
+    {
+      "fixture": "picklePATT",
+      "watts": 750,
+      "weight": 14.0,
+      "modes": {
+        "Mode 1": 1
+      }
+    },
+    {
+      "fixture": "SilverScan",
+      "watts": 440,
+      "weight": 17.0,
+      "modes": {
+        "Mode 1": 34,
+        "Mode 2": 27
       }
     },
     {
@@ -169,6 +432,25 @@
         "Mode 8": 110,
         "Mode 9": 104,
         "Mode 10": 123
+      }
+    },
+    {
+      "fixture": "Spikie+",
+      "watts": 100,
+      "weight": 7.3,
+      "modes": {
+        "Mode 1": 27,
+        "Mode 2": 21
+      }
+    },
+    {
+      "fixture": "SVB1",
+      "watts": 420,
+      "weight": 10.0,
+      "modes": {
+        "Mode 1": 17,
+        "Mode 2": 31,
+        "Mode 3": 61
       }
     },
     {
@@ -195,6 +477,241 @@
       }
     },
     {
+      "fixture": "T.5 Profile",
+      "watts": 550,
+      "weight": 18.5,
+      "modes": {
+        "Mode 1": 39,
+        "Mode 2": 27,
+        "Mode 3": 43
+      }
+    },
+    {
+      "fixture": "T1 Profile",
+      "watts": 750,
+      "weight": 24.3,
+      "modes": {
+        "Mode 1": 49,
+        "Mode 2": 33,
+        "Mode 3": 53
+      }
+    },
+    {
+      "fixture": "T10 Fresnel",
+      "watts": 275,
+      "weight": 9.9,
+      "modes": {
+        "Mode 1": 18,
+        "Mode 2": 9,
+        "Mode 3": 22,
+        "Mode 4": 5,
+        "Mode 5": 1,
+        "Mode 6": 24,
+        "Mode 7": 13,
+        "Mode 8": 28
+      }
+    },
+    {
+      "fixture": "T10 PC",
+      "watts": 275,
+      "weight": 9.9,
+      "modes": {
+        "Mode 1": 18,
+        "Mode 2": 9,
+        "Mode 3": 22,
+        "Mode 4": 5,
+        "Mode 5": 1,
+        "Mode 6": 24,
+        "Mode 7": 13,
+        "Mode 8": 28
+      }
+    },
+    {
+      "fixture": "T10 Profile",
+      "watts": 275,
+      "weight": 9.9,
+      "modes": {
+        "Mode 1": 18,
+        "Mode 2": 9,
+        "Mode 3": 22,
+        "Mode 4": 5,
+        "Mode 5": 1,
+        "Mode 6": 24,
+        "Mode 7": 13,
+        "Mode 8": 28
+      }
+    },
+    {
+      "fixture": "T11 Fresnel",
+      "watts": 420,
+      "weight": 14.5,
+      "modes": {
+        "Mode 1": 18,
+        "Mode 2": 9,
+        "Mode 3": 22,
+        "Mode 4": 5,
+        "Mode 5": 1,
+        "Mode 6": 24,
+        "Mode 7": 13,
+        "Mode 8": 28
+      }
+    },
+    {
+      "fixture": "T11 PC",
+      "watts": 420,
+      "weight": 15.3,
+      "modes": {
+        "Mode 1": 18,
+        "Mode 2": 9,
+        "Mode 3": 22,
+        "Mode 4": 5,
+        "Mode 5": 1,
+        "Mode 6": 24,
+        "Mode 7": 13,
+        "Mode 8": 28
+      }
+    },
+    {
+      "fixture": "T11 Profile",
+      "watts": 420,
+      "weight": 15.7,
+      "modes": {
+        "Mode 1": 18,
+        "Mode 2": 9,
+        "Mode 3": 22,
+        "Mode 4": 5,
+        "Mode 5": 1,
+        "Mode 6": 24,
+        "Mode 7": 13,
+        "Mode 8": 28
+      }
+    },
+    {
+      "fixture": "T15 Fresnel",
+      "watts": 750,
+      "weight": 24.0,
+      "modes": {
+        "Mode 1": 18,
+        "Mode 2": 9,
+        "Mode 3": 22,
+        "Mode 4": 5,
+        "Mode 5": 1,
+        "Mode 6": 24,
+        "Mode 7": 13,
+        "Mode 8": 28
+      }
+    },
+    {
+      "fixture": "T15 PC",
+      "watts": 750,
+      "weight": 24.8,
+      "modes": {
+        "Mode 1": 18,
+        "Mode 2": 9,
+        "Mode 3": 22,
+        "Mode 4": 5,
+        "Mode 5": 1,
+        "Mode 6": 24,
+        "Mode 7": 13,
+        "Mode 8": 28
+      }
+    },
+    {
+      "fixture": "T15 Profile",
+      "watts": 750,
+      "weight": 25.2,
+      "modes": {
+        "Mode 1": 18,
+        "Mode 2": 9,
+        "Mode 3": 22,
+        "Mode 4": 5,
+        "Mode 5": 1,
+        "Mode 6": 24,
+        "Mode 7": 13,
+        "Mode 8": 28
+      }
+    },
+    {
+      "fixture": "T2 Profile",
+      "watts": 1150,
+      "weight": 36.9,
+      "modes": {
+        "Mode 1": 52,
+        "Mode 2": 36,
+        "Mode 3": 56
+      }
+    },
+    {
+      "fixture": "T2 Profile FS",
+      "watts": 1150,
+      "weight": 38,
+      "modes": {
+        "Mode 1": 52,
+        "Mode 2": 36,
+        "Mode 3": 56
+      }
+    },
+    {
+      "fixture": "T3 Fresnel",
+      "watts": 1250,
+      "weight": 43.0,
+      "modes": {
+        "Mode 1": 54,
+        "Mode 2": 38,
+        "Mode 3": 58
+      }
+    },
+    {
+      "fixture": "T3 PC",
+      "watts": 1250,
+      "weight": 43.8,
+      "modes": {
+        "Mode 1": 54,
+        "Mode 2": 38,
+        "Mode 3": 58
+      }
+    },
+    {
+      "fixture": "T3 Profile",
+      "watts": 1250,
+      "weight": 45.0,
+      "modes": {
+        "Mode 1": 54,
+        "Mode 2": 38,
+        "Mode 3": 58
+      }
+    },
+    {
+      "fixture": "T31 Cyc",
+      "watts": 300,
+      "weight": 9.5,
+      "modes": {
+        "Mode 1": 18,
+        "Mode 2": 9,
+        "Mode 3": 22,
+        "Mode 4": 5,
+        "Mode 5": 1,
+        "Mode 6": 24,
+        "Mode 7": 13,
+        "Mode 8": 28
+      }
+    },
+    {
+      "fixture": "T32 Cyc",
+      "watts": 600,
+      "weight": 17.5,
+      "modes": {
+        "Mode 1": 18,
+        "Mode 2": 9,
+        "Mode 3": 22,
+        "Mode 4": 5,
+        "Mode 5": 1,
+        "Mode 6": 24,
+        "Mode 7": 13,
+        "Mode 8": 28
+      }
+    },
+    {
       "fixture": "Tarrantula",
       "watts": 1000,
       "weight": 21.2,
@@ -208,7 +725,20 @@
       }
     },
     {
-      "fixture": "Tetra 2",
+      "fixture": "Tetra1",
+      "watts": 200,
+      "weight": 9.3,
+      "modes": {
+        "Mode 1": 25,
+        "Mode 2": 38,
+        "Mode 3": 57,
+        "Mode 4": 66,
+        "Mode 5": 61,
+        "Mode 6": 70
+      }
+    },
+    {
+      "fixture": "Tetra2",
       "watts": 600,
       "weight": 17.5,
       "modes": {
@@ -221,7 +751,7 @@
       }
     },
     {
-      "fixture": "Tetra X",
+      "fixture": "TetraX",
       "watts": 320,
       "weight": 15.7,
       "modes": {
@@ -231,6 +761,19 @@
         "Mode 4": 84,
         "Mode 5": 88,
         "Mode 6": 97
+      }
+    },
+    {
+      "fixture": "TX1 PosiProfile",
+      "watts": 640,
+      "weight": 23.5,
+      "modes": {
+        "Mode 1": 40,
+        "Mode 2": 27,
+        "Mode 3": 44,
+        "Mode 4": 48,
+        "Mode 5": 33,
+        "Mode 6": 52
       }
     },
     {

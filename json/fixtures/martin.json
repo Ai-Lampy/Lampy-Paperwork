@@ -10,7 +10,48 @@
       }
     },
     {
-      "fixture": "Mac Aura PXL",
+      "fixture": "ERA 150 Wash",
+      "watts": 315,
+      "weight": 7.3,
+      "modes": {
+        "Single Mode": 18
+      }
+    },
+    {
+      "fixture": "ERA 400 Performance CLD",
+      "watts": 455,
+      "weight": 22.5,
+      "modes": {
+        "Single Mode": 30
+      }
+    },
+    {
+      "fixture": "ERA 600 Performance",
+      "watts": 856,
+      "weight": 32.3,
+      "modes": {
+        "Single Mode": 41
+      }
+    },
+    {
+      "fixture": "ERA 600 Profile",
+      "watts": 856,
+      "weight": 31.3,
+      "modes": {
+        "Single Mode": 35
+      }
+    },
+    {
+      "fixture": "ERA 700 Performance IP",
+      "watts": 990,
+      "weight": 39.7,
+      "modes": {
+        "Basic": 42,
+        "Extended": 54
+      }
+    },
+    {
+      "fixture": "MAC Aura PXL",
       "watts": 560,
       "weight": 15.6,
       "modes": {
@@ -21,7 +62,7 @@
       }
     },
     {
-      "fixture": "Mac Aura Raven XIP",
+      "fixture": "MAC Aura Raven XIP",
       "watts": 1020,
       "weight": 28.8,
       "modes": {
@@ -33,7 +74,7 @@
       }
     },
     {
-      "fixture": "Mac Aura XB",
+      "fixture": "MAC Aura XB",
       "watts": 400,
       "weight": 6.5,
       "modes": {
@@ -42,7 +83,7 @@
       }
     },
     {
-      "fixture": "Mac Aura XIP",
+      "fixture": "MAC Aura XIP",
       "watts": 340,
       "weight": 8.6,
       "modes": {
@@ -53,7 +94,7 @@
       }
     },
     {
-      "fixture": "Mac Axiom Hybrid",
+      "fixture": "MAC Axiom Hybrid",
       "watts": 600,
       "weight": 24.8,
       "modes": {
@@ -61,7 +102,7 @@
       }
     },
     {
-      "fixture": "Mac Encore Perf CLD",
+      "fixture": "MAC Encore Performance CLD",
       "watts": 580,
       "weight": 31,
       "modes": {
@@ -69,7 +110,7 @@
       }
     },
     {
-      "fixture": "Mac One",
+      "fixture": "MAC One",
       "watts": 180,
       "weight": 4.4,
       "modes": {
@@ -79,7 +120,17 @@
       }
     },
     {
-      "fixture": "Mac Quantum Profile",
+      "fixture": "MAC One Beam",
+      "watts": 55,
+      "weight": 4.4,
+      "modes": {
+        "Compact": 19,
+        "Basic": 35,
+        "Ludicrous": 107
+      }
+    },
+    {
+      "fixture": "MAC Quantum Profile",
       "watts": 750,
       "weight": 23.2,
       "modes": {
@@ -88,7 +139,7 @@
       }
     },
     {
-      "fixture": "Mac Quantum Wash",
+      "fixture": "MAC Quantum Wash",
       "watts": 950,
       "weight": 21,
       "modes": {
@@ -97,7 +148,7 @@
       }
     },
     {
-      "fixture": "Mac Ultra Performance",
+      "fixture": "MAC Ultra Performance",
       "watts": 1450,
       "weight": 44,
       "modes": {
@@ -106,7 +157,7 @@
       }
     },
     {
-      "fixture": "Mac Ultra Wash",
+      "fixture": "MAC Ultra Wash",
       "watts": 1450,
       "weight": 39,
       "modes": {
@@ -114,7 +165,7 @@
       }
     },
     {
-      "fixture": "Mac Viper Air FX",
+      "fixture": "MAC Viper AirFX",
       "watts": 1225,
       "weight": 35.7,
       "modes": {
@@ -123,7 +174,7 @@
       }
     },
     {
-      "fixture": "Mac Viper Perf",
+      "fixture": "MAC Viper Performance",
       "watts": 1225,
       "weight": 37.9,
       "modes": {
@@ -132,7 +183,7 @@
       }
     },
     {
-      "fixture": "Mac Viper Profile",
+      "fixture": "MAC Viper Profile",
       "watts": 1225,
       "weight": 37.2,
       "modes": {
@@ -141,7 +192,7 @@
       }
     },
     {
-      "fixture": "Mac Viper Wash DX",
+      "fixture": "MAC Viper Wash DX",
       "watts": 1225,
       "weight": 34.1,
       "modes": {
@@ -150,13 +201,176 @@
       }
     },
     {
-      "fixture": "Mac Viper XIP",
+      "fixture": "MAC Viper XIP",
       "watts": 1040,
       "weight": 37,
       "modes": {
         "Basic": 54,
         "Extended": 64,
         "Ludicrous": 70
+      }
+    },
+    {
+      "fixture": "VDO Atomic Bold",
+      "watts": 400,
+      "weight": 9.32,
+      "modes": {
+        "1 Channel": 1,
+        "3 Channel": 3,
+        "4 Channel": 4,
+        "Compact": 10,
+        "Basic": 27,
+        "Extended": 243
+      }
+    },
+    {
+      "fixture": "VDO Atomic Dot CLD",
+      "watts": 55,
+      "weight": 2.2,
+      "modes": {
+        "1 Channel": 1,
+        "3 Channel": 3,
+        "4 Channel": 4,
+        "Basic": 19,
+        "Extended": 64
+      }
+    },
+    {
+      "fixture": "VDO Atomic Dot WRM",
+      "watts": 55,
+      "weight": 2.2,
+      "modes": {
+        "1 Channel": 1,
+        "3 Channel": 3,
+        "4 Channel": 4,
+        "Basic": 19,
+        "Extended": 64
+      }
+    },
+    {
+      "fixture": "VDO Fatron 20 1000 mm",
+      "watts": 60,
+      "weight": 2.8,
+      "modes": {
+        "RGB": 3,
+        "Basic": 10,
+        "Segment": 55,
+        "Pixel": 157
+      }
+    },
+    {
+      "fixture": "VDO Fatron 20 320 mm",
+      "watts": 20,
+      "weight": 0.95,
+      "modes": {
+        "RGB": 3,
+        "Basic": 10,
+        "Segment": 19,
+        "Pixel": 37
+      }
+    },
+    {
+      "fixture": "VDO Sceptron 10 1000 mm",
+      "watts": 30,
+      "weight": 1.4,
+      "modes": {
+        "RGB": 3,
+        "Basic": 10,
+        "Segment": 103,
+        "Pixel": 307
+      }
+    },
+    {
+      "fixture": "VDO Sceptron 10 320 mm",
+      "watts": 10,
+      "weight": 0.5,
+      "modes": {
+        "RGB": 3,
+        "Basic": 10,
+        "Segment": 13,
+        "Pixel": 22
+      }
+    },
+    {
+      "fixture": "VDO Sceptron 20 1000 mm",
+      "watts": 15,
+      "weight": 1.4,
+      "modes": {
+        "RGB": 3,
+        "Basic": 10,
+        "Segment": 55,
+        "Pixel": 157
+      }
+    },
+    {
+      "fixture": "VDO Sceptron 20 320 mm",
+      "watts": 5,
+      "weight": 0.5,
+      "modes": {
+        "RGB": 3,
+        "Basic": 10,
+        "Segment": 13,
+        "Pixel": 22
+      }
+    },
+    {
+      "fixture": "VDO Sceptron 40 1000 mm",
+      "watts": 7.5,
+      "weight": 1.4,
+      "modes": {
+        "RGB": 3,
+        "Basic": 10,
+        "Segment": 31,
+        "Pixel": 82
+      }
+    },
+    {
+      "fixture": "VDO Sceptron 40 320 mm",
+      "watts": 2.5,
+      "weight": 0.5,
+      "modes": {
+        "RGB": 3,
+        "Basic": 10,
+        "Segment": 13,
+        "Pixel": 22
+      }
+    },
+    {
+      "fixture": "VDO Sceptron XB 1000 mm",
+      "watts": 30,
+      "weight": 1.6,
+      "modes": {
+        "Compact": 8,
+        "Basic": 14,
+        "Extended 5 Segments": 29,
+        "Extended 10 Segments": 44,
+        "Extended 25 Segments": 89,
+        "Extended 100 Pixels": 314,
+        "Compact Direct": 8,
+        "RGB": 3,
+        "PixelMap 5 Segments": 15,
+        "PixelMap 10 Segments": 30,
+        "PixelMap 25 Segments": 75,
+        "PixelMap 100 Pixels": 300
+      }
+    },
+    {
+      "fixture": "VDO Sceptron XB 320 mm",
+      "watts": 11,
+      "weight": 0.6,
+      "modes": {
+        "Compact": 8,
+        "Basic": 14,
+        "Extended 2 Segments": 20,
+        "Extended 4 Segments": 26,
+        "Extended 8 Segments": 38,
+        "Extended 32 Pixels": 110,
+        "Compact Direct": 8,
+        "RGB": 3,
+        "PixelMap 2 Segments": 6,
+        "PixelMap 4 Segments": 12,
+        "PixelMap 8 Segments": 24,
+        "PixelMap 32 Pixels": 96
       }
     }
   ]

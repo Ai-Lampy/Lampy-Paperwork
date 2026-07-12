@@ -2,9 +2,141 @@
   "manufacturer": "Portman",
   "fixtures": [
     {
-      "fixture": "P1 Mini",
+      "fixture": "AMULET",
+      "watts": 240,
+      "weight": 5.7,
       "modes": {
-        "Standard": 43
+        "Super Simple": 9,
+        "Simple": 15,
+        "Standard": 22,
+        "Standard Fine": 37,
+        "Pixel": 34,
+        "Pixel Fine": 61
+      }
+    },
+    {
+      "fixture": "EVO ELEMENT",
+      "watts": 240,
+      "weight": 5.2,
+      "modes": {
+        "Super Simple": 9,
+        "Simple": 15,
+        "Standard": 23,
+        "Standard Fine": 39,
+        "Pixel": 22,
+        "Pixel Fine": 37
+      }
+    },
+    {
+      "fixture": "MANTIS",
+      "watts": 250,
+      "weight": 8,
+      "modes": {
+        "Super Simple": 21,
+        "Simple": 29,
+        "Standard": 29,
+        "Standard Fine": 45,
+        "Pixel": 28,
+        "Pixel Fine": 43
+      }
+    },
+    {
+      "fixture": "OMNIRAY",
+      "watts": 450,
+      "weight": 14,
+      "modes": {
+        "Simple RGB": 8,
+        "RGBW": 16,
+        "RGBW 16B": 24,
+        "CCT": 15,
+        "CCT 16B": 21,
+        "Tungsten": 16,
+        "Tungsten 16B": 24,
+        "Full Access 16B": 28
+      }
+    },
+    {
+      "fixture": "P1 EVO",
+      "watts": 340,
+      "weight": 12.5,
+      "modes": {
+        "Super Simple": 13,
+        "Simple": 19,
+        "Standard": 43,
+        "Standard Fine": 79,
+        "Pixel": 42,
+        "Pixel Fine": 77
+      }
+    },
+    {
+      "fixture": "P1 Mini",
+      "watts": 95,
+      "weight": 8,
+      "modes": {
+        "Standard": 7
+      }
+    },
+    {
+      "fixture": "P1 Retro Lamp",
+      "watts": 1610,
+      "weight": 12.5,
+      "modes": {
+        "Standard": 7
+      }
+    },
+    {
+      "fixture": "P2 EVO",
+      "watts": 300,
+      "weight": 12.5,
+      "modes": {
+        "Super Simple": 12,
+        "Simple": 18,
+        "Standard": 38,
+        "Standard Fine": 69,
+        "Pixel": 37,
+        "Pixel Fine": 67
+      }
+    },
+    {
+      "fixture": "P2 Hexaline",
+      "watts": 1380,
+      "weight": 12.5,
+      "modes": {
+        "Standard": 6
+      }
+    },
+    {
+      "fixture": "P3 EVO",
+      "watts": 240,
+      "weight": 7,
+      "modes": {
+        "Super Simple": 9,
+        "Simple": 15,
+        "Standard": 23,
+        "Standard Fine": 39,
+        "Pixel": 22,
+        "Pixel Fine": 37
+      }
+    },
+    {
+      "fixture": "P3 PIX3L",
+      "watts": 690,
+      "weight": 4.5,
+      "modes": {
+        "Standard": 3
+      }
+    },
+    {
+      "fixture": "S-TRIBE",
+      "watts": 280,
+      "weight": 8,
+      "modes": {
+        "Super Simple": 12,
+        "Simple": 17,
+        "Standard": 32,
+        "Standard Fine": 57,
+        "Pixel": 52,
+        "Pixel Fine": 97
       }
     }
   ]
