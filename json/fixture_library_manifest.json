@@ -35,6 +35,10 @@
       "file": "elation.json"
     },
     {
+      "name": "ETC",
+      "file": "etc.json"
+    },
+    {
       "name": "Fine Art",
       "file": "fine-art.json"
     },
