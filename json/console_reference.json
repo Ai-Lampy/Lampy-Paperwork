@@ -70,6 +70,18 @@
       ]
     },
     {
+      "id": "grandma3-onPC-command-wing",
+      "manufacturer": "MA Lighting",
+      "name": "grandMA3 onPC Command Wing",
+      "imageUrl": "images/consoles/grandma3-onPC-command-wing.png",
+      "softwareModes": [
+        {
+          "name": "Mode 3",
+          "parameterCount": 4096
+        }
+      ]
+    },
+    {
       "id": "grandma2-full-size",
       "manufacturer": "MA Lighting",
       "name": "grandMA2 Full Size",
@@ -90,6 +102,18 @@
         {
           "name": "Mode 2",
           "parameterCount": 4096
+        }
+      ]
+    },
+    {
+      "id": "grandma2-onPC-command-wing",
+      "manufacturer": "MA Lighting",
+      "name": "grandMA2 onPC Command Wing",
+      "imageUrl": "images/consoles/grandma2-onPC-command-wing.png",
+      "softwareModes": [
+        {
+          "name": "Mode 2",
+          "parameterCount": 2048
         }
       ]
     }
