@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Lampy Paperwork V7.27</title>
+<title>Lampy Paperwork V7.28</title>
 <style>
 :root{--label-w:18mm;--label-h:34mm;--label-gap:0.5mm;--gap-y:2mm;--radius:3mm;--border:1mm;--border-col:#ffffff;--stripe:4mm;--front-aux-w:18mm;--front-aux-h:34mm;--front-output-w:72mm;--front-output-h:34mm;--rear-soca-w:70mm;--rear-soca-h:50mm;--rear-aux-w:85mm;--rear-aux-h:30mm;--rear-aux-gap:5mm;--rear-output-w:90mm;--rear-output-h:60mm;--top-size:18pt;--bottom-size:14pt;--top-align:center;--bottom-align:center;--top-v-align:center;--bottom-v-align:center;--top-font:Cochin,'Times New Roman',Times,serif;--bottom-font:Cochin,'Times New Roman',Times,serif;--top-weight:700;--bottom-weight:700;--top-transform:none;--bottom-transform:none;--top-text-align:center;--bottom-text-align:center}
 *{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f6f7f9;color:#111}h1{margin:0;font-size:28px}h2,h3{margin:0 0 12px}button,input,select,textarea{font:inherit}.top{display:flex;align-items:center;justify-content:space-between;padding:18px 84px 18px 24px;gap:20px}.topActions{display:flex;align-items:center;justify-content:flex-end;gap:12px}.reportIssueBtn{border:1px solid #111;background:#fff;color:#111;border-radius:999px;padding:9px 14px;font-weight:900;text-decoration:none;white-space:nowrap}.reportIssueBtn:hover{background:#111;color:#fff}.badge{font-size:14px;border:1px solid #e0c64b;background:#fff4bf;border-radius:8px;padding:7px 12px;margin-left:12px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{border:1px solid #d9dee7;background:#fff;border-radius:7px;padding:10px 18px;cursor:pointer}.btn:hover{background:#f7f9fc}.btn.primary{background:#17a957;color:#fff;border-color:#17a957;font-weight:700}.btn.danger{color:#b42318}.btn.add{font-weight:800;font-size:18px;line-height:1;padding:8px 14px;background:#111;color:#fff;border-color:#111}.gear{font-size:24px;border:1px solid #d9dee7;background:#fff;border-radius:999px;width:44px;height:44px;cursor:pointer}.gear:hover{background:#f7f9fc}.tourLogoSlot{display:flex;align-items:center;justify-content:flex-end;min-width:80px;max-width:180px}.tourLogo{display:block;max-width:160px;max-height:54px;object-fit:contain}.tourLogoExport{position:absolute;top:5mm;right:5mm;max-width:34mm;max-height:18mm;object-fit:contain;z-index:3}.tourLogoUploadPreview{border:1px dashed #cfd6e1;border-radius:8px;background:#fff;min-height:130px;display:flex;align-items:center;justify-content:center;padding:14px}.tourLogoUploadPreview img{max-width:260px;max-height:120px;object-fit:contain}.logoActions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}.menuButton{position:fixed;right:18px;top:18px;z-index:18;border:1px solid #d9dee7;background:#111;color:#fff;border-radius:999px;width:46px;height:46px;font-size:24px;font-weight:900;cursor:pointer;box-shadow:0 10px 28px rgba(16,24,40,.18)}.menuButton:hover{background:#2a2a2a}.actionSidebar{position:fixed;right:18px;top:74px;width:min(260px,calc(100vw - 36px));z-index:17;border:1px solid #dfe3ea;border-radius:10px;background:#fff;box-shadow:0 18px 48px rgba(16,24,40,.22);padding:12px;transform:translateX(calc(100% + 28px));transition:transform .18s ease}.actionMenuOpen .actionSidebar{transform:translateX(0)}.actionSidebar h2{font-size:15px;margin:0 0 10px}.actionSidebar .btn{width:100%;margin:0 0 8px;text-align:left;font-weight:800}
@@ -46,7 +46,7 @@
 <style id="dynamicPrintPageStyle">@page{size:A4 landscape;margin:5mm}</style>
 </head>
 <body>
-<div class="top"><div><h1>Lampy Paperwork V7.27</h1></div><div class="topActions"><a class="reportIssueBtn" href="https://github.com/Ai-Lampy/Lampy-Paperwork/issues" target="_blank" rel="noopener">Report Issue</a><div id="tourLogoSlot" class="tourLogoSlot"></div></div></div>
+<div class="top"><div><h1>Lampy Paperwork V7.28</h1></div><div class="topActions"><a class="reportIssueBtn" href="https://github.com/Ai-Lampy/Lampy-Paperwork/issues" target="_blank" rel="noopener">Report Issue</a><div id="tourLogoSlot" class="tourLogoSlot"></div></div></div>
 <button class="menuButton" type="button" aria-label="Actions" aria-expanded="false" onclick="toggleActionMenu()">☰</button>
 <aside class="actionSidebar" id="actionSidebar"><h2>Actions</h2><button class="btn" onclick="openProjectInfo();closeActionMenu()">Project Info</button><button class="btn" onclick="newProjectFile();closeActionMenu()">New Project</button><button class="btn" onclick="downloadProjectFile();closeActionMenu()">Download Project</button><button class="btn" onclick="chooseProjectFile();closeActionMenu()">Open Project</button><button class="btn" onclick="openWalkthrough();closeActionMenu()">Walk-through</button><button class="btn primary" onclick="openExportLayout();closeActionMenu()">Export</button></aside>
 <input id="excelFile" type="file" accept=".xlsx,.xls,.xml,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel,text/xml" class="hidden">
@@ -120,7 +120,7 @@
 </style>
 <script>
 'use strict';
-const VERSION='7.27';
+const VERSION='7.28';
 const DEFAULT_FONT="Cochin,'Times New Roman',Times,serif";
 const LABEL_FORMAT_SIZES=[8,9,10,11,12,14,16,18,20,22,24,26,28,30];
 const REAR_LABEL_FORMAT_SIZES=[...LABEL_FORMAT_SIZES,34,36,38,40,42,44,46,48,50];
@@ -750,26 +750,35 @@ function powerSheetRowsForRange(range){
   info.powerSheets[key]=rows.slice(0,target);
   return info.powerSheets[key];
 }
-function powerSheetSlotResult(fixId){
+function powerSheetDuplicateFixIds(ranges=distroRanges()){
+  const counts=new Map();
+  ranges.forEach(range=>powerSheetRowsForRange(range).forEach(row=>normalisePowerSheetRow(row).fixIds.forEach(value=>{
+    const key=String(value||'').trim().toLowerCase();
+    if(key)counts.set(key,(counts.get(key)||0)+1);
+  })));
+  return counts;
+}
+function powerSheetSlotResult(fixId,duplicateIds=null){
   const text=String(fixId||'').trim();
   if(!text)return {empty:true,type:'',watts:null,error:''};
   const patch=fixturePatchByFixId(text);
   if(!patch)return {empty:false,type:'',watts:null,error:'Fix ID not found'};
+  if((duplicateIds?.get(text.toLowerCase())||0)>1)return {empty:false,type:patch.fixture||'',watts:fixtureWatts(patch),error:'Duplicate Fix ID'};
   return {empty:false,type:patch.fixture||'',watts:fixtureWatts(patch),error:''};
 }
 function formatWatts(watts){return Number.isFinite(watts)?String(Math.round(watts)):''}
 function formatAmpsValue(amps){return Number.isFinite(amps)?amps.toFixed(2)+' A':''}
-function powerSheetRowResults(row,voltage){
-  const slots=row.fixIds.map(powerSheetSlotResult),totalWatts=slots.reduce((sum,s)=>sum+(Number.isFinite(s.watts)?s.watts:0),0);
+function powerSheetRowResults(row,voltage,duplicateIds=null){
+  const slots=row.fixIds.map(fixId=>powerSheetSlotResult(fixId,duplicateIds)),totalWatts=slots.reduce((sum,s)=>sum+(Number.isFinite(s.watts)?s.watts:0),0);
   return {slots,totalWatts,amps:totalWatts>0&&voltage>0?totalWatts/voltage:null};
 }
 function powerPhaseClass(way){return ['ampsPhase1','ampsPhase2','ampsPhase3'][(way-1)%3]}
 function blankPhaseTotals(){return {p1:0,p2:0,p3:0}}
 function addPhaseTotals(a,b){return {p1:a.p1+b.p1,p2:a.p2+b.p2,p3:a.p3+b.p3}}
 function powerSheetPhaseTotals(range){
-  const totals=blankPhaseTotals(),rows=powerSheetRowsForRange(range),voltage=distroVoltage(range.d);
+  const totals=blankPhaseTotals(),rows=powerSheetRowsForRange(range),voltage=distroVoltage(range.d),duplicateIds=powerSheetDuplicateFixIds();
   rows.forEach((row,idx)=>{
-    const amps=powerSheetRowResults(normalisePowerSheetRow(row),voltage).amps||0;
+    const amps=powerSheetRowResults(normalisePowerSheetRow(row),voltage,duplicateIds).amps||0;
     const phase=['p1','p2','p3'][idx%3];
     totals[phase]+=amps;
   });
@@ -792,10 +801,16 @@ function powerSuppliesMarkup(ranges,activeRange){
   const supplyNames=activeSupply?supplyDistroNames(activeSupply,ranges):[];
   const supplyTotals=activeSupply?phaseTotalsMarkup('Supply Phase Totals',powerSupplyTotals(activeSupply,ranges),` <span class="powerSupplyNameInline">(${escapeHtml(supplyNames.join(', ')||'No distros')})</span>`):'';
   const cards=supplies.map(s=>{const distroNames=supplyDistroNames(s,ranges),summary=distroNames.join(', ')||'No distros selected';return `<div class="powerSupplyCard"><div class="powerSupplyHead"><button class="powerSupplyToggle" type="button" aria-label="Toggle supply" onclick="togglePowerSupply('${escapeAttr(s.id)}')">${s.collapsed?'▶':'▼'}</button><div class="powerSupplySummary"><strong>${escapeHtml(s.name||'Supply')}</strong><span class="powerSupplyMeta">${escapeHtml(s.input||optionDefault(distroOptions.inputSupply)||'Input Supply')} • ${escapeHtml(summary)}</span></div></div><div class="powerSupplyBody ${s.collapsed?'collapsed':''}"><div class="powerSupplyEditGrid"><div><label>Supply Name</label><input data-supply-id="${escapeAttr(s.id)}" value="${escapeAttr(s.name)}" onchange="updatePowerSupplyName(this)"></div><div><label>Input Supply</label><select data-supply-id="${escapeAttr(s.id)}" onchange="updatePowerSupplyInput(this)">${inputSupplyOptions(s.input||optionDefault(distroOptions.inputSupply))}</select></div><button class="btn danger" type="button" onclick="removePowerSupply('${escapeAttr(s.id)}')">Remove</button></div><div class="powerSupplyChecks">${ranges.map(r=>`<label><input type="checkbox" data-supply-id="${escapeAttr(s.id)}" data-supply-distro="${r.idx}" ${s.distros.includes(r.idx)?'checked':''} onchange="togglePowerSupplyDistro(this)"> ${escapeHtml(r.d.name||('Distro '+(r.idx+1)))}</label>`).join('')}</div></div></div>`}).join('');
-  return `<div class="powerSummaryGrid">${phaseTotalsMarkup('Selected Distro Phase Totals',distroTotals)}${supplyTotals}</div><div class="powerSupplyToolbar"><button class="btn add" type="button" onclick="addPowerSupply()">+ Supply</button></div>${cards?`<div class="powerSupplyList">${cards}</div>`:''}`;
+  return `<div class="powerSummaryGrid">${phaseTotalsMarkup('Selected Distro Phase Totals',distroTotals)}${supplyTotals}</div>${cards?`<div class="powerSupplyList">${cards}</div>`:''}`;
 }
-function updatePowerSheetDisplay(rowIndex,range){
-  const rows=powerSheetRowsForRange(range),row=rows[rowIndex],voltage=distroVoltage(range.d),result=powerSheetRowResults(row,voltage);
+function powerUsedFixIds(){const ids=new Set();distroRanges().forEach(range=>powerSheetRowsForRange(range).forEach(row=>normalisePowerSheetRow(row).fixIds.forEach(value=>{const key=String(value||'').trim().toLowerCase();if(key)ids.add(key)})));return ids}
+function powerUnassignedFixtures(){const used=powerUsedFixIds();return patchFixtureRows().filter(row=>String(row.fixId||'').trim()&&!used.has(String(row.fixId||'').trim().toLowerCase())).sort((a,b)=>String(a.fixId||'').localeCompare(String(b.fixId||''),undefined,{numeric:true,sensitivity:'base'}))}
+function powerFixturesPane(){let pane=$('powerFixturesPane');if(!pane){pane=document.createElement('aside');pane.id='powerFixturesPane';pane.className='frontEditorPane universeDetailPane';pane.innerHTML='<div class="frontEditorHead"><h2>Fixtures</h2><button class="close" type="button" onclick="closePowerFixturesPane()">×</button></div><div id="powerFixturesBody" class="frontEditorBody"></div>';pane.addEventListener('click',e=>e.stopPropagation());document.body.appendChild(pane)}return pane}
+function openPowerFixturesPane(){const pane=powerFixturesPane();renderPowerFixturesPane();pane.classList.add('open')}
+function closePowerFixturesPane(){const pane=$('powerFixturesPane');if(pane)pane.classList.remove('open')}
+function renderPowerFixturesPane(){const pane=$('powerFixturesPane');if(!pane||!pane.classList.contains('open'))return;const body=$('powerFixturesBody'),rows=powerUnassignedFixtures();if(!body)return;body.innerHTML=`<div class="homeDistroMeta" style="margin:0 0 12px">${rows.length} fixture${rows.length===1?'':'s'} still to add to Power Calculations.</div><table class="universeTable"><thead><tr><th>Fix ID</th><th>Type</th></tr></thead><tbody>${rows.map(row=>`<tr><td>${escapeHtml(row.fixId)}</td><td>${escapeHtml(row.fixture||'')}</td></tr>`).join('')||'<tr><td colspan="2">All patched fixtures with Fix IDs are in Power Calculations.</td></tr>'}</tbody></table>`}
+function updatePowerSheetDisplay(rowIndex,range,refreshSummary=true){
+  const rows=powerSheetRowsForRange(range),row=rows[rowIndex],voltage=distroVoltage(range.d),duplicateIds=powerSheetDuplicateFixIds(),result=powerSheetRowResults(row,voltage,duplicateIds);
   for(let slot=0;slot<4;slot++){
     const cell=document.querySelector(`[data-power-result-row="${rowIndex}"][data-power-result-slot="${slot}"]`);
     const watt=document.querySelector(`[data-power-watts-row="${rowIndex}"][data-power-watts-slot="${slot}"]`);
@@ -813,11 +828,12 @@ function updatePowerSheetDisplay(rowIndex,range){
   }
   const amps=document.querySelector(`[data-power-amps-row="${rowIndex}"]`);
   if(amps)amps.textContent=formatAmpsValue(result.amps);
-  refreshPowerPhaseSummary(range);
+  if(refreshSummary)refreshPowerPhaseSummary(range);
 }
+function updateVisiblePowerSheetDisplays(range){powerSheetRowsForRange(range).forEach((_,rowIndex)=>updatePowerSheetDisplay(rowIndex,range,false));refreshPowerPhaseSummary(range)}
 function refreshPowerPhaseSummary(range){const host=document.querySelector('[data-power-summary-host]');if(host)host.innerHTML=powerSuppliesMarkup(distroRanges(),range)}
 function syncPowerRowToRcboLabel(range,rowIndex){
-  const rows=powerSheetRowsForRange(range),row=normalisePowerSheetRow(rows[rowIndex]),result=powerSheetRowResults(row,distroVoltage(range.d));
+  const rows=powerSheetRowsForRange(range),row=normalisePowerSheetRow(rows[rowIndex]),result=powerSheetRowResults(row,distroVoltage(range.d),powerSheetDuplicateFixIds());
   const socaIndex=range.start+Math.floor(rowIndex/6),way=rowIndex%6,labelIndex=(socaIndex*6)+way;
   app.labels[labelIndex]=app.labels[labelIndex]||blankLabel();
   const label=app.labels[labelIndex],ids=row.fixIds.map(v=>String(v||'').trim()).filter(Boolean),types=[...new Set(result.slots.map(s=>s.error?'':String(s.type||'').trim()).filter(Boolean))];
@@ -839,7 +855,8 @@ function updatePowerSheetFixId(inp){
   rows[rowIndex].fixIds[slot]=inp.value;
   syncPowerRowToRcboLabel(range,rowIndex);
   persist();
-  updatePowerSheetDisplay(rowIndex,range);
+  updateVisiblePowerSheetDisplays(range);
+  renderPowerFixturesPane();
 }
 function updatePowerSocaName(inp){
   const s=parseInt(inp.dataset.powerSocaName,10);
@@ -875,7 +892,7 @@ function makePowerDistroTabs(ranges,active){
   return tabs;
 }
 function powerSheetRowMarkup(range,rows,socaLocal,way){
-  const rowIndex=(socaLocal*6)+(way-1),row=normalisePowerSheetRow(rows[rowIndex]),result=powerSheetRowResults(row,distroVoltage(range.d));
+  const rowIndex=(socaLocal*6)+(way-1),row=normalisePowerSheetRow(rows[rowIndex]),result=powerSheetRowResults(row,distroVoltage(range.d),powerSheetDuplicateFixIds());
   const socaIndex=range.start+socaLocal,socaName=cleanSocaName(app.socaNames[socaIndex],socaIndex);
   const fixCells=row.fixIds.map((value,slot)=>{
     const r=result.slots[slot],err=r.error?' powerSheetError':'';
@@ -888,11 +905,11 @@ function renderPowerSheetView(ranges){
   const sheet=$('sheet'),view=document.createElement('div');
   if(sheet)sheet.innerHTML='';
   view.className='powerSheetView';
-  if(!ranges.length){view.innerHTML='<div class="powerSheetToolbar"><div><h2>Power Calculations</h2><div class="powerSheetMeta">Add a distro to start a power sheet.</div></div><button class="btn add" type="button" onclick="openDistroSettings()">+ Distro</button></div><div class="blankState">No distros yet.</div>';sheet.appendChild(view);return}
+  if(!ranges.length){view.innerHTML='<div class="powerSheetToolbar"><div><h2>Power Calculations</h2><div class="powerSheetMeta">Add a distro to start a power sheet.</div></div><div class="powerSheetToolbarActions"><button class="btn powerFixturesButton" type="button" onclick="openPowerFixturesPane()">Fixtures</button><button class="btn add" type="button" onclick="openDistroSettings()">+ Distro</button></div></div><div class="blankState">No distros yet.</div>';sheet.appendChild(view);return}
   if(!ranges.some(r=>r.idx===activePowerDistro))activePowerDistro=ranges[0].idx;
   const range=ranges.find(r=>r.idx===activePowerDistro)||ranges[0],rows=powerSheetRowsForRange(range),voltage=distroVoltage(range.d);
   syncFilledPowerRowsToRcbo(range);
-  view.innerHTML=`<div class="powerSheetToolbar"><div><h2>Power Calculations</h2><div class="powerSheetMeta"><span>${escapeHtml(range.d.name||('Distro '+(range.idx+1)))}</span><span>${range.count} Socapex</span><span>${voltage}V calculation</span></div></div><div class="powerSheetToolbarActions"><label class="toggle" style="margin:0"><input type="checkbox" id="showPowerWatts" ${showPowerWatts?'checked':''} onchange="togglePowerWatts(this)"><span>Show Watts</span></label><button class="btn add" type="button" onclick="openDistroSettings()">+ Distro</button></div></div><div data-power-summary-host>${powerSuppliesMarkup(ranges,range)}</div>`;
+  view.innerHTML=`<div class="powerSheetToolbar"><div><h2>Power Calculations</h2><div class="powerSheetMeta"><span>${escapeHtml(range.d.name||('Distro '+(range.idx+1)))}</span><span>${range.count} Socapex</span><span>${voltage}V calculation</span></div></div><div class="powerSheetToolbarActions"><label class="toggle" style="margin:0"><input type="checkbox" id="showPowerWatts" ${showPowerWatts?'checked':''} onchange="togglePowerWatts(this)"><span>Show Watts</span></label><button class="btn powerFixturesButton" type="button" onclick="openPowerFixturesPane()">Fixtures</button><button class="btn add" type="button" onclick="openDistroSettings()">+ Distro</button><button class="btn add" type="button" onclick="addPowerSupply()">+ Supply</button></div></div><div data-power-summary-host>${powerSuppliesMarkup(ranges,range)}</div>`;
   view.appendChild(makePowerDistroTabs(ranges,activePowerDistro));
   const table=document.createElement('table');
   table.className='powerSheetTable '+(showPowerWatts?'':'hideWatts');
@@ -1808,11 +1825,12 @@ function attachEvents(){
     if(homeToggle){toggleHomePanel(homeToggle.dataset.homePanelToggle);return}
     if(frontEditorState&&!e.target?.closest?.('#frontEditorPane,.label,.socaTitle'))closeFrontEditorPane();
     if(activeUniverseDetail&&!e.target?.closest?.('#universeDetailPane,.universeSummaryButton'))closeUniverseDetailPane();
+    if($('powerFixturesPane')?.classList.contains('open')&&!e.target?.closest?.('#powerFixturesPane,.powerFixturesButton'))closePowerFixturesPane();
     if(document.body.classList.contains('actionMenuOpen')&&!e.target.closest('.actionSidebar')&&!e.target.closest('.menuButton'))closeActionMenu();
   });
   document.addEventListener('keydown',e=>{
     if(e.key==='Escape'){
-      closeActionMenu();closeFrontEditorPane();closeUniverseDetailPane();closeConsoleModal();closeSettings();closeWalkthrough();closeProjectInfo();closeDistroSettings();closeSingleDistroSettings();closeExportLayout();closeFixturePatchPdfPreview();closeOutputModal();closeFixturePatchModal();closePatchImportModal();closePatchOptionsModal();closePatchGroupEditModal();closePositionMenu();closeLabelFormat();closeUnpatchFixtureModal();closePatchColumnsModal();closePatchFormatModal();
+      closeActionMenu();closeFrontEditorPane();closeUniverseDetailPane();closePowerFixturesPane();closeConsoleModal();closeSettings();closeWalkthrough();closeProjectInfo();closeDistroSettings();closeSingleDistroSettings();closeExportLayout();closeFixturePatchPdfPreview();closeOutputModal();closeFixturePatchModal();closePatchImportModal();closePatchOptionsModal();closePatchGroupEditModal();closePositionMenu();closeLabelFormat();closeUnpatchFixtureModal();closePatchColumnsModal();closePatchFormatModal();
     }
   });
   ['settingsModal','walkthroughModal','projectInfoModal','revisionModal','distroSettingsModal','singleDistroSettingsModal','exportModal','fixturePatchPdfModal','outputModal','fixturePatchModal','patchImportModal','patchOptionsModal','patchGroupEditModal','positionModal','labelFormatModal','unpatchFixtureModal','patchColumnsModal','patchFormatModal'].forEach(id=>{
