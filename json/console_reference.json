@@ -9,7 +9,7 @@
       "id": "grandma3-full-size",
       "manufacturer": "MA Lighting",
       "name": "grandMA3 Full-Size",
-      "imageUrl": "https://xom.malighting.com/xom-rest/assets/8c87901f-9cae-4149-9cf5-4250c1e677f7/preview?mimeType=image%2Fpng&width=650&height=385",
+      "imageUrl": "images/consoles/grandma3-full-size.png",
       "softwareModes": [
         {
           "name": "Mode 2",
@@ -25,7 +25,7 @@
       "id": "grandma3-light",
       "manufacturer": "MA Lighting",
       "name": "grandMA3 Light",
-      "imageUrl": "https://xom.malighting.com/xom-rest/assets/22ea1a65-8443-46b1-87a1-e075ba751ce0/preview?mimeType=image%2Fpng&width=650&height=385",
+      "imageUrl": "images/consoles/grandma3-light.png",
       "softwareModes": [
         {
           "name": "Mode 2",
@@ -41,7 +41,7 @@
       "id": "grandma3-compact-xt",
       "manufacturer": "MA Lighting",
       "name": "grandMA3 Compact XT",
-      "imageUrl": "https://xom.malighting.com/xom-rest/assets/9b9aadb2-3763-4689-bace-d93a83613691/preview?mimeType=image%2Fpng&width=650&height=385",
+      "imageUrl": "images/consoles/grandma3-compact-xt.png",
       "softwareModes": [
         {
           "name": "Mode 2",
@@ -57,7 +57,7 @@
       "id": "grandma3-compact",
       "manufacturer": "MA Lighting",
       "name": "grandMA3 Compact",
-      "imageUrl": "https://xom.malighting.com/xom-rest/assets/dd5d9ddc-5021-42c6-8a5b-ab3d7396534f/preview?mimeType=image%2Fpng&width=650&height=385",
+      "imageUrl": "images/consoles/grandma3-compact.png",
       "softwareModes": [
         {
           "name": "Mode 2",
@@ -73,7 +73,7 @@
       "id": "grandma2-full-size",
       "manufacturer": "MA Lighting",
       "name": "grandMA2 Full Size",
-      "imageUrl": "https://xom.malighting.com/xom-rest/assets/9bb55f04-5b0b-4a62-a215-faa252f84921/preview?mimeType=image%2Fpng&width=650&height=385",
+      "imageUrl": "images/consoles/grandma2-full-size.png",
       "softwareModes": [
         {
           "name": "Mode 2",
@@ -85,7 +85,7 @@
       "id": "grandma2-light",
       "manufacturer": "MA Lighting",
       "name": "grandMA2 Light",
-      "imageUrl": "https://xom.malighting.com/xom-rest/assets/34606337-959d-49cd-8a10-c2261c845ee0/preview?mimeType=image%2Fpng&width=650&height=385",
+      "imageUrl": "images/consoles/grandma2-light.png",
       "softwareModes": [
         {
           "name": "Mode 2",
