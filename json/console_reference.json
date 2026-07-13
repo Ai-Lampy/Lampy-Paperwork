@@ -154,8 +154,19 @@
     {
       "id": "grandma2-full-size",
       "manufacturer": "MA Lighting",
-      "name": "grandMA2 Full Size",
+      "name": "grandMA2 Full-Size",
       "imageUrl": "images/consoles/grandma2-full-size.png",
+      "softwareVersions": [
+        {
+          "mode2": "3.9.63.6"
+        },
+        {
+          "mode2": "3.9.61.5"
+        },
+        {
+          "mode2": "3.9.61.3"
+        }
+      ],
       "softwareModes": [
         {
           "name": "Mode 2",
@@ -168,6 +179,17 @@
       "manufacturer": "MA Lighting",
       "name": "grandMA2 Light",
       "imageUrl": "images/consoles/grandma2-light.png",
+      "softwareVersions": [
+        {
+          "mode2": "3.9.63.6"
+        },
+        {
+          "mode2": "3.9.61.5"
+        },
+        {
+          "mode2": "3.9.61.3"
+        }
+      ],
       "softwareModes": [
         {
           "name": "Mode 2",
@@ -180,6 +202,17 @@
       "manufacturer": "MA Lighting",
       "name": "grandMA2 onPC Command Wing",
       "imageUrl": "images/consoles/grandma2-onPC-command-wing.png",
+      "softwareVersions": [
+        {
+          "mode2": "3.9.63.6"
+        },
+        {
+          "mode2": "3.9.61.5"
+        },
+        {
+          "mode2": "3.9.61.3"
+        }
+      ],
       "softwareModes": [
         {
           "name": "Mode 2",
