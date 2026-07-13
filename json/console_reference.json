@@ -10,6 +10,20 @@
       "manufacturer": "MA Lighting",
       "name": "grandMA3 Full-Size",
       "imageUrl": "images/consoles/grandma3-full-size.png",
+      "softwareVersions": [
+        {
+          "mode3": "2.4.2.2",
+          "mode2": "3.9.63.6"
+        },
+        {
+          "mode3": "2.3.2.0",
+          "mode2": "3.9.61.5"
+        },
+        {
+          "mode3": "2.3.1.1",
+          "mode2": "3.9.61.3"
+        }
+      ],
       "softwareModes": [
         {
           "name": "Mode 2",
@@ -26,6 +40,20 @@
       "manufacturer": "MA Lighting",
       "name": "grandMA3 Light",
       "imageUrl": "images/consoles/grandma3-light.png",
+      "softwareVersions": [
+        {
+          "mode3": "2.4.2.2",
+          "mode2": "3.9.63.6"
+        },
+        {
+          "mode3": "2.3.2.0",
+          "mode2": "3.9.61.5"
+        },
+        {
+          "mode3": "2.3.1.1",
+          "mode2": "3.9.61.3"
+        }
+      ],
       "softwareModes": [
         {
           "name": "Mode 2",
@@ -42,6 +70,20 @@
       "manufacturer": "MA Lighting",
       "name": "grandMA3 Compact XT",
       "imageUrl": "images/consoles/grandma3-compact-xt.png",
+      "softwareVersions": [
+        {
+          "mode3": "2.4.2.2",
+          "mode2": "3.9.63.6"
+        },
+        {
+          "mode3": "2.3.2.0",
+          "mode2": "3.9.61.5"
+        },
+        {
+          "mode3": "2.3.1.1",
+          "mode2": "3.9.61.3"
+        }
+      ],
       "softwareModes": [
         {
           "name": "Mode 2",
@@ -58,6 +100,20 @@
       "manufacturer": "MA Lighting",
       "name": "grandMA3 Compact",
       "imageUrl": "images/consoles/grandma3-compact.png",
+      "softwareVersions": [
+        {
+          "mode3": "2.4.2.2",
+          "mode2": "3.9.63.6"
+        },
+        {
+          "mode3": "2.3.2.0",
+          "mode2": "3.9.61.5"
+        },
+        {
+          "mode3": "2.3.1.1",
+          "mode2": "3.9.61.3"
+        }
+      ],
       "softwareModes": [
         {
           "name": "Mode 2",
@@ -74,6 +130,20 @@
       "manufacturer": "MA Lighting",
       "name": "grandMA3 onPC Command Wing",
       "imageUrl": "images/consoles/grandma3-onPC-command-wing.png",
+      "softwareVersions": [
+        {
+          "mode3": "2.4.2.2",
+          "mode2": "3.9.63.6"
+        },
+        {
+          "mode3": "2.3.2.0",
+          "mode2": "3.9.61.5"
+        },
+        {
+          "mode3": "2.3.1.1",
+          "mode2": "3.9.61.3"
+        }
+      ],
       "softwareModes": [
         {
           "name": "Mode 3",
