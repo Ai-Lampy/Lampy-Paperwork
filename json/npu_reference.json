@@ -4,6 +4,7 @@
       "id": "ma-npu-m",
       "manufacturer": "MA Lighting",
       "name": "grandMA3 NPU M",
+      "imageUrl": "images/NPU/grandma3-NPU.png",
       "softwareModes": [
         {
           "name": "Mode 2",
@@ -19,6 +20,7 @@
       "id": "ma-npu-l",
       "manufacturer": "MA Lighting",
       "name": "grandMA3 NPU L",
+      "imageUrl": "images/NPU/grandma3-NPU.png",
       "softwareModes": [
         {
           "name": "Mode 2",
@@ -34,6 +36,7 @@
       "id": "ma-npu-l",
       "manufacturer": "MA Lighting",
       "name": "grandMA3 NPU XL",
+      "imageUrl": "images/NPU/grandma3-NPU.png",
       "softwareModes": [
         {
           "name": "Mode 2",
@@ -49,6 +52,7 @@
       "id": "ma-npu",
       "manufacturer": "MA Lighting",
       "name": "grandMA2 NPU",
+      "imageUrl": "images/NPU/grandma2-NPU.png",
       "softwareModes": [
         {
           "name": "Mode 2",
