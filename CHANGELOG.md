@@ -2,11 +2,251 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V8.0 - 2026-07-14
+
+- Promoted the validated V8 cleanup build to the working stable `index.html`.
+- Removed verified unused JavaScript, including the old distro Excel-template helpers and unused legacy encrypted-project writer.
+- Fixed NPU reference image paths to match the case-sensitive GitHub Pages filenames.
+- Removed macOS `.DS_Store` files from the deploy tree.
+
+## V7.45 - 2026-07-14
+
+- Removed standalone Power Supply phase total cards now that supply totals are embedded in the supply cards.
+- Added automatic Power Supply creation when the first distro is added.
+- Automatically assigns additional new distros to the existing Power Supply.
+- Added a warning when any Power Supply phase exceeds 360.01 A.
+
+## V7.44 - 2026-07-14
+
+- Updated Power Supply card width to 510px with a 485px inner header.
+- Increased the Power Supply card name text to 20px.
+
+## V7.43 - 2026-07-14
+
+- Updated Power Supply cards to render at 600px wide with a 1.2px black border.
+- Applied the same 1.2px black border treatment to Power Calculations phase total blocks.
+
+## V7.42 - 2026-07-14
+
+- Adjusted Power Supply card phase totals layout to the requested 50px header and 280px totals block.
+
+## V7.41 - 2026-07-14
+
+- Updated Power Supply card phase totals to use the established styled Phase 1, Phase 2, and Phase 3 blocks.
+
+## V7.40 - 2026-07-14
+
+- Added compact phase totals directly into each Power Supply card while preserving the existing card height.
+- Kept the standalone supply phase total cards in place for visual comparison.
+
+## V7.39 - 2026-07-14
+
+- Added a phase total card for every Power Supply.
+- Updated supply phase total card headers to use the supply name.
+- Removed recommended supply output from supply phase total cards.
+
+## V7.38 - 2026-07-14
+
+- Simplified Power Supply cards to compact clickable summaries.
+- Moved Power Supply editing controls into a right-side editor pane with Previous and Next navigation.
+- Updated distro phase total cards to use the distro name instead of `Selected Distro Phase Totals`.
+
+## V7.37 - 2026-07-14
+
+- Tightened Power Calculations supply list spacing.
+- Updated Power Phase Summary cards with compact vertical padding and smaller recommended supply blocks.
+
+## V7.36 - 2026-07-14
+
+- Updated Power Calculations phase summaries to show every distro phase totals card in distro order.
+- Kept the Supply Phase Totals card last in the phase summary row.
+
+## V7.35 - 2026-07-14
+
+- Moved Power Supply cards above the Power Phase Summary cards.
+- Updated Power Supply cards to display in one horizontal row together.
+
+## V7.34 - 2026-07-14
+
+- Updated all Power Phase Summary cards to the compact 338px layout with 300px phase totals and 98px centered phase blocks.
+- Centered the recommended supply block inside Power Phase Summary cards.
+
+## V7.33 - 2026-07-13
+
+- Locked Power Calculations table layout so Fix Type cells stay constrained instead of widening the table.
+- Set Power Calculations Fix Type text to shrink between 16px and 12px inside its fixed cell.
+- Shortened the Amps column header to `Amps` and reduced the column width to 90px.
+- Fixed Power Phase Summary card and phase total widths to the requested dimensions.
+
+## V7.32 - 2026-07-13
+
+- Set the `Fixtures Not Added` side-pane table headers to 16px and body cells to 14px.
+- Added a `Keep Visible` toggle so the fixtures side pane can stay open while editing Power Calculations.
+- Changed duplicate Fix ID highlighting in Power Calculations to yellow background with red text.
+- Added auto-shrink handling for Power Calculations Fix Type cell text that would otherwise overflow.
+
+## V7.31 - 2026-07-13
+
+- Updated the Power Calculations fixtures side pane title, pane sizing, body sizing, and table column widths to match the latest layout.
+
+## V7.30 - 2026-07-13
+
+- Set the Power Calculations `Fixtures` side pane to a fixed 501px width with 14px body text.
+- Added a Position column to the unassigned fixtures list.
+
+## V7.29 - 2026-07-13
+
+- Fixed the Power Calculations `Fixtures` side pane so it renders the unassigned fixture list when opened.
+- Added a defensive fixture name fallback in the `Fixtures` side pane Type column.
+
+## V7.28 - 2026-07-13
+
+- Added duplicate Fix ID validation to Power Calculations, using the same error styling as missing Fix IDs.
+- Moved the `+ Supply` action into the Power Calculations toolbar next to `+ Distro`.
+- Added a `Fixtures` side pane in Power Calculations that lists patched Fix IDs and fixture types still missing from the power sheet.
+
+## V7.27 - 2026-07-13
+
+- Added a custom Name field to Console entries and displayed it above the console model on cards.
+- Added the selected device model subtitle under the Console/NPU side-pane editor title.
+- Updated Console/NPU editor Previous and Next navigation so it moves through consoles and NPUs as one continuous list.
+- Updated DMX Port card table headers to match the editor field labels.
+- Removed parameter chip rows from Console and NPU cards.
+- Added current grandMA2 Mode 2 software versions to Full-Size, Light, and onPC Command Wing console references.
+
+## V7.26 - 2026-07-13
+
+- Changed the Console/NPU add-edit form from a floating modal to a right-side editor pane.
+- Added Previous and Next navigation when editing Console and NPU cards.
+- Made Console/NPU card images open the matching editor.
+- Added six DMX Port fields to Console and NPU entries, with populated ports displayed as a 2-row, 6-column table on device cards.
+
+## V7.25 - 2026-07-13
+
+- Updated Control/Network position strips to use the PDF Position Summary stripe-fill and outlined serif text styling while preserving the existing 700px by 60px card strip size.
+
+## V7.24 - 2026-07-13
+
+- Restyled Control/Network position colour strips to match the Position Summary table styling.
+- Updated NPU cards so custom names appear above the NPU reference title.
+- Added outside-click and Escape-key closing for the Console/NPU modal.
+
+## V7.23 - 2026-07-13
+
+- Added Console role selection to the Add/Edit Console modal.
+- Added Location fields to Console and NPU entries, with matching Position Summary colours shown as a 700px by 60px strip on cards.
+- Added editable NPU card names.
+- Updated Control/Network parameter totals to only show active modes with parameters and center-align the summary.
+- Updated Console and NPU cards so the Master console software version displays across all control devices.
+
+## V7.22 - 2026-07-13
+
+- Added a selected Software Version field to Console entries.
+- Made the Master console role unique and sync compatible Backup console software versions to match the Master.
+
+## V7.21 - 2026-07-13
+
+- Added Master and Backup role buttons to Console cards, with the selected role saved in project data.
+
+## V7.20 - 2026-07-13
+
+- Added grandMA3 software version data to console cards, showing each latest release as a Mode 3 version with the matching Mode 2 version in brackets.
+
+## V7.19 - 2026-07-13
+
+- Removed the Control/Network reference console count from the Consoles toolbar.
+- Split the Control/Network available parameter summary into separate Mode 2 and Mode 3 totals.
+
+## V7.18 - 2026-07-13
+
+- Fixed NPU image URLs to match the lowercase filenames served by GitHub Pages.
+
+## V7.17 - 2026-07-13
+
+- Updated the Control/Network parameters available summary to use red, larger, underlined text.
+
+## V7.16 - 2026-07-13
+
+- Updated Console and NPU cards with larger bold titles and clearer mode metadata styling.
+- Added quantity fields when adding new Console or NPU entries so multiple matching cards can be created at once.
+
+## V7.15 - 2026-07-13
+
+- Fixed Console/NPU card image resolution so current JSON reference images override stale saved image paths.
+- Removed empty image frames from Console/NPU cards when no image source is available.
+
+## V7.14 - 2026-07-13
+
+- Added local NPU image assets under the GitHub Pages `images/NPU` path used by the NPU reference JSON.
+- Corrected the duplicate NPU reference ID so `grandMA3 NPU XL` uses its own `ma-npu-xl` identifier.
+
+## V7.13 - 2026-07-13
+
+- Removed the generated placeholder graphic from Console and NPU card image frames.
+- Moved Console and NPU card action buttons below the image in the right-side card column.
+
+## V7.12 - 2026-07-13
+
+- Updated Console and NPU card image frames to use the blue border styling and no dark background.
+- Anchored Console and NPU card action buttons to the bottom-right of each card.
+
+## V7.11 - 2026-07-13
+
+- Moved Console and NPU card images to the right side of each Control/Network card.
+- Set Control/Network card images to a fixed 200px presentation on desktop with a responsive fallback on smaller screens.
+
+## V7.10 - 2026-07-13
+
+- Updated console reference image paths to load from the app's GitHub Pages `images/consoles` folder instead of external MA image URLs.
+
+## V7.9 - 2026-07-13
+
+- Fixed Console and NPU card images so they load behind the placeholder and reveal once the image has finished loading.
+- Added repository image folders for GitHub Pages-hosted console and NPU image assets.
+
+## V7.8 - 2026-07-13
+
+- Added image panels to Console and NPU cards in the Control/Network tab.
+- Added support for optional `image` or `imageUrl` fields in console and NPU JSON references, with built-in placeholders when no image is provided.
+
+## V7.7 - 2026-07-11
+
+- Matched the Fixture Patch `Export to Excel` button styling to `Export to PDF`.
+- Grouped the Fixture Patch PDF and Excel export buttons on the same row in the export preview.
+
+## V7.6 - 2026-07-11
+
+- Changed Fixture Patch Excel export colour columns to output colour names instead of stored hex values.
+
+## V7.5 - 2026-07-11
+
+- Renamed the Fixture Patch toolbar export button to `Export`.
+- Changed the Fixture Patch export preview to offer separate `Export to PDF` and `Export to Excel` actions.
+- Added a Fixture Patch Excel export using the currently visible patch columns and fixture type grouping.
+
+## V7.4 - 2026-07-11
+
+- Changed Fixture Patch PDF preview/export pagination so each fixture type starts on a new page.
+
+## V7.3 - 2026-07-11
+
+- Enlarged the DMX universe side-pane chart for better readability.
+- Allowed occupied DMX chart cells to wrap repeated FIX ID and fixture name text across patched address ranges.
+
+## V7.2 - 2026-07-11
+
+- Changed the DMX universe side-pane chart to display 20 channels per row.
+- Added patched FIX ID and fixture type detail to occupied DMX chart cells.
+
+## V7.1 - 2026-07-11
+
+- Changed the DMX universe detail pane to show available addresses as a numbered 1-512 grid with free and used address states.
+
 ## V7 - 2026-07-11
 
 - Added DMX universe progress bars to the Home tab summary based on occupied addresses out of 512.
 - Changed Home DMX universe rows into clickable summaries that open a right-side universe detail pane.
-- Added universe detail pane tables for patched fixtures and available address ranges.
+- Added universe detail pane tables for patched fixtures and available address visibility.
 - Added a bulk universe renumber action to move all fixtures from one universe to another while preserving addresses.
 
 ## V6.20 - 2026-07-11
