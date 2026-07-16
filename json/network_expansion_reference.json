@@ -12,16 +12,22 @@
       "power": "Tru-1 In & Thru"
     },
     {
-      "id": "generic-managed-switch-16",
-      "manufacturer": "Generic",
-      "name": "Managed Switch 16 Port",
-      "type": "Network Switch",
-      "ports": "16 x 1GbE",
-      "power": "IEC / PSU dependent",
+      "id": "Pathway-Pathport-Octo-DMX-Gateway",
+      "manufacturer": "Pathway",
+      "name": "Pathport Octo DMX Gateway",
+      "type": "DMX Node",
+      "Ports-front": [
+	"8 x XLR-5 Outs"
+	],
+	"Ports-rear": [
+	"1 x 1GbE Ethercon"
+	],
+      "power": "IEC",
       "protocols": [
-        "sACN",
         "Art-Net",
-        "MA-Net"
+        "sACN",
+        "Pathway Protocol",
+	"Shownet"
       ]
     },
     {
