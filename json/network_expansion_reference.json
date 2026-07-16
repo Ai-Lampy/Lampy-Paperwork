@@ -8,8 +8,8 @@
       "ports": [
 	"12 x 1GbE Ethercon",
 	"2 x Quad-Fibre",
+	  ],
       "power": "Tru-1 In & Thru"
-      ]
     },
     {
       "id": "generic-managed-switch-16",
