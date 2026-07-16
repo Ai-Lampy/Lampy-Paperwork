@@ -1,16 +1,14 @@
 {
   "networkExpansion": [
     {
-      "id": "generic-managed-switch-8",
-      "manufacturer": "Generic",
-      "name": "Managed Switch 8 Port",
-      "type": "Network Switch",
-      "ports": "8 x 1GbE",
-      "power": "IEC / PSU dependent",
-      "protocols": [
-        "sACN",
-        "Art-Net",
-        "MA-Net"
+      "id": "Pathway-via-12-fibre-switch",
+      "manufacturer": "Pathway",
+      "name": "Pathport VIA 12",
+      "type": "Managed Network Switch",
+      "ports": [
+	"12 x 1GbE Ethercon",
+	"2 x Quad-Fibre",
+      "power": "Tru-1 In & Thru"
       ]
     },
     {
