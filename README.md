@@ -1,6 +1,41 @@
 # Lampy Paperwork
 
-This folder is the clean GitHub Pages deploy structure for the live app. The app is dependency-free and runs directly from `index.html`.
+Lampy Paperwork is a browser-based paperwork tool for live entertainment lighting and power workflows. It is built as a single-page GitHub Pages app using plain HTML, CSS, and vanilla JavaScript.
+
+Live app: [https://ai-lampy.github.io/Lampy-Paperwork/](https://ai-lampy.github.io/Lampy-Paperwork/)
+
+## What It Does
+
+- Builds front and rear distro labels, including Socapex, Aux, and Output labels.
+- Maintains fixture patch data with CSV, Excel, .xlsm, and .MVR import support.
+- Compares imported fixture patches against the project master patch and highlights differences.
+- Produces power calculation sheets with distro and supply phase totals.
+- Tracks DMX universe usage and available address space.
+- Builds console, NPU, and network paperwork with reference images.
+- Exports project data as a Lampy project file for reopening later.
+- Exports paperwork previews to PDF where supported by the app workflow.
+
+## Current Version
+
+Current app version: **V9.5**
+
+See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
+
+## How To Use
+
+1. Open the live app from the GitHub Pages link above.
+2. Start with **Project Info** and enter the show details.
+3. Add distro details in **Distro Labels**.
+4. Build or import the **Fixture Patch**.
+5. Check **Power Calculations** after fixture IDs and fixture types are set.
+6. Add consoles, NPUs, and network data in **Control/Network**.
+7. Download the project file regularly to save an editable copy.
+
+All project data is client-side. The app runs in your browser and does not require an account, server, database, or build process.
+
+## Browser Support
+
+Lampy Paperwork is intended for modern desktop browsers. Chrome is recommended for the most consistent PDF/export behaviour.
 
 ## Source Structure
 
@@ -20,7 +55,6 @@ This folder is the clean GitHub Pages deploy structure for the live app. The app
     fixture_library_manifest.json
     fixtures/
       <manufacturer>.json
-      ...
     lighting_vendors.json
     network_expansion_reference.json
     npu_reference.json
@@ -29,12 +63,35 @@ This folder is the clean GitHub Pages deploy structure for the live app. The app
     welcome_message.json
 ```
 
+## Reference Data
+
+Reference data is stored in `/json/` and loaded directly by the browser.
+
+- Fixture manufacturers are listed in `json/fixture_library_manifest.json`.
+- Per-manufacturer fixture data lives in `json/fixtures/`.
+- Console and NPU records can include relative image paths from `images/consoles/` and `images/NPU/`.
+- Colour names and aliases are managed in `json/colour_reference_template.json`.
+
+When adding new reference files, keep paths relative to the repository root so GitHub Pages can serve them correctly.
+
 ## Deployment Notes
 
-- Deploy `index.html` from the repository root or from a dedicated GitHub Pages branch/folder.
-- Keep the `/json/` folder at the same level as `index.html`; the app currently loads reference data from `/json/`.
-- Keep the `/images/` folder at the same level as `index.html`; console and NPU reference data use relative image paths from there.
-- Keep `CHANGELOG.md` in the repo to track updates. It is small and does not hurt GitHub Pages deployment.
-- Do not use a `published_versions/` folder; rollback notes live in `CHANGELOG.md`.
-- Keep the app dependency-free. No build step is required for GitHub Pages.
-- Use `.nojekyll` so GitHub Pages serves files exactly as placed.
+- This project is dependency-free: no framework, bundler, package manager, or build step is required.
+- GitHub Pages should serve the repository root directly.
+- Keep `index.html`, `json/`, and `images/` at the same level.
+- Keep `.nojekyll` in the root so GitHub Pages does not run the Jekyll build pipeline.
+- Do not add a `published_versions/` folder. Version tracking and rollback notes belong in `CHANGELOG.md`.
+
+## Development Rules
+
+- Keep the app plain HTML, CSS, and vanilla JavaScript.
+- Keep the app fully GitHub Pages compatible.
+- Update `CHANGELOG.md` for meaningful changes.
+- Bump the visible app version when publishing updates.
+- Check PDF preview/download behaviour carefully after export-related changes.
+
+## Feedback
+
+Use the GitHub issue tracker for bugs, feature requests, and testing notes:
+
+[Report an issue](https://github.com/Ai-Lampy/Lampy-Paperwork/issues)
