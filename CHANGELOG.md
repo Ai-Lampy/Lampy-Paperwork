@@ -2,6 +2,191 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V9.3 - 2026-07-16
+
+- Added a Delete Patch button to the Fixture Patch comparison banner for imported patch tabs.
+
+## V9.2 - 2026-07-16
+
+- Updated imported Fixture Patch comparisons so changed existing fixtures highlight only the cells that differ from the master patch.
+- Added hover comparison text on highlighted cells showing the master patch value.
+- Added click-to-review actions on highlighted cells for Merge, Ignore, or Overwrite.
+
+## V9.1 - 2026-07-16
+
+- Added .xlsm support to Fixture Patch imports.
+- Added workbook sheet selection before mapping patch columns for multi-sheet Excel imports.
+
+## V9 - 2026-07-16
+
+- Added Fixture Patch import choices for CSV/Excel and .MVR files.
+- Imported patches are now named and opened as comparison tabs when a master patch already exists.
+- Added highlighted review states for new, changed, and removed patch rows with actions to add, merge, ignore, overwrite, or remove changes.
+- Added a Make Master Patch action for imported patch tabs and persisted comparison tabs in project files.
+
+## V8.28 - 2026-07-16
+
+- Updated two-colour Control/Network position strips to render on a white base with both selected colours shown as diagonal stripe bands.
+- Fixed malformed network expansion reference JSON so the Pathport VIA 12 entry can load correctly.
+
+## V8.27 - 2026-07-16
+
+- Updated Control/Network position strips so single-colour positions render as white cards with diagonal colour stripes instead of solid colour blocks.
+
+## V8.26 - 2026-07-16
+
+- Updated the Power Calculations PDF renderer to use the current supply and distro phase summary card proportions, preventing overlapping cards in downloaded PDFs.
+- Made the stable direct Power Calculations PDF renderer primary after browser testing showed styled canvas capture is blocked by canvas security.
+
+## V8.25 - 2026-07-16
+
+- Updated Power Calculations PDF download to capture the styled export preview pages so downloaded PDFs match the preview formatting.
+- Kept the direct vector Power PDF renderer as a fallback only if preview capture fails.
+
+## V8.24 - 2026-07-16
+
+- Updated Home stats cards to use the requested flex layout, wider spacing, and fixed 200px card width.
+
+## V8.23 - 2026-07-16
+
+- Rebuilt the Power Calculations PDF download to generate a direct vector PDF from power sheet data instead of screenshotting the preview.
+- Kept supply and distro phase totals plus power table data in the exported PDF while avoiding the browser SVG capture failure.
+
+## V8.22 - 2026-07-16
+
+- Updated the Power Calculations summary layout with Supply Phase Totals and Distro Phase Totals headings.
+- Added divider spacing around the power supply and distro phase total sections.
+
+## V8.21 - 2026-07-16
+
+- Fixed Power Calculations PDF export by making the shared preview capture XML-safe for HTML void tags used in phase total cards.
+
+## V8.20 - 2026-07-16
+
+- Updated all visible Export toolbar buttons to use the green primary button styling.
+- Moved the Fixture Patch Export button before Position Summary in the Fixture Patch toolbar.
+
+## V8.19 - 2026-07-16
+
+- Updated the README to document the current GitHub Pages source structure.
+- Added a keep file for the `images/NPU` asset folder.
+- Clarified that rollback tracking lives in `CHANGELOG.md` rather than a published versions folder.
+
+## V8.18 - 2026-07-16
+
+- Updated the Fixture Patch Export button to use the green primary button styling.
+
+## V8.17 - 2026-07-16
+
+- Added an Export button after + Supply in Power Calculations.
+- Added a Power Calculations export preview modal with paper size, orientation, zoom controls, and Export to PDF.
+- Corrected the internal app version constant so project downloads match the displayed app version.
+
+## V8.16 - 2026-07-16
+
+- Updated the app footer to show the fixed Lampy Paperwork Webapp copyright line.
+- Kept the footer text fixed across tab changes instead of replacing it with per-tab help text.
+
+## V8.15 - 2026-07-16
+
+- Added the Distro tab selector to the Rear Labels tab so it matches the other Distro Labels views.
+- Added an Export button to the Distro Labels navigation after Label Format.
+- Added an Export to PDF button to the Export Layout preview modal using the existing preview pages as the PDF source.
+
+## V8.14 - 2026-07-16
+
+- Updated the source `.distroPreviewSection` rule to the requested margin, white background, auto overflow, and scroll offset.
+- Removed the duplicate later `.distroPreviewSection` override so the section styling is controlled from one rule.
+
+## V8.13 - 2026-07-16
+
+- Updated Distro Preview sections to use the requested margin, white background, auto overflow, and scroll offset.
+- Updated Socapex blocks inside preview windows with the requested left border, left padding, and removed right divider width.
+- Fixed the Distro Settings side pane so internal button clicks stay inside the pane instead of closing it.
+
+## V8.12 - 2026-07-16
+
+- Updated the Distro Labels sub-navigation border to the requested 2.2px red divider.
+- Checked the pasted generated Distro Labels markup against the current renderer; no markup changes were required for the nav structure.
+
+## V8.11 - 2026-07-16
+
+- Fixed Position Summary colour clearing so blank and No Colour fields are no longer normalized back to White by the global colour handler.
+- Marked Position editor colour fields as blank-allowed so cleared colours propagate through patch rows and linked labels correctly.
+- Updated blank Position Summary colour cells to render as empty dashed cells instead of white swatches.
+
+## V8.10 - 2026-07-16
+
+- Added a `noColour` reference block to `json/colour_reference_template.json` for the No Colour option and aliases.
+- Wired No Colour handling to the colour reference metadata so cleared position colours remain blank instead of rendering as White.
+- Fixed the Home Position Summary and Position editor to treat cleared colours and No Colour selections as empty colour fields.
+
+## V8.9 - 2026-07-16
+
+- Fixed the Distro Settings Colour 3 toggle so it only shows or hides the Socapex way table Colour 3 column.
+- Kept the main Socapex colour controls fixed to Colour 1, Colour 2, Colour 3, and Remove.
+- Added explicit two-colour and three-colour Socapex way table layouts so columns resize cleanly when Colour 3 is hidden or shown.
+
+## V8.8 - 2026-07-16
+
+- Fixed the Distro Settings Colour 3 toggle so it only shows or hides the Socapex way table Colour 3 column.
+- Added the first pass of separate Socapex way table column widths for two-colour and three-colour table layouts.
+
+## V8.7 - 2026-07-16
+
+- Cleaned up Distro Labels Table View by removing the distro meta panel, the Socapex Labels section title, and the Socapex Colour title line.
+- Made the Table View Colour 3 column hidden by default and opt-in per distro from the Distro Settings side pane.
+- Tightened Socapex Table View colour controls, override buttons, headers, and column sizing so two cards can fit on a row.
+- Updated distro heading spacing and the black Edit button sizing.
+- Removed the obsolete cleanup report source and updated the README deploy structure to match the current JSON and image folders.
+- Removed the old `published_versions` path fallback from live reference loading.
+
+## V8.6 - 2026-07-16
+
+- Updated Power Supply cards to 449px wide with 427px inner headers.
+- Updated Distro Phase Total cards to 449px wide and arranged them in a three-column 460px grid with 15px gaps.
+- Reduced the Power Supply summary minimum width to 147px.
+
+## V8.5 - 2026-07-14
+
+- Added Previous and Next navigation to the Distro Settings side pane.
+- Moved the Distro side-pane Remove Distro button below the editor options and applied the requested compact black-border styling.
+- Constrained Distro Phase Total cards to two cards per row.
+- Improved Console/NPU image loading by preloading reference images, prioritising add-menu previews, and lazy-loading card images.
+- Changed the Socapex way editor colour controls to a single three-column row.
+- Added Colour 3 to Distro Labels Table View for Socapex, Aux, and Output tables.
+- Changed Table View colour override controls from checkboxes to buttons.
+
+## V8.4 - 2026-07-14
+
+- Added a `No Colour` option to the shared colour picker list so colour fields can be cleared from the menu.
+
+## V8.3 - 2026-07-14
+
+- Changed Power Calculations distro tabs to use an `Edit` button that opens distro settings in the right-side editor pane.
+- Kept `+ Distro` focused on the add-distro modal instead of exposing existing distro editing controls.
+- Added the Remove Distro action to the distro side-pane editor.
+- Restyled supply and distro phase summary cards to the requested compact 510px layout.
+- Moved Console and NPU add-menu image previews beside their device dropdowns.
+- Added Col 3 colour fields to Socapex, way, Aux, and Output label editor panes.
+
+## V8.2 - 2026-07-14
+
+- Reduced Power Calculations Socapex name input text to 20px for the requested table display size.
+
+## V8.1 - 2026-07-14
+
+- Fixed Fixture Patch picker lists so selecting a manufacturer or fixture no longer jumps the list back to the top.
+- Changed `+ Distro` to immediately create and show a new distro setup card with JSON options loaded.
+- Updated additional distro creation so the add modal shows only the new distro instead of the current existing distro.
+- Made the Power Calculations distro settings gear clearer with visible `Settings` text.
+- Restyled distro phase total cards to match the compact supply phase total card layout and removed the recommended supply bubble.
+- Changed `Show Watts` in Power Calculations from a checkbox to a button.
+- Restored Console/NPU add flows to a floating modal while keeping card/image edits in the right-side editor pane.
+- Added Console/NPU image previews inside the add/edit menu when a device is selected.
+- Added third-colour support to linked distro label stripe rendering from Position Summary data.
+- Updated Control/Network position strip styling to match the requested PDF position stripe spacing.
+
 ## V8.0 - 2026-07-14
 
 - Promoted the validated V8 cleanup build to the working stable `index.html`.
