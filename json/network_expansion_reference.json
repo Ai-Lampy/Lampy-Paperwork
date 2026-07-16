@@ -6,9 +6,9 @@
       "name": "Pathport VIA 12",
       "type": "Managed Network Switch",
       "ports": [
-	"12 x 1GbE Ethercon",
-	"2 x Quad-Fibre",
-	  ],
+        "12 x 1GbE Ethercon",
+        "2 x Quad-Fibre"
+      ],
       "power": "Tru-1 In & Thru"
     },
     {
