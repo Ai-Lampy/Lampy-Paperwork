@@ -12,6 +12,44 @@
         "Standard Fine": 37,
         "Pixel": 34,
         "Pixel Fine": 61
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/portman",
+        "suggestedFileName": "Portman__AMULET.gdtf",
+        "file": "",
+        "modes": {
+          "Super Simple": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Simple": {
+            "channels": 15,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard Fine": {
+            "channels": 37,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Pixel": {
+            "channels": 34,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Pixel Fine": {
+            "channels": 61,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -25,6 +63,44 @@
         "Standard Fine": 39,
         "Pixel": 22,
         "Pixel Fine": 37
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/portman",
+        "suggestedFileName": "Portman__EVO_ELEMENT.gdtf",
+        "file": "",
+        "modes": {
+          "Super Simple": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Simple": {
+            "channels": 15,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 23,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard Fine": {
+            "channels": 39,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Pixel": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Pixel Fine": {
+            "channels": 37,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -38,6 +114,44 @@
         "Standard Fine": 45,
         "Pixel": 28,
         "Pixel Fine": 43
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/portman",
+        "suggestedFileName": "Portman__MANTIS.gdtf",
+        "file": "",
+        "modes": {
+          "Super Simple": {
+            "channels": 21,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Simple": {
+            "channels": 29,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 29,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard Fine": {
+            "channels": 45,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Pixel": {
+            "channels": 28,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Pixel Fine": {
+            "channels": 43,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -53,6 +167,54 @@
         "Tungsten": 16,
         "Tungsten 16B": 24,
         "Full Access 16B": 28
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/portman",
+        "suggestedFileName": "Portman__OMNIRAY.gdtf",
+        "file": "",
+        "modes": {
+          "Simple RGB": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW 16B": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "CCT": {
+            "channels": 15,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "CCT 16B": {
+            "channels": 21,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Tungsten": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Tungsten 16B": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Full Access 16B": {
+            "channels": 28,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -66,6 +228,44 @@
         "Standard Fine": 79,
         "Pixel": 42,
         "Pixel Fine": 77
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/portman",
+        "suggestedFileName": "Portman__P1_EVO.gdtf",
+        "file": "",
+        "modes": {
+          "Super Simple": {
+            "channels": 13,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Simple": {
+            "channels": 19,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 43,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard Fine": {
+            "channels": 79,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Pixel": {
+            "channels": 42,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Pixel Fine": {
+            "channels": 77,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -74,6 +274,19 @@
       "weight": 8,
       "modes": {
         "Standard": 7
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/portman",
+        "suggestedFileName": "Portman__P1_Mini.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -82,6 +295,19 @@
       "weight": 12.5,
       "modes": {
         "Standard": 7
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/portman",
+        "suggestedFileName": "Portman__P1_Retro_Lamp.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -95,6 +321,44 @@
         "Standard Fine": 69,
         "Pixel": 37,
         "Pixel Fine": 67
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/portman",
+        "suggestedFileName": "Portman__P2_EVO.gdtf",
+        "file": "",
+        "modes": {
+          "Super Simple": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Simple": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 38,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard Fine": {
+            "channels": 69,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Pixel": {
+            "channels": 37,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Pixel Fine": {
+            "channels": 67,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -103,6 +367,19 @@
       "weight": 12.5,
       "modes": {
         "Standard": 6
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/portman",
+        "suggestedFileName": "Portman__P2_Hexaline.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -116,6 +393,44 @@
         "Standard Fine": 39,
         "Pixel": 22,
         "Pixel Fine": 37
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/portman",
+        "suggestedFileName": "Portman__P3_EVO.gdtf",
+        "file": "",
+        "modes": {
+          "Super Simple": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Simple": {
+            "channels": 15,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 23,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard Fine": {
+            "channels": 39,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Pixel": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Pixel Fine": {
+            "channels": 37,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -124,6 +439,19 @@
       "weight": 4.5,
       "modes": {
         "Standard": 3
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/portman",
+        "suggestedFileName": "Portman__P3_PIX3L.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -137,6 +465,44 @@
         "Standard Fine": 57,
         "Pixel": 52,
         "Pixel Fine": 97
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/portman",
+        "suggestedFileName": "Portman__S_TRIBE.gdtf",
+        "file": "",
+        "modes": {
+          "Super Simple": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Simple": {
+            "channels": 17,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard Fine": {
+            "channels": 57,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Pixel": {
+            "channels": 52,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Pixel Fine": {
+            "channels": 97,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     }
   ]

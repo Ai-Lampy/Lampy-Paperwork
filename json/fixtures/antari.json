@@ -7,6 +7,19 @@
       "weight": 0,
       "modes": {
         "1 Chan": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/antari",
+        "suggestedFileName": "Antari__HZ_500_Hazer.gdtf",
+        "file": "",
+        "modes": {
+          "1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     }
   ]

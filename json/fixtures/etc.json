@@ -10,6 +10,34 @@
         "RGB": 3,
         "Standard": 5,
         "Direct": 6
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__ColorSource_CYC.gdtf",
+        "file": "",
+        "modes": {
+          "1 Channel": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Direct": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -21,6 +49,34 @@
         "RGB": 3,
         "Standard": 6,
         "Direct": 8
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__ColorSource_Fresnel_V.gdtf",
+        "file": "",
+        "modes": {
+          "1 Channel": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Direct": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -32,6 +88,34 @@
         "RGB": 3,
         "5ch": 5,
         "Direct": 6
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__ColorSource_PAR.gdtf",
+        "file": "",
+        "modes": {
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5ch": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Direct": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -43,6 +127,34 @@
         "RGB": 3,
         "5ch": 5,
         "Direct": 6
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__ColorSource_PAR_Deep_Blue.gdtf",
+        "file": "",
+        "modes": {
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5ch": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Direct": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -54,6 +166,34 @@
         "RGB": 3,
         "Standard": 5,
         "Direct": 6
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__ColorSource_PAR_jr.gdtf",
+        "file": "",
+        "modes": {
+          "1 Channel": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Direct": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -65,6 +205,34 @@
         "RGB": 3,
         "Standard": 6,
         "Direct": 8
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__ColorSource_PAR_V_Zoom.gdtf",
+        "file": "",
+        "modes": {
+          "1 Channel": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Direct": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -76,6 +244,34 @@
         "RGB": 3,
         "5ch": 5,
         "Direct": 6
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__ColorSource_Spot.gdtf",
+        "file": "",
+        "modes": {
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5ch": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Direct": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -87,6 +283,34 @@
         "RGB": 3,
         "5ch": 5,
         "Direct": 6
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__ColorSource_Spot_Deep_Blue.gdtf",
+        "file": "",
+        "modes": {
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5ch": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Direct": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -98,6 +322,34 @@
         "RGB": 3,
         "Standard": 5,
         "Direct": 6
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__ColorSource_Spot_jr.gdtf",
+        "file": "",
+        "modes": {
+          "1 Channel": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Direct": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -109,6 +361,34 @@
         "RGB": 3,
         "Standard": 6,
         "Direct": 8
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__ColorSource_Spot_V.gdtf",
+        "file": "",
+        "modes": {
+          "1 Channel": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Direct": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -120,6 +400,34 @@
         "RGB": 3,
         "Standard": 6,
         "Direct": 8
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__ColorSource_Spot_VXT.gdtf",
+        "file": "",
+        "modes": {
+          "1 Channel": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Direct": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -128,6 +436,19 @@
       "weight": 4.1,
       "modes": {
         "Dimmer": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Desire_D22.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -136,6 +457,19 @@
       "weight": 6.4,
       "modes": {
         "Dimmer": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Desire_D40.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -144,6 +478,19 @@
       "weight": 9.1,
       "modes": {
         "Dimmer": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Desire_D60.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -152,6 +499,19 @@
       "weight": 9.1,
       "modes": {
         "Dimmer": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Desire_D60X.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -165,6 +525,44 @@
         "8 Chan": 8,
         "9 Chan": 9,
         "12 Chan": 12
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Desire_Fresnel_5_Daylight_HDR.gdtf",
+        "file": "",
+        "modes": {
+          "1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "3 Chan": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5 Chan": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8 Chan": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "9 Chan": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "12 Chan": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -178,6 +576,44 @@
         "8 Chan": 8,
         "9 Chan": 9,
         "12 Chan": 12
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Desire_Fresnel_5_Lustr_X8.gdtf",
+        "file": "",
+        "modes": {
+          "1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "3 Chan": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5 Chan": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8 Chan": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "9 Chan": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "12 Chan": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -191,6 +627,44 @@
         "8 Chan": 8,
         "9 Chan": 9,
         "12 Chan": 12
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Desire_Fresnel_7_Daylight_HDR.gdtf",
+        "file": "",
+        "modes": {
+          "1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "3 Chan": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5 Chan": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8 Chan": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "9 Chan": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "12 Chan": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -204,6 +678,44 @@
         "8 Chan": 8,
         "9 Chan": 9,
         "12 Chan": 12
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Desire_Fresnel_7_Lustr_X8.gdtf",
+        "file": "",
+        "modes": {
+          "1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "3 Chan": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5 Chan": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8 Chan": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "9 Chan": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "12 Chan": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -212,6 +724,19 @@
       "weight": 6.4,
       "modes": {
         "Dimmer": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Desire_Studio_HD.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -220,6 +745,19 @@
       "weight": 5.9,
       "modes": {
         "Dimmer": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__ETC_Fresnel.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -232,6 +770,39 @@
         "5 Chan": 5,
         "8 Chan": 8,
         "12 Chan": 12
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__fos_4_Fresnel_5_Daylight_HDR.gdtf",
+        "file": "",
+        "modes": {
+          "1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "3 Chan": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5 Chan": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8 Chan": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "12 Chan": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -244,6 +815,39 @@
         "5 Chan": 5,
         "8 Chan": 8,
         "12 Chan": 12
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__fos_4_Fresnel_5_Lustr_X8.gdtf",
+        "file": "",
+        "modes": {
+          "1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "3 Chan": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5 Chan": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8 Chan": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "12 Chan": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -256,6 +860,39 @@
         "5 Chan": 5,
         "8 Chan": 8,
         "12 Chan": 12
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__fos_4_Fresnel_7_Daylight_HDR.gdtf",
+        "file": "",
+        "modes": {
+          "1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "3 Chan": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5 Chan": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8 Chan": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "12 Chan": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -268,6 +905,39 @@
         "5 Chan": 5,
         "8 Chan": 8,
         "12 Chan": 12
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__fos_4_Fresnel_7_Lustr_X8.gdtf",
+        "file": "",
+        "modes": {
+          "1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "3 Chan": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5 Chan": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8 Chan": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "12 Chan": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -280,6 +950,39 @@
         "5 Chan": 5,
         "8 Chan": 8,
         "12 Chan": 12
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__fos_4_Panel_16x24_Daylight_HDR.gdtf",
+        "file": "",
+        "modes": {
+          "1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "3 Chan": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5 Chan": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8 Chan": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "12 Chan": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -292,6 +995,39 @@
         "5 Chan": 5,
         "8 Chan": 8,
         "12 Chan": 12
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__fos_4_Panel_16x24_Lustr_X8.gdtf",
+        "file": "",
+        "modes": {
+          "1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "3 Chan": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5 Chan": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8 Chan": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "12 Chan": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -304,6 +1040,39 @@
         "5 Chan": 5,
         "8 Chan": 8,
         "12 Chan": 12
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__fos_4_Panel_24x24_Daylight_HDR.gdtf",
+        "file": "",
+        "modes": {
+          "1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "3 Chan": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5 Chan": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8 Chan": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "12 Chan": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -316,6 +1085,39 @@
         "5 Chan": 5,
         "8 Chan": 8,
         "12 Chan": 12
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__fos_4_Panel_24x24_Lustr_X8.gdtf",
+        "file": "",
+        "modes": {
+          "1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "3 Chan": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5 Chan": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8 Chan": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "12 Chan": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -328,6 +1130,39 @@
         "5 Chan": 5,
         "8 Chan": 8,
         "12 Chan": 12
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__fos_4_Panel_8x24_Daylight_HDR.gdtf",
+        "file": "",
+        "modes": {
+          "1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "3 Chan": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5 Chan": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8 Chan": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "12 Chan": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -340,6 +1175,39 @@
         "5 Chan": 5,
         "8 Chan": 8,
         "12 Chan": 12
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__fos_4_Panel_8x24_Lustr_X8.gdtf",
+        "file": "",
+        "modes": {
+          "1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "3 Chan": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5 Chan": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8 Chan": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "12 Chan": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -348,6 +1216,19 @@
       "weight": 28.1,
       "modes": {
         "Standard": 57
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Halcyon_Gold.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 57,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -356,6 +1237,19 @@
       "weight": 45,
       "modes": {
         "Standard": 60
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Halcyon_Platinum.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 60,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -364,6 +1258,19 @@
       "weight": 39.5,
       "modes": {
         "Standard": 60
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Halcyon_Silent.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 60,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -372,6 +1279,19 @@
       "weight": 34.5,
       "modes": {
         "Standard": 60
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Halcyon_Titanium.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 60,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -380,6 +1300,19 @@
       "weight": 21.3,
       "modes": {
         "Standard": 44
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Hyperstar.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 44,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -388,6 +1321,19 @@
       "weight": 22.7,
       "modes": {
         "Standard": 48
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Lonestar.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -397,6 +1343,24 @@
       "modes": {
         "Standard": 52,
         "Trifusion Protocol": 52
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Lonestar_Prime.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 52,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Trifusion Protocol": {
+            "channels": 52,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -405,6 +1369,19 @@
       "weight": 21.5,
       "modes": {
         "Standard": 32
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Ministar.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -413,6 +1390,19 @@
       "weight": 4.5,
       "modes": {
         "Dimmer": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__MultiPAR.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -421,6 +1411,19 @@
       "weight": 6.4,
       "modes": {
         "Dimmer": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__PARNel.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -429,6 +1432,19 @@
       "weight": 5.2,
       "modes": {
         "Direct": 8
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Selador_Vivid_Fire_11.gdtf",
+        "file": "",
+        "modes": {
+          "Direct": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -437,6 +1453,19 @@
       "weight": 9.1,
       "modes": {
         "Direct": 16
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Selador_Vivid_Fire_21.gdtf",
+        "file": "",
+        "modes": {
+          "Direct": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -445,6 +1474,19 @@
       "weight": 15.9,
       "modes": {
         "Direct": 32
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Selador_Vivid_Fire_42.gdtf",
+        "file": "",
+        "modes": {
+          "Direct": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -453,6 +1495,19 @@
       "weight": 24.1,
       "modes": {
         "Direct": 48
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Selador_Vivid_Fire_63.gdtf",
+        "file": "",
+        "modes": {
+          "Direct": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -461,6 +1516,19 @@
       "weight": 5.2,
       "modes": {
         "Direct": 8
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Selador_Vivid_Ice_11.gdtf",
+        "file": "",
+        "modes": {
+          "Direct": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -469,6 +1537,19 @@
       "weight": 9.1,
       "modes": {
         "Direct": 16
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Selador_Vivid_Ice_21.gdtf",
+        "file": "",
+        "modes": {
+          "Direct": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -477,6 +1558,19 @@
       "weight": 15.9,
       "modes": {
         "Direct": 32
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Selador_Vivid_Ice_42.gdtf",
+        "file": "",
+        "modes": {
+          "Direct": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -485,6 +1579,19 @@
       "weight": 24.1,
       "modes": {
         "Direct": 48
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Selador_Vivid_Ice_63.gdtf",
+        "file": "",
+        "modes": {
+          "Direct": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -493,6 +1600,19 @@
       "weight": 5.2,
       "modes": {
         "Direct": 8
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Selador_Vivid_R_11.gdtf",
+        "file": "",
+        "modes": {
+          "Direct": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -501,6 +1621,19 @@
       "weight": 9.1,
       "modes": {
         "Direct": 16
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Selador_Vivid_R_21.gdtf",
+        "file": "",
+        "modes": {
+          "Direct": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -509,6 +1642,19 @@
       "weight": 15.9,
       "modes": {
         "Direct": 32
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Selador_Vivid_R_42.gdtf",
+        "file": "",
+        "modes": {
+          "Direct": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -517,6 +1663,19 @@
       "weight": 24.1,
       "modes": {
         "Direct": 48
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Selador_Vivid_R_63.gdtf",
+        "file": "",
+        "modes": {
+          "Direct": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -525,6 +1684,19 @@
       "weight": 1.63,
       "modes": {
         "Direct": 6
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Source_4WRD_Color.gdtf",
+        "file": "",
+        "modes": {
+          "Direct": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -533,6 +1705,19 @@
       "weight": 6.8,
       "modes": {
         "Dimmer": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Source_Four_Fresnel.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -541,6 +1726,19 @@
       "weight": 7.7,
       "modes": {
         "Dimmer": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Source_Four_HID.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -549,6 +1747,19 @@
       "weight": 4.5,
       "modes": {
         "Dimmer": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Source_Four_jr.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -557,6 +1768,19 @@
       "weight": 5.2,
       "modes": {
         "Dimmer": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Source_Four_jr_Zoom.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -572,6 +1796,54 @@
         "HSI Plus 7": 15,
         "HSIC Plus 7": 16,
         "RGB Plus 7": 15
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Source_Four_LED_Series_1_Lustr.gdtf",
+        "file": "",
+        "modes": {
+          "Direct": {
+            "channels": 10,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSIC": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Studio": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI Plus 7": {
+            "channels": 15,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSIC Plus 7": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB Plus 7": {
+            "channels": 15,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -587,6 +1859,54 @@
         "HSI Plus 7": 15,
         "HSIC Plus 7": 16,
         "RGB Plus 7": 15
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Source_Four_LED_Series_1_Studio_HD.gdtf",
+        "file": "",
+        "modes": {
+          "Direct": {
+            "channels": 10,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSIC": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Studio": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI Plus 7": {
+            "channels": 15,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSIC Plus 7": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB Plus 7": {
+            "channels": 15,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -602,6 +1922,54 @@
         "HSI Plus 7": 15,
         "HSIC Plus 7": 16,
         "RGB Plus 7": 15
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Source_Four_LED_Series_2_Daylight_HD.gdtf",
+        "file": "",
+        "modes": {
+          "Direct": {
+            "channels": 10,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSIC": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Studio": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI Plus 7": {
+            "channels": 15,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSIC Plus 7": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB Plus 7": {
+            "channels": 15,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -617,6 +1985,54 @@
         "HSI Plus 7": 15,
         "HSIC Plus 7": 16,
         "RGB Plus 7": 15
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Source_Four_LED_Series_2_Lustr.gdtf",
+        "file": "",
+        "modes": {
+          "Direct": {
+            "channels": 10,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSIC": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Studio": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI Plus 7": {
+            "channels": 15,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSIC Plus 7": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB Plus 7": {
+            "channels": 15,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -632,6 +2048,54 @@
         "HSI Plus 7": 15,
         "HSIC Plus 7": 16,
         "RGB Plus 7": 15
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Source_Four_LED_Series_2_Tungsten_HD.gdtf",
+        "file": "",
+        "modes": {
+          "Direct": {
+            "channels": 10,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSIC": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Studio": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI Plus 7": {
+            "channels": 15,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSIC Plus 7": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB Plus 7": {
+            "channels": 15,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -644,6 +2108,39 @@
         "5 Chan": 5,
         "8 Chan": 8,
         "12 Chan": 12
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Source_Four_LED_Series_3_Daylight_HDR.gdtf",
+        "file": "",
+        "modes": {
+          "1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "3 Chan": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5 Chan": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8 Chan": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "12 Chan": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -656,6 +2153,39 @@
         "5 Chan": 5,
         "8 Chan": 8,
         "12 Chan": 12
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Source_Four_LED_Series_3_Lustr_X8.gdtf",
+        "file": "",
+        "modes": {
+          "1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "3 Chan": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5 Chan": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8 Chan": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "12 Chan": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -664,6 +2194,19 @@
       "weight": 1.2,
       "modes": {
         "Dimmer": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Source_Four_Mini.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -672,6 +2215,19 @@
       "weight": 1.2,
       "modes": {
         "Dimmer": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Source_Four_Mini_LED.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -680,6 +2236,19 @@
       "weight": 3.4,
       "modes": {
         "Dimmer": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Source_Four_PAR.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -688,6 +2257,19 @@
       "weight": 4.5,
       "modes": {
         "Dimmer": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Source_Four_PAR_HID.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -696,6 +2278,19 @@
       "weight": 6.4,
       "modes": {
         "Dimmer": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Source_Four_PARnel.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -704,6 +2299,19 @@
       "weight": 21.0,
       "modes": {
         "Full": 31
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Source_Four_Revolution.gdtf",
+        "file": "",
+        "modes": {
+          "Full": {
+            "channels": 31,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -712,6 +2320,19 @@
       "weight": 6.4,
       "modes": {
         "Dimmer": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Source_Four_Tungsten.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -720,6 +2341,19 @@
       "weight": 7.7,
       "modes": {
         "Dimmer": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Source_Four_Zoom.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -730,6 +2364,29 @@
         "Wash": 15,
         "Reduced": 23,
         "Standard": 51
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/etc",
+        "suggestedFileName": "ETC__Zeo.gdtf",
+        "file": "",
+        "modes": {
+          "Wash": {
+            "channels": 15,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Reduced": {
+            "channels": 23,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 51,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     }
   ]

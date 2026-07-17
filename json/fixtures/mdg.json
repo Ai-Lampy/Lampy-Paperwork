@@ -5,12 +5,38 @@
       "fixture": "ATME",
       "modes": {
         "Standard": 3
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/mdg",
+        "suggestedFileName": "MDG__ATME.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
       "fixture": "The ONE",
       "modes": {
         "Standard": 3
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/mdg",
+        "suggestedFileName": "MDG__The_ONE.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     }
   ]

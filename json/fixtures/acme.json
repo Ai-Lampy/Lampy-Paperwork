@@ -10,6 +10,34 @@
         "29 Chan": 29,
         "31 Chan": 31,
         "38 Chan": 38
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Aeco_15.gdtf",
+        "file": "",
+        "modes": {
+          "22 Chan": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "29 Chan": {
+            "channels": 29,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "31 Chan": {
+            "channels": 31,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "38 Chan": {
+            "channels": 38,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -21,6 +49,34 @@
         "32 Chan": 32,
         "34 Chan": 34,
         "43 Chan": 43
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Aeco_30_Ip.gdtf",
+        "file": "",
+        "modes": {
+          "23 Chan": {
+            "channels": 23,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "32 Chan": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "34 Chan": {
+            "channels": 34,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "43 Chan": {
+            "channels": 43,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -31,6 +87,29 @@
         "33 Chan": 33,
         "24 Chan": 24,
         "28 Chan": 28
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Aeco_5.gdtf",
+        "file": "",
+        "modes": {
+          "33 Chan": {
+            "channels": 33,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "24 Chan": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "28 Chan": {
+            "channels": 28,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -39,6 +118,19 @@
       "weight": 22,
       "modes": {
         "25 Chan": 25
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Autolux.gdtf",
+        "file": "",
+        "modes": {
+          "25 Chan": {
+            "channels": 25,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -48,6 +140,24 @@
       "modes": {
         "14 Chan": 14,
         "55 Chan": 55
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Blinder_Line_10_Ip.gdtf",
+        "file": "",
+        "modes": {
+          "14 Chan": {
+            "channels": 14,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "55 Chan": {
+            "channels": 55,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -57,6 +167,24 @@
       "modes": {
         "14 Chan": 14,
         "30 Chan": 30
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Blinder_Line_5_Ip.gdtf",
+        "file": "",
+        "modes": {
+          "14 Chan": {
+            "channels": 14,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "30 Chan": {
+            "channels": 30,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -68,6 +196,34 @@
         "5 Chan": 5,
         "8 Chan": 8,
         "10 Chan": 10
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Coolie_186.gdtf",
+        "file": "",
+        "modes": {
+          "4 Chan": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5 Chan": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8 Chan": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "10 Chan": {
+            "channels": 10,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -78,6 +234,29 @@
         "27 Chan": 27,
         "50 Chan": 50,
         "58 Chan": 58
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Cyclone.gdtf",
+        "file": "",
+        "modes": {
+          "27 Chan": {
+            "channels": 27,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "50 Chan": {
+            "channels": 50,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "58 Chan": {
+            "channels": 58,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -88,6 +267,29 @@
         "25 Chan": 25,
         "29 Chan": 29,
         "34 Chan": 34
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Geist_Bswf.gdtf",
+        "file": "",
+        "modes": {
+          "25 Chan": {
+            "channels": 25,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "29 Chan": {
+            "channels": 29,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "34 Chan": {
+            "channels": 34,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -102,6 +304,49 @@
         "27 Chan": 27,
         "70 Chan": 70,
         "55 Chan": 55
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Gemini.gdtf",
+        "file": "",
+        "modes": {
+          "58 Chan": {
+            "channels": 58,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "25 Chan": {
+            "channels": 25,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "23 Chan": {
+            "channels": 23,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "35+": {
+            "channels": "35+",
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "27 Chan": {
+            "channels": 27,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "70 Chan": {
+            "channels": 70,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "55 Chan": {
+            "channels": 55,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -113,6 +358,34 @@
         "45 Chan": 45,
         "46 Chan": 46,
         "50 Chan": 50
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Hue_6_Ip.gdtf",
+        "file": "",
+        "modes": {
+          "43 Chan": {
+            "channels": 43,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "45 Chan": {
+            "channels": 45,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "46 Chan": {
+            "channels": 46,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "50 Chan": {
+            "channels": 50,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -124,6 +397,34 @@
         "18 Chan": 18,
         "133 Chan": 133,
         "136 Chan": 136
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Hueline_16_Ip.gdtf",
+        "file": "",
+        "modes": {
+          "16 Chan": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "18 Chan": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "133 Chan": {
+            "channels": 133,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "136 Chan": {
+            "channels": 136,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -137,6 +438,44 @@
         "41 Chan": 41,
         "42 Chan": 42,
         "43 Chan": 43
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Hyperzone.gdtf",
+        "file": "",
+        "modes": {
+          "19 Chan": {
+            "channels": 19,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "20 Chan": {
+            "channels": 20,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "21 Chan": {
+            "channels": 21,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "41 Chan": {
+            "channels": 41,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "42 Chan": {
+            "channels": 42,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "43 Chan": {
+            "channels": 43,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -150,6 +489,44 @@
         "230 Chan": 230,
         "20+80": "20+80",
         "20+210": "20+210"
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Lightning_X.gdtf",
+        "file": "",
+        "modes": {
+          "31 Chan": {
+            "channels": 31,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "43 Chan": {
+            "channels": 43,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "100 Chan": {
+            "channels": 100,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "230 Chan": {
+            "channels": 230,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "20+80": {
+            "channels": "20+80",
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "20+210": {
+            "channels": "20+210",
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -165,6 +542,54 @@
         "20 Chan": 20,
         "79 Chan": 79,
         "81 Chan": 81
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Lineforce_10_Ip.gdtf",
+        "file": "",
+        "modes": {
+          "10 Chan": {
+            "channels": 10,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "11 Chan": {
+            "channels": 11,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "16 Chan": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "17 Chan": {
+            "channels": 17,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "19 Chan": {
+            "channels": 19,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "20 Chan": {
+            "channels": 20,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "79 Chan": {
+            "channels": 79,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "81 Chan": {
+            "channels": 81,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -180,6 +605,54 @@
         "20 Chan": 20,
         "44 Chan": 44,
         "46 Chan": 46
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Lineforce_5_Ip.gdtf",
+        "file": "",
+        "modes": {
+          "10 Chan": {
+            "channels": 10,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "11 Chan": {
+            "channels": 11,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "16 Chan": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "17 Chan": {
+            "channels": 17,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "19 Chan": {
+            "channels": 19,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "20 Chan": {
+            "channels": 20,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "44 Chan": {
+            "channels": 44,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "46 Chan": {
+            "channels": 46,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -192,6 +665,39 @@
         "31 Chan": 31,
         "39 Chan": 39,
         "40 Chan": 40
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Lyra.gdtf",
+        "file": "",
+        "modes": {
+          "22 Chan": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "30 Chan": {
+            "channels": 30,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "31 Chan": {
+            "channels": 31,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "39 Chan": {
+            "channels": 39,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "40 Chan": {
+            "channels": 40,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -201,6 +707,24 @@
       "modes": {
         "30 Chan": 30,
         "18 Chan": 18
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Lyra_Bw.gdtf",
+        "file": "",
+        "modes": {
+          "30 Chan": {
+            "channels": 30,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "18 Chan": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -210,6 +734,24 @@
       "modes": {
         "24 Chan": 24,
         "30 Chan": 30
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Mana_Hybrid.gdtf",
+        "file": "",
+        "modes": {
+          "24 Chan": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "30 Chan": {
+            "channels": 30,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -221,6 +763,34 @@
         "31 Chan": 31,
         "31 Chan (Mode 3)": 31,
         "40 Chan": 40
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Mana_Profile.gdtf",
+        "file": "",
+        "modes": {
+          "22 Chan": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "31 Chan": {
+            "channels": 31,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "31 Chan (Mode 3)": {
+            "channels": 31,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "40 Chan": {
+            "channels": 40,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -232,6 +802,34 @@
         "21 Chan": 21,
         "86 Chan": 86,
         "10+": "10+"
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Neozone.gdtf",
+        "file": "",
+        "modes": {
+          "17 Chan": {
+            "channels": 17,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "21 Chan": {
+            "channels": 21,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "86 Chan": {
+            "channels": 86,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "10+": {
+            "channels": "10+",
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -240,6 +838,19 @@
       "weight": 17.2,
       "modes": {
         "19 Chan": 19
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Nova_Beam.gdtf",
+        "file": "",
+        "modes": {
+          "19 Chan": {
+            "channels": 19,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -249,6 +860,24 @@
       "modes": {
         "17 Chan": 17,
         "37 Chan": 37
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Oxygen.gdtf",
+        "file": "",
+        "modes": {
+          "17 Chan": {
+            "channels": 17,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "37 Chan": {
+            "channels": 37,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -260,6 +889,34 @@
         "5 Chan": 5,
         "8 Chan": 8,
         "10 Chan": 10
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Pasodoble.gdtf",
+        "file": "",
+        "modes": {
+          "4 Chan": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5 Chan": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8 Chan": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "10 Chan": {
+            "channels": 10,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -280,6 +937,79 @@
         "112 Chan": 112,
         "117 Chan": 117,
         "119 Chan": 119
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Pixel_Line_Ip.gdtf",
+        "file": "",
+        "modes": {
+          "7 Chan": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "15 Chan": {
+            "channels": 15,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "17 Chan": {
+            "channels": 17,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "21 Chan": {
+            "channels": 21,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "33 Chan": {
+            "channels": 33,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "39 Chan": {
+            "channels": 39,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "65 Chan": {
+            "channels": 65,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "68 Chan": {
+            "channels": 68,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "70 Chan": {
+            "channels": 70,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "70N": {
+            "channels": "70N",
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "112 Chan": {
+            "channels": 112,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "117 Chan": {
+            "channels": 117,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "119 Chan": {
+            "channels": 119,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -299,6 +1029,74 @@
         "56 Chan": 56,
         "62 Chan": 62,
         "68 Chan": 68
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Pixel_Line_Ip_500.gdtf",
+        "file": "",
+        "modes": {
+          "8 Chan": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "10 Chan": {
+            "channels": 10,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "16 Chan": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "18 Chan": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "22 Chan": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "26 Chan": {
+            "channels": 26,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "34 Chan": {
+            "channels": 34,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "37 Chan": {
+            "channels": 37,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "39 Chan": {
+            "channels": 39,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "56 Chan": {
+            "channels": 56,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "62 Chan": {
+            "channels": 62,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "68 Chan": {
+            "channels": 68,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -311,6 +1109,39 @@
         "163 Chan": 163,
         "195 Chan": 195,
         "27+168": "27+168"
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Pulsar_Plus_S2.gdtf",
+        "file": "",
+        "modes": {
+          "43 Chan": {
+            "channels": 43,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "153 Chan": {
+            "channels": 153,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "163 Chan": {
+            "channels": 163,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "195 Chan": {
+            "channels": 195,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "27+168": {
+            "channels": "27+168",
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -322,6 +1153,34 @@
         "24 Chan": 24,
         "39 Chan": 39,
         "97 Chan": 97
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Pulsar_S2.gdtf",
+        "file": "",
+        "modes": {
+          "21+": {
+            "channels": "21+",
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "24 Chan": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "39 Chan": {
+            "channels": 39,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "97 Chan": {
+            "channels": 97,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -333,6 +1192,34 @@
         "27 Chan": 27,
         "27 Chan (Mode 3)": 27,
         "29 Chan": 29
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Sana_Beam.gdtf",
+        "file": "",
+        "modes": {
+          "16 Chan": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "27 Chan": {
+            "channels": 27,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "27 Chan (Mode 3)": {
+            "channels": 27,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "29 Chan": {
+            "channels": 29,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -344,6 +1231,34 @@
         "36 Chan": 36,
         "36 Chan (Mode 3)": 36,
         "45 Chan": 45
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Sana_Profile.gdtf",
+        "file": "",
+        "modes": {
+          "27 Chan": {
+            "channels": 27,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "36 Chan": {
+            "channels": 36,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "36 Chan (Mode 3)": {
+            "channels": 36,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "45 Chan": {
+            "channels": 45,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -356,6 +1271,39 @@
         "8 Chan": 8,
         "7 Chan": 7,
         "6 Chan": 6
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Sandane_Frost.gdtf",
+        "file": "",
+        "modes": {
+          "11 Chan": {
+            "channels": 11,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "9 Chan": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8 Chan": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "7 Chan": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "6 Chan": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -365,6 +1313,24 @@
       "modes": {
         "30 Chan": 30,
         "24 Chan": 24
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Solar_Wind.gdtf",
+        "file": "",
+        "modes": {
+          "30 Chan": {
+            "channels": 30,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "24 Chan": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -375,6 +1341,29 @@
         "5 Chan": 5,
         "7 Chan": 7,
         "9 Chan": 9
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Stage_Par_400_Zoom_Ip.gdtf",
+        "file": "",
+        "modes": {
+          "5 Chan": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "7 Chan": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "9 Chan": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -390,6 +1379,54 @@
         "8+100": "8+100",
         "8+160": "8+160",
         "21 Chan": 21
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Super_Dotline.gdtf",
+        "file": "",
+        "modes": {
+          "17 Chan": {
+            "channels": 17,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "27 Chan": {
+            "channels": 27,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "99 Chan": {
+            "channels": 99,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "108 Chan": {
+            "channels": 108,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "168 Chan": {
+            "channels": 168,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8+100": {
+            "channels": "8+100",
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8+160": {
+            "channels": "8+160",
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "21 Chan": {
+            "channels": 21,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -401,6 +1438,34 @@
         "32 Chan": 32,
         "34 Chan": 34,
         "43 Chan": 43
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Supernova.gdtf",
+        "file": "",
+        "modes": {
+          "23 Chan": {
+            "channels": 23,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "32 Chan": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "34 Chan": {
+            "channels": 34,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "43 Chan": {
+            "channels": 43,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -412,6 +1477,34 @@
         "32 Chan": 32,
         "35 Chan": 35,
         "44 Chan": 44
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Supernova_Lt.gdtf",
+        "file": "",
+        "modes": {
+          "23 Chan": {
+            "channels": 23,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "32 Chan": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "35 Chan": {
+            "channels": 35,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "44 Chan": {
+            "channels": 44,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -423,6 +1516,34 @@
         "5 Chan": 5,
         "8 Chan": 8,
         "10 Chan": 10
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Tango.gdtf",
+        "file": "",
+        "modes": {
+          "4 Chan": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5 Chan": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8 Chan": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "10 Chan": {
+            "channels": 10,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -435,6 +1556,39 @@
         "29 Chan": 29,
         "139 Chan": 139,
         "141 Chan": 141
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Theta.gdtf",
+        "file": "",
+        "modes": {
+          "19+": {
+            "channels": "19+",
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "27 Chan": {
+            "channels": 27,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "29 Chan": {
+            "channels": 29,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "139 Chan": {
+            "channels": 139,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "141 Chan": {
+            "channels": 141,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -447,6 +1601,39 @@
         "75 Chan": 75,
         "85 Chan": 85,
         "170 Chan": 170
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Tornado.gdtf",
+        "file": "",
+        "modes": {
+          "41 Chan": {
+            "channels": 41,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "71 Chan": {
+            "channels": 71,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "75 Chan": {
+            "channels": 75,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "85 Chan": {
+            "channels": 85,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "170 Chan": {
+            "channels": 170,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -456,6 +1643,24 @@
       "modes": {
         "10 Chan": 10,
         "28 Chan": 28
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Tv_Light_Panel_3000.gdtf",
+        "file": "",
+        "modes": {
+          "10 Chan": {
+            "channels": 10,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "28 Chan": {
+            "channels": 28,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -464,6 +1669,19 @@
       "weight": 9,
       "modes": {
         "17 Chan": 17
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Willow_200.gdtf",
+        "file": "",
+        "modes": {
+          "17 Chan": {
+            "channels": 17,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -472,6 +1690,19 @@
       "weight": 17.5,
       "modes": {
         "18 Chan": 18
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/acme",
+        "suggestedFileName": "ACME__Willow_500.gdtf",
+        "file": "",
+        "modes": {
+          "18 Chan": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     }
   ]

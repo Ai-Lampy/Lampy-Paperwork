@@ -41,6 +41,189 @@
         "DIM RGBWS (16 Pixels, Multi Strobe)": 96,
         "DIM RGBAWS (16 Pixels, Multi Strobe)": 112,
         "RGB CCT DIM IND S (16 Pixels, Multi Strobe)": 112
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/astera",
+        "suggestedFileName": "Astera__AX1_PixelTube.gdtf",
+        "file": "",
+        "modes": {
+          "RGB (1 Pixel)": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB (16 Pixels)": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (16 Pixels)": {
+            "channels": 64,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (16 Pixels)": {
+            "channels": 80,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (16 Pixels)": {
+            "channels": 64,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (16 Pixels)": {
+            "channels": 80,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (16 Pixels)": {
+            "channels": 96,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (16 Pixels)": {
+            "channels": 96,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (16 Pixels, Single Strobe)": {
+            "channels": 49,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (16 Pixels, Single Strobe)": {
+            "channels": 65,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (16 Pixels, Single Strobe)": {
+            "channels": 81,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (16 Pixels, Single Strobe)": {
+            "channels": 65,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (16 Pixels, Single Strobe)": {
+            "channels": 81,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (16 Pixels, Single Strobe)": {
+            "channels": 97,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (16 Pixels, Single Strobe)": {
+            "channels": 97,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (16 Pixels, Multi Strobe)": {
+            "channels": 64,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (16 Pixels, Multi Strobe)": {
+            "channels": 80,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (16 Pixels, Multi Strobe)": {
+            "channels": 96,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (16 Pixels, Multi Strobe)": {
+            "channels": 80,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (16 Pixels, Multi Strobe)": {
+            "channels": 96,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (16 Pixels, Multi Strobe)": {
+            "channels": 112,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (16 Pixels, Multi Strobe)": {
+            "channels": 112,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -62,6 +245,84 @@
         "DIM RGBWS (1 Pixel)": 6,
         "DIM RGBAWS (1 Pixel)": 7,
         "RGB CCT DIM IND S (1 Pixel)": 7
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/astera",
+        "suggestedFileName": "Astera__AX10_SpotMax.gdtf",
+        "file": "",
+        "modes": {
+          "RGB (1 Pixel)": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -104,6 +365,189 @@
         "DIM RGBWS (16 Pixels, Multi Strobe)": 96,
         "DIM RGBAWS (16 Pixels, Multi Strobe)": 112,
         "RGB CCT DIM IND S (16 Pixels, Multi Strobe)": 112
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/astera",
+        "suggestedFileName": "Astera__AX2_100_PixelBar.gdtf",
+        "file": "",
+        "modes": {
+          "RGB (1 Pixel)": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB (16 Pixels)": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (16 Pixels)": {
+            "channels": 64,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (16 Pixels)": {
+            "channels": 80,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (16 Pixels)": {
+            "channels": 64,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (16 Pixels)": {
+            "channels": 80,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (16 Pixels)": {
+            "channels": 96,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (16 Pixels)": {
+            "channels": 96,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (16 Pixels, Single Strobe)": {
+            "channels": 49,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (16 Pixels, Single Strobe)": {
+            "channels": 65,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (16 Pixels, Single Strobe)": {
+            "channels": 81,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (16 Pixels, Single Strobe)": {
+            "channels": 65,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (16 Pixels, Single Strobe)": {
+            "channels": 81,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (16 Pixels, Single Strobe)": {
+            "channels": 97,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (16 Pixels, Single Strobe)": {
+            "channels": 97,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (16 Pixels, Multi Strobe)": {
+            "channels": 64,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (16 Pixels, Multi Strobe)": {
+            "channels": 80,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (16 Pixels, Multi Strobe)": {
+            "channels": 96,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (16 Pixels, Multi Strobe)": {
+            "channels": 80,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (16 Pixels, Multi Strobe)": {
+            "channels": 96,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (16 Pixels, Multi Strobe)": {
+            "channels": 112,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (16 Pixels, Multi Strobe)": {
+            "channels": 112,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -146,6 +590,189 @@
         "DIM RGBWS (8 Pixels, Multi Strobe)": 48,
         "DIM RGBAWS (8 Pixels, Multi Strobe)": 56,
         "RGB CCT DIM IND S (8 Pixels, Multi Strobe)": 56
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/astera",
+        "suggestedFileName": "Astera__AX2_50_PixelBar.gdtf",
+        "file": "",
+        "modes": {
+          "RGB (1 Pixel)": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB (8 Pixels)": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (8 Pixels)": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (8 Pixels)": {
+            "channels": 40,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (8 Pixels)": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (8 Pixels)": {
+            "channels": 40,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (8 Pixels)": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (8 Pixels)": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (8 Pixels, Single Strobe)": {
+            "channels": 25,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (8 Pixels, Single Strobe)": {
+            "channels": 33,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (8 Pixels, Single Strobe)": {
+            "channels": 41,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (8 Pixels, Single Strobe)": {
+            "channels": 33,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (8 Pixels, Single Strobe)": {
+            "channels": 41,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (8 Pixels, Single Strobe)": {
+            "channels": 49,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (8 Pixels, Single Strobe)": {
+            "channels": 49,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (8 Pixels, Multi Strobe)": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (8 Pixels, Multi Strobe)": {
+            "channels": 40,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (8 Pixels, Multi Strobe)": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (8 Pixels, Multi Strobe)": {
+            "channels": 40,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (8 Pixels, Multi Strobe)": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (8 Pixels, Multi Strobe)": {
+            "channels": 56,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (8 Pixels, Multi Strobe)": {
+            "channels": 56,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -167,6 +794,84 @@
         "DIM RGBWS (1 Pixel)": 6,
         "DIM RGBAWS (1 Pixel)": 7,
         "RGB CCT DIM IND S (1 Pixel)": 7
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/astera",
+        "suggestedFileName": "Astera__AX3_LightDrop.gdtf",
+        "file": "",
+        "modes": {
+          "RGB (1 Pixel)": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -188,6 +893,84 @@
         "DIM RGBWS (1 Pixel)": 6,
         "DIM RGBAWS (1 Pixel)": 7,
         "RGB CCT DIM IND S (1 Pixel)": 7
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/astera",
+        "suggestedFileName": "Astera__AX5_TriplePAR.gdtf",
+        "file": "",
+        "modes": {
+          "RGB (1 Pixel)": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -209,6 +992,84 @@
         "DIM RGBWS (1 Pixel)": 6,
         "DIM RGBAWS (1 Pixel)": 7,
         "RGB CCT DIM IND S (1 Pixel)": 7
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/astera",
+        "suggestedFileName": "Astera__AX9_PowerPAR.gdtf",
+        "file": "",
+        "modes": {
+          "RGB (1 Pixel)": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -251,6 +1112,189 @@
         "DIM RGBWS (8 Pixels, Multi Strobe)": 48,
         "DIM RGBAWS (8 Pixels, Multi Strobe)": 56,
         "RGB CCT DIM IND S (8 Pixels, Multi Strobe)": 56
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/astera",
+        "suggestedFileName": "Astera__Helios_Tube.gdtf",
+        "file": "",
+        "modes": {
+          "RGB (1 Pixel)": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB (8 Pixels)": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (8 Pixels)": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (8 Pixels)": {
+            "channels": 40,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (8 Pixels)": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (8 Pixels)": {
+            "channels": 40,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (8 Pixels)": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (8 Pixels)": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (8 Pixels, Single Strobe)": {
+            "channels": 25,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (8 Pixels, Single Strobe)": {
+            "channels": 33,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (8 Pixels, Single Strobe)": {
+            "channels": 41,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (8 Pixels, Single Strobe)": {
+            "channels": 33,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (8 Pixels, Single Strobe)": {
+            "channels": 41,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (8 Pixels, Single Strobe)": {
+            "channels": 49,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (8 Pixels, Single Strobe)": {
+            "channels": 49,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (8 Pixels, Multi Strobe)": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (8 Pixels, Multi Strobe)": {
+            "channels": 40,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (8 Pixels, Multi Strobe)": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (8 Pixels, Multi Strobe)": {
+            "channels": 40,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (8 Pixels, Multi Strobe)": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (8 Pixels, Multi Strobe)": {
+            "channels": 56,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (8 Pixels, Multi Strobe)": {
+            "channels": 56,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -293,6 +1337,189 @@
         "DIM RGBWS (6 Pixels, Multi Strobe)": 36,
         "DIM RGBAWS (6 Pixels, Multi Strobe)": 42,
         "RGB CCT DIM IND S (6 Pixels, Multi Strobe)": 42
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/astera",
+        "suggestedFileName": "Astera__HydraPanel.gdtf",
+        "file": "",
+        "modes": {
+          "RGB (1 Pixel)": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB (6 Pixels)": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (6 Pixels)": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (6 Pixels)": {
+            "channels": 30,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (6 Pixels)": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (6 Pixels)": {
+            "channels": 30,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (6 Pixels)": {
+            "channels": 36,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (6 Pixels)": {
+            "channels": 36,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (6 Pixels, Single Strobe)": {
+            "channels": 19,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (6 Pixels, Single Strobe)": {
+            "channels": 25,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (6 Pixels, Single Strobe)": {
+            "channels": 31,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (6 Pixels, Single Strobe)": {
+            "channels": 25,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (6 Pixels, Single Strobe)": {
+            "channels": 31,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (6 Pixels, Single Strobe)": {
+            "channels": 37,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (6 Pixels, Single Strobe)": {
+            "channels": 37,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (6 Pixels, Multi Strobe)": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (6 Pixels, Multi Strobe)": {
+            "channels": 30,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (6 Pixels, Multi Strobe)": {
+            "channels": 36,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (6 Pixels, Multi Strobe)": {
+            "channels": 30,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (6 Pixels, Multi Strobe)": {
+            "channels": 36,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (6 Pixels, Multi Strobe)": {
+            "channels": 42,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (6 Pixels, Multi Strobe)": {
+            "channels": 42,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -335,6 +1562,189 @@
         "DIM RGBWS (32 Pixels, Multi Strobe)": 192,
         "DIM RGBAWS (32 Pixels, Multi Strobe)": 224,
         "RGB CCT DIM IND S (32 Pixels, Multi Strobe)": 224
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/astera",
+        "suggestedFileName": "Astera__Hyperion_Tube.gdtf",
+        "file": "",
+        "modes": {
+          "RGB (1 Pixel)": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB (32 Pixels)": {
+            "channels": 96,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (32 Pixels)": {
+            "channels": 128,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (32 Pixels)": {
+            "channels": 160,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (32 Pixels)": {
+            "channels": 128,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (32 Pixels)": {
+            "channels": 160,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (32 Pixels)": {
+            "channels": 192,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (32 Pixels)": {
+            "channels": 192,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (32 Pixels, Single Strobe)": {
+            "channels": 97,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (32 Pixels, Single Strobe)": {
+            "channels": 129,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (32 Pixels, Single Strobe)": {
+            "channels": 161,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (32 Pixels, Single Strobe)": {
+            "channels": 129,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (32 Pixels, Single Strobe)": {
+            "channels": 161,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (32 Pixels, Single Strobe)": {
+            "channels": 193,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (32 Pixels, Single Strobe)": {
+            "channels": 193,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (32 Pixels, Multi Strobe)": {
+            "channels": 128,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (32 Pixels, Multi Strobe)": {
+            "channels": 160,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (32 Pixels, Multi Strobe)": {
+            "channels": 192,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (32 Pixels, Multi Strobe)": {
+            "channels": 160,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (32 Pixels, Multi Strobe)": {
+            "channels": 192,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (32 Pixels, Multi Strobe)": {
+            "channels": 224,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (32 Pixels, Multi Strobe)": {
+            "channels": 224,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -356,6 +1766,84 @@
         "DIM RGBWS (1 Pixel)": 6,
         "DIM RGBAWS (1 Pixel)": 7,
         "RGB CCT DIM IND S (1 Pixel)": 7
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/astera",
+        "suggestedFileName": "Astera__LeoFresnel.gdtf",
+        "file": "",
+        "modes": {
+          "RGB (1 Pixel)": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -377,6 +1865,84 @@
         "DIM RGBWS (1 Pixel)": 6,
         "DIM RGBAWS (1 Pixel)": 7,
         "RGB CCT DIM IND S (1 Pixel)": 7
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/astera",
+        "suggestedFileName": "Astera__LunaBulb.gdtf",
+        "file": "",
+        "modes": {
+          "RGB (1 Pixel)": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -398,6 +1964,84 @@
         "DIM RGBWS (1 Pixel)": 6,
         "DIM RGBAWS (1 Pixel)": 7,
         "RGB CCT DIM IND S (1 Pixel)": 7
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/astera",
+        "suggestedFileName": "Astera__NYX_Bulb.gdtf",
+        "file": "",
+        "modes": {
+          "RGB (1 Pixel)": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -419,6 +2063,84 @@
         "DIM RGBWS (1 Pixel)": 6,
         "DIM RGBAWS (1 Pixel)": 7,
         "RGB CCT DIM IND S (1 Pixel)": 7
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/astera",
+        "suggestedFileName": "Astera__PixelBrick.gdtf",
+        "file": "",
+        "modes": {
+          "RGB (1 Pixel)": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -440,6 +2162,84 @@
         "DIM RGBWS (1 Pixel)": 6,
         "DIM RGBAWS (1 Pixel)": 7,
         "RGB CCT DIM IND S (1 Pixel)": 7
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/astera",
+        "suggestedFileName": "Astera__PlutoFresnel.gdtf",
+        "file": "",
+        "modes": {
+          "RGB (1 Pixel)": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -461,6 +2261,84 @@
         "DIM RGBWS (1 Pixel)": 6,
         "DIM RGBAWS (1 Pixel)": 7,
         "RGB CCT DIM IND S (1 Pixel)": 7
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/astera",
+        "suggestedFileName": "Astera__QuikBeam.gdtf",
+        "file": "",
+        "modes": {
+          "RGB (1 Pixel)": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -482,6 +2360,84 @@
         "DIM RGBWS (1 Pixel)": 6,
         "DIM RGBAWS (1 Pixel)": 7,
         "RGB CCT DIM IND S (1 Pixel)": 7
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/astera",
+        "suggestedFileName": "Astera__QuikPunch.gdtf",
+        "file": "",
+        "modes": {
+          "RGB (1 Pixel)": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -503,6 +2459,84 @@
         "DIM RGBWS (1 Pixel)": 6,
         "DIM RGBAWS (1 Pixel)": 7,
         "RGB CCT DIM IND S (1 Pixel)": 7
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/astera",
+        "suggestedFileName": "Astera__QuikSpot.gdtf",
+        "file": "",
+        "modes": {
+          "RGB (1 Pixel)": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -524,6 +2558,84 @@
         "DIM RGBWS (1 Pixel)": 6,
         "DIM RGBAWS (1 Pixel)": 7,
         "RGB CCT DIM IND S (1 Pixel)": 7
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/astera",
+        "suggestedFileName": "Astera__SolaBulb.gdtf",
+        "file": "",
+        "modes": {
+          "RGB (1 Pixel)": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -566,6 +2678,189 @@
         "DIM RGBWS (16 Pixels, Multi Strobe)": 96,
         "DIM RGBAWS (16 Pixels, Multi Strobe)": 112,
         "RGB CCT DIM IND S (16 Pixels, Multi Strobe)": 112
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/astera",
+        "suggestedFileName": "Astera__Titan_Tube.gdtf",
+        "file": "",
+        "modes": {
+          "RGB (1 Pixel)": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (1 Pixel)": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (1 Pixel)": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (1 Pixel)": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (1 Pixel)": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB (16 Pixels)": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBW (16 Pixels)": {
+            "channels": 64,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAW (16 Pixels)": {
+            "channels": 80,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGB (16 Pixels)": {
+            "channels": 64,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBW (16 Pixels)": {
+            "channels": 80,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAW (16 Pixels)": {
+            "channels": 96,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND (16 Pixels)": {
+            "channels": 96,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (16 Pixels, Single Strobe)": {
+            "channels": 49,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (16 Pixels, Single Strobe)": {
+            "channels": 65,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (16 Pixels, Single Strobe)": {
+            "channels": 81,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (16 Pixels, Single Strobe)": {
+            "channels": 65,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (16 Pixels, Single Strobe)": {
+            "channels": 81,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (16 Pixels, Single Strobe)": {
+            "channels": 97,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (16 Pixels, Single Strobe)": {
+            "channels": 97,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBS (16 Pixels, Multi Strobe)": {
+            "channels": 64,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBWS (16 Pixels, Multi Strobe)": {
+            "channels": 80,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBAWS (16 Pixels, Multi Strobe)": {
+            "channels": 96,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBS (16 Pixels, Multi Strobe)": {
+            "channels": 80,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBWS (16 Pixels, Multi Strobe)": {
+            "channels": 96,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "DIM RGBAWS (16 Pixels, Multi Strobe)": {
+            "channels": 112,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB CCT DIM IND S (16 Pixels, Multi Strobe)": {
+            "channels": 112,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     }
   ]

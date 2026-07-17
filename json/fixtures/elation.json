@@ -9,6 +9,29 @@
         "1 Chan": 1,
         "Standard": 7,
         "Extended": 9
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/elation",
+        "suggestedFileName": "Elation__DTW_350_IP_2_Cell.gdtf",
+        "file": "",
+        "modes": {
+          "1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -17,6 +40,19 @@
       "weight": 10.2,
       "modes": {
         "3 Chan": 3
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/elation",
+        "suggestedFileName": "Elation__Magma_Prime_Hazer.gdtf",
+        "file": "",
+        "modes": {
+          "3 Chan": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -26,6 +62,24 @@
       "modes": {
         "Standard": 27,
         "Extended": 44
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/elation",
+        "suggestedFileName": "Elation__Smarty_Max.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 27,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 44,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     }
   ]

@@ -13,6 +13,49 @@
         "30 Chan": 30,
         "74 Chan": 74,
         "97 Chan": 97
+      },
+      "gdtf": {
+        "status": "matched",
+      "folder": "fixtures/chauvet",
+        "suggestedFileName": "Chauvet__Color_Strike_M.gdtf",
+      "file": "fixtures/chauvet/Chauvet_Professional@Color_Strike_M@Rev_1.1.3.gdtf",
+        "modes": {
+          "8 Chan": {
+            "channels": 8,
+            "gdtfMode": "8Ch Mode",
+            "status": "matched"
+          },
+          "11 Chan": {
+            "channels": 11,
+            "gdtfMode": "11Ch Mode",
+            "status": "matched"
+          },
+          "13 Chan": {
+            "channels": 13,
+            "gdtfMode": "13Ch Mode",
+            "status": "matched"
+          },
+          "24 Chan": {
+            "channels": 24,
+            "gdtfMode": "24Ch Mode",
+            "status": "matched"
+          },
+          "30 Chan": {
+            "channels": 30,
+            "gdtfMode": "30Ch Mode",
+            "status": "matched"
+          },
+          "74 Chan": {
+            "channels": 74,
+            "gdtfMode": "74Ch Mode",
+            "status": "matched"
+          },
+          "97 Chan": {
+            "channels": 97,
+            "gdtfMode": "97Ch Mode",
+            "status": "matched"
+          }
+        }
       }
     },
     {
@@ -27,6 +70,49 @@
         "Single Control ~ Advance 2": 169,
         "Single Control ~ Full PXL": 169,
         "Single Control ~ Tour": 179
+      },
+      "gdtf": {
+        "status": "matched",
+      "folder": "fixtures/chauvet",
+        "suggestedFileName": "Chauvet__COLORado_PXL_Curve_12.gdtf",
+      "file": "fixtures/chauvet/Chauvet_Professional@COLORado_PXL_Curve_12@Rev_1.1.4.gdtf",
+        "modes": {
+          "Single Control ~ Basic": {
+            "channels": 20,
+            "gdtfMode": "Single Control: Basic 20Ch",
+            "status": "matched"
+          },
+          "Single Control ~ Basic 2": {
+            "channels": 53,
+            "gdtfMode": "Single Control: Basic2 53Ch",
+            "status": "matched"
+          },
+          "Single Control ~ Standard": {
+            "channels": 101,
+            "gdtfMode": "Single Control: Standard 101Ch",
+            "status": "matched"
+          },
+          "Single Control ~ Advance": {
+            "channels": 155,
+            "gdtfMode": "Single Control: Advanced 155Ch",
+            "status": "matched"
+          },
+          "Single Control ~ Advance 2": {
+            "channels": 169,
+            "gdtfMode": "Single Control: Advanced2 169Ch",
+            "status": "matched"
+          },
+          "Single Control ~ Full PXL": {
+            "channels": 169,
+            "gdtfMode": "Single Control: Full PXL 169Ch",
+            "status": "matched"
+          },
+          "Single Control ~ Tour": {
+            "channels": 179,
+            "gdtfMode": "Single Control: Tour 179Ch",
+            "status": "matched"
+          }
+        }
       }
     },
     {
@@ -38,6 +124,34 @@
         "155 Chan": 155,
         "195 Chan": 195,
         "355 Chan": 355
+      },
+      "gdtf": {
+        "status": "matched",
+      "folder": "fixtures/chauvet",
+        "suggestedFileName": "Chauvet__COLORado_PXL_Curve_5.gdtf",
+      "file": "fixtures/chauvet/Chauvet_Professional@COLORado_PXL_Curve_5@Rev_1.0.0.gdtf",
+        "modes": {
+          "120 Chan": {
+            "channels": 120,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          },
+          "155 Chan": {
+            "channels": 155,
+            "gdtfMode": "Basic High Resolution",
+            "status": "matched"
+          },
+          "195 Chan": {
+            "channels": 195,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "355 Chan": {
+            "channels": 355,
+            "gdtfMode": "Advanced",
+            "status": "matched"
+          }
+        }
       }
     },
     {
@@ -47,6 +161,24 @@
       "modes": {
         "Standard": 19,
         "Extended": 21
+      },
+      "gdtf": {
+        "status": "matched",
+      "folder": "fixtures/chauvet",
+        "suggestedFileName": "Chauvet__Maverick_Storm_1_Beam.gdtf",
+      "file": "fixtures/chauvet/Chauvet_Professional@Maverick_Storm_1_Beam@Rev_1.0.9.gdtf",
+        "modes": {
+          "Standard": {
+            "channels": 19,
+            "gdtfMode": "19Ch Mode",
+            "status": "matched"
+          },
+          "Extended": {
+            "channels": 21,
+            "gdtfMode": "21Ch Mode",
+            "status": "matched"
+          }
+        }
       }
     },
     {
@@ -56,6 +188,24 @@
       "modes": {
         "26 Chan": 26,
         "33 Chan": 33
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/chauvet",
+        "suggestedFileName": "Chauvet__Maverick_Storm_1_Flex.gdtf",
+        "file": "",
+        "modes": {
+          "26 Chan": {
+            "channels": 26,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "33 Chan": {
+            "channels": 33,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -65,6 +215,24 @@
       "modes": {
         "Standard": 24,
         "Extended": 29
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/chauvet",
+        "suggestedFileName": "Chauvet__Maverick_Storm_1_Hybrid.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 29,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -82,6 +250,64 @@
         "224 Chan": 224,
         "265 Chan": 265,
         "327 Chan": 327
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/chauvet",
+        "suggestedFileName": "Chauvet__Maverick_Storm_2_BeamWash.gdtf",
+        "file": "",
+        "modes": {
+          "13 Chan": {
+            "channels": 13,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "33 Chan": {
+            "channels": 33,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "36 Chan": {
+            "channels": 36,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "47 Chan": {
+            "channels": 47,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "93 Chan": {
+            "channels": 93,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "112 Chan": {
+            "channels": 112,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "145 Chan": {
+            "channels": 145,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "224 Chan": {
+            "channels": 224,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "265 Chan": {
+            "channels": 265,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "327 Chan": {
+            "channels": 327,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -91,6 +317,24 @@
       "modes": {
         "Standard": 32,
         "Extended": 48
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/chauvet",
+        "suggestedFileName": "Chauvet__Maverick_Storm_2_Profile.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -100,6 +344,24 @@
       "modes": {
         "Standard": 32,
         "Extended": 48
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/chauvet",
+        "suggestedFileName": "Chauvet__Maverick_Storm_2_Profile_M.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -120,6 +382,79 @@
         "336 Chan": 336,
         "416 Chan": 416,
         "424 Chan": 424
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/chauvet",
+        "suggestedFileName": "Chauvet__Maverick_Storm_3_BeamWash.gdtf",
+        "file": "",
+        "modes": {
+          "12 Chan": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "20 Chan": {
+            "channels": 20,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "32 Chan": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "35 Chan": {
+            "channels": 35,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "38 Chan": {
+            "channels": 38,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "46 Chan": {
+            "channels": 46,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "120 Chan": {
+            "channels": 120,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "148 Chan": {
+            "channels": 148,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "180 Chan": {
+            "channels": 180,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "296 Chan": {
+            "channels": 296,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "336 Chan": {
+            "channels": 336,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "416 Chan": {
+            "channels": 416,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "424 Chan": {
+            "channels": 424,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -129,6 +464,24 @@
       "modes": {
         "Standard": 34,
         "Extended": 50
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/chauvet",
+        "suggestedFileName": "Chauvet__Maverick_Storm_3_Profile.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 34,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 50,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -138,6 +491,24 @@
       "modes": {
         "Standard": 38,
         "Extended": 55
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/chauvet",
+        "suggestedFileName": "Chauvet__Maverick_Storm_4_Profile.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 38,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 55,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -147,6 +518,24 @@
       "modes": {
         "Standard": 31,
         "Extended": 46
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/chauvet",
+        "suggestedFileName": "Chauvet__Maverick_Storm_4_SoloWash.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 31,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 46,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -161,6 +550,49 @@
         "64 Chan": 64,
         "111 Chan": 111,
         "135 Chan": 135
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/chauvet",
+        "suggestedFileName": "Chauvet__Rogue_Outcast_1_BeamWash.gdtf",
+        "file": "",
+        "modes": {
+          "15 Chan": {
+            "channels": 15,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "24 Chan": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "30 Chan": {
+            "channels": 30,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "37 Chan": {
+            "channels": 37,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "64 Chan": {
+            "channels": 64,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "111 Chan": {
+            "channels": 111,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "135 Chan": {
+            "channels": 135,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -179,6 +611,69 @@
         "8P-26CH": 26,
         "8P-43CH": 43,
         "8P-46CH": 46
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/chauvet",
+        "suggestedFileName": "Chauvet__STRIKE_Array_1.gdtf",
+        "file": "",
+        "modes": {
+          "1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "2 Chan": {
+            "channels": 2,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5 Chan": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "4P-5CH": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "4P-14CH": {
+            "channels": 14,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "4P-23CH": {
+            "channels": 23,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "4P-26CH": {
+            "channels": 26,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8P-9CH": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8P-26CH": {
+            "channels": 26,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8P-43CH": {
+            "channels": 43,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8P-46CH": {
+            "channels": 46,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -192,6 +687,44 @@
         "4 Chan": 4,
         "8 Chan": 8,
         "9 Chan": 9
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/chauvet",
+        "suggestedFileName": "Chauvet__Strike_Array_2.gdtf",
+        "file": "",
+        "modes": {
+          "1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "2 Chan": {
+            "channels": 2,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "3 Chan": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "4 Chan": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "8 Chan": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "9 Chan": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -208,6 +741,59 @@
         "12 Chan 2": 12,
         "13 Chan": 13,
         "16 Chan": 16
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/chauvet",
+        "suggestedFileName": "Chauvet__STRIKE_Array_2C.gdtf",
+        "file": "",
+        "modes": {
+          "1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "3 Chan": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5 Chan": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "7 Chan": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "10 Chan": {
+            "channels": 10,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "12 Chan 1": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "12 Chan 2": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "13 Chan": {
+            "channels": 13,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "16 Chan": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -218,6 +804,29 @@
         "3 Chan": 3,
         "4 Chan": 4,
         "9 Chan": 9
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/chauvet",
+        "suggestedFileName": "Chauvet__Strike_Array_4.gdtf",
+        "file": "",
+        "modes": {
+          "3 Chan": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "4 Chan": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "9 Chan": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -234,6 +843,59 @@
         "13 Chan": 13,
         "16 Chan": 16,
         "22 Chan": 22
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/chauvet",
+        "suggestedFileName": "Chauvet__STRIKE_Array_4C.gdtf",
+        "file": "",
+        "modes": {
+          "1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "3 Chan": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5 Chan": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "7 Chan": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "10 Chan": {
+            "channels": 10,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "12 Chan": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "13 Chan": {
+            "channels": 13,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "16 Chan": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "22 Chan": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -249,6 +911,54 @@
         "32 Chan": 32,
         "40 Chan": 40,
         "53 Chan": 53
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/chauvet",
+        "suggestedFileName": "Chauvet__STRIKE_Bolt_1C.gdtf",
+        "file": "",
+        "modes": {
+          "7 Chan": {
+            "channels": 7,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "10 Chan": {
+            "channels": 10,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "12 Chan": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "16 Chan": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "19 Chan": {
+            "channels": 19,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "32 Chan": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "40 Chan": {
+            "channels": 40,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "53 Chan": {
+            "channels": 53,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -261,6 +971,39 @@
         "4 Chan": 4,
         "5 Chan": 5,
         "6 Chan": 6
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/chauvet",
+        "suggestedFileName": "Chauvet__STRIKE_P38.gdtf",
+        "file": "",
+        "modes": {
+          "1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "3 Chan": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "4 Chan": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "5 Chan": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "6 Chan": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -275,6 +1018,49 @@
         "22 Chan": 22,
         "26 Chan 1": 26,
         "26 Chan 2": 26
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/chauvet",
+        "suggestedFileName": "Chauvet__STRIKE_Saber_10.gdtf",
+        "file": "",
+        "modes": {
+          "1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "3 Chan": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "6 Chan": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "13 Chan": {
+            "channels": 13,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "22 Chan": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "26 Chan 1": {
+            "channels": 26,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "26 Chan 2": {
+            "channels": 26,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     }
   ]

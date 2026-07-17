@@ -5,30 +5,95 @@
       "fixture": "2-Lite Mole",
       "modes": {
         "Dimmer - 1 Chan": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/generic",
+        "suggestedFileName": "Generic__2_Lite_Mole.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer - 1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
       "fixture": "4-Lite Mole",
       "modes": {
         "Dimmer - 1 Chan": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/generic",
+        "suggestedFileName": "Generic__4_Lite_Mole.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer - 1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
       "fixture": "4-Lite Linear Mole",
       "modes": {
         "Dimmer - 1 Chan": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/generic",
+        "suggestedFileName": "Generic__4_Lite_Linear_Mole.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer - 1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
       "fixture": "8-Lite Mole",
       "modes": {
         "Dimmer - 2 Chan": 2
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/generic",
+        "suggestedFileName": "Generic__8_Lite_Mole.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer - 2 Chan": {
+            "channels": 2,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
       "fixture": "Omni",
       "modes": {
         "Dimmer - 1 Chan": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/generic",
+        "suggestedFileName": "Generic__Omni.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer - 1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     }
   ]

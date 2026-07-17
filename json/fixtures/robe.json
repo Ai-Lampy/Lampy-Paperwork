@@ -10,6 +10,34 @@
         "Mode 2": 63,
         "Mode 3": 111,
         "Mode 4": 127
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Arianne_2.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 39,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 63,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 111,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 127,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -21,6 +49,34 @@
         "Mode 2": 93,
         "Mode 3": 189,
         "Mode 4": 221
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Arianne_6.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 45,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 93,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 189,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 221,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -30,6 +86,24 @@
       "modes": {
         "Mode 1": 49,
         "Mode 2": 42
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__BMFL_Blade.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 49,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 42,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -39,6 +113,24 @@
       "modes": {
         "Mode 1": 33,
         "Mode 2": 27
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__BMFL_Followspot.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 33,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 27,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -48,6 +140,24 @@
       "modes": {
         "Mode 1": 33,
         "Mode 2": 27
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__BMFL_Followspot_LT.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 33,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 27,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -57,6 +167,24 @@
       "modes": {
         "Mode 1": 41,
         "Mode 2": 33
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__BMFL_Spot.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 41,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 33,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -66,6 +194,24 @@
       "modes": {
         "Mode 1": 34,
         "Mode 2": 27
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__CUETE.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 34,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 27,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -77,6 +223,34 @@
         "Mode 2": 20,
         "Mode 3": 38,
         "Mode 4": 74
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__FOOTSIE1.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 11,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 20,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 38,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 74,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -88,6 +262,34 @@
         "Mode 2": 29,
         "Mode 3": 56,
         "Mode 4": 110
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__FOOTSIE2.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 11,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 29,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 56,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 110,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -97,6 +299,24 @@
       "modes": {
         "Mode 1": 54,
         "Mode 2": 56
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__FORTE.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 54,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 56,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -106,6 +326,24 @@
       "modes": {
         "Mode 1": 39,
         "Mode 2": 41
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__GigaPointe.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 39,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 41,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -114,6 +352,19 @@
       "weight": 14.4,
       "modes": {
         "Mode 1": 5
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__HolyPATT.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -125,6 +376,34 @@
         "Mode 2": 63,
         "Mode 3": 123,
         "Mode 4": 183
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iBar_15.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 33,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 63,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 123,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 183,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -135,6 +414,29 @@
         "Mode 1": 22,
         "Mode 2": 16,
         "Mode 3": 24
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iBeam_350.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -143,6 +445,19 @@
       "weight": 54.4,
       "modes": {
         "Mode 1": 37
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iBolt.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 37,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -154,6 +469,34 @@
         "Mode 2": 42,
         "Mode 3": 50,
         "Mode 4": 43
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iEsprite.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 49,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 42,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 50,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 43,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -162,6 +505,19 @@
       "weight": 37.5,
       "modes": {
         "Mode 1": 53
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iEsprite_LTL.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 53,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -171,6 +527,24 @@
       "modes": {
         "Mode 1": 54,
         "Mode 2": 56
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iForte.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 54,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 56,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -179,6 +553,19 @@
       "weight": 49,
       "modes": {
         "Mode 1": 54
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iForte_LTX.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 54,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -188,6 +575,24 @@
       "modes": {
         "Mode 1": 44,
         "Mode 2": 45
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iPainte.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 44,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 45,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -196,6 +601,19 @@
       "weight": 37.5,
       "modes": {
         "Mode 1": 53
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iPAINTE_LTM_WB.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 53,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -206,6 +624,29 @@
         "Mode 1": 18,
         "Mode 2": 12,
         "Mode 3": 20
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iParFect_150.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 20,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -223,6 +664,64 @@
         "Mode 8": 110,
         "Mode 9": 104,
         "Mode 10": 123
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iSpiider_X.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 49,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 27,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 33,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 90,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5": {
+            "channels": 27,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 6": {
+            "channels": 47,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 7": {
+            "channels": 91,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 8": {
+            "channels": 110,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 9": {
+            "channels": 104,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 10": {
+            "channels": 123,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -238,6 +737,54 @@
         "Mode 6": 24,
         "Mode 7": 13,
         "Mode 8": 28
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iT12_Fresnel.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 6": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 7": {
+            "channels": 13,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 8": {
+            "channels": 28,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -253,6 +800,54 @@
         "Mode 6": 24,
         "Mode 7": 13,
         "Mode 8": 28
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iT12_PC.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 6": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 7": {
+            "channels": 13,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 8": {
+            "channels": 28,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -268,6 +863,54 @@
         "Mode 6": 24,
         "Mode 7": 13,
         "Mode 8": 28
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iT12_Profile.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 6": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 7": {
+            "channels": 13,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 8": {
+            "channels": 28,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -281,6 +924,44 @@
         "Mode 4": 115,
         "Mode 5": 110,
         "Mode 6": 128
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iTetra_2.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 34,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 56,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 97,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 115,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5": {
+            "channels": 110,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 6": {
+            "channels": 128,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -291,6 +972,29 @@
         "Mode 1": 18,
         "Mode 2": 12,
         "Mode 3": 20
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__LEDBeam_150.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 20,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -301,6 +1005,29 @@
         "Mode 1": 22,
         "Mode 2": 16,
         "Mode 3": 24
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__LEDBeam_200.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -311,6 +1038,29 @@
         "Mode 1": 22,
         "Mode 2": 16,
         "Mode 3": 24
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__LEDBeam_350.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -321,6 +1071,29 @@
         "Mode 1": 22,
         "Mode 2": 16,
         "Mode 3": 24
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__LEDBeam_350_FW.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -329,6 +1102,19 @@
       "weight": 21,
       "modes": {
         "Mode 1": 39
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__LedPOINTE.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 39,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -338,6 +1124,24 @@
       "modes": {
         "Mode 1": 34,
         "Mode 2": 39
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__MegaPointe.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 34,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 39,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -347,6 +1151,24 @@
       "modes": {
         "Mode 1": 20,
         "Mode 2": 22
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__miniPointe.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 20,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -355,6 +1177,19 @@
       "weight": 11.0,
       "modes": {
         "Mode 1": 5
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__MolyPATT.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -363,6 +1198,19 @@
       "weight": 9.5,
       "modes": {
         "Mode 1": 5
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__onePATT.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -372,6 +1220,24 @@
       "modes": {
         "Mode 1": 44,
         "Mode 2": 45
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__PAINTE.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 44,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 45,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -382,6 +1248,29 @@
         "Mode 1": 18,
         "Mode 2": 12,
         "Mode 3": 20
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__ParFect_150.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 20,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -390,6 +1279,19 @@
       "weight": 12.0,
       "modes": {
         "Mode 1": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__PATT_2013.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -398,6 +1300,19 @@
       "weight": 12.0,
       "modes": {
         "Mode 1": 5
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__PATT_2017.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -406,6 +1321,19 @@
       "weight": 14.0,
       "modes": {
         "Mode 1": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__picklePATT.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -415,6 +1343,24 @@
       "modes": {
         "Mode 1": 34,
         "Mode 2": 27
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__SilverScan.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 34,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 27,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -432,6 +1378,64 @@
         "Mode 8": 110,
         "Mode 9": 104,
         "Mode 10": 123
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Spiider.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 49,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 27,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 33,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 90,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5": {
+            "channels": 27,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 6": {
+            "channels": 47,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 7": {
+            "channels": 91,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 8": {
+            "channels": 110,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 9": {
+            "channels": 104,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 10": {
+            "channels": 123,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -441,6 +1445,24 @@
       "modes": {
         "Mode 1": 27,
         "Mode 2": 21
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Spikie.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 27,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 21,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -451,6 +1473,29 @@
         "Mode 1": 17,
         "Mode 2": 31,
         "Mode 3": 61
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__SVB1.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 17,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 31,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 61,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -463,6 +1508,39 @@
         "Mode 3": 124,
         "Mode 4": 286,
         "Mode 5": 384
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__SVOPATT.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 21,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 21,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 124,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 286,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5": {
+            "channels": 384,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -474,6 +1552,34 @@
         "Mode 2": 5,
         "Mode 3": 19,
         "Mode 4": 83
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__SVOPATT_Classic.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 19,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 83,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -484,6 +1590,29 @@
         "Mode 1": 39,
         "Mode 2": 27,
         "Mode 3": 43
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T_5_Profile.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 39,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 27,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 43,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -494,6 +1623,29 @@
         "Mode 1": 49,
         "Mode 2": 33,
         "Mode 3": 53
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T1_Profile.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 49,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 33,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 53,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -509,6 +1661,54 @@
         "Mode 6": 24,
         "Mode 7": 13,
         "Mode 8": 28
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T10_Fresnel.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 6": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 7": {
+            "channels": 13,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 8": {
+            "channels": 28,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -524,6 +1724,54 @@
         "Mode 6": 24,
         "Mode 7": 13,
         "Mode 8": 28
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T10_PC.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 6": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 7": {
+            "channels": 13,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 8": {
+            "channels": 28,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -539,6 +1787,54 @@
         "Mode 6": 24,
         "Mode 7": 13,
         "Mode 8": 28
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T10_Profile.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 6": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 7": {
+            "channels": 13,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 8": {
+            "channels": 28,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -554,6 +1850,54 @@
         "Mode 6": 24,
         "Mode 7": 13,
         "Mode 8": 28
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T11_Fresnel.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 6": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 7": {
+            "channels": 13,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 8": {
+            "channels": 28,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -569,6 +1913,54 @@
         "Mode 6": 24,
         "Mode 7": 13,
         "Mode 8": 28
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T11_PC.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 6": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 7": {
+            "channels": 13,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 8": {
+            "channels": 28,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -584,6 +1976,54 @@
         "Mode 6": 24,
         "Mode 7": 13,
         "Mode 8": 28
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T11_Profile.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 6": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 7": {
+            "channels": 13,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 8": {
+            "channels": 28,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -599,6 +2039,54 @@
         "Mode 6": 24,
         "Mode 7": 13,
         "Mode 8": 28
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T15_Fresnel.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 6": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 7": {
+            "channels": 13,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 8": {
+            "channels": 28,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -614,6 +2102,54 @@
         "Mode 6": 24,
         "Mode 7": 13,
         "Mode 8": 28
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T15_PC.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 6": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 7": {
+            "channels": 13,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 8": {
+            "channels": 28,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -629,6 +2165,54 @@
         "Mode 6": 24,
         "Mode 7": 13,
         "Mode 8": 28
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T15_Profile.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 6": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 7": {
+            "channels": 13,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 8": {
+            "channels": 28,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -639,6 +2223,29 @@
         "Mode 1": 52,
         "Mode 2": 36,
         "Mode 3": 56
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T2_Profile.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 52,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 36,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 56,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -649,6 +2256,29 @@
         "Mode 1": 52,
         "Mode 2": 36,
         "Mode 3": 56
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T2_Profile_FS.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 52,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 36,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 56,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -659,6 +2289,29 @@
         "Mode 1": 54,
         "Mode 2": 38,
         "Mode 3": 58
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T3_Fresnel.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 54,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 38,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 58,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -669,6 +2322,29 @@
         "Mode 1": 54,
         "Mode 2": 38,
         "Mode 3": 58
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T3_PC.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 54,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 38,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 58,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -679,6 +2355,29 @@
         "Mode 1": 54,
         "Mode 2": 38,
         "Mode 3": 58
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T3_Profile.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 54,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 38,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 58,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -694,6 +2393,54 @@
         "Mode 6": 24,
         "Mode 7": 13,
         "Mode 8": 28
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T31_Cyc.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 6": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 7": {
+            "channels": 13,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 8": {
+            "channels": 28,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -709,6 +2456,54 @@
         "Mode 6": 24,
         "Mode 7": 13,
         "Mode 8": 28
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T32_Cyc.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 5,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 6": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 7": {
+            "channels": 13,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 8": {
+            "channels": 28,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -722,6 +2517,44 @@
         "Mode 4": 183,
         "Mode 5": 159,
         "Mode 6": 196
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Tarrantula.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 28,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 146,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 183,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5": {
+            "channels": 159,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 6": {
+            "channels": 196,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -735,6 +2568,44 @@
         "Mode 4": 66,
         "Mode 5": 61,
         "Mode 6": 70
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Tetra1.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 25,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 38,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 57,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 66,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5": {
+            "channels": 61,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 6": {
+            "channels": 70,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -748,6 +2619,44 @@
         "Mode 4": 115,
         "Mode 5": 110,
         "Mode 6": 128
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Tetra2.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 34,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 56,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 97,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 115,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5": {
+            "channels": 110,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 6": {
+            "channels": 128,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -761,6 +2670,44 @@
         "Mode 4": 84,
         "Mode 5": 88,
         "Mode 6": 97
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__TetraX.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 41,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 61,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 75,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 84,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5": {
+            "channels": 88,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 6": {
+            "channels": 97,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -774,6 +2721,44 @@
         "Mode 4": 48,
         "Mode 5": 33,
         "Mode 6": 52
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__TX1_PosiProfile.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 40,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 27,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 44,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5": {
+            "channels": 33,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 6": {
+            "channels": 52,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -786,6 +2771,39 @@
         "Mode 3": 64,
         "Mode 4": 106,
         "Mode 5": 140
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__WTF.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2": {
+            "channels": 44,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3": {
+            "channels": 64,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4": {
+            "channels": 106,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5": {
+            "channels": 140,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     }
   ]

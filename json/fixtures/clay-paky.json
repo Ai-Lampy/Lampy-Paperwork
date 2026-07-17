@@ -7,6 +7,19 @@
       "weight": 56.9,
       "modes": {
         "43 Chan": 43
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/clay-paky",
+        "suggestedFileName": "Clay_Paky__Arolla_Aqua_HP.gdtf",
+        "file": "",
+        "modes": {
+          "43 Chan": {
+            "channels": 43,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -16,6 +29,24 @@
       "modes": {
         "Basic": 44,
         "Standard": 54
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/clay-paky",
+        "suggestedFileName": "Clay_Paky__Arolla_Aqua_M_LT.gdtf",
+        "file": "",
+        "modes": {
+          "Basic": {
+            "channels": 44,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 54,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -25,6 +56,24 @@
       "modes": {
         "Basic": 44,
         "Standard": 54
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/clay-paky",
+        "suggestedFileName": "Clay_Paky__Arolla_Aqua_S_LT.gdtf",
+        "file": "",
+        "modes": {
+          "Basic": {
+            "channels": 44,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 54,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -33,6 +82,19 @@
       "weight": 36.0,
       "modes": {
         "30 Chan": 30
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/clay-paky",
+        "suggestedFileName": "Clay_Paky__Arolla_Aqua_Wash_HC.gdtf",
+        "file": "",
+        "modes": {
+          "30 Chan": {
+            "channels": 30,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -41,6 +103,19 @@
       "weight": 44.7,
       "modes": {
         "39 Chan": 39
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/clay-paky",
+        "suggestedFileName": "Clay_Paky__Arolla_Profile_HP.gdtf",
+        "file": "",
+        "modes": {
+          "39 Chan": {
+            "channels": 39,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -50,6 +125,24 @@
       "modes": {
         "Basic": 37,
         "Standard": 39
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/clay-paky",
+        "suggestedFileName": "Clay_Paky__Arolla_Profile_MP.gdtf",
+        "file": "",
+        "modes": {
+          "Basic": {
+            "channels": 37,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 39,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -58,6 +151,19 @@
       "weight": 24.0,
       "modes": {
         "29 Chan": 29
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/clay-paky",
+        "suggestedFileName": "Clay_Paky__Arolla_Spot_MP.gdtf",
+        "file": "",
+        "modes": {
+          "29 Chan": {
+            "channels": 29,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -70,6 +176,39 @@
         "Standard RGBW": 169,
         "Shapes RGB": 146,
         "Shapes RGBW": 183
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/clay-paky",
+        "suggestedFileName": "Clay_Paky__B_Eye_K20.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 21,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard RGB": {
+            "channels": 132,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard RGBW": {
+            "channels": 169,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Shapes RGB": {
+            "channels": 146,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Shapes RGBW": {
+            "channels": 183,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -78,6 +217,19 @@
       "weight": 27.5,
       "modes": {
         "Shapes RGB": 35
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/clay-paky",
+        "suggestedFileName": "Clay_Paky__B_Eye_K25.gdtf",
+        "file": "",
+        "modes": {
+          "Shapes RGB": {
+            "channels": 35,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -91,6 +243,44 @@
         "Basic Engine 36 Chan": 36,
         "Pixel Engine 57 Chan": 57,
         "Pixel Engine 76 Chan": 76
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/clay-paky",
+        "suggestedFileName": "Clay_Paky__HY_B_Eye_K15.gdtf",
+        "file": "",
+        "modes": {
+          "Basic Engine 21 Chan": {
+            "channels": 21,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Basic Engine 22 Chan": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Basic Engine 35 Chan": {
+            "channels": 35,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Basic Engine 36 Chan": {
+            "channels": 36,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Pixel Engine 57 Chan": {
+            "channels": 57,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Pixel Engine 76 Chan": {
+            "channels": 76,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -105,6 +295,49 @@
         "Basic Engine 37 Chan": 37,
         "Pixel Engine 57 Chan": 57,
         "Pixel Engine 76 Chan": 76
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/clay-paky",
+        "suggestedFileName": "Clay_Paky__HY_B_Eye_K15_Aqua.gdtf",
+        "file": "",
+        "modes": {
+          "Basic Engine 21 Chan": {
+            "channels": 21,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Basic Engine 22 Chan": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Basic Engine 35 Chan": {
+            "channels": 35,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Basic Engine 36 Chan": {
+            "channels": 36,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Basic Engine 37 Chan": {
+            "channels": 37,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Pixel Engine 57 Chan": {
+            "channels": 57,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Pixel Engine 76 Chan": {
+            "channels": 76,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -116,6 +349,34 @@
         "21 Chan": 21,
         "25 Chan": 25,
         "37 Chan": 37
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/clay-paky",
+        "suggestedFileName": "Clay_Paky__Midi_B.gdtf",
+        "file": "",
+        "modes": {
+          "17 Chan": {
+            "channels": 17,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "21 Chan": {
+            "channels": 21,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "25 Chan": {
+            "channels": 25,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "37 Chan": {
+            "channels": 37,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -127,6 +388,34 @@
         "21 Chan 1": 21,
         "21 Chan 2": 21,
         "29 Chan": 29
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/clay-paky",
+        "suggestedFileName": "Clay_Paky__Mini_B.gdtf",
+        "file": "",
+        "modes": {
+          "17 Chan": {
+            "channels": 17,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "21 Chan 1": {
+            "channels": 21,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "21 Chan 2": {
+            "channels": 21,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "29 Chan": {
+            "channels": 29,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -136,6 +425,24 @@
       "modes": {
         "Standard": 40,
         "Vector": 44
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/clay-paky",
+        "suggestedFileName": "Clay_Paky__Scenius_Unico.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 40,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Vector": {
+            "channels": 44,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -145,6 +452,24 @@
       "modes": {
         "Standard": 16,
         "Vector": 20
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/clay-paky",
+        "suggestedFileName": "Clay_Paky__Sharpy.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Vector": {
+            "channels": 20,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -153,6 +478,19 @@
       "weight": 23,
       "modes": {
         "Single Mode": 31
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/clay-paky",
+        "suggestedFileName": "Clay_Paky__Sharpy_Plus.gdtf",
+        "file": "",
+        "modes": {
+          "Single Mode": {
+            "channels": 31,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -162,6 +500,24 @@
       "modes": {
         "Standard": 19,
         "Vector": 22
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/clay-paky",
+        "suggestedFileName": "Clay_Paky__Sharpy_Wash.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 19,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Vector": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -170,6 +526,19 @@
       "weight": 28,
       "modes": {
         "Single Mode": 43
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/clay-paky",
+        "suggestedFileName": "Clay_Paky__Sharpy_X_Frame.gdtf",
+        "file": "",
+        "modes": {
+          "Single Mode": {
+            "channels": 43,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -178,6 +547,19 @@
       "weight": 60,
       "modes": {
         "20 Chan": 20
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/clay-paky",
+        "suggestedFileName": "Clay_Paky__Skylos.gdtf",
+        "file": "",
+        "modes": {
+          "20 Chan": {
+            "channels": 20,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -193,6 +575,54 @@
         "Strobe Engine 50 Chan 2": 50,
         "Strobe Engine 50 Chan 3": 50,
         "Strobe Engine 100 Chan": 100
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/clay-paky",
+        "suggestedFileName": "Clay_Paky__Tambora_Glare.gdtf",
+        "file": "",
+        "modes": {
+          "Main Engine 19 Chan": {
+            "channels": 19,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Main Engine 41 Chan": {
+            "channels": 41,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Main Engine 52 Chan": {
+            "channels": 52,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Pixel Engine": {
+            "channels": 40,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Strobe Engine 50 Chan 1": {
+            "channels": 50,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Strobe Engine 50 Chan 2": {
+            "channels": 50,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Strobe Engine 50 Chan 3": {
+            "channels": 50,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Strobe Engine 100 Chan": {
+            "channels": 100,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -201,6 +631,19 @@
       "weight": 41.9,
       "modes": {
         "43 Chan": 43
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/clay-paky",
+        "suggestedFileName": "Clay_Paky__Ultimo_Hybrid.gdtf",
+        "file": "",
+        "modes": {
+          "43 Chan": {
+            "channels": 43,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -213,6 +656,39 @@
         "Basic Engine 45 Chan": 45,
         "Pixel Engine": 16,
         "Strobe Engine": 8
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/clay-paky",
+        "suggestedFileName": "Clay_Paky__Volero_Cube.gdtf",
+        "file": "",
+        "modes": {
+          "Basic Engine 22 Chan": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Basic Engine 41 Chan": {
+            "channels": 41,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Basic Engine 45 Chan": {
+            "channels": 45,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Pixel Engine": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Strobe Engine": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -225,6 +701,39 @@
         "Basic Engine 50 Chan": 50,
         "Pixel Engine": 32,
         "Strobe Engine": 20
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/clay-paky",
+        "suggestedFileName": "Clay_Paky__Volero_Twins.gdtf",
+        "file": "",
+        "modes": {
+          "Basic Engine 25 Chan": {
+            "channels": 25,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Basic Engine 43 Chan": {
+            "channels": 43,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Basic Engine 50 Chan": {
+            "channels": 50,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Pixel Engine": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Strobe Engine": {
+            "channels": 20,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -236,6 +745,34 @@
         "24 Chan": 24,
         "29 Chan": 29,
         "32 Chan": 32
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/clay-paky",
+        "suggestedFileName": "Clay_Paky__Volero_Wave.gdtf",
+        "file": "",
+        "modes": {
+          "23 Chan": {
+            "channels": 23,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "24 Chan": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "29 Chan": {
+            "channels": 29,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "32 Chan": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     },
     {
@@ -245,6 +782,24 @@
       "modes": {
         "Standard": 30,
         "Vector": 31
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/clay-paky",
+        "suggestedFileName": "Clay_Paky__Xtylos.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 30,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Vector": {
+            "channels": 31,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
       }
     }
   ]
