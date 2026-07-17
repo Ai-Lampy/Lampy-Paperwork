@@ -1,0 +1,905 @@
+{
+  "manufacturer": "Ayrton",
+  "fixtures": [
+    {
+      "fixture": "Bora",
+      "watts": 1150,
+      "weight": 37.8,
+      "modes": {
+        "Basic": 30,
+        "Standard": 32,
+        "Extended": 52
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Bora.gdtf",
+        "file": "",
+        "modes": {
+          "Basic": {
+            "channels": 30,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 52,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Cobra",
+      "watts": 480,
+      "weight": 33,
+      "modes": {
+        "Basic": 33,
+        "Standard": 36,
+        "Extended": 45
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Cobra.gdtf",
+        "file": "",
+        "modes": {
+          "Basic": {
+            "channels": 33,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 36,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 45,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Diablo Profile S",
+      "watts": 550,
+      "weight": 22,
+      "modes": {
+        "Basic": 34,
+        "Standard": 36,
+        "Extended": 56
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Diablo_Profile_S.gdtf",
+        "file": "",
+        "modes": {
+          "Basic": {
+            "channels": 34,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 36,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 56,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Domino LT",
+      "watts": 1600,
+      "weight": 60,
+      "modes": {
+        "Standard": 46,
+        "Extended": 70
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Domino_LT.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 46,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 70,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Domino Profile",
+      "watts": 1800,
+      "weight": 52,
+      "modes": {
+        "Basic": 42,
+        "Standard": 44,
+        "Extended": 66
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Domino_Profile.gdtf",
+        "file": "",
+        "modes": {
+          "Basic": {
+            "channels": 42,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 44,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 66,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Domino Wash",
+      "watts": 1600,
+      "weight": 52,
+      "modes": {
+        "Basic": 37,
+        "Standard": 39,
+        "Extended": 61
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Domino_Wash.gdtf",
+        "file": "",
+        "modes": {
+          "Basic": {
+            "channels": 37,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 39,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 61,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Eagle Strike",
+      "watts": 1295,
+      "weight": 54.7,
+      "modes": {
+        "Standard": 44,
+        "Extended": 66
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Eagle_Strike.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 44,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 66,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Eurus",
+      "watts": 1000,
+      "weight": 33,
+      "modes": {
+        "Basic": 39,
+        "Standard": 41,
+        "Extended": 62
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Eurus.gdtf",
+        "file": "",
+        "modes": {
+          "Basic": {
+            "channels": 39,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 41,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 62,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Ghibli",
+      "watts": 800,
+      "weight": 35.6,
+      "modes": {
+        "Basic": 36,
+        "Standard": 38,
+        "Extended": 58
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Ghibli.gdtf",
+        "file": "",
+        "modes": {
+          "Basic": {
+            "channels": 36,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 38,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 58,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Huracan LT",
+      "watts": 1470,
+      "weight": 53.8,
+      "modes": {
+        "Basic": 44,
+        "Standard": 46,
+        "Extended": 70
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Huracan_LT.gdtf",
+        "file": "",
+        "modes": {
+          "Basic": {
+            "channels": 44,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 46,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 70,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Huracan Profile",
+      "watts": 1470,
+      "weight": 46,
+      "modes": {
+        "Basic": 44,
+        "Standard": 46,
+        "Extended": 70
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Huracan_Profile.gdtf",
+        "file": "",
+        "modes": {
+          "Basic": {
+            "channels": 44,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 46,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 70,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Karif LT",
+      "watts": 550,
+      "weight": 27,
+      "modes": {
+        "Basic": 32,
+        "Standard": 34,
+        "Extended": 46
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Karif_LT.gdtf",
+        "file": "",
+        "modes": {
+          "Basic": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 34,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 46,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Khamsin",
+      "watts": 1550,
+      "weight": 39.8,
+      "modes": {
+        "Basic": 40,
+        "Standard": 42,
+        "Extended": 64
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Khamsin.gdtf",
+        "file": "",
+        "modes": {
+          "Basic": {
+            "channels": 40,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 42,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 64,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Kyalami",
+      "watts": 200,
+      "weight": 14.5,
+      "modes": {
+        "Standard": 33
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Kyalami.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 33,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Magic Blade Neo",
+      "watts": 800,
+      "weight": 32.4,
+      "modes": {
+        "Standard": 175,
+        "Extended": 184
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Magic_Blade_Neo.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 175,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 184,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Magic Dot Neo",
+      "watts": 160,
+      "weight": 6.6,
+      "modes": {
+        "Standard": 35
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Magic_Dot_Neo.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 35,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Mamba",
+      "watts": 800,
+      "weight": 41,
+      "modes": {
+        "Extended": 47
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Mamba.gdtf",
+        "file": "",
+        "modes": {
+          "Extended": {
+            "channels": 47,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "MiniPanel FX",
+      "watts": 220,
+      "weight": 8.9,
+      "modes": {
+        "Basic": 19,
+        "Standard": 22,
+        "Extended": 34
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__MiniPanel_FX.gdtf",
+        "file": "",
+        "modes": {
+          "Basic": {
+            "channels": 19,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 34,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Mistral",
+      "watts": 550,
+      "weight": 18.6,
+      "modes": {
+        "Standard": 39
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Mistral.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 39,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Perseo Profile",
+      "watts": 1480,
+      "weight": 38.8,
+      "modes": {
+        "Basic": 38,
+        "Standard": 40,
+        "Extended": 61
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Perseo_Profile.gdtf",
+        "file": "",
+        "modes": {
+          "Basic": {
+            "channels": 38,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 40,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 61,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "RawBeam 350",
+      "watts": 660,
+      "weight": 25.4,
+      "modes": {
+        "Extended": 43
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__RawBeam_350.gdtf",
+        "file": "",
+        "modes": {
+          "Extended": {
+            "channels": 43,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Rivale Profile",
+      "watts": 700,
+      "weight": 30.8,
+      "modes": {
+        "Standard": 42,
+        "Extended": 65
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Rivale_Profile.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 42,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 65,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Rivale Wash",
+      "watts": 700,
+      "weight": 30.8,
+      "modes": {
+        "Standard": 42,
+        "Extended": 60
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Rivale_Wash.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 42,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 60,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Stradale Profile",
+      "watts": 630,
+      "weight": 23.5,
+      "modes": {
+        "Standard": 42,
+        "Extended": 65
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Stradale_Profile.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 42,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 65,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Veloce Profile",
+      "watts": 1300,
+      "weight": 40.5,
+      "modes": {
+        "Standard": 44,
+        "Extended": 67
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Veloce_Profile.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 44,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 67,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Veloce Wash",
+      "watts": 1300,
+      "weight": 39,
+      "modes": {
+        "Standard": 38,
+        "Extended": 60
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Veloce_Wash.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 38,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 60,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Zonda 3 FX",
+      "watts": 400,
+      "weight": 11.1,
+      "modes": {
+        "Basic": 26,
+        "Standard": 50,
+        "Extended": 79
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Zonda_3_FX.gdtf",
+        "file": "",
+        "modes": {
+          "Basic": {
+            "channels": 26,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 50,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 79,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Zonda 3 Wash",
+      "watts": 400,
+      "weight": 11.1,
+      "modes": {
+        "Basic": 26,
+        "Standard": 30,
+        "Extended Ring": 46,
+        "Extended Pixel": 79
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Zonda_3_Wash.gdtf",
+        "file": "",
+        "modes": {
+          "Basic": {
+            "channels": 26,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 30,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended Ring": {
+            "channels": 46,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended Pixel": {
+            "channels": 79,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Zonda 9 FX",
+      "watts": 1400,
+      "weight": 29.2,
+      "modes": {
+        "Basic": 26,
+        "Standard": 51,
+        "Extended Ring": 54,
+        "Extended Pixel": 199
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Zonda_9_FX.gdtf",
+        "file": "",
+        "modes": {
+          "Basic": {
+            "channels": 26,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 51,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended Ring": {
+            "channels": 54,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended Pixel": {
+            "channels": 199,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Zonda 9 Wash",
+      "watts": 1400,
+      "weight": 29.2,
+      "modes": {
+        "Basic": 26,
+        "Standard": 51,
+        "Extended Ring": 54,
+        "Extended Pixel": 199
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Ayrton",
+        "suggestedFileName": "Ayrton__Zonda_9_Wash.gdtf",
+        "file": "",
+        "modes": {
+          "Basic": {
+            "channels": 26,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Standard": {
+            "channels": 51,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended Ring": {
+            "channels": 54,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended Pixel": {
+            "channels": 199,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    }
+  ]
+}

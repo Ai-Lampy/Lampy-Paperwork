@@ -1,0 +1,82 @@
+{
+  "format": "lampy-fixture-library-v2",
+  "baseUrl": "gdtf/json/",
+  "manufacturers": [
+    {
+      "name": "ACME",
+      "file": "acme.json"
+    },
+    {
+      "name": "Antari",
+      "file": "antari.json"
+    },
+    {
+      "name": "Astera",
+      "file": "astera.json"
+    },
+    {
+      "name": "Ayrton",
+      "file": "ayrton.json"
+    },
+    {
+      "name": "Chauvet",
+      "file": "chauvet.json"
+    },
+    {
+      "name": "Chroma Q",
+      "file": "chroma-q.json"
+    },
+    {
+      "name": "Clay Paky",
+      "file": "clay-paky.json"
+    },
+    {
+      "name": "Elation",
+      "file": "elation.json"
+    },
+    {
+      "name": "ETC",
+      "file": "etc.json"
+    },
+    {
+      "name": "Fine Art",
+      "file": "fine-art.json"
+    },
+    {
+      "name": "Generic",
+      "file": "generic.json"
+    },
+    {
+      "name": "GLP",
+      "file": "glp.json"
+    },
+    {
+      "name": "Jem",
+      "file": "jem.json"
+    },
+    {
+      "name": "Martin",
+      "file": "martin.json"
+    },
+    {
+      "name": "MDG",
+      "file": "mdg.json"
+    },
+    {
+      "name": "Portman",
+      "file": "portman.json"
+    },
+    {
+      "name": "Robe",
+      "file": "robe.json"
+    },
+    {
+      "name": "Roxx",
+      "file": "roxx.json"
+    },
+    {
+      "name": "Ultratec",
+      "file": "ultratec.json"
+    }
+  ]
+}

@@ -1,0 +1,1256 @@
+{
+  "manufacturer": "Chroma-Q",
+  "fixtures": [
+    {
+      "fixture": "Color Force 3 12",
+      "watts": 180,
+      "weight": 6.9,
+      "modes": {
+        "RGB 8-bit All": 3,
+        "RGBA 8-bit All": 4,
+        "RGB 16-bit All": 6,
+        "RGBA 16-bit All": 8,
+        "RGB 8-bit Odd/Even": 6,
+        "RGBA 8-bit Odd/Even": 8,
+        "RGB 16-bit Odd/Even": 12,
+        "RGBA 16-bit Odd/Even": 16,
+        "RGB 8-bit x1": 12,
+        "RGBA 8-bit x1": 16,
+        "RGB 16-bit x1": 24,
+        "RGBA 16-bit x1": 32
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Chroma-Q",
+        "suggestedFileName": "Chroma_Q__Color_Force_3_12.gdtf",
+        "file": "",
+        "modes": {
+          "RGB 8-bit All": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 8-bit All": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 16-bit All": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 16-bit All": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 8-bit Odd/Even": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 8-bit Odd/Even": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 16-bit Odd/Even": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 16-bit Odd/Even": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 8-bit x1": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 8-bit x1": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 16-bit x1": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 16-bit x1": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Color Force 3 48",
+      "watts": 700,
+      "weight": 23.5,
+      "modes": {
+        "RGB 8-bit All": 3,
+        "RGBA 8-bit All": 4,
+        "RGB 16-bit All": 6,
+        "RGBA 16-bit All": 8,
+        "RGB 8-bit Odd/Even": 6,
+        "RGBA 8-bit Odd/Even": 8,
+        "RGB 16-bit Odd/Even": 12,
+        "RGBA 16-bit Odd/Even": 16,
+        "RGB 8-bit x4": 12,
+        "RGBA 8-bit x4": 16,
+        "RGB 16-bit x4": 24,
+        "RGBA 16-bit x4": 32,
+        "RGB 8-bit x2": 24,
+        "RGBA 8-bit x2": 32,
+        "RGB 16-bit x2": 48,
+        "RGBA 16-bit x2": 64,
+        "RGB 8-bit x1": 48,
+        "RGBA 8-bit x1": 64,
+        "RGB 16-bit x1": 96,
+        "RGBA 16-bit x1": 128
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Chroma-Q",
+        "suggestedFileName": "Chroma_Q__Color_Force_3_48.gdtf",
+        "file": "",
+        "modes": {
+          "RGB 8-bit All": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 8-bit All": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 16-bit All": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 16-bit All": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 8-bit Odd/Even": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 8-bit Odd/Even": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 16-bit Odd/Even": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 16-bit Odd/Even": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 8-bit x4": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 8-bit x4": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 16-bit x4": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 16-bit x4": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 8-bit x2": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 8-bit x2": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 16-bit x2": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 16-bit x2": {
+            "channels": 64,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 8-bit x1": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 8-bit x1": {
+            "channels": 64,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 16-bit x1": {
+            "channels": 96,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 16-bit x1": {
+            "channels": 128,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Color Force 3 72",
+      "watts": 1100,
+      "weight": 35,
+      "modes": {
+        "RGB 8-bit All": 3,
+        "RGBA 8-bit All": 4,
+        "RGB 16-bit All": 6,
+        "RGBA 16-bit All": 8,
+        "RGB 8-bit Odd/Even": 6,
+        "RGBA 8-bit Odd/Even": 8,
+        "RGB 16-bit Odd/Even": 12,
+        "RGBA 16-bit Odd/Even": 16,
+        "RGB 8-bit Skp2": 9,
+        "RGBA 8-bit Skp2": 12,
+        "RGB 16-bit Skp2": 18,
+        "RGBA 16-bit Skp2": 24,
+        "RGB 8-bit x6": 12,
+        "RGBA 8-bit x6": 16,
+        "RGB 16-bit x6": 24,
+        "RGBA 16-bit x6": 32,
+        "RGB 8-bit Skp3": 12,
+        "RGBA 8-bit Skp3": 16,
+        "RGB 16-bit Skp3": 24,
+        "RGBA 16-bit Skp3": 32,
+        "RGB 8-bit x4": 18,
+        "RGBA 8-bit x4": 24,
+        "RGB 16-bit x4": 36,
+        "RGBA 16-bit x4": 48,
+        "RGB 8-bit Skp6": 18,
+        "RGBA 8-bit Skp6": 24,
+        "RGB 16-bit Skp6": 36,
+        "RGBA 16-bit Skp6": 48,
+        "RGB 8-bit x3": 24,
+        "RGBA 8-bit x3": 32,
+        "RGB 16-bit x3": 48,
+        "RGBA 16-bit x3": 64,
+        "RGB 8-bit x2": 36,
+        "RGBA 8-bit x2": 48,
+        "RGB 16-bit x2": 72,
+        "RGBA 16-bit x2": 96,
+        "RGB 8-bit x1": 72,
+        "RGBA 8-bit x1": 96,
+        "RGB 16-bit x1": 144,
+        "RGBA 16-bit x1": 192
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Chroma-Q",
+        "suggestedFileName": "Chroma_Q__Color_Force_3_72.gdtf",
+        "file": "",
+        "modes": {
+          "RGB 8-bit All": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 8-bit All": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 16-bit All": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 16-bit All": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 8-bit Odd/Even": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 8-bit Odd/Even": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 16-bit Odd/Even": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 16-bit Odd/Even": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 8-bit Skp2": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 8-bit Skp2": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 16-bit Skp2": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 16-bit Skp2": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 8-bit x6": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 8-bit x6": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 16-bit x6": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 16-bit x6": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 8-bit Skp3": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 8-bit Skp3": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 16-bit Skp3": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 16-bit Skp3": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 8-bit x4": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 8-bit x4": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 16-bit x4": {
+            "channels": 36,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 16-bit x4": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 8-bit Skp6": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 8-bit Skp6": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 16-bit Skp6": {
+            "channels": 36,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 16-bit Skp6": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 8-bit x3": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 8-bit x3": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 16-bit x3": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 16-bit x3": {
+            "channels": 64,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 8-bit x2": {
+            "channels": 36,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 8-bit x2": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 16-bit x2": {
+            "channels": 72,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 16-bit x2": {
+            "channels": 96,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 8-bit x1": {
+            "channels": 72,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 8-bit x1": {
+            "channels": 96,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB 16-bit x1": {
+            "channels": 144,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA 16-bit x1": {
+            "channels": 192,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Color Force II 12",
+      "watts": 133,
+      "weight": 5,
+      "modes": {
+        "Look Select": 1,
+        "RGB All": 3,
+        "HSI All": 3,
+        "RGBA All": 4,
+        "RGB Odd/Even": 6,
+        "HSI Odd/Even": 6,
+        "RGBA Odd/Even": 8,
+        "RGB x1": 12,
+        "HSI x1": 12,
+        "RGBA x1": 16
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Chroma-Q",
+        "suggestedFileName": "Chroma_Q__Color_Force_II_12.gdtf",
+        "file": "",
+        "modes": {
+          "Look Select": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB All": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI All": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA All": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB Odd/Even": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI Odd/Even": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA Odd/Even": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB x1": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI x1": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA x1": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Color Force II 12 Plus",
+      "watts": 133,
+      "weight": 5,
+      "modes": {
+        "Look Select": 1,
+        "RGB All": 3,
+        "HSI All": 3,
+        "RGBA All": 4,
+        "RGB Odd/Even": 6,
+        "HSI Odd/Even": 6,
+        "RGBA Odd/Even": 8,
+        "RGB x1": 12,
+        "HSI x1": 12,
+        "RGBA x1": 16
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Chroma-Q",
+        "suggestedFileName": "Chroma_Q__Color_Force_II_12_Plus.gdtf",
+        "file": "",
+        "modes": {
+          "Look Select": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB All": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI All": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA All": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB Odd/Even": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI Odd/Even": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA Odd/Even": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB x1": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI x1": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA x1": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Color Force II 48",
+      "watts": 533,
+      "weight": 18,
+      "modes": {
+        "Look Select": 1,
+        "RGB All": 3,
+        "HSI All": 3,
+        "RGBA All": 4,
+        "RGB Odd/Even": 6,
+        "HSI Odd/Even": 6,
+        "RGBA Odd/Even": 8,
+        "RGB x4": 12,
+        "HSI x4": 12,
+        "RGBA x4": 16,
+        "RGB x2": 24,
+        "HSI x2": 24,
+        "RGBA x2": 32,
+        "RGB x1": 48,
+        "HSI x1": 48,
+        "RGBA x1": 64
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Chroma-Q",
+        "suggestedFileName": "Chroma_Q__Color_Force_II_48.gdtf",
+        "file": "",
+        "modes": {
+          "Look Select": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB All": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI All": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA All": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB Odd/Even": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI Odd/Even": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA Odd/Even": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB x4": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI x4": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA x4": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB x2": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI x2": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA x2": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB x1": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI x1": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA x1": {
+            "channels": 64,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Color Force II 48 Plus",
+      "watts": 533,
+      "weight": 18,
+      "modes": {
+        "Look Select": 1,
+        "RGB All": 3,
+        "HSI All": 3,
+        "RGBA All": 4,
+        "RGB Odd/Even": 6,
+        "HSI Odd/Even": 6,
+        "RGBA Odd/Even": 8,
+        "RGB x4": 12,
+        "HSI x4": 12,
+        "RGBA x4": 16,
+        "RGB x2": 24,
+        "HSI x2": 24,
+        "RGBA x2": 32,
+        "RGB x1": 48,
+        "HSI x1": 48,
+        "RGBA x1": 64
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Chroma-Q",
+        "suggestedFileName": "Chroma_Q__Color_Force_II_48_Plus.gdtf",
+        "file": "",
+        "modes": {
+          "Look Select": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB All": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI All": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA All": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB Odd/Even": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI Odd/Even": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA Odd/Even": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB x4": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI x4": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA x4": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB x2": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI x2": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA x2": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB x1": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI x1": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA x1": {
+            "channels": 64,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Color Force II 72",
+      "watts": 800,
+      "weight": 24,
+      "modes": {
+        "Look Select": 1,
+        "RGB All": 3,
+        "HSI All": 3,
+        "RGBA All": 4,
+        "RGB Odd/Even": 6,
+        "HSI Odd/Even": 6,
+        "RGBA Odd/Even": 8,
+        "RGB Skp2": 9,
+        "HSI Skp2": 9,
+        "RGBA Skp2": 12,
+        "RGB x6": 12,
+        "HSI x6": 12,
+        "RGBA x6": 16,
+        "RGB Skp3": 12,
+        "HSI Skp3": 12,
+        "RGBA Skp3": 16,
+        "RGB x4": 18,
+        "HSI x4": 18,
+        "RGBA x4": 24,
+        "RGB Skp6": 18,
+        "HSI Skp6": 18,
+        "RGBA Skp6": 24,
+        "RGB x3": 24,
+        "HSI x3": 24,
+        "RGBA x3": 32,
+        "RGB x2": 36,
+        "HSI x2": 36,
+        "RGBA x2": 48,
+        "RGB x1": 72,
+        "HSI x1": 72,
+        "RGBA x1": 96
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Chroma-Q",
+        "suggestedFileName": "Chroma_Q__Color_Force_II_72.gdtf",
+        "file": "",
+        "modes": {
+          "Look Select": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB All": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI All": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA All": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB Odd/Even": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI Odd/Even": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA Odd/Even": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB Skp2": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI Skp2": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA Skp2": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB x6": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI x6": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA x6": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB Skp3": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI Skp3": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA Skp3": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB x4": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI x4": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA x4": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB Skp6": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI Skp6": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA Skp6": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB x3": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI x3": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA x3": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB x2": {
+            "channels": 36,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI x2": {
+            "channels": 36,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA x2": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB x1": {
+            "channels": 72,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI x1": {
+            "channels": 72,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA x1": {
+            "channels": 96,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "Color Force II 72 Plus",
+      "watts": 800,
+      "weight": 24,
+      "modes": {
+        "Look Select": 1,
+        "RGB All": 3,
+        "HSI All": 3,
+        "RGBA All": 4,
+        "RGB Odd/Even": 6,
+        "HSI Odd/Even": 6,
+        "RGBA Odd/Even": 8,
+        "RGB Skp2": 9,
+        "HSI Skp2": 9,
+        "RGBA Skp2": 12,
+        "RGB x6": 12,
+        "HSI x6": 12,
+        "RGBA x6": 16,
+        "RGB Skp3": 12,
+        "HSI Skp3": 12,
+        "RGBA Skp3": 16,
+        "RGB x4": 18,
+        "HSI x4": 18,
+        "RGBA x4": 24,
+        "RGB Skp6": 18,
+        "HSI Skp6": 18,
+        "RGBA Skp6": 24,
+        "RGB x3": 24,
+        "HSI x3": 24,
+        "RGBA x3": 32,
+        "RGB x2": 36,
+        "HSI x2": 36,
+        "RGBA x2": 48,
+        "RGB x1": 72,
+        "HSI x1": 72,
+        "RGBA x1": 96
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Chroma-Q",
+        "suggestedFileName": "Chroma_Q__Color_Force_II_72_Plus.gdtf",
+        "file": "",
+        "modes": {
+          "Look Select": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB All": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI All": {
+            "channels": 3,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA All": {
+            "channels": 4,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB Odd/Even": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI Odd/Even": {
+            "channels": 6,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA Odd/Even": {
+            "channels": 8,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB Skp2": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI Skp2": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA Skp2": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB x6": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI x6": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA x6": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB Skp3": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI Skp3": {
+            "channels": 12,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA Skp3": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB x4": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI x4": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA x4": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB Skp6": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI Skp6": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA Skp6": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB x3": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI x3": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA x3": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB x2": {
+            "channels": 36,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI x2": {
+            "channels": 36,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA x2": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGB x1": {
+            "channels": 72,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "HSI x1": {
+            "channels": 72,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBA x1": {
+            "channels": 96,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    }
+  ]
+}

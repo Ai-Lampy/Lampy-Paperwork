@@ -1,0 +1,854 @@
+{
+  "manufacturer": "GLP",
+  "fixtures": [
+    {
+      "fixture": "impression FR1",
+      "watts": 100,
+      "weight": 5.0,
+      "modes": {
+        "Single Mode": 16
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/GLP",
+        "suggestedFileName": "GLP__impression_FR1.gdtf",
+        "file": "",
+        "modes": {
+          "Single Mode": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "impression FR2 Wash",
+      "watts": 200,
+      "weight": 5.2,
+      "modes": {
+        "18 Chan": 18,
+        "28 Chan": 28,
+        "40 Chan": 40,
+        "52 Chan": 52,
+        "171 Chan": 171,
+        "427 Chan": 427
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/GLP",
+        "suggestedFileName": "GLP__impression_FR2_Wash.gdtf",
+        "file": "",
+        "modes": {
+          "18 Chan": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "28 Chan": {
+            "channels": 28,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "40 Chan": {
+            "channels": 40,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "52 Chan": {
+            "channels": 52,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "171 Chan": {
+            "channels": 171,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "427 Chan": {
+            "channels": 427,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "impression S500 Profile",
+      "watts": 750,
+      "weight": 26.9,
+      "modes": {
+        "Single Mode": 35
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/GLP",
+        "suggestedFileName": "GLP__impression_S500_Profile.gdtf",
+        "file": "",
+        "modes": {
+          "Single Mode": {
+            "channels": 35,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "impression S500 Wash",
+      "watts": 750,
+      "weight": 26.6,
+      "modes": {
+        "Single Mode": 27
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/GLP",
+        "suggestedFileName": "GLP__impression_S500_Wash.gdtf",
+        "file": "",
+        "modes": {
+          "Single Mode": {
+            "channels": 27,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "impression X4 Bar 10",
+      "watts": 230,
+      "weight": 8,
+      "modes": {
+        "Normal": 33,
+        "Compressed": 20,
+        "D Pix": 28,
+        "D Pix H-Res": 29,
+        "S Pix": 48,
+        "S Pix H-Res": 49
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/GLP",
+        "suggestedFileName": "GLP__impression_X4_Bar_10.gdtf",
+        "file": "",
+        "modes": {
+          "Normal": {
+            "channels": 33,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Compressed": {
+            "channels": 20,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "D Pix": {
+            "channels": 28,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "D Pix H-Res": {
+            "channels": 29,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "S Pix": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "S Pix H-Res": {
+            "channels": 49,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "impression X4 Bar 20",
+      "watts": 400,
+      "weight": 14.5,
+      "modes": {
+        "Normal": 34,
+        "Compressed": 20,
+        "D Pix": 48,
+        "D Pix H-Res": 49,
+        "S Pix": 88,
+        "S Pix H-Res": 89
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/GLP",
+        "suggestedFileName": "GLP__impression_X4_Bar_20.gdtf",
+        "file": "",
+        "modes": {
+          "Normal": {
+            "channels": 34,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Compressed": {
+            "channels": 20,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "D Pix": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "D Pix H-Res": {
+            "channels": 49,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "S Pix": {
+            "channels": 88,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "S Pix H-Res": {
+            "channels": 89,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "impression X4 S",
+      "watts": 200,
+      "weight": 5.5,
+      "modes": {
+        "Compressed": 14,
+        "Normal": 18,
+        "High Res": 19
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/GLP",
+        "suggestedFileName": "GLP__impression_X4_S.gdtf",
+        "file": "",
+        "modes": {
+          "Compressed": {
+            "channels": 14,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Normal": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "High Res": {
+            "channels": 19,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "impression X5",
+      "watts": 710,
+      "weight": 13.3,
+      "modes": {
+        "Basic": 24,
+        "Normal": 35,
+        "Segment": 41,
+        "Multipix Advanced": 89,
+        "Multipix Compressed RGB": 70,
+        "Multipix Compressed RGBL": 89
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/GLP",
+        "suggestedFileName": "GLP__impression_X5.gdtf",
+        "file": "",
+        "modes": {
+          "Basic": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Normal": {
+            "channels": 35,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Segment": {
+            "channels": 41,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Multipix Advanced": {
+            "channels": 89,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Multipix Compressed RGB": {
+            "channels": 70,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Multipix Compressed RGBL": {
+            "channels": 89,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "impression X5 Bar 1000",
+      "watts": 750,
+      "weight": 20.2,
+      "modes": {
+        "Basic": 20,
+        "Normal": 33,
+        "Segment": 48,
+        "Multipix Advanced": 84,
+        "Multipix Compressed": 63,
+        "Multipix Compressed RGBL": 81
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/GLP",
+        "suggestedFileName": "GLP__impression_X5_Bar_1000.gdtf",
+        "file": "",
+        "modes": {
+          "Basic": {
+            "channels": 20,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Normal": {
+            "channels": 33,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Segment": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Multipix Advanced": {
+            "channels": 84,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Multipix Compressed": {
+            "channels": 63,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Multipix Compressed RGBL": {
+            "channels": 81,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "impression X5 Compact",
+      "watts": 350,
+      "weight": 7.5,
+      "modes": {
+        "Basic": 22,
+        "Normal": 33,
+        "Segment": 36,
+        "Multipix Advanced": 51,
+        "Multipix Compressed RGB": 32,
+        "Multipix Compressed RGBL": 39
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/GLP",
+        "suggestedFileName": "GLP__impression_X5_Compact.gdtf",
+        "file": "",
+        "modes": {
+          "Basic": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Normal": {
+            "channels": 33,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Segment": {
+            "channels": 36,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Multipix Advanced": {
+            "channels": 51,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Multipix Compressed RGB": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Multipix Compressed RGBL": {
+            "channels": 39,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "impression X5 IP",
+      "watts": 700,
+      "weight": 21,
+      "modes": {
+        "Basic": 24,
+        "Normal": 35,
+        "Segment": 41,
+        "Multipix Advanced": 89,
+        "Multipix Compressed RGB": 70,
+        "Multipix Compressed RGBL": 89
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/GLP",
+        "suggestedFileName": "GLP__impression_X5_IP.gdtf",
+        "file": "",
+        "modes": {
+          "Basic": {
+            "channels": 24,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Normal": {
+            "channels": 35,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Segment": {
+            "channels": 41,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Multipix Advanced": {
+            "channels": 89,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Multipix Compressed RGB": {
+            "channels": 70,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Multipix Compressed RGBL": {
+            "channels": 89,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "impression X5 IP Bar 1000",
+      "watts": 750,
+      "weight": 27,
+      "modes": {
+        "Basic": 20,
+        "Normal": 33,
+        "Segment": 48,
+        "Multipix Advanced": 84,
+        "Multipix Compressed": 63,
+        "Multipix Compressed RGBL": 81
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/GLP",
+        "suggestedFileName": "GLP__impression_X5_IP_Bar_1000.gdtf",
+        "file": "",
+        "modes": {
+          "Basic": {
+            "channels": 20,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Normal": {
+            "channels": 33,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Segment": {
+            "channels": 48,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Multipix Advanced": {
+            "channels": 84,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Multipix Compressed": {
+            "channels": 63,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Multipix Compressed RGBL": {
+            "channels": 81,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "JDC Burst 1",
+      "watts": 1400,
+      "weight": 14,
+      "modes": {
+        "Mode 1 - Basic": 19,
+        "Mode 2 - FX": 37,
+        "Mode 3 - 12 Segments": 87,
+        "Mode 4 - 24 Segments": 135,
+        "Mode 5 - 48 Segments": 231,
+        "Mode 6 - Full 12 Segments": 105,
+        "Mode 7 - Full 24 Segments": 153,
+        "Mode 8 - Full 48 Segments": 249,
+        "Mode 9 - Legacy Spix": 68,
+        "Mode 10 - Legacy SPix Pro": 62
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/GLP",
+        "suggestedFileName": "GLP__JDC_Burst_1.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1 - Basic": {
+            "channels": 19,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2 - FX": {
+            "channels": 37,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3 - 12 Segments": {
+            "channels": 87,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4 - 24 Segments": {
+            "channels": 135,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5 - 48 Segments": {
+            "channels": 231,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 6 - Full 12 Segments": {
+            "channels": 105,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 7 - Full 24 Segments": {
+            "channels": 153,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 8 - Full 48 Segments": {
+            "channels": 249,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 9 - Legacy Spix": {
+            "channels": 68,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 10 - Legacy SPix Pro": {
+            "channels": 62,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "JDC Line 1000",
+      "watts": 1600,
+      "weight": 12,
+      "modes": {
+        "RGBWStrobe": 32,
+        "Wstrobe, RGBStrobe": 68,
+        "Wstrobe, RGB Pixel": 168,
+        "RGBStrobe, W Pixel": 94,
+        "MultiPix": 196,
+        "MultiPix Advanced": 316,
+        "Multipix Quadpix": 78
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/GLP",
+        "suggestedFileName": "GLP__JDC_Line_1000.gdtf",
+        "file": "",
+        "modes": {
+          "RGBWStrobe": {
+            "channels": 32,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Wstrobe, RGBStrobe": {
+            "channels": 68,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Wstrobe, RGB Pixel": {
+            "channels": 168,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBStrobe, W Pixel": {
+            "channels": 94,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "MultiPix": {
+            "channels": 196,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "MultiPix Advanced": {
+            "channels": 316,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Multipix Quadpix": {
+            "channels": 78,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "JDC Line 500",
+      "watts": 800,
+      "weight": 6,
+      "modes": {
+        "RGBWStrobe": 16,
+        "Wstrobe, RGBStrobe": 34,
+        "Wstrobe, RGB Pixel": 83,
+        "RGBStrobe, W Pixel": 47,
+        "MultiPix": 98,
+        "MultiPix Advanced": 158,
+        "Multipix Quadpix": 38
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/GLP",
+        "suggestedFileName": "GLP__JDC_Line_500.gdtf",
+        "file": "",
+        "modes": {
+          "RGBWStrobe": {
+            "channels": 16,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Wstrobe, RGBStrobe": {
+            "channels": 34,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Wstrobe, RGB Pixel": {
+            "channels": 83,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "RGBStrobe, W Pixel": {
+            "channels": 47,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "MultiPix": {
+            "channels": 98,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "MultiPix Advanced": {
+            "channels": 158,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Multipix Quadpix": {
+            "channels": 38,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "JDC1",
+      "watts": 1200,
+      "weight": 11.6,
+      "modes": {
+        "Mode 1 - Compressed": 14,
+        "Mode 2 - Normal": 23,
+        "Mode 3 - S Pix": 68,
+        "Mode 4 - S Pix Pro": 62,
+        "Mode 5 - 1 Pix Pro": 17,
+        "Mode 6 - Easy": 11
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/GLP",
+        "suggestedFileName": "GLP__JDC1.gdtf",
+        "file": "",
+        "modes": {
+          "Mode 1 - Compressed": {
+            "channels": 14,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 2 - Normal": {
+            "channels": 23,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 3 - S Pix": {
+            "channels": 68,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 4 - S Pix Pro": {
+            "channels": 62,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 5 - 1 Pix Pro": {
+            "channels": 17,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Mode 6 - Easy": {
+            "channels": 11,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "JDC2 IP",
+      "watts": 1500,
+      "weight": 23.5,
+      "modes": {
+        "M1": 18,
+        "M2": 30,
+        "M3": 105,
+        "M4": 141,
+        "M5": 85
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/GLP",
+        "suggestedFileName": "GLP__JDC2_IP.gdtf",
+        "file": "",
+        "modes": {
+          "M1": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "M2": {
+            "channels": 30,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "M3": {
+            "channels": 105,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "M4": {
+            "channels": 141,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "M5": {
+            "channels": 85,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "MAD MAXX",
+      "watts": 2500,
+      "weight": 208,
+      "modes": {
+        "Normal": 15,
+        "Segment": 22,
+        "MultiBeam": 70
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/GLP",
+        "suggestedFileName": "GLP__MAD_MAXX.gdtf",
+        "file": "",
+        "modes": {
+          "Normal": {
+            "channels": 15,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Segment": {
+            "channels": 22,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "MultiBeam": {
+            "channels": 70,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    },
+    {
+      "fixture": "WildBar 16",
+      "watts": 700,
+      "weight": 23,
+      "modes": {
+        "Standard": 28,
+        "Extended": 79
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/GLP",
+        "suggestedFileName": "GLP__WildBar_16.gdtf",
+        "file": "",
+        "modes": {
+          "Standard": {
+            "channels": 28,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "Extended": {
+            "channels": 79,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    }
+  ]
+}

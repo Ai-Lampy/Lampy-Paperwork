@@ -1,0 +1,26 @@
+{
+  "manufacturer": "Antari",
+  "fixtures": [
+    {
+      "fixture": "HZ-500 Hazer",
+      "watts": 0,
+      "weight": 0,
+      "modes": {
+        "1 Chan": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "GDTF/Antari",
+        "suggestedFileName": "Antari__HZ_500_Hazer.gdtf",
+        "file": "",
+        "modes": {
+          "1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      }
+    }
+  ]
+}
