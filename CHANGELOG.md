@@ -2,6 +2,59 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V11 - 2026-07-17
+
+- Added repository-backed GDTF references to the fixture library, matched by manufacturer, fixture type, mode, and channel count.
+- Added automatic loading of matched GDTF files from `gdtf/fixtures/` during MVR export.
+- Embedded repository GDTFs directly into exported MVR files while keeping the full binary data out of localStorage.
+- Retained manual GDTF upload and MVR export without GDTF data as fallback workflows.
+- Added selective `description.xml` extraction so large GDTF model and texture assets are not inflated during metadata matching.
+- Cleared repository GDTF memory when starting or opening another project to prevent stale cross-project file data.
+- Published the first verified Chauvet batch: Color Strike M, COLORado PXL Curve 12, COLORado PXL Curve 5, and Maverick Storm 1 Beam.
+- Verified the resulting MVR fixture patch and embedded GDTFs load successfully in grandMA3.
+
+## V10.9 - 2026-07-17
+
+- Fixed large manual GDTF uploads exceeding browser localStorage by keeping full GDTF data in memory and project downloads while saving only lightweight GDTF metadata locally.
+- Updated MVR export warnings to distinguish unmatched GDTFs from matched GDTFs whose full file data needs re-uploading before export.
+
+## V10.8 - 2026-07-17
+
+- Strengthened GDTF matching after manual upload by scoring Fixture Type, Mode name, and channel-count matches so GDTF Share naming differences do not leave valid uploads marked as missing.
+
+## V10.7 - 2026-07-17
+
+- Improved manual GDTF upload matching so stored GDTF files link to patch rows by Fixture Type and Mode, including compatible mode names and matching channel counts.
+
+## V10.6 - 2026-07-17
+
+- Grouped MVR missing-GDTF export warnings by Fixture Type and Mode instead of listing every affected Fix ID.
+
+## V10.5 - 2026-07-17
+
+- Replaced the MVR export warning confirm dialog with an in-app warning modal that offers Add GDTF File, Open GDTF Share, and Export Without GDTF Data actions.
+- Added an explicit MVR export path that omits embedded GDTF data when the user chooses to continue without GDTF files.
+
+## V10.4 - 2026-07-17
+
+- Kept imported GDTFSpec and GDTFMode data as background metadata by hiding those fields from the patch import preview and user mapping dropdowns while retaining them for MVR export.
+
+## V10.3 - 2026-07-17
+
+- Tightened patch import header auto-mapping so GDTF Mode maps to the GDTF metadata field instead of the normal fixture mode field.
+- Changed MVR patch import so fixture type, mode, channel count, watts, and weight are matched back to the Lampy fixture library while preserving the original imported GDTFSpec and GDTFMode for MVR export.
+- Improved imported mode matching to prefer exact mode names, compatible partial names, and matching channel counts before falling back to the first library mode.
+
+## V10.2 - 2026-07-17
+
+- Fixed MVR imports so original GDTFSpec and GDTFMode data are retained on fixture patch rows instead of being replaced by fixture-library default matches.
+- Updated MVR export to prefer stored imported GDTF references and carry them through comparison merge, overwrite, and master-patch actions.
+- Corrected embedded GDTF channel counting to use the highest DMX offset in each mode, preserving modes such as 33Ch correctly.
+
+## V10.1 - 2026-07-17
+
+- Fixed MVR imports that encode DMX as absolute address values so universe and address fields are restored correctly, and ignored placeholder fixtures with no real ID or address.
+
 ## V10 - 2026-07-17
 
 - Updated console card image sizing so console images render at 200px wide, full image-container height, and object-fit contain.

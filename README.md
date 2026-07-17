@@ -13,11 +13,12 @@ Live app: [https://ai-lampy.github.io/Lampy-Paperwork/](https://ai-lampy.github.
 - Tracks DMX universe usage and available address space.
 - Builds console, NPU, and network paperwork with reference images.
 - Exports project data as a Lampy project file for reopening later.
+- Exports MVR fixture patches with matched repository GDTF files embedded when available.
 - Exports paperwork previews to PDF where supported by the app workflow.
 
 ## Current Version
 
-Current app version: **V9.5**
+Current app version: **V11**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 
@@ -48,6 +49,9 @@ Lampy Paperwork is intended for modern desktop browsers. Chrome is recommended f
   images/
     consoles/
     NPU/
+  gdtf/
+    fixtures/
+      <manufacturer>/
   json/
     colour_reference_template.json
     console_reference.json
@@ -69,6 +73,7 @@ Reference data is stored in `/json/` and loaded directly by the browser.
 
 - Fixture manufacturers are listed in `json/fixture_library_manifest.json`.
 - Per-manufacturer fixture data lives in `json/fixtures/`.
+- Matched GDTF files used by MVR export live in `gdtf/fixtures/<manufacturer>/`.
 - Console and NPU records can include relative image paths from `images/consoles/` and `images/NPU/`.
 - Colour names and aliases are managed in `json/colour_reference_template.json`.
 
