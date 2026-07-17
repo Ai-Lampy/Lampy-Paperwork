@@ -2,6 +2,62 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V10 - 2026-07-17
+
+- Updated console card image sizing so console images render at 200px wide, full image-container height, and object-fit contain.
+- Added Fixture Patch MVR import support that reads GeneralSceneDescription.xml and imports fixture ID, fixture type, mode, universe/address, position, manufacturer, and channel count.
+- Added embedded GDTF preservation from imported MVR files with project storage for GDTF files and GDTF match metadata.
+- Added manual GDTF upload from the Fixture Patch export modal with automatic matching to current patch rows.
+- Added Fixture Patch Export to MVR with GeneralSceneDescription.xml generation, matched embedded GDTF files, and pre-export validation warnings for missing addressing, invalid addresses, missing modes, missing GDTFs, duplicate Fix IDs, and duplicate DMX ranges.
+
+## V9.14 - 2026-07-17
+
+- Extended the Fixture Patch comparison floating action bar to selected row actions as well as selected column/cell actions.
+
+## V9.13 - 2026-07-17
+
+- Changed the Fixture Patch comparison selected-cell action bar from sticky to fixed positioning so Merge, Ignore, Overwrite Rows, and Clear Selection remain visible while scrolling the patch sheet.
+
+## V9.12 - 2026-07-17
+
+- Made the Fixture Patch comparison selected-cell action bar sticky while scrolling so Merge, Ignore, Overwrite Rows, and Clear Selection remain available.
+
+## V9.11 - 2026-07-17
+
+- Split Fixture Patch manual fixture matching into Manufacture and Fixture Type selectors.
+- Added search fields for manual match manufacture and fixture type filtering.
+
+## V9.10 - 2026-07-17
+
+- Linked Fixture Patch comparison merges for Mode and Channel Count so merging either field updates both values from the imported patch.
+
+## V9.9 - 2026-07-17
+
+- Scoped Fixture Patch comparison column-header selection to the fixture type table that was clicked.
+
+## V9.8 - 2026-07-17
+
+- Added Fixture Patch comparison column selection by clicking changed column headers.
+- Added selected-cell bulk actions for Merge, Ignore, and Overwrite Rows, with undo support.
+
+## V9.7 - 2026-07-17
+
+- Added an Undo control to Fixture Patch comparison mode that lists the last six review actions and restores the selected previous patch state.
+
+## V9.6 - 2026-07-17
+
+- Hid the Fixture Patch tab strip when the project only has the master patch sheet and no imported comparison patch tabs.
+
+## V9.5 - 2026-07-17
+
+- Updated README.md into a useful GitHub project landing page with live app link, workflow overview, source structure, reference data notes, deployment notes, and development rules.
+
+## V9.4 - 2026-07-16
+
+- Added a Fixture Patch comparison filter to show only imported patch lines with differences.
+- Added multi-line selection and bulk review actions for imported patch changes.
+- Added a side-by-side comparison view for difference-filtered imported patches.
+
 ## V9.3 - 2026-07-16
 
 - Added a Delete Patch button to the Fixture Patch comparison banner for imported patch tabs.
