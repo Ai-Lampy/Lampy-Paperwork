@@ -1,0 +1,4870 @@
+[
+  {
+    "manufacturer": "ACME",
+    "fixture": "Aeco 15",
+    "modeCount": 4,
+    "modes": {
+      "22 Chan": 22,
+      "29 Chan": 29,
+      "31 Chan": 31,
+      "38 Chan": 38
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Aeco_15.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Aeco 30 Ip",
+    "modeCount": 4,
+    "modes": {
+      "23 Chan": 23,
+      "32 Chan": 32,
+      "34 Chan": 34,
+      "43 Chan": 43
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Aeco_30_Ip.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Aeco 5",
+    "modeCount": 3,
+    "modes": {
+      "33 Chan": 33,
+      "24 Chan": 24,
+      "28 Chan": 28
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Aeco_5.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Autolux",
+    "modeCount": 1,
+    "modes": {
+      "25 Chan": 25
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Autolux.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Blinder Line 10 Ip",
+    "modeCount": 2,
+    "modes": {
+      "14 Chan": 14,
+      "55 Chan": 55
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Blinder_Line_10_Ip.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Blinder Line 5 Ip",
+    "modeCount": 2,
+    "modes": {
+      "14 Chan": 14,
+      "30 Chan": 30
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Blinder_Line_5_Ip.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Coolie 186",
+    "modeCount": 4,
+    "modes": {
+      "4 Chan": 4,
+      "5 Chan": 5,
+      "8 Chan": 8,
+      "10 Chan": 10
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Coolie_186.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Cyclone",
+    "modeCount": 3,
+    "modes": {
+      "27 Chan": 27,
+      "50 Chan": 50,
+      "58 Chan": 58
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Cyclone.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Geist Bswf",
+    "modeCount": 3,
+    "modes": {
+      "25 Chan": 25,
+      "29 Chan": 29,
+      "34 Chan": 34
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Geist_Bswf.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Gemini",
+    "modeCount": 7,
+    "modes": {
+      "58 Chan": 58,
+      "25 Chan": 25,
+      "23 Chan": 23,
+      "35+": "35+",
+      "27 Chan": 27,
+      "70 Chan": 70,
+      "55 Chan": 55
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Gemini.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Hue 6 Ip",
+    "modeCount": 4,
+    "modes": {
+      "43 Chan": 43,
+      "45 Chan": 45,
+      "46 Chan": 46,
+      "50 Chan": 50
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Hue_6_Ip.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Hueline 16 Ip",
+    "modeCount": 4,
+    "modes": {
+      "16 Chan": 16,
+      "18 Chan": 18,
+      "133 Chan": 133,
+      "136 Chan": 136
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Hueline_16_Ip.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Hyperzone",
+    "modeCount": 6,
+    "modes": {
+      "19 Chan": 19,
+      "20 Chan": 20,
+      "21 Chan": 21,
+      "41 Chan": 41,
+      "42 Chan": 42,
+      "43 Chan": 43
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Hyperzone.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Lightning X",
+    "modeCount": 6,
+    "modes": {
+      "31 Chan": 31,
+      "43 Chan": 43,
+      "100 Chan": 100,
+      "230 Chan": 230,
+      "20+80": "20+80",
+      "20+210": "20+210"
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Lightning_X.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Lineforce 10 Ip",
+    "modeCount": 8,
+    "modes": {
+      "10 Chan": 10,
+      "11 Chan": 11,
+      "16 Chan": 16,
+      "17 Chan": 17,
+      "19 Chan": 19,
+      "20 Chan": 20,
+      "79 Chan": 79,
+      "81 Chan": 81
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Lineforce_10_Ip.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Lineforce 5 Ip",
+    "modeCount": 8,
+    "modes": {
+      "10 Chan": 10,
+      "11 Chan": 11,
+      "16 Chan": 16,
+      "17 Chan": 17,
+      "19 Chan": 19,
+      "20 Chan": 20,
+      "44 Chan": 44,
+      "46 Chan": 46
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Lineforce_5_Ip.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Lyra",
+    "modeCount": 5,
+    "modes": {
+      "22 Chan": 22,
+      "30 Chan": 30,
+      "31 Chan": 31,
+      "39 Chan": 39,
+      "40 Chan": 40
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Lyra.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Lyra Bw",
+    "modeCount": 2,
+    "modes": {
+      "30 Chan": 30,
+      "18 Chan": 18
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Lyra_Bw.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Mana Hybrid",
+    "modeCount": 2,
+    "modes": {
+      "24 Chan": 24,
+      "30 Chan": 30
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Mana_Hybrid.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Mana Profile",
+    "modeCount": 4,
+    "modes": {
+      "22 Chan": 22,
+      "31 Chan": 31,
+      "31 Chan (Mode 3)": 31,
+      "40 Chan": 40
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Mana_Profile.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Neozone",
+    "modeCount": 4,
+    "modes": {
+      "17 Chan": 17,
+      "21 Chan": 21,
+      "86 Chan": 86,
+      "10+": "10+"
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Neozone.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Nova Beam",
+    "modeCount": 1,
+    "modes": {
+      "19 Chan": 19
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Nova_Beam.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Oxygen",
+    "modeCount": 2,
+    "modes": {
+      "17 Chan": 17,
+      "37 Chan": 37
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Oxygen.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Pasodoble",
+    "modeCount": 4,
+    "modes": {
+      "4 Chan": 4,
+      "5 Chan": 5,
+      "8 Chan": 8,
+      "10 Chan": 10
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Pasodoble.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Pixel Line Ip",
+    "modeCount": 13,
+    "modes": {
+      "7 Chan": 7,
+      "15 Chan": 15,
+      "17 Chan": 17,
+      "21 Chan": 21,
+      "33 Chan": 33,
+      "39 Chan": 39,
+      "65 Chan": 65,
+      "68 Chan": 68,
+      "70 Chan": 70,
+      "70N": "70N",
+      "112 Chan": 112,
+      "117 Chan": 117,
+      "119 Chan": 119
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Pixel_Line_Ip.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Pixel Line Ip 500",
+    "modeCount": 12,
+    "modes": {
+      "8 Chan": 8,
+      "10 Chan": 10,
+      "16 Chan": 16,
+      "18 Chan": 18,
+      "22 Chan": 22,
+      "26 Chan": 26,
+      "34 Chan": 34,
+      "37 Chan": 37,
+      "39 Chan": 39,
+      "56 Chan": 56,
+      "62 Chan": 62,
+      "68 Chan": 68
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Pixel_Line_Ip_500.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Pulsar Plus S2",
+    "modeCount": 5,
+    "modes": {
+      "43 Chan": 43,
+      "153 Chan": 153,
+      "163 Chan": 163,
+      "195 Chan": 195,
+      "27+168": "27+168"
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Pulsar_Plus_S2.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Pulsar S2",
+    "modeCount": 4,
+    "modes": {
+      "21+": "21+",
+      "24 Chan": 24,
+      "39 Chan": 39,
+      "97 Chan": 97
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Pulsar_S2.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Sana Beam",
+    "modeCount": 4,
+    "modes": {
+      "16 Chan": 16,
+      "27 Chan": 27,
+      "27 Chan (Mode 3)": 27,
+      "29 Chan": 29
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Sana_Beam.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Sana Profile",
+    "modeCount": 4,
+    "modes": {
+      "27 Chan": 27,
+      "36 Chan": 36,
+      "36 Chan (Mode 3)": 36,
+      "45 Chan": 45
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Sana_Profile.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Sandane Frost",
+    "modeCount": 5,
+    "modes": {
+      "11 Chan": 11,
+      "9 Chan": 9,
+      "8 Chan": 8,
+      "7 Chan": 7,
+      "6 Chan": 6
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Sandane_Frost.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Solar Wind",
+    "modeCount": 2,
+    "modes": {
+      "30 Chan": 30,
+      "24 Chan": 24
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Solar_Wind.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Stage Par 400 Zoom Ip",
+    "modeCount": 3,
+    "modes": {
+      "5 Chan": 5,
+      "7 Chan": 7,
+      "9 Chan": 9
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Stage_Par_400_Zoom_Ip.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Super Dotline",
+    "modeCount": 8,
+    "modes": {
+      "17 Chan": 17,
+      "27 Chan": 27,
+      "99 Chan": 99,
+      "108 Chan": 108,
+      "168 Chan": 168,
+      "8+100": "8+100",
+      "8+160": "8+160",
+      "21 Chan": 21
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Super_Dotline.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Supernova",
+    "modeCount": 4,
+    "modes": {
+      "23 Chan": 23,
+      "32 Chan": 32,
+      "34 Chan": 34,
+      "43 Chan": 43
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Supernova.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Supernova Lt",
+    "modeCount": 4,
+    "modes": {
+      "23 Chan": 23,
+      "32 Chan": 32,
+      "35 Chan": 35,
+      "44 Chan": 44
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Supernova_Lt.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Tango",
+    "modeCount": 4,
+    "modes": {
+      "4 Chan": 4,
+      "5 Chan": 5,
+      "8 Chan": 8,
+      "10 Chan": 10
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Tango.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Theta",
+    "modeCount": 5,
+    "modes": {
+      "19+": "19+",
+      "27 Chan": 27,
+      "29 Chan": 29,
+      "139 Chan": 139,
+      "141 Chan": 141
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Theta.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Tornado",
+    "modeCount": 5,
+    "modes": {
+      "41 Chan": 41,
+      "71 Chan": 71,
+      "75 Chan": 75,
+      "85 Chan": 85,
+      "170 Chan": 170
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Tornado.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Tv Light Panel 3000",
+    "modeCount": 2,
+    "modes": {
+      "10 Chan": 10,
+      "28 Chan": 28
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Tv_Light_Panel_3000.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Willow 200",
+    "modeCount": 1,
+    "modes": {
+      "17 Chan": 17
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Willow_200.gdtf"
+  },
+  {
+    "manufacturer": "ACME",
+    "fixture": "Willow 500",
+    "modeCount": 1,
+    "modes": {
+      "18 Chan": 18
+    },
+    "suggestedPath": "GDTF/ACME/ACME__Willow_500.gdtf"
+  },
+  {
+    "manufacturer": "Antari",
+    "fixture": "HZ-500 Hazer",
+    "modeCount": 1,
+    "modes": {
+      "1 Chan": 1
+    },
+    "suggestedPath": "GDTF/Antari/Antari__HZ_500_Hazer.gdtf"
+  },
+  {
+    "manufacturer": "Astera",
+    "fixture": "AX1 PixelTube",
+    "modeCount": 35,
+    "modes": {
+      "RGB (1 Pixel)": 3,
+      "RGBW (1 Pixel)": 4,
+      "RGBAW (1 Pixel)": 5,
+      "DIM RGB (1 Pixel)": 4,
+      "DIM RGBW (1 Pixel)": 5,
+      "DIM RGBAW (1 Pixel)": 6,
+      "RGB CCT DIM IND (1 Pixel)": 6,
+      "RGBS (1 Pixel)": 4,
+      "RGBWS (1 Pixel)": 5,
+      "RGBAWS (1 Pixel)": 6,
+      "DIM RGBS (1 Pixel)": 5,
+      "DIM RGBWS (1 Pixel)": 6,
+      "DIM RGBAWS (1 Pixel)": 7,
+      "RGB CCT DIM IND S (1 Pixel)": 7,
+      "RGB (16 Pixels)": 48,
+      "RGBW (16 Pixels)": 64,
+      "RGBAW (16 Pixels)": 80,
+      "DIM RGB (16 Pixels)": 64,
+      "DIM RGBW (16 Pixels)": 80,
+      "DIM RGBAW (16 Pixels)": 96,
+      "RGB CCT DIM IND (16 Pixels)": 96,
+      "RGBS (16 Pixels, Single Strobe)": 49,
+      "RGBWS (16 Pixels, Single Strobe)": 65,
+      "RGBAWS (16 Pixels, Single Strobe)": 81,
+      "DIM RGBS (16 Pixels, Single Strobe)": 65,
+      "DIM RGBWS (16 Pixels, Single Strobe)": 81,
+      "DIM RGBAWS (16 Pixels, Single Strobe)": 97,
+      "RGB CCT DIM IND S (16 Pixels, Single Strobe)": 97,
+      "RGBS (16 Pixels, Multi Strobe)": 64,
+      "RGBWS (16 Pixels, Multi Strobe)": 80,
+      "RGBAWS (16 Pixels, Multi Strobe)": 96,
+      "DIM RGBS (16 Pixels, Multi Strobe)": 80,
+      "DIM RGBWS (16 Pixels, Multi Strobe)": 96,
+      "DIM RGBAWS (16 Pixels, Multi Strobe)": 112,
+      "RGB CCT DIM IND S (16 Pixels, Multi Strobe)": 112
+    },
+    "suggestedPath": "GDTF/Astera/Astera__AX1_PixelTube.gdtf"
+  },
+  {
+    "manufacturer": "Astera",
+    "fixture": "AX10 SpotMax",
+    "modeCount": 14,
+    "modes": {
+      "RGB (1 Pixel)": 3,
+      "RGBW (1 Pixel)": 4,
+      "RGBAW (1 Pixel)": 5,
+      "DIM RGB (1 Pixel)": 4,
+      "DIM RGBW (1 Pixel)": 5,
+      "DIM RGBAW (1 Pixel)": 6,
+      "RGB CCT DIM IND (1 Pixel)": 6,
+      "RGBS (1 Pixel)": 4,
+      "RGBWS (1 Pixel)": 5,
+      "RGBAWS (1 Pixel)": 6,
+      "DIM RGBS (1 Pixel)": 5,
+      "DIM RGBWS (1 Pixel)": 6,
+      "DIM RGBAWS (1 Pixel)": 7,
+      "RGB CCT DIM IND S (1 Pixel)": 7
+    },
+    "suggestedPath": "GDTF/Astera/Astera__AX10_SpotMax.gdtf"
+  },
+  {
+    "manufacturer": "Astera",
+    "fixture": "AX2-100 PixelBar",
+    "modeCount": 35,
+    "modes": {
+      "RGB (1 Pixel)": 3,
+      "RGBW (1 Pixel)": 4,
+      "RGBAW (1 Pixel)": 5,
+      "DIM RGB (1 Pixel)": 4,
+      "DIM RGBW (1 Pixel)": 5,
+      "DIM RGBAW (1 Pixel)": 6,
+      "RGB CCT DIM IND (1 Pixel)": 6,
+      "RGBS (1 Pixel)": 4,
+      "RGBWS (1 Pixel)": 5,
+      "RGBAWS (1 Pixel)": 6,
+      "DIM RGBS (1 Pixel)": 5,
+      "DIM RGBWS (1 Pixel)": 6,
+      "DIM RGBAWS (1 Pixel)": 7,
+      "RGB CCT DIM IND S (1 Pixel)": 7,
+      "RGB (16 Pixels)": 48,
+      "RGBW (16 Pixels)": 64,
+      "RGBAW (16 Pixels)": 80,
+      "DIM RGB (16 Pixels)": 64,
+      "DIM RGBW (16 Pixels)": 80,
+      "DIM RGBAW (16 Pixels)": 96,
+      "RGB CCT DIM IND (16 Pixels)": 96,
+      "RGBS (16 Pixels, Single Strobe)": 49,
+      "RGBWS (16 Pixels, Single Strobe)": 65,
+      "RGBAWS (16 Pixels, Single Strobe)": 81,
+      "DIM RGBS (16 Pixels, Single Strobe)": 65,
+      "DIM RGBWS (16 Pixels, Single Strobe)": 81,
+      "DIM RGBAWS (16 Pixels, Single Strobe)": 97,
+      "RGB CCT DIM IND S (16 Pixels, Single Strobe)": 97,
+      "RGBS (16 Pixels, Multi Strobe)": 64,
+      "RGBWS (16 Pixels, Multi Strobe)": 80,
+      "RGBAWS (16 Pixels, Multi Strobe)": 96,
+      "DIM RGBS (16 Pixels, Multi Strobe)": 80,
+      "DIM RGBWS (16 Pixels, Multi Strobe)": 96,
+      "DIM RGBAWS (16 Pixels, Multi Strobe)": 112,
+      "RGB CCT DIM IND S (16 Pixels, Multi Strobe)": 112
+    },
+    "suggestedPath": "GDTF/Astera/Astera__AX2_100_PixelBar.gdtf"
+  },
+  {
+    "manufacturer": "Astera",
+    "fixture": "AX2-50 PixelBar",
+    "modeCount": 35,
+    "modes": {
+      "RGB (1 Pixel)": 3,
+      "RGBW (1 Pixel)": 4,
+      "RGBAW (1 Pixel)": 5,
+      "DIM RGB (1 Pixel)": 4,
+      "DIM RGBW (1 Pixel)": 5,
+      "DIM RGBAW (1 Pixel)": 6,
+      "RGB CCT DIM IND (1 Pixel)": 6,
+      "RGBS (1 Pixel)": 4,
+      "RGBWS (1 Pixel)": 5,
+      "RGBAWS (1 Pixel)": 6,
+      "DIM RGBS (1 Pixel)": 5,
+      "DIM RGBWS (1 Pixel)": 6,
+      "DIM RGBAWS (1 Pixel)": 7,
+      "RGB CCT DIM IND S (1 Pixel)": 7,
+      "RGB (8 Pixels)": 24,
+      "RGBW (8 Pixels)": 32,
+      "RGBAW (8 Pixels)": 40,
+      "DIM RGB (8 Pixels)": 32,
+      "DIM RGBW (8 Pixels)": 40,
+      "DIM RGBAW (8 Pixels)": 48,
+      "RGB CCT DIM IND (8 Pixels)": 48,
+      "RGBS (8 Pixels, Single Strobe)": 25,
+      "RGBWS (8 Pixels, Single Strobe)": 33,
+      "RGBAWS (8 Pixels, Single Strobe)": 41,
+      "DIM RGBS (8 Pixels, Single Strobe)": 33,
+      "DIM RGBWS (8 Pixels, Single Strobe)": 41,
+      "DIM RGBAWS (8 Pixels, Single Strobe)": 49,
+      "RGB CCT DIM IND S (8 Pixels, Single Strobe)": 49,
+      "RGBS (8 Pixels, Multi Strobe)": 32,
+      "RGBWS (8 Pixels, Multi Strobe)": 40,
+      "RGBAWS (8 Pixels, Multi Strobe)": 48,
+      "DIM RGBS (8 Pixels, Multi Strobe)": 40,
+      "DIM RGBWS (8 Pixels, Multi Strobe)": 48,
+      "DIM RGBAWS (8 Pixels, Multi Strobe)": 56,
+      "RGB CCT DIM IND S (8 Pixels, Multi Strobe)": 56
+    },
+    "suggestedPath": "GDTF/Astera/Astera__AX2_50_PixelBar.gdtf"
+  },
+  {
+    "manufacturer": "Astera",
+    "fixture": "AX3 LightDrop",
+    "modeCount": 14,
+    "modes": {
+      "RGB (1 Pixel)": 3,
+      "RGBW (1 Pixel)": 4,
+      "RGBAW (1 Pixel)": 5,
+      "DIM RGB (1 Pixel)": 4,
+      "DIM RGBW (1 Pixel)": 5,
+      "DIM RGBAW (1 Pixel)": 6,
+      "RGB CCT DIM IND (1 Pixel)": 6,
+      "RGBS (1 Pixel)": 4,
+      "RGBWS (1 Pixel)": 5,
+      "RGBAWS (1 Pixel)": 6,
+      "DIM RGBS (1 Pixel)": 5,
+      "DIM RGBWS (1 Pixel)": 6,
+      "DIM RGBAWS (1 Pixel)": 7,
+      "RGB CCT DIM IND S (1 Pixel)": 7
+    },
+    "suggestedPath": "GDTF/Astera/Astera__AX3_LightDrop.gdtf"
+  },
+  {
+    "manufacturer": "Astera",
+    "fixture": "AX5 TriplePAR",
+    "modeCount": 14,
+    "modes": {
+      "RGB (1 Pixel)": 3,
+      "RGBW (1 Pixel)": 4,
+      "RGBAW (1 Pixel)": 5,
+      "DIM RGB (1 Pixel)": 4,
+      "DIM RGBW (1 Pixel)": 5,
+      "DIM RGBAW (1 Pixel)": 6,
+      "RGB CCT DIM IND (1 Pixel)": 6,
+      "RGBS (1 Pixel)": 4,
+      "RGBWS (1 Pixel)": 5,
+      "RGBAWS (1 Pixel)": 6,
+      "DIM RGBS (1 Pixel)": 5,
+      "DIM RGBWS (1 Pixel)": 6,
+      "DIM RGBAWS (1 Pixel)": 7,
+      "RGB CCT DIM IND S (1 Pixel)": 7
+    },
+    "suggestedPath": "GDTF/Astera/Astera__AX5_TriplePAR.gdtf"
+  },
+  {
+    "manufacturer": "Astera",
+    "fixture": "AX9 PowerPAR",
+    "modeCount": 14,
+    "modes": {
+      "RGB (1 Pixel)": 3,
+      "RGBW (1 Pixel)": 4,
+      "RGBAW (1 Pixel)": 5,
+      "DIM RGB (1 Pixel)": 4,
+      "DIM RGBW (1 Pixel)": 5,
+      "DIM RGBAW (1 Pixel)": 6,
+      "RGB CCT DIM IND (1 Pixel)": 6,
+      "RGBS (1 Pixel)": 4,
+      "RGBWS (1 Pixel)": 5,
+      "RGBAWS (1 Pixel)": 6,
+      "DIM RGBS (1 Pixel)": 5,
+      "DIM RGBWS (1 Pixel)": 6,
+      "DIM RGBAWS (1 Pixel)": 7,
+      "RGB CCT DIM IND S (1 Pixel)": 7
+    },
+    "suggestedPath": "GDTF/Astera/Astera__AX9_PowerPAR.gdtf"
+  },
+  {
+    "manufacturer": "Astera",
+    "fixture": "Helios Tube",
+    "modeCount": 35,
+    "modes": {
+      "RGB (1 Pixel)": 3,
+      "RGBW (1 Pixel)": 4,
+      "RGBAW (1 Pixel)": 5,
+      "DIM RGB (1 Pixel)": 4,
+      "DIM RGBW (1 Pixel)": 5,
+      "DIM RGBAW (1 Pixel)": 6,
+      "RGB CCT DIM IND (1 Pixel)": 6,
+      "RGBS (1 Pixel)": 4,
+      "RGBWS (1 Pixel)": 5,
+      "RGBAWS (1 Pixel)": 6,
+      "DIM RGBS (1 Pixel)": 5,
+      "DIM RGBWS (1 Pixel)": 6,
+      "DIM RGBAWS (1 Pixel)": 7,
+      "RGB CCT DIM IND S (1 Pixel)": 7,
+      "RGB (8 Pixels)": 24,
+      "RGBW (8 Pixels)": 32,
+      "RGBAW (8 Pixels)": 40,
+      "DIM RGB (8 Pixels)": 32,
+      "DIM RGBW (8 Pixels)": 40,
+      "DIM RGBAW (8 Pixels)": 48,
+      "RGB CCT DIM IND (8 Pixels)": 48,
+      "RGBS (8 Pixels, Single Strobe)": 25,
+      "RGBWS (8 Pixels, Single Strobe)": 33,
+      "RGBAWS (8 Pixels, Single Strobe)": 41,
+      "DIM RGBS (8 Pixels, Single Strobe)": 33,
+      "DIM RGBWS (8 Pixels, Single Strobe)": 41,
+      "DIM RGBAWS (8 Pixels, Single Strobe)": 49,
+      "RGB CCT DIM IND S (8 Pixels, Single Strobe)": 49,
+      "RGBS (8 Pixels, Multi Strobe)": 32,
+      "RGBWS (8 Pixels, Multi Strobe)": 40,
+      "RGBAWS (8 Pixels, Multi Strobe)": 48,
+      "DIM RGBS (8 Pixels, Multi Strobe)": 40,
+      "DIM RGBWS (8 Pixels, Multi Strobe)": 48,
+      "DIM RGBAWS (8 Pixels, Multi Strobe)": 56,
+      "RGB CCT DIM IND S (8 Pixels, Multi Strobe)": 56
+    },
+    "suggestedPath": "GDTF/Astera/Astera__Helios_Tube.gdtf"
+  },
+  {
+    "manufacturer": "Astera",
+    "fixture": "HydraPanel",
+    "modeCount": 35,
+    "modes": {
+      "RGB (1 Pixel)": 3,
+      "RGBW (1 Pixel)": 4,
+      "RGBAW (1 Pixel)": 5,
+      "DIM RGB (1 Pixel)": 4,
+      "DIM RGBW (1 Pixel)": 5,
+      "DIM RGBAW (1 Pixel)": 6,
+      "RGB CCT DIM IND (1 Pixel)": 6,
+      "RGBS (1 Pixel)": 4,
+      "RGBWS (1 Pixel)": 5,
+      "RGBAWS (1 Pixel)": 6,
+      "DIM RGBS (1 Pixel)": 5,
+      "DIM RGBWS (1 Pixel)": 6,
+      "DIM RGBAWS (1 Pixel)": 7,
+      "RGB CCT DIM IND S (1 Pixel)": 7,
+      "RGB (6 Pixels)": 18,
+      "RGBW (6 Pixels)": 24,
+      "RGBAW (6 Pixels)": 30,
+      "DIM RGB (6 Pixels)": 24,
+      "DIM RGBW (6 Pixels)": 30,
+      "DIM RGBAW (6 Pixels)": 36,
+      "RGB CCT DIM IND (6 Pixels)": 36,
+      "RGBS (6 Pixels, Single Strobe)": 19,
+      "RGBWS (6 Pixels, Single Strobe)": 25,
+      "RGBAWS (6 Pixels, Single Strobe)": 31,
+      "DIM RGBS (6 Pixels, Single Strobe)": 25,
+      "DIM RGBWS (6 Pixels, Single Strobe)": 31,
+      "DIM RGBAWS (6 Pixels, Single Strobe)": 37,
+      "RGB CCT DIM IND S (6 Pixels, Single Strobe)": 37,
+      "RGBS (6 Pixels, Multi Strobe)": 24,
+      "RGBWS (6 Pixels, Multi Strobe)": 30,
+      "RGBAWS (6 Pixels, Multi Strobe)": 36,
+      "DIM RGBS (6 Pixels, Multi Strobe)": 30,
+      "DIM RGBWS (6 Pixels, Multi Strobe)": 36,
+      "DIM RGBAWS (6 Pixels, Multi Strobe)": 42,
+      "RGB CCT DIM IND S (6 Pixels, Multi Strobe)": 42
+    },
+    "suggestedPath": "GDTF/Astera/Astera__HydraPanel.gdtf"
+  },
+  {
+    "manufacturer": "Astera",
+    "fixture": "Hyperion Tube",
+    "modeCount": 35,
+    "modes": {
+      "RGB (1 Pixel)": 3,
+      "RGBW (1 Pixel)": 4,
+      "RGBAW (1 Pixel)": 5,
+      "DIM RGB (1 Pixel)": 4,
+      "DIM RGBW (1 Pixel)": 5,
+      "DIM RGBAW (1 Pixel)": 6,
+      "RGB CCT DIM IND (1 Pixel)": 6,
+      "RGBS (1 Pixel)": 4,
+      "RGBWS (1 Pixel)": 5,
+      "RGBAWS (1 Pixel)": 6,
+      "DIM RGBS (1 Pixel)": 5,
+      "DIM RGBWS (1 Pixel)": 6,
+      "DIM RGBAWS (1 Pixel)": 7,
+      "RGB CCT DIM IND S (1 Pixel)": 7,
+      "RGB (32 Pixels)": 96,
+      "RGBW (32 Pixels)": 128,
+      "RGBAW (32 Pixels)": 160,
+      "DIM RGB (32 Pixels)": 128,
+      "DIM RGBW (32 Pixels)": 160,
+      "DIM RGBAW (32 Pixels)": 192,
+      "RGB CCT DIM IND (32 Pixels)": 192,
+      "RGBS (32 Pixels, Single Strobe)": 97,
+      "RGBWS (32 Pixels, Single Strobe)": 129,
+      "RGBAWS (32 Pixels, Single Strobe)": 161,
+      "DIM RGBS (32 Pixels, Single Strobe)": 129,
+      "DIM RGBWS (32 Pixels, Single Strobe)": 161,
+      "DIM RGBAWS (32 Pixels, Single Strobe)": 193,
+      "RGB CCT DIM IND S (32 Pixels, Single Strobe)": 193,
+      "RGBS (32 Pixels, Multi Strobe)": 128,
+      "RGBWS (32 Pixels, Multi Strobe)": 160,
+      "RGBAWS (32 Pixels, Multi Strobe)": 192,
+      "DIM RGBS (32 Pixels, Multi Strobe)": 160,
+      "DIM RGBWS (32 Pixels, Multi Strobe)": 192,
+      "DIM RGBAWS (32 Pixels, Multi Strobe)": 224,
+      "RGB CCT DIM IND S (32 Pixels, Multi Strobe)": 224
+    },
+    "suggestedPath": "GDTF/Astera/Astera__Hyperion_Tube.gdtf"
+  },
+  {
+    "manufacturer": "Astera",
+    "fixture": "LeoFresnel",
+    "modeCount": 14,
+    "modes": {
+      "RGB (1 Pixel)": 3,
+      "RGBW (1 Pixel)": 4,
+      "RGBAW (1 Pixel)": 5,
+      "DIM RGB (1 Pixel)": 4,
+      "DIM RGBW (1 Pixel)": 5,
+      "DIM RGBAW (1 Pixel)": 6,
+      "RGB CCT DIM IND (1 Pixel)": 6,
+      "RGBS (1 Pixel)": 4,
+      "RGBWS (1 Pixel)": 5,
+      "RGBAWS (1 Pixel)": 6,
+      "DIM RGBS (1 Pixel)": 5,
+      "DIM RGBWS (1 Pixel)": 6,
+      "DIM RGBAWS (1 Pixel)": 7,
+      "RGB CCT DIM IND S (1 Pixel)": 7
+    },
+    "suggestedPath": "GDTF/Astera/Astera__LeoFresnel.gdtf"
+  },
+  {
+    "manufacturer": "Astera",
+    "fixture": "LunaBulb",
+    "modeCount": 14,
+    "modes": {
+      "RGB (1 Pixel)": 3,
+      "RGBW (1 Pixel)": 4,
+      "RGBAW (1 Pixel)": 5,
+      "DIM RGB (1 Pixel)": 4,
+      "DIM RGBW (1 Pixel)": 5,
+      "DIM RGBAW (1 Pixel)": 6,
+      "RGB CCT DIM IND (1 Pixel)": 6,
+      "RGBS (1 Pixel)": 4,
+      "RGBWS (1 Pixel)": 5,
+      "RGBAWS (1 Pixel)": 6,
+      "DIM RGBS (1 Pixel)": 5,
+      "DIM RGBWS (1 Pixel)": 6,
+      "DIM RGBAWS (1 Pixel)": 7,
+      "RGB CCT DIM IND S (1 Pixel)": 7
+    },
+    "suggestedPath": "GDTF/Astera/Astera__LunaBulb.gdtf"
+  },
+  {
+    "manufacturer": "Astera",
+    "fixture": "NYX Bulb",
+    "modeCount": 14,
+    "modes": {
+      "RGB (1 Pixel)": 3,
+      "RGBW (1 Pixel)": 4,
+      "RGBAW (1 Pixel)": 5,
+      "DIM RGB (1 Pixel)": 4,
+      "DIM RGBW (1 Pixel)": 5,
+      "DIM RGBAW (1 Pixel)": 6,
+      "RGB CCT DIM IND (1 Pixel)": 6,
+      "RGBS (1 Pixel)": 4,
+      "RGBWS (1 Pixel)": 5,
+      "RGBAWS (1 Pixel)": 6,
+      "DIM RGBS (1 Pixel)": 5,
+      "DIM RGBWS (1 Pixel)": 6,
+      "DIM RGBAWS (1 Pixel)": 7,
+      "RGB CCT DIM IND S (1 Pixel)": 7
+    },
+    "suggestedPath": "GDTF/Astera/Astera__NYX_Bulb.gdtf"
+  },
+  {
+    "manufacturer": "Astera",
+    "fixture": "PixelBrick",
+    "modeCount": 14,
+    "modes": {
+      "RGB (1 Pixel)": 3,
+      "RGBW (1 Pixel)": 4,
+      "RGBAW (1 Pixel)": 5,
+      "DIM RGB (1 Pixel)": 4,
+      "DIM RGBW (1 Pixel)": 5,
+      "DIM RGBAW (1 Pixel)": 6,
+      "RGB CCT DIM IND (1 Pixel)": 6,
+      "RGBS (1 Pixel)": 4,
+      "RGBWS (1 Pixel)": 5,
+      "RGBAWS (1 Pixel)": 6,
+      "DIM RGBS (1 Pixel)": 5,
+      "DIM RGBWS (1 Pixel)": 6,
+      "DIM RGBAWS (1 Pixel)": 7,
+      "RGB CCT DIM IND S (1 Pixel)": 7
+    },
+    "suggestedPath": "GDTF/Astera/Astera__PixelBrick.gdtf"
+  },
+  {
+    "manufacturer": "Astera",
+    "fixture": "PlutoFresnel",
+    "modeCount": 14,
+    "modes": {
+      "RGB (1 Pixel)": 3,
+      "RGBW (1 Pixel)": 4,
+      "RGBAW (1 Pixel)": 5,
+      "DIM RGB (1 Pixel)": 4,
+      "DIM RGBW (1 Pixel)": 5,
+      "DIM RGBAW (1 Pixel)": 6,
+      "RGB CCT DIM IND (1 Pixel)": 6,
+      "RGBS (1 Pixel)": 4,
+      "RGBWS (1 Pixel)": 5,
+      "RGBAWS (1 Pixel)": 6,
+      "DIM RGBS (1 Pixel)": 5,
+      "DIM RGBWS (1 Pixel)": 6,
+      "DIM RGBAWS (1 Pixel)": 7,
+      "RGB CCT DIM IND S (1 Pixel)": 7
+    },
+    "suggestedPath": "GDTF/Astera/Astera__PlutoFresnel.gdtf"
+  },
+  {
+    "manufacturer": "Astera",
+    "fixture": "QuikBeam",
+    "modeCount": 14,
+    "modes": {
+      "RGB (1 Pixel)": 3,
+      "RGBW (1 Pixel)": 4,
+      "RGBAW (1 Pixel)": 5,
+      "DIM RGB (1 Pixel)": 4,
+      "DIM RGBW (1 Pixel)": 5,
+      "DIM RGBAW (1 Pixel)": 6,
+      "RGB CCT DIM IND (1 Pixel)": 6,
+      "RGBS (1 Pixel)": 4,
+      "RGBWS (1 Pixel)": 5,
+      "RGBAWS (1 Pixel)": 6,
+      "DIM RGBS (1 Pixel)": 5,
+      "DIM RGBWS (1 Pixel)": 6,
+      "DIM RGBAWS (1 Pixel)": 7,
+      "RGB CCT DIM IND S (1 Pixel)": 7
+    },
+    "suggestedPath": "GDTF/Astera/Astera__QuikBeam.gdtf"
+  },
+  {
+    "manufacturer": "Astera",
+    "fixture": "QuikPunch",
+    "modeCount": 14,
+    "modes": {
+      "RGB (1 Pixel)": 3,
+      "RGBW (1 Pixel)": 4,
+      "RGBAW (1 Pixel)": 5,
+      "DIM RGB (1 Pixel)": 4,
+      "DIM RGBW (1 Pixel)": 5,
+      "DIM RGBAW (1 Pixel)": 6,
+      "RGB CCT DIM IND (1 Pixel)": 6,
+      "RGBS (1 Pixel)": 4,
+      "RGBWS (1 Pixel)": 5,
+      "RGBAWS (1 Pixel)": 6,
+      "DIM RGBS (1 Pixel)": 5,
+      "DIM RGBWS (1 Pixel)": 6,
+      "DIM RGBAWS (1 Pixel)": 7,
+      "RGB CCT DIM IND S (1 Pixel)": 7
+    },
+    "suggestedPath": "GDTF/Astera/Astera__QuikPunch.gdtf"
+  },
+  {
+    "manufacturer": "Astera",
+    "fixture": "QuikSpot",
+    "modeCount": 14,
+    "modes": {
+      "RGB (1 Pixel)": 3,
+      "RGBW (1 Pixel)": 4,
+      "RGBAW (1 Pixel)": 5,
+      "DIM RGB (1 Pixel)": 4,
+      "DIM RGBW (1 Pixel)": 5,
+      "DIM RGBAW (1 Pixel)": 6,
+      "RGB CCT DIM IND (1 Pixel)": 6,
+      "RGBS (1 Pixel)": 4,
+      "RGBWS (1 Pixel)": 5,
+      "RGBAWS (1 Pixel)": 6,
+      "DIM RGBS (1 Pixel)": 5,
+      "DIM RGBWS (1 Pixel)": 6,
+      "DIM RGBAWS (1 Pixel)": 7,
+      "RGB CCT DIM IND S (1 Pixel)": 7
+    },
+    "suggestedPath": "GDTF/Astera/Astera__QuikSpot.gdtf"
+  },
+  {
+    "manufacturer": "Astera",
+    "fixture": "SolaBulb",
+    "modeCount": 14,
+    "modes": {
+      "RGB (1 Pixel)": 3,
+      "RGBW (1 Pixel)": 4,
+      "RGBAW (1 Pixel)": 5,
+      "DIM RGB (1 Pixel)": 4,
+      "DIM RGBW (1 Pixel)": 5,
+      "DIM RGBAW (1 Pixel)": 6,
+      "RGB CCT DIM IND (1 Pixel)": 6,
+      "RGBS (1 Pixel)": 4,
+      "RGBWS (1 Pixel)": 5,
+      "RGBAWS (1 Pixel)": 6,
+      "DIM RGBS (1 Pixel)": 5,
+      "DIM RGBWS (1 Pixel)": 6,
+      "DIM RGBAWS (1 Pixel)": 7,
+      "RGB CCT DIM IND S (1 Pixel)": 7
+    },
+    "suggestedPath": "GDTF/Astera/Astera__SolaBulb.gdtf"
+  },
+  {
+    "manufacturer": "Astera",
+    "fixture": "Titan Tube",
+    "modeCount": 35,
+    "modes": {
+      "RGB (1 Pixel)": 3,
+      "RGBW (1 Pixel)": 4,
+      "RGBAW (1 Pixel)": 5,
+      "DIM RGB (1 Pixel)": 4,
+      "DIM RGBW (1 Pixel)": 5,
+      "DIM RGBAW (1 Pixel)": 6,
+      "RGB CCT DIM IND (1 Pixel)": 6,
+      "RGBS (1 Pixel)": 4,
+      "RGBWS (1 Pixel)": 5,
+      "RGBAWS (1 Pixel)": 6,
+      "DIM RGBS (1 Pixel)": 5,
+      "DIM RGBWS (1 Pixel)": 6,
+      "DIM RGBAWS (1 Pixel)": 7,
+      "RGB CCT DIM IND S (1 Pixel)": 7,
+      "RGB (16 Pixels)": 48,
+      "RGBW (16 Pixels)": 64,
+      "RGBAW (16 Pixels)": 80,
+      "DIM RGB (16 Pixels)": 64,
+      "DIM RGBW (16 Pixels)": 80,
+      "DIM RGBAW (16 Pixels)": 96,
+      "RGB CCT DIM IND (16 Pixels)": 96,
+      "RGBS (16 Pixels, Single Strobe)": 49,
+      "RGBWS (16 Pixels, Single Strobe)": 65,
+      "RGBAWS (16 Pixels, Single Strobe)": 81,
+      "DIM RGBS (16 Pixels, Single Strobe)": 65,
+      "DIM RGBWS (16 Pixels, Single Strobe)": 81,
+      "DIM RGBAWS (16 Pixels, Single Strobe)": 97,
+      "RGB CCT DIM IND S (16 Pixels, Single Strobe)": 97,
+      "RGBS (16 Pixels, Multi Strobe)": 64,
+      "RGBWS (16 Pixels, Multi Strobe)": 80,
+      "RGBAWS (16 Pixels, Multi Strobe)": 96,
+      "DIM RGBS (16 Pixels, Multi Strobe)": 80,
+      "DIM RGBWS (16 Pixels, Multi Strobe)": 96,
+      "DIM RGBAWS (16 Pixels, Multi Strobe)": 112,
+      "RGB CCT DIM IND S (16 Pixels, Multi Strobe)": 112
+    },
+    "suggestedPath": "GDTF/Astera/Astera__Titan_Tube.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Bora",
+    "modeCount": 3,
+    "modes": {
+      "Basic": 30,
+      "Standard": 32,
+      "Extended": 52
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Bora.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Cobra",
+    "modeCount": 3,
+    "modes": {
+      "Basic": 33,
+      "Standard": 36,
+      "Extended": 45
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Cobra.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Diablo Profile S",
+    "modeCount": 3,
+    "modes": {
+      "Basic": 34,
+      "Standard": 36,
+      "Extended": 56
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Diablo_Profile_S.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Domino LT",
+    "modeCount": 2,
+    "modes": {
+      "Standard": 46,
+      "Extended": 70
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Domino_LT.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Domino Profile",
+    "modeCount": 3,
+    "modes": {
+      "Basic": 42,
+      "Standard": 44,
+      "Extended": 66
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Domino_Profile.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Domino Wash",
+    "modeCount": 3,
+    "modes": {
+      "Basic": 37,
+      "Standard": 39,
+      "Extended": 61
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Domino_Wash.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Eagle Strike",
+    "modeCount": 2,
+    "modes": {
+      "Standard": 44,
+      "Extended": 66
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Eagle_Strike.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Eurus",
+    "modeCount": 3,
+    "modes": {
+      "Basic": 39,
+      "Standard": 41,
+      "Extended": 62
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Eurus.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Ghibli",
+    "modeCount": 3,
+    "modes": {
+      "Basic": 36,
+      "Standard": 38,
+      "Extended": 58
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Ghibli.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Huracan LT",
+    "modeCount": 3,
+    "modes": {
+      "Basic": 44,
+      "Standard": 46,
+      "Extended": 70
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Huracan_LT.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Huracan Profile",
+    "modeCount": 3,
+    "modes": {
+      "Basic": 44,
+      "Standard": 46,
+      "Extended": 70
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Huracan_Profile.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Karif LT",
+    "modeCount": 3,
+    "modes": {
+      "Basic": 32,
+      "Standard": 34,
+      "Extended": 46
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Karif_LT.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Khamsin",
+    "modeCount": 3,
+    "modes": {
+      "Basic": 40,
+      "Standard": 42,
+      "Extended": 64
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Khamsin.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Kyalami",
+    "modeCount": 1,
+    "modes": {
+      "Standard": 33
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Kyalami.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Magic Blade Neo",
+    "modeCount": 2,
+    "modes": {
+      "Standard": 175,
+      "Extended": 184
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Magic_Blade_Neo.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Magic Dot Neo",
+    "modeCount": 1,
+    "modes": {
+      "Standard": 35
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Magic_Dot_Neo.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Mamba",
+    "modeCount": 1,
+    "modes": {
+      "Extended": 47
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Mamba.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "MiniPanel FX",
+    "modeCount": 3,
+    "modes": {
+      "Basic": 19,
+      "Standard": 22,
+      "Extended": 34
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__MiniPanel_FX.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Mistral",
+    "modeCount": 1,
+    "modes": {
+      "Standard": 39
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Mistral.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Perseo Profile",
+    "modeCount": 3,
+    "modes": {
+      "Basic": 38,
+      "Standard": 40,
+      "Extended": 61
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Perseo_Profile.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "RawBeam 350",
+    "modeCount": 1,
+    "modes": {
+      "Extended": 43
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__RawBeam_350.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Rivale Profile",
+    "modeCount": 2,
+    "modes": {
+      "Standard": 42,
+      "Extended": 65
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Rivale_Profile.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Rivale Wash",
+    "modeCount": 2,
+    "modes": {
+      "Standard": 42,
+      "Extended": 60
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Rivale_Wash.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Stradale Profile",
+    "modeCount": 2,
+    "modes": {
+      "Standard": 42,
+      "Extended": 65
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Stradale_Profile.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Veloce Profile",
+    "modeCount": 2,
+    "modes": {
+      "Standard": 44,
+      "Extended": 67
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Veloce_Profile.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Veloce Wash",
+    "modeCount": 2,
+    "modes": {
+      "Standard": 38,
+      "Extended": 60
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Veloce_Wash.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Zonda 3 FX",
+    "modeCount": 3,
+    "modes": {
+      "Basic": 26,
+      "Standard": 50,
+      "Extended": 79
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Zonda_3_FX.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Zonda 3 Wash",
+    "modeCount": 4,
+    "modes": {
+      "Basic": 26,
+      "Standard": 30,
+      "Extended Ring": 46,
+      "Extended Pixel": 79
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Zonda_3_Wash.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Zonda 9 FX",
+    "modeCount": 4,
+    "modes": {
+      "Basic": 26,
+      "Standard": 51,
+      "Extended Ring": 54,
+      "Extended Pixel": 199
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Zonda_9_FX.gdtf"
+  },
+  {
+    "manufacturer": "Ayrton",
+    "fixture": "Zonda 9 Wash",
+    "modeCount": 4,
+    "modes": {
+      "Basic": 26,
+      "Standard": 51,
+      "Extended Ring": 54,
+      "Extended Pixel": 199
+    },
+    "suggestedPath": "GDTF/Ayrton/Ayrton__Zonda_9_Wash.gdtf"
+  },
+  {
+    "manufacturer": "Chauvet",
+    "fixture": "Color Strike M",
+    "modeCount": 7,
+    "modes": {
+      "8 Chan": 8,
+      "11 Chan": 11,
+      "13 Chan": 13,
+      "24 Chan": 24,
+      "30 Chan": 30,
+      "74 Chan": 74,
+      "97 Chan": 97
+    },
+    "suggestedPath": "GDTF/Chauvet/Chauvet__Color_Strike_M.gdtf"
+  },
+  {
+    "manufacturer": "Chauvet",
+    "fixture": "COLORado PXL Curve 12",
+    "modeCount": 7,
+    "modes": {
+      "Single Control ~ Basic": 20,
+      "Single Control ~ Basic 2": 53,
+      "Single Control ~ Standard": 101,
+      "Single Control ~ Advance": 155,
+      "Single Control ~ Advance 2": 169,
+      "Single Control ~ Full PXL": 169,
+      "Single Control ~ Tour": 179
+    },
+    "suggestedPath": "GDTF/Chauvet/Chauvet__COLORado_PXL_Curve_12.gdtf"
+  },
+  {
+    "manufacturer": "Chauvet",
+    "fixture": "COLORado PXL Curve 5",
+    "modeCount": 4,
+    "modes": {
+      "120 Chan": 120,
+      "155 Chan": 155,
+      "195 Chan": 195,
+      "355 Chan": 355
+    },
+    "suggestedPath": "GDTF/Chauvet/Chauvet__COLORado_PXL_Curve_5.gdtf"
+  },
+  {
+    "manufacturer": "Chauvet",
+    "fixture": "Maverick Storm 1 Beam",
+    "modeCount": 2,
+    "modes": {
+      "Standard": 19,
+      "Extended": 21
+    },
+    "suggestedPath": "GDTF/Chauvet/Chauvet__Maverick_Storm_1_Beam.gdtf"
+  },
+  {
+    "manufacturer": "Chauvet",
+    "fixture": "Maverick Storm 1 Flex",
+    "modeCount": 2,
+    "modes": {
+      "26 Chan": 26,
+      "33 Chan": 33
+    },
+    "suggestedPath": "GDTF/Chauvet/Chauvet__Maverick_Storm_1_Flex.gdtf"
+  },
+  {
+    "manufacturer": "Chauvet",
+    "fixture": "Maverick Storm 1 Hybrid",
+    "modeCount": 2,
+    "modes": {
+      "Standard": 24,
+      "Extended": 29
+    },
+    "suggestedPath": "GDTF/Chauvet/Chauvet__Maverick_Storm_1_Hybrid.gdtf"
+  },
+  {
+    "manufacturer": "Chauvet",
+    "fixture": "Maverick Storm 2 BeamWash",
+    "modeCount": 10,
+    "modes": {
+      "13 Chan": 13,
+      "33 Chan": 33,
+      "36 Chan": 36,
+      "47 Chan": 47,
+      "93 Chan": 93,
+      "112 Chan": 112,
+      "145 Chan": 145,
+      "224 Chan": 224,
+      "265 Chan": 265,
+      "327 Chan": 327
+    },
+    "suggestedPath": "GDTF/Chauvet/Chauvet__Maverick_Storm_2_BeamWash.gdtf"
+  },
+  {
+    "manufacturer": "Chauvet",
+    "fixture": "Maverick Storm 2 Profile",
+    "modeCount": 2,
+    "modes": {
+      "Standard": 32,
+      "Extended": 48
+    },
+    "suggestedPath": "GDTF/Chauvet/Chauvet__Maverick_Storm_2_Profile.gdtf"
+  },
+  {
+    "manufacturer": "Chauvet",
+    "fixture": "Maverick Storm 2 Profile M",
+    "modeCount": 2,
+    "modes": {
+      "Standard": 32,
+      "Extended": 48
+    },
+    "suggestedPath": "GDTF/Chauvet/Chauvet__Maverick_Storm_2_Profile_M.gdtf"
+  },
+  {
+    "manufacturer": "Chauvet",
+    "fixture": "Maverick Storm 3 BeamWash",
+    "modeCount": 13,
+    "modes": {
+      "12 Chan": 12,
+      "20 Chan": 20,
+      "32 Chan": 32,
+      "35 Chan": 35,
+      "38 Chan": 38,
+      "46 Chan": 46,
+      "120 Chan": 120,
+      "148 Chan": 148,
+      "180 Chan": 180,
+      "296 Chan": 296,
+      "336 Chan": 336,
+      "416 Chan": 416,
+      "424 Chan": 424
+    },
+    "suggestedPath": "GDTF/Chauvet/Chauvet__Maverick_Storm_3_BeamWash.gdtf"
+  },
+  {
+    "manufacturer": "Chauvet",
+    "fixture": "Maverick Storm 3 Profile",
+    "modeCount": 2,
+    "modes": {
+      "Standard": 34,
+      "Extended": 50
+    },
+    "suggestedPath": "GDTF/Chauvet/Chauvet__Maverick_Storm_3_Profile.gdtf"
+  },
+  {
+    "manufacturer": "Chauvet",
+    "fixture": "Maverick Storm 4 Profile",
+    "modeCount": 2,
+    "modes": {
+      "Standard": 38,
+      "Extended": 55
+    },
+    "suggestedPath": "GDTF/Chauvet/Chauvet__Maverick_Storm_4_Profile.gdtf"
+  },
+  {
+    "manufacturer": "Chauvet",
+    "fixture": "Maverick Storm 4 SoloWash",
+    "modeCount": 2,
+    "modes": {
+      "Standard": 31,
+      "Extended": 46
+    },
+    "suggestedPath": "GDTF/Chauvet/Chauvet__Maverick_Storm_4_SoloWash.gdtf"
+  },
+  {
+    "manufacturer": "Chauvet",
+    "fixture": "Rogue Outcast 1 BeamWash",
+    "modeCount": 7,
+    "modes": {
+      "15 Chan": 15,
+      "24 Chan": 24,
+      "30 Chan": 30,
+      "37 Chan": 37,
+      "64 Chan": 64,
+      "111 Chan": 111,
+      "135 Chan": 135
+    },
+    "suggestedPath": "GDTF/Chauvet/Chauvet__Rogue_Outcast_1_BeamWash.gdtf"
+  },
+  {
+    "manufacturer": "Chauvet",
+    "fixture": "STRIKE Array 1",
+    "modeCount": 11,
+    "modes": {
+      "1 Chan": 1,
+      "2 Chan": 2,
+      "5 Chan": 5,
+      "4P-5CH": 5,
+      "4P-14CH": 14,
+      "4P-23CH": 23,
+      "4P-26CH": 26,
+      "8P-9CH": 9,
+      "8P-26CH": 26,
+      "8P-43CH": 43,
+      "8P-46CH": 46
+    },
+    "suggestedPath": "GDTF/Chauvet/Chauvet__STRIKE_Array_1.gdtf"
+  },
+  {
+    "manufacturer": "Chauvet",
+    "fixture": "Strike Array 2",
+    "modeCount": 6,
+    "modes": {
+      "1 Chan": 1,
+      "2 Chan": 2,
+      "3 Chan": 3,
+      "4 Chan": 4,
+      "8 Chan": 8,
+      "9 Chan": 9
+    },
+    "suggestedPath": "GDTF/Chauvet/Chauvet__Strike_Array_2.gdtf"
+  },
+  {
+    "manufacturer": "Chauvet",
+    "fixture": "STRIKE Array 2C",
+    "modeCount": 9,
+    "modes": {
+      "1 Chan": 1,
+      "3 Chan": 3,
+      "5 Chan": 5,
+      "7 Chan": 7,
+      "10 Chan": 10,
+      "12 Chan 1": 12,
+      "12 Chan 2": 12,
+      "13 Chan": 13,
+      "16 Chan": 16
+    },
+    "suggestedPath": "GDTF/Chauvet/Chauvet__STRIKE_Array_2C.gdtf"
+  },
+  {
+    "manufacturer": "Chauvet",
+    "fixture": "Strike Array 4",
+    "modeCount": 3,
+    "modes": {
+      "3 Chan": 3,
+      "4 Chan": 4,
+      "9 Chan": 9
+    },
+    "suggestedPath": "GDTF/Chauvet/Chauvet__Strike_Array_4.gdtf"
+  },
+  {
+    "manufacturer": "Chauvet",
+    "fixture": "STRIKE Array 4C",
+    "modeCount": 9,
+    "modes": {
+      "1 Chan": 1,
+      "3 Chan": 3,
+      "5 Chan": 5,
+      "7 Chan": 7,
+      "10 Chan": 10,
+      "12 Chan": 12,
+      "13 Chan": 13,
+      "16 Chan": 16,
+      "22 Chan": 22
+    },
+    "suggestedPath": "GDTF/Chauvet/Chauvet__STRIKE_Array_4C.gdtf"
+  },
+  {
+    "manufacturer": "Chauvet",
+    "fixture": "STRIKE Bolt 1C",
+    "modeCount": 8,
+    "modes": {
+      "7 Chan": 7,
+      "10 Chan": 10,
+      "12 Chan": 12,
+      "16 Chan": 16,
+      "19 Chan": 19,
+      "32 Chan": 32,
+      "40 Chan": 40,
+      "53 Chan": 53
+    },
+    "suggestedPath": "GDTF/Chauvet/Chauvet__STRIKE_Bolt_1C.gdtf"
+  },
+  {
+    "manufacturer": "Chauvet",
+    "fixture": "STRIKE P38",
+    "modeCount": 5,
+    "modes": {
+      "1 Chan": 1,
+      "3 Chan": 3,
+      "4 Chan": 4,
+      "5 Chan": 5,
+      "6 Chan": 6
+    },
+    "suggestedPath": "GDTF/Chauvet/Chauvet__STRIKE_P38.gdtf"
+  },
+  {
+    "manufacturer": "Chauvet",
+    "fixture": "STRIKE Saber 10",
+    "modeCount": 7,
+    "modes": {
+      "1 Chan": 1,
+      "3 Chan": 3,
+      "6 Chan": 6,
+      "13 Chan": 13,
+      "22 Chan": 22,
+      "26 Chan 1": 26,
+      "26 Chan 2": 26
+    },
+    "suggestedPath": "GDTF/Chauvet/Chauvet__STRIKE_Saber_10.gdtf"
+  },
+  {
+    "manufacturer": "Chroma-Q",
+    "fixture": "Color Force 3 12",
+    "modeCount": 12,
+    "modes": {
+      "RGB 8-bit All": 3,
+      "RGBA 8-bit All": 4,
+      "RGB 16-bit All": 6,
+      "RGBA 16-bit All": 8,
+      "RGB 8-bit Odd/Even": 6,
+      "RGBA 8-bit Odd/Even": 8,
+      "RGB 16-bit Odd/Even": 12,
+      "RGBA 16-bit Odd/Even": 16,
+      "RGB 8-bit x1": 12,
+      "RGBA 8-bit x1": 16,
+      "RGB 16-bit x1": 24,
+      "RGBA 16-bit x1": 32
+    },
+    "suggestedPath": "GDTF/Chroma-Q/Chroma_Q__Color_Force_3_12.gdtf"
+  },
+  {
+    "manufacturer": "Chroma-Q",
+    "fixture": "Color Force 3 48",
+    "modeCount": 20,
+    "modes": {
+      "RGB 8-bit All": 3,
+      "RGBA 8-bit All": 4,
+      "RGB 16-bit All": 6,
+      "RGBA 16-bit All": 8,
+      "RGB 8-bit Odd/Even": 6,
+      "RGBA 8-bit Odd/Even": 8,
+      "RGB 16-bit Odd/Even": 12,
+      "RGBA 16-bit Odd/Even": 16,
+      "RGB 8-bit x4": 12,
+      "RGBA 8-bit x4": 16,
+      "RGB 16-bit x4": 24,
+      "RGBA 16-bit x4": 32,
+      "RGB 8-bit x2": 24,
+      "RGBA 8-bit x2": 32,
+      "RGB 16-bit x2": 48,
+      "RGBA 16-bit x2": 64,
+      "RGB 8-bit x1": 48,
+      "RGBA 8-bit x1": 64,
+      "RGB 16-bit x1": 96,
+      "RGBA 16-bit x1": 128
+    },
+    "suggestedPath": "GDTF/Chroma-Q/Chroma_Q__Color_Force_3_48.gdtf"
+  },
+  {
+    "manufacturer": "Chroma-Q",
+    "fixture": "Color Force 3 72",
+    "modeCount": 40,
+    "modes": {
+      "RGB 8-bit All": 3,
+      "RGBA 8-bit All": 4,
+      "RGB 16-bit All": 6,
+      "RGBA 16-bit All": 8,
+      "RGB 8-bit Odd/Even": 6,
+      "RGBA 8-bit Odd/Even": 8,
+      "RGB 16-bit Odd/Even": 12,
+      "RGBA 16-bit Odd/Even": 16,
+      "RGB 8-bit Skp2": 9,
+      "RGBA 8-bit Skp2": 12,
+      "RGB 16-bit Skp2": 18,
+      "RGBA 16-bit Skp2": 24,
+      "RGB 8-bit x6": 12,
+      "RGBA 8-bit x6": 16,
+      "RGB 16-bit x6": 24,
+      "RGBA 16-bit x6": 32,
+      "RGB 8-bit Skp3": 12,
+      "RGBA 8-bit Skp3": 16,
+      "RGB 16-bit Skp3": 24,
+      "RGBA 16-bit Skp3": 32,
+      "RGB 8-bit x4": 18,
+      "RGBA 8-bit x4": 24,
+      "RGB 16-bit x4": 36,
+      "RGBA 16-bit x4": 48,
+      "RGB 8-bit Skp6": 18,
+      "RGBA 8-bit Skp6": 24,
+      "RGB 16-bit Skp6": 36,
+      "RGBA 16-bit Skp6": 48,
+      "RGB 8-bit x3": 24,
+      "RGBA 8-bit x3": 32,
+      "RGB 16-bit x3": 48,
+      "RGBA 16-bit x3": 64,
+      "RGB 8-bit x2": 36,
+      "RGBA 8-bit x2": 48,
+      "RGB 16-bit x2": 72,
+      "RGBA 16-bit x2": 96,
+      "RGB 8-bit x1": 72,
+      "RGBA 8-bit x1": 96,
+      "RGB 16-bit x1": 144,
+      "RGBA 16-bit x1": 192
+    },
+    "suggestedPath": "GDTF/Chroma-Q/Chroma_Q__Color_Force_3_72.gdtf"
+  },
+  {
+    "manufacturer": "Chroma-Q",
+    "fixture": "Color Force II 12",
+    "modeCount": 10,
+    "modes": {
+      "Look Select": 1,
+      "RGB All": 3,
+      "HSI All": 3,
+      "RGBA All": 4,
+      "RGB Odd/Even": 6,
+      "HSI Odd/Even": 6,
+      "RGBA Odd/Even": 8,
+      "RGB x1": 12,
+      "HSI x1": 12,
+      "RGBA x1": 16
+    },
+    "suggestedPath": "GDTF/Chroma-Q/Chroma_Q__Color_Force_II_12.gdtf"
+  },
+  {
+    "manufacturer": "Chroma-Q",
+    "fixture": "Color Force II 12 Plus",
+    "modeCount": 10,
+    "modes": {
+      "Look Select": 1,
+      "RGB All": 3,
+      "HSI All": 3,
+      "RGBA All": 4,
+      "RGB Odd/Even": 6,
+      "HSI Odd/Even": 6,
+      "RGBA Odd/Even": 8,
+      "RGB x1": 12,
+      "HSI x1": 12,
+      "RGBA x1": 16
+    },
+    "suggestedPath": "GDTF/Chroma-Q/Chroma_Q__Color_Force_II_12_Plus.gdtf"
+  },
+  {
+    "manufacturer": "Chroma-Q",
+    "fixture": "Color Force II 48",
+    "modeCount": 16,
+    "modes": {
+      "Look Select": 1,
+      "RGB All": 3,
+      "HSI All": 3,
+      "RGBA All": 4,
+      "RGB Odd/Even": 6,
+      "HSI Odd/Even": 6,
+      "RGBA Odd/Even": 8,
+      "RGB x4": 12,
+      "HSI x4": 12,
+      "RGBA x4": 16,
+      "RGB x2": 24,
+      "HSI x2": 24,
+      "RGBA x2": 32,
+      "RGB x1": 48,
+      "HSI x1": 48,
+      "RGBA x1": 64
+    },
+    "suggestedPath": "GDTF/Chroma-Q/Chroma_Q__Color_Force_II_48.gdtf"
+  },
+  {
+    "manufacturer": "Chroma-Q",
+    "fixture": "Color Force II 48 Plus",
+    "modeCount": 16,
+    "modes": {
+      "Look Select": 1,
+      "RGB All": 3,
+      "HSI All": 3,
+      "RGBA All": 4,
+      "RGB Odd/Even": 6,
+      "HSI Odd/Even": 6,
+      "RGBA Odd/Even": 8,
+      "RGB x4": 12,
+      "HSI x4": 12,
+      "RGBA x4": 16,
+      "RGB x2": 24,
+      "HSI x2": 24,
+      "RGBA x2": 32,
+      "RGB x1": 48,
+      "HSI x1": 48,
+      "RGBA x1": 64
+    },
+    "suggestedPath": "GDTF/Chroma-Q/Chroma_Q__Color_Force_II_48_Plus.gdtf"
+  },
+  {
+    "manufacturer": "Chroma-Q",
+    "fixture": "Color Force II 72",
+    "modeCount": 31,
+    "modes": {
+      "Look Select": 1,
+      "RGB All": 3,
+      "HSI All": 3,
+      "RGBA All": 4,
+      "RGB Odd/Even": 6,
+      "HSI Odd/Even": 6,
+      "RGBA Odd/Even": 8,
+      "RGB Skp2": 9,
+      "HSI Skp2": 9,
+      "RGBA Skp2": 12,
+      "RGB x6": 12,
+      "HSI x6": 12,
+      "RGBA x6": 16,
+      "RGB Skp3": 12,
+      "HSI Skp3": 12,
+      "RGBA Skp3": 16,
+      "RGB x4": 18,
+      "HSI x4": 18,
+      "RGBA x4": 24,
+      "RGB Skp6": 18,
+      "HSI Skp6": 18,
+      "RGBA Skp6": 24,
+      "RGB x3": 24,
+      "HSI x3": 24,
+      "RGBA x3": 32,
+      "RGB x2": 36,
+      "HSI x2": 36,
+      "RGBA x2": 48,
+      "RGB x1": 72,
+      "HSI x1": 72,
+      "RGBA x1": 96
+    },
+    "suggestedPath": "GDTF/Chroma-Q/Chroma_Q__Color_Force_II_72.gdtf"
+  },
+  {
+    "manufacturer": "Chroma-Q",
+    "fixture": "Color Force II 72 Plus",
+    "modeCount": 31,
+    "modes": {
+      "Look Select": 1,
+      "RGB All": 3,
+      "HSI All": 3,
+      "RGBA All": 4,
+      "RGB Odd/Even": 6,
+      "HSI Odd/Even": 6,
+      "RGBA Odd/Even": 8,
+      "RGB Skp2": 9,
+      "HSI Skp2": 9,
+      "RGBA Skp2": 12,
+      "RGB x6": 12,
+      "HSI x6": 12,
+      "RGBA x6": 16,
+      "RGB Skp3": 12,
+      "HSI Skp3": 12,
+      "RGBA Skp3": 16,
+      "RGB x4": 18,
+      "HSI x4": 18,
+      "RGBA x4": 24,
+      "RGB Skp6": 18,
+      "HSI Skp6": 18,
+      "RGBA Skp6": 24,
+      "RGB x3": 24,
+      "HSI x3": 24,
+      "RGBA x3": 32,
+      "RGB x2": 36,
+      "HSI x2": 36,
+      "RGBA x2": 48,
+      "RGB x1": 72,
+      "HSI x1": 72,
+      "RGBA x1": 96
+    },
+    "suggestedPath": "GDTF/Chroma-Q/Chroma_Q__Color_Force_II_72_Plus.gdtf"
+  },
+  {
+    "manufacturer": "Clay Paky",
+    "fixture": "Arolla Aqua HP",
+    "modeCount": 1,
+    "modes": {
+      "43 Chan": 43
+    },
+    "suggestedPath": "GDTF/Clay Paky/Clay_Paky__Arolla_Aqua_HP.gdtf"
+  },
+  {
+    "manufacturer": "Clay Paky",
+    "fixture": "Arolla Aqua M-LT",
+    "modeCount": 2,
+    "modes": {
+      "Basic": 44,
+      "Standard": 54
+    },
+    "suggestedPath": "GDTF/Clay Paky/Clay_Paky__Arolla_Aqua_M_LT.gdtf"
+  },
+  {
+    "manufacturer": "Clay Paky",
+    "fixture": "Arolla Aqua S-LT",
+    "modeCount": 2,
+    "modes": {
+      "Basic": 44,
+      "Standard": 54
+    },
+    "suggestedPath": "GDTF/Clay Paky/Clay_Paky__Arolla_Aqua_S_LT.gdtf"
+  },
+  {
+    "manufacturer": "Clay Paky",
+    "fixture": "Arolla Aqua Wash HC",
+    "modeCount": 1,
+    "modes": {
+      "30 Chan": 30
+    },
+    "suggestedPath": "GDTF/Clay Paky/Clay_Paky__Arolla_Aqua_Wash_HC.gdtf"
+  },
+  {
+    "manufacturer": "Clay Paky",
+    "fixture": "Arolla Profile HP",
+    "modeCount": 1,
+    "modes": {
+      "39 Chan": 39
+    },
+    "suggestedPath": "GDTF/Clay Paky/Clay_Paky__Arolla_Profile_HP.gdtf"
+  },
+  {
+    "manufacturer": "Clay Paky",
+    "fixture": "Arolla Profile MP",
+    "modeCount": 2,
+    "modes": {
+      "Basic": 37,
+      "Standard": 39
+    },
+    "suggestedPath": "GDTF/Clay Paky/Clay_Paky__Arolla_Profile_MP.gdtf"
+  },
+  {
+    "manufacturer": "Clay Paky",
+    "fixture": "Arolla Spot MP",
+    "modeCount": 1,
+    "modes": {
+      "29 Chan": 29
+    },
+    "suggestedPath": "GDTF/Clay Paky/Clay_Paky__Arolla_Spot_MP.gdtf"
+  },
+  {
+    "manufacturer": "Clay Paky",
+    "fixture": "B-Eye K20",
+    "modeCount": 5,
+    "modes": {
+      "Standard": 21,
+      "Standard RGB": 132,
+      "Standard RGBW": 169,
+      "Shapes RGB": 146,
+      "Shapes RGBW": 183
+    },
+    "suggestedPath": "GDTF/Clay Paky/Clay_Paky__B_Eye_K20.gdtf"
+  },
+  {
+    "manufacturer": "Clay Paky",
+    "fixture": "B-Eye K25",
+    "modeCount": 1,
+    "modes": {
+      "Shapes RGB": 35
+    },
+    "suggestedPath": "GDTF/Clay Paky/Clay_Paky__B_Eye_K25.gdtf"
+  },
+  {
+    "manufacturer": "Clay Paky",
+    "fixture": "HY B-Eye K15",
+    "modeCount": 6,
+    "modes": {
+      "Basic Engine 21 Chan": 21,
+      "Basic Engine 22 Chan": 22,
+      "Basic Engine 35 Chan": 35,
+      "Basic Engine 36 Chan": 36,
+      "Pixel Engine 57 Chan": 57,
+      "Pixel Engine 76 Chan": 76
+    },
+    "suggestedPath": "GDTF/Clay Paky/Clay_Paky__HY_B_Eye_K15.gdtf"
+  },
+  {
+    "manufacturer": "Clay Paky",
+    "fixture": "HY B-Eye K15 Aqua",
+    "modeCount": 7,
+    "modes": {
+      "Basic Engine 21 Chan": 21,
+      "Basic Engine 22 Chan": 22,
+      "Basic Engine 35 Chan": 35,
+      "Basic Engine 36 Chan": 36,
+      "Basic Engine 37 Chan": 37,
+      "Pixel Engine 57 Chan": 57,
+      "Pixel Engine 76 Chan": 76
+    },
+    "suggestedPath": "GDTF/Clay Paky/Clay_Paky__HY_B_Eye_K15_Aqua.gdtf"
+  },
+  {
+    "manufacturer": "Clay Paky",
+    "fixture": "Midi-B",
+    "modeCount": 4,
+    "modes": {
+      "17 Chan": 17,
+      "21 Chan": 21,
+      "25 Chan": 25,
+      "37 Chan": 37
+    },
+    "suggestedPath": "GDTF/Clay Paky/Clay_Paky__Midi_B.gdtf"
+  },
+  {
+    "manufacturer": "Clay Paky",
+    "fixture": "Mini-B",
+    "modeCount": 4,
+    "modes": {
+      "17 Chan": 17,
+      "21 Chan 1": 21,
+      "21 Chan 2": 21,
+      "29 Chan": 29
+    },
+    "suggestedPath": "GDTF/Clay Paky/Clay_Paky__Mini_B.gdtf"
+  },
+  {
+    "manufacturer": "Clay Paky",
+    "fixture": "Scenius Unico",
+    "modeCount": 2,
+    "modes": {
+      "Standard": 40,
+      "Vector": 44
+    },
+    "suggestedPath": "GDTF/Clay Paky/Clay_Paky__Scenius_Unico.gdtf"
+  },
+  {
+    "manufacturer": "Clay Paky",
+    "fixture": "Sharpy",
+    "modeCount": 2,
+    "modes": {
+      "Standard": 16,
+      "Vector": 20
+    },
+    "suggestedPath": "GDTF/Clay Paky/Clay_Paky__Sharpy.gdtf"
+  },
+  {
+    "manufacturer": "Clay Paky",
+    "fixture": "Sharpy Plus",
+    "modeCount": 1,
+    "modes": {
+      "Single Mode": 31
+    },
+    "suggestedPath": "GDTF/Clay Paky/Clay_Paky__Sharpy_Plus.gdtf"
+  },
+  {
+    "manufacturer": "Clay Paky",
+    "fixture": "Sharpy Wash",
+    "modeCount": 2,
+    "modes": {
+      "Standard": 19,
+      "Vector": 22
+    },
+    "suggestedPath": "GDTF/Clay Paky/Clay_Paky__Sharpy_Wash.gdtf"
+  },
+  {
+    "manufacturer": "Clay Paky",
+    "fixture": "Sharpy X Frame",
+    "modeCount": 1,
+    "modes": {
+      "Single Mode": 43
+    },
+    "suggestedPath": "GDTF/Clay Paky/Clay_Paky__Sharpy_X_Frame.gdtf"
+  },
+  {
+    "manufacturer": "Clay Paky",
+    "fixture": "Skylos",
+    "modeCount": 1,
+    "modes": {
+      "20 Chan": 20
+    },
+    "suggestedPath": "GDTF/Clay Paky/Clay_Paky__Skylos.gdtf"
+  },
+  {
+    "manufacturer": "Clay Paky",
+    "fixture": "Tambora Glare",
+    "modeCount": 8,
+    "modes": {
+      "Main Engine 19 Chan": 19,
+      "Main Engine 41 Chan": 41,
+      "Main Engine 52 Chan": 52,
+      "Pixel Engine": 40,
+      "Strobe Engine 50 Chan 1": 50,
+      "Strobe Engine 50 Chan 2": 50,
+      "Strobe Engine 50 Chan 3": 50,
+      "Strobe Engine 100 Chan": 100
+    },
+    "suggestedPath": "GDTF/Clay Paky/Clay_Paky__Tambora_Glare.gdtf"
+  },
+  {
+    "manufacturer": "Clay Paky",
+    "fixture": "Ultimo Hybrid",
+    "modeCount": 1,
+    "modes": {
+      "43 Chan": 43
+    },
+    "suggestedPath": "GDTF/Clay Paky/Clay_Paky__Ultimo_Hybrid.gdtf"
+  },
+  {
+    "manufacturer": "Clay Paky",
+    "fixture": "Volero Cube",
+    "modeCount": 5,
+    "modes": {
+      "Basic Engine 22 Chan": 22,
+      "Basic Engine 41 Chan": 41,
+      "Basic Engine 45 Chan": 45,
+      "Pixel Engine": 16,
+      "Strobe Engine": 8
+    },
+    "suggestedPath": "GDTF/Clay Paky/Clay_Paky__Volero_Cube.gdtf"
+  },
+  {
+    "manufacturer": "Clay Paky",
+    "fixture": "Volero Twins",
+    "modeCount": 5,
+    "modes": {
+      "Basic Engine 25 Chan": 25,
+      "Basic Engine 43 Chan": 43,
+      "Basic Engine 50 Chan": 50,
+      "Pixel Engine": 32,
+      "Strobe Engine": 20
+    },
+    "suggestedPath": "GDTF/Clay Paky/Clay_Paky__Volero_Twins.gdtf"
+  },
+  {
+    "manufacturer": "Clay Paky",
+    "fixture": "Volero Wave",
+    "modeCount": 4,
+    "modes": {
+      "23 Chan": 23,
+      "24 Chan": 24,
+      "29 Chan": 29,
+      "32 Chan": 32
+    },
+    "suggestedPath": "GDTF/Clay Paky/Clay_Paky__Volero_Wave.gdtf"
+  },
+  {
+    "manufacturer": "Clay Paky",
+    "fixture": "Xtylos",
+    "modeCount": 2,
+    "modes": {
+      "Standard": 30,
+      "Vector": 31
+    },
+    "suggestedPath": "GDTF/Clay Paky/Clay_Paky__Xtylos.gdtf"
+  },
+  {
+    "manufacturer": "Elation",
+    "fixture": "DTW 350 IP (2 Cell)",
+    "modeCount": 3,
+    "modes": {
+      "1 Chan": 1,
+      "Standard": 7,
+      "Extended": 9
+    },
+    "suggestedPath": "GDTF/Elation/Elation__DTW_350_IP_2_Cell.gdtf"
+  },
+  {
+    "manufacturer": "Elation",
+    "fixture": "Magma Prime Hazer",
+    "modeCount": 1,
+    "modes": {
+      "3 Chan": 3
+    },
+    "suggestedPath": "GDTF/Elation/Elation__Magma_Prime_Hazer.gdtf"
+  },
+  {
+    "manufacturer": "Elation",
+    "fixture": "Smarty Max",
+    "modeCount": 2,
+    "modes": {
+      "Standard": 27,
+      "Extended": 44
+    },
+    "suggestedPath": "GDTF/Elation/Elation__Smarty_Max.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "ColorSource CYC",
+    "modeCount": 4,
+    "modes": {
+      "1 Channel": 1,
+      "RGB": 3,
+      "Standard": 5,
+      "Direct": 6
+    },
+    "suggestedPath": "GDTF/ETC/ETC__ColorSource_CYC.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "ColorSource Fresnel V",
+    "modeCount": 4,
+    "modes": {
+      "1 Channel": 1,
+      "RGB": 3,
+      "Standard": 6,
+      "Direct": 8
+    },
+    "suggestedPath": "GDTF/ETC/ETC__ColorSource_Fresnel_V.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "ColorSource PAR",
+    "modeCount": 4,
+    "modes": {
+      "1ch": 1,
+      "RGB": 3,
+      "5ch": 5,
+      "Direct": 6
+    },
+    "suggestedPath": "GDTF/ETC/ETC__ColorSource_PAR.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "ColorSource PAR Deep Blue",
+    "modeCount": 4,
+    "modes": {
+      "1ch": 1,
+      "RGB": 3,
+      "5ch": 5,
+      "Direct": 6
+    },
+    "suggestedPath": "GDTF/ETC/ETC__ColorSource_PAR_Deep_Blue.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "ColorSource PAR jr",
+    "modeCount": 4,
+    "modes": {
+      "1 Channel": 1,
+      "RGB": 3,
+      "Standard": 5,
+      "Direct": 6
+    },
+    "suggestedPath": "GDTF/ETC/ETC__ColorSource_PAR_jr.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "ColorSource PAR V Zoom",
+    "modeCount": 4,
+    "modes": {
+      "1 Channel": 1,
+      "RGB": 3,
+      "Standard": 6,
+      "Direct": 8
+    },
+    "suggestedPath": "GDTF/ETC/ETC__ColorSource_PAR_V_Zoom.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "ColorSource Spot",
+    "modeCount": 4,
+    "modes": {
+      "1ch": 1,
+      "RGB": 3,
+      "5ch": 5,
+      "Direct": 6
+    },
+    "suggestedPath": "GDTF/ETC/ETC__ColorSource_Spot.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "ColorSource Spot Deep Blue",
+    "modeCount": 4,
+    "modes": {
+      "1ch": 1,
+      "RGB": 3,
+      "5ch": 5,
+      "Direct": 6
+    },
+    "suggestedPath": "GDTF/ETC/ETC__ColorSource_Spot_Deep_Blue.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "ColorSource Spot jr",
+    "modeCount": 4,
+    "modes": {
+      "1 Channel": 1,
+      "RGB": 3,
+      "Standard": 5,
+      "Direct": 6
+    },
+    "suggestedPath": "GDTF/ETC/ETC__ColorSource_Spot_jr.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "ColorSource Spot V",
+    "modeCount": 4,
+    "modes": {
+      "1 Channel": 1,
+      "RGB": 3,
+      "Standard": 6,
+      "Direct": 8
+    },
+    "suggestedPath": "GDTF/ETC/ETC__ColorSource_Spot_V.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "ColorSource Spot VXT",
+    "modeCount": 4,
+    "modes": {
+      "1 Channel": 1,
+      "RGB": 3,
+      "Standard": 6,
+      "Direct": 8
+    },
+    "suggestedPath": "GDTF/ETC/ETC__ColorSource_Spot_VXT.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Desire D22",
+    "modeCount": 1,
+    "modes": {
+      "Dimmer": 1
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Desire_D22.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Desire D40",
+    "modeCount": 1,
+    "modes": {
+      "Dimmer": 1
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Desire_D40.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Desire D60",
+    "modeCount": 1,
+    "modes": {
+      "Dimmer": 1
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Desire_D60.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Desire D60X",
+    "modeCount": 1,
+    "modes": {
+      "Dimmer": 1
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Desire_D60X.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Desire Fresnel 5 Daylight HDR",
+    "modeCount": 6,
+    "modes": {
+      "1 Chan": 1,
+      "3 Chan": 3,
+      "5 Chan": 5,
+      "8 Chan": 8,
+      "9 Chan": 9,
+      "12 Chan": 12
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Desire_Fresnel_5_Daylight_HDR.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Desire Fresnel 5 Lustr X8",
+    "modeCount": 6,
+    "modes": {
+      "1 Chan": 1,
+      "3 Chan": 3,
+      "5 Chan": 5,
+      "8 Chan": 8,
+      "9 Chan": 9,
+      "12 Chan": 12
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Desire_Fresnel_5_Lustr_X8.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Desire Fresnel 7 Daylight HDR",
+    "modeCount": 6,
+    "modes": {
+      "1 Chan": 1,
+      "3 Chan": 3,
+      "5 Chan": 5,
+      "8 Chan": 8,
+      "9 Chan": 9,
+      "12 Chan": 12
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Desire_Fresnel_7_Daylight_HDR.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Desire Fresnel 7 Lustr X8",
+    "modeCount": 6,
+    "modes": {
+      "1 Chan": 1,
+      "3 Chan": 3,
+      "5 Chan": 5,
+      "8 Chan": 8,
+      "9 Chan": 9,
+      "12 Chan": 12
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Desire_Fresnel_7_Lustr_X8.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Desire Studio HD",
+    "modeCount": 1,
+    "modes": {
+      "Dimmer": 1
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Desire_Studio_HD.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "ETC Fresnel",
+    "modeCount": 1,
+    "modes": {
+      "Dimmer": 1
+    },
+    "suggestedPath": "GDTF/ETC/ETC__ETC_Fresnel.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "fos/4 Fresnel 5 Daylight HDR",
+    "modeCount": 5,
+    "modes": {
+      "1 Chan": 1,
+      "3 Chan": 3,
+      "5 Chan": 5,
+      "8 Chan": 8,
+      "12 Chan": 12
+    },
+    "suggestedPath": "GDTF/ETC/ETC__fos_4_Fresnel_5_Daylight_HDR.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "fos/4 Fresnel 5 Lustr X8",
+    "modeCount": 5,
+    "modes": {
+      "1 Chan": 1,
+      "3 Chan": 3,
+      "5 Chan": 5,
+      "8 Chan": 8,
+      "12 Chan": 12
+    },
+    "suggestedPath": "GDTF/ETC/ETC__fos_4_Fresnel_5_Lustr_X8.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "fos/4 Fresnel 7 Daylight HDR",
+    "modeCount": 5,
+    "modes": {
+      "1 Chan": 1,
+      "3 Chan": 3,
+      "5 Chan": 5,
+      "8 Chan": 8,
+      "12 Chan": 12
+    },
+    "suggestedPath": "GDTF/ETC/ETC__fos_4_Fresnel_7_Daylight_HDR.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "fos/4 Fresnel 7 Lustr X8",
+    "modeCount": 5,
+    "modes": {
+      "1 Chan": 1,
+      "3 Chan": 3,
+      "5 Chan": 5,
+      "8 Chan": 8,
+      "12 Chan": 12
+    },
+    "suggestedPath": "GDTF/ETC/ETC__fos_4_Fresnel_7_Lustr_X8.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "fos/4 Panel 16x24 Daylight HDR",
+    "modeCount": 5,
+    "modes": {
+      "1 Chan": 1,
+      "3 Chan": 3,
+      "5 Chan": 5,
+      "8 Chan": 8,
+      "12 Chan": 12
+    },
+    "suggestedPath": "GDTF/ETC/ETC__fos_4_Panel_16x24_Daylight_HDR.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "fos/4 Panel 16x24 Lustr X8",
+    "modeCount": 5,
+    "modes": {
+      "1 Chan": 1,
+      "3 Chan": 3,
+      "5 Chan": 5,
+      "8 Chan": 8,
+      "12 Chan": 12
+    },
+    "suggestedPath": "GDTF/ETC/ETC__fos_4_Panel_16x24_Lustr_X8.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "fos/4 Panel 24x24 Daylight HDR",
+    "modeCount": 5,
+    "modes": {
+      "1 Chan": 1,
+      "3 Chan": 3,
+      "5 Chan": 5,
+      "8 Chan": 8,
+      "12 Chan": 12
+    },
+    "suggestedPath": "GDTF/ETC/ETC__fos_4_Panel_24x24_Daylight_HDR.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "fos/4 Panel 24x24 Lustr X8",
+    "modeCount": 5,
+    "modes": {
+      "1 Chan": 1,
+      "3 Chan": 3,
+      "5 Chan": 5,
+      "8 Chan": 8,
+      "12 Chan": 12
+    },
+    "suggestedPath": "GDTF/ETC/ETC__fos_4_Panel_24x24_Lustr_X8.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "fos/4 Panel 8x24 Daylight HDR",
+    "modeCount": 5,
+    "modes": {
+      "1 Chan": 1,
+      "3 Chan": 3,
+      "5 Chan": 5,
+      "8 Chan": 8,
+      "12 Chan": 12
+    },
+    "suggestedPath": "GDTF/ETC/ETC__fos_4_Panel_8x24_Daylight_HDR.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "fos/4 Panel 8x24 Lustr X8",
+    "modeCount": 5,
+    "modes": {
+      "1 Chan": 1,
+      "3 Chan": 3,
+      "5 Chan": 5,
+      "8 Chan": 8,
+      "12 Chan": 12
+    },
+    "suggestedPath": "GDTF/ETC/ETC__fos_4_Panel_8x24_Lustr_X8.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Halcyon Gold",
+    "modeCount": 1,
+    "modes": {
+      "Standard": 57
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Halcyon_Gold.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Halcyon Platinum",
+    "modeCount": 1,
+    "modes": {
+      "Standard": 60
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Halcyon_Platinum.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Halcyon Silent",
+    "modeCount": 1,
+    "modes": {
+      "Standard": 60
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Halcyon_Silent.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Halcyon Titanium",
+    "modeCount": 1,
+    "modes": {
+      "Standard": 60
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Halcyon_Titanium.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Hyperstar",
+    "modeCount": 1,
+    "modes": {
+      "Standard": 44
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Hyperstar.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Lonestar",
+    "modeCount": 1,
+    "modes": {
+      "Standard": 48
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Lonestar.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Lonestar Prime",
+    "modeCount": 2,
+    "modes": {
+      "Standard": 52,
+      "Trifusion Protocol": 52
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Lonestar_Prime.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Ministar",
+    "modeCount": 1,
+    "modes": {
+      "Standard": 32
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Ministar.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "MultiPAR",
+    "modeCount": 1,
+    "modes": {
+      "Dimmer": 1
+    },
+    "suggestedPath": "GDTF/ETC/ETC__MultiPAR.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "PARNel",
+    "modeCount": 1,
+    "modes": {
+      "Dimmer": 1
+    },
+    "suggestedPath": "GDTF/ETC/ETC__PARNel.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Selador Vivid Fire 11",
+    "modeCount": 1,
+    "modes": {
+      "Direct": 8
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Selador_Vivid_Fire_11.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Selador Vivid Fire 21",
+    "modeCount": 1,
+    "modes": {
+      "Direct": 16
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Selador_Vivid_Fire_21.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Selador Vivid Fire 42",
+    "modeCount": 1,
+    "modes": {
+      "Direct": 32
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Selador_Vivid_Fire_42.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Selador Vivid Fire 63",
+    "modeCount": 1,
+    "modes": {
+      "Direct": 48
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Selador_Vivid_Fire_63.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Selador Vivid Ice 11",
+    "modeCount": 1,
+    "modes": {
+      "Direct": 8
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Selador_Vivid_Ice_11.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Selador Vivid Ice 21",
+    "modeCount": 1,
+    "modes": {
+      "Direct": 16
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Selador_Vivid_Ice_21.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Selador Vivid Ice 42",
+    "modeCount": 1,
+    "modes": {
+      "Direct": 32
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Selador_Vivid_Ice_42.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Selador Vivid Ice 63",
+    "modeCount": 1,
+    "modes": {
+      "Direct": 48
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Selador_Vivid_Ice_63.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Selador Vivid-R 11",
+    "modeCount": 1,
+    "modes": {
+      "Direct": 8
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Selador_Vivid_R_11.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Selador Vivid-R 21",
+    "modeCount": 1,
+    "modes": {
+      "Direct": 16
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Selador_Vivid_R_21.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Selador Vivid-R 42",
+    "modeCount": 1,
+    "modes": {
+      "Direct": 32
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Selador_Vivid_R_42.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Selador Vivid-R 63",
+    "modeCount": 1,
+    "modes": {
+      "Direct": 48
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Selador_Vivid_R_63.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Source 4WRD Color",
+    "modeCount": 1,
+    "modes": {
+      "Direct": 6
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Source_4WRD_Color.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Source Four Fresnel",
+    "modeCount": 1,
+    "modes": {
+      "Dimmer": 1
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Source_Four_Fresnel.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Source Four HID",
+    "modeCount": 1,
+    "modes": {
+      "Dimmer": 1
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Source_Four_HID.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Source Four jr",
+    "modeCount": 1,
+    "modes": {
+      "Dimmer": 1
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Source_Four_jr.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Source Four jr Zoom",
+    "modeCount": 1,
+    "modes": {
+      "Dimmer": 1
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Source_Four_jr_Zoom.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Source Four LED Series 1 Lustr+",
+    "modeCount": 8,
+    "modes": {
+      "Direct": 10,
+      "HSI": 6,
+      "HSIC": 7,
+      "RGB": 6,
+      "Studio": 6,
+      "HSI Plus 7": 15,
+      "HSIC Plus 7": 16,
+      "RGB Plus 7": 15
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Source_Four_LED_Series_1_Lustr.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Source Four LED Series 1 Studio HD",
+    "modeCount": 8,
+    "modes": {
+      "Direct": 10,
+      "HSI": 6,
+      "HSIC": 7,
+      "RGB": 6,
+      "Studio": 6,
+      "HSI Plus 7": 15,
+      "HSIC Plus 7": 16,
+      "RGB Plus 7": 15
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Source_Four_LED_Series_1_Studio_HD.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Source Four LED Series 2 Daylight HD",
+    "modeCount": 8,
+    "modes": {
+      "Direct": 10,
+      "HSI": 6,
+      "HSIC": 7,
+      "RGB": 6,
+      "Studio": 6,
+      "HSI Plus 7": 15,
+      "HSIC Plus 7": 16,
+      "RGB Plus 7": 15
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Source_Four_LED_Series_2_Daylight_HD.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Source Four LED Series 2 Lustr",
+    "modeCount": 8,
+    "modes": {
+      "Direct": 10,
+      "HSI": 6,
+      "HSIC": 7,
+      "RGB": 6,
+      "Studio": 6,
+      "HSI Plus 7": 15,
+      "HSIC Plus 7": 16,
+      "RGB Plus 7": 15
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Source_Four_LED_Series_2_Lustr.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Source Four LED Series 2 Tungsten HD",
+    "modeCount": 8,
+    "modes": {
+      "Direct": 10,
+      "HSI": 6,
+      "HSIC": 7,
+      "RGB": 6,
+      "Studio": 6,
+      "HSI Plus 7": 15,
+      "HSIC Plus 7": 16,
+      "RGB Plus 7": 15
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Source_Four_LED_Series_2_Tungsten_HD.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Source Four LED Series 3 Daylight HDR",
+    "modeCount": 5,
+    "modes": {
+      "1 Chan": 1,
+      "3 Chan": 3,
+      "5 Chan": 5,
+      "8 Chan": 8,
+      "12 Chan": 12
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Source_Four_LED_Series_3_Daylight_HDR.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Source Four LED Series 3 Lustr X8",
+    "modeCount": 5,
+    "modes": {
+      "1 Chan": 1,
+      "3 Chan": 3,
+      "5 Chan": 5,
+      "8 Chan": 8,
+      "12 Chan": 12
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Source_Four_LED_Series_3_Lustr_X8.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Source Four Mini",
+    "modeCount": 1,
+    "modes": {
+      "Dimmer": 1
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Source_Four_Mini.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Source Four Mini LED",
+    "modeCount": 1,
+    "modes": {
+      "Dimmer": 1
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Source_Four_Mini_LED.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Source Four PAR",
+    "modeCount": 1,
+    "modes": {
+      "Dimmer": 1
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Source_Four_PAR.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Source Four PAR HID",
+    "modeCount": 1,
+    "modes": {
+      "Dimmer": 1
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Source_Four_PAR_HID.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Source Four PARnel",
+    "modeCount": 1,
+    "modes": {
+      "Dimmer": 1
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Source_Four_PARnel.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Source Four Revolution",
+    "modeCount": 1,
+    "modes": {
+      "Full": 31
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Source_Four_Revolution.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Source Four Tungsten",
+    "modeCount": 1,
+    "modes": {
+      "Dimmer": 1
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Source_Four_Tungsten.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Source Four Zoom",
+    "modeCount": 1,
+    "modes": {
+      "Dimmer": 1
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Source_Four_Zoom.gdtf"
+  },
+  {
+    "manufacturer": "ETC",
+    "fixture": "Zeo",
+    "modeCount": 3,
+    "modes": {
+      "Wash": 15,
+      "Reduced": 23,
+      "Standard": 51
+    },
+    "suggestedPath": "GDTF/ETC/ETC__Zeo.gdtf"
+  },
+  {
+    "manufacturer": "Fine Art",
+    "fixture": "1200C Strobe",
+    "modeCount": 2,
+    "modes": {
+      "62 Chan": 62,
+      "138 Chan": 138
+    },
+    "suggestedPath": "GDTF/Fine Art/Fine_Art__1200C_Strobe.gdtf"
+  },
+  {
+    "manufacturer": "Generic",
+    "fixture": "2-Lite Mole",
+    "modeCount": 1,
+    "modes": {
+      "Dimmer - 1 Chan": 1
+    },
+    "suggestedPath": "GDTF/Generic/Generic__2_Lite_Mole.gdtf"
+  },
+  {
+    "manufacturer": "Generic",
+    "fixture": "4-Lite Mole",
+    "modeCount": 1,
+    "modes": {
+      "Dimmer - 1 Chan": 1
+    },
+    "suggestedPath": "GDTF/Generic/Generic__4_Lite_Mole.gdtf"
+  },
+  {
+    "manufacturer": "Generic",
+    "fixture": "4-Lite Linear Mole",
+    "modeCount": 1,
+    "modes": {
+      "Dimmer - 1 Chan": 1
+    },
+    "suggestedPath": "GDTF/Generic/Generic__4_Lite_Linear_Mole.gdtf"
+  },
+  {
+    "manufacturer": "Generic",
+    "fixture": "8-Lite Mole",
+    "modeCount": 1,
+    "modes": {
+      "Dimmer - 2 Chan": 2
+    },
+    "suggestedPath": "GDTF/Generic/Generic__8_Lite_Mole.gdtf"
+  },
+  {
+    "manufacturer": "Generic",
+    "fixture": "Omni",
+    "modeCount": 1,
+    "modes": {
+      "Dimmer - 1 Chan": 1
+    },
+    "suggestedPath": "GDTF/Generic/Generic__Omni.gdtf"
+  },
+  {
+    "manufacturer": "GLP",
+    "fixture": "impression FR1",
+    "modeCount": 1,
+    "modes": {
+      "Single Mode": 16
+    },
+    "suggestedPath": "GDTF/GLP/GLP__impression_FR1.gdtf"
+  },
+  {
+    "manufacturer": "GLP",
+    "fixture": "impression FR2 Wash",
+    "modeCount": 6,
+    "modes": {
+      "18 Chan": 18,
+      "28 Chan": 28,
+      "40 Chan": 40,
+      "52 Chan": 52,
+      "171 Chan": 171,
+      "427 Chan": 427
+    },
+    "suggestedPath": "GDTF/GLP/GLP__impression_FR2_Wash.gdtf"
+  },
+  {
+    "manufacturer": "GLP",
+    "fixture": "impression S500 Profile",
+    "modeCount": 1,
+    "modes": {
+      "Single Mode": 35
+    },
+    "suggestedPath": "GDTF/GLP/GLP__impression_S500_Profile.gdtf"
+  },
+  {
+    "manufacturer": "GLP",
+    "fixture": "impression S500 Wash",
+    "modeCount": 1,
+    "modes": {
+      "Single Mode": 27
+    },
+    "suggestedPath": "GDTF/GLP/GLP__impression_S500_Wash.gdtf"
+  },
+  {
+    "manufacturer": "GLP",
+    "fixture": "impression X4 Bar 10",
+    "modeCount": 6,
+    "modes": {
+      "Normal": 33,
+      "Compressed": 20,
+      "D Pix": 28,
+      "D Pix H-Res": 29,
+      "S Pix": 48,
+      "S Pix H-Res": 49
+    },
+    "suggestedPath": "GDTF/GLP/GLP__impression_X4_Bar_10.gdtf"
+  },
+  {
+    "manufacturer": "GLP",
+    "fixture": "impression X4 Bar 20",
+    "modeCount": 6,
+    "modes": {
+      "Normal": 34,
+      "Compressed": 20,
+      "D Pix": 48,
+      "D Pix H-Res": 49,
+      "S Pix": 88,
+      "S Pix H-Res": 89
+    },
+    "suggestedPath": "GDTF/GLP/GLP__impression_X4_Bar_20.gdtf"
+  },
+  {
+    "manufacturer": "GLP",
+    "fixture": "impression X4 S",
+    "modeCount": 3,
+    "modes": {
+      "Compressed": 14,
+      "Normal": 18,
+      "High Res": 19
+    },
+    "suggestedPath": "GDTF/GLP/GLP__impression_X4_S.gdtf"
+  },
+  {
+    "manufacturer": "GLP",
+    "fixture": "impression X5",
+    "modeCount": 6,
+    "modes": {
+      "Basic": 24,
+      "Normal": 35,
+      "Segment": 41,
+      "Multipix Advanced": 89,
+      "Multipix Compressed RGB": 70,
+      "Multipix Compressed RGBL": 89
+    },
+    "suggestedPath": "GDTF/GLP/GLP__impression_X5.gdtf"
+  },
+  {
+    "manufacturer": "GLP",
+    "fixture": "impression X5 Bar 1000",
+    "modeCount": 6,
+    "modes": {
+      "Basic": 20,
+      "Normal": 33,
+      "Segment": 48,
+      "Multipix Advanced": 84,
+      "Multipix Compressed": 63,
+      "Multipix Compressed RGBL": 81
+    },
+    "suggestedPath": "GDTF/GLP/GLP__impression_X5_Bar_1000.gdtf"
+  },
+  {
+    "manufacturer": "GLP",
+    "fixture": "impression X5 Compact",
+    "modeCount": 6,
+    "modes": {
+      "Basic": 22,
+      "Normal": 33,
+      "Segment": 36,
+      "Multipix Advanced": 51,
+      "Multipix Compressed RGB": 32,
+      "Multipix Compressed RGBL": 39
+    },
+    "suggestedPath": "GDTF/GLP/GLP__impression_X5_Compact.gdtf"
+  },
+  {
+    "manufacturer": "GLP",
+    "fixture": "impression X5 IP",
+    "modeCount": 6,
+    "modes": {
+      "Basic": 24,
+      "Normal": 35,
+      "Segment": 41,
+      "Multipix Advanced": 89,
+      "Multipix Compressed RGB": 70,
+      "Multipix Compressed RGBL": 89
+    },
+    "suggestedPath": "GDTF/GLP/GLP__impression_X5_IP.gdtf"
+  },
+  {
+    "manufacturer": "GLP",
+    "fixture": "impression X5 IP Bar 1000",
+    "modeCount": 6,
+    "modes": {
+      "Basic": 20,
+      "Normal": 33,
+      "Segment": 48,
+      "Multipix Advanced": 84,
+      "Multipix Compressed": 63,
+      "Multipix Compressed RGBL": 81
+    },
+    "suggestedPath": "GDTF/GLP/GLP__impression_X5_IP_Bar_1000.gdtf"
+  },
+  {
+    "manufacturer": "GLP",
+    "fixture": "JDC Burst 1",
+    "modeCount": 10,
+    "modes": {
+      "Mode 1 - Basic": 19,
+      "Mode 2 - FX": 37,
+      "Mode 3 - 12 Segments": 87,
+      "Mode 4 - 24 Segments": 135,
+      "Mode 5 - 48 Segments": 231,
+      "Mode 6 - Full 12 Segments": 105,
+      "Mode 7 - Full 24 Segments": 153,
+      "Mode 8 - Full 48 Segments": 249,
+      "Mode 9 - Legacy Spix": 68,
+      "Mode 10 - Legacy SPix Pro": 62
+    },
+    "suggestedPath": "GDTF/GLP/GLP__JDC_Burst_1.gdtf"
+  },
+  {
+    "manufacturer": "GLP",
+    "fixture": "JDC Line 1000",
+    "modeCount": 7,
+    "modes": {
+      "RGBWStrobe": 32,
+      "Wstrobe, RGBStrobe": 68,
+      "Wstrobe, RGB Pixel": 168,
+      "RGBStrobe, W Pixel": 94,
+      "MultiPix": 196,
+      "MultiPix Advanced": 316,
+      "Multipix Quadpix": 78
+    },
+    "suggestedPath": "GDTF/GLP/GLP__JDC_Line_1000.gdtf"
+  },
+  {
+    "manufacturer": "GLP",
+    "fixture": "JDC Line 500",
+    "modeCount": 7,
+    "modes": {
+      "RGBWStrobe": 16,
+      "Wstrobe, RGBStrobe": 34,
+      "Wstrobe, RGB Pixel": 83,
+      "RGBStrobe, W Pixel": 47,
+      "MultiPix": 98,
+      "MultiPix Advanced": 158,
+      "Multipix Quadpix": 38
+    },
+    "suggestedPath": "GDTF/GLP/GLP__JDC_Line_500.gdtf"
+  },
+  {
+    "manufacturer": "GLP",
+    "fixture": "JDC1",
+    "modeCount": 6,
+    "modes": {
+      "Mode 1 - Compressed": 14,
+      "Mode 2 - Normal": 23,
+      "Mode 3 - S Pix": 68,
+      "Mode 4 - S Pix Pro": 62,
+      "Mode 5 - 1 Pix Pro": 17,
+      "Mode 6 - Easy": 11
+    },
+    "suggestedPath": "GDTF/GLP/GLP__JDC1.gdtf"
+  },
+  {
+    "manufacturer": "GLP",
+    "fixture": "JDC2 IP",
+    "modeCount": 5,
+    "modes": {
+      "M1": 18,
+      "M2": 30,
+      "M3": 105,
+      "M4": 141,
+      "M5": 85
+    },
+    "suggestedPath": "GDTF/GLP/GLP__JDC2_IP.gdtf"
+  },
+  {
+    "manufacturer": "GLP",
+    "fixture": "MAD MAXX",
+    "modeCount": 3,
+    "modes": {
+      "Normal": 15,
+      "Segment": 22,
+      "MultiBeam": 70
+    },
+    "suggestedPath": "GDTF/GLP/GLP__MAD_MAXX.gdtf"
+  },
+  {
+    "manufacturer": "GLP",
+    "fixture": "WildBar 16",
+    "modeCount": 2,
+    "modes": {
+      "Standard": 28,
+      "Extended": 79
+    },
+    "suggestedPath": "GDTF/GLP/GLP__WildBar_16.gdtf"
+  },
+  {
+    "manufacturer": "Jem",
+    "fixture": "ZR44 Smoke",
+    "modeCount": 1,
+    "modes": {
+      "1 Chan": 1
+    },
+    "suggestedPath": "GDTF/Jem/Jem__ZR44_Smoke.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "AF 1 Fan",
+    "modeCount": 1,
+    "modes": {
+      "1 Chan": 1
+    },
+    "suggestedPath": "GDTF/Martin/Martin__AF_1_Fan.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "ERA 150 Wash",
+    "modeCount": 1,
+    "modes": {
+      "Single Mode": 18
+    },
+    "suggestedPath": "GDTF/Martin/Martin__ERA_150_Wash.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "ERA 400 Performance CLD",
+    "modeCount": 1,
+    "modes": {
+      "Single Mode": 30
+    },
+    "suggestedPath": "GDTF/Martin/Martin__ERA_400_Performance_CLD.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "ERA 600 Performance",
+    "modeCount": 1,
+    "modes": {
+      "Single Mode": 41
+    },
+    "suggestedPath": "GDTF/Martin/Martin__ERA_600_Performance.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "ERA 600 Profile",
+    "modeCount": 1,
+    "modes": {
+      "Single Mode": 35
+    },
+    "suggestedPath": "GDTF/Martin/Martin__ERA_600_Profile.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "ERA 700 Performance IP",
+    "modeCount": 2,
+    "modes": {
+      "Basic": 42,
+      "Extended": 54
+    },
+    "suggestedPath": "GDTF/Martin/Martin__ERA_700_Performance_IP.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "MAC Aura PXL",
+    "modeCount": 4,
+    "modes": {
+      "Basic": 32,
+      "Extended": 89,
+      "Compact": 17,
+      "Ludicrous": 512
+    },
+    "suggestedPath": "GDTF/Martin/Martin__MAC_Aura_PXL.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "MAC Aura Raven XIP",
+    "modeCount": 5,
+    "modes": {
+      "Basic": 38,
+      "Extended": 149,
+      "Compact": 22,
+      "Ludicrous": 266,
+      "Plaid": 851
+    },
+    "suggestedPath": "GDTF/Martin/Martin__MAC_Aura_Raven_XIP.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "MAC Aura XB",
+    "modeCount": 2,
+    "modes": {
+      "Standard": 14,
+      "Extended": 25
+    },
+    "suggestedPath": "GDTF/Martin/Martin__MAC_Aura_XB.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "MAC Aura XIP",
+    "modeCount": 4,
+    "modes": {
+      "Basic": 36,
+      "Extended": 57,
+      "Compact": 20,
+      "Ludicrous": 93
+    },
+    "suggestedPath": "GDTF/Martin/Martin__MAC_Aura_XIP.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "MAC Axiom Hybrid",
+    "modeCount": 1,
+    "modes": {
+      "Basic": 23
+    },
+    "suggestedPath": "GDTF/Martin/Martin__MAC_Axiom_Hybrid.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "MAC Encore Performance CLD",
+    "modeCount": 1,
+    "modes": {
+      "Basic": 38
+    },
+    "suggestedPath": "GDTF/Martin/Martin__MAC_Encore_Performance_CLD.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "MAC One",
+    "modeCount": 3,
+    "modes": {
+      "Basic": 36,
+      "Compact": 20,
+      "Ludicrous": 108
+    },
+    "suggestedPath": "GDTF/Martin/Martin__MAC_One.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "MAC One Beam",
+    "modeCount": 3,
+    "modes": {
+      "Compact": 19,
+      "Basic": 35,
+      "Ludicrous": 107
+    },
+    "suggestedPath": "GDTF/Martin/Martin__MAC_One_Beam.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "MAC Quantum Profile",
+    "modeCount": 2,
+    "modes": {
+      "Basic": 19,
+      "Extended": 27
+    },
+    "suggestedPath": "GDTF/Martin/Martin__MAC_Quantum_Profile.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "MAC Quantum Wash",
+    "modeCount": 2,
+    "modes": {
+      "Basic": 17,
+      "Extended": 33
+    },
+    "suggestedPath": "GDTF/Martin/Martin__MAC_Quantum_Wash.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "MAC Ultra Performance",
+    "modeCount": 2,
+    "modes": {
+      "Basic": 48,
+      "Extended": 58
+    },
+    "suggestedPath": "GDTF/Martin/Martin__MAC_Ultra_Performance.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "MAC Ultra Wash",
+    "modeCount": 1,
+    "modes": {
+      "Basic": 29
+    },
+    "suggestedPath": "GDTF/Martin/Martin__MAC_Ultra_Wash.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "MAC Viper AirFX",
+    "modeCount": 2,
+    "modes": {
+      "Basic": 20,
+      "Extended": 28
+    },
+    "suggestedPath": "GDTF/Martin/Martin__MAC_Viper_AirFX.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "MAC Viper Performance",
+    "modeCount": 2,
+    "modes": {
+      "Basic": 32,
+      "Extended": 40
+    },
+    "suggestedPath": "GDTF/Martin/Martin__MAC_Viper_Performance.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "MAC Viper Profile",
+    "modeCount": 2,
+    "modes": {
+      "Basic": 26,
+      "Extended": 34
+    },
+    "suggestedPath": "GDTF/Martin/Martin__MAC_Viper_Profile.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "MAC Viper Wash DX",
+    "modeCount": 2,
+    "modes": {
+      "Basic": 18,
+      "Extended": 24
+    },
+    "suggestedPath": "GDTF/Martin/Martin__MAC_Viper_Wash_DX.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "MAC Viper XIP",
+    "modeCount": 3,
+    "modes": {
+      "Basic": 54,
+      "Extended": 64,
+      "Ludicrous": 70
+    },
+    "suggestedPath": "GDTF/Martin/Martin__MAC_Viper_XIP.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "VDO Atomic Bold",
+    "modeCount": 6,
+    "modes": {
+      "1 Channel": 1,
+      "3 Channel": 3,
+      "4 Channel": 4,
+      "Compact": 10,
+      "Basic": 27,
+      "Extended": 243
+    },
+    "suggestedPath": "GDTF/Martin/Martin__VDO_Atomic_Bold.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "VDO Atomic Dot CLD",
+    "modeCount": 5,
+    "modes": {
+      "1 Channel": 1,
+      "3 Channel": 3,
+      "4 Channel": 4,
+      "Basic": 19,
+      "Extended": 64
+    },
+    "suggestedPath": "GDTF/Martin/Martin__VDO_Atomic_Dot_CLD.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "VDO Atomic Dot WRM",
+    "modeCount": 5,
+    "modes": {
+      "1 Channel": 1,
+      "3 Channel": 3,
+      "4 Channel": 4,
+      "Basic": 19,
+      "Extended": 64
+    },
+    "suggestedPath": "GDTF/Martin/Martin__VDO_Atomic_Dot_WRM.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "VDO Fatron 20 1000 mm",
+    "modeCount": 4,
+    "modes": {
+      "RGB": 3,
+      "Basic": 10,
+      "Segment": 55,
+      "Pixel": 157
+    },
+    "suggestedPath": "GDTF/Martin/Martin__VDO_Fatron_20_1000_mm.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "VDO Fatron 20 320 mm",
+    "modeCount": 4,
+    "modes": {
+      "RGB": 3,
+      "Basic": 10,
+      "Segment": 19,
+      "Pixel": 37
+    },
+    "suggestedPath": "GDTF/Martin/Martin__VDO_Fatron_20_320_mm.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "VDO Sceptron 10 1000 mm",
+    "modeCount": 4,
+    "modes": {
+      "RGB": 3,
+      "Basic": 10,
+      "Segment": 103,
+      "Pixel": 307
+    },
+    "suggestedPath": "GDTF/Martin/Martin__VDO_Sceptron_10_1000_mm.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "VDO Sceptron 10 320 mm",
+    "modeCount": 4,
+    "modes": {
+      "RGB": 3,
+      "Basic": 10,
+      "Segment": 13,
+      "Pixel": 22
+    },
+    "suggestedPath": "GDTF/Martin/Martin__VDO_Sceptron_10_320_mm.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "VDO Sceptron 20 1000 mm",
+    "modeCount": 4,
+    "modes": {
+      "RGB": 3,
+      "Basic": 10,
+      "Segment": 55,
+      "Pixel": 157
+    },
+    "suggestedPath": "GDTF/Martin/Martin__VDO_Sceptron_20_1000_mm.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "VDO Sceptron 20 320 mm",
+    "modeCount": 4,
+    "modes": {
+      "RGB": 3,
+      "Basic": 10,
+      "Segment": 13,
+      "Pixel": 22
+    },
+    "suggestedPath": "GDTF/Martin/Martin__VDO_Sceptron_20_320_mm.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "VDO Sceptron 40 1000 mm",
+    "modeCount": 4,
+    "modes": {
+      "RGB": 3,
+      "Basic": 10,
+      "Segment": 31,
+      "Pixel": 82
+    },
+    "suggestedPath": "GDTF/Martin/Martin__VDO_Sceptron_40_1000_mm.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "VDO Sceptron 40 320 mm",
+    "modeCount": 4,
+    "modes": {
+      "RGB": 3,
+      "Basic": 10,
+      "Segment": 13,
+      "Pixel": 22
+    },
+    "suggestedPath": "GDTF/Martin/Martin__VDO_Sceptron_40_320_mm.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "VDO Sceptron XB 1000 mm",
+    "modeCount": 12,
+    "modes": {
+      "Compact": 8,
+      "Basic": 14,
+      "Extended 5 Segments": 29,
+      "Extended 10 Segments": 44,
+      "Extended 25 Segments": 89,
+      "Extended 100 Pixels": 314,
+      "Compact Direct": 8,
+      "RGB": 3,
+      "PixelMap 5 Segments": 15,
+      "PixelMap 10 Segments": 30,
+      "PixelMap 25 Segments": 75,
+      "PixelMap 100 Pixels": 300
+    },
+    "suggestedPath": "GDTF/Martin/Martin__VDO_Sceptron_XB_1000_mm.gdtf"
+  },
+  {
+    "manufacturer": "Martin",
+    "fixture": "VDO Sceptron XB 320 mm",
+    "modeCount": 12,
+    "modes": {
+      "Compact": 8,
+      "Basic": 14,
+      "Extended 2 Segments": 20,
+      "Extended 4 Segments": 26,
+      "Extended 8 Segments": 38,
+      "Extended 32 Pixels": 110,
+      "Compact Direct": 8,
+      "RGB": 3,
+      "PixelMap 2 Segments": 6,
+      "PixelMap 4 Segments": 12,
+      "PixelMap 8 Segments": 24,
+      "PixelMap 32 Pixels": 96
+    },
+    "suggestedPath": "GDTF/Martin/Martin__VDO_Sceptron_XB_320_mm.gdtf"
+  },
+  {
+    "manufacturer": "MDG",
+    "fixture": "ATME",
+    "modeCount": 1,
+    "modes": {
+      "Standard": 3
+    },
+    "suggestedPath": "GDTF/MDG/MDG__ATME.gdtf"
+  },
+  {
+    "manufacturer": "MDG",
+    "fixture": "The ONE",
+    "modeCount": 1,
+    "modes": {
+      "Standard": 3
+    },
+    "suggestedPath": "GDTF/MDG/MDG__The_ONE.gdtf"
+  },
+  {
+    "manufacturer": "Portman",
+    "fixture": "AMULET",
+    "modeCount": 6,
+    "modes": {
+      "Super Simple": 9,
+      "Simple": 15,
+      "Standard": 22,
+      "Standard Fine": 37,
+      "Pixel": 34,
+      "Pixel Fine": 61
+    },
+    "suggestedPath": "GDTF/Portman/Portman__AMULET.gdtf"
+  },
+  {
+    "manufacturer": "Portman",
+    "fixture": "EVO ELEMENT",
+    "modeCount": 6,
+    "modes": {
+      "Super Simple": 9,
+      "Simple": 15,
+      "Standard": 23,
+      "Standard Fine": 39,
+      "Pixel": 22,
+      "Pixel Fine": 37
+    },
+    "suggestedPath": "GDTF/Portman/Portman__EVO_ELEMENT.gdtf"
+  },
+  {
+    "manufacturer": "Portman",
+    "fixture": "MANTIS",
+    "modeCount": 6,
+    "modes": {
+      "Super Simple": 21,
+      "Simple": 29,
+      "Standard": 29,
+      "Standard Fine": 45,
+      "Pixel": 28,
+      "Pixel Fine": 43
+    },
+    "suggestedPath": "GDTF/Portman/Portman__MANTIS.gdtf"
+  },
+  {
+    "manufacturer": "Portman",
+    "fixture": "OMNIRAY",
+    "modeCount": 8,
+    "modes": {
+      "Simple RGB": 8,
+      "RGBW": 16,
+      "RGBW 16B": 24,
+      "CCT": 15,
+      "CCT 16B": 21,
+      "Tungsten": 16,
+      "Tungsten 16B": 24,
+      "Full Access 16B": 28
+    },
+    "suggestedPath": "GDTF/Portman/Portman__OMNIRAY.gdtf"
+  },
+  {
+    "manufacturer": "Portman",
+    "fixture": "P1 EVO",
+    "modeCount": 6,
+    "modes": {
+      "Super Simple": 13,
+      "Simple": 19,
+      "Standard": 43,
+      "Standard Fine": 79,
+      "Pixel": 42,
+      "Pixel Fine": 77
+    },
+    "suggestedPath": "GDTF/Portman/Portman__P1_EVO.gdtf"
+  },
+  {
+    "manufacturer": "Portman",
+    "fixture": "P1 Mini",
+    "modeCount": 1,
+    "modes": {
+      "Standard": 7
+    },
+    "suggestedPath": "GDTF/Portman/Portman__P1_Mini.gdtf"
+  },
+  {
+    "manufacturer": "Portman",
+    "fixture": "P1 Retro Lamp",
+    "modeCount": 1,
+    "modes": {
+      "Standard": 7
+    },
+    "suggestedPath": "GDTF/Portman/Portman__P1_Retro_Lamp.gdtf"
+  },
+  {
+    "manufacturer": "Portman",
+    "fixture": "P2 EVO",
+    "modeCount": 6,
+    "modes": {
+      "Super Simple": 12,
+      "Simple": 18,
+      "Standard": 38,
+      "Standard Fine": 69,
+      "Pixel": 37,
+      "Pixel Fine": 67
+    },
+    "suggestedPath": "GDTF/Portman/Portman__P2_EVO.gdtf"
+  },
+  {
+    "manufacturer": "Portman",
+    "fixture": "P2 Hexaline",
+    "modeCount": 1,
+    "modes": {
+      "Standard": 6
+    },
+    "suggestedPath": "GDTF/Portman/Portman__P2_Hexaline.gdtf"
+  },
+  {
+    "manufacturer": "Portman",
+    "fixture": "P3 EVO",
+    "modeCount": 6,
+    "modes": {
+      "Super Simple": 9,
+      "Simple": 15,
+      "Standard": 23,
+      "Standard Fine": 39,
+      "Pixel": 22,
+      "Pixel Fine": 37
+    },
+    "suggestedPath": "GDTF/Portman/Portman__P3_EVO.gdtf"
+  },
+  {
+    "manufacturer": "Portman",
+    "fixture": "P3 PIX3L",
+    "modeCount": 1,
+    "modes": {
+      "Standard": 3
+    },
+    "suggestedPath": "GDTF/Portman/Portman__P3_PIX3L.gdtf"
+  },
+  {
+    "manufacturer": "Portman",
+    "fixture": "S-TRIBE",
+    "modeCount": 6,
+    "modes": {
+      "Super Simple": 12,
+      "Simple": 17,
+      "Standard": 32,
+      "Standard Fine": 57,
+      "Pixel": 52,
+      "Pixel Fine": 97
+    },
+    "suggestedPath": "GDTF/Portman/Portman__S_TRIBE.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "Arianne 2",
+    "modeCount": 4,
+    "modes": {
+      "Mode 1": 39,
+      "Mode 2": 63,
+      "Mode 3": 111,
+      "Mode 4": 127
+    },
+    "suggestedPath": "GDTF/Robe/Robe__Arianne_2.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "Arianne 6",
+    "modeCount": 4,
+    "modes": {
+      "Mode 1": 45,
+      "Mode 2": 93,
+      "Mode 3": 189,
+      "Mode 4": 221
+    },
+    "suggestedPath": "GDTF/Robe/Robe__Arianne_6.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "BMFL Blade",
+    "modeCount": 2,
+    "modes": {
+      "Mode 1": 49,
+      "Mode 2": 42
+    },
+    "suggestedPath": "GDTF/Robe/Robe__BMFL_Blade.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "BMFL Followspot",
+    "modeCount": 2,
+    "modes": {
+      "Mode 1": 33,
+      "Mode 2": 27
+    },
+    "suggestedPath": "GDTF/Robe/Robe__BMFL_Followspot.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "BMFL Followspot LT",
+    "modeCount": 2,
+    "modes": {
+      "Mode 1": 33,
+      "Mode 2": 27
+    },
+    "suggestedPath": "GDTF/Robe/Robe__BMFL_Followspot_LT.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "BMFL Spot",
+    "modeCount": 2,
+    "modes": {
+      "Mode 1": 41,
+      "Mode 2": 33
+    },
+    "suggestedPath": "GDTF/Robe/Robe__BMFL_Spot.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "CUETE",
+    "modeCount": 2,
+    "modes": {
+      "Mode 1": 34,
+      "Mode 2": 27
+    },
+    "suggestedPath": "GDTF/Robe/Robe__CUETE.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "FOOTSIE1",
+    "modeCount": 4,
+    "modes": {
+      "Mode 1": 11,
+      "Mode 2": 20,
+      "Mode 3": 38,
+      "Mode 4": 74
+    },
+    "suggestedPath": "GDTF/Robe/Robe__FOOTSIE1.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "FOOTSIE2",
+    "modeCount": 4,
+    "modes": {
+      "Mode 1": 11,
+      "Mode 2": 29,
+      "Mode 3": 56,
+      "Mode 4": 110
+    },
+    "suggestedPath": "GDTF/Robe/Robe__FOOTSIE2.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "FORTE",
+    "modeCount": 2,
+    "modes": {
+      "Mode 1": 54,
+      "Mode 2": 56
+    },
+    "suggestedPath": "GDTF/Robe/Robe__FORTE.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "GigaPointe",
+    "modeCount": 2,
+    "modes": {
+      "Mode 1": 39,
+      "Mode 2": 41
+    },
+    "suggestedPath": "GDTF/Robe/Robe__GigaPointe.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "HolyPATT",
+    "modeCount": 1,
+    "modes": {
+      "Mode 1": 5
+    },
+    "suggestedPath": "GDTF/Robe/Robe__HolyPATT.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "iBar 15",
+    "modeCount": 4,
+    "modes": {
+      "Mode 1": 33,
+      "Mode 2": 63,
+      "Mode 3": 123,
+      "Mode 4": 183
+    },
+    "suggestedPath": "GDTF/Robe/Robe__iBar_15.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "iBeam 350",
+    "modeCount": 3,
+    "modes": {
+      "Mode 1": 22,
+      "Mode 2": 16,
+      "Mode 3": 24
+    },
+    "suggestedPath": "GDTF/Robe/Robe__iBeam_350.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "iBolt",
+    "modeCount": 1,
+    "modes": {
+      "Mode 1": 37
+    },
+    "suggestedPath": "GDTF/Robe/Robe__iBolt.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "iEsprite",
+    "modeCount": 4,
+    "modes": {
+      "Mode 1": 49,
+      "Mode 2": 42,
+      "Mode 3": 50,
+      "Mode 4": 43
+    },
+    "suggestedPath": "GDTF/Robe/Robe__iEsprite.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "iEsprite LTL",
+    "modeCount": 1,
+    "modes": {
+      "Mode 1": 53
+    },
+    "suggestedPath": "GDTF/Robe/Robe__iEsprite_LTL.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "iForte",
+    "modeCount": 2,
+    "modes": {
+      "Mode 1": 54,
+      "Mode 2": 56
+    },
+    "suggestedPath": "GDTF/Robe/Robe__iForte.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "iForte LTX",
+    "modeCount": 1,
+    "modes": {
+      "Mode 1": 54
+    },
+    "suggestedPath": "GDTF/Robe/Robe__iForte_LTX.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "iPainte",
+    "modeCount": 2,
+    "modes": {
+      "Mode 1": 44,
+      "Mode 2": 45
+    },
+    "suggestedPath": "GDTF/Robe/Robe__iPainte.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "iPAINTE LTM WB",
+    "modeCount": 1,
+    "modes": {
+      "Mode 1": 53
+    },
+    "suggestedPath": "GDTF/Robe/Robe__iPAINTE_LTM_WB.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "iParFect 150",
+    "modeCount": 3,
+    "modes": {
+      "Mode 1": 18,
+      "Mode 2": 12,
+      "Mode 3": 20
+    },
+    "suggestedPath": "GDTF/Robe/Robe__iParFect_150.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "iSpiider X",
+    "modeCount": 10,
+    "modes": {
+      "Mode 1": 49,
+      "Mode 2": 27,
+      "Mode 3": 33,
+      "Mode 4": 90,
+      "Mode 5": 27,
+      "Mode 6": 47,
+      "Mode 7": 91,
+      "Mode 8": 110,
+      "Mode 9": 104,
+      "Mode 10": 123
+    },
+    "suggestedPath": "GDTF/Robe/Robe__iSpiider_X.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "iT12 Fresnel",
+    "modeCount": 8,
+    "modes": {
+      "Mode 1": 18,
+      "Mode 2": 9,
+      "Mode 3": 22,
+      "Mode 4": 5,
+      "Mode 5": 1,
+      "Mode 6": 24,
+      "Mode 7": 13,
+      "Mode 8": 28
+    },
+    "suggestedPath": "GDTF/Robe/Robe__iT12_Fresnel.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "iT12 PC",
+    "modeCount": 8,
+    "modes": {
+      "Mode 1": 18,
+      "Mode 2": 9,
+      "Mode 3": 22,
+      "Mode 4": 5,
+      "Mode 5": 1,
+      "Mode 6": 24,
+      "Mode 7": 13,
+      "Mode 8": 28
+    },
+    "suggestedPath": "GDTF/Robe/Robe__iT12_PC.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "iT12 Profile",
+    "modeCount": 8,
+    "modes": {
+      "Mode 1": 18,
+      "Mode 2": 9,
+      "Mode 3": 22,
+      "Mode 4": 5,
+      "Mode 5": 1,
+      "Mode 6": 24,
+      "Mode 7": 13,
+      "Mode 8": 28
+    },
+    "suggestedPath": "GDTF/Robe/Robe__iT12_Profile.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "iTetra 2",
+    "modeCount": 6,
+    "modes": {
+      "Mode 1": 34,
+      "Mode 2": 56,
+      "Mode 3": 97,
+      "Mode 4": 115,
+      "Mode 5": 110,
+      "Mode 6": 128
+    },
+    "suggestedPath": "GDTF/Robe/Robe__iTetra_2.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "LEDBeam 150",
+    "modeCount": 3,
+    "modes": {
+      "Mode 1": 18,
+      "Mode 2": 12,
+      "Mode 3": 20
+    },
+    "suggestedPath": "GDTF/Robe/Robe__LEDBeam_150.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "LEDBeam 200",
+    "modeCount": 3,
+    "modes": {
+      "Mode 1": 22,
+      "Mode 2": 16,
+      "Mode 3": 24
+    },
+    "suggestedPath": "GDTF/Robe/Robe__LEDBeam_200.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "LEDBeam 350",
+    "modeCount": 3,
+    "modes": {
+      "Mode 1": 22,
+      "Mode 2": 16,
+      "Mode 3": 24
+    },
+    "suggestedPath": "GDTF/Robe/Robe__LEDBeam_350.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "LEDBeam 350 FW",
+    "modeCount": 3,
+    "modes": {
+      "Mode 1": 22,
+      "Mode 2": 16,
+      "Mode 3": 24
+    },
+    "suggestedPath": "GDTF/Robe/Robe__LEDBeam_350_FW.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "LedPOINTE",
+    "modeCount": 1,
+    "modes": {
+      "Mode 1": 39
+    },
+    "suggestedPath": "GDTF/Robe/Robe__LedPOINTE.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "MegaPointe",
+    "modeCount": 2,
+    "modes": {
+      "Mode 1": 34,
+      "Mode 2": 39
+    },
+    "suggestedPath": "GDTF/Robe/Robe__MegaPointe.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "miniPointe",
+    "modeCount": 2,
+    "modes": {
+      "Mode 1": 20,
+      "Mode 2": 22
+    },
+    "suggestedPath": "GDTF/Robe/Robe__miniPointe.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "MolyPATT",
+    "modeCount": 1,
+    "modes": {
+      "Mode 1": 5
+    },
+    "suggestedPath": "GDTF/Robe/Robe__MolyPATT.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "onePATT",
+    "modeCount": 1,
+    "modes": {
+      "Mode 1": 5
+    },
+    "suggestedPath": "GDTF/Robe/Robe__onePATT.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "PAINTE",
+    "modeCount": 2,
+    "modes": {
+      "Mode 1": 44,
+      "Mode 2": 45
+    },
+    "suggestedPath": "GDTF/Robe/Robe__PAINTE.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "ParFect 150",
+    "modeCount": 3,
+    "modes": {
+      "Mode 1": 18,
+      "Mode 2": 12,
+      "Mode 3": 20
+    },
+    "suggestedPath": "GDTF/Robe/Robe__ParFect_150.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "PATT 2013",
+    "modeCount": 1,
+    "modes": {
+      "Mode 1": 1
+    },
+    "suggestedPath": "GDTF/Robe/Robe__PATT_2013.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "PATT 2017",
+    "modeCount": 1,
+    "modes": {
+      "Mode 1": 5
+    },
+    "suggestedPath": "GDTF/Robe/Robe__PATT_2017.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "picklePATT",
+    "modeCount": 1,
+    "modes": {
+      "Mode 1": 1
+    },
+    "suggestedPath": "GDTF/Robe/Robe__picklePATT.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "SilverScan",
+    "modeCount": 2,
+    "modes": {
+      "Mode 1": 34,
+      "Mode 2": 27
+    },
+    "suggestedPath": "GDTF/Robe/Robe__SilverScan.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "Spiider",
+    "modeCount": 10,
+    "modes": {
+      "Mode 1": 49,
+      "Mode 2": 27,
+      "Mode 3": 33,
+      "Mode 4": 90,
+      "Mode 5": 27,
+      "Mode 6": 47,
+      "Mode 7": 91,
+      "Mode 8": 110,
+      "Mode 9": 104,
+      "Mode 10": 123
+    },
+    "suggestedPath": "GDTF/Robe/Robe__Spiider.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "Spikie+",
+    "modeCount": 2,
+    "modes": {
+      "Mode 1": 27,
+      "Mode 2": 21
+    },
+    "suggestedPath": "GDTF/Robe/Robe__Spikie.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "SVB1",
+    "modeCount": 3,
+    "modes": {
+      "Mode 1": 17,
+      "Mode 2": 31,
+      "Mode 3": 61
+    },
+    "suggestedPath": "GDTF/Robe/Robe__SVB1.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "SVOPATT",
+    "modeCount": 5,
+    "modes": {
+      "Mode 1": 21,
+      "Mode 2": 21,
+      "Mode 3": 124,
+      "Mode 4": 286,
+      "Mode 5": 384
+    },
+    "suggestedPath": "GDTF/Robe/Robe__SVOPATT.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "SVOPATT Classic",
+    "modeCount": 4,
+    "modes": {
+      "Mode 1": 1,
+      "Mode 2": 5,
+      "Mode 3": 19,
+      "Mode 4": 83
+    },
+    "suggestedPath": "GDTF/Robe/Robe__SVOPATT_Classic.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "T.5 Profile",
+    "modeCount": 3,
+    "modes": {
+      "Mode 1": 39,
+      "Mode 2": 27,
+      "Mode 3": 43
+    },
+    "suggestedPath": "GDTF/Robe/Robe__T_5_Profile.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "T1 Profile",
+    "modeCount": 3,
+    "modes": {
+      "Mode 1": 49,
+      "Mode 2": 33,
+      "Mode 3": 53
+    },
+    "suggestedPath": "GDTF/Robe/Robe__T1_Profile.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "T10 Fresnel",
+    "modeCount": 8,
+    "modes": {
+      "Mode 1": 18,
+      "Mode 2": 9,
+      "Mode 3": 22,
+      "Mode 4": 5,
+      "Mode 5": 1,
+      "Mode 6": 24,
+      "Mode 7": 13,
+      "Mode 8": 28
+    },
+    "suggestedPath": "GDTF/Robe/Robe__T10_Fresnel.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "T10 PC",
+    "modeCount": 8,
+    "modes": {
+      "Mode 1": 18,
+      "Mode 2": 9,
+      "Mode 3": 22,
+      "Mode 4": 5,
+      "Mode 5": 1,
+      "Mode 6": 24,
+      "Mode 7": 13,
+      "Mode 8": 28
+    },
+    "suggestedPath": "GDTF/Robe/Robe__T10_PC.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "T10 Profile",
+    "modeCount": 8,
+    "modes": {
+      "Mode 1": 18,
+      "Mode 2": 9,
+      "Mode 3": 22,
+      "Mode 4": 5,
+      "Mode 5": 1,
+      "Mode 6": 24,
+      "Mode 7": 13,
+      "Mode 8": 28
+    },
+    "suggestedPath": "GDTF/Robe/Robe__T10_Profile.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "T11 Fresnel",
+    "modeCount": 8,
+    "modes": {
+      "Mode 1": 18,
+      "Mode 2": 9,
+      "Mode 3": 22,
+      "Mode 4": 5,
+      "Mode 5": 1,
+      "Mode 6": 24,
+      "Mode 7": 13,
+      "Mode 8": 28
+    },
+    "suggestedPath": "GDTF/Robe/Robe__T11_Fresnel.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "T11 PC",
+    "modeCount": 8,
+    "modes": {
+      "Mode 1": 18,
+      "Mode 2": 9,
+      "Mode 3": 22,
+      "Mode 4": 5,
+      "Mode 5": 1,
+      "Mode 6": 24,
+      "Mode 7": 13,
+      "Mode 8": 28
+    },
+    "suggestedPath": "GDTF/Robe/Robe__T11_PC.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "T11 Profile",
+    "modeCount": 8,
+    "modes": {
+      "Mode 1": 18,
+      "Mode 2": 9,
+      "Mode 3": 22,
+      "Mode 4": 5,
+      "Mode 5": 1,
+      "Mode 6": 24,
+      "Mode 7": 13,
+      "Mode 8": 28
+    },
+    "suggestedPath": "GDTF/Robe/Robe__T11_Profile.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "T15 Fresnel",
+    "modeCount": 8,
+    "modes": {
+      "Mode 1": 18,
+      "Mode 2": 9,
+      "Mode 3": 22,
+      "Mode 4": 5,
+      "Mode 5": 1,
+      "Mode 6": 24,
+      "Mode 7": 13,
+      "Mode 8": 28
+    },
+    "suggestedPath": "GDTF/Robe/Robe__T15_Fresnel.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "T15 PC",
+    "modeCount": 8,
+    "modes": {
+      "Mode 1": 18,
+      "Mode 2": 9,
+      "Mode 3": 22,
+      "Mode 4": 5,
+      "Mode 5": 1,
+      "Mode 6": 24,
+      "Mode 7": 13,
+      "Mode 8": 28
+    },
+    "suggestedPath": "GDTF/Robe/Robe__T15_PC.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "T15 Profile",
+    "modeCount": 8,
+    "modes": {
+      "Mode 1": 18,
+      "Mode 2": 9,
+      "Mode 3": 22,
+      "Mode 4": 5,
+      "Mode 5": 1,
+      "Mode 6": 24,
+      "Mode 7": 13,
+      "Mode 8": 28
+    },
+    "suggestedPath": "GDTF/Robe/Robe__T15_Profile.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "T2 Profile",
+    "modeCount": 3,
+    "modes": {
+      "Mode 1": 52,
+      "Mode 2": 36,
+      "Mode 3": 56
+    },
+    "suggestedPath": "GDTF/Robe/Robe__T2_Profile.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "T2 Profile FS",
+    "modeCount": 3,
+    "modes": {
+      "Mode 1": 52,
+      "Mode 2": 36,
+      "Mode 3": 56
+    },
+    "suggestedPath": "GDTF/Robe/Robe__T2_Profile_FS.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "T3 Fresnel",
+    "modeCount": 3,
+    "modes": {
+      "Mode 1": 54,
+      "Mode 2": 38,
+      "Mode 3": 58
+    },
+    "suggestedPath": "GDTF/Robe/Robe__T3_Fresnel.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "T3 PC",
+    "modeCount": 3,
+    "modes": {
+      "Mode 1": 54,
+      "Mode 2": 38,
+      "Mode 3": 58
+    },
+    "suggestedPath": "GDTF/Robe/Robe__T3_PC.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "T3 Profile",
+    "modeCount": 3,
+    "modes": {
+      "Mode 1": 54,
+      "Mode 2": 38,
+      "Mode 3": 58
+    },
+    "suggestedPath": "GDTF/Robe/Robe__T3_Profile.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "T31 Cyc",
+    "modeCount": 8,
+    "modes": {
+      "Mode 1": 18,
+      "Mode 2": 9,
+      "Mode 3": 22,
+      "Mode 4": 5,
+      "Mode 5": 1,
+      "Mode 6": 24,
+      "Mode 7": 13,
+      "Mode 8": 28
+    },
+    "suggestedPath": "GDTF/Robe/Robe__T31_Cyc.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "T32 Cyc",
+    "modeCount": 8,
+    "modes": {
+      "Mode 1": 18,
+      "Mode 2": 9,
+      "Mode 3": 22,
+      "Mode 4": 5,
+      "Mode 5": 1,
+      "Mode 6": 24,
+      "Mode 7": 13,
+      "Mode 8": 28
+    },
+    "suggestedPath": "GDTF/Robe/Robe__T32_Cyc.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "Tarrantula",
+    "modeCount": 6,
+    "modes": {
+      "Mode 1": 28,
+      "Mode 2": 48,
+      "Mode 3": 146,
+      "Mode 4": 183,
+      "Mode 5": 159,
+      "Mode 6": 196
+    },
+    "suggestedPath": "GDTF/Robe/Robe__Tarrantula.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "Tetra1",
+    "modeCount": 6,
+    "modes": {
+      "Mode 1": 25,
+      "Mode 2": 38,
+      "Mode 3": 57,
+      "Mode 4": 66,
+      "Mode 5": 61,
+      "Mode 6": 70
+    },
+    "suggestedPath": "GDTF/Robe/Robe__Tetra1.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "Tetra2",
+    "modeCount": 6,
+    "modes": {
+      "Mode 1": 34,
+      "Mode 2": 56,
+      "Mode 3": 97,
+      "Mode 4": 115,
+      "Mode 5": 110,
+      "Mode 6": 128
+    },
+    "suggestedPath": "GDTF/Robe/Robe__Tetra2.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "TetraX",
+    "modeCount": 6,
+    "modes": {
+      "Mode 1": 41,
+      "Mode 2": 61,
+      "Mode 3": 75,
+      "Mode 4": 84,
+      "Mode 5": 88,
+      "Mode 6": 97
+    },
+    "suggestedPath": "GDTF/Robe/Robe__TetraX.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "TX1 PosiProfile",
+    "modeCount": 6,
+    "modes": {
+      "Mode 1": 40,
+      "Mode 2": 27,
+      "Mode 3": 44,
+      "Mode 4": 48,
+      "Mode 5": 33,
+      "Mode 6": 52
+    },
+    "suggestedPath": "GDTF/Robe/Robe__TX1_PosiProfile.gdtf"
+  },
+  {
+    "manufacturer": "Robe",
+    "fixture": "WTF!",
+    "modeCount": 5,
+    "modes": {
+      "Mode 1": 32,
+      "Mode 2": 44,
+      "Mode 3": 64,
+      "Mode 4": 106,
+      "Mode 5": 140
+    },
+    "suggestedPath": "GDTF/Robe/Robe__WTF.gdtf"
+  },
+  {
+    "manufacturer": "Roxx",
+    "fixture": "Cluster B2 FC",
+    "modeCount": 19,
+    "modes": {
+      "1CH DWE": 1,
+      "2CH DWE": 2,
+      "4CH DWE": 4,
+      "9CH DWE+": 9,
+      "6CH Strobe": 6,
+      "6CH RGB": 6,
+      "10CH Basic RGB": 10,
+      "14CH Basic RGB": 14,
+      "11CH Section RGB": 11,
+      "11CH Comp RGB": 11,
+      "13CH Standard RGB": 13,
+      "22CH Standard RGB": 22,
+      "24CH Extended RGB": 24,
+      "33CH Extended RGB": 33,
+      "10CH Direct": 10,
+      "12CH Direct": 12,
+      "17CH Direct": 17,
+      "24CH Direct": 24,
+      "41CH Direct": 41
+    },
+    "suggestedPath": "GDTF/Roxx/Roxx__Cluster_B2_FC.gdtf"
+  },
+  {
+    "manufacturer": "Ultratec",
+    "fixture": "Versa Fan",
+    "modeCount": 1,
+    "modes": {
+      "N/A": 0
+    },
+    "suggestedPath": "GDTF/Ultratec/Ultratec__Versa_Fan.gdtf"
+  }
+]

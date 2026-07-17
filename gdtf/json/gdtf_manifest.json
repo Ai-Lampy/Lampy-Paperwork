@@ -1,0 +1,151 @@
+{
+  "format": "lampy-gdtf-staging-v1",
+  "source": "json/fixtures",
+  "targetBaseUrl": "GDTF/",
+  "generatedFor": "manual GDTF Share download staging",
+  "notes": [
+    "This folder is a staging copy only. Live json/fixtures files are unchanged.",
+    "gdtf.file values are intentionally empty until real GDTF files are downloaded and matched.",
+    "Use fixture + mode + channel count for matching, not Fix ID."
+  ],
+  "manufacturers": [
+    {
+      "name": "ACME",
+      "file": "json/fixtures/acme.json",
+      "gdtfFolder": "GDTF/ACME",
+      "fixtureCount": 42,
+      "modeCount": 179
+    },
+    {
+      "name": "Antari",
+      "file": "json/fixtures/antari.json",
+      "gdtfFolder": "GDTF/Antari",
+      "fixtureCount": 1,
+      "modeCount": 1
+    },
+    {
+      "name": "Astera",
+      "file": "json/fixtures/astera.json",
+      "gdtfFolder": "GDTF/Astera",
+      "fixtureCount": 20,
+      "modeCount": 427
+    },
+    {
+      "name": "Ayrton",
+      "file": "json/fixtures/ayrton.json",
+      "gdtfFolder": "GDTF/Ayrton",
+      "fixtureCount": 30,
+      "modeCount": 75
+    },
+    {
+      "name": "Chauvet",
+      "file": "json/fixtures/chauvet.json",
+      "gdtfFolder": "GDTF/Chauvet",
+      "fixtureCount": 22,
+      "modeCount": 122
+    },
+    {
+      "name": "Chroma-Q",
+      "file": "json/fixtures/chroma-q.json",
+      "gdtfFolder": "GDTF/Chroma-Q",
+      "fixtureCount": 9,
+      "modeCount": 186
+    },
+    {
+      "name": "Clay Paky",
+      "file": "json/fixtures/clay-paky.json",
+      "gdtfFolder": "GDTF/Clay Paky",
+      "fixtureCount": 25,
+      "modeCount": 71
+    },
+    {
+      "name": "Elation",
+      "file": "json/fixtures/elation.json",
+      "gdtfFolder": "GDTF/Elation",
+      "fixtureCount": 3,
+      "modeCount": 6
+    },
+    {
+      "name": "ETC",
+      "file": "json/fixtures/etc.json",
+      "gdtfFolder": "GDTF/ETC",
+      "fixtureCount": 74,
+      "modeCount": 213
+    },
+    {
+      "name": "Fine Art",
+      "file": "json/fixtures/fine-art.json",
+      "gdtfFolder": "GDTF/Fine Art",
+      "fixtureCount": 1,
+      "modeCount": 2
+    },
+    {
+      "name": "Generic",
+      "file": "json/fixtures/generic.json",
+      "gdtfFolder": "GDTF/Generic",
+      "fixtureCount": 5,
+      "modeCount": 5
+    },
+    {
+      "name": "GLP",
+      "file": "json/fixtures/glp.json",
+      "gdtfFolder": "GDTF/GLP",
+      "fixtureCount": 19,
+      "modeCount": 94
+    },
+    {
+      "name": "Jem",
+      "file": "json/fixtures/jem.json",
+      "gdtfFolder": "GDTF/Jem",
+      "fixtureCount": 1,
+      "modeCount": 1
+    },
+    {
+      "name": "Martin",
+      "file": "json/fixtures/martin.json",
+      "gdtfFolder": "GDTF/Martin",
+      "fixtureCount": 36,
+      "modeCount": 120
+    },
+    {
+      "name": "MDG",
+      "file": "json/fixtures/mdg.json",
+      "gdtfFolder": "GDTF/MDG",
+      "fixtureCount": 2,
+      "modeCount": 2
+    },
+    {
+      "name": "Portman",
+      "file": "json/fixtures/portman.json",
+      "gdtfFolder": "GDTF/Portman",
+      "fixtureCount": 12,
+      "modeCount": 54
+    },
+    {
+      "name": "Robe",
+      "file": "json/fixtures/robe.json",
+      "gdtfFolder": "GDTF/Robe",
+      "fixtureCount": 71,
+      "modeCount": 290
+    },
+    {
+      "name": "Roxx",
+      "file": "json/fixtures/roxx.json",
+      "gdtfFolder": "GDTF/Roxx",
+      "fixtureCount": 1,
+      "modeCount": 19
+    },
+    {
+      "name": "Ultratec",
+      "file": "json/fixtures/ultratec.json",
+      "gdtfFolder": "GDTF/Ultratec",
+      "fixtureCount": 1,
+      "modeCount": 1
+    }
+  ],
+  "totals": {
+    "manufacturers": 19,
+    "fixtures": 375,
+    "modes": 1868
+  }
+}

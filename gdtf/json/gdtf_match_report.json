@@ -1,0 +1,272 @@
+{
+  "scope": "gdtf_staging only",
+  "matchingRule": "Manufacturer + Fixture Type + Mode + Channel Count",
+  "summary": {
+    "parsedGdtfFiles": 4,
+    "matchedFixtures": 4,
+    "matchedModes": 20,
+    "missingFixtures": 0,
+    "unmatchedGdtfFiles": 0,
+    "modeChannelMismatches": 0,
+    "largeFiles": 1,
+    "parseErrors": 0
+  },
+  "matchedFixtures": [
+    {
+      "manufacturer": "Chauvet",
+      "fixture": "Color Strike M",
+      "gdtfManufacturer": "Chauvet Professional",
+      "gdtfFixture": "Color Strike M",
+      "file": "GDTF/Chauvet/Chauvet_Professional@Color_Strike_M@Rev_1.1.3.gdtf",
+      "matchedModes": 7,
+      "stagedModes": 7,
+      "unmatchedGdtfModes": [
+        {
+          "name": "68Ch Mode",
+          "channels": 68
+        },
+        {
+          "name": "47Ch Mode",
+          "channels": 47
+        },
+        {
+          "name": "96Ch Mode",
+          "channels": 96
+        }
+      ]
+    },
+    {
+      "manufacturer": "Chauvet",
+      "fixture": "COLORado PXL Curve 12",
+      "gdtfManufacturer": "Chauvet Professional",
+      "gdtfFixture": "COLORado PXL Curve 12",
+      "file": "GDTF/Chauvet/Chauvet_Professional@COLORado_PXL_Curve_12@Rev_1.1.4.gdtf",
+      "matchedModes": 7,
+      "stagedModes": 7,
+      "unmatchedGdtfModes": [
+        {
+          "name": "Dual Control-Movement: Basic 41Ch",
+          "channels": 41
+        },
+        {
+          "name": "Dual Control-Movement: Standard 53Ch ",
+          "channels": 53
+        },
+        {
+          "name": "Dual Control-Movement: Advanced 59Ch ",
+          "channels": 59
+        },
+        {
+          "name": "Dual Control-Pixel: Basic 36Ch",
+          "channels": 36
+        },
+        {
+          "name": "Dual Control-Pixel: Standard 48Ch",
+          "channels": 48
+        },
+        {
+          "name": "Dual Control-Pixel: Advanced 96Ch",
+          "channels": 96
+        }
+      ]
+    },
+    {
+      "manufacturer": "Chauvet",
+      "fixture": "COLORado PXL Curve 5",
+      "gdtfManufacturer": "Chauvet Professional",
+      "gdtfFixture": "COLORado PXL Curve 5",
+      "file": "GDTF/Chauvet/Chauvet_Professional@COLORado_PXL_Curve_5@Rev_1.0.0.gdtf",
+      "matchedModes": 4,
+      "stagedModes": 4,
+      "unmatchedGdtfModes": [
+        {
+          "name": "Basic Raw",
+          "channels": 195
+        }
+      ]
+    },
+    {
+      "manufacturer": "Chauvet",
+      "fixture": "Maverick Storm 1 Beam",
+      "gdtfManufacturer": "Chauvet Professional",
+      "gdtfFixture": "Maverick Storm 1 Beam",
+      "file": "GDTF/Chauvet/Chauvet_Professional@Maverick_Storm_1_Beam@Rev_1.0.9.gdtf",
+      "matchedModes": 2,
+      "stagedModes": 2,
+      "unmatchedGdtfModes": []
+    }
+  ],
+  "matchedModes": [
+    {
+      "manufacturer": "Chauvet",
+      "fixture": "Color Strike M",
+      "stagedMode": "8 Chan",
+      "channels": 8,
+      "gdtfMode": "8Ch Mode",
+      "file": "GDTF/Chauvet/Chauvet_Professional@Color_Strike_M@Rev_1.1.3.gdtf"
+    },
+    {
+      "manufacturer": "Chauvet",
+      "fixture": "Color Strike M",
+      "stagedMode": "11 Chan",
+      "channels": 11,
+      "gdtfMode": "11Ch Mode",
+      "file": "GDTF/Chauvet/Chauvet_Professional@Color_Strike_M@Rev_1.1.3.gdtf"
+    },
+    {
+      "manufacturer": "Chauvet",
+      "fixture": "Color Strike M",
+      "stagedMode": "13 Chan",
+      "channels": 13,
+      "gdtfMode": "13Ch Mode",
+      "file": "GDTF/Chauvet/Chauvet_Professional@Color_Strike_M@Rev_1.1.3.gdtf"
+    },
+    {
+      "manufacturer": "Chauvet",
+      "fixture": "Color Strike M",
+      "stagedMode": "24 Chan",
+      "channels": 24,
+      "gdtfMode": "24Ch Mode",
+      "file": "GDTF/Chauvet/Chauvet_Professional@Color_Strike_M@Rev_1.1.3.gdtf"
+    },
+    {
+      "manufacturer": "Chauvet",
+      "fixture": "Color Strike M",
+      "stagedMode": "30 Chan",
+      "channels": 30,
+      "gdtfMode": "30Ch Mode",
+      "file": "GDTF/Chauvet/Chauvet_Professional@Color_Strike_M@Rev_1.1.3.gdtf"
+    },
+    {
+      "manufacturer": "Chauvet",
+      "fixture": "Color Strike M",
+      "stagedMode": "74 Chan",
+      "channels": 74,
+      "gdtfMode": "74Ch Mode",
+      "file": "GDTF/Chauvet/Chauvet_Professional@Color_Strike_M@Rev_1.1.3.gdtf"
+    },
+    {
+      "manufacturer": "Chauvet",
+      "fixture": "Color Strike M",
+      "stagedMode": "97 Chan",
+      "channels": 97,
+      "gdtfMode": "97Ch Mode",
+      "file": "GDTF/Chauvet/Chauvet_Professional@Color_Strike_M@Rev_1.1.3.gdtf"
+    },
+    {
+      "manufacturer": "Chauvet",
+      "fixture": "COLORado PXL Curve 12",
+      "stagedMode": "Single Control ~ Basic",
+      "channels": 20,
+      "gdtfMode": "Single Control: Basic 20Ch",
+      "file": "GDTF/Chauvet/Chauvet_Professional@COLORado_PXL_Curve_12@Rev_1.1.4.gdtf"
+    },
+    {
+      "manufacturer": "Chauvet",
+      "fixture": "COLORado PXL Curve 12",
+      "stagedMode": "Single Control ~ Basic 2",
+      "channels": 53,
+      "gdtfMode": "Single Control: Basic2 53Ch",
+      "file": "GDTF/Chauvet/Chauvet_Professional@COLORado_PXL_Curve_12@Rev_1.1.4.gdtf"
+    },
+    {
+      "manufacturer": "Chauvet",
+      "fixture": "COLORado PXL Curve 12",
+      "stagedMode": "Single Control ~ Standard",
+      "channels": 101,
+      "gdtfMode": "Single Control: Standard 101Ch",
+      "file": "GDTF/Chauvet/Chauvet_Professional@COLORado_PXL_Curve_12@Rev_1.1.4.gdtf"
+    },
+    {
+      "manufacturer": "Chauvet",
+      "fixture": "COLORado PXL Curve 12",
+      "stagedMode": "Single Control ~ Advance",
+      "channels": 155,
+      "gdtfMode": "Single Control: Advanced 155Ch",
+      "file": "GDTF/Chauvet/Chauvet_Professional@COLORado_PXL_Curve_12@Rev_1.1.4.gdtf"
+    },
+    {
+      "manufacturer": "Chauvet",
+      "fixture": "COLORado PXL Curve 12",
+      "stagedMode": "Single Control ~ Advance 2",
+      "channels": 169,
+      "gdtfMode": "Single Control: Advanced2 169Ch",
+      "file": "GDTF/Chauvet/Chauvet_Professional@COLORado_PXL_Curve_12@Rev_1.1.4.gdtf"
+    },
+    {
+      "manufacturer": "Chauvet",
+      "fixture": "COLORado PXL Curve 12",
+      "stagedMode": "Single Control ~ Full PXL",
+      "channels": 169,
+      "gdtfMode": "Single Control: Full PXL 169Ch",
+      "file": "GDTF/Chauvet/Chauvet_Professional@COLORado_PXL_Curve_12@Rev_1.1.4.gdtf"
+    },
+    {
+      "manufacturer": "Chauvet",
+      "fixture": "COLORado PXL Curve 12",
+      "stagedMode": "Single Control ~ Tour",
+      "channels": 179,
+      "gdtfMode": "Single Control: Tour 179Ch",
+      "file": "GDTF/Chauvet/Chauvet_Professional@COLORado_PXL_Curve_12@Rev_1.1.4.gdtf"
+    },
+    {
+      "manufacturer": "Chauvet",
+      "fixture": "COLORado PXL Curve 5",
+      "stagedMode": "120 Chan",
+      "channels": 120,
+      "gdtfMode": "Basic",
+      "file": "GDTF/Chauvet/Chauvet_Professional@COLORado_PXL_Curve_5@Rev_1.0.0.gdtf"
+    },
+    {
+      "manufacturer": "Chauvet",
+      "fixture": "COLORado PXL Curve 5",
+      "stagedMode": "155 Chan",
+      "channels": 155,
+      "gdtfMode": "Basic High Resolution",
+      "file": "GDTF/Chauvet/Chauvet_Professional@COLORado_PXL_Curve_5@Rev_1.0.0.gdtf"
+    },
+    {
+      "manufacturer": "Chauvet",
+      "fixture": "COLORado PXL Curve 5",
+      "stagedMode": "195 Chan",
+      "channels": 195,
+      "gdtfMode": "Standard",
+      "file": "GDTF/Chauvet/Chauvet_Professional@COLORado_PXL_Curve_5@Rev_1.0.0.gdtf"
+    },
+    {
+      "manufacturer": "Chauvet",
+      "fixture": "COLORado PXL Curve 5",
+      "stagedMode": "355 Chan",
+      "channels": 355,
+      "gdtfMode": "Advanced",
+      "file": "GDTF/Chauvet/Chauvet_Professional@COLORado_PXL_Curve_5@Rev_1.0.0.gdtf"
+    },
+    {
+      "manufacturer": "Chauvet",
+      "fixture": "Maverick Storm 1 Beam",
+      "stagedMode": "Standard",
+      "channels": 19,
+      "gdtfMode": "19Ch Mode",
+      "file": "GDTF/Chauvet/Chauvet_Professional@Maverick_Storm_1_Beam@Rev_1.0.9.gdtf"
+    },
+    {
+      "manufacturer": "Chauvet",
+      "fixture": "Maverick Storm 1 Beam",
+      "stagedMode": "Extended",
+      "channels": 21,
+      "gdtfMode": "21Ch Mode",
+      "file": "GDTF/Chauvet/Chauvet_Professional@Maverick_Storm_1_Beam@Rev_1.0.9.gdtf"
+    }
+  ],
+  "missingFixtures": [],
+  "unmatchedGdtfFiles": [],
+  "modeChannelMismatches": [],
+  "largeFiles": [
+    {
+      "file": "GDTF/Chauvet/Chauvet_Professional@COLORado_PXL_Curve_5@Rev_1.0.0.gdtf",
+      "sizeBytes": 5199217,
+      "sizeMiB": 4.96
+    }
+  ],
+  "parseErrors": []
+}
