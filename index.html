@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Lampy Paperwork V12.26</title>
+<title>Lampy Paperwork V12.27</title>
 <style>
 :root{--label-w:18mm;--label-h:34mm;--label-gap:0.5mm;--gap-y:2mm;--radius:3mm;--border:1mm;--border-col:#ffffff;--stripe:4mm;--front-aux-w:18mm;--front-aux-h:34mm;--front-output-w:72mm;--front-output-h:34mm;--rear-soca-w:70mm;--rear-soca-h:50mm;--rear-aux-w:85mm;--rear-aux-h:30mm;--rear-aux-gap:5mm;--rear-output-w:90mm;--rear-output-h:60mm;--top-size:18pt;--bottom-size:14pt;--top-align:center;--bottom-align:center;--top-v-align:center;--bottom-v-align:center;--top-font:Cochin,'Times New Roman',Times,serif;--bottom-font:Cochin,'Times New Roman',Times,serif;--top-weight:700;--bottom-weight:700;--top-transform:none;--bottom-transform:none;--top-text-align:center;--bottom-text-align:center}
 *{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f6f7f9;color:#111}h1{margin:0;font-size:28px}h2,h3{margin:0 0 12px}button,input,select,textarea{font:inherit}.top{display:flex;align-items:center;justify-content:space-between;padding:18px 84px 18px 24px;gap:20px}.topActions{display:flex;align-items:center;justify-content:flex-end;gap:12px}.reportIssueBtn{border:1px solid #111;background:#fff;color:#111;border-radius:999px;padding:9px 14px;font-weight:900;text-decoration:none;white-space:nowrap}.reportIssueBtn:hover{background:#111;color:#fff}.badge{font-size:14px;border:1px solid #e0c64b;background:#fff4bf;border-radius:8px;padding:7px 12px;margin-left:12px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{border:1px solid #d9dee7;background:#fff;border-radius:7px;padding:10px 18px;cursor:pointer}.btn:hover{background:#f7f9fc}.btn.primary{background:#17a957;color:#fff;border-color:#17a957;font-weight:700}.btn.danger{color:#b42318}.btn.add{font-weight:800;font-size:18px;line-height:1;padding:8px 14px;background:#111;color:#fff;border-color:#111}.gear{font-size:24px;border:1px solid #d9dee7;background:#fff;border-radius:999px;width:44px;height:44px;cursor:pointer}.gear:hover{background:#f7f9fc}.tourLogoSlot{display:flex;align-items:center;justify-content:flex-end;min-width:80px;max-width:180px}.tourLogo{display:block;max-width:160px;max-height:54px;object-fit:contain}.tourLogoExport{position:absolute;top:5mm;right:5mm;max-width:34mm;max-height:18mm;object-fit:contain;z-index:3}.tourLogoUploadPreview{border:1px dashed #cfd6e1;border-radius:8px;background:#fff;min-height:130px;display:flex;align-items:center;justify-content:center;padding:14px}.tourLogoUploadPreview img{max-width:260px;max-height:120px;object-fit:contain}.logoActions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}.menuButton{position:fixed;right:18px;top:18px;z-index:18;border:1px solid #d9dee7;background:#111;color:#fff;border-radius:999px;width:46px;height:46px;font-size:24px;font-weight:900;cursor:pointer;box-shadow:0 10px 28px rgba(16,24,40,.18)}.menuButton:hover{background:#2a2a2a}.actionSidebar{position:fixed;right:18px;top:74px;width:min(260px,calc(100vw - 36px));z-index:17;border:1px solid #dfe3ea;border-radius:10px;background:#fff;box-shadow:0 18px 48px rgba(16,24,40,.22);padding:12px;transform:translateX(calc(100% + 28px));transition:transform .18s ease}.actionMenuOpen .actionSidebar{transform:translateX(0)}.actionSidebar h2{font-size:15px;margin:0 0 10px}.actionSidebar .btn{width:100%;margin:0 0 8px;text-align:left;font-weight:800}
@@ -47,7 +47,7 @@
 <style id="dynamicPrintPageStyle">@page{size:A4 landscape;margin:5mm}</style>
 </head>
 <body>
-<div class="top"><div><h1>Lampy Paperwork V12.26</h1></div><div class="topActions"><a class="reportIssueBtn" href="https://github.com/Ai-Lampy/Lampy-Paperwork/issues" target="_blank" rel="noopener">Report Issue</a><div id="tourLogoSlot" class="tourLogoSlot"></div></div></div>
+<div class="top"><div><h1>Lampy Paperwork V12.27</h1></div><div class="topActions"><a class="reportIssueBtn" href="https://github.com/Ai-Lampy/Lampy-Paperwork/issues" target="_blank" rel="noopener">Report Issue</a><div id="tourLogoSlot" class="tourLogoSlot"></div></div></div>
 <button class="menuButton" type="button" aria-label="Actions" aria-expanded="false" onclick="toggleActionMenu()">☰</button>
 <aside class="actionSidebar" id="actionSidebar"><h2>Actions</h2><button class="btn" onclick="openProjectInfo();closeActionMenu()">Project Info</button><button class="btn" onclick="openRevisionManagement();closeActionMenu()">Revisions</button><button class="btn" onclick="newProjectFile();closeActionMenu()">New Project</button><button class="btn" onclick="downloadProjectFile();closeActionMenu()">Download Project</button><button class="btn" onclick="chooseProjectFile();closeActionMenu()">Open Project</button><button class="btn" onclick="openWalkthrough();closeActionMenu()">Walk-through</button><button class="btn primary" onclick="openExportLayout();closeActionMenu()">Export</button></aside>
 <input id="excelFile" type="file" accept=".xlsx,.xls,.xml,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel,text/xml" class="hidden">
@@ -185,7 +185,7 @@
 </style>
 <script>
 'use strict';
-const VERSION='12.26';
+const VERSION='12.27';
 const DEFAULT_FONT="Cochin,'Times New Roman',Times,serif";
 const LABEL_FORMAT_SIZES=[8,9,10,11,12,14,16,18,20,22,24,26,28,30];
 const REAR_LABEL_FORMAT_SIZES=[...LABEL_FORMAT_SIZES,34,36,38,40,42,44,46,48,50];
@@ -962,6 +962,56 @@ function closePowerFixturesPane(){const pane=$('powerFixturesPane');if(pane)pane
 function togglePowerFixturesPinned(){powerFixturesPinned=!powerFixturesPinned;renderPowerFixturesPane()}
 function setPowerFixTypeCell(cell,text){let span=cell?.querySelector?.('.powerFixTypeText');if(cell&&!span){cell.textContent='';span=document.createElement('span');span.className='powerFixTypeText';cell.appendChild(span)}if(span)span.textContent=text||''}
 function fitPowerFixTypeText(root=document){root.querySelectorAll('.powerFixTypeText').forEach(el=>{let size=16;el.style.fontSize=size+'px';while(size>12&&el.scrollWidth>el.clientWidth){size-=1;el.style.fontSize=size+'px'}})}
+function powerSheetCellText(cell){const control=cell.querySelector('input,select,textarea'),display=cell.querySelector('.powerAmpsValue,.powerFixTypeText');return String(control?.value??display?.textContent??cell.textContent??'').replace(/\s+/g,' ').trim()}
+function powerSheetTextWidth(text,style,size){const canvas=fitPowerSheetHeaders.canvas||(fitPowerSheetHeaders.canvas=document.createElement('canvas')),ctx=canvas.getContext('2d');ctx.font=`${style.fontStyle||'normal'} ${style.fontWeight||'400'} ${size}px ${style.fontFamily||'serif'}`;return ctx.measureText(text).width}
+function powerSheetBodyColumns(table){
+  const columns=[];
+  [...table.tBodies].forEach(body=>{
+    let rowSpans=[];
+    [...body.rows].forEach(row=>{
+      let column=0;
+      [...row.cells].forEach(cell=>{
+        while((rowSpans[column]||0)>0)column++;
+        const columnSpan=Math.max(1,cell.colSpan||1),rowSpan=Math.max(1,cell.rowSpan||1);
+        for(let offset=0;offset<columnSpan;offset++){
+          (columns[column+offset]||(columns[column+offset]=[])).push(cell);
+          rowSpans[column+offset]=Math.max(rowSpans[column+offset]||0,rowSpan);
+        }
+        column+=columnSpan;
+      });
+      rowSpans=rowSpans.map(value=>Math.max(0,value-1));
+    });
+  });
+  return columns;
+}
+function fitPowerSheetHeaders(root=document){
+  root.querySelectorAll('.powerSheetTable').forEach(table=>{
+    const headerRow=table.tHead?.rows[0],bodyColumns=powerSheetBodyColumns(table);
+    if(!headerRow)return;
+    let logicalColumn=0;
+    [...headerRow.cells].forEach(header=>{
+      const columnSpan=Math.max(1,header.colSpan||1),bodyCells=bodyColumns.slice(logicalColumn,logicalColumn+columnSpan).flat();
+      logicalColumn+=columnSpan;
+      if(getComputedStyle(header).display==='none')return;
+      const baseSize=parseFloat(header.dataset.powerHeaderBaseSize||getComputedStyle(header).fontSize)||14;
+      header.dataset.powerHeaderBaseSize=String(baseSize);
+      header.style.fontSize=baseSize+'px';
+      const headerStyle=getComputedStyle(header),headerWidth=powerSheetTextWidth(header.textContent.trim(),headerStyle,baseSize);
+      let bodyWidth=0;
+      bodyCells.forEach(cell=>{
+        if(getComputedStyle(cell).display==='none')return;
+        const text=powerSheetCellText(cell);
+        if(!text)return;
+        const textElement=cell.querySelector('input,.powerAmpsValue,.powerFixTypeText')||cell,style=getComputedStyle(textElement),size=parseFloat(style.fontSize)||14;
+        bodyWidth=Math.max(bodyWidth,powerSheetTextWidth(text,style,size));
+      });
+      const fittedSize=headerWidth>bodyWidth?Math.max(9,Math.min(baseSize,baseSize*(bodyWidth/headerWidth||0))):baseSize;
+      header.style.fontSize=fittedSize.toFixed(2)+'px';
+    });
+  });
+}
+let powerSheetHeaderFitFrame=0;
+function schedulePowerSheetHeaderFit(){if(powerSheetHeaderFitFrame)return;powerSheetHeaderFitFrame=requestAnimationFrame(()=>{powerSheetHeaderFitFrame=0;fitPowerSheetHeaders()})}
 function renderPowerFixturesPane(){const body=$('powerFixturesBody');if(!body)return;const rows=powerUnassignedFixtures();body.innerHTML=`<button class="btn powerFixturesKeep" type="button" aria-pressed="${powerFixturesPinned?'true':'false'}" onclick="togglePowerFixturesPinned()">${powerFixturesPinned?'Keep Visible: On':'Keep Visible'}</button><div class="homeDistroMeta" style="margin:0 0 12px">${rows.length} fixture${rows.length===1?'':'s'} still to add to Power Calculations.</div><table class="universeTable powerFixturesTable"><thead><tr><th style="width:69px!important">Fix ID</th><th style="width:214px!important">Type</th><th style="width:134px!important">Position</th></tr></thead><tbody>${rows.map(row=>`<tr><td>${escapeHtml(row.fixId)}</td><td>${escapeHtml(row.fixture||row.name||'')}</td><td>${escapeHtml(row.location||'')}</td></tr>`).join('')||'<tr><td colspan="3">All patched fixtures with Fix IDs are in Power Calculations.</td></tr>'}</tbody></table>`}
 function powerAmpsWarning(result,d){const limit=distroRcboLimit(d),amps=Number(result?.amps)||0;return amps>limit?`${formatAmpsValue(amps)} exceeds the ${limit.toFixed(2)} A limit for ${normaliseRcbo(d?.rcbo)}.`:''}
 function powerAmpsCellMarkup(result,d){const warning=powerAmpsWarning(result,d),rcbo=normaliseRcbo(d?.rcbo);return `<span class="powerAmpsValue">${formatAmpsValue(result.amps)}</span>${warning?`<span class="powerAmpsWarningText">Warning! exceeds the ${escapeHtml(rcbo)}.</span><span class="powerAmpsWarningIcon" aria-hidden="true">⚠</span>`:''}`}
@@ -989,6 +1039,7 @@ function updatePowerSheetDisplay(rowIndex,range,refreshSummary=true){
   const amps=document.querySelector(`[data-power-amps-row="${rowIndex}"]`);
   updatePowerAmpsCell(amps,result,range.d);
   fitPowerFixTypeText();
+  schedulePowerSheetHeaderFit();
   if(refreshSummary)refreshPowerPhaseSummary(range);
 }
 function updateVisiblePowerSheetDisplays(range){powerSheetRowsForRange(range).forEach((_,rowIndex)=>updatePowerSheetDisplay(rowIndex,range,false));refreshPowerPhaseSummary(range)}
@@ -1130,7 +1181,7 @@ function renderPowerSheetView(ranges){
   view.querySelectorAll('[data-power-aux-include]').forEach(button=>button.addEventListener('click',()=>togglePowerAuxInclude(range,button)));
   view.querySelectorAll('[data-power-aux-watts]').forEach(input=>input.addEventListener('input',()=>updatePowerAuxWatts(range,input)));
   view.querySelectorAll('[data-power-aux-label]').forEach(input=>input.addEventListener('input',()=>updatePowerAuxLabel(range,input)));
-  requestAnimationFrame(()=>fitPowerFixTypeText(view));
+  requestAnimationFrame(()=>{fitPowerFixTypeText(view);fitPowerSheetHeaders(view)});
 }
 function controlNetworkTabsMarkup(){return `<div class="controlNetworkTabs"><button class="sheetTab ${activeControlNetworkTab==='consoles'?'active':''}" type="button" onclick="setControlNetworkTab('consoles')">Consoles</button><button class="sheetTab ${activeControlNetworkTab==='network'?'active':''}" type="button" onclick="setControlNetworkTab('network')">Network Equipment</button></div>`}
 function consoleOptionMarkup(selected=''){return ['<option value="">Select Console</option>'].concat(consoleReference.consoles.map(c=>`<option value="${escapeAttr(c.id)}" ${c.id===selected?'selected':''}>${escapeHtml([c.manufacturer,c.name].filter(Boolean).join(' ')||c.id)}</option>`)).join('')}
@@ -1723,14 +1774,14 @@ function preparePowerPdfView(view,range,socaStart,socaCount,showPhaseTotals,rowM
 function powerPdfSupplyCardMarkup(supply,ranges){const distroNames=supplyDistroNames(supply,ranges),summary=distroNames.join(', ')||'No distros selected';return `<div class="powerSupplyCard" style="border:1.2px solid #000;width:449px!important;padding:8px!important"><div class="powerSupplyHead" style="height:50px!important;column-gap:1px;width:427px"><div class="powerSupplySummary"><strong style="font-size:20px">${escapeHtml(supply.name||'Supply')}</strong><span class="powerSupplyMeta">${escapeHtml(supply.input||optionDefault(distroOptions.inputSupply)||'Input Supply')} • ${escapeHtml(summary)}</span></div>${supplyCardPhaseTotalsMarkup(powerSupplyTotals(supply,ranges))}</div></div>`}
 function preparePowerPdfSupplySummary(ranges){const view=document.createElement('div'),supplies=ensureProjectInfo().powerSupplies||[];view.className='powerSheetView';view.innerHTML=`<div class="powerSheetToolbar"><div><h2>Power Calculations - Supply Summary</h2></div></div><div class="powerPdfSupplySummary">${supplies.map(supply=>{const distroCards=(supply.distros||[]).map(didx=>{const range=ranges.find(item=>item.idx===didx);return range?phaseTotalsMarkup(range.d.name||('Distro '+(range.idx+1)),powerSheetPhaseTotals(range)):''}).join('');return `<section class="powerPdfSupplyGroup"><strong style="font-size:20px">Supply Phase Total;</strong><div class="powerSupplyList" style="margin:4px 0 8px">${powerPdfSupplyCardMarkup(supply,ranges)}</div><div class="powerSummaryGrid" style="grid-template-columns:repeat(3,460px)!important;gap:15px!important;margin-top:4px!important">${distroCards||'<span class="hint">No distros assigned to this supply.</span>'}</div></section>`}).join('')||'<div class="hint">No power supplies configured.</div>'}</div>`;return view}
 function fitPowerPdfContent(page){const content=page.querySelector('.powerPdfContent');if(!content)return;content.style.transform='none';const pageStyle=getComputedStyle(page),padX=parseFloat(pageStyle.paddingLeft||0)+parseFloat(pageStyle.paddingRight||0),padY=parseFloat(pageStyle.paddingTop||0)+parseFloat(pageStyle.paddingBottom||0),maxW=Math.max(1,page.clientWidth-padX),maxH=Math.max(1,page.clientHeight-padY),scale=Math.min(1,maxW/Math.max(1,content.scrollWidth),maxH/Math.max(1,content.scrollHeight));content.style.transform='scale('+scale+')'}
-function appendPowerPdfPreviewPage(pages,d,view,extraClass=''){const shell=document.createElement('div'),page=createExportPage(d,pages.querySelectorAll('.exportPage').length),content=document.createElement('div');shell.className='exportPageShell';page.classList.add('powerPdfPreviewPage');if(extraClass)page.classList.add(extraClass);content.className='powerPdfContent';content.appendChild(view);page.appendChild(content);shell.appendChild(page);pages.appendChild(shell);fitPowerFixTypeText(page);fitPowerPdfContent(page);return page}
+function appendPowerPdfPreviewPage(pages,d,view,extraClass=''){const shell=document.createElement('div'),page=createExportPage(d,pages.querySelectorAll('.exportPage').length),content=document.createElement('div');shell.className='exportPageShell';page.classList.add('powerPdfPreviewPage');if(extraClass)page.classList.add(extraClass);content.className='powerPdfContent';content.appendChild(view);page.appendChild(content);shell.appendChild(page);pages.appendChild(shell);fitPowerFixTypeText(page);fitPowerSheetHeaders(page);fitPowerPdfContent(page);return page}
 function renderPowerPdfPreview(){const pages=$('powerPdfPages'),info=$('powerPdfInfo');if(!pages)return;pages.innerHTML='';const ranges=distroRanges(),d=powerPdfPaperDimensions(),sources=powerPdfSourceViews(ranges);if(!sources.length){const shell=document.createElement('div');shell.className='exportPageShell';const page=createExportPage(d,0);page.classList.add('powerPdfPreviewPage');page.innerHTML='<div class="hint">No power calculations to export.</div>';shell.appendChild(page);pages.appendChild(shell)}sources.forEach(({range,view})=>{for(let start=0;start<range.count;start+=4){const count=Math.min(4,range.count-start);appendPowerPdfPreviewPage(pages,d,preparePowerPdfView(view.cloneNode(true),range,start,count,start===0))}if(auxGroupCount(range.d))appendPowerPdfPreviewPage(pages,d,preparePowerPdfView(view.cloneNode(true),range,0,0,false,'aux'))});if(sources.length)appendPowerPdfPreviewPage(pages,d,preparePowerPdfSupplySummary(ranges),'powerPdfSupplySummaryPage');[...pages.querySelectorAll('.exportPage')].forEach((page,i,arr)=>{const n=document.createElement('div');n.className='exportPageNumber';n.textContent='Page '+(i+1)+' of '+arr.length;page.appendChild(n)});if(info){info.textContent=d.paper+' '+d.orient+' • '+pages.querySelectorAll('.exportPage').length+' page'+(pages.querySelectorAll('.exportPage').length===1?'':'s');info.dataset.base=info.textContent}requestAnimationFrame(()=>{pages.querySelectorAll('.powerPdfPreviewPage').forEach(fitPowerPdfContent);updatePowerPdfZoom()})}
 function updatePowerPdfPaperSettings(){powerPdfZoom='fit';renderPowerPdfPreview()}
 function setPowerPdfZoom(value){powerPdfZoom=value;updatePowerPdfZoom()}
 function updatePowerPdfZoom(){const stage=document.querySelector('#powerPdfModal .pdfPageStage'),first=document.querySelector('#powerPdfPages .exportPage');if(!stage||!first)return;const baseW=first.offsetWidth||1,baseH=first.offsetHeight||1,fitW=(stage.clientWidth-36)/baseW,fitH=(stage.clientHeight-36)/baseH,fit=Math.min(1,fitW,fitH),scale=powerPdfZoom==='fit'?Math.max(.1,fit):parseFloat(powerPdfZoom||1)||1;document.querySelectorAll('#powerPdfPages .exportPageShell').forEach(shell=>{const page=shell.querySelector('.exportPage');if(!page)return;page.style.transform='scale('+scale+')';shell.style.width=(page.offsetWidth*scale)+'px';shell.style.height=(page.offsetHeight*scale)+'px'});document.querySelectorAll('[data-power-pdf-zoom]').forEach(btn=>btn.classList.toggle('active',String(btn.dataset.powerPdfZoom)===String(powerPdfZoom)));const info=$('powerPdfInfo');if(info){const base=info.dataset.base||info.textContent.split(' • Zoom ')[0];info.dataset.base=base;info.textContent=base+' • Zoom '+Math.round(scale*100)+'%'}}
 function openPowerPdfPreview(){if(!distroRanges().length){alert('Add a distro before exporting the power calculations.');return}syncPowerPdfPaperControls();powerPdfZoom='fit';$('powerPdfModal').classList.remove('hidden');renderPowerPdfPreview()}
 function closePowerPdfPreview(){$('powerPdfModal').classList.add('hidden')}
-async function powerPdfPreviewBytes(){let pages=[...document.querySelectorAll('#powerPdfPages .exportPage')];if(!pages.length){renderPowerPdfPreview();await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));pages=[...document.querySelectorAll('#powerPdfPages .exportPage')]}if(!pages.length)throw new Error('No Power Calculations PDF preview pages found.');if(document.fonts?.ready)await document.fonts.ready;pages.forEach(page=>{fitPowerFixTypeText(page);fitPowerPdfContent(page)});await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));const images=[];for(const page of pages)images.push(await patchPdfPageToJpeg(page));const d=powerPdfPaperDimensions();return buildPdfImageFile(images,d.w,d.h)}
+async function powerPdfPreviewBytes(){let pages=[...document.querySelectorAll('#powerPdfPages .exportPage')];if(!pages.length){renderPowerPdfPreview();await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));pages=[...document.querySelectorAll('#powerPdfPages .exportPage')]}if(!pages.length)throw new Error('No Power Calculations PDF preview pages found.');if(document.fonts?.ready)await document.fonts.ready;pages.forEach(page=>{fitPowerFixTypeText(page);fitPowerSheetHeaders(page);fitPowerPdfContent(page)});await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));const images=[];for(const page of pages)images.push(await patchPdfPageToJpeg(page));const d=powerPdfPaperDimensions();return buildPdfImageFile(images,d.w,d.h)}
 function powerPdfExportText(value){return String(value||'').replace(/[•·]/g,' - ').replace(/\s+/g,' ').trim()}
 async function powerPdfDomPdfBytes(){
   let pages=[...document.querySelectorAll('#powerPdfPages .exportPage')];
@@ -1741,7 +1792,7 @@ async function powerPdfDomPdfBytes(){
   }
   if(!pages.length)throw new Error('No Power Calculations PDF preview pages found.');
   if(document.fonts?.ready)await document.fonts.ready;
-  pages.forEach(page=>{fitPowerFixTypeText(page);fitPowerPdfContent(page)});
+  pages.forEach(page=>{fitPowerFixTypeText(page);fitPowerSheetHeaders(page);fitPowerPdfContent(page)});
   await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
   const d=powerPdfPaperDimensions(),doc={pages:[],w:d.ptW,h:d.ptH,cmd:[]},images=[];
   for(let pageIndex=0;pageIndex<pages.length;pageIndex++){
