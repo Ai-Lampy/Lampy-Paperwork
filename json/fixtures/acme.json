@@ -1603,35 +1603,35 @@
         "170 Chan": 170
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Tornado.gdtf",
-        "file": "",
+        "file": "fixtures/acme/ACME@ACME_TORNADO@tornado.gdtf",
         "modes": {
           "41 Chan": {
             "channels": 41,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 41DMX 1",
+            "status": "matched"
           },
           "71 Chan": {
             "channels": 71,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 71 DMX",
+            "status": "matched"
           },
           "75 Chan": {
             "channels": 75,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 3 75 DMX",
+            "status": "matched"
           },
           "85 Chan": {
             "channels": 85,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 4 85 MDX",
+            "status": "matched"
           },
           "170 Chan": {
             "channels": 170,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 5 170DMX",
+            "status": "matched"
           }
         }
       }

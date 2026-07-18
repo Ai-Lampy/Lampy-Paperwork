@@ -202,20 +202,20 @@
         "Extended": 66
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Eagle_Strike.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@EagleStrike@V1.3_Add_RDM_Personality.gdtf",
         "modes": {
           "Standard": {
             "channels": 44,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard_540",
+            "status": "matched"
           },
           "Extended": {
             "channels": 66,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended_540",
+            "status": "matched"
           }
         }
       }
