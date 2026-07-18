@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Lampy Paperwork V12.4</title>
+<title>Lampy Paperwork V12.5</title>
 <style>
 :root{--label-w:18mm;--label-h:34mm;--label-gap:0.5mm;--gap-y:2mm;--radius:3mm;--border:1mm;--border-col:#ffffff;--stripe:4mm;--front-aux-w:18mm;--front-aux-h:34mm;--front-output-w:72mm;--front-output-h:34mm;--rear-soca-w:70mm;--rear-soca-h:50mm;--rear-aux-w:85mm;--rear-aux-h:30mm;--rear-aux-gap:5mm;--rear-output-w:90mm;--rear-output-h:60mm;--top-size:18pt;--bottom-size:14pt;--top-align:center;--bottom-align:center;--top-v-align:center;--bottom-v-align:center;--top-font:Cochin,'Times New Roman',Times,serif;--bottom-font:Cochin,'Times New Roman',Times,serif;--top-weight:700;--bottom-weight:700;--top-transform:none;--bottom-transform:none;--top-text-align:center;--bottom-text-align:center}
 *{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f6f7f9;color:#111}h1{margin:0;font-size:28px}h2,h3{margin:0 0 12px}button,input,select,textarea{font:inherit}.top{display:flex;align-items:center;justify-content:space-between;padding:18px 84px 18px 24px;gap:20px}.topActions{display:flex;align-items:center;justify-content:flex-end;gap:12px}.reportIssueBtn{border:1px solid #111;background:#fff;color:#111;border-radius:999px;padding:9px 14px;font-weight:900;text-decoration:none;white-space:nowrap}.reportIssueBtn:hover{background:#111;color:#fff}.badge{font-size:14px;border:1px solid #e0c64b;background:#fff4bf;border-radius:8px;padding:7px 12px;margin-left:12px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{border:1px solid #d9dee7;background:#fff;border-radius:7px;padding:10px 18px;cursor:pointer}.btn:hover{background:#f7f9fc}.btn.primary{background:#17a957;color:#fff;border-color:#17a957;font-weight:700}.btn.danger{color:#b42318}.btn.add{font-weight:800;font-size:18px;line-height:1;padding:8px 14px;background:#111;color:#fff;border-color:#111}.gear{font-size:24px;border:1px solid #d9dee7;background:#fff;border-radius:999px;width:44px;height:44px;cursor:pointer}.gear:hover{background:#f7f9fc}.tourLogoSlot{display:flex;align-items:center;justify-content:flex-end;min-width:80px;max-width:180px}.tourLogo{display:block;max-width:160px;max-height:54px;object-fit:contain}.tourLogoExport{position:absolute;top:5mm;right:5mm;max-width:34mm;max-height:18mm;object-fit:contain;z-index:3}.tourLogoUploadPreview{border:1px dashed #cfd6e1;border-radius:8px;background:#fff;min-height:130px;display:flex;align-items:center;justify-content:center;padding:14px}.tourLogoUploadPreview img{max-width:260px;max-height:120px;object-fit:contain}.logoActions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}.menuButton{position:fixed;right:18px;top:18px;z-index:18;border:1px solid #d9dee7;background:#111;color:#fff;border-radius:999px;width:46px;height:46px;font-size:24px;font-weight:900;cursor:pointer;box-shadow:0 10px 28px rgba(16,24,40,.18)}.menuButton:hover{background:#2a2a2a}.actionSidebar{position:fixed;right:18px;top:74px;width:min(260px,calc(100vw - 36px));z-index:17;border:1px solid #dfe3ea;border-radius:10px;background:#fff;box-shadow:0 18px 48px rgba(16,24,40,.22);padding:12px;transform:translateX(calc(100% + 28px));transition:transform .18s ease}.actionMenuOpen .actionSidebar{transform:translateX(0)}.actionSidebar h2{font-size:15px;margin:0 0 10px}.actionSidebar .btn{width:100%;margin:0 0 8px;text-align:left;font-weight:800}
@@ -47,7 +47,7 @@
 <style id="dynamicPrintPageStyle">@page{size:A4 landscape;margin:5mm}</style>
 </head>
 <body>
-<div class="top"><div><h1>Lampy Paperwork V12.4</h1></div><div class="topActions"><a class="reportIssueBtn" href="https://github.com/Ai-Lampy/Lampy-Paperwork/issues" target="_blank" rel="noopener">Report Issue</a><div id="tourLogoSlot" class="tourLogoSlot"></div></div></div>
+<div class="top"><div><h1>Lampy Paperwork V12.5</h1></div><div class="topActions"><a class="reportIssueBtn" href="https://github.com/Ai-Lampy/Lampy-Paperwork/issues" target="_blank" rel="noopener">Report Issue</a><div id="tourLogoSlot" class="tourLogoSlot"></div></div></div>
 <button class="menuButton" type="button" aria-label="Actions" aria-expanded="false" onclick="toggleActionMenu()">☰</button>
 <aside class="actionSidebar" id="actionSidebar"><h2>Actions</h2><button class="btn" onclick="openProjectInfo();closeActionMenu()">Project Info</button><button class="btn" onclick="openRevisionManagement();closeActionMenu()">Revisions</button><button class="btn" onclick="newProjectFile();closeActionMenu()">New Project</button><button class="btn" onclick="downloadProjectFile();closeActionMenu()">Download Project</button><button class="btn" onclick="chooseProjectFile();closeActionMenu()">Open Project</button><button class="btn" onclick="openWalkthrough();closeActionMenu()">Walk-through</button><button class="btn primary" onclick="openExportLayout();closeActionMenu()">Export</button></aside>
 <input id="excelFile" type="file" accept=".xlsx,.xls,.xml,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel,text/xml" class="hidden">
@@ -172,7 +172,7 @@
 </style>
 <script>
 'use strict';
-const VERSION='12.4';
+const VERSION='12.5';
 const DEFAULT_FONT="Cochin,'Times New Roman',Times,serif";
 const LABEL_FORMAT_SIZES=[8,9,10,11,12,14,16,18,20,22,24,26,28,30];
 const REAR_LABEL_FORMAT_SIZES=[...LABEL_FORMAT_SIZES,34,36,38,40,42,44,46,48,50];
@@ -1598,7 +1598,82 @@ function openPowerPdfPreview(){if(!distroRanges().length){alert('Add a distro be
 function closePowerPdfPreview(){$('powerPdfModal').classList.add('hidden')}
 async function powerPdfPreviewBytes(){let pages=[...document.querySelectorAll('#powerPdfPages .exportPage')];if(!pages.length){renderPowerPdfPreview();await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));pages=[...document.querySelectorAll('#powerPdfPages .exportPage')]}if(!pages.length)throw new Error('No Power Calculations PDF preview pages found.');if(document.fonts?.ready)await document.fonts.ready;pages.forEach(page=>{fitPowerFixTypeText(page);fitPowerPdfContent(page)});await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));const images=[];for(const page of pages)images.push(await patchPdfPageToJpeg(page));const d=powerPdfPaperDimensions();return buildPdfImageFile(images,d.w,d.h)}
 function powerPdfExportText(value){return String(value||'').replace(/[•·]/g,' - ').replace(/\s+/g,' ').trim()}
-async function powerPdfDomPdfBytes(){let pages=[...document.querySelectorAll('#powerPdfPages .exportPage')];if(!pages.length){renderPowerPdfPreview();await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));pages=[...document.querySelectorAll('#powerPdfPages .exportPage')]}if(!pages.length)throw new Error('No Power Calculations PDF preview pages found.');if(document.fonts?.ready)await document.fonts.ready;pages.forEach(page=>{fitPowerFixTypeText(page);fitPowerPdfContent(page)});await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));const d=powerPdfPaperDimensions(),doc={pages:[],w:d.ptW,h:d.ptH,cmd:[]};for(const page of pages){const oldTransform=page.style.transform;page.style.transform='none';const pageRect=page.getBoundingClientRect(),scaleX=d.ptW/pageRect.width,scaleY=d.ptH/pageRect.height,content=page.querySelector('.powerPdfContent'),contentScale=content&&content.offsetWidth?content.getBoundingClientRect().width/content.offsetWidth:1,textScaleY=scaleY*contentScale,textBox=el=>patchPdfElementBox(pageRect,el,scaleX,scaleY),drawText=(el,options={})=>patchPdfDrawDomText(doc,el,textBox(el),{scaleY:el.closest('.powerPdfContent')?textScaleY:scaleY,text:powerPdfExportText(options.text??el.textContent),...options});doc.cmd=[];pdfSetFill(doc,'#ffffff');pdfRect(doc,0,0,doc.w,doc.h,'f');page.querySelectorAll('.powerSheetToolbar,.powerSupplyCard,.powerPhaseSummary').forEach(el=>{const box=textBox(el),style=getComputedStyle(el);pdfSetFill(doc,pdfCssColour(style.backgroundColor,'#ffffff'));pdfRect(doc,box.x,box.y,box.w,box.h,'f');patchPdfDrawDomBorder(doc,box,pdfCssColour(style.borderColor,'#000000'),Math.max(.45,parseFloat(style.borderWidth||1)*scaleY))});page.querySelectorAll('.powerSheetToolbar h2,.powerSheetMeta span,.powerSheetView>strong,[data-power-summary-host]>strong,.powerSupplySummary strong,.powerSupplyMeta').forEach(el=>drawText(el,{pad:0,maxLines:2}));page.querySelectorAll('.phaseTotal').forEach(el=>{const box=textBox(el),style=getComputedStyle(el),label=el.firstChild?.textContent||'',value=el.querySelector('span')?.textContent||'';pdfSetFill(doc,pdfCssColour(style.backgroundColor,'#ffffff'));pdfSetStroke(doc,pdfCssColour(style.borderColor,'#000000'));pdfRect(doc,box.x,box.y,box.w,box.h,'B');drawText(el,{text:label+' '+value,pad:2,maxLines:2,bold:true,align:'center'})});page.querySelectorAll('.powerSheetTable').forEach(table=>{table.querySelectorAll('th,td').forEach(cell=>{const box=textBox(cell),style=getComputedStyle(cell),isHead=cell.tagName==='TH',textEl=cell.querySelector('.powerFixTypeText')||cell.querySelector(':scope > span')||cell;pdfSetFill(doc,pdfCssColour(style.backgroundColor,'#ffffff'));pdfRect(doc,box.x,box.y,box.w,box.h,'f');patchPdfDrawDomBorder(doc,box,pdfCssColour(style.borderColor,isHead?'#000000':'#d4d4d4'),isHead ? .8 : .45);drawText(textEl,{text:powerPdfExportText(textEl.textContent),pad:2,maxLines:2,bold:isHead||/socaName|wayCol|ampsCol/.test(cell.className),align:'center'})})});page.querySelectorAll('.exportPageNumber').forEach(el=>drawText(el,{pad:0,maxLines:1,bold:true,align:'right'}));doc.pages.push(doc.cmd.join('\n'));page.style.transform=oldTransform}return buildPdfFile(doc.pages,doc.w,doc.h)}
+async function powerPdfDomPdfBytes(){
+  let pages=[...document.querySelectorAll('#powerPdfPages .exportPage')];
+  if(!pages.length){
+    renderPowerPdfPreview();
+    await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+    pages=[...document.querySelectorAll('#powerPdfPages .exportPage')];
+  }
+  if(!pages.length)throw new Error('No Power Calculations PDF preview pages found.');
+  if(document.fonts?.ready)await document.fonts.ready;
+  pages.forEach(page=>{fitPowerFixTypeText(page);fitPowerPdfContent(page)});
+  await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+  const d=powerPdfPaperDimensions(),doc={pages:[],w:d.ptW,h:d.ptH,cmd:[]},images=[];
+  for(let pageIndex=0;pageIndex<pages.length;pageIndex++){
+    const page=pages[pageIndex],oldTransform=page.style.transform;
+    page.style.transform='none';
+    try{
+      const pageRect=page.getBoundingClientRect(),scaleX=d.ptW/pageRect.width,scaleY=d.ptH/pageRect.height,content=page.querySelector('.powerPdfContent'),contentScale=content&&content.offsetWidth?content.getBoundingClientRect().width/content.offsetWidth:1,textScaleY=scaleY*contentScale,textBox=el=>patchPdfElementBox(pageRect,el,scaleX,scaleY);
+      const drawText=(el,options={})=>{
+        const {box=undefined,...drawOptions}=options;
+        patchPdfDrawDomText(doc,el,box||textBox(el),{scaleY:el.closest('.powerPdfContent')?textScaleY:scaleY,text:powerPdfExportText(drawOptions.text??el.textContent),...drawOptions});
+      };
+      const expandedInlineBox=el=>{
+        const box=textBox(el),parent=el.parentElement?textBox(el.parentElement):box,right=parent.x+parent.w;
+        return {...box,w:Math.max(box.w,Math.min(box.w*1.5,right-box.x))};
+      };
+      doc.cmd=[];
+      pdfSetFill(doc,'#ffffff');
+      pdfRect(doc,0,0,doc.w,doc.h,'f');
+      page.querySelectorAll('.powerSheetToolbar,.powerSupplyCard,.powerPhaseSummary').forEach(el=>{
+        const box=textBox(el),style=getComputedStyle(el),radius=Math.min(box.h*.08,parseFloat(style.borderRadius||0)*scaleY);
+        pdfSetFill(doc,pdfCssColour(style.backgroundColor,'#ffffff'));
+        pdfSetStroke(doc,pdfCssColour(style.borderColor,'#000000'));
+        pdfRoundRect(doc,box.x,box.y,box.w,box.h,radius,'B');
+      });
+      page.querySelectorAll('.powerSheetToolbar h2').forEach(el=>drawText(el,{pad:0,maxLines:1,bold:true,box:expandedInlineBox(el)}));
+      page.querySelectorAll('.powerSheetMeta').forEach(el=>drawText(el,{text:[...el.querySelectorAll('span')].map(span=>span.textContent).join(' - '),pad:0,maxLines:1,box:textBox(el)}));
+      page.querySelectorAll('.powerSheetView>strong,[data-power-summary-host]>strong').forEach(el=>drawText(el,{pad:0,maxLines:1,bold:true,box:expandedInlineBox(el)}));
+      page.querySelectorAll('.powerSupplySummary strong,.powerSupplyMeta').forEach(el=>drawText(el,{pad:0,maxLines:2,box:expandedInlineBox(el)}));
+      page.querySelectorAll('.phaseTotal').forEach(el=>{
+        const box=textBox(el),style=getComputedStyle(el),label=el.firstChild?.textContent||'',value=el.querySelector('span')?.textContent||'',radius=Math.min(box.h*.12,parseFloat(style.borderRadius||0)*scaleY);
+        pdfSetFill(doc,pdfCssColour(style.backgroundColor,'#ffffff'));
+        pdfSetStroke(doc,pdfCssColour(style.borderColor,'#000000'));
+        pdfRoundRect(doc,box.x,box.y,box.w,box.h,radius,'B');
+        drawText(el,{text:label+' '+value,pad:2,maxLines:2,bold:true,align:'center'});
+      });
+      page.querySelectorAll('.powerSupplyList,.powerSummaryGrid').forEach(el=>{
+        const box=textBox(el),style=getComputedStyle(el);
+        pdfSetStroke(doc,pdfCssColour(style.borderBottomColor,'#d4d4d4'));
+        pdfLine(doc,box.x,box.y+box.h,box.x+box.w,box.y+box.h,Math.max(.35,parseFloat(style.borderBottomWidth||1)*scaleY));
+      });
+      page.querySelectorAll('.powerSheetTable').forEach(table=>{
+        table.querySelectorAll('th,td').forEach(cell=>{
+          const box=textBox(cell),style=getComputedStyle(cell),isHead=cell.tagName==='TH',textEl=cell.querySelector('.powerFixTypeText')||cell.querySelector(':scope > span')||cell;
+          pdfSetFill(doc,pdfCssColour(style.backgroundColor,'#ffffff'));
+          pdfRect(doc,box.x,box.y,box.w,box.h,'f');
+          patchPdfDrawDomBorder(doc,box,pdfCssColour(style.borderColor,isHead?'#000000':'#d4d4d4'),isHead ? .8 : .45);
+          drawText(textEl,{text:powerPdfExportText(textEl.textContent),pad:2,maxLines:2,bold:isHead||/socaName|wayCol|ampsCol/.test(cell.className),align:'center'});
+        });
+      });
+      for(const img of page.querySelectorAll('img')){
+        const src=img.getAttribute('src');
+        if(!src)continue;
+        try{
+          const box=textBox(img),name='PowerIm'+images.length,embedded=await patchPdfImageBytes(src,img.getBoundingClientRect().width,img.getBoundingClientRect().height);
+          images.push({...embedded,pageIndex,index:images.length,name});
+          pdfDrawImage(doc,name,box.x,box.y,box.w,box.h);
+        }catch(imageError){console.warn('Could not embed Power Calculations PDF image',imageError)}
+      }
+      page.querySelectorAll('.exportPageNumber').forEach(el=>drawText(el,{pad:0,maxLines:1,bold:true,align:'right'}));
+      doc.pages.push(doc.cmd.join('\n'));
+    }finally{
+      page.style.transform=oldTransform;
+    }
+  }
+  return buildPdfFileWithImages(doc.pages,doc.w,doc.h,images);
+}
 async function powerPdfBytes(){try{return await powerPdfPreviewBytes()}catch(previewError){console.warn('Power Calculations preview image render failed, using measured preview vector export',previewError);return powerPdfDomPdfBytes()}}
 async function downloadPowerPdf(){const button=document.querySelector('#powerPdfModal .btn.primary[onclick="downloadPowerPdf()"]'),oldText=button?button.textContent:'';if(button){button.disabled=true;button.textContent='Building PDF...'}try{const bytes=await powerPdfBytes(),blob=new Blob([bytes],{type:'application/pdf'}),a=document.createElement('a'),project=ensureProjectInfo().file.projectName||'lampy-paperwork',url=URL.createObjectURL(blob);a.href=url;a.download=pdfName(project)+'-power-calculations.pdf';a.style.display='none';document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(url);a.remove()},1000)}catch(e){console.error(e);alert('Could not build the Power Calculations PDF.')}finally{if(button){button.disabled=false;button.textContent=oldText||'Export to PDF'}}}
 function modeMetaFor(row,mode){const fixture=patchFixturesFor(row.manufacturer).find(f=>f.fixture===row.fixture),meta=normalisePatchMode(fixture?.modes?.[mode]||row.channels||1);return {channels:meta.channels,watts:meta.watts??fixture?.watts??null,weight:meta.weight??fixture?.weight??null}}
