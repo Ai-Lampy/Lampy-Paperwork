@@ -18,7 +18,7 @@ Live app: [https://ai-lampy.github.io/Lampy-Paperwork/](https://ai-lampy.github.
 
 ## Current Version
 
-Current app version: **V11**
+Current app version: **V12.2**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 

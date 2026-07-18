@@ -2,6 +2,40 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V12.2 - 2026-07-18
+
+- Removed 17 proven-unused JavaScript functions, including obsolete vector PDF helpers and unused XLSX, GDTF, power-preview, patch-merge, and colour-export helpers.
+- Cached normalized Project Info data instead of rebuilding the full object during every render and lookup.
+- Debounced project persistence to avoid repeatedly serializing the complete project and writing localStorage on every keystroke.
+- Added a final page-hide persistence flush so pending project changes are safely stored before navigation.
+- Throttled resize-driven export preview calculations to one animation frame and marked the listener passive.
+- Rechecked repository-relative JSON, image, GDTF, GitHub issue, and email paths for static GitHub Pages deployment.
+
+## V12.1 - 2026-07-18
+
+- Moved Revisions out of Project Info into its own manager, directly accessible from the Actions sidebar and Home Revision Summary card.
+- Grouped revision notes by Project Info, Fixture Patch, Power Calculations, Control/Network, and Manual Notes within each version.
+- Displayed revision dates now use `DD/MM/YYYY`.
+- Automatically generated revision notes now describe the affected project field, fixture, power supply, console, or network device.
+- Console notes include the console type, assigned name, role, and location.
+- Repeated edits to the same field or item update its current automatic note instead of adding a note for every keystroke.
+
+## V12 - 2026-07-18
+
+- Added automatic revision-note generation when Project Info, Fixture Patch, Power Calculations, or Control/Network data changes.
+- Added a `Bump Version Number` action that increments the project version by one, records the current date, and starts a new active revision.
+- Changed revisions from single text blocks into individually managed notes while automatically migrating older saved-project revision text.
+- Added controls to select revision notes and edit, remove, or move them to another version.
+- Added version-level editing for version numbers, dates, and optional manual notes.
+- Updated the Home revision summary to display the new individual revision-note structure.
+
+## V11.1 - 2026-07-18
+
+- Fixed saved projects with blank GDTF fields by refreshing matched fixture rows from the current repository library before MVR export.
+- Kept the current repository fixture library separate from the older fixture-library snapshot embedded in a saved project.
+- Added an MVR processing pop-up with a countdown and automatic download when the completed file is ready.
+- Removed the second-click step after repository GDTF files have loaded so MVR export completes from one button press.
+
 ## V11 - 2026-07-17
 
 - Added repository-backed GDTF references to the fixture library, matched by manufacturer, fixture type, mode, and channel count.
@@ -10,7 +44,9 @@ All notable fixes, cleanup work, and published version changes should be recorde
 - Retained manual GDTF upload and MVR export without GDTF data as fallback workflows.
 - Added selective `description.xml` extraction so large GDTF model and texture assets are not inflated during metadata matching.
 - Cleared repository GDTF memory when starting or opening another project to prevent stale cross-project file data.
-- Published the first verified Chauvet batch: Color Strike M, COLORado PXL Curve 12, COLORado PXL Curve 5, and Maverick Storm 1 Beam.
+- Removed the redundant `gdtf/json/` fixture-library mirror so `json/fixtures/` is the single authoritative source.
+- Losslessly recompressed the Maverick Storm 1 Flex GDTF below GitHub's browser-upload limit without removing fixture assets or metadata.
+- Published the verified Chauvet batch: Color Strike M, COLORado PXL Curve 12, COLORado PXL Curve 5, Maverick Storm 1 Beam, Maverick Storm 1 Flex, and Rogue Outcast 1 BeamWash.
 - Verified the resulting MVR fixture patch and embedded GDTFs load successfully in grandMA3.
 
 ## V10.9 - 2026-07-17
