@@ -552,45 +552,45 @@
         "135 Chan": 135
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/chauvet",
         "suggestedFileName": "Chauvet__Rogue_Outcast_1_BeamWash.gdtf",
-        "file": "",
+        "file": "fixtures/chauvet/Chauvet_Professional@Rogue_Outcast_1_BeamWash@Rev_1.0.3.gdtf",
         "modes": {
           "15 Chan": {
             "channels": 15,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "15Ch Mode",
+            "status": "matched"
           },
           "24 Chan": {
             "channels": 24,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "24Ch Mode",
+            "status": "matched"
           },
           "30 Chan": {
             "channels": 30,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "30Ch Mode",
+            "status": "matched"
           },
           "37 Chan": {
             "channels": 37,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "37Ch Mode",
+            "status": "matched"
           },
           "64 Chan": {
             "channels": 64,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "64Ch Mode",
+            "status": "matched"
           },
           "111 Chan": {
             "channels": 111,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "111Ch Mode",
+            "status": "matched"
           },
           "135 Chan": {
             "channels": 135,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "135Ch Mode",
+            "status": "matched"
           }
         }
       }
