@@ -190,20 +190,20 @@
         "33 Chan": 33
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/chauvet",
         "suggestedFileName": "Chauvet__Maverick_Storm_1_Flex.gdtf",
-        "file": "",
+        "file": "fixtures/chauvet/Chauvet_Professional@Maverick_Storm_1_Flex@Rev_1.0.1.gdtf",
         "modes": {
           "26 Chan": {
             "channels": 26,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "26Ch Mode",
+            "status": "matched"
           },
           "33 Chan": {
             "channels": 33,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "33Ch Mode",
+            "status": "matched"
           }
         }
       }
