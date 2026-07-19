@@ -11,28 +11,29 @@
         "Extended": 52
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Bora.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@Bora@V2.3_Add_RDM_Personality.gdtf",
         "modes": {
           "Basic": {
             "channels": 30,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic_540",
+            "status": "matched"
           },
           "Standard": {
             "channels": 32,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard_540",
+            "status": "matched"
           },
           "Extended": {
             "channels": 52,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended_540",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Bora"
     },
     {
       "fixture": "Cobra",
@@ -44,10 +45,10 @@
         "Extended": 45
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "pending-match",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Cobra.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@Cobra@V1.7_Add_RDM_Personality.gdtf",
         "modes": {
           "Basic": {
             "channels": 33,
@@ -61,11 +62,12 @@
           },
           "Extended": {
             "channels": 45,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended_540",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Cobra"
     },
     {
       "fixture": "Diablo Profile S",
@@ -77,28 +79,29 @@
         "Extended": 56
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Diablo_Profile_S.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@Diablo@V2.6_Add_RDM_Personality.gdtf",
         "modes": {
           "Basic": {
             "channels": 34,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic_540_S",
+            "status": "matched"
           },
           "Standard": {
             "channels": 36,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard_540_S",
+            "status": "matched"
           },
           "Extended": {
             "channels": 56,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended_540_S",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Diablo Prof S"
     },
     {
       "fixture": "Domino LT",
@@ -109,23 +112,24 @@
         "Extended": 70
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Domino_LT.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@Domino_LT@V1.8_Add_RDM_Personality.gdtf",
         "modes": {
           "Standard": {
             "channels": 46,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard_540",
+            "status": "matched"
           },
           "Extended": {
             "channels": 70,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended_540",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Domino LT"
     },
     {
       "fixture": "Domino Profile",
@@ -137,28 +141,29 @@
         "Extended": 66
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Domino_Profile.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@Domino_Profile@V2.6_Add_RDM_Personality.gdtf",
         "modes": {
           "Basic": {
             "channels": 42,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic_540",
+            "status": "matched"
           },
           "Standard": {
             "channels": 44,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard_540",
+            "status": "matched"
           },
           "Extended": {
             "channels": 66,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended_540",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Domino Prof"
     },
     {
       "fixture": "Domino Wash",
@@ -170,28 +175,29 @@
         "Extended": 61
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Domino_Wash.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@Domino_Wash@V1.4_Add_RDM_Personality.gdtf",
         "modes": {
           "Basic": {
             "channels": 37,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic_540",
+            "status": "matched"
           },
           "Standard": {
             "channels": 39,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard_540",
+            "status": "matched"
           },
           "Extended": {
             "channels": 61,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended_540",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Domino Wsh"
     },
     {
       "fixture": "Eagle Strike",
@@ -218,7 +224,8 @@
             "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Eagle Strike"
     },
     {
       "fixture": "Eurus",
@@ -230,28 +237,29 @@
         "Extended": 62
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Eurus.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@Eurus@V2.7_Add_RDM_Personality.gdtf",
         "modes": {
           "Basic": {
             "channels": 39,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic_540",
+            "status": "matched"
           },
           "Standard": {
             "channels": 41,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard_540",
+            "status": "matched"
           },
           "Extended": {
             "channels": 62,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended_540",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Eurus"
     },
     {
       "fixture": "Ghibli",
@@ -263,28 +271,29 @@
         "Extended": 58
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Ghibli.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@Ghibli@V2.4_Add_RDM_Personality.gdtf",
         "modes": {
           "Basic": {
             "channels": 36,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic_540",
+            "status": "matched"
           },
           "Standard": {
             "channels": 38,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard_540",
+            "status": "matched"
           },
           "Extended": {
             "channels": 58,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended_540",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Ghibli"
     },
     {
       "fixture": "Huracan LT",
@@ -296,28 +305,29 @@
         "Extended": 70
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Huracan_LT.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@Huracan_LT@V1.5_Add_RDM_Personality.gdtf",
         "modes": {
           "Basic": {
             "channels": 44,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic_540",
+            "status": "matched"
           },
           "Standard": {
             "channels": 46,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard_540",
+            "status": "matched"
           },
           "Extended": {
             "channels": 70,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended_540",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Huracan LT"
     },
     {
       "fixture": "Huracan Profile",
@@ -329,28 +339,29 @@
         "Extended": 70
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Huracan_Profile.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@Huracan_Profile@V2.6_Add_RDM_Personality.gdtf",
         "modes": {
           "Basic": {
             "channels": 44,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic_ 540",
+            "status": "matched"
           },
           "Standard": {
             "channels": 46,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard_ 540",
+            "status": "matched"
           },
           "Extended": {
             "channels": 70,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended_540",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Huracan Prof"
     },
     {
       "fixture": "Karif LT",
@@ -383,7 +394,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Karif LT"
     },
     {
       "fixture": "Khamsin",
@@ -395,28 +407,29 @@
         "Extended": 64
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Khamsin.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@Khamsin@V12.3_Add_RDM_Personality.gdtf",
         "modes": {
           "Basic": {
             "channels": 40,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic_540",
+            "status": "matched"
           },
           "Standard": {
             "channels": 42,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard_540",
+            "status": "matched"
           },
           "Extended": {
             "channels": 64,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended_540",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Khamsin"
     },
     {
       "fixture": "Kyalami",
@@ -426,10 +439,10 @@
         "Standard": 33
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "pending-match",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Kyalami.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@Kyalami@V1.7_Add_RDM_Personality.gdtf",
         "modes": {
           "Standard": {
             "channels": 33,
@@ -437,7 +450,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Kyalami"
     },
     {
       "fixture": "Magic Blade Neo",
@@ -448,10 +462,10 @@
         "Extended": 184
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "pending-match",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Magic_Blade_Neo.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@MagicBlade_Neo@V1.1_Add_RDM_Personality.gdtf",
         "modes": {
           "Standard": {
             "channels": 175,
@@ -464,7 +478,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Magic Blade Neo"
     },
     {
       "fixture": "Magic Dot Neo",
@@ -474,10 +489,10 @@
         "Standard": 35
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "pending-match",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Magic_Dot_Neo.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@MagicDot_Neo@V1.2_Add_RDM_Personality.gdtf",
         "modes": {
           "Standard": {
             "channels": 35,
@@ -485,7 +500,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Magic Dot Neo"
     },
     {
       "fixture": "Mamba",
@@ -495,18 +511,19 @@
         "Extended": 47
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Mamba.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@Mamba@V1.5_Add_RDM_Personality.gdtf",
         "modes": {
           "Extended": {
             "channels": 47,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended_540",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Mamba"
     },
     {
       "fixture": "MiniPanel FX",
@@ -518,20 +535,20 @@
         "Extended": 34
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "pending-match",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__MiniPanel_FX.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@MiniPanel_FX@V2.5_Add_RDM_Personality.gdtf",
         "modes": {
           "Basic": {
             "channels": 19,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched"
           },
           "Standard": {
             "channels": 22,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard",
+            "status": "matched"
           },
           "Extended": {
             "channels": 34,
@@ -539,7 +556,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "MiniPanel FX"
     },
     {
       "fixture": "Mistral",
@@ -549,10 +567,10 @@
         "Standard": 39
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "pending-match",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Mistral.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@Mistral@V2.3_Add_RDM_Personality.gdtf",
         "modes": {
           "Standard": {
             "channels": 39,
@@ -560,7 +578,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Mistral"
     },
     {
       "fixture": "Perseo Profile",
@@ -572,28 +591,29 @@
         "Extended": 61
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Perseo_Profile.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@Perseo_Profile@V2.3_Add_RDM_Personality.gdtf",
         "modes": {
           "Basic": {
             "channels": 38,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic_540",
+            "status": "matched"
           },
           "Standard": {
             "channels": 40,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard_540",
+            "status": "matched"
           },
           "Extended": {
             "channels": 61,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended_540",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Perseo Prof"
     },
     {
       "fixture": "RawBeam 350",
@@ -603,10 +623,10 @@
         "Extended": 43
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "pending-match",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__RawBeam_350.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@RawBeam_350@V1.3_Add_RDM_Personality.gdtf",
         "modes": {
           "Extended": {
             "channels": 43,
@@ -614,7 +634,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "RawBeam 350"
     },
     {
       "fixture": "Rivale Profile",
@@ -625,23 +646,24 @@
         "Extended": 65
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Rivale_Profile.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@Rivale_Profile@V1.7_Add_RDM_Personality.gdtf",
         "modes": {
           "Standard": {
             "channels": 42,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard_540",
+            "status": "matched"
           },
           "Extended": {
             "channels": 65,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended_540",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Rivale Prof"
     },
     {
       "fixture": "Rivale Wash",
@@ -652,10 +674,10 @@
         "Extended": 60
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "pending-match",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Rivale_Wash.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@Rivale_Wash@V1.7_Add_RDM_Personality.gdtf",
         "modes": {
           "Standard": {
             "channels": 42,
@@ -664,11 +686,12 @@
           },
           "Extended": {
             "channels": 60,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended_540",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Rivale Wsh"
     },
     {
       "fixture": "Stradale Profile",
@@ -679,23 +702,24 @@
         "Extended": 65
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Stradale_Profile.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@Stradale_Profile@V1.2_Add_RDM_Personality.gdtf",
         "modes": {
           "Standard": {
             "channels": 42,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard_540",
+            "status": "matched"
           },
           "Extended": {
             "channels": 65,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended_540",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Stradale Prof"
     },
     {
       "fixture": "Veloce Profile",
@@ -706,23 +730,24 @@
         "Extended": 67
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Veloce_Profile.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@Veloce_Profile@V1.5_Add_RDM_Personality.gdtf",
         "modes": {
           "Standard": {
             "channels": 44,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard_540",
+            "status": "matched"
           },
           "Extended": {
             "channels": 67,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended_540",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Veloce Prof"
     },
     {
       "fixture": "Veloce Wash",
@@ -733,23 +758,24 @@
         "Extended": 60
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Veloce_Wash.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@Veloce_Wash@V1.2_Add_RDM_Personality.gdtf",
         "modes": {
           "Standard": {
             "channels": 38,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard_540",
+            "status": "matched"
           },
           "Extended": {
             "channels": 60,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended_540",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Veloce Wsh"
     },
     {
       "fixture": "Zonda 3 FX",
@@ -761,20 +787,20 @@
         "Extended": 79
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "pending-match",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Zonda_3_FX.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@Zonda_3_FX@V1.7_Add_RDM_Personality.gdtf",
         "modes": {
           "Basic": {
             "channels": 26,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched"
           },
           "Standard": {
             "channels": 50,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard",
+            "status": "matched"
           },
           "Extended": {
             "channels": 79,
@@ -782,7 +808,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Zonda 3 FX"
     },
     {
       "fixture": "Zonda 3 Wash",
@@ -795,15 +822,15 @@
         "Extended Pixel": 79
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "pending-match",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Zonda_3_Wash.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@Zonda_3_WASH@V1.7_Add_RDM_Personality.gdtf",
         "modes": {
           "Basic": {
             "channels": 26,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched"
           },
           "Standard": {
             "channels": 30,
@@ -812,8 +839,8 @@
           },
           "Extended Ring": {
             "channels": 46,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended Ring",
+            "status": "matched"
           },
           "Extended Pixel": {
             "channels": 79,
@@ -821,7 +848,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Zonda 3 Wsh"
     },
     {
       "fixture": "Zonda 9 FX",
@@ -834,15 +862,15 @@
         "Extended Pixel": 199
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "pending-match",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Zonda_9_FX.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@Zonda_9_FX@V1.7_Add_RDM_Personality.gdtf",
         "modes": {
           "Basic": {
             "channels": 26,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched"
           },
           "Standard": {
             "channels": 51,
@@ -851,8 +879,8 @@
           },
           "Extended Ring": {
             "channels": 54,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended Ring",
+            "status": "matched"
           },
           "Extended Pixel": {
             "channels": 199,
@@ -860,7 +888,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Zonda 9 FX"
     },
     {
       "fixture": "Zonda 9 Wash",
@@ -873,15 +902,15 @@
         "Extended Pixel": 199
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "pending-match",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Zonda_9_Wash.gdtf",
-        "file": "",
+        "file": "fixtures/ayrton/Ayrton@Zonda_9_WASH@V1.7_Add_RDM_Personality.gdtf",
         "modes": {
           "Basic": {
             "channels": 26,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched"
           },
           "Standard": {
             "channels": 51,
@@ -890,8 +919,8 @@
           },
           "Extended Ring": {
             "channels": 54,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended Ring",
+            "status": "matched"
           },
           "Extended Pixel": {
             "channels": 199,
@@ -899,7 +928,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Zonda 9 Wsh"
     }
   ]
 }
