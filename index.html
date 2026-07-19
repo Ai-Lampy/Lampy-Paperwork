@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Lampy Paperwork V12.27</title>
+<title>Lampy Paperwork V12.30</title>
 <style>
 :root{--label-w:18mm;--label-h:34mm;--label-gap:0.5mm;--gap-y:2mm;--radius:3mm;--border:1mm;--border-col:#ffffff;--stripe:4mm;--front-aux-w:18mm;--front-aux-h:34mm;--front-output-w:72mm;--front-output-h:34mm;--rear-soca-w:70mm;--rear-soca-h:50mm;--rear-aux-w:85mm;--rear-aux-h:30mm;--rear-aux-gap:5mm;--rear-output-w:90mm;--rear-output-h:60mm;--top-size:18pt;--bottom-size:14pt;--top-align:center;--bottom-align:center;--top-v-align:center;--bottom-v-align:center;--top-font:Cochin,'Times New Roman',Times,serif;--bottom-font:Cochin,'Times New Roman',Times,serif;--top-weight:700;--bottom-weight:700;--top-transform:none;--bottom-transform:none;--top-text-align:center;--bottom-text-align:center}
 *{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f6f7f9;color:#111}h1{margin:0;font-size:28px}h2,h3{margin:0 0 12px}button,input,select,textarea{font:inherit}.top{display:flex;align-items:center;justify-content:space-between;padding:18px 84px 18px 24px;gap:20px}.topActions{display:flex;align-items:center;justify-content:flex-end;gap:12px}.reportIssueBtn{border:1px solid #111;background:#fff;color:#111;border-radius:999px;padding:9px 14px;font-weight:900;text-decoration:none;white-space:nowrap}.reportIssueBtn:hover{background:#111;color:#fff}.badge{font-size:14px;border:1px solid #e0c64b;background:#fff4bf;border-radius:8px;padding:7px 12px;margin-left:12px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{border:1px solid #d9dee7;background:#fff;border-radius:7px;padding:10px 18px;cursor:pointer}.btn:hover{background:#f7f9fc}.btn.primary{background:#17a957;color:#fff;border-color:#17a957;font-weight:700}.btn.danger{color:#b42318}.btn.add{font-weight:800;font-size:18px;line-height:1;padding:8px 14px;background:#111;color:#fff;border-color:#111}.gear{font-size:24px;border:1px solid #d9dee7;background:#fff;border-radius:999px;width:44px;height:44px;cursor:pointer}.gear:hover{background:#f7f9fc}.tourLogoSlot{display:flex;align-items:center;justify-content:flex-end;min-width:80px;max-width:180px}.tourLogo{display:block;max-width:160px;max-height:54px;object-fit:contain}.tourLogoExport{position:absolute;top:5mm;right:5mm;max-width:34mm;max-height:18mm;object-fit:contain;z-index:3}.tourLogoUploadPreview{border:1px dashed #cfd6e1;border-radius:8px;background:#fff;min-height:130px;display:flex;align-items:center;justify-content:center;padding:14px}.tourLogoUploadPreview img{max-width:260px;max-height:120px;object-fit:contain}.logoActions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}.menuButton{position:fixed;right:18px;top:18px;z-index:18;border:1px solid #d9dee7;background:#111;color:#fff;border-radius:999px;width:46px;height:46px;font-size:24px;font-weight:900;cursor:pointer;box-shadow:0 10px 28px rgba(16,24,40,.18)}.menuButton:hover{background:#2a2a2a}.actionSidebar{position:fixed;right:18px;top:74px;width:min(260px,calc(100vw - 36px));z-index:17;border:1px solid #dfe3ea;border-radius:10px;background:#fff;box-shadow:0 18px 48px rgba(16,24,40,.22);padding:12px;transform:translateX(calc(100% + 28px));transition:transform .18s ease}.actionMenuOpen .actionSidebar{transform:translateX(0)}.actionSidebar h2{font-size:15px;margin:0 0 10px}.actionSidebar .btn{width:100%;margin:0 0 8px;text-align:left;font-weight:800}
@@ -47,7 +47,7 @@
 <style id="dynamicPrintPageStyle">@page{size:A4 landscape;margin:5mm}</style>
 </head>
 <body>
-<div class="top"><div><h1>Lampy Paperwork V12.27</h1></div><div class="topActions"><a class="reportIssueBtn" href="https://github.com/Ai-Lampy/Lampy-Paperwork/issues" target="_blank" rel="noopener">Report Issue</a><div id="tourLogoSlot" class="tourLogoSlot"></div></div></div>
+<div class="top"><div><h1>Lampy Paperwork V12.30</h1></div><div class="topActions"><a class="reportIssueBtn" href="https://github.com/Ai-Lampy/Lampy-Paperwork/issues" target="_blank" rel="noopener">Report Issue</a><div id="tourLogoSlot" class="tourLogoSlot"></div></div></div>
 <button class="menuButton" type="button" aria-label="Actions" aria-expanded="false" onclick="toggleActionMenu()">☰</button>
 <aside class="actionSidebar" id="actionSidebar"><h2>Actions</h2><button class="btn" onclick="openProjectInfo();closeActionMenu()">Project Info</button><button class="btn" onclick="openRevisionManagement();closeActionMenu()">Revisions</button><button class="btn" onclick="newProjectFile();closeActionMenu()">New Project</button><button class="btn" onclick="downloadProjectFile();closeActionMenu()">Download Project</button><button class="btn" onclick="chooseProjectFile();closeActionMenu()">Open Project</button><button class="btn" onclick="openWalkthrough();closeActionMenu()">Walk-through</button><button class="btn primary" onclick="openExportLayout();closeActionMenu()">Export</button></aside>
 <input id="excelFile" type="file" accept=".xlsx,.xls,.xml,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel,text/xml" class="hidden">
@@ -172,8 +172,11 @@
 .powerPdfContent{width:100%!important}.powerPdfContent .powerSheetView,.powerPdfContent .powerSheetTable{width:1400px!important;max-width:100%!important}.powerPdfContent .powerSheetToolbar h2{white-space:nowrap}
 .powerSheetTable{table-layout:auto!important;border-collapse:collapse;font-family:Georgia,'Times New Roman',serif;font-size:14px}
 .powerSheetTable .socaName{width:auto!important;min-width:78px;max-width:130px}
+.powerSheetTable tbody .socaName{position:relative}
+.powerSocaNameText{position:absolute;inset:3px 6px;display:flex;align-items:center;justify-content:center;overflow:hidden;white-space:normal;overflow-wrap:normal;word-break:normal;text-align:center;line-height:1;cursor:text}
+.powerSocaNameText:focus{outline:2px solid #2b78ff;background:rgba(234,242,255,.35)}
 .powerSheetTable .wayCol{width:auto!important;max-width:42px}
-.powerSheetTable .fixIdCol{width:auto!important;max-width:100px}
+.powerSheetTable .fixIdCol{width:auto!important;min-width:0!important;max-width:70px!important;font-weight:800;font-size:16px}
 .powerSheetTable .fixTypeCol{width:auto!important;min-width:0!important;max-width:162px!important}
 .powerSheetTable .wattsCol{width:auto!important;max-width:74px}
 .powerSheetTable .ampsCol{width:auto!important;max-width:90px}
@@ -185,7 +188,7 @@
 </style>
 <script>
 'use strict';
-const VERSION='12.27';
+const VERSION='12.30';
 const DEFAULT_FONT="Cochin,'Times New Roman',Times,serif";
 const LABEL_FORMAT_SIZES=[8,9,10,11,12,14,16,18,20,22,24,26,28,30];
 const REAR_LABEL_FORMAT_SIZES=[...LABEL_FORMAT_SIZES,34,36,38,40,42,44,46,48,50];
@@ -567,6 +570,16 @@ function applyRearTextStyle(text,fmt){
   text.style.webkitTextStroke=fmt.outline?'.45mm '+autoOutlineColour(fmt.textColor||'#000000'):'0 transparent';
   text.style.paintOrder='stroke fill';
 }
+function applyPowerSocaRearTextStyle(element,s){
+  if(!element)return;
+  const fmt=normaliseRearFormat(app.socaMeta[s]?.rearFormat);
+  applyRearTextStyle(element,fmt);
+  element.style.textAlign='center';
+  element.style.lineHeight='1';
+  fitTextToBox(element,1);
+}
+function fitPowerSocaNames(root=document){root.querySelectorAll('[data-power-soca-name]').forEach(element=>applyPowerSocaRearTextStyle(element,parseInt(element.dataset.powerSocaName,10)))}
+function updatePowerSocaRearText(s){document.querySelectorAll(`[data-power-soca-name="${s}"]`).forEach(element=>{const name=cleanSocaName(app.socaNames[s],s);if('value'in element)element.value=name;else element.textContent=name;applyPowerSocaRearTextStyle(element,s)});schedulePowerSheetHeaderFit()}
 function makeAuxLabel(l,style,auxId){
   const el=document.createElement('div');
   el.className='label auxSingle '+($('grid').checked?'gridLine':'');
@@ -962,7 +975,7 @@ function closePowerFixturesPane(){const pane=$('powerFixturesPane');if(pane)pane
 function togglePowerFixturesPinned(){powerFixturesPinned=!powerFixturesPinned;renderPowerFixturesPane()}
 function setPowerFixTypeCell(cell,text){let span=cell?.querySelector?.('.powerFixTypeText');if(cell&&!span){cell.textContent='';span=document.createElement('span');span.className='powerFixTypeText';cell.appendChild(span)}if(span)span.textContent=text||''}
 function fitPowerFixTypeText(root=document){root.querySelectorAll('.powerFixTypeText').forEach(el=>{let size=16;el.style.fontSize=size+'px';while(size>12&&el.scrollWidth>el.clientWidth){size-=1;el.style.fontSize=size+'px'}})}
-function powerSheetCellText(cell){const control=cell.querySelector('input,select,textarea'),display=cell.querySelector('.powerAmpsValue,.powerFixTypeText');return String(control?.value??display?.textContent??cell.textContent??'').replace(/\s+/g,' ').trim()}
+function powerSheetCellText(cell){const control=cell.querySelector('input,select,textarea'),display=cell.querySelector('.powerAmpsValue,.powerFixTypeText,.powerSocaNameText');return String(control?.value??display?.textContent??cell.textContent??'').replace(/\s+/g,' ').trim()}
 function powerSheetTextWidth(text,style,size){const canvas=fitPowerSheetHeaders.canvas||(fitPowerSheetHeaders.canvas=document.createElement('canvas')),ctx=canvas.getContext('2d');ctx.font=`${style.fontStyle||'normal'} ${style.fontWeight||'400'} ${size}px ${style.fontFamily||'serif'}`;return ctx.measureText(text).width}
 function powerSheetBodyColumns(table){
   const columns=[];
@@ -1002,7 +1015,7 @@ function fitPowerSheetHeaders(root=document){
         if(getComputedStyle(cell).display==='none')return;
         const text=powerSheetCellText(cell);
         if(!text)return;
-        const textElement=cell.querySelector('input,.powerAmpsValue,.powerFixTypeText')||cell,style=getComputedStyle(textElement),size=parseFloat(style.fontSize)||14;
+        const textElement=cell.querySelector('input,.powerAmpsValue,.powerFixTypeText,.powerSocaNameText')||cell,style=getComputedStyle(textElement),size=parseFloat(style.fontSize)||14;
         bodyWidth=Math.max(bodyWidth,powerSheetTextWidth(text,style,size));
       });
       const fittedSize=headerWidth>bodyWidth?Math.max(9,Math.min(baseSize,baseSize*(bodyWidth/headerWidth||0))):baseSize;
@@ -1074,9 +1087,13 @@ function updatePowerSheetFixId(inp){
 function updatePowerSocaName(inp){
   const s=parseInt(inp.dataset.powerSocaName,10);
   if(!Number.isInteger(s))return;
-  app.socaNames[s]=inp.value.trim()||('Socapex '+(s+1));
+  const value=String('value'in inp?inp.value:inp.textContent||'').trim();
+  app.socaNames[s]=value||('Socapex '+(s+1));
   const previewTitle=document.querySelector('[data-soca-preview-title="'+s+'"]');
   if(previewTitle)previewTitle.textContent=cleanSocaName(app.socaNames[s],s);
+  updateRearSocaLabel(s);
+  applyPowerSocaRearTextStyle(inp,s);
+  schedulePowerSheetHeaderFit();
   persist();
   if(activeSheetTab==='distroLabels'&&activeDistroLabelTab==='table')render();
 }
@@ -1138,9 +1155,9 @@ function powerSheetFixCellsMarkup(range,rowIndex,row,result){
 }
 function powerSheetRowMarkup(range,rows,socaLocal,way){
   const rowIndex=(socaLocal*6)+(way-1),row=normalisePowerSheetRow(rows[rowIndex]),result=powerSheetRowResults(row,distroVoltage(range.d),powerSheetDuplicateFixIds());
-  const socaIndex=range.start+socaLocal,socaName=cleanSocaName(app.socaNames[socaIndex],socaIndex),socaStyle=effectiveSocaStyle(socaIndex),socaBackground=cssStripe(socaStyle.c1,socaStyle.c2,socaStyle.useC2,socaStyle.c3,socaStyle.useC3),socaCellStyle=`background:${socaBackground};color:${socaStyle.text}`;
+  const socaIndex=range.start+socaLocal,socaName=cleanSocaName(app.socaNames[socaIndex],socaIndex),socaStyle=effectiveSocaStyle(socaIndex),rearFormat=normaliseRearFormat(app.socaMeta[socaIndex]?.rearFormat),socaBackground=cssStripe(socaStyle.c1,socaStyle.c2,socaStyle.useC2,socaStyle.c3,socaStyle.useC3),socaCellStyle=`background:${socaBackground};color:${rearFormat.textColor}`;
   const warning=powerAmpsWarning(result,range.d);
-  return `<tr class="${way===1?'powerSocaStart ':''}${way===6?'powerSocaEnd':''}">${way===1?`<th class="socaName" rowspan="6" style="${escapeAttr(socaCellStyle)}"><input data-power-soca-name="${socaIndex}" value="${escapeAttr(socaName)}" style="color:${escapeAttr(socaStyle.text)}"></th>`:''}<th class="wayCol">${way}</th>${powerSheetFixCellsMarkup(range,rowIndex,row,result)}<td class="ampsCol ${powerPhaseClass(way)}${warning?' powerAmpsWarning':''}" data-power-amps-row="${rowIndex}" title="${escapeAttr(warning)}">${powerAmpsCellMarkup(result,range.d)}</td></tr>`;
+  return `<tr class="${way===1?'powerSocaStart ':''}${way===6?'powerSocaEnd':''}">${way===1?`<th class="socaName" rowspan="6" style="${escapeAttr(socaCellStyle)}"><div class="powerSocaNameText" data-power-soca-name="${socaIndex}" contenteditable="true" role="textbox" aria-label="Socapex name">${escapeHtml(socaName)}</div></th>`:''}<th class="wayCol">${way}</th>${powerSheetFixCellsMarkup(range,rowIndex,row,result)}<td class="ampsCol ${powerPhaseClass(way)}${warning?' powerAmpsWarning':''}" data-power-amps-row="${rowIndex}" title="${escapeAttr(warning)}">${powerAmpsCellMarkup(result,range.d)}</td></tr>`;
 }
 function powerAuxResult(row,range){const watts=row.watts.reduce((sum,value)=>sum+(parseFloat(value)||0),0),voltage=distroVoltage(range.d);return {amps:row.include&&watts>0&&voltage>0?watts/voltage:null}}
 function powerSheetAuxRowMarkup(range,row,auxIndex){
@@ -1177,11 +1194,11 @@ function renderPowerSheetView(ranges){
   view.insertAdjacentHTML('beforeend',powerAuxSheetMarkup(range));
   sheet.appendChild(view);
   view.querySelectorAll('[data-power-row]').forEach(inp=>inp.addEventListener('input',()=>updatePowerSheetFixId(inp)));
-  view.querySelectorAll('[data-power-soca-name]').forEach(inp=>inp.addEventListener('input',()=>updatePowerSocaName(inp)));
+  view.querySelectorAll('[data-power-soca-name]').forEach(element=>{element.addEventListener('input',()=>updatePowerSocaName(element));element.addEventListener('keydown',event=>{if(event.key==='Enter')event.preventDefault()})});
   view.querySelectorAll('[data-power-aux-include]').forEach(button=>button.addEventListener('click',()=>togglePowerAuxInclude(range,button)));
   view.querySelectorAll('[data-power-aux-watts]').forEach(input=>input.addEventListener('input',()=>updatePowerAuxWatts(range,input)));
   view.querySelectorAll('[data-power-aux-label]').forEach(input=>input.addEventListener('input',()=>updatePowerAuxLabel(range,input)));
-  requestAnimationFrame(()=>{fitPowerFixTypeText(view);fitPowerSheetHeaders(view)});
+  requestAnimationFrame(()=>{fitPowerSocaNames(view);fitPowerFixTypeText(view);fitPowerSheetHeaders(view)});
 }
 function controlNetworkTabsMarkup(){return `<div class="controlNetworkTabs"><button class="sheetTab ${activeControlNetworkTab==='consoles'?'active':''}" type="button" onclick="setControlNetworkTab('consoles')">Consoles</button><button class="sheetTab ${activeControlNetworkTab==='network'?'active':''}" type="button" onclick="setControlNetworkTab('network')">Network Equipment</button></div>`}
 function consoleOptionMarkup(selected=''){return ['<option value="">Select Console</option>'].concat(consoleReference.consoles.map(c=>`<option value="${escapeAttr(c.id)}" ${c.id===selected?'selected':''}>${escapeHtml([c.manufacturer,c.name].filter(Boolean).join(' ')||c.id)}</option>`)).join('')}
@@ -1749,7 +1766,7 @@ function closeFixturePatchPdfPreview(){$('fixturePatchPdfModal').classList.add('
 let powerPdfZoom='fit';
 function powerPdfPaperDimensions(){const paper=(($('powerPdfPaperSize')&&$('powerPdfPaperSize').value)||($('paperSize')&&$('paperSize').value)||'A4').toUpperCase(),orient=(($('powerPdfOrientation')&&$('powerPdfOrientation').value)||($('orientation')&&$('orientation').value)||'landscape').toLowerCase(),dims={A4:[210,297],A3:[297,420],A2:[420,594],A1:[594,841],A0:[841,1189]},d=dims[paper]||dims.A4,w=orient==='landscape'?Math.max(d[0],d[1]):Math.min(d[0],d[1]),h=orient==='landscape'?Math.min(d[0],d[1]):Math.max(d[0],d[1]);return {paper,orient,w,h,ptW:w*PDF_MM_TO_PT,ptH:h*PDF_MM_TO_PT}}
 function syncPowerPdfPaperControls(){if($('powerPdfPaperSize'))$('powerPdfPaperSize').value=($('paperSize')?.value)||'A4';if($('powerPdfOrientation'))$('powerPdfOrientation').value=($('orientation')?.value)||'landscape'}
-function powerPdfSourceViews(ranges){const prevTab=activeSheetTab,prevDistro=activePowerDistro,views=[];activeSheetTab='powerSheet';ranges.forEach(range=>{activePowerDistro=range.idx;render();const view=document.querySelector('#sheet .powerSheetView');if(view)views.push({range,view:view.cloneNode(true)})});activeSheetTab=prevTab;activePowerDistro=prevDistro;render();return views}
+function powerPdfSourceViews(ranges){const prevTab=activeSheetTab,prevDistro=activePowerDistro,views=[];activeSheetTab='powerSheet';ranges.forEach(range=>{activePowerDistro=range.idx;render();const view=document.querySelector('#sheet .powerSheetView');if(view){fitPowerSocaNames(view);fitPowerFixTypeText(view);fitPowerSheetHeaders(view);views.push({range,view:view.cloneNode(true)})}});activeSheetTab=prevTab;activePowerDistro=prevDistro;render();return views}
 function preparePowerPdfView(view,range,socaStart,socaCount,showPhaseTotals,rowMode='soca'){
   view.querySelectorAll('.powerSheetToolbarActions,.powerDistroTabs,.powerDistroGear').forEach(el=>el.remove());
   const distroName=range.d.name||('Distro '+(range.idx+1)),distroType=range.d.type||'Distro',heading=view.querySelector('.powerSheetToolbar h2');
@@ -1768,7 +1785,7 @@ function preparePowerPdfView(view,range,socaStart,socaCount,showPhaseTotals,rowM
     const rows=mainTable?[...mainTable.tBodies[0].rows]:[],first=socaStart*6,last=(socaStart+socaCount)*6;
     rows.forEach((row,index)=>{if(index<first||index>=last)row.remove()});
   }
-  view.querySelectorAll('input,button.powerAuxIncludeBtn').forEach(control=>{const span=document.createElement('span');span.textContent=control.tagName==='BUTTON'?(control.getAttribute('aria-pressed')==='true'?'Yes':'No'):(control.value||'');span.style.display='block';span.style.minHeight='24px';span.style.fontSize=getComputedStyle(control).fontSize;span.style.fontWeight=getComputedStyle(control).fontWeight;span.style.textAlign='center';control.replaceWith(span)});
+  view.querySelectorAll('input,button.powerAuxIncludeBtn').forEach(control=>{const span=document.createElement('span'),style=getComputedStyle(control);span.textContent=control.tagName==='BUTTON'?(control.getAttribute('aria-pressed')==='true'?'Yes':'No'):(control.value||'');span.style.cssText=control.style.cssText;span.style.display='block';span.style.minHeight='24px';span.style.fontSize=style.fontSize||span.style.fontSize;span.style.fontWeight=style.fontWeight||span.style.fontWeight;span.style.fontFamily=style.fontFamily||span.style.fontFamily;span.style.fontStyle=style.fontStyle||span.style.fontStyle;span.style.color=style.color||span.style.color;span.style.textDecoration=style.textDecoration||span.style.textDecoration;span.style.textAlign='center';if(control.matches('[data-power-soca-name]'))span.className='powerSocaNameText';control.replaceWith(span)});
   return view;
 }
 function powerPdfSupplyCardMarkup(supply,ranges){const distroNames=supplyDistroNames(supply,ranges),summary=distroNames.join(', ')||'No distros selected';return `<div class="powerSupplyCard" style="border:1.2px solid #000;width:449px!important;padding:8px!important"><div class="powerSupplyHead" style="height:50px!important;column-gap:1px;width:427px"><div class="powerSupplySummary"><strong style="font-size:20px">${escapeHtml(supply.name||'Supply')}</strong><span class="powerSupplyMeta">${escapeHtml(supply.input||optionDefault(distroOptions.inputSupply)||'Input Supply')} • ${escapeHtml(summary)}</span></div>${supplyCardPhaseTotalsMarkup(powerSupplyTotals(supply,ranges))}</div></div>`}
@@ -1838,11 +1855,11 @@ async function powerPdfDomPdfBytes(){
       });
       page.querySelectorAll('.powerSheetTable').forEach(table=>{
         table.querySelectorAll('th,td').forEach(cell=>{
-          const box=textBox(cell),style=getComputedStyle(cell),isHead=cell.tagName==='TH',textEl=cell.classList.contains('powerAmpsWarning')?cell:(cell.querySelector('.powerFixTypeText')||cell.querySelector(':scope > span')||cell);
+          const box=textBox(cell),style=getComputedStyle(cell),isColumnHeader=!!cell.closest('thead'),styledSocaName=cell.classList.contains('socaName')&&!isColumnHeader,textEl=cell.classList.contains('powerAmpsWarning')?cell:(cell.querySelector('.powerFixTypeText,.powerSocaNameText')||cell.querySelector(':scope > span')||cell);
           pdfSetFill(doc,pdfCssColour(style.backgroundColor,'#ffffff'));
           pdfRect(doc,box.x,box.y,box.w,box.h,'f');
           powerPdfDrawDomBorders(doc,box,style,scaleX,scaleY);
-          drawText(textEl,{text:powerPdfExportText(textEl.textContent),pad:2,maxLines:2,bold:isHead||/socaName|wayCol|ampsCol/.test(cell.className),align:'center'});
+          drawText(textEl,{text:powerPdfExportText(textEl.textContent),pad:2,maxLines:2,bold:styledSocaName?undefined:(isColumnHeader||/wayCol|ampsCol/.test(cell.className)),align:'center'});
         });
       });
       for(const img of page.querySelectorAll('img')){
@@ -2027,7 +2044,7 @@ function rearFormatTarget(inp){
 function updateRearText(inp){
   const target=rearFormatTarget(inp);
   if(!target)return;
-  if(target.kind==='soca'){app.socaNames[target.s]=inp.value.trim()||('Socapex '+(target.s+1));document.querySelectorAll('[data-soca-preview-title="'+target.s+'"]').forEach(el=>el.textContent=cleanSocaName(app.socaNames[target.s],target.s));updateRearSocaLabel(target.s)}
+  if(target.kind==='soca'){app.socaNames[target.s]=inp.value.trim()||('Socapex '+(target.s+1));document.querySelectorAll('[data-soca-preview-title="'+target.s+'"]').forEach(el=>el.textContent=cleanSocaName(app.socaNames[target.s],target.s));updateRearSocaLabel(target.s);updatePowerSocaRearText(target.s)}
   if(target.kind==='aux'){target.label.top=inp.value;target.label.bottom='';updateAuxPreviewLabel(target.didx,target.g,target.j);updateRearAuxLabel(target.didx,target.g,target.j)}
   if(target.kind==='output'){target.label.text=inp.value;updateOutputPreviewLabel(target.didx,target.g,target.j);updateRearOutputLabel(target.didx,target.g,target.j)}
   persist();
@@ -2040,7 +2057,7 @@ function updateRearFormat(inp){
   target.fmt[key]=isButton?inp.getAttribute('aria-pressed')==='true':(inp.type==='checkbox'?inp.checked:(key==='fontSize'?Math.max(1,parseFloat(inp.value||1)||1):(key==='textColor'?colourTextToHex(inp.value,'#000000'):inp.value)));
   if(key==='textColor')setColourTextInput(inp,target.fmt[key]);
   target.fmt.custom=true;
-  if(target.kind==='soca')updateRearSocaLabel(target.s);
+  if(target.kind==='soca'){updateRearSocaLabel(target.s);updatePowerSocaRearText(target.s)}
   if(target.kind==='aux')updateRearAuxLabel(target.didx,target.g,target.j);
   if(target.kind==='output')updateRearOutputLabel(target.didx,target.g,target.j);
   persist();
