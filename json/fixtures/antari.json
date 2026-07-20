@@ -9,18 +9,19 @@
         "1 Chan": 1
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/antari",
         "suggestedFileName": "Antari__HZ_500_Hazer.gdtf",
-        "file": "",
+        "file": "fixtures/antari/Antari@HZ-500@rev1.gdtf",
         "modes": {
           "1 Chan": {
             "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "1 Channel",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "HZ-500 Hazer"
     }
   ]
 }
