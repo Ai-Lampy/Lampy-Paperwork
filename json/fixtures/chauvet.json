@@ -222,20 +222,20 @@
         "Extended": 29
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/chauvet",
         "suggestedFileName": "Chauvet__Maverick_Storm_1_Hybrid.gdtf",
-        "file": "",
+        "file": "fixtures/chauvet/Chauvet_Professional@Maverick_Storm_1_Hybrid@Rev_1.0.9.gdtf",
         "modes": {
           "Standard": {
             "channels": 24,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "24Ch Mode",
+            "status": "matched"
           },
           "Extended": {
             "channels": 29,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "29Ch Mode",
+            "status": "matched"
           }
         }
       },
@@ -258,10 +258,10 @@
         "327 Chan": 327
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "partial",
         "folder": "fixtures/chauvet",
         "suggestedFileName": "Chauvet__Maverick_Storm_2_BeamWash.gdtf",
-        "file": "",
+        "file": "fixtures/chauvet/Chauvet_Professional@Maverick_Storm_2_BeamWash@Rev_1.1.0.gdtf",
         "modes": {
           "13 Chan": {
             "channels": 13,
@@ -285,13 +285,13 @@
           },
           "93 Chan": {
             "channels": 93,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Dual Control Mode Pixels: Basic 93ch",
+            "status": "matched"
           },
           "112 Chan": {
             "channels": 112,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Dual Control Mode Pixels: Standard 112ch",
+            "status": "matched"
           },
           "145 Chan": {
             "channels": 145,
@@ -300,8 +300,8 @@
           },
           "224 Chan": {
             "channels": 224,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Dual Control Mode Pixels Advanced 224ch",
+            "status": "matched"
           },
           "265 Chan": {
             "channels": 265,
@@ -326,52 +326,24 @@
         "Extended": 48
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/chauvet",
         "suggestedFileName": "Chauvet__Maverick_Storm_2_Profile.gdtf",
-        "file": "",
+        "file": "fixtures/chauvet/Chauvet_Professional@Maverick_Storm_2_Profile@P_T_PHYS_VALUES_INVERTED_-_MATCHES_MA3D.gdtf",
         "modes": {
           "Standard": {
             "channels": 32,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "32Ch Mode",
+            "status": "matched"
           },
           "Extended": {
             "channels": 48,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "48Ch Mode",
+            "status": "matched"
           }
         }
       },
       "shortName": "Storm 2 Prof"
-    },
-    {
-      "fixture": "Maverick Storm 2 Profile M",
-      "watts": 763,
-      "weight": 31.9,
-      "modes": {
-        "Standard": 32,
-        "Extended": 48
-      },
-      "gdtf": {
-        "status": "pending-download",
-        "folder": "fixtures/chauvet",
-        "suggestedFileName": "Chauvet__Maverick_Storm_2_Profile_M.gdtf",
-        "file": "",
-        "modes": {
-          "Standard": {
-            "channels": 32,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Extended": {
-            "channels": 48,
-            "gdtfMode": "",
-            "status": "pending-match"
-          }
-        }
-      },
-      "shortName": "Storm 2 Prof M"
     },
     {
       "fixture": "Maverick Storm 3 BeamWash",
@@ -393,10 +365,10 @@
         "424 Chan": 424
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "partial",
         "folder": "fixtures/chauvet",
         "suggestedFileName": "Chauvet__Maverick_Storm_3_BeamWash.gdtf",
-        "file": "",
+        "file": "fixtures/chauvet/Chauvet_Professional@Maverick_Storm_3_Beamwash@Rev_1.1.0.gdtf",
         "modes": {
           "12 Chan": {
             "channels": 12,
@@ -476,20 +448,20 @@
         "Extended": 50
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/chauvet",
         "suggestedFileName": "Chauvet__Maverick_Storm_3_Profile.gdtf",
-        "file": "",
+        "file": "fixtures/chauvet/Chauvet_Professional@Maverick_Storm_3_Profile@Rev_1.0.0.gdtf",
         "modes": {
           "Standard": {
             "channels": 34,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "34Ch Mode",
+            "status": "matched"
           },
           "Extended": {
             "channels": 50,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "50Ch Mode",
+            "status": "matched"
           }
         }
       },
@@ -504,20 +476,20 @@
         "Extended": 55
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/chauvet",
         "suggestedFileName": "Chauvet__Maverick_Storm_4_Profile.gdtf",
-        "file": "",
+        "file": "fixtures/chauvet/Chauvet_Professional@Maverick_Storm_4_Profile@P_T_PHYSICAL_VALUES_INVERTED_-_MATCHES_MA3D.gdtf",
         "modes": {
           "Standard": {
             "channels": 38,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "38Ch Mode",
+            "status": "matched"
           },
           "Extended": {
             "channels": 55,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "55Ch Mode",
+            "status": "matched"
           }
         }
       },
@@ -532,20 +504,20 @@
         "Extended": 46
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/chauvet",
         "suggestedFileName": "Chauvet__Maverick_Storm_4_SoloWash.gdtf",
-        "file": "",
+        "file": "fixtures/chauvet/Chauvet_Professional@Maverick_Storm_4_SoloWash@Rev_1.0.8.gdtf",
         "modes": {
           "Standard": {
             "channels": 31,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic 31ch",
+            "status": "matched"
           },
           "Extended": {
             "channels": 46,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Advanced 46ch",
+            "status": "matched"
           }
         }
       },
@@ -627,10 +599,10 @@
         "8P-46CH": 46
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "partial",
         "folder": "fixtures/chauvet",
         "suggestedFileName": "Chauvet__STRIKE_Array_1.gdtf",
-        "file": "",
+        "file": "fixtures/chauvet/Chauvet_Professional@Strike_Array_1_26_channel@Revision_V1.gdtf",
         "modes": {
           "1 Chan": {
             "channels": 1,
@@ -674,8 +646,8 @@
           },
           "8P-26CH": {
             "channels": 26,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "8P 26 channel",
+            "status": "matched"
           },
           "8P-43CH": {
             "channels": 43,
@@ -704,40 +676,40 @@
         "9 Chan": 9
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/chauvet",
         "suggestedFileName": "Chauvet__Strike_Array_2.gdtf",
-        "file": "",
+        "file": "fixtures/chauvet/Chauvet_Professional@Strike_Array_2@Rev_1.0.4.gdtf",
         "modes": {
           "1 Chan": {
             "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "1Ch Mode",
+            "status": "matched"
           },
           "2 Chan": {
             "channels": 2,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "2Ch Mode",
+            "status": "matched"
           },
           "3 Chan": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "3Ch Mode",
+            "status": "matched"
           },
           "4 Chan": {
             "channels": 4,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "4Ch Mode",
+            "status": "matched"
           },
           "8 Chan": {
             "channels": 8,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "8Ch Mode",
+            "status": "matched"
           },
           "9 Chan": {
             "channels": 9,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "9Ch Mode",
+            "status": "matched"
           }
         }
       },
@@ -759,55 +731,55 @@
         "16 Chan": 16
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/chauvet",
         "suggestedFileName": "Chauvet__STRIKE_Array_2C.gdtf",
-        "file": "",
+        "file": "fixtures/chauvet/Chauvet_Professional@Strike_Array_2C@Rev_1.1.0.gdtf",
         "modes": {
           "1 Chan": {
             "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "1Ch Mode",
+            "status": "matched"
           },
           "3 Chan": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "3Ch Mode",
+            "status": "matched"
           },
           "5 Chan": {
             "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "5Ch Mode",
+            "status": "matched"
           },
           "7 Chan": {
             "channels": 7,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "7Ch Mode",
+            "status": "matched"
           },
           "10 Chan": {
             "channels": 10,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "10Ch Mode",
+            "status": "matched"
           },
           "12 Chan 1": {
             "channels": 12,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "12Ch1 Mode",
+            "status": "matched"
           },
           "12 Chan 2": {
             "channels": 12,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "12Ch2 Mode",
+            "status": "matched"
           },
           "13 Chan": {
             "channels": 13,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "13Ch Mode",
+            "status": "matched"
           },
           "16 Chan": {
             "channels": 16,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "16Ch Mode",
+            "status": "matched"
           }
         }
       },
@@ -823,20 +795,20 @@
         "9 Chan": 9
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "partial",
         "folder": "fixtures/chauvet",
         "suggestedFileName": "Chauvet__Strike_Array_4.gdtf",
-        "file": "",
+        "file": "fixtures/chauvet/Chauvet_Professional@STRIKE_Array_4@Fixed_Face.gdtf",
         "modes": {
           "3 Chan": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "3Ch Mode",
+            "status": "matched"
           },
           "4 Chan": {
             "channels": 4,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "4Ch Mode",
+            "status": "matched"
           },
           "9 Chan": {
             "channels": 9,
@@ -863,55 +835,55 @@
         "22 Chan": 22
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/chauvet",
         "suggestedFileName": "Chauvet__STRIKE_Array_4C.gdtf",
-        "file": "",
+        "file": "fixtures/chauvet/Chauvet_Professional@Strike_Array_4C@Rev_3.gdtf",
         "modes": {
           "1 Chan": {
             "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "1Ch",
+            "status": "matched"
           },
           "3 Chan": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "3Ch Mode",
+            "status": "matched"
           },
           "5 Chan": {
             "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "5Ch Mode",
+            "status": "matched"
           },
           "7 Chan": {
             "channels": 7,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "7Ch Mode",
+            "status": "matched"
           },
           "10 Chan": {
             "channels": 10,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "10Ch Mode",
+            "status": "matched"
           },
           "12 Chan": {
             "channels": 12,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "12Ch Mode",
+            "status": "matched"
           },
           "13 Chan": {
             "channels": 13,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "13Ch Mode",
+            "status": "matched"
           },
           "16 Chan": {
             "channels": 16,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "16Ch Mode",
+            "status": "matched"
           },
           "22 Chan": {
             "channels": 22,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "22Ch Mode",
+            "status": "matched"
           }
         }
       },
@@ -932,10 +904,10 @@
         "53 Chan": 53
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "partial",
         "folder": "fixtures/chauvet",
         "suggestedFileName": "Chauvet__STRIKE_Bolt_1C.gdtf",
-        "file": "",
+        "file": "fixtures/chauvet/Chauvet_Professional@Strike_Bolt_1C@NO_BEAM_v2.gdtf",
         "modes": {
           "7 Chan": {
             "channels": 7,
@@ -944,8 +916,8 @@
           },
           "10 Chan": {
             "channels": 10,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "10Ch Mode",
+            "status": "matched"
           },
           "12 Chan": {
             "channels": 12,
@@ -969,8 +941,8 @@
           },
           "40 Chan": {
             "channels": 40,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "40Ch Mode",
+            "status": "matched"
           },
           "53 Chan": {
             "channels": 53,
@@ -993,35 +965,35 @@
         "6 Chan": 6
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/chauvet",
         "suggestedFileName": "Chauvet__STRIKE_P38.gdtf",
-        "file": "",
+        "file": "fixtures/chauvet/Chauvet_Professional@Strike_P38@version_1.gdtf",
         "modes": {
           "1 Chan": {
             "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "1Ch Mode",
+            "status": "matched"
           },
           "3 Chan": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "3Ch Mode",
+            "status": "matched"
           },
           "4 Chan": {
             "channels": 4,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "4Ch Mode",
+            "status": "matched"
           },
           "5 Chan": {
             "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "5Ch Mode",
+            "status": "matched"
           },
           "6 Chan": {
             "channels": 6,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "6Ch Mode",
+            "status": "matched"
           }
         }
       },
@@ -1041,45 +1013,45 @@
         "26 Chan 2": 26
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/chauvet",
         "suggestedFileName": "Chauvet__STRIKE_Saber_10.gdtf",
-        "file": "",
+        "file": "fixtures/chauvet/Chauvet_Professional@STRIKE_Saber_10@Beta_1.0.1.gdtf",
         "modes": {
           "1 Chan": {
             "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "1ch",
+            "status": "matched"
           },
           "3 Chan": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "3ch",
+            "status": "matched"
           },
           "6 Chan": {
             "channels": 6,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "6ch",
+            "status": "matched"
           },
           "13 Chan": {
             "channels": 13,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "13ch",
+            "status": "matched"
           },
           "22 Chan": {
             "channels": 22,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "22ch",
+            "status": "matched"
           },
           "26 Chan 1": {
             "channels": 26,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "26ch 1",
+            "status": "matched"
           },
           "26 Chan 2": {
             "channels": 26,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "26ch 2",
+            "status": "matched"
           }
         }
       },
