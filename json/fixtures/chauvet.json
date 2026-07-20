@@ -365,7 +365,7 @@
         "424 Chan": 424
       },
       "gdtf": {
-        "status": "partial",
+        "status": "pending-match",
         "folder": "fixtures/chauvet",
         "suggestedFileName": "Chauvet__Maverick_Storm_3_BeamWash.gdtf",
         "file": "fixtures/chauvet/Chauvet_Professional@Maverick_Storm_3_Beamwash@Rev_1.1.0.gdtf",

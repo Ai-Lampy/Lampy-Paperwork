@@ -174,7 +174,7 @@
         "30 Chan": 30
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Blinder_Line_5_Ip.gdtf",
         "file": "fixtures/acme/ACME@ACME_BLINDER_LINE_5_IP_(BLB_5_IP)@ACME_BLINDER_LINE_5_IP_(BLB_5_IP).gdtf",
@@ -186,8 +186,8 @@
           },
           "30 Chan": {
             "channels": 30,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 30DMX",
+            "status": "matched"
           }
         }
       },
@@ -410,7 +410,7 @@
         "136 Chan": 136
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "partial",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Hueline_16_Ip.gdtf",
         "file": "fixtures/acme/ACME@ACME_HUELINE_16_IP_(HL_16_IP)@ACME_HUELINE_16_IP__(HL_16_IP).gdtf",
@@ -427,8 +427,8 @@
           },
           "133 Chan": {
             "channels": 133,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 133CH",
+            "status": "matched"
           },
           "136 Chan": {
             "channels": 136,
@@ -452,7 +452,7 @@
         "43 Chan": 43
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "partial",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Hyperzone.gdtf",
         "file": "fixtures/acme/ACME@ACME_HYPERZONE_(CM_7_IP)@ACME_HYPERZONE_(CM_7_IP).gdtf",
@@ -504,7 +504,7 @@
         "20+210": "20+210"
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Lightning_X.gdtf",
         "file": "fixtures/acme/ACME@ACME_LIGHTNING_X_(STROBE_7_IP)@_ACME_LIGHTNING_X__(STROBE_7_IP).gdtf",
@@ -521,13 +521,13 @@
           },
           "100 Chan": {
             "channels": 100,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 4 100CH",
+            "status": "matched"
           },
           "230 Chan": {
             "channels": 230,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 230CH",
+            "status": "matched"
           },
           "20+80": {
             "channels": "20+80",
@@ -558,7 +558,7 @@
         "81 Chan": 81
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "partial",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Lineforce_10_Ip.gdtf",
         "file": "fixtures/acme/ACME@ACME_LINEFORCE_10_IP_(CYC_10_IP)@LINEFORCE_10_IP__(CYC_10_IP).gdtf",
@@ -595,8 +595,8 @@
           },
           "79 Chan": {
             "channels": 79,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 79 DMX",
+            "status": "matched"
           },
           "81 Chan": {
             "channels": 81,
@@ -622,7 +622,7 @@
         "46 Chan": 46
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "partial",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Lineforce_5_Ip.gdtf",
         "file": "fixtures/acme/ACME@ACME__LINEFORCE_5_IP_(CYC_5_IP)@ACME__LINEFORCE_5_IP_(CYC_5_IP)(2).gdtf",
@@ -659,8 +659,8 @@
           },
           "44 Chan": {
             "channels": 44,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 44CH",
+            "status": "matched"
           },
           "46 Chan": {
             "channels": 46,
@@ -784,7 +784,7 @@
         "40 Chan": 40
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "partial",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Mana_Profile.gdtf",
         "file": "fixtures/acme/ACME@ACME_MANA_PROFILE_(XA_600_BSWF_IP)@ACME_MANA_PROFILE_(XA_600_BSWF_IP).gdtf",
@@ -963,7 +963,7 @@
         "119 Chan": 119
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Pixel_Line_Ip.gdtf",
         "file": "fixtures/acme/ACME@ACME_PIXEL_LINE_IP_(STROBE_3_IP)@ACME_PIXEL_LINE_IP_(STROBE_3_IP).gdtf",
@@ -1010,13 +1010,13 @@
           },
           "70 Chan": {
             "channels": 70,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode11 70DMX",
+            "status": "matched"
           },
           "70N": {
             "channels": "70N",
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 12 70N DMX",
+            "status": "matched"
           },
           "112 Chan": {
             "channels": 112,
@@ -1056,7 +1056,7 @@
         "68 Chan": 68
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Pixel_Line_Ip_500.gdtf",
         "file": "fixtures/acme/ACME@ACME_PIXEL_LINE_IP_500_(STROBE_1_IP)@ACME_PIXEL_LINE_IP_500_(STROBE_1_IP).gdtf",
@@ -1108,8 +1108,8 @@
           },
           "56 Chan": {
             "channels": 56,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 5 56CH",
+            "status": "matched"
           },
           "62 Chan": {
             "channels": 62,
@@ -1137,7 +1137,7 @@
         "27+168": "27+168"
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "partial",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Pulsar_Plus_S2.gdtf",
         "file": "fixtures/acme/ACME@PULSAR_PLUS_S2_(CM_S2_IP)@PULSAR_PLUS_S2_(CM_S2_IP).gdtf",
@@ -1222,7 +1222,7 @@
         "29 Chan": 29
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "partial",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Sana_Beam.gdtf",
         "file": "fixtures/acme/ACME@ACME_SANA_BEAM_(XA_300_BEAM_IP)@_ACME_SANA_BEAM_(XA_300_BEAM_IP).gdtf",
@@ -1262,7 +1262,7 @@
         "45 Chan": 45
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "partial",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Sana_Profile.gdtf",
         "file": "fixtures/acme/ACME@ACME_SANA_PROFILE_(XA_300_BSWF_IP)@_ACME_SANA_PROFILE_(XA_300_BSWF_IP).gdtf",
@@ -1414,7 +1414,7 @@
         "21 Chan": 21
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "partial",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Super_Dotline.gdtf",
         "file": "fixtures/acme/ACME@ACME_SUPER_DOTLINE_(TB_1060_INT12)@ACME_SUPER_DOTLINE_(TB_1060_INT12).gdtf",
@@ -1436,13 +1436,13 @@
           },
           "108 Chan": {
             "channels": 108,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 108 DMX",
+            "status": "matched"
           },
           "168 Chan": {
             "channels": 168,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 168 DMX",
+            "status": "matched"
           },
           "8+100": {
             "channels": "8+100",
@@ -1595,15 +1595,15 @@
         "141 Chan": 141
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "partial",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Theta.gdtf",
         "file": "fixtures/acme/ACME@ACME_THETA(CM_1000_ZF)@ACME_THETA(CM_1000_ZF).gdtf",
         "modes": {
           "19+": {
             "channels": "19+",
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 3 19DMX+",
+            "status": "matched"
           },
           "27 Chan": {
             "channels": 27,
@@ -1684,7 +1684,7 @@
         "28 Chan": 28
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Tv_Light_Panel_3000.gdtf",
         "file": "fixtures/acme/ACME@ACME_TV_LIGHT_PANEL_3000_(LP_F3000)@ACME_TV_LIGHT_PANEL_3000_(LP_F3000).gdtf",
@@ -1696,8 +1696,8 @@
           },
           "28 Chan": {
             "channels": 28,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 28CH",
+            "status": "matched"
           }
         }
       },

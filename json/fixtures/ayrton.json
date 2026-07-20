@@ -45,7 +45,7 @@
         "Extended": 45
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "partial",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Cobra.gdtf",
         "file": "fixtures/ayrton/Ayrton@Cobra@V1.7_Add_RDM_Personality.gdtf",
@@ -462,7 +462,7 @@
         "Extended": 184
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "partial",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Magic_Blade_Neo.gdtf",
         "file": "fixtures/ayrton/Ayrton@MagicBlade_Neo@V1.1_Add_RDM_Personality.gdtf",
@@ -474,8 +474,8 @@
           },
           "Extended": {
             "channels": 184,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended_Chase",
+            "status": "matched"
           }
         }
       },
@@ -535,7 +535,7 @@
         "Extended": 34
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__MiniPanel_FX.gdtf",
         "file": "fixtures/ayrton/Ayrton@MiniPanel_FX@V2.5_Add_RDM_Personality.gdtf",
@@ -552,8 +552,8 @@
           },
           "Extended": {
             "channels": 34,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended",
+            "status": "matched"
           }
         }
       },
@@ -674,7 +674,7 @@
         "Extended": 60
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "partial",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Rivale_Wash.gdtf",
         "file": "fixtures/ayrton/Ayrton@Rivale_Wash@V1.7_Add_RDM_Personality.gdtf",
@@ -787,7 +787,7 @@
         "Extended": 79
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Zonda_3_FX.gdtf",
         "file": "fixtures/ayrton/Ayrton@Zonda_3_FX@V1.7_Add_RDM_Personality.gdtf",
@@ -804,8 +804,8 @@
           },
           "Extended": {
             "channels": 79,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended Pixel 1",
+            "status": "matched"
           }
         }
       },
@@ -822,7 +822,7 @@
         "Extended Pixel": 79
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "partial",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Zonda_3_Wash.gdtf",
         "file": "fixtures/ayrton/Ayrton@Zonda_3_WASH@V1.7_Add_RDM_Personality.gdtf",
@@ -844,8 +844,8 @@
           },
           "Extended Pixel": {
             "channels": 79,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended Pixel",
+            "status": "matched"
           }
         }
       },
@@ -862,7 +862,7 @@
         "Extended Pixel": 199
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "partial",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Zonda_9_FX.gdtf",
         "file": "fixtures/ayrton/Ayrton@Zonda_9_FX@V1.7_Add_RDM_Personality.gdtf",
@@ -884,8 +884,8 @@
           },
           "Extended Pixel": {
             "channels": 199,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended Pixel 1",
+            "status": "matched"
           }
         }
       },
@@ -902,7 +902,7 @@
         "Extended Pixel": 199
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "partial",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Zonda_9_Wash.gdtf",
         "file": "fixtures/ayrton/Ayrton@Zonda_9_WASH@V1.7_Add_RDM_Personality.gdtf",
@@ -924,8 +924,8 @@
           },
           "Extended Pixel": {
             "channels": 199,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended Pixel",
+            "status": "matched"
           }
         }
       },
