@@ -121,7 +121,7 @@
         "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__BMFL_Followspot.gdtf",
-        "file": "fixtures/robe/Robe_Lighting%40Robin_BMFL_FollowSpot%402026-03-27_Color_macro_open_slot_revision.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_BMFL_FollowSpot@2026-03-27_Color_macro_open_slot_revision.gdtf",
         "modes": {
           "Mode 1": {
             "channels": 33,
