@@ -864,7 +864,7 @@
         "status": "pending-match",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Nova_Beam.gdtf",
-        "file": "fixtures/acme/ACME@ACME_NOVA_BEAM_(XA_300_BEAM_)@ACME_NOVA_BEAM_(XA_300_BEAM_).gdtf",
+        "file": "fixtures/acme/ACME@ACME_NOVA_BEAM@ACME_NOVA_BEAM.gdtf",
         "modes": {
           "19 Chan": {
             "channels": 19,
