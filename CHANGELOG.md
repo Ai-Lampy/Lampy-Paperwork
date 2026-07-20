@@ -2,6 +2,247 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V14.0 - 2026-07-20
+
+- Corrected GDTF DMX footprint parsing for pixel fixtures that use geometry references and per-reference DMX offsets.
+- Enforced exact GDTF matching by manufacturer, fixture type, GDTF mode, and channel count while preserving reviewed fixture-library filename mappings.
+- Added GDTF metadata capture for DataVersion, FixtureTypeID, long name, short name, file size, and SHA-256 checksum.
+- Added a local GDTF import report covering added files, new fixtures, revisions, duplicates, missing patch matches, file errors, and GitHub size warnings.
+- Improved MVR 1.5 and 1.6 import handling, including embedded GDTF names with or without the `.gdtf` extension.
+- Added MVR position, layer, class, and fixture UUID import metadata.
+- Updated MVR export to version 1.6 metadata, standards-formatted UUIDs, absolute DMX addresses, exact GDTF mode references, and one layer per Lampy fixture position.
+- Kept all GDTF and MVR work in the browser, retained manual GDTF upload, and did not add `.show` or grandMA3 cache/library modification.
+
+## V12.39 - 2026-07-20
+
+- Added a GDTF availability line to every fixture choice in the Add Fixture library picker.
+- Displays `GDTF ✅` when the fixture has a repository GDTF file with at least one fully matched mode/channel entry; otherwise displays `GDTF ❌`.
+- Kept final MVR eligibility tied to the selected fixture mode and exact channel count.
+
+## V12.38 - 2026-07-20
+
+- Grouped similar automatic revision notes into concise count-based summaries, such as fixtures added, fixtures updated, consoles changed, or project fields updated.
+- Added a detailed per-version automatic change log that retains individual item descriptions and timestamps without cluttering the visible revision notes.
+- Added a Download Change Log action to revisions containing automatic log entries.
+- Migrated existing detailed automatic notes into grouped summaries and detailed logs when older project files are opened.
+- Kept detailed log entries attached when grouped automatic notes are moved between versions.
+
+## V12.37 - 2026-07-20
+
+- Added a GDTF File status line to every fixture group in the Home Fixture Info card.
+- Displays ✅ only when the repository fixture library contains a fully matched GDTF reference for the fixture's manufacturer, fixture type, mode, and channel count; otherwise displays ❌.
+- Increased Fixture Info group headings to 17px and refreshed the Home view when the repository fixture library finishes loading.
+
+## V12.36 - 2026-07-20
+
+- Changed Fixture Patch group title lines to always use the fixture's full name.
+- Kept the Full Name / Short Name selector available for Fixture Patch table cells without allowing it to shorten on-screen or PDF fixture titles.
+
+## V12.35 - 2026-07-20
+
+- Optimized Fix ID typing in Power Calculations to update only the edited row and rows affected by duplicate Fix IDs.
+- Reused a single duplicate-ID scan and reduced table text fitting from once per row to one pass per input update.
+- Deferred phase-summary rebuilding, revision capture, local saving, and the optional Fixtures pane refresh until typing pauses or the field is committed.
+
+## V12.34 - 2026-07-20
+
+- Set Power Calculations Amp columns to 16px text while retaining automatic width and the 90px maximum width.
+
+## V12.33 - 2026-07-20
+
+- Added PDF-only empty-column suppression to Power Calculations exports.
+- Each exported Socapex or Aux page now hides table columns that contain no data on that page, allowing populated columns to use more of the selected paper width.
+- Kept the live Power Calculations spreadsheet unchanged and updated the vector PDF renderer to ignore hidden table cells.
+
+## V12.32 - 2026-07-20
+
+- Linked each Power Calculations Position cell background to the matched fixture's colour data in Fixture Patch.
+- Position cells now use a solid Colour 1 background or the existing diagonal pattern when Fixture Patch Colour 2 is also set.
+- Added automatic contrasting text and outline colours, with the same appearance retained in Power Calculations PDF preview and export.
+
+## V12.31 - 2026-07-20
+
+- Added a Position column after every Fix Type column in Power Calculations.
+- Linked each Position value directly to the corresponding fixture's Position in Fixture Patch, keeping the worksheet and PDF output synchronized without storing duplicate position data.
+- Applied compact, content-aware sizing to the new Position columns so the expanded table continues to fit the selected PDF page.
+
+## V12.30 - 2026-07-19
+
+- Linked each Power Calculations Socapex name to its rear-label text format.
+- Power Socapex names now inherit the rear label font, size, weight, italic, underline, outline, and text colour settings, then automatically fit within the spreadsheet cell.
+- Kept Power Calculations, rear labels, PDF preview, and downloaded Power Calculations PDFs synchronized when the Socapex name or rear-label formatting changes.
+
+## V12.29 - 2026-07-19
+
+- Set Power Calculations Fix ID cells to 16px text with an 800 font weight.
+- Retained the automatic width, zero minimum width, and 70px maximum width introduced in V12.28.
+
+## V12.28 - 2026-07-19
+
+- Reduced the Power Calculations Fix ID column maximum width from 100px to 70px.
+- Removed the Fix ID column minimum width so compact IDs can shrink the column further.
+
+## V12.27 - 2026-07-18
+
+- Added content-aware Power Calculations header sizing.
+- Headers now reduce their font size when the widest populated body value is narrower than the header label, preventing header text from holding compact columns open.
+- Applied the same header fitting to the live worksheet, PDF preview, and downloaded Power Calculations PDF.
+
+## V12.26 - 2026-07-18
+
+- Reduced the Power Calculations spreadsheet type size to 14px.
+- Changed the main Power Calculations table to automatic column layout.
+- Converted the existing Socapex, Way, Fix ID, Fixture Type, Watts, and Amps widths into maximum widths so compact content produces narrower columns without allowing long content to expand beyond the established layout.
+
+## V12.25 - 2026-07-18
+
+- Added backward-compatible `shortName` support to fixture library entries and patched fixture records.
+- Populated `shortName` in all 375 bundled fixture-library records, using compact, manufacturer-specific model names up to 24 characters.
+- Added independent **Full Name / Short Name** selectors to Power Calculations, Front RCBO Labels, and Fixture Patch.
+- Applied the selected name format to live worksheets, label exports, Fixture Patch PDF exports, and Fixture Patch Excel exports.
+- Added Short Name editing to Fixture Type Options and Short Name fields when creating custom or imported fixtures.
+- Existing projects and library fixtures without a defined short name continue to display the full fixture name.
+
+## V12.24 - 2026-07-18
+
+- Removed the Aux Outlet `Include in Power Calcs?` settings column from Power Calculations PDF previews and downloaded PDFs while retaining it in the live worksheet.
+- Added each configured Socapex colour or multi-colour stripe to its Socapex name cell in Power Calculations and PDF exports.
+
+## V12.23 - 2026-07-18
+
+- Centred the Aux Outlet label column.
+- Split Aux Outlets into separate Power Calculations tables, with each table retaining a three-output Phase 1, Phase 2, and Phase 3 group.
+- Limited expanded Watts and Amps columns to the individual Aux table containing an included output.
+
+## V12.22 - 2026-07-18
+
+- Set the single-distro Input Supply selector to a 36px height and 14px font size.
+- Set the single-distro RCBO selector to a 36px height.
+- Added the requested top and bottom borders, bottom padding, and bottom margin to the single-distro P/Lock Adaptor row.
+
+## V12.21 - 2026-07-18
+
+- Set the single-distro Type and Output Voltage selectors to a 36px height.
+- Set the single-distro P/Lock Adaptor button to a 184px width with the requested horizontal padding and top margin.
+
+## V12.20 - 2026-07-18
+
+- Updated shared form labels, including the Distro Name and Distro Type labels, to use a 5px bottom margin and a 1.5px `#969393` bottom border.
+
+## V12.19 - 2026-07-18
+
+- Updated the shared `.row` rule to the requested `grid-lanes` display declaration while retaining the two-column layout, gap, and margins.
+- Limited the `Show Colour 3 In Table View` distro control to distro settings opened from **Distro Labels → Table View**; it no longer appears from **Power Calculations**.
+- Updated shared label styling with a 3px bottom margin, heavier text, a grey bottom border, and 3px bottom padding.
+
+## V12.18 - 2026-07-18
+
+- Changed the shared `.row` layout to flex while retaining its existing two-column metadata, gap, and margins.
+- Changed `.distroActions` to inline-grid while retaining right alignment, spacing, and top margin.
+
+## V12.17 - 2026-07-18
+
+- Increased RCBO warning-note text from 9px to 11px.
+- Grouped Aux Outlet power rows into visually distinct sets of three, matching their Phase 1, Phase 2, and Phase 3 allocation.
+- Updated the P/Lock Adaptor button labels to `P/Lock Adaptor: Yes!` and `P/Lock Adaptor: No!`.
+
+## V12.16 - 2026-07-18
+
+- Extended console and NPU position strips to display all three configured position colours when Colour 3 is present.
+- Position strips now generate equal continuous diagonal bands for one, two, or three colours without transparent gaps.
+
+## V12.15 - 2026-07-18
+
+- Updated overloaded RCBO Amp cells to display `Warning! exceeds the [selected RCBO].`
+- Added the requested large red warning symbol beside overloaded Amp cells.
+- Kept the warning symbol inside valid table markup and positioned it outside the Amp cell without introducing an invalid element between table rows.
+- Retained the detailed calculated-current and threshold warning in the Amp cell title.
+
+## V12.14 - 2026-07-18
+
+- Updated console and NPU cards to display position strips using the position's first two configured colours.
+- Replaced the previous transparent gaps with a continuous alternating two-colour diagonal stripe pattern.
+- Kept single-colour positions compatible by using the same colour for both halves of the strip.
+
+## V12.13 - 2026-07-18
+
+- Changed the P/Lock Adaptor control in the distro settings side pane from a checkbox to an Enabled/Disabled button.
+- Split Aux Outlets into a dedicated spreadsheet beneath the selected distro's Socapex spreadsheet.
+- Added Aux number, editable label, and per-Aux `Include in Power Calcs?` controls.
+- Added expandable Watts 1, Watts 2, Watts 3, and calculated Amps columns when at least one Aux Outlet is included.
+- Assigned Aux 1/2/3 in each group to phases 1/2/3 respectively and included enabled Aux loads in distro and supply phase totals.
+- Preserved compatibility with Aux power data created in V12.12.
+
+## V12.12 - 2026-07-18
+
+- Added a per-distro RCBO selector to the distro settings side pane with `16 Amp RCBO` as the default and `10 Amp RCBO` as the alternative.
+- Added overload detection at 15.01 A for 16 Amp RCBOs and 9.01 A for 10 Amp RCBOs.
+- Highlighted overloaded Amp cells in red and added a detailed warning containing the calculated current, limit, and selected RCBO.
+- Added configured Aux Outlets to each distro Power Calculations spreadsheet with four fixture slots, Watts, Amps, overload checking, and inclusion in phase and supply totals.
+- Stored Aux Outlet power rows separately so adding or removing Socapexes cannot shift or overwrite Aux assignments.
+- Added dedicated Aux Outlet pages to the Power Calculations PDF while retaining the four-Socapex-per-page layout.
+
+## V12.11 - 2026-07-18
+
+- Set Power Calculation Socapex name cells to a complete 1.5px solid black border.
+- Added a 1.5px solid black top border to Power Calculation table headings.
+
+## V12.10 - 2026-07-18
+
+- Removed the remaining `Distro Phase Totals;` heading generated on the first PDF page of each distro.
+- Corrected the measured PDF fallback so it draws summary divider lines only when the preview element actually has a visible bottom border.
+- Prevented zero-width preview borders from becoming artificial lines in downloaded Power Calculations PDFs.
+- Made the measured live-preview renderer the direct Power PDF export path, avoiding Chrome's tainted-canvas failure and ensuring the preview and download use the same measured geometry and border styles.
+
+## V12.9 - 2026-07-18
+
+- Removed the `Distro Phase Totals;` heading from the final Power Calculations PDF summary preview.
+- Set the Power PDF sheet view and table width to 1400px while retaining a 100% maximum width.
+
+## V12.8 - 2026-07-18
+
+- Corrected Power Calculations PDF border widths so card and table borders retain their computed thickness in the downloaded vector fallback.
+- Preserved the individual top, right, bottom, and left table-cell border styles, including the heavier Socapex group boundaries.
+- Allowed the Power Calculations PDF preview to close by clicking its backdrop or pressing Escape.
+- Kept fit-to-window Power PDF zoom synchronized after the browser window is resized.
+
+## V12.7 - 2026-07-18
+
+- Limited each distro phase-total card to the first PDF page for that distro.
+- Added a final Power Calculations summary page containing every supply phase-total card.
+- Grouped each supply with the phase-total cards for all distros assigned to it, making the supply total visibly traceable to its component distro totals.
+
+## V12.6 - 2026-07-18
+
+- Started every distro on a new Power Calculations PDF preview page.
+- Limited each Power PDF page to four complete Socapex groups and kept all six ways together.
+- Changed each page heading to `Power Calculations - Distro Name - Distro Type`.
+- Limited the phase-total summary to the distro shown on that page.
+- Sized the Power Calculations table to the usable width of the selected PDF paper size.
+
+## V12.5 - 2026-07-18
+
+- Refined the Power Calculations measured-preview fallback to match the in-app preview composition more closely.
+- Exported toolbar metadata as one line instead of separately wrapping each value.
+- Expanded measured heading boxes to prevent Supply and Distro Phase Total headings from wrapping incorrectly.
+- Added rounded summary and phase-card borders plus the preview divider lines.
+- Embedded the project/export logo in measured Power Calculations PDF pages.
+- Restored preview transforms safely after each exported page, including when an individual page fails.
+
+## V12.4 - 2026-07-18
+
+- Added the same two-stage preview export strategy used by Fixture Patch to Power Calculations.
+- Added an automatic measured-preview vector fallback when the browser cannot convert a rendered Power preview page into an image.
+- Measured fallback pages now use the live preview positions, sizes, computed colours, borders, typography, phase cards, tables, and page numbers.
+- Normalized unsupported PDF separator glyphs in the vector fallback so they no longer appear as question marks.
+
+## V12.3 - 2026-07-18
+
+- Fixed Power Calculations PDF downloads so they are generated directly from the rendered in-app preview pages.
+- Preserved the preview typography, spacing, colours, tables, summary cards, and Unicode characters in the downloaded PDF.
+- Removed the obsolete parallel Power Calculations vector renderer that produced a different layout from the preview.
+- Waited for document fonts and final content-fit calculations before capturing each PDF page.
+
 ## V12.2 - 2026-07-18
 
 - Removed 17 proven-unused JavaScript functions, including obsolete vector PDF helpers and unused XLSX, GDTF, power-preview, patch-merge, and colour-export helpers.

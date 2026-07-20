@@ -16,9 +16,11 @@ Live app: [https://ai-lampy.github.io/Lampy-Paperwork/](https://ai-lampy.github.
 - Exports MVR fixture patches with matched repository GDTF files embedded when available.
 - Exports paperwork previews to PDF where supported by the app workflow.
 
+Every bundled fixture library entry includes a `shortName` alongside `fixture`. Short names can be selected independently for Power Calculations, Front RCBO Labels, and Fixture Patch displays; custom or older fixture data without a defined short name safely uses its full name.
+
 ## Current Version
 
-Current app version: **V12.2**
+Current app version: **V14.0**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 
