@@ -1,17 +1,13 @@
 {
-  "title": "Welcome",
+  "title": "Welcome to Lampy Paperwork V14.0",
   "paragraphs": [
-    "Hello, and welcome to Lampy Paperwork.",
-    "This application is currently under active development and testing.",
-    "Lampy Paperwork is designed to provide a faster and more efficient way of creating show paperwork for power distribution, fixture patching, and live entertainment workflows.",
-    "Feedback, suggestions, feature requests, and bug reports are always welcome via the GitHub project page:",
-
-    "https://ai-lampy.github.io/lampy-paperwork/",
-
-    "Please also submit missing fixture requests via the GitHub Page.",
-
-    "Thank you for helping test and improve the project.",
-
-    "16th July 2026 - V9"
+    "Lampy Paperwork is a browser-based workspace for building fixture patches, power calculations, distro labels, and control/network paperwork for live entertainment.",
+    "V14 improves GDTF matching and MVR compatibility. Fixture patches can be imported from CSV, Excel, XLSM, or MVR files and exported as PDF, Excel, or MVR. When an exact library match is available, the exported MVR includes the matched GDTF file and mode.",
+    "All project, GDTF, and MVR processing stays within your browser. Download your Lampy project file regularly so that you can reopen and continue your work later.",
+    "Use the Walk-through in the Actions menu for the recommended workflow and an overview of the current tools.",
+    "Lampy Paperwork remains under active development and testing. Please report bugs, request missing fixtures, or suggest improvements through the GitHub issue tracker:",
+    "https://github.com/Ai-Lampy/Lampy-Paperwork/issues",
+    "Thank you for testing Lampy Paperwork.",
+    "20/07/2026 - V14.0"
   ]
 }

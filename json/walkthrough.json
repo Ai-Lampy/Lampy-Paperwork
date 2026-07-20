@@ -1,27 +1,74 @@
 {
-  "title": "Lampy Paperwork Walk-through (Written by Ai)",
+  "title": "Lampy Paperwork V14.0 Walk-through",
   "sections": [
     {
-      "title": "Suggested Workflow",
+      "title": "Recommended Workflow",
       "type": "ordered",
       "items": [
-        "Start with Project Info: add the project name, dates, production details, revisions, and logos.",
-        "Build the Fixture Patch by importing Excel/CSV or adding fixtures from the library. Use Position Summary to keep colours consistent.",
-        "Use Power Calculations after the patch is built. Enter Fix IDs and the fixture type, watts, amps, and label colours will populate from patched data.",
-        "Download the project file regularly so the browser state can be reopened and edited later.",
-	 "Use Distro Labels to add distros, set Label Settings, and check Front RCBO Labels, Rear Labels, and Table View.",
-        "Use Export for label PDFs and Fixture Patch Export PDF for the patch sheet."
+        "Open Project Info from the Actions menu and enter the project name, dates, production details, and logos.",
+        "Add each distro with + Distro. Set its name, type, supply, voltage, RCBO rating, Socapex count, and any Aux or additional outputs.",
+        "Build the Fixture Patch by adding fixtures from the library or importing CSV, Excel, XLSM, or MVR data.",
+        "Open Position Summary to create positions and assign up to three colours. Position names and colours are shared with the patch, power calculations, labels, and Control/Network cards.",
+        "Open Power Calculations and assign distros to supplies. Enter fixture IDs to link each way to Fixture Patch data, then check phase totals, RCBO warnings, Aux outlets, and the PDF preview.",
+        "Use Control/Network to add consoles, NPUs, and network equipment, including roles, locations, parameters, protocols, and reference images.",
+        "Use Distro Labels to complete Front RCBO Labels, Rear Labels, and Table View, then preview and export the required label pages.",
+        "Review Revisions from the Actions menu or Home card, then download the Lampy project file so the editable project can be reopened later."
       ]
     },
     {
-      "title": "Tips",
+      "title": "Fixture Patch, GDTF, and MVR",
       "type": "unordered",
       "items": [
-        "Position colours are the master source for patch colours and linked RCBO label colours.",
-        "Supply cards in Power Calculations can be collapsed after setup to keep the page tidy.",
-        "Patch Format controls adjust fixture titles and selected table columns without changing fixture data.",
-        "PDF export logos appear on the first page only when enabled in Project Info.",
-        "Use Report Issue for bugs, missing fixtures, or feature requests."
+        "The fixture library shows GDTF ✅ only when a repository file has a fully matched manufacturer, fixture type, mode, and channel count. GDTF ❌ means an exact match is not currently available.",
+        "Use Import to load CSV, Excel, XLSM, or MVR files. Imported comparison tabs highlight new, removed, and changed patch data before it is merged into the master patch.",
+        "Fixture Patch Export can create PDF, Excel, and MVR files. MVR export checks fixture IDs, DMX addresses, modes, duplicate ranges, and GDTF availability before building the file.",
+        "V14 imports supported MVR 1.5 and 1.6 patch data, including fixture positions, layers, classes, UUID metadata, and embedded GDTF filenames with or without the .gdtf extension.",
+        "MVR export uses standards-formatted UUIDs and DMX addresses, creates one layer per Lampy fixture position, and embeds the exact matched GDTF file and mode.",
+        "Use Add GDTF Files in Fixture Patch Export when a repository match is unavailable. Manual upload remains a fallback and produces a report for matches, revisions, duplicates, missing fixtures, errors, and oversized files."
+      ]
+    },
+    {
+      "title": "Power Calculations",
+      "type": "unordered",
+      "items": [
+        "Fixture IDs link Power Calculations to Fixture Patch names, watts, positions, and position colours. Duplicate fixture IDs are highlighted.",
+        "Choose Full Name or Short Name independently for the Power Calculations display.",
+        "Select a 16 Amp or 10 Amp RCBO in each distro's settings. A way is warned above 15.01 A for a 16 Amp RCBO or above 9.01 A for a 10 Amp RCBO.",
+        "Aux outlets are grouped in threes for Phase 1, Phase 2, and Phase 3. Only Aux outlets enabled for power calculations contribute to the totals.",
+        "The PDF preview keeps Socapex groups together, starts each distro on a new page, shows four Socapexes per page, and finishes with the supply phase-total summary."
+      ]
+    },
+    {
+      "title": "Distro Labels",
+      "type": "unordered",
+      "items": [
+        "Front RCBO Labels, Rear Labels, and Table View edit the same distro data, so changes remain synchronized between views.",
+        "Socapex, Aux, and Output labels support label formatting and colour controls. Socapex names and colours also appear in Power Calculations.",
+        "Choose Full Name or Short Name for Front RCBO Labels without changing the fixture's stored library name.",
+        "Use Label Settings and Label Format before opening Export. Select the required front and rear pages, paper size, orientation, and logos in the preview."
+      ]
+    },
+    {
+      "title": "Revisions and Saving",
+      "type": "unordered",
+      "items": [
+        "Changes to Project Info, Fixture Patch, Power Calculations, and Control/Network automatically create concise revision notes in the latest working version.",
+        "Use Bump Version Number to increment the project version and add the current date. Notes can be edited, removed, or moved to another version.",
+        "Similar automatic changes are grouped into a short client-facing summary. Use Download Change Log when the detailed activity log is needed.",
+        "The browser saves a working copy locally, but Download Project is the portable backup. Use Open Project to continue from a saved Lampy project file."
+      ]
+    },
+    {
+      "title": "Useful Tips",
+      "type": "unordered",
+      "items": [
+        "The Home tab provides project totals, fixture and GDTF status, universe usage, position information, production details, and revision access.",
+        "Fixture group title lines always use the full fixture name. Full Name and Short Name options affect supported table cells and labels only.",
+        "Use the Fixture Patch lock before editing rows, and watch for duplicate fixture IDs or overlapping DMX addresses.",
+        "Supply cards can be collapsed after setup to keep Power Calculations tidy.",
+        "Project logos are controlled in Project Info and can be included in supported exports.",
+        "All project, GDTF, and MVR processing is local to the browser. Lampy Paperwork does not import grandMA3 .show files or modify grandMA3 system libraries.",
+        "Use Report Issue for bugs, missing fixture requests, or feature suggestions."
       ]
     }
   ]
