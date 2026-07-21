@@ -24,6 +24,90 @@
       "shortName": "AF 1 Fan"
     },
     {
+      "fixture": "AF 2 Fan",
+      "watts": null,
+      "weight": 17.5,
+      "modes": {
+        "Standard": 1
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__AF_2_Fan.gdtf",
+        "file": "fixtures/martin/Martin_Professional@AF_2_Fan@V_001.gdtf",
+        "modes": {
+          "Standard": {
+            "channels": 1,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "AF2"
+    },
+    {
+      "fixture": "Atomic 3000 DMX",
+      "watts": 3000.0,
+      "weight": null,
+      "modes": {
+        "4 Channel": 4,
+        "3 Channel": 3
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__Atomic_3000_DMX.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Atomic_3000_DMX@Rev_1.0.gdtf",
+        "modes": {
+          "4 Channel": {
+            "channels": 4,
+            "gdtfMode": "4 Channel",
+            "status": "matched"
+          },
+          "3 Channel": {
+            "channels": 3,
+            "gdtfMode": "3 Channel",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Atomic"
+    },
+    {
+      "fixture": "Atomic 3000 LED",
+      "watts": 1100.0,
+      "weight": 7.8,
+      "modes": {
+        "3 Channel": 3,
+        "4 Channel": 4,
+        "Extended mode": 14
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__Atomic_3000_LED.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Atomic_3000_LED@v003.gdtf",
+        "modes": {
+          "3 Channel": {
+            "channels": 3,
+            "gdtfMode": "3 Channel",
+            "status": "matched"
+          },
+          "4 Channel": {
+            "channels": 4,
+            "gdtfMode": "4 Channel",
+            "status": "matched"
+          },
+          "Extended mode": {
+            "channels": 14,
+            "gdtfMode": "Extended mode",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "A3K LED"
+    },
+    {
       "fixture": "ELP Manet 8F",
       "watts": 492.0,
       "weight": 14.0,
@@ -596,6 +680,34 @@
         }
       },
       "shortName": "MAC Allure Wash PC"
+    },
+    {
+      "fixture": "MAC Aura",
+      "watts": 199.0,
+      "weight": 5.6,
+      "modes": {
+        "Standard": 14,
+        "Extended": 25
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__MAC_Aura.gdtf",
+        "file": "fixtures/martin/Martin_Professional@MAC_Aura@20230201NoMeas.gdtf",
+        "modes": {
+          "Standard": {
+            "channels": 14,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Extended": {
+            "channels": 25,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "MACAur"
     },
     {
       "fixture": "MAC Aura PXL",
@@ -1216,6 +1328,34 @@
         }
       },
       "shortName": "MAC Viper XIP"
+    },
+    {
+      "fixture": "MAC_101",
+      "watts": 1000.0,
+      "weight": 3.7,
+      "modes": {
+        "Basic": 8,
+        "RGB/RAW": 12
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__MAC_101.gdtf",
+        "file": "fixtures/martin/Martin_Professional@MAC_101@V_101.gdtf",
+        "modes": {
+          "Basic": {
+            "channels": 8,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          },
+          "RGB/RAW": {
+            "channels": 12,
+            "gdtfMode": "RGB/RAW",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Mac101"
     },
     {
       "fixture": "VDO Atomic Bold",
