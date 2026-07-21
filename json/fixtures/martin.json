@@ -20,7 +20,98 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "AF 1 Fan"
+    },
+    {
+      "fixture": "ELP Manet 8F",
+      "watts": 492.0,
+      "weight": 14.0,
+      "modes": {
+        "Compact": 11,
+        "Basic": 17,
+        "Direct": 17
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__ELP_Manet_8F.gdtf",
+        "file": "fixtures/martin/Martin_Professional@ELP_Manet_8F@20251114.gdtf",
+        "modes": {
+          "Compact": {
+            "channels": 11,
+            "gdtfMode": "Compact",
+            "status": "matched"
+          },
+          "Basic": {
+            "channels": 17,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          },
+          "Direct": {
+            "channels": 17,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "ELPMan8F"
+    },
+    {
+      "fixture": "ELP PAR",
+      "watts": 280.0,
+      "weight": 7.8,
+      "modes": {
+        "Basic": 14,
+        "Compact": 9
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__ELP_PAR.gdtf",
+        "file": "fixtures/martin/Martin_Professional@ELP_PAR@20241107NoMeas.gdtf",
+        "modes": {
+          "Basic": {
+            "channels": 14,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          },
+          "Compact": {
+            "channels": 9,
+            "gdtfMode": "Compact",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "ELPPAR"
+    },
+    {
+      "fixture": "ELP PAR IP",
+      "watts": 280.0,
+      "weight": 9.1,
+      "modes": {
+        "Basic": 14,
+        "Compact": 9
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__ELP_PAR_IP.gdtf",
+        "file": "fixtures/martin/Martin_Professional@ELP_PAR_IP@20241107NoMeas.gdtf",
+        "modes": {
+          "Basic": {
+            "channels": 14,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          },
+          "Compact": {
+            "channels": 9,
+            "gdtfMode": "Compact",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "ELPPARIP"
     },
     {
       "fixture": "ERA 150 Wash",
@@ -41,7 +132,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "ERA 150 Wsh"
     },
     {
       "fixture": "ERA 400 Performance CLD",
@@ -51,18 +143,47 @@
         "Single Mode": 30
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__ERA_400_Performance_CLD.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@ERA_400_Performance_CLD@20230226.gdtf",
         "modes": {
           "Single Mode": {
             "channels": 30,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "ERA 400 Perf CLD"
+    },
+    {
+      "fixture": "ERA 400 Performance WRM",
+      "watts": 300.0,
+      "weight": 22.5,
+      "modes": {
+        "Basic": 30,
+        "Extended": 32
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__ERA_400_Performance_WRM.gdtf",
+        "file": "fixtures/martin/Martin_Professional@ERA_400_Performance_WRM@20230226.gdtf",
+        "modes": {
+          "Basic": {
+            "channels": 30,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          },
+          "Extended": {
+            "channels": 32,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "ERA400PerWRM"
     },
     {
       "fixture": "ERA 600 Performance",
@@ -72,18 +193,19 @@
         "Single Mode": 41
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__ERA_600_Performance.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@ERA_600_Performance@20230226.gdtf",
         "modes": {
           "Single Mode": {
             "channels": 41,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "ERA 600 Perf"
     },
     {
       "fixture": "ERA 600 Profile",
@@ -104,7 +226,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "ERA 600 Prof"
     },
     {
       "fixture": "ERA 700 Performance IP",
@@ -115,23 +238,358 @@
         "Extended": 54
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__ERA_700_Performance_IP.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@ERA_700_Performance_IP@20240208NoMeas.gdtf",
         "modes": {
           "Basic": {
             "channels": 42,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched"
           },
           "Extended": {
             "channels": 54,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "ERA 700 Perf IP"
+    },
+    {
+      "fixture": "ERA 800 Performance",
+      "watts": 800.0,
+      "weight": 41.0,
+      "modes": {
+        "Basic": 42
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__ERA_800_Performance.gdtf",
+        "file": "fixtures/martin/Martin_Professional@ERA_800_Performance@20230226.gdtf",
+        "modes": {
+          "Basic": {
+            "channels": 42,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "ERA800Per"
+    },
+    {
+      "fixture": "Exterior Dot-1 Pro",
+      "watts": 33.0,
+      "weight": 2.48,
+      "modes": {
+        "Standard": 6,
+        "Extended": 12,
+        "Direct": 4,
+        "RGB": 3,
+        "PixelMap Segments of 16": 21,
+        "PixelMap Segments of 8": 39,
+        "PixelMap Segments of 4": 75,
+        "PixelMap Segments of 2": 150,
+        "PixelMap per Pixel": 300
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__Exterior_Dot_1_Pro.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Exterior_Dot-1_Pro@20260621.gdtf",
+        "modes": {
+          "Standard": {
+            "channels": 6,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Extended": {
+            "channels": 12,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          },
+          "Direct": {
+            "channels": 4,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "RGB": {
+            "channels": 3,
+            "gdtfMode": "RGB",
+            "status": "matched"
+          },
+          "PixelMap Segments of 16": {
+            "channels": 21,
+            "gdtfMode": "PixelMap Segments of 16",
+            "status": "matched"
+          },
+          "PixelMap Segments of 8": {
+            "channels": 39,
+            "gdtfMode": "PixelMap Segments of 8",
+            "status": "matched"
+          },
+          "PixelMap Segments of 4": {
+            "channels": 75,
+            "gdtfMode": "PixelMap Segments of 4",
+            "status": "matched"
+          },
+          "PixelMap Segments of 2": {
+            "channels": 150,
+            "gdtfMode": "PixelMap Segments of 2",
+            "status": "matched"
+          },
+          "PixelMap per Pixel": {
+            "channels": 300,
+            "gdtfMode": "PixelMap per Pixel",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "EXTDot1Pro"
+    },
+    {
+      "fixture": "Exterior Dot-4 Pro",
+      "watts": 64.0,
+      "weight": 2.96,
+      "modes": {
+        "Standard": 6,
+        "Extended": 12,
+        "Direct": 4,
+        "RGB": 3,
+        "PixelMap Segments of 16": 12,
+        "PixelMap Segments of 8": 24,
+        "PixelMap Segments of 4": 48,
+        "PixelMap Segments of 2": 96,
+        "PixelMap per Pixel": 192
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__Exterior_Dot_4_Pro.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Exterior_Dot-4_Pro@20260621.gdtf",
+        "modes": {
+          "Standard": {
+            "channels": 6,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Extended": {
+            "channels": 12,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          },
+          "Direct": {
+            "channels": 4,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "RGB": {
+            "channels": 3,
+            "gdtfMode": "RGB",
+            "status": "matched"
+          },
+          "PixelMap Segments of 16": {
+            "channels": 12,
+            "gdtfMode": "PixelMap Segments of 16",
+            "status": "matched"
+          },
+          "PixelMap Segments of 8": {
+            "channels": 24,
+            "gdtfMode": "PixelMap Segments of 8",
+            "status": "matched"
+          },
+          "PixelMap Segments of 4": {
+            "channels": 48,
+            "gdtfMode": "PixelMap Segments of 4",
+            "status": "matched"
+          },
+          "PixelMap Segments of 2": {
+            "channels": 96,
+            "gdtfMode": "PixelMap Segments of 2",
+            "status": "matched"
+          },
+          "PixelMap per Pixel": {
+            "channels": 192,
+            "gdtfMode": "PixelMap per Pixel",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "EXTDot4Pro"
+    },
+    {
+      "fixture": "Exterior Dot-9 Pro",
+      "watts": 106.92,
+      "weight": 2.75,
+      "modes": {
+        "Standard": 6,
+        "Extended": 12,
+        "Direct": 4,
+        "RGB": 3,
+        "PixelMap Segments of 16": 9,
+        "PixelMap Segments of 8": 15,
+        "PixelMap Segments of 4": 27,
+        "PixelMap Segments of 2": 54,
+        "PixelMap per Pixel": 108
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__Exterior_Dot_9_Pro.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Exterior_Dot-9_Pro@20260621.gdtf",
+        "modes": {
+          "Standard": {
+            "channels": 6,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Extended": {
+            "channels": 12,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          },
+          "Direct": {
+            "channels": 4,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "RGB": {
+            "channels": 3,
+            "gdtfMode": "RGB",
+            "status": "matched"
+          },
+          "PixelMap Segments of 16": {
+            "channels": 9,
+            "gdtfMode": "PixelMap Segments of 16",
+            "status": "matched"
+          },
+          "PixelMap Segments of 8": {
+            "channels": 15,
+            "gdtfMode": "PixelMap Segments of 8",
+            "status": "matched"
+          },
+          "PixelMap Segments of 4": {
+            "channels": 27,
+            "gdtfMode": "PixelMap Segments of 4",
+            "status": "matched"
+          },
+          "PixelMap Segments of 2": {
+            "channels": 54,
+            "gdtfMode": "PixelMap Segments of 2",
+            "status": "matched"
+          },
+          "PixelMap per Pixel": {
+            "channels": 108,
+            "gdtfMode": "PixelMap per Pixel",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "EXTDot9Pro"
+    },
+    {
+      "fixture": "Exterior Dot-HP Pro",
+      "watts": 4.8,
+      "weight": 0.4,
+      "modes": {
+        "Standard": 6,
+        "Extended": 12,
+        "Direct": 4,
+        "RGB": 3,
+        "PixelMap": 48
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__Exterior_Dot_HP_Pro.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Exterior_Dot-HP_Pro@20260621.gdtf",
+        "modes": {
+          "Standard": {
+            "channels": 6,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Extended": {
+            "channels": 12,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          },
+          "Direct": {
+            "channels": 4,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "RGB": {
+            "channels": 3,
+            "gdtfMode": "RGB",
+            "status": "matched"
+          },
+          "PixelMap": {
+            "channels": 48,
+            "gdtfMode": "PixelMap",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "EXTDotHPPro"
+    },
+    {
+      "fixture": "MAC Allure Profile",
+      "watts": 420.0,
+      "weight": 17.6,
+      "modes": {
+        "Basic": 32,
+        "Extended": 68
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__MAC_Allure_Profile.gdtf",
+        "file": "fixtures/martin/Martin_Professional@MAC_Allure_Profile@20240515NoMeas.gdtf",
+        "modes": {
+          "Basic": {
+            "channels": 32,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          },
+          "Extended": {
+            "channels": 68,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "MACAllPro"
+    },
+    {
+      "fixture": "MAC Allure Wash PC",
+      "watts": 420.0,
+      "weight": 17.6,
+      "modes": {
+        "Basic": 28,
+        "Extended": 64
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__MAC_Allure_Wash_PC.gdtf",
+        "file": "fixtures/martin/Martin_Professional@MAC_Allure_Wash_PC@20230316NoMeas.gdtf",
+        "modes": {
+          "Basic": {
+            "channels": 28,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          },
+          "Extended": {
+            "channels": 64,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "MACAllWas"
     },
     {
       "fixture": "MAC Aura PXL",
@@ -170,7 +628,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "MAC Aura PXL"
     },
     {
       "fixture": "MAC Aura Raven XIP",
@@ -184,38 +643,39 @@
         "Plaid": 851
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__MAC_Aura_Raven_XIP.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@MAC_Aura_Raven_XIP@20260620.gdtf",
         "modes": {
           "Basic": {
             "channels": 38,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched"
           },
           "Extended": {
             "channels": 149,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended",
+            "status": "matched"
           },
           "Compact": {
             "channels": 22,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Compact",
+            "status": "matched"
           },
           "Ludicrous": {
             "channels": 266,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Ludicrous",
+            "status": "matched"
           },
           "Plaid": {
             "channels": 851,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Plaid",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "MAC Aura Raven XIP"
     },
     {
       "fixture": "MAC Aura XB",
@@ -242,7 +702,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "MAC Aura XB"
     },
     {
       "fixture": "MAC Aura XIP",
@@ -281,7 +742,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "MAC Aura XIP"
     },
     {
       "fixture": "MAC Axiom Hybrid",
@@ -291,18 +753,19 @@
         "Basic": 23
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__MAC_Axiom_Hybrid.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@MAC_Axiom_Hybrid@20230517NoMeas.gdtf",
         "modes": {
           "Basic": {
             "channels": 23,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "MAC Axiom Hybrid"
     },
     {
       "fixture": "MAC Encore Performance CLD",
@@ -312,18 +775,103 @@
         "Basic": 38
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__MAC_Encore_Performance_CLD.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@MAC_Encore_Performance_CLD@20230316NoMeas.gdtf",
         "modes": {
           "Basic": {
             "channels": 38,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "MAC Encore Perf CLD"
+    },
+    {
+      "fixture": "MAC Encore Performance WRM",
+      "watts": 468.0,
+      "weight": 31.0,
+      "modes": {
+        "Basic": 38
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__MAC_Encore_Performance_WRM.gdtf",
+        "file": "fixtures/martin/Martin_Professional@MAC_Encore_Performance_WRM@20230316NoMeas.gdtf",
+        "modes": {
+          "Basic": {
+            "channels": 38,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "MACEncPerWRM"
+    },
+    {
+      "fixture": "MAC Encore Two",
+      "watts": 760.0,
+      "weight": 36.8,
+      "modes": {
+        "Basic": 52,
+        "Extended": 62,
+        "Ludicrous": 68,
+        "Compact": 46
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__MAC_Encore_Two.gdtf",
+        "file": "fixtures/martin/Martin_Professional@MAC_Encore_Two@20260503.gdtf",
+        "modes": {
+          "Basic": {
+            "channels": 52,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          },
+          "Extended": {
+            "channels": 62,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          },
+          "Ludicrous": {
+            "channels": 68,
+            "gdtfMode": "Ludicrous",
+            "status": "matched"
+          },
+          "Compact": {
+            "channels": 46,
+            "gdtfMode": "Compact",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "MACEncTwo"
+    },
+    {
+      "fixture": "MAC Encore Wash WRM",
+      "watts": 468.0,
+      "weight": 28.5,
+      "modes": {
+        "Basic": 24
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__MAC_Encore_Wash_WRM.gdtf",
+        "file": "fixtures/martin/Martin_Professional@MAC_Encore_Wash_WRM@20230316NoMeas.gdtf",
+        "modes": {
+          "Basic": {
+            "channels": 24,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "MACEncWasWRM"
     },
     {
       "fixture": "MAC One",
@@ -356,7 +904,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "MAC One"
     },
     {
       "fixture": "MAC One Beam",
@@ -368,28 +917,29 @@
         "Ludicrous": 107
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__MAC_One_Beam.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@MAC_One_Beam@20260710NoMeas.gdtf",
         "modes": {
           "Compact": {
             "channels": 19,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Compact",
+            "status": "matched"
           },
           "Basic": {
             "channels": 35,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched"
           },
           "Ludicrous": {
             "channels": 107,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Ludicrous",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "MAC One Beam"
     },
     {
       "fixture": "MAC Quantum Profile",
@@ -416,7 +966,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "MAC Quantum Prof"
     },
     {
       "fixture": "MAC Quantum Wash",
@@ -443,7 +994,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "MAC Quantum Wsh"
     },
     {
       "fixture": "MAC Ultra Performance",
@@ -454,23 +1006,24 @@
         "Extended": 58
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__MAC_Ultra_Performance.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@MAC_Ultra_Performance@20260228.gdtf",
         "modes": {
           "Basic": {
             "channels": 48,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched"
           },
           "Extended": {
             "channels": 58,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "MAC Ultra Perf"
     },
     {
       "fixture": "MAC Ultra Wash",
@@ -480,18 +1033,19 @@
         "Basic": 29
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__MAC_Ultra_Wash.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@MAC_Ultra_Wash@20260228.gdtf",
         "modes": {
           "Basic": {
             "channels": 29,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "MAC Ultra Wsh"
     },
     {
       "fixture": "MAC Viper AirFX",
@@ -502,23 +1056,24 @@
         "Extended": 28
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__MAC_Viper_AirFX.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@MAC_Viper_AirFX@20230516NoMeas.gdtf",
         "modes": {
           "Basic": {
             "channels": 20,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched"
           },
           "Extended": {
             "channels": 28,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "MAC Viper AirFX"
     },
     {
       "fixture": "MAC Viper Performance",
@@ -545,7 +1100,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "MAC Viper Perf"
     },
     {
       "fixture": "MAC Viper Profile",
@@ -556,23 +1112,24 @@
         "Extended": 34
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__MAC_Viper_Profile.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@MAC_Viper_Profile@20230516NoMeas.gdtf",
         "modes": {
           "Basic": {
             "channels": 26,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched"
           },
           "Extended": {
             "channels": 34,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "MAC Viper Prof"
     },
     {
       "fixture": "MAC Viper Wash DX",
@@ -599,7 +1156,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "MAC Viper Wsh DX"
     },
     {
       "fixture": "MAC Viper XIP",
@@ -632,7 +1190,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "MAC Viper XIP"
     },
     {
       "fixture": "VDO Atomic Bold",
@@ -647,43 +1206,44 @@
         "Extended": 243
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__VDO_Atomic_Bold.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@VDO_Atomic_Bold@20260620.gdtf",
         "modes": {
           "1 Channel": {
             "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "1 Channel",
+            "status": "matched"
           },
           "3 Channel": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "3 Channel",
+            "status": "matched"
           },
           "4 Channel": {
             "channels": 4,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "4 Channel",
+            "status": "matched"
           },
           "Compact": {
             "channels": 10,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Compact",
+            "status": "matched"
           },
           "Basic": {
             "channels": 27,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched"
           },
           "Extended": {
             "channels": 243,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Atomic Bold"
     },
     {
       "fixture": "VDO Atomic Dot CLD",
@@ -697,38 +1257,39 @@
         "Extended": 64
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__VDO_Atomic_Dot_CLD.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@VDO_Atomic_Dot_CLD@20260621.gdtf",
         "modes": {
           "1 Channel": {
             "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "1 Channel",
+            "status": "matched"
           },
           "3 Channel": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "3 Channel",
+            "status": "matched"
           },
           "4 Channel": {
             "channels": 4,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "4 Channel",
+            "status": "matched"
           },
           "Basic": {
             "channels": 19,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched"
           },
           "Extended": {
             "channels": 64,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Atomic Dot CLD"
     },
     {
       "fixture": "VDO Atomic Dot WRM",
@@ -742,38 +1303,97 @@
         "Extended": 64
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__VDO_Atomic_Dot_WRM.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@VDO_Atomic_Dot_WRM@20260621.gdtf",
         "modes": {
           "1 Channel": {
             "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "1 Channel",
+            "status": "matched"
           },
           "3 Channel": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "3 Channel",
+            "status": "matched"
           },
           "4 Channel": {
             "channels": 4,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "4 Channel",
+            "status": "matched"
           },
           "Basic": {
             "channels": 19,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched"
           },
           "Extended": {
             "channels": 64,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Atomic Dot WRM"
+    },
+    {
+      "fixture": "VDO Dotron",
+      "watts": 4.8,
+      "weight": 0.3,
+      "modes": {
+        "DMX_RGB": 3,
+        "DMX_Basic": 10,
+        "P3_Intensity": 1,
+        "P3_RGB": 3,
+        "P3_Basic": 5,
+        "P3_Hybrid": 6,
+        "P3_PixelMap": 3
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__VDO_Dotron.gdtf",
+        "file": "fixtures/martin/Martin_Professional@VDO_Dotron@20210407.gdtf",
+        "modes": {
+          "DMX_RGB": {
+            "channels": 3,
+            "gdtfMode": "DMX_RGB",
+            "status": "matched"
+          },
+          "DMX_Basic": {
+            "channels": 10,
+            "gdtfMode": "DMX_Basic",
+            "status": "matched"
+          },
+          "P3_Intensity": {
+            "channels": 1,
+            "gdtfMode": "P3_Intensity",
+            "status": "matched"
+          },
+          "P3_RGB": {
+            "channels": 3,
+            "gdtfMode": "P3_RGB",
+            "status": "matched"
+          },
+          "P3_Basic": {
+            "channels": 5,
+            "gdtfMode": "P3_Basic",
+            "status": "matched"
+          },
+          "P3_Hybrid": {
+            "channels": 6,
+            "gdtfMode": "P3_Hybrid",
+            "status": "matched"
+          },
+          "P3_PixelMap": {
+            "channels": 3,
+            "gdtfMode": "P3_PixelMap",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "VDODot"
     },
     {
       "fixture": "VDO Fatron 20 1000 mm",
@@ -812,7 +1432,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Fatron 20 1000 mm"
     },
     {
       "fixture": "VDO Fatron 20 320 mm",
@@ -851,7 +1472,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Fatron 20 320 mm"
     },
     {
       "fixture": "VDO Sceptron 10 1000 mm",
@@ -890,7 +1512,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Sceptron 10 1000 mm"
     },
     {
       "fixture": "VDO Sceptron 10 320 mm",
@@ -929,7 +1552,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Sceptron 10 320 mm"
     },
     {
       "fixture": "VDO Sceptron 20 1000 mm",
@@ -942,20 +1566,20 @@
         "Pixel": 157
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "partial",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__VDO_Sceptron_20_1000_mm.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@VDO_Sceptron_20_1000mm@20201223.gdtf",
         "modes": {
           "RGB": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "DMX_RGB",
+            "status": "matched"
           },
           "Basic": {
             "channels": 10,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "DMX_Basic",
+            "status": "matched"
           },
           "Segment": {
             "channels": 55,
@@ -964,11 +1588,12 @@
           },
           "Pixel": {
             "channels": 157,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "DMX_Pixel",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Sceptron 20 1000 mm"
     },
     {
       "fixture": "VDO Sceptron 20 320 mm",
@@ -981,25 +1606,25 @@
         "Pixel": 22
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "partial",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__VDO_Sceptron_20_320_mm.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@VDO_Sceptron_20_320mm@20201223.gdtf",
         "modes": {
           "RGB": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "DMX_RGB",
+            "status": "matched"
           },
           "Basic": {
             "channels": 10,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "DMX_Basic",
+            "status": "matched"
           },
           "Segment": {
             "channels": 13,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "DMX_Segments",
+            "status": "matched"
           },
           "Pixel": {
             "channels": 22,
@@ -1007,7 +1632,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Sceptron 20 320 mm"
     },
     {
       "fixture": "VDO Sceptron 40 1000 mm",
@@ -1020,20 +1646,20 @@
         "Pixel": 82
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "partial",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__VDO_Sceptron_40_1000_mm.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@VDO_Sceptron_40_1000mm@20201223.gdtf",
         "modes": {
           "RGB": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "DMX_RGB",
+            "status": "matched"
           },
           "Basic": {
             "channels": 10,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "DMX_Basic",
+            "status": "matched"
           },
           "Segment": {
             "channels": 31,
@@ -1042,11 +1668,12 @@
           },
           "Pixel": {
             "channels": 82,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "DMX_Pixel",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Sceptron 40 1000 mm"
     },
     {
       "fixture": "VDO Sceptron 40 320 mm",
@@ -1059,25 +1686,25 @@
         "Pixel": 22
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "partial",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__VDO_Sceptron_40_320_mm.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@VDO_Sceptron_40_320mm@20201223.gdtf",
         "modes": {
           "RGB": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "DMX_RGB",
+            "status": "matched"
           },
           "Basic": {
             "channels": 10,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "DMX_Basic",
+            "status": "matched"
           },
           "Segment": {
             "channels": 13,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "DMX_Segments",
+            "status": "matched"
           },
           "Pixel": {
             "channels": 22,
@@ -1085,7 +1712,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Sceptron 40 320 mm"
     },
     {
       "fixture": "VDO Sceptron XB 1000 mm",
@@ -1106,73 +1734,74 @@
         "PixelMap 100 Pixels": 300
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__VDO_Sceptron_XB_1000_mm.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@VDO_Sceptron_XB_1000mm@20260621.gdtf",
         "modes": {
           "Compact": {
             "channels": 8,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Compact",
+            "status": "matched"
           },
           "Basic": {
             "channels": 14,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched"
           },
           "Extended 5 Segments": {
             "channels": 29,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended 5 Segments",
+            "status": "matched"
           },
           "Extended 10 Segments": {
             "channels": 44,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended 10 Segments",
+            "status": "matched"
           },
           "Extended 25 Segments": {
             "channels": 89,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended 25 Segments",
+            "status": "matched"
           },
           "Extended 100 Pixels": {
             "channels": 314,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended 100 Pixels",
+            "status": "matched"
           },
           "Compact Direct": {
             "channels": 8,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Compact Direct",
+            "status": "matched"
           },
           "RGB": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "RGB",
+            "status": "matched"
           },
           "PixelMap 5 Segments": {
             "channels": 15,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "PixelMap 5 Segments",
+            "status": "matched"
           },
           "PixelMap 10 Segments": {
             "channels": 30,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "PixelMap 10 Segments",
+            "status": "matched"
           },
           "PixelMap 25 Segments": {
             "channels": 75,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "PixelMap 25 Segments",
+            "status": "matched"
           },
           "PixelMap 100 Pixels": {
             "channels": 300,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "PixelMap 100 Pixels",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Sceptron XB 1000 mm"
     },
     {
       "fixture": "VDO Sceptron XB 320 mm",
@@ -1193,73 +1822,74 @@
         "PixelMap 32 Pixels": 96
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__VDO_Sceptron_XB_320_mm.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@VDO_Sceptron_XB_320mm@20260621.gdtf",
         "modes": {
           "Compact": {
             "channels": 8,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Compact",
+            "status": "matched"
           },
           "Basic": {
             "channels": 14,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched"
           },
           "Extended 2 Segments": {
             "channels": 20,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended 2 Segments",
+            "status": "matched"
           },
           "Extended 4 Segments": {
             "channels": 26,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended 4 Segments",
+            "status": "matched"
           },
           "Extended 8 Segments": {
             "channels": 38,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended 8 Segments",
+            "status": "matched"
           },
           "Extended 32 Pixels": {
             "channels": 110,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended 32 Pixels",
+            "status": "matched"
           },
           "Compact Direct": {
             "channels": 8,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Compact Direct",
+            "status": "matched"
           },
           "RGB": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "RGB",
+            "status": "matched"
           },
           "PixelMap 2 Segments": {
             "channels": 6,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "PixelMap 2 Segments",
+            "status": "matched"
           },
           "PixelMap 4 Segments": {
             "channels": 12,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "PixelMap 4 Segments",
+            "status": "matched"
           },
           "PixelMap 8 Segments": {
             "channels": 24,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "PixelMap 8 Segments",
+            "status": "matched"
           },
           "PixelMap 32 Pixels": {
             "channels": 96,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "PixelMap 32 Pixels",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "Sceptron XB 320 mm"
     }
   ]
 }
