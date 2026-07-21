@@ -19,7 +19,27 @@
           }
         }
       },
-      "shortName": "2-Lite Mole"
+      "shortName": "2-Lite"
+    },
+    {
+      "fixture": "4-Lite Linear Mole",
+      "modes": {
+        "Dimmer - 1 Chan": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/generic",
+        "suggestedFileName": "Generic__4_Lite_Linear_Mole.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer - 1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      },
+      "shortName": "4-Lite Linear"
     },
     {
       "fixture": "4-Lite Mole",
@@ -45,27 +65,7 @@
           }
         }
       },
-      "shortName": "4-Lite Mole"
-    },
-    {
-      "fixture": "4-Lite Linear Mole",
-      "modes": {
-        "Dimmer - 1 Chan": 1
-      },
-      "gdtf": {
-        "status": "pending-download",
-        "folder": "fixtures/generic",
-        "suggestedFileName": "Generic__4_Lite_Linear_Mole.gdtf",
-        "file": "",
-        "modes": {
-          "Dimmer - 1 Chan": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
-          }
-        }
-      },
-      "shortName": "4-Lite Linear Mole"
+      "shortName": "4-Lite"
     },
     {
       "fixture": "8-Lite Mole",
@@ -91,7 +91,51 @@
           }
         }
       },
-      "shortName": "8-Lite Mole"
+      "shortName": "8-Lite"
+    },
+    {
+      "fixture": "Dimmer",
+      "watts": 1000.0,
+      "weight": null,
+      "modes": {
+        "Default": 1
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/generic",
+        "suggestedFileName": "Generic__Dimmer.gdtf",
+        "file": "fixtures/generic/Generic@Dimmer@Generic.gdtf",
+        "modes": {
+          "Default": {
+            "channels": 1,
+            "gdtfMode": "Default",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Dim"
+    },
+    {
+      "fixture": "Generic RGB",
+      "watts": 1000.0,
+      "weight": null,
+      "modes": {
+        "RGB": 3
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/generic",
+        "suggestedFileName": "Generic__Generic_RGB.gdtf",
+        "file": "fixtures/generic/Generic@Generic_RGB@V1_RGB.gdtf",
+        "modes": {
+          "RGB": {
+            "channels": 3,
+            "gdtfMode": "RGB",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Generic RGB"
     },
     {
       "fixture": "Omni",
@@ -112,6 +156,28 @@
         }
       },
       "shortName": "Omni"
+    },
+    {
+      "fixture": "RGBW",
+      "watts": 1000.0,
+      "weight": null,
+      "modes": {
+        "RGB": 4
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/generic",
+        "suggestedFileName": "Generic__RGBW.gdtf",
+        "file": "fixtures/generic/Generic@RGBW@V1_RGBW.gdtf",
+        "modes": {
+          "RGB": {
+            "channels": 4,
+            "gdtfMode": "RGB",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Generic RGBW"
     }
   ]
 }

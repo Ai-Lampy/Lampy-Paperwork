@@ -1,0 +1,49 @@
+{
+  "manufacturer": "Look Solutions",
+  "fixtures": [
+    {
+      "fixture": "Look Solutions Unique 2_1",
+      "watts": null,
+      "weight": null,
+      "modes": {
+        "2 Channel": 2
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/look_solutions",
+        "suggestedFileName": "Look_Solutions__Look_Solutions_Unique_2_1.gdtf",
+        "file": "fixtures/look_solutions/Look_Solutions@Look_Solutions_Unique_2_1@Adjusted_-_Added_Channel_Sets.gdtf",
+        "modes": {
+          "2 Channel": {
+            "channels": 2,
+            "gdtfMode": "2 Channel",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Unique 2.1"
+    },
+    {
+      "fixture": "Viper",
+      "watts": null,
+      "weight": 20.0,
+      "modes": {
+        "Standard": 1
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/look_solutions",
+        "suggestedFileName": "Look_Solutions__Viper.gdtf",
+        "file": "fixtures/look_solutions/Look_Solutions@Viper@New_PNG.gdtf",
+        "modes": {
+          "Standard": {
+            "channels": 1,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Viper"
+    }
+  ]
+}

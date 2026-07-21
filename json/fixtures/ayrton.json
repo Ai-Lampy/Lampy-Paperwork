@@ -209,7 +209,7 @@
           }
         }
       },
-      "shortName": "Domino Wsh"
+      "shortName": "Domino Wash"
     },
     {
       "fixture": "Eagle Strike",
@@ -745,7 +745,7 @@
           }
         }
       },
-      "shortName": "Rivale Wsh"
+      "shortName": "Rivale Wash"
     },
     {
       "fixture": "Stradale Profile",
@@ -829,7 +829,7 @@
           }
         }
       },
-      "shortName": "Veloce Wsh"
+      "shortName": "Veloce Wash"
     },
     {
       "fixture": "Zonda 3 FX",
@@ -927,7 +927,7 @@
           }
         }
       },
-      "shortName": "Zonda 3 Wsh"
+      "shortName": "Zonda 3 Wash"
     },
     {
       "fixture": "Zonda 9 FX",
@@ -1025,7 +1025,7 @@
           }
         }
       },
-      "shortName": "Zonda 9 Wsh"
+      "shortName": "Zonda 9 Wash"
     }
   ]
 }

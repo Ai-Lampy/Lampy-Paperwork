@@ -1,0 +1,167 @@
+{
+  "manufacturer": "MagicFX",
+  "fixtures": [
+    {
+      "fixture": " Swirlfan II",
+      "watts": null,
+      "weight": 19.0,
+      "modes": {
+        "Safety Version": 2,
+        "Dimmer Version": 1
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/magix_fx",
+        "suggestedFileName": "MagicFX__Swirlfan_II.gdtf",
+        "file": "fixtures/magix_fx/MagicFX@Swirlfan_II@2026-01-21.gdtf",
+        "modes": {
+          "Safety Version": {
+            "channels": 2,
+            "gdtfMode": "Safety Version",
+            "status": "matched"
+          },
+          "Dimmer Version": {
+            "channels": 1,
+            "gdtfMode": "Dimmer Version",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Swirlfan II"
+    },
+    {
+      "fixture": "ECO2JET",
+      "watts": null,
+      "weight": 31.7,
+      "modes": {
+        "Standard": 2,
+        "Extended": 3,
+        "ECO2JET Safety": 1,
+        "ECO2JET Standard Standalone": 1,
+        "ECO2JET Extended Standalone": 2
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/magix_fx",
+        "suggestedFileName": "MagicFX__ECO2JET.gdtf",
+        "file": "fixtures/magix_fx/MagicFX@Eco2Jet@Dim=Output.gdtf",
+        "modes": {
+          "Standard": {
+            "channels": 2,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Extended": {
+            "channels": 3,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          },
+          "ECO2JET Safety": {
+            "channels": 1,
+            "gdtfMode": "ECO2JET Safety",
+            "status": "matched"
+          },
+          "ECO2JET Standard Standalone": {
+            "channels": 1,
+            "gdtfMode": "ECO2JET Standard Standalone",
+            "status": "matched"
+          },
+          "ECO2JET Extended Standalone": {
+            "channels": 2,
+            "gdtfMode": "ECO2JET Extended Standalone",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "ECO2JET"
+    },
+    {
+      "fixture": "Powershot II",
+      "watts": null,
+      "weight": 1.7,
+      "modes": {
+        "Standard": 1
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/magix_fx",
+        "suggestedFileName": "MagicFX__Powershot_II.gdtf",
+        "file": "fixtures/magix_fx/MagicFX@Powershot_II@initial.gdtf",
+        "modes": {
+          "Standard": {
+            "channels": 1,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Powershot II"
+    },
+    {
+      "fixture": "Smokebubble Blaster",
+      "watts": null,
+      "weight": null,
+      "modes": {
+        "5Ch": 4
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/magix_fx",
+        "suggestedFileName": "MagicFX__Smokebubble_Blaster.gdtf",
+        "file": "fixtures/magix_fx/MagicFX@Smokebubble_Blaster@1.0.0.0.gdtf",
+        "modes": {
+          "5Ch": {
+            "channels": 4,
+            "gdtfMode": "5Ch",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Bubble Blaster"
+    },
+    {
+      "fixture": "SMOKEJET",
+      "watts": 1000.0,
+      "weight": 11.1,
+      "modes": {
+        "9 Chan": 9
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/magix_fx",
+        "suggestedFileName": "MagicFX__SMOKEJET.gdtf",
+        "file": "fixtures/magix_fx/MagicFX@SMOKEJET@1_2_Out_for_real_world_testing_-_changed_Manufacture_Name.gdtf",
+        "modes": {
+          "9 Chan": {
+            "channels": 9,
+            "gdtfMode": "9 Chan",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "SMOKEJET"
+    },
+    {
+      "fixture": "Stadiumblaster",
+      "watts": null,
+      "weight": 79.0,
+      "modes": {
+        "Mode": 2
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/magix_fx",
+        "suggestedFileName": "MagicFX__Stadiumblaster.gdtf",
+        "file": "fixtures/magix_fx/MagicFX@StadiumBlaster@Init.gdtf",
+        "modes": {
+          "Mode": {
+            "channels": 2,
+            "gdtfMode": "Mode",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Stadiumblaster"
+    }
+  ]
+}

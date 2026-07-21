@@ -1,0 +1,27 @@
+{
+  "manufacturer": "Smoke Factory",
+  "fixtures": [
+    {
+      "fixture": "Tour Hazer II",
+      "watts": null,
+      "weight": 16.5,
+      "modes": {
+        "Default": 2
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/smoke_factory",
+        "suggestedFileName": "Smoke_Factory__Tour_Hazer_II.gdtf",
+        "file": "fixtures/smoke_factory/Smoke_Factory@Tour_Hazer_II@Release_1.0.gdtf",
+        "modes": {
+          "Default": {
+            "channels": 2,
+            "gdtfMode": "Default",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "THazerII"
+    }
+  ]
+}
