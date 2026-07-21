@@ -6,13 +6,16 @@
       "watts": 696,
       "weight": 12.1,
       "modes": {
-        "8 Chan": 8,
-        "11 Chan": 11,
-        "13 Chan": 13,
-        "24 Chan": 24,
-        "30 Chan": 30,
-        "74 Chan": 74,
-        "97 Chan": 97
+        "97Ch Mode": 97,
+        "74Ch Mode": 74,
+        "68Ch Mode": 68,
+        "47Ch Mode": 47,
+        "30Ch Mode": 30,
+        "24Ch Mode": 24,
+        "13Ch Mode": 13,
+        "11Ch Mode": 11,
+        "8Ch Mode": 8,
+        "96Ch Mode": 96
       },
       "gdtf": {
         "status": "matched",
@@ -20,39 +23,54 @@
         "suggestedFileName": "Chauvet__Color_Strike_M.gdtf",
         "file": "fixtures/chauvet/Chauvet_Professional@Color_Strike_M@Rev_1.1.3.gdtf",
         "modes": {
-          "8 Chan": {
-            "channels": 8,
-            "gdtfMode": "8Ch Mode",
+          "97Ch Mode": {
+            "channels": 97,
+            "gdtfMode": "97Ch Mode",
             "status": "matched"
           },
-          "11 Chan": {
-            "channels": 11,
-            "gdtfMode": "11Ch Mode",
-            "status": "matched"
-          },
-          "13 Chan": {
-            "channels": 13,
-            "gdtfMode": "13Ch Mode",
-            "status": "matched"
-          },
-          "24 Chan": {
-            "channels": 24,
-            "gdtfMode": "24Ch Mode",
-            "status": "matched"
-          },
-          "30 Chan": {
-            "channels": 30,
-            "gdtfMode": "30Ch Mode",
-            "status": "matched"
-          },
-          "74 Chan": {
+          "74Ch Mode": {
             "channels": 74,
             "gdtfMode": "74Ch Mode",
             "status": "matched"
           },
-          "97 Chan": {
-            "channels": 97,
-            "gdtfMode": "97Ch Mode",
+          "68Ch Mode": {
+            "channels": 68,
+            "gdtfMode": "68Ch Mode",
+            "status": "matched"
+          },
+          "47Ch Mode": {
+            "channels": 47,
+            "gdtfMode": "47Ch Mode",
+            "status": "matched"
+          },
+          "30Ch Mode": {
+            "channels": 30,
+            "gdtfMode": "30Ch Mode",
+            "status": "matched"
+          },
+          "24Ch Mode": {
+            "channels": 24,
+            "gdtfMode": "24Ch Mode",
+            "status": "matched"
+          },
+          "13Ch Mode": {
+            "channels": 13,
+            "gdtfMode": "13Ch Mode",
+            "status": "matched"
+          },
+          "11Ch Mode": {
+            "channels": 11,
+            "gdtfMode": "11Ch Mode",
+            "status": "matched"
+          },
+          "8Ch Mode": {
+            "channels": 8,
+            "gdtfMode": "8Ch Mode",
+            "status": "matched"
+          },
+          "96Ch Mode": {
+            "channels": 96,
+            "gdtfMode": "96Ch Mode",
             "status": "matched"
           }
         }
@@ -64,13 +82,19 @@
       "watts": 768,
       "weight": 34.5,
       "modes": {
-        "Single Control ~ Basic": 20,
-        "Single Control ~ Basic 2": 53,
-        "Single Control ~ Standard": 101,
-        "Single Control ~ Advance": 155,
-        "Single Control ~ Advance 2": 169,
-        "Single Control ~ Full PXL": 169,
-        "Single Control ~ Tour": 179
+        "Single Control: Basic 20Ch": 20,
+        "Single Control: Basic2 53Ch": 53,
+        "Single Control: Standard 101Ch": 101,
+        "Single Control: Advanced 155Ch": 155,
+        "Single Control: Advanced2 169Ch": 169,
+        "Single Control: Tour 179Ch": 179,
+        "Single Control: Full PXL 169Ch": 169,
+        "Dual Control-Movement: Basic 41Ch": 41,
+        "Dual Control-Movement: Standard 53Ch ": 53,
+        "Dual Control-Movement: Advanced 59Ch ": 59,
+        "Dual Control-Pixel: Basic 36Ch": 36,
+        "Dual Control-Pixel: Standard 48Ch": 48,
+        "Dual Control-Pixel: Advanced 96Ch": 96
       },
       "gdtf": {
         "status": "matched",
@@ -78,39 +102,69 @@
         "suggestedFileName": "Chauvet__COLORado_PXL_Curve_12.gdtf",
         "file": "fixtures/chauvet/Chauvet_Professional@COLORado_PXL_Curve_12@Rev_1.1.4.gdtf",
         "modes": {
-          "Single Control ~ Basic": {
+          "Single Control: Basic 20Ch": {
             "channels": 20,
             "gdtfMode": "Single Control: Basic 20Ch",
             "status": "matched"
           },
-          "Single Control ~ Basic 2": {
+          "Single Control: Basic2 53Ch": {
             "channels": 53,
             "gdtfMode": "Single Control: Basic2 53Ch",
             "status": "matched"
           },
-          "Single Control ~ Standard": {
+          "Single Control: Standard 101Ch": {
             "channels": 101,
             "gdtfMode": "Single Control: Standard 101Ch",
             "status": "matched"
           },
-          "Single Control ~ Advance": {
+          "Single Control: Advanced 155Ch": {
             "channels": 155,
             "gdtfMode": "Single Control: Advanced 155Ch",
             "status": "matched"
           },
-          "Single Control ~ Advance 2": {
+          "Single Control: Advanced2 169Ch": {
             "channels": 169,
             "gdtfMode": "Single Control: Advanced2 169Ch",
             "status": "matched"
           },
-          "Single Control ~ Full PXL": {
+          "Single Control: Tour 179Ch": {
+            "channels": 179,
+            "gdtfMode": "Single Control: Tour 179Ch",
+            "status": "matched"
+          },
+          "Single Control: Full PXL 169Ch": {
             "channels": 169,
             "gdtfMode": "Single Control: Full PXL 169Ch",
             "status": "matched"
           },
-          "Single Control ~ Tour": {
-            "channels": 179,
-            "gdtfMode": "Single Control: Tour 179Ch",
+          "Dual Control-Movement: Basic 41Ch": {
+            "channels": 41,
+            "gdtfMode": "Dual Control-Movement: Basic 41Ch",
+            "status": "matched"
+          },
+          "Dual Control-Movement: Standard 53Ch ": {
+            "channels": 53,
+            "gdtfMode": "Dual Control-Movement: Standard 53Ch ",
+            "status": "matched"
+          },
+          "Dual Control-Movement: Advanced 59Ch ": {
+            "channels": 59,
+            "gdtfMode": "Dual Control-Movement: Advanced 59Ch ",
+            "status": "matched"
+          },
+          "Dual Control-Pixel: Basic 36Ch": {
+            "channels": 36,
+            "gdtfMode": "Dual Control-Pixel: Basic 36Ch",
+            "status": "matched"
+          },
+          "Dual Control-Pixel: Standard 48Ch": {
+            "channels": 48,
+            "gdtfMode": "Dual Control-Pixel: Standard 48Ch",
+            "status": "matched"
+          },
+          "Dual Control-Pixel: Advanced 96Ch": {
+            "channels": 96,
+            "gdtfMode": "Dual Control-Pixel: Advanced 96Ch",
             "status": "matched"
           }
         }
@@ -122,10 +176,11 @@
       "watts": 1113,
       "weight": 32.4,
       "modes": {
-        "120 Chan": 120,
-        "155 Chan": 155,
-        "195 Chan": 195,
-        "355 Chan": 355
+        "Advanced": 355,
+        "Standard": 195,
+        "Basic High Resolution": 155,
+        "Basic Raw": 195,
+        "Basic": 120
       },
       "gdtf": {
         "status": "matched",
@@ -133,24 +188,29 @@
         "suggestedFileName": "Chauvet__COLORado_PXL_Curve_5.gdtf",
         "file": "fixtures/chauvet/Chauvet_Professional@COLORado_PXL_Curve_5@Rev_1.0.0.gdtf",
         "modes": {
-          "120 Chan": {
-            "channels": 120,
-            "gdtfMode": "Basic",
+          "Advanced": {
+            "channels": 355,
+            "gdtfMode": "Advanced",
             "status": "matched"
           },
-          "155 Chan": {
-            "channels": 155,
-            "gdtfMode": "Basic High Resolution",
-            "status": "matched"
-          },
-          "195 Chan": {
+          "Standard": {
             "channels": 195,
             "gdtfMode": "Standard",
             "status": "matched"
           },
-          "355 Chan": {
-            "channels": 355,
-            "gdtfMode": "Advanced",
+          "Basic High Resolution": {
+            "channels": 155,
+            "gdtfMode": "Basic High Resolution",
+            "status": "matched"
+          },
+          "Basic Raw": {
+            "channels": 195,
+            "gdtfMode": "Basic Raw",
+            "status": "matched"
+          },
+          "Basic": {
+            "channels": 120,
+            "gdtfMode": "Basic",
             "status": "matched"
           }
         }
@@ -162,8 +222,8 @@
       "watts": 467,
       "weight": 23.3,
       "modes": {
-        "Standard": 19,
-        "Extended": 21
+        "19Ch Mode": 19,
+        "21Ch Mode": 21
       },
       "gdtf": {
         "status": "matched",
@@ -171,12 +231,12 @@
         "suggestedFileName": "Chauvet__Maverick_Storm_1_Beam.gdtf",
         "file": "fixtures/chauvet/Chauvet_Professional@Maverick_Storm_1_Beam@Rev_1.0.9.gdtf",
         "modes": {
-          "Standard": {
+          "19Ch Mode": {
             "channels": 19,
             "gdtfMode": "19Ch Mode",
             "status": "matched"
           },
-          "Extended": {
+          "21Ch Mode": {
             "channels": 21,
             "gdtfMode": "21Ch Mode",
             "status": "matched"
@@ -191,8 +251,8 @@
       "watts": 738,
       "weight": 28.8,
       "modes": {
-        "26 Chan": 26,
-        "33 Chan": 33
+        "33Ch Mode": 33,
+        "26Ch Mode": 26
       },
       "gdtf": {
         "status": "matched",
@@ -200,14 +260,14 @@
         "suggestedFileName": "Chauvet__Maverick_Storm_1_Flex.gdtf",
         "file": "fixtures/chauvet/Chauvet_Professional@Maverick_Storm_1_Flex@Rev_1.0.1.gdtf",
         "modes": {
-          "26 Chan": {
-            "channels": 26,
-            "gdtfMode": "26Ch Mode",
-            "status": "matched"
-          },
-          "33 Chan": {
+          "33Ch Mode": {
             "channels": 33,
             "gdtfMode": "33Ch Mode",
+            "status": "matched"
+          },
+          "26Ch Mode": {
+            "channels": 26,
+            "gdtfMode": "26Ch Mode",
             "status": "matched"
           }
         }
@@ -219,8 +279,8 @@
       "watts": 647,
       "weight": 29.2,
       "modes": {
-        "Standard": 24,
-        "Extended": 29
+        "29Ch Mode": 29,
+        "24Ch Mode": 24
       },
       "gdtf": {
         "status": "matched",
@@ -228,14 +288,14 @@
         "suggestedFileName": "Chauvet__Maverick_Storm_1_Hybrid.gdtf",
         "file": "fixtures/chauvet/Chauvet_Professional@Maverick_Storm_1_Hybrid@Rev_1.0.9.gdtf",
         "modes": {
-          "Standard": {
-            "channels": 24,
-            "gdtfMode": "24Ch Mode",
-            "status": "matched"
-          },
-          "Extended": {
+          "29Ch Mode": {
             "channels": 29,
             "gdtfMode": "29Ch Mode",
+            "status": "matched"
+          },
+          "24Ch Mode": {
+            "channels": 24,
+            "gdtfMode": "24Ch Mode",
             "status": "matched"
           }
         }
@@ -247,72 +307,90 @@
       "watts": 1040,
       "weight": 23.8,
       "modes": {
-        "13 Chan": 13,
-        "33 Chan": 33,
-        "36 Chan": 36,
-        "47 Chan": 47,
-        "93 Chan": 93,
-        "112 Chan": 112,
-        "145 Chan": 145,
-        "224 Chan": 224,
-        "265 Chan": 265,
-        "327 Chan": 327
+        "Single Control: Basic 31ch": 31,
+        "Single Control: Standard 143ch": 143,
+        "Single Control: Advanced 263ch": 263,
+        "Single Control: Tour 325ch": 325,
+        "Single Control: Basic2 37ch": 37,
+        "Single Control: Busking 19Ch": 19,
+        "Single Control: Basic3 37Ch": 37,
+        "Dual Control Mode Movement: Advanced 45ch": 45,
+        "Dual Control Mode Movement: Standard 34ch": 34,
+        "Dual Control Mode Movement: Basic 11ch": 11,
+        "Dual Control Mode Pixels Advanced 224ch": 224,
+        "Dual Control Mode Pixels: Standard 112ch": 112,
+        "Dual Control Mode Pixels: Basic 93ch": 93
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/chauvet",
         "suggestedFileName": "Chauvet__Maverick_Storm_2_BeamWash.gdtf",
         "file": "fixtures/chauvet/Chauvet_Professional@Maverick_Storm_2_BeamWash@Rev_1.1.0.gdtf",
         "modes": {
-          "13 Chan": {
-            "channels": 13,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "33 Chan": {
-            "channels": 33,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "36 Chan": {
-            "channels": 36,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "47 Chan": {
-            "channels": 47,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "93 Chan": {
-            "channels": 93,
-            "gdtfMode": "Dual Control Mode Pixels: Basic 93ch",
+          "Single Control: Basic 31ch": {
+            "channels": 31,
+            "gdtfMode": "Single Control: Basic 31ch",
             "status": "matched"
           },
-          "112 Chan": {
-            "channels": 112,
-            "gdtfMode": "Dual Control Mode Pixels: Standard 112ch",
+          "Single Control: Standard 143ch": {
+            "channels": 143,
+            "gdtfMode": "Single Control: Standard 143ch",
             "status": "matched"
           },
-          "145 Chan": {
-            "channels": 145,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Single Control: Advanced 263ch": {
+            "channels": 263,
+            "gdtfMode": "Single Control: Advanced 263ch",
+            "status": "matched"
           },
-          "224 Chan": {
+          "Single Control: Tour 325ch": {
+            "channels": 325,
+            "gdtfMode": "Single Control: Tour 325ch",
+            "status": "matched"
+          },
+          "Single Control: Basic2 37ch": {
+            "channels": 37,
+            "gdtfMode": "Single Control: Basic2 37ch",
+            "status": "matched"
+          },
+          "Single Control: Busking 19Ch": {
+            "channels": 19,
+            "gdtfMode": "Single Control: Busking 19Ch",
+            "status": "matched"
+          },
+          "Single Control: Basic3 37Ch": {
+            "channels": 37,
+            "gdtfMode": "Single Control: Basic3 37Ch",
+            "status": "matched"
+          },
+          "Dual Control Mode Movement: Advanced 45ch": {
+            "channels": 45,
+            "gdtfMode": "Dual Control Mode Movement: Advanced 45ch",
+            "status": "matched"
+          },
+          "Dual Control Mode Movement: Standard 34ch": {
+            "channels": 34,
+            "gdtfMode": "Dual Control Mode Movement: Standard 34ch",
+            "status": "matched"
+          },
+          "Dual Control Mode Movement: Basic 11ch": {
+            "channels": 11,
+            "gdtfMode": "Dual Control Mode Movement: Basic 11ch",
+            "status": "matched"
+          },
+          "Dual Control Mode Pixels Advanced 224ch": {
             "channels": 224,
             "gdtfMode": "Dual Control Mode Pixels Advanced 224ch",
             "status": "matched"
           },
-          "265 Chan": {
-            "channels": 265,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Dual Control Mode Pixels: Standard 112ch": {
+            "channels": 112,
+            "gdtfMode": "Dual Control Mode Pixels: Standard 112ch",
+            "status": "matched"
           },
-          "327 Chan": {
-            "channels": 327,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Dual Control Mode Pixels: Basic 93ch": {
+            "channels": 93,
+            "gdtfMode": "Dual Control Mode Pixels: Basic 93ch",
+            "status": "matched"
           }
         }
       },
@@ -323,8 +401,8 @@
       "watts": 763,
       "weight": 30.4,
       "modes": {
-        "Standard": 32,
-        "Extended": 48
+        "48Ch Mode": 48,
+        "32Ch Mode": 32
       },
       "gdtf": {
         "status": "matched",
@@ -332,14 +410,14 @@
         "suggestedFileName": "Chauvet__Maverick_Storm_2_Profile.gdtf",
         "file": "fixtures/chauvet/Chauvet_Professional@Maverick_Storm_2_Profile@P_T_PHYS_VALUES_INVERTED_-_MATCHES_MA3D.gdtf",
         "modes": {
-          "Standard": {
-            "channels": 32,
-            "gdtfMode": "32Ch Mode",
-            "status": "matched"
-          },
-          "Extended": {
+          "48Ch Mode": {
             "channels": 48,
             "gdtfMode": "48Ch Mode",
+            "status": "matched"
+          },
+          "32Ch Mode": {
+            "channels": 32,
+            "gdtfMode": "32Ch Mode",
             "status": "matched"
           }
         }
@@ -351,90 +429,90 @@
       "watts": 1442,
       "weight": 37.4,
       "modes": {
-        "12 Chan": 12,
-        "20 Chan": 20,
-        "32 Chan": 32,
-        "35 Chan": 35,
-        "38 Chan": 38,
-        "46 Chan": 46,
-        "120 Chan": 120,
-        "148 Chan": 148,
-        "180 Chan": 180,
-        "296 Chan": 296,
-        "336 Chan": 336,
-        "416 Chan": 416,
-        "424 Chan": 424
+        "Single Mode: Basic2 27Ch": 27,
+        "Single Mode: Standard2 41Ch": 41,
+        "Single Mode: Tour 308Ch": 308,
+        "Single Mode: 323Ch": 323,
+        "Single Mode: Advanced 252Ch": 252,
+        "Single Mode: Standard 134Ch": 134,
+        "Single Mode: Basic 22Ch": 22,
+        "Dual Mode-Movement: Advanced 28Ch": 28,
+        "Dual Mode-Movement: Standard 22Ch": 22,
+        "Dual Mode-Movement: Basic 10Ch": 10,
+        "Dual Mode-LED: Advanced 224Ch": 224,
+        "Dual Mode-LED: Standard 112Ch": 112,
+        "Dual Mode-LED: Basic 84Ch": 84
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/chauvet",
         "suggestedFileName": "Chauvet__Maverick_Storm_3_BeamWash.gdtf",
         "file": "fixtures/chauvet/Chauvet_Professional@Maverick_Storm_3_Beamwash@Rev_1.1.0.gdtf",
         "modes": {
-          "12 Chan": {
-            "channels": 12,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Single Mode: Basic2 27Ch": {
+            "channels": 27,
+            "gdtfMode": "Single Mode: Basic2 27Ch",
+            "status": "matched"
           },
-          "20 Chan": {
-            "channels": 20,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Single Mode: Standard2 41Ch": {
+            "channels": 41,
+            "gdtfMode": "Single Mode: Standard2 41Ch",
+            "status": "matched"
           },
-          "32 Chan": {
-            "channels": 32,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Single Mode: Tour 308Ch": {
+            "channels": 308,
+            "gdtfMode": "Single Mode: Tour 308Ch",
+            "status": "matched"
           },
-          "35 Chan": {
-            "channels": 35,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Single Mode: 323Ch": {
+            "channels": 323,
+            "gdtfMode": "Single Mode: 323Ch",
+            "status": "matched"
           },
-          "38 Chan": {
-            "channels": 38,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Single Mode: Advanced 252Ch": {
+            "channels": 252,
+            "gdtfMode": "Single Mode: Advanced 252Ch",
+            "status": "matched"
           },
-          "46 Chan": {
-            "channels": 46,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Single Mode: Standard 134Ch": {
+            "channels": 134,
+            "gdtfMode": "Single Mode: Standard 134Ch",
+            "status": "matched"
           },
-          "120 Chan": {
-            "channels": 120,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Single Mode: Basic 22Ch": {
+            "channels": 22,
+            "gdtfMode": "Single Mode: Basic 22Ch",
+            "status": "matched"
           },
-          "148 Chan": {
-            "channels": 148,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Dual Mode-Movement: Advanced 28Ch": {
+            "channels": 28,
+            "gdtfMode": "Dual Mode-Movement: Advanced 28Ch",
+            "status": "matched"
           },
-          "180 Chan": {
-            "channels": 180,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Dual Mode-Movement: Standard 22Ch": {
+            "channels": 22,
+            "gdtfMode": "Dual Mode-Movement: Standard 22Ch",
+            "status": "matched"
           },
-          "296 Chan": {
-            "channels": 296,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Dual Mode-Movement: Basic 10Ch": {
+            "channels": 10,
+            "gdtfMode": "Dual Mode-Movement: Basic 10Ch",
+            "status": "matched"
           },
-          "336 Chan": {
-            "channels": 336,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Dual Mode-LED: Advanced 224Ch": {
+            "channels": 224,
+            "gdtfMode": "Dual Mode-LED: Advanced 224Ch",
+            "status": "matched"
           },
-          "416 Chan": {
-            "channels": 416,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Dual Mode-LED: Standard 112Ch": {
+            "channels": 112,
+            "gdtfMode": "Dual Mode-LED: Standard 112Ch",
+            "status": "matched"
           },
-          "424 Chan": {
-            "channels": 424,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Dual Mode-LED: Basic 84Ch": {
+            "channels": 84,
+            "gdtfMode": "Dual Mode-LED: Basic 84Ch",
+            "status": "matched"
           }
         }
       },
@@ -445,8 +523,8 @@
       "watts": 1010,
       "weight": 31.3,
       "modes": {
-        "Standard": 34,
-        "Extended": 50
+        "50Ch Mode": 50,
+        "34Ch Mode": 34
       },
       "gdtf": {
         "status": "matched",
@@ -454,14 +532,14 @@
         "suggestedFileName": "Chauvet__Maverick_Storm_3_Profile.gdtf",
         "file": "fixtures/chauvet/Chauvet_Professional@Maverick_Storm_3_Profile@Rev_1.0.0.gdtf",
         "modes": {
-          "Standard": {
-            "channels": 34,
-            "gdtfMode": "34Ch Mode",
-            "status": "matched"
-          },
-          "Extended": {
+          "50Ch Mode": {
             "channels": 50,
             "gdtfMode": "50Ch Mode",
+            "status": "matched"
+          },
+          "34Ch Mode": {
+            "channels": 34,
+            "gdtfMode": "34Ch Mode",
             "status": "matched"
           }
         }
@@ -473,8 +551,8 @@
       "watts": 1760,
       "weight": 50.6,
       "modes": {
-        "Standard": 38,
-        "Extended": 55
+        "55Ch Mode": 55,
+        "38Ch Mode": 38
       },
       "gdtf": {
         "status": "matched",
@@ -482,14 +560,14 @@
         "suggestedFileName": "Chauvet__Maverick_Storm_4_Profile.gdtf",
         "file": "fixtures/chauvet/Chauvet_Professional@Maverick_Storm_4_Profile@P_T_PHYSICAL_VALUES_INVERTED_-_MATCHES_MA3D.gdtf",
         "modes": {
-          "Standard": {
-            "channels": 38,
-            "gdtfMode": "38Ch Mode",
-            "status": "matched"
-          },
-          "Extended": {
+          "55Ch Mode": {
             "channels": 55,
             "gdtfMode": "55Ch Mode",
+            "status": "matched"
+          },
+          "38Ch Mode": {
+            "channels": 38,
+            "gdtfMode": "38Ch Mode",
             "status": "matched"
           }
         }
@@ -501,8 +579,8 @@
       "watts": 1680,
       "weight": 45.5,
       "modes": {
-        "Standard": 31,
-        "Extended": 46
+        "Advanced 46ch": 46,
+        "Basic 31ch": 31
       },
       "gdtf": {
         "status": "matched",
@@ -510,14 +588,14 @@
         "suggestedFileName": "Chauvet__Maverick_Storm_4_SoloWash.gdtf",
         "file": "fixtures/chauvet/Chauvet_Professional@Maverick_Storm_4_SoloWash@Rev_1.0.8.gdtf",
         "modes": {
-          "Standard": {
-            "channels": 31,
-            "gdtfMode": "Basic 31ch",
-            "status": "matched"
-          },
-          "Extended": {
+          "Advanced 46ch": {
             "channels": 46,
             "gdtfMode": "Advanced 46ch",
+            "status": "matched"
+          },
+          "Basic 31ch": {
+            "channels": 31,
+            "gdtfMode": "Basic 31ch",
             "status": "matched"
           }
         }
@@ -529,13 +607,13 @@
       "watts": 372,
       "weight": 9.16,
       "modes": {
-        "15 Chan": 15,
-        "24 Chan": 24,
-        "30 Chan": 30,
-        "37 Chan": 37,
-        "64 Chan": 64,
-        "111 Chan": 111,
-        "135 Chan": 135
+        "135Ch Mode": 135,
+        "111Ch Mode": 111,
+        "64Ch Mode": 64,
+        "37Ch Mode": 37,
+        "30Ch Mode": 30,
+        "24Ch Mode": 24,
+        "15Ch Mode": 15
       },
       "gdtf": {
         "status": "matched",
@@ -543,39 +621,39 @@
         "suggestedFileName": "Chauvet__Rogue_Outcast_1_BeamWash.gdtf",
         "file": "fixtures/chauvet/Chauvet_Professional@Rogue_Outcast_1_BeamWash@Rev_1.0.3.gdtf",
         "modes": {
-          "15 Chan": {
-            "channels": 15,
-            "gdtfMode": "15Ch Mode",
+          "135Ch Mode": {
+            "channels": 135,
+            "gdtfMode": "135Ch Mode",
             "status": "matched"
           },
-          "24 Chan": {
-            "channels": 24,
-            "gdtfMode": "24Ch Mode",
-            "status": "matched"
-          },
-          "30 Chan": {
-            "channels": 30,
-            "gdtfMode": "30Ch Mode",
-            "status": "matched"
-          },
-          "37 Chan": {
-            "channels": 37,
-            "gdtfMode": "37Ch Mode",
-            "status": "matched"
-          },
-          "64 Chan": {
-            "channels": 64,
-            "gdtfMode": "64Ch Mode",
-            "status": "matched"
-          },
-          "111 Chan": {
+          "111Ch Mode": {
             "channels": 111,
             "gdtfMode": "111Ch Mode",
             "status": "matched"
           },
-          "135 Chan": {
-            "channels": 135,
-            "gdtfMode": "135Ch Mode",
+          "64Ch Mode": {
+            "channels": 64,
+            "gdtfMode": "64Ch Mode",
+            "status": "matched"
+          },
+          "37Ch Mode": {
+            "channels": 37,
+            "gdtfMode": "37Ch Mode",
+            "status": "matched"
+          },
+          "30Ch Mode": {
+            "channels": 30,
+            "gdtfMode": "30Ch Mode",
+            "status": "matched"
+          },
+          "24Ch Mode": {
+            "channels": 24,
+            "gdtfMode": "24Ch Mode",
+            "status": "matched"
+          },
+          "15Ch Mode": {
+            "channels": 15,
+            "gdtfMode": "15Ch Mode",
             "status": "matched"
           }
         }
@@ -587,78 +665,18 @@
       "watts": 248,
       "weight": 3.5,
       "modes": {
-        "1 Chan": 1,
-        "2 Chan": 2,
-        "5 Chan": 5,
-        "4P-5CH": 5,
-        "4P-14CH": 14,
-        "4P-23CH": 23,
-        "4P-26CH": 26,
-        "8P-9CH": 9,
-        "8P-26CH": 26,
-        "8P-43CH": 43,
-        "8P-46CH": 46
+        "8P 26 channel": 26
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/chauvet",
         "suggestedFileName": "Chauvet__STRIKE_Array_1.gdtf",
         "file": "fixtures/chauvet/Chauvet_Professional@Strike_Array_1_26_channel@Revision_V1.gdtf",
         "modes": {
-          "1 Chan": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "2 Chan": {
-            "channels": 2,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "5 Chan": {
-            "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "4P-5CH": {
-            "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "4P-14CH": {
-            "channels": 14,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "4P-23CH": {
-            "channels": 23,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "4P-26CH": {
-            "channels": 26,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "8P-9CH": {
-            "channels": 9,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "8P-26CH": {
+          "8P 26 channel": {
             "channels": 26,
             "gdtfMode": "8P 26 channel",
             "status": "matched"
-          },
-          "8P-43CH": {
-            "channels": 43,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "8P-46CH": {
-            "channels": 46,
-            "gdtfMode": "",
-            "status": "pending-match"
           }
         }
       },
@@ -669,12 +687,13 @@
       "watts": 129,
       "weight": 8,
       "modes": {
-        "1 Chan": 1,
-        "2 Chan": 2,
-        "3 Chan": 3,
-        "4 Chan": 4,
-        "8 Chan": 8,
-        "9 Chan": 9
+        "1Ch Mode": 1,
+        "2Ch Mode": 2,
+        "3Ch Mode": 3,
+        "4Ch Mode": 4,
+        "5Ch Mode": 5,
+        "8Ch Mode": 8,
+        "9Ch Mode": 9
       },
       "gdtf": {
         "status": "matched",
@@ -682,32 +701,37 @@
         "suggestedFileName": "Chauvet__Strike_Array_2.gdtf",
         "file": "fixtures/chauvet/Chauvet_Professional@Strike_Array_2@Rev_1.0.4.gdtf",
         "modes": {
-          "1 Chan": {
+          "1Ch Mode": {
             "channels": 1,
             "gdtfMode": "1Ch Mode",
             "status": "matched"
           },
-          "2 Chan": {
+          "2Ch Mode": {
             "channels": 2,
             "gdtfMode": "2Ch Mode",
             "status": "matched"
           },
-          "3 Chan": {
+          "3Ch Mode": {
             "channels": 3,
             "gdtfMode": "3Ch Mode",
             "status": "matched"
           },
-          "4 Chan": {
+          "4Ch Mode": {
             "channels": 4,
             "gdtfMode": "4Ch Mode",
             "status": "matched"
           },
-          "8 Chan": {
+          "5Ch Mode": {
+            "channels": 5,
+            "gdtfMode": "5Ch Mode",
+            "status": "matched"
+          },
+          "8Ch Mode": {
             "channels": 8,
             "gdtfMode": "8Ch Mode",
             "status": "matched"
           },
-          "9 Chan": {
+          "9Ch Mode": {
             "channels": 9,
             "gdtfMode": "9Ch Mode",
             "status": "matched"
@@ -721,15 +745,18 @@
       "watts": 581,
       "weight": 9.4,
       "modes": {
-        "1 Chan": 1,
-        "3 Chan": 3,
-        "5 Chan": 5,
-        "7 Chan": 7,
-        "10 Chan": 10,
-        "12 Chan 1": 12,
-        "12 Chan 2": 12,
-        "13 Chan": 13,
-        "16 Chan": 16
+        "1Ch Mode": 1,
+        "3Ch Mode": 3,
+        "5Ch Mode": 5,
+        "7Ch Mode": 7,
+        "10Ch Mode": 10,
+        "12Ch1 Mode": 12,
+        "13Ch Mode": 13,
+        "16Ch Mode": 16,
+        "12Ch2 Mode": 12,
+        "HSV 3Ch Mode": 3,
+        "25ch Mode": 25,
+        "8Ch Mode": 8
       },
       "gdtf": {
         "status": "matched",
@@ -737,49 +764,64 @@
         "suggestedFileName": "Chauvet__STRIKE_Array_2C.gdtf",
         "file": "fixtures/chauvet/Chauvet_Professional@Strike_Array_2C@Rev_1.1.0.gdtf",
         "modes": {
-          "1 Chan": {
+          "1Ch Mode": {
             "channels": 1,
             "gdtfMode": "1Ch Mode",
             "status": "matched"
           },
-          "3 Chan": {
+          "3Ch Mode": {
             "channels": 3,
             "gdtfMode": "3Ch Mode",
             "status": "matched"
           },
-          "5 Chan": {
+          "5Ch Mode": {
             "channels": 5,
             "gdtfMode": "5Ch Mode",
             "status": "matched"
           },
-          "7 Chan": {
+          "7Ch Mode": {
             "channels": 7,
             "gdtfMode": "7Ch Mode",
             "status": "matched"
           },
-          "10 Chan": {
+          "10Ch Mode": {
             "channels": 10,
             "gdtfMode": "10Ch Mode",
             "status": "matched"
           },
-          "12 Chan 1": {
+          "12Ch1 Mode": {
             "channels": 12,
             "gdtfMode": "12Ch1 Mode",
             "status": "matched"
           },
-          "12 Chan 2": {
-            "channels": 12,
-            "gdtfMode": "12Ch2 Mode",
-            "status": "matched"
-          },
-          "13 Chan": {
+          "13Ch Mode": {
             "channels": 13,
             "gdtfMode": "13Ch Mode",
             "status": "matched"
           },
-          "16 Chan": {
+          "16Ch Mode": {
             "channels": 16,
             "gdtfMode": "16Ch Mode",
+            "status": "matched"
+          },
+          "12Ch2 Mode": {
+            "channels": 12,
+            "gdtfMode": "12Ch2 Mode",
+            "status": "matched"
+          },
+          "HSV 3Ch Mode": {
+            "channels": 3,
+            "gdtfMode": "HSV 3Ch Mode",
+            "status": "matched"
+          },
+          "25ch Mode": {
+            "channels": 25,
+            "gdtfMode": "25ch Mode",
+            "status": "matched"
+          },
+          "8Ch Mode": {
+            "channels": 8,
+            "gdtfMode": "8Ch Mode",
             "status": "matched"
           }
         }
@@ -791,30 +833,54 @@
       "watts": 245,
       "weight": 13,
       "modes": {
-        "3 Chan": 3,
-        "4 Chan": 4,
-        "9 Chan": 9
+        "1Ch Mode": 1,
+        "3Ch Mode": 3,
+        "4Ch Mode": 4,
+        "5Ch Mode": 5,
+        "6Ch Mode": 6,
+        "10Ch Mode": 10,
+        "13Ch Mode": 13
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/chauvet",
         "suggestedFileName": "Chauvet__Strike_Array_4.gdtf",
         "file": "fixtures/chauvet/Chauvet_Professional@STRIKE_Array_4@Fixed_Face.gdtf",
         "modes": {
-          "3 Chan": {
+          "1Ch Mode": {
+            "channels": 1,
+            "gdtfMode": "1Ch Mode",
+            "status": "matched"
+          },
+          "3Ch Mode": {
             "channels": 3,
             "gdtfMode": "3Ch Mode",
             "status": "matched"
           },
-          "4 Chan": {
+          "4Ch Mode": {
             "channels": 4,
             "gdtfMode": "4Ch Mode",
             "status": "matched"
           },
-          "9 Chan": {
-            "channels": 9,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "5Ch Mode": {
+            "channels": 5,
+            "gdtfMode": "5Ch Mode",
+            "status": "matched"
+          },
+          "6Ch Mode": {
+            "channels": 6,
+            "gdtfMode": "6Ch Mode",
+            "status": "matched"
+          },
+          "10Ch Mode": {
+            "channels": 10,
+            "gdtfMode": "10Ch Mode",
+            "status": "matched"
+          },
+          "13Ch Mode": {
+            "channels": 13,
+            "gdtfMode": "13Ch Mode",
+            "status": "matched"
           }
         }
       },
@@ -825,15 +891,17 @@
       "watts": 1140,
       "weight": 15.4,
       "modes": {
-        "1 Chan": 1,
-        "3 Chan": 3,
-        "5 Chan": 5,
-        "7 Chan": 7,
-        "10 Chan": 10,
-        "12 Chan": 12,
-        "13 Chan": 13,
-        "16 Chan": 16,
-        "22 Chan": 22
+        "1Ch": 1,
+        "3Ch Mode": 3,
+        "5Ch Mode": 5,
+        "7Ch Mode": 7,
+        "10Ch Mode": 10,
+        "12Ch Mode": 12,
+        "13Ch Mode": 13,
+        "16Ch Mode": 16,
+        "22Ch Mode": 22,
+        "HSV 3Ch Mode": 3,
+        "49Ch Mode": 49
       },
       "gdtf": {
         "status": "matched",
@@ -841,49 +909,59 @@
         "suggestedFileName": "Chauvet__STRIKE_Array_4C.gdtf",
         "file": "fixtures/chauvet/Chauvet_Professional@Strike_Array_4C@Rev_3.gdtf",
         "modes": {
-          "1 Chan": {
+          "1Ch": {
             "channels": 1,
             "gdtfMode": "1Ch",
             "status": "matched"
           },
-          "3 Chan": {
+          "3Ch Mode": {
             "channels": 3,
             "gdtfMode": "3Ch Mode",
             "status": "matched"
           },
-          "5 Chan": {
+          "5Ch Mode": {
             "channels": 5,
             "gdtfMode": "5Ch Mode",
             "status": "matched"
           },
-          "7 Chan": {
+          "7Ch Mode": {
             "channels": 7,
             "gdtfMode": "7Ch Mode",
             "status": "matched"
           },
-          "10 Chan": {
+          "10Ch Mode": {
             "channels": 10,
             "gdtfMode": "10Ch Mode",
             "status": "matched"
           },
-          "12 Chan": {
+          "12Ch Mode": {
             "channels": 12,
             "gdtfMode": "12Ch Mode",
             "status": "matched"
           },
-          "13 Chan": {
+          "13Ch Mode": {
             "channels": 13,
             "gdtfMode": "13Ch Mode",
             "status": "matched"
           },
-          "16 Chan": {
+          "16Ch Mode": {
             "channels": 16,
             "gdtfMode": "16Ch Mode",
             "status": "matched"
           },
-          "22 Chan": {
+          "22Ch Mode": {
             "channels": 22,
             "gdtfMode": "22Ch Mode",
+            "status": "matched"
+          },
+          "HSV 3Ch Mode": {
+            "channels": 3,
+            "gdtfMode": "HSV 3Ch Mode",
+            "status": "matched"
+          },
+          "49Ch Mode": {
+            "channels": 49,
+            "gdtfMode": "49Ch Mode",
             "status": "matched"
           }
         }
@@ -895,60 +973,60 @@
       "watts": 323,
       "weight": 8.7,
       "modes": {
-        "7 Chan": 7,
-        "10 Chan": 10,
-        "12 Chan": 12,
-        "16 Chan": 16,
-        "19 Chan": 19,
-        "32 Chan": 32,
-        "40 Chan": 40,
-        "53 Chan": 53
+        "10Ch Mode": 10,
+        "11Ch Mode": 11,
+        "13Ch Mode": 13,
+        "17Ch Mode": 17,
+        "20Ch Mode": 20,
+        "25ch Mode": 25,
+        "27Ch Mode": 27,
+        "40Ch Mode": 40
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/chauvet",
         "suggestedFileName": "Chauvet__STRIKE_Bolt_1C.gdtf",
         "file": "fixtures/chauvet/Chauvet_Professional@Strike_Bolt_1C@NO_BEAM_v2.gdtf",
         "modes": {
-          "7 Chan": {
-            "channels": 7,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "10 Chan": {
+          "10Ch Mode": {
             "channels": 10,
             "gdtfMode": "10Ch Mode",
             "status": "matched"
           },
-          "12 Chan": {
-            "channels": 12,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "11Ch Mode": {
+            "channels": 11,
+            "gdtfMode": "11Ch Mode",
+            "status": "matched"
           },
-          "16 Chan": {
-            "channels": 16,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "13Ch Mode": {
+            "channels": 13,
+            "gdtfMode": "13Ch Mode",
+            "status": "matched"
           },
-          "19 Chan": {
-            "channels": 19,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "17Ch Mode": {
+            "channels": 17,
+            "gdtfMode": "17Ch Mode",
+            "status": "matched"
           },
-          "32 Chan": {
-            "channels": 32,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "20Ch Mode": {
+            "channels": 20,
+            "gdtfMode": "20Ch Mode",
+            "status": "matched"
           },
-          "40 Chan": {
+          "25ch Mode": {
+            "channels": 25,
+            "gdtfMode": "25ch Mode",
+            "status": "matched"
+          },
+          "27Ch Mode": {
+            "channels": 27,
+            "gdtfMode": "27Ch Mode",
+            "status": "matched"
+          },
+          "40Ch Mode": {
             "channels": 40,
             "gdtfMode": "40Ch Mode",
             "status": "matched"
-          },
-          "53 Chan": {
-            "channels": 53,
-            "gdtfMode": "",
-            "status": "pending-match"
           }
         }
       },
@@ -959,11 +1037,12 @@
       "watts": 58,
       "weight": 3.8,
       "modes": {
-        "1 Chan": 1,
-        "3 Chan": 3,
-        "4 Chan": 4,
-        "5 Chan": 5,
-        "6 Chan": 6
+        "1Ch Mode": 1,
+        "3Ch Mode": 3,
+        "4Ch Mode": 4,
+        "5Ch Mode": 5,
+        "6Ch Mode": 6,
+        "7Ch Mode": 7
       },
       "gdtf": {
         "status": "matched",
@@ -971,29 +1050,34 @@
         "suggestedFileName": "Chauvet__STRIKE_P38.gdtf",
         "file": "fixtures/chauvet/Chauvet_Professional@Strike_P38@version_1.gdtf",
         "modes": {
-          "1 Chan": {
+          "1Ch Mode": {
             "channels": 1,
             "gdtfMode": "1Ch Mode",
             "status": "matched"
           },
-          "3 Chan": {
+          "3Ch Mode": {
             "channels": 3,
             "gdtfMode": "3Ch Mode",
             "status": "matched"
           },
-          "4 Chan": {
+          "4Ch Mode": {
             "channels": 4,
             "gdtfMode": "4Ch Mode",
             "status": "matched"
           },
-          "5 Chan": {
+          "5Ch Mode": {
             "channels": 5,
             "gdtfMode": "5Ch Mode",
             "status": "matched"
           },
-          "6 Chan": {
+          "6Ch Mode": {
             "channels": 6,
             "gdtfMode": "6Ch Mode",
+            "status": "matched"
+          },
+          "7Ch Mode": {
+            "channels": 7,
+            "gdtfMode": "7Ch Mode",
             "status": "matched"
           }
         }
@@ -1005,13 +1089,14 @@
       "watts": 177,
       "weight": 8.0,
       "modes": {
-        "1 Chan": 1,
-        "3 Chan": 3,
-        "6 Chan": 6,
-        "13 Chan": 13,
-        "22 Chan": 22,
-        "26 Chan 1": 26,
-        "26 Chan 2": 26
+        "26ch 2": 26,
+        "26ch 1": 26,
+        "22ch": 22,
+        "13ch": 13,
+        "10ch": 10,
+        "6ch": 6,
+        "3ch": 3,
+        "1ch": 1
       },
       "gdtf": {
         "status": "matched",
@@ -1019,39 +1104,44 @@
         "suggestedFileName": "Chauvet__STRIKE_Saber_10.gdtf",
         "file": "fixtures/chauvet/Chauvet_Professional@STRIKE_Saber_10@Beta_1.0.1.gdtf",
         "modes": {
-          "1 Chan": {
-            "channels": 1,
-            "gdtfMode": "1ch",
+          "26ch 2": {
+            "channels": 26,
+            "gdtfMode": "26ch 2",
             "status": "matched"
           },
-          "3 Chan": {
-            "channels": 3,
-            "gdtfMode": "3ch",
-            "status": "matched"
-          },
-          "6 Chan": {
-            "channels": 6,
-            "gdtfMode": "6ch",
-            "status": "matched"
-          },
-          "13 Chan": {
-            "channels": 13,
-            "gdtfMode": "13ch",
-            "status": "matched"
-          },
-          "22 Chan": {
-            "channels": 22,
-            "gdtfMode": "22ch",
-            "status": "matched"
-          },
-          "26 Chan 1": {
+          "26ch 1": {
             "channels": 26,
             "gdtfMode": "26ch 1",
             "status": "matched"
           },
-          "26 Chan 2": {
-            "channels": 26,
-            "gdtfMode": "26ch 2",
+          "22ch": {
+            "channels": 22,
+            "gdtfMode": "22ch",
+            "status": "matched"
+          },
+          "13ch": {
+            "channels": 13,
+            "gdtfMode": "13ch",
+            "status": "matched"
+          },
+          "10ch": {
+            "channels": 10,
+            "gdtfMode": "10ch",
+            "status": "matched"
+          },
+          "6ch": {
+            "channels": 6,
+            "gdtfMode": "6ch",
+            "status": "matched"
+          },
+          "3ch": {
+            "channels": 3,
+            "gdtfMode": "3ch",
+            "status": "matched"
+          },
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
             "status": "matched"
           }
         }

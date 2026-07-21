@@ -114,8 +114,8 @@
       "watts": 2000,
       "weight": 35,
       "modes": {
-        "Mode 1": 33,
-        "Mode 2": 27
+        "Mode 1 - Standard 16 bit": 33,
+        "Mode 2 - Reduced 8 bit": 27
       },
       "gdtf": {
         "status": "matched",
@@ -123,12 +123,12 @@
         "suggestedFileName": "Robe__BMFL_Followspot.gdtf",
         "file": "fixtures/robe/Robe_Lighting@Robin_BMFL_FollowSpot@2026-03-27_Color_macro_open_slot_revision.gdtf",
         "modes": {
-          "Mode 1": {
+          "Mode 1 - Standard 16 bit": {
             "channels": 33,
             "gdtfMode": "Mode 1 - Standard 16 bit",
             "status": "matched"
           },
-          "Mode 2": {
+          "Mode 2 - Reduced 8 bit": {
             "channels": 27,
             "gdtfMode": "Mode 2 - Reduced 8 bit",
             "status": "matched"

@@ -95,13 +95,11 @@
         "1CH DWE": 1,
         "2CH DWE": 2,
         "4CH DWE": 4,
-        "9CH DWE+": 9,
+        "9CH DWE+ ": 9,
         "6CH Strobe": 6,
         "6CH RGB": 6,
         "10CH Basic RGB": 10,
         "14CH Basic RGB": 14,
-        "11CH Section RGB": 11,
-        "11CH Comp RGB": 11,
         "13CH Standard RGB": 13,
         "22CH Standard RGB": 22,
         "24CH Extended RGB": 24,
@@ -109,11 +107,11 @@
         "10CH Direct": 10,
         "12CH Direct": 12,
         "17CH Direct": 17,
-        "24CH Direct": 24,
+        "28CH Direct": 28,
         "41CH Direct": 41
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/roxx",
         "suggestedFileName": "Roxx__Cluster_B2_FC.gdtf",
         "file": "fixtures/roxx/ROXX@CLUSTER_B2-FC@TW_B_08082023.gdtf",
@@ -133,9 +131,9 @@
             "gdtfMode": "4CH DWE",
             "status": "matched"
           },
-          "9CH DWE+": {
+          "9CH DWE+ ": {
             "channels": 9,
-              "gdtfMode": "9CH DWE+ ",
+            "gdtfMode": "9CH DWE+ ",
             "status": "matched"
           },
           "6CH Strobe": {
@@ -157,16 +155,6 @@
             "channels": 14,
             "gdtfMode": "14CH Basic RGB",
             "status": "matched"
-          },
-          "11CH Section RGB": {
-            "channels": 11,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "11CH Comp RGB": {
-            "channels": 11,
-            "gdtfMode": "",
-            "status": "pending-match"
           },
           "13CH Standard RGB": {
             "channels": 13,
@@ -203,10 +191,10 @@
             "gdtfMode": "17CH Direct",
             "status": "matched"
           },
-          "24CH Direct": {
-            "channels": 24,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "28CH Direct": {
+            "channels": 28,
+            "gdtfMode": "28CH Direct",
+            "status": "matched"
           },
           "41CH Direct": {
             "channels": 41,

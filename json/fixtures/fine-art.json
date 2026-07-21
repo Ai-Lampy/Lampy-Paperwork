@@ -6,24 +6,24 @@
       "watts": 1250,
       "weight": 11,
       "modes": {
-        "62 Chan": 62,
-        "138 Chan": 138
+        "Standard 23ch": 23,
+        "PixTen48": 48
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/fine-art",
         "suggestedFileName": "Fine_Art__1200C_Strobe.gdtf",
         "file": "fixtures/fine-art/Fine_Art@FINE_1200C_STROBE@MA3_library_fixed_-_Sept_22th_2025.gdtf",
         "modes": {
-          "62 Chan": {
-            "channels": 62,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Standard 23ch": {
+            "channels": 23,
+            "gdtfMode": "Standard 23ch",
+            "status": "matched"
           },
-          "138 Chan": {
-            "channels": 138,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "PixTen48": {
+            "channels": 48,
+            "gdtfMode": "PixTen48",
+            "status": "matched"
           }
         }
       },

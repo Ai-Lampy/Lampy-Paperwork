@@ -6,10 +6,10 @@
       "watts": 1555,
       "weight": 43,
       "modes": {
-        "22 Chan": 22,
-        "29 Chan": 29,
-        "31 Chan": 31,
-        "38 Chan": 38
+        "Mode 1 38 DMX": 38,
+        "Mode 2 29 DMX": 29,
+        "Mode 3 31 DMX": 31,
+        "Mode 4 22 DMX": 22
       },
       "gdtf": {
         "status": "matched",
@@ -17,24 +17,24 @@
         "suggestedFileName": "ACME__Aeco_15.gdtf",
         "file": "fixtures/acme/ACME@ACME_AECO_15@ACME_AECO__15.gdtf",
         "modes": {
-          "22 Chan": {
-            "channels": 22,
-            "gdtfMode": "Mode 4 22 DMX",
+          "Mode 1 38 DMX": {
+            "channels": 38,
+            "gdtfMode": "Mode 1 38 DMX",
             "status": "matched"
           },
-          "29 Chan": {
+          "Mode 2 29 DMX": {
             "channels": 29,
             "gdtfMode": "Mode 2 29 DMX",
             "status": "matched"
           },
-          "31 Chan": {
+          "Mode 3 31 DMX": {
             "channels": 31,
             "gdtfMode": "Mode 3 31 DMX",
             "status": "matched"
           },
-          "38 Chan": {
-            "channels": 38,
-            "gdtfMode": "Mode 1 38 DMX",
+          "Mode 4 22 DMX": {
+            "channels": 22,
+            "gdtfMode": "Mode 4 22 DMX",
             "status": "matched"
           }
         }
@@ -46,10 +46,10 @@
       "watts": 2265,
       "weight": 52.5,
       "modes": {
-        "23 Chan": 23,
-        "32 Chan": 32,
-        "34 Chan": 34,
-        "43 Chan": 43
+        "Mode 1 43CH": 43,
+        "Mode 2 34CH": 34,
+        "Mode 3 32CH": 32,
+        "Mode 4 23CH": 23
       },
       "gdtf": {
         "status": "matched",
@@ -57,24 +57,24 @@
         "suggestedFileName": "ACME__Aeco_30_Ip.gdtf",
         "file": "fixtures/acme/ACME@ACME_AECO_30_IP_(AECO_30_IP)@__ACME_AECO_30_IP__(AECO_30_IP).gdtf",
         "modes": {
-          "23 Chan": {
-            "channels": 23,
-            "gdtfMode": "Mode 4 23CH",
+          "Mode 1 43CH": {
+            "channels": 43,
+            "gdtfMode": "Mode 1 43CH",
             "status": "matched"
           },
-          "32 Chan": {
-            "channels": 32,
-            "gdtfMode": "Mode 3 32CH",
-            "status": "matched"
-          },
-          "34 Chan": {
+          "Mode 2 34CH": {
             "channels": 34,
             "gdtfMode": "Mode 2 34CH",
             "status": "matched"
           },
-          "43 Chan": {
-            "channels": 43,
-            "gdtfMode": "Mode 1 43CH",
+          "Mode 3 32CH": {
+            "channels": 32,
+            "gdtfMode": "Mode 3 32CH",
+            "status": "matched"
+          },
+          "Mode 4 23CH": {
+            "channels": 23,
+            "gdtfMode": "Mode 4 23CH",
             "status": "matched"
           }
         }
@@ -86,9 +86,9 @@
       "watts": 670,
       "weight": 26.5,
       "modes": {
-        "33 Chan": 33,
-        "24 Chan": 24,
-        "28 Chan": 28
+        "Mode 1  33 DMX": 33,
+        "Mode 2  24 DMX": 24,
+        "Mode 2  28 DMX": 28
       },
       "gdtf": {
         "status": "matched",
@@ -96,17 +96,17 @@
         "suggestedFileName": "ACME__Aeco_5.gdtf",
         "file": "fixtures/acme/ACME@ACME_AECO_5_(AECO_5)@ACME_AECO_5_(AECO_5).gdtf",
         "modes": {
-          "33 Chan": {
+          "Mode 1  33 DMX": {
             "channels": 33,
             "gdtfMode": "Mode 1  33 DMX",
             "status": "matched"
           },
-          "24 Chan": {
+          "Mode 2  24 DMX": {
             "channels": 24,
             "gdtfMode": "Mode 2  24 DMX",
             "status": "matched"
           },
-          "28 Chan": {
+          "Mode 2  28 DMX": {
             "channels": 28,
             "gdtfMode": "Mode 2  28 DMX",
             "status": "matched"
@@ -120,18 +120,18 @@
       "watts": 865,
       "weight": 22,
       "modes": {
-        "25 Chan": 25
+        "Mode 24 DMX": 24
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Autolux.gdtf",
         "file": "fixtures/acme/ACME@ACME_AUTOLUX_(AUTO_600)@_ACME_AUTOLUX_(AUTO_600).gdtf",
         "modes": {
-          "25 Chan": {
-            "channels": 25,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 24 DMX": {
+            "channels": 24,
+            "gdtfMode": "Mode 24 DMX",
+            "status": "matched"
           }
         }
       },
@@ -142,8 +142,8 @@
       "watts": 600,
       "weight": 13.6,
       "modes": {
-        "14 Chan": 14,
-        "55 Chan": 55
+        "Mode 2 55 DMX": 55,
+        "Mode1 14 DMX": 14
       },
       "gdtf": {
         "status": "matched",
@@ -151,14 +151,14 @@
         "suggestedFileName": "ACME__Blinder_Line_10_Ip.gdtf",
         "file": "fixtures/acme/ACME@ACME_BLINDER_LINE_10_IP (BLB_10_IP)@ACME_BLINDER_LINE_10_IP (BLB_10_IP) .gdtf",
         "modes": {
-          "14 Chan": {
-            "channels": 14,
-            "gdtfMode": "Mode1 14 DMX",
-            "status": "matched"
-          },
-          "55 Chan": {
+          "Mode 2 55 DMX": {
             "channels": 55,
             "gdtfMode": "Mode 2 55 DMX",
+            "status": "matched"
+          },
+          "Mode1 14 DMX": {
+            "channels": 14,
+            "gdtfMode": "Mode1 14 DMX",
             "status": "matched"
           }
         }
@@ -170,8 +170,8 @@
       "watts": 350,
       "weight": 7.7,
       "modes": {
-        "14 Chan": 14,
-        "30 Chan": 30
+        "Mode 2 30DMX": 30,
+        "Mode 1 14DMX": 14
       },
       "gdtf": {
         "status": "matched",
@@ -179,14 +179,14 @@
         "suggestedFileName": "ACME__Blinder_Line_5_Ip.gdtf",
         "file": "fixtures/acme/ACME@ACME_BLINDER_LINE_5_IP_(BLB_5_IP)@ACME_BLINDER_LINE_5_IP_(BLB_5_IP).gdtf",
         "modes": {
-          "14 Chan": {
-            "channels": 14,
-            "gdtfMode": "Mode 1 14DMX",
-            "status": "matched"
-          },
-          "30 Chan": {
+          "Mode 2 30DMX": {
             "channels": 30,
             "gdtfMode": "Mode 2 30DMX",
+            "status": "matched"
+          },
+          "Mode 1 14DMX": {
+            "channels": 14,
+            "gdtfMode": "Mode 1 14DMX",
             "status": "matched"
           }
         }
@@ -198,10 +198,10 @@
       "watts": 55,
       "weight": 2.2,
       "modes": {
-        "4 Chan": 4,
-        "5 Chan": 5,
-        "8 Chan": 8,
-        "10 Chan": 10
+        "Mode 1 10 DMX": 10,
+        "Mode 2 8 DMX": 8,
+        "Mode 3 5 DMX": 5,
+        "Mode 4 4 DMX": 4
       },
       "gdtf": {
         "status": "matched",
@@ -209,24 +209,24 @@
         "suggestedFileName": "ACME__Coolie_186.gdtf",
         "file": "fixtures/acme/ACME@ACME_COOLIE_186_(BW_186)@ACME_COOLIE_186_(BW_186).gdtf",
         "modes": {
-          "4 Chan": {
-            "channels": 4,
-            "gdtfMode": "Mode 4 4 DMX",
+          "Mode 1 10 DMX": {
+            "channels": 10,
+            "gdtfMode": "Mode 1 10 DMX",
             "status": "matched"
           },
-          "5 Chan": {
-            "channels": 5,
-            "gdtfMode": "Mode 3 5 DMX",
-            "status": "matched"
-          },
-          "8 Chan": {
+          "Mode 2 8 DMX": {
             "channels": 8,
             "gdtfMode": "Mode 2 8 DMX",
             "status": "matched"
           },
-          "10 Chan": {
-            "channels": 10,
-            "gdtfMode": "Mode 1 10 DMX",
+          "Mode 3 5 DMX": {
+            "channels": 5,
+            "gdtfMode": "Mode 3 5 DMX",
+            "status": "matched"
+          },
+          "Mode 4 4 DMX": {
+            "channels": 4,
+            "gdtfMode": "Mode 4 4 DMX",
             "status": "matched"
           }
         }
@@ -238,9 +238,9 @@
       "watts": 260,
       "weight": null,
       "modes": {
-        "27 Chan": 27,
-        "50 Chan": 50,
-        "58 Chan": 58
+        "Mode 1 27CH": 27,
+        "Mode 2 50CH": 50,
+        "Mode 3 58CH": 58
       },
       "gdtf": {
         "status": "matched",
@@ -248,17 +248,17 @@
         "suggestedFileName": "ACME__Cyclone.gdtf",
         "file": "fixtures/acme/ACME@ACME_CYCLONE_(CM_150_IP)@_ACME_CYCLONE_(CM_150_IP).gdtf",
         "modes": {
-          "27 Chan": {
+          "Mode 1 27CH": {
             "channels": 27,
             "gdtfMode": "Mode 1 27CH",
             "status": "matched"
           },
-          "50 Chan": {
+          "Mode 2 50CH": {
             "channels": 50,
             "gdtfMode": "Mode 2 50CH",
             "status": "matched"
           },
-          "58 Chan": {
+          "Mode 3 58CH": {
             "channels": 58,
             "gdtfMode": "Mode 3 58CH",
             "status": "matched"
@@ -272,9 +272,9 @@
       "watts": 670,
       "weight": 24.5,
       "modes": {
-        "25 Chan": 25,
-        "29 Chan": 29,
-        "34 Chan": 34
+        "34 DMX": 34,
+        "25 DMX": 25,
+        "29 DMX": 29
       },
       "gdtf": {
         "status": "matched",
@@ -282,19 +282,19 @@
         "suggestedFileName": "ACME__Geist_Bswf.gdtf",
         "file": "fixtures/acme/ACME@ACME_GEIST_BSWF_(XA-500_BSWF)@_ACME_GEIST_BSWF__(XA-500_BSWF).gdtf",
         "modes": {
-          "25 Chan": {
+          "34 DMX": {
+            "channels": 34,
+            "gdtfMode": "34 DMX",
+            "status": "matched"
+          },
+          "25 DMX": {
             "channels": 25,
             "gdtfMode": "25 DMX",
             "status": "matched"
           },
-          "29 Chan": {
+          "29 DMX": {
             "channels": 29,
             "gdtfMode": "29 DMX",
-            "status": "matched"
-          },
-          "34 Chan": {
-            "channels": 34,
-            "gdtfMode": "34 DMX",
             "status": "matched"
           }
         }
@@ -306,13 +306,13 @@
       "watts": 1240,
       "weight": 19.5,
       "modes": {
-        "58 Chan": 58,
-        "25 Chan": 25,
-        "23 Chan": 23,
-        "35+": "35+",
-        "27 Chan": 27,
-        "70 Chan": 70,
-        "55 Chan": 55
+        "Mode 1 58 DMX": 58,
+        "Mode 2 25 DMX": 25,
+        "Mode 3 23 DMX": 23,
+        "Mode 4 35+ DMX": 35,
+        "Mode 5 27 DMX": 27,
+        "Mode 6 70 DMX": 70,
+        "Mode 7 55 DMX": 55
       },
       "gdtf": {
         "status": "matched",
@@ -320,37 +320,37 @@
         "suggestedFileName": "ACME__Gemini.gdtf",
         "file": "fixtures/acme/ACME@ACME_GEMINI@TA_7.25.gdtf",
         "modes": {
-          "58 Chan": {
+          "Mode 1 58 DMX": {
             "channels": 58,
             "gdtfMode": "Mode 1 58 DMX",
             "status": "matched"
           },
-          "25 Chan": {
+          "Mode 2 25 DMX": {
             "channels": 25,
             "gdtfMode": "Mode 2 25 DMX",
             "status": "matched"
           },
-          "23 Chan": {
+          "Mode 3 23 DMX": {
             "channels": 23,
             "gdtfMode": "Mode 3 23 DMX",
             "status": "matched"
           },
-          "35+": {
-            "channels": "35+",
+          "Mode 4 35+ DMX": {
+            "channels": 35,
             "gdtfMode": "Mode 4 35+ DMX",
             "status": "matched"
           },
-          "27 Chan": {
+          "Mode 5 27 DMX": {
             "channels": 27,
             "gdtfMode": "Mode 5 27 DMX",
             "status": "matched"
           },
-          "70 Chan": {
+          "Mode 6 70 DMX": {
             "channels": 70,
             "gdtfMode": "Mode 6 70 DMX",
             "status": "matched"
           },
-          "55 Chan": {
+          "Mode 7 55 DMX": {
             "channels": 55,
             "gdtfMode": "Mode 7 55 DMX",
             "status": "matched"
@@ -364,10 +364,10 @@
       "watts": 820,
       "weight": 32,
       "modes": {
-        "43 Chan": 43,
-        "45 Chan": 45,
-        "46 Chan": 46,
-        "50 Chan": 50
+        "Mode 1 50CH": 50,
+        "Mode 2 45CH": 45,
+        "Mode 3 46CH": 46,
+        "Mode 4 43CH": 43
       },
       "gdtf": {
         "status": "matched",
@@ -375,24 +375,24 @@
         "suggestedFileName": "ACME__Hue_6_Ip.gdtf",
         "file": "fixtures/acme/ACME@HUE_6_IP_(HUE_6_IP)@HUE_6_IP_(HUE_6_IP).gdtf",
         "modes": {
-          "43 Chan": {
-            "channels": 43,
-            "gdtfMode": "Mode 4 43CH",
+          "Mode 1 50CH": {
+            "channels": 50,
+            "gdtfMode": "Mode 1 50CH",
             "status": "matched"
           },
-          "45 Chan": {
+          "Mode 2 45CH": {
             "channels": 45,
             "gdtfMode": "Mode 2 45CH",
             "status": "matched"
           },
-          "46 Chan": {
+          "Mode 3 46CH": {
             "channels": 46,
             "gdtfMode": "Mode 3 46CH",
             "status": "matched"
           },
-          "50 Chan": {
-            "channels": 50,
-            "gdtfMode": "Mode 1 50CH",
+          "Mode 4 43CH": {
+            "channels": 43,
+            "gdtfMode": "Mode 4 43CH",
             "status": "matched"
           }
         }
@@ -404,36 +404,24 @@
       "watts": 190,
       "weight": null,
       "modes": {
-        "16 Chan": 16,
-        "18 Chan": 18,
-        "133 Chan": 133,
-        "136 Chan": 136
+        "Mode 1 16CH": 16,
+        "Mode 2 133CH": 133
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Hueline_16_Ip.gdtf",
         "file": "fixtures/acme/ACME@ACME_HUELINE_16_IP_(HL_16_IP)@ACME_HUELINE_16_IP__(HL_16_IP).gdtf",
         "modes": {
-          "16 Chan": {
+          "Mode 1 16CH": {
             "channels": 16,
             "gdtfMode": "Mode 1 16CH",
             "status": "matched"
           },
-          "18 Chan": {
-            "channels": 18,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "133 Chan": {
+          "Mode 2 133CH": {
             "channels": 133,
             "gdtfMode": "Mode 2 133CH",
             "status": "matched"
-          },
-          "136 Chan": {
-            "channels": 136,
-            "gdtfMode": "",
-            "status": "pending-match"
           }
         }
       },
@@ -444,48 +432,36 @@
       "watts": 1370,
       "weight": 26.4,
       "modes": {
-        "19 Chan": 19,
-        "20 Chan": 20,
-        "21 Chan": 21,
-        "41 Chan": 41,
-        "42 Chan": 42,
-        "43 Chan": 43
+        "Mode 1 19 CH": 19,
+        "Mode 2 41CH": 41,
+        "Mode 3 20CH": 20,
+        "Mode 4 42CH": 42
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Hyperzone.gdtf",
         "file": "fixtures/acme/ACME@ACME_HYPERZONE_(CM_7_IP)@ACME_HYPERZONE_(CM_7_IP).gdtf",
         "modes": {
-          "19 Chan": {
+          "Mode 1 19 CH": {
             "channels": 19,
             "gdtfMode": "Mode 1 19 CH",
             "status": "matched"
           },
-          "20 Chan": {
-            "channels": 20,
-            "gdtfMode": "Mode 3 20CH",
-            "status": "matched"
-          },
-          "21 Chan": {
-            "channels": 21,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "41 Chan": {
+          "Mode 2 41CH": {
             "channels": 41,
             "gdtfMode": "Mode 2 41CH",
             "status": "matched"
           },
-          "42 Chan": {
+          "Mode 3 20CH": {
+            "channels": 20,
+            "gdtfMode": "Mode 3 20CH",
+            "status": "matched"
+          },
+          "Mode 4 42CH": {
             "channels": 42,
             "gdtfMode": "Mode 4 42CH",
             "status": "matched"
-          },
-          "43 Chan": {
-            "channels": 43,
-            "gdtfMode": "",
-            "status": "pending-match"
           }
         }
       },
@@ -496,12 +472,12 @@
       "watts": 1135,
       "weight": null,
       "modes": {
-        "31 Chan": 31,
-        "43 Chan": 43,
-        "100 Chan": 100,
-        "230 Chan": 230,
-        "20+80": "20+80",
-        "20+210": "20+210"
+        "Mode 1 31CH": 31,
+        "Mode 2 230CH": 230,
+        "Mode 3 43CH": 43,
+        "Mode 4 100CH": 100,
+        "Mode 5 20+80CH": 20,
+        "Mode 6 20+210CH": 20
       },
       "gdtf": {
         "status": "matched",
@@ -509,33 +485,33 @@
         "suggestedFileName": "ACME__Lightning_X.gdtf",
         "file": "fixtures/acme/ACME@ACME_LIGHTNING_X_(STROBE_7_IP)@_ACME_LIGHTNING_X__(STROBE_7_IP).gdtf",
         "modes": {
-          "31 Chan": {
+          "Mode 1 31CH": {
             "channels": 31,
             "gdtfMode": "Mode 1 31CH",
             "status": "matched"
           },
-          "43 Chan": {
-            "channels": 43,
-            "gdtfMode": "Mode 3 43CH",
-            "status": "matched"
-          },
-          "100 Chan": {
-            "channels": 100,
-            "gdtfMode": "Mode 4 100CH",
-            "status": "matched"
-          },
-          "230 Chan": {
+          "Mode 2 230CH": {
             "channels": 230,
             "gdtfMode": "Mode 2 230CH",
             "status": "matched"
           },
-          "20+80": {
-            "channels": "20+80",
+          "Mode 3 43CH": {
+            "channels": 43,
+            "gdtfMode": "Mode 3 43CH",
+            "status": "matched"
+          },
+          "Mode 4 100CH": {
+            "channels": 100,
+            "gdtfMode": "Mode 4 100CH",
+            "status": "matched"
+          },
+          "Mode 5 20+80CH": {
+            "channels": 20,
             "gdtfMode": "Mode 5 20+80CH",
             "status": "matched"
           },
-          "20+210": {
-            "channels": "20+210",
+          "Mode 6 20+210CH": {
+            "channels": 20,
             "gdtfMode": "Mode 6 20+210CH",
             "status": "matched"
           }
@@ -548,60 +524,24 @@
       "watts": 625,
       "weight": null,
       "modes": {
-        "10 Chan": 10,
-        "11 Chan": 11,
-        "16 Chan": 16,
-        "17 Chan": 17,
-        "19 Chan": 19,
-        "20 Chan": 20,
-        "79 Chan": 79,
-        "81 Chan": 81
+        "Mode 1 79 DMX": 79,
+        "Mode 2 16 DMX": 16
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Lineforce_10_Ip.gdtf",
         "file": "fixtures/acme/ACME@ACME_LINEFORCE_10_IP_(CYC_10_IP)@LINEFORCE_10_IP__(CYC_10_IP).gdtf",
         "modes": {
-          "10 Chan": {
-            "channels": 10,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "11 Chan": {
-            "channels": 11,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "16 Chan": {
-            "channels": 16,
-            "gdtfMode": "Mode 2 16 DMX",
-            "status": "matched"
-          },
-          "17 Chan": {
-            "channels": 17,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "19 Chan": {
-            "channels": 19,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "20 Chan": {
-            "channels": 20,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "79 Chan": {
+          "Mode 1 79 DMX": {
             "channels": 79,
             "gdtfMode": "Mode 1 79 DMX",
             "status": "matched"
           },
-          "81 Chan": {
-            "channels": 81,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 2 16 DMX": {
+            "channels": 16,
+            "gdtfMode": "Mode 2 16 DMX",
+            "status": "matched"
           }
         }
       },
@@ -612,60 +552,36 @@
       "watts": 325,
       "weight": 8.6,
       "modes": {
-        "10 Chan": 10,
-        "11 Chan": 11,
-        "16 Chan": 16,
-        "17 Chan": 17,
-        "19 Chan": 19,
-        "20 Chan": 20,
-        "44 Chan": 44,
-        "46 Chan": 46
+        "Mode 1 16CH": 16,
+        "Mode 2 44CH": 44,
+        "Mode 3 19CH": 19,
+        "Mode 4 10CH": 10
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Lineforce_5_Ip.gdtf",
         "file": "fixtures/acme/ACME@ACME__LINEFORCE_5_IP_(CYC_5_IP)@ACME__LINEFORCE_5_IP_(CYC_5_IP)(2).gdtf",
         "modes": {
-          "10 Chan": {
-            "channels": 10,
-            "gdtfMode": "Mode 4 10CH",
-            "status": "matched"
-          },
-          "11 Chan": {
-            "channels": 11,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "16 Chan": {
+          "Mode 1 16CH": {
             "channels": 16,
             "gdtfMode": "Mode 1 16CH",
             "status": "matched"
           },
-          "17 Chan": {
-            "channels": 17,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "19 Chan": {
-            "channels": 19,
-            "gdtfMode": "Mode 3 19CH",
-            "status": "matched"
-          },
-          "20 Chan": {
-            "channels": 20,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "44 Chan": {
+          "Mode 2 44CH": {
             "channels": 44,
             "gdtfMode": "Mode 2 44CH",
             "status": "matched"
           },
-          "46 Chan": {
-            "channels": 46,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 3 19CH": {
+            "channels": 19,
+            "gdtfMode": "Mode 3 19CH",
+            "status": "matched"
+          },
+          "Mode 4 10CH": {
+            "channels": 10,
+            "gdtfMode": "Mode 4 10CH",
+            "status": "matched"
           }
         }
       },
@@ -676,11 +592,11 @@
       "watts": 1190,
       "weight": 42,
       "modes": {
-        "22 Chan": 22,
-        "30 Chan": 30,
-        "31 Chan": 31,
-        "39 Chan": 39,
-        "40 Chan": 40
+        "Mode 1  39 DMX": 39,
+        "Mode 2  30 DMX": 30,
+        "Mode 3  31 DMX": 31,
+        "Mode 4  22 DMX": 22,
+        "Mode 5  40 DMX": 40
       },
       "gdtf": {
         "status": "matched",
@@ -688,27 +604,27 @@
         "suggestedFileName": "ACME__Lyra.gdtf",
         "file": "fixtures/acme/ACME@ACME_LYRA_(XA_1000_BSWF_IP)@ACME_LYRA_(XA_1000_BSWF_IP).gdtf",
         "modes": {
-          "22 Chan": {
-            "channels": 22,
-            "gdtfMode": "Mode 4  22 DMX",
-            "status": "matched"
-          },
-          "30 Chan": {
-            "channels": 30,
-            "gdtfMode": "Mode 2  30 DMX",
-            "status": "matched"
-          },
-          "31 Chan": {
-            "channels": 31,
-            "gdtfMode": "Mode 3  31 DMX",
-            "status": "matched"
-          },
-          "39 Chan": {
+          "Mode 1  39 DMX": {
             "channels": 39,
             "gdtfMode": "Mode 1  39 DMX",
             "status": "matched"
           },
-          "40 Chan": {
+          "Mode 2  30 DMX": {
+            "channels": 30,
+            "gdtfMode": "Mode 2  30 DMX",
+            "status": "matched"
+          },
+          "Mode 3  31 DMX": {
+            "channels": 31,
+            "gdtfMode": "Mode 3  31 DMX",
+            "status": "matched"
+          },
+          "Mode 4  22 DMX": {
+            "channels": 22,
+            "gdtfMode": "Mode 4  22 DMX",
+            "status": "matched"
+          },
+          "Mode 5  40 DMX": {
             "channels": 40,
             "gdtfMode": "Mode 5  40 DMX",
             "status": "matched"
@@ -722,8 +638,8 @@
       "watts": 1455,
       "weight": 42.5,
       "modes": {
-        "30 Chan": 30,
-        "18 Chan": 18
+        "Mode 2 30 DMX": 30,
+        "Mode 1 18DMX": 18
       },
       "gdtf": {
         "status": "matched",
@@ -731,12 +647,12 @@
         "suggestedFileName": "ACME__Lyra_Bw.gdtf",
         "file": "fixtures/acme/ACME@ACME_LYRA_BW(XA_1000_BW_IP)@ACME_LYRA_BW(XA_1000_BW_IP).gdtf",
         "modes": {
-          "30 Chan": {
+          "Mode 2 30 DMX": {
             "channels": 30,
             "gdtfMode": "Mode 2 30 DMX",
             "status": "matched"
           },
-          "18 Chan": {
+          "Mode 1 18DMX": {
             "channels": 18,
             "gdtfMode": "Mode 1 18DMX",
             "status": "matched"
@@ -750,8 +666,8 @@
       "watts": 910,
       "weight": null,
       "modes": {
-        "24 Chan": 24,
-        "30 Chan": 30
+        "Mode 1  30 DMX": 30,
+        "Mode 2 24 DMX": 24
       },
       "gdtf": {
         "status": "matched",
@@ -759,14 +675,14 @@
         "suggestedFileName": "ACME__Mana_Hybrid.gdtf",
         "file": "fixtures/acme/ACME@ACME_MANA_HYBRID_(XA_600_BSW_IP)@_ACME_MANA_HYBRID_(XA_600_BSW_IP).gdtf",
         "modes": {
-          "24 Chan": {
-            "channels": 24,
-            "gdtfMode": "Mode 2 24 DMX",
-            "status": "matched"
-          },
-          "30 Chan": {
+          "Mode 1  30 DMX": {
             "channels": 30,
             "gdtfMode": "Mode 1  30 DMX",
+            "status": "matched"
+          },
+          "Mode 2 24 DMX": {
+            "channels": 24,
+            "gdtfMode": "Mode 2 24 DMX",
             "status": "matched"
           }
         }
@@ -778,35 +694,35 @@
       "watts": 910,
       "weight": 32.5,
       "modes": {
-        "22 Chan": 22,
-        "31 Chan": 31,
-        "31 Chan (Mode 3)": 31,
-        "40 Chan": 40
+        "Standard  40 DMX": 40,
+        "Spot  31 DMX ": 31,
+        "Framing  31 DMX": 31,
+        "Wash 22 DMX ": 22
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Mana_Profile.gdtf",
         "file": "fixtures/acme/ACME@ACME_MANA_PROFILE_(XA_600_BSWF_IP)@ACME_MANA_PROFILE_(XA_600_BSWF_IP).gdtf",
         "modes": {
-          "22 Chan": {
-            "channels": 22,
-            "gdtfMode": "Wash 22 DMX ",
-            "status": "matched"
-          },
-          "31 Chan": {
-            "channels": 31,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "31 Chan (Mode 3)": {
-            "channels": 31,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "40 Chan": {
+          "Standard  40 DMX": {
             "channels": 40,
             "gdtfMode": "Standard  40 DMX",
+            "status": "matched"
+          },
+          "Spot  31 DMX ": {
+            "channels": 31,
+            "gdtfMode": "Spot  31 DMX ",
+            "status": "matched"
+          },
+          "Framing  31 DMX": {
+            "channels": 31,
+            "gdtfMode": "Framing  31 DMX",
+            "status": "matched"
+          },
+          "Wash 22 DMX ": {
+            "channels": 22,
+            "gdtfMode": "Wash 22 DMX ",
             "status": "matched"
           }
         }
@@ -818,10 +734,11 @@
       "watts": 960,
       "weight": 20,
       "modes": {
-        "17 Chan": 17,
-        "21 Chan": 21,
-        "86 Chan": 86,
-        "10+": "10+"
+        "Mode 1 17DMX": 17,
+        "Mode 2 21DMX": 21,
+        "Mode 3 86DMX": 86,
+        "Mode 4 10+DMX": 10,
+        "Mode 5 10Art-Net": 76
       },
       "gdtf": {
         "status": "matched",
@@ -829,24 +746,29 @@
         "suggestedFileName": "ACME__Neozone.gdtf",
         "file": "fixtures/acme/ACME@ACME_NEOZONE_(CM_800Z)@ACME_NEOZONE__(CM_800Z).gdtf",
         "modes": {
-          "17 Chan": {
+          "Mode 1 17DMX": {
             "channels": 17,
             "gdtfMode": "Mode 1 17DMX",
             "status": "matched"
           },
-          "21 Chan": {
+          "Mode 2 21DMX": {
             "channels": 21,
             "gdtfMode": "Mode 2 21DMX",
             "status": "matched"
           },
-          "86 Chan": {
+          "Mode 3 86DMX": {
             "channels": 86,
             "gdtfMode": "Mode 3 86DMX",
             "status": "matched"
           },
-          "10+": {
-            "channels": "10+",
+          "Mode 4 10+DMX": {
+            "channels": 10,
             "gdtfMode": "Mode 4 10+DMX",
+            "status": "matched"
+          },
+          "Mode 5 10Art-Net": {
+            "channels": 76,
+            "gdtfMode": "Mode 5 10Art-Net",
             "status": "matched"
           }
         }
@@ -858,18 +780,18 @@
       "watts": 425,
       "weight": 17.2,
       "modes": {
-        "19 Chan": 19
+        "Mode 1 18CH": 18
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Nova_Beam.gdtf",
         "file": "fixtures/acme/ACME@ACME_NOVA_BEAM@ACME_NOVA_BEAM.gdtf",
         "modes": {
-          "19 Chan": {
-            "channels": 19,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 1 18CH": {
+            "channels": 18,
+            "gdtfMode": "Mode 1 18CH",
+            "status": "matched"
           }
         }
       },
@@ -880,8 +802,8 @@
       "watts": 335,
       "weight": 6.3,
       "modes": {
-        "17 Chan": 17,
-        "37 Chan": 37
+        "Mode 1 37 DMX": 37,
+        "Mode 2 17 DMX": 17
       },
       "gdtf": {
         "status": "matched",
@@ -889,14 +811,14 @@
         "suggestedFileName": "ACME__Oxygen.gdtf",
         "file": "fixtures/acme/ACME@ACME_OXYGEN_(CM-400Z)17_37CH@_ACME_OXYGEN_(CM-400Z)17_37CH.gdtf",
         "modes": {
-          "17 Chan": {
-            "channels": 17,
-            "gdtfMode": "Mode 2 17 DMX",
-            "status": "matched"
-          },
-          "37 Chan": {
+          "Mode 1 37 DMX": {
             "channels": 37,
             "gdtfMode": "Mode 1 37 DMX",
+            "status": "matched"
+          },
+          "Mode 2 17 DMX": {
+            "channels": 17,
+            "gdtfMode": "Mode 2 17 DMX",
             "status": "matched"
           }
         }
@@ -908,10 +830,10 @@
       "watts": 85,
       "weight": 3,
       "modes": {
-        "4 Chan": 4,
-        "5 Chan": 5,
-        "8 Chan": 8,
-        "10 Chan": 10
+        "Mode1 10DMX": 10,
+        "Mode2 8DMX": 8,
+        "Mode3 5DMX": 5,
+        "Mode4 4DMX": 4
       },
       "gdtf": {
         "status": "matched",
@@ -919,24 +841,24 @@
         "suggestedFileName": "ACME__Pasodoble.gdtf",
         "file": "fixtures/acme/ACME@ACME_PASODOBLE_(PAR_12)@ACME_PASODOBLE_(PAR_12).gdtf",
         "modes": {
-          "4 Chan": {
-            "channels": 4,
-            "gdtfMode": "Mode4 4DMX",
+          "Mode1 10DMX": {
+            "channels": 10,
+            "gdtfMode": "Mode1 10DMX",
             "status": "matched"
           },
-          "5 Chan": {
-            "channels": 5,
-            "gdtfMode": "Mode3 5DMX",
-            "status": "matched"
-          },
-          "8 Chan": {
+          "Mode2 8DMX": {
             "channels": 8,
             "gdtfMode": "Mode2 8DMX",
             "status": "matched"
           },
-          "10 Chan": {
-            "channels": 10,
-            "gdtfMode": "Mode1 10DMX",
+          "Mode3 5DMX": {
+            "channels": 5,
+            "gdtfMode": "Mode3 5DMX",
+            "status": "matched"
+          },
+          "Mode4 4DMX": {
+            "channels": 4,
+            "gdtfMode": "Mode4 4DMX",
             "status": "matched"
           }
         }
@@ -948,19 +870,19 @@
       "watts": 420,
       "weight": 7.3,
       "modes": {
-        "7 Chan": 7,
-        "15 Chan": 15,
-        "17 Chan": 17,
-        "21 Chan": 21,
-        "33 Chan": 33,
-        "39 Chan": 39,
-        "65 Chan": 65,
-        "68 Chan": 68,
-        "70 Chan": 70,
-        "70N": "70N",
-        "112 Chan": 112,
-        "117 Chan": 117,
-        "119 Chan": 119
+        "Mode 1 7DMX": 7,
+        "Mode 2 15DMX": 15,
+        "Mode 3 21DMX": 21,
+        "Mode 4 39DMX": 39,
+        "Mode 5 112DMX": 112,
+        "Mode 6 17DMX": 17,
+        "Mode 7 33DMX": 33,
+        "Mode 8 65DMX": 65,
+        "Mode 9 68DMX": 68,
+        "Mode 10 117DMX": 117,
+        "Mode11 70DMX": 70,
+        "Mode 12 70N DMX": 70,
+        "Mode 13 119DMX": 119
       },
       "gdtf": {
         "status": "matched",
@@ -968,67 +890,67 @@
         "suggestedFileName": "ACME__Pixel_Line_Ip.gdtf",
         "file": "fixtures/acme/ACME@ACME_PIXEL_LINE_IP_(STROBE_3_IP)@ACME_PIXEL_LINE_IP_(STROBE_3_IP).gdtf",
         "modes": {
-          "7 Chan": {
+          "Mode 1 7DMX": {
             "channels": 7,
             "gdtfMode": "Mode 1 7DMX",
             "status": "matched"
           },
-          "15 Chan": {
+          "Mode 2 15DMX": {
             "channels": 15,
             "gdtfMode": "Mode 2 15DMX",
             "status": "matched"
           },
-          "17 Chan": {
-            "channels": 17,
-            "gdtfMode": "Mode 6 17DMX",
-            "status": "matched"
-          },
-          "21 Chan": {
+          "Mode 3 21DMX": {
             "channels": 21,
             "gdtfMode": "Mode 3 21DMX",
             "status": "matched"
           },
-          "33 Chan": {
-            "channels": 33,
-            "gdtfMode": "Mode 7 33DMX",
-            "status": "matched"
-          },
-          "39 Chan": {
+          "Mode 4 39DMX": {
             "channels": 39,
             "gdtfMode": "Mode 4 39DMX",
             "status": "matched"
           },
-          "65 Chan": {
-            "channels": 65,
-            "gdtfMode": "Mode 8 65DMX",
-            "status": "matched"
-          },
-          "68 Chan": {
-            "channels": 68,
-            "gdtfMode": "Mode 9 68DMX",
-            "status": "matched"
-          },
-          "70 Chan": {
-            "channels": 70,
-            "gdtfMode": "Mode11 70DMX",
-            "status": "matched"
-          },
-          "70N": {
-            "channels": "70N",
-            "gdtfMode": "Mode 12 70N DMX",
-            "status": "matched"
-          },
-          "112 Chan": {
+          "Mode 5 112DMX": {
             "channels": 112,
             "gdtfMode": "Mode 5 112DMX",
             "status": "matched"
           },
-          "117 Chan": {
+          "Mode 6 17DMX": {
+            "channels": 17,
+            "gdtfMode": "Mode 6 17DMX",
+            "status": "matched"
+          },
+          "Mode 7 33DMX": {
+            "channels": 33,
+            "gdtfMode": "Mode 7 33DMX",
+            "status": "matched"
+          },
+          "Mode 8 65DMX": {
+            "channels": 65,
+            "gdtfMode": "Mode 8 65DMX",
+            "status": "matched"
+          },
+          "Mode 9 68DMX": {
+            "channels": 68,
+            "gdtfMode": "Mode 9 68DMX",
+            "status": "matched"
+          },
+          "Mode 10 117DMX": {
             "channels": 117,
             "gdtfMode": "Mode 10 117DMX",
             "status": "matched"
           },
-          "119 Chan": {
+          "Mode11 70DMX": {
+            "channels": 70,
+            "gdtfMode": "Mode11 70DMX",
+            "status": "matched"
+          },
+          "Mode 12 70N DMX": {
+            "channels": 70,
+            "gdtfMode": "Mode 12 70N DMX",
+            "status": "matched"
+          },
+          "Mode 13 119DMX": {
             "channels": 119,
             "gdtfMode": "Mode 13 119DMX",
             "status": "matched"
@@ -1042,18 +964,18 @@
       "watts": 875,
       "weight": 5.1,
       "modes": {
-        "8 Chan": 8,
-        "10 Chan": 10,
-        "16 Chan": 16,
-        "18 Chan": 18,
-        "22 Chan": 22,
-        "26 Chan": 26,
-        "34 Chan": 34,
-        "37 Chan": 37,
-        "39 Chan": 39,
-        "56 Chan": 56,
-        "62 Chan": 62,
-        "68 Chan": 68
+        "Mode 1 8CH": 8,
+        "Mode 2 16CH": 16,
+        "Mode 3 22CH": 22,
+        "Mode 4 26CH": 26,
+        "Mode 5 56CH": 56,
+        "Mode 6 10CH": 10,
+        "Mode 7 18CH": 18,
+        "Mode 8 34CH": 34,
+        "Mode 9 37CH": 37,
+        "Mode 10 62CH": 62,
+        "Mode 11 39CH": 39,
+        "Mode 12 68CH": 68
       },
       "gdtf": {
         "status": "matched",
@@ -1061,62 +983,62 @@
         "suggestedFileName": "ACME__Pixel_Line_Ip_500.gdtf",
         "file": "fixtures/acme/ACME@ACME_PIXEL_LINE_IP_500_(STROBE_1_IP)@ACME_PIXEL_LINE_IP_500_(STROBE_1_IP).gdtf",
         "modes": {
-          "8 Chan": {
+          "Mode 1 8CH": {
             "channels": 8,
             "gdtfMode": "Mode 1 8CH",
             "status": "matched"
           },
-          "10 Chan": {
-            "channels": 10,
-            "gdtfMode": "Mode 6 10CH",
-            "status": "matched"
-          },
-          "16 Chan": {
+          "Mode 2 16CH": {
             "channels": 16,
             "gdtfMode": "Mode 2 16CH",
             "status": "matched"
           },
-          "18 Chan": {
-            "channels": 18,
-            "gdtfMode": "Mode 7 18CH",
-            "status": "matched"
-          },
-          "22 Chan": {
+          "Mode 3 22CH": {
             "channels": 22,
             "gdtfMode": "Mode 3 22CH",
             "status": "matched"
           },
-          "26 Chan": {
+          "Mode 4 26CH": {
             "channels": 26,
             "gdtfMode": "Mode 4 26CH",
             "status": "matched"
           },
-          "34 Chan": {
-            "channels": 34,
-            "gdtfMode": "Mode 8 34CH",
-            "status": "matched"
-          },
-          "37 Chan": {
-            "channels": 37,
-            "gdtfMode": "Mode 9 37CH",
-            "status": "matched"
-          },
-          "39 Chan": {
-            "channels": 39,
-            "gdtfMode": "Mode 11 39CH",
-            "status": "matched"
-          },
-          "56 Chan": {
+          "Mode 5 56CH": {
             "channels": 56,
             "gdtfMode": "Mode 5 56CH",
             "status": "matched"
           },
-          "62 Chan": {
+          "Mode 6 10CH": {
+            "channels": 10,
+            "gdtfMode": "Mode 6 10CH",
+            "status": "matched"
+          },
+          "Mode 7 18CH": {
+            "channels": 18,
+            "gdtfMode": "Mode 7 18CH",
+            "status": "matched"
+          },
+          "Mode 8 34CH": {
+            "channels": 34,
+            "gdtfMode": "Mode 8 34CH",
+            "status": "matched"
+          },
+          "Mode 9 37CH": {
+            "channels": 37,
+            "gdtfMode": "Mode 9 37CH",
+            "status": "matched"
+          },
+          "Mode 10 62CH": {
             "channels": 62,
             "gdtfMode": "Mode 10 62CH",
             "status": "matched"
           },
-          "68 Chan": {
+          "Mode 11 39CH": {
+            "channels": 39,
+            "gdtfMode": "Mode 11 39CH",
+            "status": "matched"
+          },
+          "Mode 12 68CH": {
             "channels": 68,
             "gdtfMode": "Mode 12 68CH",
             "status": "matched"
@@ -1130,42 +1052,48 @@
       "watts": 1200,
       "weight": null,
       "modes": {
-        "43 Chan": 43,
-        "153 Chan": 153,
-        "163 Chan": 163,
-        "195 Chan": 195,
-        "27+168": "27+168"
+        "Mode 1 43CH ": 43,
+        "Mode 2 195CH": 195,
+        "Mode 3 153CH": 153,
+        "Mode 4 27CH": 27,
+        "Mode 5 168CH": 168,
+        "Mode 6 163CH": 163
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Pulsar_Plus_S2.gdtf",
         "file": "fixtures/acme/ACME@PULSAR_PLUS_S2_(CM_S2_IP)@PULSAR_PLUS_S2_(CM_S2_IP).gdtf",
         "modes": {
-          "43 Chan": {
+          "Mode 1 43CH ": {
             "channels": 43,
             "gdtfMode": "Mode 1 43CH ",
             "status": "matched"
           },
-          "153 Chan": {
-            "channels": 153,
-            "gdtfMode": "Mode 3 153CH",
-            "status": "matched"
-          },
-          "163 Chan": {
-            "channels": 163,
-            "gdtfMode": "Mode 6 163CH",
-            "status": "matched"
-          },
-          "195 Chan": {
+          "Mode 2 195CH": {
             "channels": 195,
             "gdtfMode": "Mode 2 195CH",
             "status": "matched"
           },
-          "27+168": {
-            "channels": "27+168",
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 3 153CH": {
+            "channels": 153,
+            "gdtfMode": "Mode 3 153CH",
+            "status": "matched"
+          },
+          "Mode 4 27CH": {
+            "channels": 27,
+            "gdtfMode": "Mode 4 27CH",
+            "status": "matched"
+          },
+          "Mode 5 168CH": {
+            "channels": 168,
+            "gdtfMode": "Mode 5 168CH",
+            "status": "matched"
+          },
+          "Mode 6 163CH": {
+            "channels": 163,
+            "gdtfMode": "Mode 6 163CH",
+            "status": "matched"
           }
         }
       },
@@ -1176,10 +1104,10 @@
       "watts": 600,
       "weight": null,
       "modes": {
-        "21+": "21+",
-        "24 Chan": 24,
-        "39 Chan": 39,
-        "97 Chan": 97
+        "Mode 1 24DMX": 24,
+        "Mode 2 39DMX": 39,
+        "Mode 3 97DMX": 97,
+        "Mode 4 21+DMX": 21
       },
       "gdtf": {
         "status": "matched",
@@ -1187,24 +1115,24 @@
         "suggestedFileName": "ACME__Pulsar_S2.gdtf",
         "file": "fixtures/acme/ACME@ACME_PULSAR_S2_(CM_S2)@ACME_PULSAR_S2_(CM_S2).gdtf",
         "modes": {
-          "21+": {
-            "channels": "21+",
-            "gdtfMode": "Mode 4 21+DMX",
-            "status": "matched"
-          },
-          "24 Chan": {
+          "Mode 1 24DMX": {
             "channels": 24,
             "gdtfMode": "Mode 1 24DMX",
             "status": "matched"
           },
-          "39 Chan": {
+          "Mode 2 39DMX": {
             "channels": 39,
             "gdtfMode": "Mode 2 39DMX",
             "status": "matched"
           },
-          "97 Chan": {
+          "Mode 3 97DMX": {
             "channels": 97,
             "gdtfMode": "Mode 3 97DMX",
+            "status": "matched"
+          },
+          "Mode 4 21+DMX": {
+            "channels": 21,
+            "gdtfMode": "Mode 4 21+DMX",
             "status": "matched"
           }
         }
@@ -1216,35 +1144,35 @@
       "watts": 465,
       "weight": 23.8,
       "modes": {
-        "16 Chan": 16,
-        "27 Chan": 27,
-        "27 Chan (Mode 3)": 27,
-        "29 Chan": 29
+        "Mode 1 29CH": 29,
+        "Mode 2 27CH ": 27,
+        "Mode 3 16CH ": 16,
+        "Mode 4 27CH ": 27
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Sana_Beam.gdtf",
         "file": "fixtures/acme/ACME@ACME_SANA_BEAM_(XA_300_BEAM_IP)@_ACME_SANA_BEAM_(XA_300_BEAM_IP).gdtf",
         "modes": {
-          "16 Chan": {
+          "Mode 1 29CH": {
+            "channels": 29,
+            "gdtfMode": "Mode 1 29CH",
+            "status": "matched"
+          },
+          "Mode 2 27CH ": {
+            "channels": 27,
+            "gdtfMode": "Mode 2 27CH ",
+            "status": "matched"
+          },
+          "Mode 3 16CH ": {
             "channels": 16,
             "gdtfMode": "Mode 3 16CH ",
             "status": "matched"
           },
-          "27 Chan": {
+          "Mode 4 27CH ": {
             "channels": 27,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "27 Chan (Mode 3)": {
-            "channels": 27,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "29 Chan": {
-            "channels": 29,
-            "gdtfMode": "Mode 1 29CH",
+            "gdtfMode": "Mode 4 27CH ",
             "status": "matched"
           }
         }
@@ -1256,35 +1184,35 @@
       "watts": 570,
       "weight": 26,
       "modes": {
-        "27 Chan": 27,
-        "36 Chan": 36,
-        "36 Chan (Mode 3)": 36,
-        "45 Chan": 45
+        "Mode 1 45CH (Framing)": 45,
+        "Mode 2 36CH (F-Wash)": 36,
+        "Mode 3 27CH (Wash)": 27,
+        "Mode 4 36CH (Spot)": 36
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Sana_Profile.gdtf",
         "file": "fixtures/acme/ACME@ACME_SANA_PROFILE_(XA_300_BSWF_IP)@_ACME_SANA_PROFILE_(XA_300_BSWF_IP).gdtf",
         "modes": {
-          "27 Chan": {
+          "Mode 1 45CH (Framing)": {
+            "channels": 45,
+            "gdtfMode": "Mode 1 45CH (Framing)",
+            "status": "matched"
+          },
+          "Mode 2 36CH (F-Wash)": {
+            "channels": 36,
+            "gdtfMode": "Mode 2 36CH (F-Wash)",
+            "status": "matched"
+          },
+          "Mode 3 27CH (Wash)": {
             "channels": 27,
             "gdtfMode": "Mode 3 27CH (Wash)",
             "status": "matched"
           },
-          "36 Chan": {
+          "Mode 4 36CH (Spot)": {
             "channels": 36,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "36 Chan (Mode 3)": {
-            "channels": 36,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "45 Chan": {
-            "channels": 45,
-            "gdtfMode": "Mode 1 45CH (Framing)",
+            "gdtfMode": "Mode 4 36CH (Spot)",
             "status": "matched"
           }
         }
@@ -1296,11 +1224,11 @@
       "watts": 215,
       "weight": 5,
       "modes": {
-        "11 Chan": 11,
-        "9 Chan": 9,
-        "8 Chan": 8,
-        "7 Chan": 7,
-        "6 Chan": 6
+        "Mode 1 11 DMX": 11,
+        "Mode 2 9 DMX": 9,
+        "Mode 3 8 DMX": 8,
+        "Mode 4 7 DMX": 7,
+        "Mode 5 6 DMX": 6
       },
       "gdtf": {
         "status": "matched",
@@ -1308,27 +1236,27 @@
         "suggestedFileName": "ACME__Sandane_Frost.gdtf",
         "file": "fixtures/acme/ACME@SANDANE_FROST_(PAR_54_IP_EF)@SANDANE_FROST_(PAR_54_IP_EF).gdtf",
         "modes": {
-          "11 Chan": {
+          "Mode 1 11 DMX": {
             "channels": 11,
             "gdtfMode": "Mode 1 11 DMX",
             "status": "matched"
           },
-          "9 Chan": {
+          "Mode 2 9 DMX": {
             "channels": 9,
             "gdtfMode": "Mode 2 9 DMX",
             "status": "matched"
           },
-          "8 Chan": {
+          "Mode 3 8 DMX": {
             "channels": 8,
             "gdtfMode": "Mode 3 8 DMX",
             "status": "matched"
           },
-          "7 Chan": {
+          "Mode 4 7 DMX": {
             "channels": 7,
             "gdtfMode": "Mode 4 7 DMX",
             "status": "matched"
           },
-          "6 Chan": {
+          "Mode 5 6 DMX": {
             "channels": 6,
             "gdtfMode": "Mode 5 6 DMX",
             "status": "matched"
@@ -1342,8 +1270,8 @@
       "watts": 665,
       "weight": 25.5,
       "modes": {
-        "30 Chan": 30,
-        "24 Chan": 24
+        "Mode 1 30 DMX": 30,
+        "Mode 2 24 DMX": 24
       },
       "gdtf": {
         "status": "matched",
@@ -1351,12 +1279,12 @@
         "suggestedFileName": "ACME__Solar_Wind.gdtf",
         "file": "fixtures/acme/ACME@ACME_SOLAR_WIND_(XA_500_BSW)@ACME_SOLAR_WIND__(XA_500_BSW).gdtf",
         "modes": {
-          "30 Chan": {
+          "Mode 1 30 DMX": {
             "channels": 30,
             "gdtfMode": "Mode 1 30 DMX",
             "status": "matched"
           },
-          "24 Chan": {
+          "Mode 2 24 DMX": {
             "channels": 24,
             "gdtfMode": "Mode 2 24 DMX",
             "status": "matched"
@@ -1370,9 +1298,9 @@
       "watts": 250,
       "weight": 8.5,
       "modes": {
-        "5 Chan": 5,
-        "7 Chan": 7,
-        "9 Chan": 9
+        "Mode 1 9 DMX": 9,
+        "Mode 2 7 DMX": 7,
+        "Mode 3 5 DMX": 5
       },
       "gdtf": {
         "status": "matched",
@@ -1380,19 +1308,19 @@
         "suggestedFileName": "ACME__Stage_Par_400_Zoom_Ip.gdtf",
         "file": "fixtures/acme/ACME@ACME_STAGEPAR_400_ZOOM_IP_(MP-400Z_IP)@ACME_STAGEPAR_400_ZOOM_IP_(MP-400Z_IP).gdtf",
         "modes": {
-          "5 Chan": {
-            "channels": 5,
-            "gdtfMode": "Mode 3 5 DMX",
+          "Mode 1 9 DMX": {
+            "channels": 9,
+            "gdtfMode": "Mode 1 9 DMX",
             "status": "matched"
           },
-          "7 Chan": {
+          "Mode 2 7 DMX": {
             "channels": 7,
             "gdtfMode": "Mode 2 7 DMX",
             "status": "matched"
           },
-          "9 Chan": {
-            "channels": 9,
-            "gdtfMode": "Mode 1 9 DMX",
+          "Mode 3 5 DMX": {
+            "channels": 5,
+            "gdtfMode": "Mode 3 5 DMX",
             "status": "matched"
           }
         }
@@ -1404,57 +1332,51 @@
       "watts": 1155,
       "weight": 24,
       "modes": {
-        "17 Chan": 17,
-        "27 Chan": 27,
-        "99 Chan": 99,
-        "108 Chan": 108,
-        "168 Chan": 168,
-        "8+100": "8+100",
-        "8+160": "8+160",
-        "21 Chan": 21
+        "Mode 1 168 DMX": 168,
+        "Mode 2 108 DMX": 108,
+        "Mode 3 99 DMX": 99,
+        "Mode 4 27 DMX": 27,
+        "Mode 5 17 DMX": 17,
+        "Mode 6 8+DMX": 8,
+        "Mode 7 21DMX": 21
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Super_Dotline.gdtf",
         "file": "fixtures/acme/ACME@ACME_SUPER_DOTLINE_(TB_1060_INT12)@ACME_SUPER_DOTLINE_(TB_1060_INT12).gdtf",
         "modes": {
-          "17 Chan": {
-            "channels": 17,
-            "gdtfMode": "Mode 5 17 DMX",
-            "status": "matched"
-          },
-          "27 Chan": {
-            "channels": 27,
-            "gdtfMode": "Mode 4 27 DMX",
-            "status": "matched"
-          },
-          "99 Chan": {
-            "channels": 99,
-            "gdtfMode": "Mode 3 99 DMX",
-            "status": "matched"
-          },
-          "108 Chan": {
-            "channels": 108,
-            "gdtfMode": "Mode 2 108 DMX",
-            "status": "matched"
-          },
-          "168 Chan": {
+          "Mode 1 168 DMX": {
             "channels": 168,
             "gdtfMode": "Mode 1 168 DMX",
             "status": "matched"
           },
-          "8+100": {
-            "channels": "8+100",
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 2 108 DMX": {
+            "channels": 108,
+            "gdtfMode": "Mode 2 108 DMX",
+            "status": "matched"
           },
-          "8+160": {
-            "channels": "8+160",
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 3 99 DMX": {
+            "channels": 99,
+            "gdtfMode": "Mode 3 99 DMX",
+            "status": "matched"
           },
-          "21 Chan": {
+          "Mode 4 27 DMX": {
+            "channels": 27,
+            "gdtfMode": "Mode 4 27 DMX",
+            "status": "matched"
+          },
+          "Mode 5 17 DMX": {
+            "channels": 17,
+            "gdtfMode": "Mode 5 17 DMX",
+            "status": "matched"
+          },
+          "Mode 6 8+DMX": {
+            "channels": 8,
+            "gdtfMode": "Mode 6 8+DMX",
+            "status": "matched"
+          },
+          "Mode 7 21DMX": {
             "channels": 21,
             "gdtfMode": "Mode 7 21DMX",
             "status": "matched"
@@ -1468,10 +1390,10 @@
       "watts": 2265,
       "weight": 52.5,
       "modes": {
-        "23 Chan": 23,
-        "32 Chan": 32,
-        "34 Chan": 34,
-        "43 Chan": 43
+        "Mode 1 43 DMX": 43,
+        "Mode 2 34 DMX": 34,
+        "Mode 3 32 DMX": 32,
+        "Mode 4 23 DMX": 23
       },
       "gdtf": {
         "status": "matched",
@@ -1479,24 +1401,24 @@
         "suggestedFileName": "ACME__Supernova.gdtf",
         "file": "fixtures/acme/ACME@ACME_SUPERNOVA_(XA_2000_BSWF_IP)@ACME_SUPERNOVA_(XA_2000_BSWF_IP).gdtf",
         "modes": {
-          "23 Chan": {
-            "channels": 23,
-            "gdtfMode": "Mode 4 23 DMX",
+          "Mode 1 43 DMX": {
+            "channels": 43,
+            "gdtfMode": "Mode 1 43 DMX",
             "status": "matched"
           },
-          "32 Chan": {
-            "channels": 32,
-            "gdtfMode": "Mode 3 32 DMX",
-            "status": "matched"
-          },
-          "34 Chan": {
+          "Mode 2 34 DMX": {
             "channels": 34,
             "gdtfMode": "Mode 2 34 DMX",
             "status": "matched"
           },
-          "43 Chan": {
-            "channels": 43,
-            "gdtfMode": "Mode 1 43 DMX",
+          "Mode 3 32 DMX": {
+            "channels": 32,
+            "gdtfMode": "Mode 3 32 DMX",
+            "status": "matched"
+          },
+          "Mode 4 23 DMX": {
+            "channels": 23,
+            "gdtfMode": "Mode 4 23 DMX",
             "status": "matched"
           }
         }
@@ -1508,10 +1430,10 @@
       "watts": 2200,
       "weight": 64.5,
       "modes": {
-        "23 Chan": 23,
-        "32 Chan": 32,
-        "35 Chan": 35,
-        "44 Chan": 44
+        "Mode 1 44 DMX(Framing)": 44,
+        "Mode 2 32DMX(F-Wash)": 32,
+        "Mode 3 35DMX(Spot)": 35,
+        "Mode 4 23DMX(Wash)": 23
       },
       "gdtf": {
         "status": "matched",
@@ -1519,24 +1441,24 @@
         "suggestedFileName": "ACME__Supernova_Lt.gdtf",
         "file": "fixtures/acme/ACME@ACME_SUPERNOVA_LT__(XA_2000_BSWF_IP_LT)__@ACME_SUPERNOVA_LT__(XA_2000_BSWF_IP_LT)__.gdtf",
         "modes": {
-          "23 Chan": {
-            "channels": 23,
-            "gdtfMode": "Mode 4 23DMX(Wash)",
+          "Mode 1 44 DMX(Framing)": {
+            "channels": 44,
+            "gdtfMode": "Mode 1 44 DMX(Framing)",
             "status": "matched"
           },
-          "32 Chan": {
+          "Mode 2 32DMX(F-Wash)": {
             "channels": 32,
             "gdtfMode": "Mode 2 32DMX(F-Wash)",
             "status": "matched"
           },
-          "35 Chan": {
+          "Mode 3 35DMX(Spot)": {
             "channels": 35,
             "gdtfMode": "Mode 3 35DMX(Spot)",
             "status": "matched"
           },
-          "44 Chan": {
-            "channels": 44,
-            "gdtfMode": "Mode 1 44 DMX(Framing)",
+          "Mode 4 23DMX(Wash)": {
+            "channels": 23,
+            "gdtfMode": "Mode 4 23DMX(Wash)",
             "status": "matched"
           }
         }
@@ -1548,10 +1470,10 @@
       "watts": 55,
       "weight": null,
       "modes": {
-        "4 Chan": 4,
-        "5 Chan": 5,
-        "8 Chan": 8,
-        "10 Chan": 10
+        "Mode1 10DMX": 10,
+        "Mode2 8DMX": 8,
+        "Mode3 5DMX": 5,
+        "Mode4 4DMX": 4
       },
       "gdtf": {
         "status": "matched",
@@ -1559,24 +1481,24 @@
         "suggestedFileName": "ACME__Tango.gdtf",
         "file": "fixtures/acme/ACME@ACME_TANGO_(PAR_7)@_ACME_TANGO_(PAR_7).gdtf",
         "modes": {
-          "4 Chan": {
-            "channels": 4,
-            "gdtfMode": "Mode4 4DMX",
+          "Mode1 10DMX": {
+            "channels": 10,
+            "gdtfMode": "Mode1 10DMX",
             "status": "matched"
           },
-          "5 Chan": {
-            "channels": 5,
-            "gdtfMode": "Mode3 5DMX",
-            "status": "matched"
-          },
-          "8 Chan": {
+          "Mode2 8DMX": {
             "channels": 8,
             "gdtfMode": "Mode2 8DMX",
             "status": "matched"
           },
-          "10 Chan": {
-            "channels": 10,
-            "gdtfMode": "Mode1 10DMX",
+          "Mode3 5DMX": {
+            "channels": 5,
+            "gdtfMode": "Mode3 5DMX",
+            "status": "matched"
+          },
+          "Mode4 4DMX": {
+            "channels": 4,
+            "gdtfMode": "Mode4 4DMX",
             "status": "matched"
           }
         }
@@ -1588,42 +1510,30 @@
       "watts": 1600,
       "weight": null,
       "modes": {
-        "19+": "19+",
-        "27 Chan": 27,
-        "29 Chan": 29,
-        "139 Chan": 139,
-        "141 Chan": 141
+        "Mode 1 27 DMX": 27,
+        "Mode 2 139 DMX": 139,
+        "Mode 3 19DMX+": 19
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/acme",
         "suggestedFileName": "ACME__Theta.gdtf",
         "file": "fixtures/acme/ACME@ACME_THETA(CM_1000_ZF)@ACME_THETA(CM_1000_ZF).gdtf",
         "modes": {
-          "19+": {
-            "channels": "19+",
-            "gdtfMode": "Mode 3 19DMX+",
-            "status": "matched"
-          },
-          "27 Chan": {
+          "Mode 1 27 DMX": {
             "channels": 27,
             "gdtfMode": "Mode 1 27 DMX",
             "status": "matched"
           },
-          "29 Chan": {
-            "channels": 29,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "139 Chan": {
+          "Mode 2 139 DMX": {
             "channels": 139,
             "gdtfMode": "Mode 2 139 DMX",
             "status": "matched"
           },
-          "141 Chan": {
-            "channels": 141,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 3 19DMX+": {
+            "channels": 19,
+            "gdtfMode": "Mode 3 19DMX+",
+            "status": "matched"
           }
         }
       },
@@ -1634,11 +1544,11 @@
       "watts": 935,
       "weight": 30,
       "modes": {
-        "41 Chan": 41,
-        "71 Chan": 71,
-        "75 Chan": 75,
-        "85 Chan": 85,
-        "170 Chan": 170
+        "Mode 1 41DMX 1": 41,
+        "Mode 2 71 DMX": 71,
+        "Mode 3 75 DMX": 75,
+        "Mode 4 85 MDX": 85,
+        "Mode 5 170DMX": 170
       },
       "gdtf": {
         "status": "matched",
@@ -1646,27 +1556,27 @@
         "suggestedFileName": "ACME__Tornado.gdtf",
         "file": "fixtures/acme/ACME@ACME_TORNADO@tornado.gdtf",
         "modes": {
-          "41 Chan": {
+          "Mode 1 41DMX 1": {
             "channels": 41,
             "gdtfMode": "Mode 1 41DMX 1",
             "status": "matched"
           },
-          "71 Chan": {
+          "Mode 2 71 DMX": {
             "channels": 71,
             "gdtfMode": "Mode 2 71 DMX",
             "status": "matched"
           },
-          "75 Chan": {
+          "Mode 3 75 DMX": {
             "channels": 75,
             "gdtfMode": "Mode 3 75 DMX",
             "status": "matched"
           },
-          "85 Chan": {
+          "Mode 4 85 MDX": {
             "channels": 85,
             "gdtfMode": "Mode 4 85 MDX",
             "status": "matched"
           },
-          "170 Chan": {
+          "Mode 5 170DMX": {
             "channels": 170,
             "gdtfMode": "Mode 5 170DMX",
             "status": "matched"
@@ -1680,8 +1590,8 @@
       "watts": 455,
       "weight": null,
       "modes": {
-        "10 Chan": 10,
-        "28 Chan": 28
+        "Mode 1 28CH": 28,
+        "Mode 2 10CH": 10
       },
       "gdtf": {
         "status": "matched",
@@ -1689,14 +1599,14 @@
         "suggestedFileName": "ACME__Tv_Light_Panel_3000.gdtf",
         "file": "fixtures/acme/ACME@ACME_TV_LIGHT_PANEL_3000_(LP_F3000)@ACME_TV_LIGHT_PANEL_3000_(LP_F3000).gdtf",
         "modes": {
-          "10 Chan": {
-            "channels": 10,
-            "gdtfMode": "Mode 2 10CH",
-            "status": "matched"
-          },
-          "28 Chan": {
+          "Mode 1 28CH": {
             "channels": 28,
             "gdtfMode": "Mode 1 28CH",
+            "status": "matched"
+          },
+          "Mode 2 10CH": {
+            "channels": 10,
+            "gdtfMode": "Mode 2 10CH",
             "status": "matched"
           }
         }
@@ -1708,7 +1618,7 @@
       "watts": 220,
       "weight": 9,
       "modes": {
-        "17 Chan": 17
+        "17 Channel (IV)": 17
       },
       "gdtf": {
         "status": "matched",
@@ -1716,7 +1626,7 @@
         "suggestedFileName": "ACME__Willow_200.gdtf",
         "file": "fixtures/acme/ACME@_ACME_WILLOW_(BSW_200_IV)@BSW_200_IV.gdtf",
         "modes": {
-          "17 Chan": {
+          "17 Channel (IV)": {
             "channels": 17,
             "gdtfMode": "17 Channel (IV)",
             "status": "matched"
@@ -1730,7 +1640,7 @@
       "watts": 460,
       "weight": 17.5,
       "modes": {
-        "18 Chan": 18
+        "18 DMX": 18
       },
       "gdtf": {
         "status": "matched",
@@ -1738,7 +1648,7 @@
         "suggestedFileName": "ACME__Willow_500.gdtf",
         "file": "fixtures/acme/ACME@ACME_WILLOW_(BSW_500_III)@ACME_WILLOW_(BSW_500_III).gdtf",
         "modes": {
-          "18 Chan": {
+          "18 DMX": {
             "channels": 18,
             "gdtfMode": "18 DMX",
             "status": "matched"

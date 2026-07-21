@@ -6,9 +6,9 @@
       "watts": 1150,
       "weight": 37.8,
       "modes": {
-        "Basic": 30,
-        "Standard": 32,
-        "Extended": 52
+        "Extended_540": 52,
+        "Standard_540": 32,
+        "Basic_540": 30
       },
       "gdtf": {
         "status": "matched",
@@ -16,19 +16,19 @@
         "suggestedFileName": "Ayrton__Bora.gdtf",
         "file": "fixtures/ayrton/Ayrton@Bora@V2.3_Add_RDM_Personality.gdtf",
         "modes": {
-          "Basic": {
-            "channels": 30,
-            "gdtfMode": "Basic_540",
+          "Extended_540": {
+            "channels": 52,
+            "gdtfMode": "Extended_540",
             "status": "matched"
           },
-          "Standard": {
+          "Standard_540": {
             "channels": 32,
             "gdtfMode": "Standard_540",
             "status": "matched"
           },
-          "Extended": {
-            "channels": 52,
-            "gdtfMode": "Extended_540",
+          "Basic_540": {
+            "channels": 30,
+            "gdtfMode": "Basic_540",
             "status": "matched"
           }
         }
@@ -40,29 +40,35 @@
       "watts": 480,
       "weight": 33,
       "modes": {
-        "Basic": 33,
-        "Standard": 36,
-        "Extended": 45
+        "Extended_540": 45,
+        "Standard_ 540": 35,
+        "Extended_CTO_ 540": 45,
+        "Standard_CTO_ 540": 35
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Cobra.gdtf",
         "file": "fixtures/ayrton/Ayrton@Cobra@V1.7_Add_RDM_Personality.gdtf",
         "modes": {
-          "Basic": {
-            "channels": 33,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Standard": {
-            "channels": 36,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Extended": {
+          "Extended_540": {
             "channels": 45,
             "gdtfMode": "Extended_540",
+            "status": "matched"
+          },
+          "Standard_ 540": {
+            "channels": 35,
+            "gdtfMode": "Standard_ 540",
+            "status": "matched"
+          },
+          "Extended_CTO_ 540": {
+            "channels": 45,
+            "gdtfMode": "Extended_CTO_ 540",
+            "status": "matched"
+          },
+          "Standard_CTO_ 540": {
+            "channels": 35,
+            "gdtfMode": "Standard_CTO_ 540",
             "status": "matched"
           }
         }
@@ -74,9 +80,9 @@
       "watts": 550,
       "weight": 22,
       "modes": {
-        "Basic": 34,
-        "Standard": 36,
-        "Extended": 56
+        "Extended_540_S": 56,
+        "Standard_540_S": 36,
+        "Basic_540_S": 34
       },
       "gdtf": {
         "status": "matched",
@@ -84,19 +90,19 @@
         "suggestedFileName": "Ayrton__Diablo_Profile_S.gdtf",
         "file": "fixtures/ayrton/Ayrton@Diablo@V2.6_Add_RDM_Personality.gdtf",
         "modes": {
-          "Basic": {
-            "channels": 34,
-            "gdtfMode": "Basic_540_S",
+          "Extended_540_S": {
+            "channels": 56,
+            "gdtfMode": "Extended_540_S",
             "status": "matched"
           },
-          "Standard": {
+          "Standard_540_S": {
             "channels": 36,
             "gdtfMode": "Standard_540_S",
             "status": "matched"
           },
-          "Extended": {
-            "channels": 56,
-            "gdtfMode": "Extended_540_S",
+          "Basic_540_S": {
+            "channels": 34,
+            "gdtfMode": "Basic_540_S",
             "status": "matched"
           }
         }
@@ -108,8 +114,9 @@
       "watts": 1600,
       "weight": 60,
       "modes": {
-        "Standard": 46,
-        "Extended": 70
+        "Extended_540": 70,
+        "Standard_540": 46,
+        "Basic_540": 44
       },
       "gdtf": {
         "status": "matched",
@@ -117,14 +124,19 @@
         "suggestedFileName": "Ayrton__Domino_LT.gdtf",
         "file": "fixtures/ayrton/Ayrton@Domino_LT@V1.8_Add_RDM_Personality.gdtf",
         "modes": {
-          "Standard": {
+          "Extended_540": {
+            "channels": 70,
+            "gdtfMode": "Extended_540",
+            "status": "matched"
+          },
+          "Standard_540": {
             "channels": 46,
             "gdtfMode": "Standard_540",
             "status": "matched"
           },
-          "Extended": {
-            "channels": 70,
-            "gdtfMode": "Extended_540",
+          "Basic_540": {
+            "channels": 44,
+            "gdtfMode": "Basic_540",
             "status": "matched"
           }
         }
@@ -136,9 +148,9 @@
       "watts": 1800,
       "weight": 52,
       "modes": {
-        "Basic": 42,
-        "Standard": 44,
-        "Extended": 66
+        "Extended_540": 66,
+        "Standard_540": 44,
+        "Basic_540": 42
       },
       "gdtf": {
         "status": "matched",
@@ -146,19 +158,19 @@
         "suggestedFileName": "Ayrton__Domino_Profile.gdtf",
         "file": "fixtures/ayrton/Ayrton@Domino_Profile@V2.6_Add_RDM_Personality.gdtf",
         "modes": {
-          "Basic": {
-            "channels": 42,
-            "gdtfMode": "Basic_540",
+          "Extended_540": {
+            "channels": 66,
+            "gdtfMode": "Extended_540",
             "status": "matched"
           },
-          "Standard": {
+          "Standard_540": {
             "channels": 44,
             "gdtfMode": "Standard_540",
             "status": "matched"
           },
-          "Extended": {
-            "channels": 66,
-            "gdtfMode": "Extended_540",
+          "Basic_540": {
+            "channels": 42,
+            "gdtfMode": "Basic_540",
             "status": "matched"
           }
         }
@@ -170,9 +182,9 @@
       "watts": 1600,
       "weight": 52,
       "modes": {
-        "Basic": 37,
-        "Standard": 39,
-        "Extended": 61
+        "Extended_540": 61,
+        "Standard_540": 39,
+        "Basic_540": 37
       },
       "gdtf": {
         "status": "matched",
@@ -180,19 +192,19 @@
         "suggestedFileName": "Ayrton__Domino_Wash.gdtf",
         "file": "fixtures/ayrton/Ayrton@Domino_Wash@V1.4_Add_RDM_Personality.gdtf",
         "modes": {
-          "Basic": {
-            "channels": 37,
-            "gdtfMode": "Basic_540",
+          "Extended_540": {
+            "channels": 61,
+            "gdtfMode": "Extended_540",
             "status": "matched"
           },
-          "Standard": {
+          "Standard_540": {
             "channels": 39,
             "gdtfMode": "Standard_540",
             "status": "matched"
           },
-          "Extended": {
-            "channels": 61,
-            "gdtfMode": "Extended_540",
+          "Basic_540": {
+            "channels": 37,
+            "gdtfMode": "Basic_540",
             "status": "matched"
           }
         }
@@ -204,8 +216,8 @@
       "watts": 1295,
       "weight": 54.7,
       "modes": {
-        "Standard": 44,
-        "Extended": 66
+        "Extended_540": 66,
+        "Standard_540": 44
       },
       "gdtf": {
         "status": "matched",
@@ -213,14 +225,14 @@
         "suggestedFileName": "Ayrton__Eagle_Strike.gdtf",
         "file": "fixtures/ayrton/Ayrton@EagleStrike@V1.3_Add_RDM_Personality.gdtf",
         "modes": {
-          "Standard": {
-            "channels": 44,
-            "gdtfMode": "Standard_540",
-            "status": "matched"
-          },
-          "Extended": {
+          "Extended_540": {
             "channels": 66,
             "gdtfMode": "Extended_540",
+            "status": "matched"
+          },
+          "Standard_540": {
+            "channels": 44,
+            "gdtfMode": "Standard_540",
             "status": "matched"
           }
         }
@@ -232,9 +244,9 @@
       "watts": 1000,
       "weight": 33,
       "modes": {
-        "Basic": 39,
-        "Standard": 41,
-        "Extended": 62
+        "Extended_540": 62,
+        "Standard_540": 41,
+        "Basic_540": 39
       },
       "gdtf": {
         "status": "matched",
@@ -242,19 +254,19 @@
         "suggestedFileName": "Ayrton__Eurus.gdtf",
         "file": "fixtures/ayrton/Ayrton@Eurus@V2.7_Add_RDM_Personality.gdtf",
         "modes": {
-          "Basic": {
-            "channels": 39,
-            "gdtfMode": "Basic_540",
+          "Extended_540": {
+            "channels": 62,
+            "gdtfMode": "Extended_540",
             "status": "matched"
           },
-          "Standard": {
+          "Standard_540": {
             "channels": 41,
             "gdtfMode": "Standard_540",
             "status": "matched"
           },
-          "Extended": {
-            "channels": 62,
-            "gdtfMode": "Extended_540",
+          "Basic_540": {
+            "channels": 39,
+            "gdtfMode": "Basic_540",
             "status": "matched"
           }
         }
@@ -266,9 +278,9 @@
       "watts": 800,
       "weight": 35.6,
       "modes": {
-        "Basic": 36,
-        "Standard": 38,
-        "Extended": 58
+        "Extended_540": 58,
+        "Standard_540": 38,
+        "Basic_540": 36
       },
       "gdtf": {
         "status": "matched",
@@ -276,19 +288,19 @@
         "suggestedFileName": "Ayrton__Ghibli.gdtf",
         "file": "fixtures/ayrton/Ayrton@Ghibli@V2.4_Add_RDM_Personality.gdtf",
         "modes": {
-          "Basic": {
-            "channels": 36,
-            "gdtfMode": "Basic_540",
+          "Extended_540": {
+            "channels": 58,
+            "gdtfMode": "Extended_540",
             "status": "matched"
           },
-          "Standard": {
+          "Standard_540": {
             "channels": 38,
             "gdtfMode": "Standard_540",
             "status": "matched"
           },
-          "Extended": {
-            "channels": 58,
-            "gdtfMode": "Extended_540",
+          "Basic_540": {
+            "channels": 36,
+            "gdtfMode": "Basic_540",
             "status": "matched"
           }
         }
@@ -300,9 +312,9 @@
       "watts": 1470,
       "weight": 53.8,
       "modes": {
-        "Basic": 44,
-        "Standard": 46,
-        "Extended": 70
+        "Extended_540": 70,
+        "Standard_540": 46,
+        "Basic_540": 44
       },
       "gdtf": {
         "status": "matched",
@@ -310,19 +322,19 @@
         "suggestedFileName": "Ayrton__Huracan_LT.gdtf",
         "file": "fixtures/ayrton/Ayrton@Huracan_LT@V1.5_Add_RDM_Personality.gdtf",
         "modes": {
-          "Basic": {
-            "channels": 44,
-            "gdtfMode": "Basic_540",
+          "Extended_540": {
+            "channels": 70,
+            "gdtfMode": "Extended_540",
             "status": "matched"
           },
-          "Standard": {
+          "Standard_540": {
             "channels": 46,
             "gdtfMode": "Standard_540",
             "status": "matched"
           },
-          "Extended": {
-            "channels": 70,
-            "gdtfMode": "Extended_540",
+          "Basic_540": {
+            "channels": 44,
+            "gdtfMode": "Basic_540",
             "status": "matched"
           }
         }
@@ -334,9 +346,9 @@
       "watts": 1470,
       "weight": 46,
       "modes": {
-        "Basic": 44,
-        "Standard": 46,
-        "Extended": 70
+        "Extended_540": 70,
+        "Standard_ 540": 46,
+        "Basic_ 540": 44
       },
       "gdtf": {
         "status": "matched",
@@ -344,19 +356,19 @@
         "suggestedFileName": "Ayrton__Huracan_Profile.gdtf",
         "file": "fixtures/ayrton/Ayrton@Huracan_Profile@V2.6_Add_RDM_Personality.gdtf",
         "modes": {
-          "Basic": {
-            "channels": 44,
-            "gdtfMode": "Basic_ 540",
+          "Extended_540": {
+            "channels": 70,
+            "gdtfMode": "Extended_540",
             "status": "matched"
           },
-          "Standard": {
+          "Standard_ 540": {
             "channels": 46,
             "gdtfMode": "Standard_ 540",
             "status": "matched"
           },
-          "Extended": {
-            "channels": 70,
-            "gdtfMode": "Extended_540",
+          "Basic_ 540": {
+            "channels": 44,
+            "gdtfMode": "Basic_ 540",
             "status": "matched"
           }
         }
@@ -402,9 +414,9 @@
       "watts": 1550,
       "weight": 39.8,
       "modes": {
-        "Basic": 40,
-        "Standard": 42,
-        "Extended": 64
+        "Extended_540": 64,
+        "Standard_540": 42,
+        "Basic_540": 40
       },
       "gdtf": {
         "status": "matched",
@@ -412,19 +424,19 @@
         "suggestedFileName": "Ayrton__Khamsin.gdtf",
         "file": "fixtures/ayrton/Ayrton@Khamsin@V12.3_Add_RDM_Personality.gdtf",
         "modes": {
-          "Basic": {
-            "channels": 40,
-            "gdtfMode": "Basic_540",
+          "Extended_540": {
+            "channels": 64,
+            "gdtfMode": "Extended_540",
             "status": "matched"
           },
-          "Standard": {
+          "Standard_540": {
             "channels": 42,
             "gdtfMode": "Standard_540",
             "status": "matched"
           },
-          "Extended": {
-            "channels": 64,
-            "gdtfMode": "Extended_540",
+          "Basic_540": {
+            "channels": 40,
+            "gdtfMode": "Basic_540",
             "status": "matched"
           }
         }
@@ -436,18 +448,18 @@
       "watts": 200,
       "weight": 14.5,
       "modes": {
-        "Standard": 33
+        "Extended_540": 33
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Kyalami.gdtf",
         "file": "fixtures/ayrton/Ayrton@Kyalami@V1.7_Add_RDM_Personality.gdtf",
         "modes": {
-          "Standard": {
+          "Extended_540": {
             "channels": 33,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended_540",
+            "status": "matched"
           }
         }
       },
@@ -458,23 +470,35 @@
       "watts": 800,
       "weight": 32.4,
       "modes": {
-        "Standard": 175,
-        "Extended": 184
+        "Extended_Chase": 184,
+        "Extended": 174,
+        "Extended+Liquid": 900,
+        "Extended_Chase+Liquid": 900
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Magic_Blade_Neo.gdtf",
         "file": "fixtures/ayrton/Ayrton@MagicBlade_Neo@V1.1_Add_RDM_Personality.gdtf",
         "modes": {
-          "Standard": {
-            "channels": 175,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Extended": {
+          "Extended_Chase": {
             "channels": 184,
             "gdtfMode": "Extended_Chase",
+            "status": "matched"
+          },
+          "Extended": {
+            "channels": 174,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          },
+          "Extended+Liquid": {
+            "channels": 900,
+            "gdtfMode": "Extended+Liquid",
+            "status": "matched"
+          },
+          "Extended_Chase+Liquid": {
+            "channels": 900,
+            "gdtfMode": "Extended_Chase+Liquid",
             "status": "matched"
           }
         }
@@ -486,18 +510,24 @@
       "watts": 160,
       "weight": 6.6,
       "modes": {
-        "Standard": 35
+        "Extended_540": 35,
+        "Extended_540_Pixel": 180
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Magic_Dot_Neo.gdtf",
         "file": "fixtures/ayrton/Ayrton@MagicDot_Neo@V1.2_Add_RDM_Personality.gdtf",
         "modes": {
-          "Standard": {
+          "Extended_540": {
             "channels": 35,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended_540",
+            "status": "matched"
+          },
+          "Extended_540_Pixel": {
+            "channels": 180,
+            "gdtfMode": "Extended_540_Pixel",
+            "status": "matched"
           }
         }
       },
@@ -508,7 +538,7 @@
       "watts": 800,
       "weight": 41,
       "modes": {
-        "Extended": 47
+        "Extended_540": 47
       },
       "gdtf": {
         "status": "matched",
@@ -516,7 +546,7 @@
         "suggestedFileName": "Ayrton__Mamba.gdtf",
         "file": "fixtures/ayrton/Ayrton@Mamba@V1.5_Add_RDM_Personality.gdtf",
         "modes": {
-          "Extended": {
+          "Extended_540": {
             "channels": 47,
             "gdtfMode": "Extended_540",
             "status": "matched"
@@ -530,9 +560,9 @@
       "watts": 220,
       "weight": 8.9,
       "modes": {
-        "Basic": 19,
+        "Extended": 34,
         "Standard": 22,
-        "Extended": 34
+        "Basic": 19
       },
       "gdtf": {
         "status": "matched",
@@ -540,9 +570,9 @@
         "suggestedFileName": "Ayrton__MiniPanel_FX.gdtf",
         "file": "fixtures/ayrton/Ayrton@MiniPanel_FX@V2.5_Add_RDM_Personality.gdtf",
         "modes": {
-          "Basic": {
-            "channels": 19,
-            "gdtfMode": "Basic",
+          "Extended": {
+            "channels": 34,
+            "gdtfMode": "Extended",
             "status": "matched"
           },
           "Standard": {
@@ -550,9 +580,9 @@
             "gdtfMode": "Standard",
             "status": "matched"
           },
-          "Extended": {
-            "channels": 34,
-            "gdtfMode": "Extended",
+          "Basic": {
+            "channels": 19,
+            "gdtfMode": "Basic",
             "status": "matched"
           }
         }
@@ -564,18 +594,30 @@
       "watts": 550,
       "weight": 18.6,
       "modes": {
-        "Standard": 39
+        "Extended_540": 39,
+        "Standard_540": 28,
+        "Basic_540": 26
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Mistral.gdtf",
         "file": "fixtures/ayrton/Ayrton@Mistral@V2.3_Add_RDM_Personality.gdtf",
         "modes": {
-          "Standard": {
+          "Extended_540": {
             "channels": 39,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended_540",
+            "status": "matched"
+          },
+          "Standard_540": {
+            "channels": 28,
+            "gdtfMode": "Standard_540",
+            "status": "matched"
+          },
+          "Basic_540": {
+            "channels": 26,
+            "gdtfMode": "Basic_540",
+            "status": "matched"
           }
         }
       },
@@ -586,9 +628,10 @@
       "watts": 1480,
       "weight": 38.8,
       "modes": {
-        "Basic": 38,
-        "Standard": 40,
-        "Extended": 61
+        "Extended_540": 61,
+        "Standard_540": 40,
+        "Basic_540": 38,
+        "GhibliExt_540": 58
       },
       "gdtf": {
         "status": "matched",
@@ -596,19 +639,24 @@
         "suggestedFileName": "Ayrton__Perseo_Profile.gdtf",
         "file": "fixtures/ayrton/Ayrton@Perseo_Profile@V2.3_Add_RDM_Personality.gdtf",
         "modes": {
-          "Basic": {
-            "channels": 38,
-            "gdtfMode": "Basic_540",
+          "Extended_540": {
+            "channels": 61,
+            "gdtfMode": "Extended_540",
             "status": "matched"
           },
-          "Standard": {
+          "Standard_540": {
             "channels": 40,
             "gdtfMode": "Standard_540",
             "status": "matched"
           },
-          "Extended": {
-            "channels": 61,
-            "gdtfMode": "Extended_540",
+          "Basic_540": {
+            "channels": 38,
+            "gdtfMode": "Basic_540",
+            "status": "matched"
+          },
+          "GhibliExt_540": {
+            "channels": 58,
+            "gdtfMode": "GhibliExt_540",
             "status": "matched"
           }
         }
@@ -620,18 +668,24 @@
       "watts": 660,
       "weight": 25.4,
       "modes": {
-        "Extended": 43
+        "Extended_540-FlatField_Auto": 43,
+        "Extended_540-FlatField_Off": 43
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__RawBeam_350.gdtf",
         "file": "fixtures/ayrton/Ayrton@RawBeam_350@V1.3_Add_RDM_Personality.gdtf",
         "modes": {
-          "Extended": {
+          "Extended_540-FlatField_Auto": {
             "channels": 43,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended_540-FlatField_Auto",
+            "status": "matched"
+          },
+          "Extended_540-FlatField_Off": {
+            "channels": 43,
+            "gdtfMode": "Extended_540-FlatField_Off",
+            "status": "matched"
           }
         }
       },
@@ -642,8 +696,8 @@
       "watts": 700,
       "weight": 30.8,
       "modes": {
-        "Standard": 42,
-        "Extended": 65
+        "Extended_540": 65,
+        "Standard_540": 42
       },
       "gdtf": {
         "status": "matched",
@@ -651,14 +705,14 @@
         "suggestedFileName": "Ayrton__Rivale_Profile.gdtf",
         "file": "fixtures/ayrton/Ayrton@Rivale_Profile@V1.7_Add_RDM_Personality.gdtf",
         "modes": {
-          "Standard": {
-            "channels": 42,
-            "gdtfMode": "Standard_540",
-            "status": "matched"
-          },
-          "Extended": {
+          "Extended_540": {
             "channels": 65,
             "gdtfMode": "Extended_540",
+            "status": "matched"
+          },
+          "Standard_540": {
+            "channels": 42,
+            "gdtfMode": "Standard_540",
             "status": "matched"
           }
         }
@@ -670,23 +724,23 @@
       "watts": 700,
       "weight": 30.8,
       "modes": {
-        "Standard": 42,
-        "Extended": 60
+        "Extended_540": 60,
+        "Standard_540": 38
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Rivale_Wash.gdtf",
         "file": "fixtures/ayrton/Ayrton@Rivale_Wash@V1.7_Add_RDM_Personality.gdtf",
         "modes": {
-          "Standard": {
-            "channels": 42,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Extended": {
+          "Extended_540": {
             "channels": 60,
             "gdtfMode": "Extended_540",
+            "status": "matched"
+          },
+          "Standard_540": {
+            "channels": 38,
+            "gdtfMode": "Standard_540",
             "status": "matched"
           }
         }
@@ -698,8 +752,8 @@
       "watts": 630,
       "weight": 23.5,
       "modes": {
-        "Standard": 42,
-        "Extended": 65
+        "Extended_540": 65,
+        "Standard_540": 42
       },
       "gdtf": {
         "status": "matched",
@@ -707,14 +761,14 @@
         "suggestedFileName": "Ayrton__Stradale_Profile.gdtf",
         "file": "fixtures/ayrton/Ayrton@Stradale_Profile@V1.2_Add_RDM_Personality.gdtf",
         "modes": {
-          "Standard": {
-            "channels": 42,
-            "gdtfMode": "Standard_540",
-            "status": "matched"
-          },
-          "Extended": {
+          "Extended_540": {
             "channels": 65,
             "gdtfMode": "Extended_540",
+            "status": "matched"
+          },
+          "Standard_540": {
+            "channels": 42,
+            "gdtfMode": "Standard_540",
             "status": "matched"
           }
         }
@@ -726,8 +780,8 @@
       "watts": 1300,
       "weight": 40.5,
       "modes": {
-        "Standard": 44,
-        "Extended": 67
+        "Extended_540": 67,
+        "Standard_540": 44
       },
       "gdtf": {
         "status": "matched",
@@ -735,14 +789,14 @@
         "suggestedFileName": "Ayrton__Veloce_Profile.gdtf",
         "file": "fixtures/ayrton/Ayrton@Veloce_Profile@V1.5_Add_RDM_Personality.gdtf",
         "modes": {
-          "Standard": {
-            "channels": 44,
-            "gdtfMode": "Standard_540",
-            "status": "matched"
-          },
-          "Extended": {
+          "Extended_540": {
             "channels": 67,
             "gdtfMode": "Extended_540",
+            "status": "matched"
+          },
+          "Standard_540": {
+            "channels": 44,
+            "gdtfMode": "Standard_540",
             "status": "matched"
           }
         }
@@ -754,8 +808,8 @@
       "watts": 1300,
       "weight": 39,
       "modes": {
-        "Standard": 38,
-        "Extended": 60
+        "Extended_540": 60,
+        "Standard_540": 38
       },
       "gdtf": {
         "status": "matched",
@@ -763,14 +817,14 @@
         "suggestedFileName": "Ayrton__Veloce_Wash.gdtf",
         "file": "fixtures/ayrton/Ayrton@Veloce_Wash@V1.2_Add_RDM_Personality.gdtf",
         "modes": {
-          "Standard": {
-            "channels": 38,
-            "gdtfMode": "Standard_540",
-            "status": "matched"
-          },
-          "Extended": {
+          "Extended_540": {
             "channels": 60,
             "gdtfMode": "Extended_540",
+            "status": "matched"
+          },
+          "Standard_540": {
+            "channels": 38,
+            "gdtfMode": "Standard_540",
             "status": "matched"
           }
         }
@@ -782,9 +836,13 @@
       "watts": 400,
       "weight": 11.1,
       "modes": {
-        "Basic": 26,
+        "Extended Pixel 1": 79,
         "Standard": 50,
-        "Extended": 79
+        "Extended Pixel 2": 51,
+        "Extended Pixel 1 + Liquid": 414,
+        "Extended Pixel 2 + Liquid": 414,
+        "Basic": 26,
+        "Extended Ring": 46
       },
       "gdtf": {
         "status": "matched",
@@ -792,9 +850,9 @@
         "suggestedFileName": "Ayrton__Zonda_3_FX.gdtf",
         "file": "fixtures/ayrton/Ayrton@Zonda_3_FX@V1.7_Add_RDM_Personality.gdtf",
         "modes": {
-          "Basic": {
-            "channels": 26,
-            "gdtfMode": "Basic",
+          "Extended Pixel 1": {
+            "channels": 79,
+            "gdtfMode": "Extended Pixel 1",
             "status": "matched"
           },
           "Standard": {
@@ -802,9 +860,29 @@
             "gdtfMode": "Standard",
             "status": "matched"
           },
-          "Extended": {
-            "channels": 79,
-            "gdtfMode": "Extended Pixel 1",
+          "Extended Pixel 2": {
+            "channels": 51,
+            "gdtfMode": "Extended Pixel 2",
+            "status": "matched"
+          },
+          "Extended Pixel 1 + Liquid": {
+            "channels": 414,
+            "gdtfMode": "Extended Pixel 1 + Liquid",
+            "status": "matched"
+          },
+          "Extended Pixel 2 + Liquid": {
+            "channels": 414,
+            "gdtfMode": "Extended Pixel 2 + Liquid",
+            "status": "matched"
+          },
+          "Basic": {
+            "channels": 26,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          },
+          "Extended Ring": {
+            "channels": 46,
+            "gdtfMode": "Extended Ring",
             "status": "matched"
           }
         }
@@ -816,35 +894,35 @@
       "watts": 400,
       "weight": 11.1,
       "modes": {
-        "Basic": 26,
-        "Standard": 30,
         "Extended Ring": 46,
-        "Extended Pixel": 79
+        "Standard": 37,
+        "Extended Pixel": 79,
+        "Basic": 26
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Zonda_3_Wash.gdtf",
         "file": "fixtures/ayrton/Ayrton@Zonda_3_WASH@V1.7_Add_RDM_Personality.gdtf",
         "modes": {
-          "Basic": {
-            "channels": 26,
-            "gdtfMode": "Basic",
-            "status": "matched"
-          },
-          "Standard": {
-            "channels": 30,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
           "Extended Ring": {
             "channels": 46,
             "gdtfMode": "Extended Ring",
             "status": "matched"
           },
+          "Standard": {
+            "channels": 37,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
           "Extended Pixel": {
             "channels": 79,
             "gdtfMode": "Extended Pixel",
+            "status": "matched"
+          },
+          "Basic": {
+            "channels": 26,
+            "gdtfMode": "Basic",
             "status": "matched"
           }
         }
@@ -856,35 +934,53 @@
       "watts": 1400,
       "weight": 29.2,
       "modes": {
-        "Basic": 26,
-        "Standard": 51,
+        "Extended Pixel 1": 199,
+        "Standard": 50,
+        "Extended Pixel 2 ": 148,
+        "Extended Pixel 1 + Liquid": 1770,
+        "Extended Pixel 2 + Liquid": 1770,
         "Extended Ring": 54,
-        "Extended Pixel": 199
+        "Basic": 26
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Zonda_9_FX.gdtf",
         "file": "fixtures/ayrton/Ayrton@Zonda_9_FX@V1.7_Add_RDM_Personality.gdtf",
         "modes": {
-          "Basic": {
-            "channels": 26,
-            "gdtfMode": "Basic",
+          "Extended Pixel 1": {
+            "channels": 199,
+            "gdtfMode": "Extended Pixel 1",
             "status": "matched"
           },
           "Standard": {
-            "channels": 51,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "channels": 50,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Extended Pixel 2 ": {
+            "channels": 148,
+            "gdtfMode": "Extended Pixel 2 ",
+            "status": "matched"
+          },
+          "Extended Pixel 1 + Liquid": {
+            "channels": 1770,
+            "gdtfMode": "Extended Pixel 1 + Liquid",
+            "status": "matched"
+          },
+          "Extended Pixel 2 + Liquid": {
+            "channels": 1770,
+            "gdtfMode": "Extended Pixel 2 + Liquid",
+            "status": "matched"
           },
           "Extended Ring": {
             "channels": 54,
             "gdtfMode": "Extended Ring",
             "status": "matched"
           },
-          "Extended Pixel": {
-            "channels": 199,
-            "gdtfMode": "Extended Pixel 1",
+          "Basic": {
+            "channels": 26,
+            "gdtfMode": "Basic",
             "status": "matched"
           }
         }
@@ -896,35 +992,35 @@
       "watts": 1400,
       "weight": 29.2,
       "modes": {
-        "Basic": 26,
-        "Standard": 51,
         "Extended Ring": 54,
-        "Extended Pixel": 199
+        "Standard": 37,
+        "Extended Pixel": 199,
+        "Basic": 26
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/ayrton",
         "suggestedFileName": "Ayrton__Zonda_9_Wash.gdtf",
         "file": "fixtures/ayrton/Ayrton@Zonda_9_WASH@V1.7_Add_RDM_Personality.gdtf",
         "modes": {
-          "Basic": {
-            "channels": 26,
-            "gdtfMode": "Basic",
-            "status": "matched"
-          },
-          "Standard": {
-            "channels": 51,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
           "Extended Ring": {
             "channels": 54,
             "gdtfMode": "Extended Ring",
             "status": "matched"
           },
+          "Standard": {
+            "channels": 37,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
           "Extended Pixel": {
             "channels": 199,
             "gdtfMode": "Extended Pixel",
+            "status": "matched"
+          },
+          "Basic": {
+            "channels": 26,
+            "gdtfMode": "Basic",
             "status": "matched"
           }
         }

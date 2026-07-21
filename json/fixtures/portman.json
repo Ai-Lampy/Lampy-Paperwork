@@ -11,7 +11,7 @@
         "Standard": 22,
         "Standard Fine": 37,
         "Pixel": 34,
-        "Pixel Fine": 61
+        "Pixel fine": 61
       },
       "gdtf": {
         "status": "matched",
@@ -44,7 +44,7 @@
             "gdtfMode": "Pixel",
             "status": "matched"
           },
-          "Pixel Fine": {
+          "Pixel fine": {
             "channels": 61,
             "gdtfMode": "Pixel fine",
             "status": "matched"
@@ -110,28 +110,23 @@
       "watts": 250,
       "weight": 8,
       "modes": {
-        "Super Simple": 21,
-        "Simple": 29,
+        "Simple": 21,
         "Standard": 29,
         "Standard Fine": 45,
         "Pixel": 28,
-        "Pixel Fine": 43
+        "Pixel Fine": 43,
+        "Simple Fine": 29
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/portman",
         "suggestedFileName": "Portman__MANTIS.gdtf",
         "file": "fixtures/portman/Portman_Lights@MANTIS@Mantis.gdtf",
         "modes": {
-          "Super Simple": {
-            "channels": 21,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
           "Simple": {
-            "channels": 29,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "channels": 21,
+            "gdtfMode": "Simple",
+            "status": "matched"
           },
           "Standard": {
             "channels": 29,
@@ -152,6 +147,11 @@
             "channels": 43,
             "gdtfMode": "Pixel Fine",
             "status": "matched"
+          },
+          "Simple Fine": {
+            "channels": 29,
+            "gdtfMode": "Simple Fine",
+            "status": "matched"
           }
         }
       },
@@ -167,9 +167,9 @@
         "RGBW 16B": 24,
         "CCT": 15,
         "CCT 16B": 21,
-        "Tungsten": 16,
-        "Tungsten 16B": 24,
-        "Full Access 16B": 28
+        "TUNGSTEN": 16,
+        "TUNGSTEN 16B": 24,
+        "FULL ACCESS 16B": 28
       },
       "gdtf": {
         "status": "matched",
@@ -202,17 +202,17 @@
             "gdtfMode": "CCT 16B",
             "status": "matched"
           },
-          "Tungsten": {
+          "TUNGSTEN": {
             "channels": 16,
             "gdtfMode": "TUNGSTEN",
             "status": "matched"
           },
-          "Tungsten 16B": {
+          "TUNGSTEN 16B": {
             "channels": 24,
             "gdtfMode": "TUNGSTEN 16B",
             "status": "matched"
           },
-          "Full Access 16B": {
+          "FULL ACCESS 16B": {
             "channels": 28,
             "gdtfMode": "FULL ACCESS 16B",
             "status": "matched"
@@ -278,18 +278,42 @@
       "watts": 95,
       "weight": 8,
       "modes": {
-        "Standard": 7
+        "Simple": 19,
+        "Standard": 43,
+        "Standard Fine": 50,
+        "Pixel": 42,
+        "Pixel Fine": 49
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/portman",
         "suggestedFileName": "Portman__P1_Mini.gdtf",
         "file": "fixtures/portman/Portman_Lights@P1_Mini@Untested.gdtf",
         "modes": {
+          "Simple": {
+            "channels": 19,
+            "gdtfMode": "Simple",
+            "status": "matched"
+          },
           "Standard": {
-            "channels": 7,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "channels": 43,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Standard Fine": {
+            "channels": 50,
+            "gdtfMode": "Standard Fine",
+            "status": "matched"
+          },
+          "Pixel": {
+            "channels": 42,
+            "gdtfMode": "Pixel",
+            "status": "matched"
+          },
+          "Pixel Fine": {
+            "channels": 49,
+            "gdtfMode": "Pixel Fine",
+            "status": "matched"
           }
         }
       },
@@ -303,15 +327,15 @@
         "Standard": 7
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/portman",
         "suggestedFileName": "Portman__P1_Retro_Lamp.gdtf",
         "file": "fixtures/portman/Portman_Lights@P1_Retro@Created_Fixture_-_Not_tested_in_real_life.gdtf",
         "modes": {
           "Standard": {
             "channels": 7,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard",
+            "status": "matched"
           }
         }
       },
@@ -322,48 +346,18 @@
       "watts": 300,
       "weight": 12.5,
       "modes": {
-        "Super Simple": 12,
-        "Simple": 18,
-        "Standard": 38,
-        "Standard Fine": 69,
-        "Pixel": 37,
-        "Pixel Fine": 67
+        "Standard": 38
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/portman",
         "suggestedFileName": "Portman__P2_EVO.gdtf",
         "file": "fixtures/portman/Portman_Lights@P2_EVO@WithVirtualDimmer_V3.gdtf",
         "modes": {
-          "Super Simple": {
-            "channels": 12,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Simple": {
-            "channels": 18,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
           "Standard": {
             "channels": 38,
             "gdtfMode": "Standard",
             "status": "matched"
-          },
-          "Standard Fine": {
-            "channels": 69,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Pixel": {
-            "channels": 37,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Pixel Fine": {
-            "channels": 67,
-            "gdtfMode": "",
-            "status": "pending-match"
           }
         }
       },
@@ -448,18 +442,18 @@
       "watts": 690,
       "weight": 4.5,
       "modes": {
-        "Standard": 3
+        "Mode 1": 3
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/portman",
         "suggestedFileName": "Portman__P3_PIX3L.gdtf",
         "file": "fixtures/portman/Portman_Lights@P3_PIX3L@1.00.gdtf",
         "modes": {
-          "Standard": {
+          "Mode 1": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1",
+            "status": "matched"
           }
         }
       },

@@ -15,9 +15,9 @@
       },
       "gdtf": {
         "status": "matched",
-        "folder": "fixtures/Robert_Juliat",
+        "folder": "fixtures/robert_juliat",
         "suggestedFileName": "Robert_Juliat__654SX_4C.gdtf",
-        "file": "fixtures/Robert_Juliat/Robert_Juliat@654SX_4C@1.00.gdtf",
+        "file": "fixtures/robert_juliat/Robert_Juliat@654SX_4C@1.00.gdtf",
         "modes": {
           "Full xy": {
             "channels": 20,
@@ -63,9 +63,9 @@
       },
       "gdtf": {
         "status": "matched",
-        "folder": "fixtures/Robert_Juliat",
+        "folder": "fixtures/robert_juliat",
         "suggestedFileName": "Robert_Juliat__671SX_CW.gdtf",
-        "file": "fixtures/Robert_Juliat/Robert_Juliat@671SX_CW@1_01.gdtf",
+        "file": "fixtures/robert_juliat/Robert_Juliat@671SX_CW@1_01.gdtf",
         "modes": {
           "Profile 16b": {
             "channels": 6,
@@ -93,9 +93,9 @@
       },
       "gdtf": {
         "status": "matched",
-        "folder": "fixtures/Robert_Juliat",
+        "folder": "fixtures/robert_juliat",
         "suggestedFileName": "Robert_Juliat__671SX_VW.gdtf",
-        "file": "fixtures/Robert_Juliat/Robert_Juliat@671SX_VW@1_01.gdtf",
+        "file": "fixtures/robert_juliat/Robert_Juliat@671SX_VW@1_01.gdtf",
         "modes": {
           "Profile 16b CCT": {
             "channels": 8,
@@ -131,9 +131,9 @@
       },
       "gdtf": {
         "status": "matched",
-        "folder": "fixtures/Robert_Juliat",
+        "folder": "fixtures/robert_juliat",
         "suggestedFileName": "Robert_Juliat__673SX_CW.gdtf",
-        "file": "fixtures/Robert_Juliat/Robert_Juliat@673SX_CW@1_01.gdtf",
+        "file": "fixtures/robert_juliat/Robert_Juliat@673SX_CW@1_01.gdtf",
         "modes": {
           "Profile 16b": {
             "channels": 6,
@@ -161,9 +161,9 @@
       },
       "gdtf": {
         "status": "matched",
-        "folder": "fixtures/Robert_Juliat",
+        "folder": "fixtures/robert_juliat",
         "suggestedFileName": "Robert_Juliat__673SX_VW.gdtf",
-        "file": "fixtures/Robert_Juliat/Robert_Juliat@673SX_VW@1_01.gdtf",
+        "file": "fixtures/robert_juliat/Robert_Juliat@673SX_VW@1_01.gdtf",
         "modes": {
           "Profile 16b CCT": {
             "channels": 8,
@@ -199,9 +199,9 @@
       },
       "gdtf": {
         "status": "matched",
-        "folder": "fixtures/Robert_Juliat",
+        "folder": "fixtures/robert_juliat",
         "suggestedFileName": "Robert_Juliat__674SX_CW.gdtf",
-        "file": "fixtures/Robert_Juliat/Robert_Juliat@674SX_CW@1_01.gdtf",
+        "file": "fixtures/robert_juliat/Robert_Juliat@674SX_CW@1_01.gdtf",
         "modes": {
           "Profile 16b": {
             "channels": 6,
@@ -229,9 +229,9 @@
       },
       "gdtf": {
         "status": "matched",
-        "folder": "fixtures/Robert_Juliat",
+        "folder": "fixtures/robert_juliat",
         "suggestedFileName": "Robert_Juliat__674SX_VW.gdtf",
-        "file": "fixtures/Robert_Juliat/Robert_Juliat@674SX_VW@1_02.gdtf",
+        "file": "fixtures/robert_juliat/Robert_Juliat@674SX_VW@1_02.gdtf",
         "modes": {
           "Profile 16b CCT": {
             "channels": 8,
@@ -267,9 +267,9 @@
       },
       "gdtf": {
         "status": "matched",
-        "folder": "fixtures/Robert_Juliat",
+        "folder": "fixtures/robert_juliat",
         "suggestedFileName": "Robert_Juliat__771SX_CW.gdtf",
-        "file": "fixtures/Robert_Juliat/Robert_Juliat@771SX_CW@1_01.gdtf",
+        "file": "fixtures/robert_juliat/Robert_Juliat@771SX_CW@1_01.gdtf",
         "modes": {
           "Profile 16b": {
             "channels": 6,
@@ -297,9 +297,9 @@
       },
       "gdtf": {
         "status": "matched",
-        "folder": "fixtures/Robert_Juliat",
+        "folder": "fixtures/robert_juliat",
         "suggestedFileName": "Robert_Juliat__771SX_VW.gdtf",
-        "file": "fixtures/Robert_Juliat/Robert_Juliat@771SX_VW@1_01.gdtf",
+        "file": "fixtures/robert_juliat/Robert_Juliat@771SX_VW@1_01.gdtf",
         "modes": {
           "Profile 16b CCT": {
             "channels": 8,
@@ -339,9 +339,9 @@
       },
       "gdtf": {
         "status": "matched",
-        "folder": "fixtures/Robert_Juliat",
+        "folder": "fixtures/robert_juliat",
         "suggestedFileName": "Robert_Juliat__Dalis_860.gdtf",
-        "file": "fixtures/Robert_Juliat/Robert_Juliat@Dalis_860@1.00.gdtf",
+        "file": "fixtures/robert_juliat/Robert_Juliat@Dalis_860@1.00.gdtf",
         "modes": {
           "Mode1: Full 4 groups 16bits": {
             "channels": 70,

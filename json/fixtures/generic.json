@@ -4,18 +4,18 @@
     {
       "fixture": "2-Lite Mole",
       "modes": {
-        "Dimmer - 1 Chan": 1
+        "1Ch - Mode": 1
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/generic",
         "suggestedFileName": "Generic__2_Lite_Mole.gdtf",
         "file": "fixtures/generic/Generic@2-lite_Blinder@2-lite_Blinder.gdtf",
         "modes": {
-          "Dimmer - 1 Chan": {
+          "1Ch - Mode": {
             "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "1Ch - Mode",
+            "status": "matched"
           }
         }
       },
@@ -24,18 +24,24 @@
     {
       "fixture": "4-Lite Mole",
       "modes": {
-        "Dimmer - 1 Chan": 1
+        "1Ch - Mode": 1,
+        "2Ch - Mode": 2
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/generic",
         "suggestedFileName": "Generic__4_Lite_Mole.gdtf",
         "file": "fixtures/generic/Generic@4-lite_Blinder@1.2.3._out_for_real_world_testing_-_added_an_new_image.gdtf",
         "modes": {
-          "Dimmer - 1 Chan": {
+          "1Ch - Mode": {
             "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "1Ch - Mode",
+            "status": "matched"
+          },
+          "2Ch - Mode": {
+            "channels": 2,
+            "gdtfMode": "2Ch - Mode",
+            "status": "matched"
           }
         }
       },
@@ -64,18 +70,24 @@
     {
       "fixture": "8-Lite Mole",
       "modes": {
-        "Dimmer - 2 Chan": 2
+        "1Ch - Mode_8-Cell": 1,
+        "2Ch - Mode_4-Cell": 2
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/generic",
         "suggestedFileName": "Generic__8_Lite_Mole.gdtf",
         "file": "fixtures/generic/Generic@8-lite_Blinder@V-0.1.1.gdtf",
         "modes": {
-          "Dimmer - 2 Chan": {
+          "1Ch - Mode_8-Cell": {
+            "channels": 1,
+            "gdtfMode": "1Ch - Mode_8-Cell",
+            "status": "matched"
+          },
+          "2Ch - Mode_4-Cell": {
             "channels": 2,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "2Ch - Mode_4-Cell",
+            "status": "matched"
           }
         }
       },

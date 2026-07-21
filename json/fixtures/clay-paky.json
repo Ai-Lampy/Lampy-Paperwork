@@ -6,7 +6,7 @@
       "watts": 1900,
       "weight": 56.9,
       "modes": {
-        "43 Chan": 43
+        "Standard": 43
       },
       "gdtf": {
         "status": "matched",
@@ -14,7 +14,7 @@
         "suggestedFileName": "Clay_Paky__Arolla_Aqua_HP.gdtf",
         "file": "fixtures/clay-paky/Clay_Paky@Arolla_Aqua_HP@ClayPaky_FW_1_2.gdtf",
         "modes": {
-          "43 Chan": {
+          "Standard": {
             "channels": 43,
             "gdtfMode": "Standard",
             "status": "matched"
@@ -28,8 +28,8 @@
       "watts": 900,
       "weight": 31.2,
       "modes": {
-        "Basic": 44,
-        "Standard": 54
+        "Standard": 54,
+        "Basic": 44
       },
       "gdtf": {
         "status": "matched",
@@ -37,14 +37,14 @@
         "suggestedFileName": "Clay_Paky__Arolla_Aqua_M_LT.gdtf",
         "file": "fixtures/clay-paky/Clay_Paky@Arolla_Aqua_M-LT@ClayPaky_FW_1_2.gdtf",
         "modes": {
-          "Basic": {
-            "channels": 44,
-            "gdtfMode": "Basic",
-            "status": "matched"
-          },
           "Standard": {
             "channels": 54,
             "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Basic": {
+            "channels": 44,
+            "gdtfMode": "Basic",
             "status": "matched"
           }
         }
@@ -56,8 +56,8 @@
       "watts": 600,
       "weight": 25.9,
       "modes": {
-        "Basic": 44,
-        "Standard": 54
+        "Standard": 54,
+        "Basic": 44
       },
       "gdtf": {
         "status": "matched",
@@ -65,14 +65,14 @@
         "suggestedFileName": "Clay_Paky__Arolla_Aqua_S_LT.gdtf",
         "file": "fixtures/clay-paky/Clay_Paky@Arolla_Aqua_S-LT@ClayPaky_FW_1_1.gdtf",
         "modes": {
-          "Basic": {
-            "channels": 44,
-            "gdtfMode": "Basic",
-            "status": "matched"
-          },
           "Standard": {
             "channels": 54,
             "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Basic": {
+            "channels": 44,
+            "gdtfMode": "Basic",
             "status": "matched"
           }
         }
@@ -84,7 +84,7 @@
       "watts": 1580,
       "weight": 36.0,
       "modes": {
-        "30 Chan": 30
+        "Standard": 30
       },
       "gdtf": {
         "status": "matched",
@@ -92,7 +92,7 @@
         "suggestedFileName": "Clay_Paky__Arolla_Aqua_Wash_HC.gdtf",
         "file": "fixtures/clay-paky/Clay_Paky@Arolla_Aqua_Wash_HC@CP_FW_1_8.gdtf",
         "modes": {
-          "30 Chan": {
+          "Standard": {
             "channels": 30,
             "gdtfMode": "Standard",
             "status": "matched"
@@ -106,7 +106,8 @@
       "watts": 1650,
       "weight": 44.7,
       "modes": {
-        "39 Chan": 39
+        "Standard": 39,
+        "Extended": 41
       },
       "gdtf": {
         "status": "matched",
@@ -114,9 +115,14 @@
         "suggestedFileName": "Clay_Paky__Arolla_Profile_HP.gdtf",
         "file": "fixtures/clay-paky/Clay_Paky@Arolla_Profile_HP@ClayPaky_Official_File_Fw_Ver_5_5.gdtf",
         "modes": {
-          "39 Chan": {
+          "Standard": {
             "channels": 39,
             "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Extended": {
+            "channels": 41,
+            "gdtfMode": "Extended",
             "status": "matched"
           }
         }
@@ -128,24 +134,18 @@
       "watts": 740,
       "weight": 25.0,
       "modes": {
-        "Basic": 37,
-        "Standard": 39
+        "Standard ": 37
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/clay-paky",
         "suggestedFileName": "Clay_Paky__Arolla_Profile_MP.gdtf",
         "file": "fixtures/clay-paky/Clay_Paky@Arolla_Profile_MP@2026.gdtf",
         "modes": {
-          "Basic": {
+          "Standard ": {
             "channels": 37,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Standard": {
-            "channels": 39,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard ",
+            "status": "matched"
           }
         }
       },
@@ -156,7 +156,8 @@
       "watts": 740,
       "weight": 24.0,
       "modes": {
-        "29 Chan": 29
+        "Standard ": 29,
+        "Extended": 31
       },
       "gdtf": {
         "status": "matched",
@@ -164,9 +165,14 @@
         "suggestedFileName": "Clay_Paky__Arolla_Spot_MP.gdtf",
         "file": "fixtures/clay-paky/Clay_Paky@Arolla_Spot_MP@ClayPaky_Official_File_Fw_Ver_5_5.gdtf",
         "modes": {
-          "29 Chan": {
+          "Standard ": {
             "channels": 29,
             "gdtfMode": "Standard ",
+            "status": "matched"
+          },
+          "Extended": {
+            "channels": 31,
+            "gdtfMode": "Extended",
             "status": "matched"
           }
         }
@@ -178,42 +184,36 @@
       "watts": 794,
       "weight": 21,
       "modes": {
+        "Shapes": 35,
         "Standard": 21,
-        "Standard RGB": 132,
-        "Standard RGBW": 169,
-        "Shapes RGB": 146,
-        "Shapes RGBW": 183
+        "Pixels RGB": 111,
+        "Pixels RGBW": 148
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/clay-paky",
         "suggestedFileName": "Clay_Paky__B_Eye_K20.gdtf",
         "file": "fixtures/clay-paky/Clay_Paky@Aleda_B-EYE_K20@ClayPaky_Official_File_Fw_Ver_2_26_002.gdtf",
         "modes": {
+          "Shapes": {
+            "channels": 35,
+            "gdtfMode": "Shapes",
+            "status": "matched"
+          },
           "Standard": {
             "channels": 21,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard",
+            "status": "matched"
           },
-          "Standard RGB": {
-            "channels": 132,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Pixels RGB": {
+            "channels": 111,
+            "gdtfMode": "Pixels RGB",
+            "status": "matched"
           },
-          "Standard RGBW": {
-            "channels": 169,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Shapes RGB": {
-            "channels": 146,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Shapes RGBW": {
-            "channels": 183,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Pixels RGBW": {
+            "channels": 148,
+            "gdtfMode": "Pixels RGBW",
+            "status": "matched"
           }
         }
       },
@@ -224,18 +224,48 @@
       "watts": 288,
       "weight": 27.5,
       "modes": {
-        "Shapes RGB": 35
+        "Shapes + Frequency": 36,
+        "Shapes": 35,
+        "Standard + Frequency": 22,
+        "Standard": 21,
+        "Pixels RGB": 111,
+        "Pixels RGBW": 148
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/clay-paky",
         "suggestedFileName": "Clay_Paky__B_Eye_K25.gdtf",
         "file": "fixtures/clay-paky/Clay_Paky@HY_B-EYE_K25@ClayPaky_Official_File_Fw_Ver_2_26_002.gdtf",
         "modes": {
-          "Shapes RGB": {
+          "Shapes + Frequency": {
+            "channels": 36,
+            "gdtfMode": "Shapes + Frequency",
+            "status": "matched"
+          },
+          "Shapes": {
             "channels": 35,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Shapes",
+            "status": "matched"
+          },
+          "Standard + Frequency": {
+            "channels": 22,
+            "gdtfMode": "Standard + Frequency",
+            "status": "matched"
+          },
+          "Standard": {
+            "channels": 21,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Pixels RGB": {
+            "channels": 111,
+            "gdtfMode": "Pixels RGB",
+            "status": "matched"
+          },
+          "Pixels RGBW": {
+            "channels": 148,
+            "gdtfMode": "Pixels RGBW",
+            "status": "matched"
           }
         }
       },
@@ -246,48 +276,36 @@
       "watts": 700,
       "weight": 20.7,
       "modes": {
-        "Basic Engine 21 Chan": 21,
-        "Basic Engine 22 Chan": 22,
-        "Basic Engine 35 Chan": 35,
-        "Basic Engine 36 Chan": 36,
-        "Pixel Engine 57 Chan": 57,
-        "Pixel Engine 76 Chan": 76
+        "Shapes + Frequency": 36,
+        "Shapes": 35,
+        "Standard + Frequency": 22,
+        "Standard": 21
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/clay-paky",
         "suggestedFileName": "Clay_Paky__HY_B_Eye_K15.gdtf",
         "file": "fixtures/clay-paky/Clay_Paky@HY_B-EYE_K15@Claypaky_Official_File_Fw_V.2.26.002.gdtf",
         "modes": {
-          "Basic Engine 21 Chan": {
-            "channels": 21,
-            "gdtfMode": "Standard",
-            "status": "matched"
-          },
-          "Basic Engine 22 Chan": {
-            "channels": 22,
-            "gdtfMode": "Standard + Frequency",
-            "status": "matched"
-          },
-          "Basic Engine 35 Chan": {
-            "channels": 35,
-            "gdtfMode": "Shapes",
-            "status": "matched"
-          },
-          "Basic Engine 36 Chan": {
+          "Shapes + Frequency": {
             "channels": 36,
             "gdtfMode": "Shapes + Frequency",
             "status": "matched"
           },
-          "Pixel Engine 57 Chan": {
-            "channels": 57,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Shapes": {
+            "channels": 35,
+            "gdtfMode": "Shapes",
+            "status": "matched"
           },
-          "Pixel Engine 76 Chan": {
-            "channels": 76,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Standard + Frequency": {
+            "channels": 22,
+            "gdtfMode": "Standard + Frequency",
+            "status": "matched"
+          },
+          "Standard": {
+            "channels": 21,
+            "gdtfMode": "Standard",
+            "status": "matched"
           }
         }
       },
@@ -298,51 +316,45 @@
       "watts": 680,
       "weight": 27.8,
       "modes": {
-        "Basic Engine 21 Chan": 21,
-        "Basic Engine 22 Chan": 22,
-        "Basic Engine 35 Chan": 35,
-        "Basic Engine 36 Chan": 36,
-        "Basic Engine 37 Chan": 37,
-        "Pixel Engine 57 Chan": 57,
-        "Pixel Engine 76 Chan": 76
+        "106 DMX": 37,
+        "Shape Freq": 36,
+        "Shape": 35,
+        "Standard Freq": 22,
+        "Standard": 21,
+        "Pixel RGBW": 76
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/clay-paky",
         "suggestedFileName": "Clay_Paky__HY_B_Eye_K15_Aqua.gdtf",
         "file": "fixtures/clay-paky/Clay_Paky@HY_B-EYE_K-15_Aqua@HY_B-EYE_K-15_Aqua.gdtf",
         "modes": {
-          "Basic Engine 21 Chan": {
-            "channels": 21,
-            "gdtfMode": "Standard",
-            "status": "matched"
-          },
-          "Basic Engine 22 Chan": {
-            "channels": 22,
-            "gdtfMode": "Standard Freq",
-            "status": "matched"
-          },
-          "Basic Engine 35 Chan": {
-            "channels": 35,
-            "gdtfMode": "Shape",
-            "status": "matched"
-          },
-          "Basic Engine 36 Chan": {
-            "channels": 36,
-            "gdtfMode": "Shape Freq",
-            "status": "matched"
-          },
-          "Basic Engine 37 Chan": {
+          "106 DMX": {
             "channels": 37,
             "gdtfMode": "106 DMX",
             "status": "matched"
           },
-          "Pixel Engine 57 Chan": {
-            "channels": 57,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Shape Freq": {
+            "channels": 36,
+            "gdtfMode": "Shape Freq",
+            "status": "matched"
           },
-          "Pixel Engine 76 Chan": {
+          "Shape": {
+            "channels": 35,
+            "gdtfMode": "Shape",
+            "status": "matched"
+          },
+          "Standard Freq": {
+            "channels": 22,
+            "gdtfMode": "Standard Freq",
+            "status": "matched"
+          },
+          "Standard": {
+            "channels": 21,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Pixel RGBW": {
             "channels": 76,
             "gdtfMode": "Pixel RGBW",
             "status": "matched"
@@ -356,10 +368,10 @@
       "watts": 830,
       "weight": 17,
       "modes": {
-        "17 Chan": 17,
-        "21 Chan": 21,
-        "25 Chan": 25,
-        "37 Chan": 37
+        "Extended RGBW 16bit": 37,
+        "Extended RGBW": 25,
+        "Basic RGBW 16bit": 21,
+        "Basic RGBW": 17
       },
       "gdtf": {
         "status": "matched",
@@ -367,24 +379,24 @@
         "suggestedFileName": "Clay_Paky__Midi_B.gdtf",
         "file": "fixtures/clay-paky/Clay_Paky@Midi-B@ClayPaky_FW_5_3.gdtf",
         "modes": {
-          "17 Chan": {
-            "channels": 17,
-            "gdtfMode": "Basic RGBW",
+          "Extended RGBW 16bit": {
+            "channels": 37,
+            "gdtfMode": "Extended RGBW 16bit",
             "status": "matched"
           },
-          "21 Chan": {
-            "channels": 21,
-            "gdtfMode": "Basic RGBW 16bit",
-            "status": "matched"
-          },
-          "25 Chan": {
+          "Extended RGBW": {
             "channels": 25,
             "gdtfMode": "Extended RGBW",
             "status": "matched"
           },
-          "37 Chan": {
-            "channels": 37,
-            "gdtfMode": "Extended RGBW 16bit",
+          "Basic RGBW 16bit": {
+            "channels": 21,
+            "gdtfMode": "Basic RGBW 16bit",
+            "status": "matched"
+          },
+          "Basic RGBW": {
+            "channels": 17,
+            "gdtfMode": "Basic RGBW",
             "status": "matched"
           }
         }
@@ -396,10 +408,10 @@
       "watts": 375,
       "weight": 6.5,
       "modes": {
-        "17 Chan": 17,
-        "21 Chan 1": 21,
-        "21 Chan 2": 21,
-        "29 Chan": 29
+        "Basic RGBW ": 17,
+        "Basic RGBW 16bit ": 21,
+        "Extended RGBW": 21,
+        "Extended RGBW16bit": 29
       },
       "gdtf": {
         "status": "matched",
@@ -407,22 +419,22 @@
         "suggestedFileName": "Clay_Paky__Mini_B.gdtf",
         "file": "fixtures/clay-paky/Clay_Paky@Mini-B@Updated_Defaults.gdtf",
         "modes": {
-          "17 Chan": {
+          "Basic RGBW ": {
             "channels": 17,
             "gdtfMode": "Basic RGBW ",
             "status": "matched"
           },
-          "21 Chan 1": {
+          "Basic RGBW 16bit ": {
             "channels": 21,
             "gdtfMode": "Basic RGBW 16bit ",
             "status": "matched"
           },
-          "21 Chan 2": {
+          "Extended RGBW": {
             "channels": 21,
             "gdtfMode": "Extended RGBW",
             "status": "matched"
           },
-          "29 Chan": {
+          "Extended RGBW16bit": {
             "channels": 29,
             "gdtfMode": "Extended RGBW16bit",
             "status": "matched"
@@ -436,8 +448,8 @@
       "watts": 1400,
       "weight": 45.6,
       "modes": {
-        "Standard": 40,
-        "Vector": 44
+        "Vector": 44,
+        "Standard": 40
       },
       "gdtf": {
         "status": "matched",
@@ -445,14 +457,14 @@
         "suggestedFileName": "Clay_Paky__Scenius_Unico.gdtf",
         "file": "fixtures/clay-paky/Clay_Paky@Scenius_Unico@fixed_shaper_rot_and_grandmaster_-_still_needs_colorwheelfix.gdtf",
         "modes": {
-          "Standard": {
-            "channels": 40,
-            "gdtfMode": "Standard",
-            "status": "matched"
-          },
           "Vector": {
             "channels": 44,
             "gdtfMode": "Vector",
+            "status": "matched"
+          },
+          "Standard": {
+            "channels": 40,
+            "gdtfMode": "Standard",
             "status": "matched"
           }
         }
@@ -492,7 +504,7 @@
       "watts": 540,
       "weight": 23,
       "modes": {
-        "Single Mode": 31
+        "Standard ": 31
       },
       "gdtf": {
         "status": "matched",
@@ -500,7 +512,7 @@
         "suggestedFileName": "Clay_Paky__Sharpy_Plus.gdtf",
         "file": "fixtures/clay-paky/Clay_Paky@Sharpy_Plus@ClayPaky_Official_File_Fw_Ver_2_5.gdtf",
         "modes": {
-          "Single Mode": {
+          "Standard ": {
             "channels": 31,
             "gdtfMode": "Standard ",
             "status": "matched"
@@ -518,20 +530,20 @@
         "Vector": 22
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/clay-paky",
         "suggestedFileName": "Clay_Paky__Sharpy_Wash.gdtf",
         "file": "fixtures/clay-paky/Clay_Paky@Sharpy_Wash_330@ClayPaky_FW_2_25_006.gdtf",
         "modes": {
           "Standard": {
             "channels": 19,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard",
+            "status": "matched"
           },
           "Vector": {
             "channels": 22,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Vector",
+            "status": "matched"
           }
         }
       },
@@ -542,7 +554,7 @@
       "watts": 750,
       "weight": 28,
       "modes": {
-        "Single Mode": 43
+        "Standard": 43
       },
       "gdtf": {
         "status": "matched",
@@ -550,7 +562,7 @@
         "suggestedFileName": "Clay_Paky__Sharpy_X_Frame.gdtf",
         "file": "fixtures/clay-paky/Clay_Paky@Sharpy_X_Frame@ClayPaky_Official_File_Fw_Ver_6_6_-_Added_Filters.gdtf",
         "modes": {
-          "Single Mode": {
+          "Standard": {
             "channels": 43,
             "gdtfMode": "Standard",
             "status": "matched"
@@ -564,7 +576,7 @@
       "watts": 900,
       "weight": 60,
       "modes": {
-        "20 Chan": 20
+        "Standard ": 20
       },
       "gdtf": {
         "status": "matched",
@@ -572,7 +584,7 @@
         "suggestedFileName": "Clay_Paky__Skylos.gdtf",
         "file": "fixtures/clay-paky/Clay_Paky@Skylos@ClayPaky_FW_3_2_894.gdtf",
         "modes": {
-          "20 Chan": {
+          "Standard ": {
             "channels": 20,
             "gdtfMode": "Standard ",
             "status": "matched"
@@ -586,59 +598,59 @@
       "watts": 480,
       "weight": 13.5,
       "modes": {
-        "Main Engine 19 Chan": 19,
-        "Main Engine 41 Chan": 41,
-        "Main Engine 52 Chan": 52,
-        "Pixel Engine": 40,
-        "Strobe Engine 50 Chan 1": 50,
-        "Strobe Engine 50 Chan 2": 50,
-        "Strobe Engine 50 Chan 3": 50,
-        "Strobe Engine 100 Chan": 100
+        "Advanced": 52,
+        "Standard": 41,
+        "Basic": 19,
+        "Pixels RGBA": 40,
+        "Single Cell 100ch": 100,
+        "Double Cell 50ch": 50,
+        "Basic+RGBA+DoubleCell": 109,
+        "Basic+RGBA+SingleCell": 159
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/clay-paky",
         "suggestedFileName": "Clay_Paky__Tambora_Glare.gdtf",
         "file": "fixtures/clay-paky/Clay_Paky@Tambora_Glare@Added_new_ch_modes.gdtf",
         "modes": {
-          "Main Engine 19 Chan": {
-            "channels": 19,
-            "gdtfMode": "Basic",
-            "status": "matched"
-          },
-          "Main Engine 41 Chan": {
-            "channels": 41,
-            "gdtfMode": "Standard",
-            "status": "matched"
-          },
-          "Main Engine 52 Chan": {
+          "Advanced": {
             "channels": 52,
             "gdtfMode": "Advanced",
             "status": "matched"
           },
-          "Pixel Engine": {
+          "Standard": {
+            "channels": 41,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Basic": {
+            "channels": 19,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          },
+          "Pixels RGBA": {
             "channels": 40,
             "gdtfMode": "Pixels RGBA",
             "status": "matched"
           },
-          "Strobe Engine 50 Chan 1": {
-            "channels": 50,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Strobe Engine 50 Chan 2": {
-            "channels": 50,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Strobe Engine 50 Chan 3": {
-            "channels": 50,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Strobe Engine 100 Chan": {
+          "Single Cell 100ch": {
             "channels": 100,
             "gdtfMode": "Single Cell 100ch",
+            "status": "matched"
+          },
+          "Double Cell 50ch": {
+            "channels": 50,
+            "gdtfMode": "Double Cell 50ch",
+            "status": "matched"
+          },
+          "Basic+RGBA+DoubleCell": {
+            "channels": 109,
+            "gdtfMode": "Basic+RGBA+DoubleCell",
+            "status": "matched"
+          },
+          "Basic+RGBA+SingleCell": {
+            "channels": 159,
+            "gdtfMode": "Basic+RGBA+SingleCell",
             "status": "matched"
           }
         }
@@ -650,7 +662,7 @@
       "watts": 850,
       "weight": 41.9,
       "modes": {
-        "43 Chan": 43
+        "Standard": 43
       },
       "gdtf": {
         "status": "matched",
@@ -658,7 +670,7 @@
         "suggestedFileName": "Clay_Paky__Ultimo_Hybrid.gdtf",
         "file": "fixtures/clay-paky/Clay_Paky@Ultimo_Hybrid@ClayPaky_FW_1_2_-_New_Geometries.gdtf",
         "modes": {
-          "43 Chan": {
+          "Standard": {
             "channels": 43,
             "gdtfMode": "Standard",
             "status": "matched"
@@ -672,11 +684,14 @@
       "watts": 500,
       "weight": 15.4,
       "modes": {
-        "Basic Engine 22 Chan": 22,
-        "Basic Engine 41 Chan": 41,
-        "Basic Engine 45 Chan": 45,
-        "Pixel Engine": 16,
-        "Strobe Engine": 8
+        "Standard OLD": 22,
+        "Shape OLD": 41,
+        "Advanced OLD": 45,
+        "Basic": 25,
+        "Standard": 43,
+        "Advanced": 50,
+        "RGBW": 16,
+        "Strobe": 8
       },
       "gdtf": {
         "status": "matched",
@@ -684,27 +699,42 @@
         "suggestedFileName": "Clay_Paky__Volero_Cube.gdtf",
         "file": "fixtures/clay-paky/Clay_Paky@Volero_Cube@ClayPaky_FW_CPU_1_1_006_DRV1_2_000_-_New_Geometries.gdtf",
         "modes": {
-          "Basic Engine 22 Chan": {
+          "Standard OLD": {
             "channels": 22,
             "gdtfMode": "Standard OLD",
             "status": "matched"
           },
-          "Basic Engine 41 Chan": {
+          "Shape OLD": {
             "channels": 41,
             "gdtfMode": "Shape OLD",
             "status": "matched"
           },
-          "Basic Engine 45 Chan": {
+          "Advanced OLD": {
             "channels": 45,
             "gdtfMode": "Advanced OLD",
             "status": "matched"
           },
-          "Pixel Engine": {
+          "Basic": {
+            "channels": 25,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          },
+          "Standard": {
+            "channels": 43,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Advanced": {
+            "channels": 50,
+            "gdtfMode": "Advanced",
+            "status": "matched"
+          },
+          "RGBW": {
             "channels": 16,
             "gdtfMode": "RGBW",
             "status": "matched"
           },
-          "Strobe Engine": {
+          "Strobe": {
             "channels": 8,
             "gdtfMode": "Strobe",
             "status": "matched"
@@ -718,11 +748,11 @@
       "watts": 700,
       "weight": 29.3,
       "modes": {
-        "Basic Engine 25 Chan": 25,
-        "Basic Engine 43 Chan": 43,
-        "Basic Engine 50 Chan": 50,
-        "Pixel Engine": 32,
-        "Strobe Engine": 20
+        "Basic": 25,
+        "Standard": 43,
+        "Advanced": 50,
+        "RGBW": 32,
+        "Strobe": 20
       },
       "gdtf": {
         "status": "matched",
@@ -730,27 +760,27 @@
         "suggestedFileName": "Clay_Paky__Volero_Twins.gdtf",
         "file": "fixtures/clay-paky/Clay_Paky@Volero_Twins@ClayPaky_FW_CPU_1_1_006_DRV_1_0_005_-_New_Geometries.gdtf",
         "modes": {
-          "Basic Engine 25 Chan": {
+          "Basic": {
             "channels": 25,
             "gdtfMode": "Basic",
             "status": "matched"
           },
-          "Basic Engine 43 Chan": {
+          "Standard": {
             "channels": 43,
             "gdtfMode": "Standard",
             "status": "matched"
           },
-          "Basic Engine 50 Chan": {
+          "Advanced": {
             "channels": 50,
             "gdtfMode": "Advanced",
             "status": "matched"
           },
-          "Pixel Engine": {
+          "RGBW": {
             "channels": 32,
             "gdtfMode": "RGBW",
             "status": "matched"
           },
-          "Strobe Engine": {
+          "Strobe": {
             "channels": 20,
             "gdtfMode": "Strobe",
             "status": "matched"
@@ -764,33 +794,39 @@
       "watts": 400,
       "weight": 20.8,
       "modes": {
-        "23 Chan": 23,
-        "24 Chan": 24,
-        "29 Chan": 29,
-        "32 Chan": 32
+        "Advanced": 37,
+        "Standard": 20,
+        "Shape": 38,
+        "RGB": 24,
+        "RGBW": 32
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/clay-paky",
         "suggestedFileName": "Clay_Paky__Volero_Wave.gdtf",
         "file": "fixtures/clay-paky/Clay_Paky@Volero_Wave@ClayPaky_FW_2_0_008_1_0_010.gdtf",
         "modes": {
-          "23 Chan": {
-            "channels": 23,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Advanced": {
+            "channels": 37,
+            "gdtfMode": "Advanced",
+            "status": "matched"
           },
-          "24 Chan": {
+          "Standard": {
+            "channels": 20,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Shape": {
+            "channels": 38,
+            "gdtfMode": "Shape",
+            "status": "matched"
+          },
+          "RGB": {
             "channels": 24,
             "gdtfMode": "RGB",
             "status": "matched"
           },
-          "29 Chan": {
-            "channels": 29,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "32 Chan": {
+          "RGBW": {
             "channels": 32,
             "gdtfMode": "RGBW",
             "status": "matched"
@@ -804,24 +840,18 @@
       "watts": 1380,
       "weight": 24,
       "modes": {
-        "Standard": 30,
-        "Vector": 31
+        "Default": 31
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/clay-paky",
         "suggestedFileName": "Clay_Paky__Xtylos.gdtf",
         "file": "fixtures/clay-paky/Clay_Paky@XTYLOS@Power_in,_Defalt_Values_by_Gobo_1_and_Reset_changed.gdtf",
         "modes": {
-          "Standard": {
-            "channels": 30,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Vector": {
+          "Default": {
             "channels": 31,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Default",
+            "status": "matched"
           }
         }
       },

@@ -6,36 +6,18 @@
       "watts": 120,
       "weight": 4.8,
       "modes": {
-        "1 Channel": 1,
-        "RGB": 3,
-        "Standard": 5,
-        "Direct": 6
+        "Direct": 7
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__ColorSource_CYC.gdtf",
         "file": "fixtures/etc/ETC@Colorsource_CYC@2026.gdtf",
         "modes": {
-          "1 Channel": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "RGB": {
-            "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Standard": {
-            "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
           "Direct": {
-            "channels": 6,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "channels": 7,
+            "gdtfMode": "Direct",
+            "status": "matched"
           }
         }
       },
@@ -46,36 +28,42 @@
       "watts": 147,
       "weight": 8.4,
       "modes": {
-        "1 Channel": 1,
-        "RGB": 3,
-        "Standard": 6,
-        "Direct": 8
+        "Direct Mode": 9,
+        "Standard Mode": 7,
+        "6ch Mode": 6,
+        "RGB Mode": 6,
+        "1ch Mode": 1
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__ColorSource_Fresnel_V.gdtf",
         "file": "fixtures/etc/ETC@Colorsource_V_Fresnel@Ver_1.gdtf",
         "modes": {
-          "1 Channel": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Direct Mode": {
+            "channels": 9,
+            "gdtfMode": "Direct Mode",
+            "status": "matched"
           },
-          "RGB": {
-            "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Standard Mode": {
+            "channels": 7,
+            "gdtfMode": "Standard Mode",
+            "status": "matched"
           },
-          "Standard": {
+          "6ch Mode": {
             "channels": 6,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "6ch Mode",
+            "status": "matched"
           },
-          "Direct": {
-            "channels": 8,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "RGB Mode": {
+            "channels": 6,
+            "gdtfMode": "RGB Mode",
+            "status": "matched"
+          },
+          "1ch Mode": {
+            "channels": 1,
+            "gdtfMode": "1ch Mode",
+            "status": "matched"
           }
         }
       },
@@ -86,10 +74,10 @@
       "watts": 120,
       "weight": 3.8,
       "modes": {
-        "1ch": 1,
-        "RGB": 3,
-        "5ch": 5,
-        "Direct": 6
+        "5ch(Default)": 5,
+        "6ch (Direct)": 6,
+        "3ch(RGB)": 3,
+        "1ch": 1
       },
       "gdtf": {
         "status": "matched",
@@ -97,24 +85,24 @@
         "suggestedFileName": "ETC__ColorSource_PAR.gdtf",
         "file": "fixtures/etc/ETC@ColorSource_Par@physical-change-direct.gdtf",
         "modes": {
-          "1ch": {
-            "channels": 1,
-            "gdtfMode": "1ch",
-            "status": "matched"
-          },
-          "RGB": {
-            "channels": 3,
-            "gdtfMode": "3ch(RGB)",
-            "status": "matched"
-          },
-          "5ch": {
+          "5ch(Default)": {
             "channels": 5,
             "gdtfMode": "5ch(Default)",
             "status": "matched"
           },
-          "Direct": {
+          "6ch (Direct)": {
             "channels": 6,
             "gdtfMode": "6ch (Direct)",
+            "status": "matched"
+          },
+          "3ch(RGB)": {
+            "channels": 3,
+            "gdtfMode": "3ch(RGB)",
+            "status": "matched"
+          },
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
             "status": "matched"
           }
         }
@@ -206,32 +194,14 @@
       "watts": 180,
       "weight": 6.8,
       "modes": {
-        "1 Channel": 1,
-        "RGB": 3,
-        "Standard": 6,
         "Direct": 8
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__ColorSource_PAR_V_Zoom.gdtf",
         "file": "fixtures/etc/ETC@ColorSource_Par_V_Zoom@2026.gdtf",
         "modes": {
-          "1 Channel": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "RGB": {
-            "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Standard": {
-            "channels": 6,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
           "Direct": {
             "channels": 8,
             "gdtfMode": "Direct",
@@ -246,31 +216,19 @@
       "watts": 166,
       "weight": 7.7,
       "modes": {
-        "1ch": 1,
-        "RGB": 3,
         "Direct": 5
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__ColorSource_Spot.gdtf",
         "file": "fixtures/etc/ETC@ColorSource_Spot@Colorsource_Spot.gdtf",
         "modes": {
-          "1ch": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "RGB": {
-            "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-      "Direct": {
-        "channels": 5,
-        "gdtfMode": "",
-        "status": "pending-match"
-      }
+          "Direct": {
+            "channels": 5,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          }
         }
       },
       "shortName": "CS Spot"
@@ -320,9 +278,9 @@
       "watts": 100,
       "weight": 4.9,
       "modes": {
-        "1 Channel": 1,
+        "5ch": 5,
         "RGB": 3,
-        "Standard": 5,
+        "1ch": 1,
         "Direct": 6
       },
       "gdtf": {
@@ -331,9 +289,9 @@
         "suggestedFileName": "ETC__ColorSource_Spot_jr.gdtf",
         "file": "fixtures/etc/ETC@ColorSource_Spot_Jr@init.gdtf",
         "modes": {
-          "1 Channel": {
-            "channels": 1,
-            "gdtfMode": "1ch",
+          "5ch": {
+            "channels": 5,
+            "gdtfMode": "5ch",
             "status": "matched"
           },
           "RGB": {
@@ -341,9 +299,9 @@
             "gdtfMode": "RGB",
             "status": "matched"
           },
-          "Standard": {
-            "channels": 5,
-            "gdtfMode": "5ch",
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
             "status": "matched"
           },
           "Direct": {
@@ -360,18 +318,28 @@
       "watts": 150,
       "weight": 7.7,
       "modes": {
-        "1 Channel": 1,
-        "RGB": 3,
-        "Standard": 6,
-        "Direct": 8
+        "Direct": 9,
+        "Standard": 7,
+        "1CH": 1,
+        "RGB": 3
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__ColorSource_Spot_V.gdtf",
         "file": "fixtures/etc/ETC@Colorsource_Spot_V@Added_two_more_DMX_Modes_and_RDM_info.gdtf",
         "modes": {
-          "1 Channel": {
+          "Direct": {
+            "channels": 9,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "Standard": {
+            "channels": 7,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "1CH": {
             "channels": 1,
             "gdtfMode": "1CH",
             "status": "matched"
@@ -380,16 +348,6 @@
             "channels": 3,
             "gdtfMode": "RGB",
             "status": "matched"
-          },
-          "Standard": {
-            "channels": 6,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Direct": {
-            "channels": 8,
-            "gdtfMode": "",
-            "status": "pending-match"
           }
         }
       },
@@ -440,18 +398,18 @@
       "watts": 100,
       "weight": 4.1,
       "modes": {
-        "Dimmer": 1
+        "Direct": 9
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__Desire_D22.gdtf",
         "file": "fixtures/etc/ETC@Desire_D22_Studio_HD@rev1.gdtf",
         "modes": {
-          "Dimmer": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Direct": {
+            "channels": 9,
+            "gdtfMode": "Direct",
+            "status": "matched"
           }
         }
       },
@@ -462,18 +420,30 @@
       "watts": 110,
       "weight": 6.4,
       "modes": {
-        "Dimmer": 1
+        "Standard mode": 3,
+        "HSIC": 6,
+        "Direct": 9
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__Desire_D40.gdtf",
         "file": "fixtures/etc/ETC@ETC_Desire_D40_Studio_HD@Add_Direct_Mode.gdtf",
         "modes": {
-          "Dimmer": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Standard mode": {
+            "channels": 3,
+            "gdtfMode": "Standard mode",
+            "status": "matched"
+          },
+          "HSIC": {
+            "channels": 6,
+            "gdtfMode": "HSIC",
+            "status": "matched"
+          },
+          "Direct": {
+            "channels": 9,
+            "gdtfMode": "Direct",
+            "status": "matched"
           }
         }
       },
@@ -1730,18 +1700,18 @@
       "watts": 143,
       "weight": 1.63,
       "modes": {
-        "Direct": 6
+        "Standard mode": 6
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__Source_4WRD_Color.gdtf",
         "file": "fixtures/etc/ETC@Source_4wrd_Color@Version_1.gdtf",
         "modes": {
-          "Direct": {
+          "Standard mode": {
             "channels": 6,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard mode",
+            "status": "matched"
           }
         }
       },

@@ -4,7 +4,7 @@
     {
       "fixture": "ATME",
       "modes": {
-        "Standard": 3
+        "Mode 0": 3
       },
       "gdtf": {
         "status": "matched",
@@ -12,7 +12,7 @@
         "suggestedFileName": "MDG__ATME.gdtf",
         "file": "fixtures/mdg/MDG@ATMe@Release_1.0.gdtf",
         "modes": {
-          "Standard": {
+          "Mode 0": {
             "channels": 3,
             "gdtfMode": "Mode 0",
             "status": "matched"
@@ -24,22 +24,50 @@
     {
       "fixture": "The ONE",
       "modes": {
-        "Standard": 3
+        "Mode 0": 5
       },
       "gdtf": {
-        "status": "pending-match",
+        "status": "matched",
         "folder": "fixtures/mdg",
         "suggestedFileName": "MDG__The_ONE.gdtf",
         "file": "fixtures/mdg/MDG@theONE@Release_1.0.gdtf",
         "modes": {
-          "Standard": {
-            "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 0": {
+            "channels": 5,
+            "gdtfMode": "Mode 0",
+            "status": "matched"
           }
         }
       },
       "shortName": "The ONE"
+    },
+    {
+      "fixture": "theFAN",
+      "watts": null,
+      "weight": 6.8,
+      "modes": {
+        "Mode 1 Channel": 1,
+        "Mode 2 Channel": 2
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/mdg",
+        "suggestedFileName": "MDG__theFAN.gdtf",
+        "file": "fixtures/mdg/MDG@theFAN@Release_1.0.gdtf",
+        "modes": {
+          "Mode 1 Channel": {
+            "channels": 1,
+            "gdtfMode": "Mode 1 Channel",
+            "status": "matched"
+          },
+          "Mode 2 Channel": {
+            "channels": 2,
+            "gdtfMode": "Mode 2 Channel",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "theFAN"
     }
   ]
 }

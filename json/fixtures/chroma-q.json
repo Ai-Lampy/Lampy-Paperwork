@@ -6,83 +6,407 @@
       "watts": 180,
       "weight": 6.9,
       "modes": {
-        "RGB 8-bit All": 3,
-        "RGBA 8-bit All": 4,
-        "RGB 16-bit All": 6,
-        "RGBA 16-bit All": 8,
-        "RGB 8-bit Odd/Even": 6,
-        "RGBA 8-bit Odd/Even": 8,
-        "RGB 16-bit Odd/Even": 12,
-        "RGBA 16-bit Odd/Even": 16,
-        "RGB 8-bit x1": 12,
-        "RGBA 8-bit x1": 16,
-        "RGB 16-bit x1": 24,
-        "RGBA 16-bit x1": 32
+        "RGB - 8Bit": 3,
+        "RGB - 16Bit": 6,
+        "RGBA - 8Bit": 4,
+        "RGBA - 16Bit": 8,
+        "RGB Compact - 8Bit": 6,
+        "RGB Compact - 16Bit": 12,
+        "RGBA Compact - 8Bit": 7,
+        "RGBA Compact - 16Bit": 14,
+        "RGB Extended - 8Bit": 7,
+        "RGB Extended - 16Bit": 14,
+        "RGBA Extended - 8Bit": 8,
+        "RGBA Extended - 16Bit": 16,
+        "SparQle 8Bit": 2,
+        "SparQle 16Bit": 4,
+        "CONTROL": 1,
+        "RGB 8Bit Group By 1": 12,
+        "RGB 16Bit Group By 1": 24,
+        "RGBA 8Bit Group By 1": 16,
+        "RGBA 16Bit Group By 1": 32,
+        "RGB Compact 8Bit Group By 1": 15,
+        "RGB Compact 16Bit Group By 1": 30,
+        "RGBA Compact 8Bit Group By 1": 19,
+        "RGBA Compact 16Bit Group By 1": 38,
+        "RGB Extended 8Bit Group By 1": 28,
+        "RGB Extended 16Bit Group By 1": 56,
+        "RGBA Extended 8Bit Group By 1": 32,
+        "RGBA Extended 16Bit Group By 1": 64,
+        "SparQle 8Bit Group By 1": 8,
+        "SparQle 16Bit Group By 1": 16,
+        "Effects": 10,
+        "RGB 8Bit Group By All": 3,
+        "RGB 16Bit  Group By All": 6,
+        "RGBA 8Bit Group By All": 4,
+        "RGBA 16Bit Group By All": 8,
+        "RGB Compact 8Bit Group By All ": 6,
+        "RGB Compact 16Bit Group By All": 12,
+        "RGBA Compact 8Bit Group By All": 7,
+        "RGBA Compact 16Bit Group By All": 14,
+        "RGB Extended 8Bit Group By All": 7,
+        "RGB Extended 16Bit Group By All": 14,
+        "RGBA Extended 8Bit Group By All": 8,
+        "RGBA Extended 16Bit Group By All": 16,
+        "RGB 8Bit Group By All Combined Mode": 16,
+        "RGB 16Bit Group By All Combined Mode": 21,
+        "RGBA 8Bit Group By All Combined Mode": 17,
+        "RGBA 16Bit Group By All Combined Mode": 23,
+        "RGB Compact Group By All Combined 8Bit Mode": 19,
+        "RGB Compact Group By All Combined 16Bit Mode": 27,
+        "RGBA Compact Group By All Combined 8Bit Mode": 20,
+        "RGBA Compact Group By All Combined 16Bit Mode": 29,
+        "RGB Extended Group By All 8Bit Combined Mode": 20,
+        "RGB Extended 16Bit Group By All Combined Mode": 29,
+        "RGBA Extended 8Bit Group By All Combined Mode": 21,
+        "RGBA Extended 16Bit Group By All Combined Mode": 31,
+        "RGB 8Bit Group By 1 Combined Mode": 31,
+        "RGB 16Bit Group By 1 Combined Mode": 51,
+        "RGBA 8Bit Group By 1 Combined Mode": 35,
+        "RGBA 16Bit Group By 1 Combined Mode": 59,
+        "RGB Compact 8Bit Group By 1 Combined Mode": 34,
+        "RGB Compact 16Bit Group By 1 Combined Mode": 57,
+        "RGBA Compact 8Bit Group By 1 Combined Mode": 38,
+        "RGBA Compact 16Bit Group By 1 Combined Mode": 65,
+        "RGB Extended 8Bit Group By 1 Combined Mode": 47,
+        "RGB Extended 16Bit Group By 1 Combined Mode": 83,
+        "RGBA Extended 8Bit Group By 1 Combined Mode": 51,
+        "RGBA Extended 16Bit Group By 1 Combined Mode": 91
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/chroma-q",
         "suggestedFileName": "Chroma_Q__Color_Force_3_12.gdtf",
         "file": "fixtures/chroma-q/Chroma-Q@Color_Force_3_12@Rev_2_Combined.gdtf",
         "modes": {
-          "RGB 8-bit All": {
+          "RGB - 8Bit": {
             "channels": 3,
-            "gdtfMode": "RGB 8Bit Group By All",
+            "gdtfMode": "RGB - 8Bit",
             "status": "matched"
           },
-          "RGBA 8-bit All": {
+          "RGB - 16Bit": {
+            "channels": 6,
+            "gdtfMode": "RGB - 16Bit",
+            "status": "matched"
+          },
+          "RGBA - 8Bit": {
             "channels": 4,
-            "gdtfMode": "RGBA 8Bit Group By All",
+            "gdtfMode": "RGBA - 8Bit",
             "status": "matched"
           },
-          "RGB 16-bit All": {
-            "channels": 6,
-            "gdtfMode": "RGB 16Bit  Group By All",
-            "status": "matched"
-          },
-          "RGBA 16-bit All": {
+          "RGBA - 16Bit": {
             "channels": 8,
-            "gdtfMode": "RGBA 16Bit Group By All",
+            "gdtfMode": "RGBA - 16Bit",
             "status": "matched"
           },
-          "RGB 8-bit Odd/Even": {
+          "RGB Compact - 8Bit": {
             "channels": 6,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "RGB Compact - 8Bit",
+            "status": "matched"
           },
-          "RGBA 8-bit Odd/Even": {
-            "channels": 8,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "RGB 16-bit Odd/Even": {
+          "RGB Compact - 16Bit": {
             "channels": 12,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "RGB Compact - 16Bit",
+            "status": "matched"
           },
-          "RGBA 16-bit Odd/Even": {
+          "RGBA Compact - 8Bit": {
+            "channels": 7,
+            "gdtfMode": "RGBA Compact - 8Bit",
+            "status": "matched"
+          },
+          "RGBA Compact - 16Bit": {
+            "channels": 14,
+            "gdtfMode": "RGBA Compact - 16Bit",
+            "status": "matched"
+          },
+          "RGB Extended - 8Bit": {
+            "channels": 7,
+            "gdtfMode": "RGB Extended - 8Bit",
+            "status": "matched"
+          },
+          "RGB Extended - 16Bit": {
+            "channels": 14,
+            "gdtfMode": "RGB Extended - 16Bit",
+            "status": "matched"
+          },
+          "RGBA Extended - 8Bit": {
+            "channels": 8,
+            "gdtfMode": "RGBA Extended - 8Bit",
+            "status": "matched"
+          },
+          "RGBA Extended - 16Bit": {
             "channels": 16,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "RGBA Extended - 16Bit",
+            "status": "matched"
           },
-          "RGB 8-bit x1": {
+          "SparQle 8Bit": {
+            "channels": 2,
+            "gdtfMode": "SparQle 8Bit",
+            "status": "matched"
+          },
+          "SparQle 16Bit": {
+            "channels": 4,
+            "gdtfMode": "SparQle 16Bit",
+            "status": "matched"
+          },
+          "CONTROL": {
+            "channels": 1,
+            "gdtfMode": "CONTROL",
+            "status": "matched"
+          },
+          "RGB 8Bit Group By 1": {
             "channels": 12,
             "gdtfMode": "RGB 8Bit Group By 1",
             "status": "matched"
           },
-          "RGBA 8-bit x1": {
-            "channels": 16,
-            "gdtfMode": "RGBA 8Bit Group By 1",
-            "status": "matched"
-          },
-          "RGB 16-bit x1": {
+          "RGB 16Bit Group By 1": {
             "channels": 24,
             "gdtfMode": "RGB 16Bit Group By 1",
             "status": "matched"
           },
-          "RGBA 16-bit x1": {
+          "RGBA 8Bit Group By 1": {
+            "channels": 16,
+            "gdtfMode": "RGBA 8Bit Group By 1",
+            "status": "matched"
+          },
+          "RGBA 16Bit Group By 1": {
             "channels": 32,
             "gdtfMode": "RGBA 16Bit Group By 1",
+            "status": "matched"
+          },
+          "RGB Compact 8Bit Group By 1": {
+            "channels": 15,
+            "gdtfMode": "RGB Compact 8Bit Group By 1",
+            "status": "matched"
+          },
+          "RGB Compact 16Bit Group By 1": {
+            "channels": 30,
+            "gdtfMode": "RGB Compact 16Bit Group By 1",
+            "status": "matched"
+          },
+          "RGBA Compact 8Bit Group By 1": {
+            "channels": 19,
+            "gdtfMode": "RGBA Compact 8Bit Group By 1",
+            "status": "matched"
+          },
+          "RGBA Compact 16Bit Group By 1": {
+            "channels": 38,
+            "gdtfMode": "RGBA Compact 16Bit Group By 1",
+            "status": "matched"
+          },
+          "RGB Extended 8Bit Group By 1": {
+            "channels": 28,
+            "gdtfMode": "RGB Extended 8Bit Group By 1",
+            "status": "matched"
+          },
+          "RGB Extended 16Bit Group By 1": {
+            "channels": 56,
+            "gdtfMode": "RGB Extended 16Bit Group By 1",
+            "status": "matched"
+          },
+          "RGBA Extended 8Bit Group By 1": {
+            "channels": 32,
+            "gdtfMode": "RGBA Extended 8Bit Group By 1",
+            "status": "matched"
+          },
+          "RGBA Extended 16Bit Group By 1": {
+            "channels": 64,
+            "gdtfMode": "RGBA Extended 16Bit Group By 1",
+            "status": "matched"
+          },
+          "SparQle 8Bit Group By 1": {
+            "channels": 8,
+            "gdtfMode": "SparQle 8Bit Group By 1",
+            "status": "matched"
+          },
+          "SparQle 16Bit Group By 1": {
+            "channels": 16,
+            "gdtfMode": "SparQle 16Bit Group By 1",
+            "status": "matched"
+          },
+          "Effects": {
+            "channels": 10,
+            "gdtfMode": "Effects",
+            "status": "matched"
+          },
+          "RGB 8Bit Group By All": {
+            "channels": 3,
+            "gdtfMode": "RGB 8Bit Group By All",
+            "status": "matched"
+          },
+          "RGB 16Bit  Group By All": {
+            "channels": 6,
+            "gdtfMode": "RGB 16Bit  Group By All",
+            "status": "matched"
+          },
+          "RGBA 8Bit Group By All": {
+            "channels": 4,
+            "gdtfMode": "RGBA 8Bit Group By All",
+            "status": "matched"
+          },
+          "RGBA 16Bit Group By All": {
+            "channels": 8,
+            "gdtfMode": "RGBA 16Bit Group By All",
+            "status": "matched"
+          },
+          "RGB Compact 8Bit Group By All ": {
+            "channels": 6,
+            "gdtfMode": "RGB Compact 8Bit Group By All ",
+            "status": "matched"
+          },
+          "RGB Compact 16Bit Group By All": {
+            "channels": 12,
+            "gdtfMode": "RGB Compact 16Bit Group By All",
+            "status": "matched"
+          },
+          "RGBA Compact 8Bit Group By All": {
+            "channels": 7,
+            "gdtfMode": "RGBA Compact 8Bit Group By All",
+            "status": "matched"
+          },
+          "RGBA Compact 16Bit Group By All": {
+            "channels": 14,
+            "gdtfMode": "RGBA Compact 16Bit Group By All",
+            "status": "matched"
+          },
+          "RGB Extended 8Bit Group By All": {
+            "channels": 7,
+            "gdtfMode": "RGB Extended 8Bit Group By All",
+            "status": "matched"
+          },
+          "RGB Extended 16Bit Group By All": {
+            "channels": 14,
+            "gdtfMode": "RGB Extended 16Bit Group By All",
+            "status": "matched"
+          },
+          "RGBA Extended 8Bit Group By All": {
+            "channels": 8,
+            "gdtfMode": "RGBA Extended 8Bit Group By All",
+            "status": "matched"
+          },
+          "RGBA Extended 16Bit Group By All": {
+            "channels": 16,
+            "gdtfMode": "RGBA Extended 16Bit Group By All",
+            "status": "matched"
+          },
+          "RGB 8Bit Group By All Combined Mode": {
+            "channels": 16,
+            "gdtfMode": "RGB 8Bit Group By All Combined Mode",
+            "status": "matched"
+          },
+          "RGB 16Bit Group By All Combined Mode": {
+            "channels": 21,
+            "gdtfMode": "RGB 16Bit Group By All Combined Mode",
+            "status": "matched"
+          },
+          "RGBA 8Bit Group By All Combined Mode": {
+            "channels": 17,
+            "gdtfMode": "RGBA 8Bit Group By All Combined Mode",
+            "status": "matched"
+          },
+          "RGBA 16Bit Group By All Combined Mode": {
+            "channels": 23,
+            "gdtfMode": "RGBA 16Bit Group By All Combined Mode",
+            "status": "matched"
+          },
+          "RGB Compact Group By All Combined 8Bit Mode": {
+            "channels": 19,
+            "gdtfMode": "RGB Compact Group By All Combined 8Bit Mode",
+            "status": "matched"
+          },
+          "RGB Compact Group By All Combined 16Bit Mode": {
+            "channels": 27,
+            "gdtfMode": "RGB Compact Group By All Combined 16Bit Mode",
+            "status": "matched"
+          },
+          "RGBA Compact Group By All Combined 8Bit Mode": {
+            "channels": 20,
+            "gdtfMode": "RGBA Compact Group By All Combined 8Bit Mode",
+            "status": "matched"
+          },
+          "RGBA Compact Group By All Combined 16Bit Mode": {
+            "channels": 29,
+            "gdtfMode": "RGBA Compact Group By All Combined 16Bit Mode",
+            "status": "matched"
+          },
+          "RGB Extended Group By All 8Bit Combined Mode": {
+            "channels": 20,
+            "gdtfMode": "RGB Extended Group By All 8Bit Combined Mode",
+            "status": "matched"
+          },
+          "RGB Extended 16Bit Group By All Combined Mode": {
+            "channels": 29,
+            "gdtfMode": "RGB Extended 16Bit Group By All Combined Mode",
+            "status": "matched"
+          },
+          "RGBA Extended 8Bit Group By All Combined Mode": {
+            "channels": 21,
+            "gdtfMode": "RGBA Extended 8Bit Group By All Combined Mode",
+            "status": "matched"
+          },
+          "RGBA Extended 16Bit Group By All Combined Mode": {
+            "channels": 31,
+            "gdtfMode": "RGBA Extended 16Bit Group By All Combined Mode",
+            "status": "matched"
+          },
+          "RGB 8Bit Group By 1 Combined Mode": {
+            "channels": 31,
+            "gdtfMode": "RGB 8Bit Group By 1 Combined Mode",
+            "status": "matched"
+          },
+          "RGB 16Bit Group By 1 Combined Mode": {
+            "channels": 51,
+            "gdtfMode": "RGB 16Bit Group By 1 Combined Mode",
+            "status": "matched"
+          },
+          "RGBA 8Bit Group By 1 Combined Mode": {
+            "channels": 35,
+            "gdtfMode": "RGBA 8Bit Group By 1 Combined Mode",
+            "status": "matched"
+          },
+          "RGBA 16Bit Group By 1 Combined Mode": {
+            "channels": 59,
+            "gdtfMode": "RGBA 16Bit Group By 1 Combined Mode",
+            "status": "matched"
+          },
+          "RGB Compact 8Bit Group By 1 Combined Mode": {
+            "channels": 34,
+            "gdtfMode": "RGB Compact 8Bit Group By 1 Combined Mode",
+            "status": "matched"
+          },
+          "RGB Compact 16Bit Group By 1 Combined Mode": {
+            "channels": 57,
+            "gdtfMode": "RGB Compact 16Bit Group By 1 Combined Mode",
+            "status": "matched"
+          },
+          "RGBA Compact 8Bit Group By 1 Combined Mode": {
+            "channels": 38,
+            "gdtfMode": "RGBA Compact 8Bit Group By 1 Combined Mode",
+            "status": "matched"
+          },
+          "RGBA Compact 16Bit Group By 1 Combined Mode": {
+            "channels": 65,
+            "gdtfMode": "RGBA Compact 16Bit Group By 1 Combined Mode",
+            "status": "matched"
+          },
+          "RGB Extended 8Bit Group By 1 Combined Mode": {
+            "channels": 47,
+            "gdtfMode": "RGB Extended 8Bit Group By 1 Combined Mode",
+            "status": "matched"
+          },
+          "RGB Extended 16Bit Group By 1 Combined Mode": {
+            "channels": 83,
+            "gdtfMode": "RGB Extended 16Bit Group By 1 Combined Mode",
+            "status": "matched"
+          },
+          "RGBA Extended 8Bit Group By 1 Combined Mode": {
+            "channels": 51,
+            "gdtfMode": "RGBA Extended 8Bit Group By 1 Combined Mode",
+            "status": "matched"
+          },
+          "RGBA Extended 16Bit Group By 1 Combined Mode": {
+            "channels": 91,
+            "gdtfMode": "RGBA Extended 16Bit Group By 1 Combined Mode",
             "status": "matched"
           }
         }
@@ -94,131 +418,431 @@
       "watts": 700,
       "weight": 23.5,
       "modes": {
-        "RGB 8-bit All": 3,
-        "RGBA 8-bit All": 4,
-        "RGB 16-bit All": 6,
-        "RGBA 16-bit All": 8,
-        "RGB 8-bit Odd/Even": 6,
-        "RGBA 8-bit Odd/Even": 8,
-        "RGB 16-bit Odd/Even": 12,
-        "RGBA 16-bit Odd/Even": 16,
-        "RGB 8-bit x4": 12,
-        "RGBA 8-bit x4": 16,
-        "RGB 16-bit x4": 24,
-        "RGBA 16-bit x4": 32,
-        "RGB 8-bit x2": 24,
-        "RGBA 8-bit x2": 32,
-        "RGB 16-bit x2": 48,
-        "RGBA 16-bit x2": 64,
-        "RGB 8-bit x1": 48,
-        "RGBA 8-bit x1": 64,
-        "RGB 16-bit x1": 96,
-        "RGBA 16-bit x1": 128
+        "RGB - 8Bit": 3,
+        "RGB - 16Bit": 6,
+        "RGBA - 8Bit": 4,
+        "RGBA - 16Bit": 8,
+        "RGB Compact - 8Bit": 6,
+        "RGB Compact - 16Bit": 12,
+        "RGBA Compact - 8Bit": 7,
+        "RGBA Compact - 16Bit": 14,
+        "RGB Extended - 8Bit": 7,
+        "RGB Extended - 16Bit": 14,
+        "RGBA Extended - 8Bit": 8,
+        "RGBA Extended - 16Bit": 16,
+        "SparQle 8Bit": 2,
+        "SparQle 16Bit": 4,
+        "CONTROL": 1,
+        "Effects": 10,
+        "RGB 8Bit Group By 1": 48,
+        "RGB 16Bit Group By 1": 96,
+        "RGBA 8Bit Group By 1": 64,
+        "RGBA 16Bit Group By 1": 128,
+        "RGB Compact 8Bit Group By 1": 51,
+        "RGB Compact 16Bit Group By 1": 102,
+        "RGBA Compact 8Bit Group By 1": 67,
+        "RGBA Compact 16Bit Group By 1": 134,
+        "RGB Extended 8Bit Group By 1": 112,
+        "RGB Extended 16Bit Group By 1": 224,
+        "RGBA Extended 8Bit Group By 1": 128,
+        "RGBA Extended 16Bit Group By 1": 256,
+        "SparQle 8Bit Group By 1": 32,
+        "SparQle 16Bit Group By 1": 64,
+        "RGB 8Bit Group By 4": 12,
+        "RGB 16Bit Group By 4": 24,
+        "RGBA 8Bit Group By 4": 16,
+        "RGBA 16Bit Group By 4": 32,
+        "RGB Compact 8Bit Group By 4": 15,
+        "RGB Compact 16Bit Group By 4": 30,
+        "RGBA Compact 8Bit Group By 4": 19,
+        "RGBA Compact 16Bit Group By 4": 38,
+        "RGB Extended 8Bit Group By 4": 28,
+        "RGB Extended 16Bit Group By 4": 56,
+        "RGBA Extended 8Bit Group By 4": 32,
+        "RGBA Extended 16Bit Group By 4": 64,
+        "SparQle 8Bit Group By 4": 8,
+        "SparQle 16Bit Group By 4": 16,
+        "RGB 8Bit Group By All": 3,
+        "RGB 16Bit Group By All": 6,
+        "RGBA 8Bit Group By All": 4,
+        "RGBA 16Bit Group By All": 8,
+        "RGB Compact 8Bit Group By All": 6,
+        "RGB Compact 16Bit Group By All": 12,
+        "RGBA Compact 8Bit Group By All": 7,
+        "RGBA Compact 16Bit Group By All": 14,
+        "RGB Extended 8Bit Group By All": 7,
+        "RGB Extended 16Bit Group By All": 14,
+        "RGBA Extended 8Bit Group By All": 8,
+        "RGBA Extended 16Bit Group By All": 16,
+        "SparQle 8Bit Group By All": 2,
+        "SparQle 16Bit Group By All": 4,
+        "RGB 8Bit Combined Mode": 16,
+        "RGB 16Bit Combined Mode": 21,
+        "RGBA 8Bit Combined Mode": 17,
+        "RGBA 16Bit Combined Mode": 23,
+        "RGB Compact Combined 8Bit Mode": 19,
+        "RGB Compact Combined 16Bit Mode": 27,
+        "RGBA Compact Combined 8Bit Mode": 20,
+        "RGBA Compact Combined 16Bit Mode": 29,
+        "RGB Extended 8Bit Combined Mode": 20,
+        "RGB Extended 16Bit Combined Mode": 29,
+        "RGBA Extended 8Bit Combined Mode": 21,
+        "RGBA Extended 16Bit Combined Mode": 31
       },
       "gdtf": {
-        "status": "partial",
+        "status": "matched",
         "folder": "fixtures/chroma-q",
         "suggestedFileName": "Chroma_Q__Color_Force_3_48.gdtf",
         "file": "fixtures/chroma-q/Chroma-Q@Color_Force_3_48@Rev_2_Combined.gdtf",
         "modes": {
-          "RGB 8-bit All": {
+          "RGB - 8Bit": {
             "channels": 3,
-            "gdtfMode": "RGB 8Bit Group By All",
+            "gdtfMode": "RGB - 8Bit",
             "status": "matched"
           },
-          "RGBA 8-bit All": {
+          "RGB - 16Bit": {
+            "channels": 6,
+            "gdtfMode": "RGB - 16Bit",
+            "status": "matched"
+          },
+          "RGBA - 8Bit": {
             "channels": 4,
-            "gdtfMode": "RGBA 8Bit Group By All",
+            "gdtfMode": "RGBA - 8Bit",
             "status": "matched"
           },
-          "RGB 16-bit All": {
-            "channels": 6,
-            "gdtfMode": "RGB 16Bit Group By All",
-            "status": "matched"
-          },
-          "RGBA 16-bit All": {
+          "RGBA - 16Bit": {
             "channels": 8,
-            "gdtfMode": "RGBA 16Bit Group By All",
+            "gdtfMode": "RGBA - 16Bit",
             "status": "matched"
           },
-          "RGB 8-bit Odd/Even": {
+          "RGB Compact - 8Bit": {
             "channels": 6,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "RGB Compact - 8Bit",
+            "status": "matched"
           },
-          "RGBA 8-bit Odd/Even": {
+          "RGB Compact - 16Bit": {
+            "channels": 12,
+            "gdtfMode": "RGB Compact - 16Bit",
+            "status": "matched"
+          },
+          "RGBA Compact - 8Bit": {
+            "channels": 7,
+            "gdtfMode": "RGBA Compact - 8Bit",
+            "status": "matched"
+          },
+          "RGBA Compact - 16Bit": {
+            "channels": 14,
+            "gdtfMode": "RGBA Compact - 16Bit",
+            "status": "matched"
+          },
+          "RGB Extended - 8Bit": {
+            "channels": 7,
+            "gdtfMode": "RGB Extended - 8Bit",
+            "status": "matched"
+          },
+          "RGB Extended - 16Bit": {
+            "channels": 14,
+            "gdtfMode": "RGB Extended - 16Bit",
+            "status": "matched"
+          },
+          "RGBA Extended - 8Bit": {
             "channels": 8,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "RGBA Extended - 8Bit",
+            "status": "matched"
           },
-          "RGB 16-bit Odd/Even": {
-            "channels": 12,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "RGBA 16-bit Odd/Even": {
+          "RGBA Extended - 16Bit": {
             "channels": 16,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "RGB 8-bit x4": {
-            "channels": 12,
-            "gdtfMode": "RGB 8Bit Group By 4",
+            "gdtfMode": "RGBA Extended - 16Bit",
             "status": "matched"
           },
-          "RGBA 8-bit x4": {
-            "channels": 16,
-            "gdtfMode": "RGBA 8Bit Group By 4",
+          "SparQle 8Bit": {
+            "channels": 2,
+            "gdtfMode": "SparQle 8Bit",
             "status": "matched"
           },
-          "RGB 16-bit x4": {
-            "channels": 24,
-            "gdtfMode": "RGB 16Bit Group By 4",
+          "SparQle 16Bit": {
+            "channels": 4,
+            "gdtfMode": "SparQle 16Bit",
             "status": "matched"
           },
-          "RGBA 16-bit x4": {
-            "channels": 32,
-            "gdtfMode": "RGBA 16Bit Group By 4",
+          "CONTROL": {
+            "channels": 1,
+            "gdtfMode": "CONTROL",
             "status": "matched"
           },
-          "RGB 8-bit x2": {
-            "channels": 24,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Effects": {
+            "channels": 10,
+            "gdtfMode": "Effects",
+            "status": "matched"
           },
-          "RGBA 8-bit x2": {
-            "channels": 32,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "RGB 16-bit x2": {
-            "channels": 48,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "RGBA 16-bit x2": {
-            "channels": 64,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "RGB 8-bit x1": {
+          "RGB 8Bit Group By 1": {
             "channels": 48,
             "gdtfMode": "RGB 8Bit Group By 1",
             "status": "matched"
           },
-          "RGBA 8-bit x1": {
-            "channels": 64,
-            "gdtfMode": "RGBA 8Bit Group By 1",
-            "status": "matched"
-          },
-          "RGB 16-bit x1": {
+          "RGB 16Bit Group By 1": {
             "channels": 96,
             "gdtfMode": "RGB 16Bit Group By 1",
             "status": "matched"
           },
-          "RGBA 16-bit x1": {
+          "RGBA 8Bit Group By 1": {
+            "channels": 64,
+            "gdtfMode": "RGBA 8Bit Group By 1",
+            "status": "matched"
+          },
+          "RGBA 16Bit Group By 1": {
             "channels": 128,
             "gdtfMode": "RGBA 16Bit Group By 1",
+            "status": "matched"
+          },
+          "RGB Compact 8Bit Group By 1": {
+            "channels": 51,
+            "gdtfMode": "RGB Compact 8Bit Group By 1",
+            "status": "matched"
+          },
+          "RGB Compact 16Bit Group By 1": {
+            "channels": 102,
+            "gdtfMode": "RGB Compact 16Bit Group By 1",
+            "status": "matched"
+          },
+          "RGBA Compact 8Bit Group By 1": {
+            "channels": 67,
+            "gdtfMode": "RGBA Compact 8Bit Group By 1",
+            "status": "matched"
+          },
+          "RGBA Compact 16Bit Group By 1": {
+            "channels": 134,
+            "gdtfMode": "RGBA Compact 16Bit Group By 1",
+            "status": "matched"
+          },
+          "RGB Extended 8Bit Group By 1": {
+            "channels": 112,
+            "gdtfMode": "RGB Extended 8Bit Group By 1",
+            "status": "matched"
+          },
+          "RGB Extended 16Bit Group By 1": {
+            "channels": 224,
+            "gdtfMode": "RGB Extended 16Bit Group By 1",
+            "status": "matched"
+          },
+          "RGBA Extended 8Bit Group By 1": {
+            "channels": 128,
+            "gdtfMode": "RGBA Extended 8Bit Group By 1",
+            "status": "matched"
+          },
+          "RGBA Extended 16Bit Group By 1": {
+            "channels": 256,
+            "gdtfMode": "RGBA Extended 16Bit Group By 1",
+            "status": "matched"
+          },
+          "SparQle 8Bit Group By 1": {
+            "channels": 32,
+            "gdtfMode": "SparQle 8Bit Group By 1",
+            "status": "matched"
+          },
+          "SparQle 16Bit Group By 1": {
+            "channels": 64,
+            "gdtfMode": "SparQle 16Bit Group By 1",
+            "status": "matched"
+          },
+          "RGB 8Bit Group By 4": {
+            "channels": 12,
+            "gdtfMode": "RGB 8Bit Group By 4",
+            "status": "matched"
+          },
+          "RGB 16Bit Group By 4": {
+            "channels": 24,
+            "gdtfMode": "RGB 16Bit Group By 4",
+            "status": "matched"
+          },
+          "RGBA 8Bit Group By 4": {
+            "channels": 16,
+            "gdtfMode": "RGBA 8Bit Group By 4",
+            "status": "matched"
+          },
+          "RGBA 16Bit Group By 4": {
+            "channels": 32,
+            "gdtfMode": "RGBA 16Bit Group By 4",
+            "status": "matched"
+          },
+          "RGB Compact 8Bit Group By 4": {
+            "channels": 15,
+            "gdtfMode": "RGB Compact 8Bit Group By 4",
+            "status": "matched"
+          },
+          "RGB Compact 16Bit Group By 4": {
+            "channels": 30,
+            "gdtfMode": "RGB Compact 16Bit Group By 4",
+            "status": "matched"
+          },
+          "RGBA Compact 8Bit Group By 4": {
+            "channels": 19,
+            "gdtfMode": "RGBA Compact 8Bit Group By 4",
+            "status": "matched"
+          },
+          "RGBA Compact 16Bit Group By 4": {
+            "channels": 38,
+            "gdtfMode": "RGBA Compact 16Bit Group By 4",
+            "status": "matched"
+          },
+          "RGB Extended 8Bit Group By 4": {
+            "channels": 28,
+            "gdtfMode": "RGB Extended 8Bit Group By 4",
+            "status": "matched"
+          },
+          "RGB Extended 16Bit Group By 4": {
+            "channels": 56,
+            "gdtfMode": "RGB Extended 16Bit Group By 4",
+            "status": "matched"
+          },
+          "RGBA Extended 8Bit Group By 4": {
+            "channels": 32,
+            "gdtfMode": "RGBA Extended 8Bit Group By 4",
+            "status": "matched"
+          },
+          "RGBA Extended 16Bit Group By 4": {
+            "channels": 64,
+            "gdtfMode": "RGBA Extended 16Bit Group By 4",
+            "status": "matched"
+          },
+          "SparQle 8Bit Group By 4": {
+            "channels": 8,
+            "gdtfMode": "SparQle 8Bit Group By 4",
+            "status": "matched"
+          },
+          "SparQle 16Bit Group By 4": {
+            "channels": 16,
+            "gdtfMode": "SparQle 16Bit Group By 4",
+            "status": "matched"
+          },
+          "RGB 8Bit Group By All": {
+            "channels": 3,
+            "gdtfMode": "RGB 8Bit Group By All",
+            "status": "matched"
+          },
+          "RGB 16Bit Group By All": {
+            "channels": 6,
+            "gdtfMode": "RGB 16Bit Group By All",
+            "status": "matched"
+          },
+          "RGBA 8Bit Group By All": {
+            "channels": 4,
+            "gdtfMode": "RGBA 8Bit Group By All",
+            "status": "matched"
+          },
+          "RGBA 16Bit Group By All": {
+            "channels": 8,
+            "gdtfMode": "RGBA 16Bit Group By All",
+            "status": "matched"
+          },
+          "RGB Compact 8Bit Group By All": {
+            "channels": 6,
+            "gdtfMode": "RGB Compact 8Bit Group By All",
+            "status": "matched"
+          },
+          "RGB Compact 16Bit Group By All": {
+            "channels": 12,
+            "gdtfMode": "RGB Compact 16Bit Group By All",
+            "status": "matched"
+          },
+          "RGBA Compact 8Bit Group By All": {
+            "channels": 7,
+            "gdtfMode": "RGBA Compact 8Bit Group By All",
+            "status": "matched"
+          },
+          "RGBA Compact 16Bit Group By All": {
+            "channels": 14,
+            "gdtfMode": "RGBA Compact 16Bit Group By All",
+            "status": "matched"
+          },
+          "RGB Extended 8Bit Group By All": {
+            "channels": 7,
+            "gdtfMode": "RGB Extended 8Bit Group By All",
+            "status": "matched"
+          },
+          "RGB Extended 16Bit Group By All": {
+            "channels": 14,
+            "gdtfMode": "RGB Extended 16Bit Group By All",
+            "status": "matched"
+          },
+          "RGBA Extended 8Bit Group By All": {
+            "channels": 8,
+            "gdtfMode": "RGBA Extended 8Bit Group By All",
+            "status": "matched"
+          },
+          "RGBA Extended 16Bit Group By All": {
+            "channels": 16,
+            "gdtfMode": "RGBA Extended 16Bit Group By All",
+            "status": "matched"
+          },
+          "SparQle 8Bit Group By All": {
+            "channels": 2,
+            "gdtfMode": "SparQle 8Bit Group By All",
+            "status": "matched"
+          },
+          "SparQle 16Bit Group By All": {
+            "channels": 4,
+            "gdtfMode": "SparQle 16Bit Group By All",
+            "status": "matched"
+          },
+          "RGB 8Bit Combined Mode": {
+            "channels": 16,
+            "gdtfMode": "RGB 8Bit Combined Mode",
+            "status": "matched"
+          },
+          "RGB 16Bit Combined Mode": {
+            "channels": 21,
+            "gdtfMode": "RGB 16Bit Combined Mode",
+            "status": "matched"
+          },
+          "RGBA 8Bit Combined Mode": {
+            "channels": 17,
+            "gdtfMode": "RGBA 8Bit Combined Mode",
+            "status": "matched"
+          },
+          "RGBA 16Bit Combined Mode": {
+            "channels": 23,
+            "gdtfMode": "RGBA 16Bit Combined Mode",
+            "status": "matched"
+          },
+          "RGB Compact Combined 8Bit Mode": {
+            "channels": 19,
+            "gdtfMode": "RGB Compact Combined 8Bit Mode",
+            "status": "matched"
+          },
+          "RGB Compact Combined 16Bit Mode": {
+            "channels": 27,
+            "gdtfMode": "RGB Compact Combined 16Bit Mode",
+            "status": "matched"
+          },
+          "RGBA Compact Combined 8Bit Mode": {
+            "channels": 20,
+            "gdtfMode": "RGBA Compact Combined 8Bit Mode",
+            "status": "matched"
+          },
+          "RGBA Compact Combined 16Bit Mode": {
+            "channels": 29,
+            "gdtfMode": "RGBA Compact Combined 16Bit Mode",
+            "status": "matched"
+          },
+          "RGB Extended 8Bit Combined Mode": {
+            "channels": 20,
+            "gdtfMode": "RGB Extended 8Bit Combined Mode",
+            "status": "matched"
+          },
+          "RGB Extended 16Bit Combined Mode": {
+            "channels": 29,
+            "gdtfMode": "RGB Extended 16Bit Combined Mode",
+            "status": "matched"
+          },
+          "RGBA Extended 8Bit Combined Mode": {
+            "channels": 21,
+            "gdtfMode": "RGBA Extended 8Bit Combined Mode",
+            "status": "matched"
+          },
+          "RGBA Extended 16Bit Combined Mode": {
+            "channels": 31,
+            "gdtfMode": "RGBA Extended 16Bit Combined Mode",
             "status": "matched"
           }
         }
@@ -486,16 +1110,58 @@
       "watts": 133,
       "weight": 5,
       "modes": {
-        "Look Select": 1,
-        "RGB All": 3,
-        "HSI All": 3,
-        "RGBA All": 4,
-        "RGB Odd/Even": 6,
-        "HSI Odd/Even": 6,
-        "RGBA Odd/Even": 8,
-        "RGB x1": 12,
-        "HSI x1": 12,
-        "RGBA x1": 16
+        "RGBA": 4,
+        "RGB": 3,
+        "HSI": 3,
+        "RGBAx4": 4,
+        "RGBx4": 3,
+        "HSIx4": 3,
+        "RGBAx2": 8,
+        "RGBx2": 6,
+        "HSIx2": 6,
+        "RGBAx1": 16,
+        "RGBx1": 12,
+        "HSIx1": 12,
+        "RGBA Od/Ev": 8,
+        "RGB Od/Ev": 6,
+        "HSI Od/Ev": 6,
+        "Look Sel": 1,
+        "RGBAx1 Strobe On": 18,
+        "RGBAx2 Strobe On": 10,
+        "RGBAx4 Strobe On": 6,
+        "RGBA Od/Ev Strobe On": 10,
+        "RGBx1 Strobe On": 14,
+        "RGBx2 Strobe On": 8,
+        "RGBx4 Strobe On": 5,
+        "RGB Od/Ev Strobe On": 8,
+        "HSIx1 Strobe On": 14,
+        "HSIx2 Strobe On": 8,
+        "HSIx4 Strobe On": 5,
+        "HSI Od/Ev Strobe On": 8,
+        "RGBAx4 Strobe On Top": 10,
+        "RGBx4 Strobe On Top": 8,
+        "HSIx4 Strobe On Top": 8,
+        "RGBAx2 Strobe On Top": 14,
+        "RGBx2 Strobe On Top": 11,
+        "HSIx2 Strobe On Top": 11,
+        "RGBAx1 Strobe On Top": 22,
+        "RGBx1 Strobe On Top": 17,
+        "HSIx1 Strobe On Top": 17,
+        "RGBA Od/Ev Strobe On Top": 14,
+        "RGB Od/Ev Strobe On Top": 11,
+        "HSI Od/Ev Strobe On Top 1": 11,
+        "RGBAx4 Strobe Random": 11,
+        "RGBx4 Strobe Random": 9,
+        "HSIx4 Strobe Random": 9,
+        "RGBAx2 Strobe Random": 15,
+        "RGBx2 Strobe Random": 12,
+        "HSIx2 Strobe Random": 12,
+        "RGBAx1 Strobe Random": 23,
+        "RGBx1 Strobe Random": 18,
+        "HSIx1 Strobe Random": 18,
+        "RGBA Od/Ev Strobe Random": 15,
+        "RGB Od/Ev Strobe Random": 12,
+        "HSI Od/Ev Strobe On Top": 12
       },
       "gdtf": {
         "status": "matched",
@@ -503,54 +1169,264 @@
         "suggestedFileName": "Chroma_Q__Color_Force_II_12.gdtf",
         "file": "fixtures/chroma-q/Chroma-Q@Color_Force_II_12@Release_1.gdtf",
         "modes": {
-          "Look Select": {
-            "channels": 1,
-            "gdtfMode": "Look Sel",
+          "RGBA": {
+            "channels": 4,
+            "gdtfMode": "RGBA",
             "status": "matched"
           },
-          "RGB All": {
+          "RGB": {
             "channels": 3,
-            "gdtfMode": "RGBx4",
+            "gdtfMode": "RGB",
             "status": "matched"
           },
-          "HSI All": {
+          "HSI": {
             "channels": 3,
-            "gdtfMode": "HSIx4",
+            "gdtfMode": "HSI",
             "status": "matched"
           },
-          "RGBA All": {
+          "RGBAx4": {
             "channels": 4,
             "gdtfMode": "RGBAx4",
             "status": "matched"
           },
-          "RGB Odd/Even": {
-            "channels": 6,
-            "gdtfMode": "RGB Od/Ev",
+          "RGBx4": {
+            "channels": 3,
+            "gdtfMode": "RGBx4",
             "status": "matched"
           },
-          "HSI Odd/Even": {
-            "channels": 6,
-            "gdtfMode": "HSI Od/Ev",
+          "HSIx4": {
+            "channels": 3,
+            "gdtfMode": "HSIx4",
             "status": "matched"
           },
-          "RGBA Odd/Even": {
+          "RGBAx2": {
             "channels": 8,
-            "gdtfMode": "RGBA Od/Ev",
+            "gdtfMode": "RGBAx2",
             "status": "matched"
           },
-          "RGB x1": {
+          "RGBx2": {
+            "channels": 6,
+            "gdtfMode": "RGBx2",
+            "status": "matched"
+          },
+          "HSIx2": {
+            "channels": 6,
+            "gdtfMode": "HSIx2",
+            "status": "matched"
+          },
+          "RGBAx1": {
+            "channels": 16,
+            "gdtfMode": "RGBAx1",
+            "status": "matched"
+          },
+          "RGBx1": {
             "channels": 12,
             "gdtfMode": "RGBx1",
             "status": "matched"
           },
-          "HSI x1": {
+          "HSIx1": {
             "channels": 12,
             "gdtfMode": "HSIx1",
             "status": "matched"
           },
-          "RGBA x1": {
-            "channels": 16,
-            "gdtfMode": "RGBAx1",
+          "RGBA Od/Ev": {
+            "channels": 8,
+            "gdtfMode": "RGBA Od/Ev",
+            "status": "matched"
+          },
+          "RGB Od/Ev": {
+            "channels": 6,
+            "gdtfMode": "RGB Od/Ev",
+            "status": "matched"
+          },
+          "HSI Od/Ev": {
+            "channels": 6,
+            "gdtfMode": "HSI Od/Ev",
+            "status": "matched"
+          },
+          "Look Sel": {
+            "channels": 1,
+            "gdtfMode": "Look Sel",
+            "status": "matched"
+          },
+          "RGBAx1 Strobe On": {
+            "channels": 18,
+            "gdtfMode": "RGBAx1 Strobe On",
+            "status": "matched"
+          },
+          "RGBAx2 Strobe On": {
+            "channels": 10,
+            "gdtfMode": "RGBAx2 Strobe On",
+            "status": "matched"
+          },
+          "RGBAx4 Strobe On": {
+            "channels": 6,
+            "gdtfMode": "RGBAx4 Strobe On",
+            "status": "matched"
+          },
+          "RGBA Od/Ev Strobe On": {
+            "channels": 10,
+            "gdtfMode": "RGBA Od/Ev Strobe On",
+            "status": "matched"
+          },
+          "RGBx1 Strobe On": {
+            "channels": 14,
+            "gdtfMode": "RGBx1 Strobe On",
+            "status": "matched"
+          },
+          "RGBx2 Strobe On": {
+            "channels": 8,
+            "gdtfMode": "RGBx2 Strobe On",
+            "status": "matched"
+          },
+          "RGBx4 Strobe On": {
+            "channels": 5,
+            "gdtfMode": "RGBx4 Strobe On",
+            "status": "matched"
+          },
+          "RGB Od/Ev Strobe On": {
+            "channels": 8,
+            "gdtfMode": "RGB Od/Ev Strobe On",
+            "status": "matched"
+          },
+          "HSIx1 Strobe On": {
+            "channels": 14,
+            "gdtfMode": "HSIx1 Strobe On",
+            "status": "matched"
+          },
+          "HSIx2 Strobe On": {
+            "channels": 8,
+            "gdtfMode": "HSIx2 Strobe On",
+            "status": "matched"
+          },
+          "HSIx4 Strobe On": {
+            "channels": 5,
+            "gdtfMode": "HSIx4 Strobe On",
+            "status": "matched"
+          },
+          "HSI Od/Ev Strobe On": {
+            "channels": 8,
+            "gdtfMode": "HSI Od/Ev Strobe On",
+            "status": "matched"
+          },
+          "RGBAx4 Strobe On Top": {
+            "channels": 10,
+            "gdtfMode": "RGBAx4 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx4 Strobe On Top": {
+            "channels": 8,
+            "gdtfMode": "RGBx4 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx4 Strobe On Top": {
+            "channels": 8,
+            "gdtfMode": "HSIx4 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx2 Strobe On Top": {
+            "channels": 14,
+            "gdtfMode": "RGBAx2 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx2 Strobe On Top": {
+            "channels": 11,
+            "gdtfMode": "RGBx2 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx2 Strobe On Top": {
+            "channels": 11,
+            "gdtfMode": "HSIx2 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx1 Strobe On Top": {
+            "channels": 22,
+            "gdtfMode": "RGBAx1 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx1 Strobe On Top": {
+            "channels": 17,
+            "gdtfMode": "RGBx1 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx1 Strobe On Top": {
+            "channels": 17,
+            "gdtfMode": "HSIx1 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBA Od/Ev Strobe On Top": {
+            "channels": 14,
+            "gdtfMode": "RGBA Od/Ev Strobe On Top",
+            "status": "matched"
+          },
+          "RGB Od/Ev Strobe On Top": {
+            "channels": 11,
+            "gdtfMode": "RGB Od/Ev Strobe On Top",
+            "status": "matched"
+          },
+          "HSI Od/Ev Strobe On Top 1": {
+            "channels": 11,
+            "gdtfMode": "HSI Od/Ev Strobe On Top 1",
+            "status": "matched"
+          },
+          "RGBAx4 Strobe Random": {
+            "channels": 11,
+            "gdtfMode": "RGBAx4 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx4 Strobe Random": {
+            "channels": 9,
+            "gdtfMode": "RGBx4 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx4 Strobe Random": {
+            "channels": 9,
+            "gdtfMode": "HSIx4 Strobe Random",
+            "status": "matched"
+          },
+          "RGBAx2 Strobe Random": {
+            "channels": 15,
+            "gdtfMode": "RGBAx2 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx2 Strobe Random": {
+            "channels": 12,
+            "gdtfMode": "RGBx2 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx2 Strobe Random": {
+            "channels": 12,
+            "gdtfMode": "HSIx2 Strobe Random",
+            "status": "matched"
+          },
+          "RGBAx1 Strobe Random": {
+            "channels": 23,
+            "gdtfMode": "RGBAx1 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx1 Strobe Random": {
+            "channels": 18,
+            "gdtfMode": "RGBx1 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx1 Strobe Random": {
+            "channels": 18,
+            "gdtfMode": "HSIx1 Strobe Random",
+            "status": "matched"
+          },
+          "RGBA Od/Ev Strobe Random": {
+            "channels": 15,
+            "gdtfMode": "RGBA Od/Ev Strobe Random",
+            "status": "matched"
+          },
+          "RGB Od/Ev Strobe Random": {
+            "channels": 12,
+            "gdtfMode": "RGB Od/Ev Strobe Random",
+            "status": "matched"
+          },
+          "HSI Od/Ev Strobe On Top": {
+            "channels": 12,
+            "gdtfMode": "HSI Od/Ev Strobe On Top",
             "status": "matched"
           }
         }
@@ -562,16 +1438,55 @@
       "watts": 133,
       "weight": 5,
       "modes": {
-        "Look Select": 1,
-        "RGB All": 3,
-        "HSI All": 3,
-        "RGBA All": 4,
-        "RGB Odd/Even": 6,
-        "HSI Odd/Even": 6,
-        "RGBA Odd/Even": 8,
-        "RGB x1": 12,
-        "HSI x1": 12,
-        "RGBA x1": 16
+        "RGBAx4": 4,
+        "RGBx4": 3,
+        "HSIx4": 3,
+        "RGBAx2": 8,
+        "RGBx2": 6,
+        "HSIx2": 6,
+        "RGBAx1": 16,
+        "RGBx1": 12,
+        "HSIx1": 12,
+        "RGBA OdEv": 8,
+        "RGB OdEv": 6,
+        "HSI OdEv": 6,
+        "RGBAx4 Strobe On": 6,
+        "RGBx4 Strobe On": 5,
+        "HSIx4 Strobe On": 5,
+        "RGBAx2 Strobe On": 10,
+        "RGBx2 Strobe On": 8,
+        "HSIx2 Strobe On": 8,
+        "RGBAx1 Strobe On": 18,
+        "RGBx1 Strobe On": 14,
+        "HSIx1 Strobe On": 14,
+        "RGBA OdEv Strobe On": 10,
+        "RGB OdEv Strobe On": 8,
+        "HSI OdEv Strobe On": 8,
+        "Look Sel": 1,
+        "RGBAx4 Strobe On Top": 10,
+        "RGBx4 Strobe On Top": 8,
+        "HSIx4 Strobe On Top": 8,
+        "RGBAx2 Strobe On Top": 14,
+        "RGBx2 Strobe On Top": 11,
+        "HSIx2 Strobe On Top": 11,
+        "RGBAx1 Strobe On Top": 22,
+        "RGBx1 Strobe On Top": 17,
+        "HSIx1 Strobe On Top": 17,
+        "RGBA Od/Ev Strobe On Top": 14,
+        "RGB Od/Ev Strobe On Top": 11,
+        "HSI Od/Ev Strobe On Top [11ch]": 11,
+        "RGBAx4 Strobe Random": 11,
+        "RGBx4 Strobe Random": 9,
+        "HSIx4 Strobe Random": 9,
+        "RGBAx2 Strobe Random": 15,
+        "RGBx2 Strobe Random": 12,
+        "HSIx2 Strobe Random": 12,
+        "RGBAx1 Strobe Random": 23,
+        "RGBx1 Strobe Random": 18,
+        "HSIx1 Strobe Random": 18,
+        "RGBA Od/Ev Strobe Random": 15,
+        "RGB Od/Ev Strobe Random": 12,
+        "HSI Od/Ev Strobe On Top [12ch]": 12
       },
       "gdtf": {
         "status": "matched",
@@ -579,54 +1494,249 @@
         "suggestedFileName": "Chroma_Q__Color_Force_II_12_Plus.gdtf",
         "file": "fixtures/chroma-q/Chroma-Q@Color_Force_II_12_Plus@Release_1.gdtf",
         "modes": {
-          "Look Select": {
-            "channels": 1,
-            "gdtfMode": "Look Sel",
-            "status": "matched"
-          },
-          "RGB All": {
-            "channels": 3,
-            "gdtfMode": "RGBx4",
-            "status": "matched"
-          },
-          "HSI All": {
-            "channels": 3,
-            "gdtfMode": "HSIx4",
-            "status": "matched"
-          },
-          "RGBA All": {
+          "RGBAx4": {
             "channels": 4,
             "gdtfMode": "RGBAx4",
             "status": "matched"
           },
-          "RGB Odd/Even": {
-            "channels": 6,
-            "gdtfMode": "RGB OdEv",
+          "RGBx4": {
+            "channels": 3,
+            "gdtfMode": "RGBx4",
             "status": "matched"
           },
-          "HSI Odd/Even": {
-            "channels": 6,
-            "gdtfMode": "HSI OdEv",
+          "HSIx4": {
+            "channels": 3,
+            "gdtfMode": "HSIx4",
             "status": "matched"
           },
-          "RGBA Odd/Even": {
+          "RGBAx2": {
             "channels": 8,
-            "gdtfMode": "RGBA OdEv",
+            "gdtfMode": "RGBAx2",
             "status": "matched"
           },
-          "RGB x1": {
+          "RGBx2": {
+            "channels": 6,
+            "gdtfMode": "RGBx2",
+            "status": "matched"
+          },
+          "HSIx2": {
+            "channels": 6,
+            "gdtfMode": "HSIx2",
+            "status": "matched"
+          },
+          "RGBAx1": {
+            "channels": 16,
+            "gdtfMode": "RGBAx1",
+            "status": "matched"
+          },
+          "RGBx1": {
             "channels": 12,
             "gdtfMode": "RGBx1",
             "status": "matched"
           },
-          "HSI x1": {
+          "HSIx1": {
             "channels": 12,
             "gdtfMode": "HSIx1",
             "status": "matched"
           },
-          "RGBA x1": {
-            "channels": 16,
-            "gdtfMode": "RGBAx1",
+          "RGBA OdEv": {
+            "channels": 8,
+            "gdtfMode": "RGBA OdEv",
+            "status": "matched"
+          },
+          "RGB OdEv": {
+            "channels": 6,
+            "gdtfMode": "RGB OdEv",
+            "status": "matched"
+          },
+          "HSI OdEv": {
+            "channels": 6,
+            "gdtfMode": "HSI OdEv",
+            "status": "matched"
+          },
+          "RGBAx4 Strobe On": {
+            "channels": 6,
+            "gdtfMode": "RGBAx4 Strobe On",
+            "status": "matched"
+          },
+          "RGBx4 Strobe On": {
+            "channels": 5,
+            "gdtfMode": "RGBx4 Strobe On",
+            "status": "matched"
+          },
+          "HSIx4 Strobe On": {
+            "channels": 5,
+            "gdtfMode": "HSIx4 Strobe On",
+            "status": "matched"
+          },
+          "RGBAx2 Strobe On": {
+            "channels": 10,
+            "gdtfMode": "RGBAx2 Strobe On",
+            "status": "matched"
+          },
+          "RGBx2 Strobe On": {
+            "channels": 8,
+            "gdtfMode": "RGBx2 Strobe On",
+            "status": "matched"
+          },
+          "HSIx2 Strobe On": {
+            "channels": 8,
+            "gdtfMode": "HSIx2 Strobe On",
+            "status": "matched"
+          },
+          "RGBAx1 Strobe On": {
+            "channels": 18,
+            "gdtfMode": "RGBAx1 Strobe On",
+            "status": "matched"
+          },
+          "RGBx1 Strobe On": {
+            "channels": 14,
+            "gdtfMode": "RGBx1 Strobe On",
+            "status": "matched"
+          },
+          "HSIx1 Strobe On": {
+            "channels": 14,
+            "gdtfMode": "HSIx1 Strobe On",
+            "status": "matched"
+          },
+          "RGBA OdEv Strobe On": {
+            "channels": 10,
+            "gdtfMode": "RGBA OdEv Strobe On",
+            "status": "matched"
+          },
+          "RGB OdEv Strobe On": {
+            "channels": 8,
+            "gdtfMode": "RGB OdEv Strobe On",
+            "status": "matched"
+          },
+          "HSI OdEv Strobe On": {
+            "channels": 8,
+            "gdtfMode": "HSI OdEv Strobe On",
+            "status": "matched"
+          },
+          "Look Sel": {
+            "channels": 1,
+            "gdtfMode": "Look Sel",
+            "status": "matched"
+          },
+          "RGBAx4 Strobe On Top": {
+            "channels": 10,
+            "gdtfMode": "RGBAx4 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx4 Strobe On Top": {
+            "channels": 8,
+            "gdtfMode": "RGBx4 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx4 Strobe On Top": {
+            "channels": 8,
+            "gdtfMode": "HSIx4 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx2 Strobe On Top": {
+            "channels": 14,
+            "gdtfMode": "RGBAx2 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx2 Strobe On Top": {
+            "channels": 11,
+            "gdtfMode": "RGBx2 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx2 Strobe On Top": {
+            "channels": 11,
+            "gdtfMode": "HSIx2 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx1 Strobe On Top": {
+            "channels": 22,
+            "gdtfMode": "RGBAx1 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx1 Strobe On Top": {
+            "channels": 17,
+            "gdtfMode": "RGBx1 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx1 Strobe On Top": {
+            "channels": 17,
+            "gdtfMode": "HSIx1 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBA Od/Ev Strobe On Top": {
+            "channels": 14,
+            "gdtfMode": "RGBA Od/Ev Strobe On Top",
+            "status": "matched"
+          },
+          "RGB Od/Ev Strobe On Top": {
+            "channels": 11,
+            "gdtfMode": "RGB Od/Ev Strobe On Top",
+            "status": "matched"
+          },
+          "HSI Od/Ev Strobe On Top [11ch]": {
+            "channels": 11,
+            "gdtfMode": "HSI Od/Ev Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx4 Strobe Random": {
+            "channels": 11,
+            "gdtfMode": "RGBAx4 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx4 Strobe Random": {
+            "channels": 9,
+            "gdtfMode": "RGBx4 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx4 Strobe Random": {
+            "channels": 9,
+            "gdtfMode": "HSIx4 Strobe Random",
+            "status": "matched"
+          },
+          "RGBAx2 Strobe Random": {
+            "channels": 15,
+            "gdtfMode": "RGBAx2 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx2 Strobe Random": {
+            "channels": 12,
+            "gdtfMode": "RGBx2 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx2 Strobe Random": {
+            "channels": 12,
+            "gdtfMode": "HSIx2 Strobe Random",
+            "status": "matched"
+          },
+          "RGBAx1 Strobe Random": {
+            "channels": 23,
+            "gdtfMode": "RGBAx1 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx1 Strobe Random": {
+            "channels": 18,
+            "gdtfMode": "RGBx1 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx1 Strobe Random": {
+            "channels": 18,
+            "gdtfMode": "HSIx1 Strobe Random",
+            "status": "matched"
+          },
+          "RGBA Od/Ev Strobe Random": {
+            "channels": 15,
+            "gdtfMode": "RGBA Od/Ev Strobe Random",
+            "status": "matched"
+          },
+          "RGB Od/Ev Strobe Random": {
+            "channels": 12,
+            "gdtfMode": "RGB Od/Ev Strobe Random",
+            "status": "matched"
+          },
+          "HSI Od/Ev Strobe On Top [12ch]": {
+            "channels": 12,
+            "gdtfMode": "HSI Od/Ev Strobe On Top",
             "status": "matched"
           }
         }
@@ -638,22 +1748,103 @@
       "watts": 533,
       "weight": 18,
       "modes": {
-        "Look Select": 1,
-        "RGB All": 3,
-        "HSI All": 3,
-        "RGBA All": 4,
-        "RGB Odd/Even": 6,
-        "HSI Odd/Even": 6,
-        "RGBA Odd/Even": 8,
-        "RGB x4": 12,
-        "HSI x4": 12,
-        "RGBA x4": 16,
-        "RGB x2": 24,
-        "HSI x2": 24,
-        "RGBA x2": 32,
-        "RGB x1": 48,
-        "HSI x1": 48,
-        "RGBA x1": 64
+        "RGBAx16 Strobe Off": 4,
+        "RGBx16 Strobe Off": 3,
+        "HSIx16 Strobe Off": 3,
+        "RGBAx8 Strobe Off": 8,
+        "RGBx8 Strobe Off": 6,
+        "HSIx8 Strobe Off": 6,
+        "RGBAx4 Strobe Off": 16,
+        "RGBx4 Strobe Off": 12,
+        "HSIx4 Strobe Off": 12,
+        "RGBAx2 Strobe Off": 32,
+        "RGBx2 Strobe Off": 24,
+        "HSIx2 Strobe Off": 24,
+        "RGBAx1 Strobe Off": 64,
+        "RGBx1 Strobe Off": 48,
+        "HSIx1 Strobe Off": 48,
+        "RGBA Od Ev Strobe Off": 8,
+        "RGB Od Ev Strobe Off": 6,
+        "HSI Od Ev Strobe Off": 6,
+        "RGBA Skp3 Strobe Off": 16,
+        "RGB Skp3 Strobe Off": 12,
+        "HSI Skp3 Strobe Off": 12,
+        "RGBA Skp7 Strobe Off": 32,
+        "RGB Skp7 Strobe Off": 24,
+        "HSI Skp7 Strobe Off": 24,
+        "Look Sel": 1,
+        "RGBAx4 Strobe On": 18,
+        "RGBAx8 Strobe On": 10,
+        "RGBAx16 Strobe On": 6,
+        "RGBA Od Ev Strobe On": 10,
+        "RGBx4 Strobe On": 14,
+        "RGBx8 Strobe On": 8,
+        "RGBx16 Strobe On": 5,
+        "RGB Od Ev Strobe On": 8,
+        "HSIx4 Strobe On": 14,
+        "HSIx8 Strobe On": 8,
+        "HSIx16 Strobe On": 5,
+        "HSI Od Ev Strobe On": 8,
+        "RGBAx2Strobe On": 34,
+        "RGBAx1 Strobe On": 66,
+        "RGB x2 Strobe On": 26,
+        "RGB x1 Strobe On": 50,
+        "HSI x2Strobe On": 26,
+        "HSI x1 Strobe On": 50,
+        "RGBA Skp3 Strobe On": 18,
+        "RGB Skp3 Strobe On": 14,
+        "HSI Skp3 Strobe On": 14,
+        "RGBA Skp7 Strobe On": 34,
+        "RGB Skp7 Strobe On": 26,
+        "HSI Skp7 Strobe On": 26,
+        "RGBAx16 Strobe On Top": 10,
+        "RGBx16 Strobe On Top": 8,
+        "HSIx16 Strobe On Top": 8,
+        "RGBAx8 Strobe On Top": 14,
+        "RGBx8 Strobe On Top": 11,
+        "HSIx8 Strobe On Top": 11,
+        "RGBAx4 Strobe On Top": 22,
+        "RGBx4 Strobe On Top": 17,
+        "HSIx4 Strobe On Top": 17,
+        "RGBAx2 Strobe On Top": 38,
+        "RGBx2 Strobe On Top": 29,
+        "HSIx2 Strobe On Top": 29,
+        "RGBAx1 Strobe On Top": 70,
+        "RGBx1 Strobe On Top": 53,
+        "HSIx1 Strobe On Top": 53,
+        "RGBA Od Ev Strobe On Top": 14,
+        "RGB Od Ev Strobe On Top": 11,
+        "HSI Od Ev Strobe On Top": 11,
+        "RGBA Skp3 Strobe On Top": 22,
+        "RGB Skp3 Strobe On Top": 17,
+        "HSI Skp3 Strobe On Top": 17,
+        "RGBA Skp7 Strobe On Top": 38,
+        "RGB Skp7 Strobe On Top": 29,
+        "HSI Skp7 Strobe On Top": 29,
+        "RGBAx16 Strobe Random": 11,
+        "RGBx16 Strobe Random": 9,
+        "HSIx16 Strobe Random": 9,
+        "RGBAx8 Strobe Random": 15,
+        "RGBx8 Strobe Random": 12,
+        "HSIx8 Strobe Random": 12,
+        "RGBAx4 Strobe Random": 23,
+        "RGBx4 Strobe Random": 18,
+        "HSIx4 Strobe Random": 18,
+        "RGBAx2 Strobe Random": 39,
+        "RGBx2 Strobe Random": 30,
+        "HSIx2 Strobe Random": 30,
+        "RGBAx1 Strobe Random": 71,
+        "RGBx1 Strobe Random": 54,
+        "HSIx1 Strobe Random": 54,
+        "RGBA Od Ev Strobe Random": 15,
+        "RGB Od Ev Strobe Random": 12,
+        "HSI Od Ev Strobe Random": 12,
+        "RGBA Skp3 Strobe Random": 23,
+        "RGB Skp3 Strobe Random": 18,
+        "HSI Skp3 Strobe Random": 18,
+        "RGBA Skp7 Strobe Random": 39,
+        "RGB Skp7 Strobe Random": 30,
+        "HSI Skp7 Strobe Random": 30
       },
       "gdtf": {
         "status": "matched",
@@ -661,84 +1852,489 @@
         "suggestedFileName": "Chroma_Q__Color_Force_II_48.gdtf",
         "file": "fixtures/chroma-q/Chroma-Q@Color_Force_II_48@Release_1.gdtf",
         "modes": {
-          "Look Select": {
-            "channels": 1,
-            "gdtfMode": "Look Sel",
-            "status": "matched"
-          },
-          "RGB All": {
-            "channels": 3,
-            "gdtfMode": "RGBx16 Strobe Off",
-            "status": "matched"
-          },
-          "HSI All": {
-            "channels": 3,
-            "gdtfMode": "HSIx16 Strobe Off",
-            "status": "matched"
-          },
-          "RGBA All": {
+          "RGBAx16 Strobe Off": {
             "channels": 4,
             "gdtfMode": "RGBAx16 Strobe Off",
             "status": "matched"
           },
-          "RGB Odd/Even": {
-            "channels": 6,
-            "gdtfMode": "RGB Od Ev Strobe Off",
+          "RGBx16 Strobe Off": {
+            "channels": 3,
+            "gdtfMode": "RGBx16 Strobe Off",
             "status": "matched"
           },
-          "HSI Odd/Even": {
-            "channels": 6,
-            "gdtfMode": "HSI Od Ev Strobe Off",
+          "HSIx16 Strobe Off": {
+            "channels": 3,
+            "gdtfMode": "HSIx16 Strobe Off",
             "status": "matched"
           },
-          "RGBA Odd/Even": {
+          "RGBAx8 Strobe Off": {
             "channels": 8,
-            "gdtfMode": "RGBA Od Ev Strobe Off",
+            "gdtfMode": "RGBAx8 Strobe Off",
             "status": "matched"
           },
-          "RGB x4": {
-            "channels": 12,
-            "gdtfMode": "RGBx4 Strobe Off",
+          "RGBx8 Strobe Off": {
+            "channels": 6,
+            "gdtfMode": "RGBx8 Strobe Off",
             "status": "matched"
           },
-          "HSI x4": {
-            "channels": 12,
-            "gdtfMode": "HSIx4 Strobe Off",
+          "HSIx8 Strobe Off": {
+            "channels": 6,
+            "gdtfMode": "HSIx8 Strobe Off",
             "status": "matched"
           },
-          "RGBA x4": {
+          "RGBAx4 Strobe Off": {
             "channels": 16,
             "gdtfMode": "RGBAx4 Strobe Off",
             "status": "matched"
           },
-          "RGB x2": {
-            "channels": 24,
-            "gdtfMode": "RGBx2 Strobe Off",
+          "RGBx4 Strobe Off": {
+            "channels": 12,
+            "gdtfMode": "RGBx4 Strobe Off",
             "status": "matched"
           },
-          "HSI x2": {
-            "channels": 24,
-            "gdtfMode": "HSIx2 Strobe Off",
+          "HSIx4 Strobe Off": {
+            "channels": 12,
+            "gdtfMode": "HSIx4 Strobe Off",
             "status": "matched"
           },
-          "RGBA x2": {
+          "RGBAx2 Strobe Off": {
             "channels": 32,
             "gdtfMode": "RGBAx2 Strobe Off",
             "status": "matched"
           },
-          "RGB x1": {
+          "RGBx2 Strobe Off": {
+            "channels": 24,
+            "gdtfMode": "RGBx2 Strobe Off",
+            "status": "matched"
+          },
+          "HSIx2 Strobe Off": {
+            "channels": 24,
+            "gdtfMode": "HSIx2 Strobe Off",
+            "status": "matched"
+          },
+          "RGBAx1 Strobe Off": {
+            "channels": 64,
+            "gdtfMode": "RGBAx1 Strobe Off",
+            "status": "matched"
+          },
+          "RGBx1 Strobe Off": {
             "channels": 48,
             "gdtfMode": "RGBx1 Strobe Off",
             "status": "matched"
           },
-          "HSI x1": {
+          "HSIx1 Strobe Off": {
             "channels": 48,
             "gdtfMode": "HSIx1 Strobe Off",
             "status": "matched"
           },
-          "RGBA x1": {
-            "channels": 64,
-            "gdtfMode": "RGBAx1 Strobe Off",
+          "RGBA Od Ev Strobe Off": {
+            "channels": 8,
+            "gdtfMode": "RGBA Od Ev Strobe Off",
+            "status": "matched"
+          },
+          "RGB Od Ev Strobe Off": {
+            "channels": 6,
+            "gdtfMode": "RGB Od Ev Strobe Off",
+            "status": "matched"
+          },
+          "HSI Od Ev Strobe Off": {
+            "channels": 6,
+            "gdtfMode": "HSI Od Ev Strobe Off",
+            "status": "matched"
+          },
+          "RGBA Skp3 Strobe Off": {
+            "channels": 16,
+            "gdtfMode": "RGBA Skp3 Strobe Off",
+            "status": "matched"
+          },
+          "RGB Skp3 Strobe Off": {
+            "channels": 12,
+            "gdtfMode": "RGB Skp3 Strobe Off",
+            "status": "matched"
+          },
+          "HSI Skp3 Strobe Off": {
+            "channels": 12,
+            "gdtfMode": "HSI Skp3 Strobe Off",
+            "status": "matched"
+          },
+          "RGBA Skp7 Strobe Off": {
+            "channels": 32,
+            "gdtfMode": "RGBA Skp7 Strobe Off",
+            "status": "matched"
+          },
+          "RGB Skp7 Strobe Off": {
+            "channels": 24,
+            "gdtfMode": "RGB Skp7 Strobe Off",
+            "status": "matched"
+          },
+          "HSI Skp7 Strobe Off": {
+            "channels": 24,
+            "gdtfMode": "HSI Skp7 Strobe Off",
+            "status": "matched"
+          },
+          "Look Sel": {
+            "channels": 1,
+            "gdtfMode": "Look Sel",
+            "status": "matched"
+          },
+          "RGBAx4 Strobe On": {
+            "channels": 18,
+            "gdtfMode": "RGBAx4 Strobe On",
+            "status": "matched"
+          },
+          "RGBAx8 Strobe On": {
+            "channels": 10,
+            "gdtfMode": "RGBAx8 Strobe On",
+            "status": "matched"
+          },
+          "RGBAx16 Strobe On": {
+            "channels": 6,
+            "gdtfMode": "RGBAx16 Strobe On",
+            "status": "matched"
+          },
+          "RGBA Od Ev Strobe On": {
+            "channels": 10,
+            "gdtfMode": "RGBA Od Ev Strobe On",
+            "status": "matched"
+          },
+          "RGBx4 Strobe On": {
+            "channels": 14,
+            "gdtfMode": "RGBx4 Strobe On",
+            "status": "matched"
+          },
+          "RGBx8 Strobe On": {
+            "channels": 8,
+            "gdtfMode": "RGBx8 Strobe On",
+            "status": "matched"
+          },
+          "RGBx16 Strobe On": {
+            "channels": 5,
+            "gdtfMode": "RGBx16 Strobe On",
+            "status": "matched"
+          },
+          "RGB Od Ev Strobe On": {
+            "channels": 8,
+            "gdtfMode": "RGB Od Ev Strobe On",
+            "status": "matched"
+          },
+          "HSIx4 Strobe On": {
+            "channels": 14,
+            "gdtfMode": "HSIx4 Strobe On",
+            "status": "matched"
+          },
+          "HSIx8 Strobe On": {
+            "channels": 8,
+            "gdtfMode": "HSIx8 Strobe On",
+            "status": "matched"
+          },
+          "HSIx16 Strobe On": {
+            "channels": 5,
+            "gdtfMode": "HSIx16 Strobe On",
+            "status": "matched"
+          },
+          "HSI Od Ev Strobe On": {
+            "channels": 8,
+            "gdtfMode": "HSI Od Ev Strobe On",
+            "status": "matched"
+          },
+          "RGBAx2Strobe On": {
+            "channels": 34,
+            "gdtfMode": "RGBAx2Strobe On",
+            "status": "matched"
+          },
+          "RGBAx1 Strobe On": {
+            "channels": 66,
+            "gdtfMode": "RGBAx1 Strobe On",
+            "status": "matched"
+          },
+          "RGB x2 Strobe On": {
+            "channels": 26,
+            "gdtfMode": "RGB x2 Strobe On",
+            "status": "matched"
+          },
+          "RGB x1 Strobe On": {
+            "channels": 50,
+            "gdtfMode": "RGB x1 Strobe On",
+            "status": "matched"
+          },
+          "HSI x2Strobe On": {
+            "channels": 26,
+            "gdtfMode": "HSI x2Strobe On",
+            "status": "matched"
+          },
+          "HSI x1 Strobe On": {
+            "channels": 50,
+            "gdtfMode": "HSI x1 Strobe On",
+            "status": "matched"
+          },
+          "RGBA Skp3 Strobe On": {
+            "channels": 18,
+            "gdtfMode": "RGBA Skp3 Strobe On",
+            "status": "matched"
+          },
+          "RGB Skp3 Strobe On": {
+            "channels": 14,
+            "gdtfMode": "RGB Skp3 Strobe On",
+            "status": "matched"
+          },
+          "HSI Skp3 Strobe On": {
+            "channels": 14,
+            "gdtfMode": "HSI Skp3 Strobe On",
+            "status": "matched"
+          },
+          "RGBA Skp7 Strobe On": {
+            "channels": 34,
+            "gdtfMode": "RGBA Skp7 Strobe On",
+            "status": "matched"
+          },
+          "RGB Skp7 Strobe On": {
+            "channels": 26,
+            "gdtfMode": "RGB Skp7 Strobe On",
+            "status": "matched"
+          },
+          "HSI Skp7 Strobe On": {
+            "channels": 26,
+            "gdtfMode": "HSI Skp7 Strobe On",
+            "status": "matched"
+          },
+          "RGBAx16 Strobe On Top": {
+            "channels": 10,
+            "gdtfMode": "RGBAx16 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx16 Strobe On Top": {
+            "channels": 8,
+            "gdtfMode": "RGBx16 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx16 Strobe On Top": {
+            "channels": 8,
+            "gdtfMode": "HSIx16 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx8 Strobe On Top": {
+            "channels": 14,
+            "gdtfMode": "RGBAx8 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx8 Strobe On Top": {
+            "channels": 11,
+            "gdtfMode": "RGBx8 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx8 Strobe On Top": {
+            "channels": 11,
+            "gdtfMode": "HSIx8 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx4 Strobe On Top": {
+            "channels": 22,
+            "gdtfMode": "RGBAx4 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx4 Strobe On Top": {
+            "channels": 17,
+            "gdtfMode": "RGBx4 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx4 Strobe On Top": {
+            "channels": 17,
+            "gdtfMode": "HSIx4 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx2 Strobe On Top": {
+            "channels": 38,
+            "gdtfMode": "RGBAx2 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx2 Strobe On Top": {
+            "channels": 29,
+            "gdtfMode": "RGBx2 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx2 Strobe On Top": {
+            "channels": 29,
+            "gdtfMode": "HSIx2 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx1 Strobe On Top": {
+            "channels": 70,
+            "gdtfMode": "RGBAx1 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx1 Strobe On Top": {
+            "channels": 53,
+            "gdtfMode": "RGBx1 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx1 Strobe On Top": {
+            "channels": 53,
+            "gdtfMode": "HSIx1 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBA Od Ev Strobe On Top": {
+            "channels": 14,
+            "gdtfMode": "RGBA Od Ev Strobe On Top",
+            "status": "matched"
+          },
+          "RGB Od Ev Strobe On Top": {
+            "channels": 11,
+            "gdtfMode": "RGB Od Ev Strobe On Top",
+            "status": "matched"
+          },
+          "HSI Od Ev Strobe On Top": {
+            "channels": 11,
+            "gdtfMode": "HSI Od Ev Strobe On Top",
+            "status": "matched"
+          },
+          "RGBA Skp3 Strobe On Top": {
+            "channels": 22,
+            "gdtfMode": "RGBA Skp3 Strobe On Top",
+            "status": "matched"
+          },
+          "RGB Skp3 Strobe On Top": {
+            "channels": 17,
+            "gdtfMode": "RGB Skp3 Strobe On Top",
+            "status": "matched"
+          },
+          "HSI Skp3 Strobe On Top": {
+            "channels": 17,
+            "gdtfMode": "HSI Skp3 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBA Skp7 Strobe On Top": {
+            "channels": 38,
+            "gdtfMode": "RGBA Skp7 Strobe On Top",
+            "status": "matched"
+          },
+          "RGB Skp7 Strobe On Top": {
+            "channels": 29,
+            "gdtfMode": "RGB Skp7 Strobe On Top",
+            "status": "matched"
+          },
+          "HSI Skp7 Strobe On Top": {
+            "channels": 29,
+            "gdtfMode": "HSI Skp7 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx16 Strobe Random": {
+            "channels": 11,
+            "gdtfMode": "RGBAx16 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx16 Strobe Random": {
+            "channels": 9,
+            "gdtfMode": "RGBx16 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx16 Strobe Random": {
+            "channels": 9,
+            "gdtfMode": "HSIx16 Strobe Random",
+            "status": "matched"
+          },
+          "RGBAx8 Strobe Random": {
+            "channels": 15,
+            "gdtfMode": "RGBAx8 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx8 Strobe Random": {
+            "channels": 12,
+            "gdtfMode": "RGBx8 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx8 Strobe Random": {
+            "channels": 12,
+            "gdtfMode": "HSIx8 Strobe Random",
+            "status": "matched"
+          },
+          "RGBAx4 Strobe Random": {
+            "channels": 23,
+            "gdtfMode": "RGBAx4 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx4 Strobe Random": {
+            "channels": 18,
+            "gdtfMode": "RGBx4 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx4 Strobe Random": {
+            "channels": 18,
+            "gdtfMode": "HSIx4 Strobe Random",
+            "status": "matched"
+          },
+          "RGBAx2 Strobe Random": {
+            "channels": 39,
+            "gdtfMode": "RGBAx2 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx2 Strobe Random": {
+            "channels": 30,
+            "gdtfMode": "RGBx2 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx2 Strobe Random": {
+            "channels": 30,
+            "gdtfMode": "HSIx2 Strobe Random",
+            "status": "matched"
+          },
+          "RGBAx1 Strobe Random": {
+            "channels": 71,
+            "gdtfMode": "RGBAx1 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx1 Strobe Random": {
+            "channels": 54,
+            "gdtfMode": "RGBx1 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx1 Strobe Random": {
+            "channels": 54,
+            "gdtfMode": "HSIx1 Strobe Random",
+            "status": "matched"
+          },
+          "RGBA Od Ev Strobe Random": {
+            "channels": 15,
+            "gdtfMode": "RGBA Od Ev Strobe Random",
+            "status": "matched"
+          },
+          "RGB Od Ev Strobe Random": {
+            "channels": 12,
+            "gdtfMode": "RGB Od Ev Strobe Random",
+            "status": "matched"
+          },
+          "HSI Od Ev Strobe Random": {
+            "channels": 12,
+            "gdtfMode": "HSI Od Ev Strobe Random",
+            "status": "matched"
+          },
+          "RGBA Skp3 Strobe Random": {
+            "channels": 23,
+            "gdtfMode": "RGBA Skp3 Strobe Random",
+            "status": "matched"
+          },
+          "RGB Skp3 Strobe Random": {
+            "channels": 18,
+            "gdtfMode": "RGB Skp3 Strobe Random",
+            "status": "matched"
+          },
+          "HSI Skp3 Strobe Random": {
+            "channels": 18,
+            "gdtfMode": "HSI Skp3 Strobe Random",
+            "status": "matched"
+          },
+          "RGBA Skp7 Strobe Random": {
+            "channels": 39,
+            "gdtfMode": "RGBA Skp7 Strobe Random",
+            "status": "matched"
+          },
+          "RGB Skp7 Strobe Random": {
+            "channels": 30,
+            "gdtfMode": "RGB Skp7 Strobe Random",
+            "status": "matched"
+          },
+          "HSI Skp7 Strobe Random": {
+            "channels": 30,
+            "gdtfMode": "HSI Skp7 Strobe Random",
             "status": "matched"
           }
         }
@@ -750,22 +2346,103 @@
       "watts": 533,
       "weight": 18,
       "modes": {
-        "Look Select": 1,
-        "RGB All": 3,
-        "HSI All": 3,
-        "RGBA All": 4,
-        "RGB Odd/Even": 6,
-        "HSI Odd/Even": 6,
-        "RGBA Odd/Even": 8,
-        "RGB x4": 12,
-        "HSI x4": 12,
-        "RGBA x4": 16,
-        "RGB x2": 24,
-        "HSI x2": 24,
-        "RGBA x2": 32,
-        "RGB x1": 48,
-        "HSI x1": 48,
-        "RGBA x1": 64
+        "RGBAx16 Strobe Off": 4,
+        "RGBx16 Strobe Off": 3,
+        "HSIx16 Strobe Off": 3,
+        "RGBAx8 Strobe Off": 8,
+        "RGBx8 Strobe Off": 6,
+        "HSIx8 Strobe Off": 6,
+        "RGBAx4 Strobe Off": 16,
+        "RGBx4 Strobe Off": 12,
+        "HSIx4 Strobe Off": 12,
+        "RGBAx2 Strobe Off": 32,
+        "RGBx2 Strobe Off": 24,
+        "HSIx2 Strobe Off": 24,
+        "RGBAx1 Strobe Off": 64,
+        "RGBx1 Strobe Off": 48,
+        "HSIx1 Strobe Off": 48,
+        "RGBA Od Ev Strobe Off": 8,
+        "RGB Od Ev Strobe Off": 6,
+        "HSI Od Ev Strobe Off": 6,
+        "RGBA Skp3 Strobe Off": 16,
+        "RGB Skp3 Strobe Off": 12,
+        "HSI Skp3 Strobe Off": 12,
+        "RGBA Skp7 Strobe Off": 32,
+        "RGB Skp7 Strobe Off": 24,
+        "HSI Skp7 Strobe Off": 24,
+        "RGBAx16 Strobe On": 6,
+        "RGBx16 Strobe On": 5,
+        "HSIx16 Strobe On": 5,
+        "RGBAx8 Strobe On": 10,
+        "RGBx8 Strobe On": 8,
+        "HSIx8 Strobe On": 8,
+        "RGBAx4 Strobe On": 18,
+        "RGBx4 Strobe On": 14,
+        "HSIx4 Strobe On": 14,
+        "RGBAx2Strobe On": 34,
+        "RGBx2Strobe On": 26,
+        "HSIx2 Strobe On": 26,
+        "RGBAx1 Strobe On": 66,
+        "RGBx1 Strobe On": 50,
+        "HSIx1 Strobe On": 50,
+        "RGBA Od Ev Strobe On": 10,
+        "RGB Od Ev Strobe On": 8,
+        "HSI Od Ev Strobe On": 8,
+        "RGBA Skp3 Strobe On": 18,
+        "RGB Skp3 Strobe On": 14,
+        "HSI Skp3 Strobe On": 14,
+        "RGBA Skp7 Strobe On": 34,
+        "RGB Skp7 Strobe On": 26,
+        "HSI Skp7 Strobe On": 26,
+        "RGBAx16 Strobe On Top": 10,
+        "RGBx16 Strobe On Top": 8,
+        "HSIx16 Strobe On Top": 8,
+        "RGBAx8 Strobe On Top": 14,
+        "RGBx8 Strobe On Top": 11,
+        "HSIx8 Strobe On Top": 11,
+        "RGBAx4 Strobe On Top": 22,
+        "RGBx4 Strobe On Top": 17,
+        "HSIx4 Strobe On Top": 17,
+        "RGBAx2 Strobe On Top": 38,
+        "RGBx2 Strobe On Top": 29,
+        "HSIx2 Strobe On Top": 29,
+        "RGBAx1 Strobe On Top": 70,
+        "RGBx1 Strobe On Top": 53,
+        "HSIx1 Strobe On Top": 53,
+        "RGBA Od Ev Strobe On Top": 14,
+        "RGB Od Ev Strobe On Top": 11,
+        "HSI Od Ev Strobe On Top": 11,
+        "RGBA Skp3 Strobe On Top": 22,
+        "RGB Skp3 Strobe On Top": 17,
+        "HSI Skp3 Strobe On Top": 17,
+        "RGBA Skp7 Strobe On Top": 38,
+        "RGB Skp7 Strobe On Top": 29,
+        "HSI Skp7 Strobe On Top": 29,
+        "RGBAx16 Strobe Random": 11,
+        "RGBx16 Strobe Random": 9,
+        "HSIx16 Strobe Random": 9,
+        "RGBAx8 Strobe Random": 15,
+        "RGBx8 Strobe Random": 12,
+        "HSIx8 Strobe Random": 12,
+        "RGBAx4 Strobe Random": 23,
+        "RGBx4 Strobe Random": 18,
+        "HSIx4 Strobe Random": 18,
+        "RGBAx2 Strobe Random": 39,
+        "RGBx2 Strobe Random": 30,
+        "HSIx2 Strobe Random": 30,
+        "RGBAx1 Strobe Random": 71,
+        "RGBx1 Strobe Random": 54,
+        "HSIx1 Strobe Random": 54,
+        "RGBA Od Ev Strobe Random": 15,
+        "RGB Od Ev Strobe Random": 12,
+        "HSI Od Ev Strobe Random": 12,
+        "RGBA Skp3 Strobe Random": 23,
+        "RGB Skp3 Strobe Random": 18,
+        "HSI Skp3 Strobe Random": 18,
+        "RGBA Skp7 Strobe Random": 39,
+        "RGB Skp7 Strobe Random": 30,
+        "HSI Skp7 Strobe Random": 30,
+        "Look Sel": 1
       },
       "gdtf": {
         "status": "matched",
@@ -773,84 +2450,489 @@
         "suggestedFileName": "Chroma_Q__Color_Force_II_48_Plus.gdtf",
         "file": "fixtures/chroma-q/Chroma-Q@Color_Force_II_48_Plus@Release_1.gdtf",
         "modes": {
-          "Look Select": {
-            "channels": 1,
-            "gdtfMode": "Look Sel",
-            "status": "matched"
-          },
-          "RGB All": {
-            "channels": 3,
-            "gdtfMode": "RGBx16 Strobe Off",
-            "status": "matched"
-          },
-          "HSI All": {
-            "channels": 3,
-            "gdtfMode": "HSIx16 Strobe Off",
-            "status": "matched"
-          },
-          "RGBA All": {
+          "RGBAx16 Strobe Off": {
             "channels": 4,
             "gdtfMode": "RGBAx16 Strobe Off",
             "status": "matched"
           },
-          "RGB Odd/Even": {
-            "channels": 6,
-            "gdtfMode": "RGB Od Ev Strobe Off",
+          "RGBx16 Strobe Off": {
+            "channels": 3,
+            "gdtfMode": "RGBx16 Strobe Off",
             "status": "matched"
           },
-          "HSI Odd/Even": {
-            "channels": 6,
-            "gdtfMode": "HSI Od Ev Strobe Off",
+          "HSIx16 Strobe Off": {
+            "channels": 3,
+            "gdtfMode": "HSIx16 Strobe Off",
             "status": "matched"
           },
-          "RGBA Odd/Even": {
+          "RGBAx8 Strobe Off": {
             "channels": 8,
-            "gdtfMode": "RGBA Od Ev Strobe Off",
+            "gdtfMode": "RGBAx8 Strobe Off",
             "status": "matched"
           },
-          "RGB x4": {
-            "channels": 12,
-            "gdtfMode": "RGBx4 Strobe Off",
+          "RGBx8 Strobe Off": {
+            "channels": 6,
+            "gdtfMode": "RGBx8 Strobe Off",
             "status": "matched"
           },
-          "HSI x4": {
-            "channels": 12,
-            "gdtfMode": "HSIx4 Strobe Off",
+          "HSIx8 Strobe Off": {
+            "channels": 6,
+            "gdtfMode": "HSIx8 Strobe Off",
             "status": "matched"
           },
-          "RGBA x4": {
+          "RGBAx4 Strobe Off": {
             "channels": 16,
             "gdtfMode": "RGBAx4 Strobe Off",
             "status": "matched"
           },
-          "RGB x2": {
-            "channels": 24,
-            "gdtfMode": "RGBx2 Strobe Off",
+          "RGBx4 Strobe Off": {
+            "channels": 12,
+            "gdtfMode": "RGBx4 Strobe Off",
             "status": "matched"
           },
-          "HSI x2": {
-            "channels": 24,
-            "gdtfMode": "HSIx2 Strobe Off",
+          "HSIx4 Strobe Off": {
+            "channels": 12,
+            "gdtfMode": "HSIx4 Strobe Off",
             "status": "matched"
           },
-          "RGBA x2": {
+          "RGBAx2 Strobe Off": {
             "channels": 32,
             "gdtfMode": "RGBAx2 Strobe Off",
             "status": "matched"
           },
-          "RGB x1": {
+          "RGBx2 Strobe Off": {
+            "channels": 24,
+            "gdtfMode": "RGBx2 Strobe Off",
+            "status": "matched"
+          },
+          "HSIx2 Strobe Off": {
+            "channels": 24,
+            "gdtfMode": "HSIx2 Strobe Off",
+            "status": "matched"
+          },
+          "RGBAx1 Strobe Off": {
+            "channels": 64,
+            "gdtfMode": "RGBAx1 Strobe Off",
+            "status": "matched"
+          },
+          "RGBx1 Strobe Off": {
             "channels": 48,
             "gdtfMode": "RGBx1 Strobe Off",
             "status": "matched"
           },
-          "HSI x1": {
+          "HSIx1 Strobe Off": {
             "channels": 48,
             "gdtfMode": "HSIx1 Strobe Off",
             "status": "matched"
           },
-          "RGBA x1": {
-            "channels": 64,
-            "gdtfMode": "RGBAx1 Strobe Off",
+          "RGBA Od Ev Strobe Off": {
+            "channels": 8,
+            "gdtfMode": "RGBA Od Ev Strobe Off",
+            "status": "matched"
+          },
+          "RGB Od Ev Strobe Off": {
+            "channels": 6,
+            "gdtfMode": "RGB Od Ev Strobe Off",
+            "status": "matched"
+          },
+          "HSI Od Ev Strobe Off": {
+            "channels": 6,
+            "gdtfMode": "HSI Od Ev Strobe Off",
+            "status": "matched"
+          },
+          "RGBA Skp3 Strobe Off": {
+            "channels": 16,
+            "gdtfMode": "RGBA Skp3 Strobe Off",
+            "status": "matched"
+          },
+          "RGB Skp3 Strobe Off": {
+            "channels": 12,
+            "gdtfMode": "RGB Skp3 Strobe Off",
+            "status": "matched"
+          },
+          "HSI Skp3 Strobe Off": {
+            "channels": 12,
+            "gdtfMode": "HSI Skp3 Strobe Off",
+            "status": "matched"
+          },
+          "RGBA Skp7 Strobe Off": {
+            "channels": 32,
+            "gdtfMode": "RGBA Skp7 Strobe Off",
+            "status": "matched"
+          },
+          "RGB Skp7 Strobe Off": {
+            "channels": 24,
+            "gdtfMode": "RGB Skp7 Strobe Off",
+            "status": "matched"
+          },
+          "HSI Skp7 Strobe Off": {
+            "channels": 24,
+            "gdtfMode": "HSI Skp7 Strobe Off",
+            "status": "matched"
+          },
+          "RGBAx16 Strobe On": {
+            "channels": 6,
+            "gdtfMode": "RGBAx16 Strobe On",
+            "status": "matched"
+          },
+          "RGBx16 Strobe On": {
+            "channels": 5,
+            "gdtfMode": "RGBx16 Strobe On",
+            "status": "matched"
+          },
+          "HSIx16 Strobe On": {
+            "channels": 5,
+            "gdtfMode": "HSIx16 Strobe On",
+            "status": "matched"
+          },
+          "RGBAx8 Strobe On": {
+            "channels": 10,
+            "gdtfMode": "RGBAx8 Strobe On",
+            "status": "matched"
+          },
+          "RGBx8 Strobe On": {
+            "channels": 8,
+            "gdtfMode": "RGBx8 Strobe On",
+            "status": "matched"
+          },
+          "HSIx8 Strobe On": {
+            "channels": 8,
+            "gdtfMode": "HSIx8 Strobe On",
+            "status": "matched"
+          },
+          "RGBAx4 Strobe On": {
+            "channels": 18,
+            "gdtfMode": "RGBAx4 Strobe On",
+            "status": "matched"
+          },
+          "RGBx4 Strobe On": {
+            "channels": 14,
+            "gdtfMode": "RGBx4 Strobe On",
+            "status": "matched"
+          },
+          "HSIx4 Strobe On": {
+            "channels": 14,
+            "gdtfMode": "HSIx4 Strobe On",
+            "status": "matched"
+          },
+          "RGBAx2Strobe On": {
+            "channels": 34,
+            "gdtfMode": "RGBAx2Strobe On",
+            "status": "matched"
+          },
+          "RGBx2Strobe On": {
+            "channels": 26,
+            "gdtfMode": "RGBx2Strobe On",
+            "status": "matched"
+          },
+          "HSIx2 Strobe On": {
+            "channels": 26,
+            "gdtfMode": "HSIx2 Strobe On",
+            "status": "matched"
+          },
+          "RGBAx1 Strobe On": {
+            "channels": 66,
+            "gdtfMode": "RGBAx1 Strobe On",
+            "status": "matched"
+          },
+          "RGBx1 Strobe On": {
+            "channels": 50,
+            "gdtfMode": "RGBx1 Strobe On",
+            "status": "matched"
+          },
+          "HSIx1 Strobe On": {
+            "channels": 50,
+            "gdtfMode": "HSIx1 Strobe On",
+            "status": "matched"
+          },
+          "RGBA Od Ev Strobe On": {
+            "channels": 10,
+            "gdtfMode": "RGBA Od Ev Strobe On",
+            "status": "matched"
+          },
+          "RGB Od Ev Strobe On": {
+            "channels": 8,
+            "gdtfMode": "RGB Od Ev Strobe On",
+            "status": "matched"
+          },
+          "HSI Od Ev Strobe On": {
+            "channels": 8,
+            "gdtfMode": "HSI Od Ev Strobe On",
+            "status": "matched"
+          },
+          "RGBA Skp3 Strobe On": {
+            "channels": 18,
+            "gdtfMode": "RGBA Skp3 Strobe On",
+            "status": "matched"
+          },
+          "RGB Skp3 Strobe On": {
+            "channels": 14,
+            "gdtfMode": "RGB Skp3 Strobe On",
+            "status": "matched"
+          },
+          "HSI Skp3 Strobe On": {
+            "channels": 14,
+            "gdtfMode": "HSI Skp3 Strobe On",
+            "status": "matched"
+          },
+          "RGBA Skp7 Strobe On": {
+            "channels": 34,
+            "gdtfMode": "RGBA Skp7 Strobe On",
+            "status": "matched"
+          },
+          "RGB Skp7 Strobe On": {
+            "channels": 26,
+            "gdtfMode": "RGB Skp7 Strobe On",
+            "status": "matched"
+          },
+          "HSI Skp7 Strobe On": {
+            "channels": 26,
+            "gdtfMode": "HSI Skp7 Strobe On",
+            "status": "matched"
+          },
+          "RGBAx16 Strobe On Top": {
+            "channels": 10,
+            "gdtfMode": "RGBAx16 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx16 Strobe On Top": {
+            "channels": 8,
+            "gdtfMode": "RGBx16 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx16 Strobe On Top": {
+            "channels": 8,
+            "gdtfMode": "HSIx16 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx8 Strobe On Top": {
+            "channels": 14,
+            "gdtfMode": "RGBAx8 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx8 Strobe On Top": {
+            "channels": 11,
+            "gdtfMode": "RGBx8 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx8 Strobe On Top": {
+            "channels": 11,
+            "gdtfMode": "HSIx8 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx4 Strobe On Top": {
+            "channels": 22,
+            "gdtfMode": "RGBAx4 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx4 Strobe On Top": {
+            "channels": 17,
+            "gdtfMode": "RGBx4 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx4 Strobe On Top": {
+            "channels": 17,
+            "gdtfMode": "HSIx4 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx2 Strobe On Top": {
+            "channels": 38,
+            "gdtfMode": "RGBAx2 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx2 Strobe On Top": {
+            "channels": 29,
+            "gdtfMode": "RGBx2 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx2 Strobe On Top": {
+            "channels": 29,
+            "gdtfMode": "HSIx2 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx1 Strobe On Top": {
+            "channels": 70,
+            "gdtfMode": "RGBAx1 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx1 Strobe On Top": {
+            "channels": 53,
+            "gdtfMode": "RGBx1 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx1 Strobe On Top": {
+            "channels": 53,
+            "gdtfMode": "HSIx1 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBA Od Ev Strobe On Top": {
+            "channels": 14,
+            "gdtfMode": "RGBA Od Ev Strobe On Top",
+            "status": "matched"
+          },
+          "RGB Od Ev Strobe On Top": {
+            "channels": 11,
+            "gdtfMode": "RGB Od Ev Strobe On Top",
+            "status": "matched"
+          },
+          "HSI Od Ev Strobe On Top": {
+            "channels": 11,
+            "gdtfMode": "HSI Od Ev Strobe On Top",
+            "status": "matched"
+          },
+          "RGBA Skp3 Strobe On Top": {
+            "channels": 22,
+            "gdtfMode": "RGBA Skp3 Strobe On Top",
+            "status": "matched"
+          },
+          "RGB Skp3 Strobe On Top": {
+            "channels": 17,
+            "gdtfMode": "RGB Skp3 Strobe On Top",
+            "status": "matched"
+          },
+          "HSI Skp3 Strobe On Top": {
+            "channels": 17,
+            "gdtfMode": "HSI Skp3 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBA Skp7 Strobe On Top": {
+            "channels": 38,
+            "gdtfMode": "RGBA Skp7 Strobe On Top",
+            "status": "matched"
+          },
+          "RGB Skp7 Strobe On Top": {
+            "channels": 29,
+            "gdtfMode": "RGB Skp7 Strobe On Top",
+            "status": "matched"
+          },
+          "HSI Skp7 Strobe On Top": {
+            "channels": 29,
+            "gdtfMode": "HSI Skp7 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx16 Strobe Random": {
+            "channels": 11,
+            "gdtfMode": "RGBAx16 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx16 Strobe Random": {
+            "channels": 9,
+            "gdtfMode": "RGBx16 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx16 Strobe Random": {
+            "channels": 9,
+            "gdtfMode": "HSIx16 Strobe Random",
+            "status": "matched"
+          },
+          "RGBAx8 Strobe Random": {
+            "channels": 15,
+            "gdtfMode": "RGBAx8 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx8 Strobe Random": {
+            "channels": 12,
+            "gdtfMode": "RGBx8 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx8 Strobe Random": {
+            "channels": 12,
+            "gdtfMode": "HSIx8 Strobe Random",
+            "status": "matched"
+          },
+          "RGBAx4 Strobe Random": {
+            "channels": 23,
+            "gdtfMode": "RGBAx4 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx4 Strobe Random": {
+            "channels": 18,
+            "gdtfMode": "RGBx4 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx4 Strobe Random": {
+            "channels": 18,
+            "gdtfMode": "HSIx4 Strobe Random",
+            "status": "matched"
+          },
+          "RGBAx2 Strobe Random": {
+            "channels": 39,
+            "gdtfMode": "RGBAx2 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx2 Strobe Random": {
+            "channels": 30,
+            "gdtfMode": "RGBx2 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx2 Strobe Random": {
+            "channels": 30,
+            "gdtfMode": "HSIx2 Strobe Random",
+            "status": "matched"
+          },
+          "RGBAx1 Strobe Random": {
+            "channels": 71,
+            "gdtfMode": "RGBAx1 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx1 Strobe Random": {
+            "channels": 54,
+            "gdtfMode": "RGBx1 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx1 Strobe Random": {
+            "channels": 54,
+            "gdtfMode": "HSIx1 Strobe Random",
+            "status": "matched"
+          },
+          "RGBA Od Ev Strobe Random": {
+            "channels": 15,
+            "gdtfMode": "RGBA Od Ev Strobe Random",
+            "status": "matched"
+          },
+          "RGB Od Ev Strobe Random": {
+            "channels": 12,
+            "gdtfMode": "RGB Od Ev Strobe Random",
+            "status": "matched"
+          },
+          "HSI Od Ev Strobe Random": {
+            "channels": 12,
+            "gdtfMode": "HSI Od Ev Strobe Random",
+            "status": "matched"
+          },
+          "RGBA Skp3 Strobe Random": {
+            "channels": 23,
+            "gdtfMode": "RGBA Skp3 Strobe Random",
+            "status": "matched"
+          },
+          "RGB Skp3 Strobe Random": {
+            "channels": 18,
+            "gdtfMode": "RGB Skp3 Strobe Random",
+            "status": "matched"
+          },
+          "HSI Skp3 Strobe Random": {
+            "channels": 18,
+            "gdtfMode": "HSI Skp3 Strobe Random",
+            "status": "matched"
+          },
+          "RGBA Skp7 Strobe Random": {
+            "channels": 39,
+            "gdtfMode": "RGBA Skp7 Strobe Random",
+            "status": "matched"
+          },
+          "RGB Skp7 Strobe Random": {
+            "channels": 30,
+            "gdtfMode": "RGB Skp7 Strobe Random",
+            "status": "matched"
+          },
+          "HSI Skp7 Strobe Random": {
+            "channels": 30,
+            "gdtfMode": "HSI Skp7 Strobe Random",
+            "status": "matched"
+          },
+          "Look Sel": {
+            "channels": 1,
+            "gdtfMode": "Look Sel",
             "status": "matched"
           }
         }
@@ -862,37 +2944,151 @@
       "watts": 800,
       "weight": 24,
       "modes": {
-        "Look Select": 1,
-        "RGB All": 3,
-        "HSI All": 3,
-        "RGBA All": 4,
-        "RGB Odd/Even": 6,
-        "HSI Odd/Even": 6,
-        "RGBA Odd/Even": 8,
-        "RGB Skp2": 9,
-        "HSI Skp2": 9,
-        "RGBA Skp2": 12,
-        "RGB x6": 12,
-        "HSI x6": 12,
-        "RGBA x6": 16,
-        "RGB Skp3": 12,
-        "HSI Skp3": 12,
-        "RGBA Skp3": 16,
-        "RGB x4": 18,
-        "HSI x4": 18,
-        "RGBA x4": 24,
-        "RGB Skp6": 18,
-        "HSI Skp6": 18,
-        "RGBA Skp6": 24,
-        "RGB x3": 24,
-        "HSI x3": 24,
-        "RGBA x3": 32,
-        "RGB x2": 36,
-        "HSI x2": 36,
-        "RGBA x2": 48,
-        "RGB x1": 72,
-        "HSI x1": 72,
-        "RGBA x1": 96
+        "RGBAx24 Strobe Off": 4,
+        "RGBx24 Strobe Off": 3,
+        "HSIx24 Strobe Off": 3,
+        "RGBAx12 Strobe Off": 8,
+        "RGBx12 Strobe Off": 6,
+        "HSIx12 Strobe Off": 6,
+        "RGBAx8 Strobe Off": 12,
+        "RGBx8 Strobe Off": 9,
+        "HSIx8 Strobe Off 1": 9,
+        "RGBAx6 Strobe Off": 16,
+        "RGBx6 Strobe Off": 12,
+        "HSIx6 Strobe Off": 12,
+        "RGBAx4 Strobe Off": 24,
+        "RGBx4 Strobe Off": 18,
+        "HSIx4 Strobe Off": 18,
+        "RGBAx3 Strobe Off": 32,
+        "RGBx3 Strobe Off": 24,
+        "HSIx3 Strobe Off": 24,
+        "RGBAx2 Strobe Off": 48,
+        "RGBx2 Strobe Off": 36,
+        "HSIx2 Strobe Off": 36,
+        "RGBAx1 Strobe Off": 96,
+        "RGBx1 Strobe Off": 72,
+        "HSIx1 Strobe Off": 72,
+        "RGBA Od Ev Strobe Off": 8,
+        "RGB Od Ev Strobe Off": 6,
+        "HSI Od Ev Strobe Off": 6,
+        "RGBA Skp2 Strobe Off": 12,
+        "RGB Skp2 Strobe Off": 9,
+        "HSI Skp2 Strobe Off": 9,
+        "RGBA Skp3 Strobe Off": 16,
+        "RGB skp3 Strobe Off": 12,
+        "HSI Skp3 Strobe Off": 12,
+        "RGBA Skp6 Strobe Off": 24,
+        "RGB Skp6 Strobe Off": 18,
+        "HSI Skp6 Strobe Off": 18,
+        "Look Sel": 1,
+        "RGBAx24 Strobe On": 6,
+        "RGBx24 Strobe On": 5,
+        "HSIx24Strobe On": 5,
+        "RGBAx12 Strobe On": 10,
+        "RGBx12 Strobe On": 8,
+        "HSIx12 Strobe On": 8,
+        "RGBA x8 Strobe On": 14,
+        "RGB x8 Strobe On": 11,
+        "HSIx8 Strobe Off": 11,
+        "RGBAx6 Strobe On": 18,
+        "RGBx6 Strobe On": 14,
+        "HSIx6 Strobe On": 14,
+        "RGBA x4 Strobe On": 26,
+        "RGB x4 Strobe On": 20,
+        "HSIx4 Strobe On": 20,
+        "RGBA x3 Strobe On": 34,
+        "RGB x3 Strobe On": 26,
+        "HSI x3 Strobe On": 26,
+        "RGBAx2 Strobe On": 50,
+        "RGB x2 Strobe On": 38,
+        "HSI x2 Strobe On": 38,
+        "RGBA x1 Strobe On": 98,
+        "RGBx1 Strobe On": 74,
+        "HSIx1 Strobe On": 74,
+        "RGBA OdEv Strobe On": 10,
+        "RGB OdEv Strobe On": 8,
+        "HSI OdEv Strobe On": 8,
+        "RGBA Skp2 Strobe On": 14,
+        "RGB Skp2 Strobe On": 11,
+        "HSI Skp2 Strobe On": 11,
+        "RGBA Skp3 Strobe On": 18,
+        "RGB Skp3 Strobe On": 14,
+        "HSI Skp3 Strobe On": 14,
+        "RGBA Skp6 Strobe On": 26,
+        "RGB Skp6 Strobe On": 20,
+        "HSI Skp6 Strobe On": 20,
+        "RGBAx24 Strobe On Top": 10,
+        "RGBx24 Strobe On Top": 8,
+        "HSIx24 Strobe On Top": 8,
+        "RGBAx12 Strobe On Top 1": 14,
+        "RGBAx12 Strobe On Top": 11,
+        "HSIx12 Strobe On Top": 11,
+        "RGBAx8 Strobe On Top": 18,
+        "RGBx8 Strobe On Top": 14,
+        "HSIx8 Strobe On Top": 14,
+        "RGBAx6 Strobe On Top": 22,
+        "RGBx6 Strobe On Top": 17,
+        "HSIx6 Strobe On Top": 17,
+        "RGBAx4 Strobe On Top": 30,
+        "RGBx4 Strobe On Top": 23,
+        "HSIx4 Strobe On Top": 23,
+        "RGBAx3 Strobe On Top": 38,
+        "RGBx3 Strobe On Top": 29,
+        "HSIx3 Strobe On Top 1": 29,
+        "RGBAx2 Strobe On Top": 54,
+        "RGBx2 Strobe On Top": 41,
+        "HSIx2 Strobe On Top": 41,
+        "RGBAx1 Strobe On Top": 102,
+        "RGBx1 Strobe On Top": 77,
+        "HSIx1 Strobe On Top": 77,
+        "RGBA Od Ev Strobe On Top": 14,
+        "RGB Od Ev Strobe On Top": 11,
+        "HSI Od Ev Strobe On Top": 11,
+        "RGBA Skp2 Strobe On Top": 18,
+        "RGB Skp2 Strobe On Top": 14,
+        "HSI Skp2 Strobe On Top": 14,
+        "RGBA Skp3 Strobe On Top": 22,
+        "RGB Skp3 Strobe On Top": 17,
+        "HSI Skp3 Strobe On Top": 17,
+        "RGBA Skp6 Strobe On Top": 30,
+        "RGB Skp6 Strobe On Top": 23,
+        "HSI Skp6 Strobe On Top": 23,
+        "RGBAx24 Strobe Random": 11,
+        "RGBx24 Strobe Random": 9,
+        "HSIx24 Strobe Random": 9,
+        "RGBAx12 Strobe Random": 15,
+        "RGBx12 Strobe Random": 12,
+        "HSIx12 Strobe Random": 12,
+        "RGBAx8 Strobe Random": 19,
+        "RGBx8 Strobe Random": 15,
+        "HSIx8 Strobe Random": 15,
+        "RGBAx6 Strobe Random": 23,
+        "RGBx6 Strobe Random": 18,
+        "HSIx6 Strobe Random": 18,
+        "RGBAx4 Strobe Random": 31,
+        "RGBx4 Strobe Random": 24,
+        "HSIx4 Strobe Rabdom": 24,
+        "RGBAx3 Strobe Random": 39,
+        "RGBx3 Strobe Random": 30,
+        "HSIx3 Strobe On Top": 30,
+        "RGBAx2 Strobe Random": 55,
+        "RGBx2 Strobe Random": 42,
+        "HSIx2 Strobe Random": 42,
+        "RGBAx1 Strobe Random": 103,
+        "RGBx1 Strobe Random": 78,
+        "HSIx1 Strobe Random": 78,
+        "RGBA Od Ev Strobe Random": 15,
+        "RGB Od Ev Strobe Random": 12,
+        "HSI Od Ev Strobe Random": 12,
+        "RGBA Skp2 Strobe Random": 19,
+        "RGB Skp2 Strobe Random": 15,
+        "HSI Skp2 Strobe Random": 15,
+        "RGBA Skp3 Strobe Random": 23,
+        "RGB Skp3 Strobe Random": 18,
+        "HSI Skp3 Strobe Random ": 18,
+        "RGBA Skp6 Strobe Random": 31,
+        "RGB Skp6 Strobe Random": 24,
+        "HSI Skp6 Strobe Random": 24
       },
       "gdtf": {
         "status": "matched",
@@ -900,159 +3096,729 @@
         "suggestedFileName": "Chroma_Q__Color_Force_II_72.gdtf",
         "file": "fixtures/chroma-q/Chroma-Q@Color_Force_II_72@Release_1.gdtf",
         "modes": {
-          "Look Select": {
-            "channels": 1,
-            "gdtfMode": "Look Sel",
-            "status": "matched"
-          },
-          "RGB All": {
-            "channels": 3,
-            "gdtfMode": "RGBx24 Strobe Off",
-            "status": "matched"
-          },
-          "HSI All": {
-            "channels": 3,
-            "gdtfMode": "HSIx24 Strobe Off",
-            "status": "matched"
-          },
-          "RGBA All": {
+          "RGBAx24 Strobe Off": {
             "channels": 4,
             "gdtfMode": "RGBAx24 Strobe Off",
             "status": "matched"
           },
-          "RGB Odd/Even": {
-            "channels": 6,
-            "gdtfMode": "RGB Od Ev Strobe Off",
+          "RGBx24 Strobe Off": {
+            "channels": 3,
+            "gdtfMode": "RGBx24 Strobe Off",
             "status": "matched"
           },
-          "HSI Odd/Even": {
-            "channels": 6,
-            "gdtfMode": "HSI Od Ev Strobe Off",
+          "HSIx24 Strobe Off": {
+            "channels": 3,
+            "gdtfMode": "HSIx24 Strobe Off",
             "status": "matched"
           },
-          "RGBA Odd/Even": {
+          "RGBAx12 Strobe Off": {
             "channels": 8,
-            "gdtfMode": "RGBA Od Ev Strobe Off",
+            "gdtfMode": "RGBAx12 Strobe Off",
             "status": "matched"
           },
-          "RGB Skp2": {
+          "RGBx12 Strobe Off": {
+            "channels": 6,
+            "gdtfMode": "RGBx12 Strobe Off",
+            "status": "matched"
+          },
+          "HSIx12 Strobe Off": {
+            "channels": 6,
+            "gdtfMode": "HSIx12 Strobe Off",
+            "status": "matched"
+          },
+          "RGBAx8 Strobe Off": {
+            "channels": 12,
+            "gdtfMode": "RGBAx8 Strobe Off",
+            "status": "matched"
+          },
+          "RGBx8 Strobe Off": {
             "channels": 9,
-            "gdtfMode": "RGB Skp2 Strobe Off",
+            "gdtfMode": "RGBx8 Strobe Off",
             "status": "matched"
           },
-          "HSI Skp2": {
+          "HSIx8 Strobe Off 1": {
             "channels": 9,
-            "gdtfMode": "HSI Skp2 Strobe Off",
+            "gdtfMode": "HSIx8 Strobe Off 1",
             "status": "matched"
           },
-          "RGBA Skp2": {
-            "channels": 12,
-            "gdtfMode": "RGBA Skp2 Strobe Off",
-            "status": "matched"
-          },
-          "RGB x6": {
-            "channels": 12,
-            "gdtfMode": "RGBx6 Strobe Off",
-            "status": "matched"
-          },
-          "HSI x6": {
-            "channels": 12,
-            "gdtfMode": "HSIx6 Strobe Off",
-            "status": "matched"
-          },
-          "RGBA x6": {
+          "RGBAx6 Strobe Off": {
             "channels": 16,
             "gdtfMode": "RGBAx6 Strobe Off",
             "status": "matched"
           },
-          "RGB Skp3": {
+          "RGBx6 Strobe Off": {
             "channels": 12,
-            "gdtfMode": "RGB skp3 Strobe Off",
+            "gdtfMode": "RGBx6 Strobe Off",
             "status": "matched"
           },
-          "HSI Skp3": {
+          "HSIx6 Strobe Off": {
             "channels": 12,
-            "gdtfMode": "HSI Skp3 Strobe Off",
+            "gdtfMode": "HSIx6 Strobe Off",
             "status": "matched"
           },
-          "RGBA Skp3": {
-            "channels": 16,
-            "gdtfMode": "RGBA Skp3 Strobe Off",
-            "status": "matched"
-          },
-          "RGB x4": {
-            "channels": 18,
-            "gdtfMode": "RGBx4 Strobe Off",
-            "status": "matched"
-          },
-          "HSI x4": {
-            "channels": 18,
-            "gdtfMode": "HSIx4 Strobe Off",
-            "status": "matched"
-          },
-          "RGBA x4": {
+          "RGBAx4 Strobe Off": {
             "channels": 24,
             "gdtfMode": "RGBAx4 Strobe Off",
             "status": "matched"
           },
-          "RGB Skp6": {
+          "RGBx4 Strobe Off": {
             "channels": 18,
-            "gdtfMode": "RGB Skp6 Strobe Off",
+            "gdtfMode": "RGBx4 Strobe Off",
             "status": "matched"
           },
-          "HSI Skp6": {
+          "HSIx4 Strobe Off": {
             "channels": 18,
-            "gdtfMode": "HSI Skp6 Strobe Off",
+            "gdtfMode": "HSIx4 Strobe Off",
             "status": "matched"
           },
-          "RGBA Skp6": {
-            "channels": 24,
-            "gdtfMode": "RGBA Skp6 Strobe Off",
-            "status": "matched"
-          },
-          "RGB x3": {
-            "channels": 24,
-            "gdtfMode": "RGBx3 Strobe Off",
-            "status": "matched"
-          },
-          "HSI x3": {
-            "channels": 24,
-            "gdtfMode": "HSIx3 Strobe Off",
-            "status": "matched"
-          },
-          "RGBA x3": {
+          "RGBAx3 Strobe Off": {
             "channels": 32,
             "gdtfMode": "RGBAx3 Strobe Off",
             "status": "matched"
           },
-          "RGB x2": {
-            "channels": 36,
-            "gdtfMode": "RGBx2 Strobe Off",
+          "RGBx3 Strobe Off": {
+            "channels": 24,
+            "gdtfMode": "RGBx3 Strobe Off",
             "status": "matched"
           },
-          "HSI x2": {
-            "channels": 36,
-            "gdtfMode": "HSIx2 Strobe Off",
+          "HSIx3 Strobe Off": {
+            "channels": 24,
+            "gdtfMode": "HSIx3 Strobe Off",
             "status": "matched"
           },
-          "RGBA x2": {
+          "RGBAx2 Strobe Off": {
             "channels": 48,
             "gdtfMode": "RGBAx2 Strobe Off",
             "status": "matched"
           },
-          "RGB x1": {
+          "RGBx2 Strobe Off": {
+            "channels": 36,
+            "gdtfMode": "RGBx2 Strobe Off",
+            "status": "matched"
+          },
+          "HSIx2 Strobe Off": {
+            "channels": 36,
+            "gdtfMode": "HSIx2 Strobe Off",
+            "status": "matched"
+          },
+          "RGBAx1 Strobe Off": {
+            "channels": 96,
+            "gdtfMode": "RGBAx1 Strobe Off",
+            "status": "matched"
+          },
+          "RGBx1 Strobe Off": {
             "channels": 72,
             "gdtfMode": "RGBx1 Strobe Off",
             "status": "matched"
           },
-          "HSI x1": {
+          "HSIx1 Strobe Off": {
             "channels": 72,
             "gdtfMode": "HSIx1 Strobe Off",
             "status": "matched"
           },
-          "RGBA x1": {
-            "channels": 96,
-            "gdtfMode": "RGBAx1 Strobe Off",
+          "RGBA Od Ev Strobe Off": {
+            "channels": 8,
+            "gdtfMode": "RGBA Od Ev Strobe Off",
+            "status": "matched"
+          },
+          "RGB Od Ev Strobe Off": {
+            "channels": 6,
+            "gdtfMode": "RGB Od Ev Strobe Off",
+            "status": "matched"
+          },
+          "HSI Od Ev Strobe Off": {
+            "channels": 6,
+            "gdtfMode": "HSI Od Ev Strobe Off",
+            "status": "matched"
+          },
+          "RGBA Skp2 Strobe Off": {
+            "channels": 12,
+            "gdtfMode": "RGBA Skp2 Strobe Off",
+            "status": "matched"
+          },
+          "RGB Skp2 Strobe Off": {
+            "channels": 9,
+            "gdtfMode": "RGB Skp2 Strobe Off",
+            "status": "matched"
+          },
+          "HSI Skp2 Strobe Off": {
+            "channels": 9,
+            "gdtfMode": "HSI Skp2 Strobe Off",
+            "status": "matched"
+          },
+          "RGBA Skp3 Strobe Off": {
+            "channels": 16,
+            "gdtfMode": "RGBA Skp3 Strobe Off",
+            "status": "matched"
+          },
+          "RGB skp3 Strobe Off": {
+            "channels": 12,
+            "gdtfMode": "RGB skp3 Strobe Off",
+            "status": "matched"
+          },
+          "HSI Skp3 Strobe Off": {
+            "channels": 12,
+            "gdtfMode": "HSI Skp3 Strobe Off",
+            "status": "matched"
+          },
+          "RGBA Skp6 Strobe Off": {
+            "channels": 24,
+            "gdtfMode": "RGBA Skp6 Strobe Off",
+            "status": "matched"
+          },
+          "RGB Skp6 Strobe Off": {
+            "channels": 18,
+            "gdtfMode": "RGB Skp6 Strobe Off",
+            "status": "matched"
+          },
+          "HSI Skp6 Strobe Off": {
+            "channels": 18,
+            "gdtfMode": "HSI Skp6 Strobe Off",
+            "status": "matched"
+          },
+          "Look Sel": {
+            "channels": 1,
+            "gdtfMode": "Look Sel",
+            "status": "matched"
+          },
+          "RGBAx24 Strobe On": {
+            "channels": 6,
+            "gdtfMode": "RGBAx24 Strobe On",
+            "status": "matched"
+          },
+          "RGBx24 Strobe On": {
+            "channels": 5,
+            "gdtfMode": "RGBx24 Strobe On",
+            "status": "matched"
+          },
+          "HSIx24Strobe On": {
+            "channels": 5,
+            "gdtfMode": "HSIx24Strobe On",
+            "status": "matched"
+          },
+          "RGBAx12 Strobe On": {
+            "channels": 10,
+            "gdtfMode": "RGBAx12 Strobe On",
+            "status": "matched"
+          },
+          "RGBx12 Strobe On": {
+            "channels": 8,
+            "gdtfMode": "RGBx12 Strobe On",
+            "status": "matched"
+          },
+          "HSIx12 Strobe On": {
+            "channels": 8,
+            "gdtfMode": "HSIx12 Strobe On",
+            "status": "matched"
+          },
+          "RGBA x8 Strobe On": {
+            "channels": 14,
+            "gdtfMode": "RGBA x8 Strobe On",
+            "status": "matched"
+          },
+          "RGB x8 Strobe On": {
+            "channels": 11,
+            "gdtfMode": "RGB x8 Strobe On",
+            "status": "matched"
+          },
+          "HSIx8 Strobe Off": {
+            "channels": 11,
+            "gdtfMode": "HSIx8 Strobe Off",
+            "status": "matched"
+          },
+          "RGBAx6 Strobe On": {
+            "channels": 18,
+            "gdtfMode": "RGBAx6 Strobe On",
+            "status": "matched"
+          },
+          "RGBx6 Strobe On": {
+            "channels": 14,
+            "gdtfMode": "RGBx6 Strobe On",
+            "status": "matched"
+          },
+          "HSIx6 Strobe On": {
+            "channels": 14,
+            "gdtfMode": "HSIx6 Strobe On",
+            "status": "matched"
+          },
+          "RGBA x4 Strobe On": {
+            "channels": 26,
+            "gdtfMode": "RGBA x4 Strobe On",
+            "status": "matched"
+          },
+          "RGB x4 Strobe On": {
+            "channels": 20,
+            "gdtfMode": "RGB x4 Strobe On",
+            "status": "matched"
+          },
+          "HSIx4 Strobe On": {
+            "channels": 20,
+            "gdtfMode": "HSIx4 Strobe On",
+            "status": "matched"
+          },
+          "RGBA x3 Strobe On": {
+            "channels": 34,
+            "gdtfMode": "RGBA x3 Strobe On",
+            "status": "matched"
+          },
+          "RGB x3 Strobe On": {
+            "channels": 26,
+            "gdtfMode": "RGB x3 Strobe On",
+            "status": "matched"
+          },
+          "HSI x3 Strobe On": {
+            "channels": 26,
+            "gdtfMode": "HSI x3 Strobe On",
+            "status": "matched"
+          },
+          "RGBAx2 Strobe On": {
+            "channels": 50,
+            "gdtfMode": "RGBAx2 Strobe On",
+            "status": "matched"
+          },
+          "RGB x2 Strobe On": {
+            "channels": 38,
+            "gdtfMode": "RGB x2 Strobe On",
+            "status": "matched"
+          },
+          "HSI x2 Strobe On": {
+            "channels": 38,
+            "gdtfMode": "HSI x2 Strobe On",
+            "status": "matched"
+          },
+          "RGBA x1 Strobe On": {
+            "channels": 98,
+            "gdtfMode": "RGBA x1 Strobe On",
+            "status": "matched"
+          },
+          "RGBx1 Strobe On": {
+            "channels": 74,
+            "gdtfMode": "RGBx1 Strobe On",
+            "status": "matched"
+          },
+          "HSIx1 Strobe On": {
+            "channels": 74,
+            "gdtfMode": "HSIx1 Strobe On",
+            "status": "matched"
+          },
+          "RGBA OdEv Strobe On": {
+            "channels": 10,
+            "gdtfMode": "RGBA OdEv Strobe On",
+            "status": "matched"
+          },
+          "RGB OdEv Strobe On": {
+            "channels": 8,
+            "gdtfMode": "RGB OdEv Strobe On",
+            "status": "matched"
+          },
+          "HSI OdEv Strobe On": {
+            "channels": 8,
+            "gdtfMode": "HSI OdEv Strobe On",
+            "status": "matched"
+          },
+          "RGBA Skp2 Strobe On": {
+            "channels": 14,
+            "gdtfMode": "RGBA Skp2 Strobe On",
+            "status": "matched"
+          },
+          "RGB Skp2 Strobe On": {
+            "channels": 11,
+            "gdtfMode": "RGB Skp2 Strobe On",
+            "status": "matched"
+          },
+          "HSI Skp2 Strobe On": {
+            "channels": 11,
+            "gdtfMode": "HSI Skp2 Strobe On",
+            "status": "matched"
+          },
+          "RGBA Skp3 Strobe On": {
+            "channels": 18,
+            "gdtfMode": "RGBA Skp3 Strobe On",
+            "status": "matched"
+          },
+          "RGB Skp3 Strobe On": {
+            "channels": 14,
+            "gdtfMode": "RGB Skp3 Strobe On",
+            "status": "matched"
+          },
+          "HSI Skp3 Strobe On": {
+            "channels": 14,
+            "gdtfMode": "HSI Skp3 Strobe On",
+            "status": "matched"
+          },
+          "RGBA Skp6 Strobe On": {
+            "channels": 26,
+            "gdtfMode": "RGBA Skp6 Strobe On",
+            "status": "matched"
+          },
+          "RGB Skp6 Strobe On": {
+            "channels": 20,
+            "gdtfMode": "RGB Skp6 Strobe On",
+            "status": "matched"
+          },
+          "HSI Skp6 Strobe On": {
+            "channels": 20,
+            "gdtfMode": "HSI Skp6 Strobe On",
+            "status": "matched"
+          },
+          "RGBAx24 Strobe On Top": {
+            "channels": 10,
+            "gdtfMode": "RGBAx24 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx24 Strobe On Top": {
+            "channels": 8,
+            "gdtfMode": "RGBx24 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx24 Strobe On Top": {
+            "channels": 8,
+            "gdtfMode": "HSIx24 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx12 Strobe On Top 1": {
+            "channels": 14,
+            "gdtfMode": "RGBAx12 Strobe On Top 1",
+            "status": "matched"
+          },
+          "RGBAx12 Strobe On Top": {
+            "channels": 11,
+            "gdtfMode": "RGBAx12 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx12 Strobe On Top": {
+            "channels": 11,
+            "gdtfMode": "HSIx12 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx8 Strobe On Top": {
+            "channels": 18,
+            "gdtfMode": "RGBAx8 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx8 Strobe On Top": {
+            "channels": 14,
+            "gdtfMode": "RGBx8 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx8 Strobe On Top": {
+            "channels": 14,
+            "gdtfMode": "HSIx8 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx6 Strobe On Top": {
+            "channels": 22,
+            "gdtfMode": "RGBAx6 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx6 Strobe On Top": {
+            "channels": 17,
+            "gdtfMode": "RGBx6 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx6 Strobe On Top": {
+            "channels": 17,
+            "gdtfMode": "HSIx6 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx4 Strobe On Top": {
+            "channels": 30,
+            "gdtfMode": "RGBAx4 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx4 Strobe On Top": {
+            "channels": 23,
+            "gdtfMode": "RGBx4 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx4 Strobe On Top": {
+            "channels": 23,
+            "gdtfMode": "HSIx4 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx3 Strobe On Top": {
+            "channels": 38,
+            "gdtfMode": "RGBAx3 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx3 Strobe On Top": {
+            "channels": 29,
+            "gdtfMode": "RGBx3 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx3 Strobe On Top 1": {
+            "channels": 29,
+            "gdtfMode": "HSIx3 Strobe On Top 1",
+            "status": "matched"
+          },
+          "RGBAx2 Strobe On Top": {
+            "channels": 54,
+            "gdtfMode": "RGBAx2 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx2 Strobe On Top": {
+            "channels": 41,
+            "gdtfMode": "RGBx2 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx2 Strobe On Top": {
+            "channels": 41,
+            "gdtfMode": "HSIx2 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx1 Strobe On Top": {
+            "channels": 102,
+            "gdtfMode": "RGBAx1 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx1 Strobe On Top": {
+            "channels": 77,
+            "gdtfMode": "RGBx1 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx1 Strobe On Top": {
+            "channels": 77,
+            "gdtfMode": "HSIx1 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBA Od Ev Strobe On Top": {
+            "channels": 14,
+            "gdtfMode": "RGBA Od Ev Strobe On Top",
+            "status": "matched"
+          },
+          "RGB Od Ev Strobe On Top": {
+            "channels": 11,
+            "gdtfMode": "RGB Od Ev Strobe On Top",
+            "status": "matched"
+          },
+          "HSI Od Ev Strobe On Top": {
+            "channels": 11,
+            "gdtfMode": "HSI Od Ev Strobe On Top",
+            "status": "matched"
+          },
+          "RGBA Skp2 Strobe On Top": {
+            "channels": 18,
+            "gdtfMode": "RGBA Skp2 Strobe On Top",
+            "status": "matched"
+          },
+          "RGB Skp2 Strobe On Top": {
+            "channels": 14,
+            "gdtfMode": "RGB Skp2 Strobe On Top",
+            "status": "matched"
+          },
+          "HSI Skp2 Strobe On Top": {
+            "channels": 14,
+            "gdtfMode": "HSI Skp2 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBA Skp3 Strobe On Top": {
+            "channels": 22,
+            "gdtfMode": "RGBA Skp3 Strobe On Top",
+            "status": "matched"
+          },
+          "RGB Skp3 Strobe On Top": {
+            "channels": 17,
+            "gdtfMode": "RGB Skp3 Strobe On Top",
+            "status": "matched"
+          },
+          "HSI Skp3 Strobe On Top": {
+            "channels": 17,
+            "gdtfMode": "HSI Skp3 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBA Skp6 Strobe On Top": {
+            "channels": 30,
+            "gdtfMode": "RGBA Skp6 Strobe On Top",
+            "status": "matched"
+          },
+          "RGB Skp6 Strobe On Top": {
+            "channels": 23,
+            "gdtfMode": "RGB Skp6 Strobe On Top",
+            "status": "matched"
+          },
+          "HSI Skp6 Strobe On Top": {
+            "channels": 23,
+            "gdtfMode": "HSI Skp6 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx24 Strobe Random": {
+            "channels": 11,
+            "gdtfMode": "RGBAx24 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx24 Strobe Random": {
+            "channels": 9,
+            "gdtfMode": "RGBx24 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx24 Strobe Random": {
+            "channels": 9,
+            "gdtfMode": "HSIx24 Strobe Random",
+            "status": "matched"
+          },
+          "RGBAx12 Strobe Random": {
+            "channels": 15,
+            "gdtfMode": "RGBAx12 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx12 Strobe Random": {
+            "channels": 12,
+            "gdtfMode": "RGBx12 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx12 Strobe Random": {
+            "channels": 12,
+            "gdtfMode": "HSIx12 Strobe Random",
+            "status": "matched"
+          },
+          "RGBAx8 Strobe Random": {
+            "channels": 19,
+            "gdtfMode": "RGBAx8 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx8 Strobe Random": {
+            "channels": 15,
+            "gdtfMode": "RGBx8 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx8 Strobe Random": {
+            "channels": 15,
+            "gdtfMode": "HSIx8 Strobe Random",
+            "status": "matched"
+          },
+          "RGBAx6 Strobe Random": {
+            "channels": 23,
+            "gdtfMode": "RGBAx6 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx6 Strobe Random": {
+            "channels": 18,
+            "gdtfMode": "RGBx6 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx6 Strobe Random": {
+            "channels": 18,
+            "gdtfMode": "HSIx6 Strobe Random",
+            "status": "matched"
+          },
+          "RGBAx4 Strobe Random": {
+            "channels": 31,
+            "gdtfMode": "RGBAx4 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx4 Strobe Random": {
+            "channels": 24,
+            "gdtfMode": "RGBx4 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx4 Strobe Rabdom": {
+            "channels": 24,
+            "gdtfMode": "HSIx4 Strobe Rabdom",
+            "status": "matched"
+          },
+          "RGBAx3 Strobe Random": {
+            "channels": 39,
+            "gdtfMode": "RGBAx3 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx3 Strobe Random": {
+            "channels": 30,
+            "gdtfMode": "RGBx3 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx3 Strobe On Top": {
+            "channels": 30,
+            "gdtfMode": "HSIx3 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx2 Strobe Random": {
+            "channels": 55,
+            "gdtfMode": "RGBAx2 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx2 Strobe Random": {
+            "channels": 42,
+            "gdtfMode": "RGBx2 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx2 Strobe Random": {
+            "channels": 42,
+            "gdtfMode": "HSIx2 Strobe Random",
+            "status": "matched"
+          },
+          "RGBAx1 Strobe Random": {
+            "channels": 103,
+            "gdtfMode": "RGBAx1 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx1 Strobe Random": {
+            "channels": 78,
+            "gdtfMode": "RGBx1 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx1 Strobe Random": {
+            "channels": 78,
+            "gdtfMode": "HSIx1 Strobe Random",
+            "status": "matched"
+          },
+          "RGBA Od Ev Strobe Random": {
+            "channels": 15,
+            "gdtfMode": "RGBA Od Ev Strobe Random",
+            "status": "matched"
+          },
+          "RGB Od Ev Strobe Random": {
+            "channels": 12,
+            "gdtfMode": "RGB Od Ev Strobe Random",
+            "status": "matched"
+          },
+          "HSI Od Ev Strobe Random": {
+            "channels": 12,
+            "gdtfMode": "HSI Od Ev Strobe Random",
+            "status": "matched"
+          },
+          "RGBA Skp2 Strobe Random": {
+            "channels": 19,
+            "gdtfMode": "RGBA Skp2 Strobe Random",
+            "status": "matched"
+          },
+          "RGB Skp2 Strobe Random": {
+            "channels": 15,
+            "gdtfMode": "RGB Skp2 Strobe Random",
+            "status": "matched"
+          },
+          "HSI Skp2 Strobe Random": {
+            "channels": 15,
+            "gdtfMode": "HSI Skp2 Strobe Random",
+            "status": "matched"
+          },
+          "RGBA Skp3 Strobe Random": {
+            "channels": 23,
+            "gdtfMode": "RGBA Skp3 Strobe Random",
+            "status": "matched"
+          },
+          "RGB Skp3 Strobe Random": {
+            "channels": 18,
+            "gdtfMode": "RGB Skp3 Strobe Random",
+            "status": "matched"
+          },
+          "HSI Skp3 Strobe Random ": {
+            "channels": 18,
+            "gdtfMode": "HSI Skp3 Strobe Random ",
+            "status": "matched"
+          },
+          "RGBA Skp6 Strobe Random": {
+            "channels": 31,
+            "gdtfMode": "RGBA Skp6 Strobe Random",
+            "status": "matched"
+          },
+          "RGB Skp6 Strobe Random": {
+            "channels": 24,
+            "gdtfMode": "RGB Skp6 Strobe Random",
+            "status": "matched"
+          },
+          "HSI Skp6 Strobe Random": {
+            "channels": 24,
+            "gdtfMode": "HSI Skp6 Strobe Random",
             "status": "matched"
           }
         }
@@ -1064,37 +3830,151 @@
       "watts": 800,
       "weight": 24,
       "modes": {
-        "Look Select": 1,
-        "RGB All": 3,
-        "HSI All": 3,
-        "RGBA All": 4,
-        "RGB Odd/Even": 6,
-        "HSI Odd/Even": 6,
-        "RGBA Odd/Even": 8,
-        "RGB Skp2": 9,
-        "HSI Skp2": 9,
-        "RGBA Skp2": 12,
-        "RGB x6": 12,
-        "HSI x6": 12,
-        "RGBA x6": 16,
-        "RGB Skp3": 12,
-        "HSI Skp3": 12,
-        "RGBA Skp3": 16,
-        "RGB x4": 18,
-        "HSI x4": 18,
-        "RGBA x4": 24,
-        "RGB Skp6": 18,
-        "HSI Skp6": 18,
-        "RGBA Skp6": 24,
-        "RGB x3": 24,
-        "HSI x3": 24,
-        "RGBA x3": 32,
-        "RGB x2": 36,
-        "HSI x2": 36,
-        "RGBA x2": 48,
-        "RGB x1": 72,
-        "HSI x1": 72,
-        "RGBA x1": 96
+        "RGBAx24 Strobe Off": 4,
+        "RGBx24 Strobe Off": 3,
+        "HSIx24 Strobe Off": 3,
+        "RGBAx12 Strobe Off": 8,
+        "RGBx12 Strobe Off": 6,
+        "HSIx12 Strobe Off": 6,
+        "RGBAx8 Strobe Off": 12,
+        "RGBx8 Strobe Off": 9,
+        "HSIx8 Strobe Off 1": 9,
+        "RGBAx6 Strobe Off": 16,
+        "RGBx6 Strobe Off": 12,
+        "HSIx6 Strobe Off": 12,
+        "RGBAx4 Strobe Off": 24,
+        "RGBx4 Strobe Off": 18,
+        "HSIx4 Strobe Off": 18,
+        "RGBAx3 Strobe Off": 32,
+        "RGBx3 Strobe Off": 24,
+        "HSIx3 Strobe Off": 24,
+        "RGBAx2 Strobe Off": 48,
+        "RGBx2 Strobe Off": 36,
+        "HSIx2 Strobe Off": 36,
+        "RGBAx1 Strobe Off": 96,
+        "RGBx1 Strobe Off": 72,
+        "HSIx1 Strobe Off": 72,
+        "RGBA Od Ev Strobe Off": 8,
+        "RGB Od Ev Strobe Off": 6,
+        "HSI Od Ev Strobe Off": 6,
+        "RGBA Skp2 Strobe Off": 12,
+        "RGB Skp2 Strobe Off": 9,
+        "HSI Skp2 Strobe Off": 9,
+        "RGBA Skp3 Strobe Off": 16,
+        "RGB skp3 Strobe Off": 12,
+        "HSI Skp3 Strobe Off": 12,
+        "RGBA Skp6 Strobe Off": 24,
+        "RGB Skp6 Strobe Off": 18,
+        "HSI Skp6 Strobe Off": 18,
+        "Look Sel": 1,
+        "RGBAx24 Strobe On": 6,
+        "RGBx24 Strobe On": 5,
+        "HSIx24Strobe On": 5,
+        "RGBAx12 Strobe On": 10,
+        "RGBx12 Strobe On": 8,
+        "HSIx12 Strobe On": 8,
+        "RGBA x8 Strobe On": 14,
+        "RGB x8 Strobe On": 11,
+        "HSIx8 Strobe Off": 11,
+        "RGBAx6 Strobe On": 18,
+        "RGBx6 Strobe On": 14,
+        "HSIx6 Strobe On": 14,
+        "RGBA x4 Strobe On": 26,
+        "RGB x4 Strobe On": 20,
+        "HSIx4 Strobe On": 20,
+        "RGBA x3 Strobe On": 34,
+        "RGB x3 Strobe On": 26,
+        "HSI x3 Strobe On": 26,
+        "RGBAx2 Strobe On": 50,
+        "RGB x2 Strobe On": 38,
+        "HSI x2 Strobe On": 38,
+        "RGBA x1 Strobe On": 98,
+        "RGBx1 Strobe On": 74,
+        "HSIx1 Strobe On": 74,
+        "RGBA OdEv Strobe On": 10,
+        "RGB OdEv Strobe On": 8,
+        "HSI OdEv Strobe On": 8,
+        "RGBA Skp2 Strobe On": 14,
+        "RGB Skp2 Strobe On": 11,
+        "HSI Skp2 Strobe On": 11,
+        "RGBA Skp3 Strobe On": 18,
+        "RGB Skp3 Strobe On": 14,
+        "HSI Skp3 Strobe On": 14,
+        "RGBA Skp6 Strobe On": 26,
+        "RGB Skp6 Strobe On": 20,
+        "HSI Skp6 Strobe On": 20,
+        "RGBAx24 Strobe On Top": 10,
+        "RGBx24 Strobe On Top": 8,
+        "HSIx24 Strobe On Top": 8,
+        "RGBAx12 Strobe On Top 1": 14,
+        "RGBAx12 Strobe On Top": 11,
+        "HSIx12 Strobe On Top": 11,
+        "RGBAx8 Strobe On Top": 18,
+        "RGBx8 Strobe On Top": 14,
+        "HSIx8 Strobe On Top": 14,
+        "RGBAx6 Strobe On Top": 22,
+        "RGBx6 Strobe On Top": 17,
+        "HSIx6 Strobe On Top": 17,
+        "RGBAx4 Strobe On Top": 30,
+        "RGBx4 Strobe On Top": 23,
+        "HSIx4 Strobe On Top": 23,
+        "RGBAx3 Strobe On Top": 38,
+        "RGBx3 Strobe On Top": 29,
+        "HSIx3 Strobe On Top 1": 29,
+        "RGBAx2 Strobe On Top": 54,
+        "RGBx2 Strobe On Top": 41,
+        "HSIx2 Strobe On Top": 41,
+        "RGBAx1 Strobe On Top": 102,
+        "RGBx1 Strobe On Top": 77,
+        "HSIx1 Strobe On Top": 77,
+        "RGBA Od Ev Strobe On Top": 14,
+        "RGB Od Ev Strobe On Top": 11,
+        "HSI Od Ev Strobe On Top": 11,
+        "RGBA Skp2 Strobe On Top": 18,
+        "RGB Skp2 Strobe On Top": 14,
+        "HSI Skp2 Strobe On Top": 14,
+        "RGBA Skp3 Strobe On Top": 22,
+        "RGB Skp3 Strobe On Top": 17,
+        "HSI Skp3 Strobe On Top": 17,
+        "RGBA Skp6 Strobe On Top": 30,
+        "RGB Skp6 Strobe On Top": 23,
+        "HSI Skp6 Strobe On Top": 23,
+        "RGBAx24 Strobe Random": 11,
+        "RGBx24 Strobe Random": 9,
+        "HSIx24 Strobe Random": 9,
+        "RGBAx12 Strobe Random": 15,
+        "RGBx12 Strobe Random": 12,
+        "HSIx12 Strobe Random": 12,
+        "RGBAx8 Strobe Random": 19,
+        "RGBx8 Strobe Random": 15,
+        "HSIx8 Strobe Random": 15,
+        "RGBAx6 Strobe Random": 23,
+        "RGBx6 Strobe Random": 18,
+        "HSIx6 Strobe Random": 18,
+        "RGBAx4 Strobe Random": 31,
+        "RGBx4 Strobe Random": 24,
+        "HSIx4 Strobe Rabdom": 24,
+        "RGBAx3 Strobe Random": 39,
+        "RGBx3 Strobe Random": 30,
+        "HSIx3 Strobe On Top": 30,
+        "RGBAx2 Strobe Random": 55,
+        "RGBx2 Strobe Random": 42,
+        "HSIx2 Strobe Random": 42,
+        "RGBAx1 Strobe Random": 103,
+        "RGBx1 Strobe Random": 78,
+        "HSIx1 Strobe Random": 78,
+        "RGBA Od Ev Strobe Random": 15,
+        "RGB Od Ev Strobe Random": 12,
+        "HSI Od Ev Strobe Random": 12,
+        "RGBA Skp2 Strobe Random": 19,
+        "RGB Skp2 Strobe Random": 15,
+        "HSI Skp2 Strobe Random": 15,
+        "RGBA Skp3 Strobe Random": 23,
+        "RGB Skp3 Strobe Random": 18,
+        "HSI Skp3 Strobe Random ": 18,
+        "RGBA Skp6 Strobe Random": 31,
+        "RGB Skp6 Strobe Random": 24,
+        "HSI Skp6 Strobe Random": 24
       },
       "gdtf": {
         "status": "matched",
@@ -1102,159 +3982,729 @@
         "suggestedFileName": "Chroma_Q__Color_Force_II_72_Plus.gdtf",
         "file": "fixtures/chroma-q/Chroma-Q@Color_Force_II_72_Plus@Release_1.gdtf",
         "modes": {
-          "Look Select": {
-            "channels": 1,
-            "gdtfMode": "Look Sel",
-            "status": "matched"
-          },
-          "RGB All": {
-            "channels": 3,
-            "gdtfMode": "RGBx24 Strobe Off",
-            "status": "matched"
-          },
-          "HSI All": {
-            "channels": 3,
-            "gdtfMode": "HSIx24 Strobe Off",
-            "status": "matched"
-          },
-          "RGBA All": {
+          "RGBAx24 Strobe Off": {
             "channels": 4,
             "gdtfMode": "RGBAx24 Strobe Off",
             "status": "matched"
           },
-          "RGB Odd/Even": {
-            "channels": 6,
-            "gdtfMode": "RGB Od Ev Strobe Off",
+          "RGBx24 Strobe Off": {
+            "channels": 3,
+            "gdtfMode": "RGBx24 Strobe Off",
             "status": "matched"
           },
-          "HSI Odd/Even": {
-            "channels": 6,
-            "gdtfMode": "HSI Od Ev Strobe Off",
+          "HSIx24 Strobe Off": {
+            "channels": 3,
+            "gdtfMode": "HSIx24 Strobe Off",
             "status": "matched"
           },
-          "RGBA Odd/Even": {
+          "RGBAx12 Strobe Off": {
             "channels": 8,
-            "gdtfMode": "RGBA Od Ev Strobe Off",
+            "gdtfMode": "RGBAx12 Strobe Off",
             "status": "matched"
           },
-          "RGB Skp2": {
+          "RGBx12 Strobe Off": {
+            "channels": 6,
+            "gdtfMode": "RGBx12 Strobe Off",
+            "status": "matched"
+          },
+          "HSIx12 Strobe Off": {
+            "channels": 6,
+            "gdtfMode": "HSIx12 Strobe Off",
+            "status": "matched"
+          },
+          "RGBAx8 Strobe Off": {
+            "channels": 12,
+            "gdtfMode": "RGBAx8 Strobe Off",
+            "status": "matched"
+          },
+          "RGBx8 Strobe Off": {
             "channels": 9,
-            "gdtfMode": "RGB Skp2 Strobe Off",
+            "gdtfMode": "RGBx8 Strobe Off",
             "status": "matched"
           },
-          "HSI Skp2": {
+          "HSIx8 Strobe Off 1": {
             "channels": 9,
-            "gdtfMode": "HSI Skp2 Strobe Off",
+            "gdtfMode": "HSIx8 Strobe Off 1",
             "status": "matched"
           },
-          "RGBA Skp2": {
-            "channels": 12,
-            "gdtfMode": "RGBA Skp2 Strobe Off",
-            "status": "matched"
-          },
-          "RGB x6": {
-            "channels": 12,
-            "gdtfMode": "RGBx6 Strobe Off",
-            "status": "matched"
-          },
-          "HSI x6": {
-            "channels": 12,
-            "gdtfMode": "HSIx6 Strobe Off",
-            "status": "matched"
-          },
-          "RGBA x6": {
+          "RGBAx6 Strobe Off": {
             "channels": 16,
             "gdtfMode": "RGBAx6 Strobe Off",
             "status": "matched"
           },
-          "RGB Skp3": {
+          "RGBx6 Strobe Off": {
             "channels": 12,
-            "gdtfMode": "RGB skp3 Strobe Off",
+            "gdtfMode": "RGBx6 Strobe Off",
             "status": "matched"
           },
-          "HSI Skp3": {
+          "HSIx6 Strobe Off": {
             "channels": 12,
-            "gdtfMode": "HSI Skp3 Strobe Off",
+            "gdtfMode": "HSIx6 Strobe Off",
             "status": "matched"
           },
-          "RGBA Skp3": {
-            "channels": 16,
-            "gdtfMode": "RGBA Skp3 Strobe Off",
-            "status": "matched"
-          },
-          "RGB x4": {
-            "channels": 18,
-            "gdtfMode": "RGBx4 Strobe Off",
-            "status": "matched"
-          },
-          "HSI x4": {
-            "channels": 18,
-            "gdtfMode": "HSIx4 Strobe Off",
-            "status": "matched"
-          },
-          "RGBA x4": {
+          "RGBAx4 Strobe Off": {
             "channels": 24,
             "gdtfMode": "RGBAx4 Strobe Off",
             "status": "matched"
           },
-          "RGB Skp6": {
+          "RGBx4 Strobe Off": {
             "channels": 18,
-            "gdtfMode": "RGB Skp6 Strobe Off",
+            "gdtfMode": "RGBx4 Strobe Off",
             "status": "matched"
           },
-          "HSI Skp6": {
+          "HSIx4 Strobe Off": {
             "channels": 18,
-            "gdtfMode": "HSI Skp6 Strobe Off",
+            "gdtfMode": "HSIx4 Strobe Off",
             "status": "matched"
           },
-          "RGBA Skp6": {
-            "channels": 24,
-            "gdtfMode": "RGBA Skp6 Strobe Off",
-            "status": "matched"
-          },
-          "RGB x3": {
-            "channels": 24,
-            "gdtfMode": "RGBx3 Strobe Off",
-            "status": "matched"
-          },
-          "HSI x3": {
-            "channels": 24,
-            "gdtfMode": "HSIx3 Strobe Off",
-            "status": "matched"
-          },
-          "RGBA x3": {
+          "RGBAx3 Strobe Off": {
             "channels": 32,
             "gdtfMode": "RGBAx3 Strobe Off",
             "status": "matched"
           },
-          "RGB x2": {
-            "channels": 36,
-            "gdtfMode": "RGBx2 Strobe Off",
+          "RGBx3 Strobe Off": {
+            "channels": 24,
+            "gdtfMode": "RGBx3 Strobe Off",
             "status": "matched"
           },
-          "HSI x2": {
-            "channels": 36,
-            "gdtfMode": "HSIx2 Strobe Off",
+          "HSIx3 Strobe Off": {
+            "channels": 24,
+            "gdtfMode": "HSIx3 Strobe Off",
             "status": "matched"
           },
-          "RGBA x2": {
+          "RGBAx2 Strobe Off": {
             "channels": 48,
             "gdtfMode": "RGBAx2 Strobe Off",
             "status": "matched"
           },
-          "RGB x1": {
+          "RGBx2 Strobe Off": {
+            "channels": 36,
+            "gdtfMode": "RGBx2 Strobe Off",
+            "status": "matched"
+          },
+          "HSIx2 Strobe Off": {
+            "channels": 36,
+            "gdtfMode": "HSIx2 Strobe Off",
+            "status": "matched"
+          },
+          "RGBAx1 Strobe Off": {
+            "channels": 96,
+            "gdtfMode": "RGBAx1 Strobe Off",
+            "status": "matched"
+          },
+          "RGBx1 Strobe Off": {
             "channels": 72,
             "gdtfMode": "RGBx1 Strobe Off",
             "status": "matched"
           },
-          "HSI x1": {
+          "HSIx1 Strobe Off": {
             "channels": 72,
             "gdtfMode": "HSIx1 Strobe Off",
             "status": "matched"
           },
-          "RGBA x1": {
-            "channels": 96,
-            "gdtfMode": "RGBAx1 Strobe Off",
+          "RGBA Od Ev Strobe Off": {
+            "channels": 8,
+            "gdtfMode": "RGBA Od Ev Strobe Off",
+            "status": "matched"
+          },
+          "RGB Od Ev Strobe Off": {
+            "channels": 6,
+            "gdtfMode": "RGB Od Ev Strobe Off",
+            "status": "matched"
+          },
+          "HSI Od Ev Strobe Off": {
+            "channels": 6,
+            "gdtfMode": "HSI Od Ev Strobe Off",
+            "status": "matched"
+          },
+          "RGBA Skp2 Strobe Off": {
+            "channels": 12,
+            "gdtfMode": "RGBA Skp2 Strobe Off",
+            "status": "matched"
+          },
+          "RGB Skp2 Strobe Off": {
+            "channels": 9,
+            "gdtfMode": "RGB Skp2 Strobe Off",
+            "status": "matched"
+          },
+          "HSI Skp2 Strobe Off": {
+            "channels": 9,
+            "gdtfMode": "HSI Skp2 Strobe Off",
+            "status": "matched"
+          },
+          "RGBA Skp3 Strobe Off": {
+            "channels": 16,
+            "gdtfMode": "RGBA Skp3 Strobe Off",
+            "status": "matched"
+          },
+          "RGB skp3 Strobe Off": {
+            "channels": 12,
+            "gdtfMode": "RGB skp3 Strobe Off",
+            "status": "matched"
+          },
+          "HSI Skp3 Strobe Off": {
+            "channels": 12,
+            "gdtfMode": "HSI Skp3 Strobe Off",
+            "status": "matched"
+          },
+          "RGBA Skp6 Strobe Off": {
+            "channels": 24,
+            "gdtfMode": "RGBA Skp6 Strobe Off",
+            "status": "matched"
+          },
+          "RGB Skp6 Strobe Off": {
+            "channels": 18,
+            "gdtfMode": "RGB Skp6 Strobe Off",
+            "status": "matched"
+          },
+          "HSI Skp6 Strobe Off": {
+            "channels": 18,
+            "gdtfMode": "HSI Skp6 Strobe Off",
+            "status": "matched"
+          },
+          "Look Sel": {
+            "channels": 1,
+            "gdtfMode": "Look Sel",
+            "status": "matched"
+          },
+          "RGBAx24 Strobe On": {
+            "channels": 6,
+            "gdtfMode": "RGBAx24 Strobe On",
+            "status": "matched"
+          },
+          "RGBx24 Strobe On": {
+            "channels": 5,
+            "gdtfMode": "RGBx24 Strobe On",
+            "status": "matched"
+          },
+          "HSIx24Strobe On": {
+            "channels": 5,
+            "gdtfMode": "HSIx24Strobe On",
+            "status": "matched"
+          },
+          "RGBAx12 Strobe On": {
+            "channels": 10,
+            "gdtfMode": "RGBAx12 Strobe On",
+            "status": "matched"
+          },
+          "RGBx12 Strobe On": {
+            "channels": 8,
+            "gdtfMode": "RGBx12 Strobe On",
+            "status": "matched"
+          },
+          "HSIx12 Strobe On": {
+            "channels": 8,
+            "gdtfMode": "HSIx12 Strobe On",
+            "status": "matched"
+          },
+          "RGBA x8 Strobe On": {
+            "channels": 14,
+            "gdtfMode": "RGBA x8 Strobe On",
+            "status": "matched"
+          },
+          "RGB x8 Strobe On": {
+            "channels": 11,
+            "gdtfMode": "RGB x8 Strobe On",
+            "status": "matched"
+          },
+          "HSIx8 Strobe Off": {
+            "channels": 11,
+            "gdtfMode": "HSIx8 Strobe Off",
+            "status": "matched"
+          },
+          "RGBAx6 Strobe On": {
+            "channels": 18,
+            "gdtfMode": "RGBAx6 Strobe On",
+            "status": "matched"
+          },
+          "RGBx6 Strobe On": {
+            "channels": 14,
+            "gdtfMode": "RGBx6 Strobe On",
+            "status": "matched"
+          },
+          "HSIx6 Strobe On": {
+            "channels": 14,
+            "gdtfMode": "HSIx6 Strobe On",
+            "status": "matched"
+          },
+          "RGBA x4 Strobe On": {
+            "channels": 26,
+            "gdtfMode": "RGBA x4 Strobe On",
+            "status": "matched"
+          },
+          "RGB x4 Strobe On": {
+            "channels": 20,
+            "gdtfMode": "RGB x4 Strobe On",
+            "status": "matched"
+          },
+          "HSIx4 Strobe On": {
+            "channels": 20,
+            "gdtfMode": "HSIx4 Strobe On",
+            "status": "matched"
+          },
+          "RGBA x3 Strobe On": {
+            "channels": 34,
+            "gdtfMode": "RGBA x3 Strobe On",
+            "status": "matched"
+          },
+          "RGB x3 Strobe On": {
+            "channels": 26,
+            "gdtfMode": "RGB x3 Strobe On",
+            "status": "matched"
+          },
+          "HSI x3 Strobe On": {
+            "channels": 26,
+            "gdtfMode": "HSI x3 Strobe On",
+            "status": "matched"
+          },
+          "RGBAx2 Strobe On": {
+            "channels": 50,
+            "gdtfMode": "RGBAx2 Strobe On",
+            "status": "matched"
+          },
+          "RGB x2 Strobe On": {
+            "channels": 38,
+            "gdtfMode": "RGB x2 Strobe On",
+            "status": "matched"
+          },
+          "HSI x2 Strobe On": {
+            "channels": 38,
+            "gdtfMode": "HSI x2 Strobe On",
+            "status": "matched"
+          },
+          "RGBA x1 Strobe On": {
+            "channels": 98,
+            "gdtfMode": "RGBA x1 Strobe On",
+            "status": "matched"
+          },
+          "RGBx1 Strobe On": {
+            "channels": 74,
+            "gdtfMode": "RGBx1 Strobe On",
+            "status": "matched"
+          },
+          "HSIx1 Strobe On": {
+            "channels": 74,
+            "gdtfMode": "HSIx1 Strobe On",
+            "status": "matched"
+          },
+          "RGBA OdEv Strobe On": {
+            "channels": 10,
+            "gdtfMode": "RGBA OdEv Strobe On",
+            "status": "matched"
+          },
+          "RGB OdEv Strobe On": {
+            "channels": 8,
+            "gdtfMode": "RGB OdEv Strobe On",
+            "status": "matched"
+          },
+          "HSI OdEv Strobe On": {
+            "channels": 8,
+            "gdtfMode": "HSI OdEv Strobe On",
+            "status": "matched"
+          },
+          "RGBA Skp2 Strobe On": {
+            "channels": 14,
+            "gdtfMode": "RGBA Skp2 Strobe On",
+            "status": "matched"
+          },
+          "RGB Skp2 Strobe On": {
+            "channels": 11,
+            "gdtfMode": "RGB Skp2 Strobe On",
+            "status": "matched"
+          },
+          "HSI Skp2 Strobe On": {
+            "channels": 11,
+            "gdtfMode": "HSI Skp2 Strobe On",
+            "status": "matched"
+          },
+          "RGBA Skp3 Strobe On": {
+            "channels": 18,
+            "gdtfMode": "RGBA Skp3 Strobe On",
+            "status": "matched"
+          },
+          "RGB Skp3 Strobe On": {
+            "channels": 14,
+            "gdtfMode": "RGB Skp3 Strobe On",
+            "status": "matched"
+          },
+          "HSI Skp3 Strobe On": {
+            "channels": 14,
+            "gdtfMode": "HSI Skp3 Strobe On",
+            "status": "matched"
+          },
+          "RGBA Skp6 Strobe On": {
+            "channels": 26,
+            "gdtfMode": "RGBA Skp6 Strobe On",
+            "status": "matched"
+          },
+          "RGB Skp6 Strobe On": {
+            "channels": 20,
+            "gdtfMode": "RGB Skp6 Strobe On",
+            "status": "matched"
+          },
+          "HSI Skp6 Strobe On": {
+            "channels": 20,
+            "gdtfMode": "HSI Skp6 Strobe On",
+            "status": "matched"
+          },
+          "RGBAx24 Strobe On Top": {
+            "channels": 10,
+            "gdtfMode": "RGBAx24 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx24 Strobe On Top": {
+            "channels": 8,
+            "gdtfMode": "RGBx24 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx24 Strobe On Top": {
+            "channels": 8,
+            "gdtfMode": "HSIx24 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx12 Strobe On Top 1": {
+            "channels": 14,
+            "gdtfMode": "RGBAx12 Strobe On Top 1",
+            "status": "matched"
+          },
+          "RGBAx12 Strobe On Top": {
+            "channels": 11,
+            "gdtfMode": "RGBAx12 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx12 Strobe On Top": {
+            "channels": 11,
+            "gdtfMode": "HSIx12 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx8 Strobe On Top": {
+            "channels": 18,
+            "gdtfMode": "RGBAx8 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx8 Strobe On Top": {
+            "channels": 14,
+            "gdtfMode": "RGBx8 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx8 Strobe On Top": {
+            "channels": 14,
+            "gdtfMode": "HSIx8 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx6 Strobe On Top": {
+            "channels": 22,
+            "gdtfMode": "RGBAx6 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx6 Strobe On Top": {
+            "channels": 17,
+            "gdtfMode": "RGBx6 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx6 Strobe On Top": {
+            "channels": 17,
+            "gdtfMode": "HSIx6 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx4 Strobe On Top": {
+            "channels": 30,
+            "gdtfMode": "RGBAx4 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx4 Strobe On Top": {
+            "channels": 23,
+            "gdtfMode": "RGBx4 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx4 Strobe On Top": {
+            "channels": 23,
+            "gdtfMode": "HSIx4 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx3 Strobe On Top": {
+            "channels": 38,
+            "gdtfMode": "RGBAx3 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx3 Strobe On Top": {
+            "channels": 29,
+            "gdtfMode": "RGBx3 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx3 Strobe On Top 1": {
+            "channels": 29,
+            "gdtfMode": "HSIx3 Strobe On Top 1",
+            "status": "matched"
+          },
+          "RGBAx2 Strobe On Top": {
+            "channels": 54,
+            "gdtfMode": "RGBAx2 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx2 Strobe On Top": {
+            "channels": 41,
+            "gdtfMode": "RGBx2 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx2 Strobe On Top": {
+            "channels": 41,
+            "gdtfMode": "HSIx2 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx1 Strobe On Top": {
+            "channels": 102,
+            "gdtfMode": "RGBAx1 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBx1 Strobe On Top": {
+            "channels": 77,
+            "gdtfMode": "RGBx1 Strobe On Top",
+            "status": "matched"
+          },
+          "HSIx1 Strobe On Top": {
+            "channels": 77,
+            "gdtfMode": "HSIx1 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBA Od Ev Strobe On Top": {
+            "channels": 14,
+            "gdtfMode": "RGBA Od Ev Strobe On Top",
+            "status": "matched"
+          },
+          "RGB Od Ev Strobe On Top": {
+            "channels": 11,
+            "gdtfMode": "RGB Od Ev Strobe On Top",
+            "status": "matched"
+          },
+          "HSI Od Ev Strobe On Top": {
+            "channels": 11,
+            "gdtfMode": "HSI Od Ev Strobe On Top",
+            "status": "matched"
+          },
+          "RGBA Skp2 Strobe On Top": {
+            "channels": 18,
+            "gdtfMode": "RGBA Skp2 Strobe On Top",
+            "status": "matched"
+          },
+          "RGB Skp2 Strobe On Top": {
+            "channels": 14,
+            "gdtfMode": "RGB Skp2 Strobe On Top",
+            "status": "matched"
+          },
+          "HSI Skp2 Strobe On Top": {
+            "channels": 14,
+            "gdtfMode": "HSI Skp2 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBA Skp3 Strobe On Top": {
+            "channels": 22,
+            "gdtfMode": "RGBA Skp3 Strobe On Top",
+            "status": "matched"
+          },
+          "RGB Skp3 Strobe On Top": {
+            "channels": 17,
+            "gdtfMode": "RGB Skp3 Strobe On Top",
+            "status": "matched"
+          },
+          "HSI Skp3 Strobe On Top": {
+            "channels": 17,
+            "gdtfMode": "HSI Skp3 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBA Skp6 Strobe On Top": {
+            "channels": 30,
+            "gdtfMode": "RGBA Skp6 Strobe On Top",
+            "status": "matched"
+          },
+          "RGB Skp6 Strobe On Top": {
+            "channels": 23,
+            "gdtfMode": "RGB Skp6 Strobe On Top",
+            "status": "matched"
+          },
+          "HSI Skp6 Strobe On Top": {
+            "channels": 23,
+            "gdtfMode": "HSI Skp6 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx24 Strobe Random": {
+            "channels": 11,
+            "gdtfMode": "RGBAx24 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx24 Strobe Random": {
+            "channels": 9,
+            "gdtfMode": "RGBx24 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx24 Strobe Random": {
+            "channels": 9,
+            "gdtfMode": "HSIx24 Strobe Random",
+            "status": "matched"
+          },
+          "RGBAx12 Strobe Random": {
+            "channels": 15,
+            "gdtfMode": "RGBAx12 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx12 Strobe Random": {
+            "channels": 12,
+            "gdtfMode": "RGBx12 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx12 Strobe Random": {
+            "channels": 12,
+            "gdtfMode": "HSIx12 Strobe Random",
+            "status": "matched"
+          },
+          "RGBAx8 Strobe Random": {
+            "channels": 19,
+            "gdtfMode": "RGBAx8 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx8 Strobe Random": {
+            "channels": 15,
+            "gdtfMode": "RGBx8 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx8 Strobe Random": {
+            "channels": 15,
+            "gdtfMode": "HSIx8 Strobe Random",
+            "status": "matched"
+          },
+          "RGBAx6 Strobe Random": {
+            "channels": 23,
+            "gdtfMode": "RGBAx6 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx6 Strobe Random": {
+            "channels": 18,
+            "gdtfMode": "RGBx6 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx6 Strobe Random": {
+            "channels": 18,
+            "gdtfMode": "HSIx6 Strobe Random",
+            "status": "matched"
+          },
+          "RGBAx4 Strobe Random": {
+            "channels": 31,
+            "gdtfMode": "RGBAx4 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx4 Strobe Random": {
+            "channels": 24,
+            "gdtfMode": "RGBx4 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx4 Strobe Rabdom": {
+            "channels": 24,
+            "gdtfMode": "HSIx4 Strobe Rabdom",
+            "status": "matched"
+          },
+          "RGBAx3 Strobe Random": {
+            "channels": 39,
+            "gdtfMode": "RGBAx3 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx3 Strobe Random": {
+            "channels": 30,
+            "gdtfMode": "RGBx3 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx3 Strobe On Top": {
+            "channels": 30,
+            "gdtfMode": "HSIx3 Strobe On Top",
+            "status": "matched"
+          },
+          "RGBAx2 Strobe Random": {
+            "channels": 55,
+            "gdtfMode": "RGBAx2 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx2 Strobe Random": {
+            "channels": 42,
+            "gdtfMode": "RGBx2 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx2 Strobe Random": {
+            "channels": 42,
+            "gdtfMode": "HSIx2 Strobe Random",
+            "status": "matched"
+          },
+          "RGBAx1 Strobe Random": {
+            "channels": 103,
+            "gdtfMode": "RGBAx1 Strobe Random",
+            "status": "matched"
+          },
+          "RGBx1 Strobe Random": {
+            "channels": 78,
+            "gdtfMode": "RGBx1 Strobe Random",
+            "status": "matched"
+          },
+          "HSIx1 Strobe Random": {
+            "channels": 78,
+            "gdtfMode": "HSIx1 Strobe Random",
+            "status": "matched"
+          },
+          "RGBA Od Ev Strobe Random": {
+            "channels": 15,
+            "gdtfMode": "RGBA Od Ev Strobe Random",
+            "status": "matched"
+          },
+          "RGB Od Ev Strobe Random": {
+            "channels": 12,
+            "gdtfMode": "RGB Od Ev Strobe Random",
+            "status": "matched"
+          },
+          "HSI Od Ev Strobe Random": {
+            "channels": 12,
+            "gdtfMode": "HSI Od Ev Strobe Random",
+            "status": "matched"
+          },
+          "RGBA Skp2 Strobe Random": {
+            "channels": 19,
+            "gdtfMode": "RGBA Skp2 Strobe Random",
+            "status": "matched"
+          },
+          "RGB Skp2 Strobe Random": {
+            "channels": 15,
+            "gdtfMode": "RGB Skp2 Strobe Random",
+            "status": "matched"
+          },
+          "HSI Skp2 Strobe Random": {
+            "channels": 15,
+            "gdtfMode": "HSI Skp2 Strobe Random",
+            "status": "matched"
+          },
+          "RGBA Skp3 Strobe Random": {
+            "channels": 23,
+            "gdtfMode": "RGBA Skp3 Strobe Random",
+            "status": "matched"
+          },
+          "RGB Skp3 Strobe Random": {
+            "channels": 18,
+            "gdtfMode": "RGB Skp3 Strobe Random",
+            "status": "matched"
+          },
+          "HSI Skp3 Strobe Random ": {
+            "channels": 18,
+            "gdtfMode": "HSI Skp3 Strobe Random ",
+            "status": "matched"
+          },
+          "RGBA Skp6 Strobe Random": {
+            "channels": 31,
+            "gdtfMode": "RGBA Skp6 Strobe Random",
+            "status": "matched"
+          },
+          "RGB Skp6 Strobe Random": {
+            "channels": 24,
+            "gdtfMode": "RGB Skp6 Strobe Random",
+            "status": "matched"
+          },
+          "HSI Skp6 Strobe Random": {
+            "channels": 24,
+            "gdtfMode": "HSI Skp6 Strobe Random",
             "status": "matched"
           }
         }

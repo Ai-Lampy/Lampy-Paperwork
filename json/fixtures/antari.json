@@ -6,7 +6,7 @@
       "watts": 0,
       "weight": 0,
       "modes": {
-        "1 Chan": 1
+        "1 Channel": 1
       },
       "gdtf": {
         "status": "matched",
@@ -14,7 +14,7 @@
         "suggestedFileName": "Antari__HZ_500_Hazer.gdtf",
         "file": "fixtures/antari/Antari@HZ-500@rev1.gdtf",
         "modes": {
-          "1 Chan": {
+          "1 Channel": {
             "channels": 1,
             "gdtfMode": "1 Channel",
             "status": "matched"
