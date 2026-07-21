@@ -43,15 +43,15 @@
         "3 Chan": 3
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/elation",
         "suggestedFileName": "Elation__Magma_Prime_Hazer.gdtf",
-        "file": "",
+        "file": "fixtures/elation/Elation@Magma_Prime_Hazer@V1-00.gdtf",
         "modes": {
           "3 Chan": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode3",
+            "status": "matched"
           }
         }
       },
@@ -66,20 +66,20 @@
         "Extended": 44
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/elation",
         "suggestedFileName": "Elation__Smarty_Max.gdtf",
-        "file": "",
+        "file": "fixtures/elation/Elation@Smarty_Max@V1-00.gdtf",
         "modes": {
           "Standard": {
             "channels": 27,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard",
+            "status": "matched"
           },
           "Extended": {
             "channels": 44,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended",
+            "status": "matched"
           }
         }
       },
