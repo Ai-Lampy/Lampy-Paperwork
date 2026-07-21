@@ -12,10 +12,10 @@
         "Direct": 6
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "pending-match",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__ColorSource_CYC.gdtf",
-        "file": "",
+        "file": "fixtures/etc/ETC@Colorsource_CYC@2026.gdtf",
         "modes": {
           "1 Channel": {
             "channels": 1,
@@ -38,7 +38,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "CS CYC"
     },
     {
       "fixture": "ColorSource Fresnel V",
@@ -77,7 +78,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "CS Fres V"
     },
     {
       "fixture": "ColorSource PAR",
@@ -90,33 +92,34 @@
         "Direct": 6
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__ColorSource_PAR.gdtf",
-        "file": "",
+        "file": "fixtures/etc/ETC@ColorSource_Par@physical-change-direct.gdtf",
         "modes": {
           "1ch": {
             "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "1ch",
+            "status": "matched"
           },
           "RGB": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "3ch(RGB)",
+            "status": "matched"
           },
           "5ch": {
             "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "5ch(Default)",
+            "status": "matched"
           },
           "Direct": {
             "channels": 6,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "6ch (Direct)",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "CS PAR"
     },
     {
       "fixture": "ColorSource PAR Deep Blue",
@@ -155,7 +158,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "CS PAR Deep Blue"
     },
     {
       "fixture": "ColorSource PAR jr",
@@ -194,7 +198,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "CS PAR jr"
     },
     {
       "fixture": "ColorSource PAR V Zoom",
@@ -207,10 +212,10 @@
         "Direct": 8
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "partial",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__ColorSource_PAR_V_Zoom.gdtf",
-        "file": "",
+        "file": "fixtures/etc/ETC@ColorSource_Par_V_Zoom@2026.gdtf",
         "modes": {
           "1 Channel": {
             "channels": 1,
@@ -229,11 +234,12 @@
           },
           "Direct": {
             "channels": 8,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Direct",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "CS PAR V Zoom"
     },
     {
       "fixture": "ColorSource Spot",
@@ -246,10 +252,10 @@
         "Direct": 6
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "pending-match",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__ColorSource_Spot.gdtf",
-        "file": "",
+        "file": "fixtures/etc/ETC@ColorSource_Spot@Colorsource_Spot.gdtf",
         "modes": {
           "1ch": {
             "channels": 1,
@@ -272,7 +278,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "CS Spot"
     },
     {
       "fixture": "ColorSource Spot Deep Blue",
@@ -311,7 +318,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "CS Spot Deep Blue"
     },
     {
       "fixture": "ColorSource Spot jr",
@@ -324,33 +332,34 @@
         "Direct": 6
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__ColorSource_Spot_jr.gdtf",
-        "file": "",
+        "file": "fixtures/etc/ETC@ColorSource_Spot_Jr@init.gdtf",
         "modes": {
           "1 Channel": {
             "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "1ch",
+            "status": "matched"
           },
           "RGB": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "RGB",
+            "status": "matched"
           },
           "Standard": {
             "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "5ch",
+            "status": "matched"
           },
           "Direct": {
             "channels": 6,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Direct",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "CS Spot jr"
     },
     {
       "fixture": "ColorSource Spot V",
@@ -363,20 +372,20 @@
         "Direct": 8
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "partial",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__ColorSource_Spot_V.gdtf",
-        "file": "",
+        "file": "fixtures/etc/ETC@Colorsource_Spot_V@Added_two_more_DMX_Modes_and_RDM_info.gdtf",
         "modes": {
           "1 Channel": {
             "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "1CH",
+            "status": "matched"
           },
           "RGB": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "RGB",
+            "status": "matched"
           },
           "Standard": {
             "channels": 6,
@@ -389,7 +398,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "CS Spot V"
     },
     {
       "fixture": "ColorSource Spot VXT",
@@ -428,7 +438,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "CS Spot VXT"
     },
     {
       "fixture": "Desire D22",
@@ -449,7 +460,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Desire D22"
     },
     {
       "fixture": "Desire D40",
@@ -470,7 +482,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Desire D40"
     },
     {
       "fixture": "Desire D60",
@@ -491,7 +504,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Desire D60"
     },
     {
       "fixture": "Desire D60X",
@@ -512,7 +526,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Desire D60X"
     },
     {
       "fixture": "Desire Fresnel 5 Daylight HDR",
@@ -563,7 +578,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Des Fres 5 D/L HDR"
     },
     {
       "fixture": "Desire Fresnel 5 Lustr X8",
@@ -614,7 +630,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Des Fres 5 Lustr X8"
     },
     {
       "fixture": "Desire Fresnel 7 Daylight HDR",
@@ -665,7 +682,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Des Fres 7 D/L HDR"
     },
     {
       "fixture": "Desire Fresnel 7 Lustr X8",
@@ -716,7 +734,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Des Fres 7 Lustr X8"
     },
     {
       "fixture": "Desire Studio HD",
@@ -737,7 +756,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Desire Studio"
     },
     {
       "fixture": "ETC Fresnel",
@@ -758,7 +778,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "ETC Fres"
     },
     {
       "fixture": "fos/4 Fresnel 5 Daylight HDR",
@@ -803,7 +824,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "fos/4 Fres 5 D/L HDR"
     },
     {
       "fixture": "fos/4 Fresnel 5 Lustr X8",
@@ -848,7 +870,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "fos/4 Fres 5 Lustr X8"
     },
     {
       "fixture": "fos/4 Fresnel 7 Daylight HDR",
@@ -893,7 +916,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "fos/4 Fres 7 D/L HDR"
     },
     {
       "fixture": "fos/4 Fresnel 7 Lustr X8",
@@ -938,7 +962,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "fos/4 Fres 7 Lustr X8"
     },
     {
       "fixture": "fos/4 Panel 16x24 Daylight HDR",
@@ -983,7 +1008,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "fos/4 Pnl 16x24 D/L HDR"
     },
     {
       "fixture": "fos/4 Panel 16x24 Lustr X8",
@@ -1028,7 +1054,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "fos/4 Pnl 16x24 Lustr X8"
     },
     {
       "fixture": "fos/4 Panel 24x24 Daylight HDR",
@@ -1073,7 +1100,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "fos/4 Pnl 24x24 D/L HDR"
     },
     {
       "fixture": "fos/4 Panel 24x24 Lustr X8",
@@ -1118,7 +1146,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "fos/4 Pnl 24x24 Lustr X8"
     },
     {
       "fixture": "fos/4 Panel 8x24 Daylight HDR",
@@ -1163,7 +1192,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "fos/4 Panel 8x24 D/L HDR"
     },
     {
       "fixture": "fos/4 Panel 8x24 Lustr X8",
@@ -1208,7 +1238,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "fos/4 Pnl 8x24 Lustr X8"
     },
     {
       "fixture": "Halcyon Gold",
@@ -1229,7 +1260,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Halcyon Gold"
     },
     {
       "fixture": "Halcyon Platinum",
@@ -1250,7 +1282,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Halcyon Platinum"
     },
     {
       "fixture": "Halcyon Silent",
@@ -1271,7 +1304,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Halcyon Silent"
     },
     {
       "fixture": "Halcyon Titanium",
@@ -1292,7 +1326,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Halcyon Titanium"
     },
     {
       "fixture": "Hyperstar",
@@ -1313,7 +1348,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Hyperstar"
     },
     {
       "fixture": "Lonestar",
@@ -1334,7 +1370,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Lonestar"
     },
     {
       "fixture": "Lonestar Prime",
@@ -1361,7 +1398,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Lonestar Prime"
     },
     {
       "fixture": "Ministar",
@@ -1382,7 +1420,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Ministar"
     },
     {
       "fixture": "MultiPAR",
@@ -1403,7 +1442,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "MultiPAR"
     },
     {
       "fixture": "PARNel",
@@ -1424,7 +1464,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "PARNel"
     },
     {
       "fixture": "Selador Vivid Fire 11",
@@ -1445,7 +1486,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Sel Vivid Fire 11"
     },
     {
       "fixture": "Selador Vivid Fire 21",
@@ -1466,7 +1508,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Sel Vivid Fire 21"
     },
     {
       "fixture": "Selador Vivid Fire 42",
@@ -1487,7 +1530,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Sel Vivid Fire 42"
     },
     {
       "fixture": "Selador Vivid Fire 63",
@@ -1508,7 +1552,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Sel Vivid Fire 63"
     },
     {
       "fixture": "Selador Vivid Ice 11",
@@ -1529,7 +1574,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Sel Vivid Ice 11"
     },
     {
       "fixture": "Selador Vivid Ice 21",
@@ -1550,7 +1596,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Sel Vivid Ice 21"
     },
     {
       "fixture": "Selador Vivid Ice 42",
@@ -1571,7 +1618,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Sel Vivid Ice 42"
     },
     {
       "fixture": "Selador Vivid Ice 63",
@@ -1592,7 +1640,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Sel Vivid Ice 63"
     },
     {
       "fixture": "Selador Vivid-R 11",
@@ -1613,7 +1662,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Sel Vivid-R 11"
     },
     {
       "fixture": "Selador Vivid-R 21",
@@ -1634,7 +1684,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Sel Vivid-R 21"
     },
     {
       "fixture": "Selador Vivid-R 42",
@@ -1655,7 +1706,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Sel Vivid-R 42"
     },
     {
       "fixture": "Selador Vivid-R 63",
@@ -1676,7 +1728,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Sel Vivid-R 63"
     },
     {
       "fixture": "Source 4WRD Color",
@@ -1686,10 +1739,10 @@
         "Direct": 6
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "pending-match",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__Source_4WRD_Color.gdtf",
-        "file": "",
+        "file": "fixtures/etc/ETC@Source_4wrd_Color@Version_1.gdtf",
         "modes": {
           "Direct": {
             "channels": 6,
@@ -1697,7 +1750,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Source 4WRD Color"
     },
     {
       "fixture": "Source Four Fresnel",
@@ -1718,7 +1772,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "S4 Fres"
     },
     {
       "fixture": "Source Four HID",
@@ -1739,7 +1794,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "S4 HID"
     },
     {
       "fixture": "Source Four jr",
@@ -1760,7 +1816,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "S4 jr"
     },
     {
       "fixture": "Source Four jr Zoom",
@@ -1781,7 +1838,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "S4 jr Zoom"
     },
     {
       "fixture": "Source Four LED Series 1 Lustr+",
@@ -1844,7 +1902,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "S4 LED Series 1 Lustr+"
     },
     {
       "fixture": "Source Four LED Series 1 Studio HD",
@@ -1907,7 +1966,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "S4 LED Series 1 Studio"
     },
     {
       "fixture": "Source Four LED Series 2 Daylight HD",
@@ -1970,7 +2030,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "S4 LED S2 Daylight HD"
     },
     {
       "fixture": "Source Four LED Series 2 Lustr",
@@ -2033,7 +2094,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "S4 LED Series 2 Lustr"
     },
     {
       "fixture": "Source Four LED Series 2 Tungsten HD",
@@ -2096,7 +2158,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "S4 LED Series 2 Tung HD"
     },
     {
       "fixture": "Source Four LED Series 3 Daylight HDR",
@@ -2141,7 +2204,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "S4 LED Series 3 D/L HDR"
     },
     {
       "fixture": "Source Four LED Series 3 Lustr X8",
@@ -2186,7 +2250,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "S4 LED Series 3 Lustr X8"
     },
     {
       "fixture": "Source Four Mini",
@@ -2207,7 +2272,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "S4 Mini"
     },
     {
       "fixture": "Source Four Mini LED",
@@ -2228,7 +2294,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "S4 Mini LED"
     },
     {
       "fixture": "Source Four PAR",
@@ -2249,7 +2316,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "S4 PAR"
     },
     {
       "fixture": "Source Four PAR HID",
@@ -2270,7 +2338,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "S4 PAR HID"
     },
     {
       "fixture": "Source Four PARnel",
@@ -2291,7 +2360,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "S4 PARnel"
     },
     {
       "fixture": "Source Four Revolution",
@@ -2312,7 +2382,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "S4 Revolution"
     },
     {
       "fixture": "Source Four Tungsten",
@@ -2333,7 +2404,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "S4 Tungsten"
     },
     {
       "fixture": "Source Four Zoom",
@@ -2354,7 +2426,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "S4 Zoom"
     },
     {
       "fixture": "Zeo",
@@ -2387,7 +2460,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Zeo"
     }
   ]
 }

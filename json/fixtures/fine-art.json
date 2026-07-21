@@ -10,10 +10,10 @@
         "138 Chan": 138
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "pending-match",
         "folder": "fixtures/fine-art",
         "suggestedFileName": "Fine_Art__1200C_Strobe.gdtf",
-        "file": "",
+        "file": "fixtures/fine-art/Fine_Art@FINE_1200C_STROBE@MA3_library_fixed_-_Sept_22th_2025.gdtf",
         "modes": {
           "62 Chan": {
             "channels": 62,
@@ -26,7 +26,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "1200C Strobe"
     }
   ]
 }

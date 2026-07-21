@@ -11,28 +11,29 @@
         "Extended": 9
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/elation",
         "suggestedFileName": "Elation__DTW_350_IP_2_Cell.gdtf",
-        "file": "",
+        "file": "fixtures/elation/Elation@DTW_BLINDER_350_IP@2025-14-02_Release.gdtf",
         "modes": {
           "1 Chan": {
             "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "01CH",
+            "status": "matched"
           },
           "Standard": {
             "channels": 7,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard  ",
+            "status": "matched"
           },
           "Extended": {
             "channels": 9,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended  ",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "DTW 350 IP (2 Cell)"
     },
     {
       "fixture": "Magma Prime Hazer",
@@ -53,7 +54,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Magma Prime Hazer"
     },
     {
       "fixture": "Smarty Max",
@@ -80,7 +82,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Smarty Max"
     }
   ]
 }
