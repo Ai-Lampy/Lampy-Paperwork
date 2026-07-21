@@ -1,0 +1,89 @@
+{
+  "manufacturer": "ER Productions",
+  "fixtures": [
+    {
+      "fixture": "FLAMEBER",
+      "watts": null,
+      "weight": 21.0,
+      "modes": {
+        "Standard": 5
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/er_productions",
+        "suggestedFileName": "ER_Productions__FLAMEBER.gdtf",
+        "file": "fixtures/er_productions/ER_Productions@FlamebER@v0001.gdtf",
+        "modes": {
+          "Standard": {
+            "channels": 5,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "FLAMEBER"
+    },
+    {
+      "fixture": "FLAMEBER XL",
+      "watts": null,
+      "weight": 35.0,
+      "modes": {
+        "Standard": 9,
+        "Turbo": 10,
+        "Basic": 3
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/er_productions",
+        "suggestedFileName": "ER_Productions__FLAMEBER_XL.gdtf",
+        "file": "fixtures/er_productions/ER_Productions@FLAMEBER_XL@V0003.gdtf",
+        "modes": {
+          "Standard": {
+            "channels": 9,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Turbo": {
+            "channels": 10,
+            "gdtfMode": "Turbo",
+            "status": "matched"
+          },
+          "Basic": {
+            "channels": 3,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "FLAMEBER-XL"
+    },
+    {
+      "fixture": "Laserblade2",
+      "watts": 600.0,
+      "weight": 30.0,
+      "modes": {
+        "Standard": 76,
+        "Advanced": 122
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/er_productions",
+        "suggestedFileName": "ER_Productions__Laserblade2.gdtf",
+        "file": "fixtures/er_productions/ER_Productions@Laserblade2@v2.0.gdtf",
+        "modes": {
+          "Standard": {
+            "channels": 76,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Advanced": {
+            "channels": 122,
+            "gdtfMode": "Advanced",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Laserblade2"
+    }
+  ]
+}

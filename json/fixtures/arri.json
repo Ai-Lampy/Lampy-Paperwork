@@ -1,0 +1,4641 @@
+{
+  "manufacturer": "ARRI",
+  "fixtures": [
+    {
+      "fixture": "ARRI SkyPanel-X",
+      "watts": 3000.0,
+      "weight": 18.0,
+      "modes": {
+        "Mode 1 - Legacy CCT+RGBW 8Bit": 12,
+        "Mode 2 - Legacy CCT+RGBW 16Bit": 20,
+        "Mode 3 - Ultimate": 20,
+        "Mode 4 - Ultimate Extended": 27,
+        "Mode 5 - Ultimate BI": 42,
+        "Mode 6 - 8  Zone RGB": 37,
+        "Mode 7 - 16 Zone RGB": 61,
+        "Mode 8 - 24 Zone RGB": 85,
+        "Mode 9 - 8 Zone CCT+RGB": 108,
+        "Mode 10 - 8 Zone CCT+RGBACL": 156
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/arri",
+        "suggestedFileName": "ARRI__ARRI_SkyPanel_X.gdtf",
+        "file": "fixtures/arri/ARRI@ARRI_SkyPanel-X@DMX_v.6_1_Feb_2024.gdtf",
+        "modes": {
+          "Mode 1 - Legacy CCT+RGBW 8Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 1 - Legacy CCT+RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 2 - Legacy CCT+RGBW 16Bit": {
+            "channels": 20,
+            "gdtfMode": "Mode 2 - Legacy CCT+RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 3 - Ultimate": {
+            "channels": 20,
+            "gdtfMode": "Mode 3 - Ultimate",
+            "status": "matched"
+          },
+          "Mode 4 - Ultimate Extended": {
+            "channels": 27,
+            "gdtfMode": "Mode 4 - Ultimate Extended",
+            "status": "matched"
+          },
+          "Mode 5 - Ultimate BI": {
+            "channels": 42,
+            "gdtfMode": "Mode 5 - Ultimate BI",
+            "status": "matched"
+          },
+          "Mode 6 - 8  Zone RGB": {
+            "channels": 37,
+            "gdtfMode": "Mode 6 - 8  Zone RGB",
+            "status": "matched"
+          },
+          "Mode 7 - 16 Zone RGB": {
+            "channels": 61,
+            "gdtfMode": "Mode 7 - 16 Zone RGB",
+            "status": "matched"
+          },
+          "Mode 8 - 24 Zone RGB": {
+            "channels": 85,
+            "gdtfMode": "Mode 8 - 24 Zone RGB",
+            "status": "matched"
+          },
+          "Mode 9 - 8 Zone CCT+RGB": {
+            "channels": 108,
+            "gdtfMode": "Mode 9 - 8 Zone CCT+RGB",
+            "status": "matched"
+          },
+          "Mode 10 - 8 Zone CCT+RGBACL": {
+            "channels": 156,
+            "gdtfMode": "Mode 10 - 8 Zone CCT+RGBACL",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "SkyPanel-X"
+    },
+    {
+      "fixture": "L10-C",
+      "watts": 500.0,
+      "weight": 19.0,
+      "modes": {
+        "Mode 1 CCT+RGBW 8Bit": 8,
+        "Mode 2 CCT 8Bit": 3,
+        "Mode 3 CCT+HSI 8Bit ": 6,
+        "Mode 4 RGBW 8Bit": 5,
+        "Mode 5 HSI 8Bit": 3,
+        "Mode 6 CCT+RGBW 16Bit": 16,
+        "Mode 7 CCT 16Bit ": 6,
+        "Mode 8 CCT+HSI 16Bit": 12,
+        "Mode 9 RGBW 16Bit": 10,
+        "Mode 10 HSI 16Bit": 6
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/arri",
+        "suggestedFileName": "ARRI__L10_C.gdtf",
+        "file": "fixtures/arri/ARRI@L10-C@DMX_v3.5_13_Jan_2021.gdtf",
+        "modes": {
+          "Mode 1 CCT+RGBW 8Bit": {
+            "channels": 8,
+            "gdtfMode": "Mode 1 CCT+RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 2 CCT 8Bit": {
+            "channels": 3,
+            "gdtfMode": "Mode 2 CCT 8Bit",
+            "status": "matched"
+          },
+          "Mode 3 CCT+HSI 8Bit ": {
+            "channels": 6,
+            "gdtfMode": "Mode 3 CCT+HSI 8Bit ",
+            "status": "matched"
+          },
+          "Mode 4 RGBW 8Bit": {
+            "channels": 5,
+            "gdtfMode": "Mode 4 RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 5 HSI 8Bit": {
+            "channels": 3,
+            "gdtfMode": "Mode 5 HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 6 CCT+RGBW 16Bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 6 CCT+RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 7 CCT 16Bit ": {
+            "channels": 6,
+            "gdtfMode": "Mode 7 CCT 16Bit ",
+            "status": "matched"
+          },
+          "Mode 8 CCT+HSI 16Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 8 CCT+HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 9 RGBW 16Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 9 RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 10 HSI 16Bit": {
+            "channels": 6,
+            "gdtfMode": "Mode 10 HSI 16Bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "L10C"
+    },
+    {
+      "fixture": "L5-C",
+      "watts": 115.0,
+      "weight": 5.2,
+      "modes": {
+        "Mode 1 CCT+RGBW 8Bit": 8,
+        "Mode 2 CCT 8Bit": 3,
+        "Mode 3 CCT+HSI 8Bit ": 6,
+        "Mode 4 RGBW 8Bit": 5,
+        "Mode 5 HSI 8Bit": 3,
+        "Mode 6 CCT+RGBW 16Bit": 16,
+        "Mode 7 CCT 16Bit ": 6,
+        "Mode 8 CCT+HSI 16Bit": 12,
+        "Mode 9 RGBW 16Bit": 10,
+        "Mode 10 HSI 16Bit": 6
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/arri",
+        "suggestedFileName": "ARRI__L5_C.gdtf",
+        "file": "fixtures/arri/ARRI@L5-C@DMX_v3.5_13_Jan_2021.gdtf",
+        "modes": {
+          "Mode 1 CCT+RGBW 8Bit": {
+            "channels": 8,
+            "gdtfMode": "Mode 1 CCT+RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 2 CCT 8Bit": {
+            "channels": 3,
+            "gdtfMode": "Mode 2 CCT 8Bit",
+            "status": "matched"
+          },
+          "Mode 3 CCT+HSI 8Bit ": {
+            "channels": 6,
+            "gdtfMode": "Mode 3 CCT+HSI 8Bit ",
+            "status": "matched"
+          },
+          "Mode 4 RGBW 8Bit": {
+            "channels": 5,
+            "gdtfMode": "Mode 4 RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 5 HSI 8Bit": {
+            "channels": 3,
+            "gdtfMode": "Mode 5 HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 6 CCT+RGBW 16Bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 6 CCT+RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 7 CCT 16Bit ": {
+            "channels": 6,
+            "gdtfMode": "Mode 7 CCT 16Bit ",
+            "status": "matched"
+          },
+          "Mode 8 CCT+HSI 16Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 8 CCT+HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 9 RGBW 16Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 9 RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 10 HSI 16Bit": {
+            "channels": 6,
+            "gdtfMode": "Mode 10 HSI 16Bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "L5C"
+    },
+    {
+      "fixture": "L5C Plus",
+      "watts": 200.0,
+      "weight": 8.2,
+      "modes": {
+        "Mode 1  CCT+RGBW 8Bit": 12,
+        "Mode 1  CCT+RGBW ECC 8Bit ": 20,
+        "Mode 2 - CCT 8Bit ": 7,
+        "Mode 2 - CCT ECC 8Bit": 15,
+        "Mode 3 - CCT+HSI 8Bit": 10,
+        "Mode 3 - CCT+HSI ECC 8Bit": 18,
+        "Mode 4 - RGBW 8Bit": 9,
+        "Mode 4 - RGBW ECC 8Bit": 17,
+        "Mode 5- HSI 8Bit": 7,
+        "Mode 5- HSI ECC 8Bit": 15,
+        "Mode 6  - CCT+RGBW 16Bit": 20,
+        "Mode 6  - CCT+RGBW ECC 16Bit": 36,
+        "Mode 7 - CCT 16Bit": 10,
+        "Mode 7 - CCT ECC 16Bit": 26,
+        "Mode 8 - CCT+HSI 16Bit": 16,
+        "Mode 8 - CCT+HSI ECC 16Bit": 32,
+        "Mode 9 - RGBW 16Bit": 14,
+        "Mode 9 - RGBW ECC 16Bit": 30,
+        "Mode 10 - HSI 16Bit": 10,
+        "Mode 10 - HSI ECC 16Bit": 26,
+        "Mode 16 - Gels 8Bit": 17,
+        "Mode 16 - Gels ECC 8Bit": 25,
+        "Mode 17 - Gels 16Bit": 19,
+        "Mode 17 - Gels ECC 16Bit": 35,
+        "Mode 18 - XY 8Bit": 11,
+        "Mode 18 - XY ECC 8Bit": 19,
+        "Mode 19 - XY 16Bit": 17,
+        "Mode 19 - XY ECC 16Bit": 33,
+        "Mode 20 - Source Match 8Bit": 10,
+        "Mode 20 - Source Match ECC 8Bit": 18,
+        "Mode 21 - Source Match 16Bit": 12,
+        "Mode 21 - Source Match ECC 16Bit": 28,
+        "Mode 22 - Effects 8Bit": 13,
+        "Mode 22 - Effects ECC 8Bit": 21,
+        "Mode 23 - Effects 16Bit": 21,
+        "Mode 23 - Effects ECC 16Bit": 37,
+        "Mode 24 -  LE CCT+RGBW 8Bit": 9,
+        "Mode 25 - LE CCT+RGBW 16Bit": 17,
+        "Mode 26 - LE HSI 8Bit": 4,
+        "Mode 27 - LE HSI 16Bit": 7,
+        "Mode 28 - LE XY 8Bit": 4,
+        "Mode 29 - LE XY 16Bit": 7,
+        "Mode 30 - Ultimate 8Bit": 24,
+        "Mode 30 - Ultimate ECC 8Bit": 32
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/arri",
+        "suggestedFileName": "ARRI__L5C_Plus.gdtf",
+        "file": "fixtures/arri/ARRI@L5C_Plus@DMX_v4.4.gdtf",
+        "modes": {
+          "Mode 1  CCT+RGBW 8Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 1  CCT+RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 1  CCT+RGBW ECC 8Bit ": {
+            "channels": 20,
+            "gdtfMode": "Mode 1  CCT+RGBW ECC 8Bit ",
+            "status": "matched"
+          },
+          "Mode 2 - CCT 8Bit ": {
+            "channels": 7,
+            "gdtfMode": "Mode 2 - CCT 8Bit ",
+            "status": "matched"
+          },
+          "Mode 2 - CCT ECC 8Bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 2 - CCT ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 3 - CCT+HSI 8Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 3 - CCT+HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 3 - CCT+HSI ECC 8Bit": {
+            "channels": 18,
+            "gdtfMode": "Mode 3 - CCT+HSI ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 4 - RGBW 8Bit": {
+            "channels": 9,
+            "gdtfMode": "Mode 4 - RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 4 - RGBW ECC 8Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 4 - RGBW ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 5- HSI 8Bit": {
+            "channels": 7,
+            "gdtfMode": "Mode 5- HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 5- HSI ECC 8Bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 5- HSI ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 6  - CCT+RGBW 16Bit": {
+            "channels": 20,
+            "gdtfMode": "Mode 6  - CCT+RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 6  - CCT+RGBW ECC 16Bit": {
+            "channels": 36,
+            "gdtfMode": "Mode 6  - CCT+RGBW ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 7 - CCT 16Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 7 - CCT 16Bit",
+            "status": "matched"
+          },
+          "Mode 7 - CCT ECC 16Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 7 - CCT ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 8 - CCT+HSI 16Bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 8 - CCT+HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 8 - CCT+HSI ECC 16Bit": {
+            "channels": 32,
+            "gdtfMode": "Mode 8 - CCT+HSI ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 9 - RGBW 16Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 9 - RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 9 - RGBW ECC 16Bit": {
+            "channels": 30,
+            "gdtfMode": "Mode 9 - RGBW ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 10 - HSI 16Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 10 - HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 10 - HSI ECC 16Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 10 - HSI ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 16 - Gels 8Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 16 - Gels 8Bit",
+            "status": "matched"
+          },
+          "Mode 16 - Gels ECC 8Bit": {
+            "channels": 25,
+            "gdtfMode": "Mode 16 - Gels ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 17 - Gels 16Bit": {
+            "channels": 19,
+            "gdtfMode": "Mode 17 - Gels 16Bit",
+            "status": "matched"
+          },
+          "Mode 17 - Gels ECC 16Bit": {
+            "channels": 35,
+            "gdtfMode": "Mode 17 - Gels ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 18 - XY 8Bit": {
+            "channels": 11,
+            "gdtfMode": "Mode 18 - XY 8Bit",
+            "status": "matched"
+          },
+          "Mode 18 - XY ECC 8Bit": {
+            "channels": 19,
+            "gdtfMode": "Mode 18 - XY ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 19 - XY 16Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 19 - XY 16Bit",
+            "status": "matched"
+          },
+          "Mode 19 - XY ECC 16Bit": {
+            "channels": 33,
+            "gdtfMode": "Mode 19 - XY ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 20 - Source Match 8Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 20 - Source Match 8Bit",
+            "status": "matched"
+          },
+          "Mode 20 - Source Match ECC 8Bit": {
+            "channels": 18,
+            "gdtfMode": "Mode 20 - Source Match ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 21 - Source Match 16Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 21 - Source Match 16Bit",
+            "status": "matched"
+          },
+          "Mode 21 - Source Match ECC 16Bit": {
+            "channels": 28,
+            "gdtfMode": "Mode 21 - Source Match ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 22 - Effects 8Bit": {
+            "channels": 13,
+            "gdtfMode": "Mode 22 - Effects 8Bit",
+            "status": "matched"
+          },
+          "Mode 22 - Effects ECC 8Bit": {
+            "channels": 21,
+            "gdtfMode": "Mode 22 - Effects ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 23 - Effects 16Bit": {
+            "channels": 21,
+            "gdtfMode": "Mode 23 - Effects 16Bit",
+            "status": "matched"
+          },
+          "Mode 23 - Effects ECC 16Bit": {
+            "channels": 37,
+            "gdtfMode": "Mode 23 - Effects ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 24 -  LE CCT+RGBW 8Bit": {
+            "channels": 9,
+            "gdtfMode": "Mode 24 -  LE CCT+RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 25 - LE CCT+RGBW 16Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 25 - LE CCT+RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 26 - LE HSI 8Bit": {
+            "channels": 4,
+            "gdtfMode": "Mode 26 - LE HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 27 - LE HSI 16Bit": {
+            "channels": 7,
+            "gdtfMode": "Mode 27 - LE HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 28 - LE XY 8Bit": {
+            "channels": 4,
+            "gdtfMode": "Mode 28 - LE XY 8Bit",
+            "status": "matched"
+          },
+          "Mode 29 - LE XY 16Bit": {
+            "channels": 7,
+            "gdtfMode": "Mode 29 - LE XY 16Bit",
+            "status": "matched"
+          },
+          "Mode 30 - Ultimate 8Bit": {
+            "channels": 24,
+            "gdtfMode": "Mode 30 - Ultimate 8Bit",
+            "status": "matched"
+          },
+          "Mode 30 - Ultimate ECC 8Bit": {
+            "channels": 32,
+            "gdtfMode": "Mode 30 - Ultimate ECC 8Bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "L5C"
+    },
+    {
+      "fixture": "L7C",
+      "watts": 220.0,
+      "weight": 8.2,
+      "modes": {
+        "Mode 1 CCT+RGBW 8Bit": 8,
+        "Mode 2 CCT 8Bit": 3,
+        "Mode 3 CCT+HSI 8Bit ": 6,
+        "Mode 4 RGBW 8Bit": 5,
+        "Mode 5 HSI 8Bit": 3,
+        "Mode 6 CCT+RGBW 16Bit": 16,
+        "Mode 7 CCT 16Bit ": 6,
+        "Mode 8 CCT+HSI 16Bit": 12,
+        "Mode 9 RGBW 16Bit": 10,
+        "Mode 10 HSI 16Bit": 6
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/arri",
+        "suggestedFileName": "ARRI__L7C.gdtf",
+        "file": "fixtures/arri/ARRI@L7C@DMX_v3.5_13_Jan_2021.gdtf",
+        "modes": {
+          "Mode 1 CCT+RGBW 8Bit": {
+            "channels": 8,
+            "gdtfMode": "Mode 1 CCT+RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 2 CCT 8Bit": {
+            "channels": 3,
+            "gdtfMode": "Mode 2 CCT 8Bit",
+            "status": "matched"
+          },
+          "Mode 3 CCT+HSI 8Bit ": {
+            "channels": 6,
+            "gdtfMode": "Mode 3 CCT+HSI 8Bit ",
+            "status": "matched"
+          },
+          "Mode 4 RGBW 8Bit": {
+            "channels": 5,
+            "gdtfMode": "Mode 4 RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 5 HSI 8Bit": {
+            "channels": 3,
+            "gdtfMode": "Mode 5 HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 6 CCT+RGBW 16Bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 6 CCT+RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 7 CCT 16Bit ": {
+            "channels": 6,
+            "gdtfMode": "Mode 7 CCT 16Bit ",
+            "status": "matched"
+          },
+          "Mode 8 CCT+HSI 16Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 8 CCT+HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 9 RGBW 16Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 9 RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 10 HSI 16Bit": {
+            "channels": 6,
+            "gdtfMode": "Mode 10 HSI 16Bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "L7C"
+    },
+    {
+      "fixture": "L7C Plus",
+      "watts": 360.0,
+      "weight": 8.2,
+      "modes": {
+        "Mode 1  CCT+RGBW 8Bit": 12,
+        "Mode 1  CCT+RGBW ECC 8Bit ": 20,
+        "Mode 2 - CCT 8Bit ": 7,
+        "Mode 2 - CCT ECC 8Bit": 15,
+        "Mode 3 - CCT+HSI 8Bit": 10,
+        "Mode 3 - CCT+HSI ECC 8Bit": 18,
+        "Mode 4 - RGBW 8Bit": 9,
+        "Mode 4 - RGBW ECC 8Bit": 17,
+        "Mode 5- HSI 8Bit": 7,
+        "Mode 5- HSI ECC 8Bit": 15,
+        "Mode 6  - CCT+RGBW 16Bit": 20,
+        "Mode 6  - CCT+RGBW ECC 16Bit": 36,
+        "Mode 7 - CCT 16Bit": 10,
+        "Mode 7 - CCT ECC 16Bit": 26,
+        "Mode 8 - CCT+HSI 16Bit": 16,
+        "Mode 8 - CCT+HSI ECC 16Bit": 32,
+        "Mode 9 - RGBW 16Bit": 14,
+        "Mode 9 - RGBW ECC 16Bit": 30,
+        "Mode 10 - HSI 16Bit": 10,
+        "Mode 10 - HSI ECC 16Bit": 26,
+        "Mode 16 - Gels 8Bit": 17,
+        "Mode 16 - Gels ECC 8Bit": 25,
+        "Mode 17 - Gels 16Bit": 19,
+        "Mode 17 - Gels ECC 16Bit": 35,
+        "Mode 18 - XY 8Bit": 11,
+        "Mode 18 - XY ECC 8Bit": 19,
+        "Mode 19 - XY 16Bit": 17,
+        "Mode 19 - XY ECC 16Bit": 33,
+        "Mode 20 - Source Match 8Bit": 10,
+        "Mode 20 - Source Match ECC 8Bit": 18,
+        "Mode 21 - Source Match 16Bit": 12,
+        "Mode 21 - Source Match ECC 16Bit": 28,
+        "Mode 22 - Effects 8Bit": 13,
+        "Mode 22 - Effects ECC 8Bit": 21,
+        "Mode 23 - Effects 16Bit": 21,
+        "Mode 23 - Effects ECC 16Bit": 37,
+        "Mode 24 -  LE CCT+RGBW 8Bit": 9,
+        "Mode 25 - LE CCT+RGBW 16Bit": 17,
+        "Mode 26 - LE HSI 8Bit": 4,
+        "Mode 27 - LE HSI 16Bit": 7,
+        "Mode 28 - LE XY 8Bit": 4,
+        "Mode 29 - LE XY 16Bit": 7,
+        "Mode 30 - Ultimate 8Bit": 24,
+        "Mode 30 - Ultimate ECC 8Bit": 32
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/arri",
+        "suggestedFileName": "ARRI__L7C_Plus.gdtf",
+        "file": "fixtures/arri/ARRI@L7C_Plus@DMX_v4.4.gdtf",
+        "modes": {
+          "Mode 1  CCT+RGBW 8Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 1  CCT+RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 1  CCT+RGBW ECC 8Bit ": {
+            "channels": 20,
+            "gdtfMode": "Mode 1  CCT+RGBW ECC 8Bit ",
+            "status": "matched"
+          },
+          "Mode 2 - CCT 8Bit ": {
+            "channels": 7,
+            "gdtfMode": "Mode 2 - CCT 8Bit ",
+            "status": "matched"
+          },
+          "Mode 2 - CCT ECC 8Bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 2 - CCT ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 3 - CCT+HSI 8Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 3 - CCT+HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 3 - CCT+HSI ECC 8Bit": {
+            "channels": 18,
+            "gdtfMode": "Mode 3 - CCT+HSI ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 4 - RGBW 8Bit": {
+            "channels": 9,
+            "gdtfMode": "Mode 4 - RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 4 - RGBW ECC 8Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 4 - RGBW ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 5- HSI 8Bit": {
+            "channels": 7,
+            "gdtfMode": "Mode 5- HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 5- HSI ECC 8Bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 5- HSI ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 6  - CCT+RGBW 16Bit": {
+            "channels": 20,
+            "gdtfMode": "Mode 6  - CCT+RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 6  - CCT+RGBW ECC 16Bit": {
+            "channels": 36,
+            "gdtfMode": "Mode 6  - CCT+RGBW ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 7 - CCT 16Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 7 - CCT 16Bit",
+            "status": "matched"
+          },
+          "Mode 7 - CCT ECC 16Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 7 - CCT ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 8 - CCT+HSI 16Bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 8 - CCT+HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 8 - CCT+HSI ECC 16Bit": {
+            "channels": 32,
+            "gdtfMode": "Mode 8 - CCT+HSI ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 9 - RGBW 16Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 9 - RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 9 - RGBW ECC 16Bit": {
+            "channels": 30,
+            "gdtfMode": "Mode 9 - RGBW ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 10 - HSI 16Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 10 - HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 10 - HSI ECC 16Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 10 - HSI ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 16 - Gels 8Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 16 - Gels 8Bit",
+            "status": "matched"
+          },
+          "Mode 16 - Gels ECC 8Bit": {
+            "channels": 25,
+            "gdtfMode": "Mode 16 - Gels ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 17 - Gels 16Bit": {
+            "channels": 19,
+            "gdtfMode": "Mode 17 - Gels 16Bit",
+            "status": "matched"
+          },
+          "Mode 17 - Gels ECC 16Bit": {
+            "channels": 35,
+            "gdtfMode": "Mode 17 - Gels ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 18 - XY 8Bit": {
+            "channels": 11,
+            "gdtfMode": "Mode 18 - XY 8Bit",
+            "status": "matched"
+          },
+          "Mode 18 - XY ECC 8Bit": {
+            "channels": 19,
+            "gdtfMode": "Mode 18 - XY ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 19 - XY 16Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 19 - XY 16Bit",
+            "status": "matched"
+          },
+          "Mode 19 - XY ECC 16Bit": {
+            "channels": 33,
+            "gdtfMode": "Mode 19 - XY ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 20 - Source Match 8Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 20 - Source Match 8Bit",
+            "status": "matched"
+          },
+          "Mode 20 - Source Match ECC 8Bit": {
+            "channels": 18,
+            "gdtfMode": "Mode 20 - Source Match ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 21 - Source Match 16Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 21 - Source Match 16Bit",
+            "status": "matched"
+          },
+          "Mode 21 - Source Match ECC 16Bit": {
+            "channels": 28,
+            "gdtfMode": "Mode 21 - Source Match ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 22 - Effects 8Bit": {
+            "channels": 13,
+            "gdtfMode": "Mode 22 - Effects 8Bit",
+            "status": "matched"
+          },
+          "Mode 22 - Effects ECC 8Bit": {
+            "channels": 21,
+            "gdtfMode": "Mode 22 - Effects ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 23 - Effects 16Bit": {
+            "channels": 21,
+            "gdtfMode": "Mode 23 - Effects 16Bit",
+            "status": "matched"
+          },
+          "Mode 23 - Effects ECC 16Bit": {
+            "channels": 37,
+            "gdtfMode": "Mode 23 - Effects ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 24 -  LE CCT+RGBW 8Bit": {
+            "channels": 9,
+            "gdtfMode": "Mode 24 -  LE CCT+RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 25 - LE CCT+RGBW 16Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 25 - LE CCT+RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 26 - LE HSI 8Bit": {
+            "channels": 4,
+            "gdtfMode": "Mode 26 - LE HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 27 - LE HSI 16Bit": {
+            "channels": 7,
+            "gdtfMode": "Mode 27 - LE HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 28 - LE XY 8Bit": {
+            "channels": 4,
+            "gdtfMode": "Mode 28 - LE XY 8Bit",
+            "status": "matched"
+          },
+          "Mode 29 - LE XY 16Bit": {
+            "channels": 7,
+            "gdtfMode": "Mode 29 - LE XY 16Bit",
+            "status": "matched"
+          },
+          "Mode 30 - Ultimate 8Bit": {
+            "channels": 24,
+            "gdtfMode": "Mode 30 - Ultimate 8Bit",
+            "status": "matched"
+          },
+          "Mode 30 - Ultimate ECC 8Bit": {
+            "channels": 32,
+            "gdtfMode": "Mode 30 - Ultimate ECC 8Bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "L7C"
+    },
+    {
+      "fixture": "Omnibar 2",
+      "watts": 25.0,
+      "weight": null,
+      "modes": {
+        "Mode 01 - CCT/RGB - 1 Zones - 8Bit": 9,
+        "Mode 02 - CCT/RGB - 1 Zones - 16Bit": 14,
+        "Mode 03 - CCT/RGB - 2 Zones - 8Bit": 16,
+        "Mode 04 - CCT/RGB - 2 Zones - 16Bit": 26,
+        "Mode 05 - CCT/RGB - 4 Zones - 8Bit": 30,
+        "Mode 06 - CCT/RGB - 4 Zones - 16Bit": 50,
+        "Mode 07 - CCT/RGB - 8 Zones - 8Bit": 58,
+        "Mode 08 - CCT/RGB - 8 Zones - 16Bit": 98,
+        "Mode 09 - CCT/RGB - 16 Zones - 8Bit": 114,
+        "Mode 10 - CCT/RGB - 16 Zones - 16Bit": 194,
+        "Mode 11 - CCT/RGB - 32 Zones - 8Bit": 226,
+        "Mode 12 - CCT/RGB - 32 Zones - 16Bit": 386,
+        "Mode 13 - CCT/RGBW - 1 Zones - 8Bit": 10,
+        "Mode 14 - CCT/RGBW - 1 Zones - 16Bit": 16,
+        "Mode 15 - CCT/RGBW - 2 Zones - 8Bit": 18,
+        "Mode 16 - CCT/RGBW - 2 Zones - 16Bit": 30,
+        "Mode 17 - CCT/RGBW - 4 Zones - 8Bit": 34,
+        "Mode 18 - CCT/RGBW - 4 Zones - 16Bit": 58,
+        "Mode 19 - CCT/RGBW - 8 Zones - 8Bit": 66,
+        "Mode 20 - CCT/RGBW - 8 Zones - 16Bit": 114,
+        "Mode 21 - CCT/RGBW - 16 Zones - 8Bit": 130,
+        "Mode 22 - CCT/RGBW - 16 Zones - 16Bit": 226,
+        "Mode 23 - CCT/RGBW - 32 Zones - 8Bit": 258,
+        "Mode 24 - CCT/RGBW - 32 Zones - 16Bit": 450,
+        "Mode 25 - CCT/HSI - 1 Zones - 8Bit": 8,
+        "Mode 26 - CCT/HSI - 1 Zones - 16Bit": 12,
+        "Mode 27 - CCT/HSI - 2 Zones - 8Bit": 14,
+        "Mode 28 - CCT/HSI - 2 Zones - 16Bit": 22,
+        "Mode 29 - CCT/HSI - 4 Zones - 8Bit": 26,
+        "Mode 30 - CCT/HSI - 4 Zones - 16Bit": 42,
+        "Mode 31 - CCT/HSI - 8 Zones - 8Bit": 50,
+        "Mode 32 - CCT/HSI - 8 Zones - 16Bit": 82,
+        "Mode 33 - CCT/HSI - 16 Zones - 8Bit": 98,
+        "Mode 34 - CCT/HSI - 16 Zones - 16Bit": 162,
+        "Mode 35 - CCT/HSI - 32 Zones - 8Bit": 194,
+        "Mode 36 - CCT/HSI - 32 Zones - 16Bit": 322,
+        "Mode 37 - CCT/XY - 1 Zones - 16Bit": 12,
+        "Mode 38 - CCT/XY - 2 Zones - 16Bit": 22,
+        "Mode 39 - CCT/XY - 4 Zones - 16Bit": 42,
+        "Mode 40 - CCT/XY - 8 Zones - 16Bit": 82,
+        "Mode 41 - CCT/XY - 16 Zones - 16Bit": 162,
+        "Mode 42 - CCT/XY - 32 Zones - 16Bit": 322,
+        "Mode 43 - CCT - 1 Zones - 8Bit": 5,
+        "Mode 44 - CCT - 1 Zones - 16Bit": 7,
+        "Mode 45 - CCT - 2 Zones - 8Bit": 8,
+        "Mode 46 - CCT - 2 Zones - 16Bit": 12,
+        "Mode 47 - CCT - 4 Zones - 8Bit": 14,
+        "Mode 48 - CCT - 4 Zones - 16Bit": 22,
+        "Mode 49 - CCT - 8 Zones - 8Bit": 26,
+        "Mode 50 - CCT - 8 Zones - 16Bit": 42,
+        "Mode 51 - CCT - 16 Zones - 8Bit": 50,
+        "Mode 52 - CCT - 16 Zones - 16Bit": 82,
+        "Mode 53 - CCT - 32 Zones - 8Bit": 98,
+        "Mode 54 - CCT - 32 Zones - 16Bit": 162,
+        "Mode 55 - HSI - 1 Zones - 8Bit": 5,
+        "Mode 56 - HSI - 1 Zones - 16Bit": 8,
+        "Mode 57 - HSI - 2 Zones - 8Bit": 8,
+        "Mode 58 - HSI - 2 Zones - 16Bit": 14,
+        "Mode 59 - HSI - 4 Zones - 8Bit": 14,
+        "Mode 60 - HSI - 4 Zones - 16Bit": 26,
+        "Mode 61 - HSI - 8 Zones - 8Bit": 26,
+        "Mode 62 - HSI - 8 Zones - 16Bit": 50,
+        "Mode 63 - HSI - 16 Zones - 8Bit": 50,
+        "Mode 64 - HSI - 16 Zones - 16Bit": 98,
+        "Mode 65 - HSI - 32 Zones - 8Bit": 98,
+        "Mode 66 - HSI - 32 Zones - 16Bit": 194,
+        "Mode 67 - XY - 1 Zones - 16Bit": 8,
+        "Mode 68 - XY - 2 Zones - 16Bit": 14,
+        "Mode 69 - XY - 4 Zones - 16Bit": 26,
+        "Mode 70 - XY - 8 Zones - 16Bit": 50,
+        "Mode 71 - XY - 16 Zones - 16Bit": 98,
+        "Mode 72 - XY - 32 Zones - 16Bit": 194,
+        "Mode 73 - RGB SC - 1 Zones - 8Bit": 6,
+        "Mode 74 - RGB SC - 1 Zones - 16Bit": 10,
+        "Mode 75 - RGB SC - 2 Zones - 8Bit": 9,
+        "Mode 76 - RGB SC - 2 Zones - 16Bit": 16,
+        "Mode 77 - RGB SC - 4 Zones - 8Bit": 15,
+        "Mode 78 - RGB SC - 4 Zones - 16Bit": 28,
+        "Mode 79 - RGB SC - 8 Zones - 8Bit": 27,
+        "Mode 80 - RGB SC - 8 Zones - 16Bit": 52,
+        "Mode 81 - RGB SC - 16 Zones - 8Bit": 51,
+        "Mode 82 - RGB SC - 16 Zones - 16Bit": 100,
+        "Mode 83 - RGB SC - 32 Zones - 8Bit": 99,
+        "Mode 84 - RGB SC - 32 Zones - 16Bit": 196,
+        "Mode 85 - RGBW SC - 1 Zones - 8Bit": 7,
+        "Mode 86 - RGBW SC - 1 Zones - 16Bit": 12,
+        "Mode 87 - RGBW SC - 2 Zones - 8Bit": 11,
+        "Mode 88 - RGBW SC - 2 Zones - 16Bit": 20,
+        "Mode 89 - RGBW SC - 4 Zones - 8Bit": 19,
+        "Mode 90 - RGBW SC - 4 Zones - 16Bit": 36,
+        "Mode 91 - RGBW SC - 8 Zones - 8Bit": 35,
+        "Mode 92 - RGBW SC - 8 Zones - 16Bit": 68,
+        "Mode 93 - RGBW SC - 16 Zones - 8Bit": 67,
+        "Mode 94 - RGBW SC - 16 Zones - 16Bit": 132,
+        "Mode 95 - RGBW SC - 32 Zones - 8Bit": 131,
+        "Mode 96 - RGBW SC - 32 Zones - 16Bit": 260,
+        "Mode 97 - WP RGB SC - 1 Zones - 8Bit": 8,
+        "Mode 98 - WP RGB SC - 1 Zones - 16Bit": 13,
+        "Mode 99 - WP RGB SC - 2 Zones - 8Bit": 11,
+        "Mode 100 - WP RGB SC - 2 Zones - 16Bit": 19,
+        "Mode 101 - WP RGB SC - 4 Zones - 8Bit": 17,
+        "Mode 102 - WP RGB SC - 4 Zones - 16Bit": 31,
+        "Mode 103 - WP RGB SC - 8 Zones - 8Bit": 29,
+        "Mode 104 - WP RGB SC - 8 Zones - 16Bit": 55,
+        "Mode 105 - WP RGB SC - 16 Zones - 8Bit": 53,
+        "Mode 106 - WP RGB SC - 16 Zones - 16Bit": 103,
+        "Mode 107 - WP RGB SC - 32 Zones - 8Bit": 101,
+        "Mode 108 - WP RGB SC - 32 Zones - 16Bit": 199,
+        "Mode 109 - WP RGBW SC - 1 Zones - 8Bit": 9,
+        "Mode 110 - WP RGBW SC - 1 Zones - 16Bit": 15,
+        "Mode 111 - WP RGBW SC - 2 Zones - 8Bit": 13,
+        "Mode 112 - WP RGBW SC - 2 Zones - 16Bit": 23,
+        "Mode 113 - WP RGBW SC - 4 Zones - 8Bit": 21,
+        "Mode 114 - WP RGBW SC - 4 Zones - 16Bit": 39,
+        "Mode 115 - WP RGBW SC - 8 Zones - 8Bit": 37,
+        "Mode 116 - WP RGBW SC - 8 Zones - 16Bit": 71,
+        "Mode 117 - WP RGBW SC - 16 Zones - 8Bit": 69,
+        "Mode 118 - WP RGBW SC - 16 Zones - 16Bit": 135,
+        "Mode 119 - WP RGBW SC - 32 Zones - 8Bit": 133,
+        "Mode 120 - WP RGBW SC - 32 Zones - 16Bit": 263,
+        "Mode 121 - RGB - 1 Zones - 8Bit": 3,
+        "Mode 122 - RGB - 1 Zones - 16Bit": 6,
+        "Mode 123 - RGB - 2 Zones - 8Bit": 6,
+        "Mode 124 - RGB - 2 Zones - 16Bit": 12,
+        "Mode 125 - RGB - 4 Zones - 8Bit": 12,
+        "Mode 126 - RGB - 4 Zones - 16Bit": 24,
+        "Mode 127 - RGB - 8 Zones - 8Bit": 24,
+        "Mode 128 - RGB - 8 Zones - 16Bit": 48,
+        "Mode 129 - RGB - 16 Zones - 8Bit": 48,
+        "Mode 130 - RGB - 16 Zones - 16Bit": 96,
+        "Mode 131 - RGB - 32 Zones - 8Bit": 48,
+        "Mode 132 - RGB - 32 Zones - 16Bit": 96,
+        "Mode 133 - RGBW - 1 Zones - 8Bit": 4,
+        "Mode 134 - RGBW - 1 Zones - 16Bit": 8,
+        "Mode 135 - RGBW - 2 Zones - 8Bit": 8,
+        "Mode 136 - RGBW - 2 Zones - 16Bit": 16,
+        "Mode 137 - RGBW - 4 Zones - 8Bit": 16,
+        "Mode 138 - RGBW - 4 Zones - 16Bit": 32,
+        "Mode 139 - RGBW - 8 Zones - 8Bit": 32,
+        "Mode 140 - RGBW - 8 Zones - 16Bit": 64,
+        "Mode 141 - RGBW - 16 Zones - 8Bit": 64,
+        "Mode 142 - RGBW - 16 Zones - 16Bit": 128,
+        "Mode 143 - RGBW - 32 Zones - 8Bit": 64,
+        "Mode 144 - RGBW - 32 Zones - 16Bit": 128,
+        "Mode 145 - WP RGB - 1 Zones - 8Bit": 5,
+        "Mode 146 - WP RGB - 1 Zones - 16Bit": 9,
+        "Mode 147 - WP RGB - 2 Zones - 8Bit": 8,
+        "Mode 148 - WP RGB - 2 Zones - 16Bit": 15,
+        "Mode 149 - WP RGB - 4 Zones - 8Bit": 14,
+        "Mode 150 - WP RGB - 4 Zones - 16Bit": 27,
+        "Mode 151 - WP RGB - 8 Zones - 8Bit": 26,
+        "Mode 152 - WP RGB - 8 Zones - 16Bit": 51,
+        "Mode 153 - WP RGB - 16 Zones - 8Bit": 50,
+        "Mode 154 - WP RGB - 16 Zones - 16Bit": 99,
+        "Mode 155 - WP RGB - 32 Zones - 8Bit": 50,
+        "Mode 156 - WP RGB - 32 Zones - 16Bit": 99,
+        "Mode 157 - WP RGBW - 1 Zones - 8Bit": 6,
+        "Mode 158 - WP RGBW - 1 Zones - 16Bit": 11,
+        "Mode 159 - WP RGBW - 2 Zones - 8Bit": 10,
+        "Mode 160 - WP RGBW - 2 Zones - 16Bit": 19,
+        "Mode 161 - WP RGBW - 4 Zones - 8Bit": 18,
+        "Mode 162 - WP RGBW - 4 Zones - 16Bit": 35,
+        "Mode 163 - WP RGBW - 8 Zones - 8Bit": 34,
+        "Mode 164 - WP RGBW - 8 Zones - 16Bit": 67,
+        "Mode 165 - WP RGBW - 16 Zones - 8Bit": 66,
+        "Mode 166 - WP RGBW - 16 Zones - 16Bit": 131,
+        "Mode 167 - WP RGBW - 32 Zones - 8Bit": 66,
+        "Mode 168 - WP RGBW - 32 Zones - 16Bit": 131
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/arri",
+        "suggestedFileName": "ARRI__Omnibar_2.gdtf",
+        "file": "fixtures/arri/ARRI@Omnibar_2@DMX_v1.0.gdtf",
+        "modes": {
+          "Mode 01 - CCT/RGB - 1 Zones - 8Bit": {
+            "channels": 9,
+            "gdtfMode": "Mode 01 - CCT/RGB - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 02 - CCT/RGB - 1 Zones - 16Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 02 - CCT/RGB - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 03 - CCT/RGB - 2 Zones - 8Bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 03 - CCT/RGB - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 04 - CCT/RGB - 2 Zones - 16Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 04 - CCT/RGB - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 05 - CCT/RGB - 4 Zones - 8Bit": {
+            "channels": 30,
+            "gdtfMode": "Mode 05 - CCT/RGB - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 06 - CCT/RGB - 4 Zones - 16Bit": {
+            "channels": 50,
+            "gdtfMode": "Mode 06 - CCT/RGB - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 07 - CCT/RGB - 8 Zones - 8Bit": {
+            "channels": 58,
+            "gdtfMode": "Mode 07 - CCT/RGB - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 08 - CCT/RGB - 8 Zones - 16Bit": {
+            "channels": 98,
+            "gdtfMode": "Mode 08 - CCT/RGB - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 09 - CCT/RGB - 16 Zones - 8Bit": {
+            "channels": 114,
+            "gdtfMode": "Mode 09 - CCT/RGB - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 10 - CCT/RGB - 16 Zones - 16Bit": {
+            "channels": 194,
+            "gdtfMode": "Mode 10 - CCT/RGB - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 11 - CCT/RGB - 32 Zones - 8Bit": {
+            "channels": 226,
+            "gdtfMode": "Mode 11 - CCT/RGB - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 12 - CCT/RGB - 32 Zones - 16Bit": {
+            "channels": 386,
+            "gdtfMode": "Mode 12 - CCT/RGB - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 13 - CCT/RGBW - 1 Zones - 8Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 13 - CCT/RGBW - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 14 - CCT/RGBW - 1 Zones - 16Bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 14 - CCT/RGBW - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 15 - CCT/RGBW - 2 Zones - 8Bit": {
+            "channels": 18,
+            "gdtfMode": "Mode 15 - CCT/RGBW - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 16 - CCT/RGBW - 2 Zones - 16Bit": {
+            "channels": 30,
+            "gdtfMode": "Mode 16 - CCT/RGBW - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 17 - CCT/RGBW - 4 Zones - 8Bit": {
+            "channels": 34,
+            "gdtfMode": "Mode 17 - CCT/RGBW - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 18 - CCT/RGBW - 4 Zones - 16Bit": {
+            "channels": 58,
+            "gdtfMode": "Mode 18 - CCT/RGBW - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 19 - CCT/RGBW - 8 Zones - 8Bit": {
+            "channels": 66,
+            "gdtfMode": "Mode 19 - CCT/RGBW - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 20 - CCT/RGBW - 8 Zones - 16Bit": {
+            "channels": 114,
+            "gdtfMode": "Mode 20 - CCT/RGBW - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 21 - CCT/RGBW - 16 Zones - 8Bit": {
+            "channels": 130,
+            "gdtfMode": "Mode 21 - CCT/RGBW - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 22 - CCT/RGBW - 16 Zones - 16Bit": {
+            "channels": 226,
+            "gdtfMode": "Mode 22 - CCT/RGBW - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 23 - CCT/RGBW - 32 Zones - 8Bit": {
+            "channels": 258,
+            "gdtfMode": "Mode 23 - CCT/RGBW - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 24 - CCT/RGBW - 32 Zones - 16Bit": {
+            "channels": 450,
+            "gdtfMode": "Mode 24 - CCT/RGBW - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 25 - CCT/HSI - 1 Zones - 8Bit": {
+            "channels": 8,
+            "gdtfMode": "Mode 25 - CCT/HSI - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 26 - CCT/HSI - 1 Zones - 16Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 26 - CCT/HSI - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 27 - CCT/HSI - 2 Zones - 8Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 27 - CCT/HSI - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 28 - CCT/HSI - 2 Zones - 16Bit": {
+            "channels": 22,
+            "gdtfMode": "Mode 28 - CCT/HSI - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 29 - CCT/HSI - 4 Zones - 8Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 29 - CCT/HSI - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 30 - CCT/HSI - 4 Zones - 16Bit": {
+            "channels": 42,
+            "gdtfMode": "Mode 30 - CCT/HSI - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 31 - CCT/HSI - 8 Zones - 8Bit": {
+            "channels": 50,
+            "gdtfMode": "Mode 31 - CCT/HSI - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 32 - CCT/HSI - 8 Zones - 16Bit": {
+            "channels": 82,
+            "gdtfMode": "Mode 32 - CCT/HSI - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 33 - CCT/HSI - 16 Zones - 8Bit": {
+            "channels": 98,
+            "gdtfMode": "Mode 33 - CCT/HSI - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 34 - CCT/HSI - 16 Zones - 16Bit": {
+            "channels": 162,
+            "gdtfMode": "Mode 34 - CCT/HSI - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 35 - CCT/HSI - 32 Zones - 8Bit": {
+            "channels": 194,
+            "gdtfMode": "Mode 35 - CCT/HSI - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 36 - CCT/HSI - 32 Zones - 16Bit": {
+            "channels": 322,
+            "gdtfMode": "Mode 36 - CCT/HSI - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 37 - CCT/XY - 1 Zones - 16Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 37 - CCT/XY - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 38 - CCT/XY - 2 Zones - 16Bit": {
+            "channels": 22,
+            "gdtfMode": "Mode 38 - CCT/XY - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 39 - CCT/XY - 4 Zones - 16Bit": {
+            "channels": 42,
+            "gdtfMode": "Mode 39 - CCT/XY - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 40 - CCT/XY - 8 Zones - 16Bit": {
+            "channels": 82,
+            "gdtfMode": "Mode 40 - CCT/XY - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 41 - CCT/XY - 16 Zones - 16Bit": {
+            "channels": 162,
+            "gdtfMode": "Mode 41 - CCT/XY - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 42 - CCT/XY - 32 Zones - 16Bit": {
+            "channels": 322,
+            "gdtfMode": "Mode 42 - CCT/XY - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 43 - CCT - 1 Zones - 8Bit": {
+            "channels": 5,
+            "gdtfMode": "Mode 43 - CCT - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 44 - CCT - 1 Zones - 16Bit": {
+            "channels": 7,
+            "gdtfMode": "Mode 44 - CCT - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 45 - CCT - 2 Zones - 8Bit": {
+            "channels": 8,
+            "gdtfMode": "Mode 45 - CCT - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 46 - CCT - 2 Zones - 16Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 46 - CCT - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 47 - CCT - 4 Zones - 8Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 47 - CCT - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 48 - CCT - 4 Zones - 16Bit": {
+            "channels": 22,
+            "gdtfMode": "Mode 48 - CCT - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 49 - CCT - 8 Zones - 8Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 49 - CCT - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 50 - CCT - 8 Zones - 16Bit": {
+            "channels": 42,
+            "gdtfMode": "Mode 50 - CCT - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 51 - CCT - 16 Zones - 8Bit": {
+            "channels": 50,
+            "gdtfMode": "Mode 51 - CCT - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 52 - CCT - 16 Zones - 16Bit": {
+            "channels": 82,
+            "gdtfMode": "Mode 52 - CCT - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 53 - CCT - 32 Zones - 8Bit": {
+            "channels": 98,
+            "gdtfMode": "Mode 53 - CCT - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 54 - CCT - 32 Zones - 16Bit": {
+            "channels": 162,
+            "gdtfMode": "Mode 54 - CCT - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 55 - HSI - 1 Zones - 8Bit": {
+            "channels": 5,
+            "gdtfMode": "Mode 55 - HSI - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 56 - HSI - 1 Zones - 16Bit": {
+            "channels": 8,
+            "gdtfMode": "Mode 56 - HSI - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 57 - HSI - 2 Zones - 8Bit": {
+            "channels": 8,
+            "gdtfMode": "Mode 57 - HSI - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 58 - HSI - 2 Zones - 16Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 58 - HSI - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 59 - HSI - 4 Zones - 8Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 59 - HSI - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 60 - HSI - 4 Zones - 16Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 60 - HSI - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 61 - HSI - 8 Zones - 8Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 61 - HSI - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 62 - HSI - 8 Zones - 16Bit": {
+            "channels": 50,
+            "gdtfMode": "Mode 62 - HSI - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 63 - HSI - 16 Zones - 8Bit": {
+            "channels": 50,
+            "gdtfMode": "Mode 63 - HSI - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 64 - HSI - 16 Zones - 16Bit": {
+            "channels": 98,
+            "gdtfMode": "Mode 64 - HSI - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 65 - HSI - 32 Zones - 8Bit": {
+            "channels": 98,
+            "gdtfMode": "Mode 65 - HSI - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 66 - HSI - 32 Zones - 16Bit": {
+            "channels": 194,
+            "gdtfMode": "Mode 66 - HSI - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 67 - XY - 1 Zones - 16Bit": {
+            "channels": 8,
+            "gdtfMode": "Mode 67 - XY - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 68 - XY - 2 Zones - 16Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 68 - XY - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 69 - XY - 4 Zones - 16Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 69 - XY - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 70 - XY - 8 Zones - 16Bit": {
+            "channels": 50,
+            "gdtfMode": "Mode 70 - XY - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 71 - XY - 16 Zones - 16Bit": {
+            "channels": 98,
+            "gdtfMode": "Mode 71 - XY - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 72 - XY - 32 Zones - 16Bit": {
+            "channels": 194,
+            "gdtfMode": "Mode 72 - XY - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 73 - RGB SC - 1 Zones - 8Bit": {
+            "channels": 6,
+            "gdtfMode": "Mode 73 - RGB SC - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 74 - RGB SC - 1 Zones - 16Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 74 - RGB SC - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 75 - RGB SC - 2 Zones - 8Bit": {
+            "channels": 9,
+            "gdtfMode": "Mode 75 - RGB SC - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 76 - RGB SC - 2 Zones - 16Bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 76 - RGB SC - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 77 - RGB SC - 4 Zones - 8Bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 77 - RGB SC - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 78 - RGB SC - 4 Zones - 16Bit": {
+            "channels": 28,
+            "gdtfMode": "Mode 78 - RGB SC - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 79 - RGB SC - 8 Zones - 8Bit": {
+            "channels": 27,
+            "gdtfMode": "Mode 79 - RGB SC - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 80 - RGB SC - 8 Zones - 16Bit": {
+            "channels": 52,
+            "gdtfMode": "Mode 80 - RGB SC - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 81 - RGB SC - 16 Zones - 8Bit": {
+            "channels": 51,
+            "gdtfMode": "Mode 81 - RGB SC - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 82 - RGB SC - 16 Zones - 16Bit": {
+            "channels": 100,
+            "gdtfMode": "Mode 82 - RGB SC - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 83 - RGB SC - 32 Zones - 8Bit": {
+            "channels": 99,
+            "gdtfMode": "Mode 83 - RGB SC - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 84 - RGB SC - 32 Zones - 16Bit": {
+            "channels": 196,
+            "gdtfMode": "Mode 84 - RGB SC - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 85 - RGBW SC - 1 Zones - 8Bit": {
+            "channels": 7,
+            "gdtfMode": "Mode 85 - RGBW SC - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 86 - RGBW SC - 1 Zones - 16Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 86 - RGBW SC - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 87 - RGBW SC - 2 Zones - 8Bit": {
+            "channels": 11,
+            "gdtfMode": "Mode 87 - RGBW SC - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 88 - RGBW SC - 2 Zones - 16Bit": {
+            "channels": 20,
+            "gdtfMode": "Mode 88 - RGBW SC - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 89 - RGBW SC - 4 Zones - 8Bit": {
+            "channels": 19,
+            "gdtfMode": "Mode 89 - RGBW SC - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 90 - RGBW SC - 4 Zones - 16Bit": {
+            "channels": 36,
+            "gdtfMode": "Mode 90 - RGBW SC - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 91 - RGBW SC - 8 Zones - 8Bit": {
+            "channels": 35,
+            "gdtfMode": "Mode 91 - RGBW SC - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 92 - RGBW SC - 8 Zones - 16Bit": {
+            "channels": 68,
+            "gdtfMode": "Mode 92 - RGBW SC - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 93 - RGBW SC - 16 Zones - 8Bit": {
+            "channels": 67,
+            "gdtfMode": "Mode 93 - RGBW SC - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 94 - RGBW SC - 16 Zones - 16Bit": {
+            "channels": 132,
+            "gdtfMode": "Mode 94 - RGBW SC - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 95 - RGBW SC - 32 Zones - 8Bit": {
+            "channels": 131,
+            "gdtfMode": "Mode 95 - RGBW SC - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 96 - RGBW SC - 32 Zones - 16Bit": {
+            "channels": 260,
+            "gdtfMode": "Mode 96 - RGBW SC - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 97 - WP RGB SC - 1 Zones - 8Bit": {
+            "channels": 8,
+            "gdtfMode": "Mode 97 - WP RGB SC - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 98 - WP RGB SC - 1 Zones - 16Bit": {
+            "channels": 13,
+            "gdtfMode": "Mode 98 - WP RGB SC - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 99 - WP RGB SC - 2 Zones - 8Bit": {
+            "channels": 11,
+            "gdtfMode": "Mode 99 - WP RGB SC - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 100 - WP RGB SC - 2 Zones - 16Bit": {
+            "channels": 19,
+            "gdtfMode": "Mode 100 - WP RGB SC - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 101 - WP RGB SC - 4 Zones - 8Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 101 - WP RGB SC - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 102 - WP RGB SC - 4 Zones - 16Bit": {
+            "channels": 31,
+            "gdtfMode": "Mode 102 - WP RGB SC - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 103 - WP RGB SC - 8 Zones - 8Bit": {
+            "channels": 29,
+            "gdtfMode": "Mode 103 - WP RGB SC - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 104 - WP RGB SC - 8 Zones - 16Bit": {
+            "channels": 55,
+            "gdtfMode": "Mode 104 - WP RGB SC - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 105 - WP RGB SC - 16 Zones - 8Bit": {
+            "channels": 53,
+            "gdtfMode": "Mode 105 - WP RGB SC - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 106 - WP RGB SC - 16 Zones - 16Bit": {
+            "channels": 103,
+            "gdtfMode": "Mode 106 - WP RGB SC - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 107 - WP RGB SC - 32 Zones - 8Bit": {
+            "channels": 101,
+            "gdtfMode": "Mode 107 - WP RGB SC - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 108 - WP RGB SC - 32 Zones - 16Bit": {
+            "channels": 199,
+            "gdtfMode": "Mode 108 - WP RGB SC - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 109 - WP RGBW SC - 1 Zones - 8Bit": {
+            "channels": 9,
+            "gdtfMode": "Mode 109 - WP RGBW SC - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 110 - WP RGBW SC - 1 Zones - 16Bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 110 - WP RGBW SC - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 111 - WP RGBW SC - 2 Zones - 8Bit": {
+            "channels": 13,
+            "gdtfMode": "Mode 111 - WP RGBW SC - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 112 - WP RGBW SC - 2 Zones - 16Bit": {
+            "channels": 23,
+            "gdtfMode": "Mode 112 - WP RGBW SC - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 113 - WP RGBW SC - 4 Zones - 8Bit": {
+            "channels": 21,
+            "gdtfMode": "Mode 113 - WP RGBW SC - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 114 - WP RGBW SC - 4 Zones - 16Bit": {
+            "channels": 39,
+            "gdtfMode": "Mode 114 - WP RGBW SC - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 115 - WP RGBW SC - 8 Zones - 8Bit": {
+            "channels": 37,
+            "gdtfMode": "Mode 115 - WP RGBW SC - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 116 - WP RGBW SC - 8 Zones - 16Bit": {
+            "channels": 71,
+            "gdtfMode": "Mode 116 - WP RGBW SC - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 117 - WP RGBW SC - 16 Zones - 8Bit": {
+            "channels": 69,
+            "gdtfMode": "Mode 117 - WP RGBW SC - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 118 - WP RGBW SC - 16 Zones - 16Bit": {
+            "channels": 135,
+            "gdtfMode": "Mode 118 - WP RGBW SC - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 119 - WP RGBW SC - 32 Zones - 8Bit": {
+            "channels": 133,
+            "gdtfMode": "Mode 119 - WP RGBW SC - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 120 - WP RGBW SC - 32 Zones - 16Bit": {
+            "channels": 263,
+            "gdtfMode": "Mode 120 - WP RGBW SC - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 121 - RGB - 1 Zones - 8Bit": {
+            "channels": 3,
+            "gdtfMode": "Mode 121 - RGB - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 122 - RGB - 1 Zones - 16Bit": {
+            "channels": 6,
+            "gdtfMode": "Mode 122 - RGB - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 123 - RGB - 2 Zones - 8Bit": {
+            "channels": 6,
+            "gdtfMode": "Mode 123 - RGB - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 124 - RGB - 2 Zones - 16Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 124 - RGB - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 125 - RGB - 4 Zones - 8Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 125 - RGB - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 126 - RGB - 4 Zones - 16Bit": {
+            "channels": 24,
+            "gdtfMode": "Mode 126 - RGB - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 127 - RGB - 8 Zones - 8Bit": {
+            "channels": 24,
+            "gdtfMode": "Mode 127 - RGB - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 128 - RGB - 8 Zones - 16Bit": {
+            "channels": 48,
+            "gdtfMode": "Mode 128 - RGB - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 129 - RGB - 16 Zones - 8Bit": {
+            "channels": 48,
+            "gdtfMode": "Mode 129 - RGB - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 130 - RGB - 16 Zones - 16Bit": {
+            "channels": 96,
+            "gdtfMode": "Mode 130 - RGB - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 131 - RGB - 32 Zones - 8Bit": {
+            "channels": 48,
+            "gdtfMode": "Mode 131 - RGB - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 132 - RGB - 32 Zones - 16Bit": {
+            "channels": 96,
+            "gdtfMode": "Mode 132 - RGB - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 133 - RGBW - 1 Zones - 8Bit": {
+            "channels": 4,
+            "gdtfMode": "Mode 133 - RGBW - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 134 - RGBW - 1 Zones - 16Bit": {
+            "channels": 8,
+            "gdtfMode": "Mode 134 - RGBW - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 135 - RGBW - 2 Zones - 8Bit": {
+            "channels": 8,
+            "gdtfMode": "Mode 135 - RGBW - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 136 - RGBW - 2 Zones - 16Bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 136 - RGBW - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 137 - RGBW - 4 Zones - 8Bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 137 - RGBW - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 138 - RGBW - 4 Zones - 16Bit": {
+            "channels": 32,
+            "gdtfMode": "Mode 138 - RGBW - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 139 - RGBW - 8 Zones - 8Bit": {
+            "channels": 32,
+            "gdtfMode": "Mode 139 - RGBW - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 140 - RGBW - 8 Zones - 16Bit": {
+            "channels": 64,
+            "gdtfMode": "Mode 140 - RGBW - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 141 - RGBW - 16 Zones - 8Bit": {
+            "channels": 64,
+            "gdtfMode": "Mode 141 - RGBW - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 142 - RGBW - 16 Zones - 16Bit": {
+            "channels": 128,
+            "gdtfMode": "Mode 142 - RGBW - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 143 - RGBW - 32 Zones - 8Bit": {
+            "channels": 64,
+            "gdtfMode": "Mode 143 - RGBW - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 144 - RGBW - 32 Zones - 16Bit": {
+            "channels": 128,
+            "gdtfMode": "Mode 144 - RGBW - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 145 - WP RGB - 1 Zones - 8Bit": {
+            "channels": 5,
+            "gdtfMode": "Mode 145 - WP RGB - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 146 - WP RGB - 1 Zones - 16Bit": {
+            "channels": 9,
+            "gdtfMode": "Mode 146 - WP RGB - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 147 - WP RGB - 2 Zones - 8Bit": {
+            "channels": 8,
+            "gdtfMode": "Mode 147 - WP RGB - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 148 - WP RGB - 2 Zones - 16Bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 148 - WP RGB - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 149 - WP RGB - 4 Zones - 8Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 149 - WP RGB - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 150 - WP RGB - 4 Zones - 16Bit": {
+            "channels": 27,
+            "gdtfMode": "Mode 150 - WP RGB - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 151 - WP RGB - 8 Zones - 8Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 151 - WP RGB - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 152 - WP RGB - 8 Zones - 16Bit": {
+            "channels": 51,
+            "gdtfMode": "Mode 152 - WP RGB - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 153 - WP RGB - 16 Zones - 8Bit": {
+            "channels": 50,
+            "gdtfMode": "Mode 153 - WP RGB - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 154 - WP RGB - 16 Zones - 16Bit": {
+            "channels": 99,
+            "gdtfMode": "Mode 154 - WP RGB - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 155 - WP RGB - 32 Zones - 8Bit": {
+            "channels": 50,
+            "gdtfMode": "Mode 155 - WP RGB - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 156 - WP RGB - 32 Zones - 16Bit": {
+            "channels": 99,
+            "gdtfMode": "Mode 156 - WP RGB - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 157 - WP RGBW - 1 Zones - 8Bit": {
+            "channels": 6,
+            "gdtfMode": "Mode 157 - WP RGBW - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 158 - WP RGBW - 1 Zones - 16Bit": {
+            "channels": 11,
+            "gdtfMode": "Mode 158 - WP RGBW - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 159 - WP RGBW - 2 Zones - 8Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 159 - WP RGBW - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 160 - WP RGBW - 2 Zones - 16Bit": {
+            "channels": 19,
+            "gdtfMode": "Mode 160 - WP RGBW - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 161 - WP RGBW - 4 Zones - 8Bit": {
+            "channels": 18,
+            "gdtfMode": "Mode 161 - WP RGBW - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 162 - WP RGBW - 4 Zones - 16Bit": {
+            "channels": 35,
+            "gdtfMode": "Mode 162 - WP RGBW - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 163 - WP RGBW - 8 Zones - 8Bit": {
+            "channels": 34,
+            "gdtfMode": "Mode 163 - WP RGBW - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 164 - WP RGBW - 8 Zones - 16Bit": {
+            "channels": 67,
+            "gdtfMode": "Mode 164 - WP RGBW - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 165 - WP RGBW - 16 Zones - 8Bit": {
+            "channels": 66,
+            "gdtfMode": "Mode 165 - WP RGBW - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 166 - WP RGBW - 16 Zones - 16Bit": {
+            "channels": 131,
+            "gdtfMode": "Mode 166 - WP RGBW - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 167 - WP RGBW - 32 Zones - 8Bit": {
+            "channels": 66,
+            "gdtfMode": "Mode 167 - WP RGBW - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 168 - WP RGBW - 32 Zones - 16Bit": {
+            "channels": 131,
+            "gdtfMode": "Mode 168 - WP RGBW - 32 Zones - 16Bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Omnibar 2"
+    },
+    {
+      "fixture": "Omnibar 4",
+      "watts": 50.0,
+      "weight": null,
+      "modes": {
+        "Mode 01 - CCT/RGB - 1 Zones - 8Bit": 9,
+        "Mode 02 - CCT/RGB - 1 Zones - 16Bit": 14,
+        "Mode 03 - CCT/RGB - 2 Zones - 8Bit": 16,
+        "Mode 04 - CCT/RGB - 2 Zones - 16Bit": 26,
+        "Mode 05 - CCT/RGB - 4 Zones - 8Bit": 30,
+        "Mode 06 - CCT/RGB - 4 Zones - 16Bit": 50,
+        "Mode 07 - CCT/RGB - 8 Zones - 8Bit": 58,
+        "Mode 08 - CCT/RGB - 8 Zones - 16Bit": 98,
+        "Mode 09 - CCT/RGB - 16 Zones - 8Bit": 114,
+        "Mode 10 - CCT/RGB - 16 Zones - 16Bit": 194,
+        "Mode 11 - CCT/RGB - 32 Zones - 8Bit": 226,
+        "Mode 12 - CCT/RGB - 32 Zones - 16Bit": 386,
+        "Mode 13 - CCT/RGBW - 1 Zones - 8Bit": 10,
+        "Mode 14 - CCT/RGBW - 1 Zones - 16Bit": 16,
+        "Mode 15 - CCT/RGBW - 2 Zones - 8Bit": 18,
+        "Mode 16 - CCT/RGBW - 2 Zones - 16Bit": 30,
+        "Mode 17 - CCT/RGBW - 4 Zones - 8Bit": 34,
+        "Mode 18 - CCT/RGBW - 4 Zones - 16Bit": 58,
+        "Mode 19 - CCT/RGBW - 8 Zones - 8Bit": 66,
+        "Mode 20 - CCT/RGBW - 8 Zones - 16Bit": 114,
+        "Mode 21 - CCT/RGBW - 16 Zones - 8Bit": 130,
+        "Mode 22 - CCT/RGBW - 16 Zones - 16Bit": 226,
+        "Mode 23 - CCT/RGBW - 32 Zones - 8Bit": 258,
+        "Mode 24 - CCT/RGBW - 32 Zones - 16Bit": 450,
+        "Mode 25 - CCT/HSI - 1 Zones - 8Bit": 8,
+        "Mode 26 - CCT/HSI - 1 Zones - 16Bit": 12,
+        "Mode 27 - CCT/HSI - 2 Zones - 8Bit": 14,
+        "Mode 28 - CCT/HSI - 2 Zones - 16Bit": 22,
+        "Mode 29 - CCT/HSI - 4 Zones - 8Bit": 26,
+        "Mode 30 - CCT/HSI - 4 Zones - 16Bit": 42,
+        "Mode 31 - CCT/HSI - 8 Zones - 8Bit": 50,
+        "Mode 32 - CCT/HSI - 8 Zones - 16Bit": 82,
+        "Mode 33 - CCT/HSI - 16 Zones - 8Bit": 98,
+        "Mode 34 - CCT/HSI - 16 Zones - 16Bit": 162,
+        "Mode 35 - CCT/HSI - 32 Zones - 8Bit": 194,
+        "Mode 36 - CCT/HSI - 32 Zones - 16Bit": 322,
+        "Mode 37 - CCT/XY - 1 Zones - 16Bit": 12,
+        "Mode 38 - CCT/XY - 2 Zones - 16Bit": 22,
+        "Mode 39 - CCT/XY - 4 Zones - 16Bit": 42,
+        "Mode 40 - CCT/XY - 8 Zones - 16Bit": 82,
+        "Mode 41 - CCT/XY - 16 Zones - 16Bit": 162,
+        "Mode 42 - CCT/XY - 32 Zones - 16Bit": 322,
+        "Mode 43 - CCT - 1 Zones - 8Bit": 5,
+        "Mode 44 - CCT - 1 Zones - 16Bit": 7,
+        "Mode 45 - CCT - 2 Zones - 8Bit": 8,
+        "Mode 46 - CCT - 2 Zones - 16Bit": 12,
+        "Mode 47 - CCT - 4 Zones - 8Bit": 14,
+        "Mode 48 - CCT - 4 Zones - 16Bit": 22,
+        "Mode 49 - CCT - 8 Zones - 8Bit": 26,
+        "Mode 50 - CCT - 8 Zones - 16Bit": 42,
+        "Mode 51 - CCT - 16 Zones - 8Bit": 50,
+        "Mode 52 - CCT - 16 Zones - 16Bit": 82,
+        "Mode 53 - CCT - 32 Zones - 8Bit": 98,
+        "Mode 54 - CCT - 32 Zones - 16Bit": 162,
+        "Mode 55 - HSI - 1 Zones - 8Bit": 5,
+        "Mode 56 - HSI - 1 Zones - 16Bit": 8,
+        "Mode 57 - HSI - 2 Zones - 8Bit": 8,
+        "Mode 58 - HSI - 2 Zones - 16Bit": 14,
+        "Mode 59 - HSI - 4 Zones - 8Bit": 14,
+        "Mode 60 - HSI - 4 Zones - 16Bit": 26,
+        "Mode 61 - HSI - 8 Zones - 8Bit": 26,
+        "Mode 62 - HSI - 8 Zones - 16Bit": 50,
+        "Mode 63 - HSI - 16 Zones - 8Bit": 50,
+        "Mode 64 - HSI - 16 Zones - 16Bit": 98,
+        "Mode 65 - HSI - 32 Zones - 8Bit": 98,
+        "Mode 66 - HSI - 32 Zones - 16Bit": 194,
+        "Mode 67 - XY - 1 Zones - 16Bit": 8,
+        "Mode 68 - XY - 2 Zones - 16Bit": 14,
+        "Mode 69 - XY - 4 Zones - 16Bit": 26,
+        "Mode 70 - XY - 8 Zones - 16Bit": 50,
+        "Mode 71 - XY - 16 Zones - 16Bit": 98,
+        "Mode 72 - XY - 32 Zones - 16Bit": 194,
+        "Mode 73 - RGB SC - 1 Zones - 8Bit": 6,
+        "Mode 74 - RGB SC - 1 Zones - 16Bit": 10,
+        "Mode 75 - RGB SC - 2 Zones - 8Bit": 9,
+        "Mode 76 - RGB SC - 2 Zones - 16Bit": 16,
+        "Mode 77 - RGB SC - 4 Zones - 8Bit": 15,
+        "Mode 78 - RGB SC - 4 Zones - 16Bit": 28,
+        "Mode 79 - RGB SC - 8 Zones - 8Bit": 27,
+        "Mode 80 - RGB SC - 8 Zones - 16Bit": 52,
+        "Mode 81 - RGB SC - 16 Zones - 8Bit": 51,
+        "Mode 82 - RGB SC - 16 Zones - 16Bit": 100,
+        "Mode 83 - RGB SC - 32 Zones - 8Bit": 99,
+        "Mode 84 - RGB SC - 32 Zones - 16Bit": 196,
+        "Mode 85 - RGBW SC - 1 Zones - 8Bit": 7,
+        "Mode 86 - RGBW SC - 1 Zones - 16Bit": 12,
+        "Mode 87 - RGBW SC - 2 Zones - 8Bit": 11,
+        "Mode 88 - RGBW SC - 2 Zones - 16Bit": 20,
+        "Mode 89 - RGBW SC - 4 Zones - 8Bit": 19,
+        "Mode 90 - RGBW SC - 4 Zones - 16Bit": 36,
+        "Mode 91 - RGBW SC - 8 Zones - 8Bit": 35,
+        "Mode 92 - RGBW SC - 8 Zones - 16Bit": 68,
+        "Mode 93 - RGBW SC - 16 Zones - 8Bit": 67,
+        "Mode 94 - RGBW SC - 16 Zones - 16Bit": 132,
+        "Mode 95 - RGBW SC - 32 Zones - 8Bit": 131,
+        "Mode 96 - RGBW SC - 32 Zones - 16Bit": 260,
+        "Mode 97 - WP RGB SC - 1 Zones - 8Bit": 8,
+        "Mode 98 - WP RGB SC - 1 Zones - 16Bit": 13,
+        "Mode 99 - WP RGB SC - 2 Zones - 8Bit": 11,
+        "Mode 100 - WP RGB SC - 2 Zones - 16Bit": 19,
+        "Mode 101 - WP RGB SC - 4 Zones - 8Bit": 17,
+        "Mode 102 - WP RGB SC - 4 Zones - 16Bit": 31,
+        "Mode 103 - WP RGB SC - 8 Zones - 8Bit": 29,
+        "Mode 104 - WP RGB SC - 8 Zones - 16Bit": 55,
+        "Mode 105 - WP RGB SC - 16 Zones - 8Bit": 53,
+        "Mode 106 - WP RGB SC - 16 Zones - 16Bit": 103,
+        "Mode 107 - WP RGB SC - 32 Zones - 8Bit": 101,
+        "Mode 108 - WP RGB SC - 32 Zones - 16Bit": 199,
+        "Mode 109 - WP RGBW SC - 1 Zones - 8Bit": 9,
+        "Mode 110 - WP RGBW SC - 1 Zones - 16Bit": 15,
+        "Mode 111 - WP RGBW SC - 2 Zones - 8Bit": 13,
+        "Mode 112 - WP RGBW SC - 2 Zones - 16Bit": 23,
+        "Mode 113 - WP RGBW SC - 4 Zones - 8Bit": 21,
+        "Mode 114 - WP RGBW SC - 4 Zones - 16Bit": 39,
+        "Mode 115 - WP RGBW SC - 8 Zones - 8Bit": 37,
+        "Mode 116 - WP RGBW SC - 8 Zones - 16Bit": 71,
+        "Mode 117 - WP RGBW SC - 16 Zones - 8Bit": 69,
+        "Mode 118 - WP RGBW SC - 16 Zones - 16Bit": 135,
+        "Mode 119 - WP RGBW SC - 32 Zones - 8Bit": 133,
+        "Mode 120 - WP RGBW SC - 32 Zones - 16Bit": 263,
+        "Mode 121 - RGB - 1 Zones - 8Bit": 3,
+        "Mode 122 - RGB - 1 Zones - 16Bit": 6,
+        "Mode 123 - RGB - 2 Zones - 8Bit": 6,
+        "Mode 124 - RGB - 2 Zones - 16Bit": 12,
+        "Mode 125 - RGB - 4 Zones - 8Bit": 12,
+        "Mode 126 - RGB - 4 Zones - 16Bit": 24,
+        "Mode 127 - RGB - 8 Zones - 8Bit": 24,
+        "Mode 128 - RGB - 8 Zones - 16Bit": 48,
+        "Mode 129 - RGB - 16 Zones - 8Bit": 48,
+        "Mode 130 - RGB - 16 Zones - 16Bit": 96,
+        "Mode 131 - RGB - 32 Zones - 8Bit": 96,
+        "Mode 132 - RGB - 32 Zones - 16Bit": 192,
+        "Mode 133 - RGBW - 1 Zones - 8Bit": 4,
+        "Mode 134 - RGBW - 1 Zones - 16Bit": 8,
+        "Mode 135 - RGBW - 2 Zones - 8Bit": 8,
+        "Mode 136 - RGBW - 2 Zones - 16Bit": 16,
+        "Mode 137 - RGBW - 4 Zones - 8Bit": 16,
+        "Mode 138 - RGBW - 4 Zones - 16Bit": 32,
+        "Mode 139 - RGBW - 8 Zones - 8Bit": 32,
+        "Mode 140 - RGBW - 8 Zones - 16Bit": 64,
+        "Mode 141 - RGBW - 16 Zones - 8Bit": 64,
+        "Mode 142 - RGBW - 16 Zones - 16Bit": 128,
+        "Mode 143 - RGBW - 32 Zones - 8Bit": 128,
+        "Mode 144 - RGBW - 32 Zones - 16Bit": 256,
+        "Mode 145 - WP RGB - 1 Zones - 8Bit": 5,
+        "Mode 146 - WP RGB - 1 Zones - 16Bit": 9,
+        "Mode 147 - WP RGB - 2 Zones - 8Bit": 8,
+        "Mode 148 - WP RGB - 2 Zones - 16Bit": 15,
+        "Mode 149 - WP RGB - 4 Zones - 8Bit": 14,
+        "Mode 150 - WP RGB - 4 Zones - 16Bit": 27,
+        "Mode 151 - WP RGB - 8 Zones - 8Bit": 26,
+        "Mode 152 - WP RGB - 8 Zones - 16Bit": 51,
+        "Mode 153 - WP RGB - 16 Zones - 8Bit": 50,
+        "Mode 154 - WP RGB - 16 Zones - 16Bit": 99,
+        "Mode 155 - WP RGB - 32 Zones - 8Bit": 98,
+        "Mode 156 - WP RGB - 32 Zones - 16Bit": 195,
+        "Mode 157 - WP RGBW - 1 Zones - 8Bit": 6,
+        "Mode 158 - WP RGBW - 1 Zones - 16Bit": 11,
+        "Mode 159 - WP RGBW - 2 Zones - 8Bit": 10,
+        "Mode 160 - WP RGBW - 2 Zones - 16Bit": 19,
+        "Mode 161 - WP RGBW - 4 Zones - 8Bit": 18,
+        "Mode 162 - WP RGBW - 4 Zones - 16Bit": 35,
+        "Mode 163 - WP RGBW - 8 Zones - 8Bit": 34,
+        "Mode 164 - WP RGBW - 8 Zones - 16Bit": 67,
+        "Mode 165 - WP RGBW - 16 Zones - 8Bit": 66,
+        "Mode 166 - WP RGBW - 16 Zones - 16Bit": 131,
+        "Mode 167 - WP RGBW - 32 Zones - 8Bit": 130,
+        "Mode 168 - WP RGBW - 32 Zones - 16Bit": 259
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/arri",
+        "suggestedFileName": "ARRI__Omnibar_4.gdtf",
+        "file": "fixtures/arri/ARRI@Omnibar_4@DMX_v1.0.gdtf",
+        "modes": {
+          "Mode 01 - CCT/RGB - 1 Zones - 8Bit": {
+            "channels": 9,
+            "gdtfMode": "Mode 01 - CCT/RGB - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 02 - CCT/RGB - 1 Zones - 16Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 02 - CCT/RGB - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 03 - CCT/RGB - 2 Zones - 8Bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 03 - CCT/RGB - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 04 - CCT/RGB - 2 Zones - 16Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 04 - CCT/RGB - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 05 - CCT/RGB - 4 Zones - 8Bit": {
+            "channels": 30,
+            "gdtfMode": "Mode 05 - CCT/RGB - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 06 - CCT/RGB - 4 Zones - 16Bit": {
+            "channels": 50,
+            "gdtfMode": "Mode 06 - CCT/RGB - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 07 - CCT/RGB - 8 Zones - 8Bit": {
+            "channels": 58,
+            "gdtfMode": "Mode 07 - CCT/RGB - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 08 - CCT/RGB - 8 Zones - 16Bit": {
+            "channels": 98,
+            "gdtfMode": "Mode 08 - CCT/RGB - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 09 - CCT/RGB - 16 Zones - 8Bit": {
+            "channels": 114,
+            "gdtfMode": "Mode 09 - CCT/RGB - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 10 - CCT/RGB - 16 Zones - 16Bit": {
+            "channels": 194,
+            "gdtfMode": "Mode 10 - CCT/RGB - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 11 - CCT/RGB - 32 Zones - 8Bit": {
+            "channels": 226,
+            "gdtfMode": "Mode 11 - CCT/RGB - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 12 - CCT/RGB - 32 Zones - 16Bit": {
+            "channels": 386,
+            "gdtfMode": "Mode 12 - CCT/RGB - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 13 - CCT/RGBW - 1 Zones - 8Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 13 - CCT/RGBW - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 14 - CCT/RGBW - 1 Zones - 16Bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 14 - CCT/RGBW - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 15 - CCT/RGBW - 2 Zones - 8Bit": {
+            "channels": 18,
+            "gdtfMode": "Mode 15 - CCT/RGBW - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 16 - CCT/RGBW - 2 Zones - 16Bit": {
+            "channels": 30,
+            "gdtfMode": "Mode 16 - CCT/RGBW - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 17 - CCT/RGBW - 4 Zones - 8Bit": {
+            "channels": 34,
+            "gdtfMode": "Mode 17 - CCT/RGBW - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 18 - CCT/RGBW - 4 Zones - 16Bit": {
+            "channels": 58,
+            "gdtfMode": "Mode 18 - CCT/RGBW - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 19 - CCT/RGBW - 8 Zones - 8Bit": {
+            "channels": 66,
+            "gdtfMode": "Mode 19 - CCT/RGBW - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 20 - CCT/RGBW - 8 Zones - 16Bit": {
+            "channels": 114,
+            "gdtfMode": "Mode 20 - CCT/RGBW - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 21 - CCT/RGBW - 16 Zones - 8Bit": {
+            "channels": 130,
+            "gdtfMode": "Mode 21 - CCT/RGBW - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 22 - CCT/RGBW - 16 Zones - 16Bit": {
+            "channels": 226,
+            "gdtfMode": "Mode 22 - CCT/RGBW - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 23 - CCT/RGBW - 32 Zones - 8Bit": {
+            "channels": 258,
+            "gdtfMode": "Mode 23 - CCT/RGBW - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 24 - CCT/RGBW - 32 Zones - 16Bit": {
+            "channels": 450,
+            "gdtfMode": "Mode 24 - CCT/RGBW - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 25 - CCT/HSI - 1 Zones - 8Bit": {
+            "channels": 8,
+            "gdtfMode": "Mode 25 - CCT/HSI - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 26 - CCT/HSI - 1 Zones - 16Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 26 - CCT/HSI - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 27 - CCT/HSI - 2 Zones - 8Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 27 - CCT/HSI - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 28 - CCT/HSI - 2 Zones - 16Bit": {
+            "channels": 22,
+            "gdtfMode": "Mode 28 - CCT/HSI - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 29 - CCT/HSI - 4 Zones - 8Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 29 - CCT/HSI - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 30 - CCT/HSI - 4 Zones - 16Bit": {
+            "channels": 42,
+            "gdtfMode": "Mode 30 - CCT/HSI - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 31 - CCT/HSI - 8 Zones - 8Bit": {
+            "channels": 50,
+            "gdtfMode": "Mode 31 - CCT/HSI - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 32 - CCT/HSI - 8 Zones - 16Bit": {
+            "channels": 82,
+            "gdtfMode": "Mode 32 - CCT/HSI - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 33 - CCT/HSI - 16 Zones - 8Bit": {
+            "channels": 98,
+            "gdtfMode": "Mode 33 - CCT/HSI - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 34 - CCT/HSI - 16 Zones - 16Bit": {
+            "channels": 162,
+            "gdtfMode": "Mode 34 - CCT/HSI - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 35 - CCT/HSI - 32 Zones - 8Bit": {
+            "channels": 194,
+            "gdtfMode": "Mode 35 - CCT/HSI - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 36 - CCT/HSI - 32 Zones - 16Bit": {
+            "channels": 322,
+            "gdtfMode": "Mode 36 - CCT/HSI - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 37 - CCT/XY - 1 Zones - 16Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 37 - CCT/XY - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 38 - CCT/XY - 2 Zones - 16Bit": {
+            "channels": 22,
+            "gdtfMode": "Mode 38 - CCT/XY - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 39 - CCT/XY - 4 Zones - 16Bit": {
+            "channels": 42,
+            "gdtfMode": "Mode 39 - CCT/XY - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 40 - CCT/XY - 8 Zones - 16Bit": {
+            "channels": 82,
+            "gdtfMode": "Mode 40 - CCT/XY - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 41 - CCT/XY - 16 Zones - 16Bit": {
+            "channels": 162,
+            "gdtfMode": "Mode 41 - CCT/XY - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 42 - CCT/XY - 32 Zones - 16Bit": {
+            "channels": 322,
+            "gdtfMode": "Mode 42 - CCT/XY - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 43 - CCT - 1 Zones - 8Bit": {
+            "channels": 5,
+            "gdtfMode": "Mode 43 - CCT - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 44 - CCT - 1 Zones - 16Bit": {
+            "channels": 7,
+            "gdtfMode": "Mode 44 - CCT - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 45 - CCT - 2 Zones - 8Bit": {
+            "channels": 8,
+            "gdtfMode": "Mode 45 - CCT - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 46 - CCT - 2 Zones - 16Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 46 - CCT - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 47 - CCT - 4 Zones - 8Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 47 - CCT - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 48 - CCT - 4 Zones - 16Bit": {
+            "channels": 22,
+            "gdtfMode": "Mode 48 - CCT - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 49 - CCT - 8 Zones - 8Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 49 - CCT - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 50 - CCT - 8 Zones - 16Bit": {
+            "channels": 42,
+            "gdtfMode": "Mode 50 - CCT - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 51 - CCT - 16 Zones - 8Bit": {
+            "channels": 50,
+            "gdtfMode": "Mode 51 - CCT - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 52 - CCT - 16 Zones - 16Bit": {
+            "channels": 82,
+            "gdtfMode": "Mode 52 - CCT - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 53 - CCT - 32 Zones - 8Bit": {
+            "channels": 98,
+            "gdtfMode": "Mode 53 - CCT - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 54 - CCT - 32 Zones - 16Bit": {
+            "channels": 162,
+            "gdtfMode": "Mode 54 - CCT - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 55 - HSI - 1 Zones - 8Bit": {
+            "channels": 5,
+            "gdtfMode": "Mode 55 - HSI - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 56 - HSI - 1 Zones - 16Bit": {
+            "channels": 8,
+            "gdtfMode": "Mode 56 - HSI - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 57 - HSI - 2 Zones - 8Bit": {
+            "channels": 8,
+            "gdtfMode": "Mode 57 - HSI - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 58 - HSI - 2 Zones - 16Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 58 - HSI - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 59 - HSI - 4 Zones - 8Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 59 - HSI - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 60 - HSI - 4 Zones - 16Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 60 - HSI - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 61 - HSI - 8 Zones - 8Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 61 - HSI - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 62 - HSI - 8 Zones - 16Bit": {
+            "channels": 50,
+            "gdtfMode": "Mode 62 - HSI - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 63 - HSI - 16 Zones - 8Bit": {
+            "channels": 50,
+            "gdtfMode": "Mode 63 - HSI - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 64 - HSI - 16 Zones - 16Bit": {
+            "channels": 98,
+            "gdtfMode": "Mode 64 - HSI - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 65 - HSI - 32 Zones - 8Bit": {
+            "channels": 98,
+            "gdtfMode": "Mode 65 - HSI - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 66 - HSI - 32 Zones - 16Bit": {
+            "channels": 194,
+            "gdtfMode": "Mode 66 - HSI - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 67 - XY - 1 Zones - 16Bit": {
+            "channels": 8,
+            "gdtfMode": "Mode 67 - XY - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 68 - XY - 2 Zones - 16Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 68 - XY - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 69 - XY - 4 Zones - 16Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 69 - XY - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 70 - XY - 8 Zones - 16Bit": {
+            "channels": 50,
+            "gdtfMode": "Mode 70 - XY - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 71 - XY - 16 Zones - 16Bit": {
+            "channels": 98,
+            "gdtfMode": "Mode 71 - XY - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 72 - XY - 32 Zones - 16Bit": {
+            "channels": 194,
+            "gdtfMode": "Mode 72 - XY - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 73 - RGB SC - 1 Zones - 8Bit": {
+            "channels": 6,
+            "gdtfMode": "Mode 73 - RGB SC - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 74 - RGB SC - 1 Zones - 16Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 74 - RGB SC - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 75 - RGB SC - 2 Zones - 8Bit": {
+            "channels": 9,
+            "gdtfMode": "Mode 75 - RGB SC - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 76 - RGB SC - 2 Zones - 16Bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 76 - RGB SC - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 77 - RGB SC - 4 Zones - 8Bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 77 - RGB SC - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 78 - RGB SC - 4 Zones - 16Bit": {
+            "channels": 28,
+            "gdtfMode": "Mode 78 - RGB SC - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 79 - RGB SC - 8 Zones - 8Bit": {
+            "channels": 27,
+            "gdtfMode": "Mode 79 - RGB SC - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 80 - RGB SC - 8 Zones - 16Bit": {
+            "channels": 52,
+            "gdtfMode": "Mode 80 - RGB SC - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 81 - RGB SC - 16 Zones - 8Bit": {
+            "channels": 51,
+            "gdtfMode": "Mode 81 - RGB SC - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 82 - RGB SC - 16 Zones - 16Bit": {
+            "channels": 100,
+            "gdtfMode": "Mode 82 - RGB SC - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 83 - RGB SC - 32 Zones - 8Bit": {
+            "channels": 99,
+            "gdtfMode": "Mode 83 - RGB SC - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 84 - RGB SC - 32 Zones - 16Bit": {
+            "channels": 196,
+            "gdtfMode": "Mode 84 - RGB SC - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 85 - RGBW SC - 1 Zones - 8Bit": {
+            "channels": 7,
+            "gdtfMode": "Mode 85 - RGBW SC - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 86 - RGBW SC - 1 Zones - 16Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 86 - RGBW SC - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 87 - RGBW SC - 2 Zones - 8Bit": {
+            "channels": 11,
+            "gdtfMode": "Mode 87 - RGBW SC - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 88 - RGBW SC - 2 Zones - 16Bit": {
+            "channels": 20,
+            "gdtfMode": "Mode 88 - RGBW SC - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 89 - RGBW SC - 4 Zones - 8Bit": {
+            "channels": 19,
+            "gdtfMode": "Mode 89 - RGBW SC - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 90 - RGBW SC - 4 Zones - 16Bit": {
+            "channels": 36,
+            "gdtfMode": "Mode 90 - RGBW SC - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 91 - RGBW SC - 8 Zones - 8Bit": {
+            "channels": 35,
+            "gdtfMode": "Mode 91 - RGBW SC - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 92 - RGBW SC - 8 Zones - 16Bit": {
+            "channels": 68,
+            "gdtfMode": "Mode 92 - RGBW SC - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 93 - RGBW SC - 16 Zones - 8Bit": {
+            "channels": 67,
+            "gdtfMode": "Mode 93 - RGBW SC - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 94 - RGBW SC - 16 Zones - 16Bit": {
+            "channels": 132,
+            "gdtfMode": "Mode 94 - RGBW SC - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 95 - RGBW SC - 32 Zones - 8Bit": {
+            "channels": 131,
+            "gdtfMode": "Mode 95 - RGBW SC - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 96 - RGBW SC - 32 Zones - 16Bit": {
+            "channels": 260,
+            "gdtfMode": "Mode 96 - RGBW SC - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 97 - WP RGB SC - 1 Zones - 8Bit": {
+            "channels": 8,
+            "gdtfMode": "Mode 97 - WP RGB SC - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 98 - WP RGB SC - 1 Zones - 16Bit": {
+            "channels": 13,
+            "gdtfMode": "Mode 98 - WP RGB SC - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 99 - WP RGB SC - 2 Zones - 8Bit": {
+            "channels": 11,
+            "gdtfMode": "Mode 99 - WP RGB SC - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 100 - WP RGB SC - 2 Zones - 16Bit": {
+            "channels": 19,
+            "gdtfMode": "Mode 100 - WP RGB SC - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 101 - WP RGB SC - 4 Zones - 8Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 101 - WP RGB SC - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 102 - WP RGB SC - 4 Zones - 16Bit": {
+            "channels": 31,
+            "gdtfMode": "Mode 102 - WP RGB SC - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 103 - WP RGB SC - 8 Zones - 8Bit": {
+            "channels": 29,
+            "gdtfMode": "Mode 103 - WP RGB SC - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 104 - WP RGB SC - 8 Zones - 16Bit": {
+            "channels": 55,
+            "gdtfMode": "Mode 104 - WP RGB SC - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 105 - WP RGB SC - 16 Zones - 8Bit": {
+            "channels": 53,
+            "gdtfMode": "Mode 105 - WP RGB SC - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 106 - WP RGB SC - 16 Zones - 16Bit": {
+            "channels": 103,
+            "gdtfMode": "Mode 106 - WP RGB SC - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 107 - WP RGB SC - 32 Zones - 8Bit": {
+            "channels": 101,
+            "gdtfMode": "Mode 107 - WP RGB SC - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 108 - WP RGB SC - 32 Zones - 16Bit": {
+            "channels": 199,
+            "gdtfMode": "Mode 108 - WP RGB SC - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 109 - WP RGBW SC - 1 Zones - 8Bit": {
+            "channels": 9,
+            "gdtfMode": "Mode 109 - WP RGBW SC - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 110 - WP RGBW SC - 1 Zones - 16Bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 110 - WP RGBW SC - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 111 - WP RGBW SC - 2 Zones - 8Bit": {
+            "channels": 13,
+            "gdtfMode": "Mode 111 - WP RGBW SC - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 112 - WP RGBW SC - 2 Zones - 16Bit": {
+            "channels": 23,
+            "gdtfMode": "Mode 112 - WP RGBW SC - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 113 - WP RGBW SC - 4 Zones - 8Bit": {
+            "channels": 21,
+            "gdtfMode": "Mode 113 - WP RGBW SC - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 114 - WP RGBW SC - 4 Zones - 16Bit": {
+            "channels": 39,
+            "gdtfMode": "Mode 114 - WP RGBW SC - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 115 - WP RGBW SC - 8 Zones - 8Bit": {
+            "channels": 37,
+            "gdtfMode": "Mode 115 - WP RGBW SC - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 116 - WP RGBW SC - 8 Zones - 16Bit": {
+            "channels": 71,
+            "gdtfMode": "Mode 116 - WP RGBW SC - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 117 - WP RGBW SC - 16 Zones - 8Bit": {
+            "channels": 69,
+            "gdtfMode": "Mode 117 - WP RGBW SC - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 118 - WP RGBW SC - 16 Zones - 16Bit": {
+            "channels": 135,
+            "gdtfMode": "Mode 118 - WP RGBW SC - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 119 - WP RGBW SC - 32 Zones - 8Bit": {
+            "channels": 133,
+            "gdtfMode": "Mode 119 - WP RGBW SC - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 120 - WP RGBW SC - 32 Zones - 16Bit": {
+            "channels": 263,
+            "gdtfMode": "Mode 120 - WP RGBW SC - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 121 - RGB - 1 Zones - 8Bit": {
+            "channels": 3,
+            "gdtfMode": "Mode 121 - RGB - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 122 - RGB - 1 Zones - 16Bit": {
+            "channels": 6,
+            "gdtfMode": "Mode 122 - RGB - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 123 - RGB - 2 Zones - 8Bit": {
+            "channels": 6,
+            "gdtfMode": "Mode 123 - RGB - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 124 - RGB - 2 Zones - 16Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 124 - RGB - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 125 - RGB - 4 Zones - 8Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 125 - RGB - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 126 - RGB - 4 Zones - 16Bit": {
+            "channels": 24,
+            "gdtfMode": "Mode 126 - RGB - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 127 - RGB - 8 Zones - 8Bit": {
+            "channels": 24,
+            "gdtfMode": "Mode 127 - RGB - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 128 - RGB - 8 Zones - 16Bit": {
+            "channels": 48,
+            "gdtfMode": "Mode 128 - RGB - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 129 - RGB - 16 Zones - 8Bit": {
+            "channels": 48,
+            "gdtfMode": "Mode 129 - RGB - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 130 - RGB - 16 Zones - 16Bit": {
+            "channels": 96,
+            "gdtfMode": "Mode 130 - RGB - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 131 - RGB - 32 Zones - 8Bit": {
+            "channels": 96,
+            "gdtfMode": "Mode 131 - RGB - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 132 - RGB - 32 Zones - 16Bit": {
+            "channels": 192,
+            "gdtfMode": "Mode 132 - RGB - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 133 - RGBW - 1 Zones - 8Bit": {
+            "channels": 4,
+            "gdtfMode": "Mode 133 - RGBW - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 134 - RGBW - 1 Zones - 16Bit": {
+            "channels": 8,
+            "gdtfMode": "Mode 134 - RGBW - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 135 - RGBW - 2 Zones - 8Bit": {
+            "channels": 8,
+            "gdtfMode": "Mode 135 - RGBW - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 136 - RGBW - 2 Zones - 16Bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 136 - RGBW - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 137 - RGBW - 4 Zones - 8Bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 137 - RGBW - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 138 - RGBW - 4 Zones - 16Bit": {
+            "channels": 32,
+            "gdtfMode": "Mode 138 - RGBW - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 139 - RGBW - 8 Zones - 8Bit": {
+            "channels": 32,
+            "gdtfMode": "Mode 139 - RGBW - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 140 - RGBW - 8 Zones - 16Bit": {
+            "channels": 64,
+            "gdtfMode": "Mode 140 - RGBW - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 141 - RGBW - 16 Zones - 8Bit": {
+            "channels": 64,
+            "gdtfMode": "Mode 141 - RGBW - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 142 - RGBW - 16 Zones - 16Bit": {
+            "channels": 128,
+            "gdtfMode": "Mode 142 - RGBW - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 143 - RGBW - 32 Zones - 8Bit": {
+            "channels": 128,
+            "gdtfMode": "Mode 143 - RGBW - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 144 - RGBW - 32 Zones - 16Bit": {
+            "channels": 256,
+            "gdtfMode": "Mode 144 - RGBW - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 145 - WP RGB - 1 Zones - 8Bit": {
+            "channels": 5,
+            "gdtfMode": "Mode 145 - WP RGB - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 146 - WP RGB - 1 Zones - 16Bit": {
+            "channels": 9,
+            "gdtfMode": "Mode 146 - WP RGB - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 147 - WP RGB - 2 Zones - 8Bit": {
+            "channels": 8,
+            "gdtfMode": "Mode 147 - WP RGB - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 148 - WP RGB - 2 Zones - 16Bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 148 - WP RGB - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 149 - WP RGB - 4 Zones - 8Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 149 - WP RGB - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 150 - WP RGB - 4 Zones - 16Bit": {
+            "channels": 27,
+            "gdtfMode": "Mode 150 - WP RGB - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 151 - WP RGB - 8 Zones - 8Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 151 - WP RGB - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 152 - WP RGB - 8 Zones - 16Bit": {
+            "channels": 51,
+            "gdtfMode": "Mode 152 - WP RGB - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 153 - WP RGB - 16 Zones - 8Bit": {
+            "channels": 50,
+            "gdtfMode": "Mode 153 - WP RGB - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 154 - WP RGB - 16 Zones - 16Bit": {
+            "channels": 99,
+            "gdtfMode": "Mode 154 - WP RGB - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 155 - WP RGB - 32 Zones - 8Bit": {
+            "channels": 98,
+            "gdtfMode": "Mode 155 - WP RGB - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 156 - WP RGB - 32 Zones - 16Bit": {
+            "channels": 195,
+            "gdtfMode": "Mode 156 - WP RGB - 32 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 157 - WP RGBW - 1 Zones - 8Bit": {
+            "channels": 6,
+            "gdtfMode": "Mode 157 - WP RGBW - 1 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 158 - WP RGBW - 1 Zones - 16Bit": {
+            "channels": 11,
+            "gdtfMode": "Mode 158 - WP RGBW - 1 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 159 - WP RGBW - 2 Zones - 8Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 159 - WP RGBW - 2 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 160 - WP RGBW - 2 Zones - 16Bit": {
+            "channels": 19,
+            "gdtfMode": "Mode 160 - WP RGBW - 2 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 161 - WP RGBW - 4 Zones - 8Bit": {
+            "channels": 18,
+            "gdtfMode": "Mode 161 - WP RGBW - 4 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 162 - WP RGBW - 4 Zones - 16Bit": {
+            "channels": 35,
+            "gdtfMode": "Mode 162 - WP RGBW - 4 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 163 - WP RGBW - 8 Zones - 8Bit": {
+            "channels": 34,
+            "gdtfMode": "Mode 163 - WP RGBW - 8 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 164 - WP RGBW - 8 Zones - 16Bit": {
+            "channels": 67,
+            "gdtfMode": "Mode 164 - WP RGBW - 8 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 165 - WP RGBW - 16 Zones - 8Bit": {
+            "channels": 66,
+            "gdtfMode": "Mode 165 - WP RGBW - 16 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 166 - WP RGBW - 16 Zones - 16Bit": {
+            "channels": 131,
+            "gdtfMode": "Mode 166 - WP RGBW - 16 Zones - 16Bit",
+            "status": "matched"
+          },
+          "Mode 167 - WP RGBW - 32 Zones - 8Bit": {
+            "channels": 130,
+            "gdtfMode": "Mode 167 - WP RGBW - 32 Zones - 8Bit",
+            "status": "matched"
+          },
+          "Mode 168 - WP RGBW - 32 Zones - 16Bit": {
+            "channels": 259,
+            "gdtfMode": "Mode 168 - WP RGBW - 32 Zones - 16Bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Omnibar 4"
+    },
+    {
+      "fixture": "Orbiter",
+      "watts": 1000.0,
+      "weight": null,
+      "modes": {
+        "Mode 1 - CCT+RGBACL 8Bit": 17,
+        "Mode 1 - CCT+RGBACL ECC 8Bit ": 25,
+        "Mode 1 - CCT+RGBW(Cal) 8Bit": 17,
+        "Mode 1 - CCT+RGBW(Cal) ECC 8Bit": 25,
+        "Mode 2 - CCT 8Bit": 7,
+        "Mode 2 - CCT ECC 8Bit": 15,
+        "Mode 3 - CCT+HSI 8Bit": 10,
+        "Mode 3 - CCT+HSI ECC 8Bit": 18,
+        "Mode 4 - RGBACL 8Bit": 14,
+        "Mode 4 - RGBACL ECC 8Bit": 22,
+        "Mode 4 - RGBW(Cal) 8Bit": 14,
+        "Mode 4 - RGBW(Cal) ECC 8Bit": 22,
+        "Mode 5 - HSI 8Bit": 7,
+        "Mode 5 - HSI ECC 8Bit": 15,
+        "Mode 6  - CCT+RGBACL 16Bit": 30,
+        "Mode 6  - CCT+RGBACL ECC 16Bit": 46,
+        "Mode 6  - CCT+RGBW(Cal) 16Bit": 30,
+        "Mode 6  - CCT+RGBW(Cal) ECC 16Bit": 46,
+        "Mode 7 - CCT 16Bit": 10,
+        "Mode 7 - CCT ECC 16Bit": 26,
+        "Mode 8 - CCT+HSI 16Bit": 16,
+        "Mode 8 - CCT+HSI ECC 16Bit": 32,
+        "Mode 9 - RGBACL 16Bit": 24,
+        "Mode 9 - RGBACL ECC 16Bit": 40,
+        "Mode 9 - RGBW(Cal) 16Bit": 24,
+        "Mode 9 - RGBW(Cal) ECC 16Bit": 40,
+        "Mode 10 - HSI 16Bit": 10,
+        "Mode 10 - HSI ECC 16Bit": 26,
+        "Mode 11 - Gels 8Bit": 10,
+        "Mode 11 - Gels ECC 8Bit": 18,
+        "Mode 12 - Gels 16Bit": 12,
+        "Mode 12 - Gels ECC 16Bit": 28,
+        "Mode 13 - XY 8Bit": 7,
+        "Mode 13 - XY ECC 8Bit": 15,
+        "Mode 14 - XY 16Bit": 10,
+        "Mode 14 - XY ECC 16Bit": 26,
+        "Mode 15 - Source Match 8Bit": 7,
+        "Mode 15 - Source Match ECC 8Bit": 15,
+        "Mode 16 - Source Match 16Bit": 8,
+        "Mode 16 - Source Match ECC 16Bit": 24,
+        "Mode 17 - Effects 8Bit": 14,
+        "Mode 17 - Effects ECC 8Bit": 22,
+        "Mode 18 - Effects 16Bit": 23,
+        "Mode 18 - Effects ECC 16Bit": 39,
+        "Mode 19 - Ultimate 8Bit": 26,
+        "Mode 19 - Ultimate ECC 8Bit": 34,
+        "Mode 19 - Ultimate(Cal) 8Bit": 26,
+        "Mode 19 - Ultimate(Cal) ECC 8Bit": 34,
+        "Mode 20 - Ultimate 16Bit": 46,
+        "Mode 20 - Ultimate ECC 16Bit": 62,
+        "Mode 20 - Ultimate(Cal) 16Bit": 46,
+        "Mode 20 - Ultimate(Cal) ECC 16Bit": 62
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/arri",
+        "suggestedFileName": "ARRI__Orbiter.gdtf",
+        "file": "fixtures/arri/ARRI@Orbiter@DMX_v4.5_29_Dec_Standard_and_ECC.gdtf",
+        "modes": {
+          "Mode 1 - CCT+RGBACL 8Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 1 - CCT+RGBACL 8Bit",
+            "status": "matched"
+          },
+          "Mode 1 - CCT+RGBACL ECC 8Bit ": {
+            "channels": 25,
+            "gdtfMode": "Mode 1 - CCT+RGBACL ECC 8Bit ",
+            "status": "matched"
+          },
+          "Mode 1 - CCT+RGBW(Cal) 8Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 1 - CCT+RGBW(Cal) 8Bit",
+            "status": "matched"
+          },
+          "Mode 1 - CCT+RGBW(Cal) ECC 8Bit": {
+            "channels": 25,
+            "gdtfMode": "Mode 1 - CCT+RGBW(Cal) ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 2 - CCT 8Bit": {
+            "channels": 7,
+            "gdtfMode": "Mode 2 - CCT 8Bit",
+            "status": "matched"
+          },
+          "Mode 2 - CCT ECC 8Bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 2 - CCT ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 3 - CCT+HSI 8Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 3 - CCT+HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 3 - CCT+HSI ECC 8Bit": {
+            "channels": 18,
+            "gdtfMode": "Mode 3 - CCT+HSI ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 4 - RGBACL 8Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 4 - RGBACL 8Bit",
+            "status": "matched"
+          },
+          "Mode 4 - RGBACL ECC 8Bit": {
+            "channels": 22,
+            "gdtfMode": "Mode 4 - RGBACL ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 4 - RGBW(Cal) 8Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 4 - RGBW(Cal) 8Bit",
+            "status": "matched"
+          },
+          "Mode 4 - RGBW(Cal) ECC 8Bit": {
+            "channels": 22,
+            "gdtfMode": "Mode 4 - RGBW(Cal) ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 5 - HSI 8Bit": {
+            "channels": 7,
+            "gdtfMode": "Mode 5 - HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 5 - HSI ECC 8Bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 5 - HSI ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 6  - CCT+RGBACL 16Bit": {
+            "channels": 30,
+            "gdtfMode": "Mode 6  - CCT+RGBACL 16Bit",
+            "status": "matched"
+          },
+          "Mode 6  - CCT+RGBACL ECC 16Bit": {
+            "channels": 46,
+            "gdtfMode": "Mode 6  - CCT+RGBACL ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 6  - CCT+RGBW(Cal) 16Bit": {
+            "channels": 30,
+            "gdtfMode": "Mode 6  - CCT+RGBW(Cal) 16Bit",
+            "status": "matched"
+          },
+          "Mode 6  - CCT+RGBW(Cal) ECC 16Bit": {
+            "channels": 46,
+            "gdtfMode": "Mode 6  - CCT+RGBW(Cal) ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 7 - CCT 16Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 7 - CCT 16Bit",
+            "status": "matched"
+          },
+          "Mode 7 - CCT ECC 16Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 7 - CCT ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 8 - CCT+HSI 16Bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 8 - CCT+HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 8 - CCT+HSI ECC 16Bit": {
+            "channels": 32,
+            "gdtfMode": "Mode 8 - CCT+HSI ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 9 - RGBACL 16Bit": {
+            "channels": 24,
+            "gdtfMode": "Mode 9 - RGBACL 16Bit",
+            "status": "matched"
+          },
+          "Mode 9 - RGBACL ECC 16Bit": {
+            "channels": 40,
+            "gdtfMode": "Mode 9 - RGBACL ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 9 - RGBW(Cal) 16Bit": {
+            "channels": 24,
+            "gdtfMode": "Mode 9 - RGBW(Cal) 16Bit",
+            "status": "matched"
+          },
+          "Mode 9 - RGBW(Cal) ECC 16Bit": {
+            "channels": 40,
+            "gdtfMode": "Mode 9 - RGBW(Cal) ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 10 - HSI 16Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 10 - HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 10 - HSI ECC 16Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 10 - HSI ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 11 - Gels 8Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 11 - Gels 8Bit",
+            "status": "matched"
+          },
+          "Mode 11 - Gels ECC 8Bit": {
+            "channels": 18,
+            "gdtfMode": "Mode 11 - Gels ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 12 - Gels 16Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 12 - Gels 16Bit",
+            "status": "matched"
+          },
+          "Mode 12 - Gels ECC 16Bit": {
+            "channels": 28,
+            "gdtfMode": "Mode 12 - Gels ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 13 - XY 8Bit": {
+            "channels": 7,
+            "gdtfMode": "Mode 13 - XY 8Bit",
+            "status": "matched"
+          },
+          "Mode 13 - XY ECC 8Bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 13 - XY ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 14 - XY 16Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 14 - XY 16Bit",
+            "status": "matched"
+          },
+          "Mode 14 - XY ECC 16Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 14 - XY ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 15 - Source Match 8Bit": {
+            "channels": 7,
+            "gdtfMode": "Mode 15 - Source Match 8Bit",
+            "status": "matched"
+          },
+          "Mode 15 - Source Match ECC 8Bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 15 - Source Match ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 16 - Source Match 16Bit": {
+            "channels": 8,
+            "gdtfMode": "Mode 16 - Source Match 16Bit",
+            "status": "matched"
+          },
+          "Mode 16 - Source Match ECC 16Bit": {
+            "channels": 24,
+            "gdtfMode": "Mode 16 - Source Match ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 17 - Effects 8Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 17 - Effects 8Bit",
+            "status": "matched"
+          },
+          "Mode 17 - Effects ECC 8Bit": {
+            "channels": 22,
+            "gdtfMode": "Mode 17 - Effects ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 18 - Effects 16Bit": {
+            "channels": 23,
+            "gdtfMode": "Mode 18 - Effects 16Bit",
+            "status": "matched"
+          },
+          "Mode 18 - Effects ECC 16Bit": {
+            "channels": 39,
+            "gdtfMode": "Mode 18 - Effects ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 19 - Ultimate 8Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 19 - Ultimate 8Bit",
+            "status": "matched"
+          },
+          "Mode 19 - Ultimate ECC 8Bit": {
+            "channels": 34,
+            "gdtfMode": "Mode 19 - Ultimate ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 19 - Ultimate(Cal) 8Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 19 - Ultimate(Cal) 8Bit",
+            "status": "matched"
+          },
+          "Mode 19 - Ultimate(Cal) ECC 8Bit": {
+            "channels": 34,
+            "gdtfMode": "Mode 19 - Ultimate(Cal) ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 20 - Ultimate 16Bit": {
+            "channels": 46,
+            "gdtfMode": "Mode 20 - Ultimate 16Bit",
+            "status": "matched"
+          },
+          "Mode 20 - Ultimate ECC 16Bit": {
+            "channels": 62,
+            "gdtfMode": "Mode 20 - Ultimate ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 20 - Ultimate(Cal) 16Bit": {
+            "channels": 46,
+            "gdtfMode": "Mode 20 - Ultimate(Cal) 16Bit",
+            "status": "matched"
+          },
+          "Mode 20 - Ultimate(Cal) ECC 16Bit": {
+            "channels": 62,
+            "gdtfMode": "Mode 20 - Ultimate(Cal) ECC 16Bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Orbiter"
+    },
+    {
+      "fixture": "S60 Pro",
+      "watts": 800.0,
+      "weight": null,
+      "modes": {
+        "Mode 1 - CCT+RGBW 8Bit": 12,
+        "Mode 2 - CCT 8Bit ": 7,
+        "Mode 3 - CCT+HSI 8Bit": 10,
+        "Mode 4 - RGBW 8Bit": 9,
+        "Mode 5- HSI 8Bit": 7,
+        "Mode 6  - CCT+RGBW 16Bit": 20,
+        "Mode 7 - CCT 16Bit": 10,
+        "Mode 8 - CCT+HSI 16Bit": 16,
+        "Mode 9 - RGBW 16Bit": 14,
+        "Mode 10 - HSI 16Bit": 10,
+        "Mode 16 - Gels 8Bit": 17,
+        "Mode 17 - Gels 16Bit": 19,
+        "Mode 18 - XY 8Bit": 11,
+        "Mode 19 - XY 16Bit": 17,
+        "Mode 20 - Source Match 8Bit": 10,
+        "Mode 21 - Source Match 16Bit": 12,
+        "Mode 22 - Effects 8Bit": 13,
+        "Mode 23 - Effects 16Bit": 21,
+        "Mode 24 -  Zone CCT+RGBW 8Bit": 34,
+        "Mode 25 - Zone CCT+RGBW 16Bit": 66,
+        "Mode 26 - Zone HSI 8Bit": 14,
+        "Mode 27 - Zone HSI 16Bit": 26,
+        "Mode 28 - Zone XY 8Bit": 14,
+        "Mode 29 - Zone XY 16Bit": 26,
+        "Mode 30 - Ultimate 8Bit": 24,
+        "Mode 31 - Ultimate 16Bit": 42,
+        "Mode 32 - CCT+XY 8Bit": 10,
+        "Mode 33 - CCT+XY 16Bit": 16,
+        "Mode 34 - Zone CCT+XY 8Bit": 26,
+        "Mode 35 - Zone CCT+XY 16Bit": 50,
+        "Mode 36 - CCT+RGBW+FX+Gel 8Bit": 15,
+        "Mode 37 - CCT+RGBW+FX+Gel 16Bit": 23,
+        "Mode 38 - CCT+XY+FX+Gel 8Bit": 13,
+        "Mode 39 - CCT+XY+FX+Gel 16Bit": 19
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/arri",
+        "suggestedFileName": "ARRI__S60_Pro.gdtf",
+        "file": "fixtures/arri/ARRI@S60_Pro@DMX_v4.4_S60-Pro.gdtf",
+        "modes": {
+          "Mode 1 - CCT+RGBW 8Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 1 - CCT+RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 2 - CCT 8Bit ": {
+            "channels": 7,
+            "gdtfMode": "Mode 2 - CCT 8Bit ",
+            "status": "matched"
+          },
+          "Mode 3 - CCT+HSI 8Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 3 - CCT+HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 4 - RGBW 8Bit": {
+            "channels": 9,
+            "gdtfMode": "Mode 4 - RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 5- HSI 8Bit": {
+            "channels": 7,
+            "gdtfMode": "Mode 5- HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 6  - CCT+RGBW 16Bit": {
+            "channels": 20,
+            "gdtfMode": "Mode 6  - CCT+RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 7 - CCT 16Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 7 - CCT 16Bit",
+            "status": "matched"
+          },
+          "Mode 8 - CCT+HSI 16Bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 8 - CCT+HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 9 - RGBW 16Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 9 - RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 10 - HSI 16Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 10 - HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 16 - Gels 8Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 16 - Gels 8Bit",
+            "status": "matched"
+          },
+          "Mode 17 - Gels 16Bit": {
+            "channels": 19,
+            "gdtfMode": "Mode 17 - Gels 16Bit",
+            "status": "matched"
+          },
+          "Mode 18 - XY 8Bit": {
+            "channels": 11,
+            "gdtfMode": "Mode 18 - XY 8Bit",
+            "status": "matched"
+          },
+          "Mode 19 - XY 16Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 19 - XY 16Bit",
+            "status": "matched"
+          },
+          "Mode 20 - Source Match 8Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 20 - Source Match 8Bit",
+            "status": "matched"
+          },
+          "Mode 21 - Source Match 16Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 21 - Source Match 16Bit",
+            "status": "matched"
+          },
+          "Mode 22 - Effects 8Bit": {
+            "channels": 13,
+            "gdtfMode": "Mode 22 - Effects 8Bit",
+            "status": "matched"
+          },
+          "Mode 23 - Effects 16Bit": {
+            "channels": 21,
+            "gdtfMode": "Mode 23 - Effects 16Bit",
+            "status": "matched"
+          },
+          "Mode 24 -  Zone CCT+RGBW 8Bit": {
+            "channels": 34,
+            "gdtfMode": "Mode 24 -  Zone CCT+RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 25 - Zone CCT+RGBW 16Bit": {
+            "channels": 66,
+            "gdtfMode": "Mode 25 - Zone CCT+RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 26 - Zone HSI 8Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 26 - Zone HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 27 - Zone HSI 16Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 27 - Zone HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 28 - Zone XY 8Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 28 - Zone XY 8Bit",
+            "status": "matched"
+          },
+          "Mode 29 - Zone XY 16Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 29 - Zone XY 16Bit",
+            "status": "matched"
+          },
+          "Mode 30 - Ultimate 8Bit": {
+            "channels": 24,
+            "gdtfMode": "Mode 30 - Ultimate 8Bit",
+            "status": "matched"
+          },
+          "Mode 31 - Ultimate 16Bit": {
+            "channels": 42,
+            "gdtfMode": "Mode 31 - Ultimate 16Bit",
+            "status": "matched"
+          },
+          "Mode 32 - CCT+XY 8Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 32 - CCT+XY 8Bit",
+            "status": "matched"
+          },
+          "Mode 33 - CCT+XY 16Bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 33 - CCT+XY 16Bit",
+            "status": "matched"
+          },
+          "Mode 34 - Zone CCT+XY 8Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 34 - Zone CCT+XY 8Bit",
+            "status": "matched"
+          },
+          "Mode 35 - Zone CCT+XY 16Bit": {
+            "channels": 50,
+            "gdtfMode": "Mode 35 - Zone CCT+XY 16Bit",
+            "status": "matched"
+          },
+          "Mode 36 - CCT+RGBW+FX+Gel 8Bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 36 - CCT+RGBW+FX+Gel 8Bit",
+            "status": "matched"
+          },
+          "Mode 37 - CCT+RGBW+FX+Gel 16Bit": {
+            "channels": 23,
+            "gdtfMode": "Mode 37 - CCT+RGBW+FX+Gel 16Bit",
+            "status": "matched"
+          },
+          "Mode 38 - CCT+XY+FX+Gel 8Bit": {
+            "channels": 13,
+            "gdtfMode": "Mode 38 - CCT+XY+FX+Gel 8Bit",
+            "status": "matched"
+          },
+          "Mode 39 - CCT+XY+FX+Gel 16Bit": {
+            "channels": 19,
+            "gdtfMode": "Mode 39 - CCT+XY+FX+Gel 16Bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "S60-Pro"
+    },
+    {
+      "fixture": "SkyPanel S120C",
+      "watts": 800.0,
+      "weight": 16.0,
+      "modes": {
+        "Mode 1  CCT+RGBW 8Bit": 12,
+        "Mode 1  CCT+RGBW ECC 8Bit ": 20,
+        "Mode 2 - CCT 8Bit ": 7,
+        "Mode 2 - CCT ECC 8Bit": 15,
+        "Mode 3 - CCT+HSI 8Bit": 10,
+        "Mode 3 - CCT+HSI ECC 8Bit": 18,
+        "Mode 4 - RGBW 8Bit": 9,
+        "Mode 4 - RGBW ECC 8Bit": 17,
+        "Mode 5- HSI 8Bit": 7,
+        "Mode 5- HSI ECC 8Bit": 15,
+        "Mode 6  - CCT+RGBW 16Bit": 20,
+        "Mode 6  - CCT+RGBW ECC 16Bit": 36,
+        "Mode 7 - CCT 16Bit": 10,
+        "Mode 7 - CCT ECC 16Bit": 26,
+        "Mode 8 - CCT+HSI 16Bit": 16,
+        "Mode 8 - CCT+HSI ECC 16Bit": 32,
+        "Mode 9 - RGBW 16Bit": 14,
+        "Mode 9 - RGBW ECC 16Bit": 30,
+        "Mode 10 - HSI 16Bit": 10,
+        "Mode 10 - HSI ECC 16Bit": 26,
+        "Mode 16 - Gels 8Bit": 17,
+        "Mode 16 - Gels ECC 8Bit": 25,
+        "Mode 17 - Gels 16Bit": 19,
+        "Mode 17 - Gels ECC 16Bit": 35,
+        "Mode 18 - XY 8Bit": 11,
+        "Mode 18 - XY ECC 8Bit": 19,
+        "Mode 19 - XY 16Bit": 17,
+        "Mode 19 - XY ECC 16Bit": 33,
+        "Mode 20 - Source Match 8Bit": 10,
+        "Mode 20 - Source Match ECC 8Bit": 18,
+        "Mode 21 - Source Match 16Bit": 12,
+        "Mode 21 - Source Match ECC 16Bit": 28,
+        "Mode 22 - Effects 8Bit": 13,
+        "Mode 22 - Effects ECC 8Bit": 21,
+        "Mode 23 - Effects 16Bit": 21,
+        "Mode 23 - Effects ECC 16Bit": 37,
+        "Mode 24 -  LE CCT+RGBW 8Bit": 33,
+        "Mode 25 - LE CCT+RGBW 16Bit": 65,
+        "Mode 26 -  LE HSI 8Bit": 13,
+        "Mode 27-  LE HSI 16Bit": 25,
+        "Mode 28 - LE XY 8Bit": 13,
+        "Mode 29 - LE XY 16Bit": 25,
+        "Mode 30 - Ultimate 8Bit": 24,
+        "Mode 30 - Ultimate ECC 8Bit": 32
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/arri",
+        "suggestedFileName": "ARRI__SkyPanel_S120C.gdtf",
+        "file": "fixtures/arri/ARRI@SkyPanel_S120C@DMX_v4.4_13_Jan_2021.gdtf",
+        "modes": {
+          "Mode 1  CCT+RGBW 8Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 1  CCT+RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 1  CCT+RGBW ECC 8Bit ": {
+            "channels": 20,
+            "gdtfMode": "Mode 1  CCT+RGBW ECC 8Bit ",
+            "status": "matched"
+          },
+          "Mode 2 - CCT 8Bit ": {
+            "channels": 7,
+            "gdtfMode": "Mode 2 - CCT 8Bit ",
+            "status": "matched"
+          },
+          "Mode 2 - CCT ECC 8Bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 2 - CCT ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 3 - CCT+HSI 8Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 3 - CCT+HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 3 - CCT+HSI ECC 8Bit": {
+            "channels": 18,
+            "gdtfMode": "Mode 3 - CCT+HSI ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 4 - RGBW 8Bit": {
+            "channels": 9,
+            "gdtfMode": "Mode 4 - RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 4 - RGBW ECC 8Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 4 - RGBW ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 5- HSI 8Bit": {
+            "channels": 7,
+            "gdtfMode": "Mode 5- HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 5- HSI ECC 8Bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 5- HSI ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 6  - CCT+RGBW 16Bit": {
+            "channels": 20,
+            "gdtfMode": "Mode 6  - CCT+RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 6  - CCT+RGBW ECC 16Bit": {
+            "channels": 36,
+            "gdtfMode": "Mode 6  - CCT+RGBW ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 7 - CCT 16Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 7 - CCT 16Bit",
+            "status": "matched"
+          },
+          "Mode 7 - CCT ECC 16Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 7 - CCT ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 8 - CCT+HSI 16Bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 8 - CCT+HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 8 - CCT+HSI ECC 16Bit": {
+            "channels": 32,
+            "gdtfMode": "Mode 8 - CCT+HSI ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 9 - RGBW 16Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 9 - RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 9 - RGBW ECC 16Bit": {
+            "channels": 30,
+            "gdtfMode": "Mode 9 - RGBW ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 10 - HSI 16Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 10 - HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 10 - HSI ECC 16Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 10 - HSI ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 16 - Gels 8Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 16 - Gels 8Bit",
+            "status": "matched"
+          },
+          "Mode 16 - Gels ECC 8Bit": {
+            "channels": 25,
+            "gdtfMode": "Mode 16 - Gels ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 17 - Gels 16Bit": {
+            "channels": 19,
+            "gdtfMode": "Mode 17 - Gels 16Bit",
+            "status": "matched"
+          },
+          "Mode 17 - Gels ECC 16Bit": {
+            "channels": 35,
+            "gdtfMode": "Mode 17 - Gels ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 18 - XY 8Bit": {
+            "channels": 11,
+            "gdtfMode": "Mode 18 - XY 8Bit",
+            "status": "matched"
+          },
+          "Mode 18 - XY ECC 8Bit": {
+            "channels": 19,
+            "gdtfMode": "Mode 18 - XY ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 19 - XY 16Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 19 - XY 16Bit",
+            "status": "matched"
+          },
+          "Mode 19 - XY ECC 16Bit": {
+            "channels": 33,
+            "gdtfMode": "Mode 19 - XY ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 20 - Source Match 8Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 20 - Source Match 8Bit",
+            "status": "matched"
+          },
+          "Mode 20 - Source Match ECC 8Bit": {
+            "channels": 18,
+            "gdtfMode": "Mode 20 - Source Match ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 21 - Source Match 16Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 21 - Source Match 16Bit",
+            "status": "matched"
+          },
+          "Mode 21 - Source Match ECC 16Bit": {
+            "channels": 28,
+            "gdtfMode": "Mode 21 - Source Match ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 22 - Effects 8Bit": {
+            "channels": 13,
+            "gdtfMode": "Mode 22 - Effects 8Bit",
+            "status": "matched"
+          },
+          "Mode 22 - Effects ECC 8Bit": {
+            "channels": 21,
+            "gdtfMode": "Mode 22 - Effects ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 23 - Effects 16Bit": {
+            "channels": 21,
+            "gdtfMode": "Mode 23 - Effects 16Bit",
+            "status": "matched"
+          },
+          "Mode 23 - Effects ECC 16Bit": {
+            "channels": 37,
+            "gdtfMode": "Mode 23 - Effects ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 24 -  LE CCT+RGBW 8Bit": {
+            "channels": 33,
+            "gdtfMode": "Mode 24 -  LE CCT+RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 25 - LE CCT+RGBW 16Bit": {
+            "channels": 65,
+            "gdtfMode": "Mode 25 - LE CCT+RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 26 -  LE HSI 8Bit": {
+            "channels": 13,
+            "gdtfMode": "Mode 26 -  LE HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 27-  LE HSI 16Bit": {
+            "channels": 25,
+            "gdtfMode": "Mode 27-  LE HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 28 - LE XY 8Bit": {
+            "channels": 13,
+            "gdtfMode": "Mode 28 - LE XY 8Bit",
+            "status": "matched"
+          },
+          "Mode 29 - LE XY 16Bit": {
+            "channels": 25,
+            "gdtfMode": "Mode 29 - LE XY 16Bit",
+            "status": "matched"
+          },
+          "Mode 30 - Ultimate 8Bit": {
+            "channels": 24,
+            "gdtfMode": "Mode 30 - Ultimate 8Bit",
+            "status": "matched"
+          },
+          "Mode 30 - Ultimate ECC 8Bit": {
+            "channels": 32,
+            "gdtfMode": "Mode 30 - Ultimate ECC 8Bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "S120C"
+    },
+    {
+      "fixture": "SkyPanel S30C",
+      "watts": 800.0,
+      "weight": null,
+      "modes": {
+        "Mode 1  CCT+RGBW 8Bit": 12,
+        "Mode 1  CCT+RGBW ECC 8Bit ": 20,
+        "Mode 2 - CCT 8Bit ": 7,
+        "Mode 2 - CCT ECC 8Bit": 15,
+        "Mode 3 - CCT+HSI 8Bit": 10,
+        "Mode 3 - CCT+HSI ECC 8Bit": 18,
+        "Mode 4 - RGBW 8Bit": 9,
+        "Mode 4 - RGBW ECC 8Bit": 17,
+        "Mode 5- HSI 8Bit": 7,
+        "Mode 5- HSI ECC 8Bit": 15,
+        "Mode 6  - CCT+RGBW 16Bit": 20,
+        "Mode 6  - CCT+RGBW ECC 16Bit": 36,
+        "Mode 7 - CCT 16Bit": 10,
+        "Mode 7 - CCT ECC 16Bit": 26,
+        "Mode 8 - CCT+HSI 16Bit": 16,
+        "Mode 8 - CCT+HSI ECC 16Bit": 32,
+        "Mode 9 - RGBW 16Bit": 14,
+        "Mode 9 - RGBW ECC 16Bit": 30,
+        "Mode 10 - HSI 16Bit": 10,
+        "Mode 10 - HSI ECC 16Bit": 26,
+        "Mode 16 - Gels 8Bit": 17,
+        "Mode 16 - Gels ECC 8Bit": 25,
+        "Mode 17 - Gels 16Bit": 19,
+        "Mode 17 - Gels ECC 16Bit": 35,
+        "Mode 18 - XY 8Bit": 11,
+        "Mode 18 - XY ECC 8Bit": 19,
+        "Mode 19 - XY 16Bit": 17,
+        "Mode 19 - XY ECC 16Bit": 33,
+        "Mode 20 - Source Match 8Bit": 10,
+        "Mode 20 - Source Match ECC 8Bit": 18,
+        "Mode 21 - Source Match 16Bit": 12,
+        "Mode 21 - Source Match ECC 16Bit": 28,
+        "Mode 22 - Effects 8Bit": 13,
+        "Mode 22 - Effects ECC 8Bit": 21,
+        "Mode 23 - Effects 16Bit": 21,
+        "Mode 23 - Effects ECC 16Bit": 37,
+        "Mode 24 -  LE CCT+RGBW 8Bit": 9,
+        "Mode 25 - LE CCT+RGBW 16Bit": 17,
+        "Mode 26 -  LE HSI 8Bit": 4,
+        "Mode 27-  LE HSI 16Bit": 7,
+        "Mode 28 - LE XY 8Bit": 4,
+        "Mode 29 - LE XY 16Bit": 7,
+        "Mode 30 - Ultimate 8Bit": 24,
+        "Mode 30 - Ultimate ECC 8Bit": 32
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/arri",
+        "suggestedFileName": "ARRI__SkyPanel_S30C.gdtf",
+        "file": "fixtures/arri/ARRI@SkyPanel_S30C@DMX_v4.4_13_Jan_2021.gdtf",
+        "modes": {
+          "Mode 1  CCT+RGBW 8Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 1  CCT+RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 1  CCT+RGBW ECC 8Bit ": {
+            "channels": 20,
+            "gdtfMode": "Mode 1  CCT+RGBW ECC 8Bit ",
+            "status": "matched"
+          },
+          "Mode 2 - CCT 8Bit ": {
+            "channels": 7,
+            "gdtfMode": "Mode 2 - CCT 8Bit ",
+            "status": "matched"
+          },
+          "Mode 2 - CCT ECC 8Bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 2 - CCT ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 3 - CCT+HSI 8Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 3 - CCT+HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 3 - CCT+HSI ECC 8Bit": {
+            "channels": 18,
+            "gdtfMode": "Mode 3 - CCT+HSI ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 4 - RGBW 8Bit": {
+            "channels": 9,
+            "gdtfMode": "Mode 4 - RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 4 - RGBW ECC 8Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 4 - RGBW ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 5- HSI 8Bit": {
+            "channels": 7,
+            "gdtfMode": "Mode 5- HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 5- HSI ECC 8Bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 5- HSI ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 6  - CCT+RGBW 16Bit": {
+            "channels": 20,
+            "gdtfMode": "Mode 6  - CCT+RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 6  - CCT+RGBW ECC 16Bit": {
+            "channels": 36,
+            "gdtfMode": "Mode 6  - CCT+RGBW ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 7 - CCT 16Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 7 - CCT 16Bit",
+            "status": "matched"
+          },
+          "Mode 7 - CCT ECC 16Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 7 - CCT ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 8 - CCT+HSI 16Bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 8 - CCT+HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 8 - CCT+HSI ECC 16Bit": {
+            "channels": 32,
+            "gdtfMode": "Mode 8 - CCT+HSI ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 9 - RGBW 16Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 9 - RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 9 - RGBW ECC 16Bit": {
+            "channels": 30,
+            "gdtfMode": "Mode 9 - RGBW ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 10 - HSI 16Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 10 - HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 10 - HSI ECC 16Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 10 - HSI ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 16 - Gels 8Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 16 - Gels 8Bit",
+            "status": "matched"
+          },
+          "Mode 16 - Gels ECC 8Bit": {
+            "channels": 25,
+            "gdtfMode": "Mode 16 - Gels ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 17 - Gels 16Bit": {
+            "channels": 19,
+            "gdtfMode": "Mode 17 - Gels 16Bit",
+            "status": "matched"
+          },
+          "Mode 17 - Gels ECC 16Bit": {
+            "channels": 35,
+            "gdtfMode": "Mode 17 - Gels ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 18 - XY 8Bit": {
+            "channels": 11,
+            "gdtfMode": "Mode 18 - XY 8Bit",
+            "status": "matched"
+          },
+          "Mode 18 - XY ECC 8Bit": {
+            "channels": 19,
+            "gdtfMode": "Mode 18 - XY ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 19 - XY 16Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 19 - XY 16Bit",
+            "status": "matched"
+          },
+          "Mode 19 - XY ECC 16Bit": {
+            "channels": 33,
+            "gdtfMode": "Mode 19 - XY ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 20 - Source Match 8Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 20 - Source Match 8Bit",
+            "status": "matched"
+          },
+          "Mode 20 - Source Match ECC 8Bit": {
+            "channels": 18,
+            "gdtfMode": "Mode 20 - Source Match ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 21 - Source Match 16Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 21 - Source Match 16Bit",
+            "status": "matched"
+          },
+          "Mode 21 - Source Match ECC 16Bit": {
+            "channels": 28,
+            "gdtfMode": "Mode 21 - Source Match ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 22 - Effects 8Bit": {
+            "channels": 13,
+            "gdtfMode": "Mode 22 - Effects 8Bit",
+            "status": "matched"
+          },
+          "Mode 22 - Effects ECC 8Bit": {
+            "channels": 21,
+            "gdtfMode": "Mode 22 - Effects ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 23 - Effects 16Bit": {
+            "channels": 21,
+            "gdtfMode": "Mode 23 - Effects 16Bit",
+            "status": "matched"
+          },
+          "Mode 23 - Effects ECC 16Bit": {
+            "channels": 37,
+            "gdtfMode": "Mode 23 - Effects ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 24 -  LE CCT+RGBW 8Bit": {
+            "channels": 9,
+            "gdtfMode": "Mode 24 -  LE CCT+RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 25 - LE CCT+RGBW 16Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 25 - LE CCT+RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 26 -  LE HSI 8Bit": {
+            "channels": 4,
+            "gdtfMode": "Mode 26 -  LE HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 27-  LE HSI 16Bit": {
+            "channels": 7,
+            "gdtfMode": "Mode 27-  LE HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 28 - LE XY 8Bit": {
+            "channels": 4,
+            "gdtfMode": "Mode 28 - LE XY 8Bit",
+            "status": "matched"
+          },
+          "Mode 29 - LE XY 16Bit": {
+            "channels": 7,
+            "gdtfMode": "Mode 29 - LE XY 16Bit",
+            "status": "matched"
+          },
+          "Mode 30 - Ultimate 8Bit": {
+            "channels": 24,
+            "gdtfMode": "Mode 30 - Ultimate 8Bit",
+            "status": "matched"
+          },
+          "Mode 30 - Ultimate ECC 8Bit": {
+            "channels": 32,
+            "gdtfMode": "Mode 30 - Ultimate ECC 8Bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "S30C"
+    },
+    {
+      "fixture": "SkyPanel S30RP",
+      "watts": 200.0,
+      "weight": null,
+      "modes": {
+        "Mode 1 - Intensity 8Bit": 5,
+        "Mode 2 - Intensity16Bit": 6
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/arri",
+        "suggestedFileName": "ARRI__SkyPanel_S30RP.gdtf",
+        "file": "fixtures/arri/ARRI@SkyPanel_S30RP@DMX_v4.4_13_Jan_2021.gdtf",
+        "modes": {
+          "Mode 1 - Intensity 8Bit": {
+            "channels": 5,
+            "gdtfMode": "Mode 1 - Intensity 8Bit",
+            "status": "matched"
+          },
+          "Mode 2 - Intensity16Bit": {
+            "channels": 6,
+            "gdtfMode": "Mode 2 - Intensity16Bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "S30-RP"
+    },
+    {
+      "fixture": "SkyPanel S360C",
+      "watts": 3000.0,
+      "weight": 41.0,
+      "modes": {
+        "Mode 1  CCT+RGBW 8Bit": 12,
+        "Mode 1  CCT+RGBW ECC 8Bit ": 20,
+        "Mode 2 - CCT 8Bit ": 7,
+        "Mode 2 - CCT ECC 8Bit": 15,
+        "Mode 3 - CCT+HSI 8Bit": 10,
+        "Mode 3 - CCT+HSI ECC 8Bit": 18,
+        "Mode 4 - RGBW 8Bit": 9,
+        "Mode 4 - RGBW ECC 8Bit": 17,
+        "Mode 5- HSI 8Bit": 7,
+        "Mode 5- HSI ECC 8Bit": 15,
+        "Mode 6  - CCT+RGBW 16Bit": 20,
+        "Mode 6  - CCT+RGBW ECC 16Bit": 36,
+        "Mode 7 - CCT 16Bit": 10,
+        "Mode 7 - CCT ECC 16Bit": 26,
+        "Mode 8 - CCT+HSI 16Bit": 16,
+        "Mode 8 - CCT+HSI ECC 16Bit": 32,
+        "Mode 9 - RGBW 16Bit": 14,
+        "Mode 9 - RGBW ECC 16Bit": 30,
+        "Mode 10 - HSI 16Bit": 10,
+        "Mode 10 - HSI ECC 16Bit": 26,
+        "Mode 16 - Gels 8Bit": 17,
+        "Mode 16 - Gels ECC 8Bit": 25,
+        "Mode 17 - Gels 16Bit": 19,
+        "Mode 17 - Gels ECC 16Bit": 35,
+        "Mode 18 - XY 8Bit": 11,
+        "Mode 18 - XY ECC 8Bit": 19,
+        "Mode 19 - XY 16Bit": 17,
+        "Mode 19 - XY ECC 16Bit": 33,
+        "Mode 20 - Source Match 8Bit": 10,
+        "Mode 20 - Source Match ECC 8Bit": 18,
+        "Mode 21 - Source Match 16Bit": 12,
+        "Mode 21 - Source Match ECC 16Bit": 28,
+        "Mode 22 - Effects 8Bit": 13,
+        "Mode 22 - Effects ECC 8Bit": 21,
+        "Mode 23 - Effects 16Bit": 21,
+        "Mode 23 - Effects ECC 16Bit": 37,
+        "Mode 24 -  LE CCT+RGBW 8Bit": 97,
+        "Mode 25 - LE CCT+RGBW 16Bit": 193,
+        "Mode 26 -  LE HSI 8Bit": 37,
+        "Mode 27-  LE HSI 16Bit": 73,
+        "Mode 28 - LE XY 8Bit": 37,
+        "Mode 29 - LE XY 16Bit": 73,
+        "Mode 30 - Ultimate 8Bit": 24,
+        "Mode 30 - Ultimate ECC 8Bit": 32
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/arri",
+        "suggestedFileName": "ARRI__SkyPanel_S360C.gdtf",
+        "file": "fixtures/arri/ARRI@SkyPanel_S360C@DMX_v4.4_13_Jan_2021.gdtf",
+        "modes": {
+          "Mode 1  CCT+RGBW 8Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 1  CCT+RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 1  CCT+RGBW ECC 8Bit ": {
+            "channels": 20,
+            "gdtfMode": "Mode 1  CCT+RGBW ECC 8Bit ",
+            "status": "matched"
+          },
+          "Mode 2 - CCT 8Bit ": {
+            "channels": 7,
+            "gdtfMode": "Mode 2 - CCT 8Bit ",
+            "status": "matched"
+          },
+          "Mode 2 - CCT ECC 8Bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 2 - CCT ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 3 - CCT+HSI 8Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 3 - CCT+HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 3 - CCT+HSI ECC 8Bit": {
+            "channels": 18,
+            "gdtfMode": "Mode 3 - CCT+HSI ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 4 - RGBW 8Bit": {
+            "channels": 9,
+            "gdtfMode": "Mode 4 - RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 4 - RGBW ECC 8Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 4 - RGBW ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 5- HSI 8Bit": {
+            "channels": 7,
+            "gdtfMode": "Mode 5- HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 5- HSI ECC 8Bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 5- HSI ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 6  - CCT+RGBW 16Bit": {
+            "channels": 20,
+            "gdtfMode": "Mode 6  - CCT+RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 6  - CCT+RGBW ECC 16Bit": {
+            "channels": 36,
+            "gdtfMode": "Mode 6  - CCT+RGBW ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 7 - CCT 16Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 7 - CCT 16Bit",
+            "status": "matched"
+          },
+          "Mode 7 - CCT ECC 16Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 7 - CCT ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 8 - CCT+HSI 16Bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 8 - CCT+HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 8 - CCT+HSI ECC 16Bit": {
+            "channels": 32,
+            "gdtfMode": "Mode 8 - CCT+HSI ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 9 - RGBW 16Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 9 - RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 9 - RGBW ECC 16Bit": {
+            "channels": 30,
+            "gdtfMode": "Mode 9 - RGBW ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 10 - HSI 16Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 10 - HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 10 - HSI ECC 16Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 10 - HSI ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 16 - Gels 8Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 16 - Gels 8Bit",
+            "status": "matched"
+          },
+          "Mode 16 - Gels ECC 8Bit": {
+            "channels": 25,
+            "gdtfMode": "Mode 16 - Gels ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 17 - Gels 16Bit": {
+            "channels": 19,
+            "gdtfMode": "Mode 17 - Gels 16Bit",
+            "status": "matched"
+          },
+          "Mode 17 - Gels ECC 16Bit": {
+            "channels": 35,
+            "gdtfMode": "Mode 17 - Gels ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 18 - XY 8Bit": {
+            "channels": 11,
+            "gdtfMode": "Mode 18 - XY 8Bit",
+            "status": "matched"
+          },
+          "Mode 18 - XY ECC 8Bit": {
+            "channels": 19,
+            "gdtfMode": "Mode 18 - XY ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 19 - XY 16Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 19 - XY 16Bit",
+            "status": "matched"
+          },
+          "Mode 19 - XY ECC 16Bit": {
+            "channels": 33,
+            "gdtfMode": "Mode 19 - XY ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 20 - Source Match 8Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 20 - Source Match 8Bit",
+            "status": "matched"
+          },
+          "Mode 20 - Source Match ECC 8Bit": {
+            "channels": 18,
+            "gdtfMode": "Mode 20 - Source Match ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 21 - Source Match 16Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 21 - Source Match 16Bit",
+            "status": "matched"
+          },
+          "Mode 21 - Source Match ECC 16Bit": {
+            "channels": 28,
+            "gdtfMode": "Mode 21 - Source Match ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 22 - Effects 8Bit": {
+            "channels": 13,
+            "gdtfMode": "Mode 22 - Effects 8Bit",
+            "status": "matched"
+          },
+          "Mode 22 - Effects ECC 8Bit": {
+            "channels": 21,
+            "gdtfMode": "Mode 22 - Effects ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 23 - Effects 16Bit": {
+            "channels": 21,
+            "gdtfMode": "Mode 23 - Effects 16Bit",
+            "status": "matched"
+          },
+          "Mode 23 - Effects ECC 16Bit": {
+            "channels": 37,
+            "gdtfMode": "Mode 23 - Effects ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 24 -  LE CCT+RGBW 8Bit": {
+            "channels": 97,
+            "gdtfMode": "Mode 24 -  LE CCT+RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 25 - LE CCT+RGBW 16Bit": {
+            "channels": 193,
+            "gdtfMode": "Mode 25 - LE CCT+RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 26 -  LE HSI 8Bit": {
+            "channels": 37,
+            "gdtfMode": "Mode 26 -  LE HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 27-  LE HSI 16Bit": {
+            "channels": 73,
+            "gdtfMode": "Mode 27-  LE HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 28 - LE XY 8Bit": {
+            "channels": 37,
+            "gdtfMode": "Mode 28 - LE XY 8Bit",
+            "status": "matched"
+          },
+          "Mode 29 - LE XY 16Bit": {
+            "channels": 73,
+            "gdtfMode": "Mode 29 - LE XY 16Bit",
+            "status": "matched"
+          },
+          "Mode 30 - Ultimate 8Bit": {
+            "channels": 24,
+            "gdtfMode": "Mode 30 - Ultimate 8Bit",
+            "status": "matched"
+          },
+          "Mode 30 - Ultimate ECC 8Bit": {
+            "channels": 32,
+            "gdtfMode": "Mode 30 - Ultimate ECC 8Bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "S360C"
+    },
+    {
+      "fixture": "SkyPanel S60C",
+      "watts": 800.0,
+      "weight": null,
+      "modes": {
+        "Mode 1  CCT+RGBW 8Bit": 12,
+        "Mode 1  CCT+RGBW ECC 8Bit ": 20,
+        "Mode 2 - CCT 8Bit ": 7,
+        "Mode 2 - CCT ECC 8Bit": 15,
+        "Mode 3 - CCT+HSI 8Bit": 10,
+        "Mode 3 - CCT+HSI ECC 8Bit": 18,
+        "Mode 4 - RGBW 8Bit": 9,
+        "Mode 4 - RGBW ECC 8Bit": 17,
+        "Mode 5- HSI 8Bit": 7,
+        "Mode 5- HSI ECC 8Bit": 15,
+        "Mode 6  - CCT+RGBW 16Bit": 20,
+        "Mode 6  - CCT+RGBW ECC 16Bit": 36,
+        "Mode 7 - CCT 16Bit": 10,
+        "Mode 7 - CCT ECC 16Bit": 26,
+        "Mode 8 - CCT+HSI 16Bit": 16,
+        "Mode 8 - CCT+HSI ECC 16Bit": 32,
+        "Mode 9 - RGBW 16Bit": 14,
+        "Mode 9 - RGBW ECC 16Bit": 30,
+        "Mode 10 - HSI 16Bit": 10,
+        "Mode 10 - HSI ECC 16Bit": 26,
+        "Mode 16 - Gels 8Bit": 17,
+        "Mode 16 - Gels ECC 8Bit": 25,
+        "Mode 17 - Gels 16Bit": 19,
+        "Mode 17 - Gels ECC 16Bit": 35,
+        "Mode 18 - XY 8Bit": 11,
+        "Mode 18 - XY ECC 8Bit": 19,
+        "Mode 19 - XY 16Bit": 17,
+        "Mode 19 - XY ECC 16Bit": 33,
+        "Mode 20 - Source Match 8Bit": 10,
+        "Mode 20 - Source Match ECC 8Bit": 18,
+        "Mode 21 - Source Match 16Bit": 12,
+        "Mode 21 - Source Match ECC 16Bit": 28,
+        "Mode 22 - Effects 8Bit": 13,
+        "Mode 22 - Effects ECC 8Bit": 21,
+        "Mode 23 - Effects 16Bit": 21,
+        "Mode 23 - Effects ECC 16Bit": 37,
+        "Mode 24 -  LE CCT+RGBW 8Bit": 17,
+        "Mode 25 - LE CCT+RGBW 16Bit": 33,
+        "Mode 26 -  LE HSI 8Bit": 7,
+        "Mode 27-  LE HSI 16Bit": 13,
+        "Mode 28 - LE XY 8Bit": 7,
+        "Mode 29 - LE XY 16Bit": 13,
+        "Mode 30 - Ultimate 8Bit": 24,
+        "Mode 30 - Ultimate ECC 8Bit": 32
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/arri",
+        "suggestedFileName": "ARRI__SkyPanel_S60C.gdtf",
+        "file": "fixtures/arri/ARRI@SkyPanel_S60C@DMX_v4.4_13_Jan_2021.gdtf",
+        "modes": {
+          "Mode 1  CCT+RGBW 8Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 1  CCT+RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 1  CCT+RGBW ECC 8Bit ": {
+            "channels": 20,
+            "gdtfMode": "Mode 1  CCT+RGBW ECC 8Bit ",
+            "status": "matched"
+          },
+          "Mode 2 - CCT 8Bit ": {
+            "channels": 7,
+            "gdtfMode": "Mode 2 - CCT 8Bit ",
+            "status": "matched"
+          },
+          "Mode 2 - CCT ECC 8Bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 2 - CCT ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 3 - CCT+HSI 8Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 3 - CCT+HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 3 - CCT+HSI ECC 8Bit": {
+            "channels": 18,
+            "gdtfMode": "Mode 3 - CCT+HSI ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 4 - RGBW 8Bit": {
+            "channels": 9,
+            "gdtfMode": "Mode 4 - RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 4 - RGBW ECC 8Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 4 - RGBW ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 5- HSI 8Bit": {
+            "channels": 7,
+            "gdtfMode": "Mode 5- HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 5- HSI ECC 8Bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 5- HSI ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 6  - CCT+RGBW 16Bit": {
+            "channels": 20,
+            "gdtfMode": "Mode 6  - CCT+RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 6  - CCT+RGBW ECC 16Bit": {
+            "channels": 36,
+            "gdtfMode": "Mode 6  - CCT+RGBW ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 7 - CCT 16Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 7 - CCT 16Bit",
+            "status": "matched"
+          },
+          "Mode 7 - CCT ECC 16Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 7 - CCT ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 8 - CCT+HSI 16Bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 8 - CCT+HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 8 - CCT+HSI ECC 16Bit": {
+            "channels": 32,
+            "gdtfMode": "Mode 8 - CCT+HSI ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 9 - RGBW 16Bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 9 - RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 9 - RGBW ECC 16Bit": {
+            "channels": 30,
+            "gdtfMode": "Mode 9 - RGBW ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 10 - HSI 16Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 10 - HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 10 - HSI ECC 16Bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 10 - HSI ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 16 - Gels 8Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 16 - Gels 8Bit",
+            "status": "matched"
+          },
+          "Mode 16 - Gels ECC 8Bit": {
+            "channels": 25,
+            "gdtfMode": "Mode 16 - Gels ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 17 - Gels 16Bit": {
+            "channels": 19,
+            "gdtfMode": "Mode 17 - Gels 16Bit",
+            "status": "matched"
+          },
+          "Mode 17 - Gels ECC 16Bit": {
+            "channels": 35,
+            "gdtfMode": "Mode 17 - Gels ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 18 - XY 8Bit": {
+            "channels": 11,
+            "gdtfMode": "Mode 18 - XY 8Bit",
+            "status": "matched"
+          },
+          "Mode 18 - XY ECC 8Bit": {
+            "channels": 19,
+            "gdtfMode": "Mode 18 - XY ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 19 - XY 16Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 19 - XY 16Bit",
+            "status": "matched"
+          },
+          "Mode 19 - XY ECC 16Bit": {
+            "channels": 33,
+            "gdtfMode": "Mode 19 - XY ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 20 - Source Match 8Bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 20 - Source Match 8Bit",
+            "status": "matched"
+          },
+          "Mode 20 - Source Match ECC 8Bit": {
+            "channels": 18,
+            "gdtfMode": "Mode 20 - Source Match ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 21 - Source Match 16Bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 21 - Source Match 16Bit",
+            "status": "matched"
+          },
+          "Mode 21 - Source Match ECC 16Bit": {
+            "channels": 28,
+            "gdtfMode": "Mode 21 - Source Match ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 22 - Effects 8Bit": {
+            "channels": 13,
+            "gdtfMode": "Mode 22 - Effects 8Bit",
+            "status": "matched"
+          },
+          "Mode 22 - Effects ECC 8Bit": {
+            "channels": 21,
+            "gdtfMode": "Mode 22 - Effects ECC 8Bit",
+            "status": "matched"
+          },
+          "Mode 23 - Effects 16Bit": {
+            "channels": 21,
+            "gdtfMode": "Mode 23 - Effects 16Bit",
+            "status": "matched"
+          },
+          "Mode 23 - Effects ECC 16Bit": {
+            "channels": 37,
+            "gdtfMode": "Mode 23 - Effects ECC 16Bit",
+            "status": "matched"
+          },
+          "Mode 24 -  LE CCT+RGBW 8Bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 24 -  LE CCT+RGBW 8Bit",
+            "status": "matched"
+          },
+          "Mode 25 - LE CCT+RGBW 16Bit": {
+            "channels": 33,
+            "gdtfMode": "Mode 25 - LE CCT+RGBW 16Bit",
+            "status": "matched"
+          },
+          "Mode 26 -  LE HSI 8Bit": {
+            "channels": 7,
+            "gdtfMode": "Mode 26 -  LE HSI 8Bit",
+            "status": "matched"
+          },
+          "Mode 27-  LE HSI 16Bit": {
+            "channels": 13,
+            "gdtfMode": "Mode 27-  LE HSI 16Bit",
+            "status": "matched"
+          },
+          "Mode 28 - LE XY 8Bit": {
+            "channels": 7,
+            "gdtfMode": "Mode 28 - LE XY 8Bit",
+            "status": "matched"
+          },
+          "Mode 29 - LE XY 16Bit": {
+            "channels": 13,
+            "gdtfMode": "Mode 29 - LE XY 16Bit",
+            "status": "matched"
+          },
+          "Mode 30 - Ultimate 8Bit": {
+            "channels": 24,
+            "gdtfMode": "Mode 30 - Ultimate 8Bit",
+            "status": "matched"
+          },
+          "Mode 30 - Ultimate ECC 8Bit": {
+            "channels": 32,
+            "gdtfMode": "Mode 30 - Ultimate ECC 8Bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "S60C"
+    },
+    {
+      "fixture": "SkyPanel S60RP",
+      "watts": 400.0,
+      "weight": null,
+      "modes": {
+        "Mode 1 - Intensity 8Bit": 5,
+        "Mode 2 - Intensity16Bit": 6
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/arri",
+        "suggestedFileName": "ARRI__SkyPanel_S60RP.gdtf",
+        "file": "fixtures/arri/ARRI@SkyPanel_S60RP@DMX_v4.4_13_Jan_2021.gdtf",
+        "modes": {
+          "Mode 1 - Intensity 8Bit": {
+            "channels": 5,
+            "gdtfMode": "Mode 1 - Intensity 8Bit",
+            "status": "matched"
+          },
+          "Mode 2 - Intensity16Bit": {
+            "channels": 6,
+            "gdtfMode": "Mode 2 - Intensity16Bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "S60-RP"
+    }
+  ]
+}

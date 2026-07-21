@@ -1,0 +1,51 @@
+{
+  "manufacturer": "Luxibel",
+  "fixtures": [
+    {
+      "fixture": "PIXMOVE 12",
+      "watts": 96.0,
+      "weight": null,
+      "modes": {
+        "6-channel": 6,
+        "8-channel": 8,
+        "12-channel": 12,
+        "50-channel": 50,
+        "55-channel": 55
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/Luxibel",
+        "suggestedFileName": "Luxibel__PIXMOVE_12.gdtf",
+        "file": "fixtures/Luxibel/Luxibel@PIXMOVE_12@v001.gdtf",
+        "modes": {
+          "6-channel": {
+            "channels": 6,
+            "gdtfMode": "6-channel",
+            "status": "matched"
+          },
+          "8-channel": {
+            "channels": 8,
+            "gdtfMode": "8-channel",
+            "status": "matched"
+          },
+          "12-channel": {
+            "channels": 12,
+            "gdtfMode": "12-channel",
+            "status": "matched"
+          },
+          "50-channel": {
+            "channels": 50,
+            "gdtfMode": "50-channel",
+            "status": "matched"
+          },
+          "55-channel": {
+            "channels": 55,
+            "gdtfMode": "55-channel",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "PIXMOVE12"
+    }
+  ]
+}

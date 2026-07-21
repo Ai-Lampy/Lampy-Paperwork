@@ -1,0 +1,353 @@
+{
+  "manufacturer": "Coemar Lighting",
+  "fixtures": [
+    {
+      "fixture": "LEDko FullSpectrum 6 HD Studio Plus",
+      "watts": 1000.0,
+      "weight": 6.0,
+      "modes": {
+        "16 channels": 16,
+        "7 channels": 7,
+        "1 channel": 1,
+        "Studio mode": 7,
+        "RGB mode": 9,
+        "fine RGB mode": 12,
+        "SUNRISE mode": 6
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/coemar_lighting",
+        "suggestedFileName": "Coemar_Lighting__LEDko_FullSpectrum_6_HD_Studio_Plus.gdtf",
+        "file": "fixtures/coemar_lighting/Coemar_Lighting@LEDko_FullSpectrum_6_HD_Studio_Plus@rev.10_29042024.gdtf",
+        "modes": {
+          "16 channels": {
+            "channels": 16,
+            "gdtfMode": "16 channels",
+            "status": "matched"
+          },
+          "7 channels": {
+            "channels": 7,
+            "gdtfMode": "7 channels",
+            "status": "matched"
+          },
+          "1 channel": {
+            "channels": 1,
+            "gdtfMode": "1 channel",
+            "status": "matched"
+          },
+          "Studio mode": {
+            "channels": 7,
+            "gdtfMode": "Studio mode",
+            "status": "matched"
+          },
+          "RGB mode": {
+            "channels": 9,
+            "gdtfMode": "RGB mode",
+            "status": "matched"
+          },
+          "fine RGB mode": {
+            "channels": 12,
+            "gdtfMode": "fine RGB mode",
+            "status": "matched"
+          },
+          "SUNRISE mode": {
+            "channels": 6,
+            "gdtfMode": "SUNRISE mode",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "LEDko FullSpectrum 6 HD Studio+"
+    },
+    {
+      "fixture": "LEDko FullSpectrum 6 HD-R",
+      "watts": 1000.0,
+      "weight": 6.0,
+      "modes": {
+        "16 channels": 16,
+        "7 channels": 7,
+        "1 channel": 1,
+        "Studio mode": 7,
+        "RGB mode": 9,
+        "fine RGB mode": 12,
+        "SUNRISE mode": 6
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/coemar_lighting",
+        "suggestedFileName": "Coemar_Lighting__LEDko_FullSpectrum_6_HD_R.gdtf",
+        "file": "fixtures/coemar_lighting/Coemar_Lighting@LEDko_FullSpectrum_6_HD-R@rev.06_290424.gdtf",
+        "modes": {
+          "16 channels": {
+            "channels": 16,
+            "gdtfMode": "16 channels",
+            "status": "matched"
+          },
+          "7 channels": {
+            "channels": 7,
+            "gdtfMode": "7 channels",
+            "status": "matched"
+          },
+          "1 channel": {
+            "channels": 1,
+            "gdtfMode": "1 channel",
+            "status": "matched"
+          },
+          "Studio mode": {
+            "channels": 7,
+            "gdtfMode": "Studio mode",
+            "status": "matched"
+          },
+          "RGB mode": {
+            "channels": 9,
+            "gdtfMode": "RGB mode",
+            "status": "matched"
+          },
+          "fine RGB mode": {
+            "channels": 12,
+            "gdtfMode": "fine RGB mode",
+            "status": "matched"
+          },
+          "SUNRISE mode": {
+            "channels": 6,
+            "gdtfMode": "SUNRISE mode",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "LEDko FullSpectrum 6 HD-R"
+    },
+    {
+      "fixture": "ReLite Led Kit VariWhite HD Plus for DeSisti Leonardo 1K",
+      "watts": 1000.0,
+      "weight": 12.0,
+      "modes": {
+        "5 channels": 5,
+        "2 channels": 2,
+        "1 channel": 1,
+        "SUNRISE mode": 5,
+        "Raw mode": 4,
+        "2 (MK1) channels": 2,
+        "6 channels": 6
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/coemar_lighting",
+        "suggestedFileName": "Coemar_Lighting__ReLite_Led_Kit_VariWhite_HD_Plus_for_DeSisti_Leonardo_1K.gdtf",
+        "file": "fixtures/coemar_lighting/Coemar_Lighting@ReLite_Led_Kit_VariWhite_HD_Plus_for_DeSisti_Leonardo_1K@rev002_22012025.gdtf",
+        "modes": {
+          "5 channels": {
+            "channels": 5,
+            "gdtfMode": "5 channels",
+            "status": "matched"
+          },
+          "2 channels": {
+            "channels": 2,
+            "gdtfMode": "2 channels",
+            "status": "matched"
+          },
+          "1 channel": {
+            "channels": 1,
+            "gdtfMode": "1 channel",
+            "status": "matched"
+          },
+          "SUNRISE mode": {
+            "channels": 5,
+            "gdtfMode": "SUNRISE mode",
+            "status": "matched"
+          },
+          "Raw mode": {
+            "channels": 4,
+            "gdtfMode": "Raw mode",
+            "status": "matched"
+          },
+          "2 (MK1) channels": {
+            "channels": 2,
+            "gdtfMode": "2 (MK1) channels",
+            "status": "matched"
+          },
+          "6 channels": {
+            "channels": 6,
+            "gdtfMode": "6 channels",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "ReLite Led Kit VariWhite HD Plus for DeSisti Leonardo 1K"
+    },
+    {
+      "fixture": "ReLite Led Kit VariWhite HD Plus for DeSisti Leonardo 2K",
+      "watts": 1000.0,
+      "weight": 12.0,
+      "modes": {
+        "5 channels": 5,
+        "2 channels": 2,
+        "1 channel": 1,
+        "SUNRISE mode": 5,
+        "Raw mode": 4,
+        "2 (MK1) channels": 2,
+        "6 channels": 6
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/coemar_lighting",
+        "suggestedFileName": "Coemar_Lighting__ReLite_Led_Kit_VariWhite_HD_Plus_for_DeSisti_Leonardo_2K.gdtf",
+        "file": "fixtures/coemar_lighting/Coemar_Lighting@ReLite_Led_Kit_VariWhite_HD_Plus_for_DeSisti_Leonardo_2K@rev005_22012025.gdtf",
+        "modes": {
+          "5 channels": {
+            "channels": 5,
+            "gdtfMode": "5 channels",
+            "status": "matched"
+          },
+          "2 channels": {
+            "channels": 2,
+            "gdtfMode": "2 channels",
+            "status": "matched"
+          },
+          "1 channel": {
+            "channels": 1,
+            "gdtfMode": "1 channel",
+            "status": "matched"
+          },
+          "SUNRISE mode": {
+            "channels": 5,
+            "gdtfMode": "SUNRISE mode",
+            "status": "matched"
+          },
+          "Raw mode": {
+            "channels": 4,
+            "gdtfMode": "Raw mode",
+            "status": "matched"
+          },
+          "2 (MK1) channels": {
+            "channels": 2,
+            "gdtfMode": "2 (MK1) channels",
+            "status": "matched"
+          },
+          "6 channels": {
+            "channels": 6,
+            "gdtfMode": "6 channels",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "ReLite Led Kit VariWhite HD Plus for DeSisti Leonardo 2K"
+    },
+    {
+      "fixture": "Romeo 600 FS6 HD Theater",
+      "watts": null,
+      "weight": 13.0,
+      "modes": {
+        "16 channels": 16,
+        "7 channels": 7,
+        "1 channel": 1,
+        "Studio mode": 7,
+        "RGB mode": 9,
+        "fine RGB mode": 12,
+        "SUNRISE mode": 6
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/coemar_lighting",
+        "suggestedFileName": "Coemar_Lighting__Romeo_600_FS6_HD_Theater.gdtf",
+        "file": "fixtures/coemar_lighting/Coemar_Lighting@Romeo_600_FS6_HD_Theater@rev05_del_230625.gdtf",
+        "modes": {
+          "16 channels": {
+            "channels": 16,
+            "gdtfMode": "16 channels",
+            "status": "matched"
+          },
+          "7 channels": {
+            "channels": 7,
+            "gdtfMode": "7 channels",
+            "status": "matched"
+          },
+          "1 channel": {
+            "channels": 1,
+            "gdtfMode": "1 channel",
+            "status": "matched"
+          },
+          "Studio mode": {
+            "channels": 7,
+            "gdtfMode": "Studio mode",
+            "status": "matched"
+          },
+          "RGB mode": {
+            "channels": 9,
+            "gdtfMode": "RGB mode",
+            "status": "matched"
+          },
+          "fine RGB mode": {
+            "channels": 12,
+            "gdtfMode": "fine RGB mode",
+            "status": "matched"
+          },
+          "SUNRISE mode": {
+            "channels": 6,
+            "gdtfMode": "SUNRISE mode",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Romeo 600 FS6 HD Theater"
+    },
+    {
+      "fixture": "Romeo 700 FS6 HD Theater",
+      "watts": null,
+      "weight": 20.0,
+      "modes": {
+        "16 channels": 16,
+        "7 channels": 7,
+        "1 channel": 1,
+        "Studio mode": 7,
+        "RGB mode": 9,
+        "fine RGB mode": 12,
+        "SUNRISE mode": 6
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/coemar_lighting",
+        "suggestedFileName": "Coemar_Lighting__Romeo_700_FS6_HD_Theater.gdtf",
+        "file": "fixtures/coemar_lighting/Coemar_Lighting@Romeo_700_FS6_HD_Theater@rev.07_29042024.gdtf",
+        "modes": {
+          "16 channels": {
+            "channels": 16,
+            "gdtfMode": "16 channels",
+            "status": "matched"
+          },
+          "7 channels": {
+            "channels": 7,
+            "gdtfMode": "7 channels",
+            "status": "matched"
+          },
+          "1 channel": {
+            "channels": 1,
+            "gdtfMode": "1 channel",
+            "status": "matched"
+          },
+          "Studio mode": {
+            "channels": 7,
+            "gdtfMode": "Studio mode",
+            "status": "matched"
+          },
+          "RGB mode": {
+            "channels": 9,
+            "gdtfMode": "RGB mode",
+            "status": "matched"
+          },
+          "fine RGB mode": {
+            "channels": 12,
+            "gdtfMode": "fine RGB mode",
+            "status": "matched"
+          },
+          "SUNRISE mode": {
+            "channels": 6,
+            "gdtfMode": "SUNRISE mode",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Romeo 700 FullSpectrum 6 HD Studio Plus"
+    }
+  ]
+}
