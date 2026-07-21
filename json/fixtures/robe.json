@@ -2,40 +2,536 @@
   "manufacturer": "Robe",
   "fixtures": [
     {
+      "fixture": "100 LEDBeam",
+      "watts": 180.0,
+      "weight": 4.5,
+      "modes": {
+        "Mode 1 Three LED Zones 16bit": 35,
+        "Mode 2 Beam light 16bit": 19,
+        "Mode 3 Beam light 8bit": 14,
+        "Mode 4 Macro colors 8bit": 9,
+        "Mode 5 Three LED Zones at the end 16bit": 35,
+        "Mode 6 Compatible with LW600 mode 1": 37
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__100_LEDBeam.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_100_LEDBeam@2024-02-09__3D_models_with_robe_color_revision.gdtf",
+        "modes": {
+          "Mode 1 Three LED Zones 16bit": {
+            "channels": 35,
+            "gdtfMode": "Mode 1 Three LED Zones 16bit",
+            "status": "matched"
+          },
+          "Mode 2 Beam light 16bit": {
+            "channels": 19,
+            "gdtfMode": "Mode 2 Beam light 16bit",
+            "status": "matched"
+          },
+          "Mode 3 Beam light 8bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 3 Beam light 8bit",
+            "status": "matched"
+          },
+          "Mode 4 Macro colors 8bit": {
+            "channels": 9,
+            "gdtfMode": "Mode 4 Macro colors 8bit",
+            "status": "matched"
+          },
+          "Mode 5 Three LED Zones at the end 16bit": {
+            "channels": 35,
+            "gdtfMode": "Mode 5 Three LED Zones at the end 16bit",
+            "status": "matched"
+          },
+          "Mode 6 Compatible with LW600 mode 1": {
+            "channels": 37,
+            "gdtfMode": "Mode 6 Compatible with LW600 mode 1",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "100 LEDBeam"
+    },
+    {
+      "fixture": "1200 LEDWash",
+      "watts": 1200.0,
+      "weight": 18.2,
+      "modes": {
+        "Mode 1 Extended with all zones 16bit": 45,
+        "Mode 2 Reduced RGBW 16bit": 21,
+        "Mode 3 Reduced RGBW 8bit": 15,
+        "Mode 4 Limited macro colors 8bit": 10,
+        "Mode 5 Extended all zones at the end 16bit": 45,
+        "Mode 6 Extended all zones 16bit": 37
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__1200_LEDWash.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_1200_LEDWash@2025-10-09__3D_models_update__Wiring_objects_revision.gdtf",
+        "modes": {
+          "Mode 1 Extended with all zones 16bit": {
+            "channels": 45,
+            "gdtfMode": "Mode 1 Extended with all zones 16bit",
+            "status": "matched"
+          },
+          "Mode 2 Reduced RGBW 16bit": {
+            "channels": 21,
+            "gdtfMode": "Mode 2 Reduced RGBW 16bit",
+            "status": "matched"
+          },
+          "Mode 3 Reduced RGBW 8bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 3 Reduced RGBW 8bit",
+            "status": "matched"
+          },
+          "Mode 4 Limited macro colors 8bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 4 Limited macro colors 8bit",
+            "status": "matched"
+          },
+          "Mode 5 Extended all zones at the end 16bit": {
+            "channels": 45,
+            "gdtfMode": "Mode 5 Extended all zones at the end 16bit",
+            "status": "matched"
+          },
+          "Mode 6 Extended all zones 16bit": {
+            "channels": 37,
+            "gdtfMode": "Mode 6 Extended all zones 16bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "1200 LEDWash "
+    },
+    {
+      "fixture": "300 LEDWash",
+      "watts": 190.0,
+      "weight": 8.2,
+      "modes": {
+        "Mode 1 Extended with all zones 16bit": 37,
+        "Mode 2 Reduced  RGBW 16bit": 21,
+        "Mode 3 Reduced RGBW 8bit": 15,
+        "Mode 4 Limited macro colors 8bit": 10,
+        "Mode 5 Extended all zones at the end 16bit": 37
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__300_LEDWash.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_300_LEDWash@2024-03-25__Zoom_range_fix.gdtf",
+        "modes": {
+          "Mode 1 Extended with all zones 16bit": {
+            "channels": 37,
+            "gdtfMode": "Mode 1 Extended with all zones 16bit",
+            "status": "matched"
+          },
+          "Mode 2 Reduced  RGBW 16bit": {
+            "channels": 21,
+            "gdtfMode": "Mode 2 Reduced  RGBW 16bit",
+            "status": "matched"
+          },
+          "Mode 3 Reduced RGBW 8bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 3 Reduced RGBW 8bit",
+            "status": "matched"
+          },
+          "Mode 4 Limited macro colors 8bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 4 Limited macro colors 8bit",
+            "status": "matched"
+          },
+          "Mode 5 Extended all zones at the end 16bit": {
+            "channels": 37,
+            "gdtfMode": "Mode 5 Extended all zones at the end 16bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "300 LEDWash"
+    },
+    {
+      "fixture": "300X LEDWash",
+      "watts": 285.0,
+      "weight": 8.2,
+      "modes": {
+        "Mode 1 Extended with all zones 16bit": 37,
+        "Mode 2 Reduced RGBW 16bit": 21,
+        "Mode 3 Reduced RGBW 8bit": 15,
+        "Mode 4 Limited macro colors 8bit": 10,
+        "Mode 5 Extended all zones at the end 16bit": 37
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__300X_LEDWash.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_300X_LEDWash@2022-11-10__DMX_Input_adjustment.gdtf",
+        "modes": {
+          "Mode 1 Extended with all zones 16bit": {
+            "channels": 37,
+            "gdtfMode": "Mode 1 Extended with all zones 16bit",
+            "status": "matched"
+          },
+          "Mode 2 Reduced RGBW 16bit": {
+            "channels": 21,
+            "gdtfMode": "Mode 2 Reduced RGBW 16bit",
+            "status": "matched"
+          },
+          "Mode 3 Reduced RGBW 8bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 3 Reduced RGBW 8bit",
+            "status": "matched"
+          },
+          "Mode 4 Limited macro colors 8bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 4 Limited macro colors 8bit",
+            "status": "matched"
+          },
+          "Mode 5 Extended all zones at the end 16bit": {
+            "channels": 37,
+            "gdtfMode": "Mode 5 Extended all zones at the end 16bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "300X LEDWash"
+    },
+    {
+      "fixture": "600 LEDWash",
+      "watts": 370.0,
+      "weight": 10.6,
+      "modes": {
+        "Mode 1 Extended with all zones 16bit": 37,
+        "Mode 2 Reduced RGBW Wash 16bit": 21,
+        "Mode 3 Reduced RGBW Wash 8bit": 15,
+        "Mode 4 Limited macro colors 8bit": 10,
+        "Mode 5 Extended all zones at the end 16bit": 37,
+        "Mode 6 Extended all zones 8bit": 25
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__600_LEDWash.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_600_LEDWash@2024-03-25__Zoom_range_fix.gdtf",
+        "modes": {
+          "Mode 1 Extended with all zones 16bit": {
+            "channels": 37,
+            "gdtfMode": "Mode 1 Extended with all zones 16bit",
+            "status": "matched"
+          },
+          "Mode 2 Reduced RGBW Wash 16bit": {
+            "channels": 21,
+            "gdtfMode": "Mode 2 Reduced RGBW Wash 16bit",
+            "status": "matched"
+          },
+          "Mode 3 Reduced RGBW Wash 8bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 3 Reduced RGBW Wash 8bit",
+            "status": "matched"
+          },
+          "Mode 4 Limited macro colors 8bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 4 Limited macro colors 8bit",
+            "status": "matched"
+          },
+          "Mode 5 Extended all zones at the end 16bit": {
+            "channels": 37,
+            "gdtfMode": "Mode 5 Extended all zones at the end 16bit",
+            "status": "matched"
+          },
+          "Mode 6 Extended all zones 8bit": {
+            "channels": 25,
+            "gdtfMode": "Mode 6 Extended all zones 8bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "600 LEDWash"
+    },
+    {
+      "fixture": "600 LEDWash SW",
+      "watts": 370.0,
+      "weight": 10.6,
+      "modes": {
+        "Mode 1 Zones 16bit": 24,
+        "Mode 2 Reduced Wash 16bit": 16,
+        "Mode 3 Reduced Wash 8bit": 12,
+        "Mode 4 Limited macro colors 8bit": 10,
+        "Mode 5 Zones at the end 16bit": 24
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__600_LEDWash_SW.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_600_LEDWash_SW@2023-08-14__Share_initial_release.gdtf",
+        "modes": {
+          "Mode 1 Zones 16bit": {
+            "channels": 24,
+            "gdtfMode": "Mode 1 Zones 16bit",
+            "status": "matched"
+          },
+          "Mode 2 Reduced Wash 16bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 2 Reduced Wash 16bit",
+            "status": "matched"
+          },
+          "Mode 3 Reduced Wash 8bit": {
+            "channels": 12,
+            "gdtfMode": "Mode 3 Reduced Wash 8bit",
+            "status": "matched"
+          },
+          "Mode 4 Limited macro colors 8bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 4 Limited macro colors 8bit",
+            "status": "matched"
+          },
+          "Mode 5 Zones at the end 16bit": {
+            "channels": 24,
+            "gdtfMode": "Mode 5 Zones at the end 16bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "600 LEDWash SW"
+    },
+    {
+      "fixture": "600X LEDWash",
+      "watts": 555.0,
+      "weight": 10.6,
+      "modes": {
+        "Mode 1 Extended with all zones 16bit": 37,
+        "Mode 2 Reduced RGBW Wash 16bit": 21,
+        "Mode 3 Reduced RGBW Wash 8bit": 15,
+        "Mode 4 Limited macro colors 8bit": 10,
+        "Mode 5 Extended all zones at the end 16bit": 37,
+        "Mode 6 Extended all zones 8bit": 24
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__600X_LEDWash.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_600X_LEDWash@2024-02-09__3D_models_with_robe_colors_revision.gdtf",
+        "modes": {
+          "Mode 1 Extended with all zones 16bit": {
+            "channels": 37,
+            "gdtfMode": "Mode 1 Extended with all zones 16bit",
+            "status": "matched"
+          },
+          "Mode 2 Reduced RGBW Wash 16bit": {
+            "channels": 21,
+            "gdtfMode": "Mode 2 Reduced RGBW Wash 16bit",
+            "status": "matched"
+          },
+          "Mode 3 Reduced RGBW Wash 8bit": {
+            "channels": 15,
+            "gdtfMode": "Mode 3 Reduced RGBW Wash 8bit",
+            "status": "matched"
+          },
+          "Mode 4 Limited macro colors 8bit": {
+            "channels": 10,
+            "gdtfMode": "Mode 4 Limited macro colors 8bit",
+            "status": "matched"
+          },
+          "Mode 5 Extended all zones at the end 16bit": {
+            "channels": 37,
+            "gdtfMode": "Mode 5 Extended all zones at the end 16bit",
+            "status": "matched"
+          },
+          "Mode 6 Extended all zones 8bit": {
+            "channels": 24,
+            "gdtfMode": "Mode 6 Extended all zones 8bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "600X LEDWash"
+    },
+    {
+      "fixture": "800 LEDWash SW",
+      "watts": 370.0,
+      "weight": 10.6,
+      "modes": {
+        "Mode 1 Zones 16bit": 25,
+        "Mode 2 Reduced Wash 16bit": 17,
+        "Mode 3 Reduced Wash 8bit": 13,
+        "Mode 4 Limited macro colors 8bit": 11,
+        "Mode 5 Zones at the end 16bit": 25,
+        "Mode 6 Zones no shaper 16bit": 24
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__800_LEDWash_SW.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_800_LEDWash_SW@2023-08-14__Share_initial_release.gdtf",
+        "modes": {
+          "Mode 1 Zones 16bit": {
+            "channels": 25,
+            "gdtfMode": "Mode 1 Zones 16bit",
+            "status": "matched"
+          },
+          "Mode 2 Reduced Wash 16bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 2 Reduced Wash 16bit",
+            "status": "matched"
+          },
+          "Mode 3 Reduced Wash 8bit": {
+            "channels": 13,
+            "gdtfMode": "Mode 3 Reduced Wash 8bit",
+            "status": "matched"
+          },
+          "Mode 4 Limited macro colors 8bit": {
+            "channels": 11,
+            "gdtfMode": "Mode 4 Limited macro colors 8bit",
+            "status": "matched"
+          },
+          "Mode 5 Zones at the end 16bit": {
+            "channels": 25,
+            "gdtfMode": "Mode 5 Zones at the end 16bit",
+            "status": "matched"
+          },
+          "Mode 6 Zones no shaper 16bit": {
+            "channels": 24,
+            "gdtfMode": "Mode 6 Zones no shaper 16bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "800 LEDWash SW"
+    },
+    {
+      "fixture": "800X LEDWash",
+      "watts": 555.0,
+      "weight": 11.0,
+      "modes": {
+        "Mode 1 Extended with all zones 16bit": 38,
+        "Mode 2 Reduced RGBW 16bit": 22,
+        "Mode 3 Reduced RGBW 8bit": 16,
+        "Mode 4 Limited macro colors 8bit": 11,
+        "Mode 5 Extended all zones at the end 16bit": 38,
+        "Mode 6 All zones without shaper 16bit": 37
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__800X_LEDWash.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_800X_LEDWash@2024-03-25__3D_models_update__Wiring_revision.gdtf",
+        "modes": {
+          "Mode 1 Extended with all zones 16bit": {
+            "channels": 38,
+            "gdtfMode": "Mode 1 Extended with all zones 16bit",
+            "status": "matched"
+          },
+          "Mode 2 Reduced RGBW 16bit": {
+            "channels": 22,
+            "gdtfMode": "Mode 2 Reduced RGBW 16bit",
+            "status": "matched"
+          },
+          "Mode 3 Reduced RGBW 8bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 3 Reduced RGBW 8bit",
+            "status": "matched"
+          },
+          "Mode 4 Limited macro colors 8bit": {
+            "channels": 11,
+            "gdtfMode": "Mode 4 Limited macro colors 8bit",
+            "status": "matched"
+          },
+          "Mode 5 Extended all zones at the end 16bit": {
+            "channels": 38,
+            "gdtfMode": "Mode 5 Extended all zones at the end 16bit",
+            "status": "matched"
+          },
+          "Mode 6 All zones without shaper 16bit": {
+            "channels": 37,
+            "gdtfMode": "Mode 6 All zones without shaper 16bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "800X LEDWash"
+    },
+    {
+      "fixture": "Actor 6",
+      "watts": 555.0,
+      "weight": 8.8,
+      "modes": {
+        "mode 1 - zone mode": 32,
+        "mode 2 - all zones 16 bit": 16,
+        "mode 3 - all zones 8 bit": 10,
+        "mode 4 - wash mode": 5,
+        "mode 5 - zone mode 2": 32,
+        "mode 6 - LEDWash compatible": 37
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Actor_6.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Actor_6@2025-03-10__Pixel_3D_model_revision.gdtf",
+        "modes": {
+          "mode 1 - zone mode": {
+            "channels": 32,
+            "gdtfMode": "mode 1 - zone mode",
+            "status": "matched"
+          },
+          "mode 2 - all zones 16 bit": {
+            "channels": 16,
+            "gdtfMode": "mode 2 - all zones 16 bit",
+            "status": "matched"
+          },
+          "mode 3 - all zones 8 bit": {
+            "channels": 10,
+            "gdtfMode": "mode 3 - all zones 8 bit",
+            "status": "matched"
+          },
+          "mode 4 - wash mode": {
+            "channels": 5,
+            "gdtfMode": "mode 4 - wash mode",
+            "status": "matched"
+          },
+          "mode 5 - zone mode 2": {
+            "channels": 32,
+            "gdtfMode": "mode 5 - zone mode 2",
+            "status": "matched"
+          },
+          "mode 6 - LEDWash compatible": {
+            "channels": 37,
+            "gdtfMode": "mode 6 - LEDWash compatible",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Actor 6"
+    },
+    {
       "fixture": "Arianne 2",
       "watts": 720,
       "weight": 22.5,
       "modes": {
-        "Mode 1": 39,
-        "Mode 2": 63,
-        "Mode 3": 111,
-        "Mode 4": 127
+        "Mode 1 - LB Compatible": 22,
+        "Mode 2 - Festival": 27,
+        "Mode 3 - Full+Screenpix": 50
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__Arianne_2.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Arianne_2@2026-06-22_Initial_release_to_share.gdtf",
         "modes": {
-          "Mode 1": {
-            "channels": 39,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 1 - LB Compatible": {
+            "channels": 22,
+            "gdtfMode": "Mode 1 - LB Compatible",
+            "status": "matched"
           },
-          "Mode 2": {
-            "channels": 63,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 2 - Festival": {
+            "channels": 27,
+            "gdtfMode": "Mode 2 - Festival",
+            "status": "matched"
           },
-          "Mode 3": {
-            "channels": 111,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 4": {
-            "channels": 127,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 3 - Full+Screenpix": {
+            "channels": 50,
+            "gdtfMode": "Mode 3 - Full+Screenpix",
+            "status": "matched"
           }
         }
       },
@@ -46,36 +542,30 @@
       "watts": 1550,
       "weight": 43.5,
       "modes": {
-        "Mode 1": 45,
-        "Mode 2": 93,
-        "Mode 3": 189,
-        "Mode 4": 221
+        "Mode 1 - LB Compatible": 22,
+        "Mode 2 - Festival": 27,
+        "Mode 3 - Full+ScreenPix": 58
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__Arianne_6.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Arianne_6@2026-06-05_New_3_Mode_DMX_SW_version.gdtf",
         "modes": {
-          "Mode 1": {
-            "channels": 45,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 1 - LB Compatible": {
+            "channels": 22,
+            "gdtfMode": "Mode 1 - LB Compatible",
+            "status": "matched"
           },
-          "Mode 2": {
-            "channels": 93,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 2 - Festival": {
+            "channels": 27,
+            "gdtfMode": "Mode 2 - Festival",
+            "status": "matched"
           },
-          "Mode 3": {
-            "channels": 189,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 4": {
-            "channels": 221,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 3 - Full+ScreenPix": {
+            "channels": 58,
+            "gdtfMode": "Mode 3 - Full+ScreenPix",
+            "status": "matched"
           }
         }
       },
@@ -86,24 +576,24 @@
       "watts": 2000,
       "weight": 37.9,
       "modes": {
-        "Mode 1": 49,
-        "Mode 2": 42
+        "Mode 1 - Standard 16 bit": 49,
+        "Mode 2 - Standard 8 bit": 42
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__BMFL_Blade.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_BMFL_Blade@2026-03-26_Color_macro_empty_wheel_slots_revision.gdtf",
         "modes": {
-          "Mode 1": {
+          "Mode 1 - Standard 16 bit": {
             "channels": 49,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
           },
-          "Mode 2": {
+          "Mode 2 - Standard 8 bit": {
             "channels": 42,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 - Standard 8 bit",
+            "status": "matched"
           }
         }
       },
@@ -142,24 +632,24 @@
       "watts": 2000,
       "weight": 35,
       "modes": {
-        "Mode 1": 33,
-        "Mode 2": 27
+        "Mode 1 - Standard 16 bit": 33,
+        "Mode 2 - Reduced 8 bit": 27
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__BMFL_Followspot_LT.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_BMFL_FollowSpot_LT@2026-03-27_Color_macro_open_slot_revision.gdtf",
         "modes": {
-          "Mode 1": {
+          "Mode 1 - Standard 16 bit": {
             "channels": 33,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
           },
-          "Mode 2": {
+          "Mode 2 - Reduced 8 bit": {
             "channels": 27,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 - Reduced 8 bit",
+            "status": "matched"
           }
         }
       },
@@ -170,56 +660,854 @@
       "watts": 2000,
       "weight": 36,
       "modes": {
-        "Mode 1": 41,
-        "Mode 2": 33
+        "Mode 1 - Standard 16 bit": 41,
+        "Mode 2 - Reduced 8 bit ": 33
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__BMFL_Spot.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_BMFL_Spot@2026-03-27_Color_macro_open_slot_revision.gdtf",
         "modes": {
-          "Mode 1": {
+          "Mode 1 - Standard 16 bit": {
             "channels": 41,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
           },
-          "Mode 2": {
+          "Mode 2 - Reduced 8 bit ": {
             "channels": 33,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 - Reduced 8 bit ",
+            "status": "matched"
           }
         }
       },
       "shortName": "BMFL Spot"
     },
     {
+      "fixture": "BMFL Wash",
+      "watts": 1700.0,
+      "weight": 35.0,
+      "modes": {
+        "Mode 1 - Standard 16 bit": 25,
+        "Mode 2 - Reduced 8 bit": 21
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__BMFL_Wash.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_BMFL_Wash@2026-03-27_Color_macro_open_slot_revision.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 bit": {
+            "channels": 25,
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8 bit": {
+            "channels": 21,
+            "gdtfMode": "Mode 2 - Reduced 8 bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "BMFL Wash"
+    },
+    {
+      "fixture": "BMFL Wash XF",
+      "watts": 1700.0,
+      "weight": 35.8,
+      "modes": {
+        "Mode 1 - Standard 16 bit": 34,
+        "Mode 2 - Reduced 8 bit": 30
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__BMFL_Wash_XF.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_BMFL_Wash_XF@2026-03-27_Color_macro_open_slot_revision.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 bit": {
+            "channels": 34,
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8 bit": {
+            "channels": 30,
+            "gdtfMode": "Mode 2 - Reduced 8 bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "BMFL Wash XF"
+    },
+    {
+      "fixture": "BMFL WashBeam",
+      "watts": 1700.0,
+      "weight": 38.4,
+      "modes": {
+        "Mode 1 - Standard 16 bit": 48,
+        "Mode 2 - Reduced": 41
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__BMFL_WashBeam.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_BMFL_WashBeam@2026-03-27_Color_macro_open_slot_revision.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 bit": {
+            "channels": 48,
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced": {
+            "channels": 41,
+            "gdtfMode": "Mode 2 - Reduced",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "BMFL WashBeam"
+    },
+    {
+      "fixture": "BMFL WashBeam EV",
+      "watts": 1700.0,
+      "weight": 38.4,
+      "modes": {
+        "Mode 1 - Standard 16 bit": 48,
+        "Mode 2 - Reduced": 40
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__BMFL_WashBeam_EV.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_BMFL_WashBeam_EV@2026-03-27_Color_macro_open_slot_revision.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 bit": {
+            "channels": 48,
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced": {
+            "channels": 40,
+            "gdtfMode": "Mode 2 - Reduced",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "BMFL WB EV"
+    },
+    {
+      "fixture": "ColorStrobe",
+      "watts": 1800.0,
+      "weight": 16.8,
+      "modes": {
+        "Mode 1 - RGBW No zones 8bit": 9,
+        "Mode 2 - RGBW No zones 16bit": 14,
+        "Mode 3 - RGBW No zones with effects 8bit": 18,
+        "Mode 4 - 4 zones": 28,
+        "Mode 5 - 12 zones": 84
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__ColorStrobe.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_ColorStrobe@2023-07-19__DMX_defaults_update__3D_models_and__Geometry_revision.gdtf",
+        "modes": {
+          "Mode 1 - RGBW No zones 8bit": {
+            "channels": 9,
+            "gdtfMode": "Mode 1 - RGBW No zones 8bit",
+            "status": "matched"
+          },
+          "Mode 2 - RGBW No zones 16bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 2 - RGBW No zones 16bit",
+            "status": "matched"
+          },
+          "Mode 3 - RGBW No zones with effects 8bit": {
+            "channels": 18,
+            "gdtfMode": "Mode 3 - RGBW No zones with effects 8bit",
+            "status": "matched"
+          },
+          "Mode 4 - 4 zones": {
+            "channels": 28,
+            "gdtfMode": "Mode 4 - 4 zones",
+            "status": "matched"
+          },
+          "Mode 5 - 12 zones": {
+            "channels": 84,
+            "gdtfMode": "Mode 5 - 12 zones",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "ColorStrobe"
+    },
+    {
+      "fixture": "ColorStrobe IP",
+      "watts": 420.0,
+      "weight": 15.3,
+      "modes": {
+        "Mode 1 - RGBW": 9,
+        "Mode 2 - Full RGBW": 14,
+        "Mode 3 - Zone effect": 18,
+        "Mode 4 - Three zones": 21,
+        "Mode 5 - Six zone mode": 42,
+        "Mode 6 - Simple RGBW": 4
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__ColorStrobe_IP.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_ColorStrobe_IP@2023-07-24__3D_models_revision__Geometry_revision__DMX_defaults_revision__Tilt_revision.gdtf",
+        "modes": {
+          "Mode 1 - RGBW": {
+            "channels": 9,
+            "gdtfMode": "Mode 1 - RGBW",
+            "status": "matched"
+          },
+          "Mode 2 - Full RGBW": {
+            "channels": 14,
+            "gdtfMode": "Mode 2 - Full RGBW",
+            "status": "matched"
+          },
+          "Mode 3 - Zone effect": {
+            "channels": 18,
+            "gdtfMode": "Mode 3 - Zone effect",
+            "status": "matched"
+          },
+          "Mode 4 - Three zones": {
+            "channels": 21,
+            "gdtfMode": "Mode 4 - Three zones",
+            "status": "matched"
+          },
+          "Mode 5 - Six zone mode": {
+            "channels": 42,
+            "gdtfMode": "Mode 5 - Six zone mode",
+            "status": "matched"
+          },
+          "Mode 6 - Simple RGBW": {
+            "channels": 4,
+            "gdtfMode": "Mode 6 - Simple RGBW",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "ColorStrobe IP"
+    },
+    {
       "fixture": "CUETE",
       "watts": 440,
       "weight": 18.2,
       "modes": {
-        "Mode 1": 34,
-        "Mode 2": 27
+        "Mode 1 - Standard": 29
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__CUETE.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Cuete@2025-12-01__RDM_number_fix.gdtf",
         "modes": {
-          "Mode 1": {
-            "channels": 34,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 2": {
-            "channels": 27,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 1 - Standard": {
+            "channels": 29,
+            "gdtfMode": "Mode 1 - Standard",
+            "status": "matched"
           }
         }
       },
       "shortName": "CUETE"
+    },
+    {
+      "fixture": "CycBar 15",
+      "watts": 225.0,
+      "weight": 11.1,
+      "modes": {
+        "Mode 1 - Standard 16 - bit": 16,
+        "Mode 2 - Reduced 8 - bit": 11,
+        "Mode 3 - Extended 16 - bit + RGB pixels": 75,
+        "Mode 4 - Extended 16 - bit + RGBD pixels": 20,
+        "Mode 5 - Extended 16 - bit + RGB pixels + LED Frequency setting": 61,
+        "Mode 6 - RGB pixels": 59
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__CycBar_15.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_CycBar_15@2025-12-03__Reupload_to_share.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 - bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 1 - Standard 16 - bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8 - bit": {
+            "channels": 11,
+            "gdtfMode": "Mode 2 - Reduced 8 - bit",
+            "status": "matched"
+          },
+          "Mode 3 - Extended 16 - bit + RGB pixels": {
+            "channels": 75,
+            "gdtfMode": "Mode 3 - Extended 16 - bit + RGB pixels",
+            "status": "matched"
+          },
+          "Mode 4 - Extended 16 - bit + RGBD pixels": {
+            "channels": 20,
+            "gdtfMode": "Mode 4 - Extended 16 - bit + RGBD pixels",
+            "status": "matched"
+          },
+          "Mode 5 - Extended 16 - bit + RGB pixels + LED Frequency setting": {
+            "channels": 61,
+            "gdtfMode": "Mode 5 - Extended 16 - bit + RGB pixels + LED Frequency setting",
+            "status": "matched"
+          },
+          "Mode 6 - RGB pixels": {
+            "channels": 59,
+            "gdtfMode": "Mode 6 - RGB pixels",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "CycBar15"
+    },
+    {
+      "fixture": "CycBar 15X",
+      "watts": 225.0,
+      "weight": 11.1,
+      "modes": {
+        "Mode 1 - Standard 16 - bit": 16,
+        "Mode 2 - Reduced 8 - bit": 11,
+        "Mode 3 - Extended 16 - bit + RGB pixels": 75,
+        "Mode 4 - Extended 16 - bit + RGBD pixels": 20,
+        "Mode 5 - Extended 16 - bit + RGB pixels + LED Frequency setting": 61,
+        "Mode 6 - RGB pixels": 59
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__CycBar_15X.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_CycBar_15X@2025-12-03__Reupload_to_share.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 - bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 1 - Standard 16 - bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8 - bit": {
+            "channels": 11,
+            "gdtfMode": "Mode 2 - Reduced 8 - bit",
+            "status": "matched"
+          },
+          "Mode 3 - Extended 16 - bit + RGB pixels": {
+            "channels": 75,
+            "gdtfMode": "Mode 3 - Extended 16 - bit + RGB pixels",
+            "status": "matched"
+          },
+          "Mode 4 - Extended 16 - bit + RGBD pixels": {
+            "channels": 20,
+            "gdtfMode": "Mode 4 - Extended 16 - bit + RGBD pixels",
+            "status": "matched"
+          },
+          "Mode 5 - Extended 16 - bit + RGB pixels + LED Frequency setting": {
+            "channels": 61,
+            "gdtfMode": "Mode 5 - Extended 16 - bit + RGB pixels + LED Frequency setting",
+            "status": "matched"
+          },
+          "Mode 6 - RGB pixels": {
+            "channels": 59,
+            "gdtfMode": "Mode 6 - RGB pixels",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "CycBar15X"
+    },
+    {
+      "fixture": "CycFX 8",
+      "watts": 85.0,
+      "weight": 12.0,
+      "modes": {
+        "Mode 1 - 8 bit": 14,
+        "Mode 2 - 16bit": 21,
+        "Mode 3 - Pixels RGB": 45,
+        "Mode 4 - Pixels RGB + dimmer": 53,
+        "Mode 5 - Pixel dimmers without color": 22,
+        "Mode 6 - Pixels RGBW": 53,
+        "Mode 7 - Pixels RGBW + dimmer": 61
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__CycFX_8.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_CycFX_8@2025-04-28__Shutter_initial_function_fix_in_Mode_6.gdtf",
+        "modes": {
+          "Mode 1 - 8 bit": {
+            "channels": 14,
+            "gdtfMode": "Mode 1 - 8 bit",
+            "status": "matched"
+          },
+          "Mode 2 - 16bit": {
+            "channels": 21,
+            "gdtfMode": "Mode 2 - 16bit",
+            "status": "matched"
+          },
+          "Mode 3 - Pixels RGB": {
+            "channels": 45,
+            "gdtfMode": "Mode 3 - Pixels RGB",
+            "status": "matched"
+          },
+          "Mode 4 - Pixels RGB + dimmer": {
+            "channels": 53,
+            "gdtfMode": "Mode 4 - Pixels RGB + dimmer",
+            "status": "matched"
+          },
+          "Mode 5 - Pixel dimmers without color": {
+            "channels": 22,
+            "gdtfMode": "Mode 5 - Pixel dimmers without color",
+            "status": "matched"
+          },
+          "Mode 6 - Pixels RGBW": {
+            "channels": 53,
+            "gdtfMode": "Mode 6 - Pixels RGBW",
+            "status": "matched"
+          },
+          "Mode 7 - Pixels RGBW + dimmer": {
+            "channels": 61,
+            "gdtfMode": "Mode 7 - Pixels RGBW + dimmer",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "CycFX8"
+    },
+    {
+      "fixture": "DL4S Profile",
+      "watts": 500.0,
+      "weight": 22.7,
+      "modes": {
+        "Mode 1 RGBW": 47,
+        "Mode 1 CMY": 47,
+        "Mode 2 RGBW Reduced": 38,
+        "Mode 2 CMY Reduced": 38,
+        "Mode 3 RGBW Minimal": 36,
+        "Mode 3 CMY Minimal": 36
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__DL4S_Profile.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_DL4S_Profile@2025-05-20__Tilt_physical_values_revision.gdtf",
+        "modes": {
+          "Mode 1 RGBW": {
+            "channels": 47,
+            "gdtfMode": "Mode 1 RGBW",
+            "status": "matched"
+          },
+          "Mode 1 CMY": {
+            "channels": 47,
+            "gdtfMode": "Mode 1 CMY",
+            "status": "matched"
+          },
+          "Mode 2 RGBW Reduced": {
+            "channels": 38,
+            "gdtfMode": "Mode 2 RGBW Reduced",
+            "status": "matched"
+          },
+          "Mode 2 CMY Reduced": {
+            "channels": 38,
+            "gdtfMode": "Mode 2 CMY Reduced",
+            "status": "matched"
+          },
+          "Mode 3 RGBW Minimal": {
+            "channels": 36,
+            "gdtfMode": "Mode 3 RGBW Minimal",
+            "status": "matched"
+          },
+          "Mode 3 CMY Minimal": {
+            "channels": 36,
+            "gdtfMode": "Mode 3 CMY Minimal",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "DL4S Profile"
+    },
+    {
+      "fixture": "DL4X Spot",
+      "watts": 500.0,
+      "weight": 22.7,
+      "modes": {
+        "Mode 1 RGBW": 35,
+        "Mode 1 CMY": 35,
+        "Mode 2 RGBW Reduced": 25,
+        "Mode 2 CMY Reduced": 25,
+        "Mode 3 RGBW Minimal": 23,
+        "Mode 3 CMY Minimal": 23
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__DL4X_Spot.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_DL4X_Spot@2025-05-20_Tilt_physical_values_revision.gdtf",
+        "modes": {
+          "Mode 1 RGBW": {
+            "channels": 35,
+            "gdtfMode": "Mode 1 RGBW",
+            "status": "matched"
+          },
+          "Mode 1 CMY": {
+            "channels": 35,
+            "gdtfMode": "Mode 1 CMY",
+            "status": "matched"
+          },
+          "Mode 2 RGBW Reduced": {
+            "channels": 25,
+            "gdtfMode": "Mode 2 RGBW Reduced",
+            "status": "matched"
+          },
+          "Mode 2 CMY Reduced": {
+            "channels": 25,
+            "gdtfMode": "Mode 2 CMY Reduced",
+            "status": "matched"
+          },
+          "Mode 3 RGBW Minimal": {
+            "channels": 23,
+            "gdtfMode": "Mode 3 RGBW Minimal",
+            "status": "matched"
+          },
+          "Mode 3 CMY Minimal": {
+            "channels": 23,
+            "gdtfMode": "Mode 3 CMY Minimal",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "DL4X Spot"
+    },
+    {
+      "fixture": "DL7F Wash",
+      "watts": 800.0,
+      "weight": 35.8,
+      "modes": {
+        "Mode 1 - RGB": 34,
+        "Mode 1 - CMY": 34,
+        "Mode 2 - RGB": 29,
+        "Mode 2 - CMY": 29,
+        "Mode 3 - Seven Colors": 42,
+        "Mode 4 - Seven Colors reduced": 33
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__DL7F_Wash.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_DL7F_Wash@2022-11-21__Major_update.gdtf",
+        "modes": {
+          "Mode 1 - RGB": {
+            "channels": 34,
+            "gdtfMode": "Mode 1 - RGB",
+            "status": "matched"
+          },
+          "Mode 1 - CMY": {
+            "channels": 34,
+            "gdtfMode": "Mode 1 - CMY",
+            "status": "matched"
+          },
+          "Mode 2 - RGB": {
+            "channels": 29,
+            "gdtfMode": "Mode 2 - RGB",
+            "status": "matched"
+          },
+          "Mode 2 - CMY": {
+            "channels": 29,
+            "gdtfMode": "Mode 2 - CMY",
+            "status": "matched"
+          },
+          "Mode 3 - Seven Colors": {
+            "channels": 42,
+            "gdtfMode": "Mode 3 - Seven Colors",
+            "status": "matched"
+          },
+          "Mode 4 - Seven Colors reduced": {
+            "channels": 33,
+            "gdtfMode": "Mode 4 - Seven Colors reduced",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "DL7F Wash"
+    },
+    {
+      "fixture": "DL7S Profile",
+      "watts": 800.0,
+      "weight": 35.9,
+      "modes": {
+        "Mode 1 - RGB": 51,
+        "Mode 2 - RGB reduced": 42,
+        "Mode 3 - 7 colors": 59,
+        "Mode 4 - 7 colors reduced": 46,
+        "Mode 1 - CMY": 51,
+        "Mode 2 - CMY": 42
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__DL7S_Profile.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_DL7S_Profile@2025-02-12__Framing_shutter_rotation_fix__3D_models_revision.gdtf",
+        "modes": {
+          "Mode 1 - RGB": {
+            "channels": 51,
+            "gdtfMode": "Mode 1 - RGB",
+            "status": "matched"
+          },
+          "Mode 2 - RGB reduced": {
+            "channels": 42,
+            "gdtfMode": "Mode 2 - RGB reduced",
+            "status": "matched"
+          },
+          "Mode 3 - 7 colors": {
+            "channels": 59,
+            "gdtfMode": "Mode 3 - 7 colors",
+            "status": "matched"
+          },
+          "Mode 4 - 7 colors reduced": {
+            "channels": 46,
+            "gdtfMode": "Mode 4 - 7 colors reduced",
+            "status": "matched"
+          },
+          "Mode 1 - CMY": {
+            "channels": 51,
+            "gdtfMode": "Mode 1 - CMY",
+            "status": "matched"
+          },
+          "Mode 2 - CMY": {
+            "channels": 42,
+            "gdtfMode": "Mode 2 - CMY",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "DL7S Profile"
+    },
+    {
+      "fixture": "DLX Spot",
+      "watts": 500.0,
+      "weight": 20.8,
+      "modes": {
+        "Mode 1 RGBW": 35,
+        "Mode 1 CMY": 35,
+        "Mode 2 RGBW Reduced": 25,
+        "Mode 2 CMY Reduced": 25,
+        "Mode 3 RGBW Minimal": 23,
+        "Mode 3 CMY Minimal": 23
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__DLX_Spot.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_DLX_Spot@2025-05-20__Tilt_physical_values_revision.gdtf",
+        "modes": {
+          "Mode 1 RGBW": {
+            "channels": 35,
+            "gdtfMode": "Mode 1 RGBW",
+            "status": "matched"
+          },
+          "Mode 1 CMY": {
+            "channels": 35,
+            "gdtfMode": "Mode 1 CMY",
+            "status": "matched"
+          },
+          "Mode 2 RGBW Reduced": {
+            "channels": 25,
+            "gdtfMode": "Mode 2 RGBW Reduced",
+            "status": "matched"
+          },
+          "Mode 2 CMY Reduced": {
+            "channels": 25,
+            "gdtfMode": "Mode 2 CMY Reduced",
+            "status": "matched"
+          },
+          "Mode 3 RGBW Minimal": {
+            "channels": 23,
+            "gdtfMode": "Mode 3 RGBW Minimal",
+            "status": "matched"
+          },
+          "Mode 3 CMY Minimal": {
+            "channels": 23,
+            "gdtfMode": "Mode 3 CMY Minimal",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "DLX Spot"
+    },
+    {
+      "fixture": "Esprite",
+      "watts": 650.0,
+      "weight": 28.2,
+      "modes": {
+        "Mode 1 - Standard 16 bit": 49,
+        "Mode 2 - Reduced 8 bit": 42,
+        "Mode 3 - Standard 16 bit + green correction": 50,
+        "Mode 4 - Reduced 8 bit + green correction": 43,
+        "Mode 5 - Enhanced gobo control": 51
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Esprite.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Esprite@2025-11-07_Personality_RDM_number_revision.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 bit": {
+            "channels": 49,
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8 bit": {
+            "channels": 42,
+            "gdtfMode": "Mode 2 - Reduced 8 bit",
+            "status": "matched"
+          },
+          "Mode 3 - Standard 16 bit + green correction": {
+            "channels": 50,
+            "gdtfMode": "Mode 3 - Standard 16 bit + green correction",
+            "status": "matched"
+          },
+          "Mode 4 - Reduced 8 bit + green correction": {
+            "channels": 43,
+            "gdtfMode": "Mode 4 - Reduced 8 bit + green correction",
+            "status": "matched"
+          },
+          "Mode 5 - Enhanced gobo control": {
+            "channels": 51,
+            "gdtfMode": "Mode 5 - Enhanced gobo control",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "ESPRITE"
+    },
+    {
+      "fixture": "Esprite Fresnel",
+      "watts": 650.0,
+      "weight": 26.3,
+      "modes": {
+        "Mode 1 - Standard 16 bit": 34,
+        "Mode 2 - Reduced 8 bit": 30,
+        "Mode 3 - Standard 16 bit + green corre": 35,
+        "Mode 4 - Reduced 8 bit + green corre": 31
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Esprite_Fresnel.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Esprite_Fresnel@2024-05-09__Beam_output_values_update.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 bit": {
+            "channels": 34,
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8 bit": {
+            "channels": 30,
+            "gdtfMode": "Mode 2 - Reduced 8 bit",
+            "status": "matched"
+          },
+          "Mode 3 - Standard 16 bit + green corre": {
+            "channels": 35,
+            "gdtfMode": "Mode 3 - Standard 16 bit + green corre",
+            "status": "matched"
+          },
+          "Mode 4 - Reduced 8 bit + green corre": {
+            "channels": 31,
+            "gdtfMode": "Mode 4 - Reduced 8 bit + green corre",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "ESPRITE Fresnel"
+    },
+    {
+      "fixture": "Esprite FS",
+      "watts": 650.0,
+      "weight": 29.4,
+      "modes": {
+        "Mode 1 - Standard 16 bit": 49,
+        "Mode 2 - Reduced 8 bit": 42,
+        "Mode 3 - Standard 16 bit + green correction": 50,
+        "Mode 4 - Reduced 8 bit + green correction": 43,
+        "Mode 5 - Enhanced gobo control": 51
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Esprite_FS.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Esprite_FS@2025-11-10__Personality_RDM_number_revision.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 bit": {
+            "channels": 49,
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8 bit": {
+            "channels": 42,
+            "gdtfMode": "Mode 2 - Reduced 8 bit",
+            "status": "matched"
+          },
+          "Mode 3 - Standard 16 bit + green correction": {
+            "channels": 50,
+            "gdtfMode": "Mode 3 - Standard 16 bit + green correction",
+            "status": "matched"
+          },
+          "Mode 4 - Reduced 8 bit + green correction": {
+            "channels": 43,
+            "gdtfMode": "Mode 4 - Reduced 8 bit + green correction",
+            "status": "matched"
+          },
+          "Mode 5 - Enhanced gobo control": {
+            "channels": 51,
+            "gdtfMode": "Mode 5 - Enhanced gobo control",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "EspriteFS"
+    },
+    {
+      "fixture": "Esprite PC",
+      "watts": 650.0,
+      "weight": 26.3,
+      "modes": {
+        "Mode 1 - Standard 16 bit": 34,
+        "Mode 2 - Reduced 8 bit": 30,
+        "Mode 3 - Reduced 16 bit + green corre": 35,
+        "Mode 4 - Reduced 8 bit + green corre": 31
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Esprite_PC.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Esprite_PC@2024-05-09__Beam_output_values_update.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 bit": {
+            "channels": 34,
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8 bit": {
+            "channels": 30,
+            "gdtfMode": "Mode 2 - Reduced 8 bit",
+            "status": "matched"
+          },
+          "Mode 3 - Reduced 16 bit + green corre": {
+            "channels": 35,
+            "gdtfMode": "Mode 3 - Reduced 16 bit + green corre",
+            "status": "matched"
+          },
+          "Mode 4 - Reduced 8 bit + green corre": {
+            "channels": 31,
+            "gdtfMode": "Mode 4 - Reduced 8 bit + green corre",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "ESPRITE™ PC"
     },
     {
       "fixture": "FOOTSIE1",
@@ -262,6 +1550,176 @@
       "shortName": "FOOTSIE1"
     },
     {
+      "fixture": "Footsie1 MC",
+      "watts": 100.0,
+      "weight": 10.6,
+      "modes": {
+        "Mode 1 Simple": 5,
+        "Mode 2 Standard 16 bit": 28,
+        "Mode 3 Standard 16 bit + PIP": 35
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Footsie1_MC.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Footsie1_MC@2025-09-04__Initial_revision.gdtf",
+        "modes": {
+          "Mode 1 Simple": {
+            "channels": 5,
+            "gdtfMode": "Mode 1 Simple",
+            "status": "matched"
+          },
+          "Mode 2 Standard 16 bit": {
+            "channels": 28,
+            "gdtfMode": "Mode 2 Standard 16 bit",
+            "status": "matched"
+          },
+          "Mode 3 Standard 16 bit + PIP": {
+            "channels": 35,
+            "gdtfMode": "Mode 3 Standard 16 bit + PIP",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Footsie1 MC"
+    },
+    {
+      "fixture": "Footsie1 Slim RGBW",
+      "watts": 724.0,
+      "weight": 7.5,
+      "modes": {
+        "Mode 1 Simple": 5,
+        "Mode 2 Standard 16 bit": 28,
+        "Mode 3 Standard 16 bit + PIP": 35
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Footsie1_Slim_RGBW.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Footsie1_Slim_RGBW@2025-09-19__Control_channel_update.gdtf",
+        "modes": {
+          "Mode 1 Simple": {
+            "channels": 5,
+            "gdtfMode": "Mode 1 Simple",
+            "status": "matched"
+          },
+          "Mode 2 Standard 16 bit": {
+            "channels": 28,
+            "gdtfMode": "Mode 2 Standard 16 bit",
+            "status": "matched"
+          },
+          "Mode 3 Standard 16 bit + PIP": {
+            "channels": 35,
+            "gdtfMode": "Mode 3 Standard 16 bit + PIP",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Footsie1 S RGBW"
+    },
+    {
+      "fixture": "Footsie1 Slim TW",
+      "watts": 724.0,
+      "weight": 7.5,
+      "modes": {
+        "Mode 1 Simple": 2,
+        "Mode 2 Standard 16 bit": 16,
+        "Mode 3 Standard 16 bit + PIP": 23
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Footsie1_Slim_TW.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Footsie1_Slim_TW@2025-09-19__Control_channel_update.gdtf",
+        "modes": {
+          "Mode 1 Simple": {
+            "channels": 2,
+            "gdtfMode": "Mode 1 Simple",
+            "status": "matched"
+          },
+          "Mode 2 Standard 16 bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 2 Standard 16 bit",
+            "status": "matched"
+          },
+          "Mode 3 Standard 16 bit + PIP": {
+            "channels": 23,
+            "gdtfMode": "Mode 3 Standard 16 bit + PIP",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Footsie1 S TW"
+    },
+    {
+      "fixture": "Footsie1 Slim WW",
+      "watts": 724.0,
+      "weight": 7.5,
+      "modes": {
+        "Mode 1 Simple": 1,
+        "Mode 2 Standard 16 bit": 11,
+        "Mode 3 Standard 16 bit + PIP": 18
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Footsie1_Slim_WW.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Footsie1_Slim_WW@2025-09-19__Control_channel_update.gdtf",
+        "modes": {
+          "Mode 1 Simple": {
+            "channels": 1,
+            "gdtfMode": "Mode 1 Simple",
+            "status": "matched"
+          },
+          "Mode 2 Standard 16 bit": {
+            "channels": 11,
+            "gdtfMode": "Mode 2 Standard 16 bit",
+            "status": "matched"
+          },
+          "Mode 3 Standard 16 bit + PIP": {
+            "channels": 18,
+            "gdtfMode": "Mode 3 Standard 16 bit + PIP",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Footsie1 S WW"
+    },
+    {
+      "fixture": "Footsie1 TW",
+      "watts": 724.0,
+      "weight": 11.3,
+      "modes": {
+        "Mode 1 Simple": 2,
+        "Mode 2 Standard 16 bit": 16,
+        "Mode 3 Standard 16 bit + PIP": 23
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Footsie1_TW.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Footsie1_TW@2025-09-19__Control_channel_update.gdtf",
+        "modes": {
+          "Mode 1 Simple": {
+            "channels": 2,
+            "gdtfMode": "Mode 1 Simple",
+            "status": "matched"
+          },
+          "Mode 2 Standard 16 bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 2 Standard 16 bit",
+            "status": "matched"
+          },
+          "Mode 3 Standard 16 bit + PIP": {
+            "channels": 23,
+            "gdtfMode": "Mode 3 Standard 16 bit + PIP",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Footsie1 TW"
+    },
+    {
       "fixture": "FOOTSIE2",
       "watts": 260,
       "weight": 14.6,
@@ -302,56 +1760,360 @@
       "shortName": "FOOTSIE2"
     },
     {
+      "fixture": "Footsie2 MC",
+      "watts": 200.0,
+      "weight": 19.7,
+      "modes": {
+        "Mode 1 Simple": 5,
+        "Mode 2 Standard 16 bit": 36,
+        "Mode 3 Standard 16 bit + PIP": 49
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Footsie2_MC.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Footsie2_MC@2025-09-04__Initial_revision.gdtf",
+        "modes": {
+          "Mode 1 Simple": {
+            "channels": 5,
+            "gdtfMode": "Mode 1 Simple",
+            "status": "matched"
+          },
+          "Mode 2 Standard 16 bit": {
+            "channels": 36,
+            "gdtfMode": "Mode 2 Standard 16 bit",
+            "status": "matched"
+          },
+          "Mode 3 Standard 16 bit + PIP": {
+            "channels": 49,
+            "gdtfMode": "Mode 3 Standard 16 bit + PIP",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Footsie2 MC"
+    },
+    {
+      "fixture": "Footsie2 RGBW",
+      "watts": 1448.0,
+      "weight": 21.2,
+      "modes": {
+        "Mode 1 Simple": 5,
+        "Mode 2 Standard 16 bit": 36,
+        "Mode 3 Standard 16 bit + PIP": 49
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Footsie2_RGBW.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Footsie2_RGBW@2025-09-19__Control_channel_update.gdtf",
+        "modes": {
+          "Mode 1 Simple": {
+            "channels": 5,
+            "gdtfMode": "Mode 1 Simple",
+            "status": "matched"
+          },
+          "Mode 2 Standard 16 bit": {
+            "channels": 36,
+            "gdtfMode": "Mode 2 Standard 16 bit",
+            "status": "matched"
+          },
+          "Mode 3 Standard 16 bit + PIP": {
+            "channels": 49,
+            "gdtfMode": "Mode 3 Standard 16 bit + PIP",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Footsie2 RGBW"
+    },
+    {
+      "fixture": "Footsie2 Slim WW",
+      "watts": 1467.5,
+      "weight": 13.3,
+      "modes": {
+        "Mode 1 Simple": 1,
+        "Mode 2 Standard 16 bit": 13,
+        "Mode 3 Standard 16 bit + PIP": 26
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Footsie2_Slim_WW.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Footsie2_Slim_WW@2025-09-19__Control_channel_update.gdtf",
+        "modes": {
+          "Mode 1 Simple": {
+            "channels": 1,
+            "gdtfMode": "Mode 1 Simple",
+            "status": "matched"
+          },
+          "Mode 2 Standard 16 bit": {
+            "channels": 13,
+            "gdtfMode": "Mode 2 Standard 16 bit",
+            "status": "matched"
+          },
+          "Mode 3 Standard 16 bit + PIP": {
+            "channels": 26,
+            "gdtfMode": "Mode 3 Standard 16 bit + PIP",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Footsie2 S WW"
+    },
+    {
+      "fixture": "Footsie2 TW Frost Shield",
+      "watts": 1448.0,
+      "weight": 23.49,
+      "modes": {
+        "Mode 1 Simple": 2,
+        "Mode 2 Standard 16 bit": 20,
+        "Mode 3 Standard 16 bit + PIP": 33
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Footsie2_TW_Frost_Shield.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Footsie2_TW_Frost_Shield@2025-09-19__Control_channel_update.gdtf",
+        "modes": {
+          "Mode 1 Simple": {
+            "channels": 2,
+            "gdtfMode": "Mode 1 Simple",
+            "status": "matched"
+          },
+          "Mode 2 Standard 16 bit": {
+            "channels": 20,
+            "gdtfMode": "Mode 2 Standard 16 bit",
+            "status": "matched"
+          },
+          "Mode 3 Standard 16 bit + PIP": {
+            "channels": 33,
+            "gdtfMode": "Mode 3 Standard 16 bit + PIP",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Footsie2 TW Frost Shield"
+    },
+    {
+      "fixture": "Footsie2 WW",
+      "watts": 1467.5,
+      "weight": 21.2,
+      "modes": {
+        "Mode 1 Simple": 1,
+        "Mode 2 Standard 16 bit": 13,
+        "Mode 3 Standard 16 bit + PIP": 26
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Footsie2_WW.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Footsie2_WW@2025-09-19__Control_channel_update.gdtf",
+        "modes": {
+          "Mode 1 Simple": {
+            "channels": 1,
+            "gdtfMode": "Mode 1 Simple",
+            "status": "matched"
+          },
+          "Mode 2 Standard 16 bit": {
+            "channels": 13,
+            "gdtfMode": "Mode 2 Standard 16 bit",
+            "status": "matched"
+          },
+          "Mode 3 Standard 16 bit + PIP": {
+            "channels": 26,
+            "gdtfMode": "Mode 3 Standard 16 bit + PIP",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Footsie2 WW"
+    },
+    {
+      "fixture": "Footsie2 WW Frost Shield",
+      "watts": 1467.5,
+      "weight": 23.49,
+      "modes": {
+        "Mode 1 Simple": 1,
+        "Mode 2 Standard 16 bit": 13,
+        "Mode 3 Standard 16 bit + PIP": 26
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Footsie2_WW_Frost_Shield.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Footsie2_WW_Frost_Shield@2025-09-19__Control_channel_update.gdtf",
+        "modes": {
+          "Mode 1 Simple": {
+            "channels": 1,
+            "gdtfMode": "Mode 1 Simple",
+            "status": "matched"
+          },
+          "Mode 2 Standard 16 bit": {
+            "channels": 13,
+            "gdtfMode": "Mode 2 Standard 16 bit",
+            "status": "matched"
+          },
+          "Mode 3 Standard 16 bit + PIP": {
+            "channels": 26,
+            "gdtfMode": "Mode 3 Standard 16 bit + PIP",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Footsie2 WW Frost Shield"
+    },
+    {
       "fixture": "FORTE",
       "watts": 1250,
       "weight": 41,
       "modes": {
-        "Mode 1": 54,
-        "Mode 2": 56
+        "Mode 1 - Standard 16 bit": 54,
+        "Mode 2 - Enhanced gobo control": 56
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__FORTE.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Forte@2025-11-07_Personality_RDM_number_revision.gdtf",
         "modes": {
-          "Mode 1": {
+          "Mode 1 - Standard 16 bit": {
             "channels": 54,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
           },
-          "Mode 2": {
+          "Mode 2 - Enhanced gobo control": {
             "channels": 56,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 - Enhanced gobo control",
+            "status": "matched"
           }
         }
       },
       "shortName": "FORTE"
     },
     {
+      "fixture": "Forte Fresnel",
+      "watts": 1000.0,
+      "weight": 38.1,
+      "modes": {
+        "Mode 1 - Standard 16 bit": 35
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Forte_Fresnel.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Forte_Fresnel@2024-03-27__Photometric_data_added.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 bit": {
+            "channels": 35,
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Forte Fresnel"
+    },
+    {
+      "fixture": "Forte FS",
+      "watts": 1000.0,
+      "weight": 42.2,
+      "modes": {
+        "Mode 1 - Standard 16 bit": 54,
+        "Mode 2 - Enhanced gobo control": 56
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Forte_FS.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Forte_FS@2025-11-07_Personality_RDM_number_revision.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 bit": {
+            "channels": 54,
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
+          },
+          "Mode 2 - Enhanced gobo control": {
+            "channels": 56,
+            "gdtfMode": "Mode 2 - Enhanced gobo control",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "FORTE FS"
+    },
+    {
+      "fixture": "Forte HCF",
+      "watts": 1000.0,
+      "weight": 39.8,
+      "modes": {
+        "Mode 1 - Standard 16 bit": 54,
+        "Mode 2 - Enhanced gobo control": 56
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Forte_HCF.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Forte_HCF@2025-11-07__Personality_RDM_number_revision.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 bit": {
+            "channels": 54,
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
+          },
+          "Mode 2 - Enhanced gobo control": {
+            "channels": 56,
+            "gdtfMode": "Mode 2 - Enhanced gobo control",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "FORTE HCF"
+    },
+    {
+      "fixture": "Forte PC",
+      "watts": 1000.0,
+      "weight": 38.5,
+      "modes": {
+        "Mode 1 - Standard 16 bit": 35
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Forte_PC.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Forte_PC@2024-03-27__Photometric_data_added.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 bit": {
+            "channels": 35,
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Forte PC"
+    },
+    {
       "fixture": "GigaPointe",
       "watts": 550,
       "weight": 32.5,
       "modes": {
-        "Mode 1": 39,
-        "Mode 2": 41
+        "Mode 1 - MegaPointe": 39,
+        "Mode 2 - Advanced": 41
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__GigaPointe.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_GigaPointe@2026-05-19_Control_channel_revision_DMX_V1-8.gdtf",
         "modes": {
-          "Mode 1": {
+          "Mode 1 - MegaPointe": {
             "channels": 39,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - MegaPointe",
+            "status": "matched"
           },
-          "Mode 2": {
+          "Mode 2 - Advanced": {
             "channels": 41,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 - Advanced",
+            "status": "matched"
           }
         }
       },
@@ -384,36 +2146,48 @@
       "watts": 850,
       "weight": 22.5,
       "modes": {
-        "Mode 1": 33,
-        "Mode 2": 63,
-        "Mode 3": 123,
-        "Mode 4": 183
+        "Mode 1 - Standard 16 - bit": 16,
+        "Mode 2 - Reduced 8 - bit": 11,
+        "Mode 3 - Extended 16 - bit + RGB pixels": 75,
+        "Mode 4 - Extended 16 - bit + RGBD pixels": 20,
+        "Mode 5 - Extended 16 - bit + RGB pixels + LED Frequency setting": 61,
+        "Mode 6 - RGB pixels": 59
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__iBar_15.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_iBar_15@2025-12-03__Reupload_to_share.gdtf",
         "modes": {
-          "Mode 1": {
-            "channels": 33,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 1 - Standard 16 - bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 1 - Standard 16 - bit",
+            "status": "matched"
           },
-          "Mode 2": {
-            "channels": 63,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 2 - Reduced 8 - bit": {
+            "channels": 11,
+            "gdtfMode": "Mode 2 - Reduced 8 - bit",
+            "status": "matched"
           },
-          "Mode 3": {
-            "channels": 123,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 3 - Extended 16 - bit + RGB pixels": {
+            "channels": 75,
+            "gdtfMode": "Mode 3 - Extended 16 - bit + RGB pixels",
+            "status": "matched"
           },
-          "Mode 4": {
-            "channels": 183,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 4 - Extended 16 - bit + RGBD pixels": {
+            "channels": 20,
+            "gdtfMode": "Mode 4 - Extended 16 - bit + RGBD pixels",
+            "status": "matched"
+          },
+          "Mode 5 - Extended 16 - bit + RGB pixels + LED Frequency setting": {
+            "channels": 61,
+            "gdtfMode": "Mode 5 - Extended 16 - bit + RGB pixels + LED Frequency setting",
+            "status": "matched"
+          },
+          "Mode 6 - RGB pixels": {
+            "channels": 59,
+            "gdtfMode": "Mode 6 - RGB pixels",
+            "status": "matched"
           }
         }
       },
@@ -424,30 +2198,30 @@
       "watts": 450,
       "weight": 16.5,
       "modes": {
-        "Mode 1": 22,
-        "Mode 2": 16,
-        "Mode 3": 24
+        "Mode 1 - Standard 16 - bit": 22,
+        "Mode 2 - Reduced 8 - bit": 16,
+        "Mode 3 - Cpulse mode": 24
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__iBeam_350.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_iBeam_350@2026-01-05_Control_channel_update.gdtf",
         "modes": {
-          "Mode 1": {
+          "Mode 1 - Standard 16 - bit": {
             "channels": 22,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - Standard 16 - bit",
+            "status": "matched"
           },
-          "Mode 2": {
+          "Mode 2 - Reduced 8 - bit": {
             "channels": 16,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 - Reduced 8 - bit",
+            "status": "matched"
           },
-          "Mode 3": {
+          "Mode 3 - Cpulse mode": {
             "channels": 24,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 3 - Cpulse mode",
+            "status": "matched"
           }
         }
       },
@@ -458,18 +2232,18 @@
       "watts": 700,
       "weight": 54.4,
       "modes": {
-        "Mode 1": 37
+        "Mode 1 - Standard 16 bit": 37
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__iBolt.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_iBolt@2026-05-26_Safety_control_channel_fix.gdtf",
         "modes": {
-          "Mode 1": {
+          "Mode 1 - Standard 16 bit": {
             "channels": 37,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
           }
         }
       },
@@ -538,32 +2312,104 @@
       "shortName": "iEsprite LTL"
     },
     {
+      "fixture": "iEsprite LTL WB",
+      "watts": 750.0,
+      "weight": 37.0,
+      "modes": {
+        "Mode 1 - Standard 16bit": 53
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iEsprite_LTL_WB.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_iEsprite_LTL_WB@2026-07-13_Control_channel_revision.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16bit": {
+            "channels": 53,
+            "gdtfMode": "Mode 1 - Standard 16bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "LTL WB"
+    },
+    {
       "fixture": "iForte",
       "watts": 1250,
       "weight": 42.5,
       "modes": {
-        "Mode 1": 54,
-        "Mode 2": 56
+        "Mode 1 - Standard 16 bit": 54,
+        "Mode 2 - Enhanced gobo control": 56
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__iForte.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_iForte@2026-07-13_Control_channel_revision.gdtf",
         "modes": {
-          "Mode 1": {
+          "Mode 1 - Standard 16 bit": {
             "channels": 54,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
           },
-          "Mode 2": {
+          "Mode 2 - Enhanced gobo control": {
             "channels": 56,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 - Enhanced gobo control",
+            "status": "matched"
           }
         }
       },
       "shortName": "iForte"
+    },
+    {
+      "fixture": "iForte Fresnel",
+      "watts": 1000.0,
+      "weight": 41.0,
+      "modes": {
+        "Mode 1 - Standard 16 bit": 39
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iForte_Fresnel.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_iForte_Fresnel@2025-12-17_Control_channel_update.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 bit": {
+            "channels": 39,
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "iForte iFresnel"
+    },
+    {
+      "fixture": "iForte FS",
+      "watts": 1000.0,
+      "weight": 43.8,
+      "modes": {
+        "Mode 1 - Standard 16 bit": 54,
+        "Mode 2 - Enhanced gobo control": 56
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iForte_FS.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_iForte_FS@2026-07-13_Control_channel_revision.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 bit": {
+            "channels": 54,
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
+          },
+          "Mode 2 - Enhanced gobo control": {
+            "channels": 56,
+            "gdtfMode": "Mode 2 - Enhanced gobo control",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "iFORTE FS"
     },
     {
       "fixture": "iForte LTX",
@@ -588,28 +2434,50 @@
       "shortName": "iForte LTX"
     },
     {
+      "fixture": "iForte LTX WB",
+      "watts": 1000.0,
+      "weight": 48.0,
+      "modes": {
+        "Mode 1 - Standard 16 bit": 54
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iForte_LTX_WB.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_iForte_LTX_WB@2026-07-13_Control_channel_revision.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 bit": {
+            "channels": 54,
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "iFORTE LTX WB"
+    },
+    {
       "fixture": "iPainte",
       "watts": 440,
       "weight": 24.5,
       "modes": {
-        "Mode 1": 44,
-        "Mode 2": 45
+        "Mode 1 - Standard 16 bit": 44,
+        "Mode 2 - enhanced gobo control": 45
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__iPainte.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_iPainte@2026-07-13_Control_channel_revision.gdtf",
         "modes": {
-          "Mode 1": {
+          "Mode 1 - Standard 16 bit": {
             "channels": 44,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
           },
-          "Mode 2": {
+          "Mode 2 - enhanced gobo control": {
             "channels": 45,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 - enhanced gobo control",
+            "status": "matched"
           }
         }
       },
@@ -620,18 +2488,18 @@
       "watts": 950,
       "weight": 37.5,
       "modes": {
-        "Mode 1": 53
+        "Mode 1 - Standard 16bit": 51
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__iPAINTE_LTM_WB.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_iPAINTE_LTM_WB@2026-07-13_Control_channel_revision.gdtf",
         "modes": {
-          "Mode 1": {
-            "channels": 53,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 1 - Standard 16bit": {
+            "channels": 51,
+            "gdtfMode": "Mode 1 - Standard 16bit",
+            "status": "matched"
           }
         }
       },
@@ -672,76 +2540,276 @@
       "shortName": "iParFect 150"
     },
     {
+      "fixture": "iParFect 150 FW RGBA",
+      "watts": 220.0,
+      "weight": 7.3,
+      "modes": {
+        "Mode 1 - Standard 16 - bit": 17,
+        "Mode 2 - Reduced 8 - bit": 11,
+        "Mode 3 - Simple": 8
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iParFect_150_FW_RGBA.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_iParFect_150_FW_RGBA@2022-11-23__Major_update.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 - bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 1 - Standard 16 - bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8 - bit": {
+            "channels": 11,
+            "gdtfMode": "Mode 2 - Reduced 8 - bit",
+            "status": "matched"
+          },
+          "Mode 3 - Simple": {
+            "channels": 8,
+            "gdtfMode": "Mode 3 - Simple",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "iParFect150FWRGBA"
+    },
+    {
+      "fixture": "iParFect 150 FW RGBW",
+      "watts": 220.0,
+      "weight": 7.3,
+      "modes": {
+        "Mode 1 - Standard 16 - bit": 17,
+        "Mode 2 - Reduced 8 - bit": 11,
+        "Mode 3 - Simple": 8
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iParFect_150_FW_RGBW.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_iParFect_150_FW_RGBW@2022-11-23__Major_update.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 - bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 1 - Standard 16 - bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8 - bit": {
+            "channels": 11,
+            "gdtfMode": "Mode 2 - Reduced 8 - bit",
+            "status": "matched"
+          },
+          "Mode 3 - Simple": {
+            "channels": 8,
+            "gdtfMode": "Mode 3 - Simple",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "iParFect150FWRGBW"
+    },
+    {
+      "fixture": "iPointe",
+      "watts": 310.0,
+      "weight": 38.0,
+      "modes": {
+        "Mode 1 - Standard 16 - bit": 39,
+        "Mode 2 - Reduced 8 - bit": 34
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iPointe.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_iPointe@2025-11-07__Personality_RDM_number_revision.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 - bit": {
+            "channels": 39,
+            "gdtfMode": "Mode 1 - Standard 16 - bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8 - bit": {
+            "channels": 34,
+            "gdtfMode": "Mode 2 - Reduced 8 - bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "iPointe"
+    },
+    {
+      "fixture": "iPointe65",
+      "watts": 310.0,
+      "weight": 38.0,
+      "modes": {
+        "Mode 1 - Standard 16 - bit": 39,
+        "Mode 2 - Reduced 8 - bit": 34
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iPointe65.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_iPointe65@2023-11-08__Animation_wheel_macros_channel_fix.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 - bit": {
+            "channels": 39,
+            "gdtfMode": "Mode 1 - Standard 16 - bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8 - bit": {
+            "channels": 34,
+            "gdtfMode": "Mode 2 - Reduced 8 - bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "iPointe65"
+    },
+    {
+      "fixture": "iSpiider",
+      "watts": 820.0,
+      "weight": 24.7,
+      "modes": {
+        "Mode 10 - Pattern full RGBW": 123,
+        "Mode 9 - Pattern full RGB": 71,
+        "Mode 8 - Pixel RGBW ": 110,
+        "Mode 7 - Pixel RGB": 58,
+        "Mode 6 - Pattern": 47,
+        "Mode 5 - Wash": 27,
+        "Mode 1 - Zones": 49,
+        "Mode 2 - Basic": 27,
+        "Mode 3 - Advanced": 33,
+        "Mode 4 - Full RGBW": 57
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iSpiider.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_iSpiider@2025-12-03_Reupload_to_share.gdtf",
+        "modes": {
+          "Mode 10 - Pattern full RGBW": {
+            "channels": 123,
+            "gdtfMode": "Mode 10 - Pattern full RGBW",
+            "status": "matched"
+          },
+          "Mode 9 - Pattern full RGB": {
+            "channels": 71,
+            "gdtfMode": "Mode 9 - Pattern full RGB",
+            "status": "matched"
+          },
+          "Mode 8 - Pixel RGBW ": {
+            "channels": 110,
+            "gdtfMode": "Mode 8 - Pixel RGBW ",
+            "status": "matched"
+          },
+          "Mode 7 - Pixel RGB": {
+            "channels": 58,
+            "gdtfMode": "Mode 7 - Pixel RGB",
+            "status": "matched"
+          },
+          "Mode 6 - Pattern": {
+            "channels": 47,
+            "gdtfMode": "Mode 6 - Pattern",
+            "status": "matched"
+          },
+          "Mode 5 - Wash": {
+            "channels": 27,
+            "gdtfMode": "Mode 5 - Wash",
+            "status": "matched"
+          },
+          "Mode 1 - Zones": {
+            "channels": 49,
+            "gdtfMode": "Mode 1 - Zones",
+            "status": "matched"
+          },
+          "Mode 2 - Basic": {
+            "channels": 27,
+            "gdtfMode": "Mode 2 - Basic",
+            "status": "matched"
+          },
+          "Mode 3 - Advanced": {
+            "channels": 33,
+            "gdtfMode": "Mode 3 - Advanced",
+            "status": "matched"
+          },
+          "Mode 4 - Full RGBW": {
+            "channels": 57,
+            "gdtfMode": "Mode 4 - Full RGBW",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "iSpiider"
+    },
+    {
       "fixture": "iSpiider X",
       "watts": 660,
       "weight": 19,
       "modes": {
-        "Mode 1": 49,
-        "Mode 2": 27,
-        "Mode 3": 33,
-        "Mode 4": 90,
-        "Mode 5": 27,
-        "Mode 6": 47,
-        "Mode 7": 91,
-        "Mode 8": 110,
-        "Mode 9": 104,
-        "Mode 10": 123
+        "Mode 10 - Pattern full RGBW": 123,
+        "Mode 9 - Pattern full RGB": 71,
+        "Mode 8 - Pixel RGBW ": 110,
+        "Mode 7 - Pixel RGB": 58,
+        "Mode 6 - Pattern": 47,
+        "Mode 5 - Wash": 27,
+        "Mode 1 - Zones": 49,
+        "Mode 2 - Basic": 27,
+        "Mode 3 - Advanced": 33,
+        "Mode 4 - Full RGBW": 57
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__iSpiider_X.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_iSpiiderX@2025-12-03_Reupload_to_share.gdtf",
         "modes": {
-          "Mode 1": {
-            "channels": 49,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 2": {
-            "channels": 27,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 3": {
-            "channels": 33,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 4": {
-            "channels": 90,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 5": {
-            "channels": 27,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 6": {
-            "channels": 47,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 7": {
-            "channels": 91,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 8": {
-            "channels": 110,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 9": {
-            "channels": 104,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 10": {
+          "Mode 10 - Pattern full RGBW": {
             "channels": 123,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 10 - Pattern full RGBW",
+            "status": "matched"
+          },
+          "Mode 9 - Pattern full RGB": {
+            "channels": 71,
+            "gdtfMode": "Mode 9 - Pattern full RGB",
+            "status": "matched"
+          },
+          "Mode 8 - Pixel RGBW ": {
+            "channels": 110,
+            "gdtfMode": "Mode 8 - Pixel RGBW ",
+            "status": "matched"
+          },
+          "Mode 7 - Pixel RGB": {
+            "channels": 58,
+            "gdtfMode": "Mode 7 - Pixel RGB",
+            "status": "matched"
+          },
+          "Mode 6 - Pattern": {
+            "channels": 47,
+            "gdtfMode": "Mode 6 - Pattern",
+            "status": "matched"
+          },
+          "Mode 5 - Wash": {
+            "channels": 27,
+            "gdtfMode": "Mode 5 - Wash",
+            "status": "matched"
+          },
+          "Mode 1 - Zones": {
+            "channels": 49,
+            "gdtfMode": "Mode 1 - Zones",
+            "status": "matched"
+          },
+          "Mode 2 - Basic": {
+            "channels": 27,
+            "gdtfMode": "Mode 2 - Basic",
+            "status": "matched"
+          },
+          "Mode 3 - Advanced": {
+            "channels": 33,
+            "gdtfMode": "Mode 3 - Advanced",
+            "status": "matched"
+          },
+          "Mode 4 - Full RGBW": {
+            "channels": 57,
+            "gdtfMode": "Mode 4 - Full RGBW",
+            "status": "matched"
           }
         }
       },
@@ -752,64 +2820,64 @@
       "watts": 420,
       "weight": 20.5,
       "modes": {
-        "Mode 1": 18,
-        "Mode 2": 9,
-        "Mode 3": 22,
-        "Mode 4": 5,
-        "Mode 5": 1,
-        "Mode 6": 24,
-        "Mode 7": 13,
-        "Mode 8": 28
+        "Mode 1 - 16-bit CMY": 24,
+        "Mode 2 - 16-bit RGBAL": 28,
+        "Mode 3 - 16-bit CMY + Framing module": 35,
+        "Mode 4 - 16-bit  RGBAL + Framing module": 39,
+        "Mode 5 - 16-bit CMY + Gobo module": 32,
+        "Mode 6 - 16-bit  RGBAL + Gobo module": 36,
+        "Mode 7 - 16-bit CMY + Gobo + Framing module": 43,
+        "Mode 8- 16-bit RGBAL Gobo+ Framing": 47
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__iT12_Fresnel.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_iT12_Fresnel@2026-07-21_Color_control_channel_update.gdtf",
         "modes": {
-          "Mode 1": {
-            "channels": 18,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 2": {
-            "channels": 9,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 3": {
-            "channels": 22,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 4": {
-            "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 5": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 6": {
+          "Mode 1 - 16-bit CMY": {
             "channels": 24,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - 16-bit CMY",
+            "status": "matched"
           },
-          "Mode 7": {
-            "channels": 13,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 8": {
+          "Mode 2 - 16-bit RGBAL": {
             "channels": 28,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 - 16-bit RGBAL",
+            "status": "matched"
+          },
+          "Mode 3 - 16-bit CMY + Framing module": {
+            "channels": 35,
+            "gdtfMode": "Mode 3 - 16-bit CMY + Framing module",
+            "status": "matched"
+          },
+          "Mode 4 - 16-bit  RGBAL + Framing module": {
+            "channels": 39,
+            "gdtfMode": "Mode 4 - 16-bit  RGBAL + Framing module",
+            "status": "matched"
+          },
+          "Mode 5 - 16-bit CMY + Gobo module": {
+            "channels": 32,
+            "gdtfMode": "Mode 5 - 16-bit CMY + Gobo module",
+            "status": "matched"
+          },
+          "Mode 6 - 16-bit  RGBAL + Gobo module": {
+            "channels": 36,
+            "gdtfMode": "Mode 6 - 16-bit  RGBAL + Gobo module",
+            "status": "matched"
+          },
+          "Mode 7 - 16-bit CMY + Gobo + Framing module": {
+            "channels": 43,
+            "gdtfMode": "Mode 7 - 16-bit CMY + Gobo + Framing module",
+            "status": "matched"
+          },
+          "Mode 8- 16-bit RGBAL Gobo+ Framing": {
+            "channels": 47,
+            "gdtfMode": "Mode 8- 16-bit RGBAL Gobo+ Framing",
+            "status": "matched"
           }
         }
       },
-      "shortName": "iT12 Fres"
+      "shortName": "iT12 Fresnel"
     },
     {
       "fixture": "iT12 PC",
@@ -937,7 +3005,7 @@
           }
         }
       },
-      "shortName": "iT12 Prof"
+      "shortName": "iT12 Profile"
     },
     {
       "fixture": "iTetra 2",
@@ -1026,6 +3094,118 @@
       "shortName": "LEDBeam 150"
     },
     {
+      "fixture": "LEDBeam 150 FW RGBA",
+      "watts": 220.0,
+      "weight": 5.7,
+      "modes": {
+        "Mode 1 - Standard 16 - bit": 22,
+        "Mode 2 - Reduced 8 - bit": 16
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__LEDBeam_150_FW_RGBA.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_LEDBeam_150_FW_RGBA@2026-05-22_Control_channel_update.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 - bit": {
+            "channels": 22,
+            "gdtfMode": "Mode 1 - Standard 16 - bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8 - bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 2 - Reduced 8 - bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "LEDBeam150FWRGBA"
+    },
+    {
+      "fixture": "LEDBeam 150 FW RGBW",
+      "watts": 220.0,
+      "weight": 5.7,
+      "modes": {
+        "Mode 1 - Standard 16 - bit": 22,
+        "Mode 2 - Reduced 8 - bit": 16
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__LEDBeam_150_FW_RGBW.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_LEDBeam_150_FW_RGBW@2026-05-22_Control_channel_update.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 - bit": {
+            "channels": 22,
+            "gdtfMode": "Mode 1 - Standard 16 - bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8 - bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 2 - Reduced 8 - bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "LEDBeam150FW"
+    },
+    {
+      "fixture": "LEDBeam 150 RGBA",
+      "watts": 220.0,
+      "weight": 5.7,
+      "modes": {
+        "Mode 1 - Standard 16 - bit": 22,
+        "Mode 2 - Reduced 8 - bit": 16
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__LEDBeam_150_RGBA.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_LEDBeam_150_RGBA@2026-05-22_Control_channel_update.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 - bit": {
+            "channels": 22,
+            "gdtfMode": "Mode 1 - Standard 16 - bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8 - bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 2 - Reduced 8 - bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "LEDBeam150RGBA"
+    },
+    {
+      "fixture": "LEDBeam 150 RGBW",
+      "watts": 220.0,
+      "weight": 5.7,
+      "modes": {
+        "Mode 1 - Standard 16 - bit": 22,
+        "Mode 2 - Reduced 8 - bit": 16
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__LEDBeam_150_RGBW.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_LEDBeam_150_RGBW@2026-05-22_Control_channel_update.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 - bit": {
+            "channels": 22,
+            "gdtfMode": "Mode 1 - Standard 16 - bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8 - bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 2 - Reduced 8 - bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "LEDBeam150"
+    },
+    {
       "fixture": "LEDBeam 200",
       "watts": 250,
       "weight": 7.8,
@@ -1064,30 +3244,30 @@
       "watts": 450,
       "weight": 9.9,
       "modes": {
-        "Mode 1": 22,
-        "Mode 2": 16,
-        "Mode 3": 24
+        "Mode 1 - Standard 16 - bit": 22,
+        "Mode 2 - Reduced 8 - bit": 16,
+        "Mode 3 - Cpulse mode": 24
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__LEDBeam_350.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_LEDBeam_350@2026-01-05_Control_channel_update.gdtf",
         "modes": {
-          "Mode 1": {
+          "Mode 1 - Standard 16 - bit": {
             "channels": 22,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - Standard 16 - bit",
+            "status": "matched"
           },
-          "Mode 2": {
+          "Mode 2 - Reduced 8 - bit": {
             "channels": 16,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 - Reduced 8 - bit",
+            "status": "matched"
           },
-          "Mode 3": {
+          "Mode 3 - Cpulse mode": {
             "channels": 24,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 3 - Cpulse mode",
+            "status": "matched"
           }
         }
       },
@@ -1098,34 +3278,124 @@
       "watts": 450,
       "weight": 9.9,
       "modes": {
-        "Mode 1": 22,
-        "Mode 2": 16,
-        "Mode 3": 24
+        "Mode 1 - Standard 16 - bit": 22,
+        "Mode 2 - Reduced 8 - bit": 16,
+        "Mode 3 - Cpulse mode": 24
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__LEDBeam_350_FW.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_LEDBeam_350_FW@2026-01-05_Control_channel_update.gdtf",
         "modes": {
-          "Mode 1": {
+          "Mode 1 - Standard 16 - bit": {
             "channels": 22,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - Standard 16 - bit",
+            "status": "matched"
           },
-          "Mode 2": {
+          "Mode 2 - Reduced 8 - bit": {
             "channels": 16,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 - Reduced 8 - bit",
+            "status": "matched"
           },
-          "Mode 3": {
+          "Mode 3 - Cpulse mode": {
             "channels": 24,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 3 - Cpulse mode",
+            "status": "matched"
           }
         }
       },
       "shortName": "LEDBeam 350 FW"
+    },
+    {
+      "fixture": "LEDBeam 350 RGBA",
+      "watts": 400.0,
+      "weight": 9.85,
+      "modes": {
+        "Mode 1 - Standard 16 - bit": 22,
+        "Mode 2 - Reduced 8 - bit": 16,
+        "Mode 3 - Cpulse mode": 24
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__LEDBeam_350_RGBA.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_LEDBeam_350_RGBA@2026-03-23_Control_channel_update_revision.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 - bit": {
+            "channels": 22,
+            "gdtfMode": "Mode 1 - Standard 16 - bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8 - bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 2 - Reduced 8 - bit",
+            "status": "matched"
+          },
+          "Mode 3 - Cpulse mode": {
+            "channels": 24,
+            "gdtfMode": "Mode 3 - Cpulse mode",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "LEDBeam 350 RGBA"
+    },
+    {
+      "fixture": "LEDForce 18 RGBW",
+      "watts": 90.0,
+      "weight": 4.9,
+      "modes": {
+        "Mode 1 RGBW": 4,
+        "Mode 2 RGBW + dim + strobe": 6
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__LEDForce_18_RGBW.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@LEDForce_18_RGBW@2022-11-04__Color_wheels_correction.gdtf",
+        "modes": {
+          "Mode 1 RGBW": {
+            "channels": 4,
+            "gdtfMode": "Mode 1 RGBW",
+            "status": "matched"
+          },
+          "Mode 2 RGBW + dim + strobe": {
+            "channels": 6,
+            "gdtfMode": "Mode 2 RGBW + dim + strobe",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "LEDForce 18"
+    },
+    {
+      "fixture": "LEDForce 7 RGBW",
+      "watts": 35.0,
+      "weight": 1.9,
+      "modes": {
+        "Mode 1 RGBW": 4,
+        "Mode 2 RGBW + dim + strobe": 6
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__LEDForce_7_RGBW.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@LEDForce_7_RGBW@2023-03-10__Geometry_axis_revision__Wiring_object_revision.gdtf",
+        "modes": {
+          "Mode 1 RGBW": {
+            "channels": 4,
+            "gdtfMode": "Mode 1 RGBW",
+            "status": "matched"
+          },
+          "Mode 2 RGBW + dim + strobe": {
+            "channels": 6,
+            "gdtfMode": "Mode 2 RGBW + dim + strobe",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "LEDForce 7"
     },
     {
       "fixture": "LedPOINTE",
@@ -1154,74 +3424,142 @@
       "watts": 670,
       "weight": 22,
       "modes": {
-        "Mode 1": 34,
-        "Mode 2": 39
+        "Mode 1 - Standard 16 - bit": 39,
+        "Mode 2 - Reduced 8 - bit": 34
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__MegaPointe.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_MegaPointe@2026-04-13_Shutter_channel_sets_revision.gdtf",
         "modes": {
-          "Mode 1": {
-            "channels": 34,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 2": {
+          "Mode 1 - Standard 16 - bit": {
             "channels": 39,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - Standard 16 - bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8 - bit": {
+            "channels": 34,
+            "gdtfMode": "Mode 2 - Reduced 8 - bit",
+            "status": "matched"
           }
         }
       },
       "shortName": "MegaPointe"
     },
     {
+      "fixture": "MiniMe",
+      "watts": 90.0,
+      "weight": 5.2,
+      "modes": {
+        "Mode 1 - Standard": 24
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__MiniMe.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_MiniMe@2023-01-24__3D_models_simplification.gdtf",
+        "modes": {
+          "Mode 1 - Standard": {
+            "channels": 24,
+            "gdtfMode": "Mode 1 - Standard",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "MiniMe"
+    },
+    {
       "fixture": "miniPointe",
       "watts": 280,
       "weight": 13.0,
       "modes": {
-        "Mode 1": 20,
-        "Mode 2": 22
+        "Mode 1 - Standard 16bit": 22,
+        "Mode 2 - Reduced 8 bit": 17,
+        "Mode 3 - Extended 16 bit": 27
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__miniPointe.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_MiniPointe@2024-04-23__Gobo_channels_revision.gdtf",
         "modes": {
-          "Mode 1": {
-            "channels": 20,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 2": {
+          "Mode 1 - Standard 16bit": {
             "channels": 22,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - Standard 16bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8 bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 2 - Reduced 8 bit",
+            "status": "matched"
+          },
+          "Mode 3 - Extended 16 bit": {
+            "channels": 27,
+            "gdtfMode": "Mode 3 - Extended 16 bit",
+            "status": "matched"
           }
         }
       },
       "shortName": "miniPointe"
     },
     {
+      "fixture": "MMX WashBeam",
+      "watts": 800.0,
+      "weight": 25.5,
+      "modes": {
+        "Mode 1 - Standard": 34,
+        "Mode 2 - Reduced": 29,
+        "Mode 3 - 8 bit": 27
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__MMX_WashBeam.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_MMX_WashBeam@2025-11-10__Personality_RDM_number_revision.gdtf",
+        "modes": {
+          "Mode 1 - Standard": {
+            "channels": 34,
+            "gdtfMode": "Mode 1 - Standard",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced": {
+            "channels": 29,
+            "gdtfMode": "Mode 2 - Reduced",
+            "status": "matched"
+          },
+          "Mode 3 - 8 bit": {
+            "channels": 27,
+            "gdtfMode": "Mode 3 - 8 bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "MMX WashBeam"
+    },
+    {
       "fixture": "MolyPATT",
       "watts": 300,
       "weight": 11.0,
       "modes": {
-        "Mode 1": 5
+        "Needs external dimmer - 8 bit dimmer": 1,
+        "Needs external dimmer - 16 bit dimmer": 2
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__MolyPATT.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@MolyPATT@2025-01-21__Photo_and_thumbnail_revision_bulb_temperature_revision.gdtf",
         "modes": {
-          "Mode 1": {
-            "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Needs external dimmer - 8 bit dimmer": {
+            "channels": 1,
+            "gdtfMode": "Needs external dimmer - 8 bit dimmer",
+            "status": "matched"
+          },
+          "Needs external dimmer - 16 bit dimmer": {
+            "channels": 2,
+            "gdtfMode": "Needs external dimmer - 16 bit dimmer",
+            "status": "matched"
           }
         }
       },
@@ -1254,28 +3592,56 @@
       "watts": 440,
       "weight": 24.5,
       "modes": {
-        "Mode 1": 44,
-        "Mode 2": 45
+        "Mode 1 - Standard 16 bit": 44,
+        "Mode 2 - enhanced gobo control": 45
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__PAINTE.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Painte@2025-11-07__Personality_RDM_number_revision.gdtf",
         "modes": {
-          "Mode 1": {
+          "Mode 1 - Standard 16 bit": {
             "channels": 44,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
           },
-          "Mode 2": {
+          "Mode 2 - enhanced gobo control": {
             "channels": 45,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 - enhanced gobo control",
+            "status": "matched"
           }
         }
       },
       "shortName": "PAINTE"
+    },
+    {
+      "fixture": "Painte Spot",
+      "watts": 310.0,
+      "weight": 18.08,
+      "modes": {
+        "Mode 1 - Standard 16 bit": 35,
+        "Mode 2 - enhanced gobo control": 36
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Painte_Spot.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Painte_Spot@2025-11-07__Personality_RDM_number_revision.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 bit": {
+            "channels": 35,
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
+          },
+          "Mode 2 - enhanced gobo control": {
+            "channels": 36,
+            "gdtfMode": "Mode 2 - enhanced gobo control",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Painte Spot"
     },
     {
       "fixture": "ParFect 150",
@@ -1312,22 +3678,158 @@
       "shortName": "ParFect 150"
     },
     {
+      "fixture": "ParFect 150 FW RGBA",
+      "watts": 220.0,
+      "weight": 5.0,
+      "modes": {
+        "Mode 1 - Standard 16 - bit": 17,
+        "Mode 2 - Reduced 8 - bit": 11,
+        "Mode 3 - RGBA": 8
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__ParFect_150_FW_RGBA.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_ParFect_150_FW_RGBA@2026-04-09_Mode_3_added.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 - bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 1 - Standard 16 - bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8 - bit": {
+            "channels": 11,
+            "gdtfMode": "Mode 2 - Reduced 8 - bit",
+            "status": "matched"
+          },
+          "Mode 3 - RGBA": {
+            "channels": 8,
+            "gdtfMode": "Mode 3 - RGBA",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "ParFect150FWRGBA"
+    },
+    {
+      "fixture": "ParFect 150 FW RGBW",
+      "watts": 220.0,
+      "weight": 5.0,
+      "modes": {
+        "Mode 1 - Standard 16 - bit": 17,
+        "Mode 2 - Reduced 8 - bit": 11
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__ParFect_150_FW_RGBW.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_ParFect_150_FW_RGBW@2023-07-17__3D_models_revision__Wiring_objects_revision__Tilt_revision.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 - bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 1 - Standard 16 - bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8 - bit": {
+            "channels": 11,
+            "gdtfMode": "Mode 2 - Reduced 8 - bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "ParFect150FWRGBW"
+    },
+    {
+      "fixture": "ParFect 150 RGBA",
+      "watts": 220.0,
+      "weight": 5.0,
+      "modes": {
+        "Mode 1 - Standard 16 - bit": 17,
+        "Mode 2 - Reduced 8 - bit": 11,
+        "Mode 3 - RGBA": 8
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__ParFect_150_RGBA.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_ParFect_150_RGBA@2026-04-09_Mode_3_added.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 - bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 1 - Standard 16 - bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8 - bit": {
+            "channels": 11,
+            "gdtfMode": "Mode 2 - Reduced 8 - bit",
+            "status": "matched"
+          },
+          "Mode 3 - RGBA": {
+            "channels": 8,
+            "gdtfMode": "Mode 3 - RGBA",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "ParFect150RGBA"
+    },
+    {
+      "fixture": "ParFect 150 RGBW",
+      "watts": 220.0,
+      "weight": 5.0,
+      "modes": {
+        "Mode 1 - Standard 16 - bit": 17,
+        "Mode 2 - Reduced 8 - bit": 11
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__ParFect_150_RGBW.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_ParFect_150_RGBW@2023-07-14__Tilt_revision.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 - bit": {
+            "channels": 17,
+            "gdtfMode": "Mode 1 - Standard 16 - bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8 - bit": {
+            "channels": 11,
+            "gdtfMode": "Mode 2 - Reduced 8 - bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "ParFect150RGBW"
+    },
+    {
       "fixture": "PATT 2013",
       "watts": 750,
       "weight": 12.0,
       "modes": {
-        "Mode 1": 1
+        "Needs external dimmer - mode with virtual channels": 0,
+        "Needs external dimmer - mode with 8 bit dimmer channel": 1,
+        "Needs external dimmer - mode with 16 bit dimmer channel 1": 2
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__PATT_2013.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@PATT_2013@2023-03-10__Geometry_and_wiring_object_reivison.gdtf",
         "modes": {
-          "Mode 1": {
+          "Needs external dimmer - mode with virtual channels": {
+            "channels": 0,
+            "gdtfMode": "Needs external dimmer - mode with virtual channels",
+            "status": "matched"
+          },
+          "Needs external dimmer - mode with 8 bit dimmer channel": {
             "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Needs external dimmer - mode with 8 bit dimmer channel",
+            "status": "matched"
+          },
+          "Needs external dimmer - mode with 16 bit dimmer channel 1": {
+            "channels": 2,
+            "gdtfMode": "Needs external dimmer - mode with 16 bit dimmer channel 1",
+            "status": "matched"
           }
         }
       },
@@ -1338,18 +3840,54 @@
       "watts": 300,
       "weight": 12.0,
       "modes": {
-        "Mode 1": 5
+        "Mode 1 - Wash": 13,
+        "Mode 2 - Pattern": 32,
+        "Mode 3 - Pixel RGB": 25,
+        "Mode 4 - Pixel RGBW": 47,
+        "Mode 5 - Pattern full RGB": 38,
+        "Mode 6 - Pattern full RGBW": 60,
+        "Mode 7 - Pixel RGBW only": 28
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__PATT_2017.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@PATT_2017@2025-12-03__Reupload_to_share.gdtf",
         "modes": {
-          "Mode 1": {
-            "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 1 - Wash": {
+            "channels": 13,
+            "gdtfMode": "Mode 1 - Wash",
+            "status": "matched"
+          },
+          "Mode 2 - Pattern": {
+            "channels": 32,
+            "gdtfMode": "Mode 2 - Pattern",
+            "status": "matched"
+          },
+          "Mode 3 - Pixel RGB": {
+            "channels": 25,
+            "gdtfMode": "Mode 3 - Pixel RGB",
+            "status": "matched"
+          },
+          "Mode 4 - Pixel RGBW": {
+            "channels": 47,
+            "gdtfMode": "Mode 4 - Pixel RGBW",
+            "status": "matched"
+          },
+          "Mode 5 - Pattern full RGB": {
+            "channels": 38,
+            "gdtfMode": "Mode 5 - Pattern full RGB",
+            "status": "matched"
+          },
+          "Mode 6 - Pattern full RGBW": {
+            "channels": 60,
+            "gdtfMode": "Mode 6 - Pattern full RGBW",
+            "status": "matched"
+          },
+          "Mode 7 - Pixel RGBW only": {
+            "channels": 28,
+            "gdtfMode": "Mode 7 - Pixel RGBW only",
+            "status": "matched"
           }
         }
       },
@@ -1378,28 +3916,182 @@
       "shortName": "picklePATT"
     },
     {
+      "fixture": "pixelPATT",
+      "watts": 280.0,
+      "weight": 12.0,
+      "modes": {
+        "Mode 1 - Wash": 13,
+        "Mode 2 - Pattern": 32,
+        "Mode 3 - Pixel RGB": 25,
+        "Mode 4 - Pixel RGBW": 47,
+        "Mode 5 - Pattern full RGB": 38,
+        "Mode 6 - Pattern full RGBW": 60,
+        "Mode 7 - Pixel RGBW only": 28
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__pixelPATT.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@pixelPATT@2026-02-19__3D_model_update.gdtf",
+        "modes": {
+          "Mode 1 - Wash": {
+            "channels": 13,
+            "gdtfMode": "Mode 1 - Wash",
+            "status": "matched"
+          },
+          "Mode 2 - Pattern": {
+            "channels": 32,
+            "gdtfMode": "Mode 2 - Pattern",
+            "status": "matched"
+          },
+          "Mode 3 - Pixel RGB": {
+            "channels": 25,
+            "gdtfMode": "Mode 3 - Pixel RGB",
+            "status": "matched"
+          },
+          "Mode 4 - Pixel RGBW": {
+            "channels": 47,
+            "gdtfMode": "Mode 4 - Pixel RGBW",
+            "status": "matched"
+          },
+          "Mode 5 - Pattern full RGB": {
+            "channels": 38,
+            "gdtfMode": "Mode 5 - Pattern full RGB",
+            "status": "matched"
+          },
+          "Mode 6 - Pattern full RGBW": {
+            "channels": 60,
+            "gdtfMode": "Mode 6 - Pattern full RGBW",
+            "status": "matched"
+          },
+          "Mode 7 - Pixel RGBW only": {
+            "channels": 28,
+            "gdtfMode": "Mode 7 - Pixel RGBW only",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "pixelPATT"
+    },
+    {
+      "fixture": "Pointe",
+      "watts": 280.0,
+      "weight": 15.0,
+      "modes": {
+        "Mode 1 - Standard 16bit": 24,
+        "Mode 2 - Reduced 8bit": 16,
+        "Mode 3 - Extended 16bit": 30
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Pointe.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Pointe@2024-04-22__Gobos_revision.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16bit": {
+            "channels": 24,
+            "gdtfMode": "Mode 1 - Standard 16bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8bit": {
+            "channels": 16,
+            "gdtfMode": "Mode 2 - Reduced 8bit",
+            "status": "matched"
+          },
+          "Mode 3 - Extended 16bit": {
+            "channels": 30,
+            "gdtfMode": "Mode 3 - Extended 16bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Pointe"
+    },
+    {
+      "fixture": "ProMotion",
+      "watts": 90.0,
+      "weight": 12.0,
+      "modes": {
+        "Mode 1 - CMY": 25,
+        "Mode 2 - CMY": 33
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__ProMotion.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_ProMotion@2023-07-13__Quiet_control_channel_and_3D_models_revision.gdtf",
+        "modes": {
+          "Mode 1 - CMY": {
+            "channels": 25,
+            "gdtfMode": "Mode 1 - CMY",
+            "status": "matched"
+          },
+          "Mode 2 - CMY": {
+            "channels": 33,
+            "gdtfMode": "Mode 2 - CMY",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "ProMotion"
+    },
+    {
+      "fixture": "Scan 575XT",
+      "watts": 350.0,
+      "weight": 22.0,
+      "modes": {
+        "Mode 1": 16,
+        "Mode 2": 16,
+        "Mode 3": 14
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Scan_575XT.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Scan_575XT@2025-01-17__Initial_release.gdtf",
+        "modes": {
+          "Mode 1": {
+            "channels": 16,
+            "gdtfMode": "Mode 1",
+            "status": "matched"
+          },
+          "Mode 2": {
+            "channels": 16,
+            "gdtfMode": "Mode 2",
+            "status": "matched"
+          },
+          "Mode 3": {
+            "channels": 14,
+            "gdtfMode": "Mode 3",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Scan575XT"
+    },
+    {
       "fixture": "SilverScan",
       "watts": 440,
       "weight": 17.0,
       "modes": {
-        "Mode 1": 34,
-        "Mode 2": 27
+        "Mode 1 - Standard": 32,
+        "Mode 2 - Compatible with Viva": 26
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__SilverScan.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_SilverScan@2026-05-29_Control_channel_fix.gdtf",
         "modes": {
-          "Mode 1": {
-            "channels": 34,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 1 - Standard": {
+            "channels": 32,
+            "gdtfMode": "Mode 1 - Standard",
+            "status": "matched"
           },
-          "Mode 2": {
-            "channels": 27,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 2 - Compatible with Viva": {
+            "channels": 26,
+            "gdtfMode": "Mode 2 - Compatible with Viva",
+            "status": "matched"
           }
         }
       },
@@ -1410,104 +4102,176 @@
       "watts": 660,
       "weight": 13.3,
       "modes": {
-        "Mode 1": 49,
-        "Mode 2": 27,
-        "Mode 3": 33,
-        "Mode 4": 90,
-        "Mode 5": 27,
-        "Mode 6": 47,
-        "Mode 7": 91,
-        "Mode 8": 110,
-        "Mode 9": 104,
-        "Mode 10": 123
+        "Mode 10 - Pattern full RGBW": 123,
+        "Mode 9 - Pattern full RGB": 71,
+        "Mode 8 - Pixel RGBW ": 110,
+        "Mode 7 - Pixel RGB": 58,
+        "Mode 6 - Pattern": 47,
+        "Mode 5 - Wash": 27,
+        "Mode 1 - Zones": 49,
+        "Mode 2 - Basic": 27,
+        "Mode 3 - Advanced": 33,
+        "Mode 4 - Full RGBW": 57
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__Spiider.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Spiider@2025-12-03__Reupload_to_share.gdtf",
         "modes": {
-          "Mode 1": {
-            "channels": 49,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 2": {
-            "channels": 27,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 3": {
-            "channels": 33,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 4": {
-            "channels": 90,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 5": {
-            "channels": 27,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 6": {
-            "channels": 47,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 7": {
-            "channels": 91,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 8": {
-            "channels": 110,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 9": {
-            "channels": 104,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 10": {
+          "Mode 10 - Pattern full RGBW": {
             "channels": 123,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 10 - Pattern full RGBW",
+            "status": "matched"
+          },
+          "Mode 9 - Pattern full RGB": {
+            "channels": 71,
+            "gdtfMode": "Mode 9 - Pattern full RGB",
+            "status": "matched"
+          },
+          "Mode 8 - Pixel RGBW ": {
+            "channels": 110,
+            "gdtfMode": "Mode 8 - Pixel RGBW ",
+            "status": "matched"
+          },
+          "Mode 7 - Pixel RGB": {
+            "channels": 58,
+            "gdtfMode": "Mode 7 - Pixel RGB",
+            "status": "matched"
+          },
+          "Mode 6 - Pattern": {
+            "channels": 47,
+            "gdtfMode": "Mode 6 - Pattern",
+            "status": "matched"
+          },
+          "Mode 5 - Wash": {
+            "channels": 27,
+            "gdtfMode": "Mode 5 - Wash",
+            "status": "matched"
+          },
+          "Mode 1 - Zones": {
+            "channels": 49,
+            "gdtfMode": "Mode 1 - Zones",
+            "status": "matched"
+          },
+          "Mode 2 - Basic": {
+            "channels": 27,
+            "gdtfMode": "Mode 2 - Basic",
+            "status": "matched"
+          },
+          "Mode 3 - Advanced": {
+            "channels": 33,
+            "gdtfMode": "Mode 3 - Advanced",
+            "status": "matched"
+          },
+          "Mode 4 - Full RGBW": {
+            "channels": 57,
+            "gdtfMode": "Mode 4 - Full RGBW",
+            "status": "matched"
           }
         }
       },
       "shortName": "Spiider"
     },
     {
+      "fixture": "Spikie",
+      "watts": 60.0,
+      "weight": 7.5,
+      "modes": {
+        "Mode 1 Standard 16-bit": 27,
+        "Mode 2 Reduced 8-bit": 21
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Spikie.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Spikie@2025-06-10__Pan_tilt_continuous_physical_data_revision.gdtf",
+        "modes": {
+          "Mode 1 Standard 16-bit": {
+            "channels": 27,
+            "gdtfMode": "Mode 1 Standard 16-bit",
+            "status": "matched"
+          },
+          "Mode 2 Reduced 8-bit": {
+            "channels": 21,
+            "gdtfMode": "Mode 2 Reduced 8-bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Spikie"
+    },
+    {
       "fixture": "Spikie+",
       "watts": 100,
       "weight": 7.3,
       "modes": {
-        "Mode 1": 27,
-        "Mode 2": 21
+        "Mode 1 Standard 16-bit": 27,
+        "Mode 2 Reduced 8-bit": 21
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__Spikie.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_SpikiePlus@2025-06-10__Pan_tilt_continuous_physical_data_revision.gdtf",
         "modes": {
-          "Mode 1": {
+          "Mode 1 Standard 16-bit": {
             "channels": 27,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 Standard 16-bit",
+            "status": "matched"
           },
-          "Mode 2": {
+          "Mode 2 Reduced 8-bit": {
             "channels": 21,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 Reduced 8-bit",
+            "status": "matched"
           }
         }
       },
       "shortName": "Spikie+"
+    },
+    {
+      "fixture": "Spote",
+      "watts": 70.0,
+      "weight": 10.5,
+      "modes": {
+        "Mode 1 - Standard": 25
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Spote.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Spote@2022-11-10__DMX_Input_adjustment.gdtf",
+        "modes": {
+          "Mode 1 - Standard": {
+            "channels": 25,
+            "gdtfMode": "Mode 1 - Standard",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Spote"
+    },
+    {
+      "fixture": "SuperSpikie",
+      "watts": 250.0,
+      "weight": 18.5,
+      "modes": {
+        "Mode 1 Full": 31
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__SuperSpikie.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_SuperSpikie@2025-06-11__Pan_tilt_continuous_physical_data_revision.gdtf",
+        "modes": {
+          "Mode 1 Full": {
+            "channels": 31,
+            "gdtfMode": "Mode 1 Full",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "SuperSpikie"
     },
     {
       "fixture": "SVB1",
@@ -1594,36 +4358,36 @@
       "watts": 2400,
       "weight": 36.3,
       "modes": {
-        "Mode 1": 1,
-        "Mode 2": 5,
-        "Mode 3": 19,
-        "Mode 4": 83
+        "Mode 1 - Wash": 19,
+        "Mode 2 - Individual LED modules": 83,
+        "Mode 3 - Simple": 5,
+        "Mode 4 - One channel mode 2700K": 1
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__SVOPATT_Classic.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@SVOPATT_Classic@2026-04-17_CTO_channel_revision.gdtf",
         "modes": {
-          "Mode 1": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 2": {
-            "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 3": {
+          "Mode 1 - Wash": {
             "channels": 19,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - Wash",
+            "status": "matched"
           },
-          "Mode 4": {
+          "Mode 2 - Individual LED modules": {
             "channels": 83,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 - Individual LED modules",
+            "status": "matched"
+          },
+          "Mode 3 - Simple": {
+            "channels": 5,
+            "gdtfMode": "Mode 3 - Simple",
+            "status": "matched"
+          },
+          "Mode 4 - One channel mode 2700K": {
+            "channels": 1,
+            "gdtfMode": "Mode 4 - One channel mode 2700K",
+            "status": "matched"
           }
         }
       },
@@ -1634,68 +4398,230 @@
       "watts": 550,
       "weight": 18.5,
       "modes": {
-        "Mode 1": 39,
-        "Mode 2": 27,
-        "Mode 3": 43
+        "Mode 1 - CMY": 49,
+        "Mode 1 - RGB": 49,
+        "Mode 2 - Reduced CMY": 33,
+        "Mode 2 - Reduced RGB": 33,
+        "Mode 3 - RGBAL": 53
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__T_5_Profile.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Tdot5_Profile@2026-07-13_Control_channel_revision.gdtf",
         "modes": {
-          "Mode 1": {
-            "channels": 39,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 1 - CMY": {
+            "channels": 49,
+            "gdtfMode": "Mode 1 - CMY",
+            "status": "matched"
           },
-          "Mode 2": {
-            "channels": 27,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 1 - RGB": {
+            "channels": 49,
+            "gdtfMode": "Mode 1 - RGB",
+            "status": "matched"
           },
-          "Mode 3": {
-            "channels": 43,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 2 - Reduced CMY": {
+            "channels": 33,
+            "gdtfMode": "Mode 2 - Reduced CMY",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced RGB": {
+            "channels": 33,
+            "gdtfMode": "Mode 2 - Reduced RGB",
+            "status": "matched"
+          },
+          "Mode 3 - RGBAL": {
+            "channels": 53,
+            "gdtfMode": "Mode 3 - RGBAL",
+            "status": "matched"
           }
         }
       },
-      "shortName": "T.5 Prof"
+      "shortName": "T.5 Profile"
+    },
+    {
+      "fixture": "T1 Fresnel",
+      "watts": 550.0,
+      "weight": 22.6,
+      "modes": {
+        "Mode 1 - CMY": 35,
+        "Mode 1 - RGB": 35,
+        "Mode 2 - Reduced CMY": 24,
+        "Mode 2 - Reduced RGB": 24,
+        "Mode 3 - RGBAL": 39
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T1_Fresnel.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_T1_Fresnel@2026-07-20_Color_Control_channel_update.gdtf",
+        "modes": {
+          "Mode 1 - CMY": {
+            "channels": 35,
+            "gdtfMode": "Mode 1 - CMY",
+            "status": "matched"
+          },
+          "Mode 1 - RGB": {
+            "channels": 35,
+            "gdtfMode": "Mode 1 - RGB",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced CMY": {
+            "channels": 24,
+            "gdtfMode": "Mode 2 - Reduced CMY",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced RGB": {
+            "channels": 24,
+            "gdtfMode": "Mode 2 - Reduced RGB",
+            "status": "matched"
+          },
+          "Mode 3 - RGBAL": {
+            "channels": 39,
+            "gdtfMode": "Mode 3 - RGBAL",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "T1 Fresnel"
+    },
+    {
+      "fixture": "T1 PC",
+      "watts": 550.0,
+      "weight": 22.6,
+      "modes": {
+        "Mode 1 - CMY": 35,
+        "Mode 1 - RGB": 35,
+        "Mode 2 - Reduced CMY": 24,
+        "Mode 2 - Reduced RGB": 24,
+        "Mode 3 - RGBAL": 39
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T1_PC.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_T1_PC@2026-07-20_Color_control_channel_update.gdtf",
+        "modes": {
+          "Mode 1 - CMY": {
+            "channels": 35,
+            "gdtfMode": "Mode 1 - CMY",
+            "status": "matched"
+          },
+          "Mode 1 - RGB": {
+            "channels": 35,
+            "gdtfMode": "Mode 1 - RGB",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced CMY": {
+            "channels": 24,
+            "gdtfMode": "Mode 2 - Reduced CMY",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced RGB": {
+            "channels": 24,
+            "gdtfMode": "Mode 2 - Reduced RGB",
+            "status": "matched"
+          },
+          "Mode 3 - RGBAL": {
+            "channels": 39,
+            "gdtfMode": "Mode 3 - RGBAL",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "T1 PC"
     },
     {
       "fixture": "T1 Profile",
       "watts": 750,
       "weight": 24.3,
       "modes": {
-        "Mode 1": 49,
-        "Mode 2": 33,
-        "Mode 3": 53
+        "Mode 1 - CMY": 49,
+        "Mode 1 - RGB": 49,
+        "Mode 2 - Reduced CMY": 33,
+        "Mode 2 - Reduced RGB": 33,
+        "Mode 3 - RGBAL": 53
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__T1_Profile.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_T1_Profile@2026-07-20_Color_Control_channel_update_2.gdtf",
         "modes": {
-          "Mode 1": {
+          "Mode 1 - CMY": {
             "channels": 49,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - CMY",
+            "status": "matched"
           },
-          "Mode 2": {
+          "Mode 1 - RGB": {
+            "channels": 49,
+            "gdtfMode": "Mode 1 - RGB",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced CMY": {
             "channels": 33,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 - Reduced CMY",
+            "status": "matched"
           },
-          "Mode 3": {
+          "Mode 2 - Reduced RGB": {
+            "channels": 33,
+            "gdtfMode": "Mode 2 - Reduced RGB",
+            "status": "matched"
+          },
+          "Mode 3 - RGBAL": {
             "channels": 53,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 3 - RGBAL",
+            "status": "matched"
           }
         }
       },
-      "shortName": "T1 Prof"
+      "shortName": "T1 Profile"
+    },
+    {
+      "fixture": "T1 Profile FS",
+      "watts": 650.0,
+      "weight": 25.5,
+      "modes": {
+        "Mode 1 - CMY": 49,
+        "Mode 1 - RGB": 49,
+        "Mode 2 - Reduced CMY": 33,
+        "Mode 2 - Reduced RGB": 33,
+        "Mode 3 - RGBAL": 53
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T1_Profile_FS.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_T1_Profile_FS@2026-07-20__Color_Control_channel_update.gdtf",
+        "modes": {
+          "Mode 1 - CMY": {
+            "channels": 49,
+            "gdtfMode": "Mode 1 - CMY",
+            "status": "matched"
+          },
+          "Mode 1 - RGB": {
+            "channels": 49,
+            "gdtfMode": "Mode 1 - RGB",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced CMY": {
+            "channels": 33,
+            "gdtfMode": "Mode 2 - Reduced CMY",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced RGB": {
+            "channels": 33,
+            "gdtfMode": "Mode 2 - Reduced RGB",
+            "status": "matched"
+          },
+          "Mode 3 - RGBAL": {
+            "channels": 53,
+            "gdtfMode": "Mode 3 - RGBAL",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "T1ProfileFS"
     },
     {
       "fixture": "T10 Fresnel",
@@ -1759,7 +4685,7 @@
           }
         }
       },
-      "shortName": "T10 Fres"
+      "shortName": "T10 Fresnel"
     },
     {
       "fixture": "T10 PC",
@@ -1830,64 +4756,64 @@
       "watts": 275,
       "weight": 9.9,
       "modes": {
-        "Mode 1": 18,
-        "Mode 2": 9,
-        "Mode 3": 22,
-        "Mode 4": 5,
-        "Mode 5": 1,
-        "Mode 6": 24,
-        "Mode 7": 13,
-        "Mode 8": 28
+        "Mode 1 - 16-bit CMY": 18,
+        "Mode 2 - 8-bit CMY": 9,
+        "Mode 3 - 16-bit RGBAL": 22,
+        "Mode 4 - White light + dimmer": 5,
+        "Mode 5 - Only Dimmer": 1,
+        "Mode 6 - 16-bit CMY (optional module)": 24,
+        "Mode 7 - 8-bit CMY (optional module)": 13,
+        "Mode 8 - 16-bit RGBAL (optional module)": 28
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__T10_Profile.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_T10_Profile@2026-07-20_Color_control_channel_update.gdtf",
         "modes": {
-          "Mode 1": {
+          "Mode 1 - 16-bit CMY": {
             "channels": 18,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - 16-bit CMY",
+            "status": "matched"
           },
-          "Mode 2": {
+          "Mode 2 - 8-bit CMY": {
             "channels": 9,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 - 8-bit CMY",
+            "status": "matched"
           },
-          "Mode 3": {
+          "Mode 3 - 16-bit RGBAL": {
             "channels": 22,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 3 - 16-bit RGBAL",
+            "status": "matched"
           },
-          "Mode 4": {
+          "Mode 4 - White light + dimmer": {
             "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 4 - White light + dimmer",
+            "status": "matched"
           },
-          "Mode 5": {
+          "Mode 5 - Only Dimmer": {
             "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 5 - Only Dimmer",
+            "status": "matched"
           },
-          "Mode 6": {
+          "Mode 6 - 16-bit CMY (optional module)": {
             "channels": 24,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 6 - 16-bit CMY (optional module)",
+            "status": "matched"
           },
-          "Mode 7": {
+          "Mode 7 - 8-bit CMY (optional module)": {
             "channels": 13,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 7 - 8-bit CMY (optional module)",
+            "status": "matched"
           },
-          "Mode 8": {
+          "Mode 8 - 16-bit RGBAL (optional module)": {
             "channels": 28,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 8 - 16-bit RGBAL (optional module)",
+            "status": "matched"
           }
         }
       },
-      "shortName": "T10 Prof"
+      "shortName": "T10 Profile"
     },
     {
       "fixture": "T11 Fresnel",
@@ -1951,7 +4877,7 @@
           }
         }
       },
-      "shortName": "T11 Fres"
+      "shortName": "T11 Fresnel"
     },
     {
       "fixture": "T11 PC",
@@ -2022,64 +4948,64 @@
       "watts": 420,
       "weight": 15.7,
       "modes": {
-        "Mode 1": 18,
-        "Mode 2": 9,
-        "Mode 3": 22,
-        "Mode 4": 5,
-        "Mode 5": 1,
-        "Mode 6": 24,
-        "Mode 7": 13,
-        "Mode 8": 28
+        "Mode 1 - 16-bit CMY": 18,
+        "Mode 2 - 8-bit CMY": 9,
+        "Mode 3 - 16-bit RGBAL": 22,
+        "Mode 4 - White light + dimmer": 5,
+        "Mode 5 - Only Dimmer": 1,
+        "Mode 6 - 16-bit CMY (optional module)": 24,
+        "Mode 7 - 8-bit CMY (optional module)": 13,
+        "Mode 8 - 16-bit RGBAL (optional module)": 28
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__T11_Profile.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_T11_Profile@2026-07-20_Color_control_channel_update.gdtf",
         "modes": {
-          "Mode 1": {
+          "Mode 1 - 16-bit CMY": {
             "channels": 18,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - 16-bit CMY",
+            "status": "matched"
           },
-          "Mode 2": {
+          "Mode 2 - 8-bit CMY": {
             "channels": 9,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 - 8-bit CMY",
+            "status": "matched"
           },
-          "Mode 3": {
+          "Mode 3 - 16-bit RGBAL": {
             "channels": 22,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 3 - 16-bit RGBAL",
+            "status": "matched"
           },
-          "Mode 4": {
+          "Mode 4 - White light + dimmer": {
             "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 4 - White light + dimmer",
+            "status": "matched"
           },
-          "Mode 5": {
+          "Mode 5 - Only Dimmer": {
             "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 5 - Only Dimmer",
+            "status": "matched"
           },
-          "Mode 6": {
+          "Mode 6 - 16-bit CMY (optional module)": {
             "channels": 24,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 6 - 16-bit CMY (optional module)",
+            "status": "matched"
           },
-          "Mode 7": {
+          "Mode 7 - 8-bit CMY (optional module)": {
             "channels": 13,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 7 - 8-bit CMY (optional module)",
+            "status": "matched"
           },
-          "Mode 8": {
+          "Mode 8 - 16-bit RGBAL (optional module)": {
             "channels": 28,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 8 - 16-bit RGBAL (optional module)",
+            "status": "matched"
           }
         }
       },
-      "shortName": "T11 Prof"
+      "shortName": "T11 Profile"
     },
     {
       "fixture": "T15 Fresnel",
@@ -2143,7 +5069,7 @@
           }
         }
       },
-      "shortName": "T15 Fres"
+      "shortName": "T15 Fresnel"
     },
     {
       "fixture": "T15 PC",
@@ -2271,109 +5197,237 @@
           }
         }
       },
-      "shortName": "T15 Prof"
+      "shortName": "T15 Profile"
+    },
+    {
+      "fixture": "T2 Fresnel",
+      "watts": 850.0,
+      "weight": 33.5,
+      "modes": {
+        "Mode 1 - CMY": 35,
+        "Mode 1 - RGB": 35,
+        "Mode 2 - Reduced CMY": 24,
+        "Mode 2 - Reduced RGB": 24,
+        "Mode 3 - Five colors": 39
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T2_Fresnel.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_T2_Fresnel@2026-07-21_Color_control_channel_update.gdtf",
+        "modes": {
+          "Mode 1 - CMY": {
+            "channels": 35,
+            "gdtfMode": "Mode 1 - CMY",
+            "status": "matched"
+          },
+          "Mode 1 - RGB": {
+            "channels": 35,
+            "gdtfMode": "Mode 1 - RGB",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced CMY": {
+            "channels": 24,
+            "gdtfMode": "Mode 2 - Reduced CMY",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced RGB": {
+            "channels": 24,
+            "gdtfMode": "Mode 2 - Reduced RGB",
+            "status": "matched"
+          },
+          "Mode 3 - Five colors": {
+            "channels": 39,
+            "gdtfMode": "Mode 3 - Five colors",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "T2Fresnel"
+    },
+    {
+      "fixture": "T2 PC",
+      "watts": 850.0,
+      "weight": 33.0,
+      "modes": {
+        "Mode 1 - CMY": 35,
+        "Mode 1 - RGB": 35,
+        "Mode 2 - Reduced CMY": 24,
+        "Mode 2 - Reduced RGB": 24,
+        "Mode 3 - Five colors": 39
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T2_PC.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_T2_PC@2026-07-21_Color_control_channel_update.gdtf",
+        "modes": {
+          "Mode 1 - CMY": {
+            "channels": 35,
+            "gdtfMode": "Mode 1 - CMY",
+            "status": "matched"
+          },
+          "Mode 1 - RGB": {
+            "channels": 35,
+            "gdtfMode": "Mode 1 - RGB",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced CMY": {
+            "channels": 24,
+            "gdtfMode": "Mode 2 - Reduced CMY",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced RGB": {
+            "channels": 24,
+            "gdtfMode": "Mode 2 - Reduced RGB",
+            "status": "matched"
+          },
+          "Mode 3 - Five colors": {
+            "channels": 39,
+            "gdtfMode": "Mode 3 - Five colors",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "T2 PC"
     },
     {
       "fixture": "T2 Profile",
       "watts": 1150,
       "weight": 36.9,
       "modes": {
-        "Mode 1": 52,
-        "Mode 2": 36,
-        "Mode 3": 56
+        "Mode 1 - CMY": 52,
+        "Mode 1 - RGB": 52,
+        "Mode 2 - Reduced CMY": 36,
+        "Mode 2 - Reduced RGB": 36,
+        "Mode 3 - RGBALG": 56
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__T2_Profile.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_T2_Profile@2026-07-21_Color_control_channel_revision.gdtf",
         "modes": {
-          "Mode 1": {
+          "Mode 1 - CMY": {
             "channels": 52,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - CMY",
+            "status": "matched"
           },
-          "Mode 2": {
+          "Mode 1 - RGB": {
+            "channels": 52,
+            "gdtfMode": "Mode 1 - RGB",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced CMY": {
             "channels": 36,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 - Reduced CMY",
+            "status": "matched"
           },
-          "Mode 3": {
+          "Mode 2 - Reduced RGB": {
+            "channels": 36,
+            "gdtfMode": "Mode 2 - Reduced RGB",
+            "status": "matched"
+          },
+          "Mode 3 - RGBALG": {
             "channels": 56,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 3 - RGBALG",
+            "status": "matched"
           }
         }
       },
-      "shortName": "T2 Prof"
+      "shortName": "T2 Profile"
     },
     {
       "fixture": "T2 Profile FS",
       "watts": 1150,
       "weight": 38,
       "modes": {
-        "Mode 1": 52,
-        "Mode 2": 36,
-        "Mode 3": 56
+        "Mode 1 - CMY": 52,
+        "Mode 1 - RGB": 52,
+        "Mode 2 - Reduced CMY": 36,
+        "Mode 2 - Reduced RGB": 36,
+        "Mode 3 - RGBALG": 56
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__T2_Profile_FS.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_T2_Profile_FS@2026-07-21_Color_control_channel_update.gdtf",
         "modes": {
-          "Mode 1": {
+          "Mode 1 - CMY": {
             "channels": 52,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - CMY",
+            "status": "matched"
           },
-          "Mode 2": {
+          "Mode 1 - RGB": {
+            "channels": 52,
+            "gdtfMode": "Mode 1 - RGB",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced CMY": {
             "channels": 36,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 - Reduced CMY",
+            "status": "matched"
           },
-          "Mode 3": {
+          "Mode 2 - Reduced RGB": {
+            "channels": 36,
+            "gdtfMode": "Mode 2 - Reduced RGB",
+            "status": "matched"
+          },
+          "Mode 3 - RGBALG": {
             "channels": 56,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 3 - RGBALG",
+            "status": "matched"
           }
         }
       },
-      "shortName": "T2 Prof FS"
+      "shortName": "T2 Profile FS"
     },
     {
       "fixture": "T3 Fresnel",
       "watts": 1250,
       "weight": 43.0,
       "modes": {
-        "Mode 1": 54,
-        "Mode 2": 38,
-        "Mode 3": 58
+        "Mode 1 - CMY": 35,
+        "Mode 1 - RGB": 35,
+        "Mode 2 - Reduced CMY": 25,
+        "Mode 2 - Reduced RGB": 25,
+        "Mode 3 - Five colors": 39
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__T3_Fresnel.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_T3_Fresnel@2026-07-20_Color_control_channel_update.gdtf",
         "modes": {
-          "Mode 1": {
-            "channels": 54,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 1 - CMY": {
+            "channels": 35,
+            "gdtfMode": "Mode 1 - CMY",
+            "status": "matched"
           },
-          "Mode 2": {
-            "channels": 38,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 1 - RGB": {
+            "channels": 35,
+            "gdtfMode": "Mode 1 - RGB",
+            "status": "matched"
           },
-          "Mode 3": {
-            "channels": 58,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 2 - Reduced CMY": {
+            "channels": 25,
+            "gdtfMode": "Mode 2 - Reduced CMY",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced RGB": {
+            "channels": 25,
+            "gdtfMode": "Mode 2 - Reduced RGB",
+            "status": "matched"
+          },
+          "Mode 3 - Five colors": {
+            "channels": 39,
+            "gdtfMode": "Mode 3 - Five colors",
+            "status": "matched"
           }
         }
       },
-      "shortName": "T3 Fres"
+      "shortName": "T3 Fresnel"
     },
     {
       "fixture": "T3 PC",
@@ -2441,7 +5495,7 @@
           }
         }
       },
-      "shortName": "T3 Prof"
+      "shortName": "T3 Profile"
     },
     {
       "fixture": "T31 Cyc",
@@ -2508,6 +5562,40 @@
       "shortName": "T31 Cyc"
     },
     {
+      "fixture": "T31 CYC Slim",
+      "watts": 320.0,
+      "weight": 13.4,
+      "modes": {
+        "Mode 1 - CMY": 25,
+        "Mode 1 - RGB": 25,
+        "Mode 2 - RGBAL": 29
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T31_CYC_Slim.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_T31_CYC_Slim@2026-07-21_Color_control_channel_update.gdtf",
+        "modes": {
+          "Mode 1 - CMY": {
+            "channels": 25,
+            "gdtfMode": "Mode 1 - CMY",
+            "status": "matched"
+          },
+          "Mode 1 - RGB": {
+            "channels": 25,
+            "gdtfMode": "Mode 1 - RGB",
+            "status": "matched"
+          },
+          "Mode 2 - RGBAL": {
+            "channels": 29,
+            "gdtfMode": "Mode 2 - RGBAL",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "T31 CYC Slim"
+    },
+    {
       "fixture": "T32 Cyc",
       "watts": 600,
       "weight": 17.5,
@@ -2572,52 +5660,86 @@
       "shortName": "T32 Cyc"
     },
     {
+      "fixture": "T32 CYC Slim",
+      "watts": 640.0,
+      "weight": 21.5,
+      "modes": {
+        "Mode 1 - CMY": 31,
+        "Mode 1 - RGB": 31,
+        "Mode 2 - RGBAL": 35
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T32_CYC_Slim.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_T32_CYC_Slim@2026-07-21_Color_control_channel_revision.gdtf",
+        "modes": {
+          "Mode 1 - CMY": {
+            "channels": 31,
+            "gdtfMode": "Mode 1 - CMY",
+            "status": "matched"
+          },
+          "Mode 1 - RGB": {
+            "channels": 31,
+            "gdtfMode": "Mode 1 - RGB",
+            "status": "matched"
+          },
+          "Mode 2 - RGBAL": {
+            "channels": 35,
+            "gdtfMode": "Mode 2 - RGBAL",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "T32 CYC Slim"
+    },
+    {
       "fixture": "Tarrantula",
       "watts": 1000,
       "weight": 21.2,
       "modes": {
-        "Mode 1": 28,
-        "Mode 2": 48,
-        "Mode 3": 146,
-        "Mode 4": 183,
-        "Mode 5": 159,
-        "Mode 6": 196
+        "Mode 6-Pattern full RGBW": 196,
+        "Mode 5-Pattern full RGB": 108,
+        "Mode 4-Pixel RGBW": 183,
+        "Mode 3-Pixel RGB": 95,
+        "Mode 2-Pattern": 48,
+        "Mode 1-Wash": 28
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__Tarrantula.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Tarrantula@2025-12-03__Reupload_to_share.gdtf",
         "modes": {
-          "Mode 1": {
-            "channels": 28,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 2": {
-            "channels": 48,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 3": {
-            "channels": 146,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 4": {
-            "channels": 183,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 5": {
-            "channels": 159,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 6": {
+          "Mode 6-Pattern full RGBW": {
             "channels": 196,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 6-Pattern full RGBW",
+            "status": "matched"
+          },
+          "Mode 5-Pattern full RGB": {
+            "channels": 108,
+            "gdtfMode": "Mode 5-Pattern full RGB",
+            "status": "matched"
+          },
+          "Mode 4-Pixel RGBW": {
+            "channels": 183,
+            "gdtfMode": "Mode 4-Pixel RGBW",
+            "status": "matched"
+          },
+          "Mode 3-Pixel RGB": {
+            "channels": 95,
+            "gdtfMode": "Mode 3-Pixel RGB",
+            "status": "matched"
+          },
+          "Mode 2-Pattern": {
+            "channels": 48,
+            "gdtfMode": "Mode 2-Pattern",
+            "status": "matched"
+          },
+          "Mode 1-Wash": {
+            "channels": 28,
+            "gdtfMode": "Mode 1-Wash",
+            "status": "matched"
           }
         }
       },
@@ -2628,48 +5750,48 @@
       "watts": 200,
       "weight": 9.3,
       "modes": {
-        "Mode 1": 25,
-        "Mode 2": 38,
-        "Mode 3": 57,
-        "Mode 4": 66,
-        "Mode 5": 61,
-        "Mode 6": 70
+        "Mode 6 Pattern full RGBW": 81,
+        "Mode 5 - Pattern full RGB": 48,
+        "Mode 4 - Pixel RGBW": 68,
+        "Mode 3 - Pixel RGB": 35,
+        "Mode 2 - Pattern": 45,
+        "Mode 1 - Wash": 25
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__Tetra1.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Tetra1@2025-12-03_Reupload_to_share.gdtf",
         "modes": {
-          "Mode 1": {
+          "Mode 6 Pattern full RGBW": {
+            "channels": 81,
+            "gdtfMode": "Mode 6 Pattern full RGBW",
+            "status": "matched"
+          },
+          "Mode 5 - Pattern full RGB": {
+            "channels": 48,
+            "gdtfMode": "Mode 5 - Pattern full RGB",
+            "status": "matched"
+          },
+          "Mode 4 - Pixel RGBW": {
+            "channels": 68,
+            "gdtfMode": "Mode 4 - Pixel RGBW",
+            "status": "matched"
+          },
+          "Mode 3 - Pixel RGB": {
+            "channels": 35,
+            "gdtfMode": "Mode 3 - Pixel RGB",
+            "status": "matched"
+          },
+          "Mode 2 - Pattern": {
+            "channels": 45,
+            "gdtfMode": "Mode 2 - Pattern",
+            "status": "matched"
+          },
+          "Mode 1 - Wash": {
             "channels": 25,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 2": {
-            "channels": 38,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 3": {
-            "channels": 57,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 4": {
-            "channels": 66,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 5": {
-            "channels": 61,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 6": {
-            "channels": 70,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - Wash",
+            "status": "matched"
           }
         }
       },
@@ -2680,48 +5802,48 @@
       "watts": 600,
       "weight": 17.5,
       "modes": {
-        "Mode 1": 34,
-        "Mode 2": 56,
-        "Mode 3": 97,
-        "Mode 4": 115,
-        "Mode 5": 110,
-        "Mode 6": 128
+        "Mode 6-Pattern full RGBW": 128,
+        "Mode 5-Pattern full RGB": 59,
+        "Mode 4-Pixel RGBW": 115,
+        "Mode 3-Pixel RGB": 46,
+        "Mode 2-Pattern": 56,
+        "Mode 1-Wash": 34
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__Tetra2.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Tetra2@2025-12-03_Reupload_to_share.gdtf",
         "modes": {
-          "Mode 1": {
-            "channels": 34,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 2": {
-            "channels": 56,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 3": {
-            "channels": 97,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 4": {
-            "channels": 115,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 5": {
-            "channels": 110,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 6": {
+          "Mode 6-Pattern full RGBW": {
             "channels": 128,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 6-Pattern full RGBW",
+            "status": "matched"
+          },
+          "Mode 5-Pattern full RGB": {
+            "channels": 59,
+            "gdtfMode": "Mode 5-Pattern full RGB",
+            "status": "matched"
+          },
+          "Mode 4-Pixel RGBW": {
+            "channels": 115,
+            "gdtfMode": "Mode 4-Pixel RGBW",
+            "status": "matched"
+          },
+          "Mode 3-Pixel RGB": {
+            "channels": 46,
+            "gdtfMode": "Mode 3-Pixel RGB",
+            "status": "matched"
+          },
+          "Mode 2-Pattern": {
+            "channels": 56,
+            "gdtfMode": "Mode 2-Pattern",
+            "status": "matched"
+          },
+          "Mode 1-Wash": {
+            "channels": 34,
+            "gdtfMode": "Mode 1-Wash",
+            "status": "matched"
           }
         }
       },
@@ -2732,48 +5854,48 @@
       "watts": 320,
       "weight": 15.7,
       "modes": {
-        "Mode 1": 41,
-        "Mode 2": 61,
-        "Mode 3": 75,
-        "Mode 4": 84,
-        "Mode 5": 88,
-        "Mode 6": 97
+        "Mode 6-Pattern full RGBW": 98,
+        "Mode 5-Pattern full RGB": 65,
+        "Mode 4-Pixel RGBW": 85,
+        "Mode 3-Pixel RGB": 52,
+        "Mode 2-Pattern": 62,
+        "Mode 1-Wash": 42
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__TetraX.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_TetraX@2025-12-03_Reupload_to_share.gdtf",
         "modes": {
-          "Mode 1": {
-            "channels": 41,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 6-Pattern full RGBW": {
+            "channels": 98,
+            "gdtfMode": "Mode 6-Pattern full RGBW",
+            "status": "matched"
           },
-          "Mode 2": {
-            "channels": 61,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 5-Pattern full RGB": {
+            "channels": 65,
+            "gdtfMode": "Mode 5-Pattern full RGB",
+            "status": "matched"
           },
-          "Mode 3": {
-            "channels": 75,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 4-Pixel RGBW": {
+            "channels": 85,
+            "gdtfMode": "Mode 4-Pixel RGBW",
+            "status": "matched"
           },
-          "Mode 4": {
-            "channels": 84,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 3-Pixel RGB": {
+            "channels": 52,
+            "gdtfMode": "Mode 3-Pixel RGB",
+            "status": "matched"
           },
-          "Mode 5": {
-            "channels": 88,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 2-Pattern": {
+            "channels": 62,
+            "gdtfMode": "Mode 2-Pattern",
+            "status": "matched"
           },
-          "Mode 6": {
-            "channels": 97,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 1-Wash": {
+            "channels": 42,
+            "gdtfMode": "Mode 1-Wash",
+            "status": "matched"
           }
         }
       },
@@ -2784,52 +5906,132 @@
       "watts": 640,
       "weight": 23.5,
       "modes": {
-        "Mode 1": 40,
-        "Mode 2": 27,
-        "Mode 3": 44,
-        "Mode 4": 48,
-        "Mode 5": 33,
-        "Mode 6": 52
+        "Mode 1 - CMY": 40,
+        "Mode 1 - RGB": 40,
+        "Mode 2 - Reduced CMY": 27,
+        "Mode 2 - Reduced RGB": 27,
+        "Mode 3 - RGBAL": 44,
+        "Mode 4 - CMY + Gobo module": 48,
+        "Mode 4 - RGB + Gobo module": 48,
+        "Mode 5 - Reduced CMY + Gobo module": 33,
+        "Mode 5 - Reduced RGB + Gobo module": 33,
+        "Mode 6 - RGBAL + Gobo module": 52
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__TX1_PosiProfile.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_TX1_PosiProfile@2026-07-21_Color_control_channel_update.gdtf",
         "modes": {
-          "Mode 1": {
+          "Mode 1 - CMY": {
             "channels": 40,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - CMY",
+            "status": "matched"
           },
-          "Mode 2": {
+          "Mode 1 - RGB": {
+            "channels": 40,
+            "gdtfMode": "Mode 1 - RGB",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced CMY": {
             "channels": 27,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 - Reduced CMY",
+            "status": "matched"
           },
-          "Mode 3": {
+          "Mode 2 - Reduced RGB": {
+            "channels": 27,
+            "gdtfMode": "Mode 2 - Reduced RGB",
+            "status": "matched"
+          },
+          "Mode 3 - RGBAL": {
             "channels": 44,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 3 - RGBAL",
+            "status": "matched"
           },
-          "Mode 4": {
+          "Mode 4 - CMY + Gobo module": {
             "channels": 48,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 4 - CMY + Gobo module",
+            "status": "matched"
           },
-          "Mode 5": {
+          "Mode 4 - RGB + Gobo module": {
+            "channels": 48,
+            "gdtfMode": "Mode 4 - RGB + Gobo module",
+            "status": "matched"
+          },
+          "Mode 5 - Reduced CMY + Gobo module": {
             "channels": 33,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 5 - Reduced CMY + Gobo module",
+            "status": "matched"
           },
-          "Mode 6": {
+          "Mode 5 - Reduced RGB + Gobo module": {
+            "channels": 33,
+            "gdtfMode": "Mode 5 - Reduced RGB + Gobo module",
+            "status": "matched"
+          },
+          "Mode 6 - RGBAL + Gobo module": {
             "channels": 52,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 6 - RGBAL + Gobo module",
+            "status": "matched"
           }
         }
       },
-      "shortName": "TX1 PosiProf"
+      "shortName": "TX1 PosiProfileile"
+    },
+    {
+      "fixture": "Viva",
+      "watts": 350.0,
+      "weight": 17.5,
+      "modes": {
+        "Mode 1 - Standard 16 bit": 30,
+        "Mode 2 - Reduced 8 bit": 23
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Viva.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Viva@2024-10-08__Initial_release_to_the_share.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 bit": {
+            "channels": 30,
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8 bit": {
+            "channels": 23,
+            "gdtfMode": "Mode 2 - Reduced 8 bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Viva™"
+    },
+    {
+      "fixture": "Viva CMY",
+      "watts": 350.0,
+      "weight": 19.0,
+      "modes": {
+        "Mode 1 - Standard 16 bit": 32,
+        "Mode 2 - Reduced 8 bit": 26
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Viva_CMY.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Viva_CMY@2024-10-08__3D_models_revision.gdtf",
+        "modes": {
+          "Mode 1 - Standard 16 bit": {
+            "channels": 32,
+            "gdtfMode": "Mode 1 - Standard 16 bit",
+            "status": "matched"
+          },
+          "Mode 2 - Reduced 8 bit": {
+            "channels": 26,
+            "gdtfMode": "Mode 2 - Reduced 8 bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Viva™ CMY"
     },
     {
       "fixture": "WTF!",
