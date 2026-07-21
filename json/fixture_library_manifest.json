@@ -11,6 +11,10 @@
       "file": "antari.json"
     },
     {
+      "name": "ARRI",
+      "file": "arri.json"
+    },
+    {
       "name": "Astera",
       "file": "astera.json"
     },
@@ -31,8 +35,16 @@
       "file": "clay-paky.json"
     },
     {
+      "name": "Coemar Lighting",
+      "file": "coemar-lighting.json"
+    },
+    {
       "name": "Elation",
       "file": "elation.json"
+    },
+    {
+      "name": "ER Productions",
+      "file": "er-productions.json"
     },
     {
       "name": "ETC",
@@ -53,6 +65,10 @@
     {
       "name": "Jem",
       "file": "jem.json"
+    },
+    {
+      "name": "Luxibel",
+      "file": "luxibel.json"
     },
     {
       "name": "Martin",
