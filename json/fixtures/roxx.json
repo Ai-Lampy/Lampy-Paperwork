@@ -87,7 +87,7 @@
           }
         }
       },
-      "shortName": "SW mini TW+"
+      "shortName": "Show mini TW+"
     },
     {
       "fixture": "Cluster B2 FC",
@@ -263,7 +263,7 @@
           }
         }
       },
-      "shortName": "CL-B2"
+      "shortName": "Cluster B2-W"
     },
     {
       "fixture": "CLUSTER B4-FC",
@@ -387,7 +387,7 @@
           }
         }
       },
-      "shortName": "CL-B4FC"
+      "shortName": "Cluster B4-FC"
     },
     {
       "fixture": "CLUSTER B4-W",
@@ -451,7 +451,7 @@
           }
         }
       },
-      "shortName": "CL-B4"
+      "shortName": "Cluster B4-W"
     },
     {
       "fixture": "Cluster S1",
@@ -515,7 +515,7 @@
           }
         }
       },
-      "shortName": "S1"
+      "shortName": "Cluster S1"
     },
     {
       "fixture": "Cluster S2",
@@ -573,7 +573,7 @@
           }
         }
       },
-      "shortName": "S2"
+      "shortName": "Cluster S2"
     },
     {
       "fixture": "FLEX",
@@ -755,7 +755,7 @@
           }
         }
       },
-      "shortName": "F4"
+      "shortName": "Icon F4"
     },
     {
       "fixture": "Icon F6",
@@ -837,7 +837,7 @@
           }
         }
       },
-      "shortName": "F6"
+      "shortName": "Icon F6"
     },
     {
       "fixture": "Icon F8",
@@ -919,7 +919,7 @@
           }
         }
       },
-      "shortName": "F8"
+      "shortName": "Icon F8"
     },
     {
       "fixture": "Key K36",
@@ -959,7 +959,7 @@
           }
         }
       },
-      "shortName": "K36"
+      "shortName": "Key K36"
     },
     {
       "fixture": "Neo",
@@ -1348,34 +1348,34 @@
         "4CH Mode 16bit": 4
       },
       "gdtf": {
-        "status": "matched",
+        "status": "pending-download",
         "folder": "fixtures/roxx",
         "suggestedFileName": "Roxx__Show_Daylight.gdtf",
-        "file": "fixtures/roxx/ROXX@Show_Daylight@RX_C_02022026.gdtf",
+        "file": "",
         "modes": {
           "1CH Mode 8bit": {
             "channels": 1,
-            "gdtfMode": "1CH Mode 8bit",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "2CH Mode 16bit": {
             "channels": 2,
-            "gdtfMode": "2CH Mode 16bit",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "3CH Strobe Mode 8bit": {
             "channels": 3,
-            "gdtfMode": "3CH Strobe Mode 8bit",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "4CH Mode 16bit": {
             "channels": 4,
-            "gdtfMode": "4CH Mode 16bit",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           }
         }
       },
-      "shortName": "SW D"
+      "shortName": "Show Daylight"
     },
     {
       "fixture": "Show FC",
@@ -1396,74 +1396,74 @@
         "10CH HSI": 10
       },
       "gdtf": {
-        "status": "matched",
+        "status": "pending-download",
         "folder": "fixtures/roxx",
         "suggestedFileName": "Roxx__Show_FC.gdtf",
-        "file": "fixtures/roxx/ROXX@Show_FC@RX_D_02022026.gdtf",
+        "file": "",
         "modes": {
           "3CH CCT": {
             "channels": 3,
-            "gdtfMode": "3CH CCT",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "3CH RGB": {
             "channels": 3,
-            "gdtfMode": "3CH RGB",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "6CH RGB": {
             "channels": 6,
-            "gdtfMode": "6CH RGB",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "9CH RGB": {
             "channels": 9,
-            "gdtfMode": "9CH RGB",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "11CH RGB": {
             "channels": 11,
-            "gdtfMode": "11CH RGB",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "14CH RGB": {
             "channels": 14,
-            "gdtfMode": "14CH RGB",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "4CH Direct": {
             "channels": 4,
-            "gdtfMode": "4CH Direct",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "8CH Direct": {
             "channels": 8,
-            "gdtfMode": "8CH Direct",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "11CH Direct": {
             "channels": 11,
-            "gdtfMode": "11CH Direct",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "16CH Direct": {
             "channels": 16,
-            "gdtfMode": "16CH Direct",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "3CH HSI": {
             "channels": 3,
-            "gdtfMode": "3CH HSI",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "10CH HSI": {
             "channels": 10,
-            "gdtfMode": "10CH HSI",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           }
         }
       },
-      "shortName": "SW FC"
+      "shortName": "Show FC"
     },
     {
       "fixture": "Show MAXX TWplus Narrow",
@@ -1564,34 +1564,34 @@
         "4CH Mode 16bit": 4
       },
       "gdtf": {
-        "status": "matched",
+        "status": "pending-download",
         "folder": "fixtures/roxx",
         "suggestedFileName": "Roxx__Show_Tungsten.gdtf",
-        "file": "fixtures/roxx/ROXX@Show_Tungsten@RX_C_02022026.gdtf",
+        "file": "",
         "modes": {
           "1CH Mode 8bit": {
             "channels": 1,
-            "gdtfMode": "1CH Mode 8bit",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "2CH Mode 16bit": {
             "channels": 2,
-            "gdtfMode": "2CH Mode 16bit",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "3CH Strobe Mode 8bit": {
             "channels": 3,
-            "gdtfMode": "3CH Strobe Mode 8bit",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "4CH Mode 16bit": {
             "channels": 4,
-            "gdtfMode": "4CH Mode 16bit",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           }
         }
       },
-      "shortName": "SW T"
+      "shortName": "Show Tungsten"
     },
     {
       "fixture": "Show TWPlus",
@@ -1612,74 +1612,74 @@
         "10CH HSI": 10
       },
       "gdtf": {
-        "status": "matched",
+        "status": "pending-download",
         "folder": "fixtures/roxx",
         "suggestedFileName": "Roxx__Show_TWPlus.gdtf",
-        "file": "fixtures/roxx/ROXX@Show_TWPlus@RX_D_02022026.gdtf",
+        "file": "",
         "modes": {
           "3CH CCT": {
             "channels": 3,
-            "gdtfMode": "3CH CCT",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "3CH RGB": {
             "channels": 3,
-            "gdtfMode": "3CH RGB",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "6CH RGB": {
             "channels": 6,
-            "gdtfMode": "6CH RGB",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "9CH RGB": {
             "channels": 9,
-            "gdtfMode": "9CH RGB",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "11CH RGB": {
             "channels": 11,
-            "gdtfMode": "11CH RGB",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "14CH RGB": {
             "channels": 14,
-            "gdtfMode": "14CH RGB",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "6CH Direct": {
             "channels": 6,
-            "gdtfMode": "6CH Direct",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "12CH Direct": {
             "channels": 12,
-            "gdtfMode": "12CH Direct",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "13CH Direct": {
             "channels": 13,
-            "gdtfMode": "13CH Direct",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "20CH Direct": {
             "channels": 20,
-            "gdtfMode": "20CH Direct",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "3CH HSI": {
             "channels": 3,
-            "gdtfMode": "3CH HSI",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "10CH HSI": {
             "channels": 10,
-            "gdtfMode": "10CH HSI",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           }
         }
       },
-      "shortName": "SW TW+"
+      "shortName": "Show TW+"
     }
   ]
 }

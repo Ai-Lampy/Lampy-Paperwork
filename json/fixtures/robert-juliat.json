@@ -266,20 +266,20 @@
         "Dimmer 8b": 1
       },
       "gdtf": {
-        "status": "matched",
+        "status": "pending-download",
         "folder": "fixtures/robert_juliat",
         "suggestedFileName": "Robert_Juliat__771SX_CW.gdtf",
-        "file": "fixtures/robert_juliat/Robert_Juliat@771SX_CW@1_01.gdtf",
+        "file": "",
         "modes": {
           "Profile 16b": {
             "channels": 6,
-            "gdtfMode": "Profile 16b",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "Dimmer 8b": {
             "channels": 1,
-            "gdtfMode": "Dimmer 8b",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           }
         }
       },
@@ -296,30 +296,30 @@
         "Dimmer 8b": 1
       },
       "gdtf": {
-        "status": "matched",
+        "status": "pending-download",
         "folder": "fixtures/robert_juliat",
         "suggestedFileName": "Robert_Juliat__771SX_VW.gdtf",
-        "file": "fixtures/robert_juliat/Robert_Juliat@771SX_VW@1_01.gdtf",
+        "file": "",
         "modes": {
           "Profile 16b CCT": {
             "channels": 8,
-            "gdtfMode": "Profile 16b CCT",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "Profile 16b": {
             "channels": 6,
-            "gdtfMode": "Profile 16b",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "Dimmer 8b CCT": {
             "channels": 2,
-            "gdtfMode": "Dimmer 8b CCT",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "Dimmer 8b": {
             "channels": 1,
-            "gdtfMode": "Dimmer 8b",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           }
         }
       },
@@ -375,7 +375,7 @@
           }
         }
       },
-      "shortName": "860"
+      "shortName": "Dalis 860"
     }
   ]
 }

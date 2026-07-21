@@ -21,7 +21,7 @@
           }
         }
       },
-      "shortName": "imp FR1"
+      "shortName": "FR1"
     },
     {
       "fixture": "impression FR2 Wash",
@@ -73,7 +73,7 @@
           }
         }
       },
-      "shortName": "imp FR2 Wsh"
+      "shortName": "FR2 Wash"
     },
     {
       "fixture": "impression S500 Profile",
@@ -95,7 +95,7 @@
           }
         }
       },
-      "shortName": "imp S500 Prof"
+      "shortName": "S500 Profile"
     },
     {
       "fixture": "impression S500 Wash",
@@ -117,7 +117,7 @@
           }
         }
       },
-      "shortName": "imp S500 Wsh"
+      "shortName": "S500 Wash"
     },
     {
       "fixture": "impression X4 Bar 10",
@@ -175,7 +175,7 @@
           }
         }
       },
-      "shortName": "imp X4 Bar 10"
+      "shortName": "X4 Bar 10"
     },
     {
       "fixture": "impression X4 Bar 20",
@@ -233,7 +233,7 @@
           }
         }
       },
-      "shortName": "imp X4 Bar 20"
+      "shortName": "X4 Bar 20"
     },
     {
       "fixture": "impression X4 S",
@@ -255,7 +255,7 @@
           }
         }
       },
-      "shortName": "imp X4 S"
+      "shortName": "X4 S"
     },
     {
       "fixture": "impression X5",
@@ -331,7 +331,7 @@
           }
         }
       },
-      "shortName": "imp X5"
+      "shortName": "X5"
     },
     {
       "fixture": "impression X5 Bar 1000",
@@ -407,7 +407,7 @@
           }
         }
       },
-      "shortName": "imp X5 Bar 1000"
+      "shortName": "X5 Bar 1000"
     },
     {
       "fixture": "impression X5 Compact",
@@ -483,7 +483,7 @@
           }
         }
       },
-      "shortName": "imp X5 Compact"
+      "shortName": "X5 Compact"
     },
     {
       "fixture": "impression X5 IP",
@@ -559,7 +559,7 @@
           }
         }
       },
-      "shortName": "imp X5 IP"
+      "shortName": "X5 IP"
     },
     {
       "fixture": "impression X5 IP Bar 1000",
@@ -635,7 +635,7 @@
           }
         }
       },
-      "shortName": "imp X5 IP Bar 1000"
+      "shortName": "X5 IP Bar 1000"
     },
     {
       "fixture": "JDC Burst 1",
@@ -921,7 +921,7 @@
           }
         }
       },
-      "shortName": "JDC1"
+      "shortName": "JDC-1"
     },
     {
       "fixture": "JDC2 IP",

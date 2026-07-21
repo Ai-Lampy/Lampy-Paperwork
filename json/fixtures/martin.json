@@ -55,7 +55,7 @@
           }
         }
       },
-      "shortName": "ELPMan8F"
+      "shortName": "ELP Manet 8F"
     },
     {
       "fixture": "ELP PAR",
@@ -83,7 +83,7 @@
           }
         }
       },
-      "shortName": "ELPPAR"
+      "shortName": "ELP PAR"
     },
     {
       "fixture": "ELP PAR IP",
@@ -111,7 +111,7 @@
           }
         }
       },
-      "shortName": "ELPPARIP"
+      "shortName": "ELP PAR IP"
     },
     {
       "fixture": "ERA 150 Wash",
@@ -133,7 +133,7 @@
           }
         }
       },
-      "shortName": "ERA 150 Wsh"
+      "shortName": "ERA 150 Wash"
     },
     {
       "fixture": "ERA 400 Performance CLD",
@@ -161,7 +161,7 @@
           }
         }
       },
-      "shortName": "ERA 400 Perf CLD"
+      "shortName": "ERA 400 Performance CLD"
     },
     {
       "fixture": "ERA 400 Performance WRM",
@@ -189,7 +189,7 @@
           }
         }
       },
-      "shortName": "ERA400PerWRM"
+      "shortName": "ERA 400 Performance WRM"
     },
     {
       "fixture": "ERA 600 Performance",
@@ -211,7 +211,7 @@
           }
         }
       },
-      "shortName": "ERA 600 Perf"
+      "shortName": "ERA 600 Performance"
     },
     {
       "fixture": "ERA 600 Profile",
@@ -233,7 +233,7 @@
           }
         }
       },
-      "shortName": "ERA 600 Prof"
+      "shortName": "ERA 600 Profile"
     },
     {
       "fixture": "ERA 700 Performance IP",
@@ -261,7 +261,7 @@
           }
         }
       },
-      "shortName": "ERA 700 Perf IP"
+      "shortName": "ERA 700 Performance IP"
     },
     {
       "fixture": "ERA 800 Performance",
@@ -283,7 +283,7 @@
           }
         }
       },
-      "shortName": "ERA800Per"
+      "shortName": "ERA 800 Performance"
     },
     {
       "fixture": "Exterior Dot-1 Pro",
@@ -353,7 +353,7 @@
           }
         }
       },
-      "shortName": "EXTDot1Pro"
+      "shortName": "Exterior Dot-1 Pro"
     },
     {
       "fixture": "Exterior Dot-4 Pro",
@@ -423,7 +423,7 @@
           }
         }
       },
-      "shortName": "EXTDot4Pro"
+      "shortName": "Exterior Dot-4 Pro"
     },
     {
       "fixture": "Exterior Dot-9 Pro",
@@ -493,7 +493,7 @@
           }
         }
       },
-      "shortName": "EXTDot9Pro"
+      "shortName": "Exterior Dot-9 Pro"
     },
     {
       "fixture": "Exterior Dot-HP Pro",
@@ -539,7 +539,7 @@
           }
         }
       },
-      "shortName": "EXTDotHPPro"
+      "shortName": "Exterior Dot-HP Pro"
     },
     {
       "fixture": "MAC Allure Profile",
@@ -567,7 +567,7 @@
           }
         }
       },
-      "shortName": "MACAllPro"
+      "shortName": "MAC Allure Profile"
     },
     {
       "fixture": "MAC Allure Wash PC",
@@ -595,7 +595,7 @@
           }
         }
       },
-      "shortName": "MACAllWas"
+      "shortName": "MAC Allure Wash PC"
     },
     {
       "fixture": "MAC Aura PXL",
@@ -799,7 +799,7 @@
           }
         }
       },
-      "shortName": "MAC Encore Perf CLD"
+      "shortName": "MAC Encore Performance CLD"
     },
     {
       "fixture": "MAC Encore Performance WRM",
@@ -821,7 +821,7 @@
           }
         }
       },
-      "shortName": "MACEncPerWRM"
+      "shortName": "MAC Encore Performance WRM"
     },
     {
       "fixture": "MAC Encore Two",
@@ -861,7 +861,7 @@
           }
         }
       },
-      "shortName": "MACEncTwo"
+      "shortName": "MAC Encore Two"
     },
     {
       "fixture": "MAC Encore Wash WRM",
@@ -883,7 +883,7 @@
           }
         }
       },
-      "shortName": "MACEncWasWRM"
+      "shortName": "MAC Encore Wash WRM"
     },
     {
       "fixture": "MAC One",
@@ -979,7 +979,7 @@
           }
         }
       },
-      "shortName": "MAC Quantum Prof"
+      "shortName": "MAC Quantum Profile"
     },
     {
       "fixture": "MAC Quantum Wash",
@@ -1007,7 +1007,7 @@
           }
         }
       },
-      "shortName": "MAC Quantum Wsh"
+      "shortName": "MAC Quantum Wash"
     },
     {
       "fixture": "MAC Ultra Performance",
@@ -1041,7 +1041,7 @@
           }
         }
       },
-      "shortName": "MAC Ultra Perf"
+      "shortName": "MAC Ultra Performance"
     },
     {
       "fixture": "MAC Ultra Wash",
@@ -1069,7 +1069,7 @@
           }
         }
       },
-      "shortName": "MAC Ultra Wsh"
+      "shortName": "MAC Ultra Wash"
     },
     {
       "fixture": "MAC Viper AirFX",
@@ -1125,7 +1125,7 @@
           }
         }
       },
-      "shortName": "MAC Viper Perf"
+      "shortName": "MAC Viper Performance"
     },
     {
       "fixture": "MAC Viper Profile",
@@ -1153,7 +1153,7 @@
           }
         }
       },
-      "shortName": "MAC Viper Prof"
+      "shortName": "MAC Viper Profile"
     },
     {
       "fixture": "MAC Viper Wash DX",
@@ -1181,7 +1181,7 @@
           }
         }
       },
-      "shortName": "MAC Viper Wsh DX"
+      "shortName": "MAC Viper Wash DX"
     },
     {
       "fixture": "MAC Viper XIP",
@@ -1417,7 +1417,7 @@
           }
         }
       },
-      "shortName": "VDODot"
+      "shortName": "Dotron"
     },
     {
       "fixture": "VDO Fatron 20 1000 mm",

@@ -21,7 +21,7 @@
           }
         }
       },
-      "shortName": "Arolla Aq HP"
+      "shortName": "Arolla Aqua HP"
     },
     {
       "fixture": "Arolla Aqua M-LT",
@@ -49,7 +49,7 @@
           }
         }
       },
-      "shortName": "Arolla Aq M-LT"
+      "shortName": "Arolla Aqua M-LT"
     },
     {
       "fixture": "Arolla Aqua S-LT",
@@ -77,7 +77,7 @@
           }
         }
       },
-      "shortName": "Arolla Aq S-LT"
+      "shortName": "Arolla Aqua S-LT"
     },
     {
       "fixture": "Arolla Aqua Wash HC",
@@ -99,7 +99,7 @@
           }
         }
       },
-      "shortName": "Arolla Aq Wsh HC"
+      "shortName": "Arolla Aqua Wash HC"
     },
     {
       "fixture": "Arolla Profile HP",
@@ -324,40 +324,40 @@
         "Pixel RGBW": 76
       },
       "gdtf": {
-        "status": "matched",
+        "status": "pending-download",
         "folder": "fixtures/clay-paky",
         "suggestedFileName": "Clay_Paky__HY_B_Eye_K15_Aqua.gdtf",
-        "file": "fixtures/clay-paky/Clay_Paky@HY_B-EYE_K-15_Aqua@HY_B-EYE_K-15_Aqua.gdtf",
+        "file": "",
         "modes": {
           "106 DMX": {
             "channels": 37,
-            "gdtfMode": "106 DMX",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "Shape Freq": {
             "channels": 36,
-            "gdtfMode": "Shape Freq",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "Shape": {
             "channels": 35,
-            "gdtfMode": "Shape",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "Standard Freq": {
             "channels": 22,
-            "gdtfMode": "Standard Freq",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "Standard": {
             "channels": 21,
-            "gdtfMode": "Standard",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "Pixel RGBW": {
             "channels": 76,
-            "gdtfMode": "Pixel RGBW",
-            "status": "matched"
+            "gdtfMode": "",
+            "status": "pending-match"
           }
         }
       },
@@ -547,7 +547,7 @@
           }
         }
       },
-      "shortName": "Sharpy Wsh"
+      "shortName": "Sharpy Wash"
     },
     {
       "fixture": "Sharpy X Frame",
