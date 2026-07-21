@@ -52,10 +52,10 @@
         "Direct": 8
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "pending-match",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__ColorSource_Fresnel_V.gdtf",
-        "file": "",
+        "file": "fixtures/etc/ETC@Colorsource_V_Fresnel@Ver_1.gdtf",
         "modes": {
           "1 Channel": {
             "channels": 1,
@@ -248,8 +248,7 @@
       "modes": {
         "1ch": 1,
         "RGB": 3,
-        "5ch": 5,
-        "Direct": 6
+        "Direct": 5
       },
       "gdtf": {
         "status": "pending-match",
@@ -267,16 +266,11 @@
             "gdtfMode": "",
             "status": "pending-match"
           },
-          "5ch": {
-            "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Direct": {
-            "channels": 6,
-            "gdtfMode": "",
-            "status": "pending-match"
-          }
+      "Direct": {
+        "channels": 5,
+        "gdtfMode": "",
+        "status": "pending-match"
+      }
         }
       },
       "shortName": "CS Spot"
@@ -449,10 +443,10 @@
         "Dimmer": 1
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "pending-match",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__Desire_D22.gdtf",
-        "file": "",
+        "file": "fixtures/etc/ETC@Desire_D22_Studio_HD@rev1.gdtf",
         "modes": {
           "Dimmer": {
             "channels": 1,
@@ -471,10 +465,10 @@
         "Dimmer": 1
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "pending-match",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__Desire_D40.gdtf",
-        "file": "",
+        "file": "fixtures/etc/ETC@ETC_Desire_D40_Studio_HD@Add_Direct_Mode.gdtf",
         "modes": {
           "Dimmer": {
             "channels": 1,
