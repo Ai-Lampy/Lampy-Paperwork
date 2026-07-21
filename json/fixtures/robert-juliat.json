@@ -1,0 +1,381 @@
+{
+  "manufacturer": "Robert Juliat",
+  "fixtures": [
+    {
+      "fixture": "654SX 4C",
+      "watts": 200.0,
+      "weight": 14.1,
+      "modes": {
+        "Full xy": 20,
+        "Full HS": 20,
+        "Full RGB": 22,
+        "Full RAW": 24,
+        "Profile 16B": 6,
+        "Dimmer 8B": 1
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/Robert_Juliat",
+        "suggestedFileName": "Robert_Juliat__654SX_4C.gdtf",
+        "file": "fixtures/Robert_Juliat/Robert_Juliat@654SX_4C@1.00.gdtf",
+        "modes": {
+          "Full xy": {
+            "channels": 20,
+            "gdtfMode": "Full xy",
+            "status": "matched"
+          },
+          "Full HS": {
+            "channels": 20,
+            "gdtfMode": "Full HS",
+            "status": "matched"
+          },
+          "Full RGB": {
+            "channels": 22,
+            "gdtfMode": "Full RGB",
+            "status": "matched"
+          },
+          "Full RAW": {
+            "channels": 24,
+            "gdtfMode": "Full RAW",
+            "status": "matched"
+          },
+          "Profile 16B": {
+            "channels": 6,
+            "gdtfMode": "Profile 16B",
+            "status": "matched"
+          },
+          "Dimmer 8B": {
+            "channels": 1,
+            "gdtfMode": "Dimmer 8B",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "654SX 4C"
+    },
+    {
+      "fixture": "671SX CW",
+      "watts": 500.0,
+      "weight": 21.0,
+      "modes": {
+        "Profile 16b": 6,
+        "Dimmer 8b": 1
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/Robert_Juliat",
+        "suggestedFileName": "Robert_Juliat__671SX_CW.gdtf",
+        "file": "fixtures/Robert_Juliat/Robert_Juliat@671SX_CW@1_01.gdtf",
+        "modes": {
+          "Profile 16b": {
+            "channels": 6,
+            "gdtfMode": "Profile 16b",
+            "status": "matched"
+          },
+          "Dimmer 8b": {
+            "channels": 1,
+            "gdtfMode": "Dimmer 8b",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "671SX CW"
+    },
+    {
+      "fixture": "671SX VW",
+      "watts": 500.0,
+      "weight": 21.0,
+      "modes": {
+        "Profile 16b CCT": 8,
+        "Profile 16b": 6,
+        "Dimmer 8b CCT": 2,
+        "Dimmer 8b": 1
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/Robert_Juliat",
+        "suggestedFileName": "Robert_Juliat__671SX_VW.gdtf",
+        "file": "fixtures/Robert_Juliat/Robert_Juliat@671SX_VW@1_01.gdtf",
+        "modes": {
+          "Profile 16b CCT": {
+            "channels": 8,
+            "gdtfMode": "Profile 16b CCT",
+            "status": "matched"
+          },
+          "Profile 16b": {
+            "channels": 6,
+            "gdtfMode": "Profile 16b",
+            "status": "matched"
+          },
+          "Dimmer 8b CCT": {
+            "channels": 2,
+            "gdtfMode": "Dimmer 8b CCT",
+            "status": "matched"
+          },
+          "Dimmer 8b": {
+            "channels": 1,
+            "gdtfMode": "Dimmer 8b",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "671SX VW"
+    },
+    {
+      "fixture": "673SX CW",
+      "watts": 500.0,
+      "weight": 19.2,
+      "modes": {
+        "Profile 16b": 6,
+        "Dimmer 8b": 1
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/Robert_Juliat",
+        "suggestedFileName": "Robert_Juliat__673SX_CW.gdtf",
+        "file": "fixtures/Robert_Juliat/Robert_Juliat@673SX_CW@1_01.gdtf",
+        "modes": {
+          "Profile 16b": {
+            "channels": 6,
+            "gdtfMode": "Profile 16b",
+            "status": "matched"
+          },
+          "Dimmer 8b": {
+            "channels": 1,
+            "gdtfMode": "Dimmer 8b",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "673SX CW"
+    },
+    {
+      "fixture": "673SX VW",
+      "watts": 500.0,
+      "weight": 19.2,
+      "modes": {
+        "Profile 16b CCT": 8,
+        "Profile 16b": 6,
+        "Dimmer 8b CCT": 2,
+        "Dimmer 8b": 1
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/Robert_Juliat",
+        "suggestedFileName": "Robert_Juliat__673SX_VW.gdtf",
+        "file": "fixtures/Robert_Juliat/Robert_Juliat@673SX_VW@1_01.gdtf",
+        "modes": {
+          "Profile 16b CCT": {
+            "channels": 8,
+            "gdtfMode": "Profile 16b CCT",
+            "status": "matched"
+          },
+          "Profile 16b": {
+            "channels": 6,
+            "gdtfMode": "Profile 16b",
+            "status": "matched"
+          },
+          "Dimmer 8b CCT": {
+            "channels": 2,
+            "gdtfMode": "Dimmer 8b CCT",
+            "status": "matched"
+          },
+          "Dimmer 8b": {
+            "channels": 1,
+            "gdtfMode": "Dimmer 8b",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "673SX VW"
+    },
+    {
+      "fixture": "674SX CW",
+      "watts": 600.0,
+      "weight": 20.8,
+      "modes": {
+        "Profile 16b": 6,
+        "Dimmer 8b": 1
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/Robert_Juliat",
+        "suggestedFileName": "Robert_Juliat__674SX_CW.gdtf",
+        "file": "fixtures/Robert_Juliat/Robert_Juliat@674SX_CW@1_01.gdtf",
+        "modes": {
+          "Profile 16b": {
+            "channels": 6,
+            "gdtfMode": "Profile 16b",
+            "status": "matched"
+          },
+          "Dimmer 8b": {
+            "channels": 1,
+            "gdtfMode": "Dimmer 8b",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "674SX CW"
+    },
+    {
+      "fixture": "674SX VW",
+      "watts": 500.0,
+      "weight": 20.8,
+      "modes": {
+        "Profile 16b CCT": 8,
+        "Profile 16b": 6,
+        "Dimmer 8b CCT": 2,
+        "Dimmer 8b": 1
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/Robert_Juliat",
+        "suggestedFileName": "Robert_Juliat__674SX_VW.gdtf",
+        "file": "fixtures/Robert_Juliat/Robert_Juliat@674SX_VW@1_02.gdtf",
+        "modes": {
+          "Profile 16b CCT": {
+            "channels": 8,
+            "gdtfMode": "Profile 16b CCT",
+            "status": "matched"
+          },
+          "Profile 16b": {
+            "channels": 6,
+            "gdtfMode": "Profile 16b",
+            "status": "matched"
+          },
+          "Dimmer 8b CCT": {
+            "channels": 2,
+            "gdtfMode": "Dimmer 8b CCT",
+            "status": "matched"
+          },
+          "Dimmer 8b": {
+            "channels": 1,
+            "gdtfMode": "Dimmer 8b",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "674SX VW"
+    },
+    {
+      "fixture": "771SX CW",
+      "watts": 600.0,
+      "weight": 25.8,
+      "modes": {
+        "Profile 16b": 6,
+        "Dimmer 8b": 1
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/Robert_Juliat",
+        "suggestedFileName": "Robert_Juliat__771SX_CW.gdtf",
+        "file": "fixtures/Robert_Juliat/Robert_Juliat@771SX_CW@1_01.gdtf",
+        "modes": {
+          "Profile 16b": {
+            "channels": 6,
+            "gdtfMode": "Profile 16b",
+            "status": "matched"
+          },
+          "Dimmer 8b": {
+            "channels": 1,
+            "gdtfMode": "Dimmer 8b",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "771SX CW"
+    },
+    {
+      "fixture": "771SX VW",
+      "watts": 500.0,
+      "weight": 19.2,
+      "modes": {
+        "Profile 16b CCT": 8,
+        "Profile 16b": 6,
+        "Dimmer 8b CCT": 2,
+        "Dimmer 8b": 1
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/Robert_Juliat",
+        "suggestedFileName": "Robert_Juliat__771SX_VW.gdtf",
+        "file": "fixtures/Robert_Juliat/Robert_Juliat@771SX_VW@1_01.gdtf",
+        "modes": {
+          "Profile 16b CCT": {
+            "channels": 8,
+            "gdtfMode": "Profile 16b CCT",
+            "status": "matched"
+          },
+          "Profile 16b": {
+            "channels": 6,
+            "gdtfMode": "Profile 16b",
+            "status": "matched"
+          },
+          "Dimmer 8b CCT": {
+            "channels": 2,
+            "gdtfMode": "Dimmer 8b CCT",
+            "status": "matched"
+          },
+          "Dimmer 8b": {
+            "channels": 1,
+            "gdtfMode": "Dimmer 8b",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "771SX VW"
+    },
+    {
+      "fixture": "Dalis 860",
+      "watts": null,
+      "weight": 11.0,
+      "modes": {
+        "Mode1: Full 4 groups 16bits": 70,
+        "Mode2: Full 1 group 16bits": 22,
+        "Mode3: Full 1 group 8bits": 13,
+        "Mode4: Preset mode 16bits": 8,
+        "Mode5: Preset mode 8bits": 7,
+        "Mode6: 4 groups individual 16b": 72
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/Robert_Juliat",
+        "suggestedFileName": "Robert_Juliat__Dalis_860.gdtf",
+        "file": "fixtures/Robert_Juliat/Robert_Juliat@Dalis_860@1.00.gdtf",
+        "modes": {
+          "Mode1: Full 4 groups 16bits": {
+            "channels": 70,
+            "gdtfMode": "Mode1: Full 4 groups 16bits",
+            "status": "matched"
+          },
+          "Mode2: Full 1 group 16bits": {
+            "channels": 22,
+            "gdtfMode": "Mode2: Full 1 group 16bits",
+            "status": "matched"
+          },
+          "Mode3: Full 1 group 8bits": {
+            "channels": 13,
+            "gdtfMode": "Mode3: Full 1 group 8bits",
+            "status": "matched"
+          },
+          "Mode4: Preset mode 16bits": {
+            "channels": 8,
+            "gdtfMode": "Mode4: Preset mode 16bits",
+            "status": "matched"
+          },
+          "Mode5: Preset mode 8bits": {
+            "channels": 7,
+            "gdtfMode": "Mode5: Preset mode 8bits",
+            "status": "matched"
+          },
+          "Mode6: 4 groups individual 16b": {
+            "channels": 72,
+            "gdtfMode": "Mode6: 4 groups individual 16b",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "860"
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "manufacturer": "SGM",
+  "fixtures": [
+    {
+      "fixture": "P-6",
+      "watts": 1000.0,
+      "weight": null,
+      "modes": {
+        "4 Channel RAW": 4,
+        "6 Channel RAW": 6,
+        "6 Channel CTC": 6,
+        "8 Channel RAW": 8,
+        "9 Channel Strobe": 9,
+        "10 Channel CTC": 10,
+        "6x RGB": 18,
+        "21 Channel CTC": 21,
+        "24 Channel Strobe": 24,
+        "26 Channel Strobe": 26,
+        "27 Channel RAW": 27,
+        "21 Channel Studio": 21,
+        "40 Channel CTC": 40,
+        "66 Channel Studio": 66
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/SGM",
+        "suggestedFileName": "SGM__P_6.gdtf",
+        "file": "fixtures/SGM/SGM_Light@P-6@Rev_C.gdtf",
+        "modes": {
+          "4 Channel RAW": {
+            "channels": 4,
+            "gdtfMode": "4 Channel RAW",
+            "status": "matched"
+          },
+          "6 Channel RAW": {
+            "channels": 6,
+            "gdtfMode": "6 Channel RAW",
+            "status": "matched"
+          },
+          "6 Channel CTC": {
+            "channels": 6,
+            "gdtfMode": "6 Channel CTC",
+            "status": "matched"
+          },
+          "8 Channel RAW": {
+            "channels": 8,
+            "gdtfMode": "8 Channel RAW",
+            "status": "matched"
+          },
+          "9 Channel Strobe": {
+            "channels": 9,
+            "gdtfMode": "9 Channel Strobe",
+            "status": "matched"
+          },
+          "10 Channel CTC": {
+            "channels": 10,
+            "gdtfMode": "10 Channel CTC",
+            "status": "matched"
+          },
+          "6x RGB": {
+            "channels": 18,
+            "gdtfMode": "6x RGB",
+            "status": "matched"
+          },
+          "21 Channel CTC": {
+            "channels": 21,
+            "gdtfMode": "21 Channel CTC",
+            "status": "matched"
+          },
+          "24 Channel Strobe": {
+            "channels": 24,
+            "gdtfMode": "24 Channel Strobe",
+            "status": "matched"
+          },
+          "26 Channel Strobe": {
+            "channels": 26,
+            "gdtfMode": "26 Channel Strobe",
+            "status": "matched"
+          },
+          "27 Channel RAW": {
+            "channels": 27,
+            "gdtfMode": "27 Channel RAW",
+            "status": "matched"
+          },
+          "21 Channel Studio": {
+            "channels": 21,
+            "gdtfMode": "21 Channel Studio",
+            "status": "matched"
+          },
+          "40 Channel CTC": {
+            "channels": 40,
+            "gdtfMode": "40 Channel CTC",
+            "status": "matched"
+          },
+          "66 Channel Studio": {
+            "channels": 66,
+            "gdtfMode": "66 Channel Studio",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "P-6"
+    },
+    {
+      "fixture": "Q-8",
+      "watts": 1000.0,
+      "weight": 15.5,
+      "modes": {
+        "10 Channel Strobe": 10,
+        "12 Channel Simplified": 12,
+        "27 Channel Standard": 27,
+        "34 Channel Standard +": 34,
+        "41 Channel Extended": 41,
+        "52 Channel Extended +": 52,
+        "36 Channel Studio": 36,
+        "12 Channel RGB Only": 12
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/SGM",
+        "suggestedFileName": "SGM__Q_8.gdtf",
+        "file": "fixtures/SGM/SGM_Light@Q-8@Rev_D.gdtf",
+        "modes": {
+          "10 Channel Strobe": {
+            "channels": 10,
+            "gdtfMode": "10 Channel Strobe",
+            "status": "matched"
+          },
+          "12 Channel Simplified": {
+            "channels": 12,
+            "gdtfMode": "12 Channel Simplified",
+            "status": "matched"
+          },
+          "27 Channel Standard": {
+            "channels": 27,
+            "gdtfMode": "27 Channel Standard",
+            "status": "matched"
+          },
+          "34 Channel Standard +": {
+            "channels": 34,
+            "gdtfMode": "34 Channel Standard +",
+            "status": "matched"
+          },
+          "41 Channel Extended": {
+            "channels": 41,
+            "gdtfMode": "41 Channel Extended",
+            "status": "matched"
+          },
+          "52 Channel Extended +": {
+            "channels": 52,
+            "gdtfMode": "52 Channel Extended +",
+            "status": "matched"
+          },
+          "36 Channel Studio": {
+            "channels": 36,
+            "gdtfMode": "36 Channel Studio",
+            "status": "matched"
+          },
+          "12 Channel RGB Only": {
+            "channels": 12,
+            "gdtfMode": "12 Channel RGB Only",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Q-8"
+    }
+  ]
+}

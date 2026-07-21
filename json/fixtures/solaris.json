@@ -1,0 +1,1357 @@
+{
+  "manufacturer": "Solaris",
+  "fixtures": [
+    {
+      "fixture": "Solaris Flare Q plus Rayzr 100cm",
+      "watts": 720.0,
+      "weight": 6.3,
+      "modes": {
+        "RGB 8bit (3ch)": 3,
+        "RGB 16bit (6ch)": 6,
+        "RGBW 8bit (4ch)": 4,
+        "RGBW 16bit (8ch)": 8,
+        "Strobe Only (4ch)": 4,
+        "RGB Strobe (7ch)": 7,
+        "RGBW Strobe (8ch)": 8,
+        "RGB Pixel Mode 1 (10ch)": 10,
+        "RGB Pixel Mode 2 (13ch)": 13,
+        "RGB Pixel Mode 3 (16ch)": 16,
+        "RGB Pixel Mode 4 (19ch)": 19,
+        "RGB Pixel Mode 6 (25ch)": 25,
+        "RGB Pixel Mode 12 (43ch)": 43,
+        "RGBW Pixel Mode 1 (12ch)": 12,
+        "RGBW Pixel Mode 2 (16ch)": 16,
+        "RGBW Pixel Mode 3 (20ch)": 20,
+        "RGBW Pixel Mode 4 (24ch)": 24,
+        "RGBW Pixel Mode 6 (32ch)": 32,
+        "RGBW Pixel Mode 12 (56ch)": 56
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/solaris",
+        "suggestedFileName": "Solaris__Solaris_Flare_Q_plus_Rayzr_100cm.gdtf",
+        "file": "fixtures/solaris/Solaris@Solaris_Flare_Q_plus_Rayzr_100cm@v1.0.34_-_MFR_Release.gdtf",
+        "modes": {
+          "RGB 8bit (3ch)": {
+            "channels": 3,
+            "gdtfMode": "RGB 8bit (3ch)",
+            "status": "matched"
+          },
+          "RGB 16bit (6ch)": {
+            "channels": 6,
+            "gdtfMode": "RGB 16bit (6ch)",
+            "status": "matched"
+          },
+          "RGBW 8bit (4ch)": {
+            "channels": 4,
+            "gdtfMode": "RGBW 8bit (4ch)",
+            "status": "matched"
+          },
+          "RGBW 16bit (8ch)": {
+            "channels": 8,
+            "gdtfMode": "RGBW 16bit (8ch)",
+            "status": "matched"
+          },
+          "Strobe Only (4ch)": {
+            "channels": 4,
+            "gdtfMode": "Strobe Only (4ch)",
+            "status": "matched"
+          },
+          "RGB Strobe (7ch)": {
+            "channels": 7,
+            "gdtfMode": "RGB Strobe (7ch)",
+            "status": "matched"
+          },
+          "RGBW Strobe (8ch)": {
+            "channels": 8,
+            "gdtfMode": "RGBW Strobe (8ch)",
+            "status": "matched"
+          },
+          "RGB Pixel Mode 1 (10ch)": {
+            "channels": 10,
+            "gdtfMode": "RGB Pixel Mode 1 (10ch)",
+            "status": "matched"
+          },
+          "RGB Pixel Mode 2 (13ch)": {
+            "channels": 13,
+            "gdtfMode": "RGB Pixel Mode 2 (13ch)",
+            "status": "matched"
+          },
+          "RGB Pixel Mode 3 (16ch)": {
+            "channels": 16,
+            "gdtfMode": "RGB Pixel Mode 3 (16ch)",
+            "status": "matched"
+          },
+          "RGB Pixel Mode 4 (19ch)": {
+            "channels": 19,
+            "gdtfMode": "RGB Pixel Mode 4 (19ch)",
+            "status": "matched"
+          },
+          "RGB Pixel Mode 6 (25ch)": {
+            "channels": 25,
+            "gdtfMode": "RGB Pixel Mode 6 (25ch)",
+            "status": "matched"
+          },
+          "RGB Pixel Mode 12 (43ch)": {
+            "channels": 43,
+            "gdtfMode": "RGB Pixel Mode 12 (43ch)",
+            "status": "matched"
+          },
+          "RGBW Pixel Mode 1 (12ch)": {
+            "channels": 12,
+            "gdtfMode": "RGBW Pixel Mode 1 (12ch)",
+            "status": "matched"
+          },
+          "RGBW Pixel Mode 2 (16ch)": {
+            "channels": 16,
+            "gdtfMode": "RGBW Pixel Mode 2 (16ch)",
+            "status": "matched"
+          },
+          "RGBW Pixel Mode 3 (20ch)": {
+            "channels": 20,
+            "gdtfMode": "RGBW Pixel Mode 3 (20ch)",
+            "status": "matched"
+          },
+          "RGBW Pixel Mode 4 (24ch)": {
+            "channels": 24,
+            "gdtfMode": "RGBW Pixel Mode 4 (24ch)",
+            "status": "matched"
+          },
+          "RGBW Pixel Mode 6 (32ch)": {
+            "channels": 32,
+            "gdtfMode": "RGBW Pixel Mode 6 (32ch)",
+            "status": "matched"
+          },
+          "RGBW Pixel Mode 12 (56ch)": {
+            "channels": 56,
+            "gdtfMode": "RGBW Pixel Mode 12 (56ch)",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Flare Q+ RZ 100cm"
+    },
+    {
+      "fixture": "Solaris Flare Q plus Rayzr 50cm",
+      "watts": 360.0,
+      "weight": 3.67,
+      "modes": {
+        "RGB 8bit (3ch)": 3,
+        "RGB 16bit (6ch)": 6,
+        "RGBW 8bit (4ch)": 4,
+        "RGBW 16bit 8 (ch)": 8,
+        "Strobe Only (4ch)": 4,
+        "RGB Strobe (7ch)": 7,
+        "RGBW Strobe (8ch)": 8,
+        "RGB Pixel Mode 1 (10ch)": 10,
+        "RGB Pixel Mode 2 (13ch)": 13,
+        "RGB Pixel Mode 3 (16ch)": 16,
+        "RGB Pixel Mode 6 (25ch)": 25,
+        "RGBW Pixel Mode 1 (12ch)": 12,
+        "RGBW Pixel Mode 2 (16ch)": 16,
+        "RGBW Pixel Mode 3 (20ch)": 20,
+        "RGBW Pixel Mode 6 (32ch)": 32
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/solaris",
+        "suggestedFileName": "Solaris__Solaris_Flare_Q_plus_Rayzr_50cm.gdtf",
+        "file": "fixtures/solaris/Solaris@Solaris_Flare_Q_plus_Rayzr_50cm@v1.0.32_-_MFR_Release.gdtf",
+        "modes": {
+          "RGB 8bit (3ch)": {
+            "channels": 3,
+            "gdtfMode": "RGB 8bit (3ch)",
+            "status": "matched"
+          },
+          "RGB 16bit (6ch)": {
+            "channels": 6,
+            "gdtfMode": "RGB 16bit (6ch)",
+            "status": "matched"
+          },
+          "RGBW 8bit (4ch)": {
+            "channels": 4,
+            "gdtfMode": "RGBW 8bit (4ch)",
+            "status": "matched"
+          },
+          "RGBW 16bit 8 (ch)": {
+            "channels": 8,
+            "gdtfMode": "RGBW 16bit 8 (ch)",
+            "status": "matched"
+          },
+          "Strobe Only (4ch)": {
+            "channels": 4,
+            "gdtfMode": "Strobe Only (4ch)",
+            "status": "matched"
+          },
+          "RGB Strobe (7ch)": {
+            "channels": 7,
+            "gdtfMode": "RGB Strobe (7ch)",
+            "status": "matched"
+          },
+          "RGBW Strobe (8ch)": {
+            "channels": 8,
+            "gdtfMode": "RGBW Strobe (8ch)",
+            "status": "matched"
+          },
+          "RGB Pixel Mode 1 (10ch)": {
+            "channels": 10,
+            "gdtfMode": "RGB Pixel Mode 1 (10ch)",
+            "status": "matched"
+          },
+          "RGB Pixel Mode 2 (13ch)": {
+            "channels": 13,
+            "gdtfMode": "RGB Pixel Mode 2 (13ch)",
+            "status": "matched"
+          },
+          "RGB Pixel Mode 3 (16ch)": {
+            "channels": 16,
+            "gdtfMode": "RGB Pixel Mode 3 (16ch)",
+            "status": "matched"
+          },
+          "RGB Pixel Mode 6 (25ch)": {
+            "channels": 25,
+            "gdtfMode": "RGB Pixel Mode 6 (25ch)",
+            "status": "matched"
+          },
+          "RGBW Pixel Mode 1 (12ch)": {
+            "channels": 12,
+            "gdtfMode": "RGBW Pixel Mode 1 (12ch)",
+            "status": "matched"
+          },
+          "RGBW Pixel Mode 2 (16ch)": {
+            "channels": 16,
+            "gdtfMode": "RGBW Pixel Mode 2 (16ch)",
+            "status": "matched"
+          },
+          "RGBW Pixel Mode 3 (20ch)": {
+            "channels": 20,
+            "gdtfMode": "RGBW Pixel Mode 3 (20ch)",
+            "status": "matched"
+          },
+          "RGBW Pixel Mode 6 (32ch)": {
+            "channels": 32,
+            "gdtfMode": "RGBW Pixel Mode 6 (32ch)",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Flare Q+ RZ 50cm"
+    },
+    {
+      "fixture": "Solaris Flare XL 120",
+      "watts": 1000.0,
+      "weight": 47.4,
+      "modes": {
+        "RGB 8bit": 3,
+        "RGBW 8bit ": 4,
+        "RGB 16bit": 6,
+        "RGBW 16bit": 8,
+        "RGB Strobe": 7,
+        "Strobe Only": 4,
+        "RGBW Strobe": 8,
+        "RGB Mode 1": 10,
+        "RGBW Mode 1": 12,
+        "RGB Mode 6": 25,
+        "RGB Mode 12": 43,
+        "RGB Mode 20": 67,
+        "RGB Mode 120": 367,
+        "RGBW Mode 6": 32,
+        "RGBW Mode 12": 56,
+        "RGBW Mode 20": 88,
+        "RGBW Mode 120": 488
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/solaris",
+        "suggestedFileName": "Solaris__Solaris_Flare_XL_120.gdtf",
+        "file": "fixtures/solaris/Solaris@Solaris_Flare_XL_120@v1.0.0_-_MFR_Release.gdtf",
+        "modes": {
+          "RGB 8bit": {
+            "channels": 3,
+            "gdtfMode": "RGB 8bit",
+            "status": "matched"
+          },
+          "RGBW 8bit ": {
+            "channels": 4,
+            "gdtfMode": "RGBW 8bit ",
+            "status": "matched"
+          },
+          "RGB 16bit": {
+            "channels": 6,
+            "gdtfMode": "RGB 16bit",
+            "status": "matched"
+          },
+          "RGBW 16bit": {
+            "channels": 8,
+            "gdtfMode": "RGBW 16bit",
+            "status": "matched"
+          },
+          "RGB Strobe": {
+            "channels": 7,
+            "gdtfMode": "RGB Strobe",
+            "status": "matched"
+          },
+          "Strobe Only": {
+            "channels": 4,
+            "gdtfMode": "Strobe Only",
+            "status": "matched"
+          },
+          "RGBW Strobe": {
+            "channels": 8,
+            "gdtfMode": "RGBW Strobe",
+            "status": "matched"
+          },
+          "RGB Mode 1": {
+            "channels": 10,
+            "gdtfMode": "RGB Mode 1",
+            "status": "matched"
+          },
+          "RGBW Mode 1": {
+            "channels": 12,
+            "gdtfMode": "RGBW Mode 1",
+            "status": "matched"
+          },
+          "RGB Mode 6": {
+            "channels": 25,
+            "gdtfMode": "RGB Mode 6",
+            "status": "matched"
+          },
+          "RGB Mode 12": {
+            "channels": 43,
+            "gdtfMode": "RGB Mode 12",
+            "status": "matched"
+          },
+          "RGB Mode 20": {
+            "channels": 67,
+            "gdtfMode": "RGB Mode 20",
+            "status": "matched"
+          },
+          "RGB Mode 120": {
+            "channels": 367,
+            "gdtfMode": "RGB Mode 120",
+            "status": "matched"
+          },
+          "RGBW Mode 6": {
+            "channels": 32,
+            "gdtfMode": "RGBW Mode 6",
+            "status": "matched"
+          },
+          "RGBW Mode 12": {
+            "channels": 56,
+            "gdtfMode": "RGBW Mode 12",
+            "status": "matched"
+          },
+          "RGBW Mode 20": {
+            "channels": 88,
+            "gdtfMode": "RGBW Mode 20",
+            "status": "matched"
+          },
+          "RGBW Mode 120": {
+            "channels": 488,
+            "gdtfMode": "RGBW Mode 120",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Solaris Flare XL 120"
+    },
+    {
+      "fixture": "Solaris Flare XL 36",
+      "watts": 1000.0,
+      "weight": null,
+      "modes": {
+        "RGB 8bit": 3,
+        "RGBW 8bit ": 4,
+        "RGB 16bit": 6,
+        "RGBW 16bit": 8,
+        "RGB Strobe": 7,
+        "Strobe Only": 4,
+        "RGBW Strobe": 8,
+        "RGB Mode 1": 10,
+        "RGB Mode 2": 13,
+        "RGB Mode 3": 16,
+        "RGB Mode 4": 19,
+        "RGB Mode 6": 25,
+        "RGB Mode 9": 34,
+        "RGB Mode 12": 43,
+        "RGB Mode 18": 61,
+        "RGB Mode 36": 115,
+        "RGBW Mode 1": 12,
+        "RGBW Mode 2": 16,
+        "RGBW Mode 3": 20,
+        "RGBW Mode 4": 24,
+        "RGBW Mode 6": 32,
+        "RGBW Mode 9": 44,
+        "RGBW Mode 12": 56,
+        "RGBW Mode 18": 80,
+        "RGBW Mode 36": 152
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/solaris",
+        "suggestedFileName": "Solaris__Solaris_Flare_XL_36.gdtf",
+        "file": "fixtures/solaris/Solaris@Solaris_Flare_XL_36@v1.0.0_-_MFR_Release.gdtf",
+        "modes": {
+          "RGB 8bit": {
+            "channels": 3,
+            "gdtfMode": "RGB 8bit",
+            "status": "matched"
+          },
+          "RGBW 8bit ": {
+            "channels": 4,
+            "gdtfMode": "RGBW 8bit ",
+            "status": "matched"
+          },
+          "RGB 16bit": {
+            "channels": 6,
+            "gdtfMode": "RGB 16bit",
+            "status": "matched"
+          },
+          "RGBW 16bit": {
+            "channels": 8,
+            "gdtfMode": "RGBW 16bit",
+            "status": "matched"
+          },
+          "RGB Strobe": {
+            "channels": 7,
+            "gdtfMode": "RGB Strobe",
+            "status": "matched"
+          },
+          "Strobe Only": {
+            "channels": 4,
+            "gdtfMode": "Strobe Only",
+            "status": "matched"
+          },
+          "RGBW Strobe": {
+            "channels": 8,
+            "gdtfMode": "RGBW Strobe",
+            "status": "matched"
+          },
+          "RGB Mode 1": {
+            "channels": 10,
+            "gdtfMode": "RGB Mode 1",
+            "status": "matched"
+          },
+          "RGB Mode 2": {
+            "channels": 13,
+            "gdtfMode": "RGB Mode 2",
+            "status": "matched"
+          },
+          "RGB Mode 3": {
+            "channels": 16,
+            "gdtfMode": "RGB Mode 3",
+            "status": "matched"
+          },
+          "RGB Mode 4": {
+            "channels": 19,
+            "gdtfMode": "RGB Mode 4",
+            "status": "matched"
+          },
+          "RGB Mode 6": {
+            "channels": 25,
+            "gdtfMode": "RGB Mode 6",
+            "status": "matched"
+          },
+          "RGB Mode 9": {
+            "channels": 34,
+            "gdtfMode": "RGB Mode 9",
+            "status": "matched"
+          },
+          "RGB Mode 12": {
+            "channels": 43,
+            "gdtfMode": "RGB Mode 12",
+            "status": "matched"
+          },
+          "RGB Mode 18": {
+            "channels": 61,
+            "gdtfMode": "RGB Mode 18",
+            "status": "matched"
+          },
+          "RGB Mode 36": {
+            "channels": 115,
+            "gdtfMode": "RGB Mode 36",
+            "status": "matched"
+          },
+          "RGBW Mode 1": {
+            "channels": 12,
+            "gdtfMode": "RGBW Mode 1",
+            "status": "matched"
+          },
+          "RGBW Mode 2": {
+            "channels": 16,
+            "gdtfMode": "RGBW Mode 2",
+            "status": "matched"
+          },
+          "RGBW Mode 3": {
+            "channels": 20,
+            "gdtfMode": "RGBW Mode 3",
+            "status": "matched"
+          },
+          "RGBW Mode 4": {
+            "channels": 24,
+            "gdtfMode": "RGBW Mode 4",
+            "status": "matched"
+          },
+          "RGBW Mode 6": {
+            "channels": 32,
+            "gdtfMode": "RGBW Mode 6",
+            "status": "matched"
+          },
+          "RGBW Mode 9": {
+            "channels": 44,
+            "gdtfMode": "RGBW Mode 9",
+            "status": "matched"
+          },
+          "RGBW Mode 12": {
+            "channels": 56,
+            "gdtfMode": "RGBW Mode 12",
+            "status": "matched"
+          },
+          "RGBW Mode 18": {
+            "channels": 80,
+            "gdtfMode": "RGBW Mode 18",
+            "status": "matched"
+          },
+          "RGBW Mode 36": {
+            "channels": 152,
+            "gdtfMode": "RGBW Mode 36",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Solaris Flare XL 36"
+    },
+    {
+      "fixture": "Solaris Flare XL 72",
+      "watts": 1000.0,
+      "weight": 31.1,
+      "modes": {
+        "RGB 8bit": 3,
+        "RGBW 8bit ": 4,
+        "RGB 16bit": 6,
+        "RGBW 16bit": 8,
+        "RGB Strobe": 7,
+        "Strobe Only": 4,
+        "RGBW Strobe": 8,
+        "RGB Mode 1": 10,
+        "RGB Mode 2": 13,
+        "RGB Mode 2H": 13,
+        "RGB Mode 3H": 16,
+        "RGB Mode 3V": 16,
+        "RGB Mode 4": 19,
+        "RGB Mode 4V": 19,
+        "RGB Mode 6": 32,
+        "RGB Mode 6H": 25,
+        "RGB Mode 6V": 25,
+        "RGB Mode 8": 31,
+        "RGB Mode 9": 34,
+        "RGB Mode12": 43,
+        "RGB Mode 12H": 43,
+        "RGB Mode 12V": 43,
+        "RGB Mode 18": 61,
+        "RGB Mode 18H": 61,
+        "RGB Mode 24H": 79,
+        "RGB Mode 24V": 79,
+        "RGB Mode 36H": 115,
+        "RGB Mode 36V": 115,
+        "RGBW Mode 1": 12,
+        "RGBW Mode 2": 16,
+        "RGBW Mode 2H": 16,
+        "RGBW Mode 3H": 20,
+        "RGBW Mode 3V": 20,
+        "RGBW Mode 4": 24,
+        "RGBW Mode 4V": 24,
+        "RGBW Mode 6": 32,
+        "RGBW Mode 6H": 32,
+        "RGBW Mode 6V": 32,
+        "RGBW Mode 8": 40,
+        "RGBW Mode 9": 44,
+        "RGBW Mode 12": 56,
+        "RGBW Mode 12H": 56,
+        "RGBW Mode 12V": 56,
+        "RGBW Mode 18": 80,
+        "RGBW Mode 18H": 80,
+        "RGBW Mode 24H": 104,
+        "RGBW Mode 24V": 104,
+        "RGBW Mode 36H": 152,
+        "RGBW Mode 36V": 152,
+        "RGB Mode 72": 223,
+        "RGBW Mode 72": 296
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/solaris",
+        "suggestedFileName": "Solaris__Solaris_Flare_XL_72.gdtf",
+        "file": "fixtures/solaris/Solaris@Solaris_Flare_XL_72@v1.0.0_-_MFR_Release.gdtf",
+        "modes": {
+          "RGB 8bit": {
+            "channels": 3,
+            "gdtfMode": "RGB 8bit",
+            "status": "matched"
+          },
+          "RGBW 8bit ": {
+            "channels": 4,
+            "gdtfMode": "RGBW 8bit ",
+            "status": "matched"
+          },
+          "RGB 16bit": {
+            "channels": 6,
+            "gdtfMode": "RGB 16bit",
+            "status": "matched"
+          },
+          "RGBW 16bit": {
+            "channels": 8,
+            "gdtfMode": "RGBW 16bit",
+            "status": "matched"
+          },
+          "RGB Strobe": {
+            "channels": 7,
+            "gdtfMode": "RGB Strobe",
+            "status": "matched"
+          },
+          "Strobe Only": {
+            "channels": 4,
+            "gdtfMode": "Strobe Only",
+            "status": "matched"
+          },
+          "RGBW Strobe": {
+            "channels": 8,
+            "gdtfMode": "RGBW Strobe",
+            "status": "matched"
+          },
+          "RGB Mode 1": {
+            "channels": 10,
+            "gdtfMode": "RGB Mode 1",
+            "status": "matched"
+          },
+          "RGB Mode 2": {
+            "channels": 13,
+            "gdtfMode": "RGB Mode 2",
+            "status": "matched"
+          },
+          "RGB Mode 2H": {
+            "channels": 13,
+            "gdtfMode": "RGB Mode 2H",
+            "status": "matched"
+          },
+          "RGB Mode 3H": {
+            "channels": 16,
+            "gdtfMode": "RGB Mode 3H",
+            "status": "matched"
+          },
+          "RGB Mode 3V": {
+            "channels": 16,
+            "gdtfMode": "RGB Mode 3V",
+            "status": "matched"
+          },
+          "RGB Mode 4": {
+            "channels": 19,
+            "gdtfMode": "RGB Mode 4",
+            "status": "matched"
+          },
+          "RGB Mode 4V": {
+            "channels": 19,
+            "gdtfMode": "RGB Mode 4V",
+            "status": "matched"
+          },
+          "RGB Mode 6": {
+            "channels": 32,
+            "gdtfMode": "RGB Mode 6",
+            "status": "matched"
+          },
+          "RGB Mode 6H": {
+            "channels": 25,
+            "gdtfMode": "RGB Mode 6H",
+            "status": "matched"
+          },
+          "RGB Mode 6V": {
+            "channels": 25,
+            "gdtfMode": "RGB Mode 6V",
+            "status": "matched"
+          },
+          "RGB Mode 8": {
+            "channels": 31,
+            "gdtfMode": "RGB Mode 8",
+            "status": "matched"
+          },
+          "RGB Mode 9": {
+            "channels": 34,
+            "gdtfMode": "RGB Mode 9",
+            "status": "matched"
+          },
+          "RGB Mode12": {
+            "channels": 43,
+            "gdtfMode": "RGB Mode12",
+            "status": "matched"
+          },
+          "RGB Mode 12H": {
+            "channels": 43,
+            "gdtfMode": "RGB Mode 12H",
+            "status": "matched"
+          },
+          "RGB Mode 12V": {
+            "channels": 43,
+            "gdtfMode": "RGB Mode 12V",
+            "status": "matched"
+          },
+          "RGB Mode 18": {
+            "channels": 61,
+            "gdtfMode": "RGB Mode 18",
+            "status": "matched"
+          },
+          "RGB Mode 18H": {
+            "channels": 61,
+            "gdtfMode": "RGB Mode 18H",
+            "status": "matched"
+          },
+          "RGB Mode 24H": {
+            "channels": 79,
+            "gdtfMode": "RGB Mode 24H",
+            "status": "matched"
+          },
+          "RGB Mode 24V": {
+            "channels": 79,
+            "gdtfMode": "RGB Mode 24V",
+            "status": "matched"
+          },
+          "RGB Mode 36H": {
+            "channels": 115,
+            "gdtfMode": "RGB Mode 36H",
+            "status": "matched"
+          },
+          "RGB Mode 36V": {
+            "channels": 115,
+            "gdtfMode": "RGB Mode 36V",
+            "status": "matched"
+          },
+          "RGBW Mode 1": {
+            "channels": 12,
+            "gdtfMode": "RGBW Mode 1",
+            "status": "matched"
+          },
+          "RGBW Mode 2": {
+            "channels": 16,
+            "gdtfMode": "RGBW Mode 2",
+            "status": "matched"
+          },
+          "RGBW Mode 2H": {
+            "channels": 16,
+            "gdtfMode": "RGBW Mode 2H",
+            "status": "matched"
+          },
+          "RGBW Mode 3H": {
+            "channels": 20,
+            "gdtfMode": "RGBW Mode 3H",
+            "status": "matched"
+          },
+          "RGBW Mode 3V": {
+            "channels": 20,
+            "gdtfMode": "RGBW Mode 3V",
+            "status": "matched"
+          },
+          "RGBW Mode 4": {
+            "channels": 24,
+            "gdtfMode": "RGBW Mode 4",
+            "status": "matched"
+          },
+          "RGBW Mode 4V": {
+            "channels": 24,
+            "gdtfMode": "RGBW Mode 4V",
+            "status": "matched"
+          },
+          "RGBW Mode 6": {
+            "channels": 32,
+            "gdtfMode": "RGBW Mode 6",
+            "status": "matched"
+          },
+          "RGBW Mode 6H": {
+            "channels": 32,
+            "gdtfMode": "RGBW Mode 6H",
+            "status": "matched"
+          },
+          "RGBW Mode 6V": {
+            "channels": 32,
+            "gdtfMode": "RGBW Mode 6V",
+            "status": "matched"
+          },
+          "RGBW Mode 8": {
+            "channels": 40,
+            "gdtfMode": "RGBW Mode 8",
+            "status": "matched"
+          },
+          "RGBW Mode 9": {
+            "channels": 44,
+            "gdtfMode": "RGBW Mode 9",
+            "status": "matched"
+          },
+          "RGBW Mode 12": {
+            "channels": 56,
+            "gdtfMode": "RGBW Mode 12",
+            "status": "matched"
+          },
+          "RGBW Mode 12H": {
+            "channels": 56,
+            "gdtfMode": "RGBW Mode 12H",
+            "status": "matched"
+          },
+          "RGBW Mode 12V": {
+            "channels": 56,
+            "gdtfMode": "RGBW Mode 12V",
+            "status": "matched"
+          },
+          "RGBW Mode 18": {
+            "channels": 80,
+            "gdtfMode": "RGBW Mode 18",
+            "status": "matched"
+          },
+          "RGBW Mode 18H": {
+            "channels": 80,
+            "gdtfMode": "RGBW Mode 18H",
+            "status": "matched"
+          },
+          "RGBW Mode 24H": {
+            "channels": 104,
+            "gdtfMode": "RGBW Mode 24H",
+            "status": "matched"
+          },
+          "RGBW Mode 24V": {
+            "channels": 104,
+            "gdtfMode": "RGBW Mode 24V",
+            "status": "matched"
+          },
+          "RGBW Mode 36H": {
+            "channels": 152,
+            "gdtfMode": "RGBW Mode 36H",
+            "status": "matched"
+          },
+          "RGBW Mode 36V": {
+            "channels": 152,
+            "gdtfMode": "RGBW Mode 36V",
+            "status": "matched"
+          },
+          "RGB Mode 72": {
+            "channels": 223,
+            "gdtfMode": "RGB Mode 72",
+            "status": "matched"
+          },
+          "RGBW Mode 72": {
+            "channels": 296,
+            "gdtfMode": "RGBW Mode 72",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Solaris Flare XL 72"
+    },
+    {
+      "fixture": "Solaris Flare XLR 1x16",
+      "watts": 1000.0,
+      "weight": 12.0,
+      "modes": {
+        "RGB 8bit": 3,
+        "RGBW 8bit ": 4,
+        "RGB 16bit": 6,
+        "RGBW 16bit": 8,
+        "RGB Strobe": 7,
+        "Strobe Only": 4,
+        "RGBW Strobe": 8,
+        "RGB Mode 1": 10,
+        "RGB Mode 2": 13,
+        "RGB Mode 4": 19,
+        "RGB Mode 8": 31,
+        "RGB Mode 18": 55,
+        "RGBW Mode 1": 12,
+        "RGBW Mode 2": 16,
+        "RGBW Mode 4": 24,
+        "RGBW Mode 8": 40,
+        "RGBW Mode 18": 72
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/solaris",
+        "suggestedFileName": "Solaris__Solaris_Flare_XLR_1x16.gdtf",
+        "file": "fixtures/solaris/Solaris@Solaris_Flare_XLR_1x16@v1.0.0_-_MFR_Release.gdtf",
+        "modes": {
+          "RGB 8bit": {
+            "channels": 3,
+            "gdtfMode": "RGB 8bit",
+            "status": "matched"
+          },
+          "RGBW 8bit ": {
+            "channels": 4,
+            "gdtfMode": "RGBW 8bit ",
+            "status": "matched"
+          },
+          "RGB 16bit": {
+            "channels": 6,
+            "gdtfMode": "RGB 16bit",
+            "status": "matched"
+          },
+          "RGBW 16bit": {
+            "channels": 8,
+            "gdtfMode": "RGBW 16bit",
+            "status": "matched"
+          },
+          "RGB Strobe": {
+            "channels": 7,
+            "gdtfMode": "RGB Strobe",
+            "status": "matched"
+          },
+          "Strobe Only": {
+            "channels": 4,
+            "gdtfMode": "Strobe Only",
+            "status": "matched"
+          },
+          "RGBW Strobe": {
+            "channels": 8,
+            "gdtfMode": "RGBW Strobe",
+            "status": "matched"
+          },
+          "RGB Mode 1": {
+            "channels": 10,
+            "gdtfMode": "RGB Mode 1",
+            "status": "matched"
+          },
+          "RGB Mode 2": {
+            "channels": 13,
+            "gdtfMode": "RGB Mode 2",
+            "status": "matched"
+          },
+          "RGB Mode 4": {
+            "channels": 19,
+            "gdtfMode": "RGB Mode 4",
+            "status": "matched"
+          },
+          "RGB Mode 8": {
+            "channels": 31,
+            "gdtfMode": "RGB Mode 8",
+            "status": "matched"
+          },
+          "RGB Mode 18": {
+            "channels": 55,
+            "gdtfMode": "RGB Mode 18",
+            "status": "matched"
+          },
+          "RGBW Mode 1": {
+            "channels": 12,
+            "gdtfMode": "RGBW Mode 1",
+            "status": "matched"
+          },
+          "RGBW Mode 2": {
+            "channels": 16,
+            "gdtfMode": "RGBW Mode 2",
+            "status": "matched"
+          },
+          "RGBW Mode 4": {
+            "channels": 24,
+            "gdtfMode": "RGBW Mode 4",
+            "status": "matched"
+          },
+          "RGBW Mode 8": {
+            "channels": 40,
+            "gdtfMode": "RGBW Mode 8",
+            "status": "matched"
+          },
+          "RGBW Mode 18": {
+            "channels": 72,
+            "gdtfMode": "RGBW Mode 18",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Solaris Flare XLR 1x16"
+    },
+    {
+      "fixture": "Solaris Flare XLR 1x8",
+      "watts": 1000.0,
+      "weight": 6.0,
+      "modes": {
+        "RGB 8bit": 3,
+        "RGBW 8bit ": 4,
+        "RGB 16bit": 6,
+        "RGBW 16bit": 8,
+        "RGB Strobe": 7,
+        "Strobe Only": 4,
+        "RGBW Strobe": 8,
+        "RGB Mode 1": 10,
+        "RGB Mode 2": 13,
+        "RGB Mode 4": 19,
+        "RGB Mode 9": 31,
+        "RGBW Mode 1": 12,
+        "RGBW Mode 2": 16,
+        "RGBW Mode 4": 24,
+        "RGBW Mode 9": 40
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/solaris",
+        "suggestedFileName": "Solaris__Solaris_Flare_XLR_1x8.gdtf",
+        "file": "fixtures/solaris/Solaris@Solaris_Flare_XLR_1x8@v1.0.0_-_MFR_Release.gdtf",
+        "modes": {
+          "RGB 8bit": {
+            "channels": 3,
+            "gdtfMode": "RGB 8bit",
+            "status": "matched"
+          },
+          "RGBW 8bit ": {
+            "channels": 4,
+            "gdtfMode": "RGBW 8bit ",
+            "status": "matched"
+          },
+          "RGB 16bit": {
+            "channels": 6,
+            "gdtfMode": "RGB 16bit",
+            "status": "matched"
+          },
+          "RGBW 16bit": {
+            "channels": 8,
+            "gdtfMode": "RGBW 16bit",
+            "status": "matched"
+          },
+          "RGB Strobe": {
+            "channels": 7,
+            "gdtfMode": "RGB Strobe",
+            "status": "matched"
+          },
+          "Strobe Only": {
+            "channels": 4,
+            "gdtfMode": "Strobe Only",
+            "status": "matched"
+          },
+          "RGBW Strobe": {
+            "channels": 8,
+            "gdtfMode": "RGBW Strobe",
+            "status": "matched"
+          },
+          "RGB Mode 1": {
+            "channels": 10,
+            "gdtfMode": "RGB Mode 1",
+            "status": "matched"
+          },
+          "RGB Mode 2": {
+            "channels": 13,
+            "gdtfMode": "RGB Mode 2",
+            "status": "matched"
+          },
+          "RGB Mode 4": {
+            "channels": 19,
+            "gdtfMode": "RGB Mode 4",
+            "status": "matched"
+          },
+          "RGB Mode 9": {
+            "channels": 31,
+            "gdtfMode": "RGB Mode 9",
+            "status": "matched"
+          },
+          "RGBW Mode 1": {
+            "channels": 12,
+            "gdtfMode": "RGBW Mode 1",
+            "status": "matched"
+          },
+          "RGBW Mode 2": {
+            "channels": 16,
+            "gdtfMode": "RGBW Mode 2",
+            "status": "matched"
+          },
+          "RGBW Mode 4": {
+            "channels": 24,
+            "gdtfMode": "RGBW Mode 4",
+            "status": "matched"
+          },
+          "RGBW Mode 9": {
+            "channels": 40,
+            "gdtfMode": "RGBW Mode 9",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Solaris Flare XLR 1x8"
+    },
+    {
+      "fixture": "Solaris Mozart",
+      "watts": 19.2,
+      "weight": 0.6,
+      "modes": {
+        "RGB 1pix8b (3ch)": 3,
+        "RGB 4pix8b (12ch)": 12,
+        "RGB 16pix 8b (48ch)": 48
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/solaris",
+        "suggestedFileName": "Solaris__Solaris_Mozart.gdtf",
+        "file": "fixtures/solaris/Solaris@Solaris_Mozart@v1.0.9_-_MFR_Release.gdtf",
+        "modes": {
+          "RGB 1pix8b (3ch)": {
+            "channels": 3,
+            "gdtfMode": "RGB 1pix8b (3ch)",
+            "status": "matched"
+          },
+          "RGB 4pix8b (12ch)": {
+            "channels": 12,
+            "gdtfMode": "RGB 4pix8b (12ch)",
+            "status": "matched"
+          },
+          "RGB 16pix 8b (48ch)": {
+            "channels": 48,
+            "gdtfMode": "RGB 16pix 8b (48ch)",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Mozart"
+    },
+    {
+      "fixture": "Solaris Mozart FLR",
+      "watts": 19.2,
+      "weight": 0.998,
+      "modes": {
+        "RGBW 1pix8b (4ch)": 4,
+        "RGBW 4pix8b (16ch)": 16,
+        "RGBW 16pix8b (64ch)": 64,
+        "RGB 1pix8b (3ch)": 3,
+        "RGB 4pix8b (12ch)": 12,
+        "RGB 16pix8b (48ch)": 48
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/solaris",
+        "suggestedFileName": "Solaris__Solaris_Mozart_FLR.gdtf",
+        "file": "fixtures/solaris/Solaris@Solaris_Mozart_FLR@v1.0.10_-_MFR_Release.gdtf",
+        "modes": {
+          "RGBW 1pix8b (4ch)": {
+            "channels": 4,
+            "gdtfMode": "RGBW 1pix8b (4ch)",
+            "status": "matched"
+          },
+          "RGBW 4pix8b (16ch)": {
+            "channels": 16,
+            "gdtfMode": "RGBW 4pix8b (16ch)",
+            "status": "matched"
+          },
+          "RGBW 16pix8b (64ch)": {
+            "channels": 64,
+            "gdtfMode": "RGBW 16pix8b (64ch)",
+            "status": "matched"
+          },
+          "RGB 1pix8b (3ch)": {
+            "channels": 3,
+            "gdtfMode": "RGB 1pix8b (3ch)",
+            "status": "matched"
+          },
+          "RGB 4pix8b (12ch)": {
+            "channels": 12,
+            "gdtfMode": "RGB 4pix8b (12ch)",
+            "status": "matched"
+          },
+          "RGB 16pix8b (48ch)": {
+            "channels": 48,
+            "gdtfMode": "RGB 16pix8b (48ch)",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Mozart FLR"
+    },
+    {
+      "fixture": "Solaris Mozart LR",
+      "watts": 19.2,
+      "weight": 0.73,
+      "modes": {
+        "RGB 1pix8b (3ch)": 3,
+        "RGB 4pix8b (12ch)": 12,
+        "RGB 16pix 8b (48ch)": 48
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/solaris",
+        "suggestedFileName": "Solaris__Solaris_Mozart_LR.gdtf",
+        "file": "fixtures/solaris/Solaris@Solaris_Mozart_LR@v1.0.8_-_MFR_Release.gdtf",
+        "modes": {
+          "RGB 1pix8b (3ch)": {
+            "channels": 3,
+            "gdtfMode": "RGB 1pix8b (3ch)",
+            "status": "matched"
+          },
+          "RGB 4pix8b (12ch)": {
+            "channels": 12,
+            "gdtfMode": "RGB 4pix8b (12ch)",
+            "status": "matched"
+          },
+          "RGB 16pix 8b (48ch)": {
+            "channels": 48,
+            "gdtfMode": "RGB 16pix 8b (48ch)",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Mozart LR"
+    },
+    {
+      "fixture": "Solaris Mozart LR FLR",
+      "watts": 14.4,
+      "weight": 0.74,
+      "modes": {
+        "RGBW 1pix8b (4ch)": 4,
+        "RGBW 4pix8b (16ch)": 16,
+        "RGBW 12pix 8b (48ch)": 48,
+        "RGB 1pix8b (3ch)": 3,
+        "RGB 4pix8b (12ch)": 12,
+        "RGB 12pix 8b (36ch)": 36
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/solaris",
+        "suggestedFileName": "Solaris__Solaris_Mozart_LR_FLR.gdtf",
+        "file": "fixtures/solaris/Solaris@Solaris_Mozart_LR_FLR@v1.0.10_-_MFR_Release.gdtf",
+        "modes": {
+          "RGBW 1pix8b (4ch)": {
+            "channels": 4,
+            "gdtfMode": "RGBW 1pix8b (4ch)",
+            "status": "matched"
+          },
+          "RGBW 4pix8b (16ch)": {
+            "channels": 16,
+            "gdtfMode": "RGBW 4pix8b (16ch)",
+            "status": "matched"
+          },
+          "RGBW 12pix 8b (48ch)": {
+            "channels": 48,
+            "gdtfMode": "RGBW 12pix 8b (48ch)",
+            "status": "matched"
+          },
+          "RGB 1pix8b (3ch)": {
+            "channels": 3,
+            "gdtfMode": "RGB 1pix8b (3ch)",
+            "status": "matched"
+          },
+          "RGB 4pix8b (12ch)": {
+            "channels": 12,
+            "gdtfMode": "RGB 4pix8b (12ch)",
+            "status": "matched"
+          },
+          "RGB 12pix 8b (36ch)": {
+            "channels": 36,
+            "gdtfMode": "RGB 12pix 8b (36ch)",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Mozart LR FLR"
+    },
+    {
+      "fixture": "Solaris Mozart One",
+      "watts": 20.0,
+      "weight": 1.75,
+      "modes": {
+        "RGBW 1pix 8b (4ch)": 4,
+        "RGB 1pix 8b (3ch)": 3,
+        "White 1pix 8b (1ch)": 1
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/solaris",
+        "suggestedFileName": "Solaris__Solaris_Mozart_One.gdtf",
+        "file": "fixtures/solaris/Solaris@Solaris_Mozart_One@v1.0.9_-_MFR_Release.gdtf",
+        "modes": {
+          "RGBW 1pix 8b (4ch)": {
+            "channels": 4,
+            "gdtfMode": "RGBW 1pix 8b (4ch)",
+            "status": "matched"
+          },
+          "RGB 1pix 8b (3ch)": {
+            "channels": 3,
+            "gdtfMode": "RGB 1pix 8b (3ch)",
+            "status": "matched"
+          },
+          "White 1pix 8b (1ch)": {
+            "channels": 1,
+            "gdtfMode": "White 1pix 8b (1ch)",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Mozart One"
+    },
+    {
+      "fixture": "Solaris Mozart One FLR",
+      "watts": 14.4,
+      "weight": 1.5,
+      "modes": {
+        "RGBW 1pix8b (4ch)": 4,
+        "RGBW 4pix8b (16ch)": 16,
+        "RGBW 12pix 8b (48ch)": 48,
+        "RGB 1pix8b (3ch)": 3,
+        "RGB 4pix8b (12ch)": 12,
+        "RGB 12pix 8b (36ch)": 36
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/solaris",
+        "suggestedFileName": "Solaris__Solaris_Mozart_One_FLR.gdtf",
+        "file": "fixtures/solaris/Solaris@Solaris_Mozart_One_FLR@v1.0.10_-_MFR_Release.gdtf",
+        "modes": {
+          "RGBW 1pix8b (4ch)": {
+            "channels": 4,
+            "gdtfMode": "RGBW 1pix8b (4ch)",
+            "status": "matched"
+          },
+          "RGBW 4pix8b (16ch)": {
+            "channels": 16,
+            "gdtfMode": "RGBW 4pix8b (16ch)",
+            "status": "matched"
+          },
+          "RGBW 12pix 8b (48ch)": {
+            "channels": 48,
+            "gdtfMode": "RGBW 12pix 8b (48ch)",
+            "status": "matched"
+          },
+          "RGB 1pix8b (3ch)": {
+            "channels": 3,
+            "gdtfMode": "RGB 1pix8b (3ch)",
+            "status": "matched"
+          },
+          "RGB 4pix8b (12ch)": {
+            "channels": 12,
+            "gdtfMode": "RGB 4pix8b (12ch)",
+            "status": "matched"
+          },
+          "RGB 12pix 8b (36ch)": {
+            "channels": 36,
+            "gdtfMode": "RGB 12pix 8b (36ch)",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Mozart One FLR"
+    },
+    {
+      "fixture": "Solaris Mozart UV",
+      "watts": 20.0,
+      "weight": 1.48,
+      "modes": {
+        "UV 1pix8b (1ch)": 1,
+        "UV HP 1pix8b (1ch)": 1
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/solaris",
+        "suggestedFileName": "Solaris__Solaris_Mozart_UV.gdtf",
+        "file": "fixtures/solaris/Solaris@Solaris_Mozart_UV@v1.0.7_-_MFR_Release.gdtf",
+        "modes": {
+          "UV 1pix8b (1ch)": {
+            "channels": 1,
+            "gdtfMode": "UV 1pix8b (1ch)",
+            "status": "matched"
+          },
+          "UV HP 1pix8b (1ch)": {
+            "channels": 1,
+            "gdtfMode": "UV HP 1pix8b (1ch)",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Mozart UV"
+    }
+  ]
+}
