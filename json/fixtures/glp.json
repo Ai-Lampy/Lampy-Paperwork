@@ -9,18 +9,19 @@
         "Single Mode": 16
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/glp",
         "suggestedFileName": "GLP__impression_FR1.gdtf",
-        "file": "",
+        "file": "fixtures/glp/GLP@impression_FR1@20250326_FR1_byRG_prelimV2.gdtf",
         "modes": {
           "Single Mode": {
             "channels": 16,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 16Ch",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "imp FR1"
     },
     {
       "fixture": "impression FR2 Wash",
@@ -71,7 +72,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "imp FR2 Wsh"
     },
     {
       "fixture": "impression S500 Profile",
@@ -81,18 +83,19 @@
         "Single Mode": 35
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/glp",
         "suggestedFileName": "GLP__impression_S500_Profile.gdtf",
-        "file": "",
+        "file": "fixtures/glp/GLP@impression_S500_Profil_HC@20250404_S500ProfilHC_byRG_prelimV1.gdtf",
         "modes": {
           "Single Mode": {
             "channels": 35,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Normal Mode",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "imp S500 Prof"
     },
     {
       "fixture": "impression S500 Wash",
@@ -102,18 +105,19 @@
         "Single Mode": 27
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/glp",
         "suggestedFileName": "GLP__impression_S500_Wash.gdtf",
-        "file": "",
+        "file": "fixtures/glp/GLP@impression_S500_Wash_HC@20250710_S500WashHC_byRG_prelimV2.gdtf",
         "modes": {
           "Single Mode": {
             "channels": 27,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Normal Mode",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "imp S500 Wsh"
     },
     {
       "fixture": "impression X4 Bar 10",
@@ -128,15 +132,15 @@
         "S Pix H-Res": 49
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "partial",
         "folder": "fixtures/glp",
         "suggestedFileName": "GLP__impression_X4_Bar_10.gdtf",
-        "file": "",
+        "file": "fixtures/glp/GLP@impression_X4_Bar_10@ledbar.gdtf",
         "modes": {
           "Normal": {
             "channels": 33,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Norm",
+            "status": "matched"
           },
           "Compressed": {
             "channels": 20,
@@ -145,26 +149,27 @@
           },
           "D Pix": {
             "channels": 28,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Dual Pixel Mode",
+            "status": "matched"
           },
           "D Pix H-Res": {
             "channels": 29,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Dual Pixel High Resolution",
+            "status": "matched"
           },
           "S Pix": {
             "channels": 48,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Single Pixel Mode",
+            "status": "matched"
           },
           "S Pix H-Res": {
             "channels": 49,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Single Pixel High Resolution",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "imp X4 Bar 10"
     },
     {
       "fixture": "impression X4 Bar 20",
@@ -179,10 +184,10 @@
         "S Pix H-Res": 89
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "partial",
         "folder": "fixtures/glp",
         "suggestedFileName": "GLP__impression_X4_Bar_20.gdtf",
-        "file": "",
+        "file": "fixtures/glp/GLP@impression_X4_Bar_20@Added_Virtual_Dimmer_Relations.gdtf",
         "modes": {
           "Normal": {
             "channels": 34,
@@ -196,26 +201,27 @@
           },
           "D Pix": {
             "channels": 48,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Dual Pixel Mode",
+            "status": "matched"
           },
           "D Pix H-Res": {
             "channels": 49,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Dual Pixel High Resolution",
+            "status": "matched"
           },
           "S Pix": {
             "channels": 88,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Single Pixel Mode",
+            "status": "matched"
           },
           "S Pix H-Res": {
             "channels": 89,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Single Pixel High Resolution",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "imp X4 Bar 20"
     },
     {
       "fixture": "impression X4 S",
@@ -227,10 +233,10 @@
         "High Res": 19
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "partial",
         "folder": "fixtures/glp",
         "suggestedFileName": "GLP__impression_X4_S.gdtf",
-        "file": "",
+        "file": "fixtures/glp/GLP@impression_X4_S@V1.0.0.0_-_High_Resolution_(Extended)_-Mode_19_DMX_Channel.gdtf",
         "modes": {
           "Compressed": {
             "channels": 14,
@@ -244,11 +250,12 @@
           },
           "High Res": {
             "channels": 19,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended Mode 19CH",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "imp X4 S"
     },
     {
       "fixture": "impression X5",
@@ -263,10 +270,10 @@
         "Multipix Compressed RGBL": 89
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "partial",
         "folder": "fixtures/glp",
         "suggestedFileName": "GLP__impression_X5.gdtf",
-        "file": "",
+        "file": "fixtures/glp/GLP@impression_X5@20260708_X5_byGLP_prelim04.gdtf",
         "modes": {
           "Basic": {
             "channels": 24,
@@ -290,16 +297,17 @@
           },
           "Multipix Compressed RGB": {
             "channels": 70,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 5 Mulipix Compressed RGB (71ch)",
+            "status": "matched"
           },
           "Multipix Compressed RGBL": {
             "channels": 89,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 6 Mulipix Compressed RGBL (89ch)",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "imp X5"
     },
     {
       "fixture": "impression X5 Bar 1000",
@@ -314,10 +322,10 @@
         "Multipix Compressed RGBL": 81
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "partial",
         "folder": "fixtures/glp",
         "suggestedFileName": "GLP__impression_X5_Bar_1000.gdtf",
-        "file": "",
+        "file": "fixtures/glp/GLP@impression_X5_Bar_1000@test.gdtf",
         "modes": {
           "Basic": {
             "channels": 20,
@@ -341,16 +349,17 @@
           },
           "Multipix Compressed": {
             "channels": 63,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 5 Mulipix Compressed RGB (63ch)",
+            "status": "matched"
           },
           "Multipix Compressed RGBL": {
             "channels": 81,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 6 Mulipix Compressed RGBL (81ch)",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "imp X5 Bar 1000"
     },
     {
       "fixture": "impression X5 Compact",
@@ -365,10 +374,10 @@
         "Multipix Compressed RGBL": 39
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "partial",
         "folder": "fixtures/glp",
         "suggestedFileName": "GLP__impression_X5_Compact.gdtf",
-        "file": "",
+        "file": "fixtures/glp/GLP@impression_X5_Compact@20250326_X5Compact_byRG_prelimV2.gdtf",
         "modes": {
           "Basic": {
             "channels": 22,
@@ -392,16 +401,17 @@
           },
           "Multipix Compressed RGB": {
             "channels": 32,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 5 Mulipix Compressed RGB (32ch)",
+            "status": "matched"
           },
           "Multipix Compressed RGBL": {
             "channels": 39,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 6 Mulipix Compressed RGBL (39ch)",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "imp X5 Compact"
     },
     {
       "fixture": "impression X5 IP",
@@ -416,10 +426,10 @@
         "Multipix Compressed RGBL": 89
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "partial",
         "folder": "fixtures/glp",
         "suggestedFileName": "GLP__impression_X5_IP.gdtf",
-        "file": "",
+        "file": "fixtures/glp/GLP@impression_X5_IP@20250325_X5IP_byRG_prelimV2.gdtf",
         "modes": {
           "Basic": {
             "channels": 24,
@@ -443,16 +453,17 @@
           },
           "Multipix Compressed RGB": {
             "channels": 70,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 5 Mulipix Compressed RGB (71ch)",
+            "status": "matched"
           },
           "Multipix Compressed RGBL": {
             "channels": 89,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 6 Mulipix Compressed RGBL (89ch)",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "imp X5 IP"
     },
     {
       "fixture": "impression X5 IP Bar 1000",
@@ -467,10 +478,10 @@
         "Multipix Compressed RGBL": 81
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "partial",
         "folder": "fixtures/glp",
         "suggestedFileName": "GLP__impression_X5_IP_Bar_1000.gdtf",
-        "file": "",
+        "file": "fixtures/glp/GLP@impression_X5_IP_Bar_1000@20250327_X5IPBar1000_byRG_prelimV6.gdtf",
         "modes": {
           "Basic": {
             "channels": 20,
@@ -494,16 +505,17 @@
           },
           "Multipix Compressed": {
             "channels": 63,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 5 Mulipix Compressed RGB (63ch)",
+            "status": "matched"
           },
           "Multipix Compressed RGBL": {
             "channels": 81,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 6 Mulipix Compressed RGBL (81ch)",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "imp X5 IP Bar 1000"
     },
     {
       "fixture": "JDC Burst 1",
@@ -522,10 +534,10 @@
         "Mode 10 - Legacy SPix Pro": 62
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "partial",
         "folder": "fixtures/glp",
         "suggestedFileName": "GLP__JDC_Burst_1.gdtf",
-        "file": "",
+        "file": "fixtures/glp/GLP@JDC_Burst_1_New_DMX@20250807_JDCBurst1(NewDMX)_0-3-4-0_byRG_prelim01.gdtf",
         "modes": {
           "Mode 1 - Basic": {
             "channels": 19,
@@ -569,16 +581,17 @@
           },
           "Mode 9 - Legacy Spix": {
             "channels": 68,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 9 Legacy sPix (68ch)",
+            "status": "matched"
           },
           "Mode 10 - Legacy SPix Pro": {
             "channels": 62,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 10 Legacy sPix Pro (62ch)",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "JDC Burst 1"
     },
     {
       "fixture": "JDC Line 1000",
@@ -594,40 +607,40 @@
         "Multipix Quadpix": 78
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "partial",
         "folder": "fixtures/glp",
         "suggestedFileName": "GLP__JDC_Line_1000.gdtf",
-        "file": "",
+        "file": "fixtures/glp/GLP@JDC_Line_1000@20250404_JDCLine1000_byRG_prelimV1.gdtf",
         "modes": {
           "RGBWStrobe": {
             "channels": 32,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 RGBW Strobe (32ch)",
+            "status": "matched"
           },
           "Wstrobe, RGBStrobe": {
             "channels": 68,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 W Strobe + RGB Strobe (68ch)",
+            "status": "matched"
           },
           "Wstrobe, RGB Pixel": {
             "channels": 168,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 3 W Strobe  RGB Pixel (168ch)",
+            "status": "matched"
           },
           "RGBStrobe, W Pixel": {
             "channels": 94,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 4 W + RGB Strobe + W Pixel (94ch)",
+            "status": "matched"
           },
           "MultiPix": {
             "channels": 196,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 5 Multipix (196ch)",
+            "status": "matched"
           },
           "MultiPix Advanced": {
             "channels": 316,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 6 Multipix Advanced (316ch)",
+            "status": "matched"
           },
           "Multipix Quadpix": {
             "channels": 78,
@@ -635,7 +648,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "JDC Line 1000"
     },
     {
       "fixture": "JDC Line 500",
@@ -651,20 +665,20 @@
         "Multipix Quadpix": 38
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "partial",
         "folder": "fixtures/glp",
         "suggestedFileName": "GLP__JDC_Line_500.gdtf",
-        "file": "",
+        "file": "fixtures/glp/GLP@JDC_Line_500@GLP_JDC_Line_500.gdtf",
         "modes": {
           "RGBWStrobe": {
             "channels": 16,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 RGBW Strobe (16ch)",
+            "status": "matched"
           },
           "Wstrobe, RGBStrobe": {
             "channels": 34,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 W Strobe + RGB Strobe (34ch)",
+            "status": "matched"
           },
           "Wstrobe, RGB Pixel": {
             "channels": 83,
@@ -673,26 +687,27 @@
           },
           "RGBStrobe, W Pixel": {
             "channels": 47,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 4 W + RGB Strobe + W Pixel (47ch)",
+            "status": "matched"
           },
           "MultiPix": {
             "channels": 98,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 5 Multipix (98ch)",
+            "status": "matched"
           },
           "MultiPix Advanced": {
             "channels": 158,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 6 Multipix Advanced (158ch)",
+            "status": "matched"
           },
           "Multipix Quadpix": {
             "channels": 38,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 7 Multipix Quadpix (38ch)",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "JDC Line 500"
     },
     {
       "fixture": "JDC1",
@@ -707,10 +722,10 @@
         "Mode 6 - Easy": 11
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "partial",
         "folder": "fixtures/glp",
         "suggestedFileName": "GLP__JDC1.gdtf",
-        "file": "",
+        "file": "fixtures/glp/GLP@JDC_1@MA3_Visualizer_Fixed_62ch.gdtf",
         "modes": {
           "Mode 1 - Compressed": {
             "channels": 14,
@@ -729,8 +744,8 @@
           },
           "Mode 4 - S Pix Pro": {
             "channels": 62,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 4 SPix PRO (62ch)",
+            "status": "matched"
           },
           "Mode 5 - 1 Pix Pro": {
             "channels": 17,
@@ -743,7 +758,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "JDC1"
     },
     {
       "fixture": "JDC2 IP",
@@ -757,10 +773,10 @@
         "M5": 85
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "pending-match",
         "folder": "fixtures/glp",
         "suggestedFileName": "GLP__JDC2_IP.gdtf",
-        "file": "",
+        "file": "fixtures/glp/GLP@JDC2_IP@JDC2_IP_(corrected_in_M4_mode_middle_beam_light_not_showing).gdtf",
         "modes": {
           "M1": {
             "channels": 18,
@@ -788,7 +804,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "JDC2 IP"
     },
     {
       "fixture": "MAD MAXX",
@@ -800,28 +817,29 @@
         "MultiBeam": 70
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/glp",
         "suggestedFileName": "GLP__MAD_MAXX.gdtf",
-        "file": "",
+        "file": "fixtures/glp/GLP@MAD_MAXX_CW@20250820_MadMaxxCW_byRG_VRprelim.gdtf",
         "modes": {
           "Normal": {
             "channels": 15,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 Normal (15ch)",
+            "status": "matched"
           },
           "Segment": {
             "channels": 22,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 Segments (22ch)",
+            "status": "matched"
           },
           "MultiBeam": {
             "channels": 70,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 3 Multi Beam (70ch)",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "MAD MAXX"
     },
     {
       "fixture": "WildBar 16",
@@ -832,10 +850,10 @@
         "Extended": 79
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "pending-match",
         "folder": "fixtures/glp",
         "suggestedFileName": "GLP__WildBar_16.gdtf",
-        "file": "",
+        "file": "fixtures/glp/GLP@Wild_Bar_16@20260402_WildBar16_byRG_M3_prelim02.gdtf",
         "modes": {
           "Standard": {
             "channels": 28,
@@ -848,7 +866,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "WildBar 16"
     }
   ]
 }
