@@ -1,0 +1,397 @@
+{
+  "manufacturer": "Vari-Lite",
+  "fixtures": [
+    {
+      "fixture": "Aurora Strip 12",
+      "watts": 3852.0,
+      "weight": 12.5,
+      "modes": {
+        "SSCC Mode": 12,
+        "SSCC Mode 4 Cell": 39,
+        "SOCC Mode": 17,
+        "SQCC Mode 1 Zone": 4,
+        "SOCC Mode 4 Cell": 53,
+        "SSCC Mode 12 Cell": 111,
+        "SOCC Mode 12 Cell": 149
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/vari-lite",
+        "suggestedFileName": "Vari_Lite__Aurora_Strip_12.gdtf",
+        "file": "fixtures/vari-lite/Vari-Lite@Aurora_Strip_12@Modified_SOCC_Modes_by_GDTFservice.com,_powered_by_Crescit,_commissioned_by_Strand..gdtf",
+        "modes": {
+          "SSCC Mode": {
+            "channels": 12,
+            "gdtfMode": "SSCC Mode",
+            "status": "matched"
+          },
+          "SSCC Mode 4 Cell": {
+            "channels": 39,
+            "gdtfMode": "SSCC Mode 4 Cell",
+            "status": "matched"
+          },
+          "SOCC Mode": {
+            "channels": 17,
+            "gdtfMode": "SOCC Mode",
+            "status": "matched"
+          },
+          "SQCC Mode 1 Zone": {
+            "channels": 4,
+            "gdtfMode": "SQCC Mode 1 Zone",
+            "status": "matched"
+          },
+          "SOCC Mode 4 Cell": {
+            "channels": 53,
+            "gdtfMode": "SOCC Mode 4 Cell",
+            "status": "matched"
+          },
+          "SSCC Mode 12 Cell": {
+            "channels": 111,
+            "gdtfMode": "SSCC Mode 12 Cell",
+            "status": "matched"
+          },
+          "SOCC Mode 12 Cell": {
+            "channels": 149,
+            "gdtfMode": "SOCC Mode 12 Cell",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Aurora12"
+    },
+    {
+      "fixture": "Coda Cyc",
+      "watts": 446.0,
+      "weight": 15.0,
+      "modes": {
+        "SSCC Mode 1 Zone": 13,
+        "SQCC Mode": 4,
+        "SOCC Mode 1 Zone": 17,
+        "SSCC Mode 2 Zone": 21,
+        "SOCC Mode 2 Zone": 29
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/vari-lite",
+        "suggestedFileName": "Vari_Lite__Coda_Cyc.gdtf",
+        "file": "fixtures/vari-lite/Vari-Lite@Coda_Cyc@Update_upload_by_GDTFservice.com,_powered_by_Crescit,_commissioned_by_Strand..gdtf",
+        "modes": {
+          "SSCC Mode 1 Zone": {
+            "channels": 13,
+            "gdtfMode": "SSCC Mode 1 Zone",
+            "status": "matched"
+          },
+          "SQCC Mode": {
+            "channels": 4,
+            "gdtfMode": "SQCC Mode",
+            "status": "matched"
+          },
+          "SOCC Mode 1 Zone": {
+            "channels": 17,
+            "gdtfMode": "SOCC Mode 1 Zone",
+            "status": "matched"
+          },
+          "SSCC Mode 2 Zone": {
+            "channels": 21,
+            "gdtfMode": "SSCC Mode 2 Zone",
+            "status": "matched"
+          },
+          "SOCC Mode 2 Zone": {
+            "channels": 29,
+            "gdtfMode": "SOCC Mode 2 Zone",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "CodaLEDCyc"
+    },
+    {
+      "fixture": "VL1600 Profile",
+      "watts": 820.0,
+      "weight": 32.0,
+      "modes": {
+        "16Bit Enhanced": 45,
+        "16Bit Mode": 40
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/vari-lite",
+        "suggestedFileName": "Vari_Lite__VL1600_Profile.gdtf",
+        "file": "fixtures/vari-lite/Vari-Lite@VL1600_Profile@Update_upload_by_GDTFservice.com,_powered_by_Crescit,_commissioned_by_Vari-Lite..gdtf",
+        "modes": {
+          "16Bit Enhanced": {
+            "channels": 45,
+            "gdtfMode": "16Bit Enhanced",
+            "status": "matched"
+          },
+          "16Bit Mode": {
+            "channels": 40,
+            "gdtfMode": "16Bit Mode",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "VL1600Prof"
+    },
+    {
+      "fixture": "VL2600 Profile",
+      "watts": 820.0,
+      "weight": 32.0,
+      "modes": {
+        "16Bit Enhanced": 47,
+        "16Bit": 42
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/vari-lite",
+        "suggestedFileName": "Vari_Lite__VL2600_Profile.gdtf",
+        "file": "fixtures/vari-lite/Vari-Lite@VL2600_Profile@Update_upload_by_GDTFservice.com,_powered_by_Crescit,_commissioned_by_Vari-Lite..gdtf",
+        "modes": {
+          "16Bit Enhanced": {
+            "channels": 47,
+            "gdtfMode": "16Bit Enhanced",
+            "status": "matched"
+          },
+          "16Bit": {
+            "channels": 42,
+            "gdtfMode": "16Bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "VL2600Profile"
+    },
+    {
+      "fixture": "VL2600 Spot",
+      "watts": 820.0,
+      "weight": 31.0,
+      "modes": {
+        "16Bit Enhanced": 42,
+        "16Bit": 37
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/vari-lite",
+        "suggestedFileName": "Vari_Lite__VL2600_Spot.gdtf",
+        "file": "fixtures/vari-lite/Vari-Lite@VL2600_Spot@Update_upload_by_GDTFservice.com,_powered_by_Crescit,_commissioned_by_Vari-Lite..gdtf",
+        "modes": {
+          "16Bit Enhanced": {
+            "channels": 42,
+            "gdtfMode": "16Bit Enhanced",
+            "status": "matched"
+          },
+          "16Bit": {
+            "channels": 37,
+            "gdtfMode": "16Bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "VL2600Spot"
+    },
+    {
+      "fixture": "VL2600 Wash",
+      "watts": 820.0,
+      "weight": 30.2,
+      "modes": {
+        "16Bit Enhanced": 32,
+        "16Bit": 29
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/vari-lite",
+        "suggestedFileName": "Vari_Lite__VL2600_Wash.gdtf",
+        "file": "fixtures/vari-lite/Vari-Lite@VL2600_Wash@Update_upload_by_GDTFservice.com,_powered_by_Crescit,_commissioned_by_Vari-Lite..gdtf",
+        "modes": {
+          "16Bit Enhanced": {
+            "channels": 32,
+            "gdtfMode": "16Bit Enhanced",
+            "status": "matched"
+          },
+          "16Bit": {
+            "channels": 29,
+            "gdtfMode": "16Bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "VL2600Wash"
+    },
+    {
+      "fixture": "VL3600 Profile IP",
+      "watts": 1505.0,
+      "weight": 47.6,
+      "modes": {
+        "16Bit EN Channel Mode": 54,
+        "16Bit Channel Mode": 49
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/vari-lite",
+        "suggestedFileName": "Vari_Lite__VL3600_Profile_IP.gdtf",
+        "file": "fixtures/vari-lite/Vari-Lite@VL3600_Profile_IP@Update_upload_by_GDTFservice.com,_powered_by_Crescit,_commissioned_by_Vari-Lite..gdtf",
+        "modes": {
+          "16Bit EN Channel Mode": {
+            "channels": 54,
+            "gdtfMode": "16Bit EN Channel Mode",
+            "status": "matched"
+          },
+          "16Bit Channel Mode": {
+            "channels": 49,
+            "gdtfMode": "16Bit Channel Mode",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "VL3600ProfileIP"
+    },
+    {
+      "fixture": "VL5LED Wash",
+      "watts": 1336.0,
+      "weight": 23.5,
+      "modes": {
+        "Smart Color 0": 29,
+        "Smart Color 1": 32,
+        "Smart Color 16": 77,
+        "Open Source 0": 33,
+        "Open Source 1": 36,
+        "Open Source 16": 81
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/vari-lite",
+        "suggestedFileName": "Vari_Lite__VL5LED_Wash.gdtf",
+        "file": "fixtures/vari-lite/Vari-Lite@VL5LED_Wash@Update_upload_by_GDTFservice.com,_powered_by_Crescit,_commissioned_by_Vari-Lite..gdtf",
+        "modes": {
+          "Smart Color 0": {
+            "channels": 29,
+            "gdtfMode": "Smart Color 0",
+            "status": "matched"
+          },
+          "Smart Color 1": {
+            "channels": 32,
+            "gdtfMode": "Smart Color 1",
+            "status": "matched"
+          },
+          "Smart Color 16": {
+            "channels": 77,
+            "gdtfMode": "Smart Color 16",
+            "status": "matched"
+          },
+          "Open Source 0": {
+            "channels": 33,
+            "gdtfMode": "Open Source 0",
+            "status": "matched"
+          },
+          "Open Source 1": {
+            "channels": 36,
+            "gdtfMode": "Open Source 1",
+            "status": "matched"
+          },
+          "Open Source 16": {
+            "channels": 81,
+            "gdtfMode": "Open Source 16",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "VL5LED Wash"
+    },
+    {
+      "fixture": "VL6500 Wash",
+      "watts": 1750.0,
+      "weight": 30.0,
+      "modes": {
+        "16Bit": 20
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/vari-lite",
+        "suggestedFileName": "Vari_Lite__VL6500_Wash.gdtf",
+        "file": "fixtures/vari-lite/Vari-Lite@VL6500_Wash@Update_upload_by_GDTFservice.com,_powered_by_Crescit,_commissioned_by_Vari-Lite..gdtf",
+        "modes": {
+          "16Bit": {
+            "channels": 20,
+            "gdtfMode": "16Bit",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "VL6500Wash"
+    },
+    {
+      "fixture": "VL800 EventProfile",
+      "watts": 575.0,
+      "weight": 21.0,
+      "modes": {
+        "16Bit Enhanced": 45,
+        "16Bit": 40,
+        "Clone": 35
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/vari-lite",
+        "suggestedFileName": "Vari_Lite__VL800_EventProfile.gdtf",
+        "file": "fixtures/vari-lite/Vari-Lite@VL800_EventProfile@Update_upload_by_GDTFservice.com,_powered_by_Crescit,_commissioned_by_Vari-Lite..gdtf",
+        "modes": {
+          "16Bit Enhanced": {
+            "channels": 45,
+            "gdtfMode": "16Bit Enhanced",
+            "status": "matched"
+          },
+          "16Bit": {
+            "channels": 40,
+            "gdtfMode": "16Bit",
+            "status": "matched"
+          },
+          "Clone": {
+            "channels": 35,
+            "gdtfMode": "Clone",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "VL800EventProfile"
+    },
+    {
+      "fixture": "VL800 Eventwash",
+      "watts": 1610.0,
+      "weight": 6.0,
+      "modes": {
+        "16-Bit 1Cell": 22,
+        "16-Bit 7Cell": 70,
+        "8-Bit 1Cell": 17,
+        "8-Bit 7Cell": 41
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/vari-lite",
+        "suggestedFileName": "Vari_Lite__VL800_Eventwash.gdtf",
+        "file": "fixtures/vari-lite/Vari-Lite@VL800_Eventwash@Update_upload_by_GDTFservice.com,_powered_by_Crescit,_commissioned_by_Vari-Lite..gdtf",
+        "modes": {
+          "16-Bit 1Cell": {
+            "channels": 22,
+            "gdtfMode": "16-Bit 1Cell",
+            "status": "matched"
+          },
+          "16-Bit 7Cell": {
+            "channels": 70,
+            "gdtfMode": "16-Bit 7Cell",
+            "status": "matched"
+          },
+          "8-Bit 1Cell": {
+            "channels": 17,
+            "gdtfMode": "8-Bit 1Cell",
+            "status": "matched"
+          },
+          "8-Bit 7Cell": {
+            "channels": 41,
+            "gdtfMode": "8-Bit 7Cell",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "VL800Eventwash"
+    }
+  ]
+}
