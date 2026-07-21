@@ -83,12 +83,20 @@
       "file": "sgm.json"
     },
     {
+      "name": "Showtec",
+      "file": "showtec.json"
+    },
+    {
       "name": "Solaris",
       "file": "solaris.json"
     },
     {
       "name": "Ultratec",
       "file": "ultratec.json"
+    },
+    {
+      "name": "Vari-Lite",
+      "file": "vari-lite.json"
     }
   ]
 }
