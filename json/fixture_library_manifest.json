@@ -67,8 +67,16 @@
       "file": "jem.json"
     },
     {
+      "name": "Look Solutions",
+      "file": "look-solutions.json"
+    },
+    {
       "name": "Luxibel",
       "file": "luxibel.json"
+    },
+    {
+      "name": "MagicFX",
+      "file": "magix-fx.json"
     },
     {
       "name": "Martin",
@@ -81,6 +89,10 @@
     {
       "name": "Portman",
       "file": "portman.json"
+    },
+    {
+      "name": "Resolume",
+      "file": "resolume.json"
     },
     {
       "name": "Robe",
@@ -101,6 +113,10 @@
     {
       "name": "Showtec",
       "file": "showtec.json"
+    },
+    {
+      "name": "Smoke Factory",
+      "file": "smoke-factory.json"
     },
     {
       "name": "Solaris",
