@@ -7,10 +7,10 @@
         "Dimmer - 1 Chan": 1
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "pending-match",
         "folder": "fixtures/generic",
         "suggestedFileName": "Generic__2_Lite_Mole.gdtf",
-        "file": "",
+        "file": "fixtures/generic/Generic@2-lite_Blinder@2-lite_Blinder.gdtf",
         "modes": {
           "Dimmer - 1 Chan": {
             "channels": 1,
@@ -18,7 +18,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "2-Lite Mole"
     },
     {
       "fixture": "4-Lite Mole",
@@ -26,10 +27,10 @@
         "Dimmer - 1 Chan": 1
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "pending-match",
         "folder": "fixtures/generic",
         "suggestedFileName": "Generic__4_Lite_Mole.gdtf",
-        "file": "",
+        "file": "fixtures/generic/Generic@4-lite_Blinder@1.2.3._out_for_real_world_testing_-_added_an_new_image.gdtf",
         "modes": {
           "Dimmer - 1 Chan": {
             "channels": 1,
@@ -37,7 +38,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "4-Lite Mole"
     },
     {
       "fixture": "4-Lite Linear Mole",
@@ -56,7 +58,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "4-Lite Linear Mole"
     },
     {
       "fixture": "8-Lite Mole",
@@ -64,10 +67,10 @@
         "Dimmer - 2 Chan": 2
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "pending-match",
         "folder": "fixtures/generic",
         "suggestedFileName": "Generic__8_Lite_Mole.gdtf",
-        "file": "",
+        "file": "fixtures/generic/Generic@8-lite_Blinder@V-0.1.1.gdtf",
         "modes": {
           "Dimmer - 2 Chan": {
             "channels": 2,
@@ -75,7 +78,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "8-Lite Mole"
     },
     {
       "fixture": "Omni",
@@ -94,7 +98,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "Omni"
     }
   ]
 }
