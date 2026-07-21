@@ -7,18 +7,19 @@
         "Standard": 3
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/mdg",
         "suggestedFileName": "MDG__ATME.gdtf",
-        "file": "",
+        "file": "fixtures/mdg/MDG@ATMe@Release_1.0.gdtf",
         "modes": {
           "Standard": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 0",
+            "status": "matched"
           }
         }
-      }
+      },
+      "shortName": "ATME"
     },
     {
       "fixture": "The ONE",
@@ -26,10 +27,10 @@
         "Standard": 3
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "pending-match",
         "folder": "fixtures/mdg",
         "suggestedFileName": "MDG__The_ONE.gdtf",
-        "file": "",
+        "file": "fixtures/mdg/MDG@theONE@Release_1.0.gdtf",
         "modes": {
           "Standard": {
             "channels": 3,
@@ -37,7 +38,8 @@
             "status": "pending-match"
           }
         }
-      }
+      },
+      "shortName": "The ONE"
     }
   ]
 }
