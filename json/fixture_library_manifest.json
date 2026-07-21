@@ -71,8 +71,20 @@
       "file": "robe.json"
     },
     {
+      "name": "Robert Juliat",
+      "file": "robert-juliat.json"
+    },
+    {
       "name": "Roxx",
       "file": "roxx.json"
+    },
+    {
+      "name": "SGM",
+      "file": "sgm.json"
+    },
+    {
+      "name": "Solaris",
+      "file": "solaris.json"
     },
     {
       "name": "Ultratec",
