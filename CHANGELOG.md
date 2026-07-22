@@ -2,6 +2,20 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V17.1 - 2026-07-22
+
+- Completed a production cleanup and performance audit across the app, fixture library, GDTF collection and static assets.
+- Removed unreachable JavaScript functions, disconnected legacy CSS, obsolete DMX Chart styling and accumulated Patch Options overrides.
+- Consolidated the shared Universe Viewer styling without changing its 14-column layout or current appearance.
+- Enabled normal browser caching for static JSON and GDTF information requests instead of forcing repeat downloads.
+- Prevented fixture-library thumbnails and fixture-information views from retaining entire GDTF archives in memory unnecessarily.
+- Removed exported PDF/project diagnostic payloads that retained large data objects after downloads.
+- Coalesced asynchronous startup reference loads to avoid repeated full renders.
+- Optimized large byte-array Base64 conversion used by project and GDTF processing.
+- Removed the persistent Welcome-screen keyboard listener after the overlay closes.
+- Restored backdrop closing for the single-distro settings pane by connecting its existing close-state handler.
+- Removed macOS metadata files and confirmed every remaining GDTF is referenced, unique, structurally valid and below GitHub's individual-file limit.
+
 ## V17 - 2026-07-22
 
 - Removed the legacy 20-column DMX Chart from the DMX Summary Universe pane.
