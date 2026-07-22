@@ -2,6 +2,13 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V17.3 - 2026-07-22
+
+- Updated the shared button background, border and horizontal padding.
+- Changed Fixture Patch statistics into a compact vertical grid.
+- Reordered the Fixture Patch toolbar to place fixture actions first, followed by name display, column/format tools, position summary, import and export.
+- Removed the redundant Fixture Patch heading from the toolbar.
+
 ## V17.2 - 2026-07-22
 
 - Moved the Fixture Patch lock beside each fixture-group options button.
