@@ -2,6 +2,47 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V17 - 2026-07-22
+
+- Removed the legacy 20-column DMX Chart from the DMX Summary Universe pane.
+- Replaced it with the 14-column Universe Viewer used by Patch Options.
+- Added consistent alternating address cells, patched-range borders, FIX ID boundary labels and hover details.
+- Preserved the universe utilisation summary, move-universe control and patched-fixture table.
+- Increased Universe Viewer patched-range labels to 15px.
+- Updated Location Quick Options to populate two 150px columns immediately, with capacity for 12 rows.
+
+## V16.8 - 2026-07-22
+
+- Updated alternating Universe Viewer cells to black.
+- Updated the selected fixture range and legend key to the stronger blue styling.
+- Updated patched fixture ranges to a translucent grey fill with red top and bottom borders.
+- Simplified patched fixture labels in the grid to display only the FIX ID.
+- Retained the fixture type in each patched address hover description.
+
+## V16.7 - 2026-07-22
+
+- Increased Quick Options to a 565px-high panel.
+- Arranged Quick Options into 12 rows and two 150px columns.
+- Updated the header return control to **⬅ Fixture Library**.
+
+## V16.6 - 2026-07-22
+
+- Enlarged the Universe Viewer legend text and colour keys.
+- Renamed the proposed-range legend entry from **Selected range** to **Selected**.
+- Updated the Patched legend key to the requested translucent grey fill with red border.
+- Increased the fixture options card height to 622px.
+- Removed the lower Back button from the rendered Patch Options actions.
+- Anchored the Add Fixtures button to the bottom-left of the Patch Options window.
+- Removed the modal column gap while retaining the 760px Universe Viewer column.
+
+## V16.5 - 2026-07-22
+
+- Kept the Universe Viewer template at 14 addresses per row and aligned fixture-range borders to the same row boundaries.
+- Removed the fixture/address usage metadata line beneath the Universe Viewer heading.
+- Increased spacing between the Universe Viewer heading and navigation controls.
+- Added left padding to the Universe Viewer header.
+- Reset the generic grid-wrapper border, radius, and background while retaining the Patch Options scrolling dimensions.
+
 ## V16.4 - 2026-07-22
 
 - Simplified the viewer heading to **Universe Viewer**.
