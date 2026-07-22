@@ -9,6 +9,8 @@ Live app: [https://ai-lampy.github.io/Lampy-Paperwork/](https://ai-lampy.github.
 - Builds front and rear distro labels, including Socapex, Aux, and Output labels.
 - Maintains fixture patch data with CSV, Excel, .xlsm, and .MVR import support.
 - Compares imported fixture patches against the project master patch and highlights differences.
+- Retains imported MVR fixture matrices and fixture-attached geometry as hidden background metadata.
+- Requires review of unmatched MVR fixtures and conflicting GDTF, mode, or channel-count data before import.
 - Produces power calculation sheets with distro and supply phase totals.
 - Tracks DMX universe usage and available address space.
 - Builds console, NPU, and network paperwork with reference images.
@@ -20,7 +22,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V14.0**
+Current app version: **V16.4**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 

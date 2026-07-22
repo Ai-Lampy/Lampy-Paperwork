@@ -2,6 +2,177 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V16.4 - 2026-07-22
+
+- Simplified the viewer heading to **Universe Viewer**.
+- Added previous and next arrow controls for moving between universes.
+- Added an editable universe-number button that switches to a numeric input when pressed.
+- Kept the Patch Options Universe field synchronized with the universe currently displayed in the viewer.
+
+## V16.3 - 2026-07-22
+
+- Rebuilt the Patch Options layout to the supplied 1500px-wide design.
+- Moved **← Fixture Library** beside the Patch Options heading.
+- Increased Patch Options inputs to 45px with bold text and retained blue borders.
+- Updated Patch Options field labels to the larger 15px underlined style.
+- Sized the settings card to 650px × 600px with a blue border and moved its actions lower.
+- Updated the fields/Quick Options layout to 260px plus a flexible 220px minimum column.
+- Reduced Quick Option auto-columns to a 130px minimum width.
+- Expanded the Universe Viewer to 770px × 600px with a 750px scroll area.
+- Allowed the Universe Viewer to fill the available Patch Options window height while retaining an independently scrollable address grid.
+- Set the Universe Viewer to 14 addresses per row and aligned occupied-range borders to those row boundaries.
+- Added automatic fixture-summary text fitting from 18px down when its full manufacturer, fixture, mode, and channel description exceeds the available width.
+
+## V16.2 - 2026-07-22
+
+- Reworked Patch Options into three columns: fields, Quick Options, and Universe Viewer.
+- Reduced the Patch Options field grid to 300px × 350px.
+- Changed the Universe Viewer to 10 addresses per row and a 620px grid width.
+- Updated occupied-range edge calculations for the new 10-column layout.
+- Updated the **← Fixture Library** button text and weight.
+
+## V16.1 - 2026-07-22
+
+- Sized the Patch Options input grid to 400px × 350px.
+- Updated text, number, select, and textarea controls to a 40px height with blue borders.
+
+## V16.0 - 2026-07-22
+
+- Added an interactive 512-address universe viewer to Patch Options.
+- Displayed universe addresses in a 20-column grid with selectable cells that update the Universe and Address fields.
+- Marked existing fixture ranges with rounded red borders and fixture identity labels on their start and end addresses.
+- Highlighted the currently proposed fixture range separately from existing patch data.
+- Increased the Patch Options fixture summary to 20px black text.
+- Kept Quick Options empty until a Patch Options field is selected.
+- Allowed long Quick Options lists to continue into additional columns.
+
+## V15.16 - 2026-07-22
+
+- Added a **<-- Fixture Library** button directly beneath the Patch Options header.
+- Returning to the fixture library now preserves the selected manufacturer and fixture.
+
+## V15.15 - 2026-07-22
+
+- Reduced the Add Fixtures library grid height to 560px.
+- Added browser-verified keyboard navigation fixes for the Add Fixtures picker.
+- Restored focus to the selected manufacturer or fixture after the picker rerenders and made the focused option clearly outlined.
+
+## V15.14 - 2026-07-22
+
+- Moved Add Fixtures keyboard handling to the document level while the modal is open, preventing arrow keys from scrolling the page behind it.
+- Restored picker focus automatically when a fixture selection rerender leaves no focused control.
+- Kept focused manufacturer, fixture, mode, patched-fixture, and tab options scrolling into view during keyboard navigation.
+
+## V15.13 - 2026-07-22
+
+- Rebuilt keyboard navigation throughout the Add Fixtures window.
+- Added reliable Up/Down, Home/End, and Left/Right movement across tabs, search fields, patched fixtures, manufacturers, fixtures, and modes.
+- Allowed Arrow Up from a search field and Left/Right from a single patched result to return focus to the picker tabs.
+- Kept Enter and Space selection moving focus into the next available library column.
+- Added Escape-key closing for the Add Fixtures window.
+
+## V15.12 - 2026-07-22
+
+- Reduced the Add Fixtures modal height from 1000px to 700px.
+- Retained the 1900px maximum modal width and 600px internal fixture-picker area.
+
+## V15.11 - 2026-07-22
+
+- Reduced the Add Fixtures picker-list maximum height from 1000px to 480px.
+- Kept overflowing manufacturer, fixture, and mode results independently scrollable.
+
+## V15.10 - 2026-07-22
+
+- Audited **No Colour** handling across Fixture Patch, Add Fixtures, positions, Socapex labels, per-way overrides, Aux outlets, and output labels.
+- Prevented blank and **No Colour** values from being converted to white in every background/position colour field.
+- Preserved intentional white as a real colour in Aux and Output table views.
+- Made a per-way **No Colour** override remain blank instead of falling back to the Socapex master colour.
+- Removed **No Colour** from menus for required text, outline, and border colours, which continue to use their safe defaults.
+- Normalised legacy `No Colour`, `No Color`, `None`, `Blank`, and `Clear` saved values when project data is loaded.
+
+## V15.9 - 2026-07-22
+
+- Fixed **No Colour** being converted to white when adding fixtures.
+- Preserved empty Colour 1 and Colour 2 values when no fixture colour is entered.
+- Fixed blank and **No Colour** selections made directly in the Fixture Patch table.
+- Cleared previously selected Add Fixtures colours when choosing a project position that has no stored colours.
+
+## V15.8 - 2026-07-22
+
+- Enlarged the Add Fixtures modal to a maximum width of 1900px and a height of 1000px.
+- Set the fixture picker workspace to 600px and the four-column library grid to 570px.
+- Increased the fixture picker column minimum height and list maximum height to 1000px.
+- Kept the larger modal-card height scoped to Add Fixtures so other app dialogs retain their existing viewport limits.
+
+## V15.7 - 2026-07-22
+
+- Added keyboard arrow navigation throughout the Add Fixtures picker.
+- Added Up/Down and Home/End movement within manufacturer, fixture, mode, and previously patched fixture lists.
+- Added Left/Right movement between the Manufacture, Fixture, and Mode columns.
+- Added Arrow Down/Up movement from each library search field into its first or last visible result.
+- Added Enter/Space selection with automatic focus movement to the next picker column and a visible keyboard focus outline.
+
+## V15.6 - 2026-07-21
+
+- Added a fourth Fixture Info column to the Add Fixtures library picker.
+- Displayed the selected fixture's GDTF thumbnail, with a clear fallback when the archive has no usable image.
+- Displayed the fixture-library Short Name, weight in kilograms and pounds, and wattage for the selected fixture.
+- Cached GDTF thumbnails for the duration of the Add Fixtures window to avoid repeated downloads and ZIP processing while searching.
+
+## V15.5 - 2026-07-20
+
+- Added a Product Page button beneath the GDTF fixture thumbnail at the same width as the image.
+- Added an optional, validated `productPage` field to fixture-library JSON entries and opened verified manufacturer links in a separate tab.
+- Added the official Chauvet Professional product page for Maverick Storm 1 Flex.
+- Displayed a disabled Product Page button when a fixture does not yet have a verified manufacturer URL instead of generating or guessing a link.
+
+## V15.4 - 2026-07-20
+
+- Added fixture weight to the GDTF Fixture Information header in both kilograms and pounds.
+- Added fixture wattage using the selected mode or fixture-library JSON value.
+- Added the quantity of the selected fixture type, mode, and channel count currently patched in the project.
+
+## V15.3 - 2026-07-20
+
+- Made every GDTF DMX mode button expand into its parsed channel list.
+- Added channel offsets, attributes, channel functions, geometry, and DMX-break information to the expandable mode details.
+- Changed the Fixture Information Short Name to use the fixture-library JSON value instead of the GDTF archive value.
+- Changed colour, gobo, prism, animation, and other wheel slots to wrap onto additional rows instead of producing sideways scrolling.
+
+## V15.2 - 2026-07-20
+
+- Fixed the GDTF fixture-information window so long wheel and slot content scrolls vertically within the available screen height.
+- Kept the fixture-information header and close control visible while its content scrolls.
+- Removed the GDTF fixture marketing-description paragraph from the information window.
+
+## V15.1 - 2026-07-20
+
+- Simplified the GDTF fixture-information header to display the fixture identity and Short Name without the technical file, identifier, and element-count chips.
+- Kept DMX modes, thumbnails, colour wheels, gobos, prisms, animation wheels, and other wheel data dynamically generated from the selected GDTF.
+
+## V15.0 - 2026-07-20
+
+- Made each fixture type in the Home Fixture Info card open a dedicated fixture-information window.
+- Added local, on-demand GDTF display of fixture metadata, DMX modes and channel counts.
+- Added visual wheel data for colour wheels, gobos, prisms, animation wheels, and other GDTF wheels.
+- Displayed embedded GDTF wheel media and fixture thumbnails directly from the matched archive without uploading data or adding server processing.
+- Added clear loading, unavailable-file, missing-media, click-away, and Escape-key behaviour for the fixture-information window.
+
+## V14.2 - 2026-07-20
+
+- Preserved imported MVR fixture matrices and fixture-attached geometry as hidden background metadata.
+- Carried retained fixture matrices and safe fixture geometry back into MVR exports without displaying them in Fixture Patch.
+- Added an MVR discrepancy review for unmatched fixture types, non-exact manufacturer or fixture matches, missing GDTF fields, mode mismatches, and channel-count mismatches.
+- Prevented ambiguous MVR modes from silently falling back to the first fixture-library mode.
+- Required users to select the appropriate library fixture and mode before discrepant MVR rows can be imported.
+
+## V14.1 - 2026-07-20
+
+- Changed Position in Fixture Type Options from free-text entry to the project's Position Summary list.
+- Kept the position list hidden until Position is selected for the fixture-type update.
+- Included a No position choice so positions can still be cleared from selected fixtures.
+- Added `+ Add New Position` to the Position list, with a name field that creates the project position and assigns it to the selected fixtures.
+
 ## V14.0 - 2026-07-20
 
 - Corrected GDTF DMX footprint parsing for pixel fixtures that use geometry references and per-reference DMX offsets.
