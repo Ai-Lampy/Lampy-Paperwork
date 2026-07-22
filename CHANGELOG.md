@@ -2,6 +2,14 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V17.2 - 2026-07-22
+
+- Moved the Fixture Patch lock beside each fixture-group options button.
+- Scoped patch unlocking, row selection and editing to the selected fixture group instead of the entire patch.
+- Moved `Show/Hide Columns` and `Format` from Filter & Sort into the Fixture Patch toolbar.
+- Removed the changing sheet-description hint beneath the main navigation tabs.
+- Updated the preview header spacing and main project/sheet tab container styling.
+
 ## V17.1 - 2026-07-22
 
 - Completed a production cleanup and performance audit across the app, fixture library, GDTF collection and static assets.
