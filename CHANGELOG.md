@@ -2,6 +2,14 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V17.6 - 2026-07-23
+
+- Rebuilt the Power Calculations toolbar with an empty left section and the supplied action order.
+- Moved the Power Calculations Fixture Names control directly into the toolbar markup.
+- Standardised Fixture Patch, Power Calculations and Control/Network toolbar actions with the same spacing, alignment and wrapping.
+- Stacked toolbar Fixture Names labels above their Full Name / Short Name selectors.
+- Preserved Power Calculations PDF page headings by generating them in the export clone.
+
 ## V17.5 - 2026-07-23
 
 - Added the active sheet-tab name after the Lampy Paperwork version in the main header.
