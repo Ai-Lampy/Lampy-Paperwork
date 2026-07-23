@@ -2,6 +2,11 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V17.5 - 2026-07-23
+
+- Added the active sheet-tab name after the Lampy Paperwork version in the main header.
+- Made the header update immediately when switching between Home, Fixture Patch, Power Calculations, Control/Network and Distro Labels.
+
 ## V17.4 - 2026-07-22
 
 - Moved the Fixture Names label above the Full Name / Short Name selector in the Fixture Patch toolbar.
