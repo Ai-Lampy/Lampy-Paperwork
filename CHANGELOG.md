@@ -2,6 +2,11 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V17.10 - 2026-07-23
+
+- Restyled the Home statistic cards with the supplied red borders, grey backgrounds, fixed dimensions and centred content.
+- Reduced the spacing between Home statistic cards and increased the statistic-label prominence.
+
 ## V17.9 - 2026-07-23
 
 - Added an exact `Parameters Required` total beside the Fixture Patch statistics and to the Home page statistics.
