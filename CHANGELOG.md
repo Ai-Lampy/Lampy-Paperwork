@@ -2,6 +2,18 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V17.9 - 2026-07-23
+
+- Added an exact `Parameters Required` total beside the Fixture Patch statistics and to the Home page statistics.
+- Added per-mode grandMA3 parameter counts to every matched fixture-library GDTF reference.
+- Updated browser-side GDTF parsing to retain parameter counts for imported and manually uploaded GDTF files.
+- Renamed the existing Home parameter capacity statistic to `Parameters Available` for clarity.
+
+## V17.8 - 2026-07-23
+
+- Moved the Distro Labels `+ Distro` button into the shared sheet-toolbar actions.
+- Removed the former standalone `+ Distro` control and its unused preview-header action wrapper.
+
 ## V17.7 - 2026-07-23
 
 - Updated the Distro Labels toolbar to use the shared sheet-toolbar action layout.
