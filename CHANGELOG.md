@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V17.7 - 2026-07-23
+
+- Updated the Distro Labels toolbar to use the shared sheet-toolbar action layout.
+- Separated the Front RCBO Labels, Rear Labels and Table View navigation from the right-aligned action controls.
+- Stacked the Distro Labels Fixture Names label above its Full Name / Short Name selector.
+
 ## V17.6 - 2026-07-23
 
 - Rebuilt the Power Calculations toolbar with an empty left section and the supplied action order.
