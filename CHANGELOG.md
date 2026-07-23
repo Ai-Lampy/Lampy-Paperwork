@@ -2,6 +2,11 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V17.4 - 2026-07-22
+
+- Moved the Fixture Names label above the Full Name / Short Name selector in the Fixture Patch toolbar.
+- Kept the shared fixture-name selector layout unchanged in Power Calculations and Distro Labels.
+
 ## V17.3 - 2026-07-22
 
 - Updated the shared button background, border and horizontal padding.
