@@ -2,6 +2,11 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.3 - 2026-07-24
+
+- Increased the Socapex and Unit header labels to 20 pixels.
+- Simplified the repeated Fan Out sub-column names to `Fix ID`, `Fix Type` and `Position`.
+
 ## V19.2 - 2026-07-24
 
 - Added a grouped header row to the Fan Out table.
