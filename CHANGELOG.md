@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.1 - 2026-07-24
+
+- Updated the Fan Out table with a solid 2-pixel outer border and dashed internal cell borders.
+- Reduced the Fan Out header font size and applied solid header borders.
+- Tightened the Socapex and Way columns and added stronger dividers after Way and Position columns.
+
 ## V19 - 2026-07-24
 
 - Added the new display-only `Fan Outs` sheet tab.
