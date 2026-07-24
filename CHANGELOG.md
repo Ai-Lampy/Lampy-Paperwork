@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V17.15 - 2026-07-24
+
+- Removed the collapsible Filter & Sort summary and `<details>` wrapper from Fixture Patch.
+- Made the Fixture Patch filter controls permanently visible.
+- Applied the supplied Clear Filters positioning and removed the unused panel styles and toggle state.
+
 ## V17.14 - 2026-07-24
 
 - Consolidated the updated Home and Fixture Patch styles into their original CSS definitions.
