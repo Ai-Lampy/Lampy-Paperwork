@@ -2,6 +2,13 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.2 - 2026-07-24
+
+- Added a grouped header row to the Fan Out table.
+- Added `Unit 1` through `Unit 4`, each spanning its Fix ID, Fixture Type and Position columns.
+- Changed the blank Way header and Socapex header to span both Fan Out header rows.
+- Removed the redundant `Fan Outs` title while preserving the toolbar layout and right-aligned formatting controls.
+
 ## V19.1 - 2026-07-24
 
 - Updated the Fan Out table with a solid 2-pixel outer border and dashed internal cell borders.
