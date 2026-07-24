@@ -2,6 +2,17 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V17.14 - 2026-07-24
+
+- Consolidated the updated Home and Fixture Patch styles into their original CSS definitions.
+- Removed the obsolete overridden copies of the updated statistic, toolbar and Filter & Sort rules.
+
+## V17.13 - 2026-07-24
+
+- Reduced the vertical gap between Fixture Patch sections.
+- Updated the Fixture Patch toolbar and Filter & Sort body with the supplied three-pixel grey borders.
+- Changed the Filter & Sort body and control grid to the supplied flex layouts.
+
 ## V17.12 - 2026-07-24
 
 - Reduced the Fixture Patch statistic cards to the supplied compact dimensions.
