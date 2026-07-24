@@ -2,6 +2,11 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V17.12 - 2026-07-24
+
+- Reduced the Fixture Patch statistic cards to the supplied compact dimensions.
+- Tightened the card spacing, padding, value sizing and label spacing for the Fixture Patch toolbar.
+
 ## V17.11 - 2026-07-24
 
 - Reordered the Home statistics to Fixtures, Universes, Consoles, Parameters Required, Parameters Available, Distros and Socapexes.
