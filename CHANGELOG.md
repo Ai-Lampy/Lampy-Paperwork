@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.4 - 2026-07-24
+
+- Moved Fixture Patch sheet formatting from a blocking modal into the right-side settings pane.
+- Added a Fan Out Export button and PDF preview using the same paper size, orientation, zoom and download workflow as Power Calculations.
+- Fan Out PDF pages retain Socapex and position colours and display up to four complete Socapexes per page.
+
 ## V19.3 - 2026-07-24
 
 - Increased the Socapex and Unit header labels to 20 pixels.
