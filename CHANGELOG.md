@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V17.11 - 2026-07-24
+
+- Reordered the Home statistics to Fixtures, Universes, Consoles, Parameters Required, Parameters Available, Distros and Socapexes.
+- Restyled the Fixture Patch fixture quantity, fixture type count and required parameters as Home statistic cards.
+- Removed the selected-fixture counter from the Fixture Patch statistics.
+
 ## V17.10 - 2026-07-23
 
 - Restyled the Home statistic cards with the supplied red borders, grey backgrounds, fixed dimensions and centred content.
