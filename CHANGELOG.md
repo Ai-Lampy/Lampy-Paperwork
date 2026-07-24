@@ -2,6 +2,14 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V18.1 - 2026-07-24
+
+- Fixed Phase Totals supply cards so clicking them reliably opens the connected supply settings pane.
+- Changed new power supplies to start with no distros assigned.
+- Changed the Distro Settings Input Supply field to select from supplies already in the project, displayed as `Supply Name - Input Supply`.
+- Added an explicit `No Supply Assigned` option and stopped new distros from being assigned automatically.
+- Moved the Power Calcs and Phase Totals sub-tabs to the left side of the Power Calculations toolbar.
+
 ## V18 - 2026-07-24
 
 - Added `Power Calcs` and `Phase Totals` sub-tabs to Power Calculations.
