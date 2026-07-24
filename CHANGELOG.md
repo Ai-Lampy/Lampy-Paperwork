@@ -2,6 +2,13 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.5 - 2026-07-25
+
+- Changed Fan Out PDF downloads to capture the prepared preview page directly.
+- Kept preview font sizing and line wrapping intact in the downloaded PDF.
+- Preserved the preview’s solid and dashed table borders, column widths and page margins.
+- Left the existing Power Calculations PDF renderer unchanged.
+
 ## V19.4 - 2026-07-24
 
 - Moved Fixture Patch sheet formatting from a blocking modal into the right-side settings pane.
