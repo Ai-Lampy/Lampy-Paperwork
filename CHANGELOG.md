@@ -2,6 +2,14 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V17.16 - 2026-07-24
+
+- Vertically centred the Fixture Patch Clear Filters controls.
+- Removed the standalone `Distro Phase Totals;` heading from Power Calculations.
+- Updated supply and distro phase-total card widths, spacing, borders and internal layout.
+- Split each supply card's input supply and assigned distro summary onto separate metadata lines.
+- Applied the same reusable summary-card layout to the Power Calculations PDF supply summary.
+
 ## V17.15 - 2026-07-24
 
 - Removed the collapsible Filter & Sort summary and `<details>` wrapper from Fixture Patch.
