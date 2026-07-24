@@ -2,6 +2,22 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V18 - 2026-07-24
+
+- Added `Power Calcs` and `Phase Totals` sub-tabs to Power Calculations.
+- Changed the selected-distro Power Calcs summary to show only its connected supply and distro phase card on the same row.
+- Hid supplies and distro phase cards unrelated to the currently selected distro.
+- Added a dedicated Phase Totals overview grouped by supply, with supply information, supply phase totals and the connected distro phase cards.
+- Added a clear Unassigned Distros section when a distro is not connected to any supply.
+- Enforced one connected supply per distro when assigning or creating supplies.
+- Kept Power Calculations PDF generation tied to the calculation view regardless of the currently open sub-tab.
+
+## V17.17 - 2026-07-24
+
+- Restyled Distro Phase Summary cards with the supplied compact 275 × 100 pixel layout.
+- Removed the Phase 1, Phase 2 and Phase 3 captions from distro summary cards while retaining their phase colours and amp totals.
+- Kept supply phase cards on their existing larger layout by adding a dedicated distro-card phase renderer.
+
 ## V17.16 - 2026-07-24
 
 - Vertically centred the Fixture Patch Clear Filters controls.
