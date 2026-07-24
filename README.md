@@ -12,6 +12,7 @@ Live app: [https://ai-lampy.github.io/Lampy-Paperwork/](https://ai-lampy.github.
 - Retains imported MVR fixture matrices and fixture-attached geometry as hidden background metadata.
 - Requires review of unmatched MVR fixtures and conflicting GDTF, mode, or channel-count data before import.
 - Produces power calculation sheets with distro and supply phase totals.
+- Produces display-only Fan Out sheets from Power Calculations, including Socapex colours, fixture details, and position colours.
 - Tracks DMX universe usage and available address space.
 - Builds console, NPU, and network paperwork with reference images.
 - Exports project data as a Lampy project file for reopening later.
@@ -22,7 +23,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V18.1**
+Current app version: **V19**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 

@@ -2,6 +2,21 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19 - 2026-07-24
+
+- Added the new display-only `Fan Outs` sheet tab.
+- Built Fan Out tables directly from Power Calculations assignments so Fix IDs, fixture types and positions remain synchronized.
+- Added four fixture slots per Socapex way, each showing Fix ID, fixture type and position.
+- Carried Socapex label colours and Fixture Patch position colours into the Fan Out sheet.
+- Added Full Name and Short Name display selection for Fan Outs.
+- Added dedicated Fan Out font, size, alignment, bold, italic and underline formatting controls.
+- Added the project-wide `SPARE` rule: an item labelled exactly `SPARE` automatically receives an `rgb(255, 0, 238)` background with bold black text.
+
+## V18.2 - 2026-07-24
+
+- Reduced the Fixture Patch toolbar’s vertical padding to 8 pixels.
+- Applied the requested compact Power Calculations toolbar padding while retaining the sub-tabs on its left side.
+
 ## V18.1 - 2026-07-24
 
 - Fixed Phase Totals supply cards so clicking them reliably opens the connected supply settings pane.
