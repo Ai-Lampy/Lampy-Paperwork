@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.21 - 2026-07-25
+
+- Removed underlining from Fan Out table headers and increased header borders to two pixels.
+- Refined Fan Out Way, Fix ID, Fix Type and Position column widths.
+- Strengthened the Way and Position column dividers for clearer unit grouping.
+
 ## V19.20 - 2026-07-25
 
 - Removed the global two-pixel border override from buttons, inputs, selects and textareas.
