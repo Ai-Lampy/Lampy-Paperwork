@@ -2,6 +2,13 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.27 - 2026-07-25
+
+- Fixed Fan Out PDF exports silently falling back to the limited vector renderer.
+- PDF export now uses an origin-safe capture of the preview so the selected Fan Out font family, font size, weight, alignment, and decoration are retained.
+- Preserved the 3px Way right divider and 2px Position right divider in downloaded Fan Out PDFs.
+- Browser-tested PDF capture using Cochin at 16px and 24px, and Arial at 18px.
+
 ## V19.26 - 2026-07-25
 
 - Increased the Fan Out table’s Socapex header font size from 20px to 26px.
