@@ -2,6 +2,14 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.30 - 2026-07-25
+
+- Fixed the actual cause of blank raster-backed PDF exports: an extra PDF dictionary closing token placed each page’s `/Contents` reference outside the page object.
+- Corrected the shared PDF image-page builder used by Fixture Patch, Power Calculations, Fan Outs, and Distro Labels.
+- Kept the DOM-aware renderer for layout and font fidelity, with a 12-second timeout and the local browser renderer as fallback.
+- Browser-exported and independently rendered all four affected PDF types to confirm their page images and visible content are present.
+- Verified Fan Outs at 3 pages, Power Calculations at 2 pages, Fixture Patch at 4 pages, and Distro Labels at 3 pages using the active test project.
+
 ## V19.29 - 2026-07-25
 
 - Replaced the unreliable SVG `foreignObject` PDF capture path with an on-demand DOM-aware canvas renderer.
