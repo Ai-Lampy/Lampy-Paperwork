@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.11 - 2026-07-25
+
+- Removed the Fan Out sheet’s nested scroll container.
+- Fan Out content now follows the main document’s vertical and horizontal scrolling.
+- Restores the standard sheet wrapper overflow when moving to another app tab.
+
 ## V19.10 - 2026-07-25
 
 - Automatically hides Fan Out Unit groups that contain no fixture IDs anywhere in the selected distro.
