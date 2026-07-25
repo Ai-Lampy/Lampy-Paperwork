@@ -2,6 +2,11 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.20 - 2026-07-25
+
+- Removed the global two-pixel border override from buttons, inputs, selects and textareas.
+- Restored each control’s component-specific border styling while retaining shared typography inheritance.
+
 ## V19.19 - 2026-07-25
 
 - Added a Show Unused Socas toggle to the Power Calculations PDF preview.
