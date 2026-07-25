@@ -2,6 +2,15 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.26 - 2026-07-25
+
+- Increased the Fan Out table’s Socapex header font size from 20px to 26px.
+
+## V19.25 - 2026-07-25
+
+- Fixed Fan Out PDF headers substituting the configured Cochin font with a PDF serif fallback.
+- Fan Out export headers now use the project’s configured Fan Out font and are redrawn with the browser’s native font renderer during PDF capture.
+
 ## V19.24 - 2026-07-25
 
 - Aligned the right edge of PDF export logos with the rendered table after content scaling.
