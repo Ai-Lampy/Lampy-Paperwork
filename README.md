@@ -23,7 +23,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V19.28**
+Current app version: **V19.29**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 
@@ -37,7 +37,7 @@ See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 6. Add consoles, NPUs, and network data in **Control/Network**.
 7. Download the project file regularly to save an editable copy.
 
-All project data is client-side. The app runs in your browser and does not require an account, server, database, or build process.
+All project data is client-side. The app runs in your browser and does not require an account, server, database, or build process. PDF export loads a pinned browser rendering library on demand, while project and export processing remain in the browser.
 
 ## Browser Support
 

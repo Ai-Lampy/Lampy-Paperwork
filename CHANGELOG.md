@@ -2,6 +2,14 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.29 - 2026-07-25
+
+- Replaced the unreliable SVG `foreignObject` PDF capture path with an on-demand DOM-aware canvas renderer.
+- Confirmed that the PDF binary builder was not the cause of the blank output; the browser SVG renderer was loading the outer page while omitting its embedded HTML.
+- Added a renderer sentinel that verifies the actual preview DOM was painted before a page can be embedded in a PDF.
+- Retained native and measured-vector fallbacks, while preventing either raster path from silently exporting an empty page.
+- Applied the shared repair to Fixture Patch, Power Calculations, Fan Outs, and Distro Labels PDF exports.
+
 ## V19.28 - 2026-07-25
 
 - Fixed the shared preview-capture regression that caused downloaded PDF exports to contain blank pages.
