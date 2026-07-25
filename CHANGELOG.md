@@ -2,6 +2,13 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.14 - 2026-07-25
+
+- Restores Socapex stripe colours in the Power Calculations vector PDF fallback.
+- Removes completely empty six-way Socapex groups before PDF pagination so blank groups do not create unnecessary pages.
+- Locks both the Socapex and Way column widths before export-only columns are hidden.
+- Keeps distro phase totals on the first page for each distro and shows only combined supply totals on the final summary page.
+
 ## V19.13 - 2026-07-25
 
 - Power Calculations downloads now capture the prepared preview first so browser font styling is preserved.
