@@ -2,6 +2,11 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.24 - 2026-07-25
+
+- Aligned the right edge of PDF export logos with the rendered table after content scaling.
+- Updated Fan Out PDF headers to use the same resolved font family as the Fan Out table.
+
 ## V19.23 - 2026-07-25
 
 - Increased Power and Fan Out PDF content width from 1400px to 1470px.
