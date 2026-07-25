@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.7 - 2026-07-25
+
+- Rebuilt the vector PDF colour fill to use the same repeating diagonal sequence as the on-screen Socapex and position styling.
+- Applied the project’s configured stripe width to PDF colour bands.
+- Removed the oversized fallback colour blocks that appeared when direct preview capture was unavailable.
+
 ## V19.6 - 2026-07-25
 
 - Added a reliable vector fallback when a browser cannot capture a Fan Out preview as an image.
