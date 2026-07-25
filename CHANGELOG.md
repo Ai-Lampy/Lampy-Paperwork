@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.9 - 2026-07-25
+
+- Replaced the split Socapex and blank Way headings with one true header spanning the first two Fan Out columns.
+- Centred the Socapex heading across the combined Socapex and Way column width.
+- Added an explicit outer-table border pass to the Fan Out PDF renderer so the 3-pixel perimeter exports consistently.
+
 ## V19.8 - 2026-07-25
 
 - Increased the Fan Out table and Socapex column borders to 3 pixels.
