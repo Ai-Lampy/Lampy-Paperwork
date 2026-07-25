@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.8 - 2026-07-25
+
+- Increased the Fan Out table and Socapex column borders to 3 pixels.
+- Removed the dividing border between the Socapex and blank Way header cells so the Socapex heading visually occupies the first two columns.
+- Kept the Way column available for the numbered circuit rows below the combined header.
+
 ## V19.7 - 2026-07-25
 
 - Rebuilt the vector PDF colour fill to use the same repeating diagonal sequence as the on-screen Socapex and position styling.
