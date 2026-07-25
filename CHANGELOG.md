@@ -2,6 +2,13 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.13 - 2026-07-25
+
+- Power Calculations downloads now capture the prepared preview first so browser font styling is preserved.
+- Locks the measured Socapex column width before export-only columns are hidden or recalculated.
+- Removes repeated identical phase-total cards and de-duplicates distro assignments in the final supply summary.
+- Retains the vector PDF renderer as a safe fallback when direct preview capture is unavailable.
+
 ## V19.12 - 2026-07-25
 
 - Centred fitted Fan Out content within the printable PDF page width.
