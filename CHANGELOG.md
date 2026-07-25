@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.6 - 2026-07-25
+
+- Added a reliable vector fallback when a browser cannot capture a Fan Out preview as an image.
+- Prevented fixture names, positions and Fan Out headers from wrapping in the fallback PDF.
+- Kept multi-line Socapex names supported while preserving the preview’s table borders and colours.
+
 ## V19.5 - 2026-07-25
 
 - Changed Fan Out PDF downloads to capture the prepared preview page directly.
