@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.10 - 2026-07-25
+
+- Automatically hides Fan Out Unit groups that contain no fixture IDs anywhere in the selected distro.
+- Applies the same reduced Unit layout to the Fan Out sheet, PDF preview and downloaded PDF.
+- Keeps original Unit numbering when an empty group is hidden.
+
 ## V19.9 - 2026-07-25
 
 - Replaced the split Socapex and blank Way headings with one true header spanning the first two Fan Out columns.
