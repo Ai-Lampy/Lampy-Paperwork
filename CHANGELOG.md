@@ -2,6 +2,25 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.19 - 2026-07-25
+
+- Added a Show Unused Socas toggle to the Power Calculations PDF preview.
+- The expanded preview includes every Socapex configured on each distro.
+- Empty fixture, position and power columns remain visible in the expanded preview and downloaded PDF.
+- The toggle is hidden from the shared Fan Outs export window.
+
+## V19.18 - 2026-07-25
+
+- Added a three-pixel grey border, padding and rounded corners around the Control/Network tabs.
+- Expanded shared form-control font inheritance so buttons and fields consistently inherit all supported typography properties.
+- Applied the requested two-pixel grey border to buttons, inputs, selects and textareas.
+
+## V19.17 - 2026-07-25
+
+- Increased the Power Calculations toolbar border to three pixels.
+- Updated Power phase-summary and supply cards with matching three-pixel grey borders.
+- Increased the Socapex table-cell border to 2.5 pixels and restored the requested 130-pixel column width.
+
 ## V19.16 - 2026-07-25
 
 - Moved the main sheet-tab navigation outside the app shell.
