@@ -2,6 +2,14 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.31 - 2026-07-26
+
+- Fixed missing Socapex colours in Power Calculations and Fan Out PDF downloads.
+- Socapex colour fills are now converted into export-safe stripe image layers during PDF capture, avoiding unreliable CSS gradient rendering without changing the on-screen sheets.
+- Added selectable 150, 300, and 450 DPI output for Power Calculations and Fan Out PDF exports.
+- Set 300 DPI as the default export quality for sharper text, borders, and table lines.
+- Kept Fixture Patch and Distro Label PDF capture settings unchanged.
+
 ## V19.30 - 2026-07-25
 
 - Fixed the actual cause of blank raster-backed PDF exports: an extra PDF dictionary closing token placed each page’s `/Contents` reference outside the page object.
