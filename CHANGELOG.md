@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.12 - 2026-07-25
+
+- Centred fitted Fan Out content within the printable PDF page width.
+- Distributes width left over from height-based scaling equally between the left and right margins.
+- Keeps the existing Power Calculations PDF alignment unchanged.
+
 ## V19.11 - 2026-07-25
 
 - Removed the Fan Out sheet’s nested scroll container.
