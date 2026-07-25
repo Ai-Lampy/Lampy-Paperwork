@@ -2,6 +2,13 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.28 - 2026-07-25
+
+- Fixed the shared preview-capture regression that caused downloaded PDF exports to contain blank pages.
+- Reduced each PDF capture to its frozen page styles instead of embedding the complete application stylesheet.
+- Added a blank-page capture check so an empty render cannot silently be written into a PDF.
+- Applied the repair to Fixture Patch, Power Calculations, Fan Outs, and Distro Labels exports.
+
 ## V19.27 - 2026-07-25
 
 - Fixed Fan Out PDF exports silently falling back to the limited vector renderer.
