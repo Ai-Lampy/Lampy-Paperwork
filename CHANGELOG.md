@@ -2,6 +2,16 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.23 - 2026-07-25
+
+- Increased Power and Fan Out PDF content width from 1400px to 1470px.
+- Set exported Fan Out toolbars to 1250px wide with the requested top and bottom spacing.
+
+## V19.22 - 2026-07-25
+
+- Fixed Fan Out PDF exports recalculating table borders and fonts differently from the on-screen preview.
+- PDF capture now preserves the preview’s resolved layout, typography, borders, spacing and colour styling.
+
 ## V19.21 - 2026-07-25
 
 - Removed underlining from Fan Out table headers and increased header borders to two pixels.
