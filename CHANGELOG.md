@@ -2,6 +2,18 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.16 - 2026-07-25
+
+- Moved the main sheet-tab navigation outside the app shell.
+- Applied the requested left spacing to the sheet navigation header.
+- Added right-side spacing to the fixed Actions menu button.
+
+## V19.15 - 2026-07-25
+
+- Updated the Power Calculations toolbar border, spacing and sub-tab layout.
+- Added consistent two-pixel grey borders to standard text, number, select and textarea controls.
+- Removed the visible Fixture Names label while retaining an accessible label on each Full Name / Short Name selector.
+
 ## V19.14 - 2026-07-25
 
 - Restores Socapex stripe colours in the Power Calculations vector PDF fallback.
