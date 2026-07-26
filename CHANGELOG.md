@@ -2,6 +2,16 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.35 - 2026-07-26
+
+- Increased the distro action grid and both action buttons to 185px columns with 2px borders.
+- Expanded the Include Powerlock Adaptor button to 370px and retained its green enabled state.
+- Updated distro action hints to the “3 x Aux Outlets • 1 x 3ø Output” format.
+- Reduced the Power Aux number column to 57px and increased its body text to 20px.
+- Made the Aux label column automatically size within a 100–260px range with a minimum 16px body font.
+- Reduced the Include in Power Calcs button to 60px, increased it to 18px/800 weight, and made its enabled state green.
+- Moved Include in Power Calcs to the final column of each Aux table.
+
 ## V19.34 - 2026-07-26
 
 - Placed + Aux Outlets and + 3ø Output beside each other in distro settings.
