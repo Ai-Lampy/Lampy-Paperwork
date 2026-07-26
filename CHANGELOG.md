@@ -2,6 +2,14 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.34 - 2026-07-26
+
+- Placed + Aux Outlets and + 3ø Output beside each other in distro settings.
+- Moved the Aux/Output count hint onto its own line beneath both buttons.
+- Renamed the P/Lock control to Include Powerlock Adaptor and added a green enabled state.
+- Split the Power Calculations Aux Outlet and Other Output tables into distinct table classes so they can be styled independently.
+- Retained a shared Power extra-table base class for common spacing without coupling their column formatting.
+
 ## V19.33 - 2026-07-26
 
 - Increased Power Calculations Fix ID body text to a minimum of 20px without changing the column headers.
