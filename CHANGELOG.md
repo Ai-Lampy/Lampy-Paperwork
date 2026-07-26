@@ -2,6 +2,15 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.33 - 2026-07-26
+
+- Increased Power Calculations Fix ID body text to a minimum of 20px without changing the column headers.
+- Made Fix ID and Fix Type body cells bold by default while keeping Position body text at normal weight.
+- Simplified the Power Calculations Format side pane to Font and Alignment controls only.
+- Moved the Power Calculations Format button directly after Fixtures and before + Distro.
+- Restored configured Aux Outlet tables to the live Power Calculations tab while continuing to hide blank Aux rows from PDF preview/export.
+- Added configured Other Outputs to the Power Calculations tab and Power Calculations PDF workflow.
+
 ## V19.32 - 2026-07-26
 
 - Power Calculations now hides blank Aux Outlet rows and omits the Aux section when it contains no active data.
