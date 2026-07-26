@@ -13,6 +13,7 @@ Live app: [https://ai-lampy.github.io/Lampy-Paperwork/](https://ai-lampy.github.
 - Requires review of unmatched MVR fixtures and conflicting GDTF, mode, or channel-count data before import.
 - Produces power calculation sheets with distro and supply phase totals.
 - Produces display-only Fan Out sheets from Power Calculations, including Socapex colours, fixture details, and position colours.
+- Compiles consoles, NPUs, and project network equipment into an IP Addresses sheet with dual IP fields, subnet data, VLAN assignments, locations, and notes.
 - Tracks DMX universe usage and available address space.
 - Builds console, NPU, and network paperwork with reference images.
 - Exports project data as a Lampy project file for reopening later.
@@ -23,7 +24,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V19.35**
+Current app version: **V20**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 
@@ -34,8 +35,9 @@ See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 3. Add distro details in **Distro Labels**.
 4. Build or import the **Fixture Patch**.
 5. Check **Power Calculations** after fixture IDs and fixture types are set.
-6. Add consoles, NPUs, and network data in **Control/Network**.
-7. Download the project file regularly to save an editable copy.
+6. Add consoles and NPUs in **Control/Network**.
+7. Open **IP Addresses** to review the compiled device list, assign subnets and VLANs, and add switches, nodes, cameras, or other project network devices.
+8. Download the project file regularly to save an editable copy.
 
 All project data is client-side. The app runs in your browser and does not require an account, server, database, or build process. PDF export loads a pinned browser rendering library on demand, while project and export processing remain in the browser.
 

@@ -2,6 +2,25 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V20 - 2026-07-26
+
+- Added the new IP Addresses sheet tab using the supplied VLAN and network-device table layout as its reference.
+- Automatically compiles active consoles and NPUs from Control/Network into the IP Addresses sheet.
+- Added project-specific network-device rows for switches, nodes, cameras, and other equipment that is in use.
+- Added an Add to IP Addresses action to Control/Network reference equipment.
+- Added dual IP-address fields, per-interface subnet and VLAN values, device names, locations, and notes.
+- Added VLAN 0 Untagged/MGMT, VLAN 1 sACN, VLAN 2 Art-Net, and VLAN 3 RoboCam colour-coded references.
+- Linked console and NPU IP information between Control/Network and the new IP Addresses sheet.
+- Preserved compatibility with older Lampy project files that do not contain V20 network metadata.
+- Included custom IP device changes in automatic Control/Network revision summaries.
+- Updated the README, welcome message, and walk-through for the V20 workflow.
+
+## V19.36 - 2026-07-26
+
+- Increased the Power Aux number column width to 70px.
+- Renamed Other Outputs to 3ø Outputs in the Power Calculations sheet and PDF heading.
+- Matched the 3ø Output table's widths, typography, and group borders to the Aux Outlets table while keeping their separate table classes.
+
 ## V19.35 - 2026-07-26
 
 - Increased the distro action grid and both action buttons to 185px columns with 2px borders.
