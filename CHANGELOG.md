@@ -2,6 +2,18 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V20.3 - 2026-07-26
+
+- Added a Re-order button to the IP Addresses toolbar.
+- Added a right-side device-order pane showing only the Item and Name for each console, NPU, and custom network device.
+- Added selectable Move Up and Move Down controls for changing the shared IP Addresses device order.
+- Saved the mixed device order in the Lampy project while preserving compatibility with older project files.
+
+## V20.2 - 2026-07-26
+
+- Changed VLAN legend items from equal-width columns to content-sized items that automatically fit their displayed VLAN number and name.
+- Retained wrapping when the selected VLAN legend becomes wider than the available sheet space.
+
 ## V20.1 - 2026-07-26
 
 - Updated Project Info and sheet-tab backgrounds to `#b9b9b9`.
