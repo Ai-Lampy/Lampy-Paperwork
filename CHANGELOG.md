@@ -2,6 +2,18 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V20.1 - 2026-07-26
+
+- Updated Project Info and sheet-tab backgrounds to `#b9b9b9`.
+- Added an IP Addresses Format side pane with Font and Alignment controls.
+- Added a project-specific VLAN Setup side pane with 11 configurable VLAN rows numbered 0–10 by default.
+- Added editable numeric VLAN IDs, VLAN names, colour-reference controls, and green Yes selection buttons.
+- Added named sACN Pink, Art-Net Blue, and RoboCam Peach VLAN colours to the shared colour reference.
+- Made VLAN support disabled by default, with an explicit Enable VLANs step on first use.
+- Hid the IP table VLAN column and VLAN legend while VLAN support is disabled.
+- Limited the VLAN legend and IP-table VLAN choices to rows selected in VLAN Setup.
+- Preserved older project IP/VLAN values while adding V20.1 settings defaults.
+
 ## V20 - 2026-07-26
 
 - Added the new IP Addresses sheet tab using the supplied VLAN and network-device table layout as its reference.
