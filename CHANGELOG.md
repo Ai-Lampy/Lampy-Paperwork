@@ -2,6 +2,15 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V19.32 - 2026-07-26
+
+- Power Calculations now hides blank Aux Outlet rows and omits the Aux section when it contains no active data.
+- Added a Power Calculations Format side pane with font, font size, alignment, bold, italic, and underline options.
+- Stored Power Calculations formatting in the Lampy project data so it remains available after reopening a project.
+- Fan Out PDF preview and export now hide completely unused Socapexes by default.
+- Enabled the same Show/Hide Unused Socas control for both Power Calculations and Fan Out PDF previews.
+- Updated Power Calculations PDF logo positioning to use the same widest-table right-edge alignment as Fan Outs.
+
 ## V19.31 - 2026-07-26
 
 - Fixed missing Socapex colours in Power Calculations and Fan Out PDF downloads.
