@@ -17,6 +17,7 @@
       "manufacturer": "Pathway",
       "name": "Pathport Octo DMX Gateway",
       "imageUrl": "images/pathway/Pathway_Octo_Node.jpg",
+      "lineImageUrl": "images/pathway/Pathway_Octo_Node_Line.png",
       "type": "DMX Node",
       "Ports-front": [
 	"8 x XLR-5 Outs"
