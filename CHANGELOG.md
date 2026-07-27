@@ -2,10 +2,16 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V20.7 - 2026-07-27
+
+- Replaced free-text IP-table locations with project-position selectors and grouped legacy location values case-insensitively.
+- Hid the IP 2 column independently for each location group when none of its devices supports a second IP interface.
+
 ## V20.6 - 2026-07-27
 
 - Grouped IP Address devices by project location and displayed each location in its own table.
-- Updated IP Address table body borders to `1px dashed #8b8b8b`.
+- Updated IP Address table body borders to `1.5px dashed #b9b9b9`.
+- Removed the old white device-group separator so bottom borders remain visible between every device row.
 - Allowed empty IP address and subnet fields to display blank when no value is present.
 - Kept the Global Subnet card visible and usable when VLAN support is disabled.
 - Added saved subnet values to console cards in Control/Network.
