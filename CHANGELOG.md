@@ -2,6 +2,13 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V21.2 - 2026-07-27
+
+- Added an eight-port A–H configuration table to Pathway Pathport Octo DMX Gateway settings.
+- Added per-port universe and project-position selections, with the existing project position list used to prevent mismatched location names.
+- Added the full-width Pathport Octo line image to added-device cards.
+- Displayed each assigned universe beneath its corresponding port and coloured the port marker from the selected position colours.
+
 ## V21.1 - 2026-07-27
 
 - Corrected Pathway network-device image paths to use the case-sensitive GitHub Pages `images/pathway` folder.
