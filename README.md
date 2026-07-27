@@ -1,6 +1,6 @@
 # Lampy Paperwork
 
-Lampy Paperwork is a browser-based paperwork tool for live entertainment lighting and power workflows. It is built as a single-page GitHub Pages app using plain HTML, CSS, and vanilla JavaScript.
+Lampy Paperwork is a browser-based paperwork tool for live entertainment lighting and power workflows. It is published as a single-page GitHub Pages app.
 
 Live app: [https://ai-lampy.github.io/Lampy-Paperwork/](https://ai-lampy.github.io/Lampy-Paperwork/)
 
@@ -17,6 +17,8 @@ Live app: [https://ai-lampy.github.io/Lampy-Paperwork/](https://ai-lampy.github.
 - Tracks DMX universe usage and available address space.
 - Builds console, NPU, and network paperwork with reference images.
 - Uses console-reference software versions when available, with an Other/manual version field for unlisted or empty reference data.
+- Separates console and network-device library selection from the side-pane forms used to enter project details.
+- Displays only network equipment that has actually been added to the project.
 - Exports project data as a Lampy project file for reopening later.
 - Exports MVR fixture patches with matched repository GDTF files embedded when available.
 - Exports paperwork previews to PDF where supported by the app workflow.
@@ -25,7 +27,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V20.10**
+Current app version: **V21**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 

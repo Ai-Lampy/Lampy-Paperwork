@@ -2,6 +2,19 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V21 - 2026-07-27
+
+- Separated console library selection from console configuration.
+- Kept console configuration fields hidden until Add Console is pressed, then opened the details form in the right-side pane.
+- Changed Network Equipment so reference devices remain hidden until they are added to the project.
+- Added a `+ Device` workflow with a three-column Manufacturer, Devices, and Info library.
+- Added device information previews for image, type, protocols, ports, and power.
+- Added a right-side device details form and project device cards with edit and remove actions.
+- Added Pathway reference images for the bundled VIA 12 and Octo device records.
+- Updated the Fixture Patch filter spacing and strengthened filter and format control borders.
+- Updated Home hero and panel cards to use consistent 3px grey borders.
+- Updated Distro Label navigation to use the shared bordered toolbar styling.
+
 ## V20.10 - 2026-07-27
 
 - Limited Software Mode selection and mode listings to grandMA console products.
