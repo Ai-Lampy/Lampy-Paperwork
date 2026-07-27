@@ -2,6 +2,16 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V20.6 - 2026-07-27
+
+- Grouped IP Address devices by project location and displayed each location in its own table.
+- Updated IP Address table body borders to `1px dashed #8b8b8b`.
+- Allowed empty IP address and subnet fields to display blank when no value is present.
+- Kept the Global Subnet card visible and usable when VLAN support is disabled.
+- Added saved subnet values to console cards in Control/Network.
+- Limited NPUs and ordinary network equipment to one IP address while retaining two-interface support for consoles and devices identified as computers, PCs, onPC systems, laptops, servers, or workstations.
+- Updated the IP Address table column proportions for Item, Name, Location, both IP fields, Subnet, VLAN, and Notes.
+
 ## V20.5 - 2026-07-26
 
 - Updated Control/Network cards and toolbars to use 3px `#b9b9b9` borders.
