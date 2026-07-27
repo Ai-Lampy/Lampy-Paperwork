@@ -4,7 +4,7 @@
       "id": "Pathway-via-12-fibre-switch",
       "manufacturer": "Pathway",
       "name": "Pathport VIA 12",
-      "imageUrl": "images/Pathway/Pathport_VIA_12.png",
+      "imageUrl": "images/pathway/Pathport_VIA_12.png",
       "type": "Managed Network Switch",
       "ports": [
         "12 x 1GbE Ethercon",
@@ -16,7 +16,7 @@
       "id": "Pathway-Pathport-Octo-DMX-Gateway",
       "manufacturer": "Pathway",
       "name": "Pathport Octo DMX Gateway",
-      "imageUrl": "images/Pathway/Pathway_Octo_Node.jpg",
+      "imageUrl": "images/pathway/Pathway_Octo_Node.jpg",
       "type": "DMX Node",
       "Ports-front": [
 	"8 x XLR-5 Outs"
