@@ -16,6 +16,7 @@ Live app: [https://ai-lampy.github.io/Lampy-Paperwork/](https://ai-lampy.github.
 - Compiles consoles, NPUs, and project network equipment into an IP Addresses sheet with dual IP fields, subnet data, VLAN assignments, locations, and notes.
 - Tracks DMX universe usage and available address space.
 - Builds console, NPU, and network paperwork with reference images.
+- Uses console-reference software versions when available, with an Other/manual version field for unlisted or empty reference data.
 - Exports project data as a Lampy project file for reopening later.
 - Exports MVR fixture patches with matched repository GDTF files embedded when available.
 - Exports paperwork previews to PDF where supported by the app workflow.
@@ -24,7 +25,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V20.8**
+Current app version: **V20.10**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 

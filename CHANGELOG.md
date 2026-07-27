@@ -2,6 +2,20 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V20.10 - 2026-07-27
+
+- Limited Software Mode selection and mode listings to grandMA console products.
+- Kept other console manufacturers focused on their available parameters and software versions without an unnecessary mode field.
+- Added an Other software-version option with free text entry.
+- Showed free software-version entry automatically when a console has no versions in the console reference JSON.
+
+## V20.9 - 2026-07-27
+
+- Replaced the VLAN native colour dropdown with a visible colour-only swatch picker.
+- Repaired the malformed console reference JSON so the console library loads again.
+- Rebuilt Add Console as a three-column Manufacturer, Devices, and Console Info picker.
+- Added selected-console images, available modes, parameter counts, and software versions to the Console Info column.
+
 ## V20.8 - 2026-07-27
 
 - Centred project-location selections within IP Address table cells.
