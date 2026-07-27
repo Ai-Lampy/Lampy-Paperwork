@@ -2,6 +2,14 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V20.8 - 2026-07-27
+
+- Centred project-location selections within IP Address table cells.
+- Expanded the IP re-order pane to show the same location groups as the main sheet.
+- Added independent location-group ordering and device ordering within each location.
+- Prioritised FOH, Front of House, and equivalent location-name variations as the first default group.
+- Repaired the VLAN colour-reference JSON and allowed unnamed colour-only selections.
+
 ## V20.7 - 2026-07-27
 
 - Replaced free-text IP-table locations with project-position selectors and grouped legacy location values case-insensitively.
