@@ -218,7 +218,13 @@
         {
           "name": "Mode 2",
           "parameterCount": 2048
-        }
+        },
+    {
+      "id": "Avolites Arena",
+      "manufacturer": "Avolites",
+      "name": "Avolites Arena",
+      "imageUrl": "images/consoles/avo_arena.png",
+      }
       ]
     }
   ]
