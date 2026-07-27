@@ -2,7 +2,8 @@
   "protocols": [
     "sACN",
     "Art-Net",
-    "MA-Net"
+    "MA-Net",
+    "Titan-Net"
   ],
   "consoles": [
     {
