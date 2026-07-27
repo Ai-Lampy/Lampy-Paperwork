@@ -2,6 +2,25 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V20.5 - 2026-07-26
+
+- Updated Control/Network cards and toolbars to use 3px `#b9b9b9` borders.
+- Updated console images to use 2px `#b9b9b9` borders.
+- Added 8px corner rounding to console position strips.
+- Reduced the Control/Network view spacing to 6px and added a 10px toolbar bottom margin.
+- Removed the IP Addresses sheet’s nested scroll container so the wide sheet scrolls with the main page.
+
+## V20.4 - 2026-07-26
+
+- Kept VLAN Setup rows, selected VLAN choices, and the VLAN legend in ascending numerical VLAN order.
+- Added `json/vlan_colour_reference.json` as a dedicated colour source for VLAN setup and removed VLAN-specific colours from the general lighting colour reference.
+- Added a Global Subnet card to VLAN Setup with an Apply to all Devices action.
+- Applied the Global Subnet value to every console interface, NPU, and custom network-device subnet field.
+- Replaced IP address and subnet text fields with four numeric octet boxes.
+- Limited each IP/subnet octet to three digits and values from 0–255.
+- Added `xxx . xxx . xxx . xxx` blank placeholders, period-key navigation, automatic movement after three digits, backspace navigation, and dotted-address paste support.
+- Applied the segmented IP editor to both the IP Addresses sheet and Control/Network console/NPU editors.
+
 ## V20.3 - 2026-07-26
 
 - Added a Re-order button to the IP Addresses toolbar.
