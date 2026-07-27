@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V21.1 - 2026-07-27
+
+- Corrected Pathway network-device image paths to use the case-sensitive GitHub Pages `images/pathway` folder.
+- Normalised network image paths when loading references, restoring saved devices, displaying previews, preloading images, and rendering project device cards.
+- Ensured older project data containing `images/Pathway` paths is automatically resolved to the current lowercase folder.
+
 ## V21 - 2026-07-27
 
 - Separated console library selection from console configuration.
