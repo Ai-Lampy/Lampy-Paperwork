@@ -1,14 +1,18 @@
 {
   "networkExpansion": [
     {
+      "Ports-front": [
+        "10 x 1Gbe Ethercon"
+      ],
+      "Ports-rear": [
+        "2 x 1Gbe Ethercon",
+        "2 x Quad Fibre"
+      ],
       "id": "Pathway-via-12-fibre-switch",
       "imageUrl": "images/pathway/Pathport_VIA_12.png",
+      "lineImageUrl": "images/pathway/Pathport_VIA_12_Line.png",
       "manufacturer": "Pathway",
       "name": "Pathport VIA 12",
-      "ports": [
-        "12 x 1GbE Ethercon",
-        "2 x Quad-Fibre"
-      ],
       "power": "Tru-1 In & Thru",
       "type": "Managed Network Switch"
     },
@@ -72,6 +76,75 @@
         "RTTrPL"
       ],
       "type": "USB Ethercon Dongle"
+    },
+    {
+      "id": "luminode_2",
+      "imageUrl": "images/luminex/luminode_2.png",
+      "lineImageUrl": "images/luminex/luminode_2_line.png",
+      "manufacturer": "Luminex",
+      "name": "LumiNode 2",
+      "ports": [
+        "2 x XLR-5",
+        "2 x 1Gbe Ethercon"
+      ],
+      "power": "PoE IN",
+      "protocols": [
+        "Art-Net",
+        "sACN",
+        "KiNet",
+        "RTTrPL"
+      ],
+      "type": "DMX Node"
+    },
+    {
+      "Ports-front": [
+        "4 x XLR-5",
+        "1 x 1Gbe Ethercon"
+      ],
+      "Ports-rear": [
+        "1 x 1Gbe Ethercon"
+      ],
+      "id": "luminode_4",
+      "imageUrl": "images/luminex/luminode_4.png",
+      "lineImageUrl": "images/luminex/luminode_4_line.png",
+      "manufacturer": "Luminex",
+      "name": "LumiNode 4",
+      "power": [
+        "True 1",
+        "PoE IN"
+      ],
+      "protocols": [
+        "Art-Net",
+        "sACN",
+        "KiNet",
+        "RTTrPL"
+      ],
+      "type": "DMX Node"
+    },
+    {
+      "Ports-front": [
+        "12 x XLR-5",
+        "1 x 1Gbe Ethercon"
+      ],
+      "Ports-rear": [
+        "1 x 1Gbe Ethercon"
+      ],
+      "id": "luminode_12",
+      "imageUrl": "images/luminex/luminode_12.png",
+      "lineImageUrl": "images/luminex/luminode_12_line.png",
+      "manufacturer": "Luminex",
+      "name": "LumiNode 12",
+      "power": [
+        "True 1 & Thru",
+        "PoE IN"
+      ],
+      "protocols": [
+        "Art-Net",
+        "sACN",
+        "KiNet",
+        "RTTrPL"
+      ],
+      "type": "DMX Node"
     }
   ]
 }
