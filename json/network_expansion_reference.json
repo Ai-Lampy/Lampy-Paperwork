@@ -13,6 +13,7 @@
       "lineImageUrl": "images/pathway/Pathport_VIA_12_Line.png",
       "manufacturer": "Pathway",
       "name": "Pathport VIA 12",
+      "U": 1,
       "power": "Tru-1 In & Thru",
       "type": "Managed Network Switch"
     },
@@ -28,6 +29,7 @@
       "lineImageUrl": "images/pathway/Pathway_Octo_Node_Line.png",
       "manufacturer": "Pathway",
       "name": "Pathport Octo DMX Gateway",
+      "U": 1,
       "power": "IEC",
       "protocols": [
         "Art-Net",
@@ -50,6 +52,7 @@
       "lineImageUrl": "images/luminex/ethercon_dmx8_mk2_line.png",
       "manufacturer": "Luminex",
       "name": "Ethercon DMX8 MKII",
+      "U": 1,
       "power": "IEC",
       "protocols": [
         "Art-Net",
@@ -63,6 +66,7 @@
       "lineImageUrl": "images/luminex/luminode_1_line.png",
       "manufacturer": "Luminex",
       "name": "LumiNode 1",
+      "U": 0.5,
       "ports": [
         "1 x XLR-5",
         "1 x 1Gbe Ethercon",
@@ -83,6 +87,7 @@
       "lineImageUrl": "images/luminex/luminode_2_line.png",
       "manufacturer": "Luminex",
       "name": "LumiNode 2",
+      "U": 0.5,
       "ports": [
         "2 x XLR-5",
         "2 x 1Gbe Ethercon"
@@ -109,6 +114,7 @@
       "lineImageUrl": "images/luminex/luminode_4_line.png",
       "manufacturer": "Luminex",
       "name": "LumiNode 4",
+      "U": 1,
       "power": [
         "True 1",
         "PoE IN"
@@ -134,6 +140,7 @@
       "lineImageUrl": "images/luminex/luminode_12_line.png",
       "manufacturer": "Luminex",
       "name": "LumiNode 12",
+      "U": 1,
       "power": [
         "True 1 & Thru",
         "PoE IN"
