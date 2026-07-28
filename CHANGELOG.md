@@ -2,6 +2,17 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V23 - 2026-07-28
+
+- Removed consoles from Rack Layout device choices and removed legacy console placements from restored rack layouts.
+- Added `U` height metadata to every bundled Network Equipment reference.
+- Added support for 0.5U half-width devices, centred when used alone and paired left/right when two share a rack unit.
+- Aligned rack-unit numbers, rack-space boundaries, and device positions to one rack-unit grid, with 1U defined as 44.45 mm.
+- Made empty rack spaces clickable so a new device can be added directly at the selected U position.
+- Prevented a project Network Equipment device from being placed in more than one rack.
+- Added Simple rack display mode for device name/type and Detailed mode for line images and project-position colour overlays.
+- Added line-image panels to all DMX Node cards when their Network Equipment reference supplies one.
+
 ## V22 - 2026-07-27
 
 - Added origin tracking for network devices created in Control/Network and the IP Addresses table.

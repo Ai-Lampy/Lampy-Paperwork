@@ -19,7 +19,8 @@ Live app: [https://ai-lampy.github.io/Lampy-Paperwork/](https://ai-lampy.github.
 - Uses console-reference software versions when available, with an Other/manual version field for unlisted or empty reference data.
 - Separates console and network-device library selection from the side-pane forms used to enter project details.
 - Displays only network equipment that has actually been added to the project.
-- Provides a Rack Layout builder for creating racks, assigning project devices, selecting rack-unit positions and heights, applying device colours, and identifying placement conflicts.
+- Provides a Rack Layout builder with click-to-place rack spaces, aligned U numbering, library-defined device heights, half-width pairing, duplicate-device prevention, and Simple/Detailed views.
+- Uses network-device line images and project-position colours in Detailed rack views, while keeping consoles out of rack-device choices.
 - Keeps Control/Network devices linked to the IP Addresses sheet while enforcing removal from their original owning tab.
 - Exports project data as a Lampy project file for reopening later.
 - Exports MVR fixture patches with matched repository GDTF files embedded when available.
@@ -29,7 +30,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V22**
+Current app version: **V23**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 
