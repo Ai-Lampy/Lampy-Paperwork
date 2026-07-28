@@ -2,6 +2,25 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V22 - 2026-07-27
+
+- Added origin tracking for network devices created in Control/Network and the IP Addresses table.
+- Prevented Control/Network devices from being removed through the IP Addresses table.
+- Limited IP-table removal controls to devices originally created in that table.
+- Kept IP-created devices out of the Control/Network device-card list.
+- Added the Control/Network `Rack Layout` sub-tab.
+- Added locally stored rack definitions with names, project locations, and selectable rack heights.
+- Added project-device and custom-device placement with configurable start unit, rack-unit height, label, and colour.
+- Added visual front rack layouts with numbered rails, device images, clickable placements, and collision warnings.
+- Added rack changes to automatic Control/Network revision tracking.
+
+## V21.3 - 2026-07-27
+
+- Refined Pathport Octo cards to show the device model without repeating the manufacturer.
+- Removed the duplicated card-level port and location metadata because those details are already represented by the Octo diagram and position strip.
+- Removed spacing between the Octo card sections and made the position strip sit flush with the device diagram.
+- Adjusted the colour overlays and universe labels to align more precisely with the ports in the line image.
+
 ## V21.2 - 2026-07-27
 
 - Added an eight-port A–H configuration table to Pathway Pathport Octo DMX Gateway settings.
