@@ -52,6 +52,26 @@
         "sACN"
       ],
       "type": "DMX Node"
+    },
+    {
+      "id": "luminode_1",
+      "imageUrl": "images/luminex/luminode_1.png",
+      "lineImageUrl": "images/luminex/luminode_1_line.png",
+      "manufacturer": "Luminex",
+      "name": "LumiNode 1",
+      "ports": [
+        "1 x XLR-5",
+        "1 x 1Gbe Ethercon",
+        "1 x USB-B"
+      ],
+      "power": "USB-B",
+      "protocols": [
+        "Art-Net",
+        "sACN",
+        "KiNet",
+        "RTTrPL"
+      ],
+      "type": "USB Ethercon Dongle"
     }
   ]
 }
