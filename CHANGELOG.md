@@ -2,6 +2,16 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V25.1 - 2026-07-29
+
+- Resized the Rack Layout workspace to 375 px library, 650 px rack, and 375 px settings columns with a compact 6 px gap.
+- Moved the active rack name, location, and rack-unit details above all three workspace cards.
+- Centred rack zoom controls and set Fit to restore the automatic scale; a 16U rack now defaults to 58%.
+- Added a bottom-anchored **Add Custom Device** action to the Rack Device Library.
+- Added custom-device settings for name, type, whole-number U height, and full/half rack width.
+- Migrated legacy 0.5U entries to the one-unit, half-width device model used by the rack builder.
+- Added 12 px spacing below the Control/Network tab bar.
+
 ## V25 - 2026-07-29
 
 - Rebuilt Rack Layout as a three-column workspace with library, rack, and settings cards.
