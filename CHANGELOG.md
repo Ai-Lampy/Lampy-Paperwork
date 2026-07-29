@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V24.6 - 2026-07-29
+
+- Moved `+ Rack` to the right end of the Control/Network tab bar when Rack Layout is active.
+- Removed the rack legend from rack cards.
+- Corrected Fit scaling to use the rack card's measured inner width and height without clipping or overflow.
+
 ## V24.5 - 2026-07-29
 
 - Removed the separate Rack Layout toolbar and rack tabs; rack controls now live on each rack card.
