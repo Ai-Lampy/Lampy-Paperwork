@@ -2,6 +2,13 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V24.8 - 2026-07-29
+
+- Increased Rack Layout cards to 820px high.
+- Set the default fitted canvas area to 670 × 704 px, making a 16U rack display at 55%.
+- Replaced solid side rails with open rack strips, serif unit numbers, and dashed unit marks.
+- Automatically recalculates the fitted canvas scale whenever rack size changes.
+
 ## V24.7 - 2026-07-29
 
 - Matched the default Rack Layout Fit spacing to the verified rack-card reference.
