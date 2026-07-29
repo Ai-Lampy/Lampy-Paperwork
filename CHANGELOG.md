@@ -2,6 +2,13 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V25.3 - 2026-07-29
+
+- Removed internal padding from rack-device blocks so line images can use the complete device area.
+- Removed fixed library metadata fields for Type, U Height, and Width from library-device settings.
+- Added a per-rack **Reverse U Numbers** switch that places U1 at the top and reverses rack placement and drag targeting accordingly.
+- Moved Rack Layout from the Control/Network sub-tabs to the main sheet tab bar immediately after Control/Network.
+
 ## V25.2 - 2026-07-29
 
 - Tightened spacing beneath the rack workspace header and Control/Network tabs.
@@ -9,6 +16,7 @@ All notable fixes, cleanup work, and published version changes should be recorde
 - Reduced zoom-button and rack-header height while centring the button labels.
 - Moved Simple/Detailed rack display controls into the top-right of the rack settings card.
 - Reduced rack-card vertical padding to maximise the available canvas area.
+- Set the automatic and Fit scale for a 16U rack to 60% with the current rack-card dimensions.
 
 ## V25.1 - 2026-07-29
 
