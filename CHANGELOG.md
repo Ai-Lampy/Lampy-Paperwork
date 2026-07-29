@@ -2,6 +2,13 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V24.4 - 2026-07-29
+
+- Removed fixture-position colour and stripe overlays from devices in Rack Layout.
+- Detailed rack devices now show their equipment line image on the rack device colour only.
+- Network Equipment position strips and port colours remain unchanged.
+- Added Rack Layout zoom out, reset, zoom in, and Fit to Screen controls.
+
 ## V24.3 - 2026-07-29
 
 - Added optional `lineImageUrlFront` and `lineImageUrlRear` network-device fields.
