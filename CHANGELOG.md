@@ -2,6 +2,11 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V24.5 - 2026-07-29
+
+- Removed the separate Rack Layout toolbar and rack tabs; rack controls now live on each rack card.
+- Rack canvases automatically scale inside 700 × 790 px cards and follow the main page scroll.
+
 ## V24.4 - 2026-07-29
 
 - Removed fixture-position colour and stripe overlays from devices in Rack Layout.
