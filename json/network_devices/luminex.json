@@ -8,7 +8,8 @@
       },
       "id": "luminex_luminode_1",
       "imageUrl": "images/luminex/luminode_1.png",
-      "lineImageUrl": "images/luminex/luminode_1_line.png",
+      "lineImageUrlFront": "images/luminex/luminode_1_line_front.png",
+      "lineImageUrlRear": "images/luminex/luminode_1_line_rear.png",
       "mounting": {
         "accessory": null,
         "method": null,
@@ -67,7 +68,8 @@
       },
       "id": "luminex_luminode_2",
       "imageUrl": "images/luminex/luminode_2.png",
-      "lineImageUrl": "images/luminex/luminode_2_line.png",
+      "lineImageUrlFront": "images/luminex/luminode_2_line_front.png",
+      "lineImageUrlRear": "images/luminex/luminode_2_line_rear.png",
       "mounting": {
         "accessory": "Fly-bar / wall bracket",
         "method": null,
@@ -125,7 +127,8 @@
       },
       "id": "luminex_luminode_4",
       "imageUrl": "images/luminex/luminode_4.png",
-      "lineImageUrl": "images/luminex/luminode_4_line.png",
+      "lineImageUrlFront": "images/luminex/luminode_4_line_front.png",
+      "lineImageUrlRear": "images/luminex/luminode_4_line_rear.png",
       "mounting": {
         "accessory": "Clamp",
         "method": "M10 Bolt",
@@ -189,7 +192,8 @@
       },
       "id": "luminex_luminode_12",
       "imageUrl": "images/luminex/luminode_12.png",
-      "lineImageUrl": "images/luminex/luminode_12_line.png",
+      "lineImageUrlFront": "images/luminex/luminode_12_line_front.png",
+      "lineImageUrlRear": "images/luminex/luminode_12_line_rear.png",
       "mounting": {
         "accessory": null,
         "method": null,
@@ -254,7 +258,8 @@
       },
       "id": "luminex_ethernet_dmx8_mkii",
       "imageUrl": "images/luminex/ethernet_dmx8_mk2.png",
-      "lineImageUrl": "images/luminex/ethernet_dmx8_mk2_line.png",
+      "lineImageUrlFront": "images/luminex/ethernet_dmx8_mk2_line_front.png",
+      "lineImageUrlRear": "images/luminex/ethernet_dmx8_mk2_line_rear.png",
       "mounting": {
         "accessory": null,
         "method": null,
@@ -309,7 +314,8 @@
       },
       "id": "luminex_lumisplit_1.6",
       "imageUrl": "images/luminex/lumisplit_1.6.png",
-      "lineImageUrl": "images/luminex/lumisplit_1.6_line.png",
+      "lineImageUrlFront": "images/luminex/lumisplit_1.6_line_front.png",
+      "lineImageUrlRear": "images/luminex/lumisplit_1.6_line_rear.png",
       "mounting": {
         "accessory": "Clamp",
         "method": "M10 Bolt",
@@ -363,7 +369,8 @@
       },
       "id": "luminex_lumisplit_2.10",
       "imageUrl": "images/luminex/lumisplit_2.10.png",
-      "lineImageUrl": "images/luminex/lumisplit_2.10_line.png",
+      "lineImageUrlFront": "images/luminex/lumisplit_2.10_line_front.png",
+      "lineImageUrlRear": "images/luminex/lumisplit_2.10_line_rear.png",
       "mounting": {
         "accessory": null,
         "method": null,
@@ -417,7 +424,8 @@
       },
       "id": "luminex_gigacore_16xt",
       "imageUrl": "images/luminex/gigacore_16xt.png",
-      "lineImageUrl": "images/luminex/gigacore_16xt_line.png",
+      "lineImageUrlFront": "images/luminex/gigacore_16xt_line_front.png",
+      "lineImageUrlRear": "images/luminex/gigacore_16xt_line_rear.png",
       "mounting": {
         "accessory": null,
         "method": null,
@@ -494,7 +502,8 @@
       },
       "id": "luminex_gigacore_10",
       "imageUrl": "images/luminex/gigacore_10.png",
-      "lineImageUrl": "images/luminex/gigacore_10_line.png",
+      "lineImageUrlFront": "images/luminex/gigacore_10_line_front.png",
+      "lineImageUrlRear": "images/luminex/gigacore_10_line_rear.png",
       "mounting": {
         "accessory": "Clamp / wall bracket",
         "method": null,
@@ -557,7 +566,8 @@
       },
       "id": "luminex_gigacore_14r",
       "imageUrl": "images/luminex/gigacore_14r.png",
-      "lineImageUrl": "images/luminex/gigacore_14r_line.png",
+      "lineImageUrlFront": "images/luminex/gigacore_14r_line_front.png",
+      "lineImageUrlRear": "images/luminex/gigacore_14r_line_rear.png",
       "mounting": {
         "accessory": null,
         "method": null,
@@ -628,7 +638,8 @@
       },
       "id": "luminex_gigacore_12",
       "imageUrl": "images/luminex/gigacore_12.png",
-      "lineImageUrl": "images/luminex/gigacore_12_line.png",
+      "lineImageUrlFront": "images/luminex/gigacore_12_line_front.png",
+      "lineImageUrlRear": "images/luminex/gigacore_12_line_rear.png",
       "mounting": {
         "accessory": null,
         "method": null,
@@ -685,7 +696,8 @@
       },
       "id": "luminex_gigacore_18t",
       "imageUrl": "images/luminex/gigacore_18t.png",
-      "lineImageUrl": "images/luminex/gigacore_18t_line.png",
+      "lineImageUrlFront": "images/luminex/gigacore_18t_line_front.png",
+      "lineImageUrlRear": "images/luminex/gigacore_18t_line_rear.png",
       "mounting": {
         "accessory": null,
         "method": null,
@@ -764,7 +776,8 @@
       },
       "id": "luminex_gigacore_20t",
       "imageUrl": "images/luminex/gigacore_20t.png",
-      "lineImageUrl": "images/luminex/gigacore_20t_line.png",
+      "lineImageUrlFront": "images/luminex/gigacore_20t_line_front.png",
+      "lineImageUrlRear": "images/luminex/gigacore_20t_line_rear.png",
       "mounting": {
         "accessory": null,
         "method": null,
