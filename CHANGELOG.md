@@ -2,6 +2,11 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V24.7 - 2026-07-29
+
+- Matched the default Rack Layout Fit spacing to the verified rack-card reference.
+- Rack canvases now fit within a 670 × 676 px usable card area; a 16U rack defaults to 52.8%.
+
 ## V24.6 - 2026-07-29
 
 - Moved `+ Rack` to the right end of the Control/Network tab bar when Rack Layout is active.
