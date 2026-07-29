@@ -2,6 +2,42 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V24.3 - 2026-07-29
+
+- Added optional `lineImageUrlFront` and `lineImageUrlRear` network-device fields.
+- Added labelled Front and Rear line-image views to Network Equipment cards when those assets are available.
+- Retained single `lineImageUrl` support for devices with only one diagram.
+- Allowed line-image views on switches and other network devices as well as DMX Nodes.
+- Made Rack Layout Detailed mode prefer the front line image, then the general or rear line image.
+
+## V24.2 - 2026-07-29
+
+- Corrected the LumiSplit 1.6 width to 241 mm.
+- Marked LumiNode 1 and LumiNode 2 as not rack mountable.
+- Added `rack.mountable` support to the network-device schema and reference loader.
+- Excluded non-rack-mountable Network Equipment from Rack Layout device choices.
+- Displayed `Rack Mountable: No` in device information for non-rack devices.
+- Corrected trailing commas in the updated Luminex device library.
+
+## V24.1 - 2026-07-29
+
+- Added a manifest-driven `json/network_devices` library structure.
+- Added separate editable Luminex, Pathway, and Generic manufacturer files.
+- Migrated the existing seven network-device references into the new manufacturer libraries.
+- Added schema fields for dimensions, weight, rack height and width, detailed ports, power connectors, PoE input, protocols, processing engines, and device images.
+- Updated the app to load every manufacturer file listed in the network-device manifest.
+- Retained `json/network_expansion_reference.json` as a compatibility fallback if the new manifest cannot be loaded.
+- Expanded the Add Device information panel to display the new rack and technical metadata when populated.
+
+## V24 - 2026-07-29
+
+- Centred the active rack diagram on the Rack Layout page.
+- Changed each rack unit to an 800 px device area by 80 px high.
+- Sized Detailed-mode device line images to 800 × 80 px while retaining half-width behaviour where required.
+- Removed device-location text from rack device labels, tooltips, and the rack-device settings summary.
+- Added one Rack Layout sub-tab per rack and limited the page to displaying the selected rack.
+- Automatically selects a newly created rack and chooses an adjacent rack tab after a rack is removed.
+
 ## V23 - 2026-07-28
 
 - Removed consoles from Rack Layout device choices and removed legacy console placements from restored rack layouts.

@@ -19,7 +19,8 @@ Live app: [https://ai-lampy.github.io/Lampy-Paperwork/](https://ai-lampy.github.
 - Uses console-reference software versions when available, with an Other/manual version field for unlisted or empty reference data.
 - Separates console and network-device library selection from the side-pane forms used to enter project details.
 - Displays only network equipment that has actually been added to the project.
-- Provides a Rack Layout builder with click-to-place rack spaces, aligned U numbering, library-defined device heights, half-width pairing, duplicate-device prevention, and Simple/Detailed views.
+- Provides a centred Rack Layout builder with 800 × 80 px rack units, click-to-place spaces, aligned U numbering, library-defined device heights, half-width pairing, duplicate-device prevention, and Simple/Detailed views.
+- Gives every added rack its own Rack Layout sub-tab so only one rack diagram is displayed at a time.
 - Uses network-device line images and project-position colours in Detailed rack views, while keeping consoles out of rack-device choices.
 - Keeps Control/Network devices linked to the IP Addresses sheet while enforcing removal from their original owning tab.
 - Exports project data as a Lampy project file for reopening later.
@@ -30,7 +31,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V23**
+Current app version: **V24.3**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 
@@ -74,6 +75,12 @@ Lampy Paperwork is intended for modern desktop browsers. Chrome is recommended f
       <manufacturer>.json
     lighting_vendors.json
     network_expansion_reference.json
+    network_devices/
+      README.md
+      manifest.json
+      generic.json
+      luminex.json
+      pathway.json
     npu_reference.json
     supply_reference.json
     vlan_colour_reference.json
