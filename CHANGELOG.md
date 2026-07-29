@@ -2,6 +2,14 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V25.2 - 2026-07-29
+
+- Tightened spacing beneath the rack workspace header and Control/Network tabs.
+- Simplified rack zoom controls to Zoom Out, Fit, and Zoom In.
+- Reduced zoom-button and rack-header height while centring the button labels.
+- Moved Simple/Detailed rack display controls into the top-right of the rack settings card.
+- Reduced rack-card vertical padding to maximise the available canvas area.
+
 ## V25.1 - 2026-07-29
 
 - Resized the Rack Layout workspace to 375 px library, 650 px rack, and 375 px settings columns with a compact 6 px gap.
