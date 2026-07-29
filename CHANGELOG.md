@@ -2,6 +2,13 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V24.9 - 2026-07-29
+
+- Increased rack-card width to 890px while retaining the existing 800px device bay.
+- Changed custom rack-device Height U settings to positive whole numbers.
+- Replaced preset Rack Units choices with an unrestricted positive whole-number field.
+- Added vertical rack-device drag-and-drop with rack-unit snapping and bounds checking.
+
 ## V24.8 - 2026-07-29
 
 - Increased Rack Layout cards to 820px high.
