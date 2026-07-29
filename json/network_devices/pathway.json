@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 2,
+  "manufacturer": "Pathway",
+  "devices": [
+    {
+      "id": "Pathway-via-12-fibre-switch",
+      "name": "Pathport VIA 12",
+      "type": "Managed Network Switch",
+      "dimensionsMm": {
+        "width": null,
+        "height": null,
+        "depth": null
+      },
+      "weightKg": null,
+      "rack": {
+        "heightU": 1,
+        "widthFraction": 1
+      },
+      "ports": [
+        {
+          "quantity": 10,
+          "connector": "1GbE EtherCON",
+          "direction": "network",
+          "facing": "front"
+        },
+        {
+          "quantity": 2,
+          "connector": "1GbE EtherCON",
+          "direction": "network",
+          "facing": "rear"
+        },
+        {
+          "quantity": 2,
+          "connector": "Quad Fibre",
+          "direction": "network",
+          "facing": "rear"
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON TRUE1 In/Thru"
+        ],
+        "poeIn": false
+      },
+      "protocols": [],
+      "processingEngines": null,
+      "imageUrl": "images/pathway/Pathport_VIA_12.png",
+      "lineImageUrl": "images/pathway/Pathport_VIA_12_Line.png"
+    },
+    {
+      "id": "Pathport-Octo-DMX-Gateway",
+      "name": "Pathport Octo DMX Gateway",
+      "type": "DMX Node",
+      "dimensionsMm": {
+        "width": null,
+        "height": null,
+        "depth": null
+      },
+      "weightKg": null,
+      "rack": {
+        "heightU": 1,
+        "widthFraction": 1
+      },
+      "ports": [
+        {
+          "quantity": 8,
+          "connector": "XLR-5",
+          "direction": "output",
+          "facing": "front"
+        },
+        {
+          "quantity": 1,
+          "connector": "1GbE EtherCON",
+          "direction": "network",
+          "facing": "rear"
+        }
+      ],
+      "power": {
+        "connectors": [
+          "IEC"
+        ],
+        "poeIn": false
+      },
+      "protocols": [
+        "Art-Net",
+        "sACN",
+        "Pathway Protocol",
+        "Shownet"
+      ],
+      "processingEngines": null,
+      "imageUrl": "images/pathway/Pathway_Octo_Node.jpg",
+      "lineImageUrl": "images/pathway/Pathway_Octo_Node_Line.png"
+    }
+  ]
+}
