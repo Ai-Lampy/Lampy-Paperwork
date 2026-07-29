@@ -2,6 +2,14 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V25 - 2026-07-29
+
+- Rebuilt Rack Layout as a three-column workspace with library, rack, and settings cards.
+- Added a searchable rack-device library grouped by device type, alphabetically ordered, and collapsible.
+- Replaced `+ Device` with direct library placement into the first suitable free rack unit.
+- Replaced the Rack Settings button with an always-visible settings card for the rack or selected device.
+- Changed rack cards to 650px wide and increased the rack-unit/device bay width from 800px to 802px while retaining 800px line images.
+
 ## V24.9 - 2026-07-29
 
 - Increased rack-card width to 890px while retaining the existing 800px device bay.
