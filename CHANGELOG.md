@@ -2,6 +2,11 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V25.6 - 2026-07-30
+
+- Removed project-position colour backgrounds and blend effects from Network Equipment front and rear line images.
+- Kept position colours in their dedicated strip beneath each device card.
+
 ## V25.5 - 2026-07-30
 
 - Increased Fixture Patch colour inputs to 35 px high while retaining the compact row layout.
