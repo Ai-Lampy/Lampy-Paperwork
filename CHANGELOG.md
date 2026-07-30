@@ -2,6 +2,17 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V25.5 - 2026-07-30
+
+- Increased Fixture Patch colour inputs to 35 px high while retaining the compact row layout.
+- Replaced Patch Format Bold, Italic, and Underline checkboxes with compact **B**, *I*, and <u>U</u> toggle buttons.
+- Set Network Equipment full-width rack-device line images to 70 px high and half-width device line images to 110 px high.
+- Added cached-reference compatibility matching by manufacturer and model so renamed library IDs can still resolve newly added line images.
+- Changed reference JSON requests to revalidate cached files, allowing newly published image paths to become available without stale library data.
+- Added project NPU and Network Equipment devices to the Rack Device Library and prevented a linked project device being placed more than once.
+- Added every NPU reference to the Rack Device Library; placing one now creates its linked project NPU record automatically.
+- Linked devices added from the rack reference library into Network Equipment before rack placement.
+
 ## V25.4 - 2026-07-30
 
 - Completed a production audit and safe cleanup of the single-file application without changing its established layout or workflows.
