@@ -2,6 +2,20 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V25.4 - 2026-07-30
+
+- Completed a production audit and safe cleanup of the single-file application without changing its established layout or workflows.
+- Consolidated embedded static styling and removed obsolete CSS and JavaScript from superseded rack, console, and network-device workflows.
+- Removed eager console, NPU, and network-device image preloading so reference images load only when required.
+- Cached repeated control/network normalisation, tour-logo markup, and root styling updates to reduce unnecessary startup and render work.
+- Fixed the Rack Layout action immediately closing its settings pane after opening.
+- Added deployment-safe `.DS_Store` ignore rules and removed existing macOS metadata files.
+- Revalidated all JSON, inline handlers, GDTF references, main sheets, device pickers, rack workflows, PDF previews, and generated PDF files.
+- Restyled the Fixture Patch Clear Filters control and increased its toolbar target height.
+- Reduced Fixture Patch body rows to a compact 35 px height.
+- Standardised Network Equipment line images at 700 px wide, with front and rear views arranged side by side.
+- Moved Network Equipment position strips beneath the line images and resized them to 1400 × 40 px.
+
 ## V25.3 - 2026-07-29
 
 - Removed internal padding from rack-device blocks so line images can use the complete device area.
