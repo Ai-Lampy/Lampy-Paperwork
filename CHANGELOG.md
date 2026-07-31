@@ -2,6 +2,17 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V25.8 - 2026-07-31
+
+- Expanded the NPU reference schema with the same hardware metadata structure used by Luminex and Pathway devices.
+- Added dimensions, weight, rack mounting, port, power, protocol, and line-image metadata for grandMA3 processing units M, L, XL and the grandMA2 NPU.
+- Added `grandma3_NPU_line_front.png` to the grandMA3 NPU rack-library metadata.
+- Updated NPU reference normalisation and Rack Device Library entries to use rack height, width, type, and line images from JSON.
+- Restored the Pathport Octo DMX Gateway reference name so existing saved devices resolve its corrected front line image.
+- Updated Network Equipment line-image sizing to 200 × 90 px for LumiNode 1 and 250 × 90 px for LumiNode 2.
+- Replaced the inline Rack Layout DMX port table with a **Port Configuration** button and dedicated editing window.
+- Kept the Rack Layout cards and rack canvas dimensions unchanged.
+
 ## V25.7 - 2026-07-31
 
 - Set LumiNode 4 front and rear line images to 500 × 80 px.
@@ -9,7 +20,7 @@ All notable fixes, cleanup work, and published version changes should be recorde
 - Removed Location from Network Equipment card metadata and moved the device IP address to the top centre of each card.
 - Added DMX-node Port Configuration using the actual XLR-5 port quantity from the device reference.
 - Added editable Port, Name, Universe, Position, and Direction fields, with project positions and their colours available in the Position selector.
-- Standardised every half-rack-width Network Equipment line image at 500 × 80 px.
+- Standardised rack-mountable half-width Network Equipment line images at 500 × 80 px while preserving the dedicated LumiNode 1 and LumiNode 2 sizes.
 - Expanded the DMX-node Device Settings pane to 700 px.
 - Replaced the Direction selector with exclusive **IN** and **OUT** buttons, defaulting new ports to **OUT**.
 - Added the linked DMX-node Port Configuration to Rack Layout device settings without changing rack card or canvas dimensions.
