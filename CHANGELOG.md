@@ -10,6 +10,7 @@ All notable fixes, cleanup work, and published version changes should be recorde
 - Kept Protocol and VLAN controls side by side at 170 px each.
 - Added immediate VLAN colour fills to the Rack Layout VLAN selector.
 - Added the device ID to Device Settings metadata.
+- Resized the Rack Layout cards to 375 px for the Device Library, 600 px for the rack, and 425 px for settings.
 
 ## V25.12 - 2026-07-31
 
