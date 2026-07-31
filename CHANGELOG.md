@@ -2,6 +2,15 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V25.13 - 2026-07-31
+
+- Updated the Rack Layout header to fixed 475 px, 415 px, and 475 px columns.
+- Restyled the rack inventory summary with left alignment and a 40 px height.
+- Reordered Rack Layout Device Settings to show name, network addressing, protocol/VLAN controls, rack position, and notes.
+- Kept Protocol and VLAN controls side by side at 181 px each.
+- Added immediate VLAN colour fills to the Rack Layout VLAN selector.
+- Added the device ID to Device Settings metadata.
+
 ## V25.12 - 2026-07-31
 
 - Rebuilt the Rack Layout workspace header as three columns for inventory, rack information, and display-mode controls.
