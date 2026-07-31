@@ -9,6 +9,11 @@ All notable fixes, cleanup work, and published version changes should be recorde
 - Removed Location from Network Equipment card metadata and moved the device IP address to the top centre of each card.
 - Added DMX-node Port Configuration using the actual XLR-5 port quantity from the device reference.
 - Added editable Port, Name, Universe, Position, and Direction fields, with project positions and their colours available in the Position selector.
+- Standardised every half-rack-width Network Equipment line image at 500 × 80 px.
+- Expanded the DMX-node Device Settings pane to 700 px.
+- Replaced the Direction selector with exclusive **IN** and **OUT** buttons, defaulting new ports to **OUT**.
+- Added the linked DMX-node Port Configuration to Rack Layout device settings without changing rack card or canvas dimensions.
+- Corrected Pathway image filename casing and removed references to rear images that are not present.
 
 ## V25.6 - 2026-07-30
 
