@@ -2,6 +2,16 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V25.10 - 2026-07-31
+
+- Fixed Rack Layout device deselection using capture-phase pointer handling, while preserving Rack Library group state.
+- Updated Rack Library scrolling and limited **Devices already in project** to unplaced devices only.
+- Added IP address, subnet, protocol, and notes fields to compatible Rack Layout device settings.
+- Renamed **Start Unit** to **Rack Position 'U'** and removed the unused device-colour setting.
+- Centred rack inventory quantities and changed them to use library device names rather than user-assigned names.
+- Removed Ports and Power metadata from Network Equipment cards.
+- Added rack membership and saved device notes beneath Network Equipment device names.
+
 ## V25.9 - 2026-07-31
 
 - Updated the LumiNode 1 Network Equipment line image to 180 × 90 px.
