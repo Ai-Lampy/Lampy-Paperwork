@@ -1,95 +1,122 @@
 {
-  "schemaVersion": 2,
-  "manufacturer": "Pathway",
   "devices": [
     {
-      "id": "Pathway-via-12-fibre-switch",
-      "name": "Pathport VIA 12",
-      "type": "Managed Network Switch",
       "dimensionsMm": {
-        "width": null,
-        "height": null,
-        "depth": null
+        "depth": 305,
+        "height": 43,
+        "width": 483
       },
-      "weightKg": null,
-      "rack": {
-        "heightU": 1,
-        "widthFraction": 1
+      "id": "pathway-via-12-fibre-switch",
+      "imageUrl": "images/pathway/Pathport_VIA_12.png",
+      "lineImageUrlFront": "images/pathway/Pathport_VIA_12_Line_front.png",
+      "lineImageUrlRear": "",
+      "mounting": {
+        "accessory": "Pathway truss-mount adaptor",
+        "method": null,
+        "trussMountable": true
       },
+      "name": "Pathport VIA 12",
       "ports": [
         {
-          "quantity": 10,
           "connector": "1GbE EtherCON",
           "direction": "network",
-          "facing": "front"
+          "facing": "front",
+          "quantity": 10
         },
         {
-          "quantity": 2,
           "connector": "1GbE EtherCON",
           "direction": "network",
-          "facing": "rear"
+          "facing": "rear",
+          "quantity": 2
         },
         {
-          "quantity": 2,
-          "connector": "Quad Fibre",
+          "connector": "opticalCON QUAD",
           "direction": "network",
-          "facing": "rear"
+          "facing": "rear",
+          "quantity": 2
         }
       ],
       "power": {
         "connectors": [
-          "powerCON TRUE1 In/Thru"
+          "powerCON AC input",
+          "powerCON AC thru"
         ],
         "poeIn": false
       },
-      "protocols": [],
       "processingEngines": null,
-      "imageUrl": "images/pathway/Pathport_VIA_12.png",
-      "lineImageUrl": "images/pathway/Pathport_VIA_12_Line.png"
+      "protocols": [
+        "sACN",
+        "Art-Net",
+        "IEEE 802.3af PoE",
+        "IEEE 802.1AB LLDP",
+        "IEEE 802.1Q VLAN",
+        "IEEE 802.1w RSTP",
+        "EAPS",
+        "IGMPv2",
+        "DHCP",
+        "Dante QoS / DSCP",
+        "Ethernet"
+      ],
+      "rack": {
+        "heightU": 1,
+        "widthFraction": 1
+      },
+      "type": "Network Switch",
+      "weightKg": 2.4
     },
     {
-      "id": "Pathport-Octo-DMX-Gateway",
-      "name": "Pathport Octo DMX Gateway",
-      "type": "DMX Node",
       "dimensionsMm": {
-        "width": null,
-        "height": null,
-        "depth": null
+        "depth": 150,
+        "height": 40,
+        "width": 432
       },
-      "weightKg": null,
-      "rack": {
-        "heightU": 1,
-        "widthFraction": 1
+      "id": "pathport-octo-dmx-gateway",
+      "imageUrl": "images/pathway/Pathway_Octo_Node.jpg",
+      "lineImageUrlFront": "images/pathway/Pathway_Octo_Node_Line_front.png",
+      "lineImageUrlRear": "",
+      "mounting": {
+        "accessory": "Optional truss-mount kit",
+        "method": null,
+        "trussMountable": true
       },
+      "name": "Pathport OCTO DMX Node",
       "ports": [
         {
-          "quantity": 8,
-          "connector": "XLR-5",
-          "direction": "output",
-          "facing": "front"
+          "connector": "XLR-5 female",
+          "direction": "bidirectional",
+          "facing": "front",
+          "quantity": 8
         },
         {
-          "quantity": 1,
-          "connector": "1GbE EtherCON",
+          "connector": "100MbE EtherCON",
           "direction": "network",
-          "facing": "rear"
+          "facing": "rear",
+          "quantity": 1
         }
       ],
       "power": {
         "connectors": [
-          "IEC"
+          "IEC C14 AC inlet"
         ],
         "poeIn": false
       },
-      "protocols": [
-        "Art-Net",
-        "sACN",
-        "Pathway Protocol",
-        "Shownet"
-      ],
       "processingEngines": null,
-      "imageUrl": "images/pathway/Pathway_Octo_Node.jpg",
-      "lineImageUrl": "images/pathway/Pathway_Octo_Node_Line.png"
+      "protocols": [
+        "DMX512",
+        "RDM",
+        "sACN",
+        "Art-Net",
+        "Pathport Protocol",
+        "Strand ShowNet"
+      ],
+      "rack": {
+        "heightU": 1,
+        "widthFraction": 1
+      },
+      "type": "DMX Node",
+      "weightKg": 2.4
     }
-  ]
+  ],
+  "manufacturer": "Pathway",
+  "schemaVersion": 2
 }
