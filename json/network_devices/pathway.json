@@ -71,7 +71,7 @@
         "width": 432
       },
       "id": "pathport-octo-dmx-gateway",
-      "imageUrl": "images/pathway/Pathway_Octo_Node.jpg",
+      "imageUrl": "images/pathway/Pathway_Octo_Node.png",
       "lineImageUrlFront": "images/pathway/Pathway_Octo_Node_Line_front.png",
       "lineImageUrlRear": "",
       "mounting": {
@@ -79,7 +79,7 @@
         "method": null,
         "trussMountable": true
       },
-      "name": "Pathport OCTO DMX Node",
+      "name": "Pathport Octo DMX Gateway",
       "ports": [
         {
           "connector": "XLR-5 female",
