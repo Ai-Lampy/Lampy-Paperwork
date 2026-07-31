@@ -2,6 +2,14 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V25.12 - 2026-07-31
+
+- Rebuilt the Rack Layout workspace header as three columns for inventory, rack information, and display-mode controls.
+- Added a collapsible **Devices In Rack** group to Rack Settings, ordered by visual rack position.
+- Added hover and keyboard-focus highlighting between the device list and rack canvas.
+- Made device-list selection open the corresponding Rack Layout device settings.
+- Added VLAN selection to compatible Rack Layout device settings whenever project VLAN support is enabled.
+
 ## V25.11 - 2026-07-31
 
 - Fixed rack-device deselection by detecting the selected Rack Layout element directly instead of checking the routed sheet name.
