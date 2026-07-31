@@ -2,6 +2,18 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V25.9 - 2026-07-31
+
+- Updated the LumiNode 1 Network Equipment line image to 180 × 90 px.
+- Made the Rack Device Library independently scrollable and preserved every device-group open or closed state across Rack Layout re-renders.
+- Added a dedicated **Devices already in project** library group, including clear already-placed status.
+- Scaled detailed rack images to the complete device height at 80 px per rack unit.
+- Made drag positioning and drop highlighting preserve the full height of multi-unit devices.
+- Grouped Network Equipment cards into collapsible location sections and ordered rack-mounted devices by their visual rack order.
+- Added one Rack Layout sub-tab per rack.
+- Added per-device quantity summaries to the rack workspace header.
+- Cleared rack-device selection when the user clicks outside the selected device and its settings.
+
 ## V25.8 - 2026-07-31
 
 - Expanded the NPU reference schema with the same hardware metadata structure used by Luminex and Pathway devices.
