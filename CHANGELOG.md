@@ -6,6 +6,8 @@ All notable fixes, cleanup work, and published version changes should be recorde
 
 - Removed project-position colour backgrounds and blend effects from Network Equipment front and rear line images.
 - Kept position colours in their dedicated strip beneath each device card.
+- Changed standard Network Equipment line images to 690 px wide.
+- Added model-specific line-image sizing for LumiNode 1 at 400 × 140 px and LumiNode 2 at 500 × 150 px.
 
 ## V25.5 - 2026-07-30
 
