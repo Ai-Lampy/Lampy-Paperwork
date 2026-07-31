@@ -2,6 +2,16 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V25.11 - 2026-07-31
+
+- Fixed rack-device deselection by detecting the selected Rack Layout element directly instead of checking the routed sheet name.
+- Updated segmented IP input sizing, borders, and corner radius.
+- Made device network settings capability-based: only devices with network ports show IP address, subnet, and protocol fields.
+- Excluded DMX Splitters from network configuration fields.
+- Set sACN as the default protocol for DMX Nodes.
+- Added NPU Mode and selected Software Version to Rack Layout device settings.
+- Added NPU parameter totals to the Rack Layout device metadata.
+
 ## V25.10 - 2026-07-31
 
 - Fixed Rack Layout device deselection using capture-phase pointer handling, while preserving Rack Library group state.
