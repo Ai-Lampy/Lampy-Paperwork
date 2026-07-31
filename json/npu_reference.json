@@ -1,10 +1,63 @@
 {
+  "schemaVersion": 2,
+  "manufacturer": "MA Lighting",
   "npus": [
     {
       "id": "ma-npu-m",
       "manufacturer": "MA Lighting",
       "name": "grandMA3 NPU M",
       "imageUrl": "images/NPU/grandma3-NPU.png",
+      "lineImageUrlFront": "images/NPU/grandma3_NPU_line_front.png",
+      "lineImageUrlRear": "",
+      "type": "Processing Unit",
+      "dimensionsMm": {
+        "width": 482,
+        "height": 87,
+        "depth": 372
+      },
+      "weightKg": 5,
+      "rack": {
+        "mountable": true,
+        "heightU": 2,
+        "widthFraction": 1
+      },
+      "mounting": {
+        "method": "19-inch rack",
+        "accessory": null,
+        "trussMountable": false
+      },
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "direction": "output",
+          "facing": "rear",
+          "quantity": 8
+        },
+        {
+          "connector": "EtherCON/RJ45",
+          "direction": "network",
+          "facing": "rear",
+          "quantity": 2
+        },
+        {
+          "connector": "USB 2.0 Type A",
+          "direction": "data",
+          "facing": "rear",
+          "quantity": 3
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON TRUE1"
+        ],
+        "poeIn": false,
+        "maximumVa": 200
+      },
+      "protocols": [
+        "MA-Net3",
+        "MA-Net2"
+      ],
+      "processingEngines": null,
       "softwareModes": [
         {
           "name": "Mode 2",
@@ -21,6 +74,57 @@
       "manufacturer": "MA Lighting",
       "name": "grandMA3 NPU L",
       "imageUrl": "images/NPU/grandma3-NPU.png",
+      "lineImageUrlFront": "images/NPU/grandma3_NPU_line_front.png",
+      "lineImageUrlRear": "",
+      "type": "Processing Unit",
+      "dimensionsMm": {
+        "width": 482,
+        "height": 87,
+        "depth": 372
+      },
+      "weightKg": 5,
+      "rack": {
+        "mountable": true,
+        "heightU": 2,
+        "widthFraction": 1
+      },
+      "mounting": {
+        "method": "19-inch rack",
+        "accessory": null,
+        "trussMountable": false
+      },
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "direction": "output",
+          "facing": "rear",
+          "quantity": 8
+        },
+        {
+          "connector": "EtherCON/RJ45",
+          "direction": "network",
+          "facing": "rear",
+          "quantity": 2
+        },
+        {
+          "connector": "USB 2.0 Type A",
+          "direction": "data",
+          "facing": "rear",
+          "quantity": 3
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON TRUE1"
+        ],
+        "poeIn": false,
+        "maximumVa": 200
+      },
+      "protocols": [
+        "MA-Net3",
+        "MA-Net2"
+      ],
+      "processingEngines": null,
       "softwareModes": [
         {
           "name": "Mode 2",
@@ -37,6 +141,57 @@
       "manufacturer": "MA Lighting",
       "name": "grandMA3 NPU XL",
       "imageUrl": "images/NPU/grandma3-NPU.png",
+      "lineImageUrlFront": "images/NPU/grandma3_NPU_line_front.png",
+      "lineImageUrlRear": "",
+      "type": "Processing Unit",
+      "dimensionsMm": {
+        "width": 482,
+        "height": 87,
+        "depth": 372
+      },
+      "weightKg": 5,
+      "rack": {
+        "mountable": true,
+        "heightU": 2,
+        "widthFraction": 1
+      },
+      "mounting": {
+        "method": "19-inch rack",
+        "accessory": null,
+        "trussMountable": false
+      },
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "direction": "output",
+          "facing": "rear",
+          "quantity": 8
+        },
+        {
+          "connector": "EtherCON/RJ45",
+          "direction": "network",
+          "facing": "rear",
+          "quantity": 2
+        },
+        {
+          "connector": "USB 2.0 Type A",
+          "direction": "data",
+          "facing": "rear",
+          "quantity": 3
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON TRUE1"
+        ],
+        "poeIn": false,
+        "maximumVa": 200
+      },
+      "protocols": [
+        "MA-Net3",
+        "MA-Net2"
+      ],
+      "processingEngines": null,
       "softwareModes": [
         {
           "name": "Mode 2",
@@ -53,6 +208,56 @@
       "manufacturer": "MA Lighting",
       "name": "grandMA2 NPU",
       "imageUrl": "images/NPU/grandma2-NPU.png",
+      "lineImageUrlFront": "",
+      "lineImageUrlRear": "",
+      "type": "Processing Unit",
+      "dimensionsMm": {
+        "width": 485,
+        "height": 126,
+        "depth": 332
+      },
+      "weightKg": 8.4,
+      "rack": {
+        "mountable": true,
+        "heightU": 3,
+        "widthFraction": 1
+      },
+      "mounting": {
+        "method": "19-inch rack",
+        "accessory": null,
+        "trussMountable": false
+      },
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "direction": "bidirectional",
+          "facing": "rear",
+          "quantity": 8
+        },
+        {
+          "connector": "EtherCON",
+          "direction": "network",
+          "facing": "rear",
+          "quantity": 1
+        },
+        {
+          "connector": "USB 2.0 Type A",
+          "direction": "data",
+          "facing": "rear",
+          "quantity": 3
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON"
+        ],
+        "poeIn": false,
+        "maximumVa": 150
+      },
+      "protocols": [
+        "MA-Net2"
+      ],
+      "processingEngines": null,
       "softwareModes": [
         {
           "name": "Mode 2",
