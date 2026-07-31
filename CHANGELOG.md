@@ -2,6 +2,14 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V25.7 - 2026-07-31
+
+- Set LumiNode 4 front and rear line images to 500 × 80 px.
+- Moved Network Equipment Edit and Remove controls to the left of the main product image.
+- Removed Location from Network Equipment card metadata and moved the device IP address to the top centre of each card.
+- Added DMX-node Port Configuration using the actual XLR-5 port quantity from the device reference.
+- Added editable Port, Name, Universe, Position, and Direction fields, with project positions and their colours available in the Position selector.
+
 ## V25.6 - 2026-07-30
 
 - Removed project-position colour backgrounds and blend effects from Network Equipment front and rear line images.
