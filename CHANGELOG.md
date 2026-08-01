@@ -2,6 +2,11 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V25.15 - 2026-08-01
+
+- Removed Rack Layout device background colours and colour blending.
+- Detailed rack devices now display their original line images at full opacity.
+
 ## V25.14 - 2026-08-01
 
 - Added the new rear line-image reference for the Pathport VIA 12.
