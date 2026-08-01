@@ -8,7 +8,7 @@
       "name": "grandMA3 NPU M",
       "imageUrl": "images/NPU/grandma3-NPU.png",
       "lineImageUrlFront": "images/NPU/grandma3_NPU_line_front.png",
-      "lineImageUrlRear": "",
+      "lineImageUrlRear": "images/NPU/grandma3_NPU_line_rear.png",
       "type": "Processing Unit",
       "dimensionsMm": {
         "width": 482,
@@ -75,7 +75,7 @@
       "name": "grandMA3 NPU L",
       "imageUrl": "images/NPU/grandma3-NPU.png",
       "lineImageUrlFront": "images/NPU/grandma3_NPU_line_front.png",
-      "lineImageUrlRear": "",
+      "lineImageUrlRear": "images/NPU/grandma3_NPU_line_rear.png",
       "type": "Processing Unit",
       "dimensionsMm": {
         "width": 482,
@@ -142,7 +142,7 @@
       "name": "grandMA3 NPU XL",
       "imageUrl": "images/NPU/grandma3-NPU.png",
       "lineImageUrlFront": "images/NPU/grandma3_NPU_line_front.png",
-      "lineImageUrlRear": "",
+      "lineImageUrlRear": "images/NPU/grandma3_NPU_line_rear.png",
       "type": "Processing Unit",
       "dimensionsMm": {
         "width": 482,
