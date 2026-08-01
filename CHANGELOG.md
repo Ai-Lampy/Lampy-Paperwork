@@ -4,6 +4,7 @@ All notable fixes, cleanup work, and published version changes should be recorde
 
 ## V25.13 - 2026-07-31
 
+- Set all full-rack-width Network Equipment line images to 675 px while preserving half-width and non-rack device dimensions.
 - Updated the Rack Layout header to fixed 475 px, 415 px, and 475 px columns.
 - Restyled the rack inventory summary with left alignment and a 40 px height.
 - Reordered Rack Layout Device Settings to show name, network addressing, protocol/VLAN controls, rack position, and notes.
