@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V25.14 - 2026-08-01
+
+- Added the new rear line-image reference for the Pathport VIA 12.
+- Added the new rear line-image reference for the Pathport Octo DMX Gateway.
+- Added the new grandMA3 NPU rear line image to the NPU M, L, and XL library records.
+
 ## V25.13 - 2026-07-31
 
 - Set all full-rack-width Network Equipment line images to 675 px while preserving half-width and non-rack device dimensions.
