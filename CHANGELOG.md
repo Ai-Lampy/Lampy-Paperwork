@@ -7,7 +7,7 @@ All notable fixes, cleanup work, and published version changes should be recorde
 - Updated the Rack Layout header to fixed 475 px, 415 px, and 475 px columns.
 - Restyled the rack inventory summary with left alignment and a 40 px height.
 - Reordered Rack Layout Device Settings to show name, network addressing, protocol/VLAN controls, rack position, and notes.
-- Kept Protocol and VLAN controls side by side at 170 px each.
+- Set the inline Rack Layout Device Settings controls to 194 px and centred the Rack Position value.
 - Added immediate VLAN colour fills to the Rack Layout VLAN selector.
 - Added the device ID to Device Settings metadata.
 - Resized the Rack Layout cards to 375 px for the Device Library, 600 px for the rack, and 425 px for settings.
