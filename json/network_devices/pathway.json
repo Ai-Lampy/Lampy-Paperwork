@@ -9,7 +9,7 @@
       "id": "pathway-via-12-fibre-switch",
       "imageUrl": "images/pathway/Pathport_VIA_12.png",
       "lineImageUrlFront": "images/pathway/Pathport_VIA_12_Line_front.png",
-      "lineImageUrlRear": "",
+      "lineImageUrlRear": "images/pathway/Pathport_VIA_12_Line_rear.png",
       "mounting": {
         "accessory": "Pathway truss-mount adaptor",
         "method": null,
@@ -73,7 +73,7 @@
       "id": "pathport-octo-dmx-gateway",
       "imageUrl": "images/pathway/Pathway_Octo_Node.png",
       "lineImageUrlFront": "images/pathway/Pathway_Octo_Node_Line_front.png",
-      "lineImageUrlRear": "",
+      "lineImageUrlRear": "images/pathway/Pathway_Octo_Node_Line_rear.png",
       "mounting": {
         "accessory": "Optional truss-mount kit",
         "method": null,
