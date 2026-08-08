@@ -2,6 +2,19 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26 - 2026-08-08
+
+- Added Front, Side, and Rear views to Rack Layout while retaining Simple and Detailed display modes.
+- Added configurable rack depth, front/rear device mounting, and a default 700 mm depth for existing and new racks.
+- Added depth-proportional Side view device blocks with vertical drag movement and custom-device depth settings.
+- Enforced 200 mm rear cable clearance for single and opposing devices, blocking invalid placement, movement, mounting-face, and rack-depth changes.
+- Added the option to show or hide opposite-side device backs in Front and Rear views.
+- Updated Devices In Rack to show the user-defined name followed by the JSON library device name.
+- Added JSON-driven DMX socket coordinates and position-colour overlays for rack-mountable LumiNode 4, LumiNode 12, Ethernet-DMX8 MKII, and Pathport Octo nodes.
+- Migrated V25 rack data safely: existing devices mount from the front, racks default to 700 mm, and custom devices default to 300 mm deep.
+- Updated the V26 welcome message, walkthrough, README, and application version references.
+- Removed two unavailable optional GigaCore line-image paths and corrected stale compatibility-library image paths to prevent 404 responses.
+
 ## V25.15 - 2026-08-01
 
 - Removed Rack Layout device background colours and colour blending.

@@ -19,7 +19,9 @@ Live app: [https://ai-lampy.github.io/Lampy-Paperwork/](https://ai-lampy.github.
 - Uses console-reference software versions when available, with an Other/manual version field for unlisted or empty reference data.
 - Separates console and network-device library selection from the side-pane forms used to enter project details.
 - Displays only network equipment that has actually been added to the project.
-- Provides a centred Rack Layout builder with 800 × 80 px rack units, click-to-place spaces, aligned U numbering, library-defined device heights, half-width pairing, duplicate-device prevention, and Simple/Detailed views.
+- Provides a centred Rack Layout builder with Front, Side, and Rear views, configurable depth, front/rear mounting, aligned U numbering, library-defined dimensions, half-width pairing, and Simple/Detailed display modes.
+- Enforces at least 200 mm of cable space behind rack devices and blocks invalid depth, placement, movement, or mounting-face changes.
+- Displays configured DMX Node position colours over mapped sockets in Detailed rack views.
 - Gives every added rack its own Rack Layout sub-tab so only one rack diagram is displayed at a time.
 - Uses network-device line images in Detailed rack views, without applying project-position colours, while keeping consoles out of rack-device choices.
 - Keeps Control/Network devices linked to the IP Addresses sheet while enforcing removal from their original owning tab.
@@ -31,7 +33,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V25.15**
+Current app version: **V26**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 
@@ -43,8 +45,9 @@ See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 4. Build or import the **Fixture Patch**.
 5. Check **Power Calculations** after fixture IDs and fixture types are set.
 6. Add consoles and NPUs in **Control/Network**.
-7. Open **IP Addresses** to review the compiled device list, assign subnets and VLANs, and add switches, nodes, cameras, or other project network devices.
-8. Download the project file regularly to save an editable copy.
+7. Use **Rack Layout** to create racks, set rack depth, and place equipment from the Front or Rear; use Side view to check physical depth and cable clearance.
+8. Open **IP Addresses** to review the compiled device list, assign subnets and VLANs, and add switches, nodes, cameras, or other project network devices.
+9. Download the project file regularly to save an editable copy.
 
 All project data is client-side. The app runs in your browser and does not require an account, server, database, or build process. PDF export loads a pinned browser rendering library on demand, while project and export processing remain in the browser.
 
