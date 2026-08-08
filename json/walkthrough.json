@@ -1,5 +1,5 @@
 {
-  "title": "Lampy Paperwork V20 Walk-through",
+  "title": "Lampy Paperwork V26 Walk-through",
   "sections": [
     {
       "title": "Recommended Workflow",
@@ -11,6 +11,7 @@
         "Open Position Summary to create positions and assign up to three colours. Position names and colours are shared with the patch, power calculations, labels, and Control/Network cards.",
         "Open Power Calculations and assign distros to supplies. Enter fixture IDs to link each way to Fixture Patch data, then check phase totals, RCBO warnings, Aux outlets, and the PDF preview.",
         "Use Control/Network to add consoles and NPUs, including roles, locations, parameters, protocols, IP addresses, DMX ports, and reference images.",
+        "Open Rack Layout to create racks, set their U size and depth, and place project or library devices from the Front or Rear view. Use Side view to inspect device depths and cable clearance.",
         "Open IP Addresses to review the compiled console and NPU list, assign subnet and VLAN information, and add switches, nodes, cameras, or other network devices used by the project.",
         "Review the Fan Outs tab generated from Power Calculations and export the required Fan Out paperwork.",
         "Use Distro Labels to complete Front RCBO Labels, Rear Labels, and Table View, then preview and export the required label pages.",
@@ -35,6 +36,11 @@
       "items": [
         "Consoles and NPUs added in Control/Network appear automatically in the IP Addresses sheet.",
         "Console names, locations, and IP addresses remain linked between Control/Network and IP Addresses.",
+        "Rack Layout provides Front, Side, and Rear views. Front and Rear are mounting faces; Side is a depth overview where existing devices can still be moved vertically.",
+        "New racks default to 700 mm deep. Rack Depth can be edited, but every device must retain at least 200 mm of space behind it for cabling.",
+        "Front- and rear-mounted devices may share a U only when their combined depths plus the 200 mm cable space fit inside the rack.",
+        "Use Simple view for names and device types, or Detailed view for the front and rear line images supplied by the device library.",
+        "Use Port Configuration on supported DMX Nodes to assign universes, directions, names, and project positions. Assigned position colours appear on mapped DMX sockets in Detailed Rack Layout views.",
         "Use + Network Device in IP Addresses for custom equipment, or use Add to IP Addresses on a Control/Network reference item.",
         "Each device can contain two IP addresses. Subnet and VLAN values are stored per interface, while the device name, location, and notes remain shared.",
         "The VLAN reference shows VLAN 0 Untagged/MGMT, VLAN 1 sACN, VLAN 2 Art-Net, and VLAN 3 RoboCam with matching table colours.",
