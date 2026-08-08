@@ -129,6 +129,12 @@
       "imageUrl": "images/luminex/luminode_4.png",
       "lineImageUrlFront": "images/luminex/luminode_4_line_front.png",
       "lineImageUrlRear": "images/luminex/luminode_4_line_rear.png",
+      "dmxPortLayout": [
+        { "port": "A", "face": "front", "xPercent": 55.8, "yPercent": 51.2, "sizePercent": 10 },
+        { "port": "B", "face": "front", "xPercent": 67.6, "yPercent": 51.2, "sizePercent": 10 },
+        { "port": "C", "face": "front", "xPercent": 79.5, "yPercent": 51.2, "sizePercent": 10 },
+        { "port": "D", "face": "front", "xPercent": 91.3, "yPercent": 51.2, "sizePercent": 10 }
+      ],
       "mounting": {
         "accessory": "Clamp",
         "method": "M10 Bolt",
@@ -194,6 +200,20 @@
       "imageUrl": "images/luminex/luminode_12.png",
       "lineImageUrlFront": "images/luminex/luminode_12_line_front.png",
       "lineImageUrlRear": "images/luminex/luminode_12_line_rear.png",
+      "dmxPortLayout": [
+        { "port": "A", "face": "front", "xPercent": 30.0, "yPercent": 52.7, "sizePercent": 5.5 },
+        { "port": "B", "face": "front", "xPercent": 35.6, "yPercent": 52.7, "sizePercent": 5.5 },
+        { "port": "C", "face": "front", "xPercent": 41.2, "yPercent": 52.7, "sizePercent": 5.5 },
+        { "port": "D", "face": "front", "xPercent": 46.8, "yPercent": 52.7, "sizePercent": 5.5 },
+        { "port": "E", "face": "front", "xPercent": 52.4, "yPercent": 52.7, "sizePercent": 5.5 },
+        { "port": "F", "face": "front", "xPercent": 58.0, "yPercent": 52.7, "sizePercent": 5.5 },
+        { "port": "G", "face": "front", "xPercent": 63.6, "yPercent": 52.7, "sizePercent": 5.5 },
+        { "port": "H", "face": "front", "xPercent": 69.1, "yPercent": 52.7, "sizePercent": 5.5 },
+        { "port": "I", "face": "front", "xPercent": 74.8, "yPercent": 52.7, "sizePercent": 5.5 },
+        { "port": "J", "face": "front", "xPercent": 80.3, "yPercent": 52.7, "sizePercent": 5.5 },
+        { "port": "K", "face": "front", "xPercent": 85.9, "yPercent": 52.7, "sizePercent": 5.5 },
+        { "port": "L", "face": "front", "xPercent": 91.5, "yPercent": 52.7, "sizePercent": 5.5 }
+      ],
       "mounting": {
         "accessory": null,
         "method": null,
@@ -260,6 +280,16 @@
       "imageUrl": "images/luminex/ethernet_dmx8_mk2.png",
       "lineImageUrlFront": "images/luminex/ethernet_dmx8_mk2_line_front.png",
       "lineImageUrlRear": "images/luminex/ethernet_dmx8_mk2_line_rear.png",
+      "dmxPortLayout": [
+        { "port": "A", "face": "front", "xPercent": 42.4, "yPercent": 47.9, "sizePercent": 5.6 },
+        { "port": "B", "face": "front", "xPercent": 47.5, "yPercent": 47.9, "sizePercent": 5.6 },
+        { "port": "C", "face": "front", "xPercent": 52.6, "yPercent": 47.9, "sizePercent": 5.6 },
+        { "port": "D", "face": "front", "xPercent": 57.8, "yPercent": 47.9, "sizePercent": 5.6 },
+        { "port": "E", "face": "front", "xPercent": 62.9, "yPercent": 47.9, "sizePercent": 5.6 },
+        { "port": "F", "face": "front", "xPercent": 68.0, "yPercent": 47.9, "sizePercent": 5.6 },
+        { "port": "G", "face": "front", "xPercent": 73.1, "yPercent": 47.9, "sizePercent": 5.6 },
+        { "port": "H", "face": "front", "xPercent": 78.3, "yPercent": 47.9, "sizePercent": 5.6 }
+      ],
       "mounting": {
         "accessory": null,
         "method": null,
@@ -696,8 +726,8 @@
       },
       "id": "luminex_gigacore_18t",
       "imageUrl": "images/luminex/gigacore_18t.png",
-      "lineImageUrlFront": "images/luminex/gigacore_18t_line_front.png",
-      "lineImageUrlRear": "images/luminex/gigacore_18t_line_rear.png",
+      "lineImageUrlFront": "",
+      "lineImageUrlRear": "",
       "mounting": {
         "accessory": null,
         "method": null,
@@ -776,8 +806,8 @@
       },
       "id": "luminex_gigacore_20t",
       "imageUrl": "images/luminex/gigacore_20t.png",
-      "lineImageUrlFront": "images/luminex/gigacore_20t_line_front.png",
-      "lineImageUrlRear": "images/luminex/gigacore_20t_line_rear.png",
+      "lineImageUrlFront": "",
+      "lineImageUrlRear": "",
       "mounting": {
         "accessory": null,
         "method": null,

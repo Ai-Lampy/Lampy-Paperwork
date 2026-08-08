@@ -74,6 +74,16 @@
       "imageUrl": "images/pathway/Pathway_Octo_Node.png",
       "lineImageUrlFront": "images/pathway/Pathway_Octo_Node_Line_front.png",
       "lineImageUrlRear": "images/pathway/Pathway_Octo_Node_Line_rear.png",
+      "dmxPortLayout": [
+        { "port": "A", "face": "front", "xPercent": 42.8, "yPercent": 50.0, "sizePercent": 5.5 },
+        { "port": "B", "face": "front", "xPercent": 49.3, "yPercent": 50.0, "sizePercent": 5.5 },
+        { "port": "C", "face": "front", "xPercent": 55.8, "yPercent": 50.0, "sizePercent": 5.5 },
+        { "port": "D", "face": "front", "xPercent": 62.4, "yPercent": 50.0, "sizePercent": 5.5 },
+        { "port": "E", "face": "front", "xPercent": 68.8, "yPercent": 50.0, "sizePercent": 5.5 },
+        { "port": "F", "face": "front", "xPercent": 75.4, "yPercent": 50.0, "sizePercent": 5.5 },
+        { "port": "G", "face": "front", "xPercent": 81.9, "yPercent": 50.0, "sizePercent": 5.5 },
+        { "port": "H", "face": "front", "xPercent": 88.4, "yPercent": 50.0, "sizePercent": 5.5 }
+      ],
       "mounting": {
         "accessory": "Optional truss-mount kit",
         "method": null,
