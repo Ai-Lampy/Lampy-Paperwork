@@ -2,6 +2,13 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.2 - 2026-08-09
+
+- Reduced side-by-side Front and Rear rack cards to 520 px while leaving the standard single rack width unchanged, and set rack-card horizontal padding to 4 px.
+- Removed the outer left rail from the dual Front card and the outer right rail from the dual Rear card, expanding the device area into the removed rail space.
+- Updated automatic Fit scaling for the narrower side-by-side cards.
+- Recalibrated LumiNode 12 port overlays to the actual XLR socket centres rather than internal socket pins.
+
 ## V26.1 - 2026-08-09
 
 - Fixed the **Show opposite side devices** switch so it updates Rack Layout immediately, and changed its default to off.
