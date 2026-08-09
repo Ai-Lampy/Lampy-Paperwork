@@ -2,6 +2,17 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.1 - 2026-08-09
+
+- Fixed the **Show opposite side devices** switch so it updates Rack Layout immediately, and changed its default to off.
+- Reduced required rack cable clearance from 200 mm to 100 mm.
+- Placed the Rack View and Display Mode controls on the same row.
+- Made **Devices In Rack** collapsed by default and added a confirmed **Clear Rack** action.
+- Added close controls to the Rack Device Library and Rack/Device Settings cards. Closing either card opens simultaneous Front and Rear rack cards without changing their existing dimensions.
+- Added header controls to restore either closed sidebar; selecting Front, Side, or Rear returns to the normal single-rack workspace.
+- Set rack DMX socket colour overlays to 50% opacity and a fixed 36.529412 px circle size.
+- Recalibrated all twelve LumiNode 12 socket centres against its 2566 px front line image to remove cumulative overlay drift.
+
 ## V26 - 2026-08-08
 
 - Added Front, Side, and Rear views to Rack Layout while retaining Simple and Detailed display modes.
