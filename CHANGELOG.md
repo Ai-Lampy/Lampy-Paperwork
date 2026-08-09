@@ -4,6 +4,9 @@ All notable fixes, cleanup work, and published version changes should be recorde
 
 ## V26.3 - 2026-08-09
 
+- Set the remaining Rack Settings sidebar to 365 px and Rack Device Library sidebar to 310 px whenever the Front and Rear rack cards are displayed together.
+- Expanded both rack cards to 700 px when both sidebars are closed and added the matching automatic Fit width.
+- Replaced the text × controls with conventional left/right sidebar-close icons.
 - Added the UPS network-device library from the updated manifest.
 - Fixed invalid trailing-comma syntax in the UPS library that caused the complete network-device manifest load to fall back to the legacy reference.
 - Corrected the APC UPS device type to **Power Distribution**.
