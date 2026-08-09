@@ -43,9 +43,9 @@
         "heightU": 2,
         "widthFraction": 1
       },
-      "type": "Power Distrobution",
+      "type": "Power Distribution",
       "weightKg": 20.52
-    },
+    }
   ],
   "manufacturer": "UPS",
   "schemaVersion": 2
