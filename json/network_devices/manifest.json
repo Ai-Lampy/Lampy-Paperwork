@@ -12,6 +12,10 @@
     {
       "manufacturer": "Generic",
       "file": "json/network_devices/generic.json"
-    }
+    },
+	{
+		"manufacturer": "UPS",
+		"file": "json/network_devices/UPS.json"
+	}
   ]
 }

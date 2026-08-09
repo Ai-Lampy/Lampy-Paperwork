@@ -1,0 +1,52 @@
+{
+  "devices": [
+    {
+      "dimensionsMm": {
+        "depth": 406,
+        "height": 86,
+        "width": 432
+      },
+      "id": "APC-UPS-1000",
+      "imageUrl": "images/UPS/APC_UPS.png",
+      "lineImageUrlFront": "images/UPS/APC_UPS_line_front.png",
+      "lineImageUrlRear": "images/UPS/APC_UPS_line_rear.png",
+      "mounting": {
+        "accessory": "Rack-Mounting Brackets",
+        "method": null,
+        "trussMountable": false
+      },
+      "name": "APC UPS 1000VA",
+      "ports": [
+        {
+          "connector": "IEC",
+          "direction": "Output",
+          "facing": "rear",
+          "quantity": 4
+        },
+        {
+          "connector": "IEC",
+          "direction": "Input",
+          "facing": "rear",
+          "quantity": 1
+        }
+      ],
+      "power": {
+        "connectors": [
+          "IEC input",
+          "IEC output"
+        ],
+        "poeIn": false
+      },
+      "processingEngines": null,
+      "protocols": null,
+      "rack": {
+        "heightU": 2,
+        "widthFraction": 1
+      },
+      "type": "Power Distrobution",
+      "weightKg": 20.52
+    },
+  ],
+  "manufacturer": "UPS",
+  "schemaVersion": 2
+}
