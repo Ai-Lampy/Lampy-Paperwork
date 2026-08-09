@@ -2,6 +2,13 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.3 - 2026-08-09
+
+- Added the UPS network-device library from the updated manifest.
+- Fixed invalid trailing-comma syntax in the UPS library that caused the complete network-device manifest load to fall back to the legacy reference.
+- Corrected the APC UPS device type to **Power Distribution**.
+- Verified the APC product image and front/rear line images, 2U rack metadata, dimensions, ports, and power data.
+
 ## V26.2 - 2026-08-09
 
 - Reduced side-by-side Front and Rear rack cards to 520 px while leaving the standard single rack width unchanged, and set rack-card horizontal padding to 4 px.
