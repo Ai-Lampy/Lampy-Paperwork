@@ -2,6 +2,14 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.4 - 2026-08-11
+
+- Updated Rack Layout Simple view with a white background, black border, editable device name, conditional JSON/library name, and available IP, protocol, and VLAN details.
+- Made Rack Device Settings fields responsive so they resize cleanly when the Device Library sidebar is closed.
+- Set the Device Library to 365 px when Device Settings is closed, while retaining 520 px dual rack cards and 700 px rack cards when both sidebars are closed.
+- Restored both U-number rails on the Front and Rear rack cards when both sidebars are closed, while retaining the compact outer-rail layout when one sidebar remains visible.
+- Centred rack zoom controls over the rendered rack aperture, including the offset created by compact asymmetric rails.
+
 ## V26.3 - 2026-08-09
 
 - Set the remaining Rack Settings sidebar to 365 px and Rack Device Library sidebar to 310 px whenever the Front and Rear rack cards are displayed together.
