@@ -2,6 +2,14 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.5 - 2026-08-11
+
+- Updated Simple rack devices to use 790 px full-width and 390 px half-width layouts, 75 px per rack unit, and a three-column network-information layout.
+- Limited Simple-view IP address, subnet, protocol, and VLAN details to network-capable devices while retaining clean name-only Power device blocks.
+- Set new Network Switch devices to sACN when it is available in their supported protocol list.
+- Added confirmed per-location **Delete All Devices** actions to Network Equipment, including cleanup of linked rack placements.
+- Renamed **Show Opposite Side Devices**, changed rack-unit separators to 4 px dashed grey lines, and removed rack depth from the Rack Layout header.
+
 ## V26.4 - 2026-08-11
 
 - Updated Rack Layout Simple view with a white background, black border, editable device name, conditional JSON/library name, and available IP, protocol, and VLAN details.
