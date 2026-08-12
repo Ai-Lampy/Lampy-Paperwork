@@ -6,26 +6,32 @@
     },
     {
       "name": "Adlib",
+      "logo": "images/lighting_vendors/adlib.png",
       "details": "Knowsley Business Park, Adlib House, Kitling Rd, Knowsley, Prescot L34 9JS"
     },
     {
       "name": "Christie Lites UK",
+      "logo": "images/lighting_vendors/christie_lites.png",
       "details": "44 Sayer Dr, Coventry CV5 9PX"
     },
     {
       "name": "Lights | Control | Rigging",
+      "logo": "images/lighting_vendors/LCR.png",
       "details": "Unit C, Tower business park, Commercial Rd, Darwen BB3 0FJ"
     },
     {
       "name": "Neg Earth Lights",
+      "logo": "images/lighting_vendors/neg_earth.png",
       "details": "Light House, Western Rd, London NW10 7LT"
     },
     {
       "name": "PRG UK",
+      "logo": "images/lighting_vendors/PRG.png",
       "details": "The Cofton Centre, 350 Groveley Ln, Cofton Hackett, Birmingham B31 4PT"
     },
     {
       "name": "Siyan LTD",
+      "logo": "images/lighting_vendors/siyan.png",
       "details": "Unit 7, Globe Park, First Ave (off, Parkway, Marlow SL7 1YA"
     },
     {
@@ -34,6 +40,7 @@
     },
     {
       "name": "Sonalyst",
+      "logo": "images/lighting_vendors/sonalyst.png",
       "details": "Aberavon Rd, Port Talbot SA12 7DJ"
     }
   ]

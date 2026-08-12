@@ -17,7 +17,8 @@
           "Standard": {
             "channels": 5,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           }
         }
       },
@@ -41,17 +42,20 @@
           "Standard": {
             "channels": 9,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "Turbo": {
             "channels": 10,
             "gdtfMode": "Turbo",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "Basic": {
             "channels": 3,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           }
         }
       },
@@ -74,12 +78,14 @@
           "Standard": {
             "channels": 76,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "Advanced": {
             "channels": 122,
             "gdtfMode": "Advanced",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           }
         }
       },

@@ -17,7 +17,8 @@
           "1 Channel": {
             "channels": 1,
             "gdtfMode": "1 Channel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           }
         }
       },

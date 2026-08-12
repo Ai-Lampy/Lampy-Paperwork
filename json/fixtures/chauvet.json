@@ -26,52 +26,62 @@
           "97Ch Mode": {
             "channels": 97,
             "gdtfMode": "97Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 110
           },
           "74Ch Mode": {
             "channels": 74,
             "gdtfMode": "74Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 89
           },
           "68Ch Mode": {
             "channels": 68,
             "gdtfMode": "68Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 79
           },
           "47Ch Mode": {
             "channels": 47,
             "gdtfMode": "47Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 53
           },
           "30Ch Mode": {
             "channels": 30,
             "gdtfMode": "30Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "24Ch Mode": {
             "channels": 24,
             "gdtfMode": "24Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "13Ch Mode": {
             "channels": 13,
             "gdtfMode": "13Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "11Ch Mode": {
             "channels": 11,
             "gdtfMode": "11Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "8Ch Mode": {
             "channels": 8,
             "gdtfMode": "8Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "96Ch Mode": {
             "channels": 96,
             "gdtfMode": "96Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 109
           }
         }
       },
@@ -105,67 +115,80 @@
           "Single Control: Basic 20Ch": {
             "channels": 20,
             "gdtfMode": "Single Control: Basic 20Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "Single Control: Basic2 53Ch": {
             "channels": 53,
             "gdtfMode": "Single Control: Basic2 53Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           },
           "Single Control: Standard 101Ch": {
             "channels": 101,
             "gdtfMode": "Single Control: Standard 101Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 101
           },
           "Single Control: Advanced 155Ch": {
             "channels": 155,
             "gdtfMode": "Single Control: Advanced 155Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 101
           },
           "Single Control: Advanced2 169Ch": {
             "channels": 169,
             "gdtfMode": "Single Control: Advanced2 169Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 96
           },
           "Single Control: Tour 179Ch": {
             "channels": 179,
             "gdtfMode": "Single Control: Tour 179Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 101
           },
           "Single Control: Full PXL 169Ch": {
             "channels": 169,
             "gdtfMode": "Single Control: Full PXL 169Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 97
           },
           "Dual Control-Movement: Basic 41Ch": {
             "channels": 41,
             "gdtfMode": "Dual Control-Movement: Basic 41Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "Dual Control-Movement: Standard 53Ch ": {
             "channels": 53,
             "gdtfMode": "Dual Control-Movement: Standard 53Ch ",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           },
           "Dual Control-Movement: Advanced 59Ch ": {
             "channels": 59,
             "gdtfMode": "Dual Control-Movement: Advanced 59Ch ",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           },
           "Dual Control-Pixel: Basic 36Ch": {
             "channels": 36,
             "gdtfMode": "Dual Control-Pixel: Basic 36Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 48
           },
           "Dual Control-Pixel: Standard 48Ch": {
             "channels": 48,
             "gdtfMode": "Dual Control-Pixel: Standard 48Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 60
           },
           "Dual Control-Pixel: Advanced 96Ch": {
             "channels": 96,
             "gdtfMode": "Dual Control-Pixel: Advanced 96Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 60
           }
         }
       },
@@ -191,27 +214,32 @@
           "Advanced": {
             "channels": 355,
             "gdtfMode": "Advanced",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 315
           },
           "Standard": {
             "channels": 195,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 255
           },
           "Basic High Resolution": {
             "channels": 155,
             "gdtfMode": "Basic High Resolution",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 115
           },
           "Basic Raw": {
             "channels": 195,
             "gdtfMode": "Basic Raw",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 235
           },
           "Basic": {
             "channels": 120,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 100
           }
         }
       },
@@ -234,12 +262,14 @@
           "19Ch Mode": {
             "channels": 19,
             "gdtfMode": "19Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "21Ch Mode": {
             "channels": 21,
             "gdtfMode": "21Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           }
         }
       },
@@ -263,12 +293,14 @@
           "33Ch Mode": {
             "channels": 33,
             "gdtfMode": "33Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "26Ch Mode": {
             "channels": 26,
             "gdtfMode": "26Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           }
         }
       },
@@ -291,12 +323,14 @@
           "29Ch Mode": {
             "channels": 29,
             "gdtfMode": "29Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "24Ch Mode": {
             "channels": 24,
             "gdtfMode": "24Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           }
         }
       },
@@ -330,67 +364,80 @@
           "Single Control: Basic 31ch": {
             "channels": 31,
             "gdtfMode": "Single Control: Basic 31ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "Single Control: Standard 143ch": {
             "channels": 143,
             "gdtfMode": "Single Control: Standard 143ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 172
           },
           "Single Control: Advanced 263ch": {
             "channels": 263,
             "gdtfMode": "Single Control: Advanced 263ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 172
           },
           "Single Control: Tour 325ch": {
             "channels": 325,
             "gdtfMode": "Single Control: Tour 325ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 172
           },
           "Single Control: Basic2 37ch": {
             "channels": 37,
             "gdtfMode": "Single Control: Basic2 37ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "Single Control: Busking 19Ch": {
             "channels": 19,
             "gdtfMode": "Single Control: Busking 19Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "Single Control: Basic3 37Ch": {
             "channels": 37,
             "gdtfMode": "Single Control: Basic3 37Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "Dual Control Mode Movement: Advanced 45ch": {
             "channels": 45,
             "gdtfMode": "Dual Control Mode Movement: Advanced 45ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           },
           "Dual Control Mode Movement: Standard 34ch": {
             "channels": 34,
             "gdtfMode": "Dual Control Mode Movement: Standard 34ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           },
           "Dual Control Mode Movement: Basic 11ch": {
             "channels": 11,
             "gdtfMode": "Dual Control Mode Movement: Basic 11ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "Dual Control Mode Pixels Advanced 224ch": {
             "channels": 224,
             "gdtfMode": "Dual Control Mode Pixels Advanced 224ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 145
           },
           "Dual Control Mode Pixels: Standard 112ch": {
             "channels": 112,
             "gdtfMode": "Dual Control Mode Pixels: Standard 112ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 145
           },
           "Dual Control Mode Pixels: Basic 93ch": {
             "channels": 93,
             "gdtfMode": "Dual Control Mode Pixels: Basic 93ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 126
           }
         }
       },
@@ -413,12 +460,14 @@
           "48Ch Mode": {
             "channels": 48,
             "gdtfMode": "48Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 33
           },
           "32Ch Mode": {
             "channels": 32,
             "gdtfMode": "32Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           }
         }
       },
@@ -452,67 +501,80 @@
           "Single Mode: Basic2 27Ch": {
             "channels": 27,
             "gdtfMode": "Single Mode: Basic2 27Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "Single Mode: Standard2 41Ch": {
             "channels": 41,
             "gdtfMode": "Single Mode: Standard2 41Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "Single Mode: Tour 308Ch": {
             "channels": 308,
             "gdtfMode": "Single Mode: Tour 308Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 160
           },
           "Single Mode: 323Ch": {
             "channels": 323,
             "gdtfMode": "Single Mode: 323Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 169
           },
           "Single Mode: Advanced 252Ch": {
             "channels": 252,
             "gdtfMode": "Single Mode: Advanced 252Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 160
           },
           "Single Mode: Standard 134Ch": {
             "channels": 134,
             "gdtfMode": "Single Mode: Standard 134Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 160
           },
           "Single Mode: Basic 22Ch": {
             "channels": 22,
             "gdtfMode": "Single Mode: Basic 22Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "Dual Mode-Movement: Advanced 28Ch": {
             "channels": 28,
             "gdtfMode": "Dual Mode-Movement: Advanced 28Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "Dual Mode-Movement: Standard 22Ch": {
             "channels": 22,
             "gdtfMode": "Dual Mode-Movement: Standard 22Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "Dual Mode-Movement: Basic 10Ch": {
             "channels": 10,
             "gdtfMode": "Dual Mode-Movement: Basic 10Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "Dual Mode-LED: Advanced 224Ch": {
             "channels": 224,
             "gdtfMode": "Dual Mode-LED: Advanced 224Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 140
           },
           "Dual Mode-LED: Standard 112Ch": {
             "channels": 112,
             "gdtfMode": "Dual Mode-LED: Standard 112Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 140
           },
           "Dual Mode-LED: Basic 84Ch": {
             "channels": 84,
             "gdtfMode": "Dual Mode-LED: Basic 84Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 112
           }
         }
       },
@@ -535,12 +597,14 @@
           "50Ch Mode": {
             "channels": 50,
             "gdtfMode": "50Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 35
           },
           "34Ch Mode": {
             "channels": 34,
             "gdtfMode": "34Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           }
         }
       },
@@ -563,12 +627,14 @@
           "55Ch Mode": {
             "channels": 55,
             "gdtfMode": "55Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           },
           "38Ch Mode": {
             "channels": 38,
             "gdtfMode": "38Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           }
         }
       },
@@ -591,12 +657,14 @@
           "Advanced 46ch": {
             "channels": 46,
             "gdtfMode": "Advanced 46ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           },
           "Basic 31ch": {
             "channels": 31,
             "gdtfMode": "Basic 31ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           }
         }
       },
@@ -624,37 +692,44 @@
           "135Ch Mode": {
             "channels": 135,
             "gdtfMode": "135Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 74
           },
           "111Ch Mode": {
             "channels": 111,
             "gdtfMode": "111Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 74
           },
           "64Ch Mode": {
             "channels": 64,
             "gdtfMode": "64Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 74
           },
           "37Ch Mode": {
             "channels": 37,
             "gdtfMode": "37Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "30Ch Mode": {
             "channels": 30,
             "gdtfMode": "30Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "24Ch Mode": {
             "channels": 24,
             "gdtfMode": "24Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "15Ch Mode": {
             "channels": 15,
             "gdtfMode": "15Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           }
         }
       },
@@ -676,7 +751,8 @@
           "8P 26 channel": {
             "channels": 26,
             "gdtfMode": "8P 26 channel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           }
         }
       },
@@ -704,37 +780,44 @@
           "1Ch Mode": {
             "channels": 1,
             "gdtfMode": "1Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "2Ch Mode": {
             "channels": 2,
             "gdtfMode": "2Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 2
           },
           "3Ch Mode": {
             "channels": 3,
             "gdtfMode": "3Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "4Ch Mode": {
             "channels": 4,
             "gdtfMode": "4Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "5Ch Mode": {
             "channels": 5,
             "gdtfMode": "5Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "8Ch Mode": {
             "channels": 8,
             "gdtfMode": "8Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "9Ch Mode": {
             "channels": 9,
             "gdtfMode": "9Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           }
         }
       },
@@ -767,62 +850,74 @@
           "1Ch Mode": {
             "channels": 1,
             "gdtfMode": "1Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "3Ch Mode": {
             "channels": 3,
             "gdtfMode": "3Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "5Ch Mode": {
             "channels": 5,
             "gdtfMode": "5Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "7Ch Mode": {
             "channels": 7,
             "gdtfMode": "7Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "10Ch Mode": {
             "channels": 10,
             "gdtfMode": "10Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "12Ch1 Mode": {
             "channels": 12,
             "gdtfMode": "12Ch1 Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "13Ch Mode": {
             "channels": 13,
             "gdtfMode": "13Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "16Ch Mode": {
             "channels": 16,
             "gdtfMode": "16Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "12Ch2 Mode": {
             "channels": 12,
             "gdtfMode": "12Ch2 Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "HSV 3Ch Mode": {
             "channels": 3,
             "gdtfMode": "HSV 3Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "25ch Mode": {
             "channels": 25,
             "gdtfMode": "25ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "8Ch Mode": {
             "channels": 8,
             "gdtfMode": "8Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         }
       },
@@ -850,37 +945,44 @@
           "1Ch Mode": {
             "channels": 1,
             "gdtfMode": "1Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "3Ch Mode": {
             "channels": 3,
             "gdtfMode": "3Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "4Ch Mode": {
             "channels": 4,
             "gdtfMode": "4Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "5Ch Mode": {
             "channels": 5,
             "gdtfMode": "5Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "6Ch Mode": {
             "channels": 6,
             "gdtfMode": "6Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "10Ch Mode": {
             "channels": 10,
             "gdtfMode": "10Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "13Ch Mode": {
             "channels": 13,
             "gdtfMode": "13Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 16
           }
         }
       },
@@ -912,57 +1014,68 @@
           "1Ch": {
             "channels": 1,
             "gdtfMode": "1Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "3Ch Mode": {
             "channels": 3,
             "gdtfMode": "3Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "5Ch Mode": {
             "channels": 5,
             "gdtfMode": "5Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "7Ch Mode": {
             "channels": 7,
             "gdtfMode": "7Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "10Ch Mode": {
             "channels": 10,
             "gdtfMode": "10Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "12Ch Mode": {
             "channels": 12,
             "gdtfMode": "12Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "13Ch Mode": {
             "channels": 13,
             "gdtfMode": "13Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "16Ch Mode": {
             "channels": 16,
             "gdtfMode": "16Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "22Ch Mode": {
             "channels": 22,
             "gdtfMode": "22Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           },
           "HSV 3Ch Mode": {
             "channels": 3,
             "gdtfMode": "HSV 3Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "49Ch Mode": {
             "channels": 49,
             "gdtfMode": "49Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           }
         }
       },
@@ -991,42 +1104,50 @@
           "10Ch Mode": {
             "channels": 10,
             "gdtfMode": "10Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "11Ch Mode": {
             "channels": 11,
             "gdtfMode": "11Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "13Ch Mode": {
             "channels": 13,
             "gdtfMode": "13Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "17Ch Mode": {
             "channels": 17,
             "gdtfMode": "17Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "20Ch Mode": {
             "channels": 20,
             "gdtfMode": "20Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "25ch Mode": {
             "channels": 25,
             "gdtfMode": "25ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "27Ch Mode": {
             "channels": 27,
             "gdtfMode": "27Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 33
           },
           "40Ch Mode": {
             "channels": 40,
             "gdtfMode": "40Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 42
           }
         }
       },
@@ -1053,32 +1174,38 @@
           "1Ch Mode": {
             "channels": 1,
             "gdtfMode": "1Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "3Ch Mode": {
             "channels": 3,
             "gdtfMode": "3Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "4Ch Mode": {
             "channels": 4,
             "gdtfMode": "4Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "5Ch Mode": {
             "channels": 5,
             "gdtfMode": "5Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "6Ch Mode": {
             "channels": 6,
             "gdtfMode": "6Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "7Ch Mode": {
             "channels": 7,
             "gdtfMode": "7Ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           }
         }
       },
@@ -1107,42 +1234,50 @@
           "26ch 2": {
             "channels": 26,
             "gdtfMode": "26ch 2",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "26ch 1": {
             "channels": 26,
             "gdtfMode": "26ch 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 35
           },
           "22ch": {
             "channels": 22,
             "gdtfMode": "22ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "13ch": {
             "channels": 13,
             "gdtfMode": "13ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "10ch": {
             "channels": 10,
             "gdtfMode": "10ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "6ch": {
             "channels": 6,
             "gdtfMode": "6ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "3ch": {
             "channels": 3,
             "gdtfMode": "3ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           }
         }
       },

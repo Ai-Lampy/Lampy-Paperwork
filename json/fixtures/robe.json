@@ -22,32 +22,38 @@
           "Mode 1 Three LED Zones 16bit": {
             "channels": 35,
             "gdtfMode": "Mode 1 Three LED Zones 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "Mode 2 Beam light 16bit": {
             "channels": 19,
             "gdtfMode": "Mode 2 Beam light 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "Mode 3 Beam light 8bit": {
             "channels": 14,
             "gdtfMode": "Mode 3 Beam light 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "Mode 4 Macro colors 8bit": {
             "channels": 9,
             "gdtfMode": "Mode 4 Macro colors 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "Mode 5 Three LED Zones at the end 16bit": {
             "channels": 35,
             "gdtfMode": "Mode 5 Three LED Zones at the end 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "Mode 6 Compatible with LW600 mode 1": {
             "channels": 37,
             "gdtfMode": "Mode 6 Compatible with LW600 mode 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           }
         }
       },
@@ -74,32 +80,38 @@
           "Mode 1 Extended with all zones 16bit": {
             "channels": 45,
             "gdtfMode": "Mode 1 Extended with all zones 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "Mode 2 Reduced RGBW 16bit": {
             "channels": 21,
             "gdtfMode": "Mode 2 Reduced RGBW 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Mode 3 Reduced RGBW 8bit": {
             "channels": 15,
             "gdtfMode": "Mode 3 Reduced RGBW 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Mode 4 Limited macro colors 8bit": {
             "channels": 10,
             "gdtfMode": "Mode 4 Limited macro colors 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "Mode 5 Extended all zones at the end 16bit": {
             "channels": 45,
             "gdtfMode": "Mode 5 Extended all zones at the end 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "Mode 6 Extended all zones 16bit": {
             "channels": 37,
             "gdtfMode": "Mode 6 Extended all zones 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           }
         }
       },
@@ -125,27 +137,32 @@
           "Mode 1 Extended with all zones 16bit": {
             "channels": 37,
             "gdtfMode": "Mode 1 Extended with all zones 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           },
           "Mode 2 Reduced  RGBW 16bit": {
             "channels": 21,
             "gdtfMode": "Mode 2 Reduced  RGBW 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Mode 3 Reduced RGBW 8bit": {
             "channels": 15,
             "gdtfMode": "Mode 3 Reduced RGBW 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Mode 4 Limited macro colors 8bit": {
             "channels": 10,
             "gdtfMode": "Mode 4 Limited macro colors 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "Mode 5 Extended all zones at the end 16bit": {
             "channels": 37,
             "gdtfMode": "Mode 5 Extended all zones at the end 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           }
         }
       },
@@ -171,27 +188,32 @@
           "Mode 1 Extended with all zones 16bit": {
             "channels": 37,
             "gdtfMode": "Mode 1 Extended with all zones 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           },
           "Mode 2 Reduced RGBW 16bit": {
             "channels": 21,
             "gdtfMode": "Mode 2 Reduced RGBW 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Mode 3 Reduced RGBW 8bit": {
             "channels": 15,
             "gdtfMode": "Mode 3 Reduced RGBW 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Mode 4 Limited macro colors 8bit": {
             "channels": 10,
             "gdtfMode": "Mode 4 Limited macro colors 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "Mode 5 Extended all zones at the end 16bit": {
             "channels": 37,
             "gdtfMode": "Mode 5 Extended all zones at the end 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           }
         }
       },
@@ -218,32 +240,38 @@
           "Mode 1 Extended with all zones 16bit": {
             "channels": 37,
             "gdtfMode": "Mode 1 Extended with all zones 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           },
           "Mode 2 Reduced RGBW Wash 16bit": {
             "channels": 21,
             "gdtfMode": "Mode 2 Reduced RGBW Wash 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Mode 3 Reduced RGBW Wash 8bit": {
             "channels": 15,
             "gdtfMode": "Mode 3 Reduced RGBW Wash 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Mode 4 Limited macro colors 8bit": {
             "channels": 10,
             "gdtfMode": "Mode 4 Limited macro colors 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "Mode 5 Extended all zones at the end 16bit": {
             "channels": 37,
             "gdtfMode": "Mode 5 Extended all zones at the end 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           },
           "Mode 6 Extended all zones 8bit": {
             "channels": 25,
             "gdtfMode": "Mode 6 Extended all zones 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           }
         }
       },
@@ -269,27 +297,32 @@
           "Mode 1 Zones 16bit": {
             "channels": 24,
             "gdtfMode": "Mode 1 Zones 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "Mode 2 Reduced Wash 16bit": {
             "channels": 16,
             "gdtfMode": "Mode 2 Reduced Wash 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "Mode 3 Reduced Wash 8bit": {
             "channels": 12,
             "gdtfMode": "Mode 3 Reduced Wash 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "Mode 4 Limited macro colors 8bit": {
             "channels": 10,
             "gdtfMode": "Mode 4 Limited macro colors 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "Mode 5 Zones at the end 16bit": {
             "channels": 24,
             "gdtfMode": "Mode 5 Zones at the end 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           }
         }
       },
@@ -316,32 +349,38 @@
           "Mode 1 Extended with all zones 16bit": {
             "channels": 37,
             "gdtfMode": "Mode 1 Extended with all zones 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           },
           "Mode 2 Reduced RGBW Wash 16bit": {
             "channels": 21,
             "gdtfMode": "Mode 2 Reduced RGBW Wash 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Mode 3 Reduced RGBW Wash 8bit": {
             "channels": 15,
             "gdtfMode": "Mode 3 Reduced RGBW Wash 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Mode 4 Limited macro colors 8bit": {
             "channels": 10,
             "gdtfMode": "Mode 4 Limited macro colors 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "Mode 5 Extended all zones at the end 16bit": {
             "channels": 37,
             "gdtfMode": "Mode 5 Extended all zones at the end 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           },
           "Mode 6 Extended all zones 8bit": {
             "channels": 24,
             "gdtfMode": "Mode 6 Extended all zones 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           }
         }
       },
@@ -368,32 +407,38 @@
           "Mode 1 Zones 16bit": {
             "channels": 25,
             "gdtfMode": "Mode 1 Zones 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "Mode 2 Reduced Wash 16bit": {
             "channels": 17,
             "gdtfMode": "Mode 2 Reduced Wash 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Mode 3 Reduced Wash 8bit": {
             "channels": 13,
             "gdtfMode": "Mode 3 Reduced Wash 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Mode 4 Limited macro colors 8bit": {
             "channels": 11,
             "gdtfMode": "Mode 4 Limited macro colors 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "Mode 5 Zones at the end 16bit": {
             "channels": 25,
             "gdtfMode": "Mode 5 Zones at the end 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "Mode 6 Zones no shaper 16bit": {
             "channels": 24,
             "gdtfMode": "Mode 6 Zones no shaper 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           }
         }
       },
@@ -420,32 +465,38 @@
           "Mode 1 Extended with all zones 16bit": {
             "channels": 38,
             "gdtfMode": "Mode 1 Extended with all zones 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "Mode 2 Reduced RGBW 16bit": {
             "channels": 22,
             "gdtfMode": "Mode 2 Reduced RGBW 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Mode 3 Reduced RGBW 8bit": {
             "channels": 16,
             "gdtfMode": "Mode 3 Reduced RGBW 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Mode 4 Limited macro colors 8bit": {
             "channels": 11,
             "gdtfMode": "Mode 4 Limited macro colors 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "Mode 5 Extended all zones at the end 16bit": {
             "channels": 38,
             "gdtfMode": "Mode 5 Extended all zones at the end 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "Mode 6 All zones without shaper 16bit": {
             "channels": 37,
             "gdtfMode": "Mode 6 All zones without shaper 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           }
         }
       },
@@ -472,32 +523,38 @@
           "mode 1 - zone mode": {
             "channels": 32,
             "gdtfMode": "mode 1 - zone mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "mode 2 - all zones 16 bit": {
             "channels": 16,
             "gdtfMode": "mode 2 - all zones 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "mode 3 - all zones 8 bit": {
             "channels": 10,
             "gdtfMode": "mode 3 - all zones 8 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "mode 4 - wash mode": {
             "channels": 5,
             "gdtfMode": "mode 4 - wash mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "mode 5 - zone mode 2": {
             "channels": 32,
             "gdtfMode": "mode 5 - zone mode 2",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "mode 6 - LEDWash compatible": {
             "channels": 37,
             "gdtfMode": "mode 6 - LEDWash compatible",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           }
         }
       },
@@ -521,17 +578,20 @@
           "Mode 1 - LB Compatible": {
             "channels": 22,
             "gdtfMode": "Mode 1 - LB Compatible",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Mode 2 - Festival": {
             "channels": 27,
             "gdtfMode": "Mode 2 - Festival",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "Mode 3 - Full+Screenpix": {
             "channels": 50,
             "gdtfMode": "Mode 3 - Full+Screenpix",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           }
         }
       },
@@ -555,17 +615,20 @@
           "Mode 1 - LB Compatible": {
             "channels": 22,
             "gdtfMode": "Mode 1 - LB Compatible",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Mode 2 - Festival": {
             "channels": 27,
             "gdtfMode": "Mode 2 - Festival",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "Mode 3 - Full+ScreenPix": {
             "channels": 58,
             "gdtfMode": "Mode 3 - Full+ScreenPix",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           }
         }
       },
@@ -588,12 +651,14 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 49,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 40
           },
           "Mode 2 - Standard 8 bit": {
             "channels": 42,
             "gdtfMode": "Mode 2 - Standard 8 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 40
           }
         }
       },
@@ -616,12 +681,14 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 33,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "Mode 2 - Reduced 8 bit": {
             "channels": 27,
             "gdtfMode": "Mode 2 - Reduced 8 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           }
         }
       },
@@ -644,12 +711,14 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 33,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "Mode 2 - Reduced 8 bit": {
             "channels": 27,
             "gdtfMode": "Mode 2 - Reduced 8 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           }
         }
       },
@@ -672,12 +741,14 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 41,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           },
           "Mode 2 - Reduced 8 bit ": {
             "channels": 33,
             "gdtfMode": "Mode 2 - Reduced 8 bit ",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           }
         }
       },
@@ -700,12 +771,14 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 25,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "Mode 2 - Reduced 8 bit": {
             "channels": 21,
             "gdtfMode": "Mode 2 - Reduced 8 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           }
         }
       },
@@ -728,12 +801,14 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 34,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "Mode 2 - Reduced 8 bit": {
             "channels": 30,
             "gdtfMode": "Mode 2 - Reduced 8 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           }
         }
       },
@@ -756,12 +831,14 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 48,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           },
           "Mode 2 - Reduced": {
             "channels": 41,
             "gdtfMode": "Mode 2 - Reduced",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           }
         }
       },
@@ -784,12 +861,14 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 48,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "Mode 2 - Reduced": {
             "channels": 40,
             "gdtfMode": "Mode 2 - Reduced",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           }
         }
       },
@@ -815,27 +894,32 @@
           "Mode 1 - RGBW No zones 8bit": {
             "channels": 9,
             "gdtfMode": "Mode 1 - RGBW No zones 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Mode 2 - RGBW No zones 16bit": {
             "channels": 14,
             "gdtfMode": "Mode 2 - RGBW No zones 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Mode 3 - RGBW No zones with effects 8bit": {
             "channels": 18,
             "gdtfMode": "Mode 3 - RGBW No zones with effects 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "Mode 4 - 4 zones": {
             "channels": 28,
             "gdtfMode": "Mode 4 - 4 zones",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "Mode 5 - 12 zones": {
             "channels": 84,
             "gdtfMode": "Mode 5 - 12 zones",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           }
         }
       },
@@ -862,32 +946,38 @@
           "Mode 1 - RGBW": {
             "channels": 9,
             "gdtfMode": "Mode 1 - RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "Mode 2 - Full RGBW": {
             "channels": 14,
             "gdtfMode": "Mode 2 - Full RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "Mode 3 - Zone effect": {
             "channels": 18,
             "gdtfMode": "Mode 3 - Zone effect",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "Mode 4 - Three zones": {
             "channels": 21,
             "gdtfMode": "Mode 4 - Three zones",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "Mode 5 - Six zone mode": {
             "channels": 42,
             "gdtfMode": "Mode 5 - Six zone mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "Mode 6 - Simple RGBW": {
             "channels": 4,
             "gdtfMode": "Mode 6 - Simple RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           }
         }
       },
@@ -909,7 +999,8 @@
           "Mode 1 - Standard": {
             "channels": 29,
             "gdtfMode": "Mode 1 - Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           }
         }
       },
@@ -936,32 +1027,38 @@
           "Mode 1 - Standard 16 - bit": {
             "channels": 16,
             "gdtfMode": "Mode 1 - Standard 16 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Mode 2 - Reduced 8 - bit": {
             "channels": 11,
             "gdtfMode": "Mode 2 - Reduced 8 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Mode 3 - Extended 16 - bit + RGB pixels": {
             "channels": 75,
             "gdtfMode": "Mode 3 - Extended 16 - bit + RGB pixels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "Mode 4 - Extended 16 - bit + RGBD pixels": {
             "channels": 20,
             "gdtfMode": "Mode 4 - Extended 16 - bit + RGBD pixels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "Mode 5 - Extended 16 - bit + RGB pixels + LED Frequency setting": {
             "channels": 61,
             "gdtfMode": "Mode 5 - Extended 16 - bit + RGB pixels + LED Frequency setting",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "Mode 6 - RGB pixels": {
             "channels": 59,
             "gdtfMode": "Mode 6 - RGB pixels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           }
         }
       },
@@ -988,32 +1085,38 @@
           "Mode 1 - Standard 16 - bit": {
             "channels": 16,
             "gdtfMode": "Mode 1 - Standard 16 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Mode 2 - Reduced 8 - bit": {
             "channels": 11,
             "gdtfMode": "Mode 2 - Reduced 8 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Mode 3 - Extended 16 - bit + RGB pixels": {
             "channels": 75,
             "gdtfMode": "Mode 3 - Extended 16 - bit + RGB pixels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "Mode 4 - Extended 16 - bit + RGBD pixels": {
             "channels": 20,
             "gdtfMode": "Mode 4 - Extended 16 - bit + RGBD pixels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "Mode 5 - Extended 16 - bit + RGB pixels + LED Frequency setting": {
             "channels": 61,
             "gdtfMode": "Mode 5 - Extended 16 - bit + RGB pixels + LED Frequency setting",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "Mode 6 - RGB pixels": {
             "channels": 59,
             "gdtfMode": "Mode 6 - RGB pixels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           }
         }
       },
@@ -1041,37 +1144,44 @@
           "Mode 1 - 8 bit": {
             "channels": 14,
             "gdtfMode": "Mode 1 - 8 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Mode 2 - 16bit": {
             "channels": 21,
             "gdtfMode": "Mode 2 - 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Mode 3 - Pixels RGB": {
             "channels": 45,
             "gdtfMode": "Mode 3 - Pixels RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "Mode 4 - Pixels RGB + dimmer": {
             "channels": 53,
             "gdtfMode": "Mode 4 - Pixels RGB + dimmer",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 46
           },
           "Mode 5 - Pixel dimmers without color": {
             "channels": 22,
             "gdtfMode": "Mode 5 - Pixel dimmers without color",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "Mode 6 - Pixels RGBW": {
             "channels": 53,
             "gdtfMode": "Mode 6 - Pixels RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 46
           },
           "Mode 7 - Pixels RGBW + dimmer": {
             "channels": 61,
             "gdtfMode": "Mode 7 - Pixels RGBW + dimmer",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 54
           }
         }
       },
@@ -1098,32 +1208,38 @@
           "Mode 1 RGBW": {
             "channels": 47,
             "gdtfMode": "Mode 1 RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           },
           "Mode 1 CMY": {
             "channels": 47,
             "gdtfMode": "Mode 1 CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           },
           "Mode 2 RGBW Reduced": {
             "channels": 38,
             "gdtfMode": "Mode 2 RGBW Reduced",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           },
           "Mode 2 CMY Reduced": {
             "channels": 38,
             "gdtfMode": "Mode 2 CMY Reduced",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           },
           "Mode 3 RGBW Minimal": {
             "channels": 36,
             "gdtfMode": "Mode 3 RGBW Minimal",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           },
           "Mode 3 CMY Minimal": {
             "channels": 36,
             "gdtfMode": "Mode 3 CMY Minimal",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           }
         }
       },
@@ -1150,32 +1266,38 @@
           "Mode 1 RGBW": {
             "channels": 35,
             "gdtfMode": "Mode 1 RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "Mode 1 CMY": {
             "channels": 35,
             "gdtfMode": "Mode 1 CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "Mode 2 RGBW Reduced": {
             "channels": 25,
             "gdtfMode": "Mode 2 RGBW Reduced",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "Mode 2 CMY Reduced": {
             "channels": 25,
             "gdtfMode": "Mode 2 CMY Reduced",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "Mode 3 RGBW Minimal": {
             "channels": 23,
             "gdtfMode": "Mode 3 RGBW Minimal",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "Mode 3 CMY Minimal": {
             "channels": 23,
             "gdtfMode": "Mode 3 CMY Minimal",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           }
         }
       },
@@ -1202,32 +1324,38 @@
           "Mode 1 - RGB": {
             "channels": 34,
             "gdtfMode": "Mode 1 - RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "Mode 1 - CMY": {
             "channels": 34,
             "gdtfMode": "Mode 1 - CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "Mode 2 - RGB": {
             "channels": 29,
             "gdtfMode": "Mode 2 - RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "Mode 2 - CMY": {
             "channels": 29,
             "gdtfMode": "Mode 2 - CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "Mode 3 - Seven Colors": {
             "channels": 42,
             "gdtfMode": "Mode 3 - Seven Colors",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           },
           "Mode 4 - Seven Colors reduced": {
             "channels": 33,
             "gdtfMode": "Mode 4 - Seven Colors reduced",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           }
         }
       },
@@ -1254,32 +1382,38 @@
           "Mode 1 - RGB": {
             "channels": 51,
             "gdtfMode": "Mode 1 - RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 40
           },
           "Mode 2 - RGB reduced": {
             "channels": 42,
             "gdtfMode": "Mode 2 - RGB reduced",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 40
           },
           "Mode 3 - 7 colors": {
             "channels": 59,
             "gdtfMode": "Mode 3 - 7 colors",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           },
           "Mode 4 - 7 colors reduced": {
             "channels": 46,
             "gdtfMode": "Mode 4 - 7 colors reduced",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           },
           "Mode 1 - CMY": {
             "channels": 51,
             "gdtfMode": "Mode 1 - CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 40
           },
           "Mode 2 - CMY": {
             "channels": 42,
             "gdtfMode": "Mode 2 - CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 40
           }
         }
       },
@@ -1306,32 +1440,38 @@
           "Mode 1 RGBW": {
             "channels": 35,
             "gdtfMode": "Mode 1 RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "Mode 1 CMY": {
             "channels": 35,
             "gdtfMode": "Mode 1 CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "Mode 2 RGBW Reduced": {
             "channels": 25,
             "gdtfMode": "Mode 2 RGBW Reduced",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "Mode 2 CMY Reduced": {
             "channels": 25,
             "gdtfMode": "Mode 2 CMY Reduced",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "Mode 3 RGBW Minimal": {
             "channels": 23,
             "gdtfMode": "Mode 3 RGBW Minimal",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "Mode 3 CMY Minimal": {
             "channels": 23,
             "gdtfMode": "Mode 3 CMY Minimal",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           }
         }
       },
@@ -1357,27 +1497,32 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 49,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 40
           },
           "Mode 2 - Reduced 8 bit": {
             "channels": 42,
             "gdtfMode": "Mode 2 - Reduced 8 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 40
           },
           "Mode 3 - Standard 16 bit + green correction": {
             "channels": 50,
             "gdtfMode": "Mode 3 - Standard 16 bit + green correction",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           },
           "Mode 4 - Reduced 8 bit + green correction": {
             "channels": 43,
             "gdtfMode": "Mode 4 - Reduced 8 bit + green correction",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           },
           "Mode 5 - Enhanced gobo control": {
             "channels": 51,
             "gdtfMode": "Mode 5 - Enhanced gobo control",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           }
         }
       },
@@ -1402,22 +1547,26 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 34,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "Mode 2 - Reduced 8 bit": {
             "channels": 30,
             "gdtfMode": "Mode 2 - Reduced 8 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "Mode 3 - Standard 16 bit + green corre": {
             "channels": 35,
             "gdtfMode": "Mode 3 - Standard 16 bit + green corre",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "Mode 4 - Reduced 8 bit + green corre": {
             "channels": 31,
             "gdtfMode": "Mode 4 - Reduced 8 bit + green corre",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           }
         }
       },
@@ -1443,27 +1592,32 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 49,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 40
           },
           "Mode 2 - Reduced 8 bit": {
             "channels": 42,
             "gdtfMode": "Mode 2 - Reduced 8 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 40
           },
           "Mode 3 - Standard 16 bit + green correction": {
             "channels": 50,
             "gdtfMode": "Mode 3 - Standard 16 bit + green correction",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           },
           "Mode 4 - Reduced 8 bit + green correction": {
             "channels": 43,
             "gdtfMode": "Mode 4 - Reduced 8 bit + green correction",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           },
           "Mode 5 - Enhanced gobo control": {
             "channels": 51,
             "gdtfMode": "Mode 5 - Enhanced gobo control",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           }
         }
       },
@@ -1488,22 +1642,26 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 34,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "Mode 2 - Reduced 8 bit": {
             "channels": 30,
             "gdtfMode": "Mode 2 - Reduced 8 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "Mode 3 - Reduced 16 bit + green corre": {
             "channels": 35,
             "gdtfMode": "Mode 3 - Reduced 16 bit + green corre",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "Mode 4 - Reduced 8 bit + green corre": {
             "channels": 31,
             "gdtfMode": "Mode 4 - Reduced 8 bit + green corre",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           }
         }
       },
@@ -1567,17 +1725,20 @@
           "Mode 1 Simple": {
             "channels": 5,
             "gdtfMode": "Mode 1 Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "Mode 2 Standard 16 bit": {
             "channels": 28,
             "gdtfMode": "Mode 2 Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "Mode 3 Standard 16 bit + PIP": {
             "channels": 35,
             "gdtfMode": "Mode 3 Standard 16 bit + PIP",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           }
         }
       },
@@ -1601,17 +1762,20 @@
           "Mode 1 Simple": {
             "channels": 5,
             "gdtfMode": "Mode 1 Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "Mode 2 Standard 16 bit": {
             "channels": 28,
             "gdtfMode": "Mode 2 Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "Mode 3 Standard 16 bit + PIP": {
             "channels": 35,
             "gdtfMode": "Mode 3 Standard 16 bit + PIP",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           }
         }
       },
@@ -1635,17 +1799,20 @@
           "Mode 1 Simple": {
             "channels": 2,
             "gdtfMode": "Mode 1 Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "Mode 2 Standard 16 bit": {
             "channels": 16,
             "gdtfMode": "Mode 2 Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "Mode 3 Standard 16 bit + PIP": {
             "channels": 23,
             "gdtfMode": "Mode 3 Standard 16 bit + PIP",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           }
         }
       },
@@ -1669,17 +1836,20 @@
           "Mode 1 Simple": {
             "channels": 1,
             "gdtfMode": "Mode 1 Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "Mode 2 Standard 16 bit": {
             "channels": 11,
             "gdtfMode": "Mode 2 Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Mode 3 Standard 16 bit + PIP": {
             "channels": 18,
             "gdtfMode": "Mode 3 Standard 16 bit + PIP",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           }
         }
       },
@@ -1703,17 +1873,20 @@
           "Mode 1 Simple": {
             "channels": 2,
             "gdtfMode": "Mode 1 Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "Mode 2 Standard 16 bit": {
             "channels": 16,
             "gdtfMode": "Mode 2 Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "Mode 3 Standard 16 bit + PIP": {
             "channels": 23,
             "gdtfMode": "Mode 3 Standard 16 bit + PIP",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           }
         }
       },
@@ -1777,17 +1950,20 @@
           "Mode 1 Simple": {
             "channels": 5,
             "gdtfMode": "Mode 1 Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "Mode 2 Standard 16 bit": {
             "channels": 36,
             "gdtfMode": "Mode 2 Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "Mode 3 Standard 16 bit + PIP": {
             "channels": 49,
             "gdtfMode": "Mode 3 Standard 16 bit + PIP",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 50
           }
         }
       },
@@ -1811,17 +1987,20 @@
           "Mode 1 Simple": {
             "channels": 5,
             "gdtfMode": "Mode 1 Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "Mode 2 Standard 16 bit": {
             "channels": 36,
             "gdtfMode": "Mode 2 Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "Mode 3 Standard 16 bit + PIP": {
             "channels": 49,
             "gdtfMode": "Mode 3 Standard 16 bit + PIP",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 50
           }
         }
       },
@@ -1845,17 +2024,20 @@
           "Mode 1 Simple": {
             "channels": 1,
             "gdtfMode": "Mode 1 Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "Mode 2 Standard 16 bit": {
             "channels": 13,
             "gdtfMode": "Mode 2 Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "Mode 3 Standard 16 bit + PIP": {
             "channels": 26,
             "gdtfMode": "Mode 3 Standard 16 bit + PIP",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           }
         }
       },
@@ -1879,17 +2061,20 @@
           "Mode 1 Simple": {
             "channels": 2,
             "gdtfMode": "Mode 1 Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "Mode 2 Standard 16 bit": {
             "channels": 20,
             "gdtfMode": "Mode 2 Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "Mode 3 Standard 16 bit + PIP": {
             "channels": 33,
             "gdtfMode": "Mode 3 Standard 16 bit + PIP",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           }
         }
       },
@@ -1913,17 +2098,20 @@
           "Mode 1 Simple": {
             "channels": 1,
             "gdtfMode": "Mode 1 Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "Mode 2 Standard 16 bit": {
             "channels": 13,
             "gdtfMode": "Mode 2 Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "Mode 3 Standard 16 bit + PIP": {
             "channels": 26,
             "gdtfMode": "Mode 3 Standard 16 bit + PIP",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           }
         }
       },
@@ -1947,17 +2135,20 @@
           "Mode 1 Simple": {
             "channels": 1,
             "gdtfMode": "Mode 1 Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "Mode 2 Standard 16 bit": {
             "channels": 13,
             "gdtfMode": "Mode 2 Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "Mode 3 Standard 16 bit + PIP": {
             "channels": 26,
             "gdtfMode": "Mode 3 Standard 16 bit + PIP",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           }
         }
       },
@@ -1980,12 +2171,14 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 54,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           },
           "Mode 2 - Enhanced gobo control": {
             "channels": 56,
             "gdtfMode": "Mode 2 - Enhanced gobo control",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           }
         }
       },
@@ -2007,7 +2200,8 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 35,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           }
         }
       },
@@ -2030,12 +2224,14 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 54,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           },
           "Mode 2 - Enhanced gobo control": {
             "channels": 56,
             "gdtfMode": "Mode 2 - Enhanced gobo control",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           }
         }
       },
@@ -2058,12 +2254,14 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 54,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           },
           "Mode 2 - Enhanced gobo control": {
             "channels": 56,
             "gdtfMode": "Mode 2 - Enhanced gobo control",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           }
         }
       },
@@ -2085,7 +2283,8 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 35,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           }
         }
       },
@@ -2108,12 +2307,14 @@
           "Mode 1 - MegaPointe": {
             "channels": 39,
             "gdtfMode": "Mode 1 - MegaPointe",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           },
           "Mode 2 - Advanced": {
             "channels": 41,
             "gdtfMode": "Mode 2 - Advanced",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           }
         }
       },
@@ -2162,32 +2363,38 @@
           "Mode 1 - Standard 16 - bit": {
             "channels": 16,
             "gdtfMode": "Mode 1 - Standard 16 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Mode 2 - Reduced 8 - bit": {
             "channels": 11,
             "gdtfMode": "Mode 2 - Reduced 8 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Mode 3 - Extended 16 - bit + RGB pixels": {
             "channels": 75,
             "gdtfMode": "Mode 3 - Extended 16 - bit + RGB pixels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "Mode 4 - Extended 16 - bit + RGBD pixels": {
             "channels": 20,
             "gdtfMode": "Mode 4 - Extended 16 - bit + RGBD pixels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "Mode 5 - Extended 16 - bit + RGB pixels + LED Frequency setting": {
             "channels": 61,
             "gdtfMode": "Mode 5 - Extended 16 - bit + RGB pixels + LED Frequency setting",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "Mode 6 - RGB pixels": {
             "channels": 59,
             "gdtfMode": "Mode 6 - RGB pixels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           }
         }
       },
@@ -2211,17 +2418,20 @@
           "Mode 1 - Standard 16 - bit": {
             "channels": 22,
             "gdtfMode": "Mode 1 - Standard 16 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Mode 2 - Reduced 8 - bit": {
             "channels": 16,
             "gdtfMode": "Mode 2 - Reduced 8 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Mode 3 - Cpulse mode": {
             "channels": 24,
             "gdtfMode": "Mode 3 - Cpulse mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 16
           }
         }
       },
@@ -2243,7 +2453,8 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 37,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           }
         }
       },
@@ -2327,7 +2538,8 @@
           "Mode 1 - Standard 16bit": {
             "channels": 53,
             "gdtfMode": "Mode 1 - Standard 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 43
           }
         }
       },
@@ -2350,12 +2562,14 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 54,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           },
           "Mode 2 - Enhanced gobo control": {
             "channels": 56,
             "gdtfMode": "Mode 2 - Enhanced gobo control",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           }
         }
       },
@@ -2377,7 +2591,8 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 39,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 33
           }
         }
       },
@@ -2400,12 +2615,14 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 54,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           },
           "Mode 2 - Enhanced gobo control": {
             "channels": 56,
             "gdtfMode": "Mode 2 - Enhanced gobo control",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           }
         }
       },
@@ -2449,7 +2666,8 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 54,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           }
         }
       },
@@ -2472,12 +2690,14 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 44,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           },
           "Mode 2 - enhanced gobo control": {
             "channels": 45,
             "gdtfMode": "Mode 2 - enhanced gobo control",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           }
         }
       },
@@ -2499,7 +2719,8 @@
           "Mode 1 - Standard 16bit": {
             "channels": 51,
             "gdtfMode": "Mode 1 - Standard 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 42
           }
         }
       },
@@ -2557,17 +2778,20 @@
           "Mode 1 - Standard 16 - bit": {
             "channels": 17,
             "gdtfMode": "Mode 1 - Standard 16 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Mode 2 - Reduced 8 - bit": {
             "channels": 11,
             "gdtfMode": "Mode 2 - Reduced 8 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Mode 3 - Simple": {
             "channels": 8,
             "gdtfMode": "Mode 3 - Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           }
         }
       },
@@ -2591,17 +2815,20 @@
           "Mode 1 - Standard 16 - bit": {
             "channels": 17,
             "gdtfMode": "Mode 1 - Standard 16 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Mode 2 - Reduced 8 - bit": {
             "channels": 11,
             "gdtfMode": "Mode 2 - Reduced 8 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Mode 3 - Simple": {
             "channels": 8,
             "gdtfMode": "Mode 3 - Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           }
         }
       },
@@ -2624,12 +2851,14 @@
           "Mode 1 - Standard 16 - bit": {
             "channels": 39,
             "gdtfMode": "Mode 1 - Standard 16 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           },
           "Mode 2 - Reduced 8 - bit": {
             "channels": 34,
             "gdtfMode": "Mode 2 - Reduced 8 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           }
         }
       },
@@ -2652,12 +2881,14 @@
           "Mode 1 - Standard 16 - bit": {
             "channels": 39,
             "gdtfMode": "Mode 1 - Standard 16 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           },
           "Mode 2 - Reduced 8 - bit": {
             "channels": 34,
             "gdtfMode": "Mode 2 - Reduced 8 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           }
         }
       },
@@ -2688,52 +2919,62 @@
           "Mode 10 - Pattern full RGBW": {
             "channels": 123,
             "gdtfMode": "Mode 10 - Pattern full RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 53
           },
           "Mode 9 - Pattern full RGB": {
             "channels": 71,
             "gdtfMode": "Mode 9 - Pattern full RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 50
           },
           "Mode 8 - Pixel RGBW ": {
             "channels": 110,
             "gdtfMode": "Mode 8 - Pixel RGBW ",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 40
           },
           "Mode 7 - Pixel RGB": {
             "channels": 58,
             "gdtfMode": "Mode 7 - Pixel RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 37
           },
           "Mode 6 - Pattern": {
             "channels": 47,
             "gdtfMode": "Mode 6 - Pattern",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "Mode 5 - Wash": {
             "channels": 27,
             "gdtfMode": "Mode 5 - Wash",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "Mode 1 - Zones": {
             "channels": 49,
             "gdtfMode": "Mode 1 - Zones",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           },
           "Mode 2 - Basic": {
             "channels": 27,
             "gdtfMode": "Mode 2 - Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "Mode 3 - Advanced": {
             "channels": 33,
             "gdtfMode": "Mode 3 - Advanced",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "Mode 4 - Full RGBW": {
             "channels": 57,
             "gdtfMode": "Mode 4 - Full RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 37
           }
         }
       },
@@ -2764,52 +3005,62 @@
           "Mode 10 - Pattern full RGBW": {
             "channels": 123,
             "gdtfMode": "Mode 10 - Pattern full RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 53
           },
           "Mode 9 - Pattern full RGB": {
             "channels": 71,
             "gdtfMode": "Mode 9 - Pattern full RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 50
           },
           "Mode 8 - Pixel RGBW ": {
             "channels": 110,
             "gdtfMode": "Mode 8 - Pixel RGBW ",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 40
           },
           "Mode 7 - Pixel RGB": {
             "channels": 58,
             "gdtfMode": "Mode 7 - Pixel RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 37
           },
           "Mode 6 - Pattern": {
             "channels": 47,
             "gdtfMode": "Mode 6 - Pattern",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "Mode 5 - Wash": {
             "channels": 27,
             "gdtfMode": "Mode 5 - Wash",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "Mode 1 - Zones": {
             "channels": 49,
             "gdtfMode": "Mode 1 - Zones",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           },
           "Mode 2 - Basic": {
             "channels": 27,
             "gdtfMode": "Mode 2 - Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "Mode 3 - Advanced": {
             "channels": 33,
             "gdtfMode": "Mode 3 - Advanced",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "Mode 4 - Full RGBW": {
             "channels": 57,
             "gdtfMode": "Mode 4 - Full RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 37
           }
         }
       },
@@ -2838,42 +3089,50 @@
           "Mode 1 - 16-bit CMY": {
             "channels": 24,
             "gdtfMode": "Mode 1 - 16-bit CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "Mode 2 - 16-bit RGBAL": {
             "channels": 28,
             "gdtfMode": "Mode 2 - 16-bit RGBAL",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 21
           },
           "Mode 3 - 16-bit CMY + Framing module": {
             "channels": 35,
             "gdtfMode": "Mode 3 - 16-bit CMY + Framing module",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "Mode 4 - 16-bit  RGBAL + Framing module": {
             "channels": 39,
             "gdtfMode": "Mode 4 - 16-bit  RGBAL + Framing module",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           },
           "Mode 5 - 16-bit CMY + Gobo module": {
             "channels": 32,
             "gdtfMode": "Mode 5 - 16-bit CMY + Gobo module",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "Mode 6 - 16-bit  RGBAL + Gobo module": {
             "channels": 36,
             "gdtfMode": "Mode 6 - 16-bit  RGBAL + Gobo module",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "Mode 7 - 16-bit CMY + Gobo + Framing module": {
             "channels": 43,
             "gdtfMode": "Mode 7 - 16-bit CMY + Gobo + Framing module",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 35
           },
           "Mode 8- 16-bit RGBAL Gobo+ Framing": {
             "channels": 47,
             "gdtfMode": "Mode 8- 16-bit RGBAL Gobo+ Framing",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 37
           }
         }
       },
@@ -3110,12 +3369,14 @@
           "Mode 1 - Standard 16 - bit": {
             "channels": 22,
             "gdtfMode": "Mode 1 - Standard 16 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Mode 2 - Reduced 8 - bit": {
             "channels": 16,
             "gdtfMode": "Mode 2 - Reduced 8 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           }
         }
       },
@@ -3138,12 +3399,14 @@
           "Mode 1 - Standard 16 - bit": {
             "channels": 22,
             "gdtfMode": "Mode 1 - Standard 16 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Mode 2 - Reduced 8 - bit": {
             "channels": 16,
             "gdtfMode": "Mode 2 - Reduced 8 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           }
         }
       },
@@ -3166,12 +3429,14 @@
           "Mode 1 - Standard 16 - bit": {
             "channels": 22,
             "gdtfMode": "Mode 1 - Standard 16 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Mode 2 - Reduced 8 - bit": {
             "channels": 16,
             "gdtfMode": "Mode 2 - Reduced 8 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           }
         }
       },
@@ -3194,12 +3459,14 @@
           "Mode 1 - Standard 16 - bit": {
             "channels": 22,
             "gdtfMode": "Mode 1 - Standard 16 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Mode 2 - Reduced 8 - bit": {
             "channels": 16,
             "gdtfMode": "Mode 2 - Reduced 8 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           }
         }
       },
@@ -3257,17 +3524,20 @@
           "Mode 1 - Standard 16 - bit": {
             "channels": 22,
             "gdtfMode": "Mode 1 - Standard 16 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Mode 2 - Reduced 8 - bit": {
             "channels": 16,
             "gdtfMode": "Mode 2 - Reduced 8 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Mode 3 - Cpulse mode": {
             "channels": 24,
             "gdtfMode": "Mode 3 - Cpulse mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 16
           }
         }
       },
@@ -3291,17 +3561,20 @@
           "Mode 1 - Standard 16 - bit": {
             "channels": 22,
             "gdtfMode": "Mode 1 - Standard 16 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Mode 2 - Reduced 8 - bit": {
             "channels": 16,
             "gdtfMode": "Mode 2 - Reduced 8 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Mode 3 - Cpulse mode": {
             "channels": 24,
             "gdtfMode": "Mode 3 - Cpulse mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 16
           }
         }
       },
@@ -3325,17 +3598,20 @@
           "Mode 1 - Standard 16 - bit": {
             "channels": 22,
             "gdtfMode": "Mode 1 - Standard 16 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Mode 2 - Reduced 8 - bit": {
             "channels": 16,
             "gdtfMode": "Mode 2 - Reduced 8 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Mode 3 - Cpulse mode": {
             "channels": 24,
             "gdtfMode": "Mode 3 - Cpulse mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 16
           }
         }
       },
@@ -3358,12 +3634,14 @@
           "Mode 1 RGBW": {
             "channels": 4,
             "gdtfMode": "Mode 1 RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "Mode 2 RGBW + dim + strobe": {
             "channels": 6,
             "gdtfMode": "Mode 2 RGBW + dim + strobe",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         }
       },
@@ -3386,12 +3664,14 @@
           "Mode 1 RGBW": {
             "channels": 4,
             "gdtfMode": "Mode 1 RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "Mode 2 RGBW + dim + strobe": {
             "channels": 6,
             "gdtfMode": "Mode 2 RGBW + dim + strobe",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         }
       },
@@ -3436,12 +3716,14 @@
           "Mode 1 - Standard 16 - bit": {
             "channels": 39,
             "gdtfMode": "Mode 1 - Standard 16 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           },
           "Mode 2 - Reduced 8 - bit": {
             "channels": 34,
             "gdtfMode": "Mode 2 - Reduced 8 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           }
         }
       },
@@ -3463,7 +3745,8 @@
           "Mode 1 - Standard": {
             "channels": 24,
             "gdtfMode": "Mode 1 - Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 21
           }
         }
       },
@@ -3487,17 +3770,20 @@
           "Mode 1 - Standard 16bit": {
             "channels": 22,
             "gdtfMode": "Mode 1 - Standard 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "Mode 2 - Reduced 8 bit": {
             "channels": 17,
             "gdtfMode": "Mode 2 - Reduced 8 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "Mode 3 - Extended 16 bit": {
             "channels": 27,
             "gdtfMode": "Mode 3 - Extended 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           }
         }
       },
@@ -3521,17 +3807,20 @@
           "Mode 1 - Standard": {
             "channels": 34,
             "gdtfMode": "Mode 1 - Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "Mode 2 - Reduced": {
             "channels": 29,
             "gdtfMode": "Mode 2 - Reduced",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "Mode 3 - 8 bit": {
             "channels": 27,
             "gdtfMode": "Mode 3 - 8 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           }
         }
       },
@@ -3554,12 +3843,14 @@
           "Needs external dimmer - 8 bit dimmer": {
             "channels": 1,
             "gdtfMode": "Needs external dimmer - 8 bit dimmer",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 2
           },
           "Needs external dimmer - 16 bit dimmer": {
             "channels": 2,
             "gdtfMode": "Needs external dimmer - 16 bit dimmer",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 2
           }
         }
       },
@@ -3604,12 +3895,14 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 44,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           },
           "Mode 2 - enhanced gobo control": {
             "channels": 45,
             "gdtfMode": "Mode 2 - enhanced gobo control",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           }
         }
       },
@@ -3632,12 +3925,14 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 35,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "Mode 2 - enhanced gobo control": {
             "channels": 36,
             "gdtfMode": "Mode 2 - enhanced gobo control",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           }
         }
       },
@@ -3695,17 +3990,20 @@
           "Mode 1 - Standard 16 - bit": {
             "channels": 17,
             "gdtfMode": "Mode 1 - Standard 16 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "Mode 2 - Reduced 8 - bit": {
             "channels": 11,
             "gdtfMode": "Mode 2 - Reduced 8 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "Mode 3 - RGBA": {
             "channels": 8,
             "gdtfMode": "Mode 3 - RGBA",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           }
         }
       },
@@ -3728,12 +4026,14 @@
           "Mode 1 - Standard 16 - bit": {
             "channels": 17,
             "gdtfMode": "Mode 1 - Standard 16 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "Mode 2 - Reduced 8 - bit": {
             "channels": 11,
             "gdtfMode": "Mode 2 - Reduced 8 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           }
         }
       },
@@ -3757,17 +4057,20 @@
           "Mode 1 - Standard 16 - bit": {
             "channels": 17,
             "gdtfMode": "Mode 1 - Standard 16 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "Mode 2 - Reduced 8 - bit": {
             "channels": 11,
             "gdtfMode": "Mode 2 - Reduced 8 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "Mode 3 - RGBA": {
             "channels": 8,
             "gdtfMode": "Mode 3 - RGBA",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           }
         }
       },
@@ -3790,12 +4093,14 @@
           "Mode 1 - Standard 16 - bit": {
             "channels": 17,
             "gdtfMode": "Mode 1 - Standard 16 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "Mode 2 - Reduced 8 - bit": {
             "channels": 11,
             "gdtfMode": "Mode 2 - Reduced 8 - bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           }
         }
       },
@@ -3819,17 +4124,20 @@
           "Needs external dimmer - mode with virtual channels": {
             "channels": 0,
             "gdtfMode": "Needs external dimmer - mode with virtual channels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 2
           },
           "Needs external dimmer - mode with 8 bit dimmer channel": {
             "channels": 1,
             "gdtfMode": "Needs external dimmer - mode with 8 bit dimmer channel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 2
           },
           "Needs external dimmer - mode with 16 bit dimmer channel 1": {
             "channels": 2,
             "gdtfMode": "Needs external dimmer - mode with 16 bit dimmer channel 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 2
           }
         }
       },
@@ -3857,37 +4165,44 @@
           "Mode 1 - Wash": {
             "channels": 13,
             "gdtfMode": "Mode 1 - Wash",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Mode 2 - Pattern": {
             "channels": 32,
             "gdtfMode": "Mode 2 - Pattern",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "Mode 3 - Pixel RGB": {
             "channels": 25,
             "gdtfMode": "Mode 3 - Pixel RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "Mode 4 - Pixel RGBW": {
             "channels": 47,
             "gdtfMode": "Mode 4 - Pixel RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           },
           "Mode 5 - Pattern full RGB": {
             "channels": 38,
             "gdtfMode": "Mode 5 - Pattern full RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 35
           },
           "Mode 6 - Pattern full RGBW": {
             "channels": 60,
             "gdtfMode": "Mode 6 - Pattern full RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 37
           },
           "Mode 7 - Pixel RGBW only": {
             "channels": 28,
             "gdtfMode": "Mode 7 - Pixel RGBW only",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           }
         }
       },
@@ -3937,37 +4252,44 @@
           "Mode 1 - Wash": {
             "channels": 13,
             "gdtfMode": "Mode 1 - Wash",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Mode 2 - Pattern": {
             "channels": 32,
             "gdtfMode": "Mode 2 - Pattern",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           },
           "Mode 3 - Pixel RGB": {
             "channels": 25,
             "gdtfMode": "Mode 3 - Pixel RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 21
           },
           "Mode 4 - Pixel RGBW": {
             "channels": 47,
             "gdtfMode": "Mode 4 - Pixel RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "Mode 5 - Pattern full RGB": {
             "channels": 38,
             "gdtfMode": "Mode 5 - Pattern full RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           },
           "Mode 6 - Pattern full RGBW": {
             "channels": 60,
             "gdtfMode": "Mode 6 - Pattern full RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           },
           "Mode 7 - Pixel RGBW only": {
             "channels": 28,
             "gdtfMode": "Mode 7 - Pixel RGBW only",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           }
         }
       },
@@ -3991,17 +4313,20 @@
           "Mode 1 - Standard 16bit": {
             "channels": 24,
             "gdtfMode": "Mode 1 - Standard 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "Mode 2 - Reduced 8bit": {
             "channels": 16,
             "gdtfMode": "Mode 2 - Reduced 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 16
           },
           "Mode 3 - Extended 16bit": {
             "channels": 30,
             "gdtfMode": "Mode 3 - Extended 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           }
         }
       },
@@ -4024,12 +4349,14 @@
           "Mode 1 - CMY": {
             "channels": 25,
             "gdtfMode": "Mode 1 - CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "Mode 2 - CMY": {
             "channels": 33,
             "gdtfMode": "Mode 2 - CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           }
         }
       },
@@ -4053,17 +4380,20 @@
           "Mode 1": {
             "channels": 16,
             "gdtfMode": "Mode 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Mode 2": {
             "channels": 16,
             "gdtfMode": "Mode 2",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Mode 3": {
             "channels": 14,
             "gdtfMode": "Mode 3",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           }
         }
       },
@@ -4086,12 +4416,14 @@
           "Mode 1 - Standard": {
             "channels": 32,
             "gdtfMode": "Mode 1 - Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           },
           "Mode 2 - Compatible with Viva": {
             "channels": 26,
             "gdtfMode": "Mode 2 - Compatible with Viva",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           }
         }
       },
@@ -4122,52 +4454,62 @@
           "Mode 10 - Pattern full RGBW": {
             "channels": 123,
             "gdtfMode": "Mode 10 - Pattern full RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 53
           },
           "Mode 9 - Pattern full RGB": {
             "channels": 71,
             "gdtfMode": "Mode 9 - Pattern full RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 50
           },
           "Mode 8 - Pixel RGBW ": {
             "channels": 110,
             "gdtfMode": "Mode 8 - Pixel RGBW ",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 40
           },
           "Mode 7 - Pixel RGB": {
             "channels": 58,
             "gdtfMode": "Mode 7 - Pixel RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 37
           },
           "Mode 6 - Pattern": {
             "channels": 47,
             "gdtfMode": "Mode 6 - Pattern",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "Mode 5 - Wash": {
             "channels": 27,
             "gdtfMode": "Mode 5 - Wash",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "Mode 1 - Zones": {
             "channels": 49,
             "gdtfMode": "Mode 1 - Zones",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           },
           "Mode 2 - Basic": {
             "channels": 27,
             "gdtfMode": "Mode 2 - Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "Mode 3 - Advanced": {
             "channels": 33,
             "gdtfMode": "Mode 3 - Advanced",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "Mode 4 - Full RGBW": {
             "channels": 57,
             "gdtfMode": "Mode 4 - Full RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 37
           }
         }
       },
@@ -4190,12 +4532,14 @@
           "Mode 1 Standard 16-bit": {
             "channels": 27,
             "gdtfMode": "Mode 1 Standard 16-bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "Mode 2 Reduced 8-bit": {
             "channels": 21,
             "gdtfMode": "Mode 2 Reduced 8-bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           }
         }
       },
@@ -4218,12 +4562,14 @@
           "Mode 1 Standard 16-bit": {
             "channels": 27,
             "gdtfMode": "Mode 1 Standard 16-bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "Mode 2 Reduced 8-bit": {
             "channels": 21,
             "gdtfMode": "Mode 2 Reduced 8-bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           }
         }
       },
@@ -4245,7 +4591,8 @@
           "Mode 1 - Standard": {
             "channels": 25,
             "gdtfMode": "Mode 1 - Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           }
         }
       },
@@ -4267,7 +4614,8 @@
           "Mode 1 Full": {
             "channels": 31,
             "gdtfMode": "Mode 1 Full",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           }
         }
       },
@@ -4372,22 +4720,26 @@
           "Mode 1 - Wash": {
             "channels": 19,
             "gdtfMode": "Mode 1 - Wash",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "Mode 2 - Individual LED modules": {
             "channels": 83,
             "gdtfMode": "Mode 2 - Individual LED modules",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 56
           },
           "Mode 3 - Simple": {
             "channels": 5,
             "gdtfMode": "Mode 3 - Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "Mode 4 - One channel mode 2700K": {
             "channels": 1,
             "gdtfMode": "Mode 4 - One channel mode 2700K",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           }
         }
       },
@@ -4413,27 +4765,32 @@
           "Mode 1 - CMY": {
             "channels": 49,
             "gdtfMode": "Mode 1 - CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           },
           "Mode 1 - RGB": {
             "channels": 49,
             "gdtfMode": "Mode 1 - RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           },
           "Mode 2 - Reduced CMY": {
             "channels": 33,
             "gdtfMode": "Mode 2 - Reduced CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           },
           "Mode 2 - Reduced RGB": {
             "channels": 33,
             "gdtfMode": "Mode 2 - Reduced RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           },
           "Mode 3 - RGBAL": {
             "channels": 53,
             "gdtfMode": "Mode 3 - RGBAL",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           }
         }
       },
@@ -4459,27 +4816,32 @@
           "Mode 1 - CMY": {
             "channels": 35,
             "gdtfMode": "Mode 1 - CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "Mode 1 - RGB": {
             "channels": 35,
             "gdtfMode": "Mode 1 - RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "Mode 2 - Reduced CMY": {
             "channels": 24,
             "gdtfMode": "Mode 2 - Reduced CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "Mode 2 - Reduced RGB": {
             "channels": 24,
             "gdtfMode": "Mode 2 - Reduced RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "Mode 3 - RGBAL": {
             "channels": 39,
             "gdtfMode": "Mode 3 - RGBAL",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           }
         }
       },
@@ -4505,27 +4867,32 @@
           "Mode 1 - CMY": {
             "channels": 35,
             "gdtfMode": "Mode 1 - CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "Mode 1 - RGB": {
             "channels": 35,
             "gdtfMode": "Mode 1 - RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "Mode 2 - Reduced CMY": {
             "channels": 24,
             "gdtfMode": "Mode 2 - Reduced CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "Mode 2 - Reduced RGB": {
             "channels": 24,
             "gdtfMode": "Mode 2 - Reduced RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "Mode 3 - RGBAL": {
             "channels": 39,
             "gdtfMode": "Mode 3 - RGBAL",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           }
         }
       },
@@ -4551,27 +4918,32 @@
           "Mode 1 - CMY": {
             "channels": 49,
             "gdtfMode": "Mode 1 - CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           },
           "Mode 1 - RGB": {
             "channels": 49,
             "gdtfMode": "Mode 1 - RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           },
           "Mode 2 - Reduced CMY": {
             "channels": 33,
             "gdtfMode": "Mode 2 - Reduced CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           },
           "Mode 2 - Reduced RGB": {
             "channels": 33,
             "gdtfMode": "Mode 2 - Reduced RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           },
           "Mode 3 - RGBAL": {
             "channels": 53,
             "gdtfMode": "Mode 3 - RGBAL",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           }
         }
       },
@@ -4597,27 +4969,32 @@
           "Mode 1 - CMY": {
             "channels": 49,
             "gdtfMode": "Mode 1 - CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           },
           "Mode 1 - RGB": {
             "channels": 49,
             "gdtfMode": "Mode 1 - RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           },
           "Mode 2 - Reduced CMY": {
             "channels": 33,
             "gdtfMode": "Mode 2 - Reduced CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           },
           "Mode 2 - Reduced RGB": {
             "channels": 33,
             "gdtfMode": "Mode 2 - Reduced RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           },
           "Mode 3 - RGBAL": {
             "channels": 53,
             "gdtfMode": "Mode 3 - RGBAL",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           }
         }
       },
@@ -4774,42 +5151,50 @@
           "Mode 1 - 16-bit CMY": {
             "channels": 18,
             "gdtfMode": "Mode 1 - 16-bit CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "Mode 2 - 8-bit CMY": {
             "channels": 9,
             "gdtfMode": "Mode 2 - 8-bit CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "Mode 3 - 16-bit RGBAL": {
             "channels": 22,
             "gdtfMode": "Mode 3 - 16-bit RGBAL",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "Mode 4 - White light + dimmer": {
             "channels": 5,
             "gdtfMode": "Mode 4 - White light + dimmer",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "Mode 5 - Only Dimmer": {
             "channels": 1,
             "gdtfMode": "Mode 5 - Only Dimmer",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "Mode 6 - 16-bit CMY (optional module)": {
             "channels": 24,
             "gdtfMode": "Mode 6 - 16-bit CMY (optional module)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "Mode 7 - 8-bit CMY (optional module)": {
             "channels": 13,
             "gdtfMode": "Mode 7 - 8-bit CMY (optional module)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "Mode 8 - 16-bit RGBAL (optional module)": {
             "channels": 28,
             "gdtfMode": "Mode 8 - 16-bit RGBAL (optional module)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           }
         }
       },
@@ -4966,42 +5351,50 @@
           "Mode 1 - 16-bit CMY": {
             "channels": 18,
             "gdtfMode": "Mode 1 - 16-bit CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "Mode 2 - 8-bit CMY": {
             "channels": 9,
             "gdtfMode": "Mode 2 - 8-bit CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "Mode 3 - 16-bit RGBAL": {
             "channels": 22,
             "gdtfMode": "Mode 3 - 16-bit RGBAL",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "Mode 4 - White light + dimmer": {
             "channels": 5,
             "gdtfMode": "Mode 4 - White light + dimmer",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "Mode 5 - Only Dimmer": {
             "channels": 1,
             "gdtfMode": "Mode 5 - Only Dimmer",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "Mode 6 - 16-bit CMY (optional module)": {
             "channels": 24,
             "gdtfMode": "Mode 6 - 16-bit CMY (optional module)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "Mode 7 - 8-bit CMY (optional module)": {
             "channels": 13,
             "gdtfMode": "Mode 7 - 8-bit CMY (optional module)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "Mode 8 - 16-bit RGBAL (optional module)": {
             "channels": 28,
             "gdtfMode": "Mode 8 - 16-bit RGBAL (optional module)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           }
         }
       },
@@ -5219,27 +5612,32 @@
           "Mode 1 - CMY": {
             "channels": 35,
             "gdtfMode": "Mode 1 - CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "Mode 1 - RGB": {
             "channels": 35,
             "gdtfMode": "Mode 1 - RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "Mode 2 - Reduced CMY": {
             "channels": 24,
             "gdtfMode": "Mode 2 - Reduced CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "Mode 2 - Reduced RGB": {
             "channels": 24,
             "gdtfMode": "Mode 2 - Reduced RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "Mode 3 - Five colors": {
             "channels": 39,
             "gdtfMode": "Mode 3 - Five colors",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           }
         }
       },
@@ -5265,27 +5663,32 @@
           "Mode 1 - CMY": {
             "channels": 35,
             "gdtfMode": "Mode 1 - CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "Mode 1 - RGB": {
             "channels": 35,
             "gdtfMode": "Mode 1 - RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "Mode 2 - Reduced CMY": {
             "channels": 24,
             "gdtfMode": "Mode 2 - Reduced CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "Mode 2 - Reduced RGB": {
             "channels": 24,
             "gdtfMode": "Mode 2 - Reduced RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "Mode 3 - Five colors": {
             "channels": 39,
             "gdtfMode": "Mode 3 - Five colors",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           }
         }
       },
@@ -5311,27 +5714,32 @@
           "Mode 1 - CMY": {
             "channels": 52,
             "gdtfMode": "Mode 1 - CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 42
           },
           "Mode 1 - RGB": {
             "channels": 52,
             "gdtfMode": "Mode 1 - RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 42
           },
           "Mode 2 - Reduced CMY": {
             "channels": 36,
             "gdtfMode": "Mode 2 - Reduced CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           },
           "Mode 2 - Reduced RGB": {
             "channels": 36,
             "gdtfMode": "Mode 2 - Reduced RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           },
           "Mode 3 - RGBALG": {
             "channels": 56,
             "gdtfMode": "Mode 3 - RGBALG",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           }
         }
       },
@@ -5357,27 +5765,32 @@
           "Mode 1 - CMY": {
             "channels": 52,
             "gdtfMode": "Mode 1 - CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 42
           },
           "Mode 1 - RGB": {
             "channels": 52,
             "gdtfMode": "Mode 1 - RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 42
           },
           "Mode 2 - Reduced CMY": {
             "channels": 36,
             "gdtfMode": "Mode 2 - Reduced CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           },
           "Mode 2 - Reduced RGB": {
             "channels": 36,
             "gdtfMode": "Mode 2 - Reduced RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           },
           "Mode 3 - RGBALG": {
             "channels": 56,
             "gdtfMode": "Mode 3 - RGBALG",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           }
         }
       },
@@ -5403,27 +5816,32 @@
           "Mode 1 - CMY": {
             "channels": 35,
             "gdtfMode": "Mode 1 - CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "Mode 1 - RGB": {
             "channels": 35,
             "gdtfMode": "Mode 1 - RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "Mode 2 - Reduced CMY": {
             "channels": 25,
             "gdtfMode": "Mode 2 - Reduced CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "Mode 2 - Reduced RGB": {
             "channels": 25,
             "gdtfMode": "Mode 2 - Reduced RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "Mode 3 - Five colors": {
             "channels": 39,
             "gdtfMode": "Mode 3 - Five colors",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           }
         }
       },
@@ -5579,17 +5997,20 @@
           "Mode 1 - CMY": {
             "channels": 25,
             "gdtfMode": "Mode 1 - CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 21
           },
           "Mode 1 - RGB": {
             "channels": 25,
             "gdtfMode": "Mode 1 - RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 21
           },
           "Mode 2 - RGBAL": {
             "channels": 29,
             "gdtfMode": "Mode 2 - RGBAL",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           }
         }
       },
@@ -5677,17 +6098,20 @@
           "Mode 1 - CMY": {
             "channels": 31,
             "gdtfMode": "Mode 1 - CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "Mode 1 - RGB": {
             "channels": 31,
             "gdtfMode": "Mode 1 - RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "Mode 2 - RGBAL": {
             "channels": 35,
             "gdtfMode": "Mode 2 - RGBAL",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           }
         }
       },
@@ -5714,32 +6138,38 @@
           "Mode 6-Pattern full RGBW": {
             "channels": 196,
             "gdtfMode": "Mode 6-Pattern full RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 64
           },
           "Mode 5-Pattern full RGB": {
             "channels": 108,
             "gdtfMode": "Mode 5-Pattern full RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 59
           },
           "Mode 4-Pixel RGBW": {
             "channels": 183,
             "gdtfMode": "Mode 4-Pixel RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 51
           },
           "Mode 3-Pixel RGB": {
             "channels": 95,
             "gdtfMode": "Mode 3-Pixel RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 46
           },
           "Mode 2-Pattern": {
             "channels": 48,
             "gdtfMode": "Mode 2-Pattern",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           },
           "Mode 1-Wash": {
             "channels": 28,
             "gdtfMode": "Mode 1-Wash",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           }
         }
       },
@@ -5766,32 +6196,38 @@
           "Mode 6 Pattern full RGBW": {
             "channels": 81,
             "gdtfMode": "Mode 6 Pattern full RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 42
           },
           "Mode 5 - Pattern full RGB": {
             "channels": 48,
             "gdtfMode": "Mode 5 - Pattern full RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           },
           "Mode 4 - Pixel RGBW": {
             "channels": 68,
             "gdtfMode": "Mode 4 - Pixel RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "Mode 3 - Pixel RGB": {
             "channels": 35,
             "gdtfMode": "Mode 3 - Pixel RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "Mode 2 - Pattern": {
             "channels": 45,
             "gdtfMode": "Mode 2 - Pattern",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 37
           },
           "Mode 1 - Wash": {
             "channels": 25,
             "gdtfMode": "Mode 1 - Wash",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           }
         }
       },
@@ -5818,32 +6254,38 @@
           "Mode 6-Pattern full RGBW": {
             "channels": 128,
             "gdtfMode": "Mode 6-Pattern full RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           },
           "Mode 5-Pattern full RGB": {
             "channels": 59,
             "gdtfMode": "Mode 5-Pattern full RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 43
           },
           "Mode 4-Pixel RGBW": {
             "channels": 115,
             "gdtfMode": "Mode 4-Pixel RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           },
           "Mode 3-Pixel RGB": {
             "channels": 46,
             "gdtfMode": "Mode 3-Pixel RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "Mode 2-Pattern": {
             "channels": 56,
             "gdtfMode": "Mode 2-Pattern",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           },
           "Mode 1-Wash": {
             "channels": 34,
             "gdtfMode": "Mode 1-Wash",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           }
         }
       },
@@ -5870,32 +6312,38 @@
           "Mode 6-Pattern full RGBW": {
             "channels": 98,
             "gdtfMode": "Mode 6-Pattern full RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           },
           "Mode 5-Pattern full RGB": {
             "channels": 65,
             "gdtfMode": "Mode 5-Pattern full RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 43
           },
           "Mode 4-Pixel RGBW": {
             "channels": 85,
             "gdtfMode": "Mode 4-Pixel RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           },
           "Mode 3-Pixel RGB": {
             "channels": 52,
             "gdtfMode": "Mode 3-Pixel RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "Mode 2-Pattern": {
             "channels": 62,
             "gdtfMode": "Mode 2-Pattern",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           },
           "Mode 1-Wash": {
             "channels": 42,
             "gdtfMode": "Mode 1-Wash",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           }
         }
       },
@@ -5926,52 +6374,62 @@
           "Mode 1 - CMY": {
             "channels": 40,
             "gdtfMode": "Mode 1 - CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           },
           "Mode 1 - RGB": {
             "channels": 40,
             "gdtfMode": "Mode 1 - RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           },
           "Mode 2 - Reduced CMY": {
             "channels": 27,
             "gdtfMode": "Mode 2 - Reduced CMY",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "Mode 2 - Reduced RGB": {
             "channels": 27,
             "gdtfMode": "Mode 2 - Reduced RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "Mode 3 - RGBAL": {
             "channels": 44,
             "gdtfMode": "Mode 3 - RGBAL",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 33
           },
           "Mode 4 - CMY + Gobo module": {
             "channels": 48,
             "gdtfMode": "Mode 4 - CMY + Gobo module",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 37
           },
           "Mode 4 - RGB + Gobo module": {
             "channels": 48,
             "gdtfMode": "Mode 4 - RGB + Gobo module",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 37
           },
           "Mode 5 - Reduced CMY + Gobo module": {
             "channels": 33,
             "gdtfMode": "Mode 5 - Reduced CMY + Gobo module",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "Mode 5 - Reduced RGB + Gobo module": {
             "channels": 33,
             "gdtfMode": "Mode 5 - Reduced RGB + Gobo module",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "Mode 6 - RGBAL + Gobo module": {
             "channels": 52,
             "gdtfMode": "Mode 6 - RGBAL + Gobo module",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           }
         }
       },
@@ -5994,12 +6452,14 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 30,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 21
           },
           "Mode 2 - Reduced 8 bit": {
             "channels": 23,
             "gdtfMode": "Mode 2 - Reduced 8 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 21
           }
         }
       },
@@ -6022,12 +6482,14 @@
           "Mode 1 - Standard 16 bit": {
             "channels": 32,
             "gdtfMode": "Mode 1 - Standard 16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           },
           "Mode 2 - Reduced 8 bit": {
             "channels": 26,
             "gdtfMode": "Mode 2 - Reduced 8 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           }
         }
       },

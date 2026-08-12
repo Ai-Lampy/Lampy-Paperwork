@@ -17,7 +17,8 @@
           "2 Channel": {
             "channels": 2,
             "gdtfMode": "2 Channel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 2
           }
         }
       },
@@ -39,7 +40,8 @@
           "Standard": {
             "channels": 1,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           }
         }
       },

@@ -23,37 +23,44 @@
           "SSCC Mode": {
             "channels": 12,
             "gdtfMode": "SSCC Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "SSCC Mode 4 Cell": {
             "channels": 39,
             "gdtfMode": "SSCC Mode 4 Cell",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "SOCC Mode": {
             "channels": 17,
             "gdtfMode": "SOCC Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "SQCC Mode 1 Zone": {
             "channels": 4,
             "gdtfMode": "SQCC Mode 1 Zone",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "SOCC Mode 4 Cell": {
             "channels": 53,
             "gdtfMode": "SOCC Mode 4 Cell",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "SSCC Mode 12 Cell": {
             "channels": 111,
             "gdtfMode": "SSCC Mode 12 Cell",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 63
           },
           "SOCC Mode 12 Cell": {
             "channels": 149,
             "gdtfMode": "SOCC Mode 12 Cell",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 76
           }
         }
       },
@@ -79,27 +86,32 @@
           "SSCC Mode 1 Zone": {
             "channels": 13,
             "gdtfMode": "SSCC Mode 1 Zone",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "SQCC Mode": {
             "channels": 4,
             "gdtfMode": "SQCC Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "SOCC Mode 1 Zone": {
             "channels": 17,
             "gdtfMode": "SOCC Mode 1 Zone",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "SSCC Mode 2 Zone": {
             "channels": 21,
             "gdtfMode": "SSCC Mode 2 Zone",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "SOCC Mode 2 Zone": {
             "channels": 29,
             "gdtfMode": "SOCC Mode 2 Zone",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 16
           }
         }
       },
@@ -122,12 +134,14 @@
           "16Bit Enhanced": {
             "channels": 45,
             "gdtfMode": "16Bit Enhanced",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "16Bit Mode": {
             "channels": 40,
             "gdtfMode": "16Bit Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 33
           }
         }
       },
@@ -150,12 +164,14 @@
           "16Bit Enhanced": {
             "channels": 47,
             "gdtfMode": "16Bit Enhanced",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 40
           },
           "16Bit": {
             "channels": 42,
             "gdtfMode": "16Bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 35
           }
         }
       },
@@ -178,12 +194,14 @@
           "16Bit Enhanced": {
             "channels": 42,
             "gdtfMode": "16Bit Enhanced",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           },
           "16Bit": {
             "channels": 37,
             "gdtfMode": "16Bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           }
         }
       },
@@ -206,12 +224,14 @@
           "16Bit Enhanced": {
             "channels": 32,
             "gdtfMode": "16Bit Enhanced",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "16Bit": {
             "channels": 29,
             "gdtfMode": "16Bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           }
         }
       },
@@ -234,12 +254,14 @@
           "16Bit EN Channel Mode": {
             "channels": 54,
             "gdtfMode": "16Bit EN Channel Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 45
           },
           "16Bit Channel Mode": {
             "channels": 49,
             "gdtfMode": "16Bit Channel Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 40
           }
         }
       },
@@ -266,32 +288,38 @@
           "Smart Color 0": {
             "channels": 29,
             "gdtfMode": "Smart Color 0",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "Smart Color 1": {
             "channels": 32,
             "gdtfMode": "Smart Color 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           },
           "Smart Color 16": {
             "channels": 77,
             "gdtfMode": "Smart Color 16",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 71
           },
           "Open Source 0": {
             "channels": 33,
             "gdtfMode": "Open Source 0",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           },
           "Open Source 1": {
             "channels": 36,
             "gdtfMode": "Open Source 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "Open Source 16": {
             "channels": 81,
             "gdtfMode": "Open Source 16",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 72
           }
         }
       },
@@ -313,7 +341,8 @@
           "16Bit": {
             "channels": 20,
             "gdtfMode": "16Bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           }
         }
       },
@@ -337,17 +366,20 @@
           "16Bit Enhanced": {
             "channels": 45,
             "gdtfMode": "16Bit Enhanced",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           },
           "16Bit": {
             "channels": 40,
             "gdtfMode": "16Bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           },
           "Clone": {
             "channels": 35,
             "gdtfMode": "Clone",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           }
         }
       },
@@ -372,22 +404,26 @@
           "16-Bit 1Cell": {
             "channels": 22,
             "gdtfMode": "16-Bit 1Cell",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "16-Bit 7Cell": {
             "channels": 70,
             "gdtfMode": "16-Bit 7Cell",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           },
           "8-Bit 1Cell": {
             "channels": 17,
             "gdtfMode": "8-Bit 1Cell",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "8-Bit 7Cell": {
             "channels": 41,
             "gdtfMode": "8-Bit 7Cell",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           }
         }
       },

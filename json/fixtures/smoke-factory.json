@@ -17,7 +17,8 @@
           "Default": {
             "channels": 2,
             "gdtfMode": "Default",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 2
           }
         }
       },

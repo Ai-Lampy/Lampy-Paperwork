@@ -15,7 +15,8 @@
           "Mode 0": {
             "channels": 3,
             "gdtfMode": "Mode 0",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           }
         }
       },
@@ -35,7 +36,8 @@
           "Mode 0": {
             "channels": 5,
             "gdtfMode": "Mode 0",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           }
         }
       },
@@ -58,12 +60,14 @@
           "Mode 1 Channel": {
             "channels": 1,
             "gdtfMode": "Mode 1 Channel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "Mode 2 Channel": {
             "channels": 2,
             "gdtfMode": "Mode 2 Channel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 2
           }
         }
       },

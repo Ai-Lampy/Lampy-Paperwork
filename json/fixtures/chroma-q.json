@@ -1172,262 +1172,314 @@
           "RGBA": {
             "channels": 4,
             "gdtfMode": "RGBA",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB": {
             "channels": 3,
             "gdtfMode": "RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "HSI": {
             "channels": 3,
             "gdtfMode": "HSI",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "RGBAx4": {
             "channels": 4,
             "gdtfMode": "RGBAx4",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGBx4": {
             "channels": 3,
             "gdtfMode": "RGBx4",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "HSIx4": {
             "channels": 3,
             "gdtfMode": "HSIx4",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "RGBAx2": {
             "channels": 8,
             "gdtfMode": "RGBAx2",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGBx2": {
             "channels": 6,
             "gdtfMode": "RGBx2",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "HSIx2": {
             "channels": 6,
             "gdtfMode": "HSIx2",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "RGBAx1": {
             "channels": 16,
             "gdtfMode": "RGBAx1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGBx1": {
             "channels": 12,
             "gdtfMode": "RGBx1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "HSIx1": {
             "channels": 12,
             "gdtfMode": "HSIx1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "RGBA Od/Ev": {
             "channels": 8,
             "gdtfMode": "RGBA Od/Ev",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB Od/Ev": {
             "channels": 6,
             "gdtfMode": "RGB Od/Ev",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "HSI Od/Ev": {
             "channels": 6,
             "gdtfMode": "HSI Od/Ev",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "Look Sel": {
             "channels": 1,
             "gdtfMode": "Look Sel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "RGBAx1 Strobe On": {
             "channels": 18,
             "gdtfMode": "RGBAx1 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "RGBAx2 Strobe On": {
             "channels": 10,
             "gdtfMode": "RGBAx2 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "RGBAx4 Strobe On": {
             "channels": 6,
             "gdtfMode": "RGBAx4 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "RGBA Od/Ev Strobe On": {
             "channels": 10,
             "gdtfMode": "RGBA Od/Ev Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "RGBx1 Strobe On": {
             "channels": 14,
             "gdtfMode": "RGBx1 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGBx2 Strobe On": {
             "channels": 8,
             "gdtfMode": "RGBx2 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGBx4 Strobe On": {
             "channels": 5,
             "gdtfMode": "RGBx4 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGB Od/Ev Strobe On": {
             "channels": 8,
             "gdtfMode": "RGB Od/Ev Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "HSIx1 Strobe On": {
             "channels": 14,
             "gdtfMode": "HSIx1 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "HSIx2 Strobe On": {
             "channels": 8,
             "gdtfMode": "HSIx2 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "HSIx4 Strobe On": {
             "channels": 5,
             "gdtfMode": "HSIx4 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "HSI Od/Ev Strobe On": {
             "channels": 8,
             "gdtfMode": "HSI Od/Ev Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGBAx4 Strobe On Top": {
             "channels": 10,
             "gdtfMode": "RGBAx4 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGBx4 Strobe On Top": {
             "channels": 8,
             "gdtfMode": "RGBx4 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "HSIx4 Strobe On Top": {
             "channels": 8,
             "gdtfMode": "HSIx4 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGBAx2 Strobe On Top": {
             "channels": 14,
             "gdtfMode": "RGBAx2 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGBx2 Strobe On Top": {
             "channels": 11,
             "gdtfMode": "RGBx2 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "HSIx2 Strobe On Top": {
             "channels": 11,
             "gdtfMode": "HSIx2 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGBAx1 Strobe On Top": {
             "channels": 22,
             "gdtfMode": "RGBAx1 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGBx1 Strobe On Top": {
             "channels": 17,
             "gdtfMode": "RGBx1 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "HSIx1 Strobe On Top": {
             "channels": 17,
             "gdtfMode": "HSIx1 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGBA Od/Ev Strobe On Top": {
             "channels": 14,
             "gdtfMode": "RGBA Od/Ev Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Od/Ev Strobe On Top": {
             "channels": 11,
             "gdtfMode": "RGB Od/Ev Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "HSI Od/Ev Strobe On Top 1": {
             "channels": 11,
             "gdtfMode": "HSI Od/Ev Strobe On Top 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGBAx4 Strobe Random": {
             "channels": 11,
             "gdtfMode": "RGBAx4 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBx4 Strobe Random": {
             "channels": 9,
             "gdtfMode": "RGBx4 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "HSIx4 Strobe Random": {
             "channels": 9,
             "gdtfMode": "HSIx4 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "RGBAx2 Strobe Random": {
             "channels": 15,
             "gdtfMode": "RGBAx2 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBx2 Strobe Random": {
             "channels": 12,
             "gdtfMode": "RGBx2 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "HSIx2 Strobe Random": {
             "channels": 12,
             "gdtfMode": "HSIx2 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "RGBAx1 Strobe Random": {
             "channels": 23,
             "gdtfMode": "RGBAx1 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBx1 Strobe Random": {
             "channels": 18,
             "gdtfMode": "RGBx1 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "HSIx1 Strobe Random": {
             "channels": 18,
             "gdtfMode": "HSIx1 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "RGBA Od/Ev Strobe Random": {
             "channels": 15,
             "gdtfMode": "RGBA Od/Ev Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGB Od/Ev Strobe Random": {
             "channels": 12,
             "gdtfMode": "RGB Od/Ev Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "HSI Od/Ev Strobe On Top": {
             "channels": 12,
             "gdtfMode": "HSI Od/Ev Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           }
         }
       },
@@ -1497,247 +1549,296 @@
           "RGBAx4": {
             "channels": 4,
             "gdtfMode": "RGBAx4",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGBx4": {
             "channels": 3,
             "gdtfMode": "RGBx4",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "HSIx4": {
             "channels": 3,
             "gdtfMode": "HSIx4",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "RGBAx2": {
             "channels": 8,
             "gdtfMode": "RGBAx2",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "RGBx2": {
             "channels": 6,
             "gdtfMode": "RGBx2",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "HSIx2": {
             "channels": 6,
             "gdtfMode": "HSIx2",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGBAx1": {
             "channels": 16,
             "gdtfMode": "RGBAx1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "RGBx1": {
             "channels": 12,
             "gdtfMode": "RGBx1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 16
           },
           "HSIx1": {
             "channels": 12,
             "gdtfMode": "HSIx1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBA OdEv": {
             "channels": 8,
             "gdtfMode": "RGBA OdEv",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "RGB OdEv": {
             "channels": 6,
             "gdtfMode": "RGB OdEv",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "HSI OdEv": {
             "channels": 6,
             "gdtfMode": "HSI OdEv",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGBAx4 Strobe On": {
             "channels": 6,
             "gdtfMode": "RGBAx4 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "RGBx4 Strobe On": {
             "channels": 5,
             "gdtfMode": "RGBx4 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "HSIx4 Strobe On": {
             "channels": 5,
             "gdtfMode": "HSIx4 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGBAx2 Strobe On": {
             "channels": 10,
             "gdtfMode": "RGBAx2 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBx2 Strobe On": {
             "channels": 8,
             "gdtfMode": "RGBx2 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "HSIx2 Strobe On": {
             "channels": 8,
             "gdtfMode": "HSIx2 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGBAx1 Strobe On": {
             "channels": 18,
             "gdtfMode": "RGBAx1 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "RGBx1 Strobe On": {
             "channels": 14,
             "gdtfMode": "RGBx1 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "HSIx1 Strobe On": {
             "channels": 14,
             "gdtfMode": "HSIx1 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "RGBA OdEv Strobe On": {
             "channels": 10,
             "gdtfMode": "RGBA OdEv Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGB OdEv Strobe On": {
             "channels": 8,
             "gdtfMode": "RGB OdEv Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "HSI OdEv Strobe On": {
             "channels": 8,
             "gdtfMode": "HSI OdEv Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "Look Sel": {
             "channels": 1,
             "gdtfMode": "Look Sel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "RGBAx4 Strobe On Top": {
             "channels": 10,
             "gdtfMode": "RGBAx4 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBx4 Strobe On Top": {
             "channels": 8,
             "gdtfMode": "RGBx4 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "HSIx4 Strobe On Top": {
             "channels": 8,
             "gdtfMode": "HSIx4 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGBAx2 Strobe On Top": {
             "channels": 14,
             "gdtfMode": "RGBAx2 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 16
           },
           "RGBx2 Strobe On Top": {
             "channels": 11,
             "gdtfMode": "RGBx2 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "HSIx2 Strobe On Top": {
             "channels": 11,
             "gdtfMode": "HSIx2 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGBAx1 Strobe On Top": {
             "channels": 22,
             "gdtfMode": "RGBAx1 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           },
           "RGBx1 Strobe On Top": {
             "channels": 17,
             "gdtfMode": "RGBx1 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 21
           },
           "HSIx1 Strobe On Top": {
             "channels": 17,
             "gdtfMode": "HSIx1 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGBA Od/Ev Strobe On Top": {
             "channels": 14,
             "gdtfMode": "RGBA Od/Ev Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 16
           },
           "RGB Od/Ev Strobe On Top": {
             "channels": 11,
             "gdtfMode": "RGB Od/Ev Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "HSI Od/Ev Strobe On Top [11ch]": {
             "channels": 11,
             "gdtfMode": "HSI Od/Ev Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBAx4 Strobe Random": {
             "channels": 11,
             "gdtfMode": "RGBAx4 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBx4 Strobe Random": {
             "channels": 9,
             "gdtfMode": "RGBx4 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "HSIx4 Strobe Random": {
             "channels": 9,
             "gdtfMode": "HSIx4 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "RGBAx2 Strobe Random": {
             "channels": 15,
             "gdtfMode": "RGBAx2 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGBx2 Strobe Random": {
             "channels": 12,
             "gdtfMode": "RGBx2 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "HSIx2 Strobe Random": {
             "channels": 12,
             "gdtfMode": "HSIx2 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBAx1 Strobe Random": {
             "channels": 23,
             "gdtfMode": "RGBAx1 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "RGBx1 Strobe Random": {
             "channels": 18,
             "gdtfMode": "RGBx1 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "HSIx1 Strobe Random": {
             "channels": 18,
             "gdtfMode": "HSIx1 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "RGBA Od/Ev Strobe Random": {
             "channels": 15,
             "gdtfMode": "RGBA Od/Ev Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGB Od/Ev Strobe Random": {
             "channels": 12,
             "gdtfMode": "RGB Od/Ev Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "HSI Od/Ev Strobe On Top [12ch]": {
             "channels": 12,
             "gdtfMode": "HSI Od/Ev Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           }
         }
       },
@@ -1855,487 +1956,584 @@
           "RGBAx16 Strobe Off": {
             "channels": 4,
             "gdtfMode": "RGBAx16 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGBx16 Strobe Off": {
             "channels": 3,
             "gdtfMode": "RGBx16 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "HSIx16 Strobe Off": {
             "channels": 3,
             "gdtfMode": "HSIx16 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "RGBAx8 Strobe Off": {
             "channels": 8,
             "gdtfMode": "RGBAx8 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "RGBx8 Strobe Off": {
             "channels": 6,
             "gdtfMode": "RGBx8 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "HSIx8 Strobe Off": {
             "channels": 6,
             "gdtfMode": "HSIx8 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGBAx4 Strobe Off": {
             "channels": 16,
             "gdtfMode": "RGBAx4 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "RGBx4 Strobe Off": {
             "channels": 12,
             "gdtfMode": "RGBx4 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 16
           },
           "HSIx4 Strobe Off": {
             "channels": 12,
             "gdtfMode": "HSIx4 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBAx2 Strobe Off": {
             "channels": 32,
             "gdtfMode": "RGBAx2 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGBx2 Strobe Off": {
             "channels": 24,
             "gdtfMode": "RGBx2 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "HSIx2 Strobe Off": {
             "channels": 24,
             "gdtfMode": "HSIx2 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "RGBAx1 Strobe Off": {
             "channels": 64,
             "gdtfMode": "RGBAx1 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGBx1 Strobe Off": {
             "channels": 48,
             "gdtfMode": "RGBx1 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "HSIx1 Strobe Off": {
             "channels": 48,
             "gdtfMode": "HSIx1 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "RGBA Od Ev Strobe Off": {
             "channels": 8,
             "gdtfMode": "RGBA Od Ev Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "RGB Od Ev Strobe Off": {
             "channels": 6,
             "gdtfMode": "RGB Od Ev Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "HSI Od Ev Strobe Off": {
             "channels": 6,
             "gdtfMode": "HSI Od Ev Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGBA Skp3 Strobe Off": {
             "channels": 16,
             "gdtfMode": "RGBA Skp3 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "RGB Skp3 Strobe Off": {
             "channels": 12,
             "gdtfMode": "RGB Skp3 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 16
           },
           "HSI Skp3 Strobe Off": {
             "channels": 12,
             "gdtfMode": "HSI Skp3 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBA Skp7 Strobe Off": {
             "channels": 32,
             "gdtfMode": "RGBA Skp7 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 40
           },
           "RGB Skp7 Strobe Off": {
             "channels": 24,
             "gdtfMode": "RGB Skp7 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           },
           "HSI Skp7 Strobe Off": {
             "channels": 24,
             "gdtfMode": "HSI Skp7 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           },
           "Look Sel": {
             "channels": 1,
             "gdtfMode": "Look Sel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "RGBAx4 Strobe On": {
             "channels": 18,
             "gdtfMode": "RGBAx4 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "RGBAx8 Strobe On": {
             "channels": 10,
             "gdtfMode": "RGBAx8 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBAx16 Strobe On": {
             "channels": 6,
             "gdtfMode": "RGBAx16 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "RGBA Od Ev Strobe On": {
             "channels": 10,
             "gdtfMode": "RGBA Od Ev Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBx4 Strobe On": {
             "channels": 14,
             "gdtfMode": "RGBx4 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "RGBx8 Strobe On": {
             "channels": 8,
             "gdtfMode": "RGBx8 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "RGBx16 Strobe On": {
             "channels": 5,
             "gdtfMode": "RGBx16 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGB Od Ev Strobe On": {
             "channels": 8,
             "gdtfMode": "RGB Od Ev Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "HSIx4 Strobe On": {
             "channels": 14,
             "gdtfMode": "HSIx4 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "HSIx8 Strobe On": {
             "channels": 8,
             "gdtfMode": "HSIx8 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "HSIx16 Strobe On": {
             "channels": 5,
             "gdtfMode": "HSIx16 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "HSI Od Ev Strobe On": {
             "channels": 8,
             "gdtfMode": "HSI Od Ev Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGBAx2Strobe On": {
             "channels": 34,
             "gdtfMode": "RGBAx2Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "RGBAx1 Strobe On": {
             "channels": 66,
             "gdtfMode": "RGBAx1 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "RGB x2 Strobe On": {
             "channels": 26,
             "gdtfMode": "RGB x2 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGB x1 Strobe On": {
             "channels": 50,
             "gdtfMode": "RGB x1 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "HSI x2Strobe On": {
             "channels": 26,
             "gdtfMode": "HSI x2Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "HSI x1 Strobe On": {
             "channels": 50,
             "gdtfMode": "HSI x1 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGBA Skp3 Strobe On": {
             "channels": 18,
             "gdtfMode": "RGBA Skp3 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "RGB Skp3 Strobe On": {
             "channels": 14,
             "gdtfMode": "RGB Skp3 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "HSI Skp3 Strobe On": {
             "channels": 14,
             "gdtfMode": "HSI Skp3 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "RGBA Skp7 Strobe On": {
             "channels": 34,
             "gdtfMode": "RGBA Skp7 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 42
           },
           "RGB Skp7 Strobe On": {
             "channels": 26,
             "gdtfMode": "RGB Skp7 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           },
           "HSI Skp7 Strobe On": {
             "channels": 26,
             "gdtfMode": "HSI Skp7 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           },
           "RGBAx16 Strobe On Top": {
             "channels": 10,
             "gdtfMode": "RGBAx16 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBx16 Strobe On Top": {
             "channels": 8,
             "gdtfMode": "RGBx16 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "HSIx16 Strobe On Top": {
             "channels": 8,
             "gdtfMode": "HSIx16 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGBAx8 Strobe On Top": {
             "channels": 14,
             "gdtfMode": "RGBAx8 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGBx8 Strobe On Top": {
             "channels": 11,
             "gdtfMode": "RGBx8 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "HSIx8 Strobe On Top": {
             "channels": 11,
             "gdtfMode": "HSIx8 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGBAx4 Strobe On Top": {
             "channels": 22,
             "gdtfMode": "RGBAx4 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "RGBx4 Strobe On Top": {
             "channels": 17,
             "gdtfMode": "RGBx4 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "HSIx4 Strobe On Top": {
             "channels": 17,
             "gdtfMode": "HSIx4 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGBAx2 Strobe On Top": {
             "channels": 38,
             "gdtfMode": "RGBAx2 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBx2 Strobe On Top": {
             "channels": 29,
             "gdtfMode": "RGBx2 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "HSIx2 Strobe On Top": {
             "channels": 29,
             "gdtfMode": "HSIx2 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGBAx1 Strobe On Top": {
             "channels": 70,
             "gdtfMode": "RGBAx1 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBx1 Strobe On Top": {
             "channels": 53,
             "gdtfMode": "RGBx1 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "HSIx1 Strobe On Top": {
             "channels": 53,
             "gdtfMode": "HSIx1 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGBA Od Ev Strobe On Top": {
             "channels": 14,
             "gdtfMode": "RGBA Od Ev Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGB Od Ev Strobe On Top": {
             "channels": 11,
             "gdtfMode": "RGB Od Ev Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "HSI Od Ev Strobe On Top": {
             "channels": 11,
             "gdtfMode": "HSI Od Ev Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGBA Skp3 Strobe On Top": {
             "channels": 22,
             "gdtfMode": "RGBA Skp3 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "RGB Skp3 Strobe On Top": {
             "channels": 17,
             "gdtfMode": "RGB Skp3 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "HSI Skp3 Strobe On Top": {
             "channels": 17,
             "gdtfMode": "HSI Skp3 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGBA Skp7 Strobe On Top": {
             "channels": 38,
             "gdtfMode": "RGBA Skp7 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 47
           },
           "RGB Skp7 Strobe On Top": {
             "channels": 29,
             "gdtfMode": "RGB Skp7 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "HSI Skp7 Strobe On Top": {
             "channels": 29,
             "gdtfMode": "HSI Skp7 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "RGBAx16 Strobe Random": {
             "channels": 11,
             "gdtfMode": "RGBAx16 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBx16 Strobe Random": {
             "channels": 9,
             "gdtfMode": "RGBx16 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "HSIx16 Strobe Random": {
             "channels": 9,
             "gdtfMode": "HSIx16 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "RGBAx8 Strobe Random": {
             "channels": 15,
             "gdtfMode": "RGBAx8 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "RGBx8 Strobe Random": {
             "channels": 12,
             "gdtfMode": "RGBx8 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "HSIx8 Strobe Random": {
             "channels": 12,
             "gdtfMode": "HSIx8 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBAx4 Strobe Random": {
             "channels": 23,
             "gdtfMode": "RGBAx4 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "RGBx4 Strobe Random": {
             "channels": 18,
             "gdtfMode": "RGBx4 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "HSIx4 Strobe Random": {
             "channels": 18,
             "gdtfMode": "HSIx4 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "RGBAx2 Strobe Random": {
             "channels": 39,
             "gdtfMode": "RGBAx2 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBx2 Strobe Random": {
             "channels": 30,
             "gdtfMode": "RGBx2 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "HSIx2 Strobe Random": {
             "channels": 30,
             "gdtfMode": "HSIx2 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "RGBAx1 Strobe Random": {
             "channels": 71,
             "gdtfMode": "RGBAx1 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBx1 Strobe Random": {
             "channels": 54,
             "gdtfMode": "RGBx1 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "HSIx1 Strobe Random": {
             "channels": 54,
             "gdtfMode": "HSIx1 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "RGBA Od Ev Strobe Random": {
             "channels": 15,
             "gdtfMode": "RGBA Od Ev Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "RGB Od Ev Strobe Random": {
             "channels": 12,
             "gdtfMode": "RGB Od Ev Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "HSI Od Ev Strobe Random": {
             "channels": 12,
             "gdtfMode": "HSI Od Ev Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBA Skp3 Strobe Random": {
             "channels": 23,
             "gdtfMode": "RGBA Skp3 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "RGB Skp3 Strobe Random": {
             "channels": 18,
             "gdtfMode": "RGB Skp3 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "HSI Skp3 Strobe Random": {
             "channels": 18,
             "gdtfMode": "HSI Skp3 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "RGBA Skp7 Strobe Random": {
             "channels": 39,
             "gdtfMode": "RGBA Skp7 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 48
           },
           "RGB Skp7 Strobe Random": {
             "channels": 30,
             "gdtfMode": "RGB Skp7 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           },
           "HSI Skp7 Strobe Random": {
             "channels": 30,
             "gdtfMode": "HSI Skp7 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           }
         }
       },
@@ -2453,487 +2651,584 @@
           "RGBAx16 Strobe Off": {
             "channels": 4,
             "gdtfMode": "RGBAx16 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGBx16 Strobe Off": {
             "channels": 3,
             "gdtfMode": "RGBx16 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "HSIx16 Strobe Off": {
             "channels": 3,
             "gdtfMode": "HSIx16 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "RGBAx8 Strobe Off": {
             "channels": 8,
             "gdtfMode": "RGBAx8 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "RGBx8 Strobe Off": {
             "channels": 6,
             "gdtfMode": "RGBx8 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "HSIx8 Strobe Off": {
             "channels": 6,
             "gdtfMode": "HSIx8 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGBAx4 Strobe Off": {
             "channels": 16,
             "gdtfMode": "RGBAx4 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "RGBx4 Strobe Off": {
             "channels": 12,
             "gdtfMode": "RGBx4 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 16
           },
           "HSIx4 Strobe Off": {
             "channels": 12,
             "gdtfMode": "HSIx4 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBAx2 Strobe Off": {
             "channels": 32,
             "gdtfMode": "RGBAx2 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 40
           },
           "RGBx2 Strobe Off": {
             "channels": 24,
             "gdtfMode": "RGBx2 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           },
           "HSIx2 Strobe Off": {
             "channels": 24,
             "gdtfMode": "HSIx2 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           },
           "RGBAx1 Strobe Off": {
             "channels": 64,
             "gdtfMode": "RGBAx1 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGBx1 Strobe Off": {
             "channels": 48,
             "gdtfMode": "RGBx1 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "HSIx1 Strobe Off": {
             "channels": 48,
             "gdtfMode": "HSIx1 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "RGBA Od Ev Strobe Off": {
             "channels": 8,
             "gdtfMode": "RGBA Od Ev Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "RGB Od Ev Strobe Off": {
             "channels": 6,
             "gdtfMode": "RGB Od Ev Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "HSI Od Ev Strobe Off": {
             "channels": 6,
             "gdtfMode": "HSI Od Ev Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGBA Skp3 Strobe Off": {
             "channels": 16,
             "gdtfMode": "RGBA Skp3 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "RGB Skp3 Strobe Off": {
             "channels": 12,
             "gdtfMode": "RGB Skp3 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 16
           },
           "HSI Skp3 Strobe Off": {
             "channels": 12,
             "gdtfMode": "HSI Skp3 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBA Skp7 Strobe Off": {
             "channels": 32,
             "gdtfMode": "RGBA Skp7 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 40
           },
           "RGB Skp7 Strobe Off": {
             "channels": 24,
             "gdtfMode": "RGB Skp7 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           },
           "HSI Skp7 Strobe Off": {
             "channels": 24,
             "gdtfMode": "HSI Skp7 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           },
           "RGBAx16 Strobe On": {
             "channels": 6,
             "gdtfMode": "RGBAx16 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "RGBx16 Strobe On": {
             "channels": 5,
             "gdtfMode": "RGBx16 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "HSIx16 Strobe On": {
             "channels": 5,
             "gdtfMode": "HSIx16 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGBAx8 Strobe On": {
             "channels": 10,
             "gdtfMode": "RGBAx8 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBx8 Strobe On": {
             "channels": 8,
             "gdtfMode": "RGBx8 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "HSIx8 Strobe On": {
             "channels": 8,
             "gdtfMode": "HSIx8 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGBAx4 Strobe On": {
             "channels": 18,
             "gdtfMode": "RGBAx4 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "RGBx4 Strobe On": {
             "channels": 14,
             "gdtfMode": "RGBx4 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "HSIx4 Strobe On": {
             "channels": 14,
             "gdtfMode": "HSIx4 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "RGBAx2Strobe On": {
             "channels": 34,
             "gdtfMode": "RGBAx2Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 42
           },
           "RGBx2Strobe On": {
             "channels": 26,
             "gdtfMode": "RGBx2Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           },
           "HSIx2 Strobe On": {
             "channels": 26,
             "gdtfMode": "HSIx2 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           },
           "RGBAx1 Strobe On": {
             "channels": 66,
             "gdtfMode": "RGBAx1 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "RGBx1 Strobe On": {
             "channels": 50,
             "gdtfMode": "RGBx1 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "HSIx1 Strobe On": {
             "channels": 50,
             "gdtfMode": "HSIx1 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGBA Od Ev Strobe On": {
             "channels": 10,
             "gdtfMode": "RGBA Od Ev Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGB Od Ev Strobe On": {
             "channels": 8,
             "gdtfMode": "RGB Od Ev Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "HSI Od Ev Strobe On": {
             "channels": 8,
             "gdtfMode": "HSI Od Ev Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGBA Skp3 Strobe On": {
             "channels": 18,
             "gdtfMode": "RGBA Skp3 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "RGB Skp3 Strobe On": {
             "channels": 14,
             "gdtfMode": "RGB Skp3 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "HSI Skp3 Strobe On": {
             "channels": 14,
             "gdtfMode": "HSI Skp3 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "RGBA Skp7 Strobe On": {
             "channels": 34,
             "gdtfMode": "RGBA Skp7 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 42
           },
           "RGB Skp7 Strobe On": {
             "channels": 26,
             "gdtfMode": "RGB Skp7 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           },
           "HSI Skp7 Strobe On": {
             "channels": 26,
             "gdtfMode": "HSI Skp7 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           },
           "RGBAx16 Strobe On Top": {
             "channels": 10,
             "gdtfMode": "RGBAx16 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBx16 Strobe On Top": {
             "channels": 8,
             "gdtfMode": "RGBx16 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "HSIx16 Strobe On Top": {
             "channels": 8,
             "gdtfMode": "HSIx16 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGBAx8 Strobe On Top": {
             "channels": 14,
             "gdtfMode": "RGBAx8 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGBx8 Strobe On Top": {
             "channels": 11,
             "gdtfMode": "RGBx8 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "HSIx8 Strobe On Top": {
             "channels": 11,
             "gdtfMode": "HSIx8 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGBAx4 Strobe On Top": {
             "channels": 22,
             "gdtfMode": "RGBAx4 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "RGBx4 Strobe On Top": {
             "channels": 17,
             "gdtfMode": "RGBx4 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "HSIx4 Strobe On Top": {
             "channels": 17,
             "gdtfMode": "HSIx4 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGBAx2 Strobe On Top": {
             "channels": 38,
             "gdtfMode": "RGBAx2 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 47
           },
           "RGBx2 Strobe On Top": {
             "channels": 29,
             "gdtfMode": "RGBx2 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "HSIx2 Strobe On Top": {
             "channels": 29,
             "gdtfMode": "HSIx2 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "RGBAx1 Strobe On Top": {
             "channels": 70,
             "gdtfMode": "RGBAx1 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBx1 Strobe On Top": {
             "channels": 53,
             "gdtfMode": "RGBx1 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "HSIx1 Strobe On Top": {
             "channels": 53,
             "gdtfMode": "HSIx1 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGBA Od Ev Strobe On Top": {
             "channels": 14,
             "gdtfMode": "RGBA Od Ev Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGB Od Ev Strobe On Top": {
             "channels": 11,
             "gdtfMode": "RGB Od Ev Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "HSI Od Ev Strobe On Top": {
             "channels": 11,
             "gdtfMode": "HSI Od Ev Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGBA Skp3 Strobe On Top": {
             "channels": 22,
             "gdtfMode": "RGBA Skp3 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "RGB Skp3 Strobe On Top": {
             "channels": 17,
             "gdtfMode": "RGB Skp3 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "HSI Skp3 Strobe On Top": {
             "channels": 17,
             "gdtfMode": "HSI Skp3 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGBA Skp7 Strobe On Top": {
             "channels": 38,
             "gdtfMode": "RGBA Skp7 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 47
           },
           "RGB Skp7 Strobe On Top": {
             "channels": 29,
             "gdtfMode": "RGB Skp7 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "HSI Skp7 Strobe On Top": {
             "channels": 29,
             "gdtfMode": "HSI Skp7 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "RGBAx16 Strobe Random": {
             "channels": 11,
             "gdtfMode": "RGBAx16 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBx16 Strobe Random": {
             "channels": 9,
             "gdtfMode": "RGBx16 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "HSIx16 Strobe Random": {
             "channels": 9,
             "gdtfMode": "HSIx16 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "RGBAx8 Strobe Random": {
             "channels": 15,
             "gdtfMode": "RGBAx8 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "RGBx8 Strobe Random": {
             "channels": 12,
             "gdtfMode": "RGBx8 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "HSIx8 Strobe Random": {
             "channels": 12,
             "gdtfMode": "HSIx8 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBAx4 Strobe Random": {
             "channels": 23,
             "gdtfMode": "RGBAx4 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "RGBx4 Strobe Random": {
             "channels": 18,
             "gdtfMode": "RGBx4 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "HSIx4 Strobe Random": {
             "channels": 18,
             "gdtfMode": "HSIx4 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "RGBAx2 Strobe Random": {
             "channels": 39,
             "gdtfMode": "RGBAx2 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 48
           },
           "RGBx2 Strobe Random": {
             "channels": 30,
             "gdtfMode": "RGBx2 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           },
           "HSIx2 Strobe Random": {
             "channels": 30,
             "gdtfMode": "HSIx2 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "RGBAx1 Strobe Random": {
             "channels": 71,
             "gdtfMode": "RGBAx1 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBx1 Strobe Random": {
             "channels": 54,
             "gdtfMode": "RGBx1 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "HSIx1 Strobe Random": {
             "channels": 54,
             "gdtfMode": "HSIx1 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "RGBA Od Ev Strobe Random": {
             "channels": 15,
             "gdtfMode": "RGBA Od Ev Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "RGB Od Ev Strobe Random": {
             "channels": 12,
             "gdtfMode": "RGB Od Ev Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "HSI Od Ev Strobe Random": {
             "channels": 12,
             "gdtfMode": "HSI Od Ev Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBA Skp3 Strobe Random": {
             "channels": 23,
             "gdtfMode": "RGBA Skp3 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "RGB Skp3 Strobe Random": {
             "channels": 18,
             "gdtfMode": "RGB Skp3 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "HSI Skp3 Strobe Random": {
             "channels": 18,
             "gdtfMode": "HSI Skp3 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "RGBA Skp7 Strobe Random": {
             "channels": 39,
             "gdtfMode": "RGBA Skp7 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 48
           },
           "RGB Skp7 Strobe Random": {
             "channels": 30,
             "gdtfMode": "RGB Skp7 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           },
           "HSI Skp7 Strobe Random": {
             "channels": 30,
             "gdtfMode": "HSI Skp7 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "Look Sel": {
             "channels": 1,
             "gdtfMode": "Look Sel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           }
         }
       },
@@ -3099,727 +3394,872 @@
           "RGBAx24 Strobe Off": {
             "channels": 4,
             "gdtfMode": "RGBAx24 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGBx24 Strobe Off": {
             "channels": 3,
             "gdtfMode": "RGBx24 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "HSIx24 Strobe Off": {
             "channels": 3,
             "gdtfMode": "HSIx24 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "RGBAx12 Strobe Off": {
             "channels": 8,
             "gdtfMode": "RGBAx12 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "RGBx12 Strobe Off": {
             "channels": 6,
             "gdtfMode": "RGBx12 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "HSIx12 Strobe Off": {
             "channels": 6,
             "gdtfMode": "HSIx12 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGBAx8 Strobe Off": {
             "channels": 12,
             "gdtfMode": "RGBAx8 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "RGBx8 Strobe Off": {
             "channels": 9,
             "gdtfMode": "RGBx8 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "HSIx8 Strobe Off 1": {
             "channels": 9,
             "gdtfMode": "HSIx8 Strobe Off 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "RGBAx6 Strobe Off": {
             "channels": 16,
             "gdtfMode": "RGBAx6 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "RGBx6 Strobe Off": {
             "channels": 12,
             "gdtfMode": "RGBx6 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 16
           },
           "HSIx6 Strobe Off": {
             "channels": 12,
             "gdtfMode": "HSIx6 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBAx4 Strobe Off": {
             "channels": 24,
             "gdtfMode": "RGBAx4 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "RGBx4 Strobe Off": {
             "channels": 18,
             "gdtfMode": "RGBx4 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           },
           "HSIx4 Strobe Off": {
             "channels": 18,
             "gdtfMode": "HSIx4 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "RGBAx3 Strobe Off": {
             "channels": 32,
             "gdtfMode": "RGBAx3 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 40
           },
           "RGBx3 Strobe Off": {
             "channels": 24,
             "gdtfMode": "RGBx3 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           },
           "HSIx3 Strobe Off": {
             "channels": 24,
             "gdtfMode": "HSIx3 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           },
           "RGBAx2 Strobe Off": {
             "channels": 48,
             "gdtfMode": "RGBAx2 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 60
           },
           "RGBx2 Strobe Off": {
             "channels": 36,
             "gdtfMode": "RGBx2 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 48
           },
           "HSIx2 Strobe Off": {
             "channels": 36,
             "gdtfMode": "HSIx2 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           },
           "RGBAx1 Strobe Off": {
             "channels": 96,
             "gdtfMode": "RGBAx1 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGBx1 Strobe Off": {
             "channels": 72,
             "gdtfMode": "RGBx1 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "HSIx1 Strobe Off": {
             "channels": 72,
             "gdtfMode": "HSIx1 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "RGBA Od Ev Strobe Off": {
             "channels": 8,
             "gdtfMode": "RGBA Od Ev Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "RGB Od Ev Strobe Off": {
             "channels": 6,
             "gdtfMode": "RGB Od Ev Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "HSI Od Ev Strobe Off": {
             "channels": 6,
             "gdtfMode": "HSI Od Ev Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGBA Skp2 Strobe Off": {
             "channels": 12,
             "gdtfMode": "RGBA Skp2 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "RGB Skp2 Strobe Off": {
             "channels": 9,
             "gdtfMode": "RGB Skp2 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "HSI Skp2 Strobe Off": {
             "channels": 9,
             "gdtfMode": "HSI Skp2 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "RGBA Skp3 Strobe Off": {
             "channels": 16,
             "gdtfMode": "RGBA Skp3 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "RGB skp3 Strobe Off": {
             "channels": 12,
             "gdtfMode": "RGB skp3 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 16
           },
           "HSI Skp3 Strobe Off": {
             "channels": 12,
             "gdtfMode": "HSI Skp3 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBA Skp6 Strobe Off": {
             "channels": 24,
             "gdtfMode": "RGBA Skp6 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "RGB Skp6 Strobe Off": {
             "channels": 18,
             "gdtfMode": "RGB Skp6 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           },
           "HSI Skp6 Strobe Off": {
             "channels": 18,
             "gdtfMode": "HSI Skp6 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "Look Sel": {
             "channels": 1,
             "gdtfMode": "Look Sel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "RGBAx24 Strobe On": {
             "channels": 6,
             "gdtfMode": "RGBAx24 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "RGBx24 Strobe On": {
             "channels": 5,
             "gdtfMode": "RGBx24 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "HSIx24Strobe On": {
             "channels": 5,
             "gdtfMode": "HSIx24Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGBAx12 Strobe On": {
             "channels": 10,
             "gdtfMode": "RGBAx12 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBx12 Strobe On": {
             "channels": 8,
             "gdtfMode": "RGBx12 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "HSIx12 Strobe On": {
             "channels": 8,
             "gdtfMode": "HSIx12 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGBA x8 Strobe On": {
             "channels": 14,
             "gdtfMode": "RGBA x8 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGB x8 Strobe On": {
             "channels": 11,
             "gdtfMode": "RGB x8 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "HSIx8 Strobe Off": {
             "channels": 11,
             "gdtfMode": "HSIx8 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGBAx6 Strobe On": {
             "channels": 18,
             "gdtfMode": "RGBAx6 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "RGBx6 Strobe On": {
             "channels": 14,
             "gdtfMode": "RGBx6 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "HSIx6 Strobe On": {
             "channels": 14,
             "gdtfMode": "HSIx6 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "RGBA x4 Strobe On": {
             "channels": 26,
             "gdtfMode": "RGBA x4 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           },
           "RGB x4 Strobe On": {
             "channels": 20,
             "gdtfMode": "RGB x4 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           },
           "HSIx4 Strobe On": {
             "channels": 20,
             "gdtfMode": "HSIx4 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "RGBA x3 Strobe On": {
             "channels": 34,
             "gdtfMode": "RGBA x3 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 42
           },
           "RGB x3 Strobe On": {
             "channels": 26,
             "gdtfMode": "RGB x3 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           },
           "HSI x3 Strobe On": {
             "channels": 26,
             "gdtfMode": "HSI x3 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           },
           "RGBAx2 Strobe On": {
             "channels": 50,
             "gdtfMode": "RGBAx2 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 62
           },
           "RGB x2 Strobe On": {
             "channels": 38,
             "gdtfMode": "RGB x2 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 50
           },
           "HSI x2 Strobe On": {
             "channels": 38,
             "gdtfMode": "HSI x2 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "RGBA x1 Strobe On": {
             "channels": 98,
             "gdtfMode": "RGBA x1 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "RGBx1 Strobe On": {
             "channels": 74,
             "gdtfMode": "RGBx1 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "HSIx1 Strobe On": {
             "channels": 74,
             "gdtfMode": "HSIx1 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGBA OdEv Strobe On": {
             "channels": 10,
             "gdtfMode": "RGBA OdEv Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGB OdEv Strobe On": {
             "channels": 8,
             "gdtfMode": "RGB OdEv Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "HSI OdEv Strobe On": {
             "channels": 8,
             "gdtfMode": "HSI OdEv Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGBA Skp2 Strobe On": {
             "channels": 14,
             "gdtfMode": "RGBA Skp2 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGB Skp2 Strobe On": {
             "channels": 11,
             "gdtfMode": "RGB Skp2 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "HSI Skp2 Strobe On": {
             "channels": 11,
             "gdtfMode": "HSI Skp2 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGBA Skp3 Strobe On": {
             "channels": 18,
             "gdtfMode": "RGBA Skp3 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "RGB Skp3 Strobe On": {
             "channels": 14,
             "gdtfMode": "RGB Skp3 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "HSI Skp3 Strobe On": {
             "channels": 14,
             "gdtfMode": "HSI Skp3 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "RGBA Skp6 Strobe On": {
             "channels": 26,
             "gdtfMode": "RGBA Skp6 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           },
           "RGB Skp6 Strobe On": {
             "channels": 20,
             "gdtfMode": "RGB Skp6 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           },
           "HSI Skp6 Strobe On": {
             "channels": 20,
             "gdtfMode": "HSI Skp6 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "RGBAx24 Strobe On Top": {
             "channels": 10,
             "gdtfMode": "RGBAx24 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBx24 Strobe On Top": {
             "channels": 8,
             "gdtfMode": "RGBx24 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "HSIx24 Strobe On Top": {
             "channels": 8,
             "gdtfMode": "HSIx24 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGBAx12 Strobe On Top 1": {
             "channels": 14,
             "gdtfMode": "RGBAx12 Strobe On Top 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGBAx12 Strobe On Top": {
             "channels": 11,
             "gdtfMode": "RGBAx12 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "HSIx12 Strobe On Top": {
             "channels": 11,
             "gdtfMode": "HSIx12 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGBAx8 Strobe On Top": {
             "channels": 18,
             "gdtfMode": "RGBAx8 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "RGBx8 Strobe On Top": {
             "channels": 14,
             "gdtfMode": "RGBx8 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "HSIx8 Strobe On Top": {
             "channels": 14,
             "gdtfMode": "HSIx8 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "RGBAx6 Strobe On Top": {
             "channels": 22,
             "gdtfMode": "RGBAx6 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "RGBx6 Strobe On Top": {
             "channels": 17,
             "gdtfMode": "RGBx6 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "HSIx6 Strobe On Top": {
             "channels": 17,
             "gdtfMode": "HSIx6 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGBAx4 Strobe On Top": {
             "channels": 30,
             "gdtfMode": "RGBAx4 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 37
           },
           "RGBx4 Strobe On Top": {
             "channels": 23,
             "gdtfMode": "RGBx4 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "HSIx4 Strobe On Top": {
             "channels": 23,
             "gdtfMode": "HSIx4 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "RGBAx3 Strobe On Top": {
             "channels": 38,
             "gdtfMode": "RGBAx3 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 47
           },
           "RGBx3 Strobe On Top": {
             "channels": 29,
             "gdtfMode": "RGBx3 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "HSIx3 Strobe On Top 1": {
             "channels": 29,
             "gdtfMode": "HSIx3 Strobe On Top 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "RGBAx2 Strobe On Top": {
             "channels": 54,
             "gdtfMode": "RGBAx2 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 67
           },
           "RGBx2 Strobe On Top": {
             "channels": 41,
             "gdtfMode": "RGBx2 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 54
           },
           "HSIx2 Strobe On Top": {
             "channels": 41,
             "gdtfMode": "HSIx2 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           },
           "RGBAx1 Strobe On Top": {
             "channels": 102,
             "gdtfMode": "RGBAx1 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBx1 Strobe On Top": {
             "channels": 77,
             "gdtfMode": "RGBx1 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "HSIx1 Strobe On Top": {
             "channels": 77,
             "gdtfMode": "HSIx1 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGBA Od Ev Strobe On Top": {
             "channels": 14,
             "gdtfMode": "RGBA Od Ev Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGB Od Ev Strobe On Top": {
             "channels": 11,
             "gdtfMode": "RGB Od Ev Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "HSI Od Ev Strobe On Top": {
             "channels": 11,
             "gdtfMode": "HSI Od Ev Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGBA Skp2 Strobe On Top": {
             "channels": 18,
             "gdtfMode": "RGBA Skp2 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "RGB Skp2 Strobe On Top": {
             "channels": 14,
             "gdtfMode": "RGB Skp2 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "HSI Skp2 Strobe On Top": {
             "channels": 14,
             "gdtfMode": "HSI Skp2 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "RGBA Skp3 Strobe On Top": {
             "channels": 22,
             "gdtfMode": "RGBA Skp3 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "RGB Skp3 Strobe On Top": {
             "channels": 17,
             "gdtfMode": "RGB Skp3 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "HSI Skp3 Strobe On Top": {
             "channels": 17,
             "gdtfMode": "HSI Skp3 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGBA Skp6 Strobe On Top": {
             "channels": 30,
             "gdtfMode": "RGBA Skp6 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 37
           },
           "RGB Skp6 Strobe On Top": {
             "channels": 23,
             "gdtfMode": "RGB Skp6 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "HSI Skp6 Strobe On Top": {
             "channels": 23,
             "gdtfMode": "HSI Skp6 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "RGBAx24 Strobe Random": {
             "channels": 11,
             "gdtfMode": "RGBAx24 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBx24 Strobe Random": {
             "channels": 9,
             "gdtfMode": "RGBx24 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "HSIx24 Strobe Random": {
             "channels": 9,
             "gdtfMode": "HSIx24 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "RGBAx12 Strobe Random": {
             "channels": 15,
             "gdtfMode": "RGBAx12 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "RGBx12 Strobe Random": {
             "channels": 12,
             "gdtfMode": "RGBx12 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "HSIx12 Strobe Random": {
             "channels": 12,
             "gdtfMode": "HSIx12 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBAx8 Strobe Random": {
             "channels": 19,
             "gdtfMode": "RGBAx8 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "RGBx8 Strobe Random": {
             "channels": 15,
             "gdtfMode": "RGBx8 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "HSIx8 Strobe Random": {
             "channels": 15,
             "gdtfMode": "HSIx8 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "RGBAx6 Strobe Random": {
             "channels": 23,
             "gdtfMode": "RGBAx6 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "RGBx6 Strobe Random": {
             "channels": 18,
             "gdtfMode": "RGBx6 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "HSIx6 Strobe Random": {
             "channels": 18,
             "gdtfMode": "HSIx6 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "RGBAx4 Strobe Random": {
             "channels": 31,
             "gdtfMode": "RGBAx4 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "RGBx4 Strobe Random": {
             "channels": 24,
             "gdtfMode": "RGBx4 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           },
           "HSIx4 Strobe Rabdom": {
             "channels": 24,
             "gdtfMode": "HSIx4 Strobe Rabdom",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           },
           "RGBAx3 Strobe Random": {
             "channels": 39,
             "gdtfMode": "RGBAx3 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 48
           },
           "RGBx3 Strobe Random": {
             "channels": 30,
             "gdtfMode": "RGBx3 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           },
           "HSIx3 Strobe On Top": {
             "channels": 30,
             "gdtfMode": "HSIx3 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "RGBAx2 Strobe Random": {
             "channels": 55,
             "gdtfMode": "RGBAx2 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 68
           },
           "RGBx2 Strobe Random": {
             "channels": 42,
             "gdtfMode": "RGBx2 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 55
           },
           "HSIx2 Strobe Random": {
             "channels": 42,
             "gdtfMode": "HSIx2 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 42
           },
           "RGBAx1 Strobe Random": {
             "channels": 103,
             "gdtfMode": "RGBAx1 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBx1 Strobe Random": {
             "channels": 78,
             "gdtfMode": "RGBx1 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "HSIx1 Strobe Random": {
             "channels": 78,
             "gdtfMode": "HSIx1 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "RGBA Od Ev Strobe Random": {
             "channels": 15,
             "gdtfMode": "RGBA Od Ev Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "RGB Od Ev Strobe Random": {
             "channels": 12,
             "gdtfMode": "RGB Od Ev Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "HSI Od Ev Strobe Random": {
             "channels": 12,
             "gdtfMode": "HSI Od Ev Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBA Skp2 Strobe Random": {
             "channels": 19,
             "gdtfMode": "RGBA Skp2 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "RGB Skp2 Strobe Random": {
             "channels": 15,
             "gdtfMode": "RGB Skp2 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "HSI Skp2 Strobe Random": {
             "channels": 15,
             "gdtfMode": "HSI Skp2 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "RGBA Skp3 Strobe Random": {
             "channels": 23,
             "gdtfMode": "RGBA Skp3 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "RGB Skp3 Strobe Random": {
             "channels": 18,
             "gdtfMode": "RGB Skp3 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "HSI Skp3 Strobe Random ": {
             "channels": 18,
             "gdtfMode": "HSI Skp3 Strobe Random ",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "RGBA Skp6 Strobe Random": {
             "channels": 31,
             "gdtfMode": "RGBA Skp6 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "RGB Skp6 Strobe Random": {
             "channels": 24,
             "gdtfMode": "RGB Skp6 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           },
           "HSI Skp6 Strobe Random": {
             "channels": 24,
             "gdtfMode": "HSI Skp6 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           }
         }
       },
@@ -3985,727 +4425,872 @@
           "RGBAx24 Strobe Off": {
             "channels": 4,
             "gdtfMode": "RGBAx24 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGBx24 Strobe Off": {
             "channels": 3,
             "gdtfMode": "RGBx24 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "HSIx24 Strobe Off": {
             "channels": 3,
             "gdtfMode": "HSIx24 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "RGBAx12 Strobe Off": {
             "channels": 8,
             "gdtfMode": "RGBAx12 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "RGBx12 Strobe Off": {
             "channels": 6,
             "gdtfMode": "RGBx12 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "HSIx12 Strobe Off": {
             "channels": 6,
             "gdtfMode": "HSIx12 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGBAx8 Strobe Off": {
             "channels": 12,
             "gdtfMode": "RGBAx8 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "RGBx8 Strobe Off": {
             "channels": 9,
             "gdtfMode": "RGBx8 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "HSIx8 Strobe Off 1": {
             "channels": 9,
             "gdtfMode": "HSIx8 Strobe Off 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "RGBAx6 Strobe Off": {
             "channels": 16,
             "gdtfMode": "RGBAx6 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "RGBx6 Strobe Off": {
             "channels": 12,
             "gdtfMode": "RGBx6 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 16
           },
           "HSIx6 Strobe Off": {
             "channels": 12,
             "gdtfMode": "HSIx6 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBAx4 Strobe Off": {
             "channels": 24,
             "gdtfMode": "RGBAx4 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "RGBx4 Strobe Off": {
             "channels": 18,
             "gdtfMode": "RGBx4 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           },
           "HSIx4 Strobe Off": {
             "channels": 18,
             "gdtfMode": "HSIx4 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "RGBAx3 Strobe Off": {
             "channels": 32,
             "gdtfMode": "RGBAx3 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 40
           },
           "RGBx3 Strobe Off": {
             "channels": 24,
             "gdtfMode": "RGBx3 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           },
           "HSIx3 Strobe Off": {
             "channels": 24,
             "gdtfMode": "HSIx3 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           },
           "RGBAx2 Strobe Off": {
             "channels": 48,
             "gdtfMode": "RGBAx2 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 60
           },
           "RGBx2 Strobe Off": {
             "channels": 36,
             "gdtfMode": "RGBx2 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 48
           },
           "HSIx2 Strobe Off": {
             "channels": 36,
             "gdtfMode": "HSIx2 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           },
           "RGBAx1 Strobe Off": {
             "channels": 96,
             "gdtfMode": "RGBAx1 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGBx1 Strobe Off": {
             "channels": 72,
             "gdtfMode": "RGBx1 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "HSIx1 Strobe Off": {
             "channels": 72,
             "gdtfMode": "HSIx1 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "RGBA Od Ev Strobe Off": {
             "channels": 8,
             "gdtfMode": "RGBA Od Ev Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "RGB Od Ev Strobe Off": {
             "channels": 6,
             "gdtfMode": "RGB Od Ev Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "HSI Od Ev Strobe Off": {
             "channels": 6,
             "gdtfMode": "HSI Od Ev Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGBA Skp2 Strobe Off": {
             "channels": 12,
             "gdtfMode": "RGBA Skp2 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "RGB Skp2 Strobe Off": {
             "channels": 9,
             "gdtfMode": "RGB Skp2 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "HSI Skp2 Strobe Off": {
             "channels": 9,
             "gdtfMode": "HSI Skp2 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "RGBA Skp3 Strobe Off": {
             "channels": 16,
             "gdtfMode": "RGBA Skp3 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "RGB skp3 Strobe Off": {
             "channels": 12,
             "gdtfMode": "RGB skp3 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 16
           },
           "HSI Skp3 Strobe Off": {
             "channels": 12,
             "gdtfMode": "HSI Skp3 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBA Skp6 Strobe Off": {
             "channels": 24,
             "gdtfMode": "RGBA Skp6 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "RGB Skp6 Strobe Off": {
             "channels": 18,
             "gdtfMode": "RGB Skp6 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           },
           "HSI Skp6 Strobe Off": {
             "channels": 18,
             "gdtfMode": "HSI Skp6 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "Look Sel": {
             "channels": 1,
             "gdtfMode": "Look Sel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "RGBAx24 Strobe On": {
             "channels": 6,
             "gdtfMode": "RGBAx24 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "RGBx24 Strobe On": {
             "channels": 5,
             "gdtfMode": "RGBx24 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "HSIx24Strobe On": {
             "channels": 5,
             "gdtfMode": "HSIx24Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGBAx12 Strobe On": {
             "channels": 10,
             "gdtfMode": "RGBAx12 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBx12 Strobe On": {
             "channels": 8,
             "gdtfMode": "RGBx12 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "HSIx12 Strobe On": {
             "channels": 8,
             "gdtfMode": "HSIx12 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGBA x8 Strobe On": {
             "channels": 14,
             "gdtfMode": "RGBA x8 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGB x8 Strobe On": {
             "channels": 11,
             "gdtfMode": "RGB x8 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "HSIx8 Strobe Off": {
             "channels": 11,
             "gdtfMode": "HSIx8 Strobe Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGBAx6 Strobe On": {
             "channels": 18,
             "gdtfMode": "RGBAx6 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "RGBx6 Strobe On": {
             "channels": 14,
             "gdtfMode": "RGBx6 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "HSIx6 Strobe On": {
             "channels": 14,
             "gdtfMode": "HSIx6 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "RGBA x4 Strobe On": {
             "channels": 26,
             "gdtfMode": "RGBA x4 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           },
           "RGB x4 Strobe On": {
             "channels": 20,
             "gdtfMode": "RGB x4 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           },
           "HSIx4 Strobe On": {
             "channels": 20,
             "gdtfMode": "HSIx4 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "RGBA x3 Strobe On": {
             "channels": 34,
             "gdtfMode": "RGBA x3 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 42
           },
           "RGB x3 Strobe On": {
             "channels": 26,
             "gdtfMode": "RGB x3 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           },
           "HSI x3 Strobe On": {
             "channels": 26,
             "gdtfMode": "HSI x3 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           },
           "RGBAx2 Strobe On": {
             "channels": 50,
             "gdtfMode": "RGBAx2 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 62
           },
           "RGB x2 Strobe On": {
             "channels": 38,
             "gdtfMode": "RGB x2 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 50
           },
           "HSI x2 Strobe On": {
             "channels": 38,
             "gdtfMode": "HSI x2 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "RGBA x1 Strobe On": {
             "channels": 98,
             "gdtfMode": "RGBA x1 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "RGBx1 Strobe On": {
             "channels": 74,
             "gdtfMode": "RGBx1 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "HSIx1 Strobe On": {
             "channels": 74,
             "gdtfMode": "HSIx1 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGBA OdEv Strobe On": {
             "channels": 10,
             "gdtfMode": "RGBA OdEv Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGB OdEv Strobe On": {
             "channels": 8,
             "gdtfMode": "RGB OdEv Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "HSI OdEv Strobe On": {
             "channels": 8,
             "gdtfMode": "HSI OdEv Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGBA Skp2 Strobe On": {
             "channels": 14,
             "gdtfMode": "RGBA Skp2 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGB Skp2 Strobe On": {
             "channels": 11,
             "gdtfMode": "RGB Skp2 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "HSI Skp2 Strobe On": {
             "channels": 11,
             "gdtfMode": "HSI Skp2 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGBA Skp3 Strobe On": {
             "channels": 18,
             "gdtfMode": "RGBA Skp3 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "RGB Skp3 Strobe On": {
             "channels": 14,
             "gdtfMode": "RGB Skp3 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "HSI Skp3 Strobe On": {
             "channels": 14,
             "gdtfMode": "HSI Skp3 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "RGBA Skp6 Strobe On": {
             "channels": 26,
             "gdtfMode": "RGBA Skp6 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           },
           "RGB Skp6 Strobe On": {
             "channels": 20,
             "gdtfMode": "RGB Skp6 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           },
           "HSI Skp6 Strobe On": {
             "channels": 20,
             "gdtfMode": "HSI Skp6 Strobe On",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "RGBAx24 Strobe On Top": {
             "channels": 10,
             "gdtfMode": "RGBAx24 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBx24 Strobe On Top": {
             "channels": 8,
             "gdtfMode": "RGBx24 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "HSIx24 Strobe On Top": {
             "channels": 8,
             "gdtfMode": "HSIx24 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGBAx12 Strobe On Top 1": {
             "channels": 14,
             "gdtfMode": "RGBAx12 Strobe On Top 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGBAx12 Strobe On Top": {
             "channels": 11,
             "gdtfMode": "RGBAx12 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "HSIx12 Strobe On Top": {
             "channels": 11,
             "gdtfMode": "HSIx12 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGBAx8 Strobe On Top": {
             "channels": 18,
             "gdtfMode": "RGBAx8 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "RGBx8 Strobe On Top": {
             "channels": 14,
             "gdtfMode": "RGBx8 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "HSIx8 Strobe On Top": {
             "channels": 14,
             "gdtfMode": "HSIx8 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "RGBAx6 Strobe On Top": {
             "channels": 22,
             "gdtfMode": "RGBAx6 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "RGBx6 Strobe On Top": {
             "channels": 17,
             "gdtfMode": "RGBx6 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "HSIx6 Strobe On Top": {
             "channels": 17,
             "gdtfMode": "HSIx6 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGBAx4 Strobe On Top": {
             "channels": 30,
             "gdtfMode": "RGBAx4 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 37
           },
           "RGBx4 Strobe On Top": {
             "channels": 23,
             "gdtfMode": "RGBx4 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "HSIx4 Strobe On Top": {
             "channels": 23,
             "gdtfMode": "HSIx4 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "RGBAx3 Strobe On Top": {
             "channels": 38,
             "gdtfMode": "RGBAx3 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 47
           },
           "RGBx3 Strobe On Top": {
             "channels": 29,
             "gdtfMode": "RGBx3 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "HSIx3 Strobe On Top 1": {
             "channels": 29,
             "gdtfMode": "HSIx3 Strobe On Top 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "RGBAx2 Strobe On Top": {
             "channels": 54,
             "gdtfMode": "RGBAx2 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 67
           },
           "RGBx2 Strobe On Top": {
             "channels": 41,
             "gdtfMode": "RGBx2 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 54
           },
           "HSIx2 Strobe On Top": {
             "channels": 41,
             "gdtfMode": "HSIx2 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           },
           "RGBAx1 Strobe On Top": {
             "channels": 102,
             "gdtfMode": "RGBAx1 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBx1 Strobe On Top": {
             "channels": 77,
             "gdtfMode": "RGBx1 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "HSIx1 Strobe On Top": {
             "channels": 77,
             "gdtfMode": "HSIx1 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGBA Od Ev Strobe On Top": {
             "channels": 14,
             "gdtfMode": "RGBA Od Ev Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGB Od Ev Strobe On Top": {
             "channels": 11,
             "gdtfMode": "RGB Od Ev Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "HSI Od Ev Strobe On Top": {
             "channels": 11,
             "gdtfMode": "HSI Od Ev Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGBA Skp2 Strobe On Top": {
             "channels": 18,
             "gdtfMode": "RGBA Skp2 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "RGB Skp2 Strobe On Top": {
             "channels": 14,
             "gdtfMode": "RGB Skp2 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "HSI Skp2 Strobe On Top": {
             "channels": 14,
             "gdtfMode": "HSI Skp2 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "RGBA Skp3 Strobe On Top": {
             "channels": 22,
             "gdtfMode": "RGBA Skp3 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "RGB Skp3 Strobe On Top": {
             "channels": 17,
             "gdtfMode": "RGB Skp3 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "HSI Skp3 Strobe On Top": {
             "channels": 17,
             "gdtfMode": "HSI Skp3 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGBA Skp6 Strobe On Top": {
             "channels": 30,
             "gdtfMode": "RGBA Skp6 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 37
           },
           "RGB Skp6 Strobe On Top": {
             "channels": 23,
             "gdtfMode": "RGB Skp6 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "HSI Skp6 Strobe On Top": {
             "channels": 23,
             "gdtfMode": "HSI Skp6 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "RGBAx24 Strobe Random": {
             "channels": 11,
             "gdtfMode": "RGBAx24 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBx24 Strobe Random": {
             "channels": 9,
             "gdtfMode": "RGBx24 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "HSIx24 Strobe Random": {
             "channels": 9,
             "gdtfMode": "HSIx24 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "RGBAx12 Strobe Random": {
             "channels": 15,
             "gdtfMode": "RGBAx12 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "RGBx12 Strobe Random": {
             "channels": 12,
             "gdtfMode": "RGBx12 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "HSIx12 Strobe Random": {
             "channels": 12,
             "gdtfMode": "HSIx12 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBAx8 Strobe Random": {
             "channels": 19,
             "gdtfMode": "RGBAx8 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "RGBx8 Strobe Random": {
             "channels": 15,
             "gdtfMode": "RGBx8 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "HSIx8 Strobe Random": {
             "channels": 15,
             "gdtfMode": "HSIx8 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "RGBAx6 Strobe Random": {
             "channels": 23,
             "gdtfMode": "RGBAx6 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "RGBx6 Strobe Random": {
             "channels": 18,
             "gdtfMode": "RGBx6 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "HSIx6 Strobe Random": {
             "channels": 18,
             "gdtfMode": "HSIx6 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "RGBAx4 Strobe Random": {
             "channels": 31,
             "gdtfMode": "RGBAx4 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "RGBx4 Strobe Random": {
             "channels": 24,
             "gdtfMode": "RGBx4 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           },
           "HSIx4 Strobe Rabdom": {
             "channels": 24,
             "gdtfMode": "HSIx4 Strobe Rabdom",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           },
           "RGBAx3 Strobe Random": {
             "channels": 39,
             "gdtfMode": "RGBAx3 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 48
           },
           "RGBx3 Strobe Random": {
             "channels": 30,
             "gdtfMode": "RGBx3 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           },
           "HSIx3 Strobe On Top": {
             "channels": 30,
             "gdtfMode": "HSIx3 Strobe On Top",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "RGBAx2 Strobe Random": {
             "channels": 55,
             "gdtfMode": "RGBAx2 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 68
           },
           "RGBx2 Strobe Random": {
             "channels": 42,
             "gdtfMode": "RGBx2 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 55
           },
           "HSIx2 Strobe Random": {
             "channels": 42,
             "gdtfMode": "HSIx2 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 42
           },
           "RGBAx1 Strobe Random": {
             "channels": 103,
             "gdtfMode": "RGBAx1 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBx1 Strobe Random": {
             "channels": 78,
             "gdtfMode": "RGBx1 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "HSIx1 Strobe Random": {
             "channels": 78,
             "gdtfMode": "HSIx1 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "RGBA Od Ev Strobe Random": {
             "channels": 15,
             "gdtfMode": "RGBA Od Ev Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "RGB Od Ev Strobe Random": {
             "channels": 12,
             "gdtfMode": "RGB Od Ev Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "HSI Od Ev Strobe Random": {
             "channels": 12,
             "gdtfMode": "HSI Od Ev Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "RGBA Skp2 Strobe Random": {
             "channels": 19,
             "gdtfMode": "RGBA Skp2 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "RGB Skp2 Strobe Random": {
             "channels": 15,
             "gdtfMode": "RGB Skp2 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "HSI Skp2 Strobe Random": {
             "channels": 15,
             "gdtfMode": "HSI Skp2 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "RGBA Skp3 Strobe Random": {
             "channels": 23,
             "gdtfMode": "RGBA Skp3 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "RGB Skp3 Strobe Random": {
             "channels": 18,
             "gdtfMode": "RGB Skp3 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "HSI Skp3 Strobe Random ": {
             "channels": 18,
             "gdtfMode": "HSI Skp3 Strobe Random ",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "RGBA Skp6 Strobe Random": {
             "channels": 31,
             "gdtfMode": "RGBA Skp6 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "RGB Skp6 Strobe Random": {
             "channels": 24,
             "gdtfMode": "RGB Skp6 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           },
           "HSI Skp6 Strobe Random": {
             "channels": 24,
             "gdtfMode": "HSI Skp6 Strobe Random",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           }
         }
       },

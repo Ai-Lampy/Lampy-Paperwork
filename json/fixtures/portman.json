@@ -22,32 +22,38 @@
           "Super Simple": {
             "channels": 9,
             "gdtfMode": "Super Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "Simple": {
             "channels": 15,
             "gdtfMode": "Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Standard": {
             "channels": 22,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Standard Fine": {
             "channels": 37,
             "gdtfMode": "Standard Fine",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Pixel": {
             "channels": 34,
             "gdtfMode": "Pixel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Pixel fine": {
             "channels": 61,
             "gdtfMode": "Pixel fine",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           }
         }
       },
@@ -74,32 +80,38 @@
           "Super Simple": {
             "channels": 9,
             "gdtfMode": "Super Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "Simple": {
             "channels": 15,
             "gdtfMode": "Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "Standard": {
             "channels": 23,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "Standard Fine": {
             "channels": 39,
             "gdtfMode": "Standard Fine",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "Pixel": {
             "channels": 22,
             "gdtfMode": "Pixel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "Pixel Fine": {
             "channels": 37,
             "gdtfMode": "Pixel Fine",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           }
         }
       },
@@ -126,32 +138,38 @@
           "Simple": {
             "channels": 21,
             "gdtfMode": "Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 21
           },
           "Standard": {
             "channels": 29,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           },
           "Standard Fine": {
             "channels": 45,
             "gdtfMode": "Standard Fine",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           },
           "Pixel": {
             "channels": 28,
             "gdtfMode": "Pixel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           },
           "Pixel Fine": {
             "channels": 43,
             "gdtfMode": "Pixel Fine",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           },
           "Simple Fine": {
             "channels": 29,
             "gdtfMode": "Simple Fine",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 21
           }
         }
       },
@@ -180,42 +198,50 @@
           "Simple RGB": {
             "channels": 8,
             "gdtfMode": "Simple RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "RGBW": {
             "channels": 16,
             "gdtfMode": "RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "RGBW 16B": {
             "channels": 24,
             "gdtfMode": "RGBW 16B",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "CCT": {
             "channels": 15,
             "gdtfMode": "CCT",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "CCT 16B": {
             "channels": 21,
             "gdtfMode": "CCT 16B",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "TUNGSTEN": {
             "channels": 16,
             "gdtfMode": "TUNGSTEN",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "TUNGSTEN 16B": {
             "channels": 24,
             "gdtfMode": "TUNGSTEN 16B",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "FULL ACCESS 16B": {
             "channels": 28,
             "gdtfMode": "FULL ACCESS 16B",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           }
         }
       },
@@ -242,32 +268,38 @@
           "Super Simple": {
             "channels": 13,
             "gdtfMode": "Super Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Simple": {
             "channels": 19,
             "gdtfMode": "Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "Standard": {
             "channels": 43,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 43
           },
           "Standard Fine": {
             "channels": 79,
             "gdtfMode": "Standard Fine",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 43
           },
           "Pixel": {
             "channels": 42,
             "gdtfMode": "Pixel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 49
           },
           "Pixel Fine": {
             "channels": 77,
             "gdtfMode": "Pixel Fine",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 42
           }
         }
       },
@@ -293,27 +325,32 @@
           "Simple": {
             "channels": 19,
             "gdtfMode": "Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "Standard": {
             "channels": 43,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 43
           },
           "Standard Fine": {
             "channels": 50,
             "gdtfMode": "Standard Fine",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 43
           },
           "Pixel": {
             "channels": 42,
             "gdtfMode": "Pixel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 42
           },
           "Pixel Fine": {
             "channels": 49,
             "gdtfMode": "Pixel Fine",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 42
           }
         }
       },
@@ -335,7 +372,8 @@
           "Standard": {
             "channels": 7,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           }
         }
       },
@@ -357,7 +395,8 @@
           "Standard": {
             "channels": 38,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           }
         }
       },
@@ -379,7 +418,8 @@
           "Standard": {
             "channels": 6,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           }
         }
       },
@@ -406,32 +446,38 @@
           "Super Simple": {
             "channels": 9,
             "gdtfMode": "Super Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "Simple": {
             "channels": 15,
             "gdtfMode": "Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "Standard": {
             "channels": 23,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "Standard Fine": {
             "channels": 39,
             "gdtfMode": "Standard Fine",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           },
           "Pixel": {
             "channels": 22,
             "gdtfMode": "Pixel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "Pixel Fine": {
             "channels": 37,
             "gdtfMode": "Pixel Fine",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           }
         }
       },
@@ -453,7 +499,8 @@
           "Mode 1": {
             "channels": 3,
             "gdtfMode": "Mode 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           }
         }
       },
@@ -480,32 +527,38 @@
           "Super Simple": {
             "channels": 12,
             "gdtfMode": "Super Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "Simple": {
             "channels": 17,
             "gdtfMode": "Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Standard": {
             "channels": 32,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Standard Fine": {
             "channels": 57,
             "gdtfMode": "Standard Fine",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Pixel": {
             "channels": 52,
             "gdtfMode": "Pixel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Pixel Fine": {
             "channels": 97,
             "gdtfMode": "Pixel Fine",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           }
         }
       },

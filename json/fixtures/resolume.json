@@ -18,12 +18,14 @@
           "Composition": {
             "channels": 31,
             "gdtfMode": "Composition",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 16
           },
           "Layer": {
             "channels": 43,
             "gdtfMode": "Layer",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           }
         }
       },
@@ -45,7 +47,8 @@
           "Normal": {
             "channels": 26,
             "gdtfMode": "Normal",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           }
         }
       },

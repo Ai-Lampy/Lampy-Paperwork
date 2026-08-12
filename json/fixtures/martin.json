@@ -39,7 +39,8 @@
           "Standard": {
             "channels": 1,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           }
         }
       },
@@ -62,12 +63,14 @@
           "4 Channel": {
             "channels": 4,
             "gdtfMode": "4 Channel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "3 Channel": {
             "channels": 3,
             "gdtfMode": "3 Channel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           }
         }
       },
@@ -91,17 +94,20 @@
           "3 Channel": {
             "channels": 3,
             "gdtfMode": "3 Channel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "4 Channel": {
             "channels": 4,
             "gdtfMode": "4 Channel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "Extended mode": {
             "channels": 14,
             "gdtfMode": "Extended mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           }
         }
       },
@@ -125,17 +131,20 @@
           "Compact": {
             "channels": 11,
             "gdtfMode": "Compact",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "Basic": {
             "channels": 17,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 21
           },
           "Direct": {
             "channels": 17,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           }
         }
       },
@@ -158,12 +167,14 @@
           "Basic": {
             "channels": 14,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Compact": {
             "channels": 9,
             "gdtfMode": "Compact",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           }
         }
       },
@@ -186,12 +197,14 @@
           "Basic": {
             "channels": 14,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Compact": {
             "channels": 9,
             "gdtfMode": "Compact",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           }
         }
       },
@@ -236,12 +249,14 @@
           "Basic": {
             "channels": 30,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "Extended": {
             "channels": 32,
             "gdtfMode": "Extended",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           }
         }
       },
@@ -264,12 +279,14 @@
           "Basic": {
             "channels": 30,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "Extended": {
             "channels": 32,
             "gdtfMode": "Extended",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           }
         }
       },
@@ -291,7 +308,8 @@
           "Basic": {
             "channels": 41,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           }
         }
       },
@@ -336,12 +354,14 @@
           "Basic": {
             "channels": 42,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           },
           "Extended": {
             "channels": 54,
             "gdtfMode": "Extended",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           }
         }
       },
@@ -363,7 +383,8 @@
           "Basic": {
             "channels": 42,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           }
         }
       },
@@ -393,47 +414,56 @@
           "Standard": {
             "channels": 6,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "Extended": {
             "channels": 12,
             "gdtfMode": "Extended",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Direct": {
             "channels": 4,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB": {
             "channels": 3,
             "gdtfMode": "RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "PixelMap Segments of 16": {
             "channels": 21,
             "gdtfMode": "PixelMap Segments of 16",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "PixelMap Segments of 8": {
             "channels": 39,
             "gdtfMode": "PixelMap Segments of 8",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 52
           },
           "PixelMap Segments of 4": {
             "channels": 75,
             "gdtfMode": "PixelMap Segments of 4",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 100
           },
           "PixelMap Segments of 2": {
             "channels": 150,
             "gdtfMode": "PixelMap Segments of 2",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 200
           },
           "PixelMap per Pixel": {
             "channels": 300,
             "gdtfMode": "PixelMap per Pixel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           }
         }
       },
@@ -463,47 +493,56 @@
           "Standard": {
             "channels": 6,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "Extended": {
             "channels": 12,
             "gdtfMode": "Extended",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Direct": {
             "channels": 4,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB": {
             "channels": 3,
             "gdtfMode": "RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "PixelMap Segments of 16": {
             "channels": 12,
             "gdtfMode": "PixelMap Segments of 16",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 16
           },
           "PixelMap Segments of 8": {
             "channels": 24,
             "gdtfMode": "PixelMap Segments of 8",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           },
           "PixelMap Segments of 4": {
             "channels": 48,
             "gdtfMode": "PixelMap Segments of 4",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 64
           },
           "PixelMap Segments of 2": {
             "channels": 96,
             "gdtfMode": "PixelMap Segments of 2",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 128
           },
           "PixelMap per Pixel": {
             "channels": 192,
             "gdtfMode": "PixelMap per Pixel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           }
         }
       },
@@ -533,47 +572,56 @@
           "Standard": {
             "channels": 6,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "Extended": {
             "channels": 12,
             "gdtfMode": "Extended",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Direct": {
             "channels": 4,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB": {
             "channels": 3,
             "gdtfMode": "RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "PixelMap Segments of 16": {
             "channels": 9,
             "gdtfMode": "PixelMap Segments of 16",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "PixelMap Segments of 8": {
             "channels": 15,
             "gdtfMode": "PixelMap Segments of 8",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "PixelMap Segments of 4": {
             "channels": 27,
             "gdtfMode": "PixelMap Segments of 4",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           },
           "PixelMap Segments of 2": {
             "channels": 54,
             "gdtfMode": "PixelMap Segments of 2",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 72
           },
           "PixelMap per Pixel": {
             "channels": 108,
             "gdtfMode": "PixelMap per Pixel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           }
         }
       },
@@ -599,27 +647,32 @@
           "Standard": {
             "channels": 6,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "Extended": {
             "channels": 12,
             "gdtfMode": "Extended",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Direct": {
             "channels": 4,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB": {
             "channels": 3,
             "gdtfMode": "RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "PixelMap": {
             "channels": 48,
             "gdtfMode": "PixelMap",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           }
         }
       },
@@ -642,12 +695,14 @@
           "Basic": {
             "channels": 32,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           },
           "Extended": {
             "channels": 68,
             "gdtfMode": "Extended",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 49
           }
         }
       },
@@ -670,12 +725,14 @@
           "Basic": {
             "channels": 28,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "Extended": {
             "channels": 64,
             "gdtfMode": "Extended",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 45
           }
         }
       },
@@ -698,12 +755,14 @@
           "Standard": {
             "channels": 14,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "Extended": {
             "channels": 25,
             "gdtfMode": "Extended",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           }
         }
       },
@@ -770,32 +829,38 @@
           "Compact": {
             "channels": 22,
             "gdtfMode": "Compact",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Basic": {
             "channels": 38,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "Extended": {
             "channels": 149,
             "gdtfMode": "Extended",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           },
           "Ludicrous": {
             "channels": 266,
             "gdtfMode": "Ludicrous",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 190
           },
           "Plaid": {
             "channels": 851,
             "gdtfMode": "Plaid",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "Compact Direct": {
             "channels": 22,
             "gdtfMode": "Compact Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           }
         }
       },
@@ -885,7 +950,8 @@
           "Basic": {
             "channels": 23,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           }
         }
       },
@@ -907,7 +973,8 @@
           "Basic": {
             "channels": 38,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           }
         }
       },
@@ -929,7 +996,8 @@
           "Basic": {
             "channels": 38,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           }
         }
       },
@@ -954,22 +1022,26 @@
           "Basic": {
             "channels": 52,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 40
           },
           "Extended": {
             "channels": 62,
             "gdtfMode": "Extended",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 40
           },
           "Ludicrous": {
             "channels": 68,
             "gdtfMode": "Ludicrous",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 46
           },
           "Compact": {
             "channels": 46,
             "gdtfMode": "Compact",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           }
         }
       },
@@ -991,7 +1063,8 @@
           "Basic": {
             "channels": 24,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           }
         }
       },
@@ -1049,17 +1122,20 @@
           "Compact": {
             "channels": 19,
             "gdtfMode": "Compact",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Basic": {
             "channels": 35,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "Ludicrous": {
             "channels": 107,
             "gdtfMode": "Ludicrous",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 33
           }
         }
       },
@@ -1139,17 +1215,20 @@
           "Basic": {
             "channels": 48,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 37
           },
           "Extended": {
             "channels": 58,
             "gdtfMode": "Extended",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 37
           },
           "Compact": {
             "channels": 42,
             "gdtfMode": "Compact",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           }
         }
       },
@@ -1172,12 +1251,14 @@
           "Basic": {
             "channels": 29,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "Compact": {
             "channels": 23,
             "gdtfMode": "Compact",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           }
         }
       },
@@ -1200,12 +1281,14 @@
           "Basic": {
             "channels": 20,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "Extended": {
             "channels": 28,
             "gdtfMode": "Extended",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           }
         }
       },
@@ -1256,12 +1339,14 @@
           "Basic": {
             "channels": 26,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "Extended": {
             "channels": 34,
             "gdtfMode": "Extended",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           }
         }
       },
@@ -1346,12 +1431,14 @@
           "Basic": {
             "channels": 8,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGB/RAW": {
             "channels": 12,
             "gdtfMode": "RGB/RAW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           }
         }
       },
@@ -1378,32 +1465,38 @@
           "1 Channel": {
             "channels": 1,
             "gdtfMode": "1 Channel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "3 Channel": {
             "channels": 3,
             "gdtfMode": "3 Channel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "4 Channel": {
             "channels": 4,
             "gdtfMode": "4 Channel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "Compact": {
             "channels": 10,
             "gdtfMode": "Compact",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Basic": {
             "channels": 27,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "Extended": {
             "channels": 243,
             "gdtfMode": "Extended",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           }
         }
       },
@@ -1429,27 +1522,32 @@
           "1 Channel": {
             "channels": 1,
             "gdtfMode": "1 Channel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "3 Channel": {
             "channels": 3,
             "gdtfMode": "3 Channel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "4 Channel": {
             "channels": 4,
             "gdtfMode": "4 Channel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "Basic": {
             "channels": 19,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "Extended": {
             "channels": 64,
             "gdtfMode": "Extended",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 21
           }
         }
       },
@@ -1475,27 +1573,32 @@
           "1 Channel": {
             "channels": 1,
             "gdtfMode": "1 Channel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "3 Channel": {
             "channels": 3,
             "gdtfMode": "3 Channel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "4 Channel": {
             "channels": 4,
             "gdtfMode": "4 Channel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "Basic": {
             "channels": 19,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "Extended": {
             "channels": 64,
             "gdtfMode": "Extended",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 21
           }
         }
       },
@@ -1523,37 +1626,44 @@
           "DMX_RGB": {
             "channels": 3,
             "gdtfMode": "DMX_RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "DMX_Basic": {
             "channels": 10,
             "gdtfMode": "DMX_Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "P3_Intensity": {
             "channels": 1,
             "gdtfMode": "P3_Intensity",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "P3_RGB": {
             "channels": 3,
             "gdtfMode": "P3_RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "P3_Basic": {
             "channels": 5,
             "gdtfMode": "P3_Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "P3_Hybrid": {
             "channels": 6,
             "gdtfMode": "P3_Hybrid",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "P3_PixelMap": {
             "channels": 3,
             "gdtfMode": "P3_PixelMap",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           }
         }
       },
@@ -1753,97 +1863,116 @@
           "DMX_RGB": {
             "channels": 3,
             "gdtfMode": "DMX_RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "DMX_Basic": {
             "channels": 10,
             "gdtfMode": "DMX_Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "DMX_Segments": {
             "channels": 22,
             "gdtfMode": "DMX_Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 21
           },
           "DMX_Pixel": {
             "channels": 157,
             "gdtfMode": "DMX_Pixel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 156
           },
           "P3_Intensity": {
             "channels": 1,
             "gdtfMode": "P3_Intensity",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "P3_RGB": {
             "channels": 3,
             "gdtfMode": "P3_RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "P3_Basic": {
             "channels": 5,
             "gdtfMode": "P3_Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "P3_Hybrid 1 Segment": {
             "channels": 6,
             "gdtfMode": "P3_Hybrid 1 Segment",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "P3_Hybrid 2 Segments": {
             "channels": 9,
             "gdtfMode": "P3_Hybrid 2 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "P3_Hybrid 5 Segments": {
             "channels": 18,
             "gdtfMode": "P3_Hybrid 5 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "P3_Hybrid 10 Segments": {
             "channels": 33,
             "gdtfMode": "P3_Hybrid 10 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           },
           "P3_Hybrid 25 Segments": {
             "channels": 78,
             "gdtfMode": "P3_Hybrid 25 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 77
           },
           "P3_Hybrid 50 Segments": {
             "channels": 153,
             "gdtfMode": "P3_Hybrid 50 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 152
           },
           "P3_PixelMap 1 Segment": {
             "channels": 3,
             "gdtfMode": "P3_PixelMap 1 Segment",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "P3_PixelMap 2 Segments": {
             "channels": 6,
             "gdtfMode": "P3_PixelMap 2 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "P3_PixelMap 5 Segments": {
             "channels": 15,
             "gdtfMode": "P3_PixelMap 5 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "P3_PixelMap 10 Segments": {
             "channels": 30,
             "gdtfMode": "P3_PixelMap 10 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "P3_PixelMap 25 Segments": {
             "channels": 75,
             "gdtfMode": "P3_PixelMap 25 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 75
           },
           "P3_PixelMap 50 Segments": {
             "channels": 150,
             "gdtfMode": "P3_PixelMap 50 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 150
           }
         }
       },
@@ -1881,87 +2010,104 @@
           "DMX_RGB": {
             "channels": 3,
             "gdtfMode": "DMX_RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "DMX_Basic": {
             "channels": 10,
             "gdtfMode": "DMX_Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "DMX_Segments": {
             "channels": 13,
             "gdtfMode": "DMX_Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "DMX_Pixel": {
             "channels": 55,
             "gdtfMode": "DMX_Pixel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 54
           },
           "P3_Intensity": {
             "channels": 1,
             "gdtfMode": "P3_Intensity",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "P3_RGB": {
             "channels": 3,
             "gdtfMode": "P3_RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "P3_Basic": {
             "channels": 5,
             "gdtfMode": "P3_Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "P3_Hybrid 1 Segment": {
             "channels": 6,
             "gdtfMode": "P3_Hybrid 1 Segment",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "P3_Hybrid 2 Segments": {
             "channels": 9,
             "gdtfMode": "P3_Hybrid 2 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "P3_Hybrid 4 Segments": {
             "channels": 15,
             "gdtfMode": "P3_Hybrid 4 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "P3_Hybrid 8 Segments": {
             "channels": 27,
             "gdtfMode": "P3_Hybrid 8 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           },
           "P3_Hybrid 16 Segments": {
             "channels": 51,
             "gdtfMode": "P3_Hybrid 16 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 50
           },
           "P3_PixelMap 1 Segment": {
             "channels": 3,
             "gdtfMode": "P3_PixelMap 1 Segment",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "P3_PixelMap 2 Segments": {
             "channels": 6,
             "gdtfMode": "P3_PixelMap 2 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "P3_PixelMap 4 Segments": {
             "channels": 12,
             "gdtfMode": "P3_PixelMap 4 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "P3_PixelMap 8 Segments": {
             "channels": 24,
             "gdtfMode": "P3_PixelMap 8 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           },
           "P3_PixelMap 16 Segments": {
             "channels": 48,
             "gdtfMode": "P3_PixelMap 16 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 48
           }
         }
       },
@@ -1995,67 +2141,80 @@
           "DMX_RGB": {
             "channels": 3,
             "gdtfMode": "DMX_RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "DMX_Basic": {
             "channels": 10,
             "gdtfMode": "DMX_Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "DMX_Segments": {
             "channels": 22,
             "gdtfMode": "DMX_Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 21
           },
           "DMX_Pixel": {
             "channels": 82,
             "gdtfMode": "DMX_Pixel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 81
           },
           "P3_Intensity": {
             "channels": 1,
             "gdtfMode": "P3_Intensity",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "P3_RGB": {
             "channels": 3,
             "gdtfMode": "P3_RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "P3_Basic": {
             "channels": 5,
             "gdtfMode": "P3_Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "P3_Hybrid 1 Segment": {
             "channels": 6,
             "gdtfMode": "P3_Hybrid 1 Segment",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "P3_Hybrid 5 Segments": {
             "channels": 18,
             "gdtfMode": "P3_Hybrid 5 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "P3_Hybrid 25 Segments": {
             "channels": 78,
             "gdtfMode": "P3_Hybrid 25 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 77
           },
           "P3_PixelMap 1 Segment": {
             "channels": 3,
             "gdtfMode": "P3_PixelMap 1 Segment",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "P3_PixelMap 5 Segments": {
             "channels": 15,
             "gdtfMode": "P3_PixelMap 5 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "P3_PixelMap 25 Segments": {
             "channels": 75,
             "gdtfMode": "P3_PixelMap 25 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 75
           }
         }
       },
@@ -2091,77 +2250,92 @@
           "DMX_RGB": {
             "channels": 3,
             "gdtfMode": "DMX_RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "DMX_Basic": {
             "channels": 10,
             "gdtfMode": "DMX_Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "DMX_Segments": {
             "channels": 13,
             "gdtfMode": "DMX_Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "DMX_Pixel": {
             "channels": 31,
             "gdtfMode": "DMX_Pixel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "P3_Intensity": {
             "channels": 1,
             "gdtfMode": "P3_Intensity",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "P3_RGB": {
             "channels": 3,
             "gdtfMode": "P3_RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "P3_Basic": {
             "channels": 5,
             "gdtfMode": "P3_Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "P3_Hybrid 1 Segment": {
             "channels": 6,
             "gdtfMode": "P3_Hybrid 1 Segment",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "P3_Hybrid 2 Segments": {
             "channels": 9,
             "gdtfMode": "P3_Hybrid 2 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "P3_Hybrid 4 Segments": {
             "channels": 15,
             "gdtfMode": "P3_Hybrid 4 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "P3_Hybrid 8 Segments": {
             "channels": 27,
             "gdtfMode": "P3_Hybrid 8 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           },
           "P3_PixelMap 1 Segment": {
             "channels": 3,
             "gdtfMode": "P3_PixelMap 1 Segment",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "P3_PixelMap 2 Segments": {
             "channels": 6,
             "gdtfMode": "P3_PixelMap 2 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "P3_PixelMap 4 Segments": {
             "channels": 12,
             "gdtfMode": "P3_PixelMap 4 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "P3_PixelMap 8 Segments": {
             "channels": 24,
             "gdtfMode": "P3_PixelMap 8 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           }
         }
       },
@@ -2194,62 +2368,74 @@
           "Compact": {
             "channels": 8,
             "gdtfMode": "Compact",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "Basic": {
             "channels": 14,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Extended 5 Segments": {
             "channels": 29,
             "gdtfMode": "Extended 5 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "Extended 10 Segments": {
             "channels": 44,
             "gdtfMode": "Extended 10 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "Extended 25 Segments": {
             "channels": 89,
             "gdtfMode": "Extended 25 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "Extended 100 Pixels": {
             "channels": 314,
             "gdtfMode": "Extended 100 Pixels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "Compact Direct": {
             "channels": 8,
             "gdtfMode": "Compact Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "RGB": {
             "channels": 3,
             "gdtfMode": "RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "PixelMap 5 Segments": {
             "channels": 15,
             "gdtfMode": "PixelMap 5 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "PixelMap 10 Segments": {
             "channels": 30,
             "gdtfMode": "PixelMap 10 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "PixelMap 25 Segments": {
             "channels": 75,
             "gdtfMode": "PixelMap 25 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "PixelMap 100 Pixels": {
             "channels": 300,
             "gdtfMode": "PixelMap 100 Pixels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           }
         }
       },
@@ -2282,62 +2468,74 @@
           "Compact": {
             "channels": 8,
             "gdtfMode": "Compact",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "Basic": {
             "channels": 14,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Extended 2 Segments": {
             "channels": 20,
             "gdtfMode": "Extended 2 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "Extended 4 Segments": {
             "channels": 26,
             "gdtfMode": "Extended 4 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "Extended 8 Segments": {
             "channels": 38,
             "gdtfMode": "Extended 8 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "Extended 32 Pixels": {
             "channels": 110,
             "gdtfMode": "Extended 32 Pixels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "Compact Direct": {
             "channels": 8,
             "gdtfMode": "Compact Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "RGB": {
             "channels": 3,
             "gdtfMode": "RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "PixelMap 2 Segments": {
             "channels": 6,
             "gdtfMode": "PixelMap 2 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "PixelMap 4 Segments": {
             "channels": 12,
             "gdtfMode": "PixelMap 4 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "PixelMap 8 Segments": {
             "channels": 24,
             "gdtfMode": "PixelMap 8 Segments",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "PixelMap 32 Pixels": {
             "channels": 96,
             "gdtfMode": "PixelMap 32 Pixels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           }
         }
       },

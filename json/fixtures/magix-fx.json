@@ -18,12 +18,14 @@
           "Safety Version": {
             "channels": 2,
             "gdtfMode": "Safety Version",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 2
           },
           "Dimmer Version": {
             "channels": 1,
             "gdtfMode": "Dimmer Version",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           }
         }
       },
@@ -49,27 +51,32 @@
           "Standard": {
             "channels": 2,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 2
           },
           "Extended": {
             "channels": 3,
             "gdtfMode": "Extended",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "ECO2JET Safety": {
             "channels": 1,
             "gdtfMode": "ECO2JET Safety",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "ECO2JET Standard Standalone": {
             "channels": 1,
             "gdtfMode": "ECO2JET Standard Standalone",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "ECO2JET Extended Standalone": {
             "channels": 2,
             "gdtfMode": "ECO2JET Extended Standalone",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 2
           }
         }
       },
@@ -91,7 +98,8 @@
           "Standard": {
             "channels": 1,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           }
         }
       },
@@ -113,7 +121,8 @@
           "5Ch": {
             "channels": 4,
             "gdtfMode": "5Ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           }
         }
       },
@@ -135,7 +144,8 @@
           "9 Chan": {
             "channels": 9,
             "gdtfMode": "9 Chan",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           }
         }
       },
@@ -157,7 +167,8 @@
           "Mode": {
             "channels": 2,
             "gdtfMode": "Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 2
           }
         }
       },

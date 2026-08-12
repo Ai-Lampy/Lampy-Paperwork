@@ -22,32 +22,38 @@
           "Full xy": {
             "channels": 20,
             "gdtfMode": "Full xy",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "Full HS": {
             "channels": 20,
             "gdtfMode": "Full HS",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "Full RGB": {
             "channels": 22,
             "gdtfMode": "Full RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "Full RAW": {
             "channels": 24,
             "gdtfMode": "Full RAW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 21
           },
           "Profile 16B": {
             "channels": 6,
             "gdtfMode": "Profile 16B",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "Dimmer 8B": {
             "channels": 1,
             "gdtfMode": "Dimmer 8B",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           }
         }
       },
@@ -70,12 +76,14 @@
           "Profile 16b": {
             "channels": 6,
             "gdtfMode": "Profile 16b",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "Dimmer 8b": {
             "channels": 1,
             "gdtfMode": "Dimmer 8b",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           }
         }
       },
@@ -100,22 +108,26 @@
           "Profile 16b CCT": {
             "channels": 8,
             "gdtfMode": "Profile 16b CCT",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "Profile 16b": {
             "channels": 6,
             "gdtfMode": "Profile 16b",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "Dimmer 8b CCT": {
             "channels": 2,
             "gdtfMode": "Dimmer 8b CCT",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "Dimmer 8b": {
             "channels": 1,
             "gdtfMode": "Dimmer 8b",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           }
         }
       },
@@ -138,12 +150,14 @@
           "Profile 16b": {
             "channels": 6,
             "gdtfMode": "Profile 16b",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "Dimmer 8b": {
             "channels": 1,
             "gdtfMode": "Dimmer 8b",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           }
         }
       },
@@ -168,22 +182,26 @@
           "Profile 16b CCT": {
             "channels": 8,
             "gdtfMode": "Profile 16b CCT",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "Profile 16b": {
             "channels": 6,
             "gdtfMode": "Profile 16b",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "Dimmer 8b CCT": {
             "channels": 2,
             "gdtfMode": "Dimmer 8b CCT",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "Dimmer 8b": {
             "channels": 1,
             "gdtfMode": "Dimmer 8b",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           }
         }
       },
@@ -206,12 +224,14 @@
           "Profile 16b": {
             "channels": 6,
             "gdtfMode": "Profile 16b",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "Dimmer 8b": {
             "channels": 1,
             "gdtfMode": "Dimmer 8b",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           }
         }
       },
@@ -236,22 +256,26 @@
           "Profile 16b CCT": {
             "channels": 8,
             "gdtfMode": "Profile 16b CCT",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "Profile 16b": {
             "channels": 6,
             "gdtfMode": "Profile 16b",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "Dimmer 8b CCT": {
             "channels": 2,
             "gdtfMode": "Dimmer 8b CCT",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "Dimmer 8b": {
             "channels": 1,
             "gdtfMode": "Dimmer 8b",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           }
         }
       },
@@ -346,32 +370,38 @@
           "Mode1: Full 4 groups 16bits": {
             "channels": 70,
             "gdtfMode": "Mode1: Full 4 groups 16bits",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Mode2: Full 1 group 16bits": {
             "channels": 22,
             "gdtfMode": "Mode2: Full 1 group 16bits",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Mode3: Full 1 group 8bits": {
             "channels": 13,
             "gdtfMode": "Mode3: Full 1 group 8bits",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "Mode4: Preset mode 16bits": {
             "channels": 8,
             "gdtfMode": "Mode4: Preset mode 16bits",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "Mode5: Preset mode 8bits": {
             "channels": 7,
             "gdtfMode": "Mode5: Preset mode 8bits",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "Mode6: 4 groups individual 16b": {
             "channels": 72,
             "gdtfMode": "Mode6: 4 groups individual 16b",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           }
         }
       },

@@ -23,37 +23,44 @@
           "16 channels": {
             "channels": 16,
             "gdtfMode": "16 channels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "7 channels": {
             "channels": 7,
             "gdtfMode": "7 channels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "1 channel": {
             "channels": 1,
             "gdtfMode": "1 channel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "Studio mode": {
             "channels": 7,
             "gdtfMode": "Studio mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGB mode": {
             "channels": 9,
             "gdtfMode": "RGB mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "fine RGB mode": {
             "channels": 12,
             "gdtfMode": "fine RGB mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "SUNRISE mode": {
             "channels": 6,
             "gdtfMode": "SUNRISE mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           }
         }
       },
@@ -81,37 +88,44 @@
           "16 channels": {
             "channels": 16,
             "gdtfMode": "16 channels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "7 channels": {
             "channels": 7,
             "gdtfMode": "7 channels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "1 channel": {
             "channels": 1,
             "gdtfMode": "1 channel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "Studio mode": {
             "channels": 7,
             "gdtfMode": "Studio mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGB mode": {
             "channels": 9,
             "gdtfMode": "RGB mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "fine RGB mode": {
             "channels": 12,
             "gdtfMode": "fine RGB mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "SUNRISE mode": {
             "channels": 6,
             "gdtfMode": "SUNRISE mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           }
         }
       },
@@ -139,37 +153,44 @@
           "5 channels": {
             "channels": 5,
             "gdtfMode": "5 channels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "2 channels": {
             "channels": 2,
             "gdtfMode": "2 channels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 2
           },
           "1 channel": {
             "channels": 1,
             "gdtfMode": "1 channel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "SUNRISE mode": {
             "channels": 5,
             "gdtfMode": "SUNRISE mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "Raw mode": {
             "channels": 4,
             "gdtfMode": "Raw mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 2
           },
           "2 (MK1) channels": {
             "channels": 2,
             "gdtfMode": "2 (MK1) channels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 2
           },
           "6 channels": {
             "channels": 6,
             "gdtfMode": "6 channels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           }
         }
       },
@@ -197,37 +218,44 @@
           "5 channels": {
             "channels": 5,
             "gdtfMode": "5 channels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "2 channels": {
             "channels": 2,
             "gdtfMode": "2 channels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 2
           },
           "1 channel": {
             "channels": 1,
             "gdtfMode": "1 channel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "SUNRISE mode": {
             "channels": 5,
             "gdtfMode": "SUNRISE mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "Raw mode": {
             "channels": 4,
             "gdtfMode": "Raw mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 2
           },
           "2 (MK1) channels": {
             "channels": 2,
             "gdtfMode": "2 (MK1) channels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 2
           },
           "6 channels": {
             "channels": 6,
             "gdtfMode": "6 channels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           }
         }
       },
@@ -255,37 +283,44 @@
           "16 channels": {
             "channels": 16,
             "gdtfMode": "16 channels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "7 channels": {
             "channels": 7,
             "gdtfMode": "7 channels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "1 channel": {
             "channels": 1,
             "gdtfMode": "1 channel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "Studio mode": {
             "channels": 7,
             "gdtfMode": "Studio mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGB mode": {
             "channels": 9,
             "gdtfMode": "RGB mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "fine RGB mode": {
             "channels": 12,
             "gdtfMode": "fine RGB mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "SUNRISE mode": {
             "channels": 6,
             "gdtfMode": "SUNRISE mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           }
         }
       },
@@ -313,37 +348,44 @@
           "16 channels": {
             "channels": 16,
             "gdtfMode": "16 channels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "7 channels": {
             "channels": 7,
             "gdtfMode": "7 channels",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "1 channel": {
             "channels": 1,
             "gdtfMode": "1 channel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "Studio mode": {
             "channels": 7,
             "gdtfMode": "Studio mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGB mode": {
             "channels": 9,
             "gdtfMode": "RGB mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "fine RGB mode": {
             "channels": 12,
             "gdtfMode": "fine RGB mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "SUNRISE mode": {
             "channels": 6,
             "gdtfMode": "SUNRISE mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           }
         }
       },

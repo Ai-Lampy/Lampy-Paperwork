@@ -18,12 +18,14 @@
           "Standard 23ch": {
             "channels": 23,
             "gdtfMode": "Standard 23ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 21
           },
           "PixTen48": {
             "channels": 48,
             "gdtfMode": "PixTen48",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 56
           }
         }
       },

@@ -23,37 +23,44 @@
           "01CH": {
             "channels": 1,
             "gdtfMode": "01CH",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "Standard  ": {
             "channels": 7,
             "gdtfMode": "Standard  ",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "Extended  ": {
             "channels": 9,
             "gdtfMode": "Extended  ",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "2CH": {
             "channels": 2,
             "gdtfMode": "2CH",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 2
           },
           "2Cell  ": {
             "channels": 2,
             "gdtfMode": "2Cell  ",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 2
           },
           "2WA  ": {
             "channels": 4,
             "gdtfMode": "2WA  ",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "Basic  ": {
             "channels": 4,
             "gdtfMode": "Basic  ",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           }
         }
       },
@@ -77,17 +84,20 @@
           "Mode 1": {
             "channels": 1,
             "gdtfMode": "Mode 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "Mode3": {
             "channels": 3,
             "gdtfMode": "Mode3",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "Mode 5": {
             "channels": 5,
             "gdtfMode": "Mode 5",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           }
         }
       },
@@ -110,12 +120,14 @@
           "Extended": {
             "channels": 44,
             "gdtfMode": "Extended",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "Standard": {
             "channels": 27,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           }
         }
       },

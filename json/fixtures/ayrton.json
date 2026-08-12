@@ -19,17 +19,20 @@
           "Extended_540": {
             "channels": 52,
             "gdtfMode": "Extended_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "Standard_540": {
             "channels": 32,
             "gdtfMode": "Standard_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "Basic_540": {
             "channels": 30,
             "gdtfMode": "Basic_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           }
         }
       },
@@ -54,22 +57,26 @@
           "Extended_540": {
             "channels": 45,
             "gdtfMode": "Extended_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "Standard_ 540": {
             "channels": 35,
             "gdtfMode": "Standard_ 540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           },
           "Extended_CTO_ 540": {
             "channels": 45,
             "gdtfMode": "Extended_CTO_ 540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "Standard_CTO_ 540": {
             "channels": 35,
             "gdtfMode": "Standard_CTO_ 540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           }
         }
       },
@@ -93,17 +100,20 @@
           "Extended_540_S": {
             "channels": 56,
             "gdtfMode": "Extended_540_S",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "Standard_540_S": {
             "channels": 36,
             "gdtfMode": "Standard_540_S",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "Basic_540_S": {
             "channels": 34,
             "gdtfMode": "Basic_540_S",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           }
         }
       },
@@ -127,17 +137,20 @@
           "Extended_540": {
             "channels": 70,
             "gdtfMode": "Extended_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           },
           "Standard_540": {
             "channels": 46,
             "gdtfMode": "Standard_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           },
           "Basic_540": {
             "channels": 44,
             "gdtfMode": "Basic_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           }
         }
       },
@@ -161,17 +174,20 @@
           "Extended_540": {
             "channels": 66,
             "gdtfMode": "Extended_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "Standard_540": {
             "channels": 44,
             "gdtfMode": "Standard_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "Basic_540": {
             "channels": 42,
             "gdtfMode": "Basic_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           }
         }
       },
@@ -195,17 +211,20 @@
           "Extended_540": {
             "channels": 61,
             "gdtfMode": "Extended_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           },
           "Standard_540": {
             "channels": 39,
             "gdtfMode": "Standard_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           },
           "Basic_540": {
             "channels": 37,
             "gdtfMode": "Basic_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           }
         }
       },
@@ -228,12 +247,14 @@
           "Extended_540": {
             "channels": 66,
             "gdtfMode": "Extended_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           },
           "Standard_540": {
             "channels": 44,
             "gdtfMode": "Standard_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           }
         }
       },
@@ -257,17 +278,20 @@
           "Extended_540": {
             "channels": 62,
             "gdtfMode": "Extended_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 35
           },
           "Standard_540": {
             "channels": 41,
             "gdtfMode": "Standard_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 35
           },
           "Basic_540": {
             "channels": 39,
             "gdtfMode": "Basic_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 35
           }
         }
       },
@@ -291,17 +315,20 @@
           "Extended_540": {
             "channels": 58,
             "gdtfMode": "Extended_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           },
           "Standard_540": {
             "channels": 38,
             "gdtfMode": "Standard_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           },
           "Basic_540": {
             "channels": 36,
             "gdtfMode": "Basic_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           }
         }
       },
@@ -325,17 +352,20 @@
           "Extended_540": {
             "channels": 70,
             "gdtfMode": "Extended_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           },
           "Standard_540": {
             "channels": 46,
             "gdtfMode": "Standard_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           },
           "Basic_540": {
             "channels": 44,
             "gdtfMode": "Basic_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           }
         }
       },
@@ -359,17 +389,20 @@
           "Extended_540": {
             "channels": 70,
             "gdtfMode": "Extended_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           },
           "Standard_ 540": {
             "channels": 46,
             "gdtfMode": "Standard_ 540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           },
           "Basic_ 540": {
             "channels": 44,
             "gdtfMode": "Basic_ 540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           }
         }
       },
@@ -427,17 +460,20 @@
           "Extended_540": {
             "channels": 64,
             "gdtfMode": "Extended_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           },
           "Standard_540": {
             "channels": 42,
             "gdtfMode": "Standard_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           },
           "Basic_540": {
             "channels": 40,
             "gdtfMode": "Basic_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           }
         }
       },
@@ -459,7 +495,8 @@
           "Extended_540": {
             "channels": 33,
             "gdtfMode": "Extended_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           }
         }
       },
@@ -484,22 +521,26 @@
           "Extended_Chase": {
             "channels": 184,
             "gdtfMode": "Extended_Chase",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 35
           },
           "Extended": {
             "channels": 174,
             "gdtfMode": "Extended",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           },
           "Extended+Liquid": {
             "channels": 900,
             "gdtfMode": "Extended+Liquid",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "Extended_Chase+Liquid": {
             "channels": 900,
             "gdtfMode": "Extended_Chase+Liquid",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           }
         }
       },
@@ -522,12 +563,14 @@
           "Extended_540": {
             "channels": 35,
             "gdtfMode": "Extended_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           },
           "Extended_540_Pixel": {
             "channels": 180,
             "gdtfMode": "Extended_540_Pixel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           }
         }
       },
@@ -549,7 +592,8 @@
           "Extended_540": {
             "channels": 47,
             "gdtfMode": "Extended_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           }
         }
       },
@@ -573,17 +617,20 @@
           "Extended": {
             "channels": 34,
             "gdtfMode": "Extended",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "Standard": {
             "channels": 22,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "Basic": {
             "channels": 19,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           }
         }
       },
@@ -607,17 +654,20 @@
           "Extended_540": {
             "channels": 39,
             "gdtfMode": "Extended_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "Standard_540": {
             "channels": 28,
             "gdtfMode": "Standard_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "Basic_540": {
             "channels": 26,
             "gdtfMode": "Basic_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 23
           }
         }
       },
@@ -642,22 +692,26 @@
           "Extended_540": {
             "channels": 61,
             "gdtfMode": "Extended_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           },
           "Standard_540": {
             "channels": 40,
             "gdtfMode": "Standard_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           },
           "Basic_540": {
             "channels": 38,
             "gdtfMode": "Basic_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           },
           "GhibliExt_540": {
             "channels": 58,
             "gdtfMode": "GhibliExt_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           }
         }
       },
@@ -680,12 +734,14 @@
           "Extended_540-FlatField_Auto": {
             "channels": 43,
             "gdtfMode": "Extended_540-FlatField_Auto",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "Extended_540-FlatField_Off": {
             "channels": 43,
             "gdtfMode": "Extended_540-FlatField_Off",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           }
         }
       },
@@ -708,12 +764,14 @@
           "Extended_540": {
             "channels": 65,
             "gdtfMode": "Extended_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           },
           "Standard_540": {
             "channels": 42,
             "gdtfMode": "Standard_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 35
           }
         }
       },
@@ -736,12 +794,14 @@
           "Extended_540": {
             "channels": 60,
             "gdtfMode": "Extended_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 35
           },
           "Standard_540": {
             "channels": 38,
             "gdtfMode": "Standard_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           }
         }
       },
@@ -764,12 +824,14 @@
           "Extended_540": {
             "channels": 65,
             "gdtfMode": "Extended_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           },
           "Standard_540": {
             "channels": 42,
             "gdtfMode": "Standard_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 35
           }
         }
       },
@@ -792,12 +854,14 @@
           "Extended_540": {
             "channels": 67,
             "gdtfMode": "Extended_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 40
           },
           "Standard_540": {
             "channels": 44,
             "gdtfMode": "Standard_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           }
         }
       },
@@ -820,12 +884,14 @@
           "Extended_540": {
             "channels": 60,
             "gdtfMode": "Extended_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 35
           },
           "Standard_540": {
             "channels": 38,
             "gdtfMode": "Standard_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           }
         }
       },
@@ -853,37 +919,44 @@
           "Extended Pixel 1": {
             "channels": 79,
             "gdtfMode": "Extended Pixel 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 55
           },
           "Standard": {
             "channels": 50,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           },
           "Extended Pixel 2": {
             "channels": 51,
             "gdtfMode": "Extended Pixel 2",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 55
           },
           "Extended Pixel 1 + Liquid": {
             "channels": 414,
             "gdtfMode": "Extended Pixel 1 + Liquid",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 58
           },
           "Extended Pixel 2 + Liquid": {
             "channels": 414,
             "gdtfMode": "Extended Pixel 2 + Liquid",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 58
           },
           "Basic": {
             "channels": 26,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "Extended Ring": {
             "channels": 46,
             "gdtfMode": "Extended Ring",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 41
           }
         }
       },
@@ -908,22 +981,26 @@
           "Extended Ring": {
             "channels": 46,
             "gdtfMode": "Extended Ring",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           },
           "Standard": {
             "channels": 37,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "Extended Pixel": {
             "channels": 79,
             "gdtfMode": "Extended Pixel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           },
           "Basic": {
             "channels": 26,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           }
         }
       },
@@ -951,37 +1028,44 @@
           "Extended Pixel 1": {
             "channels": 199,
             "gdtfMode": "Extended Pixel 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 65
           },
           "Standard": {
             "channels": 50,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           },
           "Extended Pixel 2 ": {
             "channels": 148,
             "gdtfMode": "Extended Pixel 2 ",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 65
           },
           "Extended Pixel 1 + Liquid": {
             "channels": 1770,
             "gdtfMode": "Extended Pixel 1 + Liquid",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 68
           },
           "Extended Pixel 2 + Liquid": {
             "channels": 1770,
             "gdtfMode": "Extended Pixel 2 + Liquid",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 68
           },
           "Extended Ring": {
             "channels": 54,
             "gdtfMode": "Extended Ring",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 51
           },
           "Basic": {
             "channels": 26,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           }
         }
       },
@@ -1006,22 +1090,26 @@
           "Extended Ring": {
             "channels": 54,
             "gdtfMode": "Extended Ring",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 49
           },
           "Standard": {
             "channels": 37,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "Extended Pixel": {
             "channels": 199,
             "gdtfMode": "Extended Pixel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 49
           },
           "Basic": {
             "channels": 26,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           }
         }
       },

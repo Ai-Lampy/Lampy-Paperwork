@@ -35,97 +35,116 @@
           "RGB 8bit (3ch)": {
             "channels": 3,
             "gdtfMode": "RGB 8bit (3ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB 16bit (6ch)": {
             "channels": 6,
             "gdtfMode": "RGB 16bit (6ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGBW 8bit (4ch)": {
             "channels": 4,
             "gdtfMode": "RGBW 8bit (4ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGBW 16bit (8ch)": {
             "channels": 8,
             "gdtfMode": "RGBW 16bit (8ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "Strobe Only (4ch)": {
             "channels": 4,
             "gdtfMode": "Strobe Only (4ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB Strobe (7ch)": {
             "channels": 7,
             "gdtfMode": "RGB Strobe (7ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGBW Strobe (8ch)": {
             "channels": 8,
             "gdtfMode": "RGBW Strobe (8ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "RGB Pixel Mode 1 (10ch)": {
             "channels": 10,
             "gdtfMode": "RGB Pixel Mode 1 (10ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Pixel Mode 2 (13ch)": {
             "channels": 13,
             "gdtfMode": "RGB Pixel Mode 2 (13ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "RGB Pixel Mode 3 (16ch)": {
             "channels": 16,
             "gdtfMode": "RGB Pixel Mode 3 (16ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGB Pixel Mode 4 (19ch)": {
             "channels": 19,
             "gdtfMode": "RGB Pixel Mode 4 (19ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           },
           "RGB Pixel Mode 6 (25ch)": {
             "channels": 25,
             "gdtfMode": "RGB Pixel Mode 6 (25ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           },
           "RGB Pixel Mode 12 (43ch)": {
             "channels": 43,
             "gdtfMode": "RGB Pixel Mode 12 (43ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           },
           "RGBW Pixel Mode 1 (12ch)": {
             "channels": 12,
             "gdtfMode": "RGBW Pixel Mode 1 (12ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Pixel Mode 2 (16ch)": {
             "channels": 16,
             "gdtfMode": "RGBW Pixel Mode 2 (16ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGBW Pixel Mode 3 (20ch)": {
             "channels": 20,
             "gdtfMode": "RGBW Pixel Mode 3 (20ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 21
           },
           "RGBW Pixel Mode 4 (24ch)": {
             "channels": 24,
             "gdtfMode": "RGBW Pixel Mode 4 (24ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "RGBW Pixel Mode 6 (32ch)": {
             "channels": 32,
             "gdtfMode": "RGBW Pixel Mode 6 (32ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 33
           },
           "RGBW Pixel Mode 12 (56ch)": {
             "channels": 56,
             "gdtfMode": "RGBW Pixel Mode 12 (56ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 57
           }
         }
       },
@@ -161,77 +180,92 @@
           "RGB 8bit (3ch)": {
             "channels": 3,
             "gdtfMode": "RGB 8bit (3ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB 16bit (6ch)": {
             "channels": 6,
             "gdtfMode": "RGB 16bit (6ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGBW 8bit (4ch)": {
             "channels": 4,
             "gdtfMode": "RGBW 8bit (4ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGBW 16bit 8 (ch)": {
             "channels": 8,
             "gdtfMode": "RGBW 16bit 8 (ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "Strobe Only (4ch)": {
             "channels": 4,
             "gdtfMode": "Strobe Only (4ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB Strobe (7ch)": {
             "channels": 7,
             "gdtfMode": "RGB Strobe (7ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGBW Strobe (8ch)": {
             "channels": 8,
             "gdtfMode": "RGBW Strobe (8ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "RGB Pixel Mode 1 (10ch)": {
             "channels": 10,
             "gdtfMode": "RGB Pixel Mode 1 (10ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Pixel Mode 2 (13ch)": {
             "channels": 13,
             "gdtfMode": "RGB Pixel Mode 2 (13ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "RGB Pixel Mode 3 (16ch)": {
             "channels": 16,
             "gdtfMode": "RGB Pixel Mode 3 (16ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGB Pixel Mode 6 (25ch)": {
             "channels": 25,
             "gdtfMode": "RGB Pixel Mode 6 (25ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           },
           "RGBW Pixel Mode 1 (12ch)": {
             "channels": 12,
             "gdtfMode": "RGBW Pixel Mode 1 (12ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Pixel Mode 2 (16ch)": {
             "channels": 16,
             "gdtfMode": "RGBW Pixel Mode 2 (16ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "RGBW Pixel Mode 3 (20ch)": {
             "channels": 20,
             "gdtfMode": "RGBW Pixel Mode 3 (20ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 21
           },
           "RGBW Pixel Mode 6 (32ch)": {
             "channels": 32,
             "gdtfMode": "RGBW Pixel Mode 6 (32ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 33
           }
         }
       },
@@ -269,87 +303,104 @@
           "RGB 8bit": {
             "channels": 3,
             "gdtfMode": "RGB 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "RGBW 8bit ": {
             "channels": 4,
             "gdtfMode": "RGBW 8bit ",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB 16bit": {
             "channels": 6,
             "gdtfMode": "RGB 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "RGBW 16bit": {
             "channels": 8,
             "gdtfMode": "RGBW 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB Strobe": {
             "channels": 7,
             "gdtfMode": "RGB Strobe",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "Strobe Only": {
             "channels": 4,
             "gdtfMode": "Strobe Only",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "RGBW Strobe": {
             "channels": 8,
             "gdtfMode": "RGBW Strobe",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGB Mode 1": {
             "channels": 10,
             "gdtfMode": "RGB Mode 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGBW Mode 1": {
             "channels": 12,
             "gdtfMode": "RGBW Mode 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGB Mode 6": {
             "channels": 25,
             "gdtfMode": "RGB Mode 6",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 12": {
             "channels": 43,
             "gdtfMode": "RGB Mode 12",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 20": {
             "channels": 67,
             "gdtfMode": "RGB Mode 20",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 120": {
             "channels": 367,
             "gdtfMode": "RGB Mode 120",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGBW Mode 6": {
             "channels": 32,
             "gdtfMode": "RGBW Mode 6",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 12": {
             "channels": 56,
             "gdtfMode": "RGBW Mode 12",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 20": {
             "channels": 88,
             "gdtfMode": "RGBW Mode 20",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 120": {
             "channels": 488,
             "gdtfMode": "RGBW Mode 120",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           }
         }
       },
@@ -395,127 +446,152 @@
           "RGB 8bit": {
             "channels": 3,
             "gdtfMode": "RGB 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "RGBW 8bit ": {
             "channels": 4,
             "gdtfMode": "RGBW 8bit ",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB 16bit": {
             "channels": 6,
             "gdtfMode": "RGB 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "RGBW 16bit": {
             "channels": 8,
             "gdtfMode": "RGBW 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB Strobe": {
             "channels": 7,
             "gdtfMode": "RGB Strobe",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "Strobe Only": {
             "channels": 4,
             "gdtfMode": "Strobe Only",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "RGBW Strobe": {
             "channels": 8,
             "gdtfMode": "RGBW Strobe",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGB Mode 1": {
             "channels": 10,
             "gdtfMode": "RGB Mode 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 2": {
             "channels": 13,
             "gdtfMode": "RGB Mode 2",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 3": {
             "channels": 16,
             "gdtfMode": "RGB Mode 3",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 4": {
             "channels": 19,
             "gdtfMode": "RGB Mode 4",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 6": {
             "channels": 25,
             "gdtfMode": "RGB Mode 6",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 9": {
             "channels": 34,
             "gdtfMode": "RGB Mode 9",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 12": {
             "channels": 43,
             "gdtfMode": "RGB Mode 12",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 18": {
             "channels": 61,
             "gdtfMode": "RGB Mode 18",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 36": {
             "channels": 115,
             "gdtfMode": "RGB Mode 36",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGBW Mode 1": {
             "channels": 12,
             "gdtfMode": "RGBW Mode 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 2": {
             "channels": 16,
             "gdtfMode": "RGBW Mode 2",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 3": {
             "channels": 20,
             "gdtfMode": "RGBW Mode 3",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 4": {
             "channels": 24,
             "gdtfMode": "RGBW Mode 4",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 6": {
             "channels": 32,
             "gdtfMode": "RGBW Mode 6",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 9": {
             "channels": 44,
             "gdtfMode": "RGBW Mode 9",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 12": {
             "channels": 56,
             "gdtfMode": "RGBW Mode 12",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 18": {
             "channels": 80,
             "gdtfMode": "RGBW Mode 18",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 36": {
             "channels": 152,
             "gdtfMode": "RGBW Mode 36",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           }
         }
       },
@@ -587,257 +663,308 @@
           "RGB 8bit": {
             "channels": 3,
             "gdtfMode": "RGB 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "RGBW 8bit ": {
             "channels": 4,
             "gdtfMode": "RGBW 8bit ",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB 16bit": {
             "channels": 6,
             "gdtfMode": "RGB 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "RGBW 16bit": {
             "channels": 8,
             "gdtfMode": "RGBW 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB Strobe": {
             "channels": 7,
             "gdtfMode": "RGB Strobe",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "Strobe Only": {
             "channels": 4,
             "gdtfMode": "Strobe Only",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "RGBW Strobe": {
             "channels": 8,
             "gdtfMode": "RGBW Strobe",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGB Mode 1": {
             "channels": 10,
             "gdtfMode": "RGB Mode 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 2": {
             "channels": 13,
             "gdtfMode": "RGB Mode 2",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 2H": {
             "channels": 13,
             "gdtfMode": "RGB Mode 2H",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 3H": {
             "channels": 16,
             "gdtfMode": "RGB Mode 3H",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 3V": {
             "channels": 16,
             "gdtfMode": "RGB Mode 3V",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 4": {
             "channels": 19,
             "gdtfMode": "RGB Mode 4",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 4V": {
             "channels": 19,
             "gdtfMode": "RGB Mode 4V",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 6": {
             "channels": 32,
             "gdtfMode": "RGB Mode 6",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 6H": {
             "channels": 25,
             "gdtfMode": "RGB Mode 6H",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 6V": {
             "channels": 25,
             "gdtfMode": "RGB Mode 6V",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 8": {
             "channels": 31,
             "gdtfMode": "RGB Mode 8",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 9": {
             "channels": 34,
             "gdtfMode": "RGB Mode 9",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode12": {
             "channels": 43,
             "gdtfMode": "RGB Mode12",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 12H": {
             "channels": 43,
             "gdtfMode": "RGB Mode 12H",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 12V": {
             "channels": 43,
             "gdtfMode": "RGB Mode 12V",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 18": {
             "channels": 61,
             "gdtfMode": "RGB Mode 18",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 18H": {
             "channels": 61,
             "gdtfMode": "RGB Mode 18H",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 24H": {
             "channels": 79,
             "gdtfMode": "RGB Mode 24H",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 24V": {
             "channels": 79,
             "gdtfMode": "RGB Mode 24V",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 36H": {
             "channels": 115,
             "gdtfMode": "RGB Mode 36H",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 36V": {
             "channels": 115,
             "gdtfMode": "RGB Mode 36V",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGBW Mode 1": {
             "channels": 12,
             "gdtfMode": "RGBW Mode 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 2": {
             "channels": 16,
             "gdtfMode": "RGBW Mode 2",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 2H": {
             "channels": 16,
             "gdtfMode": "RGBW Mode 2H",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 3H": {
             "channels": 20,
             "gdtfMode": "RGBW Mode 3H",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 3V": {
             "channels": 20,
             "gdtfMode": "RGBW Mode 3V",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 4": {
             "channels": 24,
             "gdtfMode": "RGBW Mode 4",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 4V": {
             "channels": 24,
             "gdtfMode": "RGBW Mode 4V",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 6": {
             "channels": 32,
             "gdtfMode": "RGBW Mode 6",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 6H": {
             "channels": 32,
             "gdtfMode": "RGBW Mode 6H",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 6V": {
             "channels": 32,
             "gdtfMode": "RGBW Mode 6V",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 8": {
             "channels": 40,
             "gdtfMode": "RGBW Mode 8",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 9": {
             "channels": 44,
             "gdtfMode": "RGBW Mode 9",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 12": {
             "channels": 56,
             "gdtfMode": "RGBW Mode 12",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 12H": {
             "channels": 56,
             "gdtfMode": "RGBW Mode 12H",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 12V": {
             "channels": 56,
             "gdtfMode": "RGBW Mode 12V",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 18": {
             "channels": 80,
             "gdtfMode": "RGBW Mode 18",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 18H": {
             "channels": 80,
             "gdtfMode": "RGBW Mode 18H",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 24H": {
             "channels": 104,
             "gdtfMode": "RGBW Mode 24H",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 24V": {
             "channels": 104,
             "gdtfMode": "RGBW Mode 24V",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 36H": {
             "channels": 152,
             "gdtfMode": "RGBW Mode 36H",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 36V": {
             "channels": 152,
             "gdtfMode": "RGBW Mode 36V",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGB Mode 72": {
             "channels": 223,
             "gdtfMode": "RGB Mode 72",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGBW Mode 72": {
             "channels": 296,
             "gdtfMode": "RGBW Mode 72",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           }
         }
       },
@@ -875,87 +1002,104 @@
           "RGB 8bit": {
             "channels": 3,
             "gdtfMode": "RGB 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "RGBW 8bit ": {
             "channels": 4,
             "gdtfMode": "RGBW 8bit ",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB 16bit": {
             "channels": 6,
             "gdtfMode": "RGB 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "RGBW 16bit": {
             "channels": 8,
             "gdtfMode": "RGBW 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB Strobe": {
             "channels": 7,
             "gdtfMode": "RGB Strobe",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "Strobe Only": {
             "channels": 4,
             "gdtfMode": "Strobe Only",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "RGBW Strobe": {
             "channels": 8,
             "gdtfMode": "RGBW Strobe",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGB Mode 1": {
             "channels": 10,
             "gdtfMode": "RGB Mode 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 2": {
             "channels": 13,
             "gdtfMode": "RGB Mode 2",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 4": {
             "channels": 19,
             "gdtfMode": "RGB Mode 4",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 8": {
             "channels": 31,
             "gdtfMode": "RGB Mode 8",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 18": {
             "channels": 55,
             "gdtfMode": "RGB Mode 18",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGBW Mode 1": {
             "channels": 12,
             "gdtfMode": "RGBW Mode 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 2": {
             "channels": 16,
             "gdtfMode": "RGBW Mode 2",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 4": {
             "channels": 24,
             "gdtfMode": "RGBW Mode 4",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 8": {
             "channels": 40,
             "gdtfMode": "RGBW Mode 8",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 18": {
             "channels": 72,
             "gdtfMode": "RGBW Mode 18",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           }
         }
       },
@@ -991,77 +1135,92 @@
           "RGB 8bit": {
             "channels": 3,
             "gdtfMode": "RGB 8bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "RGBW 8bit ": {
             "channels": 4,
             "gdtfMode": "RGBW 8bit ",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB 16bit": {
             "channels": 6,
             "gdtfMode": "RGB 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "RGBW 16bit": {
             "channels": 8,
             "gdtfMode": "RGBW 16bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB Strobe": {
             "channels": 7,
             "gdtfMode": "RGB Strobe",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "Strobe Only": {
             "channels": 4,
             "gdtfMode": "Strobe Only",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "RGBW Strobe": {
             "channels": 8,
             "gdtfMode": "RGBW Strobe",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "RGB Mode 1": {
             "channels": 10,
             "gdtfMode": "RGB Mode 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 2": {
             "channels": 13,
             "gdtfMode": "RGB Mode 2",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 4": {
             "channels": 19,
             "gdtfMode": "RGB Mode 4",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGB Mode 9": {
             "channels": 31,
             "gdtfMode": "RGB Mode 9",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "RGBW Mode 1": {
             "channels": 12,
             "gdtfMode": "RGBW Mode 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 2": {
             "channels": 16,
             "gdtfMode": "RGBW Mode 2",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 4": {
             "channels": 24,
             "gdtfMode": "RGBW Mode 4",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "RGBW Mode 9": {
             "channels": 40,
             "gdtfMode": "RGBW Mode 9",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           }
         }
       },
@@ -1085,17 +1244,20 @@
           "RGB 1pix8b (3ch)": {
             "channels": 3,
             "gdtfMode": "RGB 1pix8b (3ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB 4pix8b (12ch)": {
             "channels": 12,
             "gdtfMode": "RGB 4pix8b (12ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "RGB 16pix 8b (48ch)": {
             "channels": 48,
             "gdtfMode": "RGB 16pix 8b (48ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           }
         }
       },
@@ -1122,32 +1284,38 @@
           "RGBW 1pix8b (4ch)": {
             "channels": 4,
             "gdtfMode": "RGBW 1pix8b (4ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGBW 4pix8b (16ch)": {
             "channels": 16,
             "gdtfMode": "RGBW 4pix8b (16ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "RGBW 16pix8b (64ch)": {
             "channels": 64,
             "gdtfMode": "RGBW 16pix8b (64ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGB 1pix8b (3ch)": {
             "channels": 3,
             "gdtfMode": "RGB 1pix8b (3ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB 4pix8b (12ch)": {
             "channels": 12,
             "gdtfMode": "RGB 4pix8b (12ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "RGB 16pix8b (48ch)": {
             "channels": 48,
             "gdtfMode": "RGB 16pix8b (48ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           }
         }
       },
@@ -1171,17 +1339,20 @@
           "RGB 1pix8b (3ch)": {
             "channels": 3,
             "gdtfMode": "RGB 1pix8b (3ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB 4pix8b (12ch)": {
             "channels": 12,
             "gdtfMode": "RGB 4pix8b (12ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "RGB 16pix 8b (48ch)": {
             "channels": 48,
             "gdtfMode": "RGB 16pix 8b (48ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           }
         }
       },
@@ -1208,32 +1379,38 @@
           "RGBW 1pix8b (4ch)": {
             "channels": 4,
             "gdtfMode": "RGBW 1pix8b (4ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGBW 4pix8b (16ch)": {
             "channels": 16,
             "gdtfMode": "RGBW 4pix8b (16ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "RGBW 12pix 8b (48ch)": {
             "channels": 48,
             "gdtfMode": "RGBW 12pix 8b (48ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGB 1pix8b (3ch)": {
             "channels": 3,
             "gdtfMode": "RGB 1pix8b (3ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB 4pix8b (12ch)": {
             "channels": 12,
             "gdtfMode": "RGB 4pix8b (12ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "RGB 12pix 8b (36ch)": {
             "channels": 36,
             "gdtfMode": "RGB 12pix 8b (36ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           }
         }
       },
@@ -1257,17 +1434,20 @@
           "RGBW 1pix 8b (4ch)": {
             "channels": 4,
             "gdtfMode": "RGBW 1pix 8b (4ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGB 1pix 8b (3ch)": {
             "channels": 3,
             "gdtfMode": "RGB 1pix 8b (3ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "White 1pix 8b (1ch)": {
             "channels": 1,
             "gdtfMode": "White 1pix 8b (1ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           }
         }
       },
@@ -1294,32 +1474,38 @@
           "RGBW 1pix8b (4ch)": {
             "channels": 4,
             "gdtfMode": "RGBW 1pix8b (4ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGBW 4pix8b (16ch)": {
             "channels": 16,
             "gdtfMode": "RGBW 4pix8b (16ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "RGBW 12pix 8b (48ch)": {
             "channels": 48,
             "gdtfMode": "RGBW 12pix 8b (48ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGB 1pix8b (3ch)": {
             "channels": 3,
             "gdtfMode": "RGB 1pix8b (3ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB 4pix8b (12ch)": {
             "channels": 12,
             "gdtfMode": "RGB 4pix8b (12ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "RGB 12pix 8b (36ch)": {
             "channels": 36,
             "gdtfMode": "RGB 12pix 8b (36ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           }
         }
       },
@@ -1342,12 +1528,14 @@
           "UV 1pix8b (1ch)": {
             "channels": 1,
             "gdtfMode": "UV 1pix8b (1ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 2
           },
           "UV HP 1pix8b (1ch)": {
             "channels": 1,
             "gdtfMode": "UV HP 1pix8b (1ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 2
           }
         }
       },

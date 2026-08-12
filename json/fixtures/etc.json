@@ -17,7 +17,8 @@
           "Direct": {
             "channels": 7,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         }
       },
@@ -43,27 +44,32 @@
           "Direct Mode": {
             "channels": 9,
             "gdtfMode": "Direct Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "Standard Mode": {
             "channels": 7,
             "gdtfMode": "Standard Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "6ch Mode": {
             "channels": 6,
             "gdtfMode": "6ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGB Mode": {
             "channels": 6,
             "gdtfMode": "RGB Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch Mode": {
             "channels": 1,
             "gdtfMode": "1ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           }
         }
       },
@@ -88,22 +94,26 @@
           "5ch(Default)": {
             "channels": 5,
             "gdtfMode": "5ch(Default)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "6ch (Direct)": {
             "channels": 6,
             "gdtfMode": "6ch (Direct)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "3ch(RGB)": {
             "channels": 3,
             "gdtfMode": "3ch(RGB)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           }
         }
       },
@@ -205,7 +215,8 @@
           "Direct": {
             "channels": 8,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           }
         }
       },
@@ -227,7 +238,8 @@
           "Direct": {
             "channels": 5,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           }
         }
       },
@@ -292,22 +304,26 @@
           "5ch": {
             "channels": 5,
             "gdtfMode": "5ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB": {
             "channels": 3,
             "gdtfMode": "RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "Direct": {
             "channels": 6,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           }
         }
       },
@@ -332,22 +348,26 @@
           "Direct": {
             "channels": 9,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "Standard": {
             "channels": 7,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "1CH": {
             "channels": 1,
             "gdtfMode": "1CH",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "RGB": {
             "channels": 3,
             "gdtfMode": "RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           }
         }
       },
@@ -409,7 +429,8 @@
           "Direct": {
             "channels": 9,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           }
         }
       },
@@ -433,17 +454,20 @@
           "Standard mode": {
             "channels": 3,
             "gdtfMode": "Standard mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "HSIC": {
             "channels": 6,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "Direct": {
             "channels": 9,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           }
         }
       },
@@ -1711,7 +1735,8 @@
           "Standard mode": {
             "channels": 6,
             "gdtfMode": "Standard mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           }
         }
       },

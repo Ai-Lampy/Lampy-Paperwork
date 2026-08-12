@@ -15,7 +15,8 @@
           "1Ch - Mode": {
             "channels": 1,
             "gdtfMode": "1Ch - Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           }
         }
       },
@@ -56,12 +57,14 @@
           "1Ch - Mode": {
             "channels": 1,
             "gdtfMode": "1Ch - Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "2Ch - Mode": {
             "channels": 2,
             "gdtfMode": "2Ch - Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 2
           }
         }
       },
@@ -82,12 +85,14 @@
           "1Ch - Mode_8-Cell": {
             "channels": 1,
             "gdtfMode": "1Ch - Mode_8-Cell",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "2Ch - Mode_4-Cell": {
             "channels": 2,
             "gdtfMode": "2Ch - Mode_4-Cell",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 2
           }
         }
       },
@@ -109,7 +114,8 @@
           "Default": {
             "channels": 1,
             "gdtfMode": "Default",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           }
         }
       },
@@ -131,7 +137,8 @@
           "RGB": {
             "channels": 3,
             "gdtfMode": "RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           }
         }
       },
@@ -173,7 +180,8 @@
           "RGB": {
             "channels": 4,
             "gdtfMode": "RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           }
         }
       },
