@@ -2,6 +2,18 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.6 - 2026-08-12
+
+- Reworked Production Info visibility controls as four-column On/Off buttons, defaulting fields to visible while preserving saved choices.
+- Renamed Tour Lighting Director to Lighting Operator without changing the saved project-data key.
+- Moved Lighting Vendor details into a collapsible Production Info section with bundled vendor-logo previews and independent project/PDF controls.
+- Renamed the manual Vendor/Company Logo to Secondary Logo, added independent project/PDF controls, and retained legacy project compatibility.
+- Centred the Lampy Paperwork header, added Vendor and Secondary logos to its left, and split first-page PDF logos between the top-left and existing Tour Logo position.
+- Added the grandMA2 NPU front line image and the new GigaCore 18t and GigaCore 20t front/rear line images to their device references.
+- Added optional front/rear Single and Double rack-image fields and populated them for the half-width GigaCore 10 and GigaCore 10t.
+- Added Detailed Rack Layout composite rendering: a lone left device uses Single artwork, two matching half-width devices use Double artwork, and both devices retain independent controls.
+- Kept lone right-hand, mixed-pair, missing-variant, and Network Equipment rendering on the existing standard line images.
+
 ## V26.5 - 2026-08-11
 
 - Updated Simple rack devices to use 790 px full-width and 390 px half-width layouts, 75 px per rack unit, and a three-column network-information layout.
