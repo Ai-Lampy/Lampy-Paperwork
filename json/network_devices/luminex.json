@@ -534,6 +534,10 @@
       "imageUrl": "images/luminex/gigacore_10.png",
       "lineImageUrlFront": "images/luminex/gigacore_10_line_front.png",
       "lineImageUrlRear": "images/luminex/gigacore_10_line_rear.png",
+      "lineImageUrlFrontSingle": "images/luminex/gigacore_10_line_front_single.png",
+      "lineImageUrlRearSingle": "images/luminex/gigacore_10_line_rear_single.png",
+      "lineImageUrlFrontDouble": "images/luminex/gigacore_10_line_front_double.png",
+      "lineImageUrlRearDouble": "images/luminex/gigacore_10_line_rear_double.png",
       "mounting": {
         "accessory": "Clamp / wall bracket",
         "method": null,
@@ -726,8 +730,8 @@
       },
       "id": "luminex_gigacore_18t",
       "imageUrl": "images/luminex/gigacore_18t.png",
-      "lineImageUrlFront": "",
-      "lineImageUrlRear": "",
+      "lineImageUrlFront": "images/luminex/gigacore_18t_line_front.png",
+      "lineImageUrlRear": "images/luminex/gigacore_18t_line_rear.png",
       "mounting": {
         "accessory": null,
         "method": null,
@@ -806,8 +810,8 @@
       },
       "id": "luminex_gigacore_20t",
       "imageUrl": "images/luminex/gigacore_20t.png",
-      "lineImageUrlFront": "",
-      "lineImageUrlRear": "",
+      "lineImageUrlFront": "images/luminex/gigacore_20t_line_front.png",
+      "lineImageUrlRear": "images/luminex/gigacore_20t_line_rear.png",
       "mounting": {
         "accessory": null,
         "method": null,
@@ -888,6 +892,10 @@
       "imageUrl": "images/luminex/gigacore_10t.png",
       "lineImageUrlFront": "images/luminex/gigacore_10t_line_front.png",
       "lineImageUrlRear": "images/luminex/gigacore_10t_line_rear.png",
+      "lineImageUrlFrontSingle": "images/luminex/gigacore_10t_line_front_single.png",
+      "lineImageUrlRearSingle": "images/luminex/gigacore_10t_line_rear_single.png",
+      "lineImageUrlFrontDouble": "images/luminex/gigacore_10t_line_front_double.png",
+      "lineImageUrlRearDouble": "images/luminex/gigacore_10t_line_rear_double.png",
       "mounting": {
         "accessory": "Clamp",
         "method": "M10 Bolt",
