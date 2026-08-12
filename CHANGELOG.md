@@ -2,6 +2,21 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.8 - 2026-08-12
+
+- Standardised Fixture Patch, Power Calculations, Fan Outs, and Distro Labels PDF previews around the same collapsible Formatting Options panel.
+- Grouped Paper Size, Orientation, Export DPI, Zoom, and temporary Tour, Vendor, and Secondary logo controls consistently in every PDF preview.
+- Added selectable 150, 300, and 450 DPI output to Fixture Patch and Distro Labels exports, matching the existing Power Calculations and Fan Outs workflow.
+- Kept sheet-specific preview controls and export actions directly below the shared formatting panel.
+
+## V26.7 - 2026-08-12
+
+- Simplified Production Visibility buttons to field-name-only controls with fixed sizing and clear green/grey states.
+- Resized the bundled Lighting Vendor logo preview within the collapsible vendor details card.
+- Added temporary Tour, Vendor, and Secondary logo controls to Fixture Patch, Power Calculations, Fan Outs, and Distro Labels PDF previews without changing saved project defaults.
+- Added the revised Fixture Patch PDF page-header border and spacing to both preview and downloaded output.
+- Updated Detailed Rack Layout so either lone half-width device returns to its available Single front/rear artwork after a matching pair is split.
+
 ## V26.6 - 2026-08-12
 
 - Reworked Production Info visibility controls as four-column On/Off buttons, defaulting fields to visible while preserving saved choices.
