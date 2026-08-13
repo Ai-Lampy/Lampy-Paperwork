@@ -42,6 +42,7 @@
           "IEC input",
           "IEC output"
         ],
+        "poeIn": false
       },
       "imageUrl": "images/rack_power/APC_UPS.png",
       "lineImageUrlFront": "images/rack_power/APC_UPS_line_front.png",
@@ -76,6 +77,7 @@
           "13A input",
           "6 x 13A output"
         ],
+        "poeIn": false
       },
       "lineImageUrlFront": "images/rack_power/1u_13a_rack_strip.png"
     }
