@@ -9,7 +9,7 @@
 			  "width": 480
 		  },
 		  "id": "1u-Blank",
-		  "lineImageUrlFront": "images/rack_accessories/1u_blank.png",
+		  "lineImageUrlFront": "images/rack_accessories/1U/1u_blank.png",
 		  "mounting": {
 			  "accessory": "Rack-Mountable",
 			  "method": null,
@@ -19,7 +19,7 @@
 			  "heightU": 1,
 			  "widthFraction": 1
 		  },
-		  "name": "1U Blank Pannel",
+		  "name": "1U Blank Panel",
 		  "type": "Rack Accessories"
 	  }
   ]
