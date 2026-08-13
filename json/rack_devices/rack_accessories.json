@@ -113,7 +113,31 @@
           "lineImageUrlFront": "images/rack_accessories/1U/1u_8port.png"
         }
       ],
-      "Draws": [],
+      "Draws": [
+        {
+          "id": "rack-accessory-1u-draw",
+          "name": "1U Rack Draw",
+          "sizeVariantId": "rack-draw",
+          "sizeVariantLabel": "Rack Draw",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": 480,
+            "height": 44,
+            "depth": 285
+          },
+          "depthOptionsMm": {
+            "standard": 285,
+            "deep": 385,
+            "deeper": 485
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 1,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/1U/1u_draw.png"
+        }
+      ],
       "Shelves": [
         {
           "id": "rack-accessory-1u-shelf",
@@ -134,7 +158,25 @@
           "lineImageUrlFront": "images/rack_accessories/1U/1u_shelf.png"
         }
       ],
-      "Doors": []
+      "Doors": [],
+      "Lighting": [
+        {
+          "id": "rack-accessory-1u-led-light",
+          "name": "1U LED Rack Light",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": 480,
+            "height": 44,
+            "depth": null
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 1,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/1U/1u_LED_light.png"
+        }
+      ]
     },
     "2U": {
       "Blank Panels": [
@@ -241,6 +283,22 @@
             "widthFraction": 1
           },
           "lineImageUrlFront": "images/rack_accessories/2U/2u_shelf.png"
+        },
+        {
+          "id": "rack-accessory-2u-mac-mini-shelf",
+          "name": "2U Mac Mini Shelf",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": 480,
+            "height": 88,
+            "depth": null
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 2,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/2U/2u_mac_mini_shelf.png"
         }
       ],
       "Doors": [
@@ -280,7 +338,8 @@
           },
           "lineImageUrlFront": "images/rack_accessories/2U/2u_door_vented.png"
         }
-      ]
+      ],
+      "Lighting": []
     },
     "3U": {
       "Blank Panels": [
@@ -407,7 +466,8 @@
           },
           "lineImageUrlFront": "images/rack_accessories/3U/3u_door_vented.png"
         }
-      ]
+      ],
+      "Lighting": []
     },
     "4U": {
       "Blank Panels": [
@@ -515,7 +575,8 @@
           },
           "lineImageUrlFront": "images/rack_accessories/4U/4u_door_vented.png"
         }
-      ]
+      ],
+      "Lighting": []
     },
     "5U": {
       "Blank Panels": [
@@ -604,7 +665,8 @@
           },
           "lineImageUrlFront": "images/rack_accessories/5U/5u_door_vented.png"
         }
-      ]
+      ],
+      "Lighting": []
     }
   }
 }
