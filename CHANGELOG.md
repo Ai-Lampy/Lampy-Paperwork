@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.10 - 2026-08-13
+
+- Resolved bundled vendor-logo paths against the application base so the 4 Wall Europe logo loads consistently locally and on GitHub Pages.
+- Changed the shared PDF header to a full-width three-column layout with independent left/right logo grids, a responsive 650 px centre header, and a full-width bottom rule.
+- Prevented Power Calculations and Fan Out fitting from shrinking the unified PDF header to the table width.
+
 ## V26.9 - 2026-08-12
 
 - Added the bundled 4 Wall Europe vendor logo to the Lighting Vendor reference and project/PDF logo controls.
