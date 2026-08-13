@@ -10,8 +10,8 @@
       "file": "json/network_devices/pathway.json"
     },
     {
-      "manufacturer": "Generic",
-      "file": "json/network_devices/generic.json"
+      "manufacturer": "Rack Accessories",
+      "file": "json/network_devices/rack_accessories.json"
     },
 	{
 		"manufacturer": "UPS",
