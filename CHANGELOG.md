@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.24 - 2026-08-13
+
+- Removed the nested accessory subtype menus from the Rack Device Library.
+- Displayed all rack accessories directly inside the single collapsible Accessories group while retaining size controls and repeatable placement.
+- Renamed the UPS rack-device library from `UPS.json` to `rack_power.json` and updated the rack-device manifest reference.
+
 ## V26.23 - 2026-08-13
 
 - Made every Rack Accessory repeatable within the same rack and across multiple racks while retaining unique placement IDs.
