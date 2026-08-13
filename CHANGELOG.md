@@ -2,11 +2,19 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.22 - 2026-08-13
+
+- Added Standard (285 mm), Deep (385 mm), and Deeper (485 mm) depth options to every rack drawer, with Standard as the default.
+- Added a Device Depth selector for drawer devices in Rack Layout and preserved the selected depth in saved projects.
+- Applied the selected drawer depth to side views, rack clearance checks, placement validation, and device metadata.
+- Repaired and validated the expanded 5U Rack Accessories section.
+
 ## V26.21 - 2026-08-13
 
 - Added the selected Lampy release version to each manual GitHub Pages workflow-run title.
 - Added a deployment guard that stops publishing when the entered version does not match `index.html`.
 - Updated the publishing instructions for the version-labelled workflow.
+- Restored the 5U Rack Accessories section and registered the bundled 5U rack-door image without changing existing accessory IDs.
 
 ## V26.20 - 2026-08-13
 
