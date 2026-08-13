@@ -7,9 +7,9 @@
         "width": 432
       },
       "id": "APC-UPS-1000",
-      "imageUrl": "images/UPS/APC_UPS.png",
-      "lineImageUrlFront": "images/UPS/APC_UPS_line_front.png",
-      "lineImageUrlRear": "images/UPS/APC_UPS_line_rear.png",
+      "imageUrl": "images/rack_power/APC_UPS.png",
+      "lineImageUrlFront": "images/rack_power/APC_UPS_line_front.png",
+      "lineImageUrlRear": "images/rack_power/APC_UPS_line_rear.png",
       "mounting": {
         "accessory": "Rack-Mounting Brackets",
         "method": null,
