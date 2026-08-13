@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.20 - 2026-08-13
+
+- Audited and normalised the rack-accessory library to the shared rack-device schema while preserving the existing Blank Panel ID for saved-project compatibility.
+- Registered all clearly identified 1U-to-4U panel, drawer, shelf, and door artwork in data-driven Accessories subgroups.
+- Extended adjustable Blank Panels and saved rack accessory variants from 1U-to-3U to 1U-to-4U.
+
 ## V26.19 - 2026-08-13
 
 - Added a manual-only GitHub Pages deployment workflow with no automatic push trigger.
