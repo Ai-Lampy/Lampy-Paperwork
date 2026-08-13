@@ -1,33 +1,40 @@
 {
+  "schemaVersion": 2,
+  "manufacturer": "Rack Power",
   "devices": [
     {
-      "dimensionsMm": {
-        "depth": 406,
-        "height": 86,
-        "width": 432
-      },
       "id": "APC-UPS-1000",
-      "imageUrl": "images/rack_power/APC_UPS.png",
-      "lineImageUrlFront": "images/rack_power/APC_UPS_line_front.png",
-      "lineImageUrlRear": "images/rack_power/APC_UPS_line_rear.png",
+      "manufacturer": "APC",
+      "name": "APC UPS 1000VA",
+      "type": "Power Distribution",
+      "dimensionsMm": {
+        "width": 432,
+        "height": 86,
+        "depth": 406
+      },
+      "weightKg": 20.52,
+      "rack": {
+        "mountable": true,
+        "heightU": 2,
+        "widthFraction": 1
+      },
       "mounting": {
         "accessory": "Rack-Mounting Brackets",
         "method": null,
         "trussMountable": false
       },
-      "name": "APC UPS 1000VA",
       "ports": [
         {
+          "quantity": 4,
           "connector": "IEC",
-          "direction": "Output",
-          "facing": "rear",
-          "quantity": 4
+          "direction": "output",
+          "facing": "rear"
         },
         {
+          "quantity": 1,
           "connector": "IEC",
-          "direction": "Input",
-          "facing": "rear",
-          "quantity": 1
+          "direction": "input",
+          "facing": "rear"
         }
       ],
       "power": {
@@ -35,18 +42,42 @@
           "IEC input",
           "IEC output"
         ],
-        "poeIn": false
       },
-      "processingEngines": null,
-      "protocols": null,
+      "imageUrl": "images/rack_power/APC_UPS.png",
+      "lineImageUrlFront": "images/rack_power/APC_UPS_line_front.png",
+      "lineImageUrlRear": "images/rack_power/APC_UPS_line_rear.png"
+    },
+    {
+      "id": "rack-power-1u-13a-rack-strip",
+      "manufacturer": "Generic",
+      "name": "1U 13A Rack Strip",
+      "type": "Power Distribution",
+      "dimensionsMm": {
+        "width": 480,
+        "height": 44,
+        "depth": null
+      },
+      "weightKg": null,
       "rack": {
-        "heightU": 2,
+        "mountable": true,
+        "heightU": 1,
         "widthFraction": 1
       },
-      "type": "Power Distribution",
-      "weightKg": 20.52
+      "ports": [
+        {
+          "quantity": 6,
+          "connector": "13A BS 1363",
+          "direction": "output",
+          "facing": "front"
+        }
+      ],
+      "power": {
+        "connectors": [
+          "13A input",
+          "6 x 13A output"
+        ],
+      },
+      "lineImageUrlFront": "images/rack_power/1u_13a_rack_strip.png"
     }
-  ],
-  "manufacturer": "UPS",
-  "schemaVersion": 2
+  ]
 }

@@ -14,7 +14,7 @@
       "file": "json/rack_devices/rack_accessories.json"
     },
     {
-      "manufacturer": "UPS",
+      "manufacturer": "Rack Power",
       "file": "json/rack_devices/rack_power.json"
     }
   ]
