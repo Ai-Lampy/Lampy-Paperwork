@@ -1,8 +1,14 @@
 name: Deploy Lampy Paperwork
+run-name: Deploy Lampy Paperwork V${{ inputs.release_version }}
 
 on:
   workflow_dispatch:
     inputs:
+      release_version:
+        description: Lampy version number to deploy (without the V)
+        required: true
+        default: '26.21'
+        type: string
       confirm_deploy:
         description: Deploy the current selected branch to the live GitHub Pages site
         required: true
@@ -29,6 +35,22 @@ jobs:
     steps:
       - name: Checkout selected branch
         uses: actions/checkout@v6
+
+      - name: Verify release version
+        shell: bash
+        env:
+          RELEASE_VERSION: ${{ inputs.release_version }}
+        run: |
+          APP_VERSION="$(sed -n "s/^const VERSION='\([^']*\)';$/\1/p" index.html | head -n 1)"
+          if [[ -z "$APP_VERSION" ]]; then
+            echo "Could not read the Lampy version from index.html." >&2
+            exit 1
+          fi
+          if [[ "$APP_VERSION" != "$RELEASE_VERSION" ]]; then
+            echo "Release version V$RELEASE_VERSION does not match index.html V$APP_VERSION." >&2
+            exit 1
+          fi
+          echo "Verified Lampy Paperwork V$APP_VERSION."
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
