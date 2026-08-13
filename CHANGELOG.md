@@ -7,7 +7,9 @@ All notable fixes, cleanup work, and published version changes should be recorde
 - Audited the complete application, JSON libraries, manifests, image references, and GDTF repository paths for production deployment.
 - Removed uncalled legacy JavaScript helpers, Finder metadata, and four unreferenced console images that served no current application workflow.
 - Deferred full-project revision comparison and local-storage serialisation until typing pauses, reducing synchronous work during data entry.
-- Cached the normalised Rack Device Library instead of rebuilding and sorting it repeatedly during rack rendering and device lookups.
+- Made rack-library loading fault-tolerant so one malformed library file cannot hide every other Rack or Network Equipment device.
+- Restored the live Rack Device Library source after its short-lived cache caused incomplete device lists while reference files loaded asynchronously.
+- Repaired the Rack Power JSON syntax that was preventing the rack-device manifest from loading.
 - Extended legacy variable rack-accessory migration through 5U so current 5U placements remain compatible when older saved data is reopened.
 - Kept project downloads and Revision Management fully synchronised by flushing pending changes before those workflows open.
 - Confirmed all JSON files parse, every configured asset path resolves, and the embedded JavaScript remains valid.
