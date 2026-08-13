@@ -7,6 +7,8 @@
         {
           "id": "1u-Blank",
           "name": "Blank Panel",
+          "sizeVariantId": "blank-panel",
+          "sizeVariantLabel": "Blank Panel",
           "type": "Rack Accessory",
           "dimensionsMm": {
             "width": 480,
@@ -25,6 +27,8 @@
         {
           "id": "rack-accessory-1u-vented-panel",
           "name": "1U Vented Panel",
+          "sizeVariantId": "vented-panel",
+          "sizeVariantLabel": "Vented Panel",
           "type": "Rack Accessory",
           "dimensionsMm": {
             "width": 480,
@@ -43,6 +47,8 @@
         {
           "id": "rack-accessory-1u-brush-panel",
           "name": "1U Brush Panel",
+          "sizeVariantId": "brush-panel",
+          "sizeVariantLabel": "Brush Panel",
           "type": "Rack Accessory",
           "dimensionsMm": {
             "width": 480,
@@ -112,6 +118,8 @@
         {
           "id": "rack-accessory-1u-shelf",
           "name": "1U Rack Shelf",
+          "sizeVariantId": "rack-shelf",
+          "sizeVariantLabel": "Rack Shelf",
           "type": "Rack Accessory",
           "dimensionsMm": {
             "width": 480,
@@ -131,8 +139,10 @@
     "2U": {
       "Blank Panels": [
 		{
-			"id": "rack-accessory-2u-blank-panel",
-			"name": "2U Blank Panel",
+          "id": "rack-accessory-2u-blank-panel",
+          "name": "2U Blank Panel",
+          "sizeVariantId": "blank-panel",
+          "sizeVariantLabel": "Blank Panel",
 			"type": "Rack Accessory",
 			"dimensionsMm": {
 				"width": 480,
@@ -151,6 +161,8 @@
         {
           "id": "rack-accessory-2u-vented-panel",
           "name": "2U Vented Panel",
+          "sizeVariantId": "vented-panel",
+          "sizeVariantLabel": "Vented Panel",
           "type": "Rack Accessory",
           "dimensionsMm": {
             "width": 480,
@@ -169,6 +181,8 @@
         {
           "id": "rack-accessory-2u-brush-panel",
           "name": "2U Brush Panel",
+          "sizeVariantId": "brush-panel",
+          "sizeVariantLabel": "Brush Panel",
           "type": "Rack Accessory",
           "dimensionsMm": {
             "width": 480,
@@ -188,6 +202,8 @@
         {
           "id": "rack-accessory-2u-draw",
           "name": "2U Rack Draw",
+          "sizeVariantId": "rack-draw",
+          "sizeVariantLabel": "Rack Draw",
           "type": "Rack Accessory",
           "dimensionsMm": {
             "width": 480,
@@ -211,6 +227,8 @@
         {
           "id": "rack-accessory-2u-shelf",
           "name": "2U Rack Shelf",
+          "sizeVariantId": "rack-shelf",
+          "sizeVariantLabel": "Rack Shelf",
           "type": "Rack Accessory",
           "dimensionsMm": {
             "width": 480,
@@ -229,6 +247,8 @@
         {
           "id": "rack-accessory-2u-door",
           "name": "2U Rack Door",
+          "sizeVariantId": "rack-door",
+          "sizeVariantLabel": "Rack Door",
           "type": "Rack Accessory",
           "dimensionsMm": {
             "width": 480,
@@ -241,15 +261,54 @@
             "widthFraction": 1
           },
           "lineImageUrlFront": "images/rack_accessories/2U/2u_door.png"
+        },
+        {
+          "id": "rack-accessory-2u-vented-door",
+          "name": "2U Vented Rack Door",
+          "sizeVariantId": "vented-rack-door",
+          "sizeVariantLabel": "Vented Rack Door",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": 480,
+            "height": 88,
+            "depth": 5
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 2,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/2U/2u_door_vented.png"
         }
       ]
     },
     "3U": {
-      "Blank Panels": [],
+      "Blank Panels": [
+        {
+          "id": "rack-accessory-3u-blank-panel",
+          "name": "3U Blank Panel",
+          "sizeVariantId": "blank-panel",
+          "sizeVariantLabel": "Blank Panel",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": 480,
+            "height": 132,
+            "depth": 5
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 3,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/3U/3u_blank.png"
+        }
+      ],
       "Vented Panels": [
         {
           "id": "rack-accessory-3u-vented-panel",
           "name": "3U Vented Panel",
+          "sizeVariantId": "vented-panel",
+          "sizeVariantLabel": "Vented Panel",
           "type": "Rack Accessory",
           "dimensionsMm": {
             "width": 480,
@@ -270,6 +329,8 @@
         {
           "id": "rack-accessory-3u-draw",
           "name": "3U Rack Draw",
+          "sizeVariantId": "rack-draw",
+          "sizeVariantLabel": "Rack Draw",
           "type": "Rack Accessory",
           "dimensionsMm": {
             "width": 480,
@@ -293,6 +354,8 @@
         {
           "id": "rack-accessory-3u-shelf",
           "name": "3U Rack Shelf",
+          "sizeVariantId": "rack-shelf",
+          "sizeVariantLabel": "Rack Shelf",
           "type": "Rack Accessory",
           "dimensionsMm": {
             "width": 480,
@@ -311,6 +374,8 @@
         {
           "id": "rack-accessory-3u-door",
           "name": "3U Rack Door",
+          "sizeVariantId": "rack-door",
+          "sizeVariantLabel": "Rack Door",
           "type": "Rack Accessory",
           "dimensionsMm": {
             "width": 480,
@@ -323,15 +388,54 @@
             "widthFraction": 1
           },
           "lineImageUrlFront": "images/rack_accessories/3U/3u_door.png"
+        },
+        {
+          "id": "rack-accessory-3u-vented-door",
+          "name": "3U Vented Rack Door",
+          "sizeVariantId": "vented-rack-door",
+          "sizeVariantLabel": "Vented Rack Door",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": 480,
+            "height": 132,
+            "depth": 5
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 3,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/3U/3u_door_vented.png"
         }
       ]
     },
     "4U": {
-      "Blank Panels": [],
+      "Blank Panels": [
+        {
+          "id": "rack-accessory-4u-blank-panel",
+          "name": "4U Blank Panel",
+          "sizeVariantId": "blank-panel",
+          "sizeVariantLabel": "Blank Panel",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": 480,
+            "height": 176,
+            "depth": 5
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 4,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/4U/4u_blank.png"
+        }
+      ],
       "Vented Panels": [
         {
           "id": "rack-accessory-4u-vented-panel",
           "name": "4U Vented Panel",
+          "sizeVariantId": "vented-panel",
+          "sizeVariantLabel": "Vented Panel",
           "type": "Rack Accessory",
           "dimensionsMm": {
             "width": 480,
@@ -352,6 +456,8 @@
         {
           "id": "rack-accessory-4u-draw",
           "name": "4U Rack Draw",
+          "sizeVariantId": "rack-draw",
+          "sizeVariantLabel": "Rack Draw",
           "type": "Rack Accessory",
           "dimensionsMm": {
             "width": 480,
@@ -374,8 +480,28 @@
       "Shelves": [],
       "Doors": [
         {
+          "id": "rack-accessory-4u-door",
+          "name": "4U Rack Door",
+          "sizeVariantId": "rack-door",
+          "sizeVariantLabel": "Rack Door",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": 480,
+            "height": 176,
+            "depth": 5
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 4,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/4U/4u_door.png"
+        },
+        {
           "id": "rack-accessory-4u-vented-door",
           "name": "4U Vented Rack Door",
+          "sizeVariantId": "vented-rack-door",
+          "sizeVariantLabel": "Vented Rack Door",
           "type": "Rack Accessory",
           "dimensionsMm": {
             "width": 480,
@@ -392,10 +518,35 @@
       ]
     },
     "5U": {
+      "Blank Panels": [
+        {
+          "id": "rack-accessory-5u-blank-panel",
+          "name": "5U Blank Panel",
+          "sizeVariantId": "blank-panel",
+          "sizeVariantLabel": "Blank Panel",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": 480,
+            "height": 220,
+            "depth": 5
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 5,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/5U/5u_blank.png"
+        }
+      ],
+      "Vented Panels": [],
+      "Brush Panels": [],
+      "Patch Panels": [],
       "Draws": [
         {
           "id": "rack-accessory-5u-draw",
           "name": "5U Rack Draw",
+          "sizeVariantId": "rack-draw",
+          "sizeVariantLabel": "Rack Draw",
           "type": "Rack Accessory",
           "dimensionsMm": {
             "width": 480,
@@ -415,10 +566,13 @@
           "lineImageUrlFront": "images/rack_accessories/5U/5u_draw.png"
         }
       ],
+      "Shelves": [],
       "Doors": [
         {
           "id": "rack-accessory-5u-door",
           "name": "5U Rack Door",
+          "sizeVariantId": "rack-door",
+          "sizeVariantLabel": "Rack Door",
           "type": "Rack Accessory",
           "dimensionsMm": {
             "width": 480,
@@ -431,6 +585,24 @@
             "widthFraction": 1
           },
           "lineImageUrlFront": "images/rack_accessories/5U/5u_door.png"
+        },
+        {
+          "id": "rack-accessory-5u-vented-door",
+          "name": "5U Vented Rack Door",
+          "sizeVariantId": "vented-rack-door",
+          "sizeVariantLabel": "Vented Rack Door",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": 480,
+            "height": 220,
+            "depth": 5
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 5,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/5U/5u_door_vented.png"
         }
       ]
     }

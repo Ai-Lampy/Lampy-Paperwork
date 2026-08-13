@@ -6,6 +6,15 @@ Add new devices to the matching manufacturer file. Add another manufacturer by c
 
 Rack accessories are stored in `rack_accessories.json`, grouped first by rack height and then by accessory subtype. The current library contains 1U through 5U sections; retain existing IDs when editing records so saved projects continue to resolve their devices.
 
+Accessories may be placed repeatedly. When the same accessory is available at several U heights, give every size record the same `sizeVariantId` and `sizeVariantLabel`. Rack Layout combines those records into one library button with `−` and `+` size controls, while each record retains its own unique ID, dimensions, depth options, and image.
+
+```json
+"sizeVariantId": "blank-panel",
+"sizeVariantLabel": "Blank Panel"
+```
+
+Only use a shared variant ID when the records are sizes of the same item. Distinct products at the same height, such as 4-port and 8-port patch panels, keep separate library buttons.
+
 ## Device fields
 
 ```json
