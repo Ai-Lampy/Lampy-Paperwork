@@ -2,46 +2,73 @@
   "vendors": [
     {
       "name": "4 Wall Europe",
-      "details": "Unit E & F Glenfield Business Park, Philips Rd, Blackburn BB1 5PF"
+      "logo": "images/lighting_vendors/4Wall.png",
+      "details": "Unit E & F Glenfield Business Park, Philips Rd, Blackburn, BB1 5PF"
     },
     {
       "name": "Adlib",
       "logo": "images/lighting_vendors/adlib.png",
-      "details": "Knowsley Business Park, Adlib House, Kitling Rd, Knowsley, Prescot L34 9JS"
+      "details": "Knowsley Business Park, Adlib House, Kitling Rd, Knowsley, Prescot, L34 9JS"
     },
     {
       "name": "Christie Lites UK",
       "logo": "images/lighting_vendors/christie_lites.png",
-      "details": "44 Sayer Dr, Coventry CV5 9PX"
+      "details": "44 Sayer Dr, Coventry, CV5 9PX"
     },
+	{
+		"name": "Colour Sound Experiment",
+		"logo": "images/lighting_vendors/CSE.png",
+		"details": "St Leonards Road, London, NW10 6ST"
+	},
+	{
+		"name": "Creative Technology UK",
+		"logo": "images/lighting_vendors/CT.png",
+		"details": "Unit E2, Sussex Manor Business Park, Gatwick Road, Crawley, RH10 9NH"
+	},
+	{
+		"name": "Impact Production Services",
+		"logo": "images/lighting_vendors/IPS.png",
+		"details": "Second Avenue, Bletchley, Milton Keynes, MK1 1ED"
+	},
     {
       "name": "Lights | Control | Rigging",
       "logo": "images/lighting_vendors/LCR.png",
-      "details": "Unit C, Tower business park, Commercial Rd, Darwen BB3 0FJ"
+      "details": "Unit C, Tower business park, Commercial Rd, Darwen, BB3 0FJ"
     },
+	{
+		"name": "Lite Alternative LTD",
+		"logo": "images/lighting_vendors/lite_alt.png",
+		"details": "Unit 4, Duttons Way, Shadsworth Business Park, Blackburn, BB1 2QR"
+	},
+	{
+		"name": "LiteUp",
+		"logo": "images/lighting_vendors/lite_up.png",
+		"details": "Unit 9, Matrix Park, Talbot Rd, Fareham, PO15 5AP"
+	},
     {
       "name": "Neg Earth Lights",
       "logo": "images/lighting_vendors/neg_earth.png",
-      "details": "Light House, Western Rd, London NW10 7LT"
+      "details": "Light House, Western Rd, London, NW10 7LT"
     },
     {
       "name": "PRG UK",
       "logo": "images/lighting_vendors/PRG.png",
-      "details": "The Cofton Centre, 350 Groveley Ln, Cofton Hackett, Birmingham B31 4PT"
+      "details": "The Cofton Centre, 350 Groveley Ln, Cofton Hackett, Birmingham, B31 4PT"
     },
     {
       "name": "Siyan LTD",
       "logo": "images/lighting_vendors/siyan.png",
-      "details": "Unit 7, Globe Park, First Ave (off, Parkway, Marlow SL7 1YA"
+      "details": "Unit 7, Globe Park, First Ave (off Parkway), Marlow, SL7 1YA"
     },
     {
       "name": "Solotech UK",
-      "details": "Unit 1, Connexion II, Blythe Gate, Blythe Valley Park, Solihull B90 8DX"
+	  "logo": "images/lighting_vendors/solotech.png",
+      "details": "Unit 1, Connexion II, Blythe Gate, Blythe Valley Park, Solihull, B90 8DX"
     },
     {
       "name": "Sonalyst",
       "logo": "images/lighting_vendors/sonalyst.png",
-      "details": "Aberavon Rd, Port Talbot SA12 7DJ"
+      "details": "Aberavon Rd, Port Talbot, SA12 7DJ"
     }
   ]
 }
