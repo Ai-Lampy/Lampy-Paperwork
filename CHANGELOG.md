@@ -2,6 +2,19 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.16 - 2026-08-13
+
+- Added a repeatable Blank Panel rack-library item with circular 1U-to-3U size controls.
+- Switched Blank Panel artwork automatically between the bundled 1U, 2U, and 3U images.
+- Preserved the selected Blank Panel size and image in saved rack layouts and subsequent device edits.
+- Updated the renderer to use the new case-sensitive 1U, 2U, and 3U rack-accessory folders.
+
+## V26.15 - 2026-08-13
+
+- Limited Network Equipment to rack and library devices that have network-capable ports.
+- Kept power devices and accessories in Rack Layout without creating Network Equipment cards.
+- Reconciled older rack-linked power/accessory records back to rack-only library devices.
+
 ## V26.14 - 2026-08-13
 
 - Replaced the Fan Out PDF's legacy fixed-width, single-line heading with the shared full-width centred export header.
