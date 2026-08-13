@@ -33,7 +33,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V26.16**
+Current app version: **V26.17**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 
@@ -81,7 +81,7 @@ Lampy Paperwork is intended for modern desktop browsers. Chrome is recommended f
     network_devices/
       README.md
       manifest.json
-      generic.json
+      rack_accessories.json
       luminex.json
       pathway.json
     npu_reference.json

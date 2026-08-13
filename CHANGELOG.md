@@ -2,6 +2,13 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.17 - 2026-08-13
+
+- Renamed the Generic rack library to `rack_accessories.json`.
+- Split rack-accessory definitions into editable 1U, 2U, 3U, and 4U sections.
+- Added Blank Panels, Draws, and Shelves sub-types within every U-size section and exposed them as Rack Library groups.
+- Extended the network-device loader to flatten U-size groups into the existing Rack Library.
+
 ## V26.16 - 2026-08-13
 
 - Added a repeatable Blank Panel rack-library item with circular 1U-to-3U size controls.
