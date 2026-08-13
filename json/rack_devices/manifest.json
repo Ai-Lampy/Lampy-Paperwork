@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 2,
+  "libraries": [
+    {
+      "manufacturer": "Luminex",
+      "file": "json/rack_devices/luminex.json"
+    },
+    {
+      "manufacturer": "Pathway",
+      "file": "json/rack_devices/pathway.json"
+    },
+    {
+      "manufacturer": "Rack Accessories",
+      "file": "json/rack_devices/rack_accessories.json"
+    },
+	{
+		"manufacturer": "UPS",
+		"file": "json/rack_devices/UPS.json"
+	}
+  ]
+}

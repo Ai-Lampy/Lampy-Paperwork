@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 2,
+  "manufacturer": "Accessories",
+  "devicesByU": {
+    "1U": {
+      "Blank Panels": [
+        {
+          "dimensionsMm": {
+            "depth": 5,
+            "height": 44,
+            "width": 480
+          },
+          "id": "1u-Blank",
+          "lineImageUrlFront": "images/rack_accessories/1U/1u_blank.png",
+          "mounting": {
+            "accessory": "Rack-Mountable",
+            "method": null,
+            "trussMountable": false
+          },
+          "rack": {
+            "widthFraction": 1
+          },
+          "name": "1U Blank Panel"
+        }
+      ],
+      "Draws": [],
+      "Shelves": []
+    },
+    "2U": {
+      "Blank Panels": [],
+      "Draws": [],
+      "Shelves": []
+    },
+    "3U": {
+      "Blank Panels": [],
+      "Draws": [],
+      "Shelves": []
+    },
+    "4U": {
+      "Blank Panels": [],
+      "Draws": [],
+      "Shelves": []
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "devices": [
+    {
+      "dimensionsMm": {
+        "depth": 305,
+        "height": 43,
+        "width": 483
+      },
+      "id": "pathway-via-12-fibre-switch",
+      "imageUrl": "images/pathway/Pathport_VIA_12.png",
+      "lineImageUrlFront": "images/pathway/Pathport_VIA_12_Line_front.png",
+      "lineImageUrlRear": "images/pathway/Pathport_VIA_12_Line_rear.png",
+      "mounting": {
+        "accessory": "Pathway truss-mount adaptor",
+        "method": null,
+        "trussMountable": true
+      },
+      "name": "Pathport VIA 12",
+      "ports": [
+        {
+          "connector": "1GbE EtherCON",
+          "direction": "network",
+          "facing": "front",
+          "quantity": 10
+        },
+        {
+          "connector": "1GbE EtherCON",
+          "direction": "network",
+          "facing": "rear",
+          "quantity": 2
+        },
+        {
+          "connector": "opticalCON QUAD",
+          "direction": "network",
+          "facing": "rear",
+          "quantity": 2
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON AC input",
+          "powerCON AC thru"
+        ],
+        "poeIn": false
+      },
+      "processingEngines": null,
+      "protocols": [
+        "sACN",
+        "Art-Net",
+        "IEEE 802.3af PoE",
+        "IEEE 802.1AB LLDP",
+        "IEEE 802.1Q VLAN",
+        "IEEE 802.1w RSTP",
+        "EAPS",
+        "IGMPv2",
+        "DHCP",
+        "Dante QoS / DSCP",
+        "Ethernet"
+      ],
+      "rack": {
+        "heightU": 1,
+        "widthFraction": 1
+      },
+      "type": "Network Switch",
+      "weightKg": 2.4
+    },
+    {
+      "dimensionsMm": {
+        "depth": 150,
+        "height": 40,
+        "width": 432
+      },
+      "id": "pathport-octo-dmx-gateway",
+      "imageUrl": "images/pathway/Pathway_Octo_Node.png",
+      "lineImageUrlFront": "images/pathway/Pathway_Octo_Node_Line_front.png",
+      "lineImageUrlRear": "images/pathway/Pathway_Octo_Node_Line_rear.png",
+      "dmxPortLayout": [
+        { "port": "A", "face": "front", "xPercent": 42.8, "yPercent": 50.0, "sizePercent": 5.5 },
+        { "port": "B", "face": "front", "xPercent": 49.3, "yPercent": 50.0, "sizePercent": 5.5 },
+        { "port": "C", "face": "front", "xPercent": 55.8, "yPercent": 50.0, "sizePercent": 5.5 },
+        { "port": "D", "face": "front", "xPercent": 62.4, "yPercent": 50.0, "sizePercent": 5.5 },
+        { "port": "E", "face": "front", "xPercent": 68.8, "yPercent": 50.0, "sizePercent": 5.5 },
+        { "port": "F", "face": "front", "xPercent": 75.4, "yPercent": 50.0, "sizePercent": 5.5 },
+        { "port": "G", "face": "front", "xPercent": 81.9, "yPercent": 50.0, "sizePercent": 5.5 },
+        { "port": "H", "face": "front", "xPercent": 88.4, "yPercent": 50.0, "sizePercent": 5.5 }
+      ],
+      "mounting": {
+        "accessory": "Optional truss-mount kit",
+        "method": null,
+        "trussMountable": true
+      },
+      "name": "Pathport Octo DMX Gateway",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "direction": "bidirectional",
+          "facing": "front",
+          "quantity": 8
+        },
+        {
+          "connector": "100MbE EtherCON",
+          "direction": "network",
+          "facing": "rear",
+          "quantity": 1
+        }
+      ],
+      "power": {
+        "connectors": [
+          "IEC C14 AC inlet"
+        ],
+        "poeIn": false
+      },
+      "processingEngines": null,
+      "protocols": [
+        "DMX512",
+        "RDM",
+        "sACN",
+        "Art-Net",
+        "Pathport Protocol",
+        "Strand ShowNet"
+      ],
+      "rack": {
+        "heightU": 1,
+        "widthFraction": 1
+      },
+      "type": "DMX Node",
+      "weightKg": 2.4
+    }
+  ],
+  "manufacturer": "Pathway",
+  "schemaVersion": 2
+}
