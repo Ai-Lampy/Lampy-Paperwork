@@ -19,7 +19,7 @@ Live app: [https://ai-lampy.github.io/Lampy-Paperwork/](https://ai-lampy.github.
 - Uses console-reference software versions when available, with an Other/manual version field for unlisted or empty reference data.
 - Separates console and network-device library selection from the side-pane forms used to enter project details.
 - Displays only network equipment that has actually been added to the project.
-- Provides a centred Rack Layout builder with Front, Side, and Rear views, configurable depth, front/rear mounting, aligned U numbering, library-defined dimensions, half-width pairing, and Simple/Detailed display modes.
+- Provides a centred Rack Layout builder with Front, Side, and Rear views, configurable depth, front/rear mounting, aligned U numbering, library-defined dimensions, half-width pairing, repeatable size-selectable accessories, and Simple/Detailed display modes.
 - Enforces at least 100 mm of cable space behind rack devices and blocks invalid depth, placement, movement, or mounting-face changes.
 - Displays configured DMX Node position colours over mapped sockets in Detailed rack views.
 - Gives every added rack its own Rack Layout sub-tab so only one rack diagram is displayed at a time.
@@ -33,7 +33,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V26.22**
+Current app version: **V26.23**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 

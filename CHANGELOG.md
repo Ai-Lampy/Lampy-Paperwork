@@ -2,6 +2,14 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.23 - 2026-08-13
+
+- Made every Rack Accessory repeatable within the same rack and across multiple racks while retaining unique placement IDs.
+- Added shared U-size controls for Blank Panels, Vented Panels, Brush Panels, Rack Shelves, Rack Draws, standard Rack Doors, and Vented Rack Doors.
+- Registered the new 3U-to-5U Blank Panels, standard 4U Rack Door, and 2U-to-5U Vented Rack Door artwork.
+- Grouped placed accessories in a dedicated collapsible Accessories section within Devices In Rack.
+- Preserved legacy variable Blank Panel layouts while saving new accessories against their exact selected library records.
+
 ## V26.22 - 2026-08-13
 
 - Added Standard (285 mm), Deep (385 mm), and Deeper (485 mm) depth options to every rack drawer, with Standard as the default.
