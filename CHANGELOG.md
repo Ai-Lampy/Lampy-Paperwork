@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.21 - 2026-08-13
+
+- Added the selected Lampy release version to each manual GitHub Pages workflow-run title.
+- Added a deployment guard that stops publishing when the entered version does not match `index.html`.
+- Updated the publishing instructions for the version-labelled workflow.
+
 ## V26.20 - 2026-08-13
 
 - Audited and normalised the rack-accessory library to the shared rack-device schema while preserving the existing Blank Panel ID for saved-project compatibility.

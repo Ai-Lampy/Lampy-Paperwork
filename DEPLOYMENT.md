@@ -24,12 +24,13 @@ Commit or upload changed files normally. The deployment workflow has no `push` t
 3. Select **Deploy Lampy Paperwork** in the workflow list.
 4. Select **Run workflow**.
 5. Choose the branch to publish.
-6. Enable **Deploy the current selected branch to the live GitHub Pages site**.
-7. Select the green **Run workflow** button.
-8. Wait for the workflow to finish successfully.
-9. Open the deployment URL shown in the completed workflow and verify the release.
+6. Enter the Lampy version number shown in the app, without the `V` prefix.
+7. Enable **Deploy the current selected branch to the live GitHub Pages site**.
+8. Select the green **Run workflow** button.
+9. Wait for the workflow titled **Deploy Lampy Paperwork Vxx.xx** to finish successfully.
+10. Open the deployment URL shown in the completed workflow and verify the release.
 
-The selected branch is captured at the commit shown in the workflow run. Later commits are not published until the workflow is run again.
+The workflow checks that the entered release version matches `VERSION` in `index.html` before deploying. The selected branch is captured at the commit shown in the workflow run. Later commits are not published until the workflow is run again.
 
 ## Optional deployment approval
 

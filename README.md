@@ -33,7 +33,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V26.20**
+Current app version: **V26.21**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 
@@ -53,7 +53,7 @@ All project data is client-side. The app runs in your browser and does not requi
 
 ## Publishing Updates
 
-GitHub Pages deployment is manual. Repository files can be committed or uploaded without changing the live site. When a release is ready, run **Deploy Lampy Paperwork** from the repository's **Actions** tab and explicitly confirm the deployment.
+GitHub Pages deployment is manual. Repository files can be committed or uploaded without changing the live site. When a release is ready, run **Deploy Lampy Paperwork** from the repository's **Actions** tab, enter the version being released, and explicitly confirm the deployment. The completed workflow run is titled with that version.
 
 The repository's Pages source must be set to **GitHub Actions**, not **Deploy from a branch**. See [DEPLOYMENT.md](DEPLOYMENT.md) for setup, publishing, optional approval, and rollback instructions.
 
