@@ -4,6 +4,8 @@
 
 Add new devices to the matching manufacturer file. Add another manufacturer by creating a lowercase JSON file in this folder and adding it to `manifest.json`.
 
+Rack accessories are stored in `rack_accessories.json`, grouped first by rack height and then by accessory subtype. The current library contains 1U through 5U sections; retain existing IDs when editing records so saved projects continue to resolve their devices.
+
 ## Device fields
 
 ```json
@@ -58,6 +60,21 @@ Use `rack.widthFraction: 0.5` for a half-width device. Keep its physical rack he
 ```
 
 Dimensions use millimetres and weight uses kilograms. Use `null` for information that has not been confirmed rather than guessing.
+
+When one library device is available in several depths, keep its default numeric depth in `dimensionsMm.depth` and add named alternatives with `depthOptionsMm`. Rack Layout stores the selected numeric depth on each placed device.
+
+```json
+"dimensionsMm": {
+  "width": 480,
+  "height": 88,
+  "depth": 285
+},
+"depthOptionsMm": {
+  "standard": 285,
+  "deep": 385,
+  "deeper": 485
+}
+```
 
 Use `lineImageUrl` when the device has one general line image. When separate front and rear diagrams are available, use `lineImageUrlFront` and `lineImageUrlRear` instead. Either front or rear may be omitted when that view is unavailable.
 

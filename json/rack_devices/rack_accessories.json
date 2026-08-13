@@ -27,9 +27,9 @@
           "name": "1U Vented Panel",
           "type": "Rack Accessory",
           "dimensionsMm": {
-            "width": null,
-            "height": null,
-            "depth": null
+            "width": 480,
+            "height": 44,
+            "depth": 5
           },
           "rack": {
             "mountable": true,
@@ -45,9 +45,9 @@
           "name": "1U Brush Panel",
           "type": "Rack Accessory",
           "dimensionsMm": {
-            "width": null,
-            "height": null,
-            "depth": null
+            "width": 480,
+            "height": 44,
+            "depth": 5
           },
           "rack": {
             "mountable": true,
@@ -63,9 +63,9 @@
           "name": "1U 4-Port Panel",
           "type": "Rack Accessory",
           "dimensionsMm": {
-            "width": null,
-            "height": null,
-            "depth": null
+            "width": 480,
+            "height": 44,
+            "depth": 5
           },
           "rack": {
             "mountable": true,
@@ -79,9 +79,9 @@
           "name": "1U 6-Port Panel",
           "type": "Rack Accessory",
           "dimensionsMm": {
-            "width": null,
-            "height": null,
-            "depth": null
+            "width": 480,
+            "height": 44,
+            "depth": 5
           },
           "rack": {
             "mountable": true,
@@ -95,9 +95,9 @@
           "name": "1U 8-Port Panel",
           "type": "Rack Accessory",
           "dimensionsMm": {
-            "width": null,
-            "height": null,
-            "depth": null
+            "width": 480,
+            "height": 44,
+            "depth": 5
           },
           "rack": {
             "mountable": true,
@@ -114,9 +114,9 @@
           "name": "1U Rack Shelf",
           "type": "Rack Accessory",
           "dimensionsMm": {
-            "width": null,
-            "height": null,
-            "depth": null
+            "width": 480,
+            "height": 44,
+            "depth": 5
           },
           "rack": {
             "mountable": true,
@@ -136,9 +136,9 @@
           "name": "2U Vented Panel",
           "type": "Rack Accessory",
           "dimensionsMm": {
-            "width": null,
-            "height": null,
-            "depth": null
+            "width": 480,
+            "height": 88,
+            "depth": 5
           },
           "rack": {
             "mountable": true,
@@ -154,9 +154,9 @@
           "name": "2U Brush Panel",
           "type": "Rack Accessory",
           "dimensionsMm": {
-            "width": null,
-            "height": null,
-            "depth": null
+            "width": 480,
+            "height": 88,
+            "depth": 5
           },
           "rack": {
             "mountable": true,
@@ -169,13 +169,18 @@
       "Patch Panels": [],
       "Draws": [
         {
-          "id": "rack-accessory-2u-drawer",
-          "name": "2U Rack Drawer",
+          "id": "rack-accessory-2u-draw",
+          "name": "2U Rack Draw",
           "type": "Rack Accessory",
           "dimensionsMm": {
-            "width": null,
-            "height": null,
-            "depth": null
+            "width": 480,
+            "height": 88,
+            "depth": 285
+          },
+          "depthOptionsMm": {
+            "standard": 285,
+            "deep": 385,
+            "deeper": 485
           },
           "rack": {
             "mountable": true,
@@ -191,9 +196,9 @@
           "name": "2U Rack Shelf",
           "type": "Rack Accessory",
           "dimensionsMm": {
-            "width": null,
-            "height": null,
-            "depth": null
+            "width": 480,
+            "height": 88,
+            "depth": 5
           },
           "rack": {
             "mountable": true,
@@ -209,9 +214,9 @@
           "name": "2U Rack Door",
           "type": "Rack Accessory",
           "dimensionsMm": {
-            "width": null,
-            "height": null,
-            "depth": null
+            "width": 480,
+            "height": 88,
+            "depth": 5
           },
           "rack": {
             "mountable": true,
@@ -230,9 +235,9 @@
           "name": "3U Vented Panel",
           "type": "Rack Accessory",
           "dimensionsMm": {
-            "width": null,
-            "height": null,
-            "depth": null
+            "width": 480,
+            "height": 132,
+            "depth": 5
           },
           "rack": {
             "mountable": true,
@@ -246,13 +251,18 @@
       "Patch Panels": [],
       "Draws": [
         {
-          "id": "rack-accessory-3u-drawer",
-          "name": "3U Rack Drawer",
+          "id": "rack-accessory-3u-draw",
+          "name": "3U Rack Draw",
           "type": "Rack Accessory",
           "dimensionsMm": {
-            "width": null,
-            "height": null,
-            "depth": null
+            "width": 480,
+            "height": 132,
+            "depth": 285
+          },
+          "depthOptionsMm": {
+            "standard": 285,
+            "deep": 385,
+            "deeper": 485
           },
           "rack": {
             "mountable": true,
@@ -268,9 +278,9 @@
           "name": "3U Rack Shelf",
           "type": "Rack Accessory",
           "dimensionsMm": {
-            "width": null,
-            "height": null,
-            "depth": null
+            "width": 480,
+            "height": 132,
+            "depth": 5
           },
           "rack": {
             "mountable": true,
@@ -286,9 +296,9 @@
           "name": "3U Rack Door",
           "type": "Rack Accessory",
           "dimensionsMm": {
-            "width": null,
-            "height": null,
-            "depth": null
+            "width": 480,
+            "height": 132,
+            "depth": 5
           },
           "rack": {
             "mountable": true,
@@ -307,9 +317,9 @@
           "name": "4U Vented Panel",
           "type": "Rack Accessory",
           "dimensionsMm": {
-            "width": null,
-            "height": null,
-            "depth": null
+            "width": 480,
+            "height": 176,
+            "depth": 5
           },
           "rack": {
             "mountable": true,
@@ -323,13 +333,18 @@
       "Patch Panels": [],
       "Draws": [
         {
-          "id": "rack-accessory-4u-drawer",
-          "name": "4U Rack Drawer",
+          "id": "rack-accessory-4u-draw",
+          "name": "4U Rack Draw",
           "type": "Rack Accessory",
           "dimensionsMm": {
-            "width": null,
-            "height": null,
-            "depth": null
+            "width": 480,
+            "height": 176,
+            "depth": 285
+          },
+          "depthOptionsMm": {
+            "standard": 285,
+            "deep": 385,
+            "deeper": 485
           },
           "rack": {
             "mountable": true,
@@ -346,9 +361,9 @@
           "name": "4U Vented Rack Door",
           "type": "Rack Accessory",
           "dimensionsMm": {
-            "width": null,
-            "height": null,
-            "depth": null
+            "width": 480,
+            "height": 176,
+            "depth": 5
           },
           "rack": {
             "mountable": true,
@@ -356,6 +371,49 @@
             "widthFraction": 1
           },
           "lineImageUrlFront": "images/rack_accessories/4U/4u_door_vented.png"
+        }
+      ]
+    },
+    "5U": {
+      "Draws": [
+        {
+          "id": "rack-accessory-5u-draw",
+          "name": "5U Rack Draw",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": 480,
+            "height": 220,
+            "depth": 285
+          },
+          "depthOptionsMm": {
+            "standard": 285,
+            "deep": 385,
+            "deeper": 485
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 5,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/5U/5u_draw.png"
+        }
+      ],
+      "Doors": [
+        {
+          "id": "rack-accessory-5u-door",
+          "name": "5U Rack Door",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": 480,
+            "height": 220,
+            "depth": 5
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 5,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/5U/5u_door.png"
         }
       ]
     }
