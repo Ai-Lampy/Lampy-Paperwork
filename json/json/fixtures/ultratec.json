@@ -1,0 +1,25 @@
+{
+  "manufacturer": "Ultratec",
+  "fixtures": [
+    {
+      "fixture": "Versa Fan",
+      "modes": {
+        "N/A": 0
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/ultratec",
+        "suggestedFileName": "Ultratec__Versa_Fan.gdtf",
+        "file": "",
+        "modes": {
+          "N/A": {
+            "channels": 0,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      },
+      "shortName": "Versa Fan"
+    }
+  ]
+}

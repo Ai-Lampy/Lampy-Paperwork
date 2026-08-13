@@ -1,0 +1,137 @@
+{
+  "manufacturer": "Elation",
+  "fixtures": [
+    {
+      "fixture": "DTW 350 IP (2 Cell)",
+      "watts": 470,
+      "weight": 8.2,
+      "modes": {
+        "01CH": 1,
+        "Standard  ": 7,
+        "Extended  ": 9,
+        "2CH": 2,
+        "2Cell  ": 2,
+        "2WA  ": 4,
+        "Basic  ": 4
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "suggestedFileName": "Elation__DTW_350_IP_2_Cell.gdtf",
+        "file": "fixtures/elation/Elation@DTW_BLINDER_350_IP@2025-14-02_Release.gdtf",
+        "modes": {
+          "01CH": {
+            "channels": 1,
+            "gdtfMode": "01CH",
+            "status": "matched",
+            "parameters": 1
+          },
+          "Standard  ": {
+            "channels": 7,
+            "gdtfMode": "Standard  ",
+            "status": "matched",
+            "parameters": 6
+          },
+          "Extended  ": {
+            "channels": 9,
+            "gdtfMode": "Extended  ",
+            "status": "matched",
+            "parameters": 8
+          },
+          "2CH": {
+            "channels": 2,
+            "gdtfMode": "2CH",
+            "status": "matched",
+            "parameters": 2
+          },
+          "2Cell  ": {
+            "channels": 2,
+            "gdtfMode": "2Cell  ",
+            "status": "matched",
+            "parameters": 2
+          },
+          "2WA  ": {
+            "channels": 4,
+            "gdtfMode": "2WA  ",
+            "status": "matched",
+            "parameters": 4
+          },
+          "Basic  ": {
+            "channels": 4,
+            "gdtfMode": "Basic  ",
+            "status": "matched",
+            "parameters": 3
+          }
+        }
+      },
+      "shortName": "DTW 350 IP (2 Cell)"
+    },
+    {
+      "fixture": "Magma Prime Hazer",
+      "watts": 700,
+      "weight": 10.2,
+      "modes": {
+        "Mode 1": 1,
+        "Mode3": 3,
+        "Mode 5": 5
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "suggestedFileName": "Elation__Magma_Prime_Hazer.gdtf",
+        "file": "fixtures/elation/Elation@Magma_Prime_Hazer@V1-00.gdtf",
+        "modes": {
+          "Mode 1": {
+            "channels": 1,
+            "gdtfMode": "Mode 1",
+            "status": "matched",
+            "parameters": 1
+          },
+          "Mode3": {
+            "channels": 3,
+            "gdtfMode": "Mode3",
+            "status": "matched",
+            "parameters": 3
+          },
+          "Mode 5": {
+            "channels": 5,
+            "gdtfMode": "Mode 5",
+            "status": "matched",
+            "parameters": 5
+          }
+        }
+      },
+      "shortName": "Magma Prime Hazer"
+    },
+    {
+      "fixture": "Smarty Max",
+      "watts": 700,
+      "weight": 27.2,
+      "modes": {
+        "Extended": 44,
+        "Standard": 27
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "suggestedFileName": "Elation__Smarty_Max.gdtf",
+        "file": "fixtures/elation/Elation@Smarty_Max@V1-00.gdtf",
+        "modes": {
+          "Extended": {
+            "channels": 44,
+            "gdtfMode": "Extended",
+            "status": "matched",
+            "parameters": 28
+          },
+          "Standard": {
+            "channels": 27,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 24
+          }
+        }
+      },
+      "shortName": "Smarty Max"
+    }
+  ]
+}

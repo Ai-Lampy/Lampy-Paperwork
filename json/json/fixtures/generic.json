@@ -1,0 +1,191 @@
+{
+  "manufacturer": "Generic",
+  "fixtures": [
+    {
+      "fixture": "2-Lite Mole",
+      "modes": {
+        "1Ch - Mode": 1
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/generic",
+        "suggestedFileName": "Generic__2_Lite_Mole.gdtf",
+        "file": "fixtures/generic/Generic@2-lite_Blinder@2-lite_Blinder.gdtf",
+        "modes": {
+          "1Ch - Mode": {
+            "channels": 1,
+            "gdtfMode": "1Ch - Mode",
+            "status": "matched",
+            "parameters": 1
+          }
+        }
+      },
+      "shortName": "2-Lite"
+    },
+    {
+      "fixture": "4-Lite Linear Mole",
+      "modes": {
+        "Dimmer - 1 Chan": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/generic",
+        "suggestedFileName": "Generic__4_Lite_Linear_Mole.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer - 1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      },
+      "shortName": "4-Lite Linear"
+    },
+    {
+      "fixture": "4-Lite Mole",
+      "modes": {
+        "1Ch - Mode": 1,
+        "2Ch - Mode": 2
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/generic",
+        "suggestedFileName": "Generic__4_Lite_Mole.gdtf",
+        "file": "fixtures/generic/Generic@4-lite_Blinder@1.2.3._out_for_real_world_testing_-_added_an_new_image.gdtf",
+        "modes": {
+          "1Ch - Mode": {
+            "channels": 1,
+            "gdtfMode": "1Ch - Mode",
+            "status": "matched",
+            "parameters": 1
+          },
+          "2Ch - Mode": {
+            "channels": 2,
+            "gdtfMode": "2Ch - Mode",
+            "status": "matched",
+            "parameters": 2
+          }
+        }
+      },
+      "shortName": "4-Lite"
+    },
+    {
+      "fixture": "8-Lite Mole",
+      "modes": {
+        "1Ch - Mode_8-Cell": 1,
+        "2Ch - Mode_4-Cell": 2
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/generic",
+        "suggestedFileName": "Generic__8_Lite_Mole.gdtf",
+        "file": "fixtures/generic/Generic@8-lite_Blinder@V-0.1.1.gdtf",
+        "modes": {
+          "1Ch - Mode_8-Cell": {
+            "channels": 1,
+            "gdtfMode": "1Ch - Mode_8-Cell",
+            "status": "matched",
+            "parameters": 1
+          },
+          "2Ch - Mode_4-Cell": {
+            "channels": 2,
+            "gdtfMode": "2Ch - Mode_4-Cell",
+            "status": "matched",
+            "parameters": 2
+          }
+        }
+      },
+      "shortName": "8-Lite"
+    },
+    {
+      "fixture": "Dimmer",
+      "watts": 1000.0,
+      "weight": null,
+      "modes": {
+        "Default": 1
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/generic",
+        "suggestedFileName": "Generic__Dimmer.gdtf",
+        "file": "fixtures/generic/Generic@Dimmer@Generic.gdtf",
+        "modes": {
+          "Default": {
+            "channels": 1,
+            "gdtfMode": "Default",
+            "status": "matched",
+            "parameters": 1
+          }
+        }
+      },
+      "shortName": "Dim"
+    },
+    {
+      "fixture": "Generic RGB",
+      "watts": 1000.0,
+      "weight": null,
+      "modes": {
+        "RGB": 3
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/generic",
+        "suggestedFileName": "Generic__Generic_RGB.gdtf",
+        "file": "fixtures/generic/Generic@Generic_RGB@V1_RGB.gdtf",
+        "modes": {
+          "RGB": {
+            "channels": 3,
+            "gdtfMode": "RGB",
+            "status": "matched",
+            "parameters": 3
+          }
+        }
+      },
+      "shortName": "Generic RGB"
+    },
+    {
+      "fixture": "Omni",
+      "modes": {
+        "Dimmer - 1 Chan": 1
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/generic",
+        "suggestedFileName": "Generic__Omni.gdtf",
+        "file": "",
+        "modes": {
+          "Dimmer - 1 Chan": {
+            "channels": 1,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      },
+      "shortName": "Omni"
+    },
+    {
+      "fixture": "RGBW",
+      "watts": 1000.0,
+      "weight": null,
+      "modes": {
+        "RGB": 4
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/generic",
+        "suggestedFileName": "Generic__RGBW.gdtf",
+        "file": "fixtures/generic/Generic@RGBW@V1_RGBW.gdtf",
+        "modes": {
+          "RGB": {
+            "channels": 4,
+            "gdtfMode": "RGB",
+            "status": "matched",
+            "parameters": 4
+          }
+        }
+      },
+      "shortName": "Generic RGBW"
+    }
+  ]
+}

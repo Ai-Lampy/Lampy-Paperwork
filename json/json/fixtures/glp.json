@@ -1,0 +1,1192 @@
+{
+  "manufacturer": "GLP",
+  "fixtures": [
+    {
+      "fixture": "impression FR1",
+      "watts": 100,
+      "weight": 5.0,
+      "modes": {
+        "Mode 16Ch": 16
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/glp",
+        "suggestedFileName": "GLP__impression_FR1.gdtf",
+        "file": "fixtures/glp/GLP@impression_FR1@20250326_FR1_byRG_prelimV2.gdtf",
+        "modes": {
+          "Mode 16Ch": {
+            "channels": 16,
+            "gdtfMode": "Mode 16Ch",
+            "status": "matched",
+            "parameters": 13
+          }
+        }
+      },
+      "shortName": "FR1"
+    },
+    {
+      "fixture": "impression FR2 Wash",
+      "watts": 200,
+      "weight": 5.2,
+      "modes": {
+        "18 Chan": 18,
+        "28 Chan": 28,
+        "40 Chan": 40,
+        "52 Chan": 52,
+        "171 Chan": 171,
+        "427 Chan": 427
+      },
+      "gdtf": {
+        "status": "pending-download",
+        "folder": "fixtures/glp",
+        "suggestedFileName": "GLP__impression_FR2_Wash.gdtf",
+        "file": "",
+        "modes": {
+          "18 Chan": {
+            "channels": 18,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "28 Chan": {
+            "channels": 28,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "40 Chan": {
+            "channels": 40,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "52 Chan": {
+            "channels": 52,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "171 Chan": {
+            "channels": 171,
+            "gdtfMode": "",
+            "status": "pending-match"
+          },
+          "427 Chan": {
+            "channels": 427,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      },
+      "shortName": "FR2 Wash"
+    },
+    {
+      "fixture": "impression S500 Profile",
+      "watts": 750,
+      "weight": 26.9,
+      "modes": {
+        "Normal Mode": 35
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/glp",
+        "suggestedFileName": "GLP__impression_S500_Profile.gdtf",
+        "file": "fixtures/glp/GLP@impression_S500_Profil_HC@20250404_S500ProfilHC_byRG_prelimV1.gdtf",
+        "modes": {
+          "Normal Mode": {
+            "channels": 35,
+            "gdtfMode": "Normal Mode",
+            "status": "matched",
+            "parameters": 30
+          }
+        }
+      },
+      "shortName": "S500 Profile"
+    },
+    {
+      "fixture": "impression S500 Wash",
+      "watts": 750,
+      "weight": 26.6,
+      "modes": {
+        "Normal Mode": 27
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/glp",
+        "suggestedFileName": "GLP__impression_S500_Wash.gdtf",
+        "file": "fixtures/glp/GLP@impression_S500_Wash_HC@20250710_S500WashHC_byRG_prelimV2.gdtf",
+        "modes": {
+          "Normal Mode": {
+            "channels": 27,
+            "gdtfMode": "Normal Mode",
+            "status": "matched",
+            "parameters": 24
+          }
+        }
+      },
+      "shortName": "S500 Wash"
+    },
+    {
+      "fixture": "impression X4 Bar 10",
+      "watts": 230,
+      "weight": 8,
+      "modes": {
+        "Norm": 33,
+        "Comp": 19,
+        "High Resolution": 34,
+        "Single Pixel Mode": 48,
+        "Single Pixel High Resolution": 49,
+        "Dual Pixel Mode": 28,
+        "Dual Pixel High Resolution": 29
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/glp",
+        "suggestedFileName": "GLP__impression_X4_Bar_10.gdtf",
+        "file": "fixtures/glp/GLP@impression_X4_Bar_10@ledbar.gdtf",
+        "modes": {
+          "Norm": {
+            "channels": 33,
+            "gdtfMode": "Norm",
+            "status": "matched",
+            "parameters": 20
+          },
+          "Comp": {
+            "channels": 19,
+            "gdtfMode": "Comp",
+            "status": "matched",
+            "parameters": 16
+          },
+          "High Resolution": {
+            "channels": 34,
+            "gdtfMode": "High Resolution",
+            "status": "matched",
+            "parameters": 20
+          },
+          "Single Pixel Mode": {
+            "channels": 48,
+            "gdtfMode": "Single Pixel Mode",
+            "status": "matched",
+            "parameters": 12
+          },
+          "Single Pixel High Resolution": {
+            "channels": 49,
+            "gdtfMode": "Single Pixel High Resolution",
+            "status": "matched",
+            "parameters": 12
+          },
+          "Dual Pixel Mode": {
+            "channels": 28,
+            "gdtfMode": "Dual Pixel Mode",
+            "status": "matched",
+            "parameters": 12
+          },
+          "Dual Pixel High Resolution": {
+            "channels": 29,
+            "gdtfMode": "Dual Pixel High Resolution",
+            "status": "matched",
+            "parameters": 12
+          }
+        }
+      },
+      "shortName": "X4 Bar 10"
+    },
+    {
+      "fixture": "impression X4 Bar 20",
+      "watts": 400,
+      "weight": 14.5,
+      "modes": {
+        "Norm": 33,
+        "Comp": 19,
+        "High Resolution": 34,
+        "Single Pixel Mode": 88,
+        "Single Pixel High Resolution": 89,
+        "Dual Pixel Mode": 48,
+        "Dual Pixel High Resolution": 49
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/glp",
+        "suggestedFileName": "GLP__impression_X4_Bar_20.gdtf",
+        "file": "fixtures/glp/GLP@impression_X4_Bar_20@Added_Virtual_Dimmer_Relations.gdtf",
+        "modes": {
+          "Norm": {
+            "channels": 33,
+            "gdtfMode": "Norm",
+            "status": "matched",
+            "parameters": 20
+          },
+          "Comp": {
+            "channels": 19,
+            "gdtfMode": "Comp",
+            "status": "matched",
+            "parameters": 16
+          },
+          "High Resolution": {
+            "channels": 34,
+            "gdtfMode": "High Resolution",
+            "status": "matched",
+            "parameters": 20
+          },
+          "Single Pixel Mode": {
+            "channels": 88,
+            "gdtfMode": "Single Pixel Mode",
+            "status": "matched",
+            "parameters": 12
+          },
+          "Single Pixel High Resolution": {
+            "channels": 89,
+            "gdtfMode": "Single Pixel High Resolution",
+            "status": "matched",
+            "parameters": 12
+          },
+          "Dual Pixel Mode": {
+            "channels": 48,
+            "gdtfMode": "Dual Pixel Mode",
+            "status": "matched",
+            "parameters": 12
+          },
+          "Dual Pixel High Resolution": {
+            "channels": 49,
+            "gdtfMode": "Dual Pixel High Resolution",
+            "status": "matched",
+            "parameters": 12
+          }
+        }
+      },
+      "shortName": "X4 Bar 20"
+    },
+    {
+      "fixture": "impression X4 S",
+      "watts": 200,
+      "weight": 5.5,
+      "modes": {
+        "Extended Mode 19CH": 19
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/glp",
+        "suggestedFileName": "GLP__impression_X4_S.gdtf",
+        "file": "fixtures/glp/GLP@impression_X4_S@V1.0.0.0_-_High_Resolution_(Extended)_-Mode_19_DMX_Channel.gdtf",
+        "modes": {
+          "Extended Mode 19CH": {
+            "channels": 19,
+            "gdtfMode": "Extended Mode 19CH",
+            "status": "matched",
+            "parameters": 12
+          }
+        }
+      },
+      "shortName": "X4 S"
+    },
+    {
+      "fixture": "impression X5",
+      "watts": 710,
+      "weight": 13.3,
+      "modes": {
+        "Mode 1 Basic RGBL (24ch)": 24,
+        "Mode 1 Basic RGB (24ch)": 24,
+        "Mode 2 Normal RGBL (35ch)": 35,
+        "Mode 2 Normal RGB (35ch)": 35,
+        "Mode 3 Segments RGBL (41ch)": 41,
+        "Mode 3 Segments RGB (41ch)": 41,
+        "Mode 4 Mulipix Advanced RGBL (89ch)": 89,
+        "Mode 4 Mulipix Advanced RGB (89ch)": 89,
+        "Mode 5 Mulipix Compressed RGB (71ch)": 70,
+        "Mode 6 Mulipix Compressed RGBL (89ch)": 89
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/glp",
+        "suggestedFileName": "GLP__impression_X5.gdtf",
+        "file": "fixtures/glp/GLP@impression_X5@20260708_X5_byGLP_prelim04.gdtf",
+        "modes": {
+          "Mode 1 Basic RGBL (24ch)": {
+            "channels": 24,
+            "gdtfMode": "Mode 1 Basic RGBL (24ch)",
+            "status": "matched",
+            "parameters": 17
+          },
+          "Mode 1 Basic RGB (24ch)": {
+            "channels": 24,
+            "gdtfMode": "Mode 1 Basic RGB (24ch)",
+            "status": "matched",
+            "parameters": 17
+          },
+          "Mode 2 Normal RGBL (35ch)": {
+            "channels": 35,
+            "gdtfMode": "Mode 2 Normal RGBL (35ch)",
+            "status": "matched",
+            "parameters": 27
+          },
+          "Mode 2 Normal RGB (35ch)": {
+            "channels": 35,
+            "gdtfMode": "Mode 2 Normal RGB (35ch)",
+            "status": "matched",
+            "parameters": 27
+          },
+          "Mode 3 Segments RGBL (41ch)": {
+            "channels": 41,
+            "gdtfMode": "Mode 3 Segments RGBL (41ch)",
+            "status": "matched",
+            "parameters": 36
+          },
+          "Mode 3 Segments RGB (41ch)": {
+            "channels": 41,
+            "gdtfMode": "Mode 3 Segments RGB (41ch)",
+            "status": "matched",
+            "parameters": 36
+          },
+          "Mode 4 Mulipix Advanced RGBL (89ch)": {
+            "channels": 89,
+            "gdtfMode": "Mode 4 Mulipix Advanced RGBL (89ch)",
+            "status": "matched",
+            "parameters": 28
+          },
+          "Mode 4 Mulipix Advanced RGB (89ch)": {
+            "channels": 89,
+            "gdtfMode": "Mode 4 Mulipix Advanced RGB (89ch)",
+            "status": "matched",
+            "parameters": 28
+          },
+          "Mode 5 Mulipix Compressed RGB (71ch)": {
+            "channels": 70,
+            "gdtfMode": "Mode 5 Mulipix Compressed RGB (71ch)",
+            "status": "matched",
+            "parameters": 14
+          },
+          "Mode 6 Mulipix Compressed RGBL (89ch)": {
+            "channels": 89,
+            "gdtfMode": "Mode 6 Mulipix Compressed RGBL (89ch)",
+            "status": "matched",
+            "parameters": 15
+          }
+        }
+      },
+      "shortName": "X5"
+    },
+    {
+      "fixture": "impression X5 Bar 1000",
+      "watts": 750,
+      "weight": 20.2,
+      "modes": {
+        "Mode 1 Basic RGBL (20ch)": 20,
+        "Mode 1 Basic RGB (20ch)": 20,
+        "Mode 2 Normal RGBL (33ch)": 33,
+        "Mode 2 Normal RGB (33ch)": 33,
+        "Mode 3 Segments RGBL (48ch)": 48,
+        "Mode 4 Mulipix Advanced RGBL (84ch)": 84,
+        "Mode 4 Mulipix Advanced RGB (84ch)": 84,
+        "Mode 5 Mulipix Compressed RGB (63ch)": 63,
+        "Mode 6 Mulipix Compressed RGBL (81ch)": 81,
+        "Mode 3 Segments RGB (48ch)": 48
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/glp",
+        "suggestedFileName": "GLP__impression_X5_Bar_1000.gdtf",
+        "file": "fixtures/glp/GLP@impression_X5_Bar_1000@test.gdtf",
+        "modes": {
+          "Mode 1 Basic RGBL (20ch)": {
+            "channels": 20,
+            "gdtfMode": "Mode 1 Basic RGBL (20ch)",
+            "status": "matched",
+            "parameters": 14
+          },
+          "Mode 1 Basic RGB (20ch)": {
+            "channels": 20,
+            "gdtfMode": "Mode 1 Basic RGB (20ch)",
+            "status": "matched",
+            "parameters": 14
+          },
+          "Mode 2 Normal RGBL (33ch)": {
+            "channels": 33,
+            "gdtfMode": "Mode 2 Normal RGBL (33ch)",
+            "status": "matched",
+            "parameters": 26
+          },
+          "Mode 2 Normal RGB (33ch)": {
+            "channels": 33,
+            "gdtfMode": "Mode 2 Normal RGB (33ch)",
+            "status": "matched",
+            "parameters": 26
+          },
+          "Mode 3 Segments RGBL (48ch)": {
+            "channels": 48,
+            "gdtfMode": "Mode 3 Segments RGBL (48ch)",
+            "status": "matched",
+            "parameters": 47
+          },
+          "Mode 4 Mulipix Advanced RGBL (84ch)": {
+            "channels": 84,
+            "gdtfMode": "Mode 4 Mulipix Advanced RGBL (84ch)",
+            "status": "matched",
+            "parameters": 27
+          },
+          "Mode 4 Mulipix Advanced RGB (84ch)": {
+            "channels": 84,
+            "gdtfMode": "Mode 4 Mulipix Advanced RGB (84ch)",
+            "status": "matched",
+            "parameters": 27
+          },
+          "Mode 5 Mulipix Compressed RGB (63ch)": {
+            "channels": 63,
+            "gdtfMode": "Mode 5 Mulipix Compressed RGB (63ch)",
+            "status": "matched",
+            "parameters": 11
+          },
+          "Mode 6 Mulipix Compressed RGBL (81ch)": {
+            "channels": 81,
+            "gdtfMode": "Mode 6 Mulipix Compressed RGBL (81ch)",
+            "status": "matched",
+            "parameters": 12
+          },
+          "Mode 3 Segments RGB (48ch)": {
+            "channels": 48,
+            "gdtfMode": "Mode 3 Segments RGB (48ch)",
+            "status": "matched",
+            "parameters": 47
+          }
+        }
+      },
+      "shortName": "X5 Bar 1000"
+    },
+    {
+      "fixture": "impression X5 Compact",
+      "watts": 350,
+      "weight": 7.5,
+      "modes": {
+        "Mode 1 Basic RGBL (22ch)": 22,
+        "Mode 1 Basic RGB (22ch)": 22,
+        "Mode 2 Normal RGBL (33ch)": 33,
+        "Mode 2 Normal RGB (33ch)": 33,
+        "Mode 3 Segments RGBL (36ch)": 36,
+        "Mode 3 Segments RGB (36ch)": 36,
+        "Mode 4 Mulipix Advanced RGBL (51ch)": 51,
+        "Mode 4 Mulipix Advanced RGB (51ch)": 51,
+        "Mode 5 Mulipix Compressed RGB (32ch)": 32,
+        "Mode 6 Mulipix Compressed RGBL (39ch)": 39
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/glp",
+        "suggestedFileName": "GLP__impression_X5_Compact.gdtf",
+        "file": "fixtures/glp/GLP@impression_X5_Compact@20250326_X5Compact_byRG_prelimV2.gdtf",
+        "modes": {
+          "Mode 1 Basic RGBL (22ch)": {
+            "channels": 22,
+            "gdtfMode": "Mode 1 Basic RGBL (22ch)",
+            "status": "matched",
+            "parameters": 15
+          },
+          "Mode 1 Basic RGB (22ch)": {
+            "channels": 22,
+            "gdtfMode": "Mode 1 Basic RGB (22ch)",
+            "status": "matched",
+            "parameters": 15
+          },
+          "Mode 2 Normal RGBL (33ch)": {
+            "channels": 33,
+            "gdtfMode": "Mode 2 Normal RGBL (33ch)",
+            "status": "matched",
+            "parameters": 25
+          },
+          "Mode 2 Normal RGB (33ch)": {
+            "channels": 33,
+            "gdtfMode": "Mode 2 Normal RGB (33ch)",
+            "status": "matched",
+            "parameters": 25
+          },
+          "Mode 3 Segments RGBL (36ch)": {
+            "channels": 36,
+            "gdtfMode": "Mode 3 Segments RGBL (36ch)",
+            "status": "matched",
+            "parameters": 30
+          },
+          "Mode 3 Segments RGB (36ch)": {
+            "channels": 36,
+            "gdtfMode": "Mode 3 Segments RGB (36ch)",
+            "status": "matched",
+            "parameters": 30
+          },
+          "Mode 4 Mulipix Advanced RGBL (51ch)": {
+            "channels": 51,
+            "gdtfMode": "Mode 4 Mulipix Advanced RGBL (51ch)",
+            "status": "matched",
+            "parameters": 26
+          },
+          "Mode 4 Mulipix Advanced RGB (51ch)": {
+            "channels": 51,
+            "gdtfMode": "Mode 4 Mulipix Advanced RGB (51ch)",
+            "status": "matched",
+            "parameters": 26
+          },
+          "Mode 5 Mulipix Compressed RGB (32ch)": {
+            "channels": 32,
+            "gdtfMode": "Mode 5 Mulipix Compressed RGB (32ch)",
+            "status": "matched",
+            "parameters": 12
+          },
+          "Mode 6 Mulipix Compressed RGBL (39ch)": {
+            "channels": 39,
+            "gdtfMode": "Mode 6 Mulipix Compressed RGBL (39ch)",
+            "status": "matched",
+            "parameters": 13
+          }
+        }
+      },
+      "shortName": "X5 Compact"
+    },
+    {
+      "fixture": "impression X5 IP",
+      "watts": 700,
+      "weight": 21,
+      "modes": {
+        "Mode 1 Basic RGBL (24ch)": 24,
+        "Mode 1 Basic RGB (24ch)": 24,
+        "Mode 2 Normal RGBL (35ch)": 35,
+        "Mode 2 Normal RGB (35ch)": 35,
+        "Mode 3 Segments RGBL (41ch)": 41,
+        "Mode 3 Segments RGB (41ch)": 41,
+        "Mode 4 Mulipix Advanced RGBL (89ch)": 89,
+        "Mode 4 Mulipix Advanced RGB (89ch)": 89,
+        "Mode 5 Mulipix Compressed RGB (71ch)": 70,
+        "Mode 6 Mulipix Compressed RGBL (89ch)": 89
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/glp",
+        "suggestedFileName": "GLP__impression_X5_IP.gdtf",
+        "file": "fixtures/glp/GLP@impression_X5_IP@20250325_X5IP_byRG_prelimV2.gdtf",
+        "modes": {
+          "Mode 1 Basic RGBL (24ch)": {
+            "channels": 24,
+            "gdtfMode": "Mode 1 Basic RGBL (24ch)",
+            "status": "matched",
+            "parameters": 17
+          },
+          "Mode 1 Basic RGB (24ch)": {
+            "channels": 24,
+            "gdtfMode": "Mode 1 Basic RGB (24ch)",
+            "status": "matched",
+            "parameters": 17
+          },
+          "Mode 2 Normal RGBL (35ch)": {
+            "channels": 35,
+            "gdtfMode": "Mode 2 Normal RGBL (35ch)",
+            "status": "matched",
+            "parameters": 27
+          },
+          "Mode 2 Normal RGB (35ch)": {
+            "channels": 35,
+            "gdtfMode": "Mode 2 Normal RGB (35ch)",
+            "status": "matched",
+            "parameters": 27
+          },
+          "Mode 3 Segments RGBL (41ch)": {
+            "channels": 41,
+            "gdtfMode": "Mode 3 Segments RGBL (41ch)",
+            "status": "matched",
+            "parameters": 36
+          },
+          "Mode 3 Segments RGB (41ch)": {
+            "channels": 41,
+            "gdtfMode": "Mode 3 Segments RGB (41ch)",
+            "status": "matched",
+            "parameters": 36
+          },
+          "Mode 4 Mulipix Advanced RGBL (89ch)": {
+            "channels": 89,
+            "gdtfMode": "Mode 4 Mulipix Advanced RGBL (89ch)",
+            "status": "matched",
+            "parameters": 28
+          },
+          "Mode 4 Mulipix Advanced RGB (89ch)": {
+            "channels": 89,
+            "gdtfMode": "Mode 4 Mulipix Advanced RGB (89ch)",
+            "status": "matched",
+            "parameters": 28
+          },
+          "Mode 5 Mulipix Compressed RGB (71ch)": {
+            "channels": 70,
+            "gdtfMode": "Mode 5 Mulipix Compressed RGB (71ch)",
+            "status": "matched",
+            "parameters": 14
+          },
+          "Mode 6 Mulipix Compressed RGBL (89ch)": {
+            "channels": 89,
+            "gdtfMode": "Mode 6 Mulipix Compressed RGBL (89ch)",
+            "status": "matched",
+            "parameters": 15
+          }
+        }
+      },
+      "shortName": "X5 IP"
+    },
+    {
+      "fixture": "impression X5 IP Bar 1000",
+      "watts": 750,
+      "weight": 27,
+      "modes": {
+        "Mode 1 Basic RGBL (20ch)": 20,
+        "Mode 1 Basic RGB (20ch)": 20,
+        "Mode 2 Normal RGBL (33ch)": 33,
+        "Mode 2 Normal RGB (33ch)": 33,
+        "Mode 3 Segments RGBL (48ch)": 48,
+        "Mode 4 Mulipix Advanced RGBL (84ch)": 84,
+        "Mode 4 Mulipix Advanced RGB (84ch)": 84,
+        "Mode 5 Mulipix Compressed RGB (63ch)": 63,
+        "Mode 6 Mulipix Compressed RGBL (81ch)": 81,
+        "Mode 3 Segments RGB (48ch)": 48
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/glp",
+        "suggestedFileName": "GLP__impression_X5_IP_Bar_1000.gdtf",
+        "file": "fixtures/glp/GLP@impression_X5_IP_Bar_1000@20250327_X5IPBar1000_byRG_prelimV6.gdtf",
+        "modes": {
+          "Mode 1 Basic RGBL (20ch)": {
+            "channels": 20,
+            "gdtfMode": "Mode 1 Basic RGBL (20ch)",
+            "status": "matched",
+            "parameters": 14
+          },
+          "Mode 1 Basic RGB (20ch)": {
+            "channels": 20,
+            "gdtfMode": "Mode 1 Basic RGB (20ch)",
+            "status": "matched",
+            "parameters": 14
+          },
+          "Mode 2 Normal RGBL (33ch)": {
+            "channels": 33,
+            "gdtfMode": "Mode 2 Normal RGBL (33ch)",
+            "status": "matched",
+            "parameters": 26
+          },
+          "Mode 2 Normal RGB (33ch)": {
+            "channels": 33,
+            "gdtfMode": "Mode 2 Normal RGB (33ch)",
+            "status": "matched",
+            "parameters": 26
+          },
+          "Mode 3 Segments RGBL (48ch)": {
+            "channels": 48,
+            "gdtfMode": "Mode 3 Segments RGBL (48ch)",
+            "status": "matched",
+            "parameters": 47
+          },
+          "Mode 4 Mulipix Advanced RGBL (84ch)": {
+            "channels": 84,
+            "gdtfMode": "Mode 4 Mulipix Advanced RGBL (84ch)",
+            "status": "matched",
+            "parameters": 27
+          },
+          "Mode 4 Mulipix Advanced RGB (84ch)": {
+            "channels": 84,
+            "gdtfMode": "Mode 4 Mulipix Advanced RGB (84ch)",
+            "status": "matched",
+            "parameters": 27
+          },
+          "Mode 5 Mulipix Compressed RGB (63ch)": {
+            "channels": 63,
+            "gdtfMode": "Mode 5 Mulipix Compressed RGB (63ch)",
+            "status": "matched",
+            "parameters": 11
+          },
+          "Mode 6 Mulipix Compressed RGBL (81ch)": {
+            "channels": 81,
+            "gdtfMode": "Mode 6 Mulipix Compressed RGBL (81ch)",
+            "status": "matched",
+            "parameters": 12
+          },
+          "Mode 3 Segments RGB (48ch)": {
+            "channels": 48,
+            "gdtfMode": "Mode 3 Segments RGB (48ch)",
+            "status": "matched",
+            "parameters": 47
+          }
+        }
+      },
+      "shortName": "X5 IP Bar 1000"
+    },
+    {
+      "fixture": "JDC Burst 1",
+      "watts": 1400,
+      "weight": 14,
+      "modes": {
+        "Mode 1 Basic RGBW (19ch)": 19,
+        "Mode 2 FX RGBW (37ch)": 37,
+        "Mode 3-4-5 without Segments RGBW (27ch + SE Patch)": 27,
+        "Mode 6-7-8 FX without Segment RGBW (45ch + SE Patch)": 45,
+        "Mode 3 12-Segment RGBW (87ch)": 87,
+        "Mode 4 24-Segment RGBW (135ch)": 135,
+        "Mode 5 48-Segment RGBW (231ch)": 231,
+        "DMX Mode 6 FX 12-Segment RGBW (105ch)": 105,
+        "DMX Mode 7 FX 24-Segment RGBW (153ch)": 153,
+        "DMX Mode 8 FX 48-Segment RGBW (249ch)": 249,
+        "Mode 9 Legacy sPix (68ch)": 68,
+        "Mode 10 Legacy sPix Pro (62ch)": 62,
+        "Mode 1 Basic RGB (19ch)": 19,
+        "Mode 2 FX RGB (37ch)": 37,
+        "Mode 3-4-5 without Segments RGB (27ch + SE Patch)": 27,
+        "Mode 6-7-8 FX without Segment RGB (45ch + SE Patch)": 45,
+        "Mode 3 12-Segment RGB (87ch)": 87,
+        "Mode 4 24-Segment RGB (135ch)": 135,
+        "Mode 5 48-Segment RGB (231ch)": 231,
+        "DMX Mode 6 FX 12-Segment RGB (105ch)": 105,
+        "DMX Mode 7 FX 24-Segment RGB (153ch)": 153,
+        "DMX Mode 8 FX 48-Segment RGB (249ch)": 249
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/glp",
+        "suggestedFileName": "GLP__JDC_Burst_1.gdtf",
+        "file": "fixtures/glp/GLP@JDC_Burst_1_New_DMX@20250807_JDCBurst1(NewDMX)_0-3-4-0_byRG_prelim01.gdtf",
+        "modes": {
+          "Mode 1 Basic RGBW (19ch)": {
+            "channels": 19,
+            "gdtfMode": "Mode 1 Basic RGBW (19ch)",
+            "status": "matched",
+            "parameters": 16
+          },
+          "Mode 2 FX RGBW (37ch)": {
+            "channels": 37,
+            "gdtfMode": "Mode 2 FX RGBW (37ch)",
+            "status": "matched",
+            "parameters": 32
+          },
+          "Mode 3-4-5 without Segments RGBW (27ch + SE Patch)": {
+            "channels": 27,
+            "gdtfMode": "Mode 3-4-5 without Segments RGBW (27ch + SE Patch)",
+            "status": "matched",
+            "parameters": 22
+          },
+          "Mode 6-7-8 FX without Segment RGBW (45ch + SE Patch)": {
+            "channels": 45,
+            "gdtfMode": "Mode 6-7-8 FX without Segment RGBW (45ch + SE Patch)",
+            "status": "matched",
+            "parameters": 38
+          },
+          "Mode 3 12-Segment RGBW (87ch)": {
+            "channels": 87,
+            "gdtfMode": "Mode 3 12-Segment RGBW (87ch)",
+            "status": "matched",
+            "parameters": 28
+          },
+          "Mode 4 24-Segment RGBW (135ch)": {
+            "channels": 135,
+            "gdtfMode": "Mode 4 24-Segment RGBW (135ch)",
+            "status": "matched",
+            "parameters": 28
+          },
+          "Mode 5 48-Segment RGBW (231ch)": {
+            "channels": 231,
+            "gdtfMode": "Mode 5 48-Segment RGBW (231ch)",
+            "status": "matched",
+            "parameters": 28
+          },
+          "DMX Mode 6 FX 12-Segment RGBW (105ch)": {
+            "channels": 105,
+            "gdtfMode": "DMX Mode 6 FX 12-Segment RGBW (105ch)",
+            "status": "matched",
+            "parameters": 44
+          },
+          "DMX Mode 7 FX 24-Segment RGBW (153ch)": {
+            "channels": 153,
+            "gdtfMode": "DMX Mode 7 FX 24-Segment RGBW (153ch)",
+            "status": "matched",
+            "parameters": 44
+          },
+          "DMX Mode 8 FX 48-Segment RGBW (249ch)": {
+            "channels": 249,
+            "gdtfMode": "DMX Mode 8 FX 48-Segment RGBW (249ch)",
+            "status": "matched",
+            "parameters": 44
+          },
+          "Mode 9 Legacy sPix (68ch)": {
+            "channels": 68,
+            "gdtfMode": "Mode 9 Legacy sPix (68ch)",
+            "status": "matched",
+            "parameters": 24
+          },
+          "Mode 10 Legacy sPix Pro (62ch)": {
+            "channels": 62,
+            "gdtfMode": "Mode 10 Legacy sPix Pro (62ch)",
+            "status": "matched",
+            "parameters": 18
+          },
+          "Mode 1 Basic RGB (19ch)": {
+            "channels": 19,
+            "gdtfMode": "Mode 1 Basic RGB (19ch)",
+            "status": "matched",
+            "parameters": 16
+          },
+          "Mode 2 FX RGB (37ch)": {
+            "channels": 37,
+            "gdtfMode": "Mode 2 FX RGB (37ch)",
+            "status": "matched",
+            "parameters": 32
+          },
+          "Mode 3-4-5 without Segments RGB (27ch + SE Patch)": {
+            "channels": 27,
+            "gdtfMode": "Mode 3-4-5 without Segments RGB (27ch + SE Patch)",
+            "status": "matched",
+            "parameters": 22
+          },
+          "Mode 6-7-8 FX without Segment RGB (45ch + SE Patch)": {
+            "channels": 45,
+            "gdtfMode": "Mode 6-7-8 FX without Segment RGB (45ch + SE Patch)",
+            "status": "matched",
+            "parameters": 38
+          },
+          "Mode 3 12-Segment RGB (87ch)": {
+            "channels": 87,
+            "gdtfMode": "Mode 3 12-Segment RGB (87ch)",
+            "status": "matched",
+            "parameters": 28
+          },
+          "Mode 4 24-Segment RGB (135ch)": {
+            "channels": 135,
+            "gdtfMode": "Mode 4 24-Segment RGB (135ch)",
+            "status": "matched",
+            "parameters": 28
+          },
+          "Mode 5 48-Segment RGB (231ch)": {
+            "channels": 231,
+            "gdtfMode": "Mode 5 48-Segment RGB (231ch)",
+            "status": "matched",
+            "parameters": 28
+          },
+          "DMX Mode 6 FX 12-Segment RGB (105ch)": {
+            "channels": 105,
+            "gdtfMode": "DMX Mode 6 FX 12-Segment RGB (105ch)",
+            "status": "matched",
+            "parameters": 44
+          },
+          "DMX Mode 7 FX 24-Segment RGB (153ch)": {
+            "channels": 153,
+            "gdtfMode": "DMX Mode 7 FX 24-Segment RGB (153ch)",
+            "status": "matched",
+            "parameters": 44
+          },
+          "DMX Mode 8 FX 48-Segment RGB (249ch)": {
+            "channels": 249,
+            "gdtfMode": "DMX Mode 8 FX 48-Segment RGB (249ch)",
+            "status": "matched",
+            "parameters": 44
+          }
+        }
+      },
+      "shortName": "JDC Burst 1"
+    },
+    {
+      "fixture": "JDC Line 1000",
+      "watts": 1600,
+      "weight": 12,
+      "modes": {
+        "Mode 1 RGBW Strobe (32ch)": 32,
+        "Mode 2 W Strobe + RGB Strobe (68ch)": 68,
+        "Mode 3 W Strobe  RGB Pixel (168ch)": 168,
+        "Mode 4 W + RGB Strobe + W Pixel (94ch)": 94,
+        "Mode 5 Multipix (196ch)": 196,
+        "Mode 6 Multipix Advanced (316ch)": 316,
+        "Mode 7 Multipix Quadpix (76ch)": 76
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/glp",
+        "suggestedFileName": "GLP__JDC_Line_1000.gdtf",
+        "file": "fixtures/glp/GLP@JDC_Line_1000@20250404_JDCLine1000_byRG_prelimV1.gdtf",
+        "modes": {
+          "Mode 1 RGBW Strobe (32ch)": {
+            "channels": 32,
+            "gdtfMode": "Mode 1 RGBW Strobe (32ch)",
+            "status": "matched",
+            "parameters": 16
+          },
+          "Mode 2 W Strobe + RGB Strobe (68ch)": {
+            "channels": 68,
+            "gdtfMode": "Mode 2 W Strobe + RGB Strobe (68ch)",
+            "status": "matched",
+            "parameters": 33
+          },
+          "Mode 3 W Strobe  RGB Pixel (168ch)": {
+            "channels": 168,
+            "gdtfMode": "Mode 3 W Strobe  RGB Pixel (168ch)",
+            "status": "matched",
+            "parameters": 27
+          },
+          "Mode 4 W + RGB Strobe + W Pixel (94ch)": {
+            "channels": 94,
+            "gdtfMode": "Mode 4 W + RGB Strobe + W Pixel (94ch)",
+            "status": "matched",
+            "parameters": 27
+          },
+          "Mode 5 Multipix (196ch)": {
+            "channels": 196,
+            "gdtfMode": "Mode 5 Multipix (196ch)",
+            "status": "matched",
+            "parameters": 22
+          },
+          "Mode 6 Multipix Advanced (316ch)": {
+            "channels": 316,
+            "gdtfMode": "Mode 6 Multipix Advanced (316ch)",
+            "status": "matched",
+            "parameters": 22
+          },
+          "Mode 7 Multipix Quadpix (76ch)": {
+            "channels": 76,
+            "gdtfMode": "Mode 7 Multipix Quadpix (76ch)",
+            "status": "matched",
+            "parameters": 22
+          }
+        }
+      },
+      "shortName": "JDC Line 1000"
+    },
+    {
+      "fixture": "JDC Line 500",
+      "watts": 800,
+      "weight": 6,
+      "modes": {
+        "Mode 1 RGBW Strobe (16ch)": 16,
+        "Mode 2 W Strobe + RGB Strobe (34ch)": 34,
+        "Mode 3 W Strobe  RGB Pixel (84ch)": 84,
+        "Mode 4 W + RGB Strobe + W Pixel (47ch)": 47,
+        "Mode 5 Multipix (98ch)": 98,
+        "Mode 6 Multipix Advanced (158ch)": 158,
+        "Mode 7 Multipix Quadpix (38ch)": 38
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/glp",
+        "suggestedFileName": "GLP__JDC_Line_500.gdtf",
+        "file": "fixtures/glp/GLP@JDC_Line_500@GLP_JDC_Line_500.gdtf",
+        "modes": {
+          "Mode 1 RGBW Strobe (16ch)": {
+            "channels": 16,
+            "gdtfMode": "Mode 1 RGBW Strobe (16ch)",
+            "status": "matched",
+            "parameters": 15
+          },
+          "Mode 2 W Strobe + RGB Strobe (34ch)": {
+            "channels": 34,
+            "gdtfMode": "Mode 2 W Strobe + RGB Strobe (34ch)",
+            "status": "matched",
+            "parameters": 32
+          },
+          "Mode 3 W Strobe  RGB Pixel (84ch)": {
+            "channels": 84,
+            "gdtfMode": "Mode 3 W Strobe  RGB Pixel (84ch)",
+            "status": "matched",
+            "parameters": 26
+          },
+          "Mode 4 W + RGB Strobe + W Pixel (47ch)": {
+            "channels": 47,
+            "gdtfMode": "Mode 4 W + RGB Strobe + W Pixel (47ch)",
+            "status": "matched",
+            "parameters": 26
+          },
+          "Mode 5 Multipix (98ch)": {
+            "channels": 98,
+            "gdtfMode": "Mode 5 Multipix (98ch)",
+            "status": "matched",
+            "parameters": 21
+          },
+          "Mode 6 Multipix Advanced (158ch)": {
+            "channels": 158,
+            "gdtfMode": "Mode 6 Multipix Advanced (158ch)",
+            "status": "matched",
+            "parameters": 21
+          },
+          "Mode 7 Multipix Quadpix (38ch)": {
+            "channels": 38,
+            "gdtfMode": "Mode 7 Multipix Quadpix (38ch)",
+            "status": "matched",
+            "parameters": 21
+          }
+        }
+      },
+      "shortName": "JDC Line 500"
+    },
+    {
+      "fixture": "JDC1",
+      "watts": 1200,
+      "weight": 11.6,
+      "modes": {
+        "Mode 4 SPix PRO (62ch)": 62
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/glp",
+        "suggestedFileName": "GLP__JDC1.gdtf",
+        "file": "fixtures/glp/GLP@JDC_1@MA3_Visualizer_Fixed_62ch.gdtf",
+        "modes": {
+          "Mode 4 SPix PRO (62ch)": {
+            "channels": 62,
+            "gdtfMode": "Mode 4 SPix PRO (62ch)",
+            "status": "matched",
+            "parameters": 18
+          }
+        }
+      },
+      "shortName": "JDC-1"
+    },
+    {
+      "fixture": "JDC2 IP",
+      "watts": 1500,
+      "weight": 23.5,
+      "modes": {
+        "M1 - Dual Strobe": 24,
+        "M2 - Segment 1-1": 46,
+        "M3 - Segment 12-12": 91,
+        "M4 - Segment 12-24 (DEFAULT)": 127,
+        "M5 - JDC1 Spix Patch": 68
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/glp",
+        "suggestedFileName": "GLP__JDC2_IP.gdtf",
+        "file": "fixtures/glp/GLP@JDC2_IP@JDC2_IP_(corrected_in_M4_mode_middle_beam_light_not_showing).gdtf",
+        "modes": {
+          "M1 - Dual Strobe": {
+            "channels": 24,
+            "gdtfMode": "M1 - Dual Strobe",
+            "status": "matched",
+            "parameters": 20
+          },
+          "M2 - Segment 1-1": {
+            "channels": 46,
+            "gdtfMode": "M2 - Segment 1-1",
+            "status": "matched",
+            "parameters": 39
+          },
+          "M3 - Segment 12-12": {
+            "channels": 91,
+            "gdtfMode": "M3 - Segment 12-12",
+            "status": "matched",
+            "parameters": 41
+          },
+          "M4 - Segment 12-24 (DEFAULT)": {
+            "channels": 127,
+            "gdtfMode": "M4 - Segment 12-24 (DEFAULT)",
+            "status": "matched",
+            "parameters": 41
+          },
+          "M5 - JDC1 Spix Patch": {
+            "channels": 68,
+            "gdtfMode": "M5 - JDC1 Spix Patch",
+            "status": "matched",
+            "parameters": 24
+          }
+        }
+      },
+      "shortName": "JDC2 IP"
+    },
+    {
+      "fixture": "MAD MAXX",
+      "watts": 2500,
+      "weight": 208,
+      "modes": {
+        "Mode 1 Normal (15ch)": 15,
+        "Mode 2 Segments (22ch)": 22,
+        "Mode 3 Multi Beam (70ch)": 70
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/glp",
+        "suggestedFileName": "GLP__MAD_MAXX.gdtf",
+        "file": "fixtures/glp/GLP@MAD_MAXX_CW@20250820_MadMaxxCW_byRG_VRprelim.gdtf",
+        "modes": {
+          "Mode 1 Normal (15ch)": {
+            "channels": 15,
+            "gdtfMode": "Mode 1 Normal (15ch)",
+            "status": "matched",
+            "parameters": 11
+          },
+          "Mode 2 Segments (22ch)": {
+            "channels": 22,
+            "gdtfMode": "Mode 2 Segments (22ch)",
+            "status": "matched",
+            "parameters": 16
+          },
+          "Mode 3 Multi Beam (70ch)": {
+            "channels": 70,
+            "gdtfMode": "Mode 3 Multi Beam (70ch)",
+            "status": "matched",
+            "parameters": 12
+          }
+        }
+      },
+      "shortName": "MAD MAXX"
+    },
+    {
+      "fixture": "WildBar 16",
+      "watts": 700,
+      "weight": 23,
+      "modes": {
+        "M1 Basic / RGBL (28ch)": 28,
+        "M2 Pixel / RGBL PE Externel (31ch)": 31,
+        "M2 Pixel / RGBL PE Internal (79ch)": 79,
+        "M1 Basic / RGB (28ch)": 28,
+        "M2 Pixel / RGB PE Externel (31ch)": 31,
+        "M2 Pixel / RGB PE Internal (79ch)": 79,
+        "M3 RGBL Pixel / RGBL PE Internal (95ch)": 95,
+        "M3 RGBL Pixel / RGB PE Internal (95ch)": 95
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/glp",
+        "suggestedFileName": "GLP__WildBar_16.gdtf",
+        "file": "fixtures/glp/GLP@Wild_Bar_16@20260402_WildBar16_byRG_M3_prelim02.gdtf",
+        "modes": {
+          "M1 Basic / RGBL (28ch)": {
+            "channels": 28,
+            "gdtfMode": "M1 Basic / RGBL (28ch)",
+            "status": "matched",
+            "parameters": 21
+          },
+          "M2 Pixel / RGBL PE Externel (31ch)": {
+            "channels": 31,
+            "gdtfMode": "M2 Pixel / RGBL PE Externel (31ch)",
+            "status": "matched",
+            "parameters": 23
+          },
+          "M2 Pixel / RGBL PE Internal (79ch)": {
+            "channels": 79,
+            "gdtfMode": "M2 Pixel / RGBL PE Internal (79ch)",
+            "status": "matched",
+            "parameters": 27
+          },
+          "M1 Basic / RGB (28ch)": {
+            "channels": 28,
+            "gdtfMode": "M1 Basic / RGB (28ch)",
+            "status": "matched",
+            "parameters": 21
+          },
+          "M2 Pixel / RGB PE Externel (31ch)": {
+            "channels": 31,
+            "gdtfMode": "M2 Pixel / RGB PE Externel (31ch)",
+            "status": "matched",
+            "parameters": 23
+          },
+          "M2 Pixel / RGB PE Internal (79ch)": {
+            "channels": 79,
+            "gdtfMode": "M2 Pixel / RGB PE Internal (79ch)",
+            "status": "matched",
+            "parameters": 27
+          },
+          "M3 RGBL Pixel / RGBL PE Internal (95ch)": {
+            "channels": 95,
+            "gdtfMode": "M3 RGBL Pixel / RGBL PE Internal (95ch)",
+            "status": "matched",
+            "parameters": 28
+          },
+          "M3 RGBL Pixel / RGB PE Internal (95ch)": {
+            "channels": 95,
+            "gdtfMode": "M3 RGBL Pixel / RGB PE Internal (95ch)",
+            "status": "matched",
+            "parameters": 28
+          }
+        }
+      },
+      "shortName": "WildBar 16"
+    }
+  ]
+}

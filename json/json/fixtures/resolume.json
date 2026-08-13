@@ -1,0 +1,58 @@
+{
+  "manufacturer": "Resolume",
+  "fixtures": [
+    {
+      "fixture": "Arena 7",
+      "watts": null,
+      "weight": null,
+      "modes": {
+        "Composition": 31,
+        "Layer": 43
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/resolume",
+        "suggestedFileName": "Resolume__Arena_7.gdtf",
+        "file": "fixtures/resolume/Resolume@Arena_7@v1_3:_Updated_DMX_Defaults.gdtf",
+        "modes": {
+          "Composition": {
+            "channels": 31,
+            "gdtfMode": "Composition",
+            "status": "matched",
+            "parameters": 16
+          },
+          "Layer": {
+            "channels": 43,
+            "gdtfMode": "Layer",
+            "status": "matched",
+            "parameters": 22
+          }
+        }
+      },
+      "shortName": "Arena7"
+    },
+    {
+      "fixture": "Arena 7 Mini",
+      "watts": null,
+      "weight": null,
+      "modes": {
+        "Normal": 26
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/resolume",
+        "suggestedFileName": "Resolume__Arena_7_Mini.gdtf",
+        "file": "fixtures/resolume/Resolume@Arena_7_Mini@20260609.gdtf",
+        "modes": {
+          "Normal": {
+            "channels": 26,
+            "gdtfMode": "Normal",
+            "status": "matched",
+            "parameters": 26
+          }
+        }
+      },
+      "shortName": "Arena 7"
+    }
+  ]
+}

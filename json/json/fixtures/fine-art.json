@@ -1,0 +1,35 @@
+{
+  "manufacturer": "Fine Art",
+  "fixtures": [
+    {
+      "fixture": "1200C Strobe",
+      "watts": 1250,
+      "weight": 11,
+      "modes": {
+        "Standard 23ch": 23,
+        "PixTen48": 48
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/fine-art",
+        "suggestedFileName": "Fine_Art__1200C_Strobe.gdtf",
+        "file": "fixtures/fine-art/Fine_Art@FINE_1200C_STROBE@MA3_library_fixed_-_Sept_22th_2025.gdtf",
+        "modes": {
+          "Standard 23ch": {
+            "channels": 23,
+            "gdtfMode": "Standard 23ch",
+            "status": "matched",
+            "parameters": 21
+          },
+          "PixTen48": {
+            "channels": 48,
+            "gdtfMode": "PixTen48",
+            "status": "matched",
+            "parameters": 56
+          }
+        }
+      },
+      "shortName": "1200C Strobe"
+    }
+  ]
+}

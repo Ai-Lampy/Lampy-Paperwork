@@ -1,0 +1,568 @@
+{
+  "manufacturer": "Portman",
+  "fixtures": [
+    {
+      "fixture": "AMULET",
+      "watts": 240,
+      "weight": 5.7,
+      "modes": {
+        "Super Simple": 9,
+        "Simple": 15,
+        "Standard": 22,
+        "Standard Fine": 37,
+        "Pixel": 34,
+        "Pixel fine": 61
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/portman",
+        "suggestedFileName": "Portman__AMULET.gdtf",
+        "file": "fixtures/portman/Portman_Lights@AMULET@V1-01.gdtf",
+        "modes": {
+          "Super Simple": {
+            "channels": 9,
+            "gdtfMode": "Super Simple",
+            "status": "matched",
+            "parameters": 8
+          },
+          "Simple": {
+            "channels": 15,
+            "gdtfMode": "Simple",
+            "status": "matched",
+            "parameters": 13
+          },
+          "Standard": {
+            "channels": 22,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 13
+          },
+          "Standard Fine": {
+            "channels": 37,
+            "gdtfMode": "Standard Fine",
+            "status": "matched",
+            "parameters": 13
+          },
+          "Pixel": {
+            "channels": 34,
+            "gdtfMode": "Pixel",
+            "status": "matched",
+            "parameters": 13
+          },
+          "Pixel fine": {
+            "channels": 61,
+            "gdtfMode": "Pixel fine",
+            "status": "matched",
+            "parameters": 13
+          }
+        }
+      },
+      "shortName": "AMULET"
+    },
+    {
+      "fixture": "EVO ELEMENT",
+      "watts": 240,
+      "weight": 5.2,
+      "modes": {
+        "Super Simple": 9,
+        "Simple": 15,
+        "Standard": 23,
+        "Standard Fine": 39,
+        "Pixel": 22,
+        "Pixel Fine": 37
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/portman",
+        "suggestedFileName": "Portman__EVO_ELEMENT.gdtf",
+        "file": "fixtures/portman/Portman_Lights@EVO_ELEMENT@V102.gdtf",
+        "modes": {
+          "Super Simple": {
+            "channels": 9,
+            "gdtfMode": "Super Simple",
+            "status": "matched",
+            "parameters": 9
+          },
+          "Simple": {
+            "channels": 15,
+            "gdtfMode": "Simple",
+            "status": "matched",
+            "parameters": 15
+          },
+          "Standard": {
+            "channels": 23,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 23
+          },
+          "Standard Fine": {
+            "channels": 39,
+            "gdtfMode": "Standard Fine",
+            "status": "matched",
+            "parameters": 23
+          },
+          "Pixel": {
+            "channels": 22,
+            "gdtfMode": "Pixel",
+            "status": "matched",
+            "parameters": 22
+          },
+          "Pixel Fine": {
+            "channels": 37,
+            "gdtfMode": "Pixel Fine",
+            "status": "matched",
+            "parameters": 22
+          }
+        }
+      },
+      "shortName": "EVO ELEMENT"
+    },
+    {
+      "fixture": "MANTIS",
+      "watts": 250,
+      "weight": 8,
+      "modes": {
+        "Simple": 21,
+        "Standard": 29,
+        "Standard Fine": 45,
+        "Pixel": 28,
+        "Pixel Fine": 43,
+        "Simple Fine": 29
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/portman",
+        "suggestedFileName": "Portman__MANTIS.gdtf",
+        "file": "fixtures/portman/Portman_Lights@MANTIS@Mantis.gdtf",
+        "modes": {
+          "Simple": {
+            "channels": 21,
+            "gdtfMode": "Simple",
+            "status": "matched",
+            "parameters": 21
+          },
+          "Standard": {
+            "channels": 29,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 32
+          },
+          "Standard Fine": {
+            "channels": 45,
+            "gdtfMode": "Standard Fine",
+            "status": "matched",
+            "parameters": 32
+          },
+          "Pixel": {
+            "channels": 28,
+            "gdtfMode": "Pixel",
+            "status": "matched",
+            "parameters": 31
+          },
+          "Pixel Fine": {
+            "channels": 43,
+            "gdtfMode": "Pixel Fine",
+            "status": "matched",
+            "parameters": 31
+          },
+          "Simple Fine": {
+            "channels": 29,
+            "gdtfMode": "Simple Fine",
+            "status": "matched",
+            "parameters": 21
+          }
+        }
+      },
+      "shortName": "MANTIS"
+    },
+    {
+      "fixture": "OMNIRAY",
+      "watts": 450,
+      "weight": 14,
+      "modes": {
+        "Simple RGB": 8,
+        "RGBW": 16,
+        "RGBW 16B": 24,
+        "CCT": 15,
+        "CCT 16B": 21,
+        "TUNGSTEN": 16,
+        "TUNGSTEN 16B": 24,
+        "FULL ACCESS 16B": 28
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/portman",
+        "suggestedFileName": "Portman__OMNIRAY.gdtf",
+        "file": "fixtures/portman/Portman_Lights@OMNIRAY@V1-00.gdtf",
+        "modes": {
+          "Simple RGB": {
+            "channels": 8,
+            "gdtfMode": "Simple RGB",
+            "status": "matched",
+            "parameters": 9
+          },
+          "RGBW": {
+            "channels": 16,
+            "gdtfMode": "RGBW",
+            "status": "matched",
+            "parameters": 18
+          },
+          "RGBW 16B": {
+            "channels": 24,
+            "gdtfMode": "RGBW 16B",
+            "status": "matched",
+            "parameters": 18
+          },
+          "CCT": {
+            "channels": 15,
+            "gdtfMode": "CCT",
+            "status": "matched",
+            "parameters": 18
+          },
+          "CCT 16B": {
+            "channels": 21,
+            "gdtfMode": "CCT 16B",
+            "status": "matched",
+            "parameters": 17
+          },
+          "TUNGSTEN": {
+            "channels": 16,
+            "gdtfMode": "TUNGSTEN",
+            "status": "matched",
+            "parameters": 19
+          },
+          "TUNGSTEN 16B": {
+            "channels": 24,
+            "gdtfMode": "TUNGSTEN 16B",
+            "status": "matched",
+            "parameters": 19
+          },
+          "FULL ACCESS 16B": {
+            "channels": 28,
+            "gdtfMode": "FULL ACCESS 16B",
+            "status": "matched",
+            "parameters": 20
+          }
+        }
+      },
+      "shortName": "OMNIRAY"
+    },
+    {
+      "fixture": "P1 EVO",
+      "watts": 340,
+      "weight": 12.5,
+      "modes": {
+        "Super Simple": 13,
+        "Simple": 19,
+        "Standard": 43,
+        "Standard Fine": 79,
+        "Pixel": 42,
+        "Pixel Fine": 77
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/portman",
+        "suggestedFileName": "Portman__P1_EVO.gdtf",
+        "file": "fixtures/portman/Portman_Lights@P1_EVO@V1_1.gdtf",
+        "modes": {
+          "Super Simple": {
+            "channels": 13,
+            "gdtfMode": "Super Simple",
+            "status": "matched",
+            "parameters": 13
+          },
+          "Simple": {
+            "channels": 19,
+            "gdtfMode": "Simple",
+            "status": "matched",
+            "parameters": 19
+          },
+          "Standard": {
+            "channels": 43,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 43
+          },
+          "Standard Fine": {
+            "channels": 79,
+            "gdtfMode": "Standard Fine",
+            "status": "matched",
+            "parameters": 43
+          },
+          "Pixel": {
+            "channels": 42,
+            "gdtfMode": "Pixel",
+            "status": "matched",
+            "parameters": 49
+          },
+          "Pixel Fine": {
+            "channels": 77,
+            "gdtfMode": "Pixel Fine",
+            "status": "matched",
+            "parameters": 42
+          }
+        }
+      },
+      "shortName": "P1 EVO"
+    },
+    {
+      "fixture": "P1 Mini",
+      "watts": 95,
+      "weight": 8,
+      "modes": {
+        "Simple": 19,
+        "Standard": 43,
+        "Standard Fine": 50,
+        "Pixel": 42,
+        "Pixel Fine": 49
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/portman",
+        "suggestedFileName": "Portman__P1_Mini.gdtf",
+        "file": "fixtures/portman/Portman_Lights@P1_Mini@Untested.gdtf",
+        "modes": {
+          "Simple": {
+            "channels": 19,
+            "gdtfMode": "Simple",
+            "status": "matched",
+            "parameters": 19
+          },
+          "Standard": {
+            "channels": 43,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 43
+          },
+          "Standard Fine": {
+            "channels": 50,
+            "gdtfMode": "Standard Fine",
+            "status": "matched",
+            "parameters": 43
+          },
+          "Pixel": {
+            "channels": 42,
+            "gdtfMode": "Pixel",
+            "status": "matched",
+            "parameters": 42
+          },
+          "Pixel Fine": {
+            "channels": 49,
+            "gdtfMode": "Pixel Fine",
+            "status": "matched",
+            "parameters": 42
+          }
+        }
+      },
+      "shortName": "P1 Mini"
+    },
+    {
+      "fixture": "P1 Retro Lamp",
+      "watts": 1610,
+      "weight": 12.5,
+      "modes": {
+        "Standard": 7
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/portman",
+        "suggestedFileName": "Portman__P1_Retro_Lamp.gdtf",
+        "file": "fixtures/portman/Portman_Lights@P1_Retro@Created_Fixture_-_Not_tested_in_real_life.gdtf",
+        "modes": {
+          "Standard": {
+            "channels": 7,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 8
+          }
+        }
+      },
+      "shortName": "P1 Retro Lamp"
+    },
+    {
+      "fixture": "P2 EVO",
+      "watts": 300,
+      "weight": 12.5,
+      "modes": {
+        "Standard": 38
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/portman",
+        "suggestedFileName": "Portman__P2_EVO.gdtf",
+        "file": "fixtures/portman/Portman_Lights@P2_EVO@WithVirtualDimmer_V3.gdtf",
+        "modes": {
+          "Standard": {
+            "channels": 38,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 44
+          }
+        }
+      },
+      "shortName": "P2 EVO"
+    },
+    {
+      "fixture": "P2 Hexaline",
+      "watts": 1380,
+      "weight": 12.5,
+      "modes": {
+        "Standard": 6
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/portman",
+        "suggestedFileName": "Portman__P2_Hexaline.gdtf",
+        "file": "fixtures/portman/Portman_Lights@P2_Hexaline@V7_with_Mesh.gdtf",
+        "modes": {
+          "Standard": {
+            "channels": 6,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 6
+          }
+        }
+      },
+      "shortName": "P2 Hexaline"
+    },
+    {
+      "fixture": "P3 EVO",
+      "watts": 240,
+      "weight": 7,
+      "modes": {
+        "Super Simple": 9,
+        "Simple": 15,
+        "Standard": 23,
+        "Standard Fine": 39,
+        "Pixel": 22,
+        "Pixel Fine": 37
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/portman",
+        "suggestedFileName": "Portman__P3_EVO.gdtf",
+        "file": "fixtures/portman/Portman_Lights@P3_EVO@0.92.gdtf",
+        "modes": {
+          "Super Simple": {
+            "channels": 9,
+            "gdtfMode": "Super Simple",
+            "status": "matched",
+            "parameters": 9
+          },
+          "Simple": {
+            "channels": 15,
+            "gdtfMode": "Simple",
+            "status": "matched",
+            "parameters": 15
+          },
+          "Standard": {
+            "channels": 23,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 23
+          },
+          "Standard Fine": {
+            "channels": 39,
+            "gdtfMode": "Standard Fine",
+            "status": "matched",
+            "parameters": 23
+          },
+          "Pixel": {
+            "channels": 22,
+            "gdtfMode": "Pixel",
+            "status": "matched",
+            "parameters": 22
+          },
+          "Pixel Fine": {
+            "channels": 37,
+            "gdtfMode": "Pixel Fine",
+            "status": "matched",
+            "parameters": 22
+          }
+        }
+      },
+      "shortName": "P3 EVO"
+    },
+    {
+      "fixture": "P3 PIX3L",
+      "watts": 690,
+      "weight": 4.5,
+      "modes": {
+        "Mode 1": 3
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/portman",
+        "suggestedFileName": "Portman__P3_PIX3L.gdtf",
+        "file": "fixtures/portman/Portman_Lights@P3_PIX3L@1.00.gdtf",
+        "modes": {
+          "Mode 1": {
+            "channels": 3,
+            "gdtfMode": "Mode 1",
+            "status": "matched",
+            "parameters": 3
+          }
+        }
+      },
+      "shortName": "P3 PIX3L"
+    },
+    {
+      "fixture": "S-TRIBE",
+      "watts": 280,
+      "weight": 8,
+      "modes": {
+        "Super Simple": 12,
+        "Simple": 17,
+        "Standard": 32,
+        "Standard Fine": 57,
+        "Pixel": 52,
+        "Pixel Fine": 97
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/portman",
+        "suggestedFileName": "Portman__S_TRIBE.gdtf",
+        "file": "fixtures/portman/Portman_Lights@S-Tribe@V.1.00.gdtf",
+        "modes": {
+          "Super Simple": {
+            "channels": 12,
+            "gdtfMode": "Super Simple",
+            "status": "matched",
+            "parameters": 8
+          },
+          "Simple": {
+            "channels": 17,
+            "gdtfMode": "Simple",
+            "status": "matched",
+            "parameters": 13
+          },
+          "Standard": {
+            "channels": 32,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 13
+          },
+          "Standard Fine": {
+            "channels": 57,
+            "gdtfMode": "Standard Fine",
+            "status": "matched",
+            "parameters": 13
+          },
+          "Pixel": {
+            "channels": 52,
+            "gdtfMode": "Pixel",
+            "status": "matched",
+            "parameters": 13
+          },
+          "Pixel Fine": {
+            "channels": 97,
+            "gdtfMode": "Pixel Fine",
+            "status": "matched",
+            "parameters": 13
+          }
+        }
+      },
+      "shortName": "S-TRIBE"
+    }
+  ]
+}
