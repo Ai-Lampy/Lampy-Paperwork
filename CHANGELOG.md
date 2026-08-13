@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.19 - 2026-08-13
+
+- Added a manual-only GitHub Pages deployment workflow with no automatic push trigger.
+- Added an explicit confirmation checkbox before the live Pages deployment job can run.
+- Added repository setup, publishing, approval, and rollback instructions in `DEPLOYMENT.md`.
+
 ## V26.18 - 2026-08-13
 
 - Renamed the rack-device library directory to `json/rack_devices` to reflect its complete scope.

@@ -33,7 +33,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V26.18**
+Current app version: **V26.19**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 
@@ -50,6 +50,12 @@ See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 9. Download the project file regularly to save an editable copy.
 
 All project data is client-side. The app runs in your browser and does not require an account, server, database, or build process. PDF export loads a pinned browser rendering library on demand, while project and export processing remain in the browser.
+
+## Publishing Updates
+
+GitHub Pages deployment is manual. Repository files can be committed or uploaded without changing the live site. When a release is ready, run **Deploy Lampy Paperwork** from the repository's **Actions** tab and explicitly confirm the deployment.
+
+The repository's Pages source must be set to **GitHub Actions**, not **Deploy from a branch**. See [DEPLOYMENT.md](DEPLOYMENT.md) for setup, publishing, optional approval, and rollback instructions.
 
 ## Browser Support
 
