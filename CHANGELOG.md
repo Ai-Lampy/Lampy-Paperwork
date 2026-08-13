@@ -4,9 +4,10 @@ All notable fixes, cleanup work, and published version changes should be recorde
 
 ## V26.24 - 2026-08-13
 
-- Removed the nested accessory subtype menus from the Rack Device Library.
-- Displayed all rack accessories directly inside the single collapsible Accessories group while retaining size controls and repeatable placement.
+- Removed the Blank Panel, Vented Panel, Brush Panel, Draw, Shelf, and Door subtype menus from the Rack Device Library.
+- Displayed those accessories directly inside Accessories while retaining the dedicated Patch Panels subgroup, size controls, and repeatable placement.
 - Renamed the UPS rack-device library from `UPS.json` to `rack_power.json` and updated the rack-device manifest reference.
+- Renamed the matching image directory from `images/UPS` to `images/rack_power` and updated its asset paths.
 
 ## V26.23 - 2026-08-13
 
