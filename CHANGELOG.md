@@ -2,6 +2,13 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.11 - 2026-08-13
+
+- Updated the shared PDF logo columns to use 14 px bottom spacing without duplicate padding.
+- Removed the centred Power Calculations and Fan Out toolbar borders while retaining their centred alignment.
+- Replaced the Fixture Patch project strip with the shared centred export-header layout, including the Fixture Patch title, project name, version, and date range.
+- Removed the Fixture Patch-specific 80 px logo clearance and top-border treatment so all PDF exports use consistent first-page spacing.
+
 ## V26.10 - 2026-08-13
 
 - Resolved bundled vendor-logo paths against the application base so the 4 Wall Europe logo loads consistently locally and on GitHub Pages.
