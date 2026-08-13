@@ -1,46 +1,363 @@
 {
   "schemaVersion": 2,
-  "manufacturer": "Accessories",
+  "manufacturer": "Rack Accessories",
   "devicesByU": {
     "1U": {
       "Blank Panels": [
         {
-          "dimensionsMm": {
-            "depth": 5,
-            "height": 44,
-            "width": 480
-          },
           "id": "1u-Blank",
-          "lineImageUrlFront": "images/rack_accessories/1U/1u_blank.png",
-          "mounting": {
-            "accessory": "Rack-Mountable",
-            "method": null,
-            "trussMountable": false
+          "name": "Blank Panel",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": 480,
+            "height": 44,
+            "depth": 5
           },
           "rack": {
+            "mountable": true,
+            "heightU": 1,
             "widthFraction": 1
           },
-          "name": "1U Blank Panel",
-          "type": "Rack Accessories"
+          "lineImageUrlFront": "images/rack_accessories/1U/1u_blank.png"
+        }
+      ],
+      "Vented Panels": [
+        {
+          "id": "rack-accessory-1u-vented-panel",
+          "name": "1U Vented Panel",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": null,
+            "height": null,
+            "depth": null
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 1,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/1U/1u_blank_vented.png"
+        }
+      ],
+      "Brush Panels": [
+        {
+          "id": "rack-accessory-1u-brush-panel",
+          "name": "1U Brush Panel",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": null,
+            "height": null,
+            "depth": null
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 1,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/1U/1u_brush_panel.png"
+        }
+      ],
+      "Patch Panels": [
+        {
+          "id": "rack-accessory-1u-4-port-panel",
+          "name": "1U 4-Port Panel",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": null,
+            "height": null,
+            "depth": null
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 1,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/1U/1u_4port.png"
+        },
+        {
+          "id": "rack-accessory-1u-6-port-panel",
+          "name": "1U 6-Port Panel",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": null,
+            "height": null,
+            "depth": null
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 1,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/1U/1u_6port.png"
+        },
+        {
+          "id": "rack-accessory-1u-8-port-panel",
+          "name": "1U 8-Port Panel",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": null,
+            "height": null,
+            "depth": null
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 1,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/1U/1u_8port.png"
         }
       ],
       "Draws": [],
-      "Shelves": []
+      "Shelves": [
+        {
+          "id": "rack-accessory-1u-shelf",
+          "name": "1U Rack Shelf",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": null,
+            "height": null,
+            "depth": null
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 1,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/1U/1u_shelf.png"
+        }
+      ],
+      "Doors": []
     },
     "2U": {
       "Blank Panels": [],
-      "Draws": [],
-      "Shelves": []
+      "Vented Panels": [
+        {
+          "id": "rack-accessory-2u-vented-panel",
+          "name": "2U Vented Panel",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": null,
+            "height": null,
+            "depth": null
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 2,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/2U/2u_blank_vented.png"
+        }
+      ],
+      "Brush Panels": [
+        {
+          "id": "rack-accessory-2u-brush-panel",
+          "name": "2U Brush Panel",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": null,
+            "height": null,
+            "depth": null
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 2,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/2U/2u_brush_panel.png"
+        }
+      ],
+      "Patch Panels": [],
+      "Draws": [
+        {
+          "id": "rack-accessory-2u-drawer",
+          "name": "2U Rack Drawer",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": null,
+            "height": null,
+            "depth": null
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 2,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/2U/2u_draw.png"
+        }
+      ],
+      "Shelves": [
+        {
+          "id": "rack-accessory-2u-shelf",
+          "name": "2U Rack Shelf",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": null,
+            "height": null,
+            "depth": null
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 2,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/2U/2u_shelf.png"
+        }
+      ],
+      "Doors": [
+        {
+          "id": "rack-accessory-2u-door",
+          "name": "2U Rack Door",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": null,
+            "height": null,
+            "depth": null
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 2,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/2U/2u_door.png"
+        }
+      ]
     },
     "3U": {
       "Blank Panels": [],
-      "Draws": [],
-      "Shelves": []
+      "Vented Panels": [
+        {
+          "id": "rack-accessory-3u-vented-panel",
+          "name": "3U Vented Panel",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": null,
+            "height": null,
+            "depth": null
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 3,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/3U/3u_blank_vented.png"
+        }
+      ],
+      "Brush Panels": [],
+      "Patch Panels": [],
+      "Draws": [
+        {
+          "id": "rack-accessory-3u-drawer",
+          "name": "3U Rack Drawer",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": null,
+            "height": null,
+            "depth": null
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 3,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/3U/3u_draw.png"
+        }
+      ],
+      "Shelves": [
+        {
+          "id": "rack-accessory-3u-shelf",
+          "name": "3U Rack Shelf",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": null,
+            "height": null,
+            "depth": null
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 3,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/3U/3u_shelf.png"
+        }
+      ],
+      "Doors": [
+        {
+          "id": "rack-accessory-3u-door",
+          "name": "3U Rack Door",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": null,
+            "height": null,
+            "depth": null
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 3,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/3U/3u_door.png"
+        }
+      ]
     },
     "4U": {
       "Blank Panels": [],
-      "Draws": [],
-      "Shelves": []
+      "Vented Panels": [
+        {
+          "id": "rack-accessory-4u-vented-panel",
+          "name": "4U Vented Panel",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": null,
+            "height": null,
+            "depth": null
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 4,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/4U/4u_blank_vented.png"
+        }
+      ],
+      "Brush Panels": [],
+      "Patch Panels": [],
+      "Draws": [
+        {
+          "id": "rack-accessory-4u-drawer",
+          "name": "4U Rack Drawer",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": null,
+            "height": null,
+            "depth": null
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 4,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/4U/4u_draw.png"
+        }
+      ],
+      "Shelves": [],
+      "Doors": [
+        {
+          "id": "rack-accessory-4u-vented-door",
+          "name": "4U Vented Rack Door",
+          "type": "Rack Accessory",
+          "dimensionsMm": {
+            "width": null,
+            "height": null,
+            "depth": null
+          },
+          "rack": {
+            "mountable": true,
+            "heightU": 4,
+            "widthFraction": 1
+          },
+          "lineImageUrlFront": "images/rack_accessories/4U/4u_door_vented.png"
+        }
+      ]
     }
   }
 }
