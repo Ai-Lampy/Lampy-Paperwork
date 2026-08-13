@@ -4,6 +4,8 @@
 
 Add new devices to the matching manufacturer file. Add another manufacturer by creating a lowercase JSON file in this folder and adding it to `manifest.json`.
 
+Rack power equipment such as UPS units and rack PDUs is stored in `rack_power.json`. Keep its manifest entry updated if the file is renamed or split in future.
+
 Rack accessories are stored in `rack_accessories.json`, grouped first by rack height and then by accessory subtype. The current library contains 1U through 5U sections; retain existing IDs when editing records so saved projects continue to resolve their devices.
 
 Accessories may be placed repeatedly. When the same accessory is available at several U heights, give every size record the same `sizeVariantId` and `sizeVariantLabel`. Rack Layout combines those records into one library button with `−` and `+` size controls, while each record retains its own unique ID, dimensions, depth options, and image.
