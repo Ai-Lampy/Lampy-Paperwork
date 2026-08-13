@@ -2,6 +2,13 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.12 - 2026-08-13
+
+- Added the project version and calculated fixture parameter count to the Fixture Patch PDF header.
+- Split the Power Calculations PDF header into a centred title and distro/type subtitle, while retaining Aux Outlet, 3ø Output, and supply-summary context.
+- Enlarged every PDF preview card to 1500 px with compact 8 px vertical padding.
+- Updated the vector PDF fallbacks to render the revised multi-line Fixture Patch and Power Calculations headers.
+
 ## V26.11 - 2026-08-13
 
 - Updated the shared PDF logo columns to use 14 px bottom spacing without duplicate padding.
