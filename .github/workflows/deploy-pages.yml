@@ -7,7 +7,6 @@ on:
       release_version:
         description: Lampy version number to deploy (without the V)
         required: true
-        default: '26.21'
         type: string
       confirm_deploy:
         description: Deploy the current selected branch to the live GitHub Pages site
