@@ -20,7 +20,8 @@
           "rack": {
             "widthFraction": 1
           },
-          "name": "1U Blank Panel"
+          "name": "1U Blank Panel",
+          "type": "Rack Accessories"
         }
       ],
       "Draws": [],
