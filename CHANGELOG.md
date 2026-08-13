@@ -2,6 +2,14 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.13 - 2026-08-13
+
+- Added independent PDF margins for Lighting Vendor, Secondary, and Tour logos and set the unified logo-grid gap to 8 px.
+- Automatically hides Fixture Patch PDF columns that contain no exported data and lists all hidden columns in the preview controls.
+- Removed zoom details from the Fixture Patch PDF information line while retaining all zoom controls.
+- Centralised Arial, Helvetica, Cochin, Times New Roman, and Georgia as the application-wide formatting font list.
+- Applied each sheet's selected formatting font to its PDF page header and fallback renderer.
+
 ## V26.12 - 2026-08-13
 
 - Added the project version and calculated fixture parameter count to the Fixture Patch PDF header.
