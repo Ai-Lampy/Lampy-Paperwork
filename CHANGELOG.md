@@ -2,12 +2,26 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.25 - 2026-08-13
+
+- Audited the complete application, JSON libraries, manifests, image references, and GDTF repository paths for production deployment.
+- Removed uncalled legacy JavaScript helpers, Finder metadata, and four unreferenced console images that served no current application workflow.
+- Deferred full-project revision comparison and local-storage serialisation until typing pauses, reducing synchronous work during data entry.
+- Cached the normalised Rack Device Library instead of rebuilding and sorting it repeatedly during rack rendering and device lookups.
+- Extended legacy variable rack-accessory migration through 5U so current 5U placements remain compatible when older saved data is reopened.
+- Kept project downloads and Revision Management fully synchronised by flushing pending changes before those workflows open.
+- Confirmed all JSON files parse, every configured asset path resolves, and the embedded JavaScript remains valid.
+
 ## V26.24 - 2026-08-13
 
 - Removed the Blank Panel, Vented Panel, Brush Panel, Draw, Shelf, and Door subtype menus from the Rack Device Library.
 - Displayed those accessories directly inside Accessories while retaining the dedicated Patch Panels subgroup, size controls, and repeatable placement.
 - Renamed the UPS rack-device library from `UPS.json` to `rack_power.json` and updated the rack-device manifest reference.
 - Renamed the matching image directory from `images/UPS` to `images/rack_power` and updated its asset paths.
+- Added the new 1U LED Rack Light, 1U Rack Draw, and 2U Mac Mini Shelf assets to the Rack Accessories library.
+- Extended the adjustable Rack Draw family to 1U through 5U while retaining its Standard, Deep, and Deeper depth choices.
+- Normalised the Rack Power library schema and added the new 1U six-outlet 13A rack strip.
+- Repaired and revalidated the Rack Power JSON structure and top-level image references.
 
 ## V26.23 - 2026-08-13
 
