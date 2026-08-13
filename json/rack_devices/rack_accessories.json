@@ -129,7 +129,24 @@
       "Doors": []
     },
     "2U": {
-      "Blank Panels": [],
+      "Blank Panels": [
+		{
+			"id": "rack-accessory-2u-blank-panel",
+			"name": "2U Blank Panel",
+			"type": "Rack Accessory",
+			"dimensionsMm": {
+				"width": 480,
+				"height": 88,
+				"depth": 5
+			},
+			"rack": {
+				"mountable": true,
+				"heightU": 2,
+				"widthFraction": 1
+			},
+			"lineImageUrlFront": "images/rack_accessories/2U/2u_blank.png"
+		}
+	  ],
       "Vented Panels": [
         {
           "id": "rack-accessory-2u-vented-panel",
