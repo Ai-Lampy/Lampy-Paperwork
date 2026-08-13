@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.14 - 2026-08-13
+
+- Replaced the Fan Out PDF's legacy fixed-width, single-line heading with the shared full-width centred export header.
+- Split the Fan Out PDF heading into the standard title and distro/type subtitle used by the other PDF exports.
+- Preserved the selected Fan Out formatting font across both header lines in preview and downloaded PDF output.
+
 ## V26.13 - 2026-08-13
 
 - Added independent PDF margins for Lighting Vendor, Secondary, and Tour logos and set the unified logo-grid gap to 8 px.
