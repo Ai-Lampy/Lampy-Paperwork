@@ -1,5 +1,26 @@
 {
   "schemaVersion": 2,
   "manufacturer": "Generic",
-  "devices": []
+  "devices": [
+	  {
+		  "dimensionsMm":{
+			  "depth": 5,
+			  "height": 44,
+			  "width": 480
+		  },
+		  "id": "1u-Blank",
+		  "lineImageUrlFront": "images/rack_accessories/1u_blank.png",
+		  "mounting": {
+			  "accessory": "Rack-Mountable",
+			  "method": null,
+			  "trussMountable": false
+		  },
+		  "rack": {
+			  "heightU": 1,
+			  "widthFraction": 1
+		  },
+		  "name": "1U Blank Pannel",
+		  "type": "Rack Accessories"
+	  }
+  ]
 }
