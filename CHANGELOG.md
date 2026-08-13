@@ -2,6 +2,13 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.18 - 2026-08-13
+
+- Renamed the rack-device library directory to `json/rack_devices` to reflect its complete scope.
+- Updated the application loader, manifest paths, library documentation, and project structure references.
+- Renamed the manifest constant and loading messages from Network Device to Rack Device.
+- Nested rack accessories under an Accessories library group with Blank Panels, Draws, and Shelves sub-groups.
+
 ## V26.17 - 2026-08-13
 
 - Renamed the Generic rack library to `rack_accessories.json`.
@@ -358,7 +365,7 @@ All notable fixes, cleanup work, and published version changes should be recorde
 
 ## V24.1 - 2026-07-29
 
-- Added a manifest-driven `json/network_devices` library structure.
+- Added a manifest-driven `json/rack_devices` library structure.
 - Added separate editable Luminex, Pathway, and Generic manufacturer files.
 - Migrated the existing seven network-device references into the new manufacturer libraries.
 - Added schema fields for dimensions, weight, rack height and width, detailed ports, power connectors, PoE input, protocols, processing engines, and device images.
