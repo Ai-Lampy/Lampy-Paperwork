@@ -2,6 +2,16 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.9 - 2026-08-12
+
+- Added the bundled 4 Wall Europe vendor logo to the Lighting Vendor reference and project/PDF logo controls.
+
+- Added a shared first-page PDF header with balanced left-logo, centred sheet-header, and right-logo columns for Fixture Patch, Power Calculations, Fan Outs, and Distro Labels.
+- Centred Power Calculations and Fan Out export toolbars mathematically between the enabled project and Tour logos.
+- Limited the shared export header and logos to the first page while retaining required sheet and distro context on later pages.
+- Made the Fixture Patch top border and 80 px logo clearance conditional on first-page logos, with a borderless 1 px top margin when no logos are selected.
+- Refit Power Calculations and Fan Out page content around the shared header so preview and captured PDF layout remain aligned.
+
 ## V26.8 - 2026-08-12
 
 - Standardised Fixture Patch, Power Calculations, Fan Outs, and Distro Labels PDF previews around the same collapsible Formatting Options panel.
