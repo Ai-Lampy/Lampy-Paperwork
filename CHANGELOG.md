@@ -2,6 +2,13 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.30 - 2026-08-15
+
+- Removed the separate Rack Window toolbar and all detached-window zoom controls.
+- Moved the Front View and Dual View buttons into the first rack-card header where the popup zoom controls previously appeared.
+- Reduced detached-window overhead so its automatic dimensions fit the displayed rack more closely.
+- Moved Open Rack Window into the Rack Layout toolbar immediately before + Rack.
+
 ## V26.29 - 2026-08-15
 
 - Sized the detached Rack Window from the active rack's U height and fitted display scale instead of opening every rack at a fixed size.
