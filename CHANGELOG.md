@@ -2,6 +2,13 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V27 - 2026-08-15
+
+- Added spreadsheet-style keyboard navigation to editable Power Calculations cells using the arrow keys, Enter, Shift+Enter, Tab, and Shift+Tab.
+- Added a visible selected-cell state and fill handle for copying a value vertically through compatible cells in the same column.
+- Extended keyboard and drag-fill editing to Fix IDs, Aux Outlet labels and watts, and 3ø Output labels while keeping calculated fixture, position, watts, amps, and warning cells protected.
+- Kept the existing project data, calculation, RCBO label, revision, persistence, and PDF export workflows unchanged.
+
 ## V26.31 - 2026-08-15
 
 - Scaled the Rack Window Front/Dual controls to 70% and anchored them to the far-right edge of the rack-card header.
