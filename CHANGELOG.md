@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.29 - 2026-08-15
+
+- Sized the detached Rack Window from the active rack's U height and fitted display scale instead of opening every rack at a fixed size.
+- Resized the detached window automatically when switching between Front and Dual View.
+- Kept the window dimensions synchronised with Zoom Out, Fit, and Zoom In while respecting the available screen bounds.
+
 ## V26.28 - 2026-08-15
 
 - Updated the detached Rack Window so its Front/Dual controls sit inside the rack-view grid above the displayed cards.
