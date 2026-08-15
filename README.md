@@ -12,6 +12,7 @@ Live app: [https://ai-lampy.github.io/Lampy-Paperwork/](https://ai-lampy.github.
 - Retains imported MVR fixture matrices and fixture-attached geometry as hidden background metadata.
 - Requires review of unmatched MVR fixtures and conflicting GDTF, mode, or channel-count data before import.
 - Produces power calculation sheets with distro and supply phase totals.
+- Provides spreadsheet-style keyboard navigation and vertical drag-fill editing in Power Calculations and Distro Labels Table View.
 - Produces display-only Fan Out sheets from Power Calculations, including Socapex colours, fixture details, and position colours.
 - Compiles consoles, NPUs, and project network equipment into an IP Addresses sheet with dual IP fields, subnet data, VLAN assignments, locations, and notes.
 - Tracks DMX universe usage and available address space.
@@ -29,7 +30,7 @@ Live app: [https://ai-lampy.github.io/Lampy-Paperwork/](https://ai-lampy.github.
 - Exports MVR fixture patches with matched repository GDTF files embedded when available.
 - Exports paperwork previews to PDF where supported by the app workflow.
 
-Every bundled fixture library entry includes a `shortName` alongside `fixture`. Short names can be selected independently for Power Calculations, Front RCBO Labels, and Fixture Patch displays; custom or older fixture data without a defined short name safely uses its full name.
+Every bundled fixture library entry includes a `shortName` alongside `fixture`. Short names can be selected independently for Power Calculations, Front RCBO Labels, Distro Labels Table View, and Fixture Patch displays; custom or older fixture data without a defined short name safely uses its full name.
 
 ## Current Version
 

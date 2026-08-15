@@ -2,12 +2,17 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
-## V27 - 2026-08-15
+## V27 - 2026-08-16
 
 - Added spreadsheet-style keyboard navigation to editable Power Calculations cells using the arrow keys, Enter, Shift+Enter, Tab, and Shift+Tab.
 - Added a visible selected-cell state and fill handle for copying a value vertically through compatible cells in the same column.
 - Extended keyboard and drag-fill editing to Fix IDs, Aux Outlet labels and watts, and 3ø Output labels while keeping calculated fixture, position, watts, amps, and warning cells protected.
 - Kept the existing project data, calculation, RCBO label, revision, persistence, and PDF export workflows unchanged.
+- Extended spreadsheet-style keyboard navigation and vertical drag-fill to editable Socapex, Aux, and Output cells in Distro Labels Table View.
+- Removed the visible Colour Override column and redistributed its width without changing the 688px Socapex table size.
+- Added the Full Name/Short Name selector to Table View for fixture-library-linked fixture types.
+- Enlarged and centred the Patch Import modal and increased its data preview from 8 to 12 rows.
+- Updated the V27 welcome message and walkthrough, including the current 100mm rack cable-clearance requirement.
 
 ## V26.31 - 2026-08-15
 

@@ -1,5 +1,5 @@
 {
-  "title": "Lampy Paperwork V26 Walk-through",
+  "title": "Lampy Paperwork V27 Walk-through",
   "sections": [
     {
       "title": "Recommended Workflow",
@@ -37,8 +37,8 @@
         "Consoles and NPUs added in Control/Network appear automatically in the IP Addresses sheet.",
         "Console names, locations, and IP addresses remain linked between Control/Network and IP Addresses.",
         "Rack Layout provides Front, Side, and Rear views. Front and Rear are mounting faces; Side is a depth overview where existing devices can still be moved vertically.",
-        "New racks default to 700 mm deep. Rack Depth can be edited, but every device must retain at least 200 mm of space behind it for cabling.",
-        "Front- and rear-mounted devices may share a U only when their combined depths plus the 200 mm cable space fit inside the rack.",
+        "New racks default to 700 mm deep. Rack Depth can be edited, but every device must retain at least 100 mm of space behind it for cabling.",
+        "Front- and rear-mounted devices may share a U only when their combined depths plus the 100 mm cable space fit inside the rack.",
         "Use Simple view for names and device types, or Detailed view for the front and rear line images supplied by the device library.",
         "Use Port Configuration on supported DMX Nodes to assign universes, directions, names, and project positions. Assigned position colours appear on mapped DMX sockets in Detailed Rack Layout views.",
         "Use + Network Device in IP Addresses for custom equipment, or use Add to IP Addresses on a Control/Network reference item.",
@@ -52,6 +52,7 @@
       "type": "unordered",
       "items": [
         "Fixture IDs link Power Calculations to Fixture Patch names, watts, positions, and position colours. Duplicate fixture IDs are highlighted.",
+        "Use the arrow keys, Enter, Shift+Enter, Tab, and Shift+Tab to move between editable Power Calculations cells. Drag the selected cell's blue fill handle vertically to copy a value through a compatible column.",
         "Choose Full Name or Short Name independently for the Power Calculations display.",
         "Select a 16 Amp or 10 Amp RCBO in each distro's settings. A way is warned above 15.01 A for a 16 Amp RCBO or above 9.01 A for a 10 Amp RCBO.",
         "Aux outlets are grouped in threes for Phase 1, Phase 2, and Phase 3. Only Aux outlets enabled for power calculations contribute to the totals. Configured 3ø Outputs are shown separately.",
@@ -65,6 +66,8 @@
       "type": "unordered",
       "items": [
         "Front RCBO Labels, Rear Labels, and Table View edit the same distro data, so changes remain synchronized between views.",
+        "Table View supports spreadsheet-style keyboard navigation, shift-selection, copy and paste, and vertical drag-fill across editable Socapex, Aux, and Output cells.",
+        "Choose Full Name or Short Name in Table View to display the linked fixture-library name without changing manually entered fixture text.",
         "Socapex, Aux, and Output labels support label formatting and colour controls. Socapex names and colours also appear in Power Calculations.",
         "Choose Full Name or Short Name for Front RCBO Labels without changing the fixture's stored library name.",
         "Use Label Settings and Label Format before opening Export. Select the required front and rear pages, paper size, orientation, and logos in the preview."
