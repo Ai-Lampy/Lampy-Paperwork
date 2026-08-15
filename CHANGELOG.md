@@ -2,6 +2,15 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.26 - 2026-08-14
+
+- Standardised the Front, Rear, and Side rack outlines to solid 4 px black borders with matching dashed U separators and clean first/last rack-unit endpoints.
+- Added an explicit Dual View control that displays the rack Front and Rear cards together without requiring either sidebar to be closed.
+- Added a detachable Rack Window that presents a live Front view while the main Rack Layout retains the Device Library and Settings cards.
+- Kept detachable-window and Dual View state temporary so project files and existing rack data remain unchanged.
+- Corrected variable-height rack accessory handling to retain valid 5U placements.
+- Restored the corrupted Distro Options reference file from the application defaults so distro setup data loads normally again.
+
 ## V26.25 - 2026-08-13
 
 - Audited the complete application, JSON libraries, manifests, image references, and GDTF repository paths for production deployment.
