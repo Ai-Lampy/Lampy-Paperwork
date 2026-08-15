@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.31 - 2026-08-15
+
+- Scaled the Rack Window Front/Dual controls to 70% and anchored them to the far-right edge of the rack-card header.
+- Added browser-window and screen-height allowances to detached rack sizing.
+- Constrained the detached rack render scale by available screen height so the bottom U remains visible on 16U and larger racks.
+
 ## V26.30 - 2026-08-15
 
 - Removed the separate Rack Window toolbar and all detached-window zoom controls.
