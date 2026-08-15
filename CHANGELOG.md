@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.28 - 2026-08-15
+
+- Updated the detached Rack Window so its Front/Dual controls sit inside the rack-view grid above the displayed cards.
+- Added the rack name to each detached Front and Rear card header while retaining the view label.
+- Restored working Zoom Out, Fit, and Zoom In controls inside the detached window without re-rendering the main application.
+
 ## V26.27 - 2026-08-15
 
 - Moved Dual View into the detachable Rack Window, where it switches between a single Front card and simultaneous Front and Rear cards.
