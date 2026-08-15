@@ -12,6 +12,7 @@ All notable fixes, cleanup work, and published version changes should be recorde
 - Removed the visible Colour Override column and redistributed its width without changing the 688px Socapex table size.
 - Added the Full Name/Short Name selector to Table View for fixture-library-linked fixture types.
 - Enlarged and centred the Patch Import modal and increased its data preview from 8 to 12 rows.
+- Changed Distro Labels Table View colour cells so focusing or selecting a cell no longer opens the complete colour list; suggestions now appear only when typed text has matching colours.
 - Updated the V27 welcome message and walkthrough, including the current 100mm rack cable-clearance requirement.
 
 ## V26.31 - 2026-08-15
