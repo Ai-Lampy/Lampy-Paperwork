@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V26.27 - 2026-08-15
+
+- Moved Dual View into the detachable Rack Window, where it switches between a single Front card and simultaneous Front and Rear cards.
+- Kept the main Rack Layout, rack card, Device Library, Settings card, sidebar state, and selected rack view unchanged while the detached window is open.
+- Increased the initial detached window width to accommodate its Front and Rear Dual View.
+
 ## V26.26 - 2026-08-14
 
 - Standardised the Front, Rear, and Side rack outlines to solid 4 px black borders with matching dashed U separators and clean first/last rack-unit endpoints.
