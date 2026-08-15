@@ -1445,6 +1445,28 @@
       "shortName": "Mac101"
     },
     {
+      "fixture": "Macula Base Station",
+      "watts": null,
+      "weight": 20.1,
+      "modes": {
+        "PresetBank": 2
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin_Professional__Macula_Base_Station.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Macula_Base_Station@20260810.gdtf",
+        "modes": {
+          "PresetBank": {
+            "channels": 2,
+            "gdtfMode": "PresetBank",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "MaculaBase"
+    },
+    {
       "fixture": "VDO Atomic Bold",
       "watts": 400,
       "weight": 9.32,

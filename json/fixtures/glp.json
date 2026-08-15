@@ -1117,6 +1117,326 @@
       "shortName": "MAD MAXX"
     },
     {
+      "fixture": "Nexus Shapes Circle",
+      "watts": 305.0,
+      "weight": 0.4,
+      "modes": {
+        "M1 Compressed": 3,
+        "M1 Compressed virtual DIM": 3,
+        "M2 Simple": 5,
+        "M3 Normal": 8,
+        "M5 Effect": 22,
+        "M4 Patterns": 17,
+        "M6 Segment Square": 50,
+        "M7 Segment Line": 41,
+        "M8 Segment Ring": 17
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/glp",
+        "suggestedFileName": "GLP__Nexus_Shapes_Circle.gdtf",
+        "file": "fixtures/glp/GLP@Nexus_Shapes_Circle@20260808_Circle_byGLP_sw6-0-50_02.gdtf",
+        "modes": {
+          "M1 Compressed": {
+            "channels": 3,
+            "gdtfMode": "M1 Compressed",
+            "status": "matched"
+          },
+          "M1 Compressed virtual DIM": {
+            "channels": 3,
+            "gdtfMode": "M1 Compressed virtual DIM",
+            "status": "matched"
+          },
+          "M2 Simple": {
+            "channels": 5,
+            "gdtfMode": "M2 Simple",
+            "status": "matched"
+          },
+          "M3 Normal": {
+            "channels": 8,
+            "gdtfMode": "M3 Normal",
+            "status": "matched"
+          },
+          "M5 Effect": {
+            "channels": 22,
+            "gdtfMode": "M5 Effect",
+            "status": "matched"
+          },
+          "M4 Patterns": {
+            "channels": 17,
+            "gdtfMode": "M4 Patterns",
+            "status": "matched"
+          },
+          "M6 Segment Square": {
+            "channels": 50,
+            "gdtfMode": "M6 Segment Square",
+            "status": "matched"
+          },
+          "M7 Segment Line": {
+            "channels": 41,
+            "gdtfMode": "M7 Segment Line",
+            "status": "matched"
+          },
+          "M8 Segment Ring": {
+            "channels": 17,
+            "gdtfMode": "M8 Segment Ring",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Nexus Circle"
+    },
+    {
+      "fixture": "Nexus Shapes Line",
+      "watts": 240.0,
+      "weight": 0.4,
+      "modes": {
+        "M1 Compressed": 3,
+        "M1 Compressed virtual DIM": 3,
+        "M2 Simple": 5,
+        "M3 Normal": 8,
+        "M5 Effect": 22,
+        "M4 Patterns": 17,
+        "M6 Segment Square": 26,
+        "M7 Segment Line": 74,
+        "M8 Segment Ring": 38
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/glp",
+        "suggestedFileName": "GLP__Nexus_Shapes_Line.gdtf",
+        "file": "fixtures/glp/GLP@Nexus_Shapes_Line@20260808_Line_byGLP_sw6-0-50_01.gdtf",
+        "modes": {
+          "M1 Compressed": {
+            "channels": 3,
+            "gdtfMode": "M1 Compressed",
+            "status": "matched"
+          },
+          "M1 Compressed virtual DIM": {
+            "channels": 3,
+            "gdtfMode": "M1 Compressed virtual DIM",
+            "status": "matched"
+          },
+          "M2 Simple": {
+            "channels": 5,
+            "gdtfMode": "M2 Simple",
+            "status": "matched"
+          },
+          "M3 Normal": {
+            "channels": 8,
+            "gdtfMode": "M3 Normal",
+            "status": "matched"
+          },
+          "M5 Effect": {
+            "channels": 22,
+            "gdtfMode": "M5 Effect",
+            "status": "matched"
+          },
+          "M4 Patterns": {
+            "channels": 17,
+            "gdtfMode": "M4 Patterns",
+            "status": "matched"
+          },
+          "M6 Segment Square": {
+            "channels": 26,
+            "gdtfMode": "M6 Segment Square",
+            "status": "matched"
+          },
+          "M7 Segment Line": {
+            "channels": 74,
+            "gdtfMode": "M7 Segment Line",
+            "status": "matched"
+          },
+          "M8 Segment Ring": {
+            "channels": 38,
+            "gdtfMode": "M8 Segment Ring",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Nexus Line"
+    },
+    {
+      "fixture": "Nexus Shapes Square",
+      "watts": 320.0,
+      "weight": 0.4,
+      "modes": {
+        "M1 Compressed": 3,
+        "M1 Compressed virtual DIM": 3,
+        "M2 Simple": 5,
+        "M3 Normal": 8,
+        "M5 Effect": 22,
+        "M4 Patterns": 17,
+        "M8 Segment Ring": 29,
+        "M7 Segment Line": 26,
+        "M6 Segment Square": 50
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/glp",
+        "suggestedFileName": "GLP__Nexus_Shapes_Square.gdtf",
+        "file": "fixtures/glp/GLP@Nexus_Shapes_Square@20260808_Square_byGLP_sw6-0-50_02.gdtf",
+        "modes": {
+          "M1 Compressed": {
+            "channels": 3,
+            "gdtfMode": "M1 Compressed",
+            "status": "matched"
+          },
+          "M1 Compressed virtual DIM": {
+            "channels": 3,
+            "gdtfMode": "M1 Compressed virtual DIM",
+            "status": "matched"
+          },
+          "M2 Simple": {
+            "channels": 5,
+            "gdtfMode": "M2 Simple",
+            "status": "matched"
+          },
+          "M3 Normal": {
+            "channels": 8,
+            "gdtfMode": "M3 Normal",
+            "status": "matched"
+          },
+          "M5 Effect": {
+            "channels": 22,
+            "gdtfMode": "M5 Effect",
+            "status": "matched"
+          },
+          "M4 Patterns": {
+            "channels": 17,
+            "gdtfMode": "M4 Patterns",
+            "status": "matched"
+          },
+          "M8 Segment Ring": {
+            "channels": 29,
+            "gdtfMode": "M8 Segment Ring",
+            "status": "matched"
+          },
+          "M7 Segment Line": {
+            "channels": 26,
+            "gdtfMode": "M7 Segment Line",
+            "status": "matched"
+          },
+          "M6 Segment Square": {
+            "channels": 50,
+            "gdtfMode": "M6 Segment Square",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Nexus Square"
+    },
+    {
+      "fixture": "Nexus Uplight",
+      "watts": 10.0,
+      "weight": 0.4,
+      "modes": {
+        "M1 Compressed": 6,
+        "M1 Compressed virtual DIM": 6,
+        "M2 Simple": 9,
+        "M3 Normal": 12,
+        "M4 Effect": 23
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/glp",
+        "suggestedFileName": "GLP__Nexus_Uplight.gdtf",
+        "file": "fixtures/glp/GLP@Nexus_Uplight@20251711_NexusUplight_byRG_sw5-5-0_prelim01.gdtf",
+        "modes": {
+          "M1 Compressed": {
+            "channels": 6,
+            "gdtfMode": "M1 Compressed",
+            "status": "matched"
+          },
+          "M1 Compressed virtual DIM": {
+            "channels": 6,
+            "gdtfMode": "M1 Compressed virtual DIM",
+            "status": "matched"
+          },
+          "M2 Simple": {
+            "channels": 9,
+            "gdtfMode": "M2 Simple",
+            "status": "matched"
+          },
+          "M3 Normal": {
+            "channels": 12,
+            "gdtfMode": "M3 Normal",
+            "status": "matched"
+          },
+          "M4 Effect": {
+            "channels": 23,
+            "gdtfMode": "M4 Effect",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Nexus Uplight"
+    },
+    {
+      "fixture": "Wild Wash 12",
+      "watts": 500.0,
+      "weight": 15.0,
+      "modes": {
+        "M1 - Basic RGBL (24ch)": 24,
+        "M1 - Basic RGB (24ch)": 24,
+        "M2 - Normal RGBL (35ch)": 35,
+        "M2 - Normal RGB (35ch)": 35,
+        "M3 - Multi-pix-Advanced RGBL (68ch)": 68,
+        "M3 - Multi-pix-Advanced RGB (68ch)": 68,
+        "M4 - Multi-pix-Compressed RGB (49ch)": 49,
+        "M5 - Multi-pix-Compressed RGBL (61ch)": 61
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/glp",
+        "suggestedFileName": "GLP__Wild_Wash_12.gdtf",
+        "file": "fixtures/glp/GLP@Wild_Wash_12@20260805_WildWash12_V-0-4-2_byGLP_03.gdtf",
+        "modes": {
+          "M1 - Basic RGBL (24ch)": {
+            "channels": 24,
+            "gdtfMode": "M1 - Basic RGBL (24ch)",
+            "status": "matched"
+          },
+          "M1 - Basic RGB (24ch)": {
+            "channels": 24,
+            "gdtfMode": "M1 - Basic RGB (24ch)",
+            "status": "matched"
+          },
+          "M2 - Normal RGBL (35ch)": {
+            "channels": 35,
+            "gdtfMode": "M2 - Normal RGBL (35ch)",
+            "status": "matched"
+          },
+          "M2 - Normal RGB (35ch)": {
+            "channels": 35,
+            "gdtfMode": "M2 - Normal RGB (35ch)",
+            "status": "matched"
+          },
+          "M3 - Multi-pix-Advanced RGBL (68ch)": {
+            "channels": 68,
+            "gdtfMode": "M3 - Multi-pix-Advanced RGBL (68ch)",
+            "status": "matched"
+          },
+          "M3 - Multi-pix-Advanced RGB (68ch)": {
+            "channels": 68,
+            "gdtfMode": "M3 - Multi-pix-Advanced RGB (68ch)",
+            "status": "matched"
+          },
+          "M4 - Multi-pix-Compressed RGB (49ch)": {
+            "channels": 49,
+            "gdtfMode": "M4 - Multi-pix-Compressed RGB (49ch)",
+            "status": "matched"
+          },
+          "M5 - Multi-pix-Compressed RGBL (61ch)": {
+            "channels": 61,
+            "gdtfMode": "M5 - Multi-pix-Compressed RGBL (61ch)",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "WildWash12"
+    },
+    {
       "fixture": "WildBar 16",
       "watts": 700,
       "weight": 23,
