@@ -2,6 +2,104 @@
   "manufacturer": "Ayrton",
   "fixtures": [
     {
+      "fixture": "Argo 6 FX",
+      "watts": 1000.0,
+      "weight": 22.0,
+      "modes": {
+        "Extended_Pixel_1": 127,
+        "Standard": 50,
+        "Extended_Pixel_2": 76,
+        "Extended_Pixel_1_+_Liquid": 956,
+        "Extended_Pixel_2_+_Liquid": 956,
+        "Basic": 26,
+        "Extended_Ring": 50
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/ayrton",
+        "suggestedFileName": "Ayrton__Argo_6_FX.gdtf",
+        "file": "fixtures/ayrton/Ayrton@Argo_6_FX@V1.7_Add_RDM_Personality.gdtf",
+        "modes": {
+          "Extended_Pixel_1": {
+            "channels": 127,
+            "gdtfMode": "Extended_Pixel_1",
+            "status": "matched"
+          },
+          "Standard": {
+            "channels": 50,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Extended_Pixel_2": {
+            "channels": 76,
+            "gdtfMode": "Extended_Pixel_2",
+            "status": "matched"
+          },
+          "Extended_Pixel_1_+_Liquid": {
+            "channels": 956,
+            "gdtfMode": "Extended_Pixel_1_+_Liquid",
+            "status": "matched"
+          },
+          "Extended_Pixel_2_+_Liquid": {
+            "channels": 956,
+            "gdtfMode": "Extended_Pixel_2_+_Liquid",
+            "status": "matched"
+          },
+          "Basic": {
+            "channels": 26,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          },
+          "Extended_Ring": {
+            "channels": 50,
+            "gdtfMode": "Extended_Ring",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "AX6"
+    },
+    {
+      "fixture": "Argo 6 WASH",
+      "watts": 120.0,
+      "weight": 22.0,
+      "modes": {
+        "Extended_Ring": 50,
+        "Standard": 37,
+        "Extended_Pixel": 127,
+        "Basic": 26
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/ayrton",
+        "suggestedFileName": "Ayrton__Argo_6_WASH.gdtf",
+        "file": "fixtures/ayrton/Ayrton@Argo_6_WASH@V1.7_Add_RDM_Personality.gdtf",
+        "modes": {
+          "Extended_Ring": {
+            "channels": 50,
+            "gdtfMode": "Extended_Ring",
+            "status": "matched"
+          },
+          "Standard": {
+            "channels": 37,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Extended_Pixel": {
+            "channels": 127,
+            "gdtfMode": "Extended_Pixel",
+            "status": "matched"
+          },
+          "Basic": {
+            "channels": 26,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "A6W"
+    },
+    {
       "fixture": "Bora",
       "watts": 1150,
       "weight": 37.8,
@@ -81,6 +179,46 @@
         }
       },
       "shortName": "Cobra"
+    },
+    {
+      "fixture": "Cobra 2",
+      "watts": 260.0,
+      "weight": 30.7,
+      "modes": {
+        "Extended_540": 45,
+        "Standard_ 540": 35,
+        "Extended_CTO_ 540": 45,
+        "Standard_CTO_ 540": 35
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/ayrton",
+        "suggestedFileName": "Ayrton__Cobra_2.gdtf",
+        "file": "fixtures/ayrton/Ayrton@Cobra_2@V1.3_Add_BZ_Control.gdtf",
+        "modes": {
+          "Extended_540": {
+            "channels": 45,
+            "gdtfMode": "Extended_540",
+            "status": "matched"
+          },
+          "Standard_ 540": {
+            "channels": 35,
+            "gdtfMode": "Standard_ 540",
+            "status": "matched"
+          },
+          "Extended_CTO_ 540": {
+            "channels": 45,
+            "gdtfMode": "Extended_CTO_ 540",
+            "status": "matched"
+          },
+          "Standard_CTO_ 540": {
+            "channels": 35,
+            "gdtfMode": "Standard_CTO_ 540",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "CBR 2"
     },
     {
       "fixture": "Diablo Profile S",
@@ -672,6 +810,234 @@
         }
       },
       "shortName": "Mistral"
+    },
+    {
+      "fixture": "Naja",
+      "watts": 260.0,
+      "weight": 31.8,
+      "modes": {
+        "Extended_540": 49
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/ayrton",
+        "suggestedFileName": "Ayrton__Naja.gdtf",
+        "file": "fixtures/ayrton/Ayrton@Naja@V1.0_First_Release.gdtf",
+        "modes": {
+          "Extended_540": {
+            "channels": 49,
+            "gdtfMode": "Extended_540",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Naja"
+    },
+    {
+      "fixture": "Nando 1202",
+      "watts": 1120.0,
+      "weight": null,
+      "modes": {
+        "Extended Pixel 1U": 150,
+        "Extended Ring 1U": 50,
+        "Standard": 37,
+        "Basic": 26,
+        "Extended Pixel 2U": 112,
+        "Extended Ring 2U": 38
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/ayrton",
+        "suggestedFileName": "Ayrton__Nando_1202.gdtf",
+        "file": "fixtures/ayrton/Ayrton@Nando_1202@V1.1_Add_RDM_Personality.gdtf",
+        "modes": {
+          "Extended Pixel 1U": {
+            "channels": 150,
+            "gdtfMode": "Extended Pixel 1U",
+            "status": "matched"
+          },
+          "Extended Ring 1U": {
+            "channels": 50,
+            "gdtfMode": "Extended Ring 1U",
+            "status": "matched"
+          },
+          "Standard": {
+            "channels": 37,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Basic": {
+            "channels": 26,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          },
+          "Extended Pixel 2U": {
+            "channels": 112,
+            "gdtfMode": "Extended Pixel 2U",
+            "status": "matched"
+          },
+          "Extended Ring 2U": {
+            "channels": 38,
+            "gdtfMode": "Extended Ring 2U",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "NB1202"
+    },
+    {
+      "fixture": "Nando 502",
+      "watts": 480.0,
+      "weight": 14.5,
+      "modes": {
+        "Extended Pixel 1U": 86,
+        "Extended Ring 1U": 46,
+        "Standard": 37,
+        "Basic": 26,
+        "Extended Pixel 2U": 48,
+        "Extended Ring 2U": 38
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/ayrton",
+        "suggestedFileName": "Ayrton__Nando_502.gdtf",
+        "file": "fixtures/ayrton/Ayrton@Nando_502@V2.3_Add_RDM_Personality.gdtf",
+        "modes": {
+          "Extended Pixel 1U": {
+            "channels": 86,
+            "gdtfMode": "Extended Pixel 1U",
+            "status": "matched"
+          },
+          "Extended Ring 1U": {
+            "channels": 46,
+            "gdtfMode": "Extended Ring 1U",
+            "status": "matched"
+          },
+          "Standard": {
+            "channels": 37,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Basic": {
+            "channels": 26,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          },
+          "Extended Pixel 2U": {
+            "channels": 48,
+            "gdtfMode": "Extended Pixel 2U",
+            "status": "matched"
+          },
+          "Extended Ring 2U": {
+            "channels": 38,
+            "gdtfMode": "Extended Ring 2U",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "ND502"
+    },
+    {
+      "fixture": "NandoBeam-S3",
+      "watts": 304.0,
+      "weight": 9.1,
+      "modes": {
+        "Extended": 28,
+        "Standard": 20,
+        "Basic": 17
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/ayrton",
+        "suggestedFileName": "Ayrton__NandoBeam_S3.gdtf",
+        "file": "fixtures/ayrton/Ayrton@NandoBeam-S3@V1.52_New_SVG.gdtf",
+        "modes": {
+          "Extended": {
+            "channels": 28,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          },
+          "Standard": {
+            "channels": 20,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Basic": {
+            "channels": 17,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "NBS3"
+    },
+    {
+      "fixture": "NandoBeam-S6",
+      "watts": 592.0,
+      "weight": 13.9,
+      "modes": {
+        "Extended": 32,
+        "Standard": 20,
+        "Basic": 17
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/ayrton",
+        "suggestedFileName": "Ayrton__NandoBeam_S6.gdtf",
+        "file": "fixtures/ayrton/Ayrton@NandoBeam-S6@V1.72_New_SVG.gdtf",
+        "modes": {
+          "Extended": {
+            "channels": 32,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          },
+          "Standard": {
+            "channels": 20,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Basic": {
+            "channels": 17,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "NBS6"
+    },
+    {
+      "fixture": "NandoBeam-S9",
+      "watts": 880.0,
+      "weight": 21.1,
+      "modes": {
+        "Extended": 36,
+        "Standard": 20,
+        "Basic": 17
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/ayrton",
+        "suggestedFileName": "Ayrton__NandoBeam_S9.gdtf",
+        "file": "fixtures/ayrton/Ayrton@NandoBeam-S9@V1.72_New_SVG.gdtf",
+        "modes": {
+          "Extended": {
+            "channels": 36,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          },
+          "Standard": {
+            "channels": 20,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Basic": {
+            "channels": 17,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "NBS9"
     },
     {
       "fixture": "Perseo Profile",
