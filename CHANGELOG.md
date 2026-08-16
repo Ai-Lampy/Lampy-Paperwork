@@ -2,6 +2,15 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V28 - 2026-08-16
+
+- Moved Show/Hide Columns from the main Fixture Patch toolbar into the Filter & Sort actions beside Clear Filters.
+- Reorganised Fixture Patch Export into a collapsed Formatting Options panel and a separate actions, PDF logos, and hidden-columns row.
+- Updated the Fixture Patch export modal dimensions and header spacing while retaining PDF, Excel, MVR, GDTF, DPI, zoom, logo, and automatic hidden-column workflows.
+- Removed the redundant Fixture Patch PDF paper and page information line.
+- Updated the V28 welcome message and walkthrough so every current-version reference and workflow description matches the release.
+- Moved `welcome_message.json` and `walkthrough.json` into the root-level `info_txt/` folder and updated their application and documentation paths.
+
 ## V27 - 2026-08-16
 
 - Added spreadsheet-style keyboard navigation to editable Power Calculations cells using the arrow keys, Enter, Shift+Enter, Tab, and Shift+Tab.

@@ -1,5 +1,5 @@
 {
-  "title": "Lampy Paperwork V27 Walk-through",
+  "title": "Lampy Paperwork V28 Walk-through",
   "sections": [
     {
       "title": "Recommended Workflow",
@@ -24,7 +24,8 @@
       "items": [
         "The fixture library shows GDTF ✅ only when a repository file has a fully matched manufacturer, fixture type, mode, and channel count. GDTF ❌ means an exact match is not currently available.",
         "Use Import to load CSV, Excel, XLSM, or MVR files. Imported comparison tabs highlight new, removed, and changed patch data before it is merged into the master patch.",
-        "Fixture Patch Export can create PDF, Excel, and MVR files. MVR export checks fixture IDs, DMX addresses, modes, duplicate ranges, and GDTF availability before building the file.",
+        "Fixture Patch Export groups paper, orientation, DPI, zoom, column, and GDTF controls inside Formatting Options. PDF, Excel, and MVR actions, temporary PDF logo controls, and the hidden-column report remain directly accessible below it.",
+        "MVR export checks fixture IDs, DMX addresses, modes, duplicate ranges, and GDTF availability before building the file.",
         "V14 imports supported MVR 1.5 and 1.6 patch data, including fixture positions, layers, classes, UUID metadata, and embedded GDTF filenames with or without the .gdtf extension.",
         "MVR export uses standards-formatted UUIDs and DMX addresses, creates one layer per Lampy fixture position, and embeds the exact matched GDTF file and mode.",
         "Use Add GDTF Files in Fixture Patch Export when a repository match is unavailable. Manual upload remains a fallback and produces a report for matches, revisions, duplicates, missing fixtures, errors, and oversized files."
@@ -89,7 +90,7 @@
       "items": [
         "The Home tab provides project totals, fixture and GDTF status, universe usage, position information, production details, network summaries, and revision access.",
         "Fixture group title lines always use the full fixture name. Full Name and Short Name options affect supported table cells and labels only.",
-        "Use the Fixture Patch lock before editing rows, and watch for duplicate fixture IDs or overlapping DMX addresses.",
+        "Use the Fixture Patch lock before editing rows, and watch for duplicate fixture IDs or overlapping DMX addresses. Show/Hide Columns is available beside Clear Filters in the Filter & Sort controls.",
         "Supply cards can be collapsed after setup to keep Power Calculations tidy.",
         "Project logos are controlled in Project Info and can be included in supported exports.",
         "All project, GDTF, and MVR processing is local to the browser. Lampy Paperwork does not import grandMA3 .show files or modify grandMA3 system libraries.",

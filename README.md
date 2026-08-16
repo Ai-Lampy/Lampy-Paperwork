@@ -34,7 +34,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V27**
+Current app version: **V28**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 
@@ -76,6 +76,9 @@ Lampy Paperwork is intended for modern desktop browsers. Chrome is recommended f
   gdtf/
     fixtures/
       <manufacturer>/
+  info_txt/
+    walkthrough.json
+    welcome_message.json
   json/
     colour_reference_template.json
     console_reference.json
@@ -95,8 +98,6 @@ Lampy Paperwork is intended for modern desktop browsers. Chrome is recommended f
     npu_reference.json
     supply_reference.json
     vlan_colour_reference.json
-    walkthrough.json
-    welcome_message.json
 ```
 
 ## Reference Data
@@ -105,6 +106,7 @@ Reference data is stored in `/json/` and loaded directly by the browser.
 
 - Fixture manufacturers are listed in `json/fixture_library_manifest.json`.
 - Per-manufacturer fixture data lives in `json/fixtures/`.
+- Welcome and walk-through text lives in the root-level `info_txt/` folder.
 - Matched GDTF files used by MVR export live in `gdtf/fixtures/<manufacturer>/`.
 - Console and NPU records can include relative image paths from `images/consoles/` and `images/NPU/`.
 - Colour names and aliases are managed in `json/colour_reference_template.json`.
