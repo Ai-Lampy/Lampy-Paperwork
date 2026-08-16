@@ -2,6 +2,11 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V28.1 - 2026-08-16
+
+- Refined the Fixture Patch export formatting and action-control sizing, spacing, wrapping, and heading alignment.
+- Renamed the user-facing Secondary Logo label to 2nd Logo while preserving existing saved project data.
+
 ## V28 - 2026-08-16
 
 - Moved Show/Hide Columns from the main Fixture Patch toolbar into the Filter & Sort actions beside Clear Filters.
