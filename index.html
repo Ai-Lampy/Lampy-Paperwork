@@ -74,10 +74,12 @@
 .socaDataTable input[type=text]{border:0;border-radius:0;width:100%;min-width:0;height:100%;padding:1mm 1.5mm;font-size:13px}
 .socaDataTable .colourTextInput{font-weight:800;text-align:center}
 .socaDataTable .colourTextInput:disabled{opacity:1;color:#111}
-.socaDataTable input[data-sheet-cell]:focus{outline:2px solid #2b78ff;outline-offset:-2px}
-.socaDataTable input.cellSelected{background:#eaf2ff!important;box-shadow:inset 0 0 0 2px #2b78ff}
-.socaDataTable td.sheetGridSelected{position:relative;box-shadow:inset 0 0 0 2px #2b78ff!important;z-index:2}
-.socaDataTable td.sheetGridSelected input{outline:0!important;background:#eaf2ff!important}
+.socaDataTable input[data-sheet-cell]:focus:not([data-colour-suggestions="typed"]){outline:2px solid #2b78ff;outline-offset:-2px}
+.socaDataTable input.cellSelected:not([data-colour-suggestions="typed"]){background:#eaf2ff!important;box-shadow:inset 0 0 0 2px #2b78ff}
+.socaDataTable td.sheetGridSelected:not(.colourCol){position:relative;box-shadow:inset 0 0 0 2px #2b78ff!important;z-index:2}
+.socaDataTable td.sheetGridSelected:not(.colourCol) input{outline:0!important;background:#eaf2ff!important}
+.socaDataTable td.colourCol.sheetGridSelected{position:relative;z-index:2}
+.socaDataTable td.colourCol input[data-sheet-cell]:focus,.socaDataTable td.colourCol input.cellSelected{outline:0!important;box-shadow:none!important}
 .sheetGridFillHandle{position:absolute;right:-5px;bottom:-5px;width:10px;height:10px;border:1px solid #fff;border-radius:2px;background:#2b78ff;box-shadow:0 0 0 1px #175cd3;cursor:ns-resize;z-index:5;touch-action:none}
 .socaDataTable td.sheetGridFillTarget{position:relative;background:#dbeafe!important;box-shadow:inset 0 0 0 1px #2b78ff!important}
 .tableColourCell{display:flex;align-items:center;justify-content:center;height:100%;padding:0 1mm}
@@ -579,7 +581,7 @@ textarea{min-height:45px}
 <div id="revisionModal" class="modal hidden"><div class="modalCard" style="width:min(620px,100%);"><div class="modalHead"><h2 id="revisionModalTitle">Add Revision</h2><button class="close" onclick="closeRevisionModal()">×</button></div><div class="settingsCard full"><div class="row"><div><label>Version</label><input id="revisionVersion" type="text"></div><div><label>Date</label><input id="revisionDate" type="date"></div></div><div><label>Notes</label><textarea id="revisionNotes"></textarea></div><div style="display:flex;justify-content:flex-end;gap:10px;margin-top:12px"><button class="btn" type="button" onclick="closeRevisionModal()">Cancel</button><button id="revisionSaveButton" class="btn primary" type="button" onclick="saveRevisionEntry()">Add Revision</button></div></div></div></div>
 <div id="fixturePatchModal" class="modal hidden"><div class="modalCard" style="width:min(1900px,100%);height:700px!important;"><div class="modalHead"><h2>Add Fixtures</h2><button class="close" onclick="closeFixturePatchModal()">×</button></div><div id="fixturePatchPicker" style="height:600px!important;" tabindex="-1"></div></div></div>
 <div id="fixtureInfoModal" class="modal hidden"><div class="modalCard gdtfFixtureModalCard"><div class="modalHead"><h2>Fixture Type Information</h2><button class="close" type="button" onclick="closeFixtureInfoModal()">×</button></div><div id="fixtureInfoBody" class="gdtfFixtureInfoBody"></div></div></div>
-<div id="patchImportModal" class="modal hidden"><div class="modalCard" style="width:min(1495px,100%);height:800px;padding:28px 8px;"><div class="modalHead" style="position:relative;justify-content:center;"><h2 style="width:100%;text-align:center;">Import Patch</h2><button class="close" style="position:absolute;right:0;top:50%;transform:translateY(-50%);" onclick="closePatchImportModal()">×</button></div><input id="patchImportFile" class="hidden" type="file" accept=".csv,.xlsx,.xlsm,.xls,.xml,.mvr,text/csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel.sheet.macroEnabled.12,application/vnd.ms-excel,text/xml,application/zip,application/octet-stream"><input id="gdtfUploadFile" class="hidden" type="file" accept=".gdtf,application/octet-stream,application/zip" multiple><div id="patchImportBody"></div></div></div>
+<div id="patchImportModal" class="modal hidden" style="padding:28px 8px;"><div class="modalCard" style="width:min(1495px,100%);height:800px;padding:28px 8px;"><div class="modalHead" style="position:relative;justify-content:center;"><h2 style="width:100%;text-align:center;">Import Patch</h2><button class="close" style="position:absolute;right:0;top:50%;transform:translateY(-50%);" onclick="closePatchImportModal()">×</button></div><input id="patchImportFile" class="hidden" type="file" accept=".csv,.xlsx,.xlsm,.xls,.xml,.mvr,text/csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel.sheet.macroEnabled.12,application/vnd.ms-excel,text/xml,application/zip,application/octet-stream"><input id="gdtfUploadFile" class="hidden" type="file" accept=".gdtf,application/octet-stream,application/zip" multiple><div id="patchImportBody"></div></div></div>
 <div id="patchOptionsModal" class="modal hidden"><div class="modalCard" style="width:min(1500px,100%);max-height:94vh;"><div class="modalHead"><div class="patchOptionsHeading"><h2>Patch Options</h2><button class="btn patchOptionsLibraryButton" type="button" onclick="returnToFixtureLibrary()" style="font-weight:900;">⬅ Fixture Library</button></div><button class="close" onclick="closePatchOptionsModal()">×</button></div><div id="patchOptionsBody"></div><section id="patchUniverseViewer" class="patchUniverseViewer hidden"></section></div></div>
 <div id="patchGroupEditModal" class="modal hidden"><div class="modalCard" style="width:min(1050px,100%);"><div class="modalHead"><h2>Fixture Type Options</h2><button class="close" onclick="closePatchGroupEditModal()">×</button></div><div id="patchGroupEditBody"></div></div></div>
 <div id="positionModal" class="modal hidden"><div class="modalCard" style="width:min(860px,100%);"><div class="modalHead"><h2>Positions</h2><button class="close" onclick="closePositionMenu()">×</button></div><div id="positionMenuBody"></div></div></div>
@@ -3248,6 +3250,10 @@ function sheetCells(root){return [...root.querySelectorAll('input[data-sheet-cel
 function sheetGridInputs(root){return [...root.querySelectorAll('.socaDataTable tbody input[data-sheet-cell]')].filter(input=>!input.disabled&&!input.readOnly&&input.offsetParent!==null)}
 function clearSheetGridFillTargets(root){root.querySelectorAll('.sheetGridFillTarget').forEach(cell=>cell.classList.remove('sheetGridFillTarget'))}
 function clearSheetGridDecorations(root){root.querySelectorAll('.sheetGridSelected').forEach(cell=>cell.classList.remove('sheetGridSelected'));root.querySelectorAll('.sheetGridFillHandle').forEach(handle=>handle.remove());clearSheetGridFillTargets(root)}
+function tableSheetGridRoots(){return [...document.querySelectorAll('.tableView .socaTableBlock,.tableView .tableAuxBlock,.tableView .tableOutputBlock')]}
+function clearSheetGridSelection(root,resetAnchor=true){if(!root)return;clearSheetGridDecorations(root);root.querySelectorAll('.cellSelected').forEach(element=>element.classList.remove('cellSelected'));if(resetAnchor)root._sheetGridAnchor=null}
+function clearOtherSheetGridSelections(activeRoot){tableSheetGridRoots().forEach(root=>{if(root!==activeRoot)clearSheetGridSelection(root,true)})}
+function clearAllTableSheetGridSelections(){tableSheetGridRoots().forEach(root=>clearSheetGridSelection(root,true))}
 function activateSheetGridInput(root,input,selectText=false){
   const cell=input?.closest('.socaDataTable tbody td');
   if(!cell)return;
@@ -3283,7 +3289,9 @@ function moveSheetGridSelection(root,input,direction){
 }
 function handleSheetGridKeydown(event,root){
   const input=event.target.closest?.('.socaDataTable tbody input[data-sheet-cell]');
-  if(!input||event.isComposing||event.ctrlKey||event.metaKey||event.altKey)return;
+  if(!input||event.isComposing)return;
+  if(event.key==='Escape'){event.preventDefault();event.stopPropagation();clearAllTableSheetGridSelections();hideColourMenu();input.blur();return}
+  if(event.ctrlKey||event.metaKey||event.altKey)return;
   const direction={ArrowLeft:'left',ArrowRight:'right',ArrowUp:'up',ArrowDown:'down',Enter:event.shiftKey?'up':'down',Tab:event.shiftKey?'previous':'next'}[event.key];
   if(direction&&moveSheetGridSelection(root,input,direction))event.preventDefault();
 }
@@ -3320,14 +3328,14 @@ function startSheetGridFill(event,root,source,handle){
 function attachSheetCellEvents(root){
   root._sheetGridAnchor=null;
   sheetCells(root).forEach(input=>{
-    input.addEventListener('focus',()=>{if(!root._sheetGridAnchor)root._sheetGridAnchor=input;if(input.closest('.socaDataTable tbody'))activateSheetGridInput(root,input,false);else if(!input.classList.contains('cellSelected')){root.querySelectorAll('.cellSelected').forEach(element=>element.classList.remove('cellSelected'));input.classList.add('cellSelected')}});
-    input.addEventListener('click',event=>{if(event.shiftKey&&root._sheetGridAnchor){clearSheetGridDecorations(root);selectSheetRange(root,root._sheetGridAnchor,input)}else{root._sheetGridAnchor=input;if(input.closest('.socaDataTable tbody'))activateSheetGridInput(root,input,false);else{root.querySelectorAll('.cellSelected').forEach(element=>element.classList.remove('cellSelected'));input.classList.add('cellSelected')}}});
+    input.addEventListener('focus',()=>{clearOtherSheetGridSelections(root);if(!root._sheetGridAnchor)root._sheetGridAnchor=input;if(input.closest('.socaDataTable tbody'))activateSheetGridInput(root,input,false);else if(!input.classList.contains('cellSelected')){root.querySelectorAll('.cellSelected').forEach(element=>element.classList.remove('cellSelected'));input.classList.add('cellSelected')}});
+    input.addEventListener('click',event=>{clearOtherSheetGridSelections(root);if(event.shiftKey&&root._sheetGridAnchor){clearSheetGridDecorations(root);selectSheetRange(root,root._sheetGridAnchor,input)}else{root._sheetGridAnchor=input;if(input.closest('.socaDataTable tbody'))activateSheetGridInput(root,input,false);else{root.querySelectorAll('.cellSelected').forEach(element=>element.classList.remove('cellSelected'));input.classList.add('cellSelected')}}});
     input.addEventListener('paste',event=>pasteSheetRange(event,root,input));
     if(input.closest('.socaDataTable tbody'))input.setAttribute('aria-keyshortcuts','ArrowUp ArrowDown ArrowLeft ArrowRight Enter Shift+Enter Tab Shift+Tab');
   });
   root.addEventListener('keydown',event=>handleSheetGridKeydown(event,root));
   root.addEventListener('copy',event=>copySheetRange(event,root));
-  root.addEventListener('pointerdown',event=>{if(!event.target.closest('.sheetGridFillHandle,.socaDataTable tbody input[data-sheet-cell]'))clearSheetGridDecorations(root)});
+  root.addEventListener('pointerdown',event=>{if(!event.target.closest('.sheetGridFillHandle,.socaDataTable tbody input[data-sheet-cell]'))clearSheetGridSelection(root,true)});
 }
 function selectSheetRange(root,a,b){const ar=parseInt(a.dataset.sheetRow,10),ac=parseInt(a.dataset.sheetCol,10),br=parseInt(b.dataset.sheetRow,10),bc=parseInt(b.dataset.sheetCol,10);const r1=Math.min(ar,br),r2=Math.max(ar,br),c1=Math.min(ac,bc),c2=Math.max(ac,bc);sheetCells(root).forEach(el=>{const r=parseInt(el.dataset.sheetRow,10),c=parseInt(el.dataset.sheetCol,10);el.classList.toggle('cellSelected',r>=r1&&r<=r2&&c>=c1&&c<=c2)})}
 function pasteSheetRange(e,root,start){const text=e.clipboardData?.getData('text/plain')||'';const selected=[...root.querySelectorAll('input.cellSelected[data-sheet-cell]')].filter(el=>!el.disabled);if(selected.length>1&&!/[\t\r\n]/.test(text)){e.preventDefault();selected.forEach(target=>{target.value=text;updateTableInput(target)});return}if(!/[\t\r\n]/.test(text))return;e.preventDefault();const startR=parseInt(start.dataset.sheetRow,10),startC=parseInt(start.dataset.sheetCol,10);text.replace(/\r/g,'').split('\n').filter((row,idx,arr)=>row!==''||idx<arr.length-1).forEach((row,ri)=>{row.split('\t').forEach((val,ci)=>{const target=root.querySelector(`input[data-sheet-cell][data-sheet-row="${startR+ri}"][data-sheet-col="${startC+ci}"]`);if(target&&!target.disabled){target.value=val;updateTableInput(target)}})})}
