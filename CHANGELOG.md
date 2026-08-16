@@ -2,6 +2,15 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V28.2 - 2026-08-16
+
+- Unified Fixture Patch, Power Calculations, Fan Outs, and Distro Labels PDF previews in a 96vw × 94vh workspace with a fixed 340px right-hand controls pane.
+- Moved formatting, sheet-specific options, PDF logos, preview details, and export actions out of the page preview area while preserving their existing behaviour.
+- Aligned Fixture Patch filter actions with the Sort and Filter selects and retained imported-patch comparison controls.
+- Renamed the colour, console, NPU, power-supply, and VLAN reference files to clearer production filenames and updated every active application and documentation path.
+- Added reserved font colour, outline colour, and pixel line-weight metadata to every general colour option without changing current rendering or user formatting.
+- Removed the obsolete `network_expansion_reference.json` fallback; the rack-device manifest and its split libraries are now the sole rack/network-device source.
+
 ## V28.1 - 2026-08-16
 
 - Refined the Fixture Patch export formatting and action-control sizing, spacing, wrapping, and heading alignment.

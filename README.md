@@ -34,7 +34,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V28.1**
+Current app version: **V28.2**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 
@@ -80,14 +80,13 @@ Lampy Paperwork is intended for modern desktop browsers. Chrome is recommended f
     walkthrough.json
     welcome_message.json
   json/
-    colour_reference_template.json
-    console_reference.json
+    colour_options.json
+    lighting_consoles.json
     distro_options.json
     fixture_library_manifest.json
     fixtures/
       <manufacturer>.json
     lighting_vendors.json
-    network_expansion_reference.json
     rack_devices/
       README.md
       manifest.json
@@ -95,9 +94,9 @@ Lampy Paperwork is intended for modern desktop browsers. Chrome is recommended f
       rack_power.json
       luminex.json
       pathway.json
-    npu_reference.json
-    supply_reference.json
-    vlan_colour_reference.json
+    grandMA_NPU.json
+    power_supply.json
+    vlan_colour_options.json
 ```
 
 ## Reference Data
@@ -108,8 +107,11 @@ Reference data is stored in `/json/` and loaded directly by the browser.
 - Per-manufacturer fixture data lives in `json/fixtures/`.
 - Welcome and walk-through text lives in the root-level `info_txt/` folder.
 - Matched GDTF files used by MVR export live in `gdtf/fixtures/<manufacturer>/`.
-- Console and NPU records can include relative image paths from `images/consoles/` and `images/NPU/`.
-- Colour names and aliases are managed in `json/colour_reference_template.json`.
+- Lighting-console records are stored in `json/lighting_consoles.json` and can reference images from `images/consoles/`.
+- grandMA NPU records are stored in `json/grandMA_NPU.json` and can reference images from `images/NPU/`.
+- Power-supply calculation thresholds are stored in `json/power_supply.json`.
+- VLAN colour choices are stored in `json/vlan_colour_options.json`.
+- Colour names, aliases, and reserved text/outline style metadata are managed in `json/colour_options.json`.
 
 When adding new reference files, keep paths relative to the repository root so GitHub Pages can serve them correctly.
 

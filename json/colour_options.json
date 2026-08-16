@@ -1,0 +1,82 @@
+{
+  "schema": "lighting_colour_options_v2",
+  "description": "Colour options with names, aliases, and reserved text and outline style metadata. Style metadata is not currently applied by the app renderer.",
+  "noColour": {
+    "name": "No Colour",
+    "aliases": [
+      "No Colour",
+      "No Color",
+      "None",
+      "Blank",
+      "Clear"
+    ]
+  },
+  "colours": {
+    "#FF0000": {
+      "names": ["Red", "Re", "R"],
+      "fontColour": "#FFFFFF",
+      "outlineColour": "#000000",
+      "lineWeight": 1
+    },
+    "#FF881A": {
+      "names": ["Orange", "O", "Or", "Ora", "Oran", "Orang"],
+      "fontColour": "#000000",
+      "outlineColour": "#FFFFFF",
+      "lineWeight": 1
+    },
+    "#FFFF3D": {
+      "names": ["Yellow", "Y", "Ye", "Yel", "Yell", "Yello"],
+      "fontColour": "#000000",
+      "outlineColour": "#FFFFFF",
+      "lineWeight": 1
+    },
+    "#9E9D9D": {
+      "names": ["Grey", "G", "Gr", "Gre", "Gra"],
+      "fontColour": "#000000",
+      "outlineColour": "#FFFFFF",
+      "lineWeight": 1
+    },
+    "#00B311": {
+      "names": ["Green", "G", "Gr", "Gre", "Gre", "Gree"],
+      "fontColour": "#FFFFFF",
+      "outlineColour": "#000000",
+      "lineWeight": 1
+    },
+    "#008EE6": {
+      "names": ["Blue", "Cyan", "B", "Bl", "Blu", "C", "Cy", "Cya"],
+      "fontColour": "#FFFFFF",
+      "outlineColour": "#000000",
+      "lineWeight": 1
+    },
+    "#FA23C8": {
+      "names": ["Pink", "P", "Pi", "Pin"],
+      "fontColour": "#FFFFFF",
+      "outlineColour": "#000000",
+      "lineWeight": 1
+    },
+    "#9C54FF": {
+      "names": ["Lavender", "Purple", "L", "La", "Lav", "Lave", "Laven", "Lavend", "Lavende", "P", "Pu", "Pur", "Purp", "Purpl"],
+      "fontColour": "#FFFFFF",
+      "outlineColour": "#000000",
+      "lineWeight": 1
+    },
+    "#FFFFFF": {
+      "names": ["White", "W", "Wh", "Whi", "Whit"],
+      "fontColour": "#000000",
+      "outlineColour": "#FFFFFF",
+      "lineWeight": 1
+    },
+    "#914F21": {
+      "names": ["Brown", "Br", "Bro", "Brow"],
+      "fontColour": "#FFFFFF",
+      "outlineColour": "#000000",
+      "lineWeight": 1
+    },
+    "#000000": {
+      "names": ["Black", "B", "Bl", "Bla", "Blac"],
+      "fontColour": "#FFFFFF",
+      "outlineColour": "#000000",
+      "lineWeight": 1
+    }
+  }
+}
