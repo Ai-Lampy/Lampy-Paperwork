@@ -2,6 +2,13 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V28.3 - 2026-08-16
+
+- Moved Zoom above Formatting Options across every PDF preview and placed all five zoom controls on one row.
+- Simplified Fixture Patch Export by removing Add GDTF Files, grouping Hidden Columns with Sheet Options, and omitting its empty Preview Details section.
+- Refined PDF logo and Fixture Patch export-action grids while preserving all existing export workflows.
+- Added the cross-platform System UI stack to every shared font selector and PDF formatting workflow.
+
 ## V28.2 - 2026-08-16
 
 - Unified Fixture Patch, Power Calculations, Fan Outs, and Distro Labels PDF previews in a 96vw × 94vh workspace with a fixed 340px right-hand controls pane.
