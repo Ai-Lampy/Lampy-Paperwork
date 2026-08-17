@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V28.4 - 2026-08-16
+
+- Refined Fixture Patch PDF, Excel, and MVR action sizing for the export sidebar.
+- Standardised PDF logo control sizing across every PDF preview and preserved it during dynamic rerenders.
+- Simplified Fixture Patch sheet options by removing its heading and placing dynamic Hidden Columns above Show/Hide Columns.
+
 ## V28.3 - 2026-08-16
 
 - Moved Zoom above Formatting Options across every PDF preview and placed all five zoom controls on one row.
