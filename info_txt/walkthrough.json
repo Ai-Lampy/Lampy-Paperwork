@@ -8,9 +8,9 @@
         "Open Project Info from the Actions menu and enter the project name, dates, production details, and logos.",
         "Add each distro with + Distro. Set its name, type, supply, voltage, RCBO rating, Socapex count, and any Aux or additional outputs.",
         "Build the Fixture Patch by adding fixtures from the library or importing CSV, Excel, XLSM, or MVR data.",
-        "Open Position Summary to create positions and assign up to three colours. Position names and colours are shared with the patch, power calculations, labels, and Control/Network cards.",
+        "Open Position Summary to create positions and assign up to three colours. Position names and colours are shared with the patch, power calculations, labels, Control cards, and Network Equipment cards.",
         "Open Power Calculations and assign distros to supplies. Enter fixture IDs to link each way to Fixture Patch data, then check phase totals, RCBO warnings, Aux outlets, and the PDF preview.",
-        "Use Control/Network to add consoles and NPUs, including roles, locations, parameters, protocols, IP addresses, DMX ports, and reference images.",
+        "Use Control to add consoles and NPUs, including roles, locations, parameters, protocols, IP addresses, DMX ports, and reference images. Add switches, nodes, and other project hardware in Network Equipment.",
         "Open Rack Layout to create racks, set their U size and depth, and place project or library devices from the Front or Rear view. Use Side view to inspect device depths and cable clearance.",
         "Open IP Addresses to review the compiled console and NPU list, assign subnet and VLAN information, and add switches, nodes, cameras, or other network devices used by the project.",
         "Review the Fan Outs tab generated from Power Calculations and export the required Fan Out paperwork.",
@@ -32,17 +32,18 @@
       ]
     },
     {
-      "title": "Control, Network, and IP Addresses",
+      "title": "Control, Network Equipment, and IP Addresses",
       "type": "unordered",
       "items": [
-        "Consoles and NPUs added in Control/Network appear automatically in the IP Addresses sheet.",
-        "Console names, locations, and IP addresses remain linked between Control/Network and IP Addresses.",
+        "Consoles and NPUs added in Control appear automatically in the IP Addresses sheet. Devices added in Network Equipment are compiled there as well.",
+        "Device names, locations, and IP addresses remain linked between Control, Network Equipment, Rack Layout, and IP Addresses.",
         "Rack Layout provides Front, Side, and Rear views. Front and Rear are mounting faces; Side is a depth overview where existing devices can still be moved vertically.",
         "New racks default to 700 mm deep. Rack Depth can be edited, but every device must retain at least 100 mm of space behind it for cabling.",
         "Front- and rear-mounted devices may share a U only when their combined depths plus the 100 mm cable space fit inside the rack.",
         "Use Simple view for names and device types, or Detailed view for the front and rear line images supplied by the device library.",
         "Use Port Configuration on supported DMX Nodes to assign universes, directions, names, and project positions. Assigned position colours appear on mapped DMX sockets in Detailed Rack Layout views.",
-        "Use + Network Device in IP Addresses for custom equipment, or use Add to IP Addresses on a Control/Network reference item.",
+        "Use + Network Device in IP Addresses for IP-only equipment. Add project hardware from the reference library in Network Equipment.",
+        "Global Subnet can automatically supply the subnet for new devices. Manually changing an interface subnet excludes it from later global updates until Apply to all Devices is used.",
         "Each device can contain two IP addresses. Subnet and VLAN values are stored per interface, while the device name, location, and notes remain shared.",
         "The VLAN reference shows VLAN 0 Untagged/MGMT, VLAN 1 sACN, VLAN 2 Art-Net, and VLAN 3 RoboCam with matching table colours.",
         "A Notes value of SPARE uses the project-wide SPARE styling automatically."
@@ -78,7 +79,7 @@
       "title": "Revisions and Saving",
       "type": "unordered",
       "items": [
-        "Changes to Project Info, Fixture Patch, Power Calculations, and Control/Network automatically create concise revision notes in the latest working version.",
+        "Changes to Project Info, Fixture Patch, Power Calculations, and Control automatically create concise revision notes in the latest working version.",
         "Use Bump Version Number to increment the project version and add the current date. Notes can be edited, removed, or moved to another version.",
         "Similar automatic changes are grouped into a short client-facing summary. Use Download Change Log when the detailed activity log is needed.",
         "The browser saves a working copy locally, but Download Project is the portable backup. Use Open Project to continue from a saved Lampy project file."
