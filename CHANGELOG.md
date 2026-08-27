@@ -2,6 +2,16 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V28.6 - 2026-08-27
+
+- Linked rack-mounted network devices and NPUs to their current rack location in the IP Addresses sheet.
+- Grouped rack-mounted devices by rack and kept their IP sheet order synchronized with their rack positions.
+- Made rack-managed IP location cells read-only so Rack Layout remains the single source of truth.
+
+## V28.5 - 2026-08-17
+
+- Updated the shared Show Unused Socas control styling in both Power Calculations and Fan Outs PDF previews.
+
 ## V28.4 - 2026-08-16
 
 - Refined Fixture Patch PDF, Excel, and MVR action sizing for the export sidebar.
