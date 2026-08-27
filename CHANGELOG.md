@@ -2,6 +2,18 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V29 - 2026-08-27
+
+- Added the Device Config tree after Rack Layout for all network-capable project devices.
+- Added collapsible device branches with physical Ethernet, fibre and XLR-5 DMX port rows, plus secondary logical IP interfaces where supported.
+- Linked Device Config edits directly to Control, IP Address', Rack Layout, Home summaries, DMX port overlays, project persistence and revision tracking.
+- Added spreadsheet navigation, range selection, copy/paste and vertical drag-fill to editable Device Config cells.
+- Added Device Config search, location and type filters, parent-device sorting, Expand All, Collapse All, column visibility and font/alignment formatting.
+- Kept rack devices grouped by rack and ordered by physical rack position.
+- Hid the legacy Network Equipment interface while preserving its stored data and internal compatibility functions.
+- Renamed the visible IP Addresses tab to IP Address'.
+- Extended device normalization with stable per-port configuration and removed the legacy six-port limit for reference-defined DMX nodes.
+
 ## V28.8 - 2026-08-27
 
 - Grouped rack-mounted Network Equipment devices by their rack instead of their previous standalone location.

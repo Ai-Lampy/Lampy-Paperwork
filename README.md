@@ -14,7 +14,8 @@ Live app: [https://ai-lampy.github.io/Lampy-Paperwork/](https://ai-lampy.github.
 - Produces power calculation sheets with distro and supply phase totals.
 - Provides spreadsheet-style keyboard navigation and vertical drag-fill editing in Power Calculations and Distro Labels Table View.
 - Produces display-only Fan Out sheets from Power Calculations, including Socapex colours, fixture details, and position colours.
-- Compiles consoles, NPUs, and project network equipment into an IP Addresses sheet with dual IP fields, subnet data, VLAN assignments, locations, and notes.
+- Compiles consoles, NPUs, and project network equipment into an IP Address' sheet with dual IP fields, subnet data, VLAN assignments, locations, and notes.
+- Provides a synchronized Device Config tree with expandable physical ports, editable patching, protocols, directions, VLANs and notes, plus spreadsheet navigation, copy/paste and vertical drag-fill.
 - Tracks DMX universe usage and available address space.
 - Builds console, NPU, and network paperwork with reference images.
 - Uses console-reference software versions when available, with an Other/manual version field for unlisted or empty reference data.
@@ -25,7 +26,7 @@ Live app: [https://ai-lampy.github.io/Lampy-Paperwork/](https://ai-lampy.github.
 - Displays configured DMX Node position colours over mapped sockets in Detailed rack views.
 - Gives every added rack its own Rack Layout sub-tab so only one rack diagram is displayed at a time.
 - Uses network-device line images in Detailed rack views, without applying project-position colours, while keeping consoles out of rack-device choices.
-- Keeps Control and Network Equipment devices linked to the IP Addresses sheet while enforcing removal from their original owning tab.
+- Keeps Control, Device Config, Rack Layout, and IP Address' device data synchronized without duplicating the underlying project records.
 - Exports project data as a Lampy project file for reopening later.
 - Exports MVR fixture patches with matched repository GDTF files embedded when available.
 - Exports paperwork previews to PDF where supported by the app workflow.
@@ -34,7 +35,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V28.8**
+Current app version: **V29**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 
@@ -45,10 +46,11 @@ See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 3. Add distro details in **Distro Labels**.
 4. Build or import the **Fixture Patch**.
 5. Check **Power Calculations** after fixture IDs and fixture types are set.
-6. Add consoles and NPUs in **Control**, then add switches, nodes, cameras, and other hardware in **Network Equipment**.
+6. Add consoles and NPUs in **Control**, then add network-capable project hardware through **Rack Layout** or **IP Address'**.
 7. Use **Rack Layout** to create racks, set rack depth, and place equipment from the Front or Rear; use Side view to check physical depth and cable clearance.
-8. Open **IP Addresses** to review the compiled device list and configure Global Subnet, interface subnets, VLANs, and IP-only devices.
-9. Download the project file regularly to save an editable copy.
+8. Open **Device Config** to review and edit devices and their individual ports in a synchronized tree.
+9. Open **IP Address'** to configure Global Subnet, interface subnets, VLANs, and IP-only devices.
+10. Download the project file regularly to save an editable copy.
 
 All project data is client-side. The app runs in your browser and does not require an account, server, database, or build process. PDF export loads a pinned browser rendering library on demand, while project and export processing remain in the browser.
 

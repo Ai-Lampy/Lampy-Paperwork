@@ -1,5 +1,5 @@
 {
-  "title": "Lampy Paperwork V28 Walk-through",
+  "title": "Lampy Paperwork V29 Walk-through",
   "sections": [
     {
       "title": "Recommended Workflow",
@@ -8,11 +8,12 @@
         "Open Project Info from the Actions menu and enter the project name, dates, production details, and logos.",
         "Add each distro with + Distro. Set its name, type, supply, voltage, RCBO rating, Socapex count, and any Aux or additional outputs.",
         "Build the Fixture Patch by adding fixtures from the library or importing CSV, Excel, XLSM, or MVR data.",
-        "Open Position Summary to create positions and assign up to three colours. Position names and colours are shared with the patch, power calculations, labels, Control cards, and Network Equipment cards.",
+        "Open Position Summary to create positions and assign up to three colours. Position names and colours are shared with the patch, power calculations, labels, Control, Rack Layout, and Device Config.",
         "Open Power Calculations and assign distros to supplies. Enter fixture IDs to link each way to Fixture Patch data, then check phase totals, RCBO warnings, Aux outlets, and the PDF preview.",
-        "Use Control to add consoles and NPUs, including roles, locations, parameters, protocols, IP addresses, DMX ports, and reference images. Add switches, nodes, and other project hardware in Network Equipment.",
+        "Use Control to add consoles and NPUs, including roles, locations, parameters, protocols, IP addresses, DMX ports, and reference images. Add switches, nodes, and other network-capable hardware through Rack Layout or IP Address'.",
         "Open Rack Layout to create racks, set their U size and depth, and place project or library devices from the Front or Rear view. Use Side view to inspect device depths and cable clearance.",
-        "Open IP Addresses to review the compiled console and NPU list, assign subnet and VLAN information, and add switches, nodes, cameras, or other network devices used by the project.",
+        "Open Device Config to review the synchronized device tree, expand individual ports, and edit patch, IP, subnet, protocol, direction, VLAN, and notes data.",
+        "Open IP Address' to review interfaces, assign subnet and VLAN information, and add IP-only devices used by the project.",
         "Review the Fan Outs tab generated from Power Calculations and export the required Fan Out paperwork.",
         "Use Distro Labels to complete Front RCBO Labels, Rear Labels, and Table View, then preview and export the required label pages.",
         "Review Revisions from the Actions menu or Home card, then download the Lampy project file so the editable project can be reopened later."
@@ -32,17 +33,19 @@
       ]
     },
     {
-      "title": "Control, Network Equipment, and IP Addresses",
+      "title": "Control, Device Config, Rack Layout, and IP Address'",
       "type": "unordered",
       "items": [
-        "Consoles and NPUs added in Control appear automatically in the IP Addresses sheet. Devices added in Network Equipment are compiled there as well.",
-        "Device names, locations, and IP addresses remain linked between Control, Network Equipment, Rack Layout, and IP Addresses.",
+        "Consoles and NPUs added in Control appear automatically in Device Config and IP Address'. Network-capable devices added through Rack Layout are compiled there as well.",
+        "Device names, locations, IP addresses, port settings, protocols, VLANs, and notes remain linked between Control, Device Config, Rack Layout, and IP Address'.",
+        "Device Config branches are collapsed by default. Expand a device to see its Ethernet, fibre, XLR-5 DMX, and supported secondary-interface records.",
+        "Use arrow keys, Enter, Shift+Enter, Tab, and Shift+Tab to move through Device Config. Copy, paste, select ranges, or drag the fill handle vertically through compatible cells.",
         "Rack Layout provides Front, Side, and Rear views. Front and Rear are mounting faces; Side is a depth overview where existing devices can still be moved vertically.",
         "New racks default to 700 mm deep. Rack Depth can be edited, but every device must retain at least 100 mm of space behind it for cabling.",
         "Front- and rear-mounted devices may share a U only when their combined depths plus the 100 mm cable space fit inside the rack.",
         "Use Simple view for names and device types, or Detailed view for the front and rear line images supplied by the device library.",
         "Use Port Configuration on supported DMX Nodes to assign universes, directions, names, and project positions. Assigned position colours appear on mapped DMX sockets in Detailed Rack Layout views.",
-        "Use + Network Device in IP Addresses for IP-only equipment. Add project hardware from the reference library in Network Equipment.",
+        "Use + Network Device in IP Address' for IP-only equipment. Add reference-library rack hardware from Rack Layout.",
         "Global Subnet can automatically supply the subnet for new devices. Manually changing an interface subnet excludes it from later global updates until Apply to all Devices is used.",
         "Each device can contain two IP addresses. Subnet and VLAN values are stored per interface, while the device name, location, and notes remain shared.",
         "The VLAN reference shows VLAN 0 Untagged/MGMT, VLAN 1 sACN, VLAN 2 Art-Net, and VLAN 3 RoboCam with matching table colours.",
