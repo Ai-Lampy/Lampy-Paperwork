@@ -25,7 +25,7 @@ Live app: [https://ai-lampy.github.io/Lampy-Paperwork/](https://ai-lampy.github.
 - Displays configured DMX Node position colours over mapped sockets in Detailed rack views.
 - Gives every added rack its own Rack Layout sub-tab so only one rack diagram is displayed at a time.
 - Uses network-device line images in Detailed rack views, without applying project-position colours, while keeping consoles out of rack-device choices.
-- Keeps Control/Network devices linked to the IP Addresses sheet while enforcing removal from their original owning tab.
+- Keeps Control and Network Equipment devices linked to the IP Addresses sheet while enforcing removal from their original owning tab.
 - Exports project data as a Lampy project file for reopening later.
 - Exports MVR fixture patches with matched repository GDTF files embedded when available.
 - Exports paperwork previews to PDF where supported by the app workflow.
@@ -34,7 +34,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V28.6**
+Current app version: **V28.7**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 
@@ -45,9 +45,9 @@ See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 3. Add distro details in **Distro Labels**.
 4. Build or import the **Fixture Patch**.
 5. Check **Power Calculations** after fixture IDs and fixture types are set.
-6. Add consoles and NPUs in **Control/Network**.
+6. Add consoles and NPUs in **Control**, then add switches, nodes, cameras, and other hardware in **Network Equipment**.
 7. Use **Rack Layout** to create racks, set rack depth, and place equipment from the Front or Rear; use Side view to check physical depth and cable clearance.
-8. Open **IP Addresses** to review the compiled device list, assign subnets and VLANs, and add switches, nodes, cameras, or other project network devices.
+8. Open **IP Addresses** to review the compiled device list and configure Global Subnet, interface subnets, VLANs, and IP-only devices.
 9. Download the project file regularly to save an editable copy.
 
 All project data is client-side. The app runs in your browser and does not require an account, server, database, or build process. PDF export loads a pinned browser rendering library on demand, while project and export processing remain in the browser.

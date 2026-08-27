@@ -2,6 +2,16 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V28.7 - 2026-08-27
+
+- Separated the main Control and Network Equipment sheets while preserving existing Control/Network project data.
+- Made bundled rack-library devices repeatable, with independent project items and rack placements for each copy.
+- Grouped rack-mounted IP devices by rack, used `Rack Name - Rack Location`, and synchronized their physical rack order.
+- Added optional Global Subnet inheritance for new devices, manual per-interface exclusions, and an Apply to all Devices reset.
+- Started Home summary panels collapsed on each app load.
+- Opened Lighting Vendor details by default, expanded an existing 2nd Logo automatically, clarified Home production-field visibility controls, and added vendor-specific logo upload and restore controls.
+- Validated and normalised the Clear-Com MS-702 rack-device reference, including its brand name, port metadata, power connector, manifest entry, and image paths.
+
 ## V28.6 - 2026-08-27
 
 - Linked rack-mounted network devices and NPUs to their current rack location in the IP Addresses sheet.
