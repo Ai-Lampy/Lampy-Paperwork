@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 2,
+  "manufacturer": "Clear Com",
+  "devices": [
+    {
+      "id": "ms_702",
+      "manufacturer": "Clear Com",
+      "name": "MS-702",
+      "type": "Comms",
+      "dimensionsMm": {
+        "width": 483,
+        "height": 44,
+        "depth": 165
+      },
+      "weightKg": 2.8,
+      "rack": {
+        "mountable": true,
+        "heightU": 1,
+        "widthFraction": 1
+      },
+      "mounting": {
+        "accessory": null,
+        "method": "19-inch rack mount",
+        "trussMountable": false
+      },
+      "ports": [
+        {
+          "quantity": 3,
+          "connector": "XLR-3M Intercom Channel A",
+          "direction": "Bidirectional",
+          "facing": "Rear"
+        },
+        {
+          "quantity": 3,
+          "connector": "XLR-3M Intercom Channel B",
+          "direction": "Bidirectional",
+          "facing": "Rear"
+        },
+        {
+          "quantity": 1,
+          "connector": "XLR-3F Program Input",
+          "direction": "Input",
+          "facing": "Rear"
+        },
+        {
+          "quantity": 1,
+          "connector": "XLR-3M Announce Out",
+          "direction": "Output",
+          "facing": "Rear"
+        },
+        {
+          "quantity": 1,
+          "connector": "1/4-inch TRS Announce Relay",
+          "direction": "Output",
+          "facing": "Rear"
+        },
+        {
+          "quantity": 1,
+          "connector": "1/4-inch TRS Hot Mic / IFB Interface",
+          "direction": "Output",
+          "facing": "Rear"
+        },
+        {
+          "quantity": 1,
+          "connector": "XLR-4M Headset",
+          "direction": "Bidirectional",
+          "facing": "Front"
+        },
+        {
+          "quantity": 1,
+          "connector": "1/4-inch Panel Microphone",
+          "direction": "Input",
+          "facing": "Front"
+        }
+      ],
+      "power": {
+        "connectors": [
+          {
+            "quantity": 1,
+            "connector": "IEC 320",
+            "direction": "Input",
+            "facing": "Rear"
+          }
+        ],
+        "poeIn": false
+      },
+      "imageUrl": "images/rack_accessories/comms/clear_com_MS702.png",
+      "lineImageUrlFront": "images/rack_accessories/comms/clear_com_MS702_line_front.png",
+      "lineImageUrlRear": "images/rack_accessories/comms/clear_com_MS702_line_rear.png"
+    }
+  ]
+}

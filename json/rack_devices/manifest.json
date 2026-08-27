@@ -16,6 +16,10 @@
     {
       "manufacturer": "Rack Power",
       "file": "json/rack_devices/rack_power.json"
-    }
+    },
+	{
+	  "manufacturer": "Clear Com",
+	  "file": "json/rack_devices/clear_com.json"
+	}
   ]
 }
