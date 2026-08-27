@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V28.8 - 2026-08-27
+
+- Grouped rack-mounted Network Equipment devices by their rack instead of their previous standalone location.
+- Updated linked Network Equipment locations from the rack location and kept them synchronized when rack settings change.
+- Kept devices within each rack group ordered by their physical rack position.
+
 ## V28.7 - 2026-08-27
 
 - Separated the main Control and Network Equipment sheets while preserving existing Control/Network project data.
