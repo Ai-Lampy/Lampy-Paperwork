@@ -1,10 +1,10 @@
 {
   "schemaVersion": 2,
-  "manufacturer": "Clear Com",
+  "manufacturer": "Clear-Com",
   "devices": [
     {
       "id": "ms_702",
-      "manufacturer": "Clear Com",
+      "manufacturer": "Clear-Com",
       "name": "MS-702",
       "type": "Comms",
       "dimensionsMm": {
@@ -27,60 +27,55 @@
         {
           "quantity": 3,
           "connector": "XLR-3M Intercom Channel A",
-          "direction": "Bidirectional",
-          "facing": "Rear"
+          "direction": "bidirectional",
+          "facing": "rear"
         },
         {
           "quantity": 3,
           "connector": "XLR-3M Intercom Channel B",
-          "direction": "Bidirectional",
-          "facing": "Rear"
+          "direction": "bidirectional",
+          "facing": "rear"
         },
         {
           "quantity": 1,
           "connector": "XLR-3F Program Input",
-          "direction": "Input",
-          "facing": "Rear"
+          "direction": "input",
+          "facing": "rear"
         },
         {
           "quantity": 1,
           "connector": "XLR-3M Announce Out",
-          "direction": "Output",
-          "facing": "Rear"
+          "direction": "output",
+          "facing": "rear"
         },
         {
           "quantity": 1,
           "connector": "1/4-inch TRS Announce Relay",
-          "direction": "Output",
-          "facing": "Rear"
+          "direction": "output",
+          "facing": "rear"
         },
         {
           "quantity": 1,
           "connector": "1/4-inch TRS Hot Mic / IFB Interface",
-          "direction": "Output",
-          "facing": "Rear"
+          "direction": "output",
+          "facing": "rear"
         },
         {
           "quantity": 1,
           "connector": "XLR-4M Headset",
-          "direction": "Bidirectional",
-          "facing": "Front"
+          "direction": "bidirectional",
+          "facing": "front"
         },
         {
           "quantity": 1,
           "connector": "1/4-inch Panel Microphone",
-          "direction": "Input",
-          "facing": "Front"
+          "direction": "input",
+          "facing": "front"
         }
       ],
       "power": {
         "connectors": [
-          {
-            "quantity": 1,
-            "connector": "IEC 320",
-            "direction": "Input",
-            "facing": "Rear"
-          }
+          "IEC 320 AC inlet"
         ],
         "poeIn": false
       },
