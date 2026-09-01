@@ -2,6 +2,19 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V29.1 - 2026-09-01
+
+- Promoted the performance-refactored application candidate to the working release.
+- Replaced linear label text fitting with bounded binary-search fitting and removed duplicate per-label fitting frames.
+- Debounced Device Config search and batched interactive settings renders.
+- Deferred project persistence and reference-library loading away from active input frames.
+- Throttled Rack Layout pop-out synchronization and reduced unnecessary MutationObserver work.
+- Reused compiled Device Config data and applied its table formatting through shared CSS variables.
+- Batched PDF preview zoom measurements before style updates.
+- Cached Distro Labels export source sections and limited repeated text fitting to newly added export blocks.
+- Removed confirmed dead functions, unused CSS selectors, and redundant post-definition renderer wrappers.
+- Added off-screen rendering containment to Device Config location groups.
+
 ## V29 - 2026-08-27
 
 - Added the Device Config tree after Rack Layout for all network-capable project devices.
