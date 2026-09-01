@@ -2,6 +2,15 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V31 - 2026-09-01
+
+- Added project-aware Home dashboard layouts with card ordering, sizing, visibility, collapsed state, drag-and-drop, accessible move controls, browser defaults, and factory reset.
+- Redesigned the detailed Home summary panels while retaining the existing Home Stat appearance.
+- Replaced the Positions modal with a full-page editor shared by Home and Fixture Patch.
+- Propagated position renames and removals across fixtures, consoles, NPUs, network devices, and racks.
+- Changed Control console ordering to group by position and sort Master, Backup, unassigned, then name.
+- Updated the Welcome Message and Walk-through for the V31 workflows.
+
 ## V30.2 - 2026-09-01
 
 - Restructured the lighting-console reference as a rack-library-style `devices` collection with shared physical, mounting, power, protocol, processing, and image fields.

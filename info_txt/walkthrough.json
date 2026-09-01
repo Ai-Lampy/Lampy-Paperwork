@@ -1,5 +1,5 @@
 {
-  "title": "Lampy Paperwork V30 Walk-through",
+  "title": "Lampy Paperwork V31 Walk-through",
   "sections": [
     {
       "title": "Recommended Workflow",
@@ -8,7 +8,7 @@
         "Press the menu button to open Actions, then open Project Info and enter the project name, dates, production details, and logos.",
         "Add each distro with + Distro. Set its name, type, supply, voltage, RCBO rating, Socapex count, and any Aux or additional outputs.",
         "Build the Fixture Patch by adding fixtures from the library or importing CSV, Excel, XLSM, or MVR data.",
-        "Open Position Summary to create positions and assign up to three colours. Position names and colours are shared with the patch, power calculations, labels, Control, Rack Layout, and Device Config.",
+        "Open the full-page Positions workspace from Home Position Summary or Fixture Patch to create positions and assign up to three colours. Position names and colours are shared with the patch, power calculations, labels, Control, Rack Layout, Device Config, and IP Address'.",
         "Open Power Calculations and assign distros to supplies. Enter fixture IDs to link each way to Fixture Patch data, then check phase totals, RCBO warnings, Aux outlets, and the PDF preview.",
         "Use Control to add consoles and NPUs, including roles, locations, parameters, protocols, IP addresses, DMX ports, and reference images. When NPUs exist, use the Consoles and NPU sub-tabs to switch between them, and choose Card View or Table View for the required workflow. Add switches, nodes, and other network-capable hardware through Rack Layout or IP Address'.",
         "Open Rack Layout to create racks, set their U size and depth, and place project or library devices from the Front or Rear view. Use Side view to inspect device depths and cable clearance.",
@@ -37,7 +37,7 @@
       "type": "unordered",
       "items": [
         "Consoles and NPUs added in Control appear automatically in Device Config and IP Address'. When at least one NPU exists, Control displays separate Consoles and NPU sub-tabs.",
-        "Control groups consoles and NPUs by location. Devices are sorted by name, with matching console names ordered as Master, Backup, then unassigned.",
+        "Control groups consoles and NPUs by project position. Consoles are ordered Master, Backup, unassigned, then by name; NPUs remain sorted by name.",
         "Choose Card View for device summary cards or Table View for Device Config-style editing, expandable ports, keyboard navigation, copy and paste, selection, and vertical drag-fill. The last Control view is remembered by the browser.",
         "Device names, locations, roles, modes, software, parameters, IP addresses, port settings, protocols, VLANs, and notes remain linked between Control, Device Config, Rack Layout, and IP Address'. Rack position, mounting face, and physical dimensions remain controlled by Rack Layout.",
         "Device Config branches are collapsed by default. Expand a device to see its Ethernet, fibre, XLR-5 DMX, and supported secondary-interface records.",
@@ -95,6 +95,8 @@
       "type": "unordered",
       "items": [
         "The Home tab provides clickable totals for Fixtures, Universes, Consoles, parameters, Distros, Socapexes, and Data Racks. These open the relevant project page directly.",
+        "Use Customise Home to reorder, resize, hide, restore, or collapse dashboard cards. Changes are stored with the current project; Set as Browser Default applies the chosen layout to future and legacy projects.",
+        "Use Edit at the top of Position Summary to open the Positions workspace. Renaming a position updates linked fixtures and devices; removing one clears it from affected project records after confirmation.",
         "Opening Universes from Home displays a full-page Universe Detail view with one tab per patched universe. Use Back to Home when finished.",
         "Move the pointer over a main Sheet tab, or focus it with the keyboard, to display its available sub-tabs and project pages for faster navigation.",
         "Fixture group title lines always use the full fixture name. Full Name and Short Name options affect supported table cells and labels only.",

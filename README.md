@@ -17,6 +17,8 @@ Live app: [https://ai-lampy.github.io/Lampy-Paperwork/](https://ai-lampy.github.
 - Compiles consoles, NPUs, and project network equipment into an IP Address' sheet with dual IP fields, subnet data, VLAN assignments, locations, and notes.
 - Provides a synchronized Device Config tree with expandable physical ports, editable patching, protocols, VLANs and notes, JSON-defined read-only Console/NPU port capabilities, plus spreadsheet navigation, copy/paste and vertical drag-fill.
 - Tracks DMX universe usage and available address space.
+- Provides a project-aware, customisable Home dashboard with reorderable, resizable, hideable statistics and summary cards plus an explicit browser default.
+- Provides a full-page Positions workspace that synchronises renamed or removed positions across fixtures, consoles, NPUs, network devices, and racks.
 - Builds console, NPU, and network paperwork with reference images.
 - Uses console-reference software versions when available, with an Other/manual version field for unlisted or empty reference data.
 - Separates console and network-device library selection from the side-pane forms used to enter project details.
@@ -35,7 +37,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V30.2**
+Current app version: **V31**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 
