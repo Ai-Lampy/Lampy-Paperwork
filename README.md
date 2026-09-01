@@ -15,7 +15,7 @@ Live app: [https://ai-lampy.github.io/Lampy-Paperwork/](https://ai-lampy.github.
 - Provides spreadsheet-style keyboard navigation and vertical drag-fill editing in Power Calculations and Distro Labels Table View.
 - Produces display-only Fan Out sheets from Power Calculations, including Socapex colours, fixture details, and position colours.
 - Compiles consoles, NPUs, and project network equipment into an IP Address' sheet with dual IP fields, subnet data, VLAN assignments, locations, and notes.
-- Provides a synchronized Device Config tree with expandable physical ports, editable patching, protocols, directions, VLANs and notes, plus spreadsheet navigation, copy/paste and vertical drag-fill.
+- Provides a synchronized Device Config tree with expandable physical ports, editable patching, protocols, VLANs and notes, JSON-defined read-only Console/NPU port capabilities, plus spreadsheet navigation, copy/paste and vertical drag-fill.
 - Tracks DMX universe usage and available address space.
 - Builds console, NPU, and network paperwork with reference images.
 - Uses console-reference software versions when available, with an Other/manual version field for unlisted or empty reference data.
@@ -35,7 +35,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V30**
+Current app version: **V30.1**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 

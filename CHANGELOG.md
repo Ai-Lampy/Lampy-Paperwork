@@ -2,6 +2,15 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V30.1 - 2026-09-01
+
+- Reduced Home statistic cards to 115 × 90 px, tightened their spacing and padding, and changed their typography to Cochin.
+- Reduced the Device Config status, port, patch, IP, subnet, and notes column widths.
+- Added a compact percentage-based Control table layout that fits Console and NPU columns at standard desktop widths.
+- Added physical port definitions to the console reference library and moved Console/NPU port capabilities to JSON-defined direction arrays.
+- Made Console and NPU port direction capabilities read-only while retaining compatible saved port configuration data.
+- Hid Fixture Patch hover and sheet sub-tabs until an imported comparison patch exists.
+
 ## V30 - 2026-09-01
 
 - Added independent Home summary-card sizing, clickable project statistics, a Data Racks statistic, and a full-page Universe Detail view.
