@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "manufacturer": "MA Lighting",
   "npus": [
     {
@@ -29,19 +29,19 @@
       "ports": [
         {
           "connector": "XLR-5 female",
-          "direction": "output",
+          "directions": ["input", "output"],
           "facing": "rear",
           "quantity": 8
         },
         {
           "connector": "EtherCON/RJ45",
-          "direction": "network",
+          "directions": ["input", "output"],
           "facing": "rear",
           "quantity": 2
         },
         {
           "connector": "USB 2.0 Type A",
-          "direction": "data",
+          "directions": ["input", "output"],
           "facing": "rear",
           "quantity": 3
         }
@@ -96,19 +96,19 @@
       "ports": [
         {
           "connector": "XLR-5 female",
-          "direction": "output",
+          "directions": ["input", "output"],
           "facing": "rear",
           "quantity": 8
         },
         {
           "connector": "EtherCON/RJ45",
-          "direction": "network",
+          "directions": ["input", "output"],
           "facing": "rear",
           "quantity": 2
         },
         {
           "connector": "USB 2.0 Type A",
-          "direction": "data",
+          "directions": ["input", "output"],
           "facing": "rear",
           "quantity": 3
         }
@@ -163,19 +163,19 @@
       "ports": [
         {
           "connector": "XLR-5 female",
-          "direction": "output",
+          "directions": ["input", "output"],
           "facing": "rear",
           "quantity": 8
         },
         {
           "connector": "EtherCON/RJ45",
-          "direction": "network",
+          "directions": ["input", "output"],
           "facing": "rear",
           "quantity": 2
         },
         {
           "connector": "USB 2.0 Type A",
-          "direction": "data",
+          "directions": ["input", "output"],
           "facing": "rear",
           "quantity": 3
         }
@@ -230,19 +230,19 @@
       "ports": [
         {
           "connector": "XLR-5 female",
-          "direction": "bidirectional",
+          "directions": ["input", "output"],
           "facing": "rear",
           "quantity": 8
         },
         {
           "connector": "EtherCON",
-          "direction": "network",
+          "directions": ["input", "output"],
           "facing": "rear",
           "quantity": 1
         },
         {
           "connector": "USB 2.0 Type A",
-          "direction": "data",
+          "directions": ["input", "output"],
           "facing": "rear",
           "quantity": 3
         }

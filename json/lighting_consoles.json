@@ -1,4 +1,5 @@
 {
+  "schemaVersion": 3,
   "protocols": [
     "sACN",
     "Art-Net",
@@ -11,6 +12,11 @@
       "manufacturer": "MA Lighting",
       "name": "grandMA3 Full-Size",
       "imageUrl": "images/consoles/grandma3-full-size.png",
+      "ports": [
+        { "connector": "XLR-5 female", "directions": ["input", "output"], "facing": "rear", "quantity": 6 },
+        { "connector": "XLR-5 male", "directions": ["input", "output"], "facing": "rear", "quantity": 1 },
+        { "connector": "EtherCON/RJ45", "directions": ["input", "output"], "facing": "rear", "quantity": 3 }
+      ],
       "softwareVersions": [
         {
           "mode3": "2.4.2.2",
@@ -41,6 +47,11 @@
       "manufacturer": "MA Lighting",
       "name": "grandMA3 Light",
       "imageUrl": "images/consoles/grandma3-light.png",
+      "ports": [
+        { "connector": "XLR-5 female", "directions": ["input", "output"], "facing": "rear", "quantity": 6 },
+        { "connector": "XLR-5 male", "directions": ["input", "output"], "facing": "rear", "quantity": 1 },
+        { "connector": "EtherCON/RJ45", "directions": ["input", "output"], "facing": "rear", "quantity": 3 }
+      ],
       "softwareVersions": [
         {
           "mode3": "2.4.2.2",
@@ -71,6 +82,11 @@
       "manufacturer": "MA Lighting",
       "name": "grandMA3 Compact XT",
       "imageUrl": "images/consoles/grandma3-compact-xt.png",
+      "ports": [
+        { "connector": "XLR-5 female", "directions": ["input", "output"], "facing": "rear", "quantity": 6 },
+        { "connector": "XLR-5 male", "directions": ["input", "output"], "facing": "rear", "quantity": 1 },
+        { "connector": "EtherCON/RJ45", "directions": ["input", "output"], "facing": "rear", "quantity": 3 }
+      ],
       "softwareVersions": [
         {
           "mode3": "2.4.2.2",
@@ -101,6 +117,11 @@
       "manufacturer": "MA Lighting",
       "name": "grandMA3 Compact",
       "imageUrl": "images/consoles/grandma3-compact.png",
+      "ports": [
+        { "connector": "XLR-5 female", "directions": ["input", "output"], "facing": "rear", "quantity": 6 },
+        { "connector": "XLR-5 male", "directions": ["input", "output"], "facing": "rear", "quantity": 1 },
+        { "connector": "EtherCON/RJ45", "directions": ["input", "output"], "facing": "rear", "quantity": 3 }
+      ],
       "softwareVersions": [
         {
           "mode3": "2.4.2.2",
@@ -131,6 +152,10 @@
       "manufacturer": "MA Lighting",
       "name": "grandMA3 onPC Command Wing",
       "imageUrl": "images/consoles/grandma3-onPC-command-wing.png",
+      "ports": [
+        { "connector": "XLR-5 female", "directions": ["input", "output"], "facing": "rear", "quantity": 2 },
+        { "connector": "XLR-5 male", "directions": ["input", "output"], "facing": "rear", "quantity": 1 }
+      ],
       "softwareVersions": [
         {
           "mode3": "2.4.2.2",
@@ -157,6 +182,11 @@
       "manufacturer": "MA Lighting",
       "name": "grandMA2 Full-Size",
       "imageUrl": "images/consoles/grandma2-full-size.png",
+      "ports": [
+        { "connector": "XLR-5 female", "directions": ["input", "output"], "facing": "rear", "quantity": 6 },
+        { "connector": "XLR-5 male", "directions": ["input", "output"], "facing": "rear", "quantity": 1 },
+        { "connector": "EtherCON/RJ45", "directions": ["input", "output"], "facing": "rear", "quantity": 2 }
+      ],
       "softwareVersions": [
         {
           "mode2": "3.9.63.6"
@@ -180,6 +210,11 @@
       "manufacturer": "MA Lighting",
       "name": "grandMA2 Light",
       "imageUrl": "images/consoles/grandma2-light.png",
+      "ports": [
+        { "connector": "XLR-5 female", "directions": ["input", "output"], "facing": "rear", "quantity": 6 },
+        { "connector": "XLR-5 male", "directions": ["input", "output"], "facing": "rear", "quantity": 1 },
+        { "connector": "EtherCON/RJ45", "directions": ["input", "output"], "facing": "rear", "quantity": 2 }
+      ],
       "softwareVersions": [
         {
           "mode2": "3.9.63.6"
@@ -203,6 +238,11 @@
       "manufacturer": "MA Lighting",
       "name": "grandMA2 onPC Command Wing",
       "imageUrl": "images/consoles/grandma2-onPC-command-wing.png",
+      "ports": [
+        { "connector": "XLR-5 female (DMX A)", "directions": ["input", "output"], "facing": "rear", "quantity": 1 },
+        { "connector": "XLR-5 female (DMX B)", "directions": ["output"], "facing": "rear", "quantity": 1 },
+        { "connector": "XLR-5 male (DMX In)", "directions": ["input"], "facing": "rear", "quantity": 1 }
+      ],
       "softwareVersions": [
         {
           "mode2": "3.9.63.6"
@@ -226,6 +266,11 @@
       "manufacturer": "Avolites",
       "name": "Avolites Arena",
       "imageUrl": "images/consoles/avo_arena.png",
+      "ports": [
+        { "connector": "XLR-5 female", "directions": ["input", "output"], "facing": "rear", "quantity": 8 },
+        { "connector": "EtherCON/RJ45", "directions": ["input", "output"], "facing": "rear", "quantity": 5 },
+        { "connector": "OpticalCON Duo", "directions": ["input", "output"], "facing": "rear", "quantity": 1 }
+      ],
       "softwareVersions": [],
       "softwareModes": []
     }
