@@ -2,6 +2,13 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V29.2 - 2026-09-01
+
+- Anchored the Actions button and menu to the page header so they scroll away with the page.
+- Changed the visible app title to the current project name, with an `Untitled Project` fallback.
+- Moved the app version to the sheet footer and updated the release to V29.2.
+- Collapsed Formatting Options by default whenever a PDF export preview opens.
+
 ## V29.1 - 2026-09-01
 
 - Promoted the performance-refactored application candidate to the working release.
