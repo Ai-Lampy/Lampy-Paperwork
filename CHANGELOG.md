@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V30.2 - 2026-09-01
+
+- Restructured the lighting-console reference as a rack-library-style `devices` collection with shared physical, mounting, power, protocol, processing, and image fields.
+- Preserved console IDs, software definitions, and JSON-defined multi-direction port capabilities.
+- Added loader compatibility for both the new `devices` envelope and the legacy `consoles` envelope.
+
 ## V30.1 - 2026-09-01
 
 - Reduced Home statistic cards to 115 × 90 px, tightened their spacing and padding, and changed their typography to Cochin.

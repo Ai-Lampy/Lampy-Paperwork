@@ -35,7 +35,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V30.1**
+Current app version: **V30.2**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 
@@ -109,7 +109,7 @@ Reference data is stored in `/json/` and loaded directly by the browser.
 - Per-manufacturer fixture data lives in `json/fixtures/`.
 - Welcome and walk-through text lives in the root-level `info_txt/` folder.
 - Matched GDTF files used by MVR export live in `gdtf/fixtures/<manufacturer>/`.
-- Lighting-console records are stored in `json/lighting_consoles.json` and can reference images from `images/consoles/`.
+- Lighting-console records are stored in the rack-library-style `devices` collection in `json/lighting_consoles.json` and can reference images from `images/consoles/`.
 - grandMA NPU records are stored in `json/grandMA_NPU.json` and can reference images from `images/NPU/`.
 - Power-supply calculation thresholds are stored in `json/power_supply.json`.
 - VLAN colour choices are stored in `json/vlan_colour_options.json`.
