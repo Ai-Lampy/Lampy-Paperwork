@@ -35,7 +35,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V29.2**
+Current app version: **V30**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 

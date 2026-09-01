@@ -2,6 +2,15 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V30 - 2026-09-01
+
+- Added independent Home summary-card sizing, clickable project statistics, a Data Racks statistic, and a full-page Universe Detail view.
+- Added generated hover sub-tab menus for project sheets, distros, Control devices, racks, and label views.
+- Split Control into conditional Consoles and NPU sub-tabs with location grouping, deterministic sorting, and remembered Card/Table views.
+- Reused the Device Config table editor in Control with Control-specific fields and expanded shared device-setting synchronisation across the project.
+- Kept the Actions panel fully hidden until its menu button is activated.
+- Updated the Welcome Message and Walk-through for the V30 major release and its new navigation, Home, Control, and synchronization workflows.
+
 ## V29.2 - 2026-09-01
 
 - Anchored the Actions button and menu to the page header so they scroll away with the page.
