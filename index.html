@@ -207,8 +207,6 @@ textarea{min-height:45px}
 .socaTableThreeColour .fixCol{width:132px!important}
 .socaTableThreeColour .typeCol{width:190px!important}
 .socaTableThreeColour .colourColDef{width:108px!important}
-.tableOverrideButton{border:1px solid #111;background:#fff;color:#111;border-radius:4px;padding:3px 2px;font-size:10px;font-weight:900;cursor:pointer;width:100%;min-width:0}
-.tableOverrideButton[aria-pressed="true"]{background:#111;color:#fff}
 .socaTableBlock .socaDataTable thead th:nth-child(n+4){font-size:12px}
 .socaTableBlock [data-table-remove-soca]{font-size:14px;border:1.2px solid #000}
 .positionColourCell.blank .positionColourPill{background:transparent!important;border:1px dashed #98a2b3!important}
@@ -688,6 +686,7 @@ const networkEquipmentOpenLocations=new Set();
 const networkEquipmentKnownLocations=new Set();
 const deviceConfigExpandedDevices=new Set();
 let deviceConfigFilters={search:'',location:'',type:''};
+let deviceConfigFilterTimer=null;
 let deviceConfigSort={key:'name',direction:'asc'};
 let deviceConfigSelectionAnchor=null;
 let rackDeviceDragState=null;
@@ -805,7 +804,7 @@ function repoBasePath(){const path=location.pathname;const project='/Lampy-Paper
 function bundledAssetUrl(path){const source=String(path||'').trim();if(!source||/^(?:data:|blob:|https?:|file:)/i.test(source))return source;const clean=source.replace(/^\/+/,'');try{if(location.protocol==='http:'||location.protocol==='https:')return new URL(repoBasePath()+clean,location.origin).href;return new URL(clean,document.baseURI).href}catch{return source}}
 function jsonCandidateUrls(file){const clean=String(file||'').replace(/^\/+/,'');const name=clean.split('/').pop(),rel=clean.startsWith('json/')?clean:'json/'+clean;const urls=[];if(location.protocol==='http:'||location.protocol==='https:'){const base=repoBasePath();urls.push(new URL(base+rel,location.origin).href,new URL(base+'json/'+name,location.origin).href,new URL(base+clean,location.origin).href);if(location.hostname.endsWith('github.io'))urls.push(new URL('/Lampy-Paperwork/'+rel,location.origin).href,new URL('/Lampy-Paperwork/'+name,location.origin).href)}urls.push(new URL(rel,document.baseURI).href,new URL('json/'+name,document.baseURI).href,new URL('../'+rel,document.baseURI).href,new URL('../../'+rel,document.baseURI).href,new URL(clean,document.baseURI).href);return [...new Set(urls)]}
 async function fetchJSONWithFallback(file){let lastError=null;for(const url of jsonCandidateUrls(file)){try{const res=await fetch(url,{cache:'no-cache'});if(!res.ok)throw new Error('HTTP '+res.status);return await res.json()}catch(e){lastError=e}}throw lastError||new Error('Could not load '+file)}
-function fallbackWelcomeMessage(){return {title:'Welcome to Lampy Paperwork',paragraphs:['Lampy Paperwork is a browser-based workspace for creating and managing the technical paperwork used on live entertainment productions. It brings fixture patching, power calculations, distro and Fan Out documentation, control systems, network devices, rack layouts, exports, and project records together in one place.','The app is designed to keep related project information connected, reduce repeated data entry, and produce clear paperwork that can move with a production from planning through delivery.','Lampy Paperwork is still under active development. Features, layouts, workflows, and saved data may continue to change while the app is tested and improved. Download and keep regular copies of your Lampy project file.','Please report bugs, request missing library items, or suggest improvements through the GitHub issue tracker:','https://github.com/Ai-Lampy/Lampy-Paperwork/issues','Thank you for testing Lampy Paperwork.']}}
+function fallbackWelcomeMessage(){return {title:'Welcome',paragraphs:['Hello, and welcome to Lampy Paperwork.','This application is currently under active development and testing.','Lampy Paperwork is designed to provide a faster and more efficient way of creating show paperwork for power distribution, fixture patching, and live entertainment workflows.','Feedback, suggestions, feature requests, and bug reports are always welcome via the GitHub project page:','https://ai-lampy.github.io/lampy-paperwork/','Thank you for helping test and improve the project.']}}
 function normaliseWelcomeMessage(data){data=data||{};const fallback=fallbackWelcomeMessage();const title=String(data.title||fallback.title).trim()||fallback.title;const paragraphs=Array.isArray(data.paragraphs)?data.paragraphs.map(p=>String(p||'').trim()).filter(Boolean):fallback.paragraphs;return {title,paragraphs:paragraphs.length?paragraphs:fallback.paragraphs}}
 async function loadWelcomeMessage(){try{return normaliseWelcomeMessage(await fetchJSONWithFallback(WELCOME_MESSAGE_URL))}catch(e){console.warn('Could not load welcome message',e);return fallbackWelcomeMessage()}}
 function fallbackWalkthrough(){return {title:'Lampy Paperwork Walk-through',sections:[{title:'Suggested Workflow',type:'ordered',items:['Start with Project Info: add the project name, dates, production details, revisions, and logos.','Use Distro Labels to add distros, set Label Settings, and check Front RCBO Labels, Rear Labels, and Table View.','Build the Fixture Patch by importing Excel/CSV or adding fixtures from the library. Use Position Summary to keep colours consistent.','Use Power Calculations after the patch is built. Enter Fix IDs and the fixture type, watts, amps, and label colours will populate from patched data.','Download the project file regularly so the browser state can be reopened and edited later.','Use Export for label PDFs and Fixture Patch Export for patch sheet PDF or Excel files.']},{title:'Tips',type:'unordered',items:['Position colours are the master source for patch colours and linked RCBO label colours.','Supply cards in Power Calculations can be collapsed after setup to keep the page tidy.','Patch Format controls adjust fixture titles and selected table columns without changing fixture data.','PDF export logos appear on the first page only when enabled in Project Info.']}]}}
@@ -1102,18 +1101,22 @@ function updateGeneratedSocaNamesForDistro(idx,previousName){
   }
 }
 function frontLabelFixtureDisplay(label){const ids=String(label?.top||'').split(/\s*,\s*/).map(value=>value.trim()).filter(Boolean),patches=ids.map(fixturePatchByFixId).filter(Boolean);if(!patches.length)return String(label?.bottom||'');return [...new Set(patches.map(patch=>fixtureDisplayName(patch,'labels')).filter(Boolean))].join(', ')||String(label?.bottom||'')}
-function makeLabel(i){const l=app.labels[i]||blankLabel();const el=document.createElement('div');el.className='label '+($('grid').checked?'gridLine':'');el.dataset.i=i;const style=effectiveLabelStyle(i);el.style.color=style.text;el.innerHTML='<div class="bg"></div><div class="half topHalf"></div><div class="half bottomHalf"></div>';el.querySelector('.bg').style.background=cssStripe(style.c1,style.c2,style.useC2,style.c3,style.useC3);el.querySelector('.topHalf').textContent=l.top||'';el.querySelector('.bottomHalf').textContent=frontLabelFixtureDisplay(l);el.addEventListener('click',e=>{e.stopPropagation();openFrontWayEditor(i)});applyWayTextStyle(el,l);requestAnimationFrame(()=>fitLabel(el));return el}
+function makeLabel(i){const l=app.labels[i]||blankLabel();const el=document.createElement('div');el.className='label '+($('grid').checked?'gridLine':'');el.dataset.i=i;const style=effectiveLabelStyle(i);el.style.color=style.text;el.innerHTML='<div class="bg"></div><div class="half topHalf"></div><div class="half bottomHalf"></div>';el.querySelector('.bg').style.background=cssStripe(style.c1,style.c2,style.useC2,style.c3,style.useC3);el.querySelector('.topHalf').textContent=l.top||'';el.querySelector('.bottomHalf').textContent=frontLabelFixtureDisplay(l);el.addEventListener('click',e=>{e.stopPropagation();openFrontWayEditor(i)});applyWayTextStyle(el,l);return el}
 function fitTextToBox(el,minPt=1){
   if(!el)return;
   el.style.fontSize='';
-  let size=parseFloat(el.dataset.basePt||'');
-  if(!size)size=parseFloat(getComputedStyle(el).fontSize)*0.75;
-  if(!size||size<minPt)size=18;
-  el.style.fontSize=size+'pt';
-  while(size>minPt&&(el.scrollHeight>el.clientHeight||el.scrollWidth>el.clientWidth)){
-    size-=0.25;
+  const measured=parseFloat(el.dataset.basePt||'')||parseFloat(getComputedStyle(el).fontSize)*0.75||18;
+  const maximum=Math.max(minPt,measured);
+  let low=minPt,high=maximum;
+  el.style.fontSize=maximum+'pt';
+  if(el.scrollHeight<=el.clientHeight&&el.scrollWidth<=el.clientWidth)return;
+  for(let pass=0;pass<7;pass++){
+    const size=(low+high)/2;
     el.style.fontSize=size+'pt';
+    if(el.scrollHeight<=el.clientHeight&&el.scrollWidth<=el.clientWidth)low=size;
+    else high=size;
   }
+  el.style.fontSize=low.toFixed(2)+'pt';
 }
 function fitAuxText(el){fitTextToBox(el,1)}
 function fitLabel(label){if(!label)return;label.querySelectorAll('.topHalf,.bottomHalf').forEach(el=>fitTextToBox(el,1))}
@@ -1416,7 +1419,6 @@ function makeSocaBlock(s){const block=document.createElement('div');block.classN
 function addPreviewWindow(host,didx,local,start,end,distroName,rangeStart=0){const key=previewKey(didx,local);const win=document.createElement('div');win.className='previewWindow '+(app.collapsed.previews.has(key)?'previewCollapsed':'');win.dataset.previewKey=key;const title=document.createElement('div');title.className='previewWindowTitle';title.title='Click to collapse / expand preview';title.textContent=(distroName||'Distro')+' - Socapex '+((start-rangeStart)+1)+' > '+(end-rangeStart);title.onclick=()=>togglePreviewRange(key,start,end);win.appendChild(title);host.appendChild(win);return win}
 function setSheetTab(tab){if(tab==='networkEquipment')tab='deviceConfig';if(tab==='rackLayout'){activeSheetTab='controlNetwork';activeControlNetworkTab='racks'}else if(['labels','rear','table'].includes(tab)){activeDistroLabelTab=tab;activeSheetTab='distroLabels';if(activeControlNetworkTab==='racks')activeControlNetworkTab='consoles'}else{activeSheetTab=['home','fixturePatch','powerSheet','fanOuts','controlNetwork','deviceConfig','ipAddresses','distroLabels'].includes(tab)?tab:'home';if(activeControlNetworkTab==='racks')activeControlNetworkTab='consoles'}if(activeSheetTab!=='distroLabels'||activeDistroLabelTab!=='labels')closeFrontEditorPane();if(activeSheetTab!=='fanOuts')closeFanOutFormat();if(activeSheetTab!=='fixturePatch')closePatchFormatModal();if(activeSheetTab!=='deviceConfig'){closeDeviceConfigFormat();closeDeviceConfigColumns()}if(activeControlNetworkTab!=='racks')closeRackEditor();render()}
 function setDistroLabelTab(tab){activeDistroLabelTab=['labels','rear','table'].includes(tab)?tab:'labels';if(activeDistroLabelTab!=='labels')closeFrontEditorPane();render()}
-function setControlNetworkTab(tab){activeControlNetworkTab=['consoles','network'].includes(tab)?tab:'consoles';closeRackEditor();render()}
 function currentLabelRoute(){return activeSheetTab==='distroLabels'?activeDistroLabelTab:activeSheetTab}
 function distroLabelTabsMarkup(){return `<div class="distroLabelNav"><div class="distroLabelTabs"><button class="sheetTab ${activeDistroLabelTab==='labels'?'active':''}" type="button" onclick="setDistroLabelTab('labels')">Front RCBO Labels</button><button class="sheetTab ${activeDistroLabelTab==='rear'?'active':''}" type="button" onclick="setDistroLabelTab('rear')">Rear Labels</button><button class="sheetTab ${activeDistroLabelTab==='table'?'active':''}" type="button" onclick="setDistroLabelTab('table')">Table View</button></div><div class="distroLabelToolbarActions sheetToolbarActions"><button class="btn add" type="button" onclick="openDistroSettings()">+ Distro</button>${activeDistroLabelTab==='labels'||activeDistroLabelTab==='table'?fixtureNameModeControl('labels'):''}<button class="btn" type="button" onclick="openSettings()">Label Settings</button><button class="btn" type="button" onclick="openLabelFormat()">Label Format</button><button class="btn primary" type="button" onclick="openExportLayout()">Export</button></div></div>`}
 function labelFormatSizeOptions(current,scope='front'){return labelFormatSizes(scope).map(size=>`<option value="${size}" ${Number(current)===size?'selected':''}>${size}</option>`).join('')}
@@ -1961,7 +1963,6 @@ function renderPowerSheetView(ranges){
   applyPowerTableFormat(view);
   requestAnimationFrame(()=>{fitPowerSocaNames(view);fitPowerFixTypeText(view);fitPowerSheetHeaders(view)});
 }
-function controlNetworkTabsMarkup(){return ''}
 function protocolOptionMarkup(selected=''){const protocols=consoleReference.protocols||[];return ['<option value="">Select Protocol</option>'].concat(protocols.map(p=>`<option value="${escapeAttr(p)}" ${p===selected?'selected':''}>${escapeHtml(p)}</option>`)).join('')}
 function positionDatalistMarkup(id='controlPositionOptions'){const options=positionSummaryRows().map(pos=>`<option value="${escapeAttr(pos.name)}"></option>`).join('');return `<datalist id="${escapeAttr(id)}">${options}</datalist>`}
 function modeOptionsMarkup(ref,selected=''){const modes=ref?.softwareModes||[];if(!modes.length)return '<option value="">Select Software Mode</option>';const active=selected||modes[0].name;return modes.map(m=>`<option value="${escapeAttr(m.name)}" ${m.name===active?'selected':''}>${escapeHtml(m.name)}</option>`).join('')}
@@ -2336,7 +2337,7 @@ function updateDeviceConfigField(control){const source=control.dataset.dcSource,
 function toggleDeviceConfigDevice(key){if(deviceConfigExpandedDevices.has(key))deviceConfigExpandedDevices.delete(key);else deviceConfigExpandedDevices.add(key);render()}
 function expandAllDeviceConfig(){compiledDeviceConfigDevices().forEach(device=>deviceConfigExpandedDevices.add(ipDeviceOrderKey(device)));render()}
 function collapseAllDeviceConfig(){deviceConfigExpandedDevices.clear();render()}
-function updateDeviceConfigFilter(key,value){deviceConfigFilters[key]=String(value||'');const start=$('deviceConfigSearch')?.selectionStart;render();if(key==='search')requestAnimationFrame(()=>{const input=$('deviceConfigSearch');if(input){input.focus();input.setSelectionRange(start??input.value.length,start??input.value.length)}})}
+function updateDeviceConfigFilter(key,value){deviceConfigFilters[key]=String(value||'');const start=$('deviceConfigSearch')?.selectionStart??String(value||'').length;if(deviceConfigFilterTimer)clearTimeout(deviceConfigFilterTimer);deviceConfigFilterTimer=setTimeout(()=>{deviceConfigFilterTimer=null;render();if(key==='search')requestAnimationFrame(()=>{const input=$('deviceConfigSearch');if(input){input.focus();input.setSelectionRange(start,start)}})},key==='search'?120:0)}
 function clearDeviceConfigFilters(){deviceConfigFilters={search:'',location:'',type:''};render()}
 function setDeviceConfigSort(key){if(!DEVICE_CONFIG_COLUMN_KEYS.includes(key))return;if(deviceConfigSort.key===key)deviceConfigSort.direction=deviceConfigSort.direction==='asc'?'desc':'asc';else deviceConfigSort={key,direction:'asc'};render()}
 function clearDeviceConfigSelection(root=document){root.querySelectorAll('.deviceConfigCellSelected,.deviceConfigFillTarget').forEach(cell=>cell.classList.remove('deviceConfigCellSelected','deviceConfigFillTarget'));root.querySelectorAll('.deviceConfigFillHandle').forEach(handle=>handle.remove());deviceConfigSelectionAnchor=null}
