@@ -2,6 +2,16 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V31.2 - 2026-09-03
+
+- Added arrow-key, Home, End, Enter, Space, and Escape navigation to the Add Console library.
+- Added physical network-port and port-specific protocol details to Console Info.
+- Moved console network settings onto JSON-defined physical ports while mirroring the first two ports to legacy project fields.
+- Listed console network ports before DMX ports and used JSON port names in the Control table.
+- Limited Control table protocol choices to the protocols supported by each physical port.
+- Added segmented IPv4 validation to Device Config and Control table IP and subnet cells.
+- Updated Control table headings and applied project position colours to Location cells.
+
 ## V31.1 - 2026-09-02
 
 - Split console references into manifest-listed manufacturer libraries under `json/consoles/`.
