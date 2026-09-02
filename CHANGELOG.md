@@ -2,6 +2,15 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V31.1 - 2026-09-02
+
+- Split console references into manifest-listed manufacturer libraries under `json/consoles/`.
+- Added and validated Avolites, ChamSys, ETC, High End Systems, and MA Lighting libraries containing 41 console references.
+- Added manufacturer-neutral console software versions, port-derived protocols, JSON-defined DMX output counts, platform-safe Master/Backup version synchronisation, and graceful pending-image handling.
+- Updated console image references to manufacturer folders and migrated the available Avolites, ChamSys, ETC, and MA Lighting assets.
+- Corrected two JPEG-encoded rack-device images so their `.png` paths now contain valid PNG data.
+- Validated project JSON, manifests, GDTF references, image casing, HTML, JavaScript, saved-project compatibility, and GitHub Pages deployment structure.
+
 ## V31 - 2026-09-01
 
 - Added project-aware Home dashboard layouts with card ordering, sizing, visibility, collapsed state, drag-and-drop, accessible move controls, browser defaults, and factory reset.

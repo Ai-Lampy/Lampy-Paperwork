@@ -1,0 +1,493 @@
+{
+  "schemaVersion": 4,
+  "manufacturer": "High End Systems",
+  "devices": [
+    {
+      "id": "hes-tour-hog",
+      "manufacturer": "High End Systems",
+      "name": "Tour Hog",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 784,
+        "height": 525,
+        "depth": 547
+      },
+      "weightKg": 35.0,
+      "imageUrl": "images/consoles/high_end_systems/tour-hog.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 4
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "FixtureNet",
+          "protocols": [
+            "Art-Net",
+            "sACN",
+            "Hog Visualizer Stream"
+          ]
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "HogNet",
+          "protocols": [
+            "HogNet",
+            "OSC"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON TRUE1 Input",
+          "powerCON TRUE1 Thru"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "hogOs": "4.2.1"
+        },
+        {
+          "hogOs": "4.2.0"
+        },
+        {
+          "hogOs": "4.1.0"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Hog OS",
+          "parameterCount": 32768
+        }
+      ]
+    },
+    {
+      "id": "hes-stage-hog",
+      "manufacturer": "High End Systems",
+      "name": "Stage Hog",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 737,
+        "height": 202,
+        "depth": 579
+      },
+      "weightKg": 21.0,
+      "imageUrl": "images/consoles/high_end_systems/stage-hog.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 4
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "FixtureNet",
+          "protocols": [
+            "Art-Net",
+            "sACN",
+            "Hog Visualizer Stream"
+          ]
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "HogNet",
+          "protocols": [
+            "HogNet",
+            "OSC"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON TRUE1 Input",
+          "powerCON TRUE1 Thru"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "hogOs": "4.2.1"
+        },
+        {
+          "hogOs": "4.2.0"
+        },
+        {
+          "hogOs": "4.1.0"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Hog OS",
+          "parameterCount": 32768
+        }
+      ]
+    },
+    {
+      "id": "hes-flex-hog",
+      "manufacturer": "High End Systems",
+      "name": "Flex Hog",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 737,
+        "height": 121,
+        "depth": 384
+      },
+      "weightKg": 12.3,
+      "imageUrl": "images/consoles/high_end_systems/flex-hog.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 4
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "FixtureNet",
+          "protocols": [
+            "Art-Net",
+            "sACN",
+            "Hog Visualizer Stream"
+          ]
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "HogNet",
+          "protocols": [
+            "HogNet",
+            "OSC"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON TRUE1 Input",
+          "powerCON TRUE1 Thru"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "hogOs": "4.2.1"
+        },
+        {
+          "hogOs": "4.2.0"
+        },
+        {
+          "hogOs": "4.1.0"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Hog OS",
+          "parameterCount": 32768
+        }
+      ]
+    },
+    {
+      "id": "hes-gig-hog",
+      "manufacturer": "High End Systems",
+      "name": "Gig Hog",
+      "type": "Lighting Console Wing",
+      "dimensionsMm": {
+        "width": 450,
+        "height": 107,
+        "depth": 321
+      },
+      "weightKg": 5.4,
+      "imageUrl": "images/consoles/high_end_systems/gig-hog.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 2
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "FixtureNet",
+          "protocols": [
+            "Art-Net",
+            "sACN",
+            "Hog Visualizer Stream"
+          ]
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "HogNet",
+          "protocols": [
+            "HogNet",
+            "OSC"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON TRUE1 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "hogOs": "4.2.1"
+        },
+        {
+          "hogOs": "4.2.0"
+        },
+        {
+          "hogOs": "4.1.0"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Hog PC",
+          "parameterCount": 6144
+        }
+      ]
+    },
+    {
+      "id": "hes-wholehog-2",
+      "manufacturer": "High End Systems",
+      "name": "Wholehog II",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 668,
+        "height": 153,
+        "depth": 588
+      },
+      "weightKg": 22.0,
+      "imageUrl": "images/consoles/high_end_systems/wholehog-2.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 4
+        },
+        {
+          "connector": "XLR-5 male",
+          "directions": [
+            "input"
+          ],
+          "facing": "rear",
+          "quantity": 1
+        }
+      ],
+      "power": {
+        "connectors": [
+          "IEC C14 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "wholehog2": "3.3 b177"
+        },
+        {
+          "wholehog2": "3.2.3"
+        },
+        {
+          "wholehog2": "3.2.2"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Wholehog II",
+          "parameterCount": 2048
+        }
+      ]
+    },
+    {
+      "id": "hes-wholehog-3",
+      "manufacturer": "High End Systems",
+      "name": "Wholehog 3",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 760,
+        "height": 110,
+        "depth": 580
+      },
+      "weightKg": 20.0,
+      "imageUrl": "images/consoles/high_end_systems/wholehog-3.png",
+      "ports": [
+        {
+          "connector": "EtherCON Fast Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "FixtureNet",
+          "protocols": [
+            "Art-Net",
+            "sACN",
+            "Hog Visualizer Stream"
+          ]
+        },
+        {
+          "connector": "EtherCON Fast Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "HogNet",
+          "protocols": [
+            "HogNet",
+            "OSC"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "IEC C14 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "hog3Os": "3.2.6"
+        },
+        {
+          "hog3Os": "3.2.5"
+        },
+        {
+          "hog3Os": "3.2.4"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Hog 3 OS",
+          "parameterCount": 65536
+        }
+      ]
+    },
+    {
+      "id": "hes-road-hog-full-boar",
+      "manufacturer": "High End Systems",
+      "name": "Road Hog Full Boar",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 736,
+        "height": 197,
+        "depth": 625
+      },
+      "weightKg": 24.5,
+      "imageUrl": "images/consoles/high_end_systems/road-hog-full-boar.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 4
+        },
+        {
+          "connector": "EtherCON Fast Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "FixtureNet",
+          "protocols": [
+            "Art-Net",
+            "sACN",
+            "Hog Visualizer Stream"
+          ]
+        },
+        {
+          "connector": "EtherCON Fast Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "HogNet",
+          "protocols": [
+            "HogNet",
+            "OSC"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "IEC C14 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "hog3Os": "3.2.6"
+        },
+        {
+          "hog3Os": "3.2.5"
+        },
+        {
+          "hog3Os": "3.2.4"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Hog 3 OS",
+          "parameterCount": 8192
+        }
+      ]
+    }
+  ]
+}

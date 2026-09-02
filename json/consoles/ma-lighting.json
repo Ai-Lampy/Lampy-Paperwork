@@ -1,0 +1,664 @@
+{
+  "schemaVersion": 4,
+  "manufacturer": "MA Lighting",
+  "devices": [
+    {
+      "id": "grandma3-full-size",
+      "manufacturer": "MA Lighting",
+      "name": "grandMA3 Full-Size",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 1256,
+        "height": 181,
+        "depth": 539
+      },
+      "weightKg": 44,
+      "imageUrl": "images/consoles/MA_lighting/grandma3-full-size.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 6
+        },
+        {
+          "connector": "XLR-5 male",
+          "directions": [
+            "input"
+          ],
+          "facing": "rear",
+          "quantity": 1
+        },
+        {
+          "connector": "EtherCON/RJ45",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "ETH 1",
+          "protocols": [
+            "Art-Net"
+          ]
+        },
+        {
+          "connector": "EtherCON/RJ45",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "ETH 2",
+          "protocols": [
+            "sACN",
+            "MA-Net"
+          ]
+        },
+        {
+          "connector": "EtherCON/RJ45",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "ETH 3",
+          "protocols": [
+            "Web Link"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON TRUE1 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "mode3": "2.5.0.3",
+          "mode2": "3.9.63.10"
+        },
+        {
+          "mode3": "2.4.2.2",
+          "mode2": "3.9.63.6"
+        },
+        {
+          "mode3": "2.3.2.0",
+          "mode2": "3.9.61.5"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Mode 2",
+          "parameterCount": 8192
+        },
+        {
+          "name": "Mode 3",
+          "parameterCount": 20480
+        }
+      ]
+    },
+    {
+      "id": "grandma3-light",
+      "manufacturer": "MA Lighting",
+      "name": "grandMA3 Light",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 854,
+        "height": 181,
+        "depth": 539
+      },
+      "weightKg": 33,
+      "imageUrl": "images/consoles/MA_lighting/grandma3-light.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 6
+        },
+        {
+          "connector": "XLR-5 male",
+          "directions": [
+            "input"
+          ],
+          "facing": "rear",
+          "quantity": 1
+        },
+        {
+          "connector": "EtherCON/RJ45",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "ETH 1",
+          "protocols": [
+            "Art-Net"
+          ]
+        },
+        {
+          "connector": "EtherCON/RJ45",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "ETH 2",
+          "protocols": [
+            "sACN",
+            "MA-Net"
+          ]
+        },
+        {
+          "connector": "EtherCON/RJ45",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "ETH 3",
+          "protocols": [
+            "Web Link"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON TRUE1 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "mode3": "2.5.0.3",
+          "mode2": "3.9.63.10"
+        },
+        {
+          "mode3": "2.4.2.2",
+          "mode2": "3.9.63.6"
+        },
+        {
+          "mode3": "2.3.2.0",
+          "mode2": "3.9.61.5"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Mode 2",
+          "parameterCount": 4096
+        },
+        {
+          "name": "Mode 3",
+          "parameterCount": 16384
+        }
+      ]
+    },
+    {
+      "id": "grandma3-compact",
+      "manufacturer": "MA Lighting",
+      "name": "grandMA3 Compact",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 661,
+        "height": 160,
+        "depth": 429
+      },
+      "weightKg": 16,
+      "imageUrl": "images/consoles/MA_lighting/grandma3-compact.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 6
+        },
+        {
+          "connector": "XLR-5 male",
+          "directions": [
+            "input"
+          ],
+          "facing": "rear",
+          "quantity": 1
+        },
+        {
+          "connector": "EtherCON/RJ45",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "ETH 1",
+          "protocols": [
+            "Art-Net"
+          ]
+        },
+        {
+          "connector": "EtherCON/RJ45",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "ETH 2",
+          "protocols": [
+            "sACN",
+            "MA-Net"
+          ]
+        },
+        {
+          "connector": "EtherCON/RJ45",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "ETH 3",
+          "protocols": [
+            "Web Link"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON TRUE1 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "mode3": "2.5.0.3",
+          "mode2": "3.9.63.10"
+        },
+        {
+          "mode3": "2.4.2.2",
+          "mode2": "3.9.63.6"
+        },
+        {
+          "mode3": "2.3.2.0",
+          "mode2": "3.9.61.5"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Mode 2",
+          "parameterCount": 4096
+        },
+        {
+          "name": "Mode 3",
+          "parameterCount": 8192
+        }
+      ]
+    },
+    {
+      "id": "grandma3-compact-xt",
+      "manufacturer": "MA Lighting",
+      "name": "grandMA3 Compact XT",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 845,
+        "height": 160,
+        "depth": 429
+      },
+      "weightKg": 20,
+      "imageUrl": "images/consoles/MA_lighting/grandma3-compact-xt.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 6
+        },
+        {
+          "connector": "XLR-5 male",
+          "directions": [
+            "input"
+          ],
+          "facing": "rear",
+          "quantity": 1
+        },
+        {
+          "connector": "EtherCON/RJ45",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "ETH 1",
+          "protocols": [
+            "Art-Net"
+          ]
+        },
+        {
+          "connector": "EtherCON/RJ45",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "ETH 2",
+          "protocols": [
+            "sACN",
+            "MA-Net"
+          ]
+        },
+        {
+          "connector": "EtherCON/RJ45",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "ETH 3",
+          "protocols": [
+            "Web Link"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON TRUE1 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "mode3": "2.5.0.3",
+          "mode2": "3.9.63.10"
+        },
+        {
+          "mode3": "2.4.2.2",
+          "mode2": "3.9.63.6"
+        },
+        {
+          "mode3": "2.3.2.0",
+          "mode2": "3.9.61.5"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Mode 2",
+          "parameterCount": 4096
+        },
+        {
+          "name": "Mode 3",
+          "parameterCount": 8192
+        }
+      ]
+    },
+    {
+      "id": "grandma3-onpc-command-wing",
+      "manufacturer": "MA Lighting",
+      "name": "grandMA3 On PC Command Wing",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 620,
+        "height": 102,
+        "depth": 427
+      },
+      "weightKg": 10,
+      "imageUrl": "images/consoles/MA_lighting/grandma3-onpc-command-wing.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 2
+        },
+        {
+          "connector": "XLR-5 male",
+          "directions": [
+            "input"
+          ],
+          "facing": "rear",
+          "quantity": 1
+        }
+      ],
+      "power": {
+        "connectors": [
+          "IEC 60320 C14 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "mode3": "2.5.0.3"
+        },
+        {
+          "mode3": "2.4.2.2"
+        },
+        {
+          "mode3": "2.3.2.0"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Mode 3",
+          "parameterCount": 4096
+        }
+      ]
+    },
+    {
+      "id": "grandma2-full-size",
+      "manufacturer": "MA Lighting",
+      "name": "grandMA2 Full Size",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 1284,
+        "height": 204,
+        "depth": 661
+      },
+      "weightKg": 46,
+      "imageUrl": "images/consoles/MA_lighting/grandma2-full-size.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 6
+        },
+        {
+          "connector": "XLR-5 male",
+          "directions": [
+            "input"
+          ],
+          "facing": "rear",
+          "quantity": 1
+        },
+        {
+          "connector": "EtherCON",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "ETH 1",
+          "protocols": [
+            "Art-Net"
+          ]
+        },
+        {
+          "connector": "EtherCON",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "ETH 2",
+          "protocols": [
+            "sACN",
+            "MA-Net"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "mode2": "3.9.63.10"
+        },
+        {
+          "mode2": "3.9.63.6"
+        },
+        {
+          "mode2": "3.9.61.5"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Mode 2",
+          "parameterCount": 8192
+        }
+      ]
+    },
+    {
+      "id": "grandma2-light",
+      "manufacturer": "MA Lighting",
+      "name": "grandMA2 Light",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 935,
+        "height": 204,
+        "depth": 652
+      },
+      "weightKg": 37,
+      "imageUrl": "images/consoles/MA_lighting/grandma2-light.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 6
+        },
+        {
+          "connector": "XLR-5 male",
+          "directions": [
+            "input"
+          ],
+          "facing": "rear",
+          "quantity": 1
+        },
+        {
+          "connector": "EtherCON",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "ETH 1",
+          "protocols": [
+            "Art-Net"
+          ]
+        },
+        {
+          "connector": "EtherCON",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "ETH 2",
+          "protocols": [
+            "sACN",
+            "MA-Net"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "mode2": "3.9.63.10"
+        },
+        {
+          "mode2": "3.9.63.6"
+        },
+        {
+          "mode2": "3.9.61.5"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Mode 2",
+          "parameterCount": 4096
+        }
+      ]
+    },
+    {
+      "id": "grandma2-onpc-command-wing",
+      "manufacturer": "MA Lighting",
+      "name": "grandMA2 On PC Command Wing",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 540,
+        "height": 75,
+        "depth": 400
+      },
+      "weightKg": 6,
+      "imageUrl": "images/consoles/MA_lighting/grandma2-onpc-command-wing.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 2
+        },
+        {
+          "connector": "XLR-5 male",
+          "directions": [
+            "input"
+          ],
+          "facing": "rear",
+          "quantity": 1
+        }
+      ],
+      "power": {
+        "connectors": [
+          "IEC 60320 C14 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "mode2": "3.9.63.10"
+        },
+        {
+          "mode2": "3.9.63.6"
+        },
+        {
+          "mode2": "3.9.61.5"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Mode 2",
+          "parameterCount": 2048
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,434 @@
+{
+  "schemaVersion": 4,
+  "manufacturer": "ChamSys",
+  "devices": [
+    {
+      "id": "chamsys-magicq-mq500m-plus",
+      "manufacturer": "ChamSys",
+      "name": "MagicQ MQ500M+ Stadium Console",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 860,
+        "height": 175,
+        "depth": 585
+      },
+      "weightKg": 32,
+      "imageUrl": "images/consoles/chamsys/magicq-mq500m-plus.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 4
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 4,
+          "protocols": [
+            "Art-Net",
+            "sACN",
+            "Pathport",
+            "ChamNet"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON TRUE1 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "magicQ": "1.9.8.3"
+        },
+        {
+          "magicQ": "1.9.6.4"
+        },
+        {
+          "magicQ": "1.9.6.3"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "MagicQ",
+          "parameterCount": 204800
+        }
+      ]
+    },
+    {
+      "id": "chamsys-magicq-mq250m",
+      "manufacturer": "ChamSys",
+      "name": "MagicQ MQ250M Stadium Console",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 680,
+        "height": 159,
+        "depth": 416
+      },
+      "weightKg": 13,
+      "imageUrl": "images/consoles/chamsys/magicq-mq250m.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 4
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 4,
+          "protocols": [
+            "Art-Net",
+            "sACN",
+            "Pathport",
+            "ChamNet"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON TRUE1 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "magicQ": "1.9.8.3"
+        },
+        {
+          "magicQ": "1.9.6.4"
+        },
+        {
+          "magicQ": "1.9.6.3"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "MagicQ 64 Universes",
+          "parameterCount": 32768
+        },
+        {
+          "name": "MagicQ 128 Universes Upgrade",
+          "parameterCount": 65536
+        }
+      ]
+    },
+    {
+      "id": "chamsys-magicq-mq70",
+      "manufacturer": "ChamSys",
+      "name": "MagicQ MQ70 Compact Console",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 525,
+        "height": 60,
+        "depth": 350
+      },
+      "weightKg": 7,
+      "imageUrl": "images/consoles/chamsys/magicq-mq70.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 4
+        },
+        {
+          "connector": "EtherCON Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 3,
+          "protocols": [
+            "Art-Net",
+            "sACN",
+            "Pathport",
+            "ChamNet"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON TRUE1 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "magicQ": "1.9.8.3"
+        },
+        {
+          "magicQ": "1.9.6.4"
+        },
+        {
+          "magicQ": "1.9.6.3"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "MagicQ 24 Universes",
+          "parameterCount": 12288
+        },
+        {
+          "name": "MagicQ 48 Universes Upgrade",
+          "parameterCount": 24576
+        }
+      ]
+    },
+    {
+      "id": "chamsys-magicq-mq50",
+      "manufacturer": "ChamSys",
+      "name": "MagicQ MQ50 Compact Console",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 525,
+        "height": 60,
+        "depth": 350
+      },
+      "weightKg": 7,
+      "imageUrl": "images/consoles/chamsys/magicq-mq50.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 4
+        },
+        {
+          "connector": "RJ45 Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "protocols": [
+            "Art-Net",
+            "sACN",
+            "Pathport",
+            "ChamNet"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON TRUE1 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "magicQ": "1.9.8.3"
+        },
+        {
+          "magicQ": "1.9.6.4"
+        },
+        {
+          "magicQ": "1.9.6.3"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "MagicQ",
+          "parameterCount": 4096
+        }
+      ]
+    },
+    {
+      "id": "chamsys-quickq-30",
+      "manufacturer": "ChamSys",
+      "name": "QuickQ 30",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 760,
+        "height": 106,
+        "depth": 350
+      },
+      "weightKg": 6.1,
+      "imageUrl": "images/consoles/chamsys/quickq-30.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 3
+        },
+        {
+          "connector": "RJ45 Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "protocols": [
+            "Art-Net",
+            "sACN",
+            "Pathport",
+            "OSC"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "12 V DC barrel input, centre-positive"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "quickQ": "12.1"
+        },
+        {
+          "quickQ": "12.0"
+        },
+        {
+          "quickQ": "11.0"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "QuickQ",
+          "parameterCount": 2048
+        }
+      ]
+    },
+    {
+      "id": "chamsys-quickq-20",
+      "manufacturer": "ChamSys",
+      "name": "QuickQ 20",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 565,
+        "height": 106,
+        "depth": 350
+      },
+      "weightKg": 5.2,
+      "imageUrl": "images/consoles/chamsys/quickq-20.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 2
+        },
+        {
+          "connector": "RJ45 Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "protocols": [
+            "Art-Net",
+            "sACN",
+            "Pathport",
+            "OSC"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "12 V DC barrel input, centre-positive"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "quickQ": "12.1"
+        },
+        {
+          "quickQ": "12.0"
+        },
+        {
+          "quickQ": "11.0"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "QuickQ",
+          "parameterCount": 1024
+        }
+      ]
+    },
+    {
+      "id": "chamsys-quickq-10",
+      "manufacturer": "ChamSys",
+      "name": "QuickQ 10",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 525,
+        "height": 106,
+        "depth": 350
+      },
+      "weightKg": 4.07,
+      "imageUrl": "images/consoles/chamsys/quickq-10.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 1
+        },
+        {
+          "connector": "RJ45 Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "protocols": [
+            "Art-Net",
+            "sACN",
+            "Pathport",
+            "OSC"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "12 V DC barrel input, centre-positive"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "quickQ": "12.1"
+        },
+        {
+          "quickQ": "12.0"
+        },
+        {
+          "quickQ": "11.0"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "QuickQ",
+          "parameterCount": 512
+        }
+      ]
+    }
+  ]
+}

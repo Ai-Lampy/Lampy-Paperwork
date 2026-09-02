@@ -55,6 +55,11 @@
       "logo": "images/lighting_vendors/PRG.png",
       "details": "The Cofton Centre, 350 Groveley Ln, Cofton Hackett, Birmingham, B31 4PT"
     },
+	{
+		"name": "TSL Lighting",
+		"logo": "images/lighting_vendors/TSL.png",
+		"details": "Gateway House, Kingsland Buisness Park, Basingstoke, RG24 8LJ"
+	},
     {
       "name": "Siyan LTD",
       "logo": "images/lighting_vendors/siyan.png",

@@ -1,0 +1,620 @@
+{
+  "schemaVersion": 4,
+  "manufacturer": "ETC",
+  "devices": [
+    {
+      "id": "etc-eos-apex-fp",
+      "manufacturer": "ETC",
+      "name": "Eos Apex FP",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 864,
+        "height": 180,
+        "depth": 648
+      },
+      "weightKg": 31.3,
+      "imageUrl": "images/consoles/ETC/eos-apex-fp.png",
+      "ports": [
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 4,
+          "protocols": [
+            "Net3 (ACN)",
+            "sACN",
+            "Art-Net",
+            "OSC",
+            "UDP Strings"
+          ]
+        },
+        {
+          "connector": "SFP+ 10 Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 2,
+          "protocols": [
+            "Net3 (ACN)",
+            "sACN",
+            "Art-Net",
+            "OSC",
+            "UDP Strings"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "IEC C14 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "eos": "3.3.11"
+        },
+        {
+          "eos": "3.3.10"
+        },
+        {
+          "eos": "3.3.9"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Eos",
+          "parameterCount": 24576
+        }
+      ]
+    },
+    {
+      "id": "etc-eos-apex-5",
+      "manufacturer": "ETC",
+      "name": "Eos Apex 5",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 864,
+        "height": 447,
+        "depth": 648
+      },
+      "weightKg": 44.0,
+      "imageUrl": "images/consoles/ETC/eos-apex-5.png",
+      "ports": [
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 4,
+          "protocols": [
+            "Net3 (ACN)",
+            "sACN",
+            "Art-Net",
+            "OSC",
+            "UDP Strings"
+          ]
+        },
+        {
+          "connector": "SFP+ 10 Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 2,
+          "protocols": [
+            "Net3 (ACN)",
+            "sACN",
+            "Art-Net",
+            "OSC",
+            "UDP Strings"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "IEC C14 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "eos": "3.3.11"
+        },
+        {
+          "eos": "3.3.10"
+        },
+        {
+          "eos": "3.3.9"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Eos",
+          "parameterCount": 24576
+        }
+      ]
+    },
+    {
+      "id": "etc-eos-apex-10",
+      "manufacturer": "ETC",
+      "name": "Eos Apex 10",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 1219,
+        "height": 447,
+        "depth": 648
+      },
+      "weightKg": 61.24,
+      "imageUrl": "images/consoles/ETC/eos-apex-10.png",
+      "ports": [
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 4,
+          "protocols": [
+            "Net3 (ACN)",
+            "sACN",
+            "Art-Net",
+            "OSC",
+            "UDP Strings"
+          ]
+        },
+        {
+          "connector": "SFP+ 10 Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 2,
+          "protocols": [
+            "Net3 (ACN)",
+            "sACN",
+            "Art-Net",
+            "OSC",
+            "UDP Strings"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "IEC C14 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "eos": "3.3.11"
+        },
+        {
+          "eos": "3.3.10"
+        },
+        {
+          "eos": "3.3.9"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Eos",
+          "parameterCount": 24576
+        }
+      ]
+    },
+    {
+      "id": "etc-eos-apex-20",
+      "manufacturer": "ETC",
+      "name": "Eos Apex 20",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 1422,
+        "height": 499,
+        "depth": 648
+      },
+      "weightKg": 66.68,
+      "imageUrl": "images/consoles/ETC/eos-apex-20.png",
+      "ports": [
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 4,
+          "protocols": [
+            "Net3 (ACN)",
+            "sACN",
+            "Art-Net",
+            "OSC",
+            "UDP Strings"
+          ]
+        },
+        {
+          "connector": "SFP+ 10 Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 2,
+          "protocols": [
+            "Net3 (ACN)",
+            "sACN",
+            "Art-Net",
+            "OSC",
+            "UDP Strings"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "IEC C14 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "eos": "3.3.11"
+        },
+        {
+          "eos": "3.3.10"
+        },
+        {
+          "eos": "3.3.9"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Eos",
+          "parameterCount": 24576
+        }
+      ]
+    },
+    {
+      "id": "etc-gio-at5",
+      "manufacturer": "ETC",
+      "name": "Gio @5",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 641,
+        "height": 364,
+        "depth": 667
+      },
+      "weightKg": 23.59,
+      "imageUrl": "images/consoles/ETC/gio-at5.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 4
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 4,
+          "protocols": [
+            "Net3 (ACN)",
+            "sACN",
+            "Art-Net",
+            "OSC",
+            "UDP Strings"
+          ]
+        },
+        {
+          "connector": "RJ45 Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 2,
+          "protocols": [
+            "Net3 (ACN)",
+            "sACN",
+            "Art-Net",
+            "OSC",
+            "UDP Strings"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "IEC C14 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "eos": "3.3.11"
+        },
+        {
+          "eos": "3.3.10"
+        },
+        {
+          "eos": "3.3.9"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Eos Base",
+          "parameterCount": 4096
+        },
+        {
+          "name": "Eos Maximum",
+          "parameterCount": 24576
+        }
+      ]
+    },
+    {
+      "id": "etc-ion-xe",
+      "manufacturer": "ETC",
+      "name": "Ion Xe",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 497,
+        "height": 104,
+        "depth": 362
+      },
+      "weightKg": 5.76,
+      "imageUrl": "images/consoles/ETC/ion-xe.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 4
+        },
+        {
+          "connector": "RJ45 Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 2,
+          "protocols": [
+            "Net3 (ACN)",
+            "sACN",
+            "Art-Net",
+            "OSC",
+            "UDP Strings"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "IEC C14 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "eos": "3.3.11"
+        },
+        {
+          "eos": "3.3.10"
+        },
+        {
+          "eos": "3.3.9"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Eos Base",
+          "parameterCount": 2048
+        },
+        {
+          "name": "Eos Maximum",
+          "parameterCount": 12288
+        }
+      ]
+    },
+    {
+      "id": "etc-ion-xe-20",
+      "manufacturer": "ETC",
+      "name": "Ion Xe 20",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 744,
+        "height": 104,
+        "depth": 362
+      },
+      "weightKg": 7.35,
+      "imageUrl": "images/consoles/ETC/ion-xe-20.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 4
+        },
+        {
+          "connector": "RJ45 Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 2,
+          "protocols": [
+            "Net3 (ACN)",
+            "sACN",
+            "Art-Net",
+            "OSC",
+            "UDP Strings"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "IEC C14 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "eos": "3.3.11"
+        },
+        {
+          "eos": "3.3.10"
+        },
+        {
+          "eos": "3.3.9"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Eos Base",
+          "parameterCount": 2048
+        },
+        {
+          "name": "Eos Maximum",
+          "parameterCount": 12288
+        }
+      ]
+    },
+    {
+      "id": "etc-element-2",
+      "manufacturer": "ETC",
+      "name": "Element 2",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 868,
+        "height": 111,
+        "depth": 362
+      },
+      "weightKg": 7.26,
+      "imageUrl": "images/consoles/ETC/element-2.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 4
+        },
+        {
+          "connector": "RJ45 Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 2,
+          "protocols": [
+            "Net3 (ACN)",
+            "sACN",
+            "Art-Net",
+            "OSC",
+            "UDP Strings"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "IEC C14 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "eos": "3.3.11"
+        },
+        {
+          "eos": "3.3.10"
+        },
+        {
+          "eos": "3.3.9"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Eos Base",
+          "parameterCount": 1024
+        },
+        {
+          "name": "Eos Maximum",
+          "parameterCount": 6144
+        }
+      ]
+    },
+    {
+      "id": "etc-ion-classic",
+      "manufacturer": "ETC",
+      "name": "Ion Classic",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 455,
+        "height": 132,
+        "depth": 462
+      },
+      "weightKg": 9.23,
+      "imageUrl": "images/consoles/ETC/ion-classic.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 4
+        },
+        {
+          "connector": "RJ45 Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 2,
+          "protocols": [
+            "ETCNet2 (EDMX)",
+            "Net3 (ACN)",
+            "sACN",
+            "Art-Net",
+            "Avab UDP",
+            "OSC",
+            "UDP Strings"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "IEC C14 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "eos": "3.3.11"
+        },
+        {
+          "eos": "3.3.10"
+        },
+        {
+          "eos": "3.3.9"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Eos Base",
+          "parameterCount": 1024
+        },
+        {
+          "name": "Eos Maximum",
+          "parameterCount": 6144
+        }
+      ]
+    }
+  ]
+}

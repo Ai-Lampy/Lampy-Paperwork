@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "baseUrl": "json/consoles/",
+  "manufacturers": [
+    {
+      "name": "Avolites",
+      "file": "avolites.json"
+    },
+    {
+      "name": "ChamSys",
+      "file": "chamsys.json"
+    },
+    {
+      "name": "ETC",
+      "file": "etc.json"
+    },
+    {
+      "name": "High End Systems",
+      "file": "high-end-systems.json"
+    },
+    {
+      "name": "MA Lighting",
+      "file": "ma-lighting.json"
+    }
+  ]
+}

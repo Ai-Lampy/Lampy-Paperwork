@@ -37,7 +37,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V31**
+Current app version: **V31.1**
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 
@@ -70,14 +70,30 @@ Lampy Paperwork is intended for modern desktop browsers. Chrome is recommended f
 
 ```text
 /
+  .github/
+    workflows/
+      deploy-pages.yml
+  .gitignore
   .nojekyll
   CHANGELOG.md
+  DEPLOYMENT.md
   README.md
   index.html
   images/
     consoles/
+      ETC/
+      MA_lighting/
+      avolites/
+      chamsys/
+      high_end_systems/
     NPU/
+    lighting_vendors/
+    luminex/
+    pathway/
+    rack_accessories/
+    rack_power/
   gdtf/
+    README.md
     fixtures/
       <manufacturer>/
   info_txt/
@@ -85,7 +101,14 @@ Lampy Paperwork is intended for modern desktop browsers. Chrome is recommended f
     welcome_message.json
   json/
     colour_options.json
-    lighting_consoles.json
+    consoles/
+      README.md
+      manifest.json
+      avolites.json
+      chamsys.json
+      etc.json
+      high-end-systems.json
+      ma-lighting.json
     distro_options.json
     fixture_library_manifest.json
     fixtures/
@@ -111,7 +134,8 @@ Reference data is stored in `/json/` and loaded directly by the browser.
 - Per-manufacturer fixture data lives in `json/fixtures/`.
 - Welcome and walk-through text lives in the root-level `info_txt/` folder.
 - Matched GDTF files used by MVR export live in `gdtf/fixtures/<manufacturer>/`.
-- Lighting-console records are stored in the rack-library-style `devices` collection in `json/lighting_consoles.json` and can reference images from `images/consoles/`.
+- Console manufacturers are listed in `json/consoles/manifest.json`.
+- Each manufacturer console library lives in `json/consoles/` and uses a rack-library-style `devices` collection. Console records can reference images from `images/consoles/`.
 - grandMA NPU records are stored in `json/grandMA_NPU.json` and can reference images from `images/NPU/`.
 - Power-supply calculation thresholds are stored in `json/power_supply.json`.
 - VLAN colour choices are stored in `json/vlan_colour_options.json`.

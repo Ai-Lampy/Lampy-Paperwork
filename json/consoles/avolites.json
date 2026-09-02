@@ -1,0 +1,816 @@
+{
+  "schemaVersion": 4,
+  "manufacturer": "Avolites",
+  "devices": [
+    {
+      "id": "avolites-d3-010",
+      "manufacturer": "Avolites",
+      "name": "D3-010",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 398,
+        "height": 78,
+        "depth": 275
+      },
+      "weightKg": 4.6,
+      "imageUrl": "images/consoles/avolites/d3-010.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 4
+        },
+        {
+          "connector": "RJ45 Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "ETH 1",
+          "protocols": [
+            "TitanNet",
+            "Art-Net",
+            "Art-RDM",
+            "sACN",
+            "CITP"
+          ]
+        },
+        {
+          "connector": "RJ45 Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "ETH 2",
+          "protocols": [
+            "TitanNet",
+            "Art-Net",
+            "Art-RDM",
+            "sACN",
+            "CITP"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON TRUE1 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "titan": "19.2"
+        },
+        {
+          "titan": "19.1"
+        },
+        {
+          "titan": "19.0"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Titan",
+          "parameterCount": 4096
+        }
+      ]
+    },
+    {
+      "id": "avolites-d3-110",
+      "manufacturer": "Avolites",
+      "name": "D3-110",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 423,
+        "height": 202,
+        "depth": 468
+      },
+      "weightKg": 8.7,
+      "imageUrl": "images/consoles/avolites/d3-110.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 4
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "ETH 1",
+          "protocols": [
+            "TitanNet",
+            "Art-Net",
+            "Art-RDM",
+            "sACN",
+            "CITP"
+          ]
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "ETH 2",
+          "protocols": [
+            "TitanNet",
+            "Art-Net",
+            "Art-RDM",
+            "sACN",
+            "CITP"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON TRUE1 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "titan": "19.2"
+        },
+        {
+          "titan": "19.1"
+        },
+        {
+          "titan": "19.0"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Titan",
+          "parameterCount": 12288
+        }
+      ]
+    },
+    {
+      "id": "avolites-d9-330",
+      "manufacturer": "Avolites",
+      "name": "D9-330",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 1380,
+        "height": 240,
+        "depth": 705
+      },
+      "weightKg": 68,
+      "imageUrl": "images/consoles/avolites/d9-330.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 8
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 4,
+          "port": "Primary Network",
+          "protocols": [
+            "TitanNet",
+            "Art-Net",
+            "sACN",
+            "CITP"
+          ]
+        },
+        {
+          "connector": "opticalCON QUAD Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "Primary Fibre Network",
+          "protocols": [
+            "TitanNet",
+            "Art-Net",
+            "sACN",
+            "CITP"
+          ]
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "Secondary Network",
+          "protocols": [
+            "TitanNet",
+            "Art-Net",
+            "sACN",
+            "CITP"
+          ]
+        },
+        {
+          "connector": "XLR-5 male",
+          "directions": [
+            "input"
+          ],
+          "facing": "rear",
+          "quantity": 1
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON TRUE1 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "titan": "19.2"
+        },
+        {
+          "titan": "19.1"
+        },
+        {
+          "titan": "19.0"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Titan",
+          "parameterCount": 16384
+        }
+      ]
+    },
+    {
+      "id": "avolites-d9-215",
+      "manufacturer": "Avolites",
+      "name": "D9-215",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 995,
+        "height": 240,
+        "depth": 705
+      },
+      "weightKg": 54,
+      "imageUrl": "images/consoles/avolites/d9-215.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 8
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 4,
+          "port": "Primary Network",
+          "protocols": [
+            "TitanNet",
+            "Art-Net",
+            "sACN",
+            "CITP"
+          ]
+        },
+        {
+          "connector": "opticalCON QUAD Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "Primary Fibre Network",
+          "protocols": [
+            "TitanNet",
+            "Art-Net",
+            "sACN",
+            "CITP"
+          ]
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "Secondary Network",
+          "protocols": [
+            "TitanNet",
+            "Art-Net",
+            "sACN",
+            "CITP"
+          ]
+        },
+        {
+          "connector": "XLR-5 male",
+          "directions": [
+            "input"
+          ],
+          "facing": "rear",
+          "quantity": 1
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON TRUE1 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "titan": "19.2"
+        },
+        {
+          "titan": "19.1"
+        },
+        {
+          "titan": "19.0"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Titan",
+          "parameterCount": 16384
+        }
+      ]
+    },
+    {
+      "id": "avolites-d7-330",
+      "manufacturer": "Avolites",
+      "name": "D7-330",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 1070,
+        "height": 160,
+        "depth": 440
+      },
+      "weightKg": 24.5,
+      "imageUrl": "images/consoles/avolites/d7-330.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 8
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 4,
+          "port": "Primary Network",
+          "protocols": [
+            "TitanNet",
+            "Art-Net",
+            "sACN",
+            "CITP"
+          ]
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "Secondary Network",
+          "protocols": [
+            "TitanNet",
+            "Art-Net",
+            "sACN",
+            "CITP"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON TRUE1 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "titan": "19.2"
+        },
+        {
+          "titan": "19.1"
+        },
+        {
+          "titan": "19.0"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Titan",
+          "parameterCount": 16384
+        }
+      ]
+    },
+    {
+      "id": "avolites-d7-215",
+      "manufacturer": "Avolites",
+      "name": "D7-215",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 680,
+        "height": 150,
+        "depth": 450
+      },
+      "weightKg": 17,
+      "imageUrl": "images/consoles/avolites/d7-215.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 4
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 4,
+          "port": "Primary Network",
+          "protocols": [
+            "TitanNet",
+            "Art-Net",
+            "sACN",
+            "CITP"
+          ]
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "Secondary Network",
+          "protocols": [
+            "TitanNet",
+            "Art-Net",
+            "sACN",
+            "CITP"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON TRUE1 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "titan": "19.2"
+        },
+        {
+          "titan": "19.1"
+        },
+        {
+          "titan": "19.0"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Titan",
+          "parameterCount": 16384
+        }
+      ]
+    },
+    {
+      "id": "avolites-sapphire-touch",
+      "manufacturer": "Avolites",
+      "name": "Sapphire Touch",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 884,
+        "height": 218,
+        "depth": 720
+      },
+      "weightKg": 46,
+      "imageUrl": "images/consoles/avolites/sapphire-touch.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 8
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "ETH 1",
+          "protocols": [
+            "TitanNet",
+            "Art-Net",
+            "sACN",
+            "CITP"
+          ]
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "ETH 2",
+          "protocols": [
+            "TitanNet",
+            "Art-Net",
+            "sACN",
+            "CITP"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "IEC 60320 C14 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "titan": "19.2"
+        },
+        {
+          "titan": "19.1"
+        },
+        {
+          "titan": "19.0"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Titan",
+          "parameterCount": 8192
+        }
+      ]
+    },
+    {
+      "id": "avolites-arena",
+      "manufacturer": "Avolites",
+      "name": "Arena",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 1072,
+        "height": 150,
+        "depth": 428
+      },
+      "weightKg": 23,
+      "imageUrl": "images/consoles/avolites/arena.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 8
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 4,
+          "port": "Primary Network",
+          "protocols": [
+            "TitanNet",
+            "Art-Net",
+            "sACN",
+            "CITP"
+          ]
+        },
+        {
+          "connector": "opticalCON DUO Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "Primary Fibre Network",
+          "protocols": [
+            "TitanNet",
+            "Art-Net",
+            "sACN",
+            "CITP"
+          ]
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "Secondary Network",
+          "protocols": [
+            "TitanNet",
+            "Art-Net",
+            "sACN",
+            "CITP"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "IEC 60320 C14 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "titan": "19.2"
+        },
+        {
+          "titan": "19.1"
+        },
+        {
+          "titan": "19.0"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Titan",
+          "parameterCount": 8192
+        }
+      ]
+    },
+    {
+      "id": "avolites-tiger-touch-ii",
+      "manufacturer": "Avolites",
+      "name": "Tiger Touch II",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 674,
+        "height": 147,
+        "depth": 435
+      },
+      "weightKg": 15.2,
+      "imageUrl": "images/consoles/avolites/tiger-touch-ii.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 4
+        },
+        {
+          "connector": "RJ45 Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "ETH 1",
+          "protocols": [
+            "TitanNet",
+            "Art-Net",
+            "sACN",
+            "CITP"
+          ]
+        },
+        {
+          "connector": "RJ45 Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "ETH 2",
+          "protocols": [
+            "TitanNet",
+            "Art-Net",
+            "sACN",
+            "CITP"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "IEC 60320 C14 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "titan": "19.2"
+        },
+        {
+          "titan": "19.1"
+        },
+        {
+          "titan": "19.0"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Titan",
+          "parameterCount": 8192
+        }
+      ]
+    },
+    {
+      "id": "avolites-quartz",
+      "manufacturer": "Avolites",
+      "name": "Quartz",
+      "type": "Lighting Console",
+      "dimensionsMm": {
+        "width": 425,
+        "height": 194,
+        "depth": 466
+      },
+      "weightKg": 8,
+      "imageUrl": "images/consoles/avolites/quartz.png",
+      "ports": [
+        {
+          "connector": "XLR-5 female",
+          "directions": [
+            "output"
+          ],
+          "facing": "rear",
+          "quantity": 4
+        },
+        {
+          "connector": "EtherCON Gigabit Ethernet",
+          "directions": [
+            "network"
+          ],
+          "facing": "rear",
+          "quantity": 1,
+          "port": "ETH 1",
+          "protocols": [
+            "TitanNet",
+            "Art-Net",
+            "sACN",
+            "CITP"
+          ]
+        }
+      ],
+      "power": {
+        "connectors": [
+          "IEC 60320 C14 Input"
+        ],
+        "poeIn": false
+      },
+      "softwareVersions": [
+        {
+          "titan": "19.2"
+        },
+        {
+          "titan": "19.1"
+        },
+        {
+          "titan": "19.0"
+        }
+      ],
+      "softwareModes": [
+        {
+          "name": "Titan",
+          "parameterCount": 8192
+        }
+      ]
+    }
+  ]
+}
