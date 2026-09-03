@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 4,
+  "schemaVersion": 5,
   "manufacturer": "Avolites",
   "devices": [
     {
@@ -76,7 +76,11 @@
       "softwareModes": [
         {
           "name": "Titan",
-          "parameterCount": 4096
+          "universes": {
+            "systemLimit": 8,
+            "onboardProcessing": 8,
+            "expandableWithTNP": false
+          }
         }
       ]
     },
@@ -154,7 +158,11 @@
       "softwareModes": [
         {
           "name": "Titan",
-          "parameterCount": 12288
+          "universes": {
+            "systemLimit": 24,
+            "onboardProcessing": 24,
+            "expandableWithTNP": false
+          }
         }
       ]
     },
@@ -253,7 +261,12 @@
       "softwareModes": [
         {
           "name": "Titan",
-          "parameterCount": 16384
+          "universes": {
+            "systemLimit": 64,
+            "onboardProcessing": 32,
+            "expandableWithTNP": true,
+            "processorIncrement": 16
+          }
         }
       ]
     },
@@ -352,7 +365,12 @@
       "softwareModes": [
         {
           "name": "Titan",
-          "parameterCount": 16384
+          "universes": {
+            "systemLimit": 64,
+            "onboardProcessing": 32,
+            "expandableWithTNP": true,
+            "processorIncrement": 16
+          }
         }
       ]
     },
@@ -428,7 +446,12 @@
       "softwareModes": [
         {
           "name": "Titan",
-          "parameterCount": 16384
+          "universes": {
+            "systemLimit": 64,
+            "onboardProcessing": 32,
+            "expandableWithTNP": true,
+            "processorIncrement": 16
+          }
         }
       ]
     },
@@ -504,7 +527,12 @@
       "softwareModes": [
         {
           "name": "Titan",
-          "parameterCount": 16384
+          "universes": {
+            "systemLimit": 64,
+            "onboardProcessing": 32,
+            "expandableWithTNP": true,
+            "processorIncrement": 16
+          }
         }
       ]
     },
@@ -580,7 +608,12 @@
       "softwareModes": [
         {
           "name": "Titan",
-          "parameterCount": 8192
+          "universes": {
+            "systemLimit": 64,
+            "onboardProcessing": 16,
+            "expandableWithTNP": true,
+            "processorIncrement": 16
+          }
         }
       ]
     },
@@ -671,7 +704,12 @@
       "softwareModes": [
         {
           "name": "Titan",
-          "parameterCount": 8192
+          "universes": {
+            "systemLimit": 64,
+            "onboardProcessing": 16,
+            "expandableWithTNP": true,
+            "processorIncrement": 16
+          }
         }
       ]
     },
@@ -747,7 +785,12 @@
       "softwareModes": [
         {
           "name": "Titan",
-          "parameterCount": 8192
+          "universes": {
+            "systemLimit": 64,
+            "onboardProcessing": 16,
+            "expandableWithTNP": true,
+            "processorIncrement": 16
+          }
         }
       ]
     },
@@ -808,7 +851,12 @@
       "softwareModes": [
         {
           "name": "Titan",
-          "parameterCount": 8192
+          "universes": {
+            "systemLimit": 64,
+            "onboardProcessing": 16,
+            "expandableWithTNP": true,
+            "processorIncrement": 16
+          }
         }
       ]
     }
