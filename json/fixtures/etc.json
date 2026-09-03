@@ -17,8 +17,7 @@
           "Direct": {
             "channels": 7,
             "gdtfMode": "Direct",
-            "status": "matched",
-            "parameters": 7
+            "status": "matched"
           }
         }
       },
@@ -44,32 +43,27 @@
           "Direct Mode": {
             "channels": 9,
             "gdtfMode": "Direct Mode",
-            "status": "matched",
-            "parameters": 9
+            "status": "matched"
           },
           "Standard Mode": {
             "channels": 7,
             "gdtfMode": "Standard Mode",
-            "status": "matched",
-            "parameters": 7
+            "status": "matched"
           },
           "6ch Mode": {
             "channels": 6,
             "gdtfMode": "6ch Mode",
-            "status": "matched",
-            "parameters": 6
+            "status": "matched"
           },
           "RGB Mode": {
             "channels": 6,
             "gdtfMode": "RGB Mode",
-            "status": "matched",
-            "parameters": 4
+            "status": "matched"
           },
           "1ch Mode": {
             "channels": 1,
             "gdtfMode": "1ch Mode",
-            "status": "matched",
-            "parameters": 1
+            "status": "matched"
           }
         }
       },
@@ -86,34 +80,30 @@
         "1ch": 1
       },
       "gdtf": {
-        "status": "matched",
+        "status": "pending-download",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__ColorSource_PAR.gdtf",
-        "file": "fixtures/etc/ETC@ColorSource_Par@physical-change-direct.gdtf",
+        "file": "",
         "modes": {
           "5ch(Default)": {
             "channels": 5,
-            "gdtfMode": "5ch(Default)",
-            "status": "matched",
-            "parameters": 5
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "6ch (Direct)": {
             "channels": 6,
-            "gdtfMode": "6ch (Direct)",
-            "status": "matched",
-            "parameters": 6
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "3ch(RGB)": {
             "channels": 3,
-            "gdtfMode": "3ch(RGB)",
-            "status": "matched",
-            "parameters": 3
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "1ch": {
             "channels": 1,
-            "gdtfMode": "1ch",
-            "status": "matched",
-            "parameters": 1
+            "gdtfMode": "",
+            "status": "pending-match"
           }
         }
       },
@@ -124,36 +114,36 @@
       "watts": 120,
       "weight": 3.8,
       "modes": {
-        "1ch": 1,
-        "RGB": 3,
-        "5ch": 5,
-        "Direct": 6
+        "5ch(Default)": 5,
+        "6ch (Direct)": 6,
+        "3ch(RGB)": 3,
+        "1ch": 1
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__ColorSource_PAR_Deep_Blue.gdtf",
-        "file": "",
+        "file": "fixtures/etc/ETC@ColorSource_Par@physical-change-direct.gdtf",
         "modes": {
+          "5ch(Default)": {
+            "channels": 5,
+            "gdtfMode": "5ch(Default)",
+            "status": "matched"
+          },
+          "6ch (Direct)": {
+            "channels": 6,
+            "gdtfMode": "6ch (Direct)",
+            "status": "matched"
+          },
+          "3ch(RGB)": {
+            "channels": 3,
+            "gdtfMode": "3ch(RGB)",
+            "status": "matched"
+          },
           "1ch": {
             "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "RGB": {
-            "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "5ch": {
-            "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Direct": {
-            "channels": 6,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "1ch",
+            "status": "matched"
           }
         }
       },
@@ -215,8 +205,7 @@
           "Direct": {
             "channels": 8,
             "gdtfMode": "Direct",
-            "status": "matched",
-            "parameters": 8
+            "status": "matched"
           }
         }
       },
@@ -238,8 +227,7 @@
           "Direct": {
             "channels": 5,
             "gdtfMode": "Direct",
-            "status": "matched",
-            "parameters": 5
+            "status": "matched"
           }
         }
       },
@@ -304,26 +292,22 @@
           "5ch": {
             "channels": 5,
             "gdtfMode": "5ch",
-            "status": "matched",
-            "parameters": 5
+            "status": "matched"
           },
           "RGB": {
             "channels": 3,
             "gdtfMode": "RGB",
-            "status": "matched",
-            "parameters": 3
+            "status": "matched"
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched",
-            "parameters": 1
+            "status": "matched"
           },
           "Direct": {
             "channels": 6,
             "gdtfMode": "Direct",
-            "status": "matched",
-            "parameters": 6
+            "status": "matched"
           }
         }
       },
@@ -348,26 +332,22 @@
           "Direct": {
             "channels": 9,
             "gdtfMode": "Direct",
-            "status": "matched",
-            "parameters": 9
+            "status": "matched"
           },
           "Standard": {
             "channels": 7,
             "gdtfMode": "Standard",
-            "status": "matched",
-            "parameters": 7
+            "status": "matched"
           },
           "1CH": {
             "channels": 1,
             "gdtfMode": "1CH",
-            "status": "matched",
-            "parameters": 1
+            "status": "matched"
           },
           "RGB": {
             "channels": 3,
             "gdtfMode": "RGB",
-            "status": "matched",
-            "parameters": 3
+            "status": "matched"
           }
         }
       },
@@ -421,20 +401,41 @@
         "Direct": 9
       },
       "gdtf": {
-        "status": "matched",
+        "status": "pending-download",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__Desire_D22.gdtf",
+        "file": "",
+        "modes": {
+          "Direct": {
+            "channels": 9,
+            "gdtfMode": "",
+            "status": "pending-match"
+          }
+        }
+      },
+      "shortName": "Desire D22"
+    },
+    {
+      "fixture": "Desire D22 Studio HD",
+      "watts": 30.0,
+      "weight": 2.95,
+      "modes": {
+        "Direct": 9
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/etc",
         "file": "fixtures/etc/ETC@Desire_D22_Studio_HD@rev1.gdtf",
         "modes": {
           "Direct": {
             "channels": 9,
             "gdtfMode": "Direct",
-            "status": "matched",
-            "parameters": 8
+            "status": "matched"
           }
-        }
+        },
+        "suggestedFileName": "ETC__Desire_D22_Studio_HD.gdtf"
       },
-      "shortName": "Desire D22"
+      "shortName": "D22 Studio HD"
     },
     {
       "fixture": "Desire D40",
@@ -446,28 +447,25 @@
         "Direct": 9
       },
       "gdtf": {
-        "status": "matched",
+        "status": "pending-download",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__Desire_D40.gdtf",
-        "file": "fixtures/etc/ETC@ETC_Desire_D40_Studio_HD@Add_Direct_Mode.gdtf",
+        "file": "",
         "modes": {
           "Standard mode": {
             "channels": 3,
-            "gdtfMode": "Standard mode",
-            "status": "matched",
-            "parameters": 3
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "HSIC": {
             "channels": 6,
-            "gdtfMode": "HSIC",
-            "status": "matched",
-            "parameters": 5
+            "gdtfMode": "",
+            "status": "pending-match"
           },
           "Direct": {
             "channels": 9,
-            "gdtfMode": "Direct",
-            "status": "matched",
-            "parameters": 8
+            "gdtfMode": "",
+            "status": "pending-match"
           }
         }
       },
@@ -748,6 +746,40 @@
       "shortName": "Desire Studio"
     },
     {
+      "fixture": "ETC Desire D40 Studio HD",
+      "watts": 30.0,
+      "weight": 6.4,
+      "modes": {
+        "Standard mode": 3,
+        "HSIC": 6,
+        "Direct": 9
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/etc",
+        "file": "fixtures/etc/ETC@ETC_Desire_D40_Studio_HD@Add_Direct_Mode.gdtf",
+        "modes": {
+          "Standard mode": {
+            "channels": 3,
+            "gdtfMode": "Standard mode",
+            "status": "matched"
+          },
+          "HSIC": {
+            "channels": 6,
+            "gdtfMode": "HSIC",
+            "status": "matched"
+          },
+          "Direct": {
+            "channels": 9,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "ETC__ETC_Desire_D40_Studio_HD.gdtf"
+      },
+      "shortName": "D40 Studio HD"
+    },
+    {
       "fixture": "ETC Fresnel",
       "watts": 750,
       "weight": 5.9,
@@ -770,46 +802,156 @@
       "shortName": "ETC Fres"
     },
     {
+      "fixture": "Fos/4 Fresnel 10 in Daylight HDR",
+      "watts": 303.9,
+      "weight": 13.4,
+      "modes": {
+        "Direct": 10,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/etc",
+        "file": "fixtures/etc/ETC@Fos4_Fresnel_10_in_Daylight_HDR@New_fixture_type_based_on_Fos4_Fresnel_10_in_Daylight_HDR_from_ETC.gdtf",
+        "modes": {
+          "Direct": {
+            "channels": 10,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
+            "channels": 3,
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
+          },
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
+          },
+          "HSIC": {
+            "channels": 8,
+            "gdtfMode": "HSIC",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "ETC__Fos_4_Fresnel_10_in_Daylight_HDR.gdtf"
+      },
+      "shortName": "Fos4FD10"
+    },
+    {
+      "fixture": "Fos/4 Fresnel 10 in Lustr X8",
+      "watts": 208.9,
+      "weight": 13.4,
+      "modes": {
+        "Direct": 12,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/etc",
+        "file": "fixtures/etc/ETC@Fos4_Fresnel_10_in_Lustr_X8@New_fixture_type_based_on_Fos4_Fresnel_10_in_Lustr_X8_from_ETC.gdtf",
+        "modes": {
+          "Direct": {
+            "channels": 12,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
+            "channels": 3,
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
+          },
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
+          },
+          "HSIC": {
+            "channels": 8,
+            "gdtfMode": "HSIC",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "ETC__Fos_4_Fresnel_10_in_Lustr_X8.gdtf"
+      },
+      "shortName": "Fos4FL10"
+    },
+    {
       "fixture": "fos/4 Fresnel 5 Daylight HDR",
       "watts": 160,
       "weight": 8.6,
       "modes": {
-        "1 Chan": 1,
-        "3 Chan": 3,
-        "5 Chan": 5,
-        "8 Chan": 8,
-        "12 Chan": 12
+        "Direct": 10,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__fos_4_Fresnel_5_Daylight_HDR.gdtf",
-        "file": "",
+        "file": "fixtures/etc/ETC@Fos4_Fresnel_5_in_Daylight_HDR@v1.3.0.gdtf",
         "modes": {
-          "1 Chan": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Direct": {
+            "channels": 10,
+            "gdtfMode": "Direct",
+            "status": "matched"
           },
-          "3 Chan": {
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
           },
-          "5 Chan": {
-            "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
           },
-          "8 Chan": {
+          "HSIC": {
             "channels": 8,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "12 Chan": {
-            "channels": 12,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "HSIC",
+            "status": "matched"
           }
         }
       },
@@ -820,42 +962,48 @@
       "watts": 160,
       "weight": 8.6,
       "modes": {
-        "1 Chan": 1,
-        "3 Chan": 3,
-        "5 Chan": 5,
-        "8 Chan": 8,
-        "12 Chan": 12
+        "Direct": 12,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__fos_4_Fresnel_5_Lustr_X8.gdtf",
-        "file": "",
+        "file": "fixtures/etc/ETC@Fos4_Fresnel_5_in_Lustr_X8@v1.3.0.gdtf",
         "modes": {
-          "1 Chan": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "3 Chan": {
-            "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "5 Chan": {
-            "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "8 Chan": {
-            "channels": 8,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "12 Chan": {
+          "Direct": {
             "channels": 12,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
+            "channels": 3,
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
+          },
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
+          },
+          "HSIC": {
+            "channels": 8,
+            "gdtfMode": "HSIC",
+            "status": "matched"
           }
         }
       },
@@ -866,42 +1014,48 @@
       "watts": 220,
       "weight": 11.1,
       "modes": {
-        "1 Chan": 1,
-        "3 Chan": 3,
-        "5 Chan": 5,
-        "8 Chan": 8,
-        "12 Chan": 12
+        "Direct": 10,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__fos_4_Fresnel_7_Daylight_HDR.gdtf",
-        "file": "",
+        "file": "fixtures/etc/ETC@Fos4_Fresnel_7_in_Daylight_HDR@New_fixture_type_based_on_Fos4_Fresnel_7_in_Daylight_HDR_from_ETC.gdtf",
         "modes": {
-          "1 Chan": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Direct": {
+            "channels": 10,
+            "gdtfMode": "Direct",
+            "status": "matched"
           },
-          "3 Chan": {
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
           },
-          "5 Chan": {
-            "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
           },
-          "8 Chan": {
+          "HSIC": {
             "channels": 8,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "12 Chan": {
-            "channels": 12,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "HSIC",
+            "status": "matched"
           }
         }
       },
@@ -912,42 +1066,48 @@
       "watts": 220,
       "weight": 11.1,
       "modes": {
-        "1 Chan": 1,
-        "3 Chan": 3,
-        "5 Chan": 5,
-        "8 Chan": 8,
-        "12 Chan": 12
+        "Direct": 12,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__fos_4_Fresnel_7_Lustr_X8.gdtf",
-        "file": "",
+        "file": "fixtures/etc/ETC@Fos4_Fresnel_7_in_Lustr_X8@New_fixture_type_based_on_Fos4_Fresnel_7_in_Lustr_X8_from_ETC.gdtf",
         "modes": {
-          "1 Chan": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "3 Chan": {
-            "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "5 Chan": {
-            "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "8 Chan": {
-            "channels": 8,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "12 Chan": {
+          "Direct": {
             "channels": 12,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
+            "channels": 3,
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
+          },
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
+          },
+          "HSIC": {
+            "channels": 8,
+            "gdtfMode": "HSIC",
+            "status": "matched"
           }
         }
       },
@@ -958,42 +1118,48 @@
       "watts": 670,
       "weight": 20.2,
       "modes": {
-        "1 Chan": 1,
-        "3 Chan": 3,
-        "5 Chan": 5,
-        "8 Chan": 8,
-        "12 Chan": 12
+        "Direct": 10,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__fos_4_Panel_16x24_Daylight_HDR.gdtf",
-        "file": "",
+        "file": "fixtures/etc/ETC@fos4_PD16@v1.3.0.gdtf",
         "modes": {
-          "1 Chan": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Direct": {
+            "channels": 10,
+            "gdtfMode": "Direct",
+            "status": "matched"
           },
-          "3 Chan": {
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
           },
-          "5 Chan": {
-            "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
           },
-          "8 Chan": {
+          "HSIC": {
             "channels": 8,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "12 Chan": {
-            "channels": 12,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "HSIC",
+            "status": "matched"
           }
         }
       },
@@ -1004,42 +1170,48 @@
       "watts": 670,
       "weight": 20.2,
       "modes": {
-        "1 Chan": 1,
-        "3 Chan": 3,
-        "5 Chan": 5,
-        "8 Chan": 8,
-        "12 Chan": 12
+        "Direct": 12,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__fos_4_Panel_16x24_Lustr_X8.gdtf",
-        "file": "",
+        "file": "fixtures/etc/ETC@fos4_PL16@v1.3.0.gdtf",
         "modes": {
-          "1 Chan": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "3 Chan": {
-            "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "5 Chan": {
-            "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "8 Chan": {
-            "channels": 8,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "12 Chan": {
+          "Direct": {
             "channels": 12,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
+            "channels": 3,
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
+          },
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
+          },
+          "HSIC": {
+            "channels": 8,
+            "gdtfMode": "HSIC",
+            "status": "matched"
           }
         }
       },
@@ -1050,42 +1222,48 @@
       "watts": 1000,
       "weight": 29.0,
       "modes": {
-        "1 Chan": 1,
-        "3 Chan": 3,
-        "5 Chan": 5,
-        "8 Chan": 8,
-        "12 Chan": 12
+        "Direct": 10,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__fos_4_Panel_24x24_Daylight_HDR.gdtf",
-        "file": "",
+        "file": "fixtures/etc/ETC@fos4_PD24@v1.3.0.gdtf",
         "modes": {
-          "1 Chan": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Direct": {
+            "channels": 10,
+            "gdtfMode": "Direct",
+            "status": "matched"
           },
-          "3 Chan": {
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
           },
-          "5 Chan": {
-            "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
           },
-          "8 Chan": {
+          "HSIC": {
             "channels": 8,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "12 Chan": {
-            "channels": 12,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "HSIC",
+            "status": "matched"
           }
         }
       },
@@ -1096,42 +1274,48 @@
       "watts": 1000,
       "weight": 29.0,
       "modes": {
-        "1 Chan": 1,
-        "3 Chan": 3,
-        "5 Chan": 5,
-        "8 Chan": 8,
-        "12 Chan": 12
+        "Direct": 12,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__fos_4_Panel_24x24_Lustr_X8.gdtf",
-        "file": "",
+        "file": "fixtures/etc/ETC@fos4_PL24@v1.3.0.gdtf",
         "modes": {
-          "1 Chan": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "3 Chan": {
-            "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "5 Chan": {
-            "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "8 Chan": {
-            "channels": 8,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "12 Chan": {
+          "Direct": {
             "channels": 12,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
+            "channels": 3,
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
+          },
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
+          },
+          "HSIC": {
+            "channels": 8,
+            "gdtfMode": "HSIC",
+            "status": "matched"
           }
         }
       },
@@ -1142,42 +1326,48 @@
       "watts": 340,
       "weight": 12.4,
       "modes": {
-        "1 Chan": 1,
-        "3 Chan": 3,
-        "5 Chan": 5,
-        "8 Chan": 8,
-        "12 Chan": 12
+        "Direct": 10,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__fos_4_Panel_8x24_Daylight_HDR.gdtf",
-        "file": "",
+        "file": "fixtures/etc/ETC@fos4_PD8@v1.3.0.gdtf",
         "modes": {
-          "1 Chan": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Direct": {
+            "channels": 10,
+            "gdtfMode": "Direct",
+            "status": "matched"
           },
-          "3 Chan": {
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
           },
-          "5 Chan": {
-            "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
           },
-          "8 Chan": {
+          "HSIC": {
             "channels": 8,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "12 Chan": {
-            "channels": 12,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "HSIC",
+            "status": "matched"
           }
         }
       },
@@ -1188,42 +1378,48 @@
       "watts": 340,
       "weight": 12.4,
       "modes": {
-        "1 Chan": 1,
-        "3 Chan": 3,
-        "5 Chan": 5,
-        "8 Chan": 8,
-        "12 Chan": 12
+        "Direct": 12,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/etc",
         "suggestedFileName": "ETC__fos_4_Panel_8x24_Lustr_X8.gdtf",
-        "file": "",
+        "file": "fixtures/etc/ETC@fos4_PL8@v1.3.0.gdtf",
         "modes": {
-          "1 Chan": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "3 Chan": {
-            "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "5 Chan": {
-            "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "8 Chan": {
-            "channels": 8,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "12 Chan": {
+          "Direct": {
             "channels": 12,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
+            "channels": 3,
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
+          },
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
+          },
+          "HSIC": {
+            "channels": 8,
+            "gdtfMode": "HSIC",
+            "status": "matched"
           }
         }
       },
@@ -1735,8 +1931,7 @@
           "Standard mode": {
             "channels": 6,
             "gdtfMode": "Standard mode",
-            "status": "matched",
-            "parameters": 6
+            "status": "matched"
           }
         }
       },
@@ -2197,6 +2392,422 @@
       "shortName": "S4 LED Series 3 DayLight HDR"
     },
     {
+      "fixture": "Source Four LED Series 3 Daylight HDR 10 Degree",
+      "watts": 340.0,
+      "weight": 8.87,
+      "modes": {
+        "Direct": 10,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/etc",
+        "file": "fixtures/etc/ETC@S4_Series_3_Daylight_HDR_10Deg@v1.3.0.gdtf",
+        "modes": {
+          "Direct": {
+            "channels": 10,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
+            "channels": 3,
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
+          },
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
+          },
+          "HSIC": {
+            "channels": 8,
+            "gdtfMode": "HSIC",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "ETC__Source_Four_LED_Series_3_Daylight_HDR_10_Degree.gdtf"
+      },
+      "shortName": "S4 Daylight HDR 10Deg"
+    },
+    {
+      "fixture": "Source Four LED Series 3 Daylight HDR 14 Degree",
+      "watts": 340.0,
+      "weight": 8.87,
+      "modes": {
+        "Direct": 10,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/etc",
+        "file": "fixtures/etc/ETC@S4_Series_3_Daylight_HDR_14Deg@v1.3.0.gdtf",
+        "modes": {
+          "Direct": {
+            "channels": 10,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
+            "channels": 3,
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
+          },
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
+          },
+          "HSIC": {
+            "channels": 8,
+            "gdtfMode": "HSIC",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "ETC__Source_Four_LED_Series_3_Daylight_HDR_14_Degree.gdtf"
+      },
+      "shortName": "S4 Daylight HDR 14Deg"
+    },
+    {
+      "fixture": "Source Four LED Series 3 Daylight HDR 19 Degree",
+      "watts": 340.0,
+      "weight": 8.87,
+      "modes": {
+        "Direct": 10,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/etc",
+        "file": "fixtures/etc/ETC@S4_Series_3_Daylight_HDR_19Deg@v1.3.0.gdtf",
+        "modes": {
+          "Direct": {
+            "channels": 10,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
+            "channels": 3,
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
+          },
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
+          },
+          "HSIC": {
+            "channels": 8,
+            "gdtfMode": "HSIC",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "ETC__Source_Four_LED_Series_3_Daylight_HDR_19_Degree.gdtf"
+      },
+      "shortName": "S4 Daylight HDR 19Deg"
+    },
+    {
+      "fixture": "Source Four LED Series 3 Daylight HDR 26 Degree",
+      "watts": 340.0,
+      "weight": 8.87,
+      "modes": {
+        "Direct": 10,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/etc",
+        "file": "fixtures/etc/ETC@S4_Series_3_Daylight_HDR_26Deg@v1.3.0.gdtf",
+        "modes": {
+          "Direct": {
+            "channels": 10,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
+            "channels": 3,
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
+          },
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
+          },
+          "HSIC": {
+            "channels": 8,
+            "gdtfMode": "HSIC",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "ETC__Source_Four_LED_Series_3_Daylight_HDR_26_Degree.gdtf"
+      },
+      "shortName": "S4 Daylight HDR 26Deg"
+    },
+    {
+      "fixture": "Source Four LED Series 3 Daylight HDR 36 Degree",
+      "watts": 340.0,
+      "weight": 8.87,
+      "modes": {
+        "Direct": 10,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/etc",
+        "file": "fixtures/etc/ETC@S4_Series_3_Daylight_HDR_36Deg@v1.3.0.gdtf",
+        "modes": {
+          "Direct": {
+            "channels": 10,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
+            "channels": 3,
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
+          },
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
+          },
+          "HSIC": {
+            "channels": 8,
+            "gdtfMode": "HSIC",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "ETC__Source_Four_LED_Series_3_Daylight_HDR_36_Degree.gdtf"
+      },
+      "shortName": "S4 Daylight HDR 36Deg"
+    },
+    {
+      "fixture": "Source Four LED Series 3 Daylight HDR 5 Degree",
+      "watts": 340.0,
+      "weight": 8.87,
+      "modes": {
+        "Direct": 10,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/etc",
+        "file": "fixtures/etc/ETC@S4_Series_3_Daylight_HDR_5Deg@v1.3.0.gdtf",
+        "modes": {
+          "Direct": {
+            "channels": 10,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
+            "channels": 3,
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
+          },
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
+          },
+          "HSIC": {
+            "channels": 8,
+            "gdtfMode": "HSIC",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "ETC__Source_Four_LED_Series_3_Daylight_HDR_5_Degree.gdtf"
+      },
+      "shortName": "S4 Daylight HDR 5Deg"
+    },
+    {
+      "fixture": "Source Four LED Series 3 Daylight HDR 50 Degree",
+      "watts": 340.0,
+      "weight": 8.87,
+      "modes": {
+        "Direct": 10,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/etc",
+        "file": "fixtures/etc/ETC@S4_Series_3_Daylight_HDR_50Deg@v1.3.0.gdtf",
+        "modes": {
+          "Direct": {
+            "channels": 10,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
+            "channels": 3,
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
+          },
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
+          },
+          "HSIC": {
+            "channels": 8,
+            "gdtfMode": "HSIC",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "ETC__Source_Four_LED_Series_3_Daylight_HDR_50_Degree.gdtf"
+      },
+      "shortName": "S4 Daylight HDR 50Deg"
+    },
+    {
+      "fixture": "Source Four LED Series 3 Daylight HDR 70 Degree",
+      "watts": 340.0,
+      "weight": 8.87,
+      "modes": {
+        "Direct": 10,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/etc",
+        "file": "fixtures/etc/ETC@S4_Series_3_Daylight_HDR_70Deg@v1.3.0.gdtf",
+        "modes": {
+          "Direct": {
+            "channels": 10,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
+            "channels": 3,
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
+          },
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
+          },
+          "HSIC": {
+            "channels": 8,
+            "gdtfMode": "HSIC",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "ETC__Source_Four_LED_Series_3_Daylight_HDR_70_Degree.gdtf"
+      },
+      "shortName": "S4 Daylight HDR 70Deg"
+    },
+    {
       "fixture": "Source Four LED Series 3 Lustr X8",
       "watts": 305,
       "weight": 10.1,
@@ -2241,6 +2852,422 @@
         }
       },
       "shortName": "S4 LED Series 3 Lustr X8"
+    },
+    {
+      "fixture": "Source Four LED Series 3 Lustr X8 10 Degree",
+      "watts": 150.0,
+      "weight": 8.87,
+      "modes": {
+        "Direct": 12,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/etc",
+        "file": "fixtures/etc/ETC@S4_Series_3_Lustr_X8_10Deg@v1.3.0.gdtf",
+        "modes": {
+          "Direct": {
+            "channels": 12,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
+            "channels": 3,
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
+          },
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
+          },
+          "HSIC": {
+            "channels": 8,
+            "gdtfMode": "HSIC",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "ETC__Source_Four_LED_Series_3_Lustr_X8_10_Degree.gdtf"
+      },
+      "shortName": "S4 Lustr X8 10Deg"
+    },
+    {
+      "fixture": "Source Four LED Series 3 Lustr X8 14 Degree",
+      "watts": 150.0,
+      "weight": 8.87,
+      "modes": {
+        "Direct": 12,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/etc",
+        "file": "fixtures/etc/ETC@S4_Series_3_Lustr_X8_14Deg@v1.3.0.gdtf",
+        "modes": {
+          "Direct": {
+            "channels": 12,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
+            "channels": 3,
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
+          },
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
+          },
+          "HSIC": {
+            "channels": 8,
+            "gdtfMode": "HSIC",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "ETC__Source_Four_LED_Series_3_Lustr_X8_14_Degree.gdtf"
+      },
+      "shortName": "S4 Lustr X8 14Deg"
+    },
+    {
+      "fixture": "Source Four LED Series 3 Lustr X8 19 Degree",
+      "watts": 150.0,
+      "weight": 8.87,
+      "modes": {
+        "Direct": 12,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/etc",
+        "file": "fixtures/etc/ETC@S4_Series_3_Lustr_X8_19Deg@v1.3.0.gdtf",
+        "modes": {
+          "Direct": {
+            "channels": 12,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
+            "channels": 3,
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
+          },
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
+          },
+          "HSIC": {
+            "channels": 8,
+            "gdtfMode": "HSIC",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "ETC__Source_Four_LED_Series_3_Lustr_X8_19_Degree.gdtf"
+      },
+      "shortName": "S4 Lustr X8 19Deg"
+    },
+    {
+      "fixture": "Source Four LED Series 3 Lustr X8 26 Degree",
+      "watts": 150.0,
+      "weight": 8.87,
+      "modes": {
+        "Direct": 12,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/etc",
+        "file": "fixtures/etc/ETC@S4_Series_3_Lustr_X8_26Deg@v1.3.0.gdtf",
+        "modes": {
+          "Direct": {
+            "channels": 12,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
+            "channels": 3,
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
+          },
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
+          },
+          "HSIC": {
+            "channels": 8,
+            "gdtfMode": "HSIC",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "ETC__Source_Four_LED_Series_3_Lustr_X8_26_Degree.gdtf"
+      },
+      "shortName": "S4 Lustr X8 26Deg"
+    },
+    {
+      "fixture": "Source Four LED Series 3 Lustr X8 36 Degree",
+      "watts": 150.0,
+      "weight": 8.87,
+      "modes": {
+        "Direct": 12,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/etc",
+        "file": "fixtures/etc/ETC@S4_Series_3_Lustr_X8_36Deg@v1.3.0.gdtf",
+        "modes": {
+          "Direct": {
+            "channels": 12,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
+            "channels": 3,
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
+          },
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
+          },
+          "HSIC": {
+            "channels": 8,
+            "gdtfMode": "HSIC",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "ETC__Source_Four_LED_Series_3_Lustr_X8_36_Degree.gdtf"
+      },
+      "shortName": "S4 Lustr X8 36Deg"
+    },
+    {
+      "fixture": "Source Four LED Series 3 Lustr X8 5 Degree",
+      "watts": 150.0,
+      "weight": 8.87,
+      "modes": {
+        "Direct": 12,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/etc",
+        "file": "fixtures/etc/ETC@S4_Series_3_Lustr_X8_5Deg@v1.3.0.gdtf",
+        "modes": {
+          "Direct": {
+            "channels": 12,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
+            "channels": 3,
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
+          },
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
+          },
+          "HSIC": {
+            "channels": 8,
+            "gdtfMode": "HSIC",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "ETC__Source_Four_LED_Series_3_Lustr_X8_5_Degree.gdtf"
+      },
+      "shortName": "S4 Lustr X8 5Deg"
+    },
+    {
+      "fixture": "Source Four LED Series 3 Lustr X8 50 Degree",
+      "watts": 150.0,
+      "weight": 8.87,
+      "modes": {
+        "Direct": 12,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/etc",
+        "file": "fixtures/etc/ETC@S4_Series_3_Lustr_X8_50Deg@v1.3.0.gdtf",
+        "modes": {
+          "Direct": {
+            "channels": 12,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
+            "channels": 3,
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
+          },
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
+          },
+          "HSIC": {
+            "channels": 8,
+            "gdtfMode": "HSIC",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "ETC__Source_Four_LED_Series_3_Lustr_X8_50_Degree.gdtf"
+      },
+      "shortName": "S4 Lustr X8 50Deg"
+    },
+    {
+      "fixture": "Source Four LED Series 3 Lustr X8 70 Degree",
+      "watts": 150.0,
+      "weight": 8.87,
+      "modes": {
+        "Direct": 12,
+        "Expanded": 11,
+        "Studio": 7,
+        "3ch RGB": 3,
+        "1ch": 1,
+        "HSIC": 8
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/etc",
+        "file": "fixtures/etc/ETC@S4_Series_3_Lustr_X8_70Deg@v1.3.0.gdtf",
+        "modes": {
+          "Direct": {
+            "channels": 12,
+            "gdtfMode": "Direct",
+            "status": "matched"
+          },
+          "Expanded": {
+            "channels": 11,
+            "gdtfMode": "Expanded",
+            "status": "matched"
+          },
+          "Studio": {
+            "channels": 7,
+            "gdtfMode": "Studio",
+            "status": "matched"
+          },
+          "3ch RGB": {
+            "channels": 3,
+            "gdtfMode": "3ch RGB",
+            "status": "matched"
+          },
+          "1ch": {
+            "channels": 1,
+            "gdtfMode": "1ch",
+            "status": "matched"
+          },
+          "HSIC": {
+            "channels": 8,
+            "gdtfMode": "HSIC",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "ETC__Source_Four_LED_Series_3_Lustr_X8_70_Degree.gdtf"
+      },
+      "shortName": "S4 Lustr X8 70Deg"
     },
     {
       "fixture": "Source Four Mini",

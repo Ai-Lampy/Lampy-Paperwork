@@ -2,6 +2,770 @@
   "manufacturer": "Elation",
   "fixtures": [
     {
+      "fixture": " Artiste Van Gogh",
+      "watts": 380.0,
+      "weight": 28.5,
+      "modes": {
+        "Extended Pan540": 36,
+        "Standard Pan540": 22,
+        "Extended Pan630": 36,
+        "Standard Pan630": 22
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Artiste_Van_Gogh@25-26-07_Release.gdtf",
+        "modes": {
+          "Extended Pan540": {
+            "channels": 36,
+            "gdtfMode": "Extended Pan540",
+            "status": "matched"
+          },
+          "Standard Pan540": {
+            "channels": 22,
+            "gdtfMode": "Standard Pan540",
+            "status": "matched"
+          },
+          "Extended Pan630": {
+            "channels": 36,
+            "gdtfMode": "Extended Pan630",
+            "status": "matched"
+          },
+          "Standard Pan630": {
+            "channels": 22,
+            "gdtfMode": "Standard Pan630",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Artiste_Van_Gogh.gdtf"
+      },
+      "shortName": "ArtVanGogh"
+    },
+    {
+      "fixture": "ACL 360 Bar",
+      "watts": null,
+      "weight": 10.0,
+      "modes": {
+        "Extended": 43,
+        "Stand": 19,
+        "Basic": 17
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@ACL_360_Bar@25-11-04_Release.gdtf",
+        "modes": {
+          "Extended": {
+            "channels": 43,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          },
+          "Stand": {
+            "channels": 19,
+            "gdtfMode": "Stand",
+            "status": "matched"
+          },
+          "Basic": {
+            "channels": 17,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__ACL_360_Bar.gdtf"
+      },
+      "shortName": "ACL 360B"
+    },
+    {
+      "fixture": "ACL 360i",
+      "watts": 60.0,
+      "weight": 5.2,
+      "modes": {
+        "Extended": 20,
+        "Stand": 18,
+        "Basic": 16
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@ACL_360i@25-16-06_Release.gdtf",
+        "modes": {
+          "Extended": {
+            "channels": 20,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          },
+          "Stand": {
+            "channels": 18,
+            "gdtfMode": "Stand",
+            "status": "matched"
+          },
+          "Basic": {
+            "channels": 16,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__ACL_360i.gdtf"
+      },
+      "shortName": "ACL360i"
+    },
+    {
+      "fixture": "Artiste DaVinci",
+      "watts": 270.0,
+      "weight": 25.4,
+      "modes": {
+        "Extended Pan540": 40,
+        "Standard Pan540": 28,
+        "Basic Pan540": 26,
+        "Extended Pan630": 40,
+        "Standard Pan630": 28,
+        "Basic Pan630": 26
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Artiste_DaVinci@25-07-04_Release.gdtf",
+        "modes": {
+          "Extended Pan540": {
+            "channels": 40,
+            "gdtfMode": "Extended Pan540",
+            "status": "matched"
+          },
+          "Standard Pan540": {
+            "channels": 28,
+            "gdtfMode": "Standard Pan540",
+            "status": "matched"
+          },
+          "Basic Pan540": {
+            "channels": 26,
+            "gdtfMode": "Basic Pan540",
+            "status": "matched"
+          },
+          "Extended Pan630": {
+            "channels": 40,
+            "gdtfMode": "Extended Pan630",
+            "status": "matched"
+          },
+          "Standard Pan630": {
+            "channels": 28,
+            "gdtfMode": "Standard Pan630",
+            "status": "matched"
+          },
+          "Basic Pan630": {
+            "channels": 26,
+            "gdtfMode": "Basic Pan630",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Artiste_DaVinci.gdtf"
+      },
+      "shortName": "ArtDVinci"
+    },
+    {
+      "fixture": "Artiste Mondrian",
+      "watts": 1500.0,
+      "weight": 49.9,
+      "modes": {
+        "Extended Pan540": 68,
+        "Standard Pan540": 42,
+        "Extended Pan630": 68,
+        "Standard Pan630": 42
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Artiste_Mondrian@_25-13-08_Release.gdtf",
+        "modes": {
+          "Extended Pan540": {
+            "channels": 68,
+            "gdtfMode": "Extended Pan540",
+            "status": "matched"
+          },
+          "Standard Pan540": {
+            "channels": 42,
+            "gdtfMode": "Standard Pan540",
+            "status": "matched"
+          },
+          "Extended Pan630": {
+            "channels": 68,
+            "gdtfMode": "Extended Pan630",
+            "status": "matched"
+          },
+          "Standard Pan630": {
+            "channels": 42,
+            "gdtfMode": "Standard Pan630",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Artiste_Mondrian.gdtf"
+      },
+      "shortName": "ArtMon"
+    },
+    {
+      "fixture": "Artiste Monet",
+      "watts": 1000.0,
+      "weight": 42.6,
+      "modes": {
+        "Extended": 67,
+        "Standard": 40
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Artiste_Monet@25-13-08_Release.gdtf",
+        "modes": {
+          "Extended": {
+            "channels": 67,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          },
+          "Standard": {
+            "channels": 40,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Artiste_Monet.gdtf"
+      },
+      "shortName": "Artiste Monet"
+    },
+    {
+      "fixture": "Artiste Picasso",
+      "watts": 620.0,
+      "weight": 36.2,
+      "modes": {
+        "Standard Pan540": 36,
+        "Extended Pan540": 62,
+        "Extended Pan630": 62,
+        "Standard Pan630": 36
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Artiste_Picasso@25-09-05_Release.gdtf",
+        "modes": {
+          "Standard Pan540": {
+            "channels": 36,
+            "gdtfMode": "Standard Pan540",
+            "status": "matched"
+          },
+          "Extended Pan540": {
+            "channels": 62,
+            "gdtfMode": "Extended Pan540",
+            "status": "matched"
+          },
+          "Extended Pan630": {
+            "channels": 62,
+            "gdtfMode": "Extended Pan630",
+            "status": "matched"
+          },
+          "Standard Pan630": {
+            "channels": 36,
+            "gdtfMode": "Standard Pan630",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Artiste_Picasso.gdtf"
+      },
+      "shortName": "ArtPic"
+    },
+    {
+      "fixture": "Chorus Line 16",
+      "watts": null,
+      "weight": 11.3,
+      "modes": {
+        "Standard ": 18,
+        "Extend ": 78,
+        "Basic": 16
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Chorus_Line_16@2023-13-06_First_Release.gdtf",
+        "modes": {
+          "Standard ": {
+            "channels": 18,
+            "gdtfMode": "Standard ",
+            "status": "matched"
+          },
+          "Extend ": {
+            "channels": 78,
+            "gdtfMode": "Extend ",
+            "status": "matched"
+          },
+          "Basic": {
+            "channels": 16,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Chorus_Line_16.gdtf"
+      },
+      "shortName": "ChrsL16"
+    },
+    {
+      "fixture": "Chorus Line 8",
+      "watts": null,
+      "weight": 11.3,
+      "modes": {
+        "Standard ": 18,
+        "Extend ": 46,
+        "Basic": 16
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Chorus_Line_8@2023-13-06_First_Release.gdtf",
+        "modes": {
+          "Standard ": {
+            "channels": 18,
+            "gdtfMode": "Standard ",
+            "status": "matched"
+          },
+          "Extend ": {
+            "channels": 46,
+            "gdtfMode": "Extend ",
+            "status": "matched"
+          },
+          "Basic": {
+            "channels": 16,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Chorus_Line_8.gdtf"
+      },
+      "shortName": "ChrsL8"
+    },
+    {
+      "fixture": "COLOUR 5 Profile",
+      "watts": null,
+      "weight": 8.8,
+      "modes": {
+        "19CH": 19,
+        "13CH": 13,
+        "8CH": 8,
+        "6CH": 6,
+        "5CH": 5
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@COLOUR_5_Profile@24-25-03_First_Release.gdtf",
+        "modes": {
+          "19CH": {
+            "channels": 19,
+            "gdtfMode": "19CH",
+            "status": "matched"
+          },
+          "13CH": {
+            "channels": 13,
+            "gdtfMode": "13CH",
+            "status": "matched"
+          },
+          "8CH": {
+            "channels": 8,
+            "gdtfMode": "8CH",
+            "status": "matched"
+          },
+          "6CH": {
+            "channels": 6,
+            "gdtfMode": "6CH",
+            "status": "matched"
+          },
+          "5CH": {
+            "channels": 5,
+            "gdtfMode": "5CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__COLOUR_5_Profile.gdtf"
+      },
+      "shortName": "Clr5prof"
+    },
+    {
+      "fixture": "CUEPIX 16IP",
+      "watts": null,
+      "weight": 15.0,
+      "modes": {
+        "03CH RGB": 3,
+        "04CH RGBA": 4,
+        "07CH RGBA+": 7,
+        "07CH DA+": 7,
+        "06CH RGBI": 6,
+        "08CH 16Bit": 8,
+        "08CH RGBA": 8,
+        "11CH Basic": 11,
+        "12CH RGBA": 12,
+        "12CH RGBI": 12,
+        "48CH DA": 48,
+        "64CH RGBA": 64,
+        "72CH Pixel": 72,
+        "128CH 16Bit": 128
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@CUEPIX_16IP@2024-13-03_First_Release.gdtf",
+        "modes": {
+          "03CH RGB": {
+            "channels": 3,
+            "gdtfMode": "03CH RGB",
+            "status": "matched"
+          },
+          "04CH RGBA": {
+            "channels": 4,
+            "gdtfMode": "04CH RGBA",
+            "status": "matched"
+          },
+          "07CH RGBA+": {
+            "channels": 7,
+            "gdtfMode": "07CH RGBA+",
+            "status": "matched"
+          },
+          "07CH DA+": {
+            "channels": 7,
+            "gdtfMode": "07CH DA+",
+            "status": "matched"
+          },
+          "06CH RGBI": {
+            "channels": 6,
+            "gdtfMode": "06CH RGBI",
+            "status": "matched"
+          },
+          "08CH 16Bit": {
+            "channels": 8,
+            "gdtfMode": "08CH 16Bit",
+            "status": "matched"
+          },
+          "08CH RGBA": {
+            "channels": 8,
+            "gdtfMode": "08CH RGBA",
+            "status": "matched"
+          },
+          "11CH Basic": {
+            "channels": 11,
+            "gdtfMode": "11CH Basic",
+            "status": "matched"
+          },
+          "12CH RGBA": {
+            "channels": 12,
+            "gdtfMode": "12CH RGBA",
+            "status": "matched"
+          },
+          "12CH RGBI": {
+            "channels": 12,
+            "gdtfMode": "12CH RGBI",
+            "status": "matched"
+          },
+          "48CH DA": {
+            "channels": 48,
+            "gdtfMode": "48CH DA",
+            "status": "matched"
+          },
+          "64CH RGBA": {
+            "channels": 64,
+            "gdtfMode": "64CH RGBA",
+            "status": "matched"
+          },
+          "72CH Pixel": {
+            "channels": 72,
+            "gdtfMode": "72CH Pixel",
+            "status": "matched"
+          },
+          "128CH 16Bit": {
+            "channels": 128,
+            "gdtfMode": "128CH 16Bit",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__CUEPIX_16IP.gdtf"
+      },
+      "shortName": "CuePix16IP"
+    },
+    {
+      "fixture": "CUEPIX 16IP DTW",
+      "watts": null,
+      "weight": 15.0,
+      "modes": {
+        "1Ch": 1,
+        "2Ch": 2,
+        "Basic": 7,
+        "Cells 8bit Amber/White": 32,
+        "Cells 8bit DTW": 16,
+        "Cells 16bit ": 64,
+        "Cells 16bit DTW": 32,
+        "Ext 4 Cell DTW Option": 13,
+        "Ext ALL DTW option": 37
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@CUEPIX_16IP_DTW@2024-12-03_First_Release.gdtf",
+        "modes": {
+          "1Ch": {
+            "channels": 1,
+            "gdtfMode": "1Ch",
+            "status": "matched"
+          },
+          "2Ch": {
+            "channels": 2,
+            "gdtfMode": "2Ch",
+            "status": "matched"
+          },
+          "Basic": {
+            "channels": 7,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          },
+          "Cells 8bit Amber/White": {
+            "channels": 32,
+            "gdtfMode": "Cells 8bit Amber/White",
+            "status": "matched"
+          },
+          "Cells 8bit DTW": {
+            "channels": 16,
+            "gdtfMode": "Cells 8bit DTW",
+            "status": "matched"
+          },
+          "Cells 16bit ": {
+            "channels": 64,
+            "gdtfMode": "Cells 16bit ",
+            "status": "matched"
+          },
+          "Cells 16bit DTW": {
+            "channels": 32,
+            "gdtfMode": "Cells 16bit DTW",
+            "status": "matched"
+          },
+          "Ext 4 Cell DTW Option": {
+            "channels": 13,
+            "gdtfMode": "Ext 4 Cell DTW Option",
+            "status": "matched"
+          },
+          "Ext ALL DTW option": {
+            "channels": 37,
+            "gdtfMode": "Ext ALL DTW option",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__CUEPIX_16IP_DTW.gdtf"
+      },
+      "shortName": "CuePix16IPDTW"
+    },
+    {
+      "fixture": "Cuepix Blinder WW2",
+      "watts": null,
+      "weight": 5.1,
+      "modes": {
+        "01 CH": 1,
+        "2 CH": 2,
+        "3 CH": 3,
+        "4 CH  ": 4
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Cuepix_Blinder_WW2@2023-26-06_First_Release.gdtf",
+        "modes": {
+          "01 CH": {
+            "channels": 1,
+            "gdtfMode": "01 CH",
+            "status": "matched"
+          },
+          "2 CH": {
+            "channels": 2,
+            "gdtfMode": "2 CH",
+            "status": "matched"
+          },
+          "3 CH": {
+            "channels": 3,
+            "gdtfMode": "3 CH",
+            "status": "matched"
+          },
+          "4 CH  ": {
+            "channels": 4,
+            "gdtfMode": "4 CH  ",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Cuepix_Blinder_WW2.gdtf"
+      },
+      "shortName": "CuepixWW2"
+    },
+    {
+      "fixture": "CUEPIX BLINDER WW4",
+      "watts": null,
+      "weight": 9.5,
+      "modes": {
+        "01 CH ": 1,
+        "2 CH ": 2,
+        "4 CH": 4,
+        "5 CH": 5,
+        "7 CH": 7,
+        "9 CH": 9
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Cuepix_Blinder_WW4@2023-19-06_First_Release.gdtf",
+        "modes": {
+          "01 CH ": {
+            "channels": 1,
+            "gdtfMode": "01 CH ",
+            "status": "matched"
+          },
+          "2 CH ": {
+            "channels": 2,
+            "gdtfMode": "2 CH ",
+            "status": "matched"
+          },
+          "4 CH": {
+            "channels": 4,
+            "gdtfMode": "4 CH",
+            "status": "matched"
+          },
+          "5 CH": {
+            "channels": 5,
+            "gdtfMode": "5 CH",
+            "status": "matched"
+          },
+          "7 CH": {
+            "channels": 7,
+            "gdtfMode": "7 CH",
+            "status": "matched"
+          },
+          "9 CH": {
+            "channels": 9,
+            "gdtfMode": "9 CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__CUEPIX_BLINDER_WW4.gdtf"
+      },
+      "shortName": "CuePixBlndWW4"
+    },
+    {
+      "fixture": "CW Profile HP",
+      "watts": null,
+      "weight": 9.5,
+      "modes": {
+        "1CH": 1,
+        "4CH": 4
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@CW_Profile_HP@24-22-03_First_Release.gdtf",
+        "modes": {
+          "1CH": {
+            "channels": 1,
+            "gdtfMode": "1CH",
+            "status": "matched"
+          },
+          "4CH": {
+            "channels": 4,
+            "gdtfMode": "4CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__CW_Profile_HP.gdtf"
+      },
+      "shortName": "CWProfHP"
+    },
+    {
+      "fixture": "CW Profile HP IP",
+      "watts": null,
+      "weight": 8.8,
+      "modes": {
+        "1CH": 1,
+        "8CH": 8,
+        "6CH": 6,
+        "3CH": 3
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@CW_Profile_HP_IP@24-26-03_First_Release.gdtf",
+        "modes": {
+          "1CH": {
+            "channels": 1,
+            "gdtfMode": "1CH",
+            "status": "matched"
+          },
+          "8CH": {
+            "channels": 8,
+            "gdtfMode": "8CH",
+            "status": "matched"
+          },
+          "6CH": {
+            "channels": 6,
+            "gdtfMode": "6CH",
+            "status": "matched"
+          },
+          "3CH": {
+            "channels": 3,
+            "gdtfMode": "3CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__CW_Profile_HP_IP.gdtf"
+      },
+      "shortName": "CWProfHPIP"
+    },
+    {
+      "fixture": "Dartz 360",
+      "watts": 50.0,
+      "weight": 12.7,
+      "modes": {
+        "Extend Pan540": 25,
+        "Stand Pan540": 22,
+        "Basic Pan540": 19,
+        "Extend Pan630": 25,
+        "Stand Pan630": 22,
+        "Basic Pan630": 19
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@DARTZ_360@2023-22-05_First_Release.gdtf",
+        "modes": {
+          "Extend Pan540": {
+            "channels": 25,
+            "gdtfMode": "Extend Pan540",
+            "status": "matched"
+          },
+          "Stand Pan540": {
+            "channels": 22,
+            "gdtfMode": "Stand Pan540",
+            "status": "matched"
+          },
+          "Basic Pan540": {
+            "channels": 19,
+            "gdtfMode": "Basic Pan540",
+            "status": "matched"
+          },
+          "Extend Pan630": {
+            "channels": 25,
+            "gdtfMode": "Extend Pan630",
+            "status": "matched"
+          },
+          "Stand Pan630": {
+            "channels": 22,
+            "gdtfMode": "Stand Pan630",
+            "status": "matched"
+          },
+          "Basic Pan630": {
+            "channels": 19,
+            "gdtfMode": "Basic Pan630",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Dartz_360.gdtf"
+      },
+      "shortName": "Dartz360"
+    },
+    {
       "fixture": "DTW 350 IP (2 Cell)",
       "watts": 470,
       "weight": 8.2,
@@ -23,48 +787,2013 @@
           "01CH": {
             "channels": 1,
             "gdtfMode": "01CH",
-            "status": "matched",
-            "parameters": 1
+            "status": "matched"
           },
           "Standard  ": {
             "channels": 7,
             "gdtfMode": "Standard  ",
-            "status": "matched",
-            "parameters": 6
+            "status": "matched"
           },
           "Extended  ": {
             "channels": 9,
             "gdtfMode": "Extended  ",
-            "status": "matched",
-            "parameters": 8
+            "status": "matched"
           },
           "2CH": {
             "channels": 2,
             "gdtfMode": "2CH",
-            "status": "matched",
-            "parameters": 2
+            "status": "matched"
           },
           "2Cell  ": {
             "channels": 2,
             "gdtfMode": "2Cell  ",
-            "status": "matched",
-            "parameters": 2
+            "status": "matched"
           },
           "2WA  ": {
             "channels": 4,
             "gdtfMode": "2WA  ",
-            "status": "matched",
-            "parameters": 4
+            "status": "matched"
           },
           "Basic  ": {
             "channels": 4,
             "gdtfMode": "Basic  ",
-            "status": "matched",
-            "parameters": 3
+            "status": "matched"
           }
         }
       },
       "shortName": "DTW 350 IP (2 Cell)"
+    },
+    {
+      "fixture": "DTW BAR 1000",
+      "watts": null,
+      "weight": 6.4,
+      "modes": {
+        "1CH": 1,
+        "2CH": 2,
+        "3CH": 3,
+        "5CH ": 5,
+        "7CH": 7,
+        "10CH": 10,
+        "12CH": 12,
+        "15CH ": 15,
+        "36CH ": 36,
+        "41CH ": 41,
+        "45CH": 45,
+        "20CH ": 20,
+        "72CH ": 72
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@DTW_BAR_1000@2024-27-02_First_Release.gdtf",
+        "modes": {
+          "1CH": {
+            "channels": 1,
+            "gdtfMode": "1CH",
+            "status": "matched"
+          },
+          "2CH": {
+            "channels": 2,
+            "gdtfMode": "2CH",
+            "status": "matched"
+          },
+          "3CH": {
+            "channels": 3,
+            "gdtfMode": "3CH",
+            "status": "matched"
+          },
+          "5CH ": {
+            "channels": 5,
+            "gdtfMode": "5CH ",
+            "status": "matched"
+          },
+          "7CH": {
+            "channels": 7,
+            "gdtfMode": "7CH",
+            "status": "matched"
+          },
+          "10CH": {
+            "channels": 10,
+            "gdtfMode": "10CH",
+            "status": "matched"
+          },
+          "12CH": {
+            "channels": 12,
+            "gdtfMode": "12CH",
+            "status": "matched"
+          },
+          "15CH ": {
+            "channels": 15,
+            "gdtfMode": "15CH ",
+            "status": "matched"
+          },
+          "36CH ": {
+            "channels": 36,
+            "gdtfMode": "36CH ",
+            "status": "matched"
+          },
+          "41CH ": {
+            "channels": 41,
+            "gdtfMode": "41CH ",
+            "status": "matched"
+          },
+          "45CH": {
+            "channels": 45,
+            "gdtfMode": "45CH",
+            "status": "matched"
+          },
+          "20CH ": {
+            "channels": 20,
+            "gdtfMode": "20CH ",
+            "status": "matched"
+          },
+          "72CH ": {
+            "channels": 72,
+            "gdtfMode": "72CH ",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__DTW_BAR_1000.gdtf"
+      },
+      "shortName": "DTW1000"
+    },
+    {
+      "fixture": "Fuze Max Profile",
+      "watts": 800.0,
+      "weight": 25.9,
+      "modes": {
+        "Standard Pan540": 40,
+        "Extended Pan540": 61,
+        "CMY Pan540": 38,
+        "CMY Extended  Pan540": 57,
+        "Extended Pan630": 61,
+        "Standard Pan630": 40,
+        "CMY Pan630": 38,
+        "CMY Extended Pan630": 57
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Fuze_Max_Profile@26-13-05_Release.gdtf",
+        "modes": {
+          "Standard Pan540": {
+            "channels": 40,
+            "gdtfMode": "Standard Pan540",
+            "status": "matched"
+          },
+          "Extended Pan540": {
+            "channels": 61,
+            "gdtfMode": "Extended Pan540",
+            "status": "matched"
+          },
+          "CMY Pan540": {
+            "channels": 38,
+            "gdtfMode": "CMY Pan540",
+            "status": "matched"
+          },
+          "CMY Extended  Pan540": {
+            "channels": 57,
+            "gdtfMode": "CMY Extended  Pan540",
+            "status": "matched"
+          },
+          "Extended Pan630": {
+            "channels": 61,
+            "gdtfMode": "Extended Pan630",
+            "status": "matched"
+          },
+          "Standard Pan630": {
+            "channels": 40,
+            "gdtfMode": "Standard Pan630",
+            "status": "matched"
+          },
+          "CMY Pan630": {
+            "channels": 38,
+            "gdtfMode": "CMY Pan630",
+            "status": "matched"
+          },
+          "CMY Extended Pan630": {
+            "channels": 57,
+            "gdtfMode": "CMY Extended Pan630",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Fuze_Max_Profile.gdtf"
+      },
+      "shortName": "FuzeMaxProf"
+    },
+    {
+      "fixture": "Fuze Max Spot",
+      "watts": 800.0,
+      "weight": 25.9,
+      "modes": {
+        "Standard Pan540": 34,
+        "Extended Pan540": 44,
+        "CMY Extended  Pan540 ": 40,
+        "CMY Pan540": 32,
+        "Standard Pan630": 34,
+        "Extended Pan630": 44,
+        "CMY Extended Pan630": 40,
+        "CMY Pan630": 32
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Fuze_Max_Spot@2025-07-05_Release.gdtf",
+        "modes": {
+          "Standard Pan540": {
+            "channels": 34,
+            "gdtfMode": "Standard Pan540",
+            "status": "matched"
+          },
+          "Extended Pan540": {
+            "channels": 44,
+            "gdtfMode": "Extended Pan540",
+            "status": "matched"
+          },
+          "CMY Extended  Pan540 ": {
+            "channels": 40,
+            "gdtfMode": "CMY Extended  Pan540 ",
+            "status": "matched"
+          },
+          "CMY Pan540": {
+            "channels": 32,
+            "gdtfMode": "CMY Pan540",
+            "status": "matched"
+          },
+          "Standard Pan630": {
+            "channels": 34,
+            "gdtfMode": "Standard Pan630",
+            "status": "matched"
+          },
+          "Extended Pan630": {
+            "channels": 44,
+            "gdtfMode": "Extended Pan630",
+            "status": "matched"
+          },
+          "CMY Extended Pan630": {
+            "channels": 40,
+            "gdtfMode": "CMY Extended Pan630",
+            "status": "matched"
+          },
+          "CMY Pan630": {
+            "channels": 32,
+            "gdtfMode": "CMY Pan630",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Fuze_Max_Spot.gdtf"
+      },
+      "shortName": "FzMxSpot"
+    },
+    {
+      "fixture": "FUZE PAR Z120 IP",
+      "watts": 120.0,
+      "weight": 8.6,
+      "modes": {
+        "CH:04 RGBW": 4,
+        "CH:04 HSI": 4,
+        "CH:05 HSI": 5,
+        "CH:06 RGBW": 6,
+        "CH:07 sRGBWI": 7,
+        "CH:07 RGBW": 7,
+        "CH:08 RGBW": 8,
+        "CH:09 RGBW": 9,
+        "CH:10 16Bit": 10,
+        "CH:10 HSI": 10,
+        "CH:12 sRGBI": 12,
+        "CH:13 RGBW": 13
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@FUZE_PAR_Z120_IP@24-18-06_First_Release.gdtf",
+        "modes": {
+          "CH:04 RGBW": {
+            "channels": 4,
+            "gdtfMode": "CH:04 RGBW",
+            "status": "matched"
+          },
+          "CH:04 HSI": {
+            "channels": 4,
+            "gdtfMode": "CH:04 HSI",
+            "status": "matched"
+          },
+          "CH:05 HSI": {
+            "channels": 5,
+            "gdtfMode": "CH:05 HSI",
+            "status": "matched"
+          },
+          "CH:06 RGBW": {
+            "channels": 6,
+            "gdtfMode": "CH:06 RGBW",
+            "status": "matched"
+          },
+          "CH:07 sRGBWI": {
+            "channels": 7,
+            "gdtfMode": "CH:07 sRGBWI",
+            "status": "matched"
+          },
+          "CH:07 RGBW": {
+            "channels": 7,
+            "gdtfMode": "CH:07 RGBW",
+            "status": "matched"
+          },
+          "CH:08 RGBW": {
+            "channels": 8,
+            "gdtfMode": "CH:08 RGBW",
+            "status": "matched"
+          },
+          "CH:09 RGBW": {
+            "channels": 9,
+            "gdtfMode": "CH:09 RGBW",
+            "status": "matched"
+          },
+          "CH:10 16Bit": {
+            "channels": 10,
+            "gdtfMode": "CH:10 16Bit",
+            "status": "matched"
+          },
+          "CH:10 HSI": {
+            "channels": 10,
+            "gdtfMode": "CH:10 HSI",
+            "status": "matched"
+          },
+          "CH:12 sRGBI": {
+            "channels": 12,
+            "gdtfMode": "CH:12 sRGBI",
+            "status": "matched"
+          },
+          "CH:13 RGBW": {
+            "channels": 13,
+            "gdtfMode": "CH:13 RGBW",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__FUZE_PAR_Z120_IP.gdtf"
+      },
+      "shortName": "FuzPrZ60"
+    },
+    {
+      "fixture": "FUZE PAR Z175",
+      "watts": 175.0,
+      "weight": 8.6,
+      "modes": {
+        "4CH RGBW": 4,
+        "5CH RGBW": 5,
+        "5CH2 HSI": 5,
+        "6CH HIS+": 6,
+        "7CH RGBW": 7,
+        "8CH sRGBWI": 8,
+        "8CH2 RGBW": 8,
+        "8CH3 RGBW": 8,
+        "9CH RGBW": 9,
+        "10CH RGBW": 10,
+        "10CH2 RGBW": 10,
+        "11CH RGBW": 11,
+        "11CH2 16Bit": 11,
+        "11CH3 HSI": 11,
+        "12CH 16Bit": 12,
+        "13CH sRGBWI": 13,
+        "14CH RGBW": 14,
+        "15CH RGBW": 15
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Fuze_Par_Z175@24-21-06_First_Release.gdtf",
+        "modes": {
+          "4CH RGBW": {
+            "channels": 4,
+            "gdtfMode": "4CH RGBW",
+            "status": "matched"
+          },
+          "5CH RGBW": {
+            "channels": 5,
+            "gdtfMode": "5CH RGBW",
+            "status": "matched"
+          },
+          "5CH2 HSI": {
+            "channels": 5,
+            "gdtfMode": "5CH2 HSI",
+            "status": "matched"
+          },
+          "6CH HIS+": {
+            "channels": 6,
+            "gdtfMode": "6CH HIS+",
+            "status": "matched"
+          },
+          "7CH RGBW": {
+            "channels": 7,
+            "gdtfMode": "7CH RGBW",
+            "status": "matched"
+          },
+          "8CH sRGBWI": {
+            "channels": 8,
+            "gdtfMode": "8CH sRGBWI",
+            "status": "matched"
+          },
+          "8CH2 RGBW": {
+            "channels": 8,
+            "gdtfMode": "8CH2 RGBW",
+            "status": "matched"
+          },
+          "8CH3 RGBW": {
+            "channels": 8,
+            "gdtfMode": "8CH3 RGBW",
+            "status": "matched"
+          },
+          "9CH RGBW": {
+            "channels": 9,
+            "gdtfMode": "9CH RGBW",
+            "status": "matched"
+          },
+          "10CH RGBW": {
+            "channels": 10,
+            "gdtfMode": "10CH RGBW",
+            "status": "matched"
+          },
+          "10CH2 RGBW": {
+            "channels": 10,
+            "gdtfMode": "10CH2 RGBW",
+            "status": "matched"
+          },
+          "11CH RGBW": {
+            "channels": 11,
+            "gdtfMode": "11CH RGBW",
+            "status": "matched"
+          },
+          "11CH2 16Bit": {
+            "channels": 11,
+            "gdtfMode": "11CH2 16Bit",
+            "status": "matched"
+          },
+          "11CH3 HSI": {
+            "channels": 11,
+            "gdtfMode": "11CH3 HSI",
+            "status": "matched"
+          },
+          "12CH 16Bit": {
+            "channels": 12,
+            "gdtfMode": "12CH 16Bit",
+            "status": "matched"
+          },
+          "13CH sRGBWI": {
+            "channels": 13,
+            "gdtfMode": "13CH sRGBWI",
+            "status": "matched"
+          },
+          "14CH RGBW": {
+            "channels": 14,
+            "gdtfMode": "14CH RGBW",
+            "status": "matched"
+          },
+          "15CH RGBW": {
+            "channels": 15,
+            "gdtfMode": "15CH RGBW",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__FUZE_PAR_Z175.gdtf"
+      },
+      "shortName": "FuzPrZ175"
+    },
+    {
+      "fixture": "FUZE PAR Z60 IP",
+      "watts": 78.0,
+      "weight": 4.4,
+      "modes": {
+        "CH:04 RGBW": 4,
+        "CH:04 HSI": 4,
+        "CH:05 HSI": 5,
+        "CH:06 RGBW": 6,
+        "CH:07 sRGBWI": 7,
+        "CH:07 RGBW": 7,
+        "CH:08 RGBW": 8,
+        "CH:09 RGBW": 9,
+        "CH:10 16Bit": 10,
+        "CH:10 HSI": 10,
+        "CH:12 sRGBI": 12,
+        "CH:13 RGBW": 13
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@FUZE_PAR_Z60_IP@24-18-06_First_Release.gdtf",
+        "modes": {
+          "CH:04 RGBW": {
+            "channels": 4,
+            "gdtfMode": "CH:04 RGBW",
+            "status": "matched"
+          },
+          "CH:04 HSI": {
+            "channels": 4,
+            "gdtfMode": "CH:04 HSI",
+            "status": "matched"
+          },
+          "CH:05 HSI": {
+            "channels": 5,
+            "gdtfMode": "CH:05 HSI",
+            "status": "matched"
+          },
+          "CH:06 RGBW": {
+            "channels": 6,
+            "gdtfMode": "CH:06 RGBW",
+            "status": "matched"
+          },
+          "CH:07 sRGBWI": {
+            "channels": 7,
+            "gdtfMode": "CH:07 sRGBWI",
+            "status": "matched"
+          },
+          "CH:07 RGBW": {
+            "channels": 7,
+            "gdtfMode": "CH:07 RGBW",
+            "status": "matched"
+          },
+          "CH:08 RGBW": {
+            "channels": 8,
+            "gdtfMode": "CH:08 RGBW",
+            "status": "matched"
+          },
+          "CH:09 RGBW": {
+            "channels": 9,
+            "gdtfMode": "CH:09 RGBW",
+            "status": "matched"
+          },
+          "CH:10 16Bit": {
+            "channels": 10,
+            "gdtfMode": "CH:10 16Bit",
+            "status": "matched"
+          },
+          "CH:10 HSI": {
+            "channels": 10,
+            "gdtfMode": "CH:10 HSI",
+            "status": "matched"
+          },
+          "CH:12 sRGBI": {
+            "channels": 12,
+            "gdtfMode": "CH:12 sRGBI",
+            "status": "matched"
+          },
+          "CH:13 RGBW": {
+            "channels": 13,
+            "gdtfMode": "CH:13 RGBW",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__FUZE_PAR_Z60_IP.gdtf"
+      },
+      "shortName": "FuzPrZ60"
+    },
+    {
+      "fixture": "Fuze Pendant",
+      "watts": 258.0,
+      "weight": 7.2,
+      "modes": {
+        "Dimmer 1CH": 1,
+        "Color 4CH": 4,
+        "RGBWL 5CH": 5,
+        "16bit 10CH": 10,
+        "Standard 10CH": 10,
+        "Extended 17CH": 17,
+        "HSI 4CH": 4,
+        "HSI 9CH": 9
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Fuze_Pendant@24-23-12_Release.gdtf",
+        "modes": {
+          "Dimmer 1CH": {
+            "channels": 1,
+            "gdtfMode": "Dimmer 1CH",
+            "status": "matched"
+          },
+          "Color 4CH": {
+            "channels": 4,
+            "gdtfMode": "Color 4CH",
+            "status": "matched"
+          },
+          "RGBWL 5CH": {
+            "channels": 5,
+            "gdtfMode": "RGBWL 5CH",
+            "status": "matched"
+          },
+          "16bit 10CH": {
+            "channels": 10,
+            "gdtfMode": "16bit 10CH",
+            "status": "matched"
+          },
+          "Standard 10CH": {
+            "channels": 10,
+            "gdtfMode": "Standard 10CH",
+            "status": "matched"
+          },
+          "Extended 17CH": {
+            "channels": 17,
+            "gdtfMode": "Extended 17CH",
+            "status": "matched"
+          },
+          "HSI 4CH": {
+            "channels": 4,
+            "gdtfMode": "HSI 4CH",
+            "status": "matched"
+          },
+          "HSI 9CH": {
+            "channels": 9,
+            "gdtfMode": "HSI 9CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Fuze_Pendant.gdtf"
+      },
+      "shortName": "FuzPdnt"
+    },
+    {
+      "fixture": "Fuze Pendant Compact",
+      "watts": 144.0,
+      "weight": 13.0,
+      "modes": {
+        "Dimmer 1CH": 1,
+        "Color 4CH": 4,
+        "RGBWL 5CH": 5,
+        "16bit 10CH": 10,
+        "Standard 10CH": 10,
+        "Extended 17CH": 17,
+        "HSI 4CH": 4,
+        "HSI 9CH": 9
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Fuze_Pendant_Compact@23-15-09_First_Release.gdtf",
+        "modes": {
+          "Dimmer 1CH": {
+            "channels": 1,
+            "gdtfMode": "Dimmer 1CH",
+            "status": "matched"
+          },
+          "Color 4CH": {
+            "channels": 4,
+            "gdtfMode": "Color 4CH",
+            "status": "matched"
+          },
+          "RGBWL 5CH": {
+            "channels": 5,
+            "gdtfMode": "RGBWL 5CH",
+            "status": "matched"
+          },
+          "16bit 10CH": {
+            "channels": 10,
+            "gdtfMode": "16bit 10CH",
+            "status": "matched"
+          },
+          "Standard 10CH": {
+            "channels": 10,
+            "gdtfMode": "Standard 10CH",
+            "status": "matched"
+          },
+          "Extended 17CH": {
+            "channels": 17,
+            "gdtfMode": "Extended 17CH",
+            "status": "matched"
+          },
+          "HSI 4CH": {
+            "channels": 4,
+            "gdtfMode": "HSI 4CH",
+            "status": "matched"
+          },
+          "HSI 9CH": {
+            "channels": 9,
+            "gdtfMode": "HSI 9CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Fuze_Pendant_Compact.gdtf"
+      },
+      "shortName": "FuzPdntCmpt"
+    },
+    {
+      "fixture": "Fuze PFX",
+      "watts": 400.0,
+      "weight": 22.7,
+      "modes": {
+        "Extended": 55,
+        "Standard": 38
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Fuze_PFX@25-22-09_Release.gdtf",
+        "modes": {
+          "Extended": {
+            "channels": 55,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          },
+          "Standard": {
+            "channels": 38,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Fuze_PFX.gdtf"
+      },
+      "shortName": "FuzePFX"
+    },
+    {
+      "fixture": "Fuze Profile",
+      "watts": 305.0,
+      "weight": 25.9,
+      "modes": {
+        "Standard Pan540": 38,
+        "Extended Pan540": 59,
+        "CMY Pan540": 36,
+        "CMY Extended  Pan540": 55,
+        "Standard Pan630": 38,
+        "Extended Pan630": 59,
+        "CMY Pan630": 36,
+        "CMY Extended Pan630": 55
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Fuze_Profile@25-07-03_Release.gdtf",
+        "modes": {
+          "Standard Pan540": {
+            "channels": 38,
+            "gdtfMode": "Standard Pan540",
+            "status": "matched"
+          },
+          "Extended Pan540": {
+            "channels": 59,
+            "gdtfMode": "Extended Pan540",
+            "status": "matched"
+          },
+          "CMY Pan540": {
+            "channels": 36,
+            "gdtfMode": "CMY Pan540",
+            "status": "matched"
+          },
+          "CMY Extended  Pan540": {
+            "channels": 55,
+            "gdtfMode": "CMY Extended  Pan540",
+            "status": "matched"
+          },
+          "Standard Pan630": {
+            "channels": 38,
+            "gdtfMode": "Standard Pan630",
+            "status": "matched"
+          },
+          "Extended Pan630": {
+            "channels": 59,
+            "gdtfMode": "Extended Pan630",
+            "status": "matched"
+          },
+          "CMY Pan630": {
+            "channels": 36,
+            "gdtfMode": "CMY Pan630",
+            "status": "matched"
+          },
+          "CMY Extended Pan630": {
+            "channels": 55,
+            "gdtfMode": "CMY Extended Pan630",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Fuze_Profile.gdtf"
+      },
+      "shortName": "Fuze Profile"
+    },
+    {
+      "fixture": "Fuze Profile CW",
+      "watts": 380.0,
+      "weight": 23.3,
+      "modes": {
+        "Extended Pan540": 40,
+        "Extended Pan630": 40,
+        "Standard Pan540": 26,
+        "Standard Pan630": 26
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Fuze_Profile_CW@First_Release_2024-11-12.gdtf",
+        "modes": {
+          "Extended Pan540": {
+            "channels": 40,
+            "gdtfMode": "Extended Pan540",
+            "status": "matched"
+          },
+          "Extended Pan630": {
+            "channels": 40,
+            "gdtfMode": "Extended Pan630",
+            "status": "matched"
+          },
+          "Standard Pan540": {
+            "channels": 26,
+            "gdtfMode": "Standard Pan540",
+            "status": "matched"
+          },
+          "Standard Pan630": {
+            "channels": 26,
+            "gdtfMode": "Standard Pan630",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Fuze_Profile_CW.gdtf"
+      },
+      "shortName": "FzProCW"
+    },
+    {
+      "fixture": "Fuze SFX",
+      "watts": 300.0,
+      "weight": 19.3,
+      "modes": {
+        "Standard Pan540": 31,
+        "Standard Pan630": 31
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Fuze_SFX@Release_2024-11-11.gdtf",
+        "modes": {
+          "Standard Pan540": {
+            "channels": 31,
+            "gdtfMode": "Standard Pan540",
+            "status": "matched"
+          },
+          "Standard Pan630": {
+            "channels": 31,
+            "gdtfMode": "Standard Pan630",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Fuze_SFX.gdtf"
+      },
+      "shortName": "FuzeSFX"
+    },
+    {
+      "fixture": "Fuze Teatro",
+      "watts": 480.0,
+      "weight": 36.0,
+      "modes": {
+        "Std Pan540": 42,
+        "Ext Pan540": 61,
+        "RGB Pan540": 40,
+        "RGB Ext Pan540": 57,
+        "CMY Pan540": 40,
+        "CMY Ext Pan540": 57,
+        "Std Pan630": 42,
+        "Ext Pan630": 61,
+        "RGB Pan630": 40,
+        "RGB Ext Pan630": 57,
+        "CMY Pan630": 40,
+        "CMY Ext Pan630": 57
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Fuze_Teatro@24-25-11_Release.gdtf",
+        "modes": {
+          "Std Pan540": {
+            "channels": 42,
+            "gdtfMode": "Std Pan540",
+            "status": "matched"
+          },
+          "Ext Pan540": {
+            "channels": 61,
+            "gdtfMode": "Ext Pan540",
+            "status": "matched"
+          },
+          "RGB Pan540": {
+            "channels": 40,
+            "gdtfMode": "RGB Pan540",
+            "status": "matched"
+          },
+          "RGB Ext Pan540": {
+            "channels": 57,
+            "gdtfMode": "RGB Ext Pan540",
+            "status": "matched"
+          },
+          "CMY Pan540": {
+            "channels": 40,
+            "gdtfMode": "CMY Pan540",
+            "status": "matched"
+          },
+          "CMY Ext Pan540": {
+            "channels": 57,
+            "gdtfMode": "CMY Ext Pan540",
+            "status": "matched"
+          },
+          "Std Pan630": {
+            "channels": 42,
+            "gdtfMode": "Std Pan630",
+            "status": "matched"
+          },
+          "Ext Pan630": {
+            "channels": 61,
+            "gdtfMode": "Ext Pan630",
+            "status": "matched"
+          },
+          "RGB Pan630": {
+            "channels": 40,
+            "gdtfMode": "RGB Pan630",
+            "status": "matched"
+          },
+          "RGB Ext Pan630": {
+            "channels": 57,
+            "gdtfMode": "RGB Ext Pan630",
+            "status": "matched"
+          },
+          "CMY Pan630": {
+            "channels": 40,
+            "gdtfMode": "CMY Pan630",
+            "status": "matched"
+          },
+          "CMY Ext Pan630": {
+            "channels": 57,
+            "gdtfMode": "CMY Ext Pan630",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Fuze_Teatro.gdtf"
+      },
+      "shortName": "FzTeatro"
+    },
+    {
+      "fixture": "Fuze Wash 500 Barndoor",
+      "watts": 500.0,
+      "weight": 18.5,
+      "modes": {
+        "Standard Pan540": 21,
+        "Extended Pan540": 30,
+        "CMY Pan540": 19,
+        "CMY Extended Pan540": 26,
+        "RGB Pan540": 20,
+        "RGB Extended Pan540": 26,
+        "Standard Pan630": 21,
+        "Extended Pan630": 30,
+        "CMY Pan630": 19,
+        "CMY Extended Pan630": 26,
+        "RGB Pan630": 20,
+        "RGB Extended Pan630": 26
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Fuze_Wash_500_Barndoor@26-01-04_Release.gdtf",
+        "modes": {
+          "Standard Pan540": {
+            "channels": 21,
+            "gdtfMode": "Standard Pan540",
+            "status": "matched"
+          },
+          "Extended Pan540": {
+            "channels": 30,
+            "gdtfMode": "Extended Pan540",
+            "status": "matched"
+          },
+          "CMY Pan540": {
+            "channels": 19,
+            "gdtfMode": "CMY Pan540",
+            "status": "matched"
+          },
+          "CMY Extended Pan540": {
+            "channels": 26,
+            "gdtfMode": "CMY Extended Pan540",
+            "status": "matched"
+          },
+          "RGB Pan540": {
+            "channels": 20,
+            "gdtfMode": "RGB Pan540",
+            "status": "matched"
+          },
+          "RGB Extended Pan540": {
+            "channels": 26,
+            "gdtfMode": "RGB Extended Pan540",
+            "status": "matched"
+          },
+          "Standard Pan630": {
+            "channels": 21,
+            "gdtfMode": "Standard Pan630",
+            "status": "matched"
+          },
+          "Extended Pan630": {
+            "channels": 30,
+            "gdtfMode": "Extended Pan630",
+            "status": "matched"
+          },
+          "CMY Pan630": {
+            "channels": 19,
+            "gdtfMode": "CMY Pan630",
+            "status": "matched"
+          },
+          "CMY Extended Pan630": {
+            "channels": 26,
+            "gdtfMode": "CMY Extended Pan630",
+            "status": "matched"
+          },
+          "RGB Pan630": {
+            "channels": 20,
+            "gdtfMode": "RGB Pan630",
+            "status": "matched"
+          },
+          "RGB Extended Pan630": {
+            "channels": 26,
+            "gdtfMode": "RGB Extended Pan630",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Fuze_Wash_500_Barndoor.gdtf"
+      },
+      "shortName": "FuzW500BN"
+    },
+    {
+      "fixture": "Fuze Wash 575",
+      "watts": 350.0,
+      "weight": 12.2,
+      "modes": {
+        "11CH 16bit": 11,
+        "9CH 8bit": 9
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Fuze_Wash_575@First_Release_2024-11-12.gdtf",
+        "modes": {
+          "11CH 16bit": {
+            "channels": 11,
+            "gdtfMode": "11CH 16bit",
+            "status": "matched"
+          },
+          "9CH 8bit": {
+            "channels": 9,
+            "gdtfMode": "9CH 8bit",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Fuze_Wash_575.gdtf"
+      },
+      "shortName": "FzWsh575"
+    },
+    {
+      "fixture": "Fuze Wash FR",
+      "watts": 480.0,
+      "weight": 28.6,
+      "modes": {
+        "Extended Pan540": 47,
+        "CMY Extended  Pan540 ": 43,
+        "Standard Pan540": 29,
+        "CMY Pan540": 27,
+        "Extended Pan630": 47,
+        "CMY Extended  Pan630": 43,
+        "Standard Pan630": 29,
+        "CMY Pan630": 27
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Fuze_Wash_FR@2024-25-11_Release.gdtf",
+        "modes": {
+          "Extended Pan540": {
+            "channels": 47,
+            "gdtfMode": "Extended Pan540",
+            "status": "matched"
+          },
+          "CMY Extended  Pan540 ": {
+            "channels": 43,
+            "gdtfMode": "CMY Extended  Pan540 ",
+            "status": "matched"
+          },
+          "Standard Pan540": {
+            "channels": 29,
+            "gdtfMode": "Standard Pan540",
+            "status": "matched"
+          },
+          "CMY Pan540": {
+            "channels": 27,
+            "gdtfMode": "CMY Pan540",
+            "status": "matched"
+          },
+          "Extended Pan630": {
+            "channels": 47,
+            "gdtfMode": "Extended Pan630",
+            "status": "matched"
+          },
+          "CMY Extended  Pan630": {
+            "channels": 43,
+            "gdtfMode": "CMY Extended  Pan630",
+            "status": "matched"
+          },
+          "Standard Pan630": {
+            "channels": 29,
+            "gdtfMode": "Standard Pan630",
+            "status": "matched"
+          },
+          "CMY Pan630": {
+            "channels": 27,
+            "gdtfMode": "CMY Pan630",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Fuze_Wash_FR.gdtf"
+      },
+      "shortName": "FzwshFR"
+    },
+    {
+      "fixture": "Fuze Wash Z120",
+      "watts": 120.0,
+      "weight": 10.0,
+      "modes": {
+        "19 RGBW ": 19,
+        "17 RGBI ": 17,
+        "16 HSI ": 16,
+        "15 RGBW  ": 15
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Fuze_Wash_Z120@2023-15-05_First_Release.gdtf",
+        "modes": {
+          "19 RGBW ": {
+            "channels": 19,
+            "gdtfMode": "19 RGBW ",
+            "status": "matched"
+          },
+          "17 RGBI ": {
+            "channels": 17,
+            "gdtfMode": "17 RGBI ",
+            "status": "matched"
+          },
+          "16 HSI ": {
+            "channels": 16,
+            "gdtfMode": "16 HSI ",
+            "status": "matched"
+          },
+          "15 RGBW  ": {
+            "channels": 15,
+            "gdtfMode": "15 RGBW  ",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Fuze_Wash_Z120.gdtf"
+      },
+      "shortName": "FzWshZ120"
+    },
+    {
+      "fixture": "Fuze Wash Z350",
+      "watts": 350.0,
+      "weight": 45.0,
+      "modes": {
+        "19 RGBW Pan540": 19,
+        "17 RGBI Pan540": 17,
+        "16 HSI Pan540": 16,
+        "15 RGBW Pan540": 15,
+        "19 RGBW Pan630": 19,
+        "17 RGBI  Pan630": 17,
+        "15 RGBW Pan630": 15,
+        "16 HSI Pan630": 16
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Fuze_Wash_Z350@2023-15-05_First_Release.gdtf",
+        "modes": {
+          "19 RGBW Pan540": {
+            "channels": 19,
+            "gdtfMode": "19 RGBW Pan540",
+            "status": "matched"
+          },
+          "17 RGBI Pan540": {
+            "channels": 17,
+            "gdtfMode": "17 RGBI Pan540",
+            "status": "matched"
+          },
+          "16 HSI Pan540": {
+            "channels": 16,
+            "gdtfMode": "16 HSI Pan540",
+            "status": "matched"
+          },
+          "15 RGBW Pan540": {
+            "channels": 15,
+            "gdtfMode": "15 RGBW Pan540",
+            "status": "matched"
+          },
+          "19 RGBW Pan630": {
+            "channels": 19,
+            "gdtfMode": "19 RGBW Pan630",
+            "status": "matched"
+          },
+          "17 RGBI  Pan630": {
+            "channels": 17,
+            "gdtfMode": "17 RGBI  Pan630",
+            "status": "matched"
+          },
+          "15 RGBW Pan630": {
+            "channels": 15,
+            "gdtfMode": "15 RGBW Pan630",
+            "status": "matched"
+          },
+          "16 HSI Pan630": {
+            "channels": 16,
+            "gdtfMode": "16 HSI Pan630",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Fuze_Wash_Z350.gdtf"
+      },
+      "shortName": "FzWshZ350"
+    },
+    {
+      "fixture": "KL Batten 12",
+      "watts": null,
+      "weight": 6.65,
+      "modes": {
+        "Dimmer 1CH": 1,
+        "RGB 3CH": 3,
+        "RGBA": 4,
+        "Dimmer/ CCT  4CH": 4,
+        "HSI 3CH": 3,
+        "HSIC 6CH": 6,
+        "RGBMA 10CH": 10,
+        "Standard 14ch": 14,
+        "Extended 22ch": 22,
+        "xy  Extended 16CH": 16,
+        "RGB 2 Cell 6CH": 6,
+        "RGBA 2 Cell 8CH": 8,
+        " HSI 2 Cell 6CH": 6,
+        "RGBMA 2 Cell 20CH": 20,
+        "Standard  2 Cell 20CH": 20,
+        "Extended 2 Cell 35CH": 35,
+        "RGB 4 Cell 12CH": 12,
+        "RGBA 4 Cell 16CH": 16,
+        "HSI 4 Cell 12CH": 12,
+        "RGBMA 4 Cell 40CH": 40,
+        "Standard  4 Cell 32CH": 32,
+        "Extended 4 Cell 61CH": 61
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@KL_Batten_12@26-13-05_Release.gdtf",
+        "modes": {
+          "Dimmer 1CH": {
+            "channels": 1,
+            "gdtfMode": "Dimmer 1CH",
+            "status": "matched"
+          },
+          "RGB 3CH": {
+            "channels": 3,
+            "gdtfMode": "RGB 3CH",
+            "status": "matched"
+          },
+          "RGBA": {
+            "channels": 4,
+            "gdtfMode": "RGBA",
+            "status": "matched"
+          },
+          "Dimmer/ CCT  4CH": {
+            "channels": 4,
+            "gdtfMode": "Dimmer/ CCT  4CH",
+            "status": "matched"
+          },
+          "HSI 3CH": {
+            "channels": 3,
+            "gdtfMode": "HSI 3CH",
+            "status": "matched"
+          },
+          "HSIC 6CH": {
+            "channels": 6,
+            "gdtfMode": "HSIC 6CH",
+            "status": "matched"
+          },
+          "RGBMA 10CH": {
+            "channels": 10,
+            "gdtfMode": "RGBMA 10CH",
+            "status": "matched"
+          },
+          "Standard 14ch": {
+            "channels": 14,
+            "gdtfMode": "Standard 14ch",
+            "status": "matched"
+          },
+          "Extended 22ch": {
+            "channels": 22,
+            "gdtfMode": "Extended 22ch",
+            "status": "matched"
+          },
+          "xy  Extended 16CH": {
+            "channels": 16,
+            "gdtfMode": "xy  Extended 16CH",
+            "status": "matched"
+          },
+          "RGB 2 Cell 6CH": {
+            "channels": 6,
+            "gdtfMode": "RGB 2 Cell 6CH",
+            "status": "matched"
+          },
+          "RGBA 2 Cell 8CH": {
+            "channels": 8,
+            "gdtfMode": "RGBA 2 Cell 8CH",
+            "status": "matched"
+          },
+          " HSI 2 Cell 6CH": {
+            "channels": 6,
+            "gdtfMode": " HSI 2 Cell 6CH",
+            "status": "matched"
+          },
+          "RGBMA 2 Cell 20CH": {
+            "channels": 20,
+            "gdtfMode": "RGBMA 2 Cell 20CH",
+            "status": "matched"
+          },
+          "Standard  2 Cell 20CH": {
+            "channels": 20,
+            "gdtfMode": "Standard  2 Cell 20CH",
+            "status": "matched"
+          },
+          "Extended 2 Cell 35CH": {
+            "channels": 35,
+            "gdtfMode": "Extended 2 Cell 35CH",
+            "status": "matched"
+          },
+          "RGB 4 Cell 12CH": {
+            "channels": 12,
+            "gdtfMode": "RGB 4 Cell 12CH",
+            "status": "matched"
+          },
+          "RGBA 4 Cell 16CH": {
+            "channels": 16,
+            "gdtfMode": "RGBA 4 Cell 16CH",
+            "status": "matched"
+          },
+          "HSI 4 Cell 12CH": {
+            "channels": 12,
+            "gdtfMode": "HSI 4 Cell 12CH",
+            "status": "matched"
+          },
+          "RGBMA 4 Cell 40CH": {
+            "channels": 40,
+            "gdtfMode": "RGBMA 4 Cell 40CH",
+            "status": "matched"
+          },
+          "Standard  4 Cell 32CH": {
+            "channels": 32,
+            "gdtfMode": "Standard  4 Cell 32CH",
+            "status": "matched"
+          },
+          "Extended 4 Cell 61CH": {
+            "channels": 61,
+            "gdtfMode": "Extended 4 Cell 61CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__KL_Batten_12.gdtf"
+      },
+      "shortName": "KLBAT12"
+    },
+    {
+      "fixture": "KL Batten 48",
+      "watts": null,
+      "weight": 19.6,
+      "modes": {
+        "Dimmer 1CH": 1,
+        "RGB 3CH": 3,
+        "RGBA": 4,
+        "Dimmer/ CCT  4CH": 4,
+        "HSI 3CH": 3,
+        "HSIC 6CH": 6,
+        "RGBMA 10CH": 10,
+        "Standard 14ch": 14,
+        "Extended 22ch": 22,
+        "xy  Extended 16CH": 16,
+        "RGB 2 Cell 6CH": 6,
+        "RGBA 2 Cell 8CH": 8,
+        " HSI 2 Cell 6CH": 6,
+        "RGBMA 2 Cell 20CH": 20,
+        "Standard  2 Cell 20CH": 20,
+        "Extended 2 Cell 35CH": 35,
+        "RGB 4 Cell 12CH": 12,
+        "RGBA 4 Cell 16CH": 16,
+        "HSI 4 Cell 12CH": 12,
+        "RGBMA 4 Cell 40CH": 40,
+        "Standard  4 Cell 32CH": 32,
+        "Extended 4 Cell 61": 61,
+        "RGB 8 Cell 24CH": 24,
+        " HSI 8 Cell 24CH": 24,
+        "Extended 8 Cell 113CH": 113,
+        "HSI 16 Cell 48CH": 48,
+        "Standard  16 Cell 104CH": 104,
+        "Extended 16 Cell 217ch": 217
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@KL_Batten_48@26-14-05_Release.gdtf",
+        "modes": {
+          "Dimmer 1CH": {
+            "channels": 1,
+            "gdtfMode": "Dimmer 1CH",
+            "status": "matched"
+          },
+          "RGB 3CH": {
+            "channels": 3,
+            "gdtfMode": "RGB 3CH",
+            "status": "matched"
+          },
+          "RGBA": {
+            "channels": 4,
+            "gdtfMode": "RGBA",
+            "status": "matched"
+          },
+          "Dimmer/ CCT  4CH": {
+            "channels": 4,
+            "gdtfMode": "Dimmer/ CCT  4CH",
+            "status": "matched"
+          },
+          "HSI 3CH": {
+            "channels": 3,
+            "gdtfMode": "HSI 3CH",
+            "status": "matched"
+          },
+          "HSIC 6CH": {
+            "channels": 6,
+            "gdtfMode": "HSIC 6CH",
+            "status": "matched"
+          },
+          "RGBMA 10CH": {
+            "channels": 10,
+            "gdtfMode": "RGBMA 10CH",
+            "status": "matched"
+          },
+          "Standard 14ch": {
+            "channels": 14,
+            "gdtfMode": "Standard 14ch",
+            "status": "matched"
+          },
+          "Extended 22ch": {
+            "channels": 22,
+            "gdtfMode": "Extended 22ch",
+            "status": "matched"
+          },
+          "xy  Extended 16CH": {
+            "channels": 16,
+            "gdtfMode": "xy  Extended 16CH",
+            "status": "matched"
+          },
+          "RGB 2 Cell 6CH": {
+            "channels": 6,
+            "gdtfMode": "RGB 2 Cell 6CH",
+            "status": "matched"
+          },
+          "RGBA 2 Cell 8CH": {
+            "channels": 8,
+            "gdtfMode": "RGBA 2 Cell 8CH",
+            "status": "matched"
+          },
+          " HSI 2 Cell 6CH": {
+            "channels": 6,
+            "gdtfMode": " HSI 2 Cell 6CH",
+            "status": "matched"
+          },
+          "RGBMA 2 Cell 20CH": {
+            "channels": 20,
+            "gdtfMode": "RGBMA 2 Cell 20CH",
+            "status": "matched"
+          },
+          "Standard  2 Cell 20CH": {
+            "channels": 20,
+            "gdtfMode": "Standard  2 Cell 20CH",
+            "status": "matched"
+          },
+          "Extended 2 Cell 35CH": {
+            "channels": 35,
+            "gdtfMode": "Extended 2 Cell 35CH",
+            "status": "matched"
+          },
+          "RGB 4 Cell 12CH": {
+            "channels": 12,
+            "gdtfMode": "RGB 4 Cell 12CH",
+            "status": "matched"
+          },
+          "RGBA 4 Cell 16CH": {
+            "channels": 16,
+            "gdtfMode": "RGBA 4 Cell 16CH",
+            "status": "matched"
+          },
+          "HSI 4 Cell 12CH": {
+            "channels": 12,
+            "gdtfMode": "HSI 4 Cell 12CH",
+            "status": "matched"
+          },
+          "RGBMA 4 Cell 40CH": {
+            "channels": 40,
+            "gdtfMode": "RGBMA 4 Cell 40CH",
+            "status": "matched"
+          },
+          "Standard  4 Cell 32CH": {
+            "channels": 32,
+            "gdtfMode": "Standard  4 Cell 32CH",
+            "status": "matched"
+          },
+          "Extended 4 Cell 61": {
+            "channels": 61,
+            "gdtfMode": "Extended 4 Cell 61",
+            "status": "matched"
+          },
+          "RGB 8 Cell 24CH": {
+            "channels": 24,
+            "gdtfMode": "RGB 8 Cell 24CH",
+            "status": "matched"
+          },
+          " HSI 8 Cell 24CH": {
+            "channels": 24,
+            "gdtfMode": " HSI 8 Cell 24CH",
+            "status": "matched"
+          },
+          "Extended 8 Cell 113CH": {
+            "channels": 113,
+            "gdtfMode": "Extended 8 Cell 113CH",
+            "status": "matched"
+          },
+          "HSI 16 Cell 48CH": {
+            "channels": 48,
+            "gdtfMode": "HSI 16 Cell 48CH",
+            "status": "matched"
+          },
+          "Standard  16 Cell 104CH": {
+            "channels": 104,
+            "gdtfMode": "Standard  16 Cell 104CH",
+            "status": "matched"
+          },
+          "Extended 16 Cell 217ch": {
+            "channels": 217,
+            "gdtfMode": "Extended 16 Cell 217ch",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__KL_Batten_48.gdtf"
+      },
+      "shortName": "KLBAT48"
+    },
+    {
+      "fixture": "KL Core IP",
+      "watts": 460.0,
+      "weight": 10.0,
+      "modes": {
+        "Dimmer 1CH": 1,
+        "Dimmer/ CCT  4CH": 4,
+        "Dim/CCT/ Color      6CH": 6,
+        "RGBMA 10CH": 10,
+        "Standard  11CH": 11,
+        "Extended 19CH": 19,
+        "CMY     9CH": 9,
+        "CMY Extended 15CH": 15,
+        "xy Extended 13CH": 13,
+        "Dimmer 1CH(+2 Gobo)": 3,
+        "Dimmer/ CCT  4CH(+2 Gobo)": 6,
+        "Dim/CCT/ Color      6CH(+2 Gobo)": 8,
+        "RGBMA 10CH(+2 Gobo)": 12,
+        "Standard  11CH(+2 Gobo)": 13,
+        "Extended 19CH(+2 Gobo)": 21,
+        "CMY     9CH(+2 Gobo)": 11,
+        "CMY Extended 15CH(+2 Gobo)": 17,
+        "xy Extended 13CH(+2 Gobo)": 15
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@KL_Core_IP@25-25-03_First_Release.gdtf",
+        "modes": {
+          "Dimmer 1CH": {
+            "channels": 1,
+            "gdtfMode": "Dimmer 1CH",
+            "status": "matched"
+          },
+          "Dimmer/ CCT  4CH": {
+            "channels": 4,
+            "gdtfMode": "Dimmer/ CCT  4CH",
+            "status": "matched"
+          },
+          "Dim/CCT/ Color      6CH": {
+            "channels": 6,
+            "gdtfMode": "Dim/CCT/ Color      6CH",
+            "status": "matched"
+          },
+          "RGBMA 10CH": {
+            "channels": 10,
+            "gdtfMode": "RGBMA 10CH",
+            "status": "matched"
+          },
+          "Standard  11CH": {
+            "channels": 11,
+            "gdtfMode": "Standard  11CH",
+            "status": "matched"
+          },
+          "Extended 19CH": {
+            "channels": 19,
+            "gdtfMode": "Extended 19CH",
+            "status": "matched"
+          },
+          "CMY     9CH": {
+            "channels": 9,
+            "gdtfMode": "CMY     9CH",
+            "status": "matched"
+          },
+          "CMY Extended 15CH": {
+            "channels": 15,
+            "gdtfMode": "CMY Extended 15CH",
+            "status": "matched"
+          },
+          "xy Extended 13CH": {
+            "channels": 13,
+            "gdtfMode": "xy Extended 13CH",
+            "status": "matched"
+          },
+          "Dimmer 1CH(+2 Gobo)": {
+            "channels": 3,
+            "gdtfMode": "Dimmer 1CH(+2 Gobo)",
+            "status": "matched"
+          },
+          "Dimmer/ CCT  4CH(+2 Gobo)": {
+            "channels": 6,
+            "gdtfMode": "Dimmer/ CCT  4CH(+2 Gobo)",
+            "status": "matched"
+          },
+          "Dim/CCT/ Color      6CH(+2 Gobo)": {
+            "channels": 8,
+            "gdtfMode": "Dim/CCT/ Color      6CH(+2 Gobo)",
+            "status": "matched"
+          },
+          "RGBMA 10CH(+2 Gobo)": {
+            "channels": 12,
+            "gdtfMode": "RGBMA 10CH(+2 Gobo)",
+            "status": "matched"
+          },
+          "Standard  11CH(+2 Gobo)": {
+            "channels": 13,
+            "gdtfMode": "Standard  11CH(+2 Gobo)",
+            "status": "matched"
+          },
+          "Extended 19CH(+2 Gobo)": {
+            "channels": 21,
+            "gdtfMode": "Extended 19CH(+2 Gobo)",
+            "status": "matched"
+          },
+          "CMY     9CH(+2 Gobo)": {
+            "channels": 11,
+            "gdtfMode": "CMY     9CH(+2 Gobo)",
+            "status": "matched"
+          },
+          "CMY Extended 15CH(+2 Gobo)": {
+            "channels": 17,
+            "gdtfMode": "CMY Extended 15CH(+2 Gobo)",
+            "status": "matched"
+          },
+          "xy Extended 13CH(+2 Gobo)": {
+            "channels": 15,
+            "gdtfMode": "xy Extended 13CH(+2 Gobo)",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__KL_Core_IP.gdtf"
+      },
+      "shortName": "KLCoreIP"
+    },
+    {
+      "fixture": "KL Fresnel 4",
+      "watts": 50.0,
+      "weight": 15.8,
+      "modes": {
+        "Dimmer": 1,
+        "Dimmer 16bit": 2,
+        "3CH": 3,
+        "Standard": 4,
+        "Extended": 5
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@KL_Fresnel_4@2023-28-08_First_Release.gdtf",
+        "modes": {
+          "Dimmer": {
+            "channels": 1,
+            "gdtfMode": "Dimmer",
+            "status": "matched"
+          },
+          "Dimmer 16bit": {
+            "channels": 2,
+            "gdtfMode": "Dimmer 16bit",
+            "status": "matched"
+          },
+          "3CH": {
+            "channels": 3,
+            "gdtfMode": "3CH",
+            "status": "matched"
+          },
+          "Standard": {
+            "channels": 4,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Extended": {
+            "channels": 5,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__KL_Fresnel_4.gdtf"
+      },
+      "shortName": "KLFrsnl4"
+    },
+    {
+      "fixture": "KL Fresnel 4 CW",
+      "watts": 50.0,
+      "weight": 4.0,
+      "modes": {
+        "Dimmer": 1,
+        "Dimmer 16bit": 2,
+        "3CH": 3,
+        "Standard": 4,
+        "Extended": 5
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@KL_Fresnel_4_CW@23-29-08_First_Release.gdtf",
+        "modes": {
+          "Dimmer": {
+            "channels": 1,
+            "gdtfMode": "Dimmer",
+            "status": "matched"
+          },
+          "Dimmer 16bit": {
+            "channels": 2,
+            "gdtfMode": "Dimmer 16bit",
+            "status": "matched"
+          },
+          "3CH": {
+            "channels": 3,
+            "gdtfMode": "3CH",
+            "status": "matched"
+          },
+          "Standard": {
+            "channels": 4,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Extended": {
+            "channels": 5,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__KL_Fresnel_4_CW.gdtf"
+      },
+      "shortName": "KLFrsnl4CW"
+    },
+    {
+      "fixture": "KL Fresnel 6",
+      "watts": 150.0,
+      "weight": 6.9,
+      "modes": {
+        "Dimmer": 1,
+        "Dimmer 16bit": 2,
+        "3CH": 3,
+        "Standard": 4,
+        "Extended": 5
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@KL_Fresnel_6@23-05-09_First_Release.gdtf",
+        "modes": {
+          "Dimmer": {
+            "channels": 1,
+            "gdtfMode": "Dimmer",
+            "status": "matched"
+          },
+          "Dimmer 16bit": {
+            "channels": 2,
+            "gdtfMode": "Dimmer 16bit",
+            "status": "matched"
+          },
+          "3CH": {
+            "channels": 3,
+            "gdtfMode": "3CH",
+            "status": "matched"
+          },
+          "Standard": {
+            "channels": 4,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Extended": {
+            "channels": 5,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__KL_Fresnel_6.gdtf"
+      },
+      "shortName": "KLFrsnl6"
+    },
+    {
+      "fixture": "KL Fresnel 6 CW PO",
+      "watts": 150.0,
+      "weight": 8.4,
+      "modes": {
+        "Dimmer": 1,
+        "Dimmer 16bit": 2,
+        "3CH": 3,
+        "Standard": 4,
+        "Extended": 5
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@KL_Fresnel_6_CW_PO@23-05-09_First_Release.gdtf",
+        "modes": {
+          "Dimmer": {
+            "channels": 1,
+            "gdtfMode": "Dimmer",
+            "status": "matched"
+          },
+          "Dimmer 16bit": {
+            "channels": 2,
+            "gdtfMode": "Dimmer 16bit",
+            "status": "matched"
+          },
+          "3CH": {
+            "channels": 3,
+            "gdtfMode": "3CH",
+            "status": "matched"
+          },
+          "Standard": {
+            "channels": 4,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Extended": {
+            "channels": 5,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__KL_Fresnel_6_CW_PO.gdtf"
+      },
+      "shortName": "KLFrsnl6CWPO"
+    },
+    {
+      "fixture": "KL Fresnel 8",
+      "watts": 300.0,
+      "weight": 11.5,
+      "modes": {
+        "Dimmer": 2,
+        "Dimmer 16bit": 3,
+        "3CH": 3,
+        "Standard": 6,
+        "Extended": 7
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@KL_Fresnel_8@23-05-09_First_Release.gdtf",
+        "modes": {
+          "Dimmer": {
+            "channels": 2,
+            "gdtfMode": "Dimmer",
+            "status": "matched"
+          },
+          "Dimmer 16bit": {
+            "channels": 3,
+            "gdtfMode": "Dimmer 16bit",
+            "status": "matched"
+          },
+          "3CH": {
+            "channels": 3,
+            "gdtfMode": "3CH",
+            "status": "matched"
+          },
+          "Standard": {
+            "channels": 6,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Extended": {
+            "channels": 7,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__KL_Fresnel_8.gdtf"
+      },
+      "shortName": "KLFrsnl8"
+    },
+    {
+      "fixture": "KL Fresnel 8 CW",
+      "watts": 370.0,
+      "weight": 12.7,
+      "modes": {
+        "Dimmer": 2,
+        "Dimmer 16bit": 3,
+        "3CH": 3,
+        "Standard": 6,
+        "Extended": 7
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@KL_Fresnel_8_CW@23-05-09_First_Release.gdtf",
+        "modes": {
+          "Dimmer": {
+            "channels": 2,
+            "gdtfMode": "Dimmer",
+            "status": "matched"
+          },
+          "Dimmer 16bit": {
+            "channels": 3,
+            "gdtfMode": "Dimmer 16bit",
+            "status": "matched"
+          },
+          "3CH": {
+            "channels": 3,
+            "gdtfMode": "3CH",
+            "status": "matched"
+          },
+          "Standard": {
+            "channels": 6,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Extended": {
+            "channels": 7,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__KL_Fresnel_8_CW.gdtf"
+      },
+      "shortName": "KLFrsnl8CW"
+    },
+    {
+      "fixture": "LIMELIGHT PAR S",
+      "watts": null,
+      "weight": 9.2,
+      "modes": {
+        "Ext Zones 25Ch": 25,
+        "Std Zones 17Ch": 17,
+        "Ext 17Ch": 17,
+        "Std 13Ch": 13,
+        "CMY Ext 15Ch": 15,
+        "CMY 12Ch": 12,
+        "RGB 4Ch": 4
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@LIMELIGHT_PAR_S@2024-07-10_Release.gdtf",
+        "modes": {
+          "Ext Zones 25Ch": {
+            "channels": 25,
+            "gdtfMode": "Ext Zones 25Ch",
+            "status": "matched"
+          },
+          "Std Zones 17Ch": {
+            "channels": 17,
+            "gdtfMode": "Std Zones 17Ch",
+            "status": "matched"
+          },
+          "Ext 17Ch": {
+            "channels": 17,
+            "gdtfMode": "Ext 17Ch",
+            "status": "matched"
+          },
+          "Std 13Ch": {
+            "channels": 13,
+            "gdtfMode": "Std 13Ch",
+            "status": "matched"
+          },
+          "CMY Ext 15Ch": {
+            "channels": 15,
+            "gdtfMode": "CMY Ext 15Ch",
+            "status": "matched"
+          },
+          "CMY 12Ch": {
+            "channels": 12,
+            "gdtfMode": "CMY 12Ch",
+            "status": "matched"
+          },
+          "RGB 4Ch": {
+            "channels": 4,
+            "gdtfMode": "RGB 4Ch",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__LIMELIGHT_PAR_S.gdtf"
+      },
+      "shortName": "LmLtPrS"
     },
     {
       "fixture": "Magma Prime Hazer",
@@ -84,24 +2813,3485 @@
           "Mode 1": {
             "channels": 1,
             "gdtfMode": "Mode 1",
-            "status": "matched",
-            "parameters": 1
+            "status": "matched"
           },
           "Mode3": {
             "channels": 3,
             "gdtfMode": "Mode3",
-            "status": "matched",
-            "parameters": 3
+            "status": "matched"
           },
           "Mode 5": {
             "channels": 5,
             "gdtfMode": "Mode 5",
-            "status": "matched",
-            "parameters": 5
+            "status": "matched"
           }
         }
       },
       "shortName": "Magma Prime Hazer"
+    },
+    {
+      "fixture": "Paladin",
+      "watts": null,
+      "weight": 20.9,
+      "modes": {
+        "Extended 33CH": 33,
+        "Standard 21CH": 21,
+        "Basic 12CH": 12
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Paladin@2023-20-12_Release.gdtf",
+        "modes": {
+          "Extended 33CH": {
+            "channels": 33,
+            "gdtfMode": "Extended 33CH",
+            "status": "matched"
+          },
+          "Standard 21CH": {
+            "channels": 21,
+            "gdtfMode": "Standard 21CH",
+            "status": "matched"
+          },
+          "Basic 12CH": {
+            "channels": 12,
+            "gdtfMode": "Basic 12CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Paladin.gdtf"
+      },
+      "shortName": "Paladn"
+    },
+    {
+      "fixture": "Paladin Brick",
+      "watts": null,
+      "weight": 9.5,
+      "modes": {
+        "Ext-Cells 56CH": 56,
+        "Cells 50CH": 50,
+        "Cells 48CH": 48,
+        "Extended 16CH": 16,
+        "16bit Dim 10CH": 10,
+        "16bit 8CH": 8,
+        "8bit 4CH": 4,
+        "RGB 3CH": 3,
+        "HSI-Ext 10CH": 10,
+        "HSI 4CH": 4,
+        "HSI Cell 26CH": 26
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Paladin_Brick@23-21-09_First_Release.gdtf",
+        "modes": {
+          "Ext-Cells 56CH": {
+            "channels": 56,
+            "gdtfMode": "Ext-Cells 56CH",
+            "status": "matched"
+          },
+          "Cells 50CH": {
+            "channels": 50,
+            "gdtfMode": "Cells 50CH",
+            "status": "matched"
+          },
+          "Cells 48CH": {
+            "channels": 48,
+            "gdtfMode": "Cells 48CH",
+            "status": "matched"
+          },
+          "Extended 16CH": {
+            "channels": 16,
+            "gdtfMode": "Extended 16CH",
+            "status": "matched"
+          },
+          "16bit Dim 10CH": {
+            "channels": 10,
+            "gdtfMode": "16bit Dim 10CH",
+            "status": "matched"
+          },
+          "16bit 8CH": {
+            "channels": 8,
+            "gdtfMode": "16bit 8CH",
+            "status": "matched"
+          },
+          "8bit 4CH": {
+            "channels": 4,
+            "gdtfMode": "8bit 4CH",
+            "status": "matched"
+          },
+          "RGB 3CH": {
+            "channels": 3,
+            "gdtfMode": "RGB 3CH",
+            "status": "matched"
+          },
+          "HSI-Ext 10CH": {
+            "channels": 10,
+            "gdtfMode": "HSI-Ext 10CH",
+            "status": "matched"
+          },
+          "HSI 4CH": {
+            "channels": 4,
+            "gdtfMode": "HSI 4CH",
+            "status": "matched"
+          },
+          "HSI Cell 26CH": {
+            "channels": 26,
+            "gdtfMode": "HSI Cell 26CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Paladin_Brick.gdtf"
+      },
+      "shortName": "PalBrck"
+    },
+    {
+      "fixture": "Paladin Cube",
+      "watts": null,
+      "weight": 4.6,
+      "modes": {
+        "Extended +Cells 32CH": 32,
+        "Cells+Dim 26CH": 26,
+        "Cells 24CH": 24,
+        "Extended 16CH": 16,
+        "16bit Dim 10CH": 10,
+        "16bit 8CH": 8,
+        "8bit 4CH": 4,
+        "RGB 3CH": 3,
+        "HSI-Ext 10CH": 10,
+        "HSI 4CH": 4,
+        "HSI+Cells 17CH": 17
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Paladin_Cube@23-02-10_First_Release.gdtf",
+        "modes": {
+          "Extended +Cells 32CH": {
+            "channels": 32,
+            "gdtfMode": "Extended +Cells 32CH",
+            "status": "matched"
+          },
+          "Cells+Dim 26CH": {
+            "channels": 26,
+            "gdtfMode": "Cells+Dim 26CH",
+            "status": "matched"
+          },
+          "Cells 24CH": {
+            "channels": 24,
+            "gdtfMode": "Cells 24CH",
+            "status": "matched"
+          },
+          "Extended 16CH": {
+            "channels": 16,
+            "gdtfMode": "Extended 16CH",
+            "status": "matched"
+          },
+          "16bit Dim 10CH": {
+            "channels": 10,
+            "gdtfMode": "16bit Dim 10CH",
+            "status": "matched"
+          },
+          "16bit 8CH": {
+            "channels": 8,
+            "gdtfMode": "16bit 8CH",
+            "status": "matched"
+          },
+          "8bit 4CH": {
+            "channels": 4,
+            "gdtfMode": "8bit 4CH",
+            "status": "matched"
+          },
+          "RGB 3CH": {
+            "channels": 3,
+            "gdtfMode": "RGB 3CH",
+            "status": "matched"
+          },
+          "HSI-Ext 10CH": {
+            "channels": 10,
+            "gdtfMode": "HSI-Ext 10CH",
+            "status": "matched"
+          },
+          "HSI 4CH": {
+            "channels": 4,
+            "gdtfMode": "HSI 4CH",
+            "status": "matched"
+          },
+          "HSI+Cells 17CH": {
+            "channels": 17,
+            "gdtfMode": "HSI+Cells 17CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Paladin_Cube.gdtf"
+      },
+      "shortName": "PalCube"
+    },
+    {
+      "fixture": "Paladin Panel",
+      "watts": null,
+      "weight": 15.0,
+      "modes": {
+        "Ext-Cells 88CH": 88,
+        "Cells Dim 82CH": 82,
+        "Cells 80CH": 80,
+        "HSI-Cell 38CH": 38,
+        "HSI-Ext 10CH": 10,
+        "HSI 4CH": 4,
+        "Extended 16CH": 16,
+        "16bit Dim 10CH": 10,
+        "16bit 8CH": 8,
+        "8bit 4CH": 4,
+        "RGB 3CH": 3
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Paladin_Panel@24-30-09_Release.gdtf",
+        "modes": {
+          "Ext-Cells 88CH": {
+            "channels": 88,
+            "gdtfMode": "Ext-Cells 88CH",
+            "status": "matched"
+          },
+          "Cells Dim 82CH": {
+            "channels": 82,
+            "gdtfMode": "Cells Dim 82CH",
+            "status": "matched"
+          },
+          "Cells 80CH": {
+            "channels": 80,
+            "gdtfMode": "Cells 80CH",
+            "status": "matched"
+          },
+          "HSI-Cell 38CH": {
+            "channels": 38,
+            "gdtfMode": "HSI-Cell 38CH",
+            "status": "matched"
+          },
+          "HSI-Ext 10CH": {
+            "channels": 10,
+            "gdtfMode": "HSI-Ext 10CH",
+            "status": "matched"
+          },
+          "HSI 4CH": {
+            "channels": 4,
+            "gdtfMode": "HSI 4CH",
+            "status": "matched"
+          },
+          "Extended 16CH": {
+            "channels": 16,
+            "gdtfMode": "Extended 16CH",
+            "status": "matched"
+          },
+          "16bit Dim 10CH": {
+            "channels": 10,
+            "gdtfMode": "16bit Dim 10CH",
+            "status": "matched"
+          },
+          "16bit 8CH": {
+            "channels": 8,
+            "gdtfMode": "16bit 8CH",
+            "status": "matched"
+          },
+          "8bit 4CH": {
+            "channels": 4,
+            "gdtfMode": "8bit 4CH",
+            "status": "matched"
+          },
+          "RGB 3CH": {
+            "channels": 3,
+            "gdtfMode": "RGB 3CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Paladin_Panel.gdtf"
+      },
+      "shortName": "PalPnl"
+    },
+    {
+      "fixture": "Paragon LT",
+      "watts": 1300.0,
+      "weight": 43.5,
+      "modes": {
+        "Standard": 44,
+        "Extended": 67,
+        "RGB Standard": 47,
+        "RGB Extended": 73
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Paragon_LT@25-12-08_Release.gdtf",
+        "modes": {
+          "Standard": {
+            "channels": 44,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Extended": {
+            "channels": 67,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          },
+          "RGB Standard": {
+            "channels": 47,
+            "gdtfMode": "RGB Standard",
+            "status": "matched"
+          },
+          "RGB Extended": {
+            "channels": 73,
+            "gdtfMode": "RGB Extended",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Paragon_LT.gdtf"
+      },
+      "shortName": "PrgnLT"
+    },
+    {
+      "fixture": "Paragon S",
+      "watts": 550.0,
+      "weight": 23.0,
+      "modes": {
+        "Standard": 41,
+        "Extended": 64,
+        "Standard Fixed Gobo": 41,
+        "Extended Fixed Gobo": 64
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Paragon_S@25-07-07_Release.gdtf",
+        "modes": {
+          "Standard": {
+            "channels": 41,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          },
+          "Extended": {
+            "channels": 64,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          },
+          "Standard Fixed Gobo": {
+            "channels": 41,
+            "gdtfMode": "Standard Fixed Gobo",
+            "status": "matched"
+          },
+          "Extended Fixed Gobo": {
+            "channels": 64,
+            "gdtfMode": "Extended Fixed Gobo",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Paragon_S.gdtf"
+      },
+      "shortName": "Prgn S"
+    },
+    {
+      "fixture": "Pixel Bar 120IP",
+      "watts": null,
+      "weight": 2.0,
+      "modes": {
+        "120x1": 360,
+        "60x2": 180,
+        "30x4": 90,
+        "15x8": 45,
+        "12x10": 36,
+        "2x60": 6,
+        "4x30": 12
+      },
+      "gdtf": {
+        "status": "pending-match",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Pixel_Bar_120IP@25-06-02_Release.gdtf",
+        "modes": {
+          "120x1": {
+            "channels": 360,
+            "gdtfMode": "120x1",
+            "status": "pending-match"
+          },
+          "60x2": {
+            "channels": 180,
+            "gdtfMode": "60x2",
+            "status": "pending-match"
+          },
+          "30x4": {
+            "channels": 90,
+            "gdtfMode": "30x4",
+            "status": "pending-match"
+          },
+          "15x8": {
+            "channels": 45,
+            "gdtfMode": "15x8",
+            "status": "pending-match"
+          },
+          "12x10": {
+            "channels": 36,
+            "gdtfMode": "12x10",
+            "status": "pending-match"
+          },
+          "2x60": {
+            "channels": 6,
+            "gdtfMode": "2x60",
+            "status": "pending-match"
+          },
+          "4x30": {
+            "channels": 12,
+            "gdtfMode": "4x30",
+            "status": "pending-match"
+          }
+        },
+        "suggestedFileName": "Elation__Pixel_Bar_120IP.gdtf"
+      },
+      "shortName": "PixBr120"
+    },
+    {
+      "fixture": "Pixel Bar 30IP",
+      "watts": null,
+      "weight": 0.7,
+      "modes": {
+        "30x1": 90,
+        "15x2": 45,
+        "10x3": 30,
+        "5x6": 18,
+        "1x30": 3,
+        "2x15": 6,
+        "3x10": 9,
+        "6x5": 15
+      },
+      "gdtf": {
+        "status": "pending-match",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Pixel_Bar_30IP@25-11-02_First_Release.gdtf",
+        "modes": {
+          "30x1": {
+            "channels": 90,
+            "gdtfMode": "30x1",
+            "status": "pending-match"
+          },
+          "15x2": {
+            "channels": 45,
+            "gdtfMode": "15x2",
+            "status": "pending-match"
+          },
+          "10x3": {
+            "channels": 30,
+            "gdtfMode": "10x3",
+            "status": "pending-match"
+          },
+          "5x6": {
+            "channels": 18,
+            "gdtfMode": "5x6",
+            "status": "pending-match"
+          },
+          "1x30": {
+            "channels": 3,
+            "gdtfMode": "1x30",
+            "status": "pending-match"
+          },
+          "2x15": {
+            "channels": 6,
+            "gdtfMode": "2x15",
+            "status": "pending-match"
+          },
+          "3x10": {
+            "channels": 9,
+            "gdtfMode": "3x10",
+            "status": "pending-match"
+          },
+          "6x5": {
+            "channels": 15,
+            "gdtfMode": "6x5",
+            "status": "pending-match"
+          }
+        },
+        "suggestedFileName": "Elation__Pixel_Bar_30IP.gdtf"
+      },
+      "shortName": "PixBr30"
+    },
+    {
+      "fixture": "Platinum Beam 5R Extreme",
+      "watts": 189.0,
+      "weight": 20.0,
+      "modes": {
+        "Extend": 18,
+        "Stnd": 14,
+        "Basic": 12
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Platinum_Beam_5R_Extreme@24-22-07_Release.gdtf",
+        "modes": {
+          "Extend": {
+            "channels": 18,
+            "gdtfMode": "Extend",
+            "status": "matched"
+          },
+          "Stnd": {
+            "channels": 14,
+            "gdtfMode": "Stnd",
+            "status": "matched"
+          },
+          "Basic": {
+            "channels": 12,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Platinum_Beam_5R_Extreme.gdtf"
+      },
+      "shortName": "PlatBeam5rExt"
+    },
+    {
+      "fixture": "Platinum FLX",
+      "watts": 470.0,
+      "weight": 34.0,
+      "modes": {
+        "Extend": 37,
+        "Stand": 26,
+        "Basic": 24
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Platinum_FLX@24-11-06_Release.gdtf",
+        "modes": {
+          "Extend": {
+            "channels": 37,
+            "gdtfMode": "Extend",
+            "status": "matched"
+          },
+          "Stand": {
+            "channels": 26,
+            "gdtfMode": "Stand",
+            "status": "matched"
+          },
+          "Basic": {
+            "channels": 24,
+            "gdtfMode": "Basic",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Platinum_FLX.gdtf"
+      },
+      "shortName": "PlatFlx"
+    },
+    {
+      "fixture": "Proteus Atlas",
+      "watts": 500.0,
+      "weight": 53.0,
+      "modes": {
+        "Extended Pan540": 41,
+        "Standard Pan540": 30,
+        "Extended Pan630": 41,
+        "Standard Pan630": 30
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Proteus_Atlas@26-04-03_Release.gdtf",
+        "modes": {
+          "Extended Pan540": {
+            "channels": 41,
+            "gdtfMode": "Extended Pan540",
+            "status": "matched"
+          },
+          "Standard Pan540": {
+            "channels": 30,
+            "gdtfMode": "Standard Pan540",
+            "status": "matched"
+          },
+          "Extended Pan630": {
+            "channels": 41,
+            "gdtfMode": "Extended Pan630",
+            "status": "matched"
+          },
+          "Standard Pan630": {
+            "channels": 30,
+            "gdtfMode": "Standard Pan630",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Proteus_Atlas.gdtf"
+      },
+      "shortName": "ProAtls"
+    },
+    {
+      "fixture": "Proteus Beam",
+      "watts": 280.0,
+      "weight": 35.0,
+      "modes": {
+        "Extend Pan540": 30,
+        "Stand Pan540": 21,
+        "Basic Pan540": 19,
+        "Extend Pan630": 30,
+        "Stand Pan630": 21,
+        "Basic Pan630": 19
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Proteus_Beam@2023-27-12_First_Release.gdtf",
+        "modes": {
+          "Extend Pan540": {
+            "channels": 30,
+            "gdtfMode": "Extend Pan540",
+            "status": "matched"
+          },
+          "Stand Pan540": {
+            "channels": 21,
+            "gdtfMode": "Stand Pan540",
+            "status": "matched"
+          },
+          "Basic Pan540": {
+            "channels": 19,
+            "gdtfMode": "Basic Pan540",
+            "status": "matched"
+          },
+          "Extend Pan630": {
+            "channels": 30,
+            "gdtfMode": "Extend Pan630",
+            "status": "matched"
+          },
+          "Stand Pan630": {
+            "channels": 21,
+            "gdtfMode": "Stand Pan630",
+            "status": "matched"
+          },
+          "Basic Pan630": {
+            "channels": 19,
+            "gdtfMode": "Basic Pan630",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Proteus_Beam.gdtf"
+      },
+      "shortName": "ProBeam"
+    },
+    {
+      "fixture": "Proteus Brutus",
+      "watts": 1200.0,
+      "weight": 50.0,
+      "modes": {
+        "Framing Extended Pan540": 56,
+        "Framing Standard Pan540": 34,
+        "Extended Pan540": 36,
+        "Standard Pan540": 25,
+        "Framing Extended Mode Pan630": 56,
+        "Framing Standard Pan630": 34,
+        "Extended Pan630": 36,
+        "Standard Pan630": 25
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Proteus_Brutus@2023-29-09_Release.gdtf",
+        "modes": {
+          "Framing Extended Pan540": {
+            "channels": 56,
+            "gdtfMode": "Framing Extended Pan540",
+            "status": "matched"
+          },
+          "Framing Standard Pan540": {
+            "channels": 34,
+            "gdtfMode": "Framing Standard Pan540",
+            "status": "matched"
+          },
+          "Extended Pan540": {
+            "channels": 36,
+            "gdtfMode": "Extended Pan540",
+            "status": "matched"
+          },
+          "Standard Pan540": {
+            "channels": 25,
+            "gdtfMode": "Standard Pan540",
+            "status": "matched"
+          },
+          "Framing Extended Mode Pan630": {
+            "channels": 56,
+            "gdtfMode": "Framing Extended Mode Pan630",
+            "status": "matched"
+          },
+          "Framing Standard Pan630": {
+            "channels": 34,
+            "gdtfMode": "Framing Standard Pan630",
+            "status": "matched"
+          },
+          "Extended Pan630": {
+            "channels": 36,
+            "gdtfMode": "Extended Pan630",
+            "status": "matched"
+          },
+          "Standard Pan630": {
+            "channels": 25,
+            "gdtfMode": "Standard Pan630",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Proteus_Brutus.gdtf"
+      },
+      "shortName": "Proteus Brutus"
+    },
+    {
+      "fixture": "Proteus Brutus FS",
+      "watts": 1200.0,
+      "weight": 54.0,
+      "modes": {
+        "Extended": 36,
+        "Standard": 27
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Proteus_Brutus_FS@Release_25-13-03.gdtf",
+        "modes": {
+          "Extended": {
+            "channels": 36,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          },
+          "Standard": {
+            "channels": 27,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Proteus_Brutus_FS.gdtf"
+      },
+      "shortName": "ProBruFS"
+    },
+    {
+      "fixture": "Proteus Excalibur",
+      "watts": 580.0,
+      "weight": 46.5,
+      "modes": {
+        "Standard Pan540": 26,
+        "Standard Pan630": 26
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Proteus_Excalibur@2023-17-10_Release.gdtf",
+        "modes": {
+          "Standard Pan540": {
+            "channels": 26,
+            "gdtfMode": "Standard Pan540",
+            "status": "matched"
+          },
+          "Standard Pan630": {
+            "channels": 26,
+            "gdtfMode": "Standard Pan630",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Proteus_Excalibur.gdtf"
+      },
+      "shortName": "Proteus Excalibur"
+    },
+    {
+      "fixture": "Proteus Hybrid",
+      "watts": 470.0,
+      "weight": 38.0,
+      "modes": {
+        "Basic 540deg": 24,
+        "Standard 540deg": 26,
+        "Extended 540deg": 37,
+        "Extended Mode 630deg": 37,
+        "Standard 630deg": 26,
+        "Basic 630deg": 24
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Proteus_Hybrid@2023-25-07_Release.gdtf",
+        "modes": {
+          "Basic 540deg": {
+            "channels": 24,
+            "gdtfMode": "Basic 540deg",
+            "status": "matched"
+          },
+          "Standard 540deg": {
+            "channels": 26,
+            "gdtfMode": "Standard 540deg",
+            "status": "matched"
+          },
+          "Extended 540deg": {
+            "channels": 37,
+            "gdtfMode": "Extended 540deg",
+            "status": "matched"
+          },
+          "Extended Mode 630deg": {
+            "channels": 37,
+            "gdtfMode": "Extended Mode 630deg",
+            "status": "matched"
+          },
+          "Standard 630deg": {
+            "channels": 26,
+            "gdtfMode": "Standard 630deg",
+            "status": "matched"
+          },
+          "Basic 630deg": {
+            "channels": 24,
+            "gdtfMode": "Basic 630deg",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Proteus_Hybrid.gdtf"
+      },
+      "shortName": "Proteus_Hybrid"
+    },
+    {
+      "fixture": "Proteus Hybrid Max",
+      "watts": 550.0,
+      "weight": 34.5,
+      "modes": {
+        "Extended Pan540": 43,
+        "Extended Pan360": 43,
+        "Standard Pan360": 32,
+        "Standard Pan540": 32
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Proteus_Hybrid_Max@25-20-06_Release.gdtf",
+        "modes": {
+          "Extended Pan540": {
+            "channels": 43,
+            "gdtfMode": "Extended Pan540",
+            "status": "matched"
+          },
+          "Extended Pan360": {
+            "channels": 43,
+            "gdtfMode": "Extended Pan360",
+            "status": "matched"
+          },
+          "Standard Pan360": {
+            "channels": 32,
+            "gdtfMode": "Standard Pan360",
+            "status": "matched"
+          },
+          "Standard Pan540": {
+            "channels": 32,
+            "gdtfMode": "Standard Pan540",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Proteus_Hybrid_Max.gdtf"
+      },
+      "shortName": "ProHybrdMx"
+    },
+    {
+      "fixture": "Proteus Hybrid Max OPS",
+      "watts": 550.0,
+      "weight": 35.5,
+      "modes": {
+        "Extended Pan540": 43,
+        "Extended Pan360": 43,
+        "Standard Pan360": 32,
+        "Standard Pan540": 32
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Proteus_Hybrid_Max_OPS@25-20-06_First_Release.gdtf",
+        "modes": {
+          "Extended Pan540": {
+            "channels": 43,
+            "gdtfMode": "Extended Pan540",
+            "status": "matched"
+          },
+          "Extended Pan360": {
+            "channels": 43,
+            "gdtfMode": "Extended Pan360",
+            "status": "matched"
+          },
+          "Standard Pan360": {
+            "channels": 32,
+            "gdtfMode": "Standard Pan360",
+            "status": "matched"
+          },
+          "Standard Pan540": {
+            "channels": 32,
+            "gdtfMode": "Standard Pan540",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Proteus_Hybrid_Max_OPS.gdtf"
+      },
+      "shortName": "ProHybrdMxOPS"
+    },
+    {
+      "fixture": "Proteus Lucius",
+      "watts": 580.0,
+      "weight": 41.0,
+      "modes": {
+        "Extended Pan540": 68,
+        "Extended Pan630": 68,
+        "Standard Pan540": 43,
+        "Standard Pan630": 43
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Proteus_Lucius@25-19-06_Release.gdtf",
+        "modes": {
+          "Extended Pan540": {
+            "channels": 68,
+            "gdtfMode": "Extended Pan540",
+            "status": "matched"
+          },
+          "Extended Pan630": {
+            "channels": 68,
+            "gdtfMode": "Extended Pan630",
+            "status": "matched"
+          },
+          "Standard Pan540": {
+            "channels": 43,
+            "gdtfMode": "Standard Pan540",
+            "status": "matched"
+          },
+          "Standard Pan630": {
+            "channels": 43,
+            "gdtfMode": "Standard Pan630",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Proteus_Lucius.gdtf"
+      },
+      "shortName": "Proteus Lucius"
+    },
+    {
+      "fixture": "Proteus Lucius OPS",
+      "watts": 580.0,
+      "weight": 41.0,
+      "modes": {
+        "Extended Pan540": 68,
+        "Extended Pan630": 68,
+        "Standard Pan540": 43,
+        "Standard Pan630": 43
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Proteus_Lucius_OPS@25-19-06_Release.gdtf",
+        "modes": {
+          "Extended Pan540": {
+            "channels": 68,
+            "gdtfMode": "Extended Pan540",
+            "status": "matched"
+          },
+          "Extended Pan630": {
+            "channels": 68,
+            "gdtfMode": "Extended Pan630",
+            "status": "matched"
+          },
+          "Standard Pan540": {
+            "channels": 43,
+            "gdtfMode": "Standard Pan540",
+            "status": "matched"
+          },
+          "Standard Pan630": {
+            "channels": 43,
+            "gdtfMode": "Standard Pan630",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Proteus_Lucius_OPS.gdtf"
+      },
+      "shortName": "Proteus Lucius"
+    },
+    {
+      "fixture": "Proteus Maximus",
+      "watts": 550.0,
+      "weight": 53.0,
+      "modes": {
+        "Extended 540deg": 61,
+        "Standard 540deg": 37,
+        "Standard 630deg": 37,
+        "Extended 630deg": 61
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Proteus_Maximus@2023-26-12_Release.gdtf",
+        "modes": {
+          "Extended 540deg": {
+            "channels": 61,
+            "gdtfMode": "Extended 540deg",
+            "status": "matched"
+          },
+          "Standard 540deg": {
+            "channels": 37,
+            "gdtfMode": "Standard 540deg",
+            "status": "matched"
+          },
+          "Standard 630deg": {
+            "channels": 37,
+            "gdtfMode": "Standard 630deg",
+            "status": "matched"
+          },
+          "Extended 630deg": {
+            "channels": 61,
+            "gdtfMode": "Extended 630deg",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Proteus_Maximus.gdtf"
+      },
+      "shortName": "ProMax"
+    },
+    {
+      "fixture": "Proteus Odeon",
+      "watts": 850.0,
+      "weight": 42.0,
+      "modes": {
+        "Ext CRI 80": 68,
+        "Ext CRI Flex CRI": 69,
+        "Std CRI Flex CRI": 44,
+        "Std CRI 80": 43
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Proteus_Odeon@2024-22-11_Release.gdtf",
+        "modes": {
+          "Ext CRI 80": {
+            "channels": 68,
+            "gdtfMode": "Ext CRI 80",
+            "status": "matched"
+          },
+          "Ext CRI Flex CRI": {
+            "channels": 69,
+            "gdtfMode": "Ext CRI Flex CRI",
+            "status": "matched"
+          },
+          "Std CRI Flex CRI": {
+            "channels": 44,
+            "gdtfMode": "Std CRI Flex CRI",
+            "status": "matched"
+          },
+          "Std CRI 80": {
+            "channels": 43,
+            "gdtfMode": "Std CRI 80",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Proteus_Odeon.gdtf"
+      },
+      "shortName": "Proteus Odeon"
+    },
+    {
+      "fixture": "Proteus Radius",
+      "watts": 100.0,
+      "weight": 19.0,
+      "modes": {
+        "Extended Pan540 Tilt270": 36,
+        "Extended Pan630 Tilt 270": 36,
+        "Extended Pan540 Tilt540": 36,
+        "Extended Pan630 Tilt540": 36,
+        "Standard Pan540 Tilt270": 26,
+        "Standard Pan630 Tilt270": 26,
+        "Standard Pan540 Tilt540": 26,
+        "Standard Pan630 Tilt540": 26
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Proteus_Radius@2024-15-02_First_Release.gdtf",
+        "modes": {
+          "Extended Pan540 Tilt270": {
+            "channels": 36,
+            "gdtfMode": "Extended Pan540 Tilt270",
+            "status": "matched"
+          },
+          "Extended Pan630 Tilt 270": {
+            "channels": 36,
+            "gdtfMode": "Extended Pan630 Tilt 270",
+            "status": "matched"
+          },
+          "Extended Pan540 Tilt540": {
+            "channels": 36,
+            "gdtfMode": "Extended Pan540 Tilt540",
+            "status": "matched"
+          },
+          "Extended Pan630 Tilt540": {
+            "channels": 36,
+            "gdtfMode": "Extended Pan630 Tilt540",
+            "status": "matched"
+          },
+          "Standard Pan540 Tilt270": {
+            "channels": 26,
+            "gdtfMode": "Standard Pan540 Tilt270",
+            "status": "matched"
+          },
+          "Standard Pan630 Tilt270": {
+            "channels": 26,
+            "gdtfMode": "Standard Pan630 Tilt270",
+            "status": "matched"
+          },
+          "Standard Pan540 Tilt540": {
+            "channels": 26,
+            "gdtfMode": "Standard Pan540 Tilt540",
+            "status": "matched"
+          },
+          "Standard Pan630 Tilt540": {
+            "channels": 26,
+            "gdtfMode": "Standard Pan630 Tilt540",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Proteus_Radius.gdtf"
+      },
+      "shortName": "ProRad"
+    },
+    {
+      "fixture": "Proteus Rayzor 760",
+      "watts": null,
+      "weight": 12.2,
+      "modes": {
+        "Extended 360Pan/Tilt": 80,
+        "Pixels 360Pan/Tilt": 52,
+        "Standard 360Pan/Tilt": 25,
+        "SparkLED": 28,
+        "Extended 540Pan/270Tilt": 80,
+        "Pixels 540Pan/270Tilt": 52,
+        "Standard 540Pan/270Tilt": 25
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Proteus_Rayzor_760@25-15-05_Release.gdtf",
+        "modes": {
+          "Extended 360Pan/Tilt": {
+            "channels": 80,
+            "gdtfMode": "Extended 360Pan/Tilt",
+            "status": "matched"
+          },
+          "Pixels 360Pan/Tilt": {
+            "channels": 52,
+            "gdtfMode": "Pixels 360Pan/Tilt",
+            "status": "matched"
+          },
+          "Standard 360Pan/Tilt": {
+            "channels": 25,
+            "gdtfMode": "Standard 360Pan/Tilt",
+            "status": "matched"
+          },
+          "SparkLED": {
+            "channels": 28,
+            "gdtfMode": "SparkLED",
+            "status": "matched"
+          },
+          "Extended 540Pan/270Tilt": {
+            "channels": 80,
+            "gdtfMode": "Extended 540Pan/270Tilt",
+            "status": "matched"
+          },
+          "Pixels 540Pan/270Tilt": {
+            "channels": 52,
+            "gdtfMode": "Pixels 540Pan/270Tilt",
+            "status": "matched"
+          },
+          "Standard 540Pan/270Tilt": {
+            "channels": 25,
+            "gdtfMode": "Standard 540Pan/270Tilt",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Proteus_Rayzor_760.gdtf"
+      },
+      "shortName": "ProRay760"
+    },
+    {
+      "fixture": "Proteus Rayzor 760 OPS",
+      "watts": null,
+      "weight": 12.2,
+      "modes": {
+        "Extended 360Pan/Tilt": 80,
+        "Pixels 360Pan/Tilt": 52,
+        "Standard 360Pan/Tilt": 25,
+        "SparkLED": 28,
+        "Extended 540Pan/270Tilt": 80,
+        "Pixels 540Pan/270Tilt": 52,
+        "Standard 540Pan/270Tilt": 25
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Proteus_Rayzor_760_OPS@25-15-05_Release.gdtf",
+        "modes": {
+          "Extended 360Pan/Tilt": {
+            "channels": 80,
+            "gdtfMode": "Extended 360Pan/Tilt",
+            "status": "matched"
+          },
+          "Pixels 360Pan/Tilt": {
+            "channels": 52,
+            "gdtfMode": "Pixels 360Pan/Tilt",
+            "status": "matched"
+          },
+          "Standard 360Pan/Tilt": {
+            "channels": 25,
+            "gdtfMode": "Standard 360Pan/Tilt",
+            "status": "matched"
+          },
+          "SparkLED": {
+            "channels": 28,
+            "gdtfMode": "SparkLED",
+            "status": "matched"
+          },
+          "Extended 540Pan/270Tilt": {
+            "channels": 80,
+            "gdtfMode": "Extended 540Pan/270Tilt",
+            "status": "matched"
+          },
+          "Pixels 540Pan/270Tilt": {
+            "channels": 52,
+            "gdtfMode": "Pixels 540Pan/270Tilt",
+            "status": "matched"
+          },
+          "Standard 540Pan/270Tilt": {
+            "channels": 25,
+            "gdtfMode": "Standard 540Pan/270Tilt",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Proteus_Rayzor_760_OPS.gdtf"
+      },
+      "shortName": "ProRay760ops"
+    },
+    {
+      "fixture": "Proteus Rayzor Blade L",
+      "watts": null,
+      "weight": 33.0,
+      "modes": {
+        "STANDARD 28CH": 28,
+        "PIXEL 76CH": 76,
+        "PIXEL PLUS CH140": 140,
+        "PIXEL COMP 108CH": 108,
+        "PIXEL SPARK LED 120CH": 120,
+        "EXTENDED 188CH": 188
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Proteus_Rayzor_Blade_L@25-04-03_Release.gdtf",
+        "modes": {
+          "STANDARD 28CH": {
+            "channels": 28,
+            "gdtfMode": "STANDARD 28CH",
+            "status": "matched"
+          },
+          "PIXEL 76CH": {
+            "channels": 76,
+            "gdtfMode": "PIXEL 76CH",
+            "status": "matched"
+          },
+          "PIXEL PLUS CH140": {
+            "channels": 140,
+            "gdtfMode": "PIXEL PLUS CH140",
+            "status": "matched"
+          },
+          "PIXEL COMP 108CH": {
+            "channels": 108,
+            "gdtfMode": "PIXEL COMP 108CH",
+            "status": "matched"
+          },
+          "PIXEL SPARK LED 120CH": {
+            "channels": 120,
+            "gdtfMode": "PIXEL SPARK LED 120CH",
+            "status": "matched"
+          },
+          "EXTENDED 188CH": {
+            "channels": 188,
+            "gdtfMode": "EXTENDED 188CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Proteus_Rayzor_Blade_L.gdtf"
+      },
+      "shortName": "Proteus Rayzor Blade L"
+    },
+    {
+      "fixture": "Proton 3K Color",
+      "watts": 3000.0,
+      "weight": 17.2,
+      "modes": {
+        "3 Channel": 3,
+        "5 Channel": 5,
+        "7 Channel": 7,
+        "8 Channel": 8
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Proton_3K_Color@25-19-05_First_Release.gdtf",
+        "modes": {
+          "3 Channel": {
+            "channels": 3,
+            "gdtfMode": "3 Channel",
+            "status": "matched"
+          },
+          "5 Channel": {
+            "channels": 5,
+            "gdtfMode": "5 Channel",
+            "status": "matched"
+          },
+          "7 Channel": {
+            "channels": 7,
+            "gdtfMode": "7 Channel",
+            "status": "matched"
+          },
+          "8 Channel": {
+            "channels": 8,
+            "gdtfMode": "8 Channel",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Proton_3K_Color.gdtf"
+      },
+      "shortName": "Proton3KColor"
+    },
+    {
+      "fixture": "PROTRON ECLYPSE",
+      "watts": null,
+      "weight": 5.1,
+      "modes": {
+        "RGB": 3,
+        "RGB 16bit": 6,
+        "RGBW": 4,
+        "RGBW 16bit": 8,
+        "Strobe": 4,
+        "1": 13,
+        " 2V": 17,
+        "2H": 17,
+        "3": 21,
+        " 4": 25,
+        "4A": 25,
+        "6": 33,
+        "6A": 33,
+        "6H": 33,
+        "12": 57,
+        " 12A": 57,
+        "F1": 12,
+        "F2V": 16,
+        "F2H": 16,
+        "F3": 20,
+        "F4": 24,
+        "F6V": 32,
+        "F6H": 32,
+        "F12": 56
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Protron_Eclypse@23-19-07_Release.gdtf",
+        "modes": {
+          "RGB": {
+            "channels": 3,
+            "gdtfMode": "RGB",
+            "status": "matched"
+          },
+          "RGB 16bit": {
+            "channels": 6,
+            "gdtfMode": "RGB 16bit",
+            "status": "matched"
+          },
+          "RGBW": {
+            "channels": 4,
+            "gdtfMode": "RGBW",
+            "status": "matched"
+          },
+          "RGBW 16bit": {
+            "channels": 8,
+            "gdtfMode": "RGBW 16bit",
+            "status": "matched"
+          },
+          "Strobe": {
+            "channels": 4,
+            "gdtfMode": "Strobe",
+            "status": "matched"
+          },
+          "1": {
+            "channels": 13,
+            "gdtfMode": "1",
+            "status": "matched"
+          },
+          " 2V": {
+            "channels": 17,
+            "gdtfMode": " 2V",
+            "status": "matched"
+          },
+          "2H": {
+            "channels": 17,
+            "gdtfMode": "2H",
+            "status": "matched"
+          },
+          "3": {
+            "channels": 21,
+            "gdtfMode": "3",
+            "status": "matched"
+          },
+          " 4": {
+            "channels": 25,
+            "gdtfMode": " 4",
+            "status": "matched"
+          },
+          "4A": {
+            "channels": 25,
+            "gdtfMode": "4A",
+            "status": "matched"
+          },
+          "6": {
+            "channels": 33,
+            "gdtfMode": "6",
+            "status": "matched"
+          },
+          "6A": {
+            "channels": 33,
+            "gdtfMode": "6A",
+            "status": "matched"
+          },
+          "6H": {
+            "channels": 33,
+            "gdtfMode": "6H",
+            "status": "matched"
+          },
+          "12": {
+            "channels": 57,
+            "gdtfMode": "12",
+            "status": "matched"
+          },
+          " 12A": {
+            "channels": 57,
+            "gdtfMode": " 12A",
+            "status": "matched"
+          },
+          "F1": {
+            "channels": 12,
+            "gdtfMode": "F1",
+            "status": "matched"
+          },
+          "F2V": {
+            "channels": 16,
+            "gdtfMode": "F2V",
+            "status": "matched"
+          },
+          "F2H": {
+            "channels": 16,
+            "gdtfMode": "F2H",
+            "status": "matched"
+          },
+          "F3": {
+            "channels": 20,
+            "gdtfMode": "F3",
+            "status": "matched"
+          },
+          "F4": {
+            "channels": 24,
+            "gdtfMode": "F4",
+            "status": "matched"
+          },
+          "F6V": {
+            "channels": 32,
+            "gdtfMode": "F6V",
+            "status": "matched"
+          },
+          "F6H": {
+            "channels": 32,
+            "gdtfMode": "F6H",
+            "status": "matched"
+          },
+          "F12": {
+            "channels": 56,
+            "gdtfMode": "F12",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__PROTRON_ECLYPSE.gdtf"
+      },
+      "shortName": "PrtnEclypse"
+    },
+    {
+      "fixture": "Pulse Bar L",
+      "watts": null,
+      "weight": 12.25,
+      "modes": {
+        "Xenon Strobe 3CH": 3,
+        "Simple Strobe 11CH": 11,
+        "Strobe FX 22CH": 22,
+        "Large Pixels 52CH": 52,
+        "Simple Pixel 92CH": 92,
+        "Pixel Focus 234CH": 234,
+        "Basic Full Control 132CH": 132,
+        "Raw Mode 220CH": 220,
+        "Full Control 242CH": 242
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Pulse_Bar_L@26-21-07_Release.gdtf",
+        "modes": {
+          "Xenon Strobe 3CH": {
+            "channels": 3,
+            "gdtfMode": "Xenon Strobe 3CH",
+            "status": "matched"
+          },
+          "Simple Strobe 11CH": {
+            "channels": 11,
+            "gdtfMode": "Simple Strobe 11CH",
+            "status": "matched"
+          },
+          "Strobe FX 22CH": {
+            "channels": 22,
+            "gdtfMode": "Strobe FX 22CH",
+            "status": "matched"
+          },
+          "Large Pixels 52CH": {
+            "channels": 52,
+            "gdtfMode": "Large Pixels 52CH",
+            "status": "matched"
+          },
+          "Simple Pixel 92CH": {
+            "channels": 92,
+            "gdtfMode": "Simple Pixel 92CH",
+            "status": "matched"
+          },
+          "Pixel Focus 234CH": {
+            "channels": 234,
+            "gdtfMode": "Pixel Focus 234CH",
+            "status": "matched"
+          },
+          "Basic Full Control 132CH": {
+            "channels": 132,
+            "gdtfMode": "Basic Full Control 132CH",
+            "status": "matched"
+          },
+          "Raw Mode 220CH": {
+            "channels": 220,
+            "gdtfMode": "Raw Mode 220CH",
+            "status": "matched"
+          },
+          "Full Control 242CH": {
+            "channels": 242,
+            "gdtfMode": "Full Control 242CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Pulse_Bar_L.gdtf"
+      },
+      "shortName": "PulsbrL"
+    },
+    {
+      "fixture": "Pulse Bar S",
+      "watts": null,
+      "weight": 7.2,
+      "modes": {
+        "Xenon Strobe 3CH": 3,
+        "Simple Strobe 11CH": 11,
+        "Strobe FX 22CH": 22,
+        "Large Pixels 34CH": 34,
+        "Simple Pixel 52CH": 52,
+        "Basic Full Control 77CH": 77,
+        "Raw Mode 110CH": 110,
+        "Pixel Focus 124CH": 124,
+        "Full Control 132CH": 132
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Pulse_Bar_S@26-23-07_Release.gdtf",
+        "modes": {
+          "Xenon Strobe 3CH": {
+            "channels": 3,
+            "gdtfMode": "Xenon Strobe 3CH",
+            "status": "matched"
+          },
+          "Simple Strobe 11CH": {
+            "channels": 11,
+            "gdtfMode": "Simple Strobe 11CH",
+            "status": "matched"
+          },
+          "Strobe FX 22CH": {
+            "channels": 22,
+            "gdtfMode": "Strobe FX 22CH",
+            "status": "matched"
+          },
+          "Large Pixels 34CH": {
+            "channels": 34,
+            "gdtfMode": "Large Pixels 34CH",
+            "status": "matched"
+          },
+          "Simple Pixel 52CH": {
+            "channels": 52,
+            "gdtfMode": "Simple Pixel 52CH",
+            "status": "matched"
+          },
+          "Basic Full Control 77CH": {
+            "channels": 77,
+            "gdtfMode": "Basic Full Control 77CH",
+            "status": "matched"
+          },
+          "Raw Mode 110CH": {
+            "channels": 110,
+            "gdtfMode": "Raw Mode 110CH",
+            "status": "matched"
+          },
+          "Pixel Focus 124CH": {
+            "channels": 124,
+            "gdtfMode": "Pixel Focus 124CH",
+            "status": "matched"
+          },
+          "Full Control 132CH": {
+            "channels": 132,
+            "gdtfMode": "Full Control 132CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Pulse_Bar_S.gdtf"
+      },
+      "shortName": "PulsbrS"
+    },
+    {
+      "fixture": "Pulse Panel",
+      "watts": null,
+      "weight": 13.0,
+      "modes": {
+        "3CH": 3,
+        "12CH": 12,
+        "22CH": 22,
+        "45CH": 45,
+        "60CH": 60,
+        "170CH": 170,
+        "88CH": 88,
+        "178CH": 178,
+        "156CH": 156
+      },
+      "gdtf": {
+        "status": "partial",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Pulse_Panel@25-17-02_Release.gdtf",
+        "modes": {
+          "3CH": {
+            "channels": 3,
+            "gdtfMode": "3CH",
+            "status": "matched"
+          },
+          "12CH": {
+            "channels": 12,
+            "gdtfMode": "12CH",
+            "status": "matched"
+          },
+          "22CH": {
+            "channels": 22,
+            "gdtfMode": "22CH",
+            "status": "matched"
+          },
+          "45CH": {
+            "channels": 45,
+            "gdtfMode": "45CH",
+            "status": "matched"
+          },
+          "60CH": {
+            "channels": 60,
+            "gdtfMode": "60CH",
+            "status": "pending-match"
+          },
+          "170CH": {
+            "channels": 170,
+            "gdtfMode": "170CH",
+            "status": "matched"
+          },
+          "88CH": {
+            "channels": 88,
+            "gdtfMode": "88CH",
+            "status": "matched"
+          },
+          "178CH": {
+            "channels": 178,
+            "gdtfMode": "178CH",
+            "status": "matched"
+          },
+          "156CH": {
+            "channels": 156,
+            "gdtfMode": "156CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Pulse_Panel.gdtf"
+      },
+      "shortName": "PulsPnl"
+    },
+    {
+      "fixture": "Pulse Panel FX",
+      "watts": null,
+      "weight": 17.0,
+      "modes": {
+        "Strobe FX 27CH": 27,
+        "Simple Strobe 16CH": 16,
+        "Xenon Strobe 8CH": 8,
+        "Large Pixel 50CH": 50,
+        "Basic Full Control- No Pan 90CH": 90,
+        "Basic Full Control 93CH": 93,
+        "Simple Pixel Pro 65CH": 65,
+        "Simple Pixel Pro No Pan 62CH": 62,
+        "Pixel Focus 175CH": 175,
+        "LED Panel 156CH": 156,
+        "Raw Mode 161CH": 161,
+        "Full Control 183CH": 183
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Pulse_Panel_FX@26-23-07_Release.gdtf",
+        "modes": {
+          "Strobe FX 27CH": {
+            "channels": 27,
+            "gdtfMode": "Strobe FX 27CH",
+            "status": "matched"
+          },
+          "Simple Strobe 16CH": {
+            "channels": 16,
+            "gdtfMode": "Simple Strobe 16CH",
+            "status": "matched"
+          },
+          "Xenon Strobe 8CH": {
+            "channels": 8,
+            "gdtfMode": "Xenon Strobe 8CH",
+            "status": "matched"
+          },
+          "Large Pixel 50CH": {
+            "channels": 50,
+            "gdtfMode": "Large Pixel 50CH",
+            "status": "matched"
+          },
+          "Basic Full Control- No Pan 90CH": {
+            "channels": 90,
+            "gdtfMode": "Basic Full Control- No Pan 90CH",
+            "status": "matched"
+          },
+          "Basic Full Control 93CH": {
+            "channels": 93,
+            "gdtfMode": "Basic Full Control 93CH",
+            "status": "matched"
+          },
+          "Simple Pixel Pro 65CH": {
+            "channels": 65,
+            "gdtfMode": "Simple Pixel Pro 65CH",
+            "status": "matched"
+          },
+          "Simple Pixel Pro No Pan 62CH": {
+            "channels": 62,
+            "gdtfMode": "Simple Pixel Pro No Pan 62CH",
+            "status": "matched"
+          },
+          "Pixel Focus 175CH": {
+            "channels": 175,
+            "gdtfMode": "Pixel Focus 175CH",
+            "status": "matched"
+          },
+          "LED Panel 156CH": {
+            "channels": 156,
+            "gdtfMode": "LED Panel 156CH",
+            "status": "matched"
+          },
+          "Raw Mode 161CH": {
+            "channels": 161,
+            "gdtfMode": "Raw Mode 161CH",
+            "status": "matched"
+          },
+          "Full Control 183CH": {
+            "channels": 183,
+            "gdtfMode": "Full Control 183CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Pulse_Panel_FX.gdtf"
+      },
+      "shortName": "PulsPnlFX"
+    },
+    {
+      "fixture": "Rayzor 760",
+      "watts": null,
+      "weight": 12.2,
+      "modes": {
+        "Extended 360Pan/Tilt": 80,
+        "Pixels 360Pan/Tilt": 52,
+        "Standard 360Pan/Tilt": 25,
+        "SparkLED": 28,
+        "Extended 540Pan/270Tilt": 80,
+        "Pixels 540Pan/270Tilt": 52,
+        "Standard 540Pan/270Tilt": 25
+      },
+      "gdtf": {
+        "status": "partial",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Rayzor_760@2023-15-08_Release.gdtf",
+        "modes": {
+          "Extended 360Pan/Tilt": {
+            "channels": 80,
+            "gdtfMode": "Extended 360Pan/Tilt",
+            "status": "matched"
+          },
+          "Pixels 360Pan/Tilt": {
+            "channels": 52,
+            "gdtfMode": "Pixels 360Pan/Tilt",
+            "status": "matched"
+          },
+          "Standard 360Pan/Tilt": {
+            "channels": 25,
+            "gdtfMode": "Standard 360Pan/Tilt",
+            "status": "matched"
+          },
+          "SparkLED": {
+            "channels": 28,
+            "gdtfMode": "SparkLED",
+            "status": "matched"
+          },
+          "Extended 540Pan/270Tilt": {
+            "channels": 80,
+            "gdtfMode": "Extended 540Pan/270Tilt",
+            "status": "pending-match"
+          },
+          "Pixels 540Pan/270Tilt": {
+            "channels": 52,
+            "gdtfMode": "Pixels 540Pan/270Tilt",
+            "status": "matched"
+          },
+          "Standard 540Pan/270Tilt": {
+            "channels": 25,
+            "gdtfMode": "Standard 540Pan/270Tilt",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Rayzor_760.gdtf"
+      },
+      "shortName": "Ray760"
+    },
+    {
+      "fixture": "REBEL Profile",
+      "watts": 500.0,
+      "weight": 29.9,
+      "modes": {
+        "Extended": 58,
+        "Standard": 42
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@REBEL_Profile@25-16-09_Release.gdtf",
+        "modes": {
+          "Extended": {
+            "channels": 58,
+            "gdtfMode": "Extended",
+            "status": "matched"
+          },
+          "Standard": {
+            "channels": 42,
+            "gdtfMode": "Standard",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__REBEL_Profile.gdtf"
+      },
+      "shortName": "RblPrf"
+    },
+    {
+      "fixture": "REBEL Wash 12",
+      "watts": null,
+      "weight": 16.35,
+      "modes": {
+        "Standard Pan540 Tilt270": 21,
+        "Pixels Pan540 Tilt270": 68,
+        "Extended Pan540 Tilt270": 28,
+        "Standard Pan360 Tilt270": 21,
+        "Pixels Pan360 Tilt270": 68,
+        "Extended Pan360 Tilt270": 28,
+        "Standard Pan360 Tilt360": 21,
+        "Pixels Pan360 Tilt360": 68,
+        "Extended Pan360 Tilt360": 28,
+        "Standard Pan540 Tilt360": 21,
+        "Pixels Pan540 Tilt360": 68,
+        "Extended Pan540 Tilt360": 28
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@REBEL_Wash_12@26-24-07_Release.gdtf",
+        "modes": {
+          "Standard Pan540 Tilt270": {
+            "channels": 21,
+            "gdtfMode": "Standard Pan540 Tilt270",
+            "status": "matched"
+          },
+          "Pixels Pan540 Tilt270": {
+            "channels": 68,
+            "gdtfMode": "Pixels Pan540 Tilt270",
+            "status": "matched"
+          },
+          "Extended Pan540 Tilt270": {
+            "channels": 28,
+            "gdtfMode": "Extended Pan540 Tilt270",
+            "status": "matched"
+          },
+          "Standard Pan360 Tilt270": {
+            "channels": 21,
+            "gdtfMode": "Standard Pan360 Tilt270",
+            "status": "matched"
+          },
+          "Pixels Pan360 Tilt270": {
+            "channels": 68,
+            "gdtfMode": "Pixels Pan360 Tilt270",
+            "status": "matched"
+          },
+          "Extended Pan360 Tilt270": {
+            "channels": 28,
+            "gdtfMode": "Extended Pan360 Tilt270",
+            "status": "matched"
+          },
+          "Standard Pan360 Tilt360": {
+            "channels": 21,
+            "gdtfMode": "Standard Pan360 Tilt360",
+            "status": "matched"
+          },
+          "Pixels Pan360 Tilt360": {
+            "channels": 68,
+            "gdtfMode": "Pixels Pan360 Tilt360",
+            "status": "matched"
+          },
+          "Extended Pan360 Tilt360": {
+            "channels": 28,
+            "gdtfMode": "Extended Pan360 Tilt360",
+            "status": "matched"
+          },
+          "Standard Pan540 Tilt360": {
+            "channels": 21,
+            "gdtfMode": "Standard Pan540 Tilt360",
+            "status": "matched"
+          },
+          "Pixels Pan540 Tilt360": {
+            "channels": 68,
+            "gdtfMode": "Pixels Pan540 Tilt360",
+            "status": "matched"
+          },
+          "Extended Pan540 Tilt360": {
+            "channels": 28,
+            "gdtfMode": "Extended Pan540 Tilt360",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__REBEL_Wash_12.gdtf"
+      },
+      "shortName": "RblWsh12"
+    },
+    {
+      "fixture": "SEVEN BATTEN 14",
+      "watts": null,
+      "weight": 7.7,
+      "modes": {
+        "RGB 3CH": 3,
+        "RGBSeven 3CH": 3,
+        "8Bit 7CH": 7,
+        "16Bit 14CH": 14,
+        "16bit + Dim 16CH": 16,
+        "Ext 15CH": 15,
+        "Cells 14CH": 14,
+        "Cells Dim 16CH": 16,
+        "Ext Cells 22CH": 22,
+        "HSI 4CH": 4,
+        "HSI Mast 10CH": 10,
+        "HSI Cell 14CH": 14
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Seven_Batten_14@2024-16-02_First_Release.gdtf",
+        "modes": {
+          "RGB 3CH": {
+            "channels": 3,
+            "gdtfMode": "RGB 3CH",
+            "status": "matched"
+          },
+          "RGBSeven 3CH": {
+            "channels": 3,
+            "gdtfMode": "RGBSeven 3CH",
+            "status": "matched"
+          },
+          "8Bit 7CH": {
+            "channels": 7,
+            "gdtfMode": "8Bit 7CH",
+            "status": "matched"
+          },
+          "16Bit 14CH": {
+            "channels": 14,
+            "gdtfMode": "16Bit 14CH",
+            "status": "matched"
+          },
+          "16bit + Dim 16CH": {
+            "channels": 16,
+            "gdtfMode": "16bit + Dim 16CH",
+            "status": "matched"
+          },
+          "Ext 15CH": {
+            "channels": 15,
+            "gdtfMode": "Ext 15CH",
+            "status": "matched"
+          },
+          "Cells 14CH": {
+            "channels": 14,
+            "gdtfMode": "Cells 14CH",
+            "status": "matched"
+          },
+          "Cells Dim 16CH": {
+            "channels": 16,
+            "gdtfMode": "Cells Dim 16CH",
+            "status": "matched"
+          },
+          "Ext Cells 22CH": {
+            "channels": 22,
+            "gdtfMode": "Ext Cells 22CH",
+            "status": "matched"
+          },
+          "HSI 4CH": {
+            "channels": 4,
+            "gdtfMode": "HSI 4CH",
+            "status": "matched"
+          },
+          "HSI Mast 10CH": {
+            "channels": 10,
+            "gdtfMode": "HSI Mast 10CH",
+            "status": "matched"
+          },
+          "HSI Cell 14CH": {
+            "channels": 14,
+            "gdtfMode": "HSI Cell 14CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__SEVEN_BATTEN_14.gdtf"
+      },
+      "shortName": "SEVBAT14"
+    },
+    {
+      "fixture": "Seven Batten 42",
+      "watts": null,
+      "weight": 17.7,
+      "modes": {
+        "RGB 3CH": 3,
+        "RGBSeven 3CH": 3,
+        "8Bit 7CH": 7,
+        "16Bit 14CH": 14,
+        "16bit + Dim 16CH": 16,
+        "Ext 15CH": 15,
+        "Cells 42CH": 42,
+        "Cells Dim 44CH": 44,
+        "Ext Cells 50CH": 50,
+        "HSI 4CH": 4,
+        "HSI Mast 10CH": 10,
+        "HSI Cell  26CH": 26
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Seven_Batten_42@2024-20-02_First_Release.gdtf",
+        "modes": {
+          "RGB 3CH": {
+            "channels": 3,
+            "gdtfMode": "RGB 3CH",
+            "status": "matched"
+          },
+          "RGBSeven 3CH": {
+            "channels": 3,
+            "gdtfMode": "RGBSeven 3CH",
+            "status": "matched"
+          },
+          "8Bit 7CH": {
+            "channels": 7,
+            "gdtfMode": "8Bit 7CH",
+            "status": "matched"
+          },
+          "16Bit 14CH": {
+            "channels": 14,
+            "gdtfMode": "16Bit 14CH",
+            "status": "matched"
+          },
+          "16bit + Dim 16CH": {
+            "channels": 16,
+            "gdtfMode": "16bit + Dim 16CH",
+            "status": "matched"
+          },
+          "Ext 15CH": {
+            "channels": 15,
+            "gdtfMode": "Ext 15CH",
+            "status": "matched"
+          },
+          "Cells 42CH": {
+            "channels": 42,
+            "gdtfMode": "Cells 42CH",
+            "status": "matched"
+          },
+          "Cells Dim 44CH": {
+            "channels": 44,
+            "gdtfMode": "Cells Dim 44CH",
+            "status": "matched"
+          },
+          "Ext Cells 50CH": {
+            "channels": 50,
+            "gdtfMode": "Ext Cells 50CH",
+            "status": "matched"
+          },
+          "HSI 4CH": {
+            "channels": 4,
+            "gdtfMode": "HSI 4CH",
+            "status": "matched"
+          },
+          "HSI Mast 10CH": {
+            "channels": 10,
+            "gdtfMode": "HSI Mast 10CH",
+            "status": "matched"
+          },
+          "HSI Cell  26CH": {
+            "channels": 26,
+            "gdtfMode": "HSI Cell  26CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Seven_Batten_42.gdtf"
+      },
+      "shortName": "SEVBAT42"
+    },
+    {
+      "fixture": "Seven Batten 72",
+      "watts": null,
+      "weight": 26.3,
+      "modes": {
+        "RGB 3CH": 3,
+        "RGBSeven 3CH": 3,
+        "8Bit 7CH": 7,
+        "16Bit 14CH": 14,
+        "16bit + Dim 16CH": 16,
+        "Ext 15CH": 15,
+        "Cells 70CH": 70,
+        "Ext Cells 78CH": 78,
+        "HSI 4CH": 4,
+        "HSI Mast 10CH": 10,
+        "HSI Cell 38CH": 38,
+        "Cells Dim 72CH": 72
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Seven_Batten_72@2024-22-02_First_Release.gdtf",
+        "modes": {
+          "RGB 3CH": {
+            "channels": 3,
+            "gdtfMode": "RGB 3CH",
+            "status": "matched"
+          },
+          "RGBSeven 3CH": {
+            "channels": 3,
+            "gdtfMode": "RGBSeven 3CH",
+            "status": "matched"
+          },
+          "8Bit 7CH": {
+            "channels": 7,
+            "gdtfMode": "8Bit 7CH",
+            "status": "matched"
+          },
+          "16Bit 14CH": {
+            "channels": 14,
+            "gdtfMode": "16Bit 14CH",
+            "status": "matched"
+          },
+          "16bit + Dim 16CH": {
+            "channels": 16,
+            "gdtfMode": "16bit + Dim 16CH",
+            "status": "matched"
+          },
+          "Ext 15CH": {
+            "channels": 15,
+            "gdtfMode": "Ext 15CH",
+            "status": "matched"
+          },
+          "Cells 70CH": {
+            "channels": 70,
+            "gdtfMode": "Cells 70CH",
+            "status": "matched"
+          },
+          "Ext Cells 78CH": {
+            "channels": 78,
+            "gdtfMode": "Ext Cells 78CH",
+            "status": "matched"
+          },
+          "HSI 4CH": {
+            "channels": 4,
+            "gdtfMode": "HSI 4CH",
+            "status": "matched"
+          },
+          "HSI Mast 10CH": {
+            "channels": 10,
+            "gdtfMode": "HSI Mast 10CH",
+            "status": "matched"
+          },
+          "HSI Cell 38CH": {
+            "channels": 38,
+            "gdtfMode": "HSI Cell 38CH",
+            "status": "matched"
+          },
+          "Cells Dim 72CH": {
+            "channels": 72,
+            "gdtfMode": "Cells Dim 72CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Seven_Batten_72.gdtf"
+      },
+      "shortName": "SEVBAT72"
+    },
+    {
+      "fixture": "SEVEN PAR 19IP",
+      "watts": 266.0,
+      "weight": 11.3,
+      "modes": {
+        "RGB 3CH": 3,
+        "RGBSeven 3CH": 3,
+        "16Bit 14CH": 14,
+        "8Bit 7CH": 7,
+        "Master 15CH": 15,
+        "HSI 4CH": 4,
+        "HSI Mast 10CH": 10
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@SEVEN_PAR_19IP@2024-02-02_First_Release.gdtf",
+        "modes": {
+          "RGB 3CH": {
+            "channels": 3,
+            "gdtfMode": "RGB 3CH",
+            "status": "matched"
+          },
+          "RGBSeven 3CH": {
+            "channels": 3,
+            "gdtfMode": "RGBSeven 3CH",
+            "status": "matched"
+          },
+          "16Bit 14CH": {
+            "channels": 14,
+            "gdtfMode": "16Bit 14CH",
+            "status": "matched"
+          },
+          "8Bit 7CH": {
+            "channels": 7,
+            "gdtfMode": "8Bit 7CH",
+            "status": "matched"
+          },
+          "Master 15CH": {
+            "channels": 15,
+            "gdtfMode": "Master 15CH",
+            "status": "matched"
+          },
+          "HSI 4CH": {
+            "channels": 4,
+            "gdtfMode": "HSI 4CH",
+            "status": "matched"
+          },
+          "HSI Mast 10CH": {
+            "channels": 10,
+            "gdtfMode": "HSI Mast 10CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__SEVEN_PAR_19IP.gdtf"
+      },
+      "shortName": "SIXP19IP"
+    },
+    {
+      "fixture": "SEVEN PAR 7IP",
+      "watts": 161.0,
+      "weight": 5.0,
+      "modes": {
+        "RGB 3CH": 3,
+        "RGBSeven 3CH": 3,
+        "16Bit 14CH": 14,
+        "8Bit 7CH": 7,
+        "Master 15CH": 15,
+        "HSI 4CH": 4,
+        "HSI Mast 10CH": 10
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@SEVEN_PAR_7IP@2024-02-02_First_Release.gdtf",
+        "modes": {
+          "RGB 3CH": {
+            "channels": 3,
+            "gdtfMode": "RGB 3CH",
+            "status": "matched"
+          },
+          "RGBSeven 3CH": {
+            "channels": 3,
+            "gdtfMode": "RGBSeven 3CH",
+            "status": "matched"
+          },
+          "16Bit 14CH": {
+            "channels": 14,
+            "gdtfMode": "16Bit 14CH",
+            "status": "matched"
+          },
+          "8Bit 7CH": {
+            "channels": 7,
+            "gdtfMode": "8Bit 7CH",
+            "status": "matched"
+          },
+          "Master 15CH": {
+            "channels": 15,
+            "gdtfMode": "Master 15CH",
+            "status": "matched"
+          },
+          "HSI 4CH": {
+            "channels": 4,
+            "gdtfMode": "HSI 4CH",
+            "status": "matched"
+          },
+          "HSI Mast 10CH": {
+            "channels": 10,
+            "gdtfMode": "HSI Mast 10CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__SEVEN_PAR_7IP.gdtf"
+      },
+      "shortName": "SIXP7IP"
+    },
+    {
+      "fixture": "SIX plus BAR L",
+      "watts": null,
+      "weight": 27.0,
+      "modes": {
+        "6CH": 6,
+        "7CH": 7,
+        "11CH": 11,
+        "13CH": 13,
+        "75CH": 75,
+        "Dimmer  1CH": 1,
+        "RGB 3CH": 3,
+        "Color 6CH": 6,
+        "Color and Dimmer 9CH": 9,
+        "CMY 13CH": 13,
+        "CMY Extended 16CH": 16,
+        "Standard 16CH": 16,
+        "Extended 22CH": 22,
+        "2 Cell Std 22CH": 22,
+        "2 Cell Ext 34CH": 34,
+        "4 Cell Std 34CH": 34,
+        "4 Cell Ext 58CH": 58,
+        "Raw 12 Cell 72CH": 72,
+        "12 Cell Ext 154CH": 154,
+        "12 Cell Std 82CH": 82
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@SIX_plus_BAR_L@24-11-10_Release.gdtf",
+        "modes": {
+          "6CH": {
+            "channels": 6,
+            "gdtfMode": "6CH",
+            "status": "matched"
+          },
+          "7CH": {
+            "channels": 7,
+            "gdtfMode": "7CH",
+            "status": "matched"
+          },
+          "11CH": {
+            "channels": 11,
+            "gdtfMode": "11CH",
+            "status": "matched"
+          },
+          "13CH": {
+            "channels": 13,
+            "gdtfMode": "13CH",
+            "status": "matched"
+          },
+          "75CH": {
+            "channels": 75,
+            "gdtfMode": "75CH",
+            "status": "matched"
+          },
+          "Dimmer  1CH": {
+            "channels": 1,
+            "gdtfMode": "Dimmer  1CH",
+            "status": "matched"
+          },
+          "RGB 3CH": {
+            "channels": 3,
+            "gdtfMode": "RGB 3CH",
+            "status": "matched"
+          },
+          "Color 6CH": {
+            "channels": 6,
+            "gdtfMode": "Color 6CH",
+            "status": "matched"
+          },
+          "Color and Dimmer 9CH": {
+            "channels": 9,
+            "gdtfMode": "Color and Dimmer 9CH",
+            "status": "matched"
+          },
+          "CMY 13CH": {
+            "channels": 13,
+            "gdtfMode": "CMY 13CH",
+            "status": "matched"
+          },
+          "CMY Extended 16CH": {
+            "channels": 16,
+            "gdtfMode": "CMY Extended 16CH",
+            "status": "matched"
+          },
+          "Standard 16CH": {
+            "channels": 16,
+            "gdtfMode": "Standard 16CH",
+            "status": "matched"
+          },
+          "Extended 22CH": {
+            "channels": 22,
+            "gdtfMode": "Extended 22CH",
+            "status": "matched"
+          },
+          "2 Cell Std 22CH": {
+            "channels": 22,
+            "gdtfMode": "2 Cell Std 22CH",
+            "status": "matched"
+          },
+          "2 Cell Ext 34CH": {
+            "channels": 34,
+            "gdtfMode": "2 Cell Ext 34CH",
+            "status": "matched"
+          },
+          "4 Cell Std 34CH": {
+            "channels": 34,
+            "gdtfMode": "4 Cell Std 34CH",
+            "status": "matched"
+          },
+          "4 Cell Ext 58CH": {
+            "channels": 58,
+            "gdtfMode": "4 Cell Ext 58CH",
+            "status": "matched"
+          },
+          "Raw 12 Cell 72CH": {
+            "channels": 72,
+            "gdtfMode": "Raw 12 Cell 72CH",
+            "status": "matched"
+          },
+          "12 Cell Ext 154CH": {
+            "channels": 154,
+            "gdtfMode": "12 Cell Ext 154CH",
+            "status": "matched"
+          },
+          "12 Cell Std 82CH": {
+            "channels": 82,
+            "gdtfMode": "12 Cell Std 82CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__SIX_plus_BAR_L.gdtf"
+      },
+      "shortName": "SIX+BrL"
+    },
+    {
+      "fixture": "SIX plus BAR S",
+      "watts": null,
+      "weight": 6.75,
+      "modes": {
+        "43CH": 43,
+        "39CH": 39,
+        "36CH": 36,
+        "18CH": 18,
+        "13CH": 13,
+        "11CH": 11,
+        "7CH": 7,
+        "6CH": 6,
+        "Dimmer  1CH": 1,
+        "RGB 3CH": 3,
+        "Color 6CH": 6,
+        "Color and Dimmer 9CH": 9,
+        "CMY 13CH": 13,
+        "CMY Extended 16CH": 16,
+        "Standard 16CH": 16,
+        "Extended 22CH": 22,
+        "2 Cell Standard 22CH": 22,
+        "2 Cell Extended 34CH": 34,
+        "Raw 6 Cell 36CH": 36,
+        "6 Cell Standard 46CH": 46,
+        "6 Cell Extended 82CH": 82
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@SIX_plus_BAR_S@24-24-07_Release.gdtf",
+        "modes": {
+          "43CH": {
+            "channels": 43,
+            "gdtfMode": "43CH",
+            "status": "matched"
+          },
+          "39CH": {
+            "channels": 39,
+            "gdtfMode": "39CH",
+            "status": "matched"
+          },
+          "36CH": {
+            "channels": 36,
+            "gdtfMode": "36CH",
+            "status": "matched"
+          },
+          "18CH": {
+            "channels": 18,
+            "gdtfMode": "18CH",
+            "status": "matched"
+          },
+          "13CH": {
+            "channels": 13,
+            "gdtfMode": "13CH",
+            "status": "matched"
+          },
+          "11CH": {
+            "channels": 11,
+            "gdtfMode": "11CH",
+            "status": "matched"
+          },
+          "7CH": {
+            "channels": 7,
+            "gdtfMode": "7CH",
+            "status": "matched"
+          },
+          "6CH": {
+            "channels": 6,
+            "gdtfMode": "6CH",
+            "status": "matched"
+          },
+          "Dimmer  1CH": {
+            "channels": 1,
+            "gdtfMode": "Dimmer  1CH",
+            "status": "matched"
+          },
+          "RGB 3CH": {
+            "channels": 3,
+            "gdtfMode": "RGB 3CH",
+            "status": "matched"
+          },
+          "Color 6CH": {
+            "channels": 6,
+            "gdtfMode": "Color 6CH",
+            "status": "matched"
+          },
+          "Color and Dimmer 9CH": {
+            "channels": 9,
+            "gdtfMode": "Color and Dimmer 9CH",
+            "status": "matched"
+          },
+          "CMY 13CH": {
+            "channels": 13,
+            "gdtfMode": "CMY 13CH",
+            "status": "matched"
+          },
+          "CMY Extended 16CH": {
+            "channels": 16,
+            "gdtfMode": "CMY Extended 16CH",
+            "status": "matched"
+          },
+          "Standard 16CH": {
+            "channels": 16,
+            "gdtfMode": "Standard 16CH",
+            "status": "matched"
+          },
+          "Extended 22CH": {
+            "channels": 22,
+            "gdtfMode": "Extended 22CH",
+            "status": "matched"
+          },
+          "2 Cell Standard 22CH": {
+            "channels": 22,
+            "gdtfMode": "2 Cell Standard 22CH",
+            "status": "matched"
+          },
+          "2 Cell Extended 34CH": {
+            "channels": 34,
+            "gdtfMode": "2 Cell Extended 34CH",
+            "status": "matched"
+          },
+          "Raw 6 Cell 36CH": {
+            "channels": 36,
+            "gdtfMode": "Raw 6 Cell 36CH",
+            "status": "matched"
+          },
+          "6 Cell Standard 46CH": {
+            "channels": 46,
+            "gdtfMode": "6 Cell Standard 46CH",
+            "status": "matched"
+          },
+          "6 Cell Extended 82CH": {
+            "channels": 82,
+            "gdtfMode": "6 Cell Extended 82CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__SIX_plus_BAR_S.gdtf"
+      },
+      "shortName": "SIX+BrS"
+    },
+    {
+      "fixture": "SIX plus PAR L",
+      "watts": 216.0,
+      "weight": 5.6,
+      "modes": {
+        "12 CH": 12,
+        "8 CH": 8,
+        "7 CH": 7,
+        "6 CH": 6,
+        "Dim 1CH": 1,
+        "RGB 3CH": 3,
+        "RGB Ext 9CH": 9,
+        "Color & Dim 9CH": 9,
+        "Color 6CH": 6,
+        "CMY 11CH": 11,
+        "CMY 14CH Ext": 14,
+        "Std 14CH ": 14,
+        "Ext 20CH": 20
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@SIX_plus_PAR_L@25-14-03_Release.gdtf",
+        "modes": {
+          "12 CH": {
+            "channels": 12,
+            "gdtfMode": "12 CH",
+            "status": "matched"
+          },
+          "8 CH": {
+            "channels": 8,
+            "gdtfMode": "8 CH",
+            "status": "matched"
+          },
+          "7 CH": {
+            "channels": 7,
+            "gdtfMode": "7 CH",
+            "status": "matched"
+          },
+          "6 CH": {
+            "channels": 6,
+            "gdtfMode": "6 CH",
+            "status": "matched"
+          },
+          "Dim 1CH": {
+            "channels": 1,
+            "gdtfMode": "Dim 1CH",
+            "status": "matched"
+          },
+          "RGB 3CH": {
+            "channels": 3,
+            "gdtfMode": "RGB 3CH",
+            "status": "matched"
+          },
+          "RGB Ext 9CH": {
+            "channels": 9,
+            "gdtfMode": "RGB Ext 9CH",
+            "status": "matched"
+          },
+          "Color & Dim 9CH": {
+            "channels": 9,
+            "gdtfMode": "Color & Dim 9CH",
+            "status": "matched"
+          },
+          "Color 6CH": {
+            "channels": 6,
+            "gdtfMode": "Color 6CH",
+            "status": "matched"
+          },
+          "CMY 11CH": {
+            "channels": 11,
+            "gdtfMode": "CMY 11CH",
+            "status": "matched"
+          },
+          "CMY 14CH Ext": {
+            "channels": 14,
+            "gdtfMode": "CMY 14CH Ext",
+            "status": "matched"
+          },
+          "Std 14CH ": {
+            "channels": 14,
+            "gdtfMode": "Std 14CH ",
+            "status": "matched"
+          },
+          "Ext 20CH": {
+            "channels": 20,
+            "gdtfMode": "Ext 20CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__SIX_plus_PAR_L.gdtf"
+      },
+      "shortName": "SIXPARL"
+    },
+    {
+      "fixture": "SIX plus PAR L OPS",
+      "watts": 216.0,
+      "weight": 5.6,
+      "modes": {
+        "12 CH": 12,
+        "8 CH": 8,
+        "7 CH": 7,
+        "6 CH": 6,
+        "Dim 1CH": 1,
+        "RGB 3CH": 3,
+        "RGB Ext 9CH": 9,
+        "Color & Dim 9CH": 9,
+        "Color 6CH": 6,
+        "CMY 11CH": 11,
+        "CMY 14CH Ext": 14,
+        "Std 14CH ": 14,
+        "Ext 20CH": 20
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@SIX_plus_PAR_L_OPS@25-14-03_First_Release.gdtf",
+        "modes": {
+          "12 CH": {
+            "channels": 12,
+            "gdtfMode": "12 CH",
+            "status": "matched"
+          },
+          "8 CH": {
+            "channels": 8,
+            "gdtfMode": "8 CH",
+            "status": "matched"
+          },
+          "7 CH": {
+            "channels": 7,
+            "gdtfMode": "7 CH",
+            "status": "matched"
+          },
+          "6 CH": {
+            "channels": 6,
+            "gdtfMode": "6 CH",
+            "status": "matched"
+          },
+          "Dim 1CH": {
+            "channels": 1,
+            "gdtfMode": "Dim 1CH",
+            "status": "matched"
+          },
+          "RGB 3CH": {
+            "channels": 3,
+            "gdtfMode": "RGB 3CH",
+            "status": "matched"
+          },
+          "RGB Ext 9CH": {
+            "channels": 9,
+            "gdtfMode": "RGB Ext 9CH",
+            "status": "matched"
+          },
+          "Color & Dim 9CH": {
+            "channels": 9,
+            "gdtfMode": "Color & Dim 9CH",
+            "status": "matched"
+          },
+          "Color 6CH": {
+            "channels": 6,
+            "gdtfMode": "Color 6CH",
+            "status": "matched"
+          },
+          "CMY 11CH": {
+            "channels": 11,
+            "gdtfMode": "CMY 11CH",
+            "status": "matched"
+          },
+          "CMY 14CH Ext": {
+            "channels": 14,
+            "gdtfMode": "CMY 14CH Ext",
+            "status": "matched"
+          },
+          "Std 14CH ": {
+            "channels": 14,
+            "gdtfMode": "Std 14CH ",
+            "status": "matched"
+          },
+          "Ext 20CH": {
+            "channels": 20,
+            "gdtfMode": "Ext 20CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__SIX_plus_PAR_L_OPS.gdtf"
+      },
+      "shortName": "SIXPARL"
+    },
+    {
+      "fixture": "SIX plus PAR S",
+      "watts": 216.0,
+      "weight": 4.0,
+      "modes": {
+        "12 CH": 12,
+        "8 CH": 8,
+        "7 CH": 7,
+        "6 CH": 6,
+        "Dim 1CH": 1,
+        "RGB 3CH": 3,
+        "RGB Ext 9CH": 9,
+        "Color & Dim 9CH": 9,
+        "Color 6CH": 6,
+        "CMY 11CH": 11,
+        "CMY 14CH Ext": 14,
+        "Std 14CH ": 14,
+        "Ext 20CH": 20
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@SIX_plus_PAR_S@25-13-03_Release.gdtf",
+        "modes": {
+          "12 CH": {
+            "channels": 12,
+            "gdtfMode": "12 CH",
+            "status": "matched"
+          },
+          "8 CH": {
+            "channels": 8,
+            "gdtfMode": "8 CH",
+            "status": "matched"
+          },
+          "7 CH": {
+            "channels": 7,
+            "gdtfMode": "7 CH",
+            "status": "matched"
+          },
+          "6 CH": {
+            "channels": 6,
+            "gdtfMode": "6 CH",
+            "status": "matched"
+          },
+          "Dim 1CH": {
+            "channels": 1,
+            "gdtfMode": "Dim 1CH",
+            "status": "matched"
+          },
+          "RGB 3CH": {
+            "channels": 3,
+            "gdtfMode": "RGB 3CH",
+            "status": "matched"
+          },
+          "RGB Ext 9CH": {
+            "channels": 9,
+            "gdtfMode": "RGB Ext 9CH",
+            "status": "matched"
+          },
+          "Color & Dim 9CH": {
+            "channels": 9,
+            "gdtfMode": "Color & Dim 9CH",
+            "status": "matched"
+          },
+          "Color 6CH": {
+            "channels": 6,
+            "gdtfMode": "Color 6CH",
+            "status": "matched"
+          },
+          "CMY 11CH": {
+            "channels": 11,
+            "gdtfMode": "CMY 11CH",
+            "status": "matched"
+          },
+          "CMY 14CH Ext": {
+            "channels": 14,
+            "gdtfMode": "CMY 14CH Ext",
+            "status": "matched"
+          },
+          "Std 14CH ": {
+            "channels": 14,
+            "gdtfMode": "Std 14CH ",
+            "status": "matched"
+          },
+          "Ext 20CH": {
+            "channels": 20,
+            "gdtfMode": "Ext 20CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__SIX_plus_PAR_S.gdtf"
+      },
+      "shortName": "SIXPARs"
+    },
+    {
+      "fixture": "SIX plus PAR S OPS",
+      "watts": 216.0,
+      "weight": 4.0,
+      "modes": {
+        "12 CH": 12,
+        "8 CH": 8,
+        "7 CH": 7,
+        "6 CH": 6,
+        "Dim 1CH": 1,
+        "RGB 3CH": 3,
+        "RGB Ext 9CH": 9,
+        "Color & Dim 9CH": 9,
+        "Color 6CH": 6,
+        "CMY 11CH": 11,
+        "CMY 14CH Ext": 14,
+        "Std 14CH ": 14,
+        "Ext 20CH": 20
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@SIX_plus_PAR_S_OPS@25-13-03_First_Release.gdtf",
+        "modes": {
+          "12 CH": {
+            "channels": 12,
+            "gdtfMode": "12 CH",
+            "status": "matched"
+          },
+          "8 CH": {
+            "channels": 8,
+            "gdtfMode": "8 CH",
+            "status": "matched"
+          },
+          "7 CH": {
+            "channels": 7,
+            "gdtfMode": "7 CH",
+            "status": "matched"
+          },
+          "6 CH": {
+            "channels": 6,
+            "gdtfMode": "6 CH",
+            "status": "matched"
+          },
+          "Dim 1CH": {
+            "channels": 1,
+            "gdtfMode": "Dim 1CH",
+            "status": "matched"
+          },
+          "RGB 3CH": {
+            "channels": 3,
+            "gdtfMode": "RGB 3CH",
+            "status": "matched"
+          },
+          "RGB Ext 9CH": {
+            "channels": 9,
+            "gdtfMode": "RGB Ext 9CH",
+            "status": "matched"
+          },
+          "Color & Dim 9CH": {
+            "channels": 9,
+            "gdtfMode": "Color & Dim 9CH",
+            "status": "matched"
+          },
+          "Color 6CH": {
+            "channels": 6,
+            "gdtfMode": "Color 6CH",
+            "status": "matched"
+          },
+          "CMY 11CH": {
+            "channels": 11,
+            "gdtfMode": "CMY 11CH",
+            "status": "matched"
+          },
+          "CMY 14CH Ext": {
+            "channels": 14,
+            "gdtfMode": "CMY 14CH Ext",
+            "status": "matched"
+          },
+          "Std 14CH ": {
+            "channels": 14,
+            "gdtfMode": "Std 14CH ",
+            "status": "matched"
+          },
+          "Ext 20CH": {
+            "channels": 20,
+            "gdtfMode": "Ext 20CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__SIX_plus_PAR_S_OPS.gdtf"
+      },
+      "shortName": "SIXPARs"
+    },
+    {
+      "fixture": "SIXBAR 1000",
+      "watts": null,
+      "weight": 4.1,
+      "modes": {
+        "79CH": 79,
+        "75CH": 75,
+        "72CH": 72,
+        "13CH": 13,
+        "11CH": 11,
+        "7CH": 7,
+        "6CH": 6,
+        "36CH": 36
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@SIXBAR_1000@2024-25-01_First_Release.gdtf",
+        "modes": {
+          "79CH": {
+            "channels": 79,
+            "gdtfMode": "79CH",
+            "status": "matched"
+          },
+          "75CH": {
+            "channels": 75,
+            "gdtfMode": "75CH",
+            "status": "matched"
+          },
+          "72CH": {
+            "channels": 72,
+            "gdtfMode": "72CH",
+            "status": "matched"
+          },
+          "13CH": {
+            "channels": 13,
+            "gdtfMode": "13CH",
+            "status": "matched"
+          },
+          "11CH": {
+            "channels": 11,
+            "gdtfMode": "11CH",
+            "status": "matched"
+          },
+          "7CH": {
+            "channels": 7,
+            "gdtfMode": "7CH",
+            "status": "matched"
+          },
+          "6CH": {
+            "channels": 6,
+            "gdtfMode": "6CH",
+            "status": "matched"
+          },
+          "36CH": {
+            "channels": 36,
+            "gdtfMode": "36CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__SIXBAR_1000.gdtf"
+      },
+      "shortName": "SIXBR1000"
+    },
+    {
+      "fixture": "SIXBAR 1000 IP",
+      "watts": null,
+      "weight": 4.1,
+      "modes": {
+        "79CH": 79,
+        "75CH": 75,
+        "72CH": 72,
+        "13CH": 13,
+        "11CH": 11,
+        "7CH": 7,
+        "6CH": 6,
+        "36CH": 36
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@SIXBAR_1000_IP@2024-25-01_First_Release.gdtf",
+        "modes": {
+          "79CH": {
+            "channels": 79,
+            "gdtfMode": "79CH",
+            "status": "matched"
+          },
+          "75CH": {
+            "channels": 75,
+            "gdtfMode": "75CH",
+            "status": "matched"
+          },
+          "72CH": {
+            "channels": 72,
+            "gdtfMode": "72CH",
+            "status": "matched"
+          },
+          "13CH": {
+            "channels": 13,
+            "gdtfMode": "13CH",
+            "status": "matched"
+          },
+          "11CH": {
+            "channels": 11,
+            "gdtfMode": "11CH",
+            "status": "matched"
+          },
+          "7CH": {
+            "channels": 7,
+            "gdtfMode": "7CH",
+            "status": "matched"
+          },
+          "6CH": {
+            "channels": 6,
+            "gdtfMode": "6CH",
+            "status": "matched"
+          },
+          "36CH": {
+            "channels": 36,
+            "gdtfMode": "36CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__SIXBAR_1000_IP.gdtf"
+      },
+      "shortName": "SIXBR1000IP"
+    },
+    {
+      "fixture": "SIXBAR 500",
+      "watts": null,
+      "weight": 4.1,
+      "modes": {
+        "43CH": 43,
+        "39CH": 39,
+        "36CH": 36,
+        "18CH": 18,
+        "13CH": 13,
+        "11CH": 11,
+        "7CH": 7,
+        "6CH": 6
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@SIXBAR_500@2024-24-01_First_Release.gdtf",
+        "modes": {
+          "43CH": {
+            "channels": 43,
+            "gdtfMode": "43CH",
+            "status": "matched"
+          },
+          "39CH": {
+            "channels": 39,
+            "gdtfMode": "39CH",
+            "status": "matched"
+          },
+          "36CH": {
+            "channels": 36,
+            "gdtfMode": "36CH",
+            "status": "matched"
+          },
+          "18CH": {
+            "channels": 18,
+            "gdtfMode": "18CH",
+            "status": "matched"
+          },
+          "13CH": {
+            "channels": 13,
+            "gdtfMode": "13CH",
+            "status": "matched"
+          },
+          "11CH": {
+            "channels": 11,
+            "gdtfMode": "11CH",
+            "status": "matched"
+          },
+          "7CH": {
+            "channels": 7,
+            "gdtfMode": "7CH",
+            "status": "matched"
+          },
+          "6CH": {
+            "channels": 6,
+            "gdtfMode": "6CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__SIXBAR_500.gdtf"
+      },
+      "shortName": "SIXBR500"
+    },
+    {
+      "fixture": "SIXPAR 100",
+      "watts": 84.0,
+      "weight": 3.3,
+      "modes": {
+        "12 CH": 12,
+        "8 CH": 8,
+        "7 CH": 7,
+        "6 CH": 6
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@SIXPAR_100@2023-22-11_First_Release.gdtf",
+        "modes": {
+          "12 CH": {
+            "channels": 12,
+            "gdtfMode": "12 CH",
+            "status": "matched"
+          },
+          "8 CH": {
+            "channels": 8,
+            "gdtfMode": "8 CH",
+            "status": "matched"
+          },
+          "7 CH": {
+            "channels": 7,
+            "gdtfMode": "7 CH",
+            "status": "matched"
+          },
+          "6 CH": {
+            "channels": 6,
+            "gdtfMode": "6 CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__SIXPAR_100.gdtf"
+      },
+      "shortName": "Sixpar100"
+    },
+    {
+      "fixture": "SIXPAR 100 IP",
+      "watts": 72.0,
+      "weight": 4.3,
+      "modes": {
+        "12 CH": 12,
+        "8 CH": 8,
+        "7 CH": 7,
+        "6 CH": 6
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@SIXPAR_100_IP@2023-22-11_First_Release.gdtf",
+        "modes": {
+          "12 CH": {
+            "channels": 12,
+            "gdtfMode": "12 CH",
+            "status": "matched"
+          },
+          "8 CH": {
+            "channels": 8,
+            "gdtfMode": "8 CH",
+            "status": "matched"
+          },
+          "7 CH": {
+            "channels": 7,
+            "gdtfMode": "7 CH",
+            "status": "matched"
+          },
+          "6 CH": {
+            "channels": 6,
+            "gdtfMode": "6 CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__SIXPAR_100_IP.gdtf"
+      },
+      "shortName": "Sixpar100IP"
+    },
+    {
+      "fixture": "SIXPAR 200",
+      "watts": 144.0,
+      "weight": 5.1,
+      "modes": {
+        "12 CH": 12,
+        "8 CH": 8,
+        "7 CH": 7,
+        "6 CH": 6
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@SIXPAR_200@23-27-11_First_Release.gdtf",
+        "modes": {
+          "12 CH": {
+            "channels": 12,
+            "gdtfMode": "12 CH",
+            "status": "matched"
+          },
+          "8 CH": {
+            "channels": 8,
+            "gdtfMode": "8 CH",
+            "status": "matched"
+          },
+          "7 CH": {
+            "channels": 7,
+            "gdtfMode": "7 CH",
+            "status": "matched"
+          },
+          "6 CH": {
+            "channels": 6,
+            "gdtfMode": "6 CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__SIXPAR_200.gdtf"
+      },
+      "shortName": "SIXPAR200"
+    },
+    {
+      "fixture": "SIXPAR 200 IP",
+      "watts": 144.0,
+      "weight": 5.7,
+      "modes": {
+        "12 CH": 12,
+        "8 CH": 8,
+        "7 CH": 7,
+        "6 CH": 6
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@SIXPAR_200_IP@23-27-11_First_Release.gdtf",
+        "modes": {
+          "12 CH": {
+            "channels": 12,
+            "gdtfMode": "12 CH",
+            "status": "matched"
+          },
+          "8 CH": {
+            "channels": 8,
+            "gdtfMode": "8 CH",
+            "status": "matched"
+          },
+          "7 CH": {
+            "channels": 7,
+            "gdtfMode": "7 CH",
+            "status": "matched"
+          },
+          "6 CH": {
+            "channels": 6,
+            "gdtfMode": "6 CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__SIXPAR_200_IP.gdtf"
+      },
+      "shortName": "SIXPAR200IP"
+    },
+    {
+      "fixture": "SIXPAR 300",
+      "watts": 216.0,
+      "weight": 8.1,
+      "modes": {
+        "12 CH": 12,
+        "8 CH": 8,
+        "7 CH": 7,
+        "6 CH": 6
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@SIXPAR_300@23-28-11_First_Release.gdtf",
+        "modes": {
+          "12 CH": {
+            "channels": 12,
+            "gdtfMode": "12 CH",
+            "status": "matched"
+          },
+          "8 CH": {
+            "channels": 8,
+            "gdtfMode": "8 CH",
+            "status": "matched"
+          },
+          "7 CH": {
+            "channels": 7,
+            "gdtfMode": "7 CH",
+            "status": "matched"
+          },
+          "6 CH": {
+            "channels": 6,
+            "gdtfMode": "6 CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__SIXPAR_300.gdtf"
+      },
+      "shortName": "SIXPAR300"
+    },
+    {
+      "fixture": "SIXPAR 300 IP",
+      "watts": 216.0,
+      "weight": 9.5,
+      "modes": {
+        "12 CH": 12,
+        "8 CH": 8,
+        "7 CH": 7,
+        "6 CH": 6
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@SIXPAR_300_IP@23-28-11_First_Release.gdtf",
+        "modes": {
+          "12 CH": {
+            "channels": 12,
+            "gdtfMode": "12 CH",
+            "status": "matched"
+          },
+          "8 CH": {
+            "channels": 8,
+            "gdtfMode": "8 CH",
+            "status": "matched"
+          },
+          "7 CH": {
+            "channels": 7,
+            "gdtfMode": "7 CH",
+            "status": "matched"
+          },
+          "6 CH": {
+            "channels": 6,
+            "gdtfMode": "6 CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__SIXPAR_300_IP.gdtf"
+      },
+      "shortName": "SIXPAR300IP"
+    },
+    {
+      "fixture": "Smarty Hybrid",
+      "watts": 240.0,
+      "weight": 22.0,
+      "modes": {
+        "Standard Pan540": 20,
+        "Extended Pan540": 34,
+        "Standard Pan630": 20,
+        "Extended Pan630": 34
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@Smarty_Hybrid@2023-27-02_First_Release.gdtf",
+        "modes": {
+          "Standard Pan540": {
+            "channels": 20,
+            "gdtfMode": "Standard Pan540",
+            "status": "matched"
+          },
+          "Extended Pan540": {
+            "channels": 34,
+            "gdtfMode": "Extended Pan540",
+            "status": "matched"
+          },
+          "Standard Pan630": {
+            "channels": 20,
+            "gdtfMode": "Standard Pan630",
+            "status": "matched"
+          },
+          "Extended Pan630": {
+            "channels": 34,
+            "gdtfMode": "Extended Pan630",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__Smarty_Hybrid.gdtf"
+      },
+      "shortName": "SmtyHybd"
     },
     {
       "fixture": "Smarty Max",
@@ -120,18 +6310,394 @@
           "Extended": {
             "channels": 44,
             "gdtfMode": "Extended",
-            "status": "matched",
-            "parameters": 28
+            "status": "matched"
           },
           "Standard": {
             "channels": 27,
             "gdtfMode": "Standard",
-            "status": "matched",
-            "parameters": 24
+            "status": "matched"
           }
         }
       },
       "shortName": "Smarty Max"
+    },
+    {
+      "fixture": "SOL I Blinder",
+      "watts": 250.0,
+      "weight": 3.0,
+      "modes": {
+        "Dimmer 1CH": 1,
+        "Dimmer and CCT 2CH": 2,
+        "Dimmer/ Strobe/CCT 3CH": 3,
+        "IRGB 4CH": 4,
+        "Raw Color 6CH": 6,
+        "Std 13CH": 13,
+        "Ext 21CH": 21,
+        "RGB 10CH": 10,
+        "RGB ext 15CH": 15,
+        "CMY 10CH": 10,
+        "CMY Ext 15CH": 15,
+        "Dim/CCT/Color Picker 7CH": 7
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@SOL_I_Blinder@26-26-03_Release.gdtf",
+        "modes": {
+          "Dimmer 1CH": {
+            "channels": 1,
+            "gdtfMode": "Dimmer 1CH",
+            "status": "matched"
+          },
+          "Dimmer and CCT 2CH": {
+            "channels": 2,
+            "gdtfMode": "Dimmer and CCT 2CH",
+            "status": "matched"
+          },
+          "Dimmer/ Strobe/CCT 3CH": {
+            "channels": 3,
+            "gdtfMode": "Dimmer/ Strobe/CCT 3CH",
+            "status": "matched"
+          },
+          "IRGB 4CH": {
+            "channels": 4,
+            "gdtfMode": "IRGB 4CH",
+            "status": "matched"
+          },
+          "Raw Color 6CH": {
+            "channels": 6,
+            "gdtfMode": "Raw Color 6CH",
+            "status": "matched"
+          },
+          "Std 13CH": {
+            "channels": 13,
+            "gdtfMode": "Std 13CH",
+            "status": "matched"
+          },
+          "Ext 21CH": {
+            "channels": 21,
+            "gdtfMode": "Ext 21CH",
+            "status": "matched"
+          },
+          "RGB 10CH": {
+            "channels": 10,
+            "gdtfMode": "RGB 10CH",
+            "status": "matched"
+          },
+          "RGB ext 15CH": {
+            "channels": 15,
+            "gdtfMode": "RGB ext 15CH",
+            "status": "matched"
+          },
+          "CMY 10CH": {
+            "channels": 10,
+            "gdtfMode": "CMY 10CH",
+            "status": "matched"
+          },
+          "CMY Ext 15CH": {
+            "channels": 15,
+            "gdtfMode": "CMY Ext 15CH",
+            "status": "matched"
+          },
+          "Dim/CCT/Color Picker 7CH": {
+            "channels": 7,
+            "gdtfMode": "Dim/CCT/Color Picker 7CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__SOL_I_Blinder.gdtf"
+      },
+      "shortName": "SOLBlnd"
+    },
+    {
+      "fixture": "VOLT plus BAR S",
+      "watts": null,
+      "weight": 6.75,
+      "modes": {
+        "1CH": 1,
+        "3CH": 3,
+        "6CH": 6,
+        "9CH": 9,
+        "14CH": 14,
+        "17 ch-A": 17,
+        "17 ch-B": 17,
+        "23 ch-A": 23,
+        "23 ch-B": 23,
+        "35CH": 35,
+        "47CH": 47,
+        "83CH": 83,
+        "36CH": 36
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@VOLT_plus_BAR_S@26-15-04_Release.gdtf",
+        "modes": {
+          "1CH": {
+            "channels": 1,
+            "gdtfMode": "1CH",
+            "status": "matched"
+          },
+          "3CH": {
+            "channels": 3,
+            "gdtfMode": "3CH",
+            "status": "matched"
+          },
+          "6CH": {
+            "channels": 6,
+            "gdtfMode": "6CH",
+            "status": "matched"
+          },
+          "9CH": {
+            "channels": 9,
+            "gdtfMode": "9CH",
+            "status": "matched"
+          },
+          "14CH": {
+            "channels": 14,
+            "gdtfMode": "14CH",
+            "status": "matched"
+          },
+          "17 ch-A": {
+            "channels": 17,
+            "gdtfMode": "17 ch-A",
+            "status": "matched"
+          },
+          "17 ch-B": {
+            "channels": 17,
+            "gdtfMode": "17 ch-B",
+            "status": "matched"
+          },
+          "23 ch-A": {
+            "channels": 23,
+            "gdtfMode": "23 ch-A",
+            "status": "matched"
+          },
+          "23 ch-B": {
+            "channels": 23,
+            "gdtfMode": "23 ch-B",
+            "status": "matched"
+          },
+          "35CH": {
+            "channels": 35,
+            "gdtfMode": "35CH",
+            "status": "matched"
+          },
+          "47CH": {
+            "channels": 47,
+            "gdtfMode": "47CH",
+            "status": "matched"
+          },
+          "83CH": {
+            "channels": 83,
+            "gdtfMode": "83CH",
+            "status": "matched"
+          },
+          "36CH": {
+            "channels": 36,
+            "gdtfMode": "36CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__VOLT_plus_BAR_S.gdtf"
+      },
+      "shortName": "VOLT+BrS"
+    },
+    {
+      "fixture": "VOLT plus PAR L",
+      "watts": 60.0,
+      "weight": 6.85,
+      "modes": {
+        "Dimmer  1CH": 1,
+        "RGB 3CH": 3,
+        "Color 6CH": 6,
+        "Color and Dimmer 9CH": 9,
+        "CMY 11CH": 11,
+        "CMY Extended 14CH": 14,
+        "Standard 14CH": 14,
+        "Extended 20CH": 20
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@VOLT_plus_PAR_L@26-24-04_Release.gdtf",
+        "modes": {
+          "Dimmer  1CH": {
+            "channels": 1,
+            "gdtfMode": "Dimmer  1CH",
+            "status": "matched"
+          },
+          "RGB 3CH": {
+            "channels": 3,
+            "gdtfMode": "RGB 3CH",
+            "status": "matched"
+          },
+          "Color 6CH": {
+            "channels": 6,
+            "gdtfMode": "Color 6CH",
+            "status": "matched"
+          },
+          "Color and Dimmer 9CH": {
+            "channels": 9,
+            "gdtfMode": "Color and Dimmer 9CH",
+            "status": "matched"
+          },
+          "CMY 11CH": {
+            "channels": 11,
+            "gdtfMode": "CMY 11CH",
+            "status": "matched"
+          },
+          "CMY Extended 14CH": {
+            "channels": 14,
+            "gdtfMode": "CMY Extended 14CH",
+            "status": "matched"
+          },
+          "Standard 14CH": {
+            "channels": 14,
+            "gdtfMode": "Standard 14CH",
+            "status": "matched"
+          },
+          "Extended 20CH": {
+            "channels": 20,
+            "gdtfMode": "Extended 20CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__VOLT_plus_PAR_L.gdtf"
+      },
+      "shortName": "VOLTPARL"
+    },
+    {
+      "fixture": "VOLT plus PAR S",
+      "watts": 40.0,
+      "weight": 3.75,
+      "modes": {
+        "Dimmer  1CH": 1,
+        "RGB 3CH": 3,
+        "Color 6CH": 6,
+        "Color and Dimmer 9CH": 9,
+        "CMY 11CH": 11,
+        "CMY Extended 14CH": 14,
+        "Standard 14CH": 14,
+        "Extended 20CH": 20
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@VOLT_plus_PAR_S@26-24-04_Release.gdtf",
+        "modes": {
+          "Dimmer  1CH": {
+            "channels": 1,
+            "gdtfMode": "Dimmer  1CH",
+            "status": "matched"
+          },
+          "RGB 3CH": {
+            "channels": 3,
+            "gdtfMode": "RGB 3CH",
+            "status": "matched"
+          },
+          "Color 6CH": {
+            "channels": 6,
+            "gdtfMode": "Color 6CH",
+            "status": "matched"
+          },
+          "Color and Dimmer 9CH": {
+            "channels": 9,
+            "gdtfMode": "Color and Dimmer 9CH",
+            "status": "matched"
+          },
+          "CMY 11CH": {
+            "channels": 11,
+            "gdtfMode": "CMY 11CH",
+            "status": "matched"
+          },
+          "CMY Extended 14CH": {
+            "channels": 14,
+            "gdtfMode": "CMY Extended 14CH",
+            "status": "matched"
+          },
+          "Standard 14CH": {
+            "channels": 14,
+            "gdtfMode": "Standard 14CH",
+            "status": "matched"
+          },
+          "Extended 20CH": {
+            "channels": 20,
+            "gdtfMode": "Extended 20CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__VOLT_plus_PAR_S.gdtf"
+      },
+      "shortName": "VOLTPARs"
+    },
+    {
+      "fixture": "WW Profile HP",
+      "watts": null,
+      "weight": 9.5,
+      "modes": {
+        "1CH": 1,
+        "4CH": 4
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@WW_Profile_HP@24-22-03_First_Release.gdtf",
+        "modes": {
+          "1CH": {
+            "channels": 1,
+            "gdtfMode": "1CH",
+            "status": "matched"
+          },
+          "4CH": {
+            "channels": 4,
+            "gdtfMode": "4CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__WW_Profile_HP.gdtf"
+      },
+      "shortName": "WWProfHP"
+    },
+    {
+      "fixture": "WW Profile HP IP",
+      "watts": null,
+      "weight": 8.8,
+      "modes": {
+        "1CH": 1,
+        "8CH": 8,
+        "6CH ": 6,
+        "3CH": 3
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "file": "fixtures/elation/Elation@WW_Profile_HP_IP@24-26-03_First_Release.gdtf",
+        "modes": {
+          "1CH": {
+            "channels": 1,
+            "gdtfMode": "1CH",
+            "status": "matched"
+          },
+          "8CH": {
+            "channels": 8,
+            "gdtfMode": "8CH",
+            "status": "matched"
+          },
+          "6CH ": {
+            "channels": 6,
+            "gdtfMode": "6CH ",
+            "status": "matched"
+          },
+          "3CH": {
+            "channels": 3,
+            "gdtfMode": "3CH",
+            "status": "matched"
+          }
+        },
+        "suggestedFileName": "Elation__WW_Profile_HP_IP.gdtf"
+      },
+      "shortName": "WWProfHPIP"
     }
   ]
 }
