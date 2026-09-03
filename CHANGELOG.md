@@ -2,6 +2,14 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V31.5 - 2026-09-03
+
+- Applied the requested Control Table column limits and matching Device Config constraints while retaining automatic sizing for other columns.
+- Limited displayed console software versions to the selected software mode.
+- Removed the duplicated title and device-count blocks from the Control, Device Config, and IP Address toolbars.
+- Changed expanded Home Position Summary entries to 115 × 90 px boxes.
+- Anchored console role buttons, action buttons, and position strips to consistent rows regardless of console information length.
+
 ## V31.4 - 2026-09-03
 
 - Added manifest-defined manufacturer logos to the Add Console manufacturer list.
