@@ -2,6 +2,14 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V31.8 - 2026-09-04
+
+- Added Universes Available to Console and Home statistics using the Avolites Master's onboard capacity, or the highest non-backup capacity when no Avolites Master exists.
+- Added Channel Count and Max Universes Required (channel count divided by 512, rounded up), with an estimate tooltip.
+- Kept parameter statistics for mixed projects and replaced them for Avolites-only projects without changing saved visibility preferences.
+- Added stable dashboard statistic IDs and legacy-layout placement while preserving console data and reference files.
+- Extended regression checks for capacity selection, conditional statistics, channel totals and dashboard compatibility.
+
 ## V31.7 - 2026-09-03
 
 - Removed console-strip grid placement from Home position boxes so each box occupies one of the four responsive columns.
