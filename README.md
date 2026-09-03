@@ -158,6 +158,7 @@ When adding new reference files, keep paths relative to the repository root so G
 - Update `CHANGELOG.md` for meaningful changes.
 - Bump the visible app version when publishing updates.
 - Check PDF preview/download behaviour carefully after export-related changes.
+- Run `node tests/display-regressions.cjs` for static Home-position, console-capacity, table-expansion and project-package regression checks. These checks do not replace rendered browser testing.
 
 ## Feedback
 

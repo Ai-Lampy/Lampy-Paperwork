@@ -4,10 +4,15 @@ All notable fixes, cleanup work, and published version changes should be recorde
 
 ## V31.7 - 2026-09-03
 
+- Removed console-strip grid placement from Home position boxes so each box occupies one of the four responsive columns.
+- Preserved 90 px box height, position colours and fitted text without changing console position strips.
+- Simplified Avolites console cards to one Onboard Processing line and Control table capacity cells to compact onboard universe counts.
+- Kept full system-limit and TNP guidance in detailed console information, editing and Home summaries.
+
 - Arranged Home Position Summary boxes in four equal columns, reducing to two or one on narrow cards.
 - Separated Control and Device Config expansion state and scoped bulk expansion actions to their own view.
 - Fixed IP Address and Subnet columns at 110 px and centred selected dropdown text.
-- Added Avolites system/onboard universe capacity and TNP expansion guidance throughout console information, editing, cards, tables and Home summaries.
+- Added Avolites system/onboard universe capacity and TNP guidance to detailed console information, editing and Home summaries; cards and tables show onboard processing only.
 - Excluded Avolites universe capacity and legacy parameter counts from parameter totals; retained saved-project compatibility without adding TNP assignments.
 
 ## V31.6 - 2026-09-03
