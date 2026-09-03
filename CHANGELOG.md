@@ -2,6 +2,13 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V31.3 - 2026-09-03
+
+- Changed Control and Device Config tables to content-aware automatic column sizing with compact, centred cells.
+- Moved Control Table Notes to the final column while preserving Device Config's existing column structure.
+- Matched Control Location cells to the card-view position strip colours and text styling.
+- Changed the visible top title to show the project name and the most specific active page.
+
 ## V31.2 - 2026-09-03
 
 - Added arrow-key, Home, End, Enter, Space, and Escape navigation to the Add Console library.
