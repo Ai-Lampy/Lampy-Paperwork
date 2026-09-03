@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V31.4 - 2026-09-03
+
+- Added manifest-defined manufacturer logos to the Add Console manufacturer list.
+- Added compact manufacturer logos between console images and card actions without changing card dimensions.
+- Replaced the expanded Home Position Summary table with rendered project position strips.
+
 ## V31.3 - 2026-09-03
 
 - Changed Control and Device Config tables to content-aware automatic column sizing with compact, centred cells.

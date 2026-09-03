@@ -4,23 +4,28 @@
   "manufacturers": [
     {
       "name": "Avolites",
-      "file": "avolites.json"
+      "file": "avolites.json",
+      "logo": "images/consoles/avolites/avolites_logo.png"
     },
     {
       "name": "ChamSys",
-      "file": "chamsys.json"
+      "file": "chamsys.json",
+      "logo": "images/consoles/chamsys/chamsys_logo.png"
     },
     {
       "name": "ETC",
-      "file": "etc.json"
+      "file": "etc.json",
+      "logo": "images/consoles/ETC/ETC_logo.png"
     },
     {
       "name": "High End Systems",
-      "file": "high-end-systems.json"
+      "file": "high-end-systems.json",
+      "logo": "images/consoles/high_end_systems/hog_logo.png"
     },
     {
       "name": "MA Lighting",
-      "file": "ma-lighting.json"
+      "file": "ma-lighting.json",
+      "logo": "images/consoles/MA_lighting/MA_logo.png"
     }
   ]
 }
