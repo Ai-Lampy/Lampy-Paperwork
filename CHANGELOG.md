@@ -2,6 +2,13 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V31.6 - 2026-09-03
+
+- Reduced Home summary header and body padding to 8 px.
+- Made 90 px-high position boxes fill each row, with responsive text fitting.
+- Sized Control and Device Config columns from headings, parent values and expanded rows while enforcing column limits, including an 80 px Control Location maximum.
+- Standardised Device Config cell text and segmented addresses at 12 px and matched shared Control headings without changing its 11-column structure.
+
 ## V31.5 - 2026-09-03
 
 - Applied the requested Control Table column limits and matching Device Config constraints while retaining automatic sizing for other columns.
