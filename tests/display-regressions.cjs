@@ -6,16 +6,16 @@ function add(...names){for(const name of names)vm.runInContext(source(name),c)}
 // V32.2 header/rack regression checks: bounds, recovery, scheduling and layout variants.
 add('applicationTitleFontSize');
 assert.equal(c.applicationTitleFontSize(1000,size=>size*10),28);
-assert.equal(c.applicationTitleFontSize(50,size=>size*10),12);
-assert.equal(c.applicationTitleFontSize(200,size=>size*10),20);
+assert.equal(c.applicationTitleFontSize(50,size=>size*10),8);
+assert(c.applicationTitleFontSize(200,size=>size*10)>=19.9&&c.applicationTitleFontSize(200,size=>size*10)<=20);
 assert.equal(c.applicationTitleFontSize(280,size=>size*10),28);
-assert.equal(c.applicationTitleFontSize(0,size=>size*10),12);
+assert.equal(c.applicationTitleFontSize(0,size=>size*10),8);
 assert.match(html,/grid-template-columns:240px minmax\(0,1fr\) 400px/);
 assert.match(html,/\.top #projectHeaderLogoSlot\{width:240px;max-width:100%\}/);
 assert.match(html,/\.topActions\{display:grid;grid-template-columns:max-content max-content 165px;[^}]*width:400px;[^}]*gap:4px/);
 assert.match(html,/\.reportIssueBtn\{border:2px solid #111;[^}]*border-radius:60px;padding:8px 8px/);
 assert.match(html,/\.tourLogoSlot\{[^}]*width:165px/);
-assert.match(html,/\.topTitle h1\{[^}]*overflow:hidden;text-overflow:ellipsis/);
+assert.match(html,/\.topTitle h1\{[^}]*white-space:nowrap;[^}]*line-height:1\.05/);
 assert.match(html,/@media\(max-width:900px\)\{\.top\{grid-template-columns:1fr/);
 for(const [selector,columns] of [['.rackWorkspace','375px 690px 360px'],['.rackWorkspace.libraryClosed','690px 360px'],['.rackWorkspace.settingsClosed','375px 690px'],['.rackWorkspace.libraryClosed.settingsClosed','690px']]){
  const rule=html.slice(html.indexOf(selector+'{')).split('}')[0];assert.equal(rule.split('grid-template-columns:')[1].split(';')[0],columns);
@@ -29,15 +29,16 @@ vm.runInContext('let applicationTitleFitFrame=0,applicationTitleFitStarted=false
 titleContext.document.documentElement={clientWidth:1000};titleContext.layoutTextMeasure=()=>()=>280;
 for(const name of ['applicationTitleFontSize','applicationTitlePlacement','fitApplicationTitle','scheduleApplicationTitleFit'])vm.runInContext(source(name),titleContext);
 titleContext.scheduleApplicationTitleFit();titleContext.scheduleApplicationTitleFit();assert.equal(titleCallbacks.length,1);assert.equal(titleEvents.length,3);
-titleCallbacks[0]();assert.equal(titleElement.style.fontSize,'20px');assert.equal(titleElement.title,'Project ~ Home');
+titleCallbacks[0]();assert(parseFloat(titleElement.style.fontSize)>=19.9);assert.equal(titleElement.title,'Project ~ Home');
 titleElement.parentElement.clientWidth=500;titleContext.scheduleApplicationTitleFit();titleCallbacks[1]();assert.equal(titleElement.style.fontSize,'28px');
+titleElement.parentElement.clientWidth=50;titleContext.scheduleApplicationTitleFit();titleCallbacks[2]();assert.equal(titleElement.style.fontSize,'8px');assert.equal(titleElement.style.whiteSpace,'normal');assert.equal(titleElement.style.overflow,'visible');
 add('applicationTitlePlacement','consoleTableScale');
 assert.deepEqual(JSON.parse(JSON.stringify(c.applicationTitlePlacement(100,800,1000,200))),{width:200,offset:300});
 assert.deepEqual(JSON.parse(JSON.stringify(c.applicationTitlePlacement(100,300,1000,200))),{width:200,offset:100});
 assert.equal(c.consoleTableScale([100,100],402),2);assert.equal(c.consoleTableScale([100,100],100),1);assert.equal(c.consoleTableScale([0,0],100),1);
 for(const available of [1000,1600,2400]){const widths=[20,60,130,60,100,110,110,80,70,90,80,70,80,85,80,120],total=widths.reduce((a,b)=>a+b,0)+2,scale=c.consoleTableScale(widths,available);assert(Math.abs(total*scale-Math.max(total,available+2))<0.0001)}
 assert.match(source('applyDeviceConfigTableWidths'),/table\.dataset\.consoleTable==='true'\?String\(consoleTableScale/);
-const scaleTable={dataset:{consoleTable:'true'},style:{},classList:{add(){}},querySelector:()=>({children:[{style:{}},{style:{}}]})},scaleContext=vm.createContext({});
+const scaleTable={dataset:{consoleTable:'true'},style:{},classList:{add(){}},querySelector:()=>({children:[{style:{}},{style:{}}]}),querySelectorAll:()=>[]},scaleContext=vm.createContext({});
 for(const name of ['consoleTableScale','applyDeviceConfigTableWidths'])vm.runInContext(source(name),scaleContext);
 scaleContext.applyDeviceConfigTableWidths({table:scaleTable,widths:[100,100],hidden:[false,false],available:402});assert.equal(scaleTable.style.width,'202px');assert.equal(scaleTable.style.zoom,'2');
 scaleContext.applyDeviceConfigTableWidths({table:scaleTable,widths:[100,100],hidden:[false,false],available:100});assert.equal(scaleTable.style.zoom,'1');
@@ -78,8 +79,13 @@ c.activeControlNetworkTab='npu';c.expandAllControlDevices();c.activeControlNetwo
 c.collapseAllDeviceConfig();assert.equal(c.deviceConfigExpandedDevices.size,0);assert(c.controlExpandedDevices.has('npu:p'));
 for(const name of ['clearProjectState','loadProjectPayload']){assert(source(name).includes('controlExpandedDevices.clear()'));assert(source(name).includes('deviceConfigExpandedDevices.clear()'))}
 for(const name of ['appPayload','projectFilePayload']){assert(!source(name).includes('ExpandedDevices'))}
+for(const prefix of ['const DEVICE_CONFIG_WIDTH_HEADINGS=','const DEVICE_CONFIG_WIDTH_DEFAULTS=','let deviceConfigWidthProfile='])vm.runInContext(html.split('\n').find(line=>line.startsWith(prefix)),c);
 add('deviceConfigColumnLimits','calculateDeviceConfigWidths');
 for(const control of [false,true])for(const width of [320,1280,1920]){const w=c.calculateDeviceConfigWidths(Array(control?16:11).fill(300),width,control);assert.equal(w[5],110);assert.equal(w[6],110);if(control)assert(w[10]<=80)}
+assert.deepEqual(JSON.parse(JSON.stringify(c.deviceConfigColumnLimits(1,false,false))),{min:40,max:80});
+vm.runInContext('deviceConfigWidthProfile[1]={min:55,max:65}',c);assert.deepEqual(JSON.parse(JSON.stringify(c.deviceConfigColumnLimits(1,false,false))),{min:55,max:65});
+assert.deepEqual(JSON.parse(JSON.stringify(c.deviceConfigColumnLimits(1,true,true))),{min:40,max:60});
+vm.runInContext('deviceConfigWidthProfile=DEVICE_CONFIG_WIDTH_DEFAULTS.map(([min,max])=>({min,max}))',c);
 assert(html.includes('@container homePositions (min-width:238px)'));assert(html.includes('@container homePositions (min-width:484px)'));assert(html.includes('grid-template-columns:repeat(4,minmax(0,1fr))'));assert(html.includes('text-align-last:center'));assert(html.includes('padding:2px 14px!important'));
 Object.assign(c,{escapeHtml:v=>String(v??''),escapeAttr:v=>String(v??''),parameterDetailsMarkup:()=>'',controlReferencePreviewMarkup:()=>'',versionPairText:()=>'',consoleLibraryNetworkInfoMarkup:()=>'',controlDeviceSoftwareVersionText:()=>'',controlCardHeadingMarkup:()=>'',dmxPortTableMarkup:()=>'',controlCardMediaMarkup:()=>'',consoleRoleButtonsMarkup:()=>'',controlCardActionButtonsMarkup:()=>'',controlPositionStripMarkup:()=>''});
 add('controlParameterMarkup','consoleLibraryInfoMarkup','consoleCardMarkup');
@@ -96,13 +102,13 @@ assert.equal(c.controlTableCapacityText({kind:'universes',onboardProcessing:null
 add('positionSummaryMarkup');c.controlPositionStripStyle=()=>'';
 for(const n of [0,1,4,5,8,20]){c.positionSummaryRows=()=>Array.from({length:n},(_,i)=>({name:'Position '+i}));const m=c.positionSummaryMarkup();assert.equal((m.match(/class="homePositionStrip(?:\s|")/g)||[]).length,n);if(!n)assert(m.includes('No position summary yet'))}
 Object.assign(c,{deviceConfigColumnAttr:()=>'',deviceConfigSort:{key:'name',direction:'asc'},ipAddressSourceItem:()=>avo,deviceConfigSourceProtocol:()=>'',ipVlanCellStyle:()=>'',deviceConfigSegmentedInput:()=>'<div></div>',deviceConfigProtocolSelect:()=>'<select></select>',deviceConfigVlanSelect:()=>'<select></select>',deviceConfigDirectionSelect:()=>'<span>Output</span>',deviceConfigReference:()=>refs[2],canonicalDeviceRackPlacement:()=>null,controlLocationCellStyle:()=>'',modeOptionsMarkup:()=>'<option>Titan</option>'});
-add('deviceConfigInput','deviceConfigParentRow','deviceConfigPortRow','deviceConfigInterfaceTwoRow','deviceConfigTableMarkup','controlTableCellAttrs','controlTableParentExtraCells','controlTableAppendCells','controlTableBlankExtraCells','controlDeviceConfigTableMarkup');
+add('deviceConfigWidthEditorCellMarkup','deviceConfigWidthEditorRowMarkup','deviceConfigInput','deviceConfigParentRow','deviceConfigPortRow','deviceConfigInterfaceTwoRow','deviceConfigTableMarkup','controlTableCellAttrs','controlTableParentExtraCells','controlTableAppendCells','controlTableBlankExtraCells','controlDeviceConfigTableMarkup');
 const dev={id:'a',source:'console',name:'D9 parent',interfaces:[],ports:[{id:'eth-1',category:'network',sub:'ETH 1'},{id:'dmx-1',category:'dmx',sub:'DMX 1'}]};
 c.deviceConfigExpandedDevices.clear();c.controlExpandedDevices.clear();c.activeControlNetworkTab='consoles';c.controlExpandedDevices.add('console:a');
 let control=c.controlDeviceConfigTableMarkup([dev]),config=c.deviceConfigTableMarkup([dev]);
-assert.equal((control.match(/<tr\b/g)||[]).length,4);assert.equal((config.match(/<tr\b/g)||[]).length,2);
+assert.equal((control.match(/<tr\b/g)||[]).length,4);assert.equal((config.match(/<tr\b/g)||[]).length,3);
 assert(control.includes("'console:a','control'"));assert(config.includes("'console:a','deviceConfig'"));assert(control.includes('<th>Capacity</th>'));assert(control.includes('32 Uni'));assert(!control.includes('System Limit:'));
-c.deviceConfigExpandedDevices.add('console:a');c.controlExpandedDevices.clear();control=c.controlDeviceConfigTableMarkup([dev]);config=c.deviceConfigTableMarkup([dev]);assert.equal((control.match(/<tr\b/g)||[]).length,2);assert.equal((config.match(/<tr\b/g)||[]).length,4);
+c.deviceConfigExpandedDevices.add('console:a');c.controlExpandedDevices.clear();control=c.controlDeviceConfigTableMarkup([dev]);config=c.deviceConfigTableMarkup([dev]);assert.equal((control.match(/<tr\b/g)||[]).length,2);assert.equal((config.match(/<tr\b/g)||[]).length,5);
 for(const [markup,count] of [[control,16],[config,11]])for(const [,row] of markup.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/g))assert.equal((row.match(/<t[dh]\b/g)||[]).length,count);
 add('bytesToBase64','base64ToBytes','sha256Base64','packageProjectPayload','unpackProjectPayload');
 (async()=>{const p={appVersion:'32',app:{controlNetwork:{consoles:[avo,backup,main],npus:[]}}};const out=await c.unpackProjectPayload(await c.packageProjectPayload(p));assert.equal(JSON.stringify(out),JSON.stringify(p));console.log('PASS: Avolites reference limits/images/ports; D9 and D3 TNP examples; mixed/backup/legacy totals; expansion isolation; 110px limits; UI capacity labels; position counts; project package round trip.');})().catch(e=>{console.error(e);process.exitCode=1});
@@ -139,8 +145,8 @@ for(const width of [237,238,483,484,700]){
 }
 assert(source('homePanelMarkup').includes("collapsed?'homePanelCollapsed'"));
 assert(source('renderHomeView').includes('onclick="openPositionMenu()"'));
-assert(html.includes("<title>Lampy Paperwork V32.2</title>"));
-assert(html.includes("const VERSION='32.2'"));
+assert(html.includes("<title>Lampy Paperwork V32.3</title>"));
+assert(html.includes("const VERSION='32.3'"));
 
 // V32: capacity statistics and dashboard compatibility, without browser automation.
 add('avolitesProjectConsoles','projectCapacityStats','avolitesUniversesAvailable','fixtureChannelCount','controlParameterSummaryMarkup','normaliseHomeLayout','factoryHomeLayout','homeStat','homeStatsMarkup');
@@ -329,9 +335,26 @@ const small=c.calculateDeviceConfigWidths(Array(16).fill(45),2400,true,[],true),
 assert(small[1]<large[1]);assert(small[2]<large[2]);assert(small[4]<large[4]);assert(small.reduce((sum,value)=>sum+value,0)<2400);
 assert.deepEqual(Array.from(c.calculateDeviceConfigWidths(Array(16).fill(45),2400,false,[],true)),Array.from(small));
 assert(!html.includes('consoleWidthEditor'));
-assert(!html.includes('Copy Width Settings'));
+assert(html.includes('Copy Width Settings'));
+assert(html.includes('Restore Starting Widths'));
+assert(source('renderDeviceConfigView').includes("openVlanSetup()\">VLAN Setup"));
+assert(!source('renderDeviceConfigView').includes('Show/Hide Columns'));
+assert(source('renderDeviceConfigView').includes("[data-device-config-width-table] [data-device-config-hidden]"));
+assert(source('measureDeviceConfigTable').includes("row.matches('[data-device-config-width-editor]')"));
+assert(source('measureDeviceConfigTable').includes("querySelector('.deviceConfigColumnHeadings')"));
+assert(source('deviceConfigTableMarkup').includes('deviceConfigWidthEditorRowMarkup'));
+assert(source('deviceConfigWidthEditorRowMarkup').includes('data-device-config-width-editor'));
+assert(!source('controlDeviceConfigTableMarkup').includes('data-device-config-width-editor'));
+assert(html.indexOf('data-sheet-tab="network"')<html.indexOf('data-sheet-tab="rackLayout"'));
+const widthInput={value:'55',validity:'',reports:0,setCustomValidity(value){this.validity=value},reportValidity(){this.reports++}},widthContext=vm.createContext({setTimeout:fn=>fn(),syncs:0,syncDeviceConfigWidthEditors(){this.syncs++}});
+for(const prefix of ['const DEVICE_CONFIG_WIDTH_DEFAULTS=','let deviceConfigWidthProfile='])vm.runInContext(html.split('\n').find(line=>line.startsWith(prefix)),widthContext);
+for(const name of ['rejectDeviceConfigWidth','updateDeviceConfigWidth'])vm.runInContext(source(name),widthContext);
+widthContext.input=widthInput;vm.runInContext("updateDeviceConfigWidth(1,'min',input)",widthContext);assert.equal(vm.runInContext('deviceConfigWidthProfile[1].min',widthContext),55);
+widthInput.value='50';vm.runInContext("updateDeviceConfigWidth(1,'max',input)",widthContext);assert.equal(widthInput.value,80);assert.equal(widthInput.reports,1);assert.equal(vm.runInContext('deviceConfigWidthProfile[1].max',widthContext),80);
+widthInput.value='';vm.runInContext("updateDeviceConfigWidth(1,'max',input)",widthContext);assert.equal(vm.runInContext('deviceConfigWidthProfile[1].max',widthContext),null);
+widthInput.value='-1';vm.runInContext("updateDeviceConfigWidth(1,'min',input)",widthContext);assert.equal(widthInput.value,55);assert.equal(widthInput.reports,2);
 assert(!source('controlDeviceSoftwareVersionText').includes('masterConsoleVersion'));assert(!source('saveConsoleFromModal').includes('syncConsoles'));
-assert(html.includes("<title>Lampy Paperwork V32.2</title>"));assert(html.includes("const VERSION='32.2'"));
+assert(html.includes("<title>Lampy Paperwork V32.3</title>"));assert(html.includes("const VERSION='32.3'"));
 console.log('PASS: independent SW selections, model/mode restrictions, invalid paste, immediate VLAN styling and shared content-based widths.');
 console.log('PASS: isolated Home grid placement, responsive CSS boundaries, 90px boxes, compact onboard displays and unchanged detailed capacity guidance.');
 

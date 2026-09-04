@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V32.3 - 2026-09-04
+
+- Kept long project/page titles fully visible by repositioning first, shrinking to 8 px and wrapping only when necessary.
+- Moved Network before Rack Layout; removed Device Config's column-visibility control, restored all 11 device columns and added VLAN Setup.
+- Added a temporary session-only Min/Max/current-width editor for 11-column Device Config tables, with copy and restore controls.
+
 ## V32.2 - 2026-09-04
 
 - Scaled console tables proportionally to available width, preserving base column limits and normal-scale scrolling on narrow screens.

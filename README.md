@@ -37,7 +37,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V32.2**
+Current app version: **V32.3**
 
 Console tables use the final shared column proportions with automatic text fitting and scale up to fill available width. Narrow layouts retain scrolling at normal scale.
 Console removal warns that its data will be deleted; “Do Not Show Again” is remembered for that project only.
