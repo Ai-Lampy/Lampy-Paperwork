@@ -2,6 +2,14 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V32 - 2026-09-04
+
+- Grouped Device Config and IP Address under the new Network main tab while retaining existing destination routes.
+- Added the Errors badge, five-item dropdown and full-page active network/Master Patch error review with links to affected fields.
+- Added stable session-only error ordering, grouped duplicate counts and automatic removal of corrected issues.
+- Applied 80 px TX Protocol/VLAN caps and bounded text fitting to both console tables; compacted Capacity values to numbers or Uni.
+- Updated the major-release Welcome and Walk-through content and regression tests.
+
 ## V31.9 - 2026-09-04
 
 - Standardised Home console summaries and reused Console position/role ordering.

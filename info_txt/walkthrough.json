@@ -1,6 +1,17 @@
 {
-  "title": "Lampy Paperwork V31 Walk-through",
+  "title": "Lampy Paperwork V32 Walk-through",
   "sections": [
+    {
+      "title": "New in V32: Network and Errors",
+      "type": "unordered",
+      "items": [
+        "Network contains Device Config and IP Address’ sub-tabs. Its last selected page is remembered for the current project session.",
+        "Press Errors beside Report Issue to see the five most recently detected active issues. The red badge shows the total active count; Show All Errors opens the full review page.",
+        "Select an error or affected record to reveal its field. The app checks duplicate/invalid IP addresses, duplicate fixture IDs, missing patch addresses or modes, invalid DMX ranges and unconfirmed address overlaps in the Master Patch.",
+        "Corrected errors disappear. The list is session-only, not a saved history, and does not include power, rack, capacity or export checks.",
+        "Console tables in Control and Device Config cap TX Protocol and VLAN at 80 px, show parameter numbers without a label and use Uni for universes. Long VLAN, Role, Mode and SW values shrink within their cells; the full value remains available as a tooltip."
+      ]
+    },
     {
       "title": "Recommended Workflow",
       "type": "ordered",
@@ -12,8 +23,8 @@
         "Open Power Calculations and assign distros to supplies. Enter fixture IDs to link each way to Fixture Patch data, then check phase totals, RCBO warnings, Aux outlets, and the PDF preview.",
         "Use Control to add consoles and NPUs, including roles, locations, parameters, protocols, IP addresses, DMX ports, and reference images. When NPUs exist, use the Consoles and NPU sub-tabs to switch between them, and choose Card View or Table View for the required workflow. Add switches, nodes, and other network-capable hardware through Rack Layout or IP Address'.",
         "Open Rack Layout to create racks, set their U size and depth, and place project or library devices from the Front or Rear view. Use Side view to inspect device depths and cable clearance.",
-        "Open Device Config to review the synchronized device tree, expand individual ports, and edit patch, IP, subnet, protocol, direction, VLAN, and notes data.",
-        "Open IP Address' to review interfaces, assign subnet and VLAN information, and add IP-only devices used by the project.",
+        "Open Network → Device Config to review the synchronized device tree, expand individual ports, and edit patch, IP, subnet, protocol, direction, VLAN, and notes data.",
+        "Open Network → IP Address’ to review interfaces, assign subnet and VLAN information, and add IP-only devices used by the project.",
         "Review the Fan Outs tab generated from Power Calculations and export the required Fan Out paperwork.",
         "Use Distro Labels to complete Front RCBO Labels, Rear Labels, and Table View, then preview and export the required label pages.",
         "Review Revisions from the Actions menu or Home card, then download the Lampy project file so the editable project can be reopened later."
