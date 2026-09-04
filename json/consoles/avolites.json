@@ -5,7 +5,7 @@
     {
       "id": "avolites-d3-010",
       "manufacturer": "Avolites",
-      "name": "D3-010",
+      "name": "Avolites D3-010",
       "type": "Lighting Console",
       "dimensionsMm": {
         "width": 398,
@@ -87,7 +87,7 @@
     {
       "id": "avolites-d3-110",
       "manufacturer": "Avolites",
-      "name": "D3-110",
+      "name": "Avolites D3-110",
       "type": "Lighting Console",
       "dimensionsMm": {
         "width": 423,
@@ -169,7 +169,7 @@
     {
       "id": "avolites-d9-330",
       "manufacturer": "Avolites",
-      "name": "D9-330",
+      "name": "Avolites D9-330",
       "type": "Lighting Console",
       "dimensionsMm": {
         "width": 1380,
@@ -273,7 +273,7 @@
     {
       "id": "avolites-d9-215",
       "manufacturer": "Avolites",
-      "name": "D9-215",
+      "name": "Avolites D9-215",
       "type": "Lighting Console",
       "dimensionsMm": {
         "width": 995,
@@ -377,7 +377,7 @@
     {
       "id": "avolites-d7-330",
       "manufacturer": "Avolites",
-      "name": "D7-330",
+      "name": "Avolites D7-330",
       "type": "Lighting Console",
       "dimensionsMm": {
         "width": 1070,
@@ -458,7 +458,7 @@
     {
       "id": "avolites-d7-215",
       "manufacturer": "Avolites",
-      "name": "D7-215",
+      "name": "Avolites D7-215",
       "type": "Lighting Console",
       "dimensionsMm": {
         "width": 680,
@@ -539,7 +539,7 @@
     {
       "id": "avolites-sapphire-touch",
       "manufacturer": "Avolites",
-      "name": "Sapphire Touch",
+      "name": "Avolites Sapphire Touch",
       "type": "Lighting Console",
       "dimensionsMm": {
         "width": 884,
@@ -620,7 +620,7 @@
     {
       "id": "avolites-arena",
       "manufacturer": "Avolites",
-      "name": "Arena",
+      "name": "Avolites Arena",
       "type": "Lighting Console",
       "dimensionsMm": {
         "width": 1072,
@@ -716,7 +716,7 @@
     {
       "id": "avolites-tiger-touch-ii",
       "manufacturer": "Avolites",
-      "name": "Tiger Touch II",
+      "name": "Avolites Tiger Touch II",
       "type": "Lighting Console",
       "dimensionsMm": {
         "width": 674,
@@ -797,7 +797,7 @@
     {
       "id": "avolites-quartz",
       "manufacturer": "Avolites",
-      "name": "Quartz",
+      "name": "Avolites Quartz",
       "type": "Lighting Console",
       "dimensionsMm": {
         "width": 425,
