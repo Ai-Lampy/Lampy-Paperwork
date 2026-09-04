@@ -37,10 +37,11 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V32.3**
+Current app version: **V32.4**
 
 Console tables use the final shared column proportions with automatic text fitting and scale up to fill available width. Narrow layouts retain scrolling at normal scale.
 Console removal warns that its data will be deleted; “Do Not Show Again” is remembered for that project only.
+Device Config uses a 12-column device table with editable device/port locations and temporary session-only width controls.
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 

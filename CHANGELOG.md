@@ -2,6 +2,12 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V32.4 - 2026-09-04
+
+- Added editable Device Config locations for devices, interfaces and physical ports, with rack-owned parent locations retained as read-only.
+- Applied the final 12-column Device Config width profile and reduced table-select padding to 2 px 8 px.
+- Extended compatible port records with optional locations while preserving legacy project loading.
+
 ## V32.3 - 2026-09-04
 
 - Kept long project/page titles fully visible by repositioning first, shrinking to 8 px and wrapping only when necessary.
