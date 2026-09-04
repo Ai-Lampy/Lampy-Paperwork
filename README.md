@@ -37,11 +37,10 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V32.1**
+Current app version: **V32.2**
 
-V32.1 includes temporary Min/Max width controls above console-table columns.
-Changes apply to both console views for the current browser session only.
-Use **Copy Width Settings** to report final limits; reloading restores the starting widths.
+Console tables use the final shared column limits with automatic text fitting.
+Console removal warns that its data will be deleted; “Do Not Show Again” is remembered for that project only.
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 

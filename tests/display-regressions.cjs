@@ -3,9 +3,34 @@ const root=require('path').resolve(__dirname,'..')+'/',html=fs.readFileSync(root
 function source(name){const start=html.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const s=html.slice(start,end+1);try{new Function('return ('+s+')');return s}catch{}}throw Error(name)}
 const c=vm.createContext({console,TextEncoder,TextDecoder,Uint8Array,crypto:require('crypto').webcrypto,btoa,atob,VERSION:'32'});
 function add(...names){for(const name of names)vm.runInContext(source(name),c)}
-for(const name of ['CONSOLE_WIDTH_COLUMNS','CONSOLE_WIDTH_KEYS','CONSOLE_WIDTH_DEFAULTS'])vm.runInContext(html.split('\n').find(line=>line.startsWith('const '+name+'=')),c);
-vm.runInContext(html.split('\n').find(line=>line.startsWith('let consoleColumnWidths=')),c);
-add('consoleWidthActionsMarkup','consoleWidthEditorMarkup','consoleTableVersionSelect','consoleAvailableVersions','storedConsoleVersion','consoleVersionValue','consoleVersionForMode');
+// V32.2 header/rack regression checks: bounds, recovery, scheduling and layout variants.
+add('applicationTitleFontSize');
+assert.equal(c.applicationTitleFontSize(1000,size=>size*10),28);
+assert.equal(c.applicationTitleFontSize(50,size=>size*10),12);
+assert.equal(c.applicationTitleFontSize(200,size=>size*10),20);
+assert.equal(c.applicationTitleFontSize(280,size=>size*10),28);
+assert.equal(c.applicationTitleFontSize(0,size=>size*10),12);
+assert.match(html,/grid-template-columns:240px minmax\(0,1fr\) 400px/);
+assert.match(html,/\.top #projectHeaderLogoSlot\{width:240px;max-width:100%\}/);
+assert.match(html,/\.topActions\{display:grid;grid-template-columns:max-content max-content minmax\(0,1fr\);width:400px/);
+assert.match(html,/\.topTitle h1\{[^}]*overflow:hidden;text-overflow:ellipsis/);
+assert.match(html,/@media\(max-width:900px\)\{\.top\{grid-template-columns:1fr/);
+for(const [selector,columns] of [['.rackWorkspace','375px 690px 360px'],['.rackWorkspace.libraryClosed','690px 360px'],['.rackWorkspace.settingsClosed','375px 690px'],['.rackWorkspace.libraryClosed.settingsClosed','690px']]){
+ const rule=html.slice(html.indexOf(selector+'{')).split('}')[0];assert.equal(rule.split('grid-template-columns:')[1].split(';')[0],columns);
+}
+assert.match(html,/\.rackCard\{width:690px/);assert.match(html,/\.rackSettingsCard\{width:360px/);assert.match(html,/\.rackDeviceLibraryCard\{width:375px/);
+assert.match(html,/\.rackWorkspaceHeader\{[^}]*grid-template-columns:repeat\(3,minmax\(0,1fr\)\)/);
+assert.match(html,/\.rackPopoutBody \.rackCard\{width:100%;height:calc\(100vh - 24px\)/);
+const titleCallbacks=[],titleEvents=[],titleElement={parentElement:{clientWidth:200},textContent:'Project ~ Home',style:{}};
+const titleContext=vm.createContext({$:()=>titleElement,getComputedStyle:()=>({fontStyle:'normal',fontWeight:'700',fontFamily:'Arial',letterSpacing:'normal'}),document:{createElement:()=>({getContext:()=>({font:'',measureText(){return {width:parseFloat(this.font.split(' ')[2])*10}}})}),fonts:{ready:{then:fn=>titleEvents.push(fn)},addEventListener:(event,fn)=>titleEvents.push(fn)}},window:{addEventListener:(event,fn)=>titleEvents.push(fn)},ResizeObserver:class{constructor(fn){this.callback=fn}observe(element){this.element=element}},requestAnimationFrame:fn=>{titleCallbacks.push(fn);return titleCallbacks.length}});
+vm.runInContext('let applicationTitleFitFrame=0,applicationTitleFitStarted=false,applicationTitleResizeObserver=null;',titleContext);
+for(const name of ['applicationTitleFontSize','fitApplicationTitle','scheduleApplicationTitleFit'])vm.runInContext(source(name),titleContext);
+titleContext.scheduleApplicationTitleFit();titleContext.scheduleApplicationTitleFit();assert.equal(titleCallbacks.length,1);assert.equal(titleEvents.length,3);
+titleCallbacks[0]();assert.equal(titleElement.style.fontSize,'20px');assert.equal(titleElement.title,'Project ~ Home');
+titleElement.parentElement.clientWidth=500;titleContext.scheduleApplicationTitleFit();titleCallbacks[1]();assert.equal(titleElement.style.fontSize,'28px');
+console.log('PASS: V32.2 header fitting/scheduling and rack width variants (static/VM).');
+vm.runInContext(html.split('\n').find(line=>line.startsWith('const CONSOLE_COLUMN_LIMITS=')),c);
+add('consoleTableVersionSelect','consoleAvailableVersions','storedConsoleVersion','consoleVersionValue','consoleVersionForMode');
 c.consoleRefForItem=item=>c.consoleReference?.consoles.find(ref=>ref.id===item.consoleId);
 add('compactConsoleCapacityText','normaliseUniverseLimits','normaliseControlSoftwareModes','modeReference','parameterDataForMode','parameterCountFromData','parameterCountForReference','referenceCapacity','storedDeviceCapacity','parametersForStoredItem','universeProcessingWithTnp','universeCapacityLines','deviceCapacityLines','consoleCardCapacityText','controlTableCapacityText','totalControlNetworkParameters','totalControlNetworkParametersForMode','homeParametersAvailable');
 const data=JSON.parse(fs.readFileSync(root+'json/consoles/avolites.json'));
@@ -60,9 +85,9 @@ add('deviceConfigInput','deviceConfigParentRow','deviceConfigPortRow','deviceCon
 const dev={id:'a',source:'console',name:'D9 parent',interfaces:[],ports:[{id:'eth-1',category:'network',sub:'ETH 1'},{id:'dmx-1',category:'dmx',sub:'DMX 1'}]};
 c.deviceConfigExpandedDevices.clear();c.controlExpandedDevices.clear();c.activeControlNetworkTab='consoles';c.controlExpandedDevices.add('console:a');
 let control=c.controlDeviceConfigTableMarkup([dev]),config=c.deviceConfigTableMarkup([dev]);
-assert.equal((control.match(/<tr\b/g)||[]).length,5);assert.equal((config.match(/<tr\b/g)||[]).length,2);
+assert.equal((control.match(/<tr\b/g)||[]).length,4);assert.equal((config.match(/<tr\b/g)||[]).length,2);
 assert(control.includes("'console:a','control'"));assert(config.includes("'console:a','deviceConfig'"));assert(control.includes('<th>Capacity</th>'));assert(control.includes('32 Uni'));assert(!control.includes('System Limit:'));
-c.deviceConfigExpandedDevices.add('console:a');c.controlExpandedDevices.clear();control=c.controlDeviceConfigTableMarkup([dev]);config=c.deviceConfigTableMarkup([dev]);assert.equal((control.match(/<tr\b/g)||[]).length,3);assert.equal((config.match(/<tr\b/g)||[]).length,4);
+c.deviceConfigExpandedDevices.add('console:a');c.controlExpandedDevices.clear();control=c.controlDeviceConfigTableMarkup([dev]);config=c.deviceConfigTableMarkup([dev]);assert.equal((control.match(/<tr\b/g)||[]).length,2);assert.equal((config.match(/<tr\b/g)||[]).length,4);
 for(const [markup,count] of [[control,16],[config,11]])for(const [,row] of markup.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/g))assert.equal((row.match(/<t[dh]\b/g)||[]).length,count);
 add('bytesToBase64','base64ToBytes','sha256Base64','packageProjectPayload','unpackProjectPayload');
 (async()=>{const p={appVersion:'32',app:{controlNetwork:{consoles:[avo,backup,main],npus:[]}}};const out=await c.unpackProjectPayload(await c.packageProjectPayload(p));assert.equal(JSON.stringify(out),JSON.stringify(p));console.log('PASS: Avolites reference limits/images/ports; D9 and D3 TNP examples; mixed/backup/legacy totals; expansion isolation; 110px limits; UI capacity labels; position counts; project package round trip.');})().catch(e=>{console.error(e);process.exitCode=1});
@@ -99,8 +124,8 @@ for(const width of [237,238,483,484,700]){
 }
 assert(source('homePanelMarkup').includes("collapsed?'homePanelCollapsed'"));
 assert(source('renderHomeView').includes('onclick="openPositionMenu()"'));
-assert(html.includes("<title>Lampy Paperwork V32.1</title>"));
-assert(html.includes("const VERSION='32.1'"));
+assert(html.includes("<title>Lampy Paperwork V32.2</title>"));
+assert(html.includes("const VERSION='32.2'"));
 
 // V32: capacity statistics and dashboard compatibility, without browser automation.
 add('avolitesProjectConsoles','projectCapacityStats','avolitesUniversesAvailable','fixtureChannelCount','controlParameterSummaryMarkup','normaliseHomeLayout','factoryHomeLayout','homeStat','homeStatsMarkup');
@@ -224,7 +249,7 @@ assert.equal(c.compactConsoleCapacityText({kind:'universes',onboardProcessing:32
 assert.equal(c.controlTableCapacityText({kind:'parameters',parameters:4096}),'Parameters: 4,096');
 assert.equal(c.consoleCellFontSize(40,60),12);assert.equal(c.consoleCellFontSize(120,60),9);assert.equal(c.consoleCellFontSize(100,90),10.8);
 for(const control of [true,false]){
- const widths=c.calculateDeviceConfigWidths(Array(16).fill(250),1600,control,[],true);assert(widths[7]<=80);assert(widths[9]<=80);
+ const widths=c.calculateDeviceConfigWidths(Array(16).fill(250),1600,control,[],true);assert(widths[7]<=80);assert(widths[9]<=90);
 }
 assert.equal(c.deviceConfigColumnLimits(7,true,false).min,90);
 assert.equal(c.deviceConfigColumnLimits(7,false,false).max,110);
@@ -267,7 +292,7 @@ console.log('PASS: V32 console-only caps/text fitting, Network routing, grouped 
 assert.equal(menuContext.projectErrorToken("fixture-id:FOH's"),'fixture-id%3AFOH%27s');
 navigation.setSheetTab('networkEquipment');assert.equal(navigation.activeNetworkSubTab,'deviceConfig');
 
-// V32.1: independent, model-specific software and temporary shared width controls.
+// V32.2: independent, model-specific software and temporary shared width controls.
 const versionRefs={ma:{softwareVersions:[{mode3:'2.5',mode2:'3.9'},{mode3:'2.4',mode2:'3.8'}]},avo:{softwareVersions:[{platform:'Titan',version:'19.2'},{platform:'Titan',version:'18.0'}]},empty:{softwareVersions:[]}};
 const versionItems={m:{consoleId:'ma',softwareMode:'Mode 3',softwareVersionMode3:'2.4',softwareVersionMode2:'3.8'},a:{consoleId:'avo',softwareMode:'Titan',softwareVersionPlatform:'Titan',softwareVersionValue:'18.0'},u:{consoleId:'ma',softwareMode:'Mode 3',softwareVersionCustom:'Legacy 1'}};
 const v=vm.createContext({consoleRefForItem:item=>versionRefs[item.consoleId],ipAddressSourceItem:(source,id)=>versionItems[id],updateCanonicalNetworkAlias:()=>null,canonicalDeviceRackPlacement:()=>null,syncRackMountedNetworkLocations:()=>{},scheduleRackPopoutWindowsSync:()=>{},escapeAttr:c.escapeAttr,escapeHtml:c.escapeHtml,controlTableCellAttrs:()=>'',subnetGlobalKeyForField:()=>''});
@@ -285,18 +310,41 @@ v.setDeviceConfigControlValue(select,'18.0');assert.equal(writes,0);assert.equal
 const vlanCell={style:{background:'old',color:'old'}},vlanSelect={style:{background:'old',color:'old'},closest:()=>vlanCell};
 v.ipVlanById=value=>value==='1'?{colour:'#ff0000'}:null;v.contrastText=()=> '#ffffff';vm.runInContext(source('refreshDeviceConfigVlanColour'),v);
 v.refreshDeviceConfigVlanColour(vlanSelect,'1');assert.equal(vlanSelect.style.background,'#ff0000');assert.equal(vlanCell.style.background,'#ff0000');v.refreshDeviceConfigVlanColour(vlanSelect,'0');assert.equal(vlanSelect.style.background,'');assert.equal(vlanCell.style.color,'');
-add('validatedConsoleWidth','consoleWidthsText');
-assert.equal(c.validatedConsoleWidth('-1','80'),null);assert.equal(c.validatedConsoleWidth('81','80'),null);assert.equal(c.validatedConsoleWidth('abc','80'),null);assert.equal(c.validatedConsoleWidth('40','Infinity'),null);assert.equal(c.validatedConsoleWidth('','80'),null);
-assert.equal(c.validatedConsoleWidth('40','').max,Infinity);assert.equal(c.validatedConsoleWidth('80','80').min,80);
 const small=c.calculateDeviceConfigWidths(Array(16).fill(45),2400,true,[],true),large=c.calculateDeviceConfigWidths(Array(16).fill(180),2400,true,[],true);
 assert(small[1]<large[1]);assert(small[2]<large[2]);assert(small[4]<large[4]);assert(small.reduce((sum,value)=>sum+value,0)<2400);
 assert.deepEqual(Array.from(c.calculateDeviceConfigWidths(Array(16).fill(45),2400,false,[],true)),Array.from(small));
-vm.runInContext('consoleColumnWidths[2]={min:20,max:30}',c);assert.equal(c.calculateDeviceConfigWidths(Array(16).fill(45),2400,true,[],true)[2],30);
-assert(c.consoleWidthsText().includes('| 3 | Name | 20 | 30 |'));assert.equal(c.consoleWidthsText().split('\n').length,18);
-assert(source('measureDeviceConfigTable').includes("row.classList.contains('consoleWidthEditor')"));
-assert(source('attachDeviceConfigTableEvents').includes("event.target.closest('.consoleWidthEditor')"));
-for(const name of ['settingsPayload','projectExportPayload'])if(html.includes('function '+name+'('))assert(!source(name).includes('consoleColumnWidths'));
+assert(!html.includes('consoleWidthEditor'));
+assert(!html.includes('Copy Width Settings'));
 assert(!source('controlDeviceSoftwareVersionText').includes('masterConsoleVersion'));assert(!source('saveConsoleFromModal').includes('syncConsoles'));
-assert(html.includes("<title>Lampy Paperwork V32.1</title>"));assert(html.includes("const VERSION='32.1'"));
-console.log('PASS: V32.1 independent SW selections, model/mode restrictions, invalid paste, immediate VLAN styling, shared live width profile and editor isolation.');
+assert(html.includes("<title>Lampy Paperwork V32.2</title>"));assert(html.includes("const VERSION='32.2'"));
+console.log('PASS: independent SW selections, model/mode restrictions, invalid paste, immediate VLAN styling and shared content-based widths.');
 console.log('PASS: isolated Home grid placement, responsive CSS boundaries, 90px boxes, compact onboard displays and unchanged detailed capacity guidance.');
+
+// V32.2 final limits, complete-address fitting and project-specific removal.
+const finalLimits=[[20,20],[40,60],[80,130],[60,60],[40,180],[110,110],[110,110],[40,80],[40,70],[40,90],[40,80],[40,70],[40,80],[40,85],[40,80],[40,120]];
+for(const control of [true,false])for(const available of [500,1280,3000]){
+ const widths=c.calculateDeviceConfigWidths(Array(16).fill(300),available,control,[],true);
+ finalLimits.forEach(([min,max],i)=>{assert(widths[i]>=min);assert(widths[i]<=max);assert.equal(c.deviceConfigColumnLimits(i,control,true).min,min);assert.equal(c.deviceConfigColumnLimits(i,control,true).max,max)});
+}
+for(const obsolete of ['consoleWidthEditor','consoleColumnWidths','copyConsoleWidths','restoreConsoleWidths'])assert(!html.includes(obsolete));
+assert(source('measureConsoleCellText').includes('[...row.cells]'));assert(source('measureConsoleCellText').includes("ipSegmentedState(segmented).parts.join('.')"));
+const projectA={skipConsoleRemovalConfirmation:false},projectB={skipConsoleRemovalConfirmation:false};
+let activeProject=projectA,persisted=0,rendered=0;
+const modalFields={consoleRemovalSkip:{checked:false},consoleRemovalCancel:{focus:()=>{}}};
+const removal=vm.createContext({app:{controlNetwork:{consoles:[{id:'one',name:'One',deviceConfigPorts:[{id:'p',ip:'1.2.3.4'}]},{id:'two',name:'Two'}],npus:[{id:'npu'}]}},ensureProjectInfo:()=>activeProject,persist:()=>persisted++,render:()=>rendered++,controlExpandedDevices:new Set(['console:one']),deviceConfigExpandedDevices:new Set(['console:one']),pendingConsoleRemoval:null,$:id=>modalFields[id],document:{removeEventListener:()=>{},querySelector:()=>null},consoleRemovalFocus:()=>{}});
+for(const name of ['deleteConsoleById','closeConsoleRemoval','confirmConsoleRemoval','handleConsoleRemovalKeydown','containConsoleRemovalFocus'])vm.runInContext(source(name),removal);
+removal.pendingConsoleRemoval={id:'one',project:projectA};removal.closeConsoleRemoval(false);assert.equal(removal.app.controlNetwork.consoles.length,2);assert.equal(projectA.skipConsoleRemovalConfirmation,false);
+removal.pendingConsoleRemoval={id:'one',project:projectA};removal.app.controlNetwork.consoles.reverse();modalFields.consoleRemovalSkip.checked=true;removal.confirmConsoleRemoval();
+assert.deepEqual(Array.from(removal.app.controlNetwork.consoles,item=>item.id),['two']);assert.equal(projectA.skipConsoleRemovalConfirmation,true);assert.equal(removal.app.controlNetwork.npus.length,1);assert.equal(persisted,1);assert.equal(rendered,1);
+activeProject=projectB;assert.equal(removal.deleteConsoleById('two',projectA,true),false);assert.equal(projectB.skipConsoleRemovalConfirmation,false);
+assert.equal(removal.deleteConsoleById('missing',projectB,true),false);assert.equal(projectB.skipConsoleRemovalConfirmation,false);
+removal.pendingConsoleRemoval={id:'two',project:projectA};removal.confirmConsoleRemoval();assert.equal(removal.app.controlNetwork.consoles.length,1);
+assert(source('clearProjectState').includes('closeConsoleRemoval(false)'));assert(source('loadProjectPayload').includes('closeConsoleRemoval(false)'));
+assert(source('removeConsole').includes('role="alertdialog"'));assert(source('removeConsole').includes('Do Not Show Again for This Project'));assert(source('removeConsole').includes('project.skipConsoleRemovalConfirmation===true'));
+const pctx=vm.createContext({defaultProductionVisibility:()=>({}),defaultDeviceConfigColumns:()=>({}),DEFAULT_IP_VLANS:[],normaliseFanOutFormat:()=>({}),normalisePowerFormat:()=>({}),normaliseIpAddressFormat:()=>({}),normaliseDeviceConfigFormat:()=>({}),normaliseVlanSetup:()=>({})});
+for(const name of ['defaultProjectInfo','normaliseProjectInfo'])vm.runInContext(source(name),pctx);
+assert.equal(pctx.defaultProjectInfo().skipConsoleRemovalConfirmation,false);assert.equal(pctx.normaliseProjectInfo({}).skipConsoleRemovalConfirmation,false);
+assert.equal(pctx.normaliseProjectInfo({skipConsoleRemovalConfirmation:'true'}).skipConsoleRemovalConfirmation,false);
+assert.equal(pctx.normaliseProjectInfo(JSON.parse(JSON.stringify({skipConsoleRemovalConfirmation:true}))).skipConsoleRemovalConfirmation,true);
+assert(!source('settingsPayload').includes('skipConsoleRemovalConfirmation'));
+console.log('PASS: V32.2 final bounds, editor removal, stable-ID deletion, cancel/stale-project safety and per-project preference normalization.');

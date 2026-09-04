@@ -2,6 +2,15 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V32.2 - 2026-09-04
+
+- Reserved stable header logo/action slots, centred and fitted long page titles, and retained stacked mobile headers.
+- Set Rack Layout library/rack/settings widths to 375/690/360 px, including closed-panel layouts, without changing detached rack windows.
+- Applied the final 16-column console width limits in Control and Device Config and removed the temporary width editor.
+- Extended bounded text fitting to all console body cells and complete segmented addresses, retaining full-value tooltips.
+- Added an accessible console-removal warning with a project-specific Do Not Show Again preference, saved only after confirmed deletion.
+- Resolved pending deletions by console ID and cancelled them on project changes; retained other device data and refreshed project views/errors.
+
 ## V32.1 - 2026-09-04
 
 - Removed Master-based software overrides and automatic copying; each console retains its own software version.
