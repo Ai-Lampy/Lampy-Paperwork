@@ -2,6 +2,14 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V32.1 - 2026-09-04
+
+- Removed Master-based software overrides and automatic copying; each console retains its own software version.
+- Changed console-table SW cells to model/mode-specific dropdowns with unavailable legacy values preserved and invalid paste/fill rejected.
+- Updated VLAN dropdown and cell colours immediately without collapsing devices.
+- Added temporary session-only Min/Max controls above each console-table column, calculated widths, copy settings and restore controls.
+- Shared the temporary profile across both console views and stopped distributing spare width into short console columns.
+
 ## V32 - 2026-09-04
 
 - Grouped Device Config and IP Address under the new Network main tab while retaining existing destination routes.

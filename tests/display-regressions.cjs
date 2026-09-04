@@ -3,6 +3,10 @@ const root=require('path').resolve(__dirname,'..')+'/',html=fs.readFileSync(root
 function source(name){const start=html.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const s=html.slice(start,end+1);try{new Function('return ('+s+')');return s}catch{}}throw Error(name)}
 const c=vm.createContext({console,TextEncoder,TextDecoder,Uint8Array,crypto:require('crypto').webcrypto,btoa,atob,VERSION:'32'});
 function add(...names){for(const name of names)vm.runInContext(source(name),c)}
+for(const name of ['CONSOLE_WIDTH_COLUMNS','CONSOLE_WIDTH_KEYS','CONSOLE_WIDTH_DEFAULTS'])vm.runInContext(html.split('\n').find(line=>line.startsWith('const '+name+'=')),c);
+vm.runInContext(html.split('\n').find(line=>line.startsWith('let consoleColumnWidths=')),c);
+add('consoleWidthActionsMarkup','consoleWidthEditorMarkup','consoleTableVersionSelect','consoleAvailableVersions','storedConsoleVersion','consoleVersionValue','consoleVersionForMode');
+c.consoleRefForItem=item=>c.consoleReference?.consoles.find(ref=>ref.id===item.consoleId);
 add('compactConsoleCapacityText','normaliseUniverseLimits','normaliseControlSoftwareModes','modeReference','parameterDataForMode','parameterCountFromData','parameterCountForReference','referenceCapacity','storedDeviceCapacity','parametersForStoredItem','universeProcessingWithTnp','universeCapacityLines','deviceCapacityLines','consoleCardCapacityText','controlTableCapacityText','totalControlNetworkParameters','totalControlNetworkParametersForMode','homeParametersAvailable');
 const data=JSON.parse(fs.readFileSync(root+'json/consoles/avolites.json'));
 const refs=data.devices.map(d=>({...d,softwareModes:c.normaliseControlSoftwareModes(d.softwareModes)}));
@@ -16,7 +20,7 @@ for(const ref of refs){
  assert.equal(c.parametersForStoredItem({consoleId:ref.id,manufacturer:'Avolites',parameterCount:999999},'console'),0);
  for(const p of ref.ports){assert(Array.isArray(p.directions));assert(p.quantity>0);if(p.protocols)assert(p.protocols.every(v=>typeof v==='string'&&v.trim()))}
 }
-const d9=c.referenceCapacity(refs.find(d=>d.name==='D9-330'),'Titan'),d3=c.referenceCapacity(refs.find(d=>d.name==='D3-110'),'Titan');
+const d9=c.referenceCapacity(refs.find(d=>d.id==='avolites-d9-330'),'Titan'),d3=c.referenceCapacity(refs.find(d=>d.id==='avolites-d3-110'),'Titan');
 assert.deepEqual([0,1,2,3].map(n=>c.universeProcessingWithTnp(d9,n)),[32,48,64,64]);
 assert.deepEqual([0,1,2,100].map(n=>c.universeProcessingWithTnp(d3,n)),[24,24,24,24]);
 const avo={id:'a',consoleId:refs[2].id,manufacturer:'Avolites',parameterCount:99999,softwareMode:'Titan'},backup={...avo,id:'b',role:'backup'};
@@ -56,9 +60,9 @@ add('deviceConfigInput','deviceConfigParentRow','deviceConfigPortRow','deviceCon
 const dev={id:'a',source:'console',name:'D9 parent',interfaces:[],ports:[{id:'eth-1',category:'network',sub:'ETH 1'},{id:'dmx-1',category:'dmx',sub:'DMX 1'}]};
 c.deviceConfigExpandedDevices.clear();c.controlExpandedDevices.clear();c.activeControlNetworkTab='consoles';c.controlExpandedDevices.add('console:a');
 let control=c.controlDeviceConfigTableMarkup([dev]),config=c.deviceConfigTableMarkup([dev]);
-assert.equal((control.match(/<tr\b/g)||[]).length,4);assert.equal((config.match(/<tr\b/g)||[]).length,2);
+assert.equal((control.match(/<tr\b/g)||[]).length,5);assert.equal((config.match(/<tr\b/g)||[]).length,2);
 assert(control.includes("'console:a','control'"));assert(config.includes("'console:a','deviceConfig'"));assert(control.includes('<th>Capacity</th>'));assert(control.includes('32 Uni'));assert(!control.includes('System Limit:'));
-c.deviceConfigExpandedDevices.add('console:a');c.controlExpandedDevices.clear();control=c.controlDeviceConfigTableMarkup([dev]);config=c.deviceConfigTableMarkup([dev]);assert.equal((control.match(/<tr\b/g)||[]).length,2);assert.equal((config.match(/<tr\b/g)||[]).length,4);
+c.deviceConfigExpandedDevices.add('console:a');c.controlExpandedDevices.clear();control=c.controlDeviceConfigTableMarkup([dev]);config=c.deviceConfigTableMarkup([dev]);assert.equal((control.match(/<tr\b/g)||[]).length,3);assert.equal((config.match(/<tr\b/g)||[]).length,4);
 for(const [markup,count] of [[control,16],[config,11]])for(const [,row] of markup.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/g))assert.equal((row.match(/<t[dh]\b/g)||[]).length,count);
 add('bytesToBase64','base64ToBytes','sha256Base64','packageProjectPayload','unpackProjectPayload');
 (async()=>{const p={appVersion:'32',app:{controlNetwork:{consoles:[avo,backup,main],npus:[]}}};const out=await c.unpackProjectPayload(await c.packageProjectPayload(p));assert.equal(JSON.stringify(out),JSON.stringify(p));console.log('PASS: Avolites reference limits/images/ports; D9 and D3 TNP examples; mixed/backup/legacy totals; expansion isolation; 110px limits; UI capacity labels; position counts; project package round trip.');})().catch(e=>{console.error(e);process.exitCode=1});
@@ -95,13 +99,13 @@ for(const width of [237,238,483,484,700]){
 }
 assert(source('homePanelMarkup').includes("collapsed?'homePanelCollapsed'"));
 assert(source('renderHomeView').includes('onclick="openPositionMenu()"'));
-assert(html.includes("<title>Lampy Paperwork V32</title>"));
-assert(html.includes("const VERSION='32'"));
+assert(html.includes("<title>Lampy Paperwork V32.1</title>"));
+assert(html.includes("const VERSION='32.1'"));
 
 // V32: capacity statistics and dashboard compatibility, without browser automation.
 add('avolitesProjectConsoles','projectCapacityStats','avolitesUniversesAvailable','fixtureChannelCount','controlParameterSummaryMarkup','normaliseHomeLayout','factoryHomeLayout','homeStat','homeStatsMarkup');
 for(const name of ['HOME_STAT_LAYOUT_IDS','HOME_SUMMARY_LAYOUT_IDS'])vm.runInContext(html.split('\n').find(line=>line.startsWith('const '+name+'=')),c);
-const d3Console={...avo,id:'d3',consoleId:refs.find(ref=>ref.name==='D3-110').id,role:'master'};
+const d3Console={...avo,id:'d3',consoleId:refs.find(ref=>ref.id==='avolites-d3-110').id,role:'master'};
 const d9Console={...avo,id:'d9',role:''};
 c.app={controlNetwork:{consoles:[d3Console,d9Console,backup],npus:[],racks:[]}};
 assert.equal(c.avolitesUniversesAvailable(),24);
@@ -139,7 +143,7 @@ assert.equal(JSON.stringify(layout),JSON.stringify(c.normaliseHomeLayout(legacyL
 console.log('PASS: Master/Backup/missing-reference capacity, channel boundaries, mixed/empty projects, conditional statistics and legacy dashboard layouts.');
 
 // V32: shared table context, manufacturer roles and canonical duplicate IPs.
-add('consoleManufacturerKey','makeConsoleRoleUnique','syncConsolesToMasterVersion','canonicalIpEndpoints','duplicateIpKey','duplicateIpIndex','duplicateIpConflicts','duplicateIpFieldAlias','consoleHomeSummaryMarkup','controlNetworkSummaryMarkup','controlLocationGroups','controlEffectiveName','deviceConfigGroupTablesMarkup','ipDeviceInterfaces','updateCanonicalNetworkAlias');
+add('consoleManufacturerKey','makeConsoleRoleUnique','canonicalIpEndpoints','duplicateIpKey','duplicateIpIndex','duplicateIpConflicts','duplicateIpFieldAlias','consoleHomeSummaryMarkup','controlNetworkSummaryMarkup','controlLocationGroups','controlEffectiveName','deviceConfigGroupTablesMarkup','ipDeviceInterfaces','updateCanonicalNetworkAlias');
 const maMaster={...main,id:'ma-master',manufacturer:'MA Lighting',role:'master',softwareVersionValue:'MA-1'},maSecond={...maMaster,id:'ma-second',role:'backup'};
 const avoMaster={...d9Console,id:'avo-master',role:'master',softwareVersionValue:'Titan-1'},avoSecond={...avoMaster,id:'avo-second',role:'backup'};
 c.app.controlNetwork={consoles:[maMaster,maSecond,avoMaster,avoSecond],npus:[],networkDevices:[],racks:[]};
@@ -147,7 +151,7 @@ maSecond.role='master';c.makeConsoleRoleUnique(maSecond);assert.equal(maMaster.r
 avoSecond.role='master';c.makeConsoleRoleUnique(avoSecond);assert.equal(avoMaster.role,'backup');assert.equal(maSecond.role,'master');
 assert.equal(c.consoleManufacturerKey({manufacturer:' MA-Lighting '}),c.consoleManufacturerKey({manufacturer:'MA Lighting'}));
 c.consoleVersionValue=version=>version.version;c.matchingConsoleVersion=()=>true;c.applyConsoleVersion=(item,version)=>item.syncedVersion=version.version;
-c.syncConsolesToMasterVersion();assert.equal(maMaster.syncedVersion,'MA-1');assert.equal(avoMaster.syncedVersion,'Titan-1');
+assert.equal(maMaster.softwareVersionValue,'MA-1');assert.equal(avoMaster.softwareVersionValue,'Titan-1');assert(!html.includes('function syncConsolesToMasterVersion'));
 assert(!Object.hasOwn(maSecond,'syncedVersion'));assert(!Object.hasOwn(avoSecond,'syncedVersion'));
 c.positionSummaryRows=()=>[{name:'FOH'},{name:'Stage'}];c.positionKey=value=>String(value).trim().toLowerCase();c.titleCaseRevisionValue=(value,fallback='')=>value?value[0].toUpperCase()+value.slice(1):fallback;
 c.deviceConfigPortsFor=()=>[{category:'network',protocol:'sACN',ip:'10.0.0.5'},{category:'network',protocol:'Art-Net',ip:'2.0.0.5'}];
@@ -262,4 +266,37 @@ for(const file of ['info_txt/welcome_message.json','info_txt/walkthrough.json'])
 console.log('PASS: V32 console-only caps/text fitting, Network routing, grouped errors, validation boundaries, recency/resolution, five-item menu and major-release JSON.');
 assert.equal(menuContext.projectErrorToken("fixture-id:FOH's"),'fixture-id%3AFOH%27s');
 navigation.setSheetTab('networkEquipment');assert.equal(navigation.activeNetworkSubTab,'deviceConfig');
+
+// V32.1: independent, model-specific software and temporary shared width controls.
+const versionRefs={ma:{softwareVersions:[{mode3:'2.5',mode2:'3.9'},{mode3:'2.4',mode2:'3.8'}]},avo:{softwareVersions:[{platform:'Titan',version:'19.2'},{platform:'Titan',version:'18.0'}]},empty:{softwareVersions:[]}};
+const versionItems={m:{consoleId:'ma',softwareMode:'Mode 3',softwareVersionMode3:'2.4',softwareVersionMode2:'3.8'},a:{consoleId:'avo',softwareMode:'Titan',softwareVersionPlatform:'Titan',softwareVersionValue:'18.0'},u:{consoleId:'ma',softwareMode:'Mode 3',softwareVersionCustom:'Legacy 1'}};
+const v=vm.createContext({consoleRefForItem:item=>versionRefs[item.consoleId],ipAddressSourceItem:(source,id)=>versionItems[id],updateCanonicalNetworkAlias:()=>null,canonicalDeviceRackPlacement:()=>null,syncRackMountedNetworkLocations:()=>{},scheduleRackPopoutWindowsSync:()=>{},escapeAttr:c.escapeAttr,escapeHtml:c.escapeHtml,controlTableCellAttrs:()=>'',subnetGlobalKeyForField:()=>''});
+for(const name of ['storedConsoleVersion','consoleAvailableVersions','consoleVersionValue','consoleVersionForMode','applyConsoleVersion','controlDeviceSoftwareVersionText','consoleTableVersionSelect','updateCanonicalDeviceField','setDeviceConfigControlValue'])vm.runInContext(source(name),v);
+assert.equal(v.controlDeviceSoftwareVersionText(versionItems.m),'2.4');assert.equal(v.controlDeviceSoftwareVersionText(versionItems.a),'18.0');
+let softwareOptions=v.consoleTableVersionSelect({source:'console'},versionItems.m,0);
+assert(softwareOptions.includes('<select'));assert(!softwareOptions.includes('<input'));assert(!softwareOptions.includes('Other'));assert(!softwareOptions.includes('19.2'));
+assert.equal(v.updateCanonicalDeviceField('console','m','softwareVersion','19.2'),false);
+assert.equal(v.updateCanonicalDeviceField('console','m','softwareVersion','2.5'),true);assert.equal(versionItems.m.softwareVersionMode3,'2.5');assert.equal(versionItems.m.softwareVersionMode2,'3.9');assert.equal(versionItems.a.softwareVersionValue,'18.0');
+versionItems.m.softwareMode='Mode 2';assert.equal(v.controlDeviceSoftwareVersionText(versionItems.m),'3.9');assert.deepEqual(Array.from(v.consoleAvailableVersions(versionItems.m),entry=>entry.label),['3.9','3.8']);
+softwareOptions=v.consoleTableVersionSelect({},versionItems.u,0);assert(softwareOptions.includes('Legacy 1 (Unavailable)'));assert(softwareOptions.includes('selected disabled'));assert.equal(versionItems.u.softwareVersionCustom,'Legacy 1');
+assert(v.consoleTableVersionSelect({},{consoleId:'empty'},0).includes('No versions available'));
+let writes=0;v.updateDeviceConfigField=()=>writes++;const select={dataset:{controlKey:'softwareVersion'},value:'2.4',options:[{value:'2.4',disabled:false},{value:'2.5',disabled:false},{value:'Legacy',disabled:true}]};
+v.setDeviceConfigControlValue(select,'18.0');assert.equal(writes,0);assert.equal(select.value,'2.4');v.setDeviceConfigControlValue(select,'Legacy');assert.equal(writes,0);v.setDeviceConfigControlValue(select,'2.5');assert.equal(writes,1);
+const vlanCell={style:{background:'old',color:'old'}},vlanSelect={style:{background:'old',color:'old'},closest:()=>vlanCell};
+v.ipVlanById=value=>value==='1'?{colour:'#ff0000'}:null;v.contrastText=()=> '#ffffff';vm.runInContext(source('refreshDeviceConfigVlanColour'),v);
+v.refreshDeviceConfigVlanColour(vlanSelect,'1');assert.equal(vlanSelect.style.background,'#ff0000');assert.equal(vlanCell.style.background,'#ff0000');v.refreshDeviceConfigVlanColour(vlanSelect,'0');assert.equal(vlanSelect.style.background,'');assert.equal(vlanCell.style.color,'');
+add('validatedConsoleWidth','consoleWidthsText');
+assert.equal(c.validatedConsoleWidth('-1','80'),null);assert.equal(c.validatedConsoleWidth('81','80'),null);assert.equal(c.validatedConsoleWidth('abc','80'),null);assert.equal(c.validatedConsoleWidth('40','Infinity'),null);assert.equal(c.validatedConsoleWidth('','80'),null);
+assert.equal(c.validatedConsoleWidth('40','').max,Infinity);assert.equal(c.validatedConsoleWidth('80','80').min,80);
+const small=c.calculateDeviceConfigWidths(Array(16).fill(45),2400,true,[],true),large=c.calculateDeviceConfigWidths(Array(16).fill(180),2400,true,[],true);
+assert(small[1]<large[1]);assert(small[2]<large[2]);assert(small[4]<large[4]);assert(small.reduce((sum,value)=>sum+value,0)<2400);
+assert.deepEqual(Array.from(c.calculateDeviceConfigWidths(Array(16).fill(45),2400,false,[],true)),Array.from(small));
+vm.runInContext('consoleColumnWidths[2]={min:20,max:30}',c);assert.equal(c.calculateDeviceConfigWidths(Array(16).fill(45),2400,true,[],true)[2],30);
+assert(c.consoleWidthsText().includes('| 3 | Name | 20 | 30 |'));assert.equal(c.consoleWidthsText().split('\n').length,18);
+assert(source('measureDeviceConfigTable').includes("row.classList.contains('consoleWidthEditor')"));
+assert(source('attachDeviceConfigTableEvents').includes("event.target.closest('.consoleWidthEditor')"));
+for(const name of ['settingsPayload','projectExportPayload'])if(html.includes('function '+name+'('))assert(!source(name).includes('consoleColumnWidths'));
+assert(!source('controlDeviceSoftwareVersionText').includes('masterConsoleVersion'));assert(!source('saveConsoleFromModal').includes('syncConsoles'));
+assert(html.includes("<title>Lampy Paperwork V32.1</title>"));assert(html.includes("const VERSION='32.1'"));
+console.log('PASS: V32.1 independent SW selections, model/mode restrictions, invalid paste, immediate VLAN styling, shared live width profile and editor isolation.');
 console.log('PASS: isolated Home grid placement, responsive CSS boundaries, 90px boxes, compact onboard displays and unchanged detailed capacity guidance.');
