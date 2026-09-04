@@ -2,6 +2,16 @@
 
 All notable fixes, cleanup work, and published version changes should be recorded here.
 
+## V31.9 - 2026-09-04
+
+- Standardised Home console summaries and reused Console position/role ordering.
+- Scoped Master selection and compatible software-version synchronisation to each console manufacturer.
+- Added the full 16-column Console table to Device Config, retaining 11 columns for other devices and independent expansion.
+- Applied Device Config-only Port, IP/Subnet and TX Protocol limits; retained Console-tab widths.
+- Removed Max Universes Required while preserving the remaining dashboard layout.
+- Added project-wide duplicate-IP detection and red field warnings with floating device/interface notes in Control, Device Config and IP Address.
+- Kept physical network-port values and legacy IP-page edits linked; corrected the final Notes keyboard-grid index.
+
 ## V31.8 - 2026-09-04
 
 - Added Universes Available to Console and Home statistics using the Avolites Master's onboard capacity, or the highest non-backup capacity when no Avolites Master exists.

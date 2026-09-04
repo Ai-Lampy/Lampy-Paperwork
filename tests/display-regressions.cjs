@@ -1,7 +1,7 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert/strict');
 const root=require('path').resolve(__dirname,'..')+'/',html=fs.readFileSync(root+'index.html','utf8');
 function source(name){const start=html.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const s=html.slice(start,end+1);try{new Function('return ('+s+')');return s}catch{}}throw Error(name)}
-const c=vm.createContext({console,TextEncoder,TextDecoder,Uint8Array,crypto:require('crypto').webcrypto,btoa,atob,VERSION:'31.8'});
+const c=vm.createContext({console,TextEncoder,TextDecoder,Uint8Array,crypto:require('crypto').webcrypto,btoa,atob,VERSION:'31.9'});
 function add(...names){for(const name of names)vm.runInContext(source(name),c)}
 add('normaliseUniverseLimits','normaliseControlSoftwareModes','modeReference','parameterDataForMode','parameterCountFromData','parameterCountForReference','referenceCapacity','storedDeviceCapacity','parametersForStoredItem','universeProcessingWithTnp','universeCapacityLines','deviceCapacityLines','consoleCardCapacityText','controlTableCapacityText','totalControlNetworkParameters','totalControlNetworkParametersForMode','homeParametersAvailable');
 const data=JSON.parse(fs.readFileSync(root+'json/consoles/avolites.json'));
@@ -61,7 +61,7 @@ assert(control.includes("'console:a','control'"));assert(config.includes("'conso
 c.deviceConfigExpandedDevices.add('console:a');c.controlExpandedDevices.clear();control=c.controlDeviceConfigTableMarkup([dev]);config=c.deviceConfigTableMarkup([dev]);assert.equal((control.match(/<tr\b/g)||[]).length,2);assert.equal((config.match(/<tr\b/g)||[]).length,4);
 for(const [markup,count] of [[control,16],[config,11]])for(const [,row] of markup.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/g))assert.equal((row.match(/<t[dh]\b/g)||[]).length,count);
 add('bytesToBase64','base64ToBytes','sha256Base64','packageProjectPayload','unpackProjectPayload');
-(async()=>{const p={appVersion:'31.8',app:{controlNetwork:{consoles:[avo,backup,main],npus:[]}}};const out=await c.unpackProjectPayload(await c.packageProjectPayload(p));assert.equal(JSON.stringify(out),JSON.stringify(p));console.log('PASS: Avolites reference limits/images/ports; D9 and D3 TNP examples; mixed/backup/legacy totals; expansion isolation; 110px limits; UI capacity labels; position counts; project package round trip.');})().catch(e=>{console.error(e);process.exitCode=1});
+(async()=>{const p={appVersion:'31.9',app:{controlNetwork:{consoles:[avo,backup,main],npus:[]}}};const out=await c.unpackProjectPayload(await c.packageProjectPayload(p));assert.equal(JSON.stringify(out),JSON.stringify(p));console.log('PASS: Avolites reference limits/images/ports; D9 and D3 TNP examples; mixed/backup/legacy totals; expansion isolation; 110px limits; UI capacity labels; position counts; project package round trip.');})().catch(e=>{console.error(e);process.exitCode=1});
 
 
 // Inspect all inline styles, not just the intended four-column rule.
@@ -95,10 +95,10 @@ for(const width of [237,238,483,484,700]){
 }
 assert(source('homePanelMarkup').includes("collapsed?'homePanelCollapsed'"));
 assert(source('renderHomeView').includes('onclick="openPositionMenu()"'));
-assert(html.includes("<title>Lampy Paperwork V31.8</title>"));
-assert(html.includes("const VERSION='31.8'"));
+assert(html.includes("<title>Lampy Paperwork V31.9</title>"));
+assert(html.includes("const VERSION='31.9'"));
 
-// V31.8: capacity statistics and dashboard compatibility, without browser automation.
+// V31.9: capacity statistics and dashboard compatibility, without browser automation.
 add('avolitesProjectConsoles','projectCapacityStats','avolitesUniversesAvailable','fixtureChannelCount','controlParameterSummaryMarkup','normaliseHomeLayout','factoryHomeLayout','homeStat','homeStatsMarkup');
 for(const name of ['HOME_STAT_LAYOUT_IDS','HOME_SUMMARY_LAYOUT_IDS'])vm.runInContext(html.split('\n').find(line=>line.startsWith('const '+name+'=')),c);
 const d3Console={...avo,id:'d3',consoleId:refs.find(ref=>ref.name==='D3-110').id,role:'master'};
@@ -117,7 +117,7 @@ const legacyBefore=JSON.stringify(legacyLayout),layout=c.normaliseHomeLayout(leg
 assert.equal(JSON.stringify(legacyLayout),legacyBefore);
 assert.equal(ids[ids.indexOf('parameters-available')+1],'universes-available');
 assert.equal(ids[ids.indexOf('parameters-required')+1],'channel-count');
-assert.equal(ids[ids.indexOf('channel-count')+1],'max-universes-required');
+assert(!ids.includes('max-universes-required'));
 assert.equal(layout.stats[0].visible,false);assert.equal(layout.stats[0].size,'wide');
 assert.equal(JSON.stringify(c.normaliseHomeLayout(layout)),JSON.stringify(layout));
 const reordered=JSON.parse(JSON.stringify(layout));reordered.stats.unshift(reordered.stats.splice(reordered.stats.findIndex(item=>item.id==='channel-count'),1)[0]);reordered.stats[0].visible=false;
@@ -126,8 +126,8 @@ c.ensureHomeLayout=()=>layout;c.patchFixtureRows=()=>[{channels:513}];c.fixtureP
 const renderStats=()=>c.homeStatsMarkup({universeCount:7,socapexCount:0},[],1);
 c.app.controlNetwork.consoles=[d9Console];
 let statsMarkup=renderStats();
-assert(statsMarkup.includes('Channel Count'));assert(statsMarkup.includes('Max Universes Required'));assert(statsMarkup.includes('Universes Available'));assert(!statsMarkup.includes('Parameters Required'));assert(!statsMarkup.includes('Parameters Available'));
-assert(statsMarkup.includes('Theoretical packed-channel estimate'));assert(statsMarkup.includes('homeStatValue">2</div>'));
+assert(statsMarkup.includes('Channel Count'));assert(!statsMarkup.includes('Max Universes Required'));assert(statsMarkup.includes('Universes Available'));assert(!statsMarkup.includes('Parameters Required'));assert(!statsMarkup.includes('Parameters Available'));
+assert(!statsMarkup.includes('Theoretical packed-channel estimate'));assert(statsMarkup.includes('homeStatValue">513</div>'));
 assert(c.controlParameterSummaryMarkup().includes('Universes Available'));
 c.app.controlNetwork.consoles.push(main);
 statsMarkup=renderStats();assert(statsMarkup.includes('Parameters Required'));assert(statsMarkup.includes('Parameters Available'));assert(statsMarkup.includes('Universes Available'));
@@ -136,5 +136,80 @@ c.app.controlNetwork.consoles=[main];statsMarkup=renderStats();assert(!statsMark
 c.app.controlNetwork.consoles=[];statsMarkup=renderStats();assert(!statsMarkup.includes('Universes Available'));assert(statsMarkup.includes('Parameters Required'));
 c.app.controlNetwork.consoles=[d9Console];c.app.controlNetwork.npus=[{npuId:'npu',softwareMode:'Mode 3'}];assert(renderStats().includes('Parameters Available'));
 assert.equal(JSON.stringify(layout),JSON.stringify(c.normaliseHomeLayout(legacyLayout)));
-console.log('PASS: V31.8 Master/Backup/missing-reference capacity, channel boundaries, mixed/empty projects, conditional statistics and legacy dashboard layouts.');
+console.log('PASS: Master/Backup/missing-reference capacity, channel boundaries, mixed/empty projects, conditional statistics and legacy dashboard layouts.');
+
+// V31.9: shared table context, manufacturer roles and canonical duplicate IPs.
+add('consoleManufacturerKey','makeConsoleRoleUnique','syncConsolesToMasterVersion','canonicalIpEndpoints','duplicateIpKey','duplicateIpIndex','duplicateIpConflicts','duplicateIpFieldAlias','consoleHomeSummaryMarkup','controlNetworkSummaryMarkup','controlLocationGroups','controlEffectiveName','deviceConfigGroupTablesMarkup','ipDeviceInterfaces','updateCanonicalNetworkAlias');
+const maMaster={...main,id:'ma-master',manufacturer:'MA Lighting',role:'master',softwareVersionValue:'MA-1'},maSecond={...maMaster,id:'ma-second',role:'backup'};
+const avoMaster={...d9Console,id:'avo-master',role:'master',softwareVersionValue:'Titan-1'},avoSecond={...avoMaster,id:'avo-second',role:'backup'};
+c.app.controlNetwork={consoles:[maMaster,maSecond,avoMaster,avoSecond],npus:[],networkDevices:[],racks:[]};
+maSecond.role='master';c.makeConsoleRoleUnique(maSecond);assert.equal(maMaster.role,'backup');assert.equal(avoMaster.role,'master');
+avoSecond.role='master';c.makeConsoleRoleUnique(avoSecond);assert.equal(avoMaster.role,'backup');assert.equal(maSecond.role,'master');
+assert.equal(c.consoleManufacturerKey({manufacturer:' MA-Lighting '}),c.consoleManufacturerKey({manufacturer:'MA Lighting'}));
+c.consoleVersionValue=version=>version.version;c.matchingConsoleVersion=()=>true;c.applyConsoleVersion=(item,version)=>item.syncedVersion=version.version;
+c.syncConsolesToMasterVersion();assert.equal(maMaster.syncedVersion,'MA-1');assert.equal(avoMaster.syncedVersion,'Titan-1');
+assert(!Object.hasOwn(maSecond,'syncedVersion'));assert(!Object.hasOwn(avoSecond,'syncedVersion'));
+c.positionSummaryRows=()=>[{name:'FOH'},{name:'Stage'}];c.positionKey=value=>String(value).trim().toLowerCase();c.titleCaseRevisionValue=(value,fallback='')=>value?value[0].toUpperCase()+value.slice(1):fallback;
+c.deviceConfigPortsFor=()=>[{category:'network',protocol:'sACN',ip:'10.0.0.5'},{category:'network',protocol:'Art-Net',ip:'2.0.0.5'}];
+Object.assign(avoSecond,{customName:'B Main',location:'FOH',softwareMode:'Titan'});
+Object.assign(maSecond,{customName:'A Main',location:'FOH'});Object.assign(maMaster,{customName:'A Backup',location:'FOH'});Object.assign(avoMaster,{customName:'B Backup',location:'FOH'});
+const summary=c.controlNetworkSummaryMarkup();
+assert(summary.indexOf('A Main -')<summary.indexOf('B Main -'));assert(summary.indexOf('B Main -')<summary.indexOf('A Backup -'));
+assert(summary.includes('Master - Titan'));assert(summary.includes('Location: FOH'));assert(summary.includes('Protocol 1: sACN · IP Address 1: 10.0.0.5'));
+for(const forbidden of ['System Limit','Onboard Processing','TNP','Parameters:'])assert(!summary.includes(forbidden));
+c.deviceConfigPortsFor=()=>[];const emptySummary=c.consoleHomeSummaryMarkup({id:'empty',name:'Model',manufacturer:'Maker'});assert(emptySummary.includes('— - —'));assert(emptySummary.includes('Location: —'));
+const legacySummary=c.consoleHomeSummaryMarkup({...avoSecond,protocol1:'Art-Net',ip1:'2.0.0.8'});assert(legacySummary.includes('IP Address 1: 2.0.0.8'));
+
+for(const control of [true,false])for(const available of [500,1280,2400]){
+ const widths=c.calculateDeviceConfigWidths(Array(16).fill(300),available,control);assert.equal(widths[5],110);assert.equal(widths[6],110);
+ if(!control){assert(widths[1]<=80);assert(widths[7]<=110)}else{assert(widths[10]<=80);assert(widths[8]<=60)}
+}
+for(const index of [0,2,3,4,8,9,10,11,12,13,14,15])assert.equal(c.deviceConfigColumnLimits(index,false).max,Infinity);
+c.deviceConfigExpandedDevices.add('console:a');c.controlExpandedDevices.clear();
+const dcConsole=c.controlDeviceConfigTableMarkup([dev],'deviceConfig');
+assert(dcConsole.includes('data-table-view="deviceConfig"'));assert(dcConsole.includes("'console:a','deviceConfig'"));assert(dcConsole.includes("setDeviceConfigSort('name')"));
+for(const [,row]of dcConsole.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/g))assert.equal((row.match(/<t[dh]\b/g)||[]).length,16);
+assert(dcConsole.includes('data-dc-col="15"'));assert(!dcConsole.includes('data-dc-col="14"'));
+const mixedTables=c.deviceConfigGroupTablesMarkup([dev,{...dev,id:'n',source:'network'}]);assert.equal((mixedTables.match(/<table /g)||[]).length,2);
+assert(source('measureDeviceConfigTable').includes("table.dataset.tableView!=='deviceConfig'"));
+assert(html.includes('.deviceConfigView .deviceConfigTable.deviceConfigMeasured .controlLocationCell{max-width:none}'));
+const migrated=c.normaliseHomeLayout({stats:[{id:'max-universes-required',visible:true},{id:'channel-count',visible:false,size:'wide'}]});
+assert(!migrated.stats.some(item=>item.id==='max-universes-required'));assert.equal(migrated.stats[0].id,'channel-count');assert.equal(migrated.stats[0].visible,false);
+
+const ipDevices=[
+ {source:'console',id:'c',name:'Main',interfaces:[{slot:1,ipKey:'ip1',ip:'010.0.0.1'},{slot:2,ipKey:'ip2',ip:'10.0.0.2'}],ports:[{id:'eth1',category:'network',sub:'ETH 1',ip:'10.0.0.1'},{id:'eth2',category:'network',sub:'ETH 2',ip:'10.0.0.2'},{id:'eth3',category:'network',sub:'ETH 3',ip:'10.0.0.1'}]},
+ {source:'network',id:'n',name:'Switch',interfaces:[{slot:1,ipKey:'ip1',ip:'010.000.000.001'}],ports:[]},
+ {source:'npu',id:'p',name:'NPU',interfaces:[{slot:1,ipKey:'ip',ip:''}],ports:[]}
+];
+const endpoints=c.canonicalIpEndpoints(ipDevices),ipIndex=c.duplicateIpIndex(endpoints);
+assert.equal(endpoints.length,5);assert.equal(ipIndex.byAddress.get('10.0.0.1').length,3);
+assert.equal(c.duplicateIpConflicts(ipIndex,'console:c:ip1','10.0.0.1').length,2);
+assert.equal(c.duplicateIpConflicts(ipIndex,'console:c:port:eth1','010.0.0.1').length,2);
+assert.equal(c.duplicateIpConflicts(ipIndex,'console:c:ip2','10.0.0.2').length,0);
+for(const bad of ['', '10.0.0','300.0.0.1','abc.0.0.1'])assert.equal(c.duplicateIpKey(bad),'');
+assert.equal(c.duplicateIpFieldAlias({dataset:{dcSource:'console',dcId:'c',dcKey:'subnet',dcPortId:'eth1'}}),'');
+assert.equal(c.duplicateIpFieldAlias({dataset:{ipSource:'console',ipId:'c',ipKey:'ip1'}}),'console:c:ip1');
+ipDevices[0].ports[2].ip='10.0.0.3';ipDevices.splice(1,1);
+assert.equal(c.duplicateIpConflicts(c.duplicateIpIndex(c.canonicalIpEndpoints(ipDevices)),'console:c:ip1','10.0.0.1').length,0);
+c.deviceConfigDeviceByKey=()=>({ports:[{id:'p1',category:'network'},{id:'p2',category:'network'}]});
+const aliasWrites=[];c.updateDeviceConfigPortField=(...args)=>{aliasWrites.push(args);return true};
+assert.equal(c.updateCanonicalNetworkAlias('console','c','ip2','10.1.1.2'),true);assert.deepEqual(aliasWrites[0],['console','c','p2','ip','10.1.1.2']);
+assert.equal(c.updateCanonicalNetworkAlias('console','c','role','master'),null);
+assert(source('persist').includes('scheduleDuplicateIpWarnings()'));assert(source('render').includes('scheduleDuplicateIpWarnings()'));
+assert(source('refreshDuplicateIpWarnings').includes("#sheet .ipSegmentedField"));
+assert(source('showDuplicateIpNote').includes("note.setAttribute('role','tooltip')"));
+console.log('PASS: V31.9 manufacturer Masters/version isolation, summaries/order, 16/11-column table context, Device Config limits, statistic removal and duplicate-IP identity/alias checks.');
+const singlePort=c.canonicalIpEndpoints([{source:'console',id:'single',interfaces:[{slot:1,ipKey:'ip1',ip:'1.1.1.1'},{slot:2,ipKey:'ip2',ip:'1.1.1.1'}],ports:[{id:'eth',category:'network',ip:'1.1.1.1'}]}]);
+assert.equal(singlePort.length,1);assert.equal(c.duplicateIpConflicts(c.duplicateIpIndex(singlePort),'console:single:ip1','1.1.1.1').length,0);
+// Exercise warning class/message refresh with a minimal DOM double (not a browser).
+const field={dataset:{dcSource:'console',dcId:'c',dcKey:'ip',dcPortId:'eth1'},classes:new Set(),contains:()=>false,querySelectorAll:()=>field.octets};
+field.octets='10.0.0.1'.split('.').map(value=>({value}));
+field.classList={toggle:(name,on)=>on?field.classes.add(name):field.classes.delete(name)};
+const warnDevices=[{source:'console',id:'c',name:'Main',interfaces:[],ports:[{id:'eth1',category:'network',ip:'10.0.0.1'}]},{source:'network',id:'n',name:'Other',interfaces:[{slot:1,ipKey:'ip1',ip:'10.0.0.1'}],ports:[]}];
+const w=vm.createContext({document:{querySelectorAll:()=>[field],activeElement:null},compiledIpDevices:()=>warnDevices,deviceConfigPortsFor:device=>device.ports,hideDuplicateIpNote:()=>{},showDuplicateIpNote:()=>{},duplicateIpTarget:null,duplicateIpFrame:1});
+for(const name of ['duplicateIpKey','canonicalIpEndpoints','duplicateIpIndex','duplicateIpConflicts','duplicateIpFieldAlias','ipSegmentedState','refreshDuplicateIpWarnings'])vm.runInContext(source(name),w);
+w.refreshDuplicateIpWarnings();assert(field.classes.has('ipDuplicate'));assert(field.dataset.duplicateIpMessage.includes('Other'));
+warnDevices[1].interfaces[0].ip='10.0.0.2';w.refreshDuplicateIpWarnings();assert(!field.classes.has('ipDuplicate'));assert(!field.dataset.duplicateIpMessage);
+warnDevices[1].interfaces[0].ip='10.0.0.1';field.octets[3].value='';w.refreshDuplicateIpWarnings();assert(!field.classes.has('ipDuplicate'));
+console.log('PASS: warning refresh adds and clears red classes/messages, ignores incomplete edits and excludes unused legacy aliases.');
 console.log('PASS: isolated Home grid placement, responsive CSS boundaries, 90px boxes, compact onboard displays and unchanged detailed capacity guidance.');
