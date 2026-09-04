@@ -12,7 +12,9 @@ assert.equal(c.applicationTitleFontSize(280,size=>size*10),28);
 assert.equal(c.applicationTitleFontSize(0,size=>size*10),12);
 assert.match(html,/grid-template-columns:240px minmax\(0,1fr\) 400px/);
 assert.match(html,/\.top #projectHeaderLogoSlot\{width:240px;max-width:100%\}/);
-assert.match(html,/\.topActions\{display:grid;grid-template-columns:max-content max-content minmax\(0,1fr\);width:400px/);
+assert.match(html,/\.topActions\{display:grid;grid-template-columns:max-content max-content 165px;[^}]*width:400px;[^}]*gap:4px/);
+assert.match(html,/\.reportIssueBtn\{border:2px solid #111;[^}]*border-radius:60px;padding:8px 8px/);
+assert.match(html,/\.tourLogoSlot\{[^}]*width:165px/);
 assert.match(html,/\.topTitle h1\{[^}]*overflow:hidden;text-overflow:ellipsis/);
 assert.match(html,/@media\(max-width:900px\)\{\.top\{grid-template-columns:1fr/);
 for(const [selector,columns] of [['.rackWorkspace','375px 690px 360px'],['.rackWorkspace.libraryClosed','690px 360px'],['.rackWorkspace.settingsClosed','375px 690px'],['.rackWorkspace.libraryClosed.settingsClosed','690px']]){
@@ -21,13 +23,26 @@ for(const [selector,columns] of [['.rackWorkspace','375px 690px 360px'],['.rackW
 assert.match(html,/\.rackCard\{width:690px/);assert.match(html,/\.rackSettingsCard\{width:360px/);assert.match(html,/\.rackDeviceLibraryCard\{width:375px/);
 assert.match(html,/\.rackWorkspaceHeader\{[^}]*grid-template-columns:repeat\(3,minmax\(0,1fr\)\)/);
 assert.match(html,/\.rackPopoutBody \.rackCard\{width:100%;height:calc\(100vh - 24px\)/);
-const titleCallbacks=[],titleEvents=[],titleElement={parentElement:{clientWidth:200},textContent:'Project ~ Home',style:{}};
+const titleCallbacks=[],titleEvents=[],titleElement={parentElement:{clientWidth:200,getBoundingClientRect:()=>({left:100})},textContent:'Project ~ Home',style:{}};
 const titleContext=vm.createContext({$:()=>titleElement,getComputedStyle:()=>({fontStyle:'normal',fontWeight:'700',fontFamily:'Arial',letterSpacing:'normal'}),document:{createElement:()=>({getContext:()=>({font:'',measureText(){return {width:parseFloat(this.font.split(' ')[2])*10}}})}),fonts:{ready:{then:fn=>titleEvents.push(fn)},addEventListener:(event,fn)=>titleEvents.push(fn)}},window:{addEventListener:(event,fn)=>titleEvents.push(fn)},ResizeObserver:class{constructor(fn){this.callback=fn}observe(element){this.element=element}},requestAnimationFrame:fn=>{titleCallbacks.push(fn);return titleCallbacks.length}});
 vm.runInContext('let applicationTitleFitFrame=0,applicationTitleFitStarted=false,applicationTitleResizeObserver=null;',titleContext);
-for(const name of ['applicationTitleFontSize','fitApplicationTitle','scheduleApplicationTitleFit'])vm.runInContext(source(name),titleContext);
+titleContext.document.documentElement={clientWidth:1000};titleContext.layoutTextMeasure=()=>()=>280;
+for(const name of ['applicationTitleFontSize','applicationTitlePlacement','fitApplicationTitle','scheduleApplicationTitleFit'])vm.runInContext(source(name),titleContext);
 titleContext.scheduleApplicationTitleFit();titleContext.scheduleApplicationTitleFit();assert.equal(titleCallbacks.length,1);assert.equal(titleEvents.length,3);
 titleCallbacks[0]();assert.equal(titleElement.style.fontSize,'20px');assert.equal(titleElement.title,'Project ~ Home');
 titleElement.parentElement.clientWidth=500;titleContext.scheduleApplicationTitleFit();titleCallbacks[1]();assert.equal(titleElement.style.fontSize,'28px');
+add('applicationTitlePlacement','consoleTableScale');
+assert.deepEqual(JSON.parse(JSON.stringify(c.applicationTitlePlacement(100,800,1000,200))),{width:200,offset:300});
+assert.deepEqual(JSON.parse(JSON.stringify(c.applicationTitlePlacement(100,300,1000,200))),{width:200,offset:100});
+assert.equal(c.consoleTableScale([100,100],402),2);assert.equal(c.consoleTableScale([100,100],100),1);assert.equal(c.consoleTableScale([0,0],100),1);
+for(const available of [1000,1600,2400]){const widths=[20,60,130,60,100,110,110,80,70,90,80,70,80,85,80,120],total=widths.reduce((a,b)=>a+b,0)+2,scale=c.consoleTableScale(widths,available);assert(Math.abs(total*scale-Math.max(total,available+2))<0.0001)}
+assert.match(source('applyDeviceConfigTableWidths'),/table\.dataset\.consoleTable==='true'\?String\(consoleTableScale/);
+const scaleTable={dataset:{consoleTable:'true'},style:{},classList:{add(){}},querySelector:()=>({children:[{style:{}},{style:{}}]})},scaleContext=vm.createContext({});
+for(const name of ['consoleTableScale','applyDeviceConfigTableWidths'])vm.runInContext(source(name),scaleContext);
+scaleContext.applyDeviceConfigTableWidths({table:scaleTable,widths:[100,100],hidden:[false,false],available:402});assert.equal(scaleTable.style.width,'202px');assert.equal(scaleTable.style.zoom,'2');
+scaleContext.applyDeviceConfigTableWidths({table:scaleTable,widths:[100,100],hidden:[false,false],available:100});assert.equal(scaleTable.style.zoom,'1');
+scaleTable.dataset.consoleTable='false';scaleContext.applyDeviceConfigTableWidths({table:scaleTable,widths:[100,100],hidden:[false,false],available:402});assert.equal(scaleTable.style.zoom,'');
+for(const removed of ['matchingConsoleVersion','colourCellMarkup','positionSummaryUsesColour3'])assert(!html.includes('function '+removed+'('));
 console.log('PASS: V32.2 header fitting/scheduling and rack width variants (static/VM).');
 vm.runInContext(html.split('\n').find(line=>line.startsWith('const CONSOLE_COLUMN_LIMITS=')),c);
 add('consoleTableVersionSelect','consoleAvailableVersions','storedConsoleVersion','consoleVersionValue','consoleVersionForMode');
@@ -175,7 +190,7 @@ c.app.controlNetwork={consoles:[maMaster,maSecond,avoMaster,avoSecond],npus:[],n
 maSecond.role='master';c.makeConsoleRoleUnique(maSecond);assert.equal(maMaster.role,'backup');assert.equal(avoMaster.role,'master');
 avoSecond.role='master';c.makeConsoleRoleUnique(avoSecond);assert.equal(avoMaster.role,'backup');assert.equal(maSecond.role,'master');
 assert.equal(c.consoleManufacturerKey({manufacturer:' MA-Lighting '}),c.consoleManufacturerKey({manufacturer:'MA Lighting'}));
-c.consoleVersionValue=version=>version.version;c.matchingConsoleVersion=()=>true;c.applyConsoleVersion=(item,version)=>item.syncedVersion=version.version;
+c.consoleVersionValue=version=>version.version;c.applyConsoleVersion=(item,version)=>item.syncedVersion=version.version;
 assert.equal(maMaster.softwareVersionValue,'MA-1');assert.equal(avoMaster.softwareVersionValue,'Titan-1');assert(!html.includes('function syncConsolesToMasterVersion'));
 assert(!Object.hasOwn(maSecond,'syncedVersion'));assert(!Object.hasOwn(avoSecond,'syncedVersion'));
 c.positionSummaryRows=()=>[{name:'FOH'},{name:'Stage'}];c.positionKey=value=>String(value).trim().toLowerCase();c.titleCaseRevisionValue=(value,fallback='')=>value?value[0].toUpperCase()+value.slice(1):fallback;

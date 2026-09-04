@@ -4,6 +4,9 @@ All notable fixes, cleanup work, and published version changes should be recorde
 
 ## V32.2 - 2026-09-04
 
+- Scaled console tables proportionally to available width, preserving base column limits and normal-scale scrolling on narrow screens.
+- Updated report/error button styling, 4 px action gaps and the 165 px tour-logo slot; centred titles on the page wherever surrounding controls allow.
+- Removed superseded header/console CSS, unused version/position helpers and a redundant table-width branch.
 - Reserved stable header logo/action slots, centred and fitted long page titles, and retained stacked mobile headers.
 - Set Rack Layout library/rack/settings widths to 375/690/360 px, including closed-panel layouts, without changing detached rack windows.
 - Applied the final 16-column console width limits in Control and Device Config and removed the temporary width editor.
