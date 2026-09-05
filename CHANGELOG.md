@@ -1,3 +1,22 @@
+## V33 — 5 September 2026
+
+- Advance the application to V33, retaining the V32.5 engineering fixes and existing project-file compatibility.
+- Update the welcome message, walkthrough and active release documentation for the major version.
+- Update version assertions; validate using static checks and regression suites only.
+
+## V32.5 — 5 September 2026
+
+- Correct circuit-voltage defaults, phase allocation, selected-supply overload warnings and incomplete-load reporting. Preserve existing voltage selections for explicit review.
+- Preserve distro/Socapex ownership through deletion and resizing, including legacy-project migration.
+- Validate project imports before normalisation/commit; reject unsafe identifiers and keys. Add bounded ZIP extraction and CRC validation in a separate archive module.
+- Replace supply inline actions with delegated events and encode legacy handler arguments for JavaScript context.
+- Show save state/failure and provide recovery JSON downloads; retain manual GDTF data in local save attempts and pause writes after another tab changes the project.
+- Track distro/label, output settings, positions, network configuration and GDTF changes in revisions; validate contiguous subnet masks; add visible welcome dismissal and form-label associations.
+- Add shared project-rule, archive and UI support modules, release regressions, asset checks and an allowlisted deployment build. Compress deployment GDTF copies losslessly; preserve original archives.
+- Remove the missing Road Hog Full Boar image reference.
+- Restore custom-fixture picker modes from saved patch data after reload.
+- Keep the existing manual deployment trigger and project-file formats.
+
 # Lampy Paperwork Changelog
 
 All notable fixes, cleanup work, and published version changes should be recorded here.

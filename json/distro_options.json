@@ -1,29 +1,76 @@
 {
   "distroType": [
-    { "value": "72 Way / 12 Socapex", "socapexes": 12, "default": true },
-    { "value": "48 Way / 8 Socapex", "socapexes": 8 },
-    { "value": "36 Way / 6 Socapex", "socapexes": 6 },
-    { "value": "24 Way / 4 Socapex", "socapexes": 4 },
-    { "value": "12 Way / 2 Socapex", "socapexes": 2 }
+    {
+      "value": "72 Way / 12 Socapex",
+      "socapexes": 12,
+      "default": true
+    },
+    {
+      "value": "48 Way / 8 Socapex",
+      "socapexes": 8
+    },
+    {
+      "value": "36 Way / 6 Socapex",
+      "socapexes": 6
+    },
+    {
+      "value": "24 Way / 4 Socapex",
+      "socapexes": 4
+    },
+    {
+      "value": "12 Way / 2 Socapex",
+      "socapexes": 2
+    }
   ],
   "socapexPhasing": [
-    { "value": "Single Phase" },
-    { "value": "Three Phase", "default": true }
+    {
+      "value": "Single Phase"
+    },
+    {
+      "value": "Three Phase",
+      "default": true
+    }
   ],
   "outputVoltage": [
-    { "value": "230V" },
-    { "value": "400V", "default": true },
-    { "value": "110V" },
-    { "value": "120V" },
-    { "value": "208V" }
+    {
+      "value": "230V",
+      "default": true
+    },
+    {
+      "value": "400V"
+    },
+    {
+      "value": "110V"
+    },
+    {
+      "value": "120V"
+    },
+    {
+      "value": "208V"
+    }
   ],
   "inputSupply": [
-    { "value": "16A 1ø" },
-    { "value": "32A 1ø" },
-    { "value": "63A 1ø" },
-    { "value": "16A 3ø" },
-    { "value": "32A 3ø" },
-    { "value": "63A 3ø" },
-    { "value": "125A 3ø", "default": true }
+    {
+      "value": "16A 1ø"
+    },
+    {
+      "value": "32A 1ø"
+    },
+    {
+      "value": "63A 1ø"
+    },
+    {
+      "value": "16A 3ø"
+    },
+    {
+      "value": "32A 3ø"
+    },
+    {
+      "value": "63A 3ø"
+    },
+    {
+      "value": "125A 3ø",
+      "default": true
+    }
   ]
 }

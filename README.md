@@ -37,7 +37,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V32.4**
+Current app version: **V33**
 
 Console tables use the final shared column proportions with automatic text fitting and scale up to fill available width. Narrow layouts retain scrolling at normal scale.
 Console removal warns that its data will be deleted; “Do Not Show Again” is remembered for that project only.
@@ -58,7 +58,7 @@ See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 9. Open **IP Address'** to configure Global Subnet, interface subnets, VLANs, and IP-only devices.
 10. Download the project file regularly to save an editable copy.
 
-All project data is client-side. The app runs in your browser and does not require an account, server, database, or build process. PDF export loads a pinned browser rendering library on demand, while project and export processing remain in the browser.
+All project data is client-side. The app runs in your browser and does not require an account, server, database, for project processing. PDF export loads a pinned browser rendering library on demand, while project and export processing remain in the browser.
 
 ## Publishing Updates
 
@@ -149,8 +149,8 @@ When adding new reference files, keep paths relative to the repository root so G
 
 ## Deployment Notes
 
-- This project is dependency-free: no framework, bundler, package manager, or build step is required.
-- GitHub Pages should serve the repository root directly.
+- Local use needs no framework, bundler or package manager. Publishing uses Python to package the static site and Node.js to run release checks.
+- GitHub Pages serves the validated `_site` artifact. `scripts/build_site.py` compresses deployment copies of GDTF archives without changing their extracted contents or the source archives.
 - Keep `index.html`, `json/`, and `images/` at the same level.
 - Keep `.nojekyll` in the root so GitHub Pages does not run the Jekyll build pipeline.
 - Do not add a `published_versions/` folder. Version tracking and rollback notes belong in `CHANGELOG.md`.
@@ -161,7 +161,7 @@ When adding new reference files, keep paths relative to the repository root so G
 - Keep the app fully GitHub Pages compatible.
 - Update `CHANGELOG.md` for meaningful changes.
 - Bump the visible app version when publishing updates.
-- Check PDF preview/download behaviour carefully after export-related changes.
+- Browser testing requires an explicit user request. Do not use browser automation merely because a change affects the interface. Use static validation otherwise. When requested, check PDF preview/download behaviour carefully after export-related changes.
 - Run `node tests/display-regressions.cjs` for static Home-position, console-capacity, table-expansion and project-package regression checks. These checks do not replace rendered browser testing.
 
 ## Feedback
@@ -169,3 +169,15 @@ When adding new reference files, keep paths relative to the repository root so G
 Use the GitHub issue tracker for bugs, feature requests, and testing notes:
 
 [Report an issue](https://github.com/Ai-Lampy/Lampy-Paperwork/issues)
+
+## V33 engineering changes
+
+- New distros default to 230 V circuit voltage. Existing selections are preserved. Power calculations assume power factor 1; verify against rated equipment current. Single-phase inputs and single-phase Socapex groups use explicit phase allocation rules.
+- Supply warnings use the selected amperage. Missing or invalid loads show incomplete totals, including exports.
+- Distro/Socapex ownership IDs preserve downstream labels when distros are deleted or resized. Existing saved projects gain IDs on load.
+- Save status reports pending, successful and failed writes. Recovery JSON downloads work without browser crypto. Another tab changing the project pauses automatic saving until you reopen a project or reload. Manual GDTF binaries are retained in the local save attempt; large projects may exceed browser storage and require a portable download.
+- Imports validate structure before committing data. Project files are limited to 64 MiB; ZIP imports to 256 MiB total, 64 MiB per entry and 10,000 entries. ZIP paths, bounds and CRCs are checked.
+- Supply-card actions use delegated listeners; remaining legacy handlers use JavaScript-context encoding. New code belongs in the `js/` modules where practical.
+- Distro labels, output settings, positions, network settings and GDTF metadata/matches participate in revision tracking. Saved custom fixtures remain selectable after reload. Welcome has a visible Continue control; dynamically rendered single-control form labels are associated automatically.
+
+Run `node tests/display-regressions.cjs`, `node tests/release-regressions.cjs` and `node scripts/validate-release.cjs`. Build with `python3 scripts/build_site.py /tmp/lampy-site` using a new destination directory. See `tests/BROWSER-CHECKLIST.md` for release browser coverage.
