@@ -54,10 +54,24 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Check release
+        run: |
+          node tests/display-regressions.cjs
+          node tests/release-regressions.cjs
+          node scripts/validate-release.cjs
+
+      - name: Build and verify deployment artifact
+        run: python3 scripts/build_site.py _site
+
       - name: Upload static site
         uses: actions/upload-pages-artifact@v4
         with:
-          path: .
+          path: _site
 
       - name: Deploy to GitHub Pages
         id: deployment
