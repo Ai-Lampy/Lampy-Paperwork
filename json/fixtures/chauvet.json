@@ -4,7 +4,7 @@
     {
       "fixture": "Color Strike M",
       "watts": 696,
-      "weight": 12.1,
+      "weight": 11.9,
       "modes": {
         "97Ch Mode": 97,
         "74Ch Mode": 74,
@@ -248,7 +248,7 @@
     {
       "fixture": "Maverick Storm 1 Beam",
       "watts": 467,
-      "weight": 23.3,
+      "weight": 23.8,
       "modes": {
         "19Ch Mode": 19,
         "21Ch Mode": 21
@@ -613,7 +613,7 @@
     {
       "fixture": "Maverick Storm 4 Profile",
       "watts": 1760,
-      "weight": 50.6,
+      "weight": 46.5,
       "modes": {
         "55Ch Mode": 55,
         "38Ch Mode": 38
@@ -643,7 +643,7 @@
     {
       "fixture": "Maverick Storm 4 SoloWash",
       "watts": 1680,
-      "weight": 45.5,
+      "weight": 47.0,
       "modes": {
         "Advanced 46ch": 46,
         "Basic 31ch": 31
@@ -826,7 +826,7 @@
     {
       "fixture": "STRIKE Array 2C",
       "watts": 581,
-      "weight": 9.4,
+      "weight": 8.0,
       "modes": {
         "1Ch Mode": 1,
         "3Ch Mode": 3,
@@ -991,7 +991,7 @@
     {
       "fixture": "STRIKE Array 4C",
       "watts": 1140,
-      "weight": 15.4,
+      "weight": 13.0,
       "modes": {
         "1Ch": 1,
         "3Ch Mode": 3,
