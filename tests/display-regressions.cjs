@@ -40,7 +40,7 @@ assert.deepEqual(JSON.parse(JSON.stringify(c.applicationTitlePlacement(100,800,1
 assert.deepEqual(JSON.parse(JSON.stringify(c.applicationTitlePlacement(100,300,1000,200))),{width:200,offset:100});
 assert.equal(c.consoleTableScale([100,100],402),2);assert.equal(c.consoleTableScale([100,100],100),1);assert.equal(c.consoleTableScale([0,0],100),1);
 for(const available of [1000,1600,2400]){const widths=[20,60,130,60,100,110,110,80,70,90,80,70,80,85,80,120],total=widths.reduce((a,b)=>a+b,0)+2,scale=c.consoleTableScale(widths,available);assert(Math.abs(total*scale-Math.max(total,available+2))<0.0001)}
-assert.match(source('applyDeviceConfigTableWidths'),/table\.dataset\.consoleTable==='true'\?String\(consoleTableScale/);
+assert.match(source('applyDeviceConfigTableWidths'),/control&&table\.dataset\.consoleTable==='true'\?String\(consoleTableScale/);
 const scaleTable={dataset:{consoleTable:'true'},style:{},classList:{add(){}},querySelector:()=>({children:[{style:{}},{style:{}}]}),querySelectorAll:()=>[]},scaleContext=vm.createContext({});
 for(const name of ['consoleTableScale','applyDeviceConfigTableWidths'])vm.runInContext(source(name),scaleContext);
 scaleContext.applyDeviceConfigTableWidths({table:scaleTable,widths:[100,100],hidden:[false,false],available:402});assert.equal(scaleTable.style.width,'202px');assert.equal(scaleTable.style.zoom,'2');
@@ -82,13 +82,12 @@ c.activeControlNetworkTab='npu';c.expandAllControlDevices();c.activeControlNetwo
 c.collapseAllDeviceConfig();assert.equal(c.deviceConfigExpandedDevices.size,0);assert(c.controlExpandedDevices.has('npu:p'));
 for(const name of ['clearProjectState','loadProjectPayload']){assert(source(name).includes('controlExpandedDevices.clear()'));assert(source(name).includes('deviceConfigExpandedDevices.clear()'))}
 for(const name of ['appPayload','projectFilePayload']){assert(!source(name).includes('ExpandedDevices'))}
-for(const prefix of ['const DEVICE_CONFIG_WIDTH_HEADINGS=','const DEVICE_CONFIG_WIDTH_DEFAULTS=','let deviceConfigWidthProfile='])vm.runInContext(html.split('\n').find(line=>line.startsWith(prefix)),c);
+vm.runInContext(html.split('\n').find(line=>line.startsWith('const DEVICE_CONFIG_WIDTH_DEFAULTS=')),c);
 add('deviceConfigColumnLimits','calculateDeviceConfigWidths');
-for(const control of [false,true])for(const width of [320,1280,1920]){const w=c.calculateDeviceConfigWidths(Array(control?16:12).fill(300),width,control);assert.equal(w[5],110);assert.equal(w[6],110);if(control)assert(w[10]<=80)}
+for(const width of [320,1280,1920]){const w=c.calculateDeviceConfigWidths(Array(12).fill(300),width,false);assert(w[5]>=110);assert(w[6]>=110);if(width>=1280)assert(Math.abs(w.reduce((sum,value)=>sum+value,0)-width)<0.001)}
+for(const width of [320,1280,1920]){const w=c.calculateDeviceConfigWidths(Array(16).fill(300),width,true,[],true);assert.equal(w[5],110);assert.equal(w[6],110);assert(w[10]<=80)}
 assert.deepEqual(JSON.parse(JSON.stringify(c.deviceConfigColumnLimits(1,false,false))),{min:40,max:60});
-vm.runInContext('deviceConfigWidthProfile[1]={min:55,max:65}',c);assert.deepEqual(JSON.parse(JSON.stringify(c.deviceConfigColumnLimits(1,false,false))),{min:55,max:65});
 assert.deepEqual(JSON.parse(JSON.stringify(c.deviceConfigColumnLimits(1,true,true))),{min:40,max:60});
-vm.runInContext('deviceConfigWidthProfile=DEVICE_CONFIG_WIDTH_DEFAULTS.map(([min,max])=>({min,max}))',c);
 assert(html.includes('@container homePositions (min-width:238px)'));assert(html.includes('@container homePositions (min-width:484px)'));assert(html.includes('grid-template-columns:repeat(4,minmax(0,1fr))'));assert(html.includes('text-align-last:center'));assert(html.includes('padding:2px 8px!important'));
 Object.assign(c,{escapeHtml:v=>String(v??''),escapeAttr:v=>String(v??''),parameterDetailsMarkup:()=>'',controlReferencePreviewMarkup:()=>'',versionPairText:()=>'',consoleLibraryNetworkInfoMarkup:()=>'',controlDeviceSoftwareVersionText:()=>'',controlCardHeadingMarkup:()=>'',dmxPortTableMarkup:()=>'',controlCardMediaMarkup:()=>'',consoleRoleButtonsMarkup:()=>'',controlCardActionButtonsMarkup:()=>'',controlPositionStripMarkup:()=>''});
 add('controlParameterMarkup','consoleLibraryInfoMarkup','consoleCardMarkup');
@@ -105,16 +104,18 @@ assert.equal(c.controlTableCapacityText({kind:'universes',onboardProcessing:null
 add('positionSummaryMarkup');c.controlPositionStripStyle=()=>'';
 for(const n of [0,1,4,5,8,20]){c.positionSummaryRows=()=>Array.from({length:n},(_,i)=>({name:'Position '+i}));const m=c.positionSummaryMarkup();assert.equal((m.match(/class="homePositionStrip(?:\s|")/g)||[]).length,n);if(!n)assert(m.includes('No position summary yet'))}
 Object.assign(c,{deviceConfigColumnAttr:()=>'',deviceConfigSort:{key:'name',direction:'asc'},ipAddressSourceItem:()=>avo,deviceConfigSourceProtocol:()=>'',ipVlanCellStyle:()=>'',deviceConfigSegmentedInput:()=>'<div></div>',deviceConfigProtocolSelect:()=>'<select></select>',deviceConfigVlanSelect:()=>'<select></select>',deviceConfigDirectionSelect:()=>'<span>Output</span>',deviceConfigReference:()=>refs[2],canonicalDeviceRackPlacement:()=>null,controlLocationCellStyle:()=>'',modeOptionsMarkup:()=>'<option>Titan</option>'});
-add('deviceConfigWidthEditorCellMarkup','deviceConfigWidthEditorRowMarkup','deviceConfigInput','deviceConfigLocationControl','deviceConfigRowWithLocation','deviceConfigParentRow','deviceConfigPortRow','deviceConfigInterfaceTwoRow','deviceConfigTableMarkup','controlTableCellAttrs','controlTableParentExtraCells','controlTableAppendCells','controlTableBlankExtraCells','controlDeviceConfigTableMarkup');
+add('deviceConfigNetworkPorts','deviceConfigPromotedNetworkPort','deviceConfigVisiblePorts','deviceConfigHasSecondaryInterface','deviceConfigHasChildren','deviceConfigInput','deviceConfigLocationControl','deviceConfigRowWithLocation','deviceConfigParentRow','deviceConfigPortRow','deviceConfigInterfaceTwoRow','deviceConfigTableMarkup','controlTableCellAttrs','controlTableParentExtraCells','controlTableAppendCells','controlTableBlankExtraCells','controlDeviceConfigTableMarkup');
 const dev={id:'a',source:'console',name:'D9 parent',interfaces:[],ports:[{id:'eth-1',category:'network',sub:'ETH 1'},{id:'dmx-1',category:'dmx',sub:'DMX 1'}]};
 c.deviceConfigExpandedDevices.clear();c.controlExpandedDevices.clear();c.activeControlNetworkTab='consoles';c.controlExpandedDevices.add('console:a');
 let control=c.controlDeviceConfigTableMarkup([dev]),config=c.deviceConfigTableMarkup([dev]);
-assert.equal((control.match(/<tr\b/g)||[]).length,4);assert.equal((config.match(/<tr\b/g)||[]).length,3);
+assert.equal((control.match(/<tr\b/g)||[]).length,4);assert.equal((config.match(/<tr\b/g)||[]).length,2);
 assert(control.includes("'console:a','control'"));assert(config.includes("'console:a','deviceConfig'"));assert(control.includes('<th>Capacity</th>'));assert(control.includes('32 Uni'));assert(!control.includes('System Limit:'));
-c.deviceConfigExpandedDevices.add('console:a');c.controlExpandedDevices.clear();control=c.controlDeviceConfigTableMarkup([dev]);config=c.deviceConfigTableMarkup([dev]);assert.equal((control.match(/<tr\b/g)||[]).length,2);assert.equal((config.match(/<tr\b/g)||[]).length,5);
+c.deviceConfigExpandedDevices.add('console:a');c.controlExpandedDevices.clear();control=c.controlDeviceConfigTableMarkup([dev]);config=c.deviceConfigTableMarkup([dev]);assert.equal((control.match(/<tr\b/g)||[]).length,2);assert.equal((config.match(/<tr\b/g)||[]).length,3);assert(!config.includes('ETH 1'));assert(config.includes('DMX 1'));
+for(const sourceType of ['console','npu','network']){const one={...dev,source:sourceType,ports:[dev.ports[0]],interfaces:[]};assert.equal(c.deviceConfigPromotedNetworkPort(one)?.id,'eth-1');assert.equal(c.deviceConfigVisiblePorts(one).length,0);assert.equal(c.deviceConfigHasChildren(one),false);assert(!c.deviceConfigParentRow(one,0).includes('deviceConfigTreeButton'))}
+const multi={...dev,source:'network',ports:[dev.ports[0],{...dev.ports[0],id:'eth-2',sub:'ETH 2'}]};assert.equal(c.deviceConfigPromotedNetworkPort(multi),null);assert.equal(c.deviceConfigVisiblePorts(multi).length,2);assert(c.deviceConfigParentRow(multi,0).includes('<td class="deviceConfigIpCol"></td>'));assert(c.deviceConfigPortRow(multi,multi.ports[0],1).includes('data-dc-port-id="eth-1"'));
 for(const [markup,count] of [[control,16],[config,12]])for(const [,row] of markup.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/g))assert.equal((row.match(/<t[dh]\b/g)||[]).length,count);
 assert(config.includes('>Location<'));assert(config.includes('data-dc-key="location"'));assert(config.includes('data-dc-col="10"'));assert(config.includes('data-dc-col="11"'));
-assert.equal((config.match(/minimum width/g)||[]).length>=12,true);assert.equal((config.match(/maximum width/g)||[]).length>=12,true);
+assert(!config.includes('minimum width'));assert(!config.includes('maximum width'));
 const rackLocation=c.canonicalDeviceRackPlacement;c.canonicalDeviceRackPlacement=()=>({rack:{location:'Rack Room'}});assert(c.deviceConfigLocationControl(dev,'Ignored',0,10,'',true).includes('Managed by Rack Layout'));assert(c.deviceConfigLocationControl(dev,'Port Location',0,10,'eth-1',false).includes('data-dc-port-id="eth-1"'));c.canonicalDeviceRackPlacement=rackLocation;
 const portContext=vm.createContext({normaliseVlan:value=>String(value||'0')});vm.runInContext(source('normaliseDeviceConfigPort'),portContext);assert.equal(portContext.normaliseDeviceConfigPort({id:'p',location:'Dimmer City'}).location,'Dimmer City');assert.equal(portContext.normaliseDeviceConfigPort({id:'p'}).location,'');
 assert(source('deviceConfigPortsFor').includes("if(!Object.hasOwn(raw,'location'))base.location=device.location||''"));
@@ -219,7 +220,7 @@ for(const forbidden of ['System Limit','Onboard Processing','TNP','Parameters:']
 c.deviceConfigPortsFor=()=>[];const emptySummary=c.consoleHomeSummaryMarkup({id:'empty',name:'Model',manufacturer:'Maker'});assert(emptySummary.includes('— - —'));assert(emptySummary.includes('Location: —'));
 const legacySummary=c.consoleHomeSummaryMarkup({...avoSecond,protocol1:'Art-Net',ip1:'2.0.0.8'});assert(legacySummary.includes('IP Address 1: 2.0.0.8'));
 
-for(const available of [500,1280,2400]){const widths=c.calculateDeviceConfigWidths(Array(12).fill(300),available,false);assert.equal(widths[5],110);assert.equal(widths[6],110)}
+for(const available of [500,1280,2400]){const widths=c.calculateDeviceConfigWidths(Array(12).fill(300),available,false);assert(widths[5]>=110);assert(widths[6]>=110);if(available>=1280)assert(Math.abs(widths.reduce((sum,value)=>sum+value,0)-available)<0.001)}
 for(const available of [500,1280,2400]){const widths=c.calculateDeviceConfigWidths(Array(16).fill(300),available,true);assert.equal(widths[5],110);assert.equal(widths[6],110);assert(widths[10]<=80);assert(widths[8]<=60)}
 const deviceLimits=[[30,30],[40,60],[100,130],[60,60],[100,180],[110,110],[110,110],[40,100],[40,100],[40,150],[80,120],[200,400]];
 deviceLimits.forEach(([min,max],index)=>assert.deepEqual(JSON.parse(JSON.stringify(c.deviceConfigColumnLimits(index,false))),{min,max}));
@@ -341,37 +342,30 @@ v.ipVlanById=value=>value==='1'?{colour:'#ff0000'}:null;v.contrastText=()=> '#ff
 v.refreshDeviceConfigVlanColour(vlanSelect,'1');assert.equal(vlanSelect.style.background,'#ff0000');assert.equal(vlanCell.style.background,'#ff0000');v.refreshDeviceConfigVlanColour(vlanSelect,'0');assert.equal(vlanSelect.style.background,'');assert.equal(vlanCell.style.color,'');
 const small=c.calculateDeviceConfigWidths(Array(16).fill(45),2400,true,[],true),large=c.calculateDeviceConfigWidths(Array(16).fill(180),2400,true,[],true);
 assert(small[1]<large[1]);assert(small[2]<large[2]);assert(small[4]<large[4]);assert(small.reduce((sum,value)=>sum+value,0)<2400);
-assert.deepEqual(Array.from(c.calculateDeviceConfigWidths(Array(16).fill(45),2400,false,[],true)),Array.from(small));
+const fullDeviceConfig=c.calculateDeviceConfigWidths(Array(16).fill(45),2400,false,[],true);assert(Math.abs(fullDeviceConfig.reduce((sum,value)=>sum+value,0)-2400)<0.001);assert(fullDeviceConfig[5]>=110);assert(fullDeviceConfig[6]>=110);
 assert(!html.includes('consoleWidthEditor'));
-assert(html.includes('Copy Width Settings'));
-assert(html.includes('Restore Starting Widths'));
+for(const removed of ['Copy Width Settings','Restore Starting Widths','deviceConfigWidthProfile','deviceConfigWidthEditorRow','copyDeviceConfigWidths','restoreDeviceConfigWidths'])assert(!html.includes(removed));
 assert(source('renderDeviceConfigView').includes("openVlanSetup()\">VLAN Setup"));
+assert(!source('renderIpAddressView').includes('openVlanSetup'));
+assert(source('closeVlanSetup').includes("activeSheetTab==='deviceConfig'"));
+assert(html.includes('#vlanSetupPane,.deviceConfigToolbar,#colourMenu'));
 assert(!source('renderDeviceConfigView').includes('Show/Hide Columns'));
 assert(source('renderDeviceConfigView').includes("[data-device-config-width-table] [data-device-config-hidden]"));
-assert(source('measureDeviceConfigTable').includes("row.matches('[data-device-config-width-editor]')"));
 assert(source('measureDeviceConfigTable').includes("querySelector('.deviceConfigColumnHeadings')"));
-assert(source('deviceConfigTableMarkup').includes('deviceConfigWidthEditorRowMarkup'));
-assert(source('deviceConfigWidthEditorRowMarkup').includes('data-device-config-width-editor'));
 assert(!source('controlDeviceConfigTableMarkup').includes('data-device-config-width-editor'));
 assert(html.indexOf('data-sheet-tab="network"')<html.indexOf('data-sheet-tab="rackLayout"'));
-const widthInput={value:'55',validity:'',reports:0,setCustomValidity(value){this.validity=value},reportValidity(){this.reports++}},widthContext=vm.createContext({setTimeout:fn=>fn(),syncs:0,syncDeviceConfigWidthEditors(){this.syncs++}});
-for(const prefix of ['const DEVICE_CONFIG_WIDTH_DEFAULTS=','let deviceConfigWidthProfile='])vm.runInContext(html.split('\n').find(line=>line.startsWith(prefix)),widthContext);
-for(const name of ['rejectDeviceConfigWidth','updateDeviceConfigWidth'])vm.runInContext(source(name),widthContext);
-widthContext.input=widthInput;vm.runInContext("updateDeviceConfigWidth(1,'min',input)",widthContext);assert.equal(vm.runInContext('deviceConfigWidthProfile[1].min',widthContext),55);
-widthInput.value='50';vm.runInContext("updateDeviceConfigWidth(1,'max',input)",widthContext);assert.equal(widthInput.value,60);assert.equal(widthInput.reports,1);assert.equal(vm.runInContext('deviceConfigWidthProfile[1].max',widthContext),60);
-widthInput.value='';vm.runInContext("updateDeviceConfigWidth(1,'max',input)",widthContext);assert.equal(vm.runInContext('deviceConfigWidthProfile[1].max',widthContext),null);
-widthInput.value='-1';vm.runInContext("updateDeviceConfigWidth(1,'min',input)",widthContext);assert.equal(widthInput.value,55);assert.equal(widthInput.reports,2);
 assert(!source('controlDeviceSoftwareVersionText').includes('masterConsoleVersion'));assert(!source('saveConsoleFromModal').includes('syncConsoles'));
 assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 console.log('PASS: independent SW selections, model/mode restrictions, invalid paste, immediate VLAN styling and shared content-based widths.');
 console.log('PASS: isolated Home grid placement, responsive CSS boundaries, 90px boxes, compact onboard displays and unchanged detailed capacity guidance.');
 
-// V32.2 final limits, complete-address fitting and project-specific removal.
+// V33.1 Device Config full-width sizing, Control limits, complete-address fitting and project-specific removal.
 const finalLimits=[[20,20],[40,60],[80,130],[60,60],[40,180],[110,110],[110,110],[40,80],[40,70],[40,90],[40,80],[40,70],[40,80],[40,85],[40,80],[40,120]];
-for(const control of [true,false])for(const available of [500,1280,3000]){
- const widths=c.calculateDeviceConfigWidths(Array(16).fill(300),available,control,[],true);
- finalLimits.forEach(([min,max],i)=>{assert(widths[i]>=min);assert(widths[i]<=max);assert.equal(c.deviceConfigColumnLimits(i,control,true).min,min);assert.equal(c.deviceConfigColumnLimits(i,control,true).max,max)});
+for(const available of [500,1280,3000]){
+ const widths=c.calculateDeviceConfigWidths(Array(16).fill(300),available,true,[],true);
+ finalLimits.forEach(([min,max],i)=>{assert(widths[i]>=min);assert(widths[i]<=max);assert.equal(c.deviceConfigColumnLimits(i,true,true).min,min);assert.equal(c.deviceConfigColumnLimits(i,true,true).max,max)});
 }
+for(const available of [1280,3000])assert(Math.abs(c.calculateDeviceConfigWidths(Array(16).fill(100),available,false,[],true).reduce((sum,value)=>sum+value,0)-available)<0.001);
 for(const obsolete of ['consoleWidthEditor','consoleColumnWidths','copyConsoleWidths','restoreConsoleWidths'])assert(!html.includes(obsolete));
 assert(source('measureConsoleCellText').includes('[...row.cells]'));assert(source('measureConsoleCellText').includes("ipSegmentedState(segmented).parts.join('.')"));
 const projectA={skipConsoleRemovalConfirmation:false},projectB={skipConsoleRemovalConfirmation:false};

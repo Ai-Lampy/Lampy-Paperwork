@@ -37,11 +37,12 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V33**
+Current app version: **V33.1**
 
 Console tables use the final shared column proportions with automatic text fitting and scale up to fill available width. Narrow layouts retain scrolling at normal scale.
 Console removal warns that its data will be deleted; “Do Not Show Again” is remembered for that project only.
-Device Config uses a 12-column device table with editable device/port locations and temporary session-only width controls.
+Device Config fills each location group across the available page width. Devices with one physical network port show IP Address, Subnet, Protocol and VLAN on the parent row; multi-port devices keep separate editable network-port rows.
+The Device Config toolbar owns VLAN Setup. The `+ Supply` pane loads its Input Supply choices from `json/power_supply.json`, starts new supplies blank and preserves older saved values.
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 
@@ -141,7 +142,7 @@ Reference data is stored in `/json/` and loaded directly by the browser.
 - Console manufacturers are listed in `json/consoles/manifest.json`.
 - Each manufacturer console library lives in `json/consoles/` and uses a rack-library-style `devices` collection. Console records can reference images from `images/consoles/`.
 - grandMA NPU records are stored in `json/grandMA_NPU.json` and can reference images from `images/NPU/`.
-- Power-supply calculation thresholds are stored in `json/power_supply.json`.
+- Input Supply choices are stored as unique non-empty `supplies[].label` values in `json/power_supply.json`. Its older range fields remain compatible but do not select or change a supply.
 - VLAN colour choices are stored in `json/vlan_colour_options.json`.
 - Colour names, aliases, and reserved text/outline style metadata are managed in `json/colour_options.json`.
 
@@ -169,6 +170,12 @@ When adding new reference files, keep paths relative to the repository root so G
 Use the GitHub issue tracker for bugs, feature requests, and testing notes:
 
 [Report an issue](https://github.com/Ai-Lampy/Lampy-Paperwork/issues)
+
+## V33.1 engineering changes
+
+- Device Config promotes a single physical network port to the parent row, keeps multiple physical network ports as children and fills the available location-group width.
+- VLAN Setup opens from Device Config only. Input Supply choices come from `json/power_supply.json`, and failed list loading stops supply creation.
+- Control presentation and project-file structure remain unchanged.
 
 ## V33 engineering changes
 

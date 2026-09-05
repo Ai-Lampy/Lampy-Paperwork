@@ -1,3 +1,12 @@
+## V33.1 — 5 September 2026
+
+- Promote a device's only physical network port to its Device Config parent row for consoles, NPUs and network devices, while retaining DMX and secondary logical-interface child rows where applicable.
+- Keep multi-port network addressing on editable child rows, remove empty expand controls and synchronize physical-port edits with the canonical Control and IP Address' records.
+- Remove the temporary Device Config width editor and actions. Distribute measured columns across each location group's full width without changing Control-table sizing.
+- Keep VLAN Setup in Device Config, repair its panel boundary and refresh behaviour, and remove the duplicate action from IP Address'.
+- Load `+ Supply` Input Supply choices from the unique labels in `json/power_supply.json`. Start new supplies blank, retain unavailable saved values and abort creation when the list cannot load.
+- Preserve the project-file schema and existing saved device, VLAN, port, location, protocol and supply values.
+
 ## V33 — 5 September 2026
 
 - Advance the application to V33, retaining the V32.5 engineering fixes and existing project-file compatibility.

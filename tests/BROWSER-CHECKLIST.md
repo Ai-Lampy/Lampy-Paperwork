@@ -1,4 +1,4 @@
-# V33 browser release checks
+# V33.1 browser release checks
 
 **Use this checklist only when the user explicitly requests browser testing.** Interface changes, implementation requests and releases do not authorise browser testing. Static validation remains the default.
 
@@ -15,6 +15,9 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 | Malformed project leaves current work unchanged | Required | Required | Required |
 | Storage denied/full shows recovery action; second tab pauses writes | Required | Required | Required |
 | ZIP/GDTF import, corrupt ZIP rejected, built GDTF thumbnail | Required | Required | Required |
+| Device Config single-port parent promotion, multi-port children and full-width tables | Required | Required | Required |
+| Device Config VLAN Setup opens and refreshes; IP Address' has no VLAN Setup action | Required | Required | Required |
+| `+ Supply` loads JSON labels, starts blank and cancels cleanly if loading fails | Required | Required | Required |
 | Power and label PDF preview/download; inspect physical dimensions | Required | Required | Required |
 | 1,000-fixture project editing, navigation and exports | Required | Required | Required |
 
