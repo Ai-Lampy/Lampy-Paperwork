@@ -2,6 +2,82 @@
   "manufacturer": "Smoke Factory",
   "fixtures": [
     {
+      "fixture": "Captain D",
+      "watts": 1300,
+      "weight": 9.7,
+      "modes": {
+        "Control external Fan": 2,
+        "Internal Fan": 1
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/smoke_factory",
+        "suggestedFileName": "Smoke_Factory__Captain_D.gdtf",
+        "file": "fixtures/smoke_factory/Smoke_Factory@Captain_D@2026-07-01.gdtf",
+        "modes": {
+          "Control external Fan": {
+            "channels": 2,
+            "gdtfMode": "Control external Fan",
+            "status": "matched",
+            "parameters": 2
+          },
+          "Internal Fan": {
+            "channels": 1,
+            "gdtfMode": "Internal Fan",
+            "status": "matched",
+            "parameters": 1
+          }
+        }
+      },
+      "shortName": "CaptainD"
+    },
+    {
+      "fixture": "Fan Fogger",
+      "watts": 3660,
+      "weight": 75,
+      "modes": {
+        "Default": 2
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/smoke_factory",
+        "suggestedFileName": "Smoke_Factory__Fan_Fogger.gdtf",
+        "file": "fixtures/smoke_factory/Smoke_Factory@Fan_Fogger@1000.gdtf",
+        "modes": {
+          "Default": {
+            "channels": 2,
+            "gdtfMode": "Default",
+            "status": "matched",
+            "parameters": 2
+          }
+        }
+      },
+      "shortName": "FFog"
+    },
+    {
+      "fixture": "FanFogger EC26",
+      "watts": 3050,
+      "weight": 75,
+      "modes": {
+        "Control external Fan": 2
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/smoke_factory",
+        "suggestedFileName": "Smoke_Factory__FanFogger_EC26.gdtf",
+        "file": "fixtures/smoke_factory/Smoke_Factory@FanFogger_EC26@2026-07-01.gdtf",
+        "modes": {
+          "Control external Fan": {
+            "channels": 2,
+            "gdtfMode": "Control external Fan",
+            "status": "matched",
+            "parameters": 2
+          }
+        }
+      },
+      "shortName": "FF26"
+    },
+    {
       "fixture": "Tour Hazer II",
       "watts": null,
       "weight": 16.5,
