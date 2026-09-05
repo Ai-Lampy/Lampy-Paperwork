@@ -6410,6 +6410,34 @@
       "shortName": "SOLBlnd"
     },
     {
+      "fixture": "Therma Tour 800",
+      "watts": 820,
+      "weight": 42,
+      "modes": {
+        "1-CH": 1,
+        "3-CH": 3
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elation",
+        "suggestedFileName": "Elation__Therma_Tour_800.gdtf",
+        "file": "fixtures/elation/Elation@THERMA_TOUR_800@V2_-_Updated_DMX.gdtf",
+        "modes": {
+          "1-CH": {
+            "channels": 1,
+            "gdtfMode": "1-CH",
+            "status": "matched"
+          },
+          "3-CH": {
+            "channels": 3,
+            "gdtfMode": "3-CH",
+            "status": "matched"
+          }
+        }
+      },
+      "shortName": "Therma Tour 800"
+    },
+    {
       "fixture": "VOLT plus BAR S",
       "watts": null,
       "weight": 6.75,
