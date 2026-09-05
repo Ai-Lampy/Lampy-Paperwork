@@ -50,7 +50,7 @@ The workflow will then pause for approval after it has been started manually and
 
 Do not re-enable branch-based Pages publishing, because pushes to that publishing branch would deploy automatically.
 
-## V33 release checks and artifact
+## V32.5 release checks and artifact
 
 The workflow runs both Node regression suites and the JSON/asset/version validator before building `_site`. Python recompresses GDTF ZIP entries at level 9 and compares every extracted byte with its source. Source GDTFs remain unchanged. The artifact must remain below 900 MB. Only runtime HTML, JavaScript, JSON, images, help text and GDTF archives are published; tests and development documents are excluded. No external asset host is required.
 
