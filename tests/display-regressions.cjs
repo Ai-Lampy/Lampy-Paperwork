@@ -1,5 +1,7 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert/strict');
 const root=require('path').resolve(__dirname,'..')+'/',html=fs.readFileSync(root+'index.html','utf8');
+const appVersion=html.match(/^const VERSION='([^']+)';$/m)?.[1];
+assert(appVersion,'Application version declaration is missing');
 function source(name){const start=html.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const s=html.slice(start,end+1);try{new Function('return ('+s+')');return s}catch{}}throw Error(name)}
 const c=vm.createContext({console,TextEncoder,TextDecoder,Uint8Array,crypto:require('crypto').webcrypto,btoa,atob,VERSION:'32'});
 function add(...names){for(const name of names)vm.runInContext(source(name),c)}
@@ -153,8 +155,7 @@ for(const width of [237,238,483,484,700]){
 }
 assert(source('homePanelMarkup').includes("collapsed?'homePanelCollapsed'"));
 assert(source('renderHomeView').includes('onclick="openPositionMenu()"'));
-assert(html.includes("<title>Lampy Paperwork V32.5</title>"));
-assert(html.includes("const VERSION='32.5'"));
+assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 
 // V32: capacity statistics and dashboard compatibility, without browser automation.
 add('avolitesProjectConsoles','projectCapacityStats','avolitesUniversesAvailable','fixtureChannelCount','controlParameterSummaryMarkup','normaliseHomeLayout','factoryHomeLayout','homeStat','homeStatsMarkup');
@@ -315,7 +316,7 @@ menuContext.updateProjectErrorsMenu();assert(menu.innerHTML.includes('No project
 for(let i=0;i<7;i++)menuContext.projectErrors.set(String(i),{id:String(i),description:'Error '+i,order:i});
 menuContext.updateProjectErrorsMenu();assert.equal((menu.innerHTML.match(/data-error-key=/g)||[]).length,5);assert(menu.innerHTML.indexOf('Error 6')<menu.innerHTML.indexOf('Error 5'));assert(!menu.innerHTML.includes('Error 1'));
 assert(source('handleProjectErrorsKeydown').includes("event.key==='Escape'"));assert(source('updateProjectErrorsPage').includes('host.dataset.content===content'));
-for(const file of ['info_txt/welcome_message.json','info_txt/walkthrough.json']){const doc=JSON.parse(fs.readFileSync(root+file));assert(doc.title.includes('V32.5'));assert(JSON.stringify(doc).includes('Errors'));assert(JSON.stringify(doc).includes('Network'))}
+for(const file of ['info_txt/welcome_message.json','info_txt/walkthrough.json']){const doc=JSON.parse(fs.readFileSync(root+file));assert(doc.title.includes('V33'));assert(JSON.stringify(doc).includes('Errors'));assert(JSON.stringify(doc).includes('Network'))}
 console.log('PASS: V32 console-only caps/text fitting, Network routing, grouped errors, validation boundaries, recency/resolution, five-item menu and major-release JSON.');
 assert.equal(menuContext.projectErrorToken("fixture-id:FOH's"),'fixture-id%3AFOH%27s');
 navigation.setSheetTab('networkEquipment');assert.equal(navigation.activeNetworkSubTab,'deviceConfig');
@@ -361,7 +362,7 @@ widthInput.value='50';vm.runInContext("updateDeviceConfigWidth(1,'max',input)",w
 widthInput.value='';vm.runInContext("updateDeviceConfigWidth(1,'max',input)",widthContext);assert.equal(vm.runInContext('deviceConfigWidthProfile[1].max',widthContext),null);
 widthInput.value='-1';vm.runInContext("updateDeviceConfigWidth(1,'min',input)",widthContext);assert.equal(widthInput.value,55);assert.equal(widthInput.reports,2);
 assert(!source('controlDeviceSoftwareVersionText').includes('masterConsoleVersion'));assert(!source('saveConsoleFromModal').includes('syncConsoles'));
-assert(html.includes("<title>Lampy Paperwork V32.5</title>"));assert(html.includes("const VERSION='32.5'"));
+assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 console.log('PASS: independent SW selections, model/mode restrictions, invalid paste, immediate VLAN styling and shared content-based widths.');
 console.log('PASS: isolated Home grid placement, responsive CSS boundaries, 90px boxes, compact onboard displays and unchanged detailed capacity guidance.');
 

@@ -1,4 +1,4 @@
-# V32.5 browser release checks
+# V33 browser release checks
 
 **Use this checklist only when the user explicitly requests browser testing.** Interface changes, implementation requests and releases do not authorise browser testing. Static validation remains the default.
 
