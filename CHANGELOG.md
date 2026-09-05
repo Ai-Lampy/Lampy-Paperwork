@@ -1,8 +1,4 @@
-## V33 — 5 September 2026
 
-- Advance the application to V33, retaining the V32.5 engineering fixes and existing project-file compatibility.
-- Update the welcome message, walkthrough and active release documentation for the major version.
-- Update version assertions; validate using static checks and regression suites only.
 
 ## V32.5 — 5 September 2026
 
