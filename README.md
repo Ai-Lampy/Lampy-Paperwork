@@ -37,11 +37,12 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V33.1**
+Current app version: **V33.2**
 
 Console tables use the final shared column proportions with automatic text fitting and scale up to fill available width. Narrow layouts retain scrolling at normal scale.
 Console removal warns that its data will be deleted; “Do Not Show Again” is remembered for that project only.
-Device Config fills each location group across the available page width. Devices with one physical network port show IP Address, Subnet, Protocol and VLAN on the parent row; multi-port devices keep separate editable network-port rows.
+Device Config fills each location group across the available page width. Its separate Filters panel starts collapsed, and physical port rows show their JSON-defined facing and permitted directions.
+DMX Nodes keep management IP Address, Subnet, TX Protocol and VLAN on the parent row. Network Switches keep their management IP Address and Subnet on the parent row.
 The Device Config toolbar owns VLAN Setup. The `+ Supply` pane loads its Input Supply choices from `json/power_supply.json`, starts new supplies blank and preserves older saved values.
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
@@ -170,6 +171,13 @@ When adding new reference files, keep paths relative to the repository root so G
 Use the GitHub issue tracker for bugs, feature requests, and testing notes:
 
 [Report an issue](https://github.com/Ai-Lampy/Lampy-Paperwork/issues)
+
+## V33.2 engineering changes
+
+- Device Config supports reliable Shift range selection and vertical drag-fill for compatible list cells.
+- Port facing and direction now follow the connector metadata in the device reference JSON. Fixed directions remain read-only and bidirectional DMX ports offer only Input and Output.
+- DMX Node and Network Switch management addressing appears on parent rows without duplicating fields on physical network-port children.
+- Device Config filters now occupy a separate session-only collapsible panel. Global Subnet no longer has an enable switch; a non-empty value supplies new-device defaults and updates existing devices only when Apply to all Devices is pressed.
 
 ## V33.1 engineering changes
 

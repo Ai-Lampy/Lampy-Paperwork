@@ -1,3 +1,13 @@
+## V33.2 — 5 September 2026
+
+- Fix Shift range selection and make vertical drag-fill work from list cells while skipping incompatible target options.
+- Add a Device Config Facing column from device-reference metadata and constrain Port Direction to the JSON-defined choices.
+- Move DMX Node management IP Address, Subnet, TX Protocol and VLAN to the parent row. Move Network Switch management IP Address and Subnet to the parent row without duplicating network child fields.
+- Move Device Config filters into a separate collapsed session panel with an active-filter count.
+- Reduce VLAN legend items to a 25 px minimum height with 16 px type and 6 px by 8 px padding.
+- Remove the Global Subnet enable control. Use a non-empty subnet for new devices and update existing interfaces only through Apply to all Devices.
+- Preserve the project-file schema, existing subnet inheritance fields, Control table layout and previous release history.
+
 ## V33.1 — 5 September 2026
 
 - Promote a device's only physical network port to its Device Config parent row for consoles, NPUs and network devices, while retaining DMX and secondary logical-interface child rows where applicable.
