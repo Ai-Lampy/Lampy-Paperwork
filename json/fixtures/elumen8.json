@@ -1,0 +1,28 @@
+{
+  "manufacturer": "Elumen8",
+  "fixtures": [
+    {
+      "fixture": "Windstorm DMX Fan",
+      "watts": 185,
+      "weight": 7.8,
+      "modes": {
+        "1 Channel": 1
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/elumen8",
+        "suggestedFileName": "Elumen8__Windstorm_DMX_Fan.gdtf",
+        "file": "fixtures/elumen8/Elumen8@Windstorm_DMX_Fan@Lampy_1.0.gdtf",
+        "modes": {
+          "1 Channel": {
+            "channels": 1,
+            "gdtfMode": "1 Channel",
+            "status": "matched",
+            "parameters": 1
+          }
+        }
+      },
+      "shortName": "Windstorm"
+    }
+  ]
+}
