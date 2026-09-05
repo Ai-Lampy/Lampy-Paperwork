@@ -52,6 +52,6 @@ Do not re-enable branch-based Pages publishing, because pushes to that publishin
 
 ## V33 release checks and artifact
 
-The workflow runs both Node regression suites and the JSON/asset/version validator before building `_site`. Python recompresses GDTF ZIP entries at level 9 and compares every extracted byte with its source. Source GDTFs remain unchanged. The artifact must remain below 900 MB. Only runtime HTML, JavaScript, JSON, images, help text and GDTF archives are published; tests and development documents are excluded. No external asset host is required.
+The workflow runs both Node regression suites and the JSON/asset/version validator before building `_site`. Python packages only GDTF archives referenced by the active JSON library, recompresses their ZIP entries at level 9 and compares every extracted byte with its source. Invalid referenced archives report their exact path. Source GDTFs remain unchanged. The artifact must remain below 900 MB. Only runtime HTML, JavaScript, JSON, images, help text and referenced GDTF archives are published; tests and development documents are excluded. No external asset host is required.
 
 For a local check, run `python3 scripts/build_site.py /tmp/lampy-site` with a new output directory. The script refuses an existing destination to avoid deleting unrelated files. Do not start a browser or browser automation unless the user explicitly requests browser testing. The optional browser checklist applies only after that explicit request.

@@ -1,6 +1,7 @@
 ## V33 — 5 September 2026
 
 - Advance the application to V33, retaining the V32.5 engineering fixes and existing project-file compatibility.
+- Build releases from GDTF files referenced by the active fixture library, excluding obsolete repository files and reporting the exact path of any invalid referenced archive.
 - Update the welcome message, walkthrough and active release documentation for the major version.
 - Update version assertions; validate using static checks and regression suites only.
 
