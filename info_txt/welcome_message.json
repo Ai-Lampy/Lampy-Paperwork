@@ -1,9 +1,9 @@
 {
-  "title": "Welcome to Lampy Paperwork V32.5",
+  "title": "Welcome to Lampy Paperwork V33",
   "paragraphs": [
     "Lampy Paperwork is a browser-based workspace for creating and managing the technical paperwork used on live entertainment productions. It brings fixture patching, power calculations, distro and Fan Out documentation, control systems, network devices, rack layouts, exports, and project records together in one place.",
     "The app is designed to keep related project information connected, reduce repeated data entry, and produce clear paperwork that can move with a production from planning through delivery.",
-    "V32 groups Device Config and IP Address under Network, adds an Errors button and full-page active network/patch error review with links to affected fields, and improves console-table widths and compact capacity text.",
+    "V33 improves power calculations, supply warnings, distro-label preservation, project import validation, saving feedback and revision tracking. Network and Errors remain available for device configuration and patch checks.",
     "Lampy Paperwork is still under active development. Features, layouts, workflows, and saved data may continue to change while the app is tested and improved. Download and keep regular copies of your Lampy project file.",
     "Please report bugs, request missing library items, or suggest improvements through the GitHub issue tracker:",
     "https://github.com/Ai-Lampy/Lampy-Paperwork/issues",

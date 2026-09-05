@@ -1,8 +1,20 @@
 {
-  "title": "Lampy Paperwork V32.5 Walk-through",
+  "title": "Lampy Paperwork V33 Walk-through",
   "sections": [
     {
-      "title": "New in V32: Network and Errors",
+      "title": "New in V33: Project Reliability",
+      "type": "unordered",
+      "items": [
+        "New distros default to 230 V circuit voltage. Existing voltage selections are preserved. Verify the actual circuit voltage and rated equipment current; calculated current assumes power factor 1.",
+        "Supply warnings use the selected rating. Missing fixture wattage produces incomplete totals rather than a complete-looking partial load.",
+        "Distro and Socapex ownership preserves other distros’ labels when you resize or remove a distro.",
+        "Save status shows unsaved changes, successful saves and storage failures. Use Download recovery if saving fails. If another tab changes the project, download a recovery copy before reloading.",
+        "Project imports validate data before replacing your project. ZIP imports check paths, extraction limits and file integrity.",
+        "Revision tracking includes distro labels, output settings, positions, network settings and GDTF metadata. Saved custom fixtures remain selectable after reload."
+      ]
+    },
+    {
+      "title": "Network and Errors",
       "type": "unordered",
       "items": [
         "Network contains Device Config and IP Address’ sub-tabs. Its last selected page is remembered for the current project session.",
@@ -38,7 +50,7 @@
         "Use Import to load CSV, Excel, XLSM, or MVR files. Imported comparison tabs highlight new, removed, and changed patch data before it is merged into the master patch.",
         "Fixture Patch Export groups paper, orientation, DPI, zoom, column, and GDTF controls inside Formatting Options. PDF, Excel, and MVR actions, temporary PDF logo controls, and the hidden-column report remain directly accessible below it.",
         "MVR export checks fixture IDs, DMX addresses, modes, duplicate ranges, and GDTF availability before building the file.",
-        "V14 imports supported MVR 1.5 and 1.6 patch data, including fixture positions, layers, classes, UUID metadata, and embedded GDTF filenames with or without the .gdtf extension.",
+        "V33 imports supported MVR 1.5 and 1.6 patch data, including fixture positions, layers, classes, UUID metadata, and embedded GDTF filenames with or without the .gdtf extension.",
         "MVR export uses standards-formatted UUIDs and DMX addresses, creates one layer per Lampy fixture position, and embeds the exact matched GDTF file and mode.",
         "Use Add GDTF Files in Fixture Patch Export when a repository match is unavailable. Manual upload remains a fallback and produces a report for matches, revisions, duplicates, missing fixtures, errors, and oversized files."
       ]
@@ -95,7 +107,7 @@
       "title": "Revisions and Saving",
       "type": "unordered",
       "items": [
-        "Changes to Project Info, Fixture Patch, Power Calculations, and Control automatically create concise revision notes in the latest working version.",
+        "Changes to Project Info, Fixture Patch, Power Calculations, Control, distro labels, output settings and GDTF metadata create revision notes in the latest working version.",
         "Use Bump Version Number to increment the project version and add the current date. Notes can be edited, removed, or moved to another version.",
         "Similar automatic changes are grouped into a short client-facing summary. Use Download Change Log when the detailed activity log is needed.",
         "The browser saves a working copy locally, but Download Project is the portable backup. Use Open Project to continue from a saved Lampy project file."
