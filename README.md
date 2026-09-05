@@ -37,7 +37,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V33**
+Current app version: **V32.5**
 
 Console tables use the final shared column proportions with automatic text fitting and scale up to fill available width. Narrow layouts retain scrolling at normal scale.
 Console removal warns that its data will be deleted; “Do Not Show Again” is remembered for that project only.
@@ -170,7 +170,7 @@ Use the GitHub issue tracker for bugs, feature requests, and testing notes:
 
 [Report an issue](https://github.com/Ai-Lampy/Lampy-Paperwork/issues)
 
-## V33 engineering changes
+## V32.5 engineering changes
 
 - New distros default to 230 V circuit voltage. Existing selections are preserved. Power calculations assume power factor 1; verify against rated equipment current. Single-phase inputs and single-phase Socapex groups use explicit phase allocation rules.
 - Supply warnings use the selected amperage. Missing or invalid loads show incomplete totals, including exports.
