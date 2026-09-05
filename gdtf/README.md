@@ -1,6 +1,6 @@
 # GDTF Repository
 
-This folder stores the GDTF files used by Lampy Paperwork V11 when exporting
+This folder stores the GDTF files used by Lampy Paperwork V33 when exporting
 fixture patches as MVR files.
 
 ## Structure
