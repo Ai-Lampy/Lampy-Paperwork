@@ -37,13 +37,15 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V33.2**
+Current app version: **V33.3**
 
 Console tables use the final shared column proportions with automatic text fitting and scale up to fill available width. Narrow layouts retain scrolling at normal scale.
 Console removal warns that its data will be deleted; “Do Not Show Again” is remembered for that project only.
 Device Config fills each location group across the available page width. Its separate Filters panel starts collapsed, and physical port rows show their JSON-defined facing and permitted directions.
 DMX Nodes keep management IP Address, Subnet, TX Protocol and VLAN on the parent row. Network Switches keep their management IP Address and Subnet on the parent row.
 The Device Config toolbar owns VLAN Setup. The `+ Supply` pane loads its Input Supply choices from `json/power_supply.json`, starts new supplies blank and preserves older saved values.
+Fixture Patch import offers linked library suggestions after three typed characters, accepts combined Uni/Add columns, and allows new fixtures without wattage or weight.
+Position Summary exports open in the shared PDF preview workspace with saved Rectangle or Box layouts.
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 

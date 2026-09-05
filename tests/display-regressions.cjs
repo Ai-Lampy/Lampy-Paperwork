@@ -399,3 +399,32 @@ assert.equal(pctx.normaliseProjectInfo({skipConsoleRemovalConfirmation:'true'}).
 assert.equal(pctx.normaliseProjectInfo(JSON.parse(JSON.stringify({skipConsoleRemovalConfirmation:true}))).skipConsoleRemovalConfirmation,true);
 assert(!source('settingsPayload').includes('skipConsoleRemovalConfirmation'));
 console.log('PASS: V32.2 final bounds, editor removal, stable-ID deletion, cancel/stale-project safety and per-project preference normalization.');
+
+// V33.3 Fixture Patch import and Position Summary preview.
+const importContext=vm.createContext({});
+for(const name of ['normaliseImportMatch','parsePatchImportUniAddress','patchImportMappedRows'])vm.runInContext(source(name),importContext);
+for(const value of ['3/280',' 3 , 280 ','3-280','3.280'])assert.deepEqual(JSON.parse(JSON.stringify(importContext.parsePatchImportUniAddress(value))),{universe:'3',address:'280'});
+for(const value of ['','3','3:280','0/280','3/0','3/513'])assert.deepEqual(JSON.parse(JSON.stringify(importContext.parsePatchImportUniAddress(value))),{universe:'',address:''});
+importContext.patchImportState={headers:['Combined','Universe','Address','Fixture'],rows:[['3.280','','','Test'],['4/120','8','','Test'],['5-200','','240','Test'],['bad','','','Test']],mapping:{0:'uniAddress',1:'universe',2:'address',3:'fixture'}};
+const mapped=JSON.parse(JSON.stringify(importContext.patchImportMappedRows()));
+assert.deepEqual(mapped[0],{universe:'3',address:'280',fixture:'Test'});assert.deepEqual(mapped[1],{universe:'8',address:'120',fixture:'Test'});assert.deepEqual(mapped[2],{universe:'5',address:'240',fixture:'Test'});assert.deepEqual(mapped[3],{universe:'',address:'',fixture:'Test'});
+const importFields=vm.runInNewContext(html.match(/const PATCH_IMPORT_FIELDS=\[(.*?)\n\];/s)[0]+';PATCH_IMPORT_FIELDS');
+assert.equal(importFields.findIndex(field=>field.key==='uniAddress'),importFields.findIndex(field=>field.key==='address')+1);
+assert(importFields.find(field=>field.key==='uniAddress').terms.includes('dmx address'));
+const mappingContext=vm.createContext({});vm.runInContext(html.match(/const PATCH_IMPORT_FIELDS=\[(.*?)\n\];/s)[0],mappingContext);for(const name of ['normaliseImportKey','defaultPatchImportMapping'])vm.runInContext(source(name),mappingContext);
+assert.deepEqual(JSON.parse(JSON.stringify(mappingContext.defaultPatchImportMapping(['Uni/Add','Universe','Address']))),{0:'uniAddress',1:'universe',2:'address'});
+assert.equal(mappingContext.defaultPatchImportMapping(['DMX Address'])[0],'uniAddress');
+assert(source('patchImportSuggestionResults').includes('query.length<3'));
+const suggestionFilter={manufacturerSearch:'ab',fixtureSearch:'',activeSuggestion:'manufacturerSearch'},suggestionContext=vm.createContext({patchImportMatchFilter:()=>suggestionFilter,normaliseImportMatch:value=>String(value).replace(/\W/g,'').toLowerCase(),patchImportMatchManufacturers:()=>['Ayrton'],patchImportMatchFixtures:()=>[{manufacturer:'Ayrton',fixture:'Diablo'}]});vm.runInContext(source('patchImportSuggestionResults'),suggestionContext);assert.equal(suggestionContext.patchImportSuggestionResults('x','manufacturerSearch').length,0);suggestionFilter.manufacturerSearch='ayr';assert.deepEqual(Array.from(suggestionContext.patchImportSuggestionResults('x','manufacturerSearch')),['Ayrton']);suggestionFilter.activeSuggestion='fixtureSearch';suggestionFilter.fixtureSearch='dia';assert.equal(suggestionContext.patchImportSuggestionResults('x','fixtureSearch')[0].fixture,'Diablo');
+assert(source('patchImportManualMatchMarkup').includes('role="combobox"'));assert(!source('patchImportManualMatchMarkup').includes('<select'));
+assert(source('patchImportSuggestionKeydown').includes("'ArrowDown'"));assert(source('patchImportSuggestionKeydown').includes("'ArrowUp'"));assert(source('patchImportSuggestionKeydown').includes("'Enter'"));assert(source('patchImportSuggestionKeydown').includes("'Escape'"));
+assert(source('choosePatchImportFixture').includes("filter.manufacturer+'||'+filter.fixtureSearch"));
+assert(source('addPatchImportNewFixture').includes("wattsText===''?null"));assert(source('addPatchImportNewFixture').includes("weightText===''?null"));assert(!source('addPatchImportNewFixture').includes('!Number.isFinite(watts)||!Number.isFinite(weight)'));
+assert(html.includes('id="positionPdfModal"'));for(const id of ['positionPdfPaperSize','positionPdfOrientation','positionPdfLayout','positionPdfPages','positionPdfInfo'])assert(html.includes('id="'+id+'"'));
+assert(source('renderHomeView').includes('openPositionSummaryPreview()\">Export Summary'));
+assert(source('renderPositionsView').includes('openPositionSummaryPreview()\">Export Summary'));
+const geometryContext=vm.createContext({});vm.runInContext(source('positionSummaryGeometry'),geometryContext);
+const paper={w:297,h:210};assert.equal(geometryContext.positionSummaryGeometry(paper,'rectangles').cols,2);assert.equal(geometryContext.positionSummaryGeometry(paper,'boxes').cols,4);
+assert(source('downloadPositionSummary').includes("'-position-summary.pdf'"));assert(source('openPositionSummaryPreview').includes("beginPdfLogoPreview('position','positionPdfModal')"));
+assert.equal(pctx.defaultProjectInfo().positionSummaryFormat.layout,'rectangles');assert.equal(pctx.normaliseProjectInfo({positionSummaryFormat:{layout:'boxes'}}).positionSummaryFormat.layout,'boxes');assert.equal(pctx.normaliseProjectInfo({positionSummaryFormat:{layout:'invalid'}}).positionSummaryFormat.layout,'rectangles');
+console.log('PASS: V33.3 linked import suggestions, combined Uni/Add parsing, optional loads and Position Summary preview layouts.');

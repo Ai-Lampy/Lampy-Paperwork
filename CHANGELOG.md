@@ -1,3 +1,11 @@
+## V33.3 — 5 September 2026
+
+- Replace Fixture Patch import matching dropdowns with linked Manufacture and Fixture Type suggestions shown after three typed characters, including keyboard selection.
+- Add Uni/Add column mapping with slash, comma, hyphen and period separators while preserving explicit Universe and Address values.
+- Make Wattage and Weight optional for new fixtures created during import.
+- Add a Position Summary PDF preview with paper, orientation, DPI, zoom, logo and saved Rectangle/Box layout controls.
+- Preserve older project loading and the existing Position Summary PDF filename without updating the major-release browser checklist.
+
 ## V33.2 — 5 September 2026
 
 - Fix Shift range selection and make vertical drag-fill work from list cells while skipping incompatible target options.
