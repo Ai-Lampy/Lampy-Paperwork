@@ -154,7 +154,7 @@ for(const width of [237,238,483,484,700]){
 assert(source('homePanelMarkup').includes("collapsed?'homePanelCollapsed'"));
 assert(source('renderHomeView').includes('onclick="openPositionMenu()"'));
 assert(html.includes("<title>Lampy Paperwork V32.5</title>"));
-assert(html.includes("const VERSION='33'"));
+assert(html.includes("const VERSION='32.5'"));
 
 // V32: capacity statistics and dashboard compatibility, without browser automation.
 add('avolitesProjectConsoles','projectCapacityStats','avolitesUniversesAvailable','fixtureChannelCount','controlParameterSummaryMarkup','normaliseHomeLayout','factoryHomeLayout','homeStat','homeStatsMarkup');
@@ -361,7 +361,7 @@ widthInput.value='50';vm.runInContext("updateDeviceConfigWidth(1,'max',input)",w
 widthInput.value='';vm.runInContext("updateDeviceConfigWidth(1,'max',input)",widthContext);assert.equal(vm.runInContext('deviceConfigWidthProfile[1].max',widthContext),null);
 widthInput.value='-1';vm.runInContext("updateDeviceConfigWidth(1,'min',input)",widthContext);assert.equal(widthInput.value,55);assert.equal(widthInput.reports,2);
 assert(!source('controlDeviceSoftwareVersionText').includes('masterConsoleVersion'));assert(!source('saveConsoleFromModal').includes('syncConsoles'));
-assert(html.includes("<title>Lampy Paperwork V32.5</title>"));assert(html.includes("const VERSION='33'"));
+assert(html.includes("<title>Lampy Paperwork V32.5</title>"));assert(html.includes("const VERSION='32.5'"));
 console.log('PASS: independent SW selections, model/mode restrictions, invalid paste, immediate VLAN styling and shared content-based widths.');
 console.log('PASS: isolated Home grid placement, responsive CSS boundaries, 90px boxes, compact onboard displays and unchanged detailed capacity guidance.');
 
