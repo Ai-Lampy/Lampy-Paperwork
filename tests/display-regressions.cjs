@@ -467,4 +467,7 @@ assert(html.includes('color:var(--pos-text,#fff)'));
 assert(html.includes('.positionPdfItem.noColour span{color:#111;text-shadow:none}'));
 assert(source('controlPositionStripStyle').includes("--pos-text:#111;--pos-text-shadow:none;"));
 assert(source('drawPositionSummaryBlock').includes("blackText?'#111111':'#ffffff'"));
+assert(source('drawPositionSummaryHeader').includes("title='Position Summary - '+projectName"));
+assert(source('drawPositionSummaryHeader').includes("sideReserve=100"));
+assert(source('drawPositionSummaryHeader').includes("pdfLine(doc,18,lineY,doc.w-18,lineY,1)"));
 console.log('PASS: V33.6 white and uncoloured position text uses black.');
