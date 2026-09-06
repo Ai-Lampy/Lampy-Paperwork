@@ -464,6 +464,7 @@ console.log('PASS: V33.6 Device Config parent delete action and rack-placement c
 
 // V33.6 white and uncoloured Position Summary text stays black.
 assert(html.includes('color:var(--pos-text,#fff)'));
+assert(html.includes('.positionPdfItem.noColour span{color:#111;text-shadow:none}'));
 assert(source('controlPositionStripStyle').includes("--pos-text:#111;--pos-text-shadow:none;"));
 assert(source('drawPositionSummaryBlock').includes("blackText?'#111111':'#ffffff'"));
 console.log('PASS: V33.6 white and uncoloured position text uses black.');
