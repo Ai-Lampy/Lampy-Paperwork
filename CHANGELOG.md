@@ -3,6 +3,7 @@
 - Add a final blank Device Config action column with a confirmed red ❌ delete action on each parent device row.
 - Remove deleted NPUs and network devices from any Rack Layout placements, while retaining the existing Console deletion confirmation.
 - Use black text for single white or uncoloured Position Summary entries in the app and exported PDF.
+- Resize and compress uploaded logos before saving, and retain a lightweight local project copy when embedded GDTF data would exceed browser storage.
 - Keep Control Consoles table columns and project-file compatibility unchanged.
 
 ## V33.5 — 6 September 2026

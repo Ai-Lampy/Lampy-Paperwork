@@ -51,6 +51,7 @@ Position Summary exports open in the shared PDF preview workspace with saved Rec
 Position names are merged case-insensitively across fixture, device, physical-port and rack records, preserving the first entered spelling and position colours.
 Device Config has a final delete column with a confirmed red ❌ action on every parent device row; the Control Consoles table is unchanged.
 Single white or uncoloured Position Summary entries use black text in the app and exported PDF.
+Uploaded project logos are resized and compressed before local saving. If browser storage is full, the local save retains project data without embedded GDTF file contents.
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 

@@ -470,4 +470,7 @@ assert(source('drawPositionSummaryBlock').includes("blackText?'#111111':'#ffffff
 assert(source('drawPositionSummaryHeader').includes("title='Position Summary - '+projectName"));
 assert(source('drawPositionSummaryHeader').includes("sideReserve=100"));
 assert(source('drawPositionSummaryHeader').includes("pdfLine(doc,18,lineY,doc.w-18,lineY,1)"));
+assert(html.includes('const PROJECT_LOGO_MAX_DIMENSION=800'));
+assert(source('compactUploadedLogo').includes("canvas.toDataURL('image/jpeg',PROJECT_LOGO_JPEG_QUALITY)"));
+assert(source('flushPersist').includes('appPayload(false)'));
 console.log('PASS: V33.6 white and uncoloured position text uses black.');
