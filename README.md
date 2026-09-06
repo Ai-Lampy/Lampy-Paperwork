@@ -50,6 +50,7 @@ Fixture Patch import offers linked library suggestions after three typed charact
 Position Summary exports open in the shared PDF preview workspace with saved Rectangle or Box layouts.
 Position names are merged case-insensitively across fixture, device, physical-port and rack records, preserving the first entered spelling and position colours.
 Device Config has a final delete column with a confirmed red ❌ action on every parent device row; the Control Consoles table is unchanged.
+Single white or uncoloured Position Summary entries use black text in the app and exported PDF.
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 
