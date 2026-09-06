@@ -432,7 +432,7 @@ assert.equal(pctx.defaultProjectInfo().positionSummaryFormat.layout,'rectangles'
 console.log('PASS: V33.3 linked import suggestions, combined Uni/Add parsing, optional loads and Position Summary preview layouts.');
 
 // V33.4 patch cleanup, single-distro menus, Device Config controls and rack fitting.
-assert(html.includes('<title>Lampy Paperwork V33.6</title>'));
+assert(html.includes('<title>Lampy Paperwork V33.7</title>'));
 assert(source('appPayload').includes('syncPositionsFromPatch()'));
 assert(html.includes('>Delete Patch</button>'));assert(html.includes('>Delete Imported Patch</button>'));
 assert(html.includes('.deviceConfigFillHandle{position:absolute;right:-10px;bottom:-10px;width:20px;height:20px'));
@@ -449,12 +449,12 @@ const rackContext=vm.createContext({rackViewFor:()=> 'front'});vm.runInContext(s
 console.log('PASS: V33.4 complete patch deletion, single-distro menus, Device Config controls and measured rack fitting.');
 
 // V33.5 position names merge across every project location source.
-assert(html.includes('<title>Lampy Paperwork V33.6</title>'));
+assert(html.includes('<title>Lampy Paperwork V33.7</title>'));
 const v335=vm.createContext({app:{fixturePatch:[{location:'foh',colour1:'#ff0000',colour2:''}],controlNetwork:{consoles:[{location:'FOH ',deviceConfigPorts:[{location:'fOh'}]}],npus:[{location:'foh',deviceConfigPorts:[{location:'FOH'}]}],networkDevices:[{location:'FoH',portSettings:[{location:' foh '}]}],racks:[{location:'FOH',devices:[]}]}},normalisePosition:value=>({name:String(value?.name||value?.location||'').trim(),colour1:value?.colour1||'',colour2:value?.colour2||'',colour3:value?.colour3||''}),normaliseBlankColour:value=>String(value||'').trim(),ensureProjectInfo:()=>v335.project,project:{positions:[{name:'FOH',colour1:'',colour2:'#00ff00',colour3:''},{name:'foh',colour1:'#ff0000',colour2:'',colour3:'#0000ff'}]},patchFixtureRows:()=>v335.app.fixturePatch,syncRackMountedNetworkLocations:()=>v335.racksSynced=true});vm.runInContext(source('positionKey'),v335);vm.runInContext(source('positionLocationItems'),v335);vm.runInContext(source('syncPositionsFromPatch'),v335);vm.runInContext(source('updatePositionReferences'),v335);v335.syncPositionsFromPatch();assert.equal(v335.project.positions.filter(position=>position.name).length,1);assert.deepEqual(JSON.parse(JSON.stringify(v335.project.positions[0])),{name:'FOH',colour1:'#ff0000',colour2:'#00ff00',colour3:'#0000ff'});assert(v335.positionLocationItems().every(item=>!item.location||item.location==='FOH'));assert(v335.racksSynced);v335.updatePositionReferences('FOH','Front of House');assert(v335.positionLocationItems().every(item=>!item.location||item.location==='Front of House'));
 console.log('PASS: V33.5 project-wide position merging and reference canonicalisation.');
 
 // V33.6 Device Config parent deletion action.
-assert(html.includes('<title>Lampy Paperwork V33.6</title>'));
+assert(html.includes('<title>Lampy Paperwork V33.7</title>'));
 assert(source('deviceConfigParentRow').includes('deviceConfigDeleteButton'));
 assert(source('deviceConfigPortRow').includes('deviceConfigDeleteCol'));
 assert(source('deviceConfigInterfaceTwoRow').includes('deviceConfigDeleteCol'));
@@ -473,4 +473,6 @@ assert(source('drawPositionSummaryHeader').includes("pdfLine(doc,18,lineY,doc.w-
 assert(html.includes('const PROJECT_LOGO_MAX_DIMENSION=800'));
 assert(source('compactUploadedLogo').includes("canvas.toDataURL('image/jpeg',PROJECT_LOGO_JPEG_QUALITY)"));
 assert(source('flushPersist').includes('appPayload(false)'));
+assert(html.includes('.patchPdfPreviewPage .fixturePatchTable .type{width:15%!important}'));
+assert(html.includes('.patchPdfPreviewPage .fixturePatchTable .position{width:13%!important}'));
 console.log('PASS: V33.6 white and uncoloured position text uses black.');

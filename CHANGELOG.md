@@ -1,9 +1,14 @@
+## V33.7 — 6 September 2026
+
+- Match the exported Position Summary header to its PDF preview, including centred project title and version/date metadata.
+- Resize and compress uploaded logos before saving, and retain a lightweight local project copy when embedded GDTF data would exceed browser storage.
+- Give exported Fixture Patch Position cells more width by reducing the Type and Notes allocations, matching the usable web-table layout and avoiding unnecessary position wrapping.
+
 ## V33.6 — 6 September 2026
 
 - Add a final blank Device Config action column with a confirmed red ❌ delete action on each parent device row.
 - Remove deleted NPUs and network devices from any Rack Layout placements, while retaining the existing Console deletion confirmation.
 - Use black text for single white or uncoloured Position Summary entries in the app and exported PDF.
-- Resize and compress uploaded logos before saving, and retain a lightweight local project copy when embedded GDTF data would exceed browser storage.
 - Keep Control Consoles table columns and project-file compatibility unchanged.
 
 ## V33.5 — 6 September 2026
