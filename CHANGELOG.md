@@ -1,3 +1,19 @@
+## V33.5 — 6 September 2026
+
+- Merge matching position names case-insensitively across Fixture Patch, Control, Device Config physical ports and Rack Layout, using one canonical position name throughout the project.
+- Merge duplicate Position Summary entries and retain the first entered name plus any missing saved position colours.
+- Preserve the project-file schema and leave the major-release browser checklist unchanged.
+
+## V33.4 — 6 September 2026
+
+- Add a confirmed Fixture Patch Delete Patch action that clears master and imported patch rows, attached GDTF data, caches and matching patch positions while retaining unrelated project paperwork.
+- Hide single-network-port child rows for every Device Config device type, including DMX Nodes and Network Switches.
+- Use female connectors as Output defaults and male connectors as Input defaults for bidirectional and legacy ports, while retaining fixed JSON directions and saved values.
+- Increase Device Config list drag-fill hit areas, prevent text selection while dragging and add keyboard access to parent expand and collapse controls.
+- Hide redundant single-distro Power Calculations and Fan Outs top-menu choices.
+- Recalculate Rack Layout Fit from the measured rack-card space rather than the old fixed width.
+- Keep project-file compatibility and leave the major-release browser checklist unchanged.
+
 ## V33.3 — 5 September 2026
 
 - Replace Fixture Patch import matching dropdowns with linked Manufacture and Fixture Type suggestions shown after three typed characters, including keyboard selection.

@@ -37,15 +37,18 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V33.3**
+Current app version: **V33.5**
 
 Console tables use the final shared column proportions with automatic text fitting and scale up to fill available width. Narrow layouts retain scrolling at normal scale.
 Console removal warns that its data will be deleted; “Do Not Show Again” is remembered for that project only.
 Device Config fills each location group across the available page width. Its separate Filters panel starts collapsed, and physical port rows show their JSON-defined facing and permitted directions.
-DMX Nodes keep management IP Address, Subnet, TX Protocol and VLAN on the parent row. Network Switches keep their management IP Address and Subnet on the parent row.
+DMX Nodes keep management IP Address, Subnet, TX Protocol and VLAN on the parent row. Network Switches keep their management IP Address and Subnet on the parent row. Any device with one physical network port keeps that port on its parent row.
+Fixture Patch has a confirmed Delete Patch action that clears the master, imported comparisons, attached GDTF data and matching patch positions.
+Device Config supports a larger drag-fill target for list cells, connector-sex direction defaults and keyboard access to parent expand controls. Rack Layout Fit uses the current rack-card space.
 The Device Config toolbar owns VLAN Setup. The `+ Supply` pane loads its Input Supply choices from `json/power_supply.json`, starts new supplies blank and preserves older saved values.
 Fixture Patch import offers linked library suggestions after three typed characters, accepts combined Uni/Add columns, and allows new fixtures without wattage or weight.
 Position Summary exports open in the shared PDF preview workspace with saved Rectangle or Box layouts.
+Position names are merged case-insensitively across fixture, device, physical-port and rack records, preserving the first entered spelling and position colours.
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 
