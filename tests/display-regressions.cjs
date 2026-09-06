@@ -120,14 +120,15 @@ assert.equal(c.deviceConfigNetworkParentMode(dmxNode),'dmx-node');assert.equal(c
 const singleNode={...dmxNode,ports:[dmxNode.ports[0]]},singleSwitch={...networkSwitch,ports:[networkSwitch.ports[0]]};assert.equal(c.deviceConfigPromotedNetworkPort(singleNode)?.id,'eth-1');assert.equal(c.deviceConfigVisiblePorts(singleNode).length,0);assert.equal(c.deviceConfigPromotedNetworkPort(singleSwitch)?.id,'eth-1');assert.equal(c.deviceConfigVisiblePorts(singleSwitch).length,0);
 const nodeParent=c.deviceConfigParentRow(dmxNode,0),switchParent=c.deviceConfigParentRow(networkSwitch,0),nodePort=c.deviceConfigPortRow(dmxNode,dmxNode.ports[0],1);assert(nodeParent.includes('<seg data-key="ip1">'));assert(nodeParent.includes('<protocol>'));assert(nodeParent.includes('<vlan>'));assert(switchParent.includes('<seg data-key="ip1">'));assert(!switchParent.includes('<protocol>'));assert(!switchParent.includes('<vlan>'));assert(!nodePort.includes('<seg'));assert(!nodePort.includes('<protocol>'));assert(!nodePort.includes('<vlan>'));assert(nodePort.includes('>Front<'));
 c.deviceConfigSegmentedInput=oldSegmented;c.deviceConfigProtocolSelect=oldProtocol;c.deviceConfigVlanSelect=oldVlan;
-for(const [markup,count] of [[control,16],[config,13]])for(const [,row] of markup.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/g))assert.equal((row.match(/<t[dh]\b/g)||[]).length,count);
+for(const [markup,count] of [[control,16],[config,14]])for(const [,row] of markup.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/g))assert.equal((row.match(/<t[dh]\b/g)||[]).length,count);
 assert(config.includes('>Location<'));assert(config.includes('deviceConfigFacingCol'));assert(config.includes('data-dc-key="location"'));assert(config.includes('data-dc-col="11"'));assert(config.includes('data-dc-col="12"'));
 assert(!config.includes('minimum width'));assert(!config.includes('maximum width'));
 const rackLocation=c.canonicalDeviceRackPlacement;c.canonicalDeviceRackPlacement=()=>({rack:{location:'Rack Room'}});assert(c.deviceConfigLocationControl(dev,'Ignored',0,11,'',true).includes('Managed by Rack Layout'));assert(c.deviceConfigLocationControl(dev,'Port Location',0,11,'eth-1',false).includes('data-dc-port-id="eth-1"'));c.canonicalDeviceRackPlacement=rackLocation;
 const portContext=vm.createContext({normaliseVlan:value=>String(value||'0')});vm.runInContext(source('normaliseDeviceConfigPort'),portContext);assert.equal(portContext.normaliseDeviceConfigPort({id:'p',location:'Dimmer City'}).location,'Dimmer City');assert.equal(portContext.normaliseDeviceConfigPort({id:'p'}).location,'');
 assert(source('deviceConfigPortsFor').includes("if(!Object.hasOwn(raw,'location'))base.location=device.location||''"));
 assert(source('updateDeviceConfigField').includes("if(key==='location'&&!portId)render()"));
-assert.deepEqual(JSON.parse(JSON.stringify(vm.runInContext('DEVICE_CONFIG_WIDTH_DEFAULTS',c))),[[30,30],[45,70],[40,60],[100,130],[60,60],[100,180],[110,110],[110,110],[40,100],[40,100],[40,150],[80,120],[200,400]]);
+assert(config.includes('deviceConfigDeleteButton'));assert(config.includes('❌'));assert(!control.includes('deviceConfigDeleteButton'));
+assert.deepEqual(JSON.parse(JSON.stringify(vm.runInContext('DEVICE_CONFIG_WIDTH_DEFAULTS',c))),[[30,30],[45,70],[40,60],[100,130],[60,60],[100,180],[110,110],[110,110],[40,100],[40,100],[40,150],[80,120],[200,400],[34,34]]);
 const directionContext=vm.createContext({escapeHtml:c.escapeHtml,escapeAttr:c.escapeAttr});vm.runInContext(source('connectorDefaultDirection'),directionContext);vm.runInContext(source('deviceConfigDirectionSelect'),directionContext);const directionDevice={source:'network',id:'n'};assert.equal(directionContext.connectorDefaultDirection('XLR-5 female','input'),'output');assert.equal(directionContext.connectorDefaultDirection('XLR-5 male','output'),'input');assert.equal(directionContext.connectorDefaultDirection('RJ45','network'),'network');assert(!directionContext.deviceConfigDirectionSelect(directionDevice,{id:'p',direction:'network',directions:['network']},0,9).includes('<select'));const bidirectional=directionContext.deviceConfigDirectionSelect(directionDevice,{id:'p',type:'XLR-5 female',direction:'',directions:['input','output']},0,9);assert(bidirectional.includes('<select'));assert(bidirectional.includes('>Input<'));assert(bidirectional.includes('>Output<'));assert(bidirectional.includes('value="output" selected'));assert(!bidirectional.includes('>Network<'));assert(directionContext.deviceConfigDirectionSelect(directionDevice,{id:'p',direction:'output',directions:[]},0,9).includes('>Bidirectional<'));
 add('bytesToBase64','base64ToBytes','sha256Base64','packageProjectPayload','unpackProjectPayload');
 (async()=>{const p={appVersion:'32',app:{controlNetwork:{consoles:[avo,backup,main],npus:[]}}};const out=await c.unpackProjectPayload(await c.packageProjectPayload(p));assert.equal(JSON.stringify(out),JSON.stringify(p));const located={app:{controlNetwork:{networkDevices:[{id:'n',deviceConfigPorts:[{id:'p',location:'Dimmer City'}]}]}}};const locatedOut=await c.unpackProjectPayload(await c.packageProjectPayload(located));assert.equal(locatedOut.app.controlNetwork.networkDevices[0].deviceConfigPorts[0].location,'Dimmer City');console.log('PASS: Avolites reference limits/images/ports; D9 and D3 TNP examples; mixed/backup/legacy totals; expansion isolation; 110px limits; UI capacity labels; position counts; project package round trip.');})().catch(e=>{console.error(e);process.exitCode=1});
@@ -235,7 +236,7 @@ deviceLimits.forEach(([min,max],index)=>assert.deepEqual(JSON.parse(JSON.stringi
 c.deviceConfigExpandedDevices.add('console:a');c.controlExpandedDevices.clear();
 const dcConsole=c.controlDeviceConfigTableMarkup([dev],'deviceConfig');
 assert(dcConsole.includes('data-table-view="deviceConfig"'));assert(dcConsole.includes("'console:a','deviceConfig'"));assert(dcConsole.includes("setDeviceConfigSort('name')"));
-for(const [,row]of dcConsole.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/g))assert.equal((row.match(/<t[dh]\b/g)||[]).length,17);
+for(const [,row]of dcConsole.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/g))assert.equal((row.match(/<t[dh]\b/g)||[]).length,18);
 assert(dcConsole.includes('data-dc-col="16"'));assert(dcConsole.includes('deviceConfigFacingCol'));
 const mixedTables=c.deviceConfigGroupTablesMarkup([dev,{...dev,id:'n',source:'network'}]);assert.equal((mixedTables.match(/<table /g)||[]).length,2);
 assert(source('measureDeviceConfigTable').includes("table.dataset.tableView!=='deviceConfig'"));
@@ -431,7 +432,7 @@ assert.equal(pctx.defaultProjectInfo().positionSummaryFormat.layout,'rectangles'
 console.log('PASS: V33.3 linked import suggestions, combined Uni/Add parsing, optional loads and Position Summary preview layouts.');
 
 // V33.4 patch cleanup, single-distro menus, Device Config controls and rack fitting.
-assert(html.includes('<title>Lampy Paperwork V33.5</title>'));
+assert(html.includes('<title>Lampy Paperwork V33.6</title>'));
 assert(source('appPayload').includes('syncPositionsFromPatch()'));
 assert(html.includes('>Delete Patch</button>'));assert(html.includes('>Delete Imported Patch</button>'));
 assert(html.includes('.deviceConfigFillHandle{position:absolute;right:-10px;bottom:-10px;width:20px;height:20px'));
@@ -448,6 +449,15 @@ const rackContext=vm.createContext({rackViewFor:()=> 'front'});vm.runInContext(s
 console.log('PASS: V33.4 complete patch deletion, single-distro menus, Device Config controls and measured rack fitting.');
 
 // V33.5 position names merge across every project location source.
-assert(html.includes('<title>Lampy Paperwork V33.5</title>'));
+assert(html.includes('<title>Lampy Paperwork V33.6</title>'));
 const v335=vm.createContext({app:{fixturePatch:[{location:'foh',colour1:'#ff0000',colour2:''}],controlNetwork:{consoles:[{location:'FOH ',deviceConfigPorts:[{location:'fOh'}]}],npus:[{location:'foh',deviceConfigPorts:[{location:'FOH'}]}],networkDevices:[{location:'FoH',portSettings:[{location:' foh '}]}],racks:[{location:'FOH',devices:[]}]}},normalisePosition:value=>({name:String(value?.name||value?.location||'').trim(),colour1:value?.colour1||'',colour2:value?.colour2||'',colour3:value?.colour3||''}),normaliseBlankColour:value=>String(value||'').trim(),ensureProjectInfo:()=>v335.project,project:{positions:[{name:'FOH',colour1:'',colour2:'#00ff00',colour3:''},{name:'foh',colour1:'#ff0000',colour2:'',colour3:'#0000ff'}]},patchFixtureRows:()=>v335.app.fixturePatch,syncRackMountedNetworkLocations:()=>v335.racksSynced=true});vm.runInContext(source('positionKey'),v335);vm.runInContext(source('positionLocationItems'),v335);vm.runInContext(source('syncPositionsFromPatch'),v335);vm.runInContext(source('updatePositionReferences'),v335);v335.syncPositionsFromPatch();assert.equal(v335.project.positions.filter(position=>position.name).length,1);assert.deepEqual(JSON.parse(JSON.stringify(v335.project.positions[0])),{name:'FOH',colour1:'#ff0000',colour2:'#00ff00',colour3:'#0000ff'});assert(v335.positionLocationItems().every(item=>!item.location||item.location==='FOH'));assert(v335.racksSynced);v335.updatePositionReferences('FOH','Front of House');assert(v335.positionLocationItems().every(item=>!item.location||item.location==='Front of House'));
 console.log('PASS: V33.5 project-wide position merging and reference canonicalisation.');
+
+// V33.6 Device Config parent deletion action.
+assert(html.includes('<title>Lampy Paperwork V33.6</title>'));
+assert(source('deviceConfigParentRow').includes('deviceConfigDeleteButton'));
+assert(source('deviceConfigPortRow').includes('deviceConfigDeleteCol'));
+assert(source('deviceConfigInterfaceTwoRow').includes('deviceConfigDeleteCol'));
+assert(source('controlDeviceConfigTableMarkup').includes("view==='deviceConfig'?'<th class=\"deviceConfigDeleteCol\""));
+assert(source('deleteDeviceConfigDevice').includes('rack.devices=(rack.devices||[]).filter'));
+console.log('PASS: V33.6 Device Config parent delete action and rack-placement cleanup.');

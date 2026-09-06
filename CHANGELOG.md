@@ -1,3 +1,9 @@
+## V33.6 — 6 September 2026
+
+- Add a final blank Device Config action column with a confirmed red ❌ delete action on each parent device row.
+- Remove deleted NPUs and network devices from any Rack Layout placements, while retaining the existing Console deletion confirmation.
+- Keep Control Consoles table columns and project-file compatibility unchanged.
+
 ## V33.5 — 6 September 2026
 
 - Merge matching position names case-insensitively across Fixture Patch, Control, Device Config physical ports and Rack Layout, using one canonical position name throughout the project.
