@@ -1,8 +1,11 @@
+## V33.9 — 7 September 2026
+
+- Remove the non-application mode-name review register from the repository and release checks; Fixture Patch and GDTF matching do not depend on it.
+
 ## V33.8 — 6 September 2026
 
 - Add clean Fixture Patch display names for Ayrton Domino LT and Rivale Profile Extended modes, and ACME Pixel Line Ip Mode 11, while retaining the exact GDTF mode names for matching and MVR export.
 - Migrate saved and imported patch rows using the three former mode names without changing their channel counts, GDTF files or GDTF modes.
-- Add `MODE_NAME_REVIEW.csv` as the owner-review register for all remaining fixture-library mode names.
 
 ## V33.7 — 6 September 2026
 

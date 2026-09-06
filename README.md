@@ -37,7 +37,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V33.8**
+Current app version: **V33.9**
 
 Console tables use the final shared column proportions with automatic text fitting and scale up to fill available width. Narrow layouts retain scrolling at normal scale.
 Console removal warns that its data will be deleted; “Do Not Show Again” is remembered for that project only.
@@ -52,7 +52,7 @@ Position names are merged case-insensitively across fixture, device, physical-po
 Device Config has a final delete column with a confirmed red ❌ action on every parent device row; the Control Consoles table is unchanged.
 Single white or uncoloured Position Summary entries use black text in the app and exported PDF.
 Uploaded project logos are resized and compressed before local saving. If browser storage is full, the local save retains project data without embedded GDTF file contents.
-Fixture Patch uses clean display labels for reviewed fixture modes while retaining the exact GDTF mode name for matching and MVR export. `MODE_NAME_REVIEW.csv` lists the remaining library modes for owner review.
+Fixture Patch uses clean display labels for reviewed fixture modes while retaining the exact GDTF mode name for matching and MVR export.
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 
