@@ -48,7 +48,7 @@
     {
       "fixture": "Aeco 30 Ip",
       "watts": 2265,
-      "weight": 52.5,
+      "weight": 54.5,
       "modes": {
         "Mode 1 43CH": 43,
         "Mode 2 34CH": 34,
@@ -92,7 +92,7 @@
     {
       "fixture": "Aeco 5",
       "watts": 670,
-      "weight": 26.5,
+      "weight": 40.0,
       "modes": {
         "Mode 1  33 DMX": 33,
         "Mode 2  24 DMX": 24,
@@ -129,7 +129,7 @@
     {
       "fixture": "Autolux",
       "watts": 865,
-      "weight": 22,
+      "weight": 25.0,
       "modes": {
         "Mode 24 DMX": 24
       },
@@ -152,7 +152,7 @@
     {
       "fixture": "Blinder Line 10 Ip",
       "watts": 600,
-      "weight": 13.6,
+      "weight": 13.5,
       "modes": {
         "Mode 2 55 DMX": 55,
         "Mode1 14 DMX": 14
@@ -182,7 +182,7 @@
     {
       "fixture": "Blinder Line 5 Ip",
       "watts": 350,
-      "weight": 7.7,
+      "weight": 7.74,
       "modes": {
         "Mode 2 30DMX": 30,
         "Mode 1 14DMX": 14
@@ -256,7 +256,7 @@
     {
       "fixture": "Cyclone",
       "watts": 260,
-      "weight": null,
+      "weight": 5.6,
       "modes": {
         "Mode 1 27CH": 27,
         "Mode 2 50CH": 50,
@@ -395,7 +395,7 @@
     {
       "fixture": "Hue 6 Ip",
       "watts": 820,
-      "weight": 32,
+      "weight": 5.6,
       "modes": {
         "Mode 1 50CH": 50,
         "Mode 2 45CH": 45,
@@ -439,7 +439,7 @@
     {
       "fixture": "Hueline 16 Ip",
       "watts": 190,
-      "weight": null,
+      "weight": 6.8,
       "modes": {
         "Mode 1 16CH": 16,
         "Mode 2 133CH": 133
@@ -469,7 +469,7 @@
     {
       "fixture": "Hyperzone",
       "watts": 1370,
-      "weight": 26.4,
+      "weight": 24.0,
       "modes": {
         "Mode 1 19 CH": 19,
         "Mode 2 41CH": 41,
@@ -513,7 +513,7 @@
     {
       "fixture": "Lightning X",
       "watts": 1135,
-      "weight": null,
+      "weight": 18.0,
       "modes": {
         "Mode 1 31CH": 31,
         "Mode 2 230CH": 230,
@@ -571,7 +571,7 @@
     {
       "fixture": "Lineforce 10 Ip",
       "watts": 625,
-      "weight": null,
+      "weight": 13.6,
       "modes": {
         "Mode 1 79 DMX": 79,
         "Mode 2 16 DMX": 16
@@ -726,7 +726,7 @@
     {
       "fixture": "Mana Hybrid",
       "watts": 910,
-      "weight": null,
+      "weight": 30.5,
       "modes": {
         "Mode 1  30 DMX": 30,
         "Mode 2 24 DMX": 24
@@ -756,7 +756,7 @@
     {
       "fixture": "Mana Profile",
       "watts": 910,
-      "weight": 32.5,
+      "weight": 46.5,
       "modes": {
         "Standard  40 DMX": 40,
         "Spot  31 DMX ": 31,
@@ -800,7 +800,7 @@
     {
       "fixture": "Neozone",
       "watts": 960,
-      "weight": 20,
+      "weight": 21.3,
       "modes": {
         "Mode 1 17DMX": 17,
         "Mode 2 21DMX": 21,
@@ -948,7 +948,7 @@
     {
       "fixture": "Pixel Line Ip",
       "watts": 420,
-      "weight": 7.3,
+      "weight": 10.5,
       "modes": {
         "Mode 1 7DMX": 7,
         "Mode 2 15DMX": 15,
@@ -960,9 +960,12 @@
         "Mode 8 65DMX": 65,
         "Mode 9 68DMX": 68,
         "Mode 10 117DMX": 117,
-        "Mode11 70DMX": 70,
+        "Mode 11": 70,
         "Mode 12 70N DMX": 70,
         "Mode 13 119DMX": 119
+      },
+      "modeAliases": {
+        "Mode11 70DMX": "Mode 11"
       },
       "gdtf": {
         "status": "matched",
@@ -1030,7 +1033,7 @@
             "status": "matched",
             "parameters": 165
           },
-          "Mode11 70DMX": {
+          "Mode 11": {
             "channels": 70,
             "gdtfMode": "Mode11 70DMX",
             "status": "matched",
@@ -1055,7 +1058,7 @@
     {
       "fixture": "Pixel Line Ip 500",
       "watts": 875,
-      "weight": 5.1,
+      "weight": 5.5,
       "modes": {
         "Mode 1 8CH": 8,
         "Mode 2 16CH": 16,
@@ -1155,7 +1158,7 @@
     {
       "fixture": "Pulsar Plus S2",
       "watts": 1200,
-      "weight": null,
+      "weight": 12.0,
       "modes": {
         "Mode 1 43CH ": 43,
         "Mode 2 195CH": 195,
@@ -1213,7 +1216,7 @@
     {
       "fixture": "Pulsar S2",
       "watts": 600,
-      "weight": null,
+      "weight": 12.0,
       "modes": {
         "Mode 1 24DMX": 24,
         "Mode 2 39DMX": 39,
@@ -1257,7 +1260,7 @@
     {
       "fixture": "Sana Beam",
       "watts": 465,
-      "weight": 23.8,
+      "weight": 5.6,
       "modes": {
         "Mode 1 29CH": 29,
         "Mode 2 27CH ": 27,
@@ -1301,7 +1304,7 @@
     {
       "fixture": "Sana Profile",
       "watts": 570,
-      "weight": 26,
+      "weight": 5.6,
       "modes": {
         "Mode 1 45CH (Framing)": 45,
         "Mode 2 36CH (F-Wash)": 36,
@@ -1463,7 +1466,7 @@
     {
       "fixture": "Super Dotline",
       "watts": 1155,
-      "weight": 24,
+      "weight": 23.0,
       "modes": {
         "Mode 1 168 DMX": 168,
         "Mode 2 108 DMX": 108,
@@ -1528,7 +1531,7 @@
     {
       "fixture": "Supernova",
       "watts": 2265,
-      "weight": 52.5,
+      "weight": 49.0,
       "modes": {
         "Mode 1 43 DMX": 43,
         "Mode 2 34 DMX": 34,
@@ -1572,7 +1575,7 @@
     {
       "fixture": "Supernova Lt",
       "watts": 2200,
-      "weight": 64.5,
+      "weight": 56.0,
       "modes": {
         "Mode 1 44 DMX(Framing)": 44,
         "Mode 2 32DMX(F-Wash)": 32,
@@ -1616,7 +1619,7 @@
     {
       "fixture": "Tango",
       "watts": 55,
-      "weight": null,
+      "weight": 1.62,
       "modes": {
         "Mode1 10DMX": 10,
         "Mode2 8DMX": 8,
@@ -1660,7 +1663,7 @@
     {
       "fixture": "Theta",
       "watts": 1600,
-      "weight": null,
+      "weight": 34.0,
       "modes": {
         "Mode 1 27 DMX": 27,
         "Mode 2 139 DMX": 139,
@@ -1697,7 +1700,7 @@
     {
       "fixture": "Tornado",
       "watts": 935,
-      "weight": 30,
+      "weight": 29.0,
       "modes": {
         "Mode 1 41DMX 1": 41,
         "Mode 2 71 DMX": 71,
@@ -1748,7 +1751,7 @@
     {
       "fixture": "Tv Light Panel 3000",
       "watts": 455,
-      "weight": null,
+      "weight": 12.0,
       "modes": {
         "Mode 1 28CH": 28,
         "Mode 2 10CH": 10

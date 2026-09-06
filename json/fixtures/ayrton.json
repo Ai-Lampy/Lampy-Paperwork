@@ -23,37 +23,44 @@
           "Extended_Pixel_1": {
             "channels": 127,
             "gdtfMode": "Extended_Pixel_1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 60
           },
           "Standard": {
             "channels": 50,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           },
           "Extended_Pixel_2": {
             "channels": 76,
             "gdtfMode": "Extended_Pixel_2",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 60
           },
           "Extended_Pixel_1_+_Liquid": {
             "channels": 956,
             "gdtfMode": "Extended_Pixel_1_+_Liquid",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 63
           },
           "Extended_Pixel_2_+_Liquid": {
             "channels": 956,
             "gdtfMode": "Extended_Pixel_2_+_Liquid",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 63
           },
           "Basic": {
             "channels": 26,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "Extended_Ring": {
             "channels": 50,
             "gdtfMode": "Extended_Ring",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 46
           }
         }
       },
@@ -78,22 +85,26 @@
           "Extended_Ring": {
             "channels": 50,
             "gdtfMode": "Extended_Ring",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           },
           "Standard": {
             "channels": 37,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           },
           "Extended_Pixel": {
             "channels": 127,
             "gdtfMode": "Extended_Pixel",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           },
           "Basic": {
             "channels": 26,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           }
         }
       },
@@ -199,22 +210,26 @@
           "Extended_540": {
             "channels": 45,
             "gdtfMode": "Extended_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "Standard_ 540": {
             "channels": 35,
             "gdtfMode": "Standard_ 540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           },
           "Extended_CTO_ 540": {
             "channels": 45,
             "gdtfMode": "Extended_CTO_ 540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "Standard_CTO_ 540": {
             "channels": 35,
             "gdtfMode": "Standard_CTO_ 540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           }
         }
       },
@@ -223,7 +238,7 @@
     {
       "fixture": "Diablo Profile S",
       "watts": 550,
-      "weight": 22,
+      "weight": 21.8,
       "modes": {
         "Extended_540_S": 56,
         "Standard_540_S": 36,
@@ -262,9 +277,12 @@
       "watts": 1600,
       "weight": 60,
       "modes": {
-        "Extended_540": 70,
+        "Extended": 70,
         "Standard_540": 46,
         "Basic_540": 44
+      },
+      "modeAliases": {
+        "Extended_540": "Extended"
       },
       "gdtf": {
         "status": "matched",
@@ -272,7 +290,7 @@
         "suggestedFileName": "Ayrton__Domino_LT.gdtf",
         "file": "fixtures/ayrton/Ayrton@Domino_LT@V1.8_Add_RDM_Personality.gdtf",
         "modes": {
-          "Extended_540": {
+          "Extended": {
             "channels": 70,
             "gdtfMode": "Extended_540",
             "status": "matched",
@@ -475,7 +493,7 @@
     {
       "fixture": "Huracan LT",
       "watts": 1470,
-      "weight": 53.8,
+      "weight": 52.0,
       "modes": {
         "Extended_540": 70,
         "Standard_540": 46,
@@ -512,7 +530,7 @@
     {
       "fixture": "Huracan Profile",
       "watts": 1470,
-      "weight": 46,
+      "weight": 44.0,
       "modes": {
         "Extended_540": 70,
         "Standard_ 540": 46,
@@ -717,7 +735,7 @@
     {
       "fixture": "Mamba",
       "watts": 800,
-      "weight": 41,
+      "weight": 41.1,
       "modes": {
         "Extended_540": 47
       },
@@ -777,7 +795,7 @@
     {
       "fixture": "Mistral",
       "watts": 550,
-      "weight": 18.6,
+      "weight": 18.9,
       "modes": {
         "Extended_540": 39,
         "Standard_540": 28,
@@ -827,7 +845,8 @@
           "Extended_540": {
             "channels": 49,
             "gdtfMode": "Extended_540",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           }
         }
       },
@@ -854,32 +873,38 @@
           "Extended Pixel 1U": {
             "channels": 150,
             "gdtfMode": "Extended Pixel 1U",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 50
           },
           "Extended Ring 1U": {
             "channels": 50,
             "gdtfMode": "Extended Ring 1U",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           },
           "Standard": {
             "channels": 37,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "Basic": {
             "channels": 26,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "Extended Pixel 2U": {
             "channels": 112,
             "gdtfMode": "Extended Pixel 2U",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 50
           },
           "Extended Ring 2U": {
             "channels": 38,
             "gdtfMode": "Extended Ring 2U",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 44
           }
         }
       },
@@ -906,32 +931,38 @@
           "Extended Pixel 1U": {
             "channels": 86,
             "gdtfMode": "Extended Pixel 1U",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 45
           },
           "Extended Ring 1U": {
             "channels": 46,
             "gdtfMode": "Extended Ring 1U",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           },
           "Standard": {
             "channels": 37,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "Basic": {
             "channels": 26,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "Extended Pixel 2U": {
             "channels": 48,
             "gdtfMode": "Extended Pixel 2U",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 45
           },
           "Extended Ring 2U": {
             "channels": 38,
             "gdtfMode": "Extended Ring 2U",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           }
         }
       },
@@ -955,17 +986,20 @@
           "Extended": {
             "channels": 28,
             "gdtfMode": "Extended",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "Standard": {
             "channels": 20,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "Basic": {
             "channels": 17,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           }
         }
       },
@@ -989,17 +1023,20 @@
           "Extended": {
             "channels": 32,
             "gdtfMode": "Extended",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 33
           },
           "Standard": {
             "channels": 20,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "Basic": {
             "channels": 17,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           }
         }
       },
@@ -1023,17 +1060,20 @@
           "Extended": {
             "channels": 36,
             "gdtfMode": "Extended",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "Standard": {
             "channels": 20,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "Basic": {
             "channels": 17,
             "gdtfMode": "Basic",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           }
         }
       },
@@ -1086,7 +1126,7 @@
     {
       "fixture": "RawBeam 350",
       "watts": 660,
-      "weight": 25.4,
+      "weight": 25.0,
       "modes": {
         "Extended_540-FlatField_Auto": 43,
         "Extended_540-FlatField_Off": 43
@@ -1116,10 +1156,13 @@
     {
       "fixture": "Rivale Profile",
       "watts": 700,
-      "weight": 30.8,
+      "weight": 28.5,
       "modes": {
-        "Extended_540": 65,
+        "Extended": 65,
         "Standard_540": 42
+      },
+      "modeAliases": {
+        "Extended_540": "Extended"
       },
       "gdtf": {
         "status": "matched",
@@ -1127,7 +1170,7 @@
         "suggestedFileName": "Ayrton__Rivale_Profile.gdtf",
         "file": "fixtures/ayrton/Ayrton@Rivale_Profile@V1.7_Add_RDM_Personality.gdtf",
         "modes": {
-          "Extended_540": {
+          "Extended": {
             "channels": 65,
             "gdtfMode": "Extended_540",
             "status": "matched",
@@ -1440,7 +1483,7 @@
     {
       "fixture": "Zonda 9 Wash",
       "watts": 1400,
-      "weight": 29.2,
+      "weight": 29.0,
       "modes": {
         "Extended Ring": 54,
         "Standard": 37,
