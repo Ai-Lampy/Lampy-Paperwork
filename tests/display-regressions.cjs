@@ -432,7 +432,7 @@ assert.equal(pctx.defaultProjectInfo().positionSummaryFormat.layout,'rectangles'
 console.log('PASS: V33.3 linked import suggestions, combined Uni/Add parsing, optional loads and Position Summary preview layouts.');
 
 // V33.4 patch cleanup, single-distro menus, Device Config controls and rack fitting.
-assert(html.includes('<title>Lampy Paperwork V33.12</title>'));
+assert(html.includes('<title>Lampy Paperwork V33.13</title>'));
 assert(source('appPayload').includes('syncPositionsFromPatch()'));
 assert(html.includes('>Delete Patch</button>'));assert(html.includes('>Delete Imported Patch</button>'));
 assert(html.includes('.deviceConfigFillHandle{position:absolute;right:-10px;bottom:-10px;width:20px;height:20px'));
@@ -449,12 +449,12 @@ const rackContext=vm.createContext({rackViewFor:()=> 'front'});vm.runInContext(s
 console.log('PASS: V33.4 complete patch deletion, single-distro menus, Device Config controls and measured rack fitting.');
 
 // V33.5 position names merge across every project location source.
-assert(html.includes('<title>Lampy Paperwork V33.12</title>'));
+assert(html.includes('<title>Lampy Paperwork V33.13</title>'));
 const v335=vm.createContext({app:{fixturePatch:[{location:'foh',colour1:'#ff0000',colour2:''}],controlNetwork:{consoles:[{location:'FOH ',deviceConfigPorts:[{location:'fOh'}]}],npus:[{location:'foh',deviceConfigPorts:[{location:'FOH'}]}],networkDevices:[{location:'FoH',portSettings:[{location:' foh '}]}],racks:[{location:'FOH',devices:[]}]}},normalisePosition:value=>({name:String(value?.name||value?.location||'').trim(),colour1:value?.colour1||'',colour2:value?.colour2||'',colour3:value?.colour3||''}),normaliseBlankColour:value=>String(value||'').trim(),ensureProjectInfo:()=>v335.project,project:{positions:[{name:'FOH',colour1:'',colour2:'#00ff00',colour3:''},{name:'foh',colour1:'#ff0000',colour2:'',colour3:'#0000ff'}]},patchFixtureRows:()=>v335.app.fixturePatch,syncRackMountedNetworkLocations:()=>v335.racksSynced=true});vm.runInContext(source('positionKey'),v335);vm.runInContext(source('positionLocationItems'),v335);vm.runInContext(source('syncPositionsFromPatch'),v335);vm.runInContext(source('updatePositionReferences'),v335);v335.syncPositionsFromPatch();assert.equal(v335.project.positions.filter(position=>position.name).length,1);assert.deepEqual(JSON.parse(JSON.stringify(v335.project.positions[0])),{name:'FOH',colour1:'#ff0000',colour2:'#00ff00',colour3:'#0000ff'});assert(v335.positionLocationItems().every(item=>!item.location||item.location==='FOH'));assert(v335.racksSynced);v335.updatePositionReferences('FOH','Front of House');assert(v335.positionLocationItems().every(item=>!item.location||item.location==='Front of House'));
 console.log('PASS: V33.5 project-wide position merging and reference canonicalisation.');
 
 // V33.6 Device Config parent deletion action.
-assert(html.includes('<title>Lampy Paperwork V33.12</title>'));
+assert(html.includes('<title>Lampy Paperwork V33.13</title>'));
 assert(source('deviceConfigParentRow').includes('deviceConfigDeleteButton'));
 assert(source('deviceConfigPortRow').includes('deviceConfigDeleteCol'));
 assert(source('deviceConfigInterfaceTwoRow').includes('deviceConfigDeleteCol'));
@@ -478,7 +478,7 @@ assert(source('applyPatchTableColumnWidths').includes('patchColumnContentWidth')
 console.log('PASS: V33.6 white and uncoloured position text uses black.');
 
 // V33.8 keeps clean reviewed display labels separate from exact GDTF modes.
-assert(html.includes('<title>Lampy Paperwork V33.12</title>'));
+assert(html.includes('<title>Lampy Paperwork V33.13</title>'));
 const modeContext=vm.createContext({normaliseImportMatch:value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,'')});
 for(const name of ['normalisePatchMode','normaliseFixtureGdtf','normaliseFixtureModeAliases','fixtureModeKey','fixtureDisplayMode','fixtureCanonicalMode','normaliseFixtureList'])vm.runInContext(source(name),modeContext);
 const ayrtonLibrary=JSON.parse(fs.readFileSync(root+'json/fixtures/ayrton.json','utf8')).fixtures,acmeLibrary=JSON.parse(fs.readFileSync(root+'json/fixtures/acme.json','utf8')).fixtures;
@@ -493,7 +493,7 @@ console.log('PASS: V33.8 reviewed mode labels, legacy migration and raw-GDTF imp
 
 
 // V33.11 shared export chrome and Project Owner details.
-assert(html.includes('<title>Lampy Paperwork V33.12</title>'));
+assert(html.includes('<title>Lampy Paperwork V33.13</title>'));
 assert(source('patchSheetTabsMarkup').includes("if(!sheets.length)return ''"));
 assert(source('defaultProjectInfo').includes("projectOwner:''"));
 assert(source('defaultProjectInfo').includes("includeOwnerDetailsInPdfFooters:false"));
@@ -524,12 +524,14 @@ footerContext.ensureProjectInfo=()=>({file:{includeOwnerDetailsInPdfFooters:fals
 console.log('PASS: V33.11 shared PDF chrome, owner details and single-master Patch tabs.');
 
 
-// V33.12 Fixture Patch temporary min/max widths and text fitting.
-assert(html.includes('<title>Lampy Paperwork V33.12</title>'));
+// V33.13 Fixture Patch temporary min/max widths and text fitting.
+assert(html.includes('<title>Lampy Paperwork V33.13</title>'));
 assert(source('patchColumnWidthSetting').includes('PATCH_FIXED_COLUMN_WIDTHS'));
-assert(source('patchColumnWidthsMarkup').includes('Temporary Live Column Widths'));
-assert(source('patchColumnWidthsMarkup').includes('not saved in the project file'));
-assert(source('patchColumnWidthsMarkup').includes('Fixed: ${setting.fixed}px'));
+assert(source('patchWidthEditorHeader').includes('fixturePatchWidthEditorRow'));
+assert(source('patchWidthEditorHeader').includes('Current —'));
+assert(source('patchWidthEditorHeader').includes('Fixed'));
+assert(source('renderFixturePatchGroup').includes('patchWidthEditorHeader(cols,!!sheet)'));
+assert(!source('renderPatchFormatModal').includes('Temporary Live Column Widths'));
 assert(source('updatePatchColumnWidth').includes('fixturePatchColumnWidths'));
 assert(source('resetPatchColumnWidths').includes('PATCH_COLUMN_WIDTH_DEFAULTS'));
 assert(source('patchTableColgroup').includes('data-patch-column'));
@@ -539,4 +541,4 @@ assert(source('fitPatchTableText').includes('size>8'));
 assert(source('fitPatchTableText').includes("el.style.whiteSpace='normal'"));
 assert(source('fitPatchTableText').includes('size*1.1*3'));
 assert(!source('defaultPatchViewOptions').includes('fixturePatchColumnWidths'));
-console.log('PASS: V33.12 Fixture Patch temporary min/max widths, fixed colour columns and three-line text fitting.');
+console.log('PASS: V33.13 Fixture Patch header width editor, fixed colour columns and three-line text fitting.');

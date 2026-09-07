@@ -1,3 +1,8 @@
+## V33.13 — 7 September 2026
+
+- Move Fixture Patch temporary min/max column-width controls from Format to a compact row above the first visible table header, including the measured current width for each adjustable column.
+- Retain fixed 110 px Col 1 and Col 2 indicators in the same row and keep all settings temporary to the browser session.
+
 ## V33.12 — 7 September 2026
 
 - Add temporary, browser-session Fixture Patch column-width controls. Col 1 and Col 2 are fixed at 110 px; every other visible column has editable min/max widths shared by the live table and Fixture Patch PDF preview/export.
