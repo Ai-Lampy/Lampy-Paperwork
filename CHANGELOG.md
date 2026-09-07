@@ -1,3 +1,8 @@
+## V33.14 — 7 September 2026
+
+- Apply the reviewed Fixture Patch column limits: #, Uni and Add 45–80 px; Type 80–220 px; Mode 90–280 px; Chan 45–80 px; Position 90–300 px; Notes 90–150 px.
+- Remove the temporary live width editor. Col 1 and Col 2 remain fixed at 110 px in the live table and PDF output.
+
 ## V33.13 — 7 September 2026
 
 - Move Fixture Patch temporary min/max column-width controls from Format to a compact row above the first visible table header, including the measured current width for each adjustable column.
