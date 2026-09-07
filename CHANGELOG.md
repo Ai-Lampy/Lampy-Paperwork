@@ -1,3 +1,9 @@
+## V33.15 — 7 September 2026
+
+- Change Fixture Patch Position width to 90–260 px.
+- Make unlocked Fixture Patch groups use the Device Config spreadsheet-editing pattern: transparent in-cell controls, selected-cell highlighting, Shift range selection, keyboard navigation, copy/paste and compatible vertical drag-fill.
+- Keep locked Fixture Patch groups and PDF output in their existing paperwork presentation.
+
 ## V33.14 — 7 September 2026
 
 - Apply the reviewed Fixture Patch column limits: #, Uni and Add 45–80 px; Type 80–220 px; Mode 90–280 px; Chan 45–80 px; Position 90–300 px; Notes 90–150 px.
