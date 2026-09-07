@@ -1,3 +1,9 @@
+## V33.10 — 7 September 2026
+
+- Apply the owner-reviewed ACME and ARRI fixture-mode labels from the first 3,679 review rows, replacing `DMX` with `CH` in corrected labels.
+- Keep the raw GDTF mode and channel count as the internal identity, allowing distinct modes to share the same reviewed display label.
+- Remove processed rows from the local mode-name review CSV, leaving the remaining entries ready for continued review.
+
 ## V33.9 — 7 September 2026
 
 - Remove the non-application mode-name review register from the repository and release checks; Fixture Patch and GDTF matching do not depend on it.
