@@ -1,3 +1,10 @@
+## V33.11 — 7 September 2026
+
+- Hide the Fixture Patch tab bar when the project has only its master patch; imported comparison patches retain the Master Patch tab and comparison tabs.
+- Add Project Owner, E-mail, Phone Number and an optional PDF-footer setting to Project Info, with backward-compatible project-file defaults.
+- Add shared 7 px `#9A9A9A` footers to Fixture Patch, Position Summary, Power Calculations, Fan Outs and Distro Labels PDFs: page count at left, project/version in the centre and enabled owner details at right.
+- Add a document-name header to every PDF page after the first and reserve header/footer space before pagination in previews and downloaded PDFs.
+
 ## V33.10 — 7 September 2026
 
 - Apply the owner-reviewed ACME and ARRI fixture-mode labels from the first 3,679 review rows, replacing `DMX` with `CH` in corrected labels.

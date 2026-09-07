@@ -37,7 +37,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V33.10**
+Current app version: **V33.11**
 
 Console tables use the final shared column proportions with automatic text fitting and scale up to fill available width. Narrow layouts retain scrolling at normal scale.
 Console removal warns that its data will be deleted; “Do Not Show Again” is remembered for that project only.
@@ -54,6 +54,7 @@ Single white or uncoloured Position Summary entries use black text in the app an
 Uploaded project logos are resized and compressed before local saving. If browser storage is full, the local save retains project data without embedded GDTF file contents.
 Fixture Patch uses clean display labels for reviewed fixture modes while retaining the exact GDTF mode name for matching and MVR export.
 Reviewed fixture-library labels may use a shared display name while retaining distinct raw GDTF modes and channel counts.
+Project Info can store optional Project Owner, E-mail and Phone Number details. When enabled, all PDF exports show these details in a shared footer with page number and project version; later pages also show the document name.
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 

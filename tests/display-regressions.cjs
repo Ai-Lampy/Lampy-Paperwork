@@ -432,7 +432,7 @@ assert.equal(pctx.defaultProjectInfo().positionSummaryFormat.layout,'rectangles'
 console.log('PASS: V33.3 linked import suggestions, combined Uni/Add parsing, optional loads and Position Summary preview layouts.');
 
 // V33.4 patch cleanup, single-distro menus, Device Config controls and rack fitting.
-assert(html.includes('<title>Lampy Paperwork V33.10</title>'));
+assert(html.includes('<title>Lampy Paperwork V33.11</title>'));
 assert(source('appPayload').includes('syncPositionsFromPatch()'));
 assert(html.includes('>Delete Patch</button>'));assert(html.includes('>Delete Imported Patch</button>'));
 assert(html.includes('.deviceConfigFillHandle{position:absolute;right:-10px;bottom:-10px;width:20px;height:20px'));
@@ -449,12 +449,12 @@ const rackContext=vm.createContext({rackViewFor:()=> 'front'});vm.runInContext(s
 console.log('PASS: V33.4 complete patch deletion, single-distro menus, Device Config controls and measured rack fitting.');
 
 // V33.5 position names merge across every project location source.
-assert(html.includes('<title>Lampy Paperwork V33.10</title>'));
+assert(html.includes('<title>Lampy Paperwork V33.11</title>'));
 const v335=vm.createContext({app:{fixturePatch:[{location:'foh',colour1:'#ff0000',colour2:''}],controlNetwork:{consoles:[{location:'FOH ',deviceConfigPorts:[{location:'fOh'}]}],npus:[{location:'foh',deviceConfigPorts:[{location:'FOH'}]}],networkDevices:[{location:'FoH',portSettings:[{location:' foh '}]}],racks:[{location:'FOH',devices:[]}]}},normalisePosition:value=>({name:String(value?.name||value?.location||'').trim(),colour1:value?.colour1||'',colour2:value?.colour2||'',colour3:value?.colour3||''}),normaliseBlankColour:value=>String(value||'').trim(),ensureProjectInfo:()=>v335.project,project:{positions:[{name:'FOH',colour1:'',colour2:'#00ff00',colour3:''},{name:'foh',colour1:'#ff0000',colour2:'',colour3:'#0000ff'}]},patchFixtureRows:()=>v335.app.fixturePatch,syncRackMountedNetworkLocations:()=>v335.racksSynced=true});vm.runInContext(source('positionKey'),v335);vm.runInContext(source('positionLocationItems'),v335);vm.runInContext(source('syncPositionsFromPatch'),v335);vm.runInContext(source('updatePositionReferences'),v335);v335.syncPositionsFromPatch();assert.equal(v335.project.positions.filter(position=>position.name).length,1);assert.deepEqual(JSON.parse(JSON.stringify(v335.project.positions[0])),{name:'FOH',colour1:'#ff0000',colour2:'#00ff00',colour3:'#0000ff'});assert(v335.positionLocationItems().every(item=>!item.location||item.location==='FOH'));assert(v335.racksSynced);v335.updatePositionReferences('FOH','Front of House');assert(v335.positionLocationItems().every(item=>!item.location||item.location==='Front of House'));
 console.log('PASS: V33.5 project-wide position merging and reference canonicalisation.');
 
 // V33.6 Device Config parent deletion action.
-assert(html.includes('<title>Lampy Paperwork V33.10</title>'));
+assert(html.includes('<title>Lampy Paperwork V33.11</title>'));
 assert(source('deviceConfigParentRow').includes('deviceConfigDeleteButton'));
 assert(source('deviceConfigPortRow').includes('deviceConfigDeleteCol'));
 assert(source('deviceConfigInterfaceTwoRow').includes('deviceConfigDeleteCol'));
@@ -478,7 +478,7 @@ assert(html.includes('.patchPdfPreviewPage .fixturePatchTable .position{width:13
 console.log('PASS: V33.6 white and uncoloured position text uses black.');
 
 // V33.8 keeps clean reviewed display labels separate from exact GDTF modes.
-assert(html.includes('<title>Lampy Paperwork V33.10</title>'));
+assert(html.includes('<title>Lampy Paperwork V33.11</title>'));
 const modeContext=vm.createContext({normaliseImportMatch:value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,'')});
 for(const name of ['normalisePatchMode','normaliseFixtureGdtf','normaliseFixtureModeAliases','fixtureModeKey','fixtureDisplayMode','fixtureCanonicalMode','normaliseFixtureList'])vm.runInContext(source(name),modeContext);
 const ayrtonLibrary=JSON.parse(fs.readFileSync(root+'json/fixtures/ayrton.json','utf8')).fixtures,acmeLibrary=JSON.parse(fs.readFileSync(root+'json/fixtures/acme.json','utf8')).fixtures;
@@ -490,3 +490,35 @@ for(const name of ['normalisePatchMode','fixtureModeKey','fixtureDisplayMode','f
 assert(migrationContext.migratePatchModeNames(migrationContext.app.fixturePatch));assert.deepEqual(JSON.parse(JSON.stringify(migrationContext.app.fixturePatch[0])),{manufacturer:'Ayrton',fixture:'Domino LT',mode:'Extended',channels:70,gdtfMode:'Extended_540',gdtfSpec:'fixture.gdtf',gdtfPath:'gdtf/70'});
 const importModeContext=vm.createContext({normaliseImportMatch:modeContext.normaliseImportMatch,normalisePatchMode:modeContext.normalisePatchMode});vm.runInContext(source('patchImportExactModeName'),importModeContext);assert.equal(importModeContext.patchImportExactModeName(domino,{gdtfMode:'Extended_540',channels:70}),'Extended');
 console.log('PASS: V33.8 reviewed mode labels, legacy migration and raw-GDTF import matching.');
+
+
+// V33.11 shared export chrome and Project Owner details.
+assert(html.includes('<title>Lampy Paperwork V33.11</title>'));
+assert(source('patchSheetTabsMarkup').includes("if(!sheets.length)return ''"));
+assert(source('defaultProjectInfo').includes("projectOwner:''"));
+assert(source('defaultProjectInfo').includes("includeOwnerDetailsInPdfFooters:false"));
+assert(source('normaliseProjectInfo').includes("base.file.includeOwnerDetailsInPdfFooters=base.file.includeOwnerDetailsInPdfFooters===true"));
+assert(source('renderFileInfo').includes('Project Owner'));
+assert(source('renderFileInfo').includes('Include Project Owner Details in PDF Footers'));
+assert(source('updateProjectFileField').includes("el.type==='checkbox'?el.checked:el.value"));
+assert(source('projectInfoRevisionNotes').includes("projectOwner:'Project owner'"));
+assert(html.includes('.pdfPageFooter{'));
+assert(html.includes('font:7px/1.15 Arial,sans-serif'));
+assert(html.includes('color:#9A9A9A'));
+assert(source('createExportPage').includes('pdfPageFooterMarkup()'));
+assert(source('createExportPage').includes('pdfLaterPageHeader'));
+assert(source('renderPositionSummaryPreview').includes("createExportPage(d,pageIndex,'Position Summary')"));
+assert(source('createPatchPdfPage').includes("createExportPage(d,pageIndex,'Fixture Patch')"));
+assert(source('appendPowerPdfPreviewPage').includes("powerPdfMode==='fanOut'?'Fan Outs':'Power Calculations'"));
+assert(source('makeExportPageWithSection').includes("createExportPage(d,pageIndex,'Distro Labels')"));
+assert(source('renderFixturePatchPdfPreview').includes('finalisePdfPageChrome'));
+assert(source('finishPowerPdfPreview').includes('finalisePdfPageChrome'));
+assert(source('renderExportPages').includes('finalisePdfPageChrome(exportPages)'));
+assert(source('positionSummaryGeometry').includes('footerMm=10'));
+const tabContext=vm.createContext({app:{patchSheets:[]},activePatchSheetId:'master',normalisePatchSheets:value=>value,patchSheetById:()=>null,patchFixtureRows:()=>[{id:'master'}],escapeHtml:value=>String(value),escapeJsAttr:value=>String(value)});
+vm.runInContext(source('patchSheetTabsMarkup'),tabContext);assert.equal(tabContext.patchSheetTabsMarkup(),'');tabContext.app.patchSheets=[{id:'import',name:'Imported',diffs:{}}];assert(tabContext.patchSheetTabsMarkup().includes('Master Patch'));
+const footerContext=vm.createContext({ensureProjectInfo:()=>({file:{projectName:'Arena Show',version:'2',projectOwner:'Lighting Team',email:'crew@example.test',phoneNumber:'+44 7700 900000',includeOwnerDetailsInPdfFooters:true}}),escapeHtml:value=>String(value)});
+for(const name of ['pdfFooterContactMarkup','pdfPageFooterMarkup'])vm.runInContext(source(name),footerContext);
+assert(footerContext.pdfFooterContactMarkup().includes('Lighting Team'));assert(footerContext.pdfFooterContactMarkup().includes('crew@example.test '+String.fromCharCode(92)+' +44 7700 900000'));assert(footerContext.pdfPageFooterMarkup().includes('Page 1 of 1'));assert(footerContext.pdfPageFooterMarkup().includes('Arena Show • Version 2'));
+footerContext.ensureProjectInfo=()=>({file:{includeOwnerDetailsInPdfFooters:false}});assert.equal(footerContext.pdfFooterContactMarkup(),'');
+console.log('PASS: V33.11 shared PDF chrome, owner details and single-master Patch tabs.');
