@@ -1,3 +1,10 @@
+## V33.12 — 7 September 2026
+
+- Add temporary, browser-session Fixture Patch column-width controls. Col 1 and Col 2 are fixed at 110 px; every other visible column has editable min/max widths shared by the live table and Fixture Patch PDF preview/export.
+- Measure table content within those limits before assigning widths, replacing the former fixed percentage allocations.
+- Reduce overflowing Fixture Patch text to 8 px first. Text that still does not fit uses its original size wrapped to three lines; longer text then reduces while wrapped to stay within that limit.
+- Keep column-width choices outside project files and leave all fixture data and existing saved formats unchanged.
+
 ## V33.11 — 7 September 2026
 
 - Hide the Fixture Patch tab bar when the project has only its master patch; imported comparison patches retain the Master Patch tab and comparison tabs.
