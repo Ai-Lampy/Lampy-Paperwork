@@ -1,3 +1,8 @@
+## V33.16 — 7 September 2026
+
+- Prevent unlocked Fixture Patch Mode selectors from entering spreadsheet-selection handling while their native option list opens.
+- Ignore the duplicate Mode blur commit after the selector has already caused a table render, preventing the lock-up when editing a fixture mode.
+
 ## V33.15 — 7 September 2026
 
 - Change Fixture Patch Position width to 90–260 px.
