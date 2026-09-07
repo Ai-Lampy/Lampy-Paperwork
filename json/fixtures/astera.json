@@ -4,7 +4,7 @@
     {
       "fixture": "AX1 PixelTube",
       "watts": 16,
-      "weight": 1.1,
+      "weight": 1.0,
       "modes": {
         "1: RGB": 3,
         "2: RGBW ": 4,
@@ -1401,7 +1401,7 @@
     {
       "fixture": "AX2-100 PixelBar",
       "watts": 80,
-      "weight": 7.9,
+      "weight": 7.4,
       "modes": {
         "1: RGB": 3,
         "2: RGBW ": 4,
@@ -2572,7 +2572,7 @@
     {
       "fixture": "AX2-50 PixelBar",
       "watts": 40,
-      "weight": 4.9,
+      "weight": 4.5,
       "modes": {
         "1: RGB": 3,
         "2: RGBW ": 4,
@@ -3743,7 +3743,7 @@
     {
       "fixture": "AX3 LightDrop",
       "watts": 15,
-      "weight": 0.679,
+      "weight": 0.68,
       "modes": {
         "1: RGB": 3,
         "2: RGBW ": 4,
@@ -5592,7 +5592,7 @@
     {
       "fixture": "HydraPanel",
       "watts": 17,
-      "weight": 0.6,
+      "weight": 0.604,
       "modes": {
         "1: RGB": 3,
         "2: RGBW ": 4,
@@ -7934,7 +7934,7 @@
     {
       "fixture": "LeoFresnel",
       "watts": 250,
-      "weight": 16.0,
+      "weight": 16.32,
       "modes": {
         "1: RGB": 3,
         "2: RGBW ": 4,
@@ -9484,7 +9484,7 @@
     {
       "fixture": "QuikBeam",
       "watts": 40,
-      "weight": 1.617,
+      "weight": 1.438,
       "modes": {
         "1: RGB": 3,
         "2: RGBW ": 4,
@@ -9920,7 +9920,7 @@
     {
       "fixture": "QuikPunch",
       "watts": 75,
-      "weight": 6.5,
+      "weight": 6.567,
       "modes": {
         "1: RGB": 3,
         "2: RGBW ": 4,

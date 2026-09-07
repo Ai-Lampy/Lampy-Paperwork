@@ -6,10 +6,22 @@
       "watts": 1555,
       "weight": 43,
       "modes": {
-        "Mode 1 38 DMX": 38,
-        "Mode 2 29 DMX": 29,
-        "Mode 3 31 DMX": 31,
-        "Mode 4 22 DMX": 22
+        "Mode 1 38 DMX": {
+          "channels": 38,
+          "displayName": "38 CH"
+        },
+        "Mode 2 29 DMX": {
+          "channels": 29,
+          "displayName": "29 CH"
+        },
+        "Mode 3 31 DMX": {
+          "channels": 31,
+          "displayName": "31 CH"
+        },
+        "Mode 4 22 DMX": {
+          "channels": 22,
+          "displayName": "22 CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -50,10 +62,22 @@
       "watts": 2265,
       "weight": 54.5,
       "modes": {
-        "Mode 1 43CH": 43,
-        "Mode 2 34CH": 34,
-        "Mode 3 32CH": 32,
-        "Mode 4 23CH": 23
+        "Mode 1 43CH": {
+          "channels": 43,
+          "displayName": "43CH"
+        },
+        "Mode 2 34CH": {
+          "channels": 34,
+          "displayName": "34CH"
+        },
+        "Mode 3 32CH": {
+          "channels": 32,
+          "displayName": "32CH"
+        },
+        "Mode 4 23CH": {
+          "channels": 23,
+          "displayName": "23CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -94,9 +118,18 @@
       "watts": 670,
       "weight": 40.0,
       "modes": {
-        "Mode 1  33 DMX": 33,
-        "Mode 2  24 DMX": 24,
-        "Mode 2  28 DMX": 28
+        "Mode 1  33 DMX": {
+          "channels": 33,
+          "displayName": "33 CH"
+        },
+        "Mode 2  24 DMX": {
+          "channels": 24,
+          "displayName": "24 CH"
+        },
+        "Mode 2  28 DMX": {
+          "channels": 28,
+          "displayName": "28 CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -131,7 +164,10 @@
       "watts": 865,
       "weight": 25.0,
       "modes": {
-        "Mode 24 DMX": 24
+        "Mode 24 DMX": {
+          "channels": 24,
+          "displayName": "4 CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -154,8 +190,14 @@
       "watts": 600,
       "weight": 13.5,
       "modes": {
-        "Mode 2 55 DMX": 55,
-        "Mode1 14 DMX": 14
+        "Mode 2 55 DMX": {
+          "channels": 55,
+          "displayName": "55 CH"
+        },
+        "Mode1 14 DMX": {
+          "channels": 14,
+          "displayName": "14 CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -184,8 +226,14 @@
       "watts": 350,
       "weight": 7.74,
       "modes": {
-        "Mode 2 30DMX": 30,
-        "Mode 1 14DMX": 14
+        "Mode 2 30DMX": {
+          "channels": 30,
+          "displayName": "30CH"
+        },
+        "Mode 1 14DMX": {
+          "channels": 14,
+          "displayName": "14CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -214,10 +262,22 @@
       "watts": 55,
       "weight": 2.2,
       "modes": {
-        "Mode 1 10 DMX": 10,
-        "Mode 2 8 DMX": 8,
-        "Mode 3 5 DMX": 5,
-        "Mode 4 4 DMX": 4
+        "Mode 1 10 DMX": {
+          "channels": 10,
+          "displayName": "10 CH"
+        },
+        "Mode 2 8 DMX": {
+          "channels": 8,
+          "displayName": "8 CH"
+        },
+        "Mode 3 5 DMX": {
+          "channels": 5,
+          "displayName": "5 CH"
+        },
+        "Mode 4 4 DMX": {
+          "channels": 4,
+          "displayName": "4 CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -258,9 +318,18 @@
       "watts": 260,
       "weight": 5.6,
       "modes": {
-        "Mode 1 27CH": 27,
-        "Mode 2 50CH": 50,
-        "Mode 3 58CH": 58
+        "Mode 1 27CH": {
+          "channels": 27,
+          "displayName": "27CH"
+        },
+        "Mode 2 50CH": {
+          "channels": 50,
+          "displayName": "50CH"
+        },
+        "Mode 3 58CH": {
+          "channels": 58,
+          "displayName": "58CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -332,13 +401,34 @@
       "watts": 1240,
       "weight": 19.5,
       "modes": {
-        "Mode 1 58 DMX": 58,
-        "Mode 2 25 DMX": 25,
-        "Mode 3 23 DMX": 23,
-        "Mode 4 35+ DMX": 35,
-        "Mode 5 27 DMX": 27,
-        "Mode 6 70 DMX": 70,
-        "Mode 7 55 DMX": 55
+        "Mode 1 58 DMX": {
+          "channels": 58,
+          "displayName": "58 CH"
+        },
+        "Mode 2 25 DMX": {
+          "channels": 25,
+          "displayName": "25 CH"
+        },
+        "Mode 3 23 DMX": {
+          "channels": 23,
+          "displayName": "23 CH"
+        },
+        "Mode 4 35+ DMX": {
+          "channels": 35,
+          "displayName": "35+ CH"
+        },
+        "Mode 5 27 DMX": {
+          "channels": 27,
+          "displayName": "27 CH"
+        },
+        "Mode 6 70 DMX": {
+          "channels": 70,
+          "displayName": "70 CH"
+        },
+        "Mode 7 55 DMX": {
+          "channels": 55,
+          "displayName": "55 CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -397,10 +487,22 @@
       "watts": 820,
       "weight": 5.6,
       "modes": {
-        "Mode 1 50CH": 50,
-        "Mode 2 45CH": 45,
-        "Mode 3 46CH": 46,
-        "Mode 4 43CH": 43
+        "Mode 1 50CH": {
+          "channels": 50,
+          "displayName": "50CH"
+        },
+        "Mode 2 45CH": {
+          "channels": 45,
+          "displayName": "45CH"
+        },
+        "Mode 3 46CH": {
+          "channels": 46,
+          "displayName": "46CH"
+        },
+        "Mode 4 43CH": {
+          "channels": 43,
+          "displayName": "43CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -441,8 +543,14 @@
       "watts": 190,
       "weight": 6.8,
       "modes": {
-        "Mode 1 16CH": 16,
-        "Mode 2 133CH": 133
+        "Mode 1 16CH": {
+          "channels": 16,
+          "displayName": "16CH"
+        },
+        "Mode 2 133CH": {
+          "channels": 133,
+          "displayName": "133CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -471,10 +579,22 @@
       "watts": 1370,
       "weight": 24.0,
       "modes": {
-        "Mode 1 19 CH": 19,
-        "Mode 2 41CH": 41,
-        "Mode 3 20CH": 20,
-        "Mode 4 42CH": 42
+        "Mode 1 19 CH": {
+          "channels": 19,
+          "displayName": "19 CH"
+        },
+        "Mode 2 41CH": {
+          "channels": 41,
+          "displayName": "41CH"
+        },
+        "Mode 3 20CH": {
+          "channels": 20,
+          "displayName": "20CH"
+        },
+        "Mode 4 42CH": {
+          "channels": 42,
+          "displayName": "42CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -515,12 +635,30 @@
       "watts": 1135,
       "weight": 18.0,
       "modes": {
-        "Mode 1 31CH": 31,
-        "Mode 2 230CH": 230,
-        "Mode 3 43CH": 43,
-        "Mode 4 100CH": 100,
-        "Mode 5 20+80CH": 20,
-        "Mode 6 20+210CH": 20
+        "Mode 1 31CH": {
+          "channels": 31,
+          "displayName": "31CH"
+        },
+        "Mode 2 230CH": {
+          "channels": 230,
+          "displayName": "230CH"
+        },
+        "Mode 3 43CH": {
+          "channels": 43,
+          "displayName": "43CH"
+        },
+        "Mode 4 100CH": {
+          "channels": 100,
+          "displayName": "100CH"
+        },
+        "Mode 5 20+80CH": {
+          "channels": 20,
+          "displayName": "20+80CH"
+        },
+        "Mode 6 20+210CH": {
+          "channels": 20,
+          "displayName": "20+210CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -573,8 +711,14 @@
       "watts": 625,
       "weight": 13.6,
       "modes": {
-        "Mode 1 79 DMX": 79,
-        "Mode 2 16 DMX": 16
+        "Mode 1 79 DMX": {
+          "channels": 79,
+          "displayName": "79 CH"
+        },
+        "Mode 2 16 DMX": {
+          "channels": 16,
+          "displayName": "16 CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -603,10 +747,22 @@
       "watts": 325,
       "weight": 8.6,
       "modes": {
-        "Mode 1 16CH": 16,
-        "Mode 2 44CH": 44,
-        "Mode 3 19CH": 19,
-        "Mode 4 10CH": 10
+        "Mode 1 16CH": {
+          "channels": 16,
+          "displayName": "16CH"
+        },
+        "Mode 2 44CH": {
+          "channels": 44,
+          "displayName": "44CH"
+        },
+        "Mode 3 19CH": {
+          "channels": 19,
+          "displayName": "19CH"
+        },
+        "Mode 4 10CH": {
+          "channels": 10,
+          "displayName": "10CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -647,11 +803,26 @@
       "watts": 1190,
       "weight": 42,
       "modes": {
-        "Mode 1  39 DMX": 39,
-        "Mode 2  30 DMX": 30,
-        "Mode 3  31 DMX": 31,
-        "Mode 4  22 DMX": 22,
-        "Mode 5  40 DMX": 40
+        "Mode 1  39 DMX": {
+          "channels": 39,
+          "displayName": "39 CH"
+        },
+        "Mode 2  30 DMX": {
+          "channels": 30,
+          "displayName": "30 CH"
+        },
+        "Mode 3  31 DMX": {
+          "channels": 31,
+          "displayName": "31 CH"
+        },
+        "Mode 4  22 DMX": {
+          "channels": 22,
+          "displayName": "22 CH"
+        },
+        "Mode 5  40 DMX": {
+          "channels": 40,
+          "displayName": "40 CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -698,8 +869,14 @@
       "watts": 1455,
       "weight": 42.5,
       "modes": {
-        "Mode 2 30 DMX": 30,
-        "Mode 1 18DMX": 18
+        "Mode 2 30 DMX": {
+          "channels": 30,
+          "displayName": "30 CH"
+        },
+        "Mode 1 18DMX": {
+          "channels": 18,
+          "displayName": "18CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -728,8 +905,14 @@
       "watts": 910,
       "weight": 30.5,
       "modes": {
-        "Mode 1  30 DMX": 30,
-        "Mode 2 24 DMX": 24
+        "Mode 1  30 DMX": {
+          "channels": 30,
+          "displayName": "30 CH"
+        },
+        "Mode 2 24 DMX": {
+          "channels": 24,
+          "displayName": "24 CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -758,10 +941,22 @@
       "watts": 910,
       "weight": 46.5,
       "modes": {
-        "Standard  40 DMX": 40,
-        "Spot  31 DMX ": 31,
-        "Framing  31 DMX": 31,
-        "Wash 22 DMX ": 22
+        "Standard  40 DMX": {
+          "channels": 40,
+          "displayName": "Standard"
+        },
+        "Spot  31 DMX ": {
+          "channels": 31,
+          "displayName": "Spot"
+        },
+        "Framing  31 DMX": {
+          "channels": 31,
+          "displayName": "Framing"
+        },
+        "Wash 22 DMX ": {
+          "channels": 22,
+          "displayName": "Wash"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -802,11 +997,26 @@
       "watts": 960,
       "weight": 21.3,
       "modes": {
-        "Mode 1 17DMX": 17,
-        "Mode 2 21DMX": 21,
-        "Mode 3 86DMX": 86,
-        "Mode 4 10+DMX": 10,
-        "Mode 5 10Art-Net": 76
+        "Mode 1 17DMX": {
+          "channels": 17,
+          "displayName": "17CH"
+        },
+        "Mode 2 21DMX": {
+          "channels": 21,
+          "displayName": "21CH"
+        },
+        "Mode 3 86DMX": {
+          "channels": 86,
+          "displayName": "86CH"
+        },
+        "Mode 4 10+DMX": {
+          "channels": 10,
+          "displayName": "10+CH"
+        },
+        "Mode 5 10Art-Net": {
+          "channels": 76,
+          "displayName": "10Art-Net"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -853,7 +1063,10 @@
       "watts": 425,
       "weight": 17.2,
       "modes": {
-        "Mode 1 18CH": 18
+        "Mode 1 18CH": {
+          "channels": 18,
+          "displayName": "18CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -876,8 +1089,14 @@
       "watts": 335,
       "weight": 6.3,
       "modes": {
-        "Mode 1 37 DMX": 37,
-        "Mode 2 17 DMX": 17
+        "Mode 1 37 DMX": {
+          "channels": 37,
+          "displayName": "37 CH"
+        },
+        "Mode 2 17 DMX": {
+          "channels": 17,
+          "displayName": "17 CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -906,10 +1125,22 @@
       "watts": 85,
       "weight": 3,
       "modes": {
-        "Mode1 10DMX": 10,
-        "Mode2 8DMX": 8,
-        "Mode3 5DMX": 5,
-        "Mode4 4DMX": 4
+        "Mode1 10DMX": {
+          "channels": 10,
+          "displayName": "10CH"
+        },
+        "Mode2 8DMX": {
+          "channels": 8,
+          "displayName": "8CH"
+        },
+        "Mode3 5DMX": {
+          "channels": 5,
+          "displayName": "5CH"
+        },
+        "Mode4 4DMX": {
+          "channels": 4,
+          "displayName": "4CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -950,19 +1181,55 @@
       "watts": 420,
       "weight": 10.5,
       "modes": {
-        "Mode 1 7DMX": 7,
-        "Mode 2 15DMX": 15,
-        "Mode 3 21DMX": 21,
-        "Mode 4 39DMX": 39,
-        "Mode 5 112DMX": 112,
-        "Mode 6 17DMX": 17,
-        "Mode 7 33DMX": 33,
-        "Mode 8 65DMX": 65,
-        "Mode 9 68DMX": 68,
-        "Mode 10 117DMX": 117,
+        "Mode 1 7DMX": {
+          "channels": 7,
+          "displayName": "7CH"
+        },
+        "Mode 2 15DMX": {
+          "channels": 15,
+          "displayName": "15CH"
+        },
+        "Mode 3 21DMX": {
+          "channels": 21,
+          "displayName": "21CH"
+        },
+        "Mode 4 39DMX": {
+          "channels": 39,
+          "displayName": "39CH"
+        },
+        "Mode 5 112DMX": {
+          "channels": 112,
+          "displayName": "112CH"
+        },
+        "Mode 6 17DMX": {
+          "channels": 17,
+          "displayName": "17CH"
+        },
+        "Mode 7 33DMX": {
+          "channels": 33,
+          "displayName": "33CH"
+        },
+        "Mode 8 65DMX": {
+          "channels": 65,
+          "displayName": "65CH"
+        },
+        "Mode 9 68DMX": {
+          "channels": 68,
+          "displayName": "68CH"
+        },
+        "Mode 10 117DMX": {
+          "channels": 117,
+          "displayName": "117CH"
+        },
         "Mode 11": 70,
-        "Mode 12 70N DMX": 70,
-        "Mode 13 119DMX": 119
+        "Mode 12 70N DMX": {
+          "channels": 70,
+          "displayName": "70N CH"
+        },
+        "Mode 13 119DMX": {
+          "channels": 119,
+          "displayName": "119CH"
+        }
       },
       "modeAliases": {
         "Mode11 70DMX": "Mode 11"
@@ -1060,18 +1327,54 @@
       "watts": 875,
       "weight": 5.5,
       "modes": {
-        "Mode 1 8CH": 8,
-        "Mode 2 16CH": 16,
-        "Mode 3 22CH": 22,
-        "Mode 4 26CH": 26,
-        "Mode 5 56CH": 56,
-        "Mode 6 10CH": 10,
-        "Mode 7 18CH": 18,
-        "Mode 8 34CH": 34,
-        "Mode 9 37CH": 37,
-        "Mode 10 62CH": 62,
-        "Mode 11 39CH": 39,
-        "Mode 12 68CH": 68
+        "Mode 1 8CH": {
+          "channels": 8,
+          "displayName": "8CH"
+        },
+        "Mode 2 16CH": {
+          "channels": 16,
+          "displayName": "16CH"
+        },
+        "Mode 3 22CH": {
+          "channels": 22,
+          "displayName": "22CH"
+        },
+        "Mode 4 26CH": {
+          "channels": 26,
+          "displayName": "26CH"
+        },
+        "Mode 5 56CH": {
+          "channels": 56,
+          "displayName": "56CH"
+        },
+        "Mode 6 10CH": {
+          "channels": 10,
+          "displayName": "10CH"
+        },
+        "Mode 7 18CH": {
+          "channels": 18,
+          "displayName": "18CH"
+        },
+        "Mode 8 34CH": {
+          "channels": 34,
+          "displayName": "34CH"
+        },
+        "Mode 9 37CH": {
+          "channels": 37,
+          "displayName": "37CH"
+        },
+        "Mode 10 62CH": {
+          "channels": 62,
+          "displayName": "62CH"
+        },
+        "Mode 11 39CH": {
+          "channels": 39,
+          "displayName": "39CH"
+        },
+        "Mode 12 68CH": {
+          "channels": 68,
+          "displayName": "68CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -1160,12 +1463,30 @@
       "watts": 1200,
       "weight": 12.0,
       "modes": {
-        "Mode 1 43CH ": 43,
-        "Mode 2 195CH": 195,
-        "Mode 3 153CH": 153,
-        "Mode 4 27CH": 27,
-        "Mode 5 168CH": 168,
-        "Mode 6 163CH": 163
+        "Mode 1 43CH ": {
+          "channels": 43,
+          "displayName": "43CH"
+        },
+        "Mode 2 195CH": {
+          "channels": 195,
+          "displayName": "195CH"
+        },
+        "Mode 3 153CH": {
+          "channels": 153,
+          "displayName": "153CH"
+        },
+        "Mode 4 27CH": {
+          "channels": 27,
+          "displayName": "27CH"
+        },
+        "Mode 5 168CH": {
+          "channels": 168,
+          "displayName": "168CH"
+        },
+        "Mode 6 163CH": {
+          "channels": 163,
+          "displayName": "163CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -1218,10 +1539,22 @@
       "watts": 600,
       "weight": 12.0,
       "modes": {
-        "Mode 1 24DMX": 24,
-        "Mode 2 39DMX": 39,
-        "Mode 3 97DMX": 97,
-        "Mode 4 21+DMX": 21
+        "Mode 1 24DMX": {
+          "channels": 24,
+          "displayName": "24CH"
+        },
+        "Mode 2 39DMX": {
+          "channels": 39,
+          "displayName": "39CH"
+        },
+        "Mode 3 97DMX": {
+          "channels": 97,
+          "displayName": "97CH"
+        },
+        "Mode 4 21+DMX": {
+          "channels": 21,
+          "displayName": "21+CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -1262,10 +1595,22 @@
       "watts": 465,
       "weight": 5.6,
       "modes": {
-        "Mode 1 29CH": 29,
-        "Mode 2 27CH ": 27,
-        "Mode 3 16CH ": 16,
-        "Mode 4 27CH ": 27
+        "Mode 1 29CH": {
+          "channels": 29,
+          "displayName": "29CH"
+        },
+        "Mode 2 27CH ": {
+          "channels": 27,
+          "displayName": "27CH"
+        },
+        "Mode 3 16CH ": {
+          "channels": 16,
+          "displayName": "16CH"
+        },
+        "Mode 4 27CH ": {
+          "channels": 27,
+          "displayName": "27CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -1306,10 +1651,22 @@
       "watts": 570,
       "weight": 5.6,
       "modes": {
-        "Mode 1 45CH (Framing)": 45,
-        "Mode 2 36CH (F-Wash)": 36,
-        "Mode 3 27CH (Wash)": 27,
-        "Mode 4 36CH (Spot)": 36
+        "Mode 1 45CH (Framing)": {
+          "channels": 45,
+          "displayName": "45CH (Framing)"
+        },
+        "Mode 2 36CH (F-Wash)": {
+          "channels": 36,
+          "displayName": "36CH (F-Wash)"
+        },
+        "Mode 3 27CH (Wash)": {
+          "channels": 27,
+          "displayName": "27CH (Wash)"
+        },
+        "Mode 4 36CH (Spot)": {
+          "channels": 36,
+          "displayName": "36CH (Spot)"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -1350,11 +1707,26 @@
       "watts": 215,
       "weight": 5,
       "modes": {
-        "Mode 1 11 DMX": 11,
-        "Mode 2 9 DMX": 9,
-        "Mode 3 8 DMX": 8,
-        "Mode 4 7 DMX": 7,
-        "Mode 5 6 DMX": 6
+        "Mode 1 11 DMX": {
+          "channels": 11,
+          "displayName": "11 CH"
+        },
+        "Mode 2 9 DMX": {
+          "channels": 9,
+          "displayName": "9 CH"
+        },
+        "Mode 3 8 DMX": {
+          "channels": 8,
+          "displayName": "8 CH"
+        },
+        "Mode 4 7 DMX": {
+          "channels": 7,
+          "displayName": "7 CH"
+        },
+        "Mode 5 6 DMX": {
+          "channels": 6,
+          "displayName": "6 CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -1401,8 +1773,14 @@
       "watts": 665,
       "weight": 25.5,
       "modes": {
-        "Mode 1 30 DMX": 30,
-        "Mode 2 24 DMX": 24
+        "Mode 1 30 DMX": {
+          "channels": 30,
+          "displayName": "30 CH"
+        },
+        "Mode 2 24 DMX": {
+          "channels": 24,
+          "displayName": "24 CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -1431,9 +1809,18 @@
       "watts": 250,
       "weight": 8.5,
       "modes": {
-        "Mode 1 9 DMX": 9,
-        "Mode 2 7 DMX": 7,
-        "Mode 3 5 DMX": 5
+        "Mode 1 9 DMX": {
+          "channels": 9,
+          "displayName": "9 CH"
+        },
+        "Mode 2 7 DMX": {
+          "channels": 7,
+          "displayName": "7 CH"
+        },
+        "Mode 3 5 DMX": {
+          "channels": 5,
+          "displayName": "5 CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -1468,13 +1855,34 @@
       "watts": 1155,
       "weight": 23.0,
       "modes": {
-        "Mode 1 168 DMX": 168,
-        "Mode 2 108 DMX": 108,
-        "Mode 3 99 DMX": 99,
-        "Mode 4 27 DMX": 27,
-        "Mode 5 17 DMX": 17,
-        "Mode 6 8+DMX": 8,
-        "Mode 7 21DMX": 21
+        "Mode 1 168 DMX": {
+          "channels": 168,
+          "displayName": "168 CH"
+        },
+        "Mode 2 108 DMX": {
+          "channels": 108,
+          "displayName": "108 CH"
+        },
+        "Mode 3 99 DMX": {
+          "channels": 99,
+          "displayName": "99 CH"
+        },
+        "Mode 4 27 DMX": {
+          "channels": 27,
+          "displayName": "27 CH"
+        },
+        "Mode 5 17 DMX": {
+          "channels": 17,
+          "displayName": "17 CH"
+        },
+        "Mode 6 8+DMX": {
+          "channels": 8,
+          "displayName": "8+CH"
+        },
+        "Mode 7 21DMX": {
+          "channels": 21,
+          "displayName": "21CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -1533,10 +1941,22 @@
       "watts": 2265,
       "weight": 49.0,
       "modes": {
-        "Mode 1 43 DMX": 43,
-        "Mode 2 34 DMX": 34,
-        "Mode 3 32 DMX": 32,
-        "Mode 4 23 DMX": 23
+        "Mode 1 43 DMX": {
+          "channels": 43,
+          "displayName": "43 CH"
+        },
+        "Mode 2 34 DMX": {
+          "channels": 34,
+          "displayName": "34 CH"
+        },
+        "Mode 3 32 DMX": {
+          "channels": 32,
+          "displayName": "32 CH"
+        },
+        "Mode 4 23 DMX": {
+          "channels": 23,
+          "displayName": "23 CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -1577,10 +1997,22 @@
       "watts": 2200,
       "weight": 56.0,
       "modes": {
-        "Mode 1 44 DMX(Framing)": 44,
-        "Mode 2 32DMX(F-Wash)": 32,
-        "Mode 3 35DMX(Spot)": 35,
-        "Mode 4 23DMX(Wash)": 23
+        "Mode 1 44 DMX(Framing)": {
+          "channels": 44,
+          "displayName": "44 CH(Framing)"
+        },
+        "Mode 2 32DMX(F-Wash)": {
+          "channels": 32,
+          "displayName": "32CH(F-Wash)"
+        },
+        "Mode 3 35DMX(Spot)": {
+          "channels": 35,
+          "displayName": "35CH(Spot)"
+        },
+        "Mode 4 23DMX(Wash)": {
+          "channels": 23,
+          "displayName": "23CH(Wash)"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -1621,10 +2053,22 @@
       "watts": 55,
       "weight": 1.62,
       "modes": {
-        "Mode1 10DMX": 10,
-        "Mode2 8DMX": 8,
-        "Mode3 5DMX": 5,
-        "Mode4 4DMX": 4
+        "Mode1 10DMX": {
+          "channels": 10,
+          "displayName": "10CH"
+        },
+        "Mode2 8DMX": {
+          "channels": 8,
+          "displayName": "8CH"
+        },
+        "Mode3 5DMX": {
+          "channels": 5,
+          "displayName": "5CH"
+        },
+        "Mode4 4DMX": {
+          "channels": 4,
+          "displayName": "4CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -1665,9 +2109,18 @@
       "watts": 1600,
       "weight": 34.0,
       "modes": {
-        "Mode 1 27 DMX": 27,
-        "Mode 2 139 DMX": 139,
-        "Mode 3 19DMX+": 19
+        "Mode 1 27 DMX": {
+          "channels": 27,
+          "displayName": "27 CH"
+        },
+        "Mode 2 139 DMX": {
+          "channels": 139,
+          "displayName": "139 CH"
+        },
+        "Mode 3 19DMX+": {
+          "channels": 19,
+          "displayName": "19CH+"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -1702,11 +2155,26 @@
       "watts": 935,
       "weight": 29.0,
       "modes": {
-        "Mode 1 41DMX 1": 41,
-        "Mode 2 71 DMX": 71,
-        "Mode 3 75 DMX": 75,
-        "Mode 4 85 MDX": 85,
-        "Mode 5 170DMX": 170
+        "Mode 1 41DMX 1": {
+          "channels": 41,
+          "displayName": "41CH 1"
+        },
+        "Mode 2 71 DMX": {
+          "channels": 71,
+          "displayName": "71 CH"
+        },
+        "Mode 3 75 DMX": {
+          "channels": 75,
+          "displayName": "75 CH"
+        },
+        "Mode 4 85 MDX": {
+          "channels": 85,
+          "displayName": "85 MDX"
+        },
+        "Mode 5 170DMX": {
+          "channels": 170,
+          "displayName": "170CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -1753,8 +2221,14 @@
       "watts": 455,
       "weight": 12.0,
       "modes": {
-        "Mode 1 28CH": 28,
-        "Mode 2 10CH": 10
+        "Mode 1 28CH": {
+          "channels": 28,
+          "displayName": "28CH"
+        },
+        "Mode 2 10CH": {
+          "channels": 10,
+          "displayName": "10CH"
+        }
       },
       "gdtf": {
         "status": "matched",
@@ -1806,7 +2280,10 @@
       "watts": 460,
       "weight": 17.5,
       "modes": {
-        "18 DMX": 18
+        "18 DMX": {
+          "channels": 18,
+          "displayName": "18 Channel"
+        }
       },
       "gdtf": {
         "status": "matched",
