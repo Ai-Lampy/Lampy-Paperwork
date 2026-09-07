@@ -1,3 +1,28 @@
+## V33.21 — 7 September 2026
+
+- Stop measuring every cell in the full Fixture Patch while a group is unlocked. The unlocked grid now uses its configured min/max widths and stays responsive during Mode edits; locked tables, previews and PDF exports retain measured content fitting.
+
+## V33.20 — 7 September 2026
+
+- Do not run the full locked-paperwork text-fitting pass while a Fixture Patch group is unlocked for editing.
+- Keep unlocked large patches responsive during repeated Mode changes; text fitting resumes when the group is locked and remains active for PDF previews and exports.
+
+## V33.19 — 7 September 2026
+
+- Stop applying PDF-style per-cell text fitting to unlocked Device Config-style Fixture Patch tables.
+- Remove the multi-second UI block after Mode changes on large patches while retaining the locked-table and PDF text-fitting rules.
+
+## V33.18 — 7 September 2026
+
+- Replace full Fixture Patch address repacking after an individual Mode change with a single-fixture address reconciliation.
+- Preserve the edited fixture’s Universe and Address whenever its new channel count still fits without an overlap; find a valid slot only when necessary.
+- Prevent repeated Mode edits from blocking large projects.
+
+## V33.17 — 7 September 2026
+
+- Fix Fixture Patch Mode changes freezing the app. Address repacking now checks only rows already placed during the repack, instead of treating every patch row as occupied including the row being evaluated.
+- Reproduce and verify the fix with the supplied Melanie Martinez V33.6 project save.
+
 ## V33.16 — 7 September 2026
 
 - Prevent unlocked Fixture Patch Mode selectors from entering spreadsheet-selection handling while their native option list opens.
