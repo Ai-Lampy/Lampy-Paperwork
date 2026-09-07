@@ -12,7 +12,7 @@ Live app: [https://ai-lampy.github.io/Lampy-Paperwork/](https://ai-lampy.github.
 - Retains imported MVR fixture matrices and fixture-attached geometry as hidden background metadata.
 - Requires review of unmatched MVR fixtures and conflicting GDTF, mode, or channel-count data before import.
 - Produces power calculation sheets with distro and supply phase totals.
-- Provides spreadsheet-style keyboard navigation and vertical drag-fill editing in Power Calculations and Distro Labels Table View.
+- Provides spreadsheet-style keyboard navigation and vertical drag-fill editing in Power and Distro Labels Table View.
 - Produces display-only Fan Out sheets from Power Calculations, including Socapex colours, fixture details, and position colours.
 - Compiles consoles, NPUs, and project network equipment into an IP Address' sheet with dual IP fields, subnet data, VLAN assignments, locations, and notes.
 - Provides a synchronized Device Config tree with expandable physical ports, editable patching, protocols, VLANs and notes, JSON-defined read-only Console/NPU port capabilities, plus spreadsheet navigation, copy/paste and vertical drag-fill.
@@ -37,7 +37,7 @@ Every bundled fixture library entry includes a `shortName` alongside `fixture`. 
 
 ## Current Version
 
-Current app version: **V33.21**
+Current app version: **V33.22**
 
 Console tables use the final shared column proportions with automatic text fitting and scale up to fill available width. Narrow layouts retain scrolling at normal scale.
 Console removal warns that its data will be deleted; “Do Not Show Again” is remembered for that project only.
@@ -65,7 +65,7 @@ See [CHANGELOG.md](CHANGELOG.md) for version history and rollback notes.
 2. Start with **Project Info** and enter the show details.
 3. Add distro details in **Distro Labels**.
 4. Build or import the **Fixture Patch**.
-5. Check **Power Calculations** after fixture IDs and fixture types are set.
+5. Check **Power** after fixture IDs and fixture types are set.
 6. Add consoles and NPUs in **Control**, then add network-capable project hardware through **Rack Layout** or **IP Address'**.
 7. Use **Rack Layout** to create racks, set rack depth, and place equipment from the Front or Rear; use Side view to check physical depth and cable clearance.
 8. Open **Device Config** to review and edit devices and their individual ports in a synchronized tree.

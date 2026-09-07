@@ -1,3 +1,10 @@
+## V33.22 — 7 September 2026
+
+- Renamed the top-level Power Calculations tab to Power and moved Fan Outs into its sub-tabs, using one selected distro across both views.
+- Hide Phase Totals until a project has multiple distros or multiple supplies; retain multi-distro Power and Fan Out menu routes.
+- Show all assigned distro phase cards beside a selected linked supply, retain the unassigned distro card, and remove the circuit-voltage hint.
+- Render all four Fan Out units when no fixture assignments exist; apply the requested main Power Sheet header sizes and 2.5 px top borders.
+
 ## V33.21 — 7 September 2026
 
 - Stop measuring every cell in the full Fixture Patch while a group is unlocked. The unlocked grid now uses its configured min/max widths and stays responsive during Mode edits; locked tables, previews and PDF exports retain measured content fitting.
