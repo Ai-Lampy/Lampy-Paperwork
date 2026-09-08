@@ -1,9 +1,14 @@
+## V34.1 — 8 September 2026
+
+- Corrected the V34 shared toolbar CSS placement so the supplied page styling is active.
+
 ## V34 — 8 September 2026
 
 - Simplified Power navigation to Power Calcs, Fan Outs and conditional Phase Totals.
 - Kept linked supply and phase-summary cards on one horizontal row with scrolling where needed.
 - Renamed Distro Labels to Labels and moved distro selection above the three Label views.
 - Standardised shared button and tab styling.
+- Added a regression guard that verifies shared interface CSS remains in the active document stylesheet.
 
 ## V33.22 — 7 September 2026
 

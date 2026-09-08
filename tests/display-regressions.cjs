@@ -586,3 +586,10 @@ assert(html.includes('.btn.primary{background:#00a61d;color:#fff;border:2px soli
 assert(html.includes('.btn.add{font-weight:800;font-size:18px;line-height:1;padding:8px;background:#00a61d;color:#fff;border:2px solid #000}'));
 assert(html.includes('.projectTab,.sheetTab{border:2px solid #000;background:#fff;border-radius:7px;padding:9px 14px;cursor:pointer;font-weight:700}'));
 console.log('PASS: V34 Power and Labels navigation, horizontal summary cards and shared toolbar styling.');
+
+// Guard against page CSS being written into a JavaScript export template.
+const activeStyleStart=html.indexOf('<style'),activeStyleEnd=html.indexOf('</style>'),bodyStart=html.indexOf('<body'),sharedToolbarCss='/* V34 shared navigation and toolbar layout. */';
+assert(activeStyleStart>=0&&activeStyleEnd>activeStyleStart&&activeStyleEnd<bodyStart,'Active stylesheet must precede the page body');
+assert(html.slice(activeStyleStart,activeStyleEnd).includes(sharedToolbarCss),'Shared toolbar CSS must be in the active stylesheet');
+assert.equal(html.split(sharedToolbarCss).length-1,1,'Shared toolbar CSS must occur exactly once');
+console.log('PASS: shared toolbar CSS remains in the active stylesheet.');
