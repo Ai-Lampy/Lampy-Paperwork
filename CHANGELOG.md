@@ -1,3 +1,8 @@
+## V35.1 — Labels styling
+
+- Applied the requested rear Socapex text, fixed red-and-orange background, label sizing and two-line wrapping behaviour.
+- Updated Labels navigation, tab and button styling, including selected-tab appearance.
+
 ## V35 — Generated Labels and Network Toolbar
 
 - Front RCBO Labels and Rear Labels now remain empty until labels are generated, while Table View remains live.

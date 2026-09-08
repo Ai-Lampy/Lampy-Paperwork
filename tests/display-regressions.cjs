@@ -432,7 +432,7 @@ assert.equal(pctx.defaultProjectInfo().positionSummaryFormat.layout,'rectangles'
 console.log('PASS: V33.3 linked import suggestions, combined Uni/Add parsing, optional loads and Position Summary preview layouts.');
 
 // V33.4 patch cleanup, single-distro menus, Device Config controls and rack fitting.
-assert(html.includes('<title>Lampy Paperwork V35</title>'));
+assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(source('appPayload').includes('syncPositionsFromPatch()'));
 assert(html.includes('>Delete Patch</button>'));assert(html.includes('>Delete Imported Patch</button>'));
 assert(html.includes('.deviceConfigFillHandle{position:absolute;right:-10px;bottom:-10px;width:20px;height:20px'));
@@ -450,12 +450,12 @@ const rackContext=vm.createContext({rackViewFor:()=> 'front'});vm.runInContext(s
 console.log('PASS: V33.4 complete patch deletion, single-distro menus, Device Config controls and measured rack fitting.');
 
 // V33.5 position names merge across every project location source.
-assert(html.includes('<title>Lampy Paperwork V35</title>'));
+assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 const v335=vm.createContext({app:{fixturePatch:[{location:'foh',colour1:'#ff0000',colour2:''}],controlNetwork:{consoles:[{location:'FOH ',deviceConfigPorts:[{location:'fOh'}]}],npus:[{location:'foh',deviceConfigPorts:[{location:'FOH'}]}],networkDevices:[{location:'FoH',portSettings:[{location:' foh '}]}],racks:[{location:'FOH',devices:[]}]}},normalisePosition:value=>({name:String(value?.name||value?.location||'').trim(),colour1:value?.colour1||'',colour2:value?.colour2||'',colour3:value?.colour3||''}),normaliseBlankColour:value=>String(value||'').trim(),ensureProjectInfo:()=>v335.project,project:{positions:[{name:'FOH',colour1:'',colour2:'#00ff00',colour3:''},{name:'foh',colour1:'#ff0000',colour2:'',colour3:'#0000ff'}]},patchFixtureRows:()=>v335.app.fixturePatch,syncRackMountedNetworkLocations:()=>v335.racksSynced=true});vm.runInContext(source('positionKey'),v335);vm.runInContext(source('positionLocationItems'),v335);vm.runInContext(source('syncPositionsFromPatch'),v335);vm.runInContext(source('updatePositionReferences'),v335);v335.syncPositionsFromPatch();assert.equal(v335.project.positions.filter(position=>position.name).length,1);assert.deepEqual(JSON.parse(JSON.stringify(v335.project.positions[0])),{name:'FOH',colour1:'#ff0000',colour2:'#00ff00',colour3:'#0000ff'});assert(v335.positionLocationItems().every(item=>!item.location||item.location==='FOH'));assert(v335.racksSynced);v335.updatePositionReferences('FOH','Front of House');assert(v335.positionLocationItems().every(item=>!item.location||item.location==='Front of House'));
 console.log('PASS: V33.5 project-wide position merging and reference canonicalisation.');
 
 // V33.6 Device Config parent deletion action.
-assert(html.includes('<title>Lampy Paperwork V35</title>'));
+assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(source('deviceConfigParentRow').includes('deviceConfigDeleteButton'));
 assert(source('deviceConfigPortRow').includes('deviceConfigDeleteCol'));
 assert(source('deviceConfigInterfaceTwoRow').includes('deviceConfigDeleteCol'));
@@ -479,7 +479,7 @@ assert(source('applyPatchTableColumnWidths').includes('patchColumnContentWidth')
 console.log('PASS: V33.6 white and uncoloured position text uses black.');
 
 // V33.8 keeps clean reviewed display labels separate from exact GDTF modes.
-assert(html.includes('<title>Lampy Paperwork V35</title>'));
+assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 const modeContext=vm.createContext({normaliseImportMatch:value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,'')});
 for(const name of ['normalisePatchMode','normaliseFixtureGdtf','normaliseFixtureModeAliases','fixtureModeKey','fixtureDisplayMode','fixtureCanonicalMode','normaliseFixtureList'])vm.runInContext(source(name),modeContext);
 const ayrtonLibrary=JSON.parse(fs.readFileSync(root+'json/fixtures/ayrton.json','utf8')).fixtures,acmeLibrary=JSON.parse(fs.readFileSync(root+'json/fixtures/acme.json','utf8')).fixtures;
@@ -494,7 +494,7 @@ console.log('PASS: V33.8 reviewed mode labels, legacy migration and raw-GDTF imp
 
 
 // V33.11 shared export chrome and Project Owner details.
-assert(html.includes('<title>Lampy Paperwork V35</title>'));
+assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(source('patchSheetTabsMarkup').includes("if(!sheets.length)return ''"));
 assert(source('defaultProjectInfo').includes("projectOwner:''"));
 assert(source('defaultProjectInfo').includes("includeOwnerDetailsInPdfFooters:false"));
@@ -526,7 +526,7 @@ console.log('PASS: V33.11 shared PDF chrome, owner details and single-master Pat
 
 
 // V34 Fixture Patch fixed min/max widths and responsive unlocked Mode editing.
-assert(html.includes('<title>Lampy Paperwork V35</title>'));
+assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(source('patchColumnWidthSetting').includes('PATCH_FIXED_COLUMN_WIDTHS'));
 assert(source('patchColumnWidthSetting').includes('PATCH_COLUMN_WIDTHS'));
 assert(source('patchColumnWidthSetting').includes('return {...setting}'));
@@ -558,7 +558,7 @@ assert(!source('defaultPatchViewOptions').includes('PATCH_COLUMN_WIDTHS'));
 console.log('PASS: V34 Fixture Patch fixed min/max widths, responsive unlocked Mode editing, address reconciliation and three-line text fitting.');
 
 // V34 consolidates Power navigation and summary presentation.
-assert(html.includes('<title>Lampy Paperwork V35</title>'));
+assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(html.includes("data-sheet-tab=\"powerSheet\" onclick=\"setSheetTab('powerSheet')\">Power</button>"));assert(!html.includes('data-sheet-tab="fanOuts"'));
 assert(source('setSheetTab').includes("if(tab==='fanOuts'){activePowerSubTab='fanOuts';tab='powerSheet'}"));
 assert(source('powerSubTabsMarkup').includes('Fan Outs'));assert(source('powerSubTabsMarkup').includes('powerPhaseTotalsAvailable'));
@@ -580,13 +580,13 @@ assert(source('render').includes("labelDistroHost.appendChild(makeDistroTabs"));
 assert(source('setTableDistro').includes('activeLabelDistro=idx'));assert(source('setLabelDistro').includes('activeTableDistro=idx'));
 assert(source('activeApplicationPageName').includes('Labels ~ ${view}'));
 assert(html.includes('.powerLinkedSummaryRow{display:flex;flex-wrap:nowrap'));
-assert(html.includes('.btn{border:2px solid #000;background:rgb(217, 217, 217);border-radius:7px;padding:8px;cursor:pointer}'));
+assert(html.includes('.btn{border:2px solid #000;background:rgb(217, 217, 217);border-radius:7px;padding:10px 12px;cursor:pointer}'));
 assert(html.includes('.projectTab,.sheetTab{border:2px solid #000;background:#fff;border-radius:7px;padding:9px 14px;cursor:pointer;font-weight:700}'));
-assert(html.includes('.projectTab.active,.sheetTab.active{background:#0060d2;color:#fff;border-color:#0060d2}'));
-assert(html.includes('.tableDistroTab.active{background:#0060d2;color:#fff;border-color:#0060d2}'));
-assert(html.includes('.distroLabelNav{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:space-between;background:#b9b9b9;border:2px solid #000;border-radius:8px;margin:0 0 10px;padding:4px 10px;width:100%}'));
+assert(html.includes('.projectTab.active,.sheetTab.active{background:rgb(0, 96, 210);color:rgb(255, 255, 255);border:2px solid #000}'));
+assert(html.includes('.tableDistroTab.active{background:rgb(0, 96, 210);color:rgb(255, 255, 255);border:2px solid #000}'));
+assert(html.includes('.distroLabelNav{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:space-between;background:rgb(185, 185, 185);border:2px solid rgb(0, 0, 0);border-radius:8px;margin:0 0 10px;padding:6px 10px;width:100%}'));
 assert(html.includes('.sheetTabs{display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap;width:100%;margin:0 0 10px;padding:10px;background:#b9b9b9;border:2px solid #000;border-radius:8px}'));
-assert(html.includes('.tableDistroTabs{display:flex;gap:8px;flex-wrap:wrap;border:2px solid #000;margin:0 0 12px}'));
+assert(html.includes('.tableDistroTabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 0}'));
 assert(source('sheetSubMenuRoutes').includes("else if(tab==='distroLabels'){routes.push"));assert(!source('sheetSubMenuRoutes').includes('Front — ${name}'));
 assert(source('fixtureNameMode').includes("area==='labels'?'power':area"));
 assert(source('buildDistroHeading').includes('distroPreviewHeadingControls'));assert(source('buildDistroHeading').includes('event.stopPropagation()'));
@@ -597,7 +597,7 @@ assert(html.includes('.projectTab,.sheetTab{border:2px solid #000;background:#ff
 console.log('PASS: V34 Power and Labels navigation, horizontal summary cards and shared toolbar styling.');
 
 // V35 generated Labels remain deliberately separate from live Power data.
-assert(html.includes('<title>Lampy Paperwork V35</title>'));
+assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(source('defaultProjectInfo').includes('labelPreview:null'));
 assert(source('normaliseProjectInfo').includes('base.labelPreview=normaliseLabelPreview(info.labelPreview)'));
 assert(source('distroLabelTabsMarkup').includes("Generate Labels"));
@@ -614,6 +614,23 @@ assert(html.includes('.networkDeviceConfigToolbar{display:flex;align-items:cente
 assert(source('renderDeviceConfigView').includes('networkDeviceConfigToolbar'));
 assert(source('render').includes("if(activeSheetTab==='ipAddresses')sheet.insertAdjacentHTML"));
 console.log('PASS: V35 generated Labels, frozen Power updates, headings and Network toolbar.');
+
+// V35.1 Labels sizing, fixed rear Socapex presentation and active navigation styles.
+assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
+assert(html.includes(".powerSocaNameText{position:absolute;inset:3px 6px;display:flex;align-items:center;justify-content:center;overflow:hidden;white-space:normal;overflow-wrap:normal;word-break:normal;text-align:center;line-height:1;cursor:text;-webkit-text-stroke-width:1.3mm}"));
+assert(html.includes(".rearLabelText{position:relative;z-index:1;max-width:100%;overflow:hidden;white-space:normal;overflow-wrap:normal;word-break:normal;-webkit-text-stroke-width:1.3mm}"));
+assert(html.includes(".rearLabel{width:var(--rear-soca-w);height:var(--rear-aux-h);border:1.2mm solid rgb(17, 17, 17);border-radius:2mm;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--top-font);font-weight:800;font-size:14pt;line-height:1;padding:1mm;box-sizing:border-box}"));
+assert(source('rearSocaBackground').includes('rgb(255, 0, 0) 0mm')&&source('rearSocaBackground').includes('rgb(255, 136, 26) 19mm'));
+assert(source('makeRearLabel').includes('rearSocaBackground()'));
+assert(source('updateRearSocaLabel').includes('rearSocaBackground()'));
+assert(source('fitRearText').includes('fitTextToBox(el,8)'));
+assert(html.includes('.tableDistroTabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 0}'));
+assert(html.includes('.tableDistroTabs.distroLabelTabs{display:flex;justify-content:center;gap:8px;align-items:center;flex-wrap:wrap;width:100%;margin:0 0 14px;padding:10px;background:rgb(185, 185, 185);border:2px solid rgb(0, 0, 0);border-radius:8px}'));
+assert(html.includes('.distroLabelNav{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:space-between;background:rgb(185, 185, 185);border:2px solid rgb(0, 0, 0);border-radius:8px;margin:0 0 10px;padding:6px 10px;width:100%}'));
+assert(html.includes('.tableDistroTab.active{background:rgb(0, 96, 210);color:rgb(255, 255, 255);border:2px solid #000}'));
+assert(html.includes('.projectTab.active,.sheetTab.active{background:rgb(0, 96, 210);color:rgb(255, 255, 255);border:2px solid #000}'));
+assert(html.includes('.btn{border:2px solid #000;background:rgb(217, 217, 217);border-radius:7px;padding:10px 12px;cursor:pointer}'));
+console.log('PASS: V35.1 Labels presentation and navigation styling.');
 
 // Guard against page CSS being written into a JavaScript export template.
 const activeStyleStart=html.indexOf('<style'),activeStyleEnd=html.indexOf('</style>'),bodyStart=html.indexOf('<body'),sharedToolbarCss='/* V34 shared navigation and toolbar layout. */';
