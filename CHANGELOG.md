@@ -6,6 +6,7 @@
 - Standardised shared button and tab styling.
 - Added a regression guard that verifies shared interface CSS remains in the active document stylesheet.
 - Corrected the V34 shared toolbar CSS placement so the supplied page styling is active.
+- Consolidated the V34 shared button, tab and Labels navigation rules; Sheet Tabs now align to the Labels content width and centre their buttons.
 - Updated the V34 Welcome Message and Walk-through for the Power and Labels navigation.
 - Simplified the README to app description, quick-start, saving/export guidance and project links; release history remains in this changelog.
 - Removed the README release-version requirement; future releases update it only when its app guidance changes.
