@@ -1,10 +1,10 @@
 {
-  "title": "Welcome to Lampy Paperwork V33",
+  "title": "Welcome to Lampy Paperwork V34",
   "paragraphs": [
-    "Lampy Paperwork is a browser-based workspace for creating and managing the technical paperwork used on live entertainment productions. It brings fixture patching, power calculations, distro and Fan Out documentation, control systems, network devices, rack layouts, exports, and project records together in one place.",
-    "The app is designed to keep related project information connected, reduce repeated data entry, and produce clear paperwork that can move with a production from planning through delivery.",
-    "V33 improves power calculations, supply warnings, distro-label preservation, project import validation, saving feedback and revision tracking. Network and Errors remain available for device configuration and patch checks.",
-    "Lampy Paperwork is still under active development. Features, layouts, workflows, and saved data may continue to change while the app is tested and improved. Download and keep regular copies of your Lampy project file.",
+    "Lampy Paperwork is a browser-based workspace for creating and managing the technical paperwork used on live entertainment productions. It brings fixture patching, power, distro and Fan Out documentation, control systems, network devices, rack layouts, exports, and project records together in one place.",
+    "The app keeps related project information connected, reduces repeated data entry, and produces clear paperwork that can move with a production from planning through delivery.",
+    "V34 simplifies the Power workspace into Power Calcs, Fan Outs and conditional Phase Totals. Labels now groups distro selection with the label workflow, and the shared tab and button styling has been updated.",
+    "Lampy Paperwork remains under active development. Features, layouts, workflows, and saved data may change while the app is tested and improved. Download and keep regular copies of your Lampy project file.",
     "Please report bugs, request missing library items, or suggest improvements through the GitHub issue tracker:",
     "https://github.com/Ai-Lampy/Lampy-Paperwork/issues",
     "Thank you for testing Lampy Paperwork."

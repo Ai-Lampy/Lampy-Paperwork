@@ -1,7 +1,3 @@
-## V34.1 — 8 September 2026
-
-- Corrected the V34 shared toolbar CSS placement so the supplied page styling is active.
-
 ## V34 — 8 September 2026
 
 - Simplified Power navigation to Power Calcs, Fan Outs and conditional Phase Totals.
@@ -9,6 +5,10 @@
 - Renamed Distro Labels to Labels and moved distro selection above the three Label views.
 - Standardised shared button and tab styling.
 - Added a regression guard that verifies shared interface CSS remains in the active document stylesheet.
+- Corrected the V34 shared toolbar CSS placement so the supplied page styling is active.
+- Updated the V34 Welcome Message and Walk-through for the Power and Labels navigation.
+- Simplified the README to app description, quick-start, saving/export guidance and project links; release history remains in this changelog.
+- Removed the README release-version requirement; future releases update it only when its app guidance changes.
 
 ## V33.22 — 7 September 2026
 

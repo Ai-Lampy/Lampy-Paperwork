@@ -1,13 +1,13 @@
 {
-  "title": "Lampy Paperwork V33 Walk-through",
+  "title": "Lampy Paperwork V34 Walk-through",
   "sections": [
     {
-      "title": "New in V33: Project Reliability",
+      "title": "New in V34: Power and Labels Navigation",
       "type": "unordered",
       "items": [
-        "New distros default to 230 V circuit voltage. Existing voltage selections are preserved. Verify the actual circuit voltage and rated equipment current; calculated current assumes power factor 1.",
-        "Supply warnings use the selected rating. Missing fixture wattage produces incomplete totals rather than a complete-looking partial load.",
-        "Distro and Socapex ownership preserves other distros’ labels when you resize or remove a distro.",
+        "Power contains Power Calcs and Fan Outs. Phase Totals appears only when the project has more than one distro or more than one supply.",
+        "Power Calcs and Fan Outs share the selected distro. Linked supply and distro phase-summary cards remain on one horizontal row; scroll sideways when needed.",
+        "Labels replaces Labels. Choose the active distro in the upper Labels navigation, then choose Front RCBO Labels, Rear Labels or Table View in the lower navigation.",
         "Save status shows unsaved changes, successful saves and storage failures. Use Download recovery if saving fails. If another tab changes the project, download a recovery copy before reloading.",
         "Project imports validate data before replacing your project. ZIP imports check paths, extraction limits and file integrity.",
         "Revision tracking includes distro labels, output settings, positions, network settings and GDTF metadata. Saved custom fixtures remain selectable after reload."
@@ -17,7 +17,7 @@
       "title": "Network and Errors",
       "type": "unordered",
       "items": [
-        "Network contains Device Config and IP Address’ sub-tabs. Its last selected page is remembered for the current project session.",
+        "Network contains Device Config and IP Address\u2019 sub-tabs. Its last selected page is remembered for the current project session.",
         "Press Errors beside Report Issue to see the five most recently detected active issues. The red badge shows the total active count; Show All Errors opens the full review page.",
         "Select an error or affected record to reveal its field. The app checks duplicate/invalid IP addresses, duplicate fixture IDs, missing patch addresses or modes, invalid DMX ranges and unconfirmed address overlaps in the Master Patch.",
         "Corrected errors disappear. The list is session-only, not a saved history, and does not include power, rack, capacity or export checks.",
@@ -32,13 +32,13 @@
         "Add each distro with + Distro. Set its name, type, supply, voltage, RCBO rating, Socapex count, and any Aux or additional outputs.",
         "Build the Fixture Patch by adding fixtures from the library or importing CSV, Excel, XLSM, or MVR data.",
         "Open the full-page Positions workspace from Home Position Summary or Fixture Patch to create positions and assign up to three colours. Position names and colours are shared with the patch, power calculations, labels, Control, Rack Layout, Device Config, and IP Address'.",
-        "Open Power Calculations and assign distros to supplies. Enter fixture IDs to link each way to Fixture Patch data, then check phase totals, RCBO warnings, Aux outlets, and the PDF preview.",
+        "Open Power and assign distros to supplies. Enter fixture IDs to link each way to Fixture Patch data, then check phase totals, RCBO warnings, Aux outlets, and the PDF preview.",
         "Use Control to add consoles and NPUs, including roles, locations, parameters, protocols, IP addresses, DMX ports, and reference images. When NPUs exist, use the Consoles and NPU sub-tabs to switch between them, and choose Card View or Table View for the required workflow. Add switches, nodes, and other network-capable hardware through Rack Layout or IP Address'.",
         "Open Rack Layout to create racks, set their U size and depth, and place project or library devices from the Front or Rear view. Use Side view to inspect device depths and cable clearance.",
-        "Open Network → Device Config to review the synchronized device tree, expand individual ports, and edit patch, IP, subnet, protocol, direction, VLAN, and notes data.",
-        "Open Network → IP Address’ to review interfaces, assign subnet and VLAN information, and add IP-only devices used by the project.",
-        "Review the Fan Outs tab generated from Power Calculations and export the required Fan Out paperwork.",
-        "Use Distro Labels to complete Front RCBO Labels, Rear Labels, and Table View, then preview and export the required label pages.",
+        "Open Network \u2192 Device Config to review the synchronized device tree, expand individual ports, and edit patch, IP, subnet, protocol, direction, VLAN, and notes data.",
+        "Open Network \u2192 IP Address\u2019 to review interfaces, assign subnet and VLAN information, and add IP-only devices used by the project.",
+        "Review the Fan Outs tab generated from Power and export the required Fan Out paperwork.",
+        "Use Labels to complete Front RCBO Labels, Rear Labels, and Table View, then preview and export the required label pages.",
         "Review Revisions from the Actions menu or Home card, then download the Lampy project file so the editable project can be reopened later."
       ]
     },
@@ -46,7 +46,7 @@
       "title": "Fixture Patch, GDTF, and MVR",
       "type": "unordered",
       "items": [
-        "The fixture library shows GDTF ✅ only when a repository file has a fully matched manufacturer, fixture type, mode, and channel count. GDTF ❌ means an exact match is not currently available.",
+        "The fixture library shows GDTF \u2705 only when a repository file has a fully matched manufacturer, fixture type, mode, and channel count. GDTF \u274c means an exact match is not currently available.",
         "Use Import to load CSV, Excel, XLSM, or MVR files. Imported comparison tabs highlight new, removed, and changed patch data before it is merged into the master patch.",
         "Fixture Patch Export groups paper, orientation, DPI, zoom, column, and GDTF controls inside Formatting Options. PDF, Excel, and MVR actions, temporary PDF logo controls, and the hidden-column report remain directly accessible below it.",
         "MVR export checks fixture IDs, DMX addresses, modes, duplicate ranges, and GDTF availability before building the file.",
@@ -78,28 +78,27 @@
       ]
     },
     {
-      "title": "Power Calculations",
+      "title": "Power",
       "type": "unordered",
       "items": [
-        "Fixture IDs link Power Calculations to Fixture Patch names, watts, positions, and position colours. Duplicate fixture IDs are highlighted.",
-        "Use the arrow keys, Enter, Shift+Enter, Tab, and Shift+Tab to move between editable Power Calculations cells. Drag the selected cell's blue fill handle vertically to copy a value through a compatible column.",
-        "Choose Full Name or Short Name independently for the Power Calculations display.",
-        "Select a 16 Amp or 10 Amp RCBO in each distro's settings. A way is warned above 15.01 A for a 16 Amp RCBO or above 9.01 A for a 10 Amp RCBO.",
-        "Aux outlets are grouped in threes for Phase 1, Phase 2, and Phase 3. Only Aux outlets enabled for power calculations contribute to the totals. Configured 3ø Outputs are shown separately.",
-        "Use Power Calcs for detailed assignments and Phase Totals for the supply and connected-distro overview.",
-        "The PDF preview keeps Socapex groups together, starts each distro on a new page, shows four Socapexes per page, and finishes with the supply phase-total summary.",
-        "Fan Outs use the Power Calculations assignments to produce display-only Socapex, fixture ID, fixture type, and position paperwork."
+        "Fixture IDs link Power to Fixture Patch names, watts, positions, and position colours. Duplicate fixture IDs are highlighted.",
+        "Use the arrow keys, Enter, Shift+Enter, Tab, and Shift+Tab to move between editable Power Calcs cells. Drag the selected cell's blue fill handle vertically to copy a value through a compatible column.",
+        "Choose Full Name or Short Name independently for the Power display.",
+        "Select a 16 Amp or 10 Amp RCBO in each distro settings. A way is warned above 15.01 A for a 16 Amp RCBO or above 9.01 A for a 10 Amp RCBO.",
+        "Aux outlets are grouped in threes for Phase 1, Phase 2, and Phase 3. Only Aux outlets enabled for power calculations contribute to the totals. Configured 3\u00f8 Outputs are shown separately.",
+        "Use Power Calcs for detailed assignments, Fan Outs for display-only Socapex paperwork, and Phase Totals when it is available for supply and connected-distro review.",
+        "The PDF preview keeps Socapex groups together, starts each distro on a new page, shows four Socapexes per page, and finishes with the supply phase-total summary."
       ]
     },
     {
-      "title": "Distro Labels",
+      "title": "Labels",
       "type": "unordered",
       "items": [
-        "Front RCBO Labels, Rear Labels, and Table View edit the same distro data, so changes remain synchronized between views.",
+        "Choose a distro in the upper Labels navigation, then use Front RCBO Labels, Rear Labels or Table View. All three views edit the same distro data.",
         "Table View supports spreadsheet-style keyboard navigation, shift-selection, copy and paste, and vertical drag-fill across editable Socapex, Aux, and Output cells.",
         "Choose Full Name or Short Name in Table View to display the linked fixture-library name without changing manually entered fixture text.",
-        "Socapex, Aux, and Output labels support label formatting and colour controls. Socapex names and colours also appear in Power Calculations.",
-        "Choose Full Name or Short Name for Front RCBO Labels without changing the fixture's stored library name.",
+        "Socapex, Aux, and Output labels support label formatting and colour controls. Socapex names and colours also appear in Power.",
+        "Choose Full Name or Short Name for Front RCBO Labels without changing the fixture stored library name.",
         "Use Label Settings and Label Format before opening Export. Select the required front and rear pages, paper size, orientation, and logos in the preview."
       ]
     },
@@ -107,7 +106,7 @@
       "title": "Revisions and Saving",
       "type": "unordered",
       "items": [
-        "Changes to Project Info, Fixture Patch, Power Calculations, Control, distro labels, output settings and GDTF metadata create revision notes in the latest working version.",
+        "Changes to Project Info, Fixture Patch, Power, Control, distro labels, output settings and GDTF metadata create revision notes in the latest working version.",
         "Use Bump Version Number to increment the project version and add the current date. Notes can be edited, removed, or moved to another version.",
         "Similar automatic changes are grouped into a short client-facing summary. Use Download Change Log when the detailed activity log is needed.",
         "The browser saves a working copy locally, but Download Project is the portable backup. Use Open Project to continue from a saved Lampy project file."
@@ -124,7 +123,7 @@
         "Move the pointer over a main Sheet tab, or focus it with the keyboard, to display its available sub-tabs and project pages for faster navigation.",
         "Fixture group title lines always use the full fixture name. Full Name and Short Name options affect supported table cells and labels only.",
         "Use the Fixture Patch lock before editing rows, and watch for duplicate fixture IDs or overlapping DMX addresses. Show/Hide Columns is available beside Clear Filters in the Filter & Sort controls.",
-        "Supply cards can be collapsed after setup to keep Power Calculations tidy.",
+        "Supply cards can be collapsed after setup to keep Power tidy.",
         "Project logos are controlled in Project Info and can be included in supported exports.",
         "All project, GDTF, and MVR processing is local to the browser. Lampy Paperwork does not import grandMA3 .show files or modify grandMA3 system libraries.",
         "Use Report Issue for bugs, missing fixture requests, or feature suggestions."
