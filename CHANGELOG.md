@@ -1,3 +1,10 @@
+## V34 — 8 September 2026
+
+- Simplified Power navigation to Power Calcs, Fan Outs and conditional Phase Totals.
+- Kept linked supply and phase-summary cards on one horizontal row with scrolling where needed.
+- Renamed Distro Labels to Labels and moved distro selection above the three Label views.
+- Standardised shared button and tab styling.
+
 ## V33.22 — 7 September 2026
 
 - Renamed the top-level Power Calculations tab to Power and moved Fan Outs into its sub-tabs, using one selected distro across both views.
