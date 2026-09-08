@@ -1,3 +1,10 @@
+## V34.1 — 8 September 2026
+
+- Applied the shared Sheet Tabs, Labels navigation, distro-tab, button and heading styling.
+- Limited the Labels hover menu to Front RCBO Labels, Rear Labels and Table View.
+- Moved Front RCBO Labels expand/collapse controls into distro headings and removed the `+ Socapex` action.
+- Made Labels follow the Power Calcs fixture-name mode.
+
 ## V34 — 8 September 2026
 
 - Simplified Power navigation to Power Calcs, Fan Outs and conditional Phase Totals.
