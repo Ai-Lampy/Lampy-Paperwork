@@ -315,7 +315,7 @@ assert(source('openProjectError').includes('deviceConfigExpandedDevices.add'));a
 assert(source('openProjectError').includes('fixturePatchViewOptions.columns[column.key]=true'));
 assert(source('clearProjectState').includes('resetProjectErrors()'));assert(source('loadProjectPayload').includes('resetProjectErrors()'));
 assert(!html.includes('data-sheet-tab="deviceConfig"'));assert(!html.includes('data-sheet-tab="ipAddresses"'));assert(html.includes('data-sheet-tab="network"'));
-const navigation=vm.createContext({activeNetworkSubTab:'deviceConfig',activeSheetTab:'home',activeControlNetworkTab:'consoles',controlViewMode:'card',activeDistroLabelTab:'labels',render:()=>{},closeProjectErrorsMenu:()=>{},closeFrontEditorPane:()=>{},closeFanOutFormat:()=>{},closePatchFormatModal:()=>{},closeDeviceConfigFormat:()=>{},closeDeviceConfigColumns:()=>{},closeRackEditor:()=>{},closeSheetSubMenus:()=>{}});
+const navigation=vm.createContext({activeNetworkSubTab:'deviceConfig',activeSheetTab:'home',activeControlNetworkTab:'consoles',controlViewMode:'card',activeDistroLabelTab:'labels',labelsHaveBeenGenerated:()=>false,render:()=>{},closeProjectErrorsMenu:()=>{},closeFrontEditorPane:()=>{},closeFanOutFormat:()=>{},closePatchFormatModal:()=>{},closeDeviceConfigFormat:()=>{},closeDeviceConfigColumns:()=>{},closeRackEditor:()=>{},closeSheetSubMenus:()=>{}});
 for(const name of ['setSheetTab','activeApplicationPageName'])vm.runInContext(source(name),navigation);
 navigation.setSheetTab('network');assert.equal(navigation.activeSheetTab,'deviceConfig');assert.equal(navigation.activeApplicationPageName(),'Network ~ Device Config');
 navigation.setSheetTab('ipAddresses');navigation.setSheetTab('home');navigation.setSheetTab('network');assert.equal(navigation.activeSheetTab,'ipAddresses');assert.equal(navigation.activeApplicationPageName(),'Network ~ IP Address’');
@@ -325,7 +325,7 @@ menuContext.updateProjectErrorsMenu();assert(menu.innerHTML.includes('No project
 for(let i=0;i<7;i++)menuContext.projectErrors.set(String(i),{id:String(i),description:'Error '+i,order:i});
 menuContext.updateProjectErrorsMenu();assert.equal((menu.innerHTML.match(/data-error-key=/g)||[]).length,5);assert(menu.innerHTML.indexOf('Error 6')<menu.innerHTML.indexOf('Error 5'));assert(!menu.innerHTML.includes('Error 1'));
 assert(source('handleProjectErrorsKeydown').includes("event.key==='Escape'"));assert(source('updateProjectErrorsPage').includes('host.dataset.content===content'));
-for(const file of ['info_txt/welcome_message.json','info_txt/walkthrough.json']){const doc=JSON.parse(fs.readFileSync(root+file));assert(doc.title.includes('V34'));assert(JSON.stringify(doc).includes('Power'));assert(JSON.stringify(doc).includes('Labels'))}
+for(const file of ['info_txt/welcome_message.json','info_txt/walkthrough.json']){const doc=JSON.parse(fs.readFileSync(root+file));assert(doc.title.includes('V35'));assert(JSON.stringify(doc).includes('Power'));assert(JSON.stringify(doc).includes('Labels'))}
 console.log('PASS: V32 console-only caps/text fitting, Network routing, grouped errors, validation boundaries, recency/resolution, and current major-release JSON.');
 assert.equal(menuContext.projectErrorToken("fixture-id:FOH's"),'fixture-id%3AFOH%27s');
 navigation.setSheetTab('networkEquipment');assert.equal(navigation.activeNetworkSubTab,'deviceConfig');
@@ -360,7 +360,7 @@ assert(source('attachDeviceConfigTableEvents').includes('deviceConfigPointerSele
 assert.match(html,/\.deviceConfigFillHandle\{[^}]*pointer-events:auto;touch-action:none;z-index:30/);assert.match(html,/\.deviceConfigCellSelected\{[^}]*overflow:visible!important/);
 assert(!source('renderIpAddressView').includes('openVlanSetup'));
 assert(source('closeVlanSetup').includes("activeSheetTab==='deviceConfig'"));
-assert(html.includes('#vlanSetupPane,.deviceConfigToolbar,#colourMenu'));
+assert(html.includes('#vlanSetupPane,.networkDeviceConfigToolbar,.deviceConfigToolbar,#colourMenu'));
 assert(!source('renderDeviceConfigView').includes('Show/Hide Columns'));
 assert(source('renderDeviceConfigView').includes("[data-device-config-width-table] [data-device-config-hidden]"));
 assert(source('measureDeviceConfigTable').includes("querySelector('.deviceConfigColumnHeadings')"));
@@ -395,7 +395,7 @@ removal.pendingConsoleRemoval={id:'two',project:projectA};removal.confirmConsole
 assert(source('clearProjectState').includes('closeConsoleRemoval(false)'));assert(source('loadProjectPayload').includes('closeConsoleRemoval(false)'));
 assert(source('removeConsole').includes('role="alertdialog"'));assert(source('removeConsole').includes('Do Not Show Again for This Project'));assert(source('removeConsole').includes('project.skipConsoleRemovalConfirmation===true'));
 const pctx=vm.createContext({defaultProductionVisibility:()=>({}),defaultDeviceConfigColumns:()=>({}),DEFAULT_IP_VLANS:[],normaliseFanOutFormat:()=>({}),normalisePowerFormat:()=>({}),normaliseIpAddressFormat:()=>({}),normaliseDeviceConfigFormat:()=>({}),normaliseVlanSetup:()=>({})});
-for(const name of ['defaultProjectInfo','normaliseProjectInfo'])vm.runInContext(source(name),pctx);
+for(const name of ['normaliseLabelPreview','defaultProjectInfo','normaliseProjectInfo'])vm.runInContext(source(name),pctx);
 assert.equal(pctx.defaultProjectInfo().skipConsoleRemovalConfirmation,false);assert.equal(pctx.normaliseProjectInfo({}).skipConsoleRemovalConfirmation,false);
 assert.equal(pctx.normaliseProjectInfo({skipConsoleRemovalConfirmation:'true'}).skipConsoleRemovalConfirmation,false);
 assert.equal(pctx.normaliseProjectInfo(JSON.parse(JSON.stringify({skipConsoleRemovalConfirmation:true}))).skipConsoleRemovalConfirmation,true);
@@ -432,7 +432,7 @@ assert.equal(pctx.defaultProjectInfo().positionSummaryFormat.layout,'rectangles'
 console.log('PASS: V33.3 linked import suggestions, combined Uni/Add parsing, optional loads and Position Summary preview layouts.');
 
 // V33.4 patch cleanup, single-distro menus, Device Config controls and rack fitting.
-assert(html.includes('<title>Lampy Paperwork V34.1</title>'));
+assert(html.includes('<title>Lampy Paperwork V35</title>'));
 assert(source('appPayload').includes('syncPositionsFromPatch()'));
 assert(html.includes('>Delete Patch</button>'));assert(html.includes('>Delete Imported Patch</button>'));
 assert(html.includes('.deviceConfigFillHandle{position:absolute;right:-10px;bottom:-10px;width:20px;height:20px'));
@@ -450,12 +450,12 @@ const rackContext=vm.createContext({rackViewFor:()=> 'front'});vm.runInContext(s
 console.log('PASS: V33.4 complete patch deletion, single-distro menus, Device Config controls and measured rack fitting.');
 
 // V33.5 position names merge across every project location source.
-assert(html.includes('<title>Lampy Paperwork V34.1</title>'));
+assert(html.includes('<title>Lampy Paperwork V35</title>'));
 const v335=vm.createContext({app:{fixturePatch:[{location:'foh',colour1:'#ff0000',colour2:''}],controlNetwork:{consoles:[{location:'FOH ',deviceConfigPorts:[{location:'fOh'}]}],npus:[{location:'foh',deviceConfigPorts:[{location:'FOH'}]}],networkDevices:[{location:'FoH',portSettings:[{location:' foh '}]}],racks:[{location:'FOH',devices:[]}]}},normalisePosition:value=>({name:String(value?.name||value?.location||'').trim(),colour1:value?.colour1||'',colour2:value?.colour2||'',colour3:value?.colour3||''}),normaliseBlankColour:value=>String(value||'').trim(),ensureProjectInfo:()=>v335.project,project:{positions:[{name:'FOH',colour1:'',colour2:'#00ff00',colour3:''},{name:'foh',colour1:'#ff0000',colour2:'',colour3:'#0000ff'}]},patchFixtureRows:()=>v335.app.fixturePatch,syncRackMountedNetworkLocations:()=>v335.racksSynced=true});vm.runInContext(source('positionKey'),v335);vm.runInContext(source('positionLocationItems'),v335);vm.runInContext(source('syncPositionsFromPatch'),v335);vm.runInContext(source('updatePositionReferences'),v335);v335.syncPositionsFromPatch();assert.equal(v335.project.positions.filter(position=>position.name).length,1);assert.deepEqual(JSON.parse(JSON.stringify(v335.project.positions[0])),{name:'FOH',colour1:'#ff0000',colour2:'#00ff00',colour3:'#0000ff'});assert(v335.positionLocationItems().every(item=>!item.location||item.location==='FOH'));assert(v335.racksSynced);v335.updatePositionReferences('FOH','Front of House');assert(v335.positionLocationItems().every(item=>!item.location||item.location==='Front of House'));
 console.log('PASS: V33.5 project-wide position merging and reference canonicalisation.');
 
 // V33.6 Device Config parent deletion action.
-assert(html.includes('<title>Lampy Paperwork V34.1</title>'));
+assert(html.includes('<title>Lampy Paperwork V35</title>'));
 assert(source('deviceConfigParentRow').includes('deviceConfigDeleteButton'));
 assert(source('deviceConfigPortRow').includes('deviceConfigDeleteCol'));
 assert(source('deviceConfigInterfaceTwoRow').includes('deviceConfigDeleteCol'));
@@ -479,7 +479,7 @@ assert(source('applyPatchTableColumnWidths').includes('patchColumnContentWidth')
 console.log('PASS: V33.6 white and uncoloured position text uses black.');
 
 // V33.8 keeps clean reviewed display labels separate from exact GDTF modes.
-assert(html.includes('<title>Lampy Paperwork V34.1</title>'));
+assert(html.includes('<title>Lampy Paperwork V35</title>'));
 const modeContext=vm.createContext({normaliseImportMatch:value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,'')});
 for(const name of ['normalisePatchMode','normaliseFixtureGdtf','normaliseFixtureModeAliases','fixtureModeKey','fixtureDisplayMode','fixtureCanonicalMode','normaliseFixtureList'])vm.runInContext(source(name),modeContext);
 const ayrtonLibrary=JSON.parse(fs.readFileSync(root+'json/fixtures/ayrton.json','utf8')).fixtures,acmeLibrary=JSON.parse(fs.readFileSync(root+'json/fixtures/acme.json','utf8')).fixtures;
@@ -494,7 +494,7 @@ console.log('PASS: V33.8 reviewed mode labels, legacy migration and raw-GDTF imp
 
 
 // V33.11 shared export chrome and Project Owner details.
-assert(html.includes('<title>Lampy Paperwork V34.1</title>'));
+assert(html.includes('<title>Lampy Paperwork V35</title>'));
 assert(source('patchSheetTabsMarkup').includes("if(!sheets.length)return ''"));
 assert(source('defaultProjectInfo').includes("projectOwner:''"));
 assert(source('defaultProjectInfo').includes("includeOwnerDetailsInPdfFooters:false"));
@@ -526,7 +526,7 @@ console.log('PASS: V33.11 shared PDF chrome, owner details and single-master Pat
 
 
 // V34 Fixture Patch fixed min/max widths and responsive unlocked Mode editing.
-assert(html.includes('<title>Lampy Paperwork V34.1</title>'));
+assert(html.includes('<title>Lampy Paperwork V35</title>'));
 assert(source('patchColumnWidthSetting').includes('PATCH_FIXED_COLUMN_WIDTHS'));
 assert(source('patchColumnWidthSetting').includes('PATCH_COLUMN_WIDTHS'));
 assert(source('patchColumnWidthSetting').includes('return {...setting}'));
@@ -558,7 +558,7 @@ assert(!source('defaultPatchViewOptions').includes('PATCH_COLUMN_WIDTHS'));
 console.log('PASS: V34 Fixture Patch fixed min/max widths, responsive unlocked Mode editing, address reconciliation and three-line text fitting.');
 
 // V34 consolidates Power navigation and summary presentation.
-assert(html.includes('<title>Lampy Paperwork V34.1</title>'));
+assert(html.includes('<title>Lampy Paperwork V35</title>'));
 assert(html.includes("data-sheet-tab=\"powerSheet\" onclick=\"setSheetTab('powerSheet')\">Power</button>"));assert(!html.includes('data-sheet-tab="fanOuts"'));
 assert(source('setSheetTab').includes("if(tab==='fanOuts'){activePowerSubTab='fanOuts';tab='powerSheet'}"));
 assert(source('powerSubTabsMarkup').includes('Fan Outs'));assert(source('powerSubTabsMarkup').includes('powerPhaseTotalsAvailable'));
@@ -595,6 +595,25 @@ assert(html.includes('.btn.primary{background:#00a61d;color:#fff;border:2px soli
 assert(html.includes('.btn.add{font-weight:800;font-size:18px;line-height:1;padding:8px;background:#00a61d;color:#fff;border:2px solid #000}'));
 assert(html.includes('.projectTab,.sheetTab{border:2px solid #000;background:#fff;border-radius:7px;padding:9px 14px;cursor:pointer;font-weight:700}'));
 console.log('PASS: V34 Power and Labels navigation, horizontal summary cards and shared toolbar styling.');
+
+// V35 generated Labels remain deliberately separate from live Power data.
+assert(html.includes('<title>Lampy Paperwork V35</title>'));
+assert(source('defaultProjectInfo').includes('labelPreview:null'));
+assert(source('normaliseProjectInfo').includes('base.labelPreview=normaliseLabelPreview(info.labelPreview)'));
+assert(source('distroLabelTabsMarkup').includes("Generate Labels"));
+assert(source('distroLabelTabsMarkup').includes("Update Labels"));
+assert(!source('distroLabelTabsMarkup').includes('+ Distro'));
+assert(source('setSheetTab').includes("tab==='distroLabels'&&!labelsHaveBeenGenerated()"));
+assert(source('render').includes('Generate Labels to create this preview.'));
+assert(source('syncPowerRowToRcboLabel').includes('labelsHaveBeenGenerated()&&!force'));assert(source('updatePowerAuxLabel').includes('if(!labelsHaveBeenGenerated())'));assert(source('updatePowerOutputLabel').includes('if(!labelsHaveBeenGenerated())'));
+assert(source('generateLabels').includes('generatedAt:new Date().toISOString()'));assert(source('generateLabels').includes('data:generatedLabelData()'));assert(source('withGeneratedLabelPreview').includes('Object.assign(app,cloneProjectValue(preview.data))'));
+assert(source('openExportLayout').includes("Generate Labels before exporting."));
+assert(source('buildDistroHeading').includes('distroPreviewGeneratedAt'));
+assert(!source('buildDistroHeading').includes('distroSummaryMeta'));
+assert(html.includes('.networkDeviceConfigToolbar{display:flex;align-items:center;justify-content:space-between'));
+assert(source('renderDeviceConfigView').includes('networkDeviceConfigToolbar'));
+assert(source('render').includes("if(activeSheetTab==='ipAddresses')sheet.insertAdjacentHTML"));
+console.log('PASS: V35 generated Labels, frozen Power updates, headings and Network toolbar.');
 
 // Guard against page CSS being written into a JavaScript export template.
 const activeStyleStart=html.indexOf('<style'),activeStyleEnd=html.indexOf('</style>'),bodyStart=html.indexOf('<body'),sharedToolbarCss='/* V34 shared navigation and toolbar layout. */';

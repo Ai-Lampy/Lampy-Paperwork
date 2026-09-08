@@ -1,9 +1,9 @@
 {
-  "title": "Welcome to Lampy Paperwork V34",
+  "title": "Welcome to Lampy Paperwork V35",
   "paragraphs": [
     "Lampy Paperwork is a browser-based workspace for creating and managing the technical paperwork used on live entertainment productions. It brings fixture patching, power, distro and Fan Out documentation, control systems, network devices, rack layouts, exports, and project records together in one place.",
     "The app keeps related project information connected, reduces repeated data entry, and produces clear paperwork that can move with a production from planning through delivery.",
-    "V34 simplifies the Power workspace into Power Calcs, Fan Outs and conditional Phase Totals. Labels now groups distro selection with the label workflow, and the shared tab and button styling has been updated.",
+    "V35 adds generated Labels. Table View remains available at all times; generate labels when Power is ready, then update them when you need a refreshed Front or Rear preview and export.",
     "Lampy Paperwork remains under active development. Features, layouts, workflows, and saved data may change while the app is tested and improved. Download and keep regular copies of your Lampy project file.",
     "Please report bugs, request missing library items, or suggest improvements through the GitHub issue tracker:",
     "https://github.com/Ai-Lampy/Lampy-Paperwork/issues",

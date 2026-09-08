@@ -1,13 +1,13 @@
 {
-  "title": "Lampy Paperwork V34 Walk-through",
+  "title": "Lampy Paperwork V35 Walk-through",
   "sections": [
     {
-      "title": "New in V34: Power and Labels Navigation",
+      "title": "New in V35: Generated Labels and Network Toolbar",
       "type": "unordered",
       "items": [
-        "Power contains Power Calcs and Fan Outs. Phase Totals appears only when the project has more than one distro or more than one supply.",
-        "Power Calcs and Fan Outs share the selected distro. Linked supply and distro phase-summary cards remain on one horizontal row; scroll sideways when needed.",
-        "Labels replaces Labels. Choose the active distro in the upper Labels navigation, then choose Front RCBO Labels, Rear Labels or Table View in the lower navigation.",
+        "Labels opens Table View until you press Generate Labels. Front RCBO Labels and Rear Labels remain empty before generation.",
+        "Generate Labels saves the current Power-derived label content. Use Update Labels after Power changes to refresh the Front and Rear previews and their export.",
+        "Network Device Config combines its page tabs and Device Config actions in one toolbar.",
         "Save status shows unsaved changes, successful saves and storage failures. Use Download recovery if saving fails. If another tab changes the project, download a recovery copy before reloading.",
         "Project imports validate data before replacing your project. ZIP imports check paths, extraction limits and file integrity.",
         "Revision tracking includes distro labels, output settings, positions, network settings and GDTF metadata. Saved custom fixtures remain selectable after reload."
@@ -94,12 +94,11 @@
       "title": "Labels",
       "type": "unordered",
       "items": [
-        "Choose a distro in the upper Labels navigation, then use Front RCBO Labels, Rear Labels or Table View. All three views edit the same distro data.",
-        "Table View supports spreadsheet-style keyboard navigation, shift-selection, copy and paste, and vertical drag-fill across editable Socapex, Aux, and Output cells.",
-        "Choose Full Name or Short Name in Table View to display the linked fixture-library name without changing manually entered fixture text.",
-        "Socapex, Aux, and Output labels support label formatting and colour controls. Socapex names and colours also appear in Power.",
-        "Choose Full Name or Short Name for Front RCBO Labels without changing the fixture stored library name.",
-        "Use Label Settings and Label Format before opening Export. Select the required front and rear pages, paper size, orientation, and logos in the preview."
+        "Before labels are generated, Labels opens Table View. Table View remains live and editable whether or not labels have been generated.",
+        "Press Generate Labels to create Front RCBO Labels and Rear Labels from current Power data. The button becomes Update Labels after generation.",
+        "Power changes do not alter generated label previews. Press Update Labels when you want the previews and Labels export to use the latest Power data.",
+        "Each generated distro heading records its generation date and time. Socapex, Aux, and Output labels support label formatting and colour controls.",
+        "Use Label Settings and Label Format before exporting. Labels export becomes available after labels are generated."
       ]
     },
     {

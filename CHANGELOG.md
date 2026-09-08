@@ -1,3 +1,9 @@
+## V35 — Generated Labels and Network Toolbar
+
+- Front RCBO Labels and Rear Labels now remain empty until labels are generated, while Table View remains live.
+- Added saved Generate Labels and Update Labels actions, generated timestamps and frozen Power-derived label content.
+- Combined the Network tab controls and Device Config actions into one toolbar.
+
 ## V34.1 — 8 September 2026
 
 - Applied the shared Sheet Tabs, Labels navigation, distro-tab, button and heading styling.
