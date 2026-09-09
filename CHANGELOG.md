@@ -1,3 +1,8 @@
+## V35.5 — Power PDF and Fixture Patch bubble corrections
+
+- Kept the Colour column in live Power Calcs only; Power PDF preview and export omit it.
+- Applied the required 1 px black border directly to Fixture Patch Colour 1 and Colour 2 input bubbles.
+
 ## V35.4 — Labels and Power PDF corrections
 
 - Standardised Distro Labels exports with the shared first-page title, project/version header, later-page header and clean distro headings.
