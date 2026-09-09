@@ -565,7 +565,7 @@ assert(source('powerSubTabsMarkup').includes('Fan Outs'));assert(source('powerSu
 assert(source('powerSuppliesMarkup').includes('supply.distros||[]'));assert(!source('powerSuppliesMarkup').includes('Calculated at circuit voltage'));
 assert(source('fanOutActiveUnitSlots').includes('return active.length?active:[0,1,2,3]'));
 assert(source('renderPowerSheetView').includes("activePowerSubTab==='fanOuts'"));assert(source('fanOutPdfSourceViews').includes("activePowerSubTab='fanOuts'"));
-assert(html.includes('.powerSheetTable:not(.powerExtraSheet) thead th{border-top:2.5px solid #000}'));assert(html.includes('.powerSheetTable:not(.powerExtraSheet) thead th:nth-child(n+3):nth-child(-n+18){font-size:11px}'));
+assert(html.includes('.powerSheetTable:not(.powerExtraSheet) thead th{border-top:2.5px solid #000}'));assert(html.includes('.powerSheetTable:not(.powerExtraSheet) thead th:nth-child(n+4):nth-child(-n+19){font-size:11px}'));
 console.log('PASS: V34 Power navigation, linked supply cards, empty Fan Outs and main-table headers.');
 
 // V34 Navigation and Toolbar Layout.
@@ -618,7 +618,7 @@ console.log('PASS: V35 generated Labels, frozen Power updates, headings and Netw
 // V35.1 Labels sizing, fixed rear Socapex presentation and active navigation styles.
 assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(html.includes(".powerSocaNameText{position:absolute;inset:3px 6px;display:flex;align-items:center;justify-content:center;overflow:hidden;white-space:normal;overflow-wrap:normal;word-break:normal;text-align:center;line-height:1;cursor:text;-webkit-text-stroke-width:1.3mm}"));
-assert(html.includes(".rearLabelText{position:relative;z-index:1;max-width:100%;overflow:hidden;white-space:normal;overflow-wrap:normal;word-break:normal;-webkit-text-stroke-width:1.3mm}"));
+assert(html.includes(".rearLabelText{position:relative;z-index:1;max-width:100%;overflow:hidden;white-space:normal;overflow-wrap:normal;word-break:normal;-webkit-text-stroke-width:1.3mm!important}"));
 assert(html.includes(".rearLabel{width:var(--rear-soca-w);height:var(--rear-aux-h);border:1.2mm solid rgb(17, 17, 17);border-radius:2mm;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--top-font);font-weight:800;font-size:14pt;line-height:1;padding:1mm;box-sizing:border-box}"));
 assert(source('rearSocaBackground').includes('meta?.c1')&&source('rearSocaBackground').includes('meta?.c2')&&source('rearSocaBackground').includes('${c1} 10mm')&&source('rearSocaBackground').includes('${c2} 19mm'));
 assert(source('makeRearLabel').includes('rearSocaBackground(meta)'));
@@ -631,6 +631,25 @@ assert(html.includes('.tableDistroTab.active{background:rgb(0, 96, 210);color:rg
 assert(html.includes('.projectTab.active,.sheetTab.active{background:rgb(0, 96, 210);color:rgb(255, 255, 255);border:2px solid #000}'));
 assert(html.includes('.btn{border:2px solid #000;background:rgb(217, 217, 217);border-radius:7px;padding:10px 12px;cursor:pointer}'));
 console.log('PASS: V35.1 Labels presentation, per-Socapex rear colours and navigation styling.');
+
+// V35.2 Power colours, automatic Socapex names, Label Format pane and rear PDF layers.
+assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
+assert(html.includes(".powerSheetTable{table-layout:auto!important;border-collapse:collapse;font-family:Georgia,'Times New Roman',serif;font-size:14px;border:2px solid #000}"));
+assert(html.includes('.powerSocaColourCol{width:96px;min-width:96px;padding:2px!important}'));
+assert(source('powerSocaColourCellMarkup').includes('rowspan=\"2\"'));
+assert(source('powerSheetRowMarkup').includes('powerSocaColourCellMarkup(socaIndex,way)'));
+assert(source('renderPowerSheetView').includes('<th class=\"powerSocaColourCol\">Colour</th>'));
+assert(source('updatePowerSocaColour').includes('updateSocaMeta(inp)'));
+assert(source('automaticSocaName').includes("'Soca '"));
+assert(source('cleanSocaName').includes("'Socapex '+(idx+1)"));
+assert(source('normaliseSocaMeta').includes('nameCustom:m.nameCustom===true'));
+assert(!html.includes('id=\"labelFormatModal\"'));
+assert(html.includes('id=\"labelFormatPane\" class=\"frontEditorPane labelFormatPane\"'));
+assert(source('openLabelFormat').includes("$('labelFormatPane')?.classList.add('open')"));
+assert(html.includes('.showHideColumnsButton{display:inline-flex!important;align-items:center;justify-content:center;text-align:center;line-height:1.1}'));
+assert(source('drawPdfRearSocaStripeCanvas').includes('12*mm'));
+assert(source('preparePdfSocaColourLayers').includes('.rearLabel[data-rear-soca-colours]'));
+console.log('PASS: V35.2 Power colours, Soca defaults, Label Format pane and rear PDF colour capture.');
 
 // Guard against page CSS being written into a JavaScript export template.
 const activeStyleStart=html.indexOf('<style'),activeStyleEnd=html.indexOf('</style>'),bodyStart=html.indexOf('<body'),sharedToolbarCss='/* V34 shared navigation and toolbar layout. */';

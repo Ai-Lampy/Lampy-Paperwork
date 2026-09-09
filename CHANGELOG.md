@@ -1,3 +1,10 @@
+## V35.2 — Power colours and Labels panel
+
+- Added three project-colour inputs per Socapex in Power Calcs, mapped to its master colours and preserved per-way overrides.
+- Changed automatic Socapex names to `Soca X` within each Distro and retained custom names.
+- Moved Label Format into a side pane, centred Show/Hide Columns controls, and corrected the requested Power and rear-label styles.
+- Added rear Socapex colour capture so Distro Labels PDF exports match their previews.
+
 ## V35.1 — Labels styling
 
 - Applied the requested rear Socapex text, per-Socapex angled two-colour backgrounds, label sizing and two-line wrapping behaviour.
