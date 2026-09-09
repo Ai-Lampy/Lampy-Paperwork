@@ -620,9 +620,9 @@ assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(html.includes(".powerSocaNameText{position:absolute;inset:3px 6px;display:flex;align-items:center;justify-content:center;overflow:hidden;white-space:normal;overflow-wrap:normal;word-break:normal;text-align:center;line-height:1;cursor:text;-webkit-text-stroke-width:1.3mm}"));
 assert(html.includes(".rearLabelText{position:relative;z-index:1;max-width:100%;overflow:hidden;white-space:normal;overflow-wrap:normal;word-break:normal;-webkit-text-stroke-width:1.3mm}"));
 assert(html.includes(".rearLabel{width:var(--rear-soca-w);height:var(--rear-aux-h);border:1.2mm solid rgb(17, 17, 17);border-radius:2mm;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--top-font);font-weight:800;font-size:14pt;line-height:1;padding:1mm;box-sizing:border-box}"));
-assert(source('rearSocaBackground').includes('rgb(255, 0, 0) 0mm')&&source('rearSocaBackground').includes('rgb(255, 136, 26) 19mm'));
-assert(source('makeRearLabel').includes('rearSocaBackground()'));
-assert(source('updateRearSocaLabel').includes('rearSocaBackground()'));
+assert(source('rearSocaBackground').includes('meta?.c1')&&source('rearSocaBackground').includes('meta?.c2')&&source('rearSocaBackground').includes('${c1} 10mm')&&source('rearSocaBackground').includes('${c2} 19mm'));
+assert(source('makeRearLabel').includes('rearSocaBackground(meta)'));
+assert(source('updateRearSocaLabel').includes('rearSocaBackground(meta)'));
 assert(source('fitRearText').includes('fitTextToBox(el,8)'));
 assert(html.includes('.tableDistroTabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 0}'));
 assert(html.includes('.tableDistroTabs.distroLabelTabs{display:flex;justify-content:center;gap:8px;align-items:center;flex-wrap:wrap;width:100%;margin:0 0 14px;padding:10px;background:rgb(185, 185, 185);border:2px solid rgb(0, 0, 0);border-radius:8px}'));
@@ -630,7 +630,7 @@ assert(html.includes('.distroLabelNav{display:flex;gap:8px;align-items:center;fl
 assert(html.includes('.tableDistroTab.active{background:rgb(0, 96, 210);color:rgb(255, 255, 255);border:2px solid #000}'));
 assert(html.includes('.projectTab.active,.sheetTab.active{background:rgb(0, 96, 210);color:rgb(255, 255, 255);border:2px solid #000}'));
 assert(html.includes('.btn{border:2px solid #000;background:rgb(217, 217, 217);border-radius:7px;padding:10px 12px;cursor:pointer}'));
-console.log('PASS: V35.1 Labels presentation and navigation styling.');
+console.log('PASS: V35.1 Labels presentation, per-Socapex rear colours and navigation styling.');
 
 // Guard against page CSS being written into a JavaScript export template.
 const activeStyleStart=html.indexOf('<style'),activeStyleEnd=html.indexOf('</style>'),bodyStart=html.indexOf('<body'),sharedToolbarCss='/* V34 shared navigation and toolbar layout. */';

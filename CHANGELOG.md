@@ -1,6 +1,6 @@
 ## V35.1 — Labels styling
 
-- Applied the requested rear Socapex text, fixed red-and-orange background, label sizing and two-line wrapping behaviour.
+- Applied the requested rear Socapex text, per-Socapex angled two-colour backgrounds, label sizing and two-line wrapping behaviour.
 - Updated Labels navigation, tab and button styling, including selected-tab appearance.
 
 ## V35 — Generated Labels and Network Toolbar

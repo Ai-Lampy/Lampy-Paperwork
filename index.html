@@ -1249,7 +1249,7 @@ function setTextVars(){const frontFmt=normaliseMasterLabelFormat(labelFormatSett
 function settingMm(id,fallback){const n=parseFloat($(id)?.value||fallback);return Math.max(1,Number.isFinite(n)?n:fallback)+'mm'}
 function setRootStyle(name,value){const style=document.documentElement.style;if(style.getPropertyValue(name)!==value)style.setProperty(name,value)}
 function applyDesignVars(){const frontFmt=normaliseMasterLabelFormat(labelFormatSettings.front,'front');setRootStyle('--radius',$('radius').value+'mm');setRootStyle('--border',$('border').value+'mm');setRootStyle('--border-col',colourTextToHex($('borderCol').value,'#ffffff'));setRootStyle('--label-gap',$('labelSpacing').value+'mm');setRootStyle('--front-output-w',settingMm('frontOutputW',72));setRootStyle('--front-output-h',settingMm('frontOutputH',34));setRootStyle('--rear-soca-w',settingMm('rearSocaW',70));setRootStyle('--rear-soca-h',settingMm('rearSocaH',50));setRootStyle('--rear-aux-w',settingMm('rearAuxW',85));setRootStyle('--rear-aux-h',settingMm('rearAuxH',30));setRootStyle('--rear-aux-gap',settingMm('rearAuxGap',5));setRootStyle('--rear-output-w',settingMm('rearOutputW',90));setRootStyle('--rear-output-h',settingMm('rearOutputH',60));setRootStyle('--top-size',settingValue('topSize',frontFmt.fontSize)+'pt');setRootStyle('--bottom-size',settingValue('bottomSize',frontFmt.fontSize)+'pt');setTextVars()}
-function rearSocaBackground(){return 'repeating-linear-gradient(135deg, rgb(255, 0, 0) 0mm, rgb(255, 0, 0) 10mm, rgb(255, 136, 26) 7mm, rgb(255, 136, 26) 19mm)'}
+function rearSocaBackground(meta){const c1=meta?.c1||'#ffffff',c2=meta?.useC2===true&&meta?.c2?meta.c2:c1;return c1===c2?c1:`repeating-linear-gradient(135deg, ${c1} 0mm, ${c1} 10mm, ${c2} 7mm, ${c2} 19mm)`}
 function cssStripe(c1,c2,useC2=true,c3='',useC3=false){const colours=[c1];if(useC2&&c2&&c2!==c1)colours.push(c2);if(useC3&&c3&&c3!==c1&&c3!==c2)colours.push(c3);if(colours.length<2)return c1;const w=parseFloat($('stripe').value||4);return `repeating-linear-gradient(135deg, ${colours.map((colour,idx)=>`${colour} ${idx*w}mm ${(idx+1)*w}mm`).join(', ')})`}
 function effectiveSocaStyle(s){const m=app.socaMeta[s]||defaultMeta();return {c1:m.c1||'',c2:m.c2||'',c3:m.c3||'',useC2:m.useC2===true,useC3:m.useC3===true,text:frontMasterFormatForSoca(s).textColor}}
 function effectiveLabelStyle(i){const l=app.labels[i]||blankLabel();const m=effectiveSocaStyle(Math.floor(i/6));const bg=l.override?{c1:l.c1||'',c2:l.c2||'',c3:l.c3||'',useC2:l.useC2===true,useC3:l.useC3===true}:m;return {...bg,text:l.formatOn?(l.text||m.text):m.text}}
@@ -1486,7 +1486,7 @@ function makeRearLabel(s){
   el.title='Click to edit rear label text format';
   el.style.color=meta.text||'#000000';
   el.innerHTML='<div class="bg"></div><div class="rearLabelText"></div>';
-  el.querySelector('.bg').style.background=rearSocaBackground();
+  el.querySelector('.bg').style.background=rearSocaBackground(meta);
   el.onclick=e=>{e.stopPropagation();openRearSocaEditor(s)};
   const text=el.querySelector('.rearLabelText');
   text.textContent=cleanSocaName(app.socaNames[s],s);
@@ -4356,7 +4356,7 @@ function updateRearFormat(inp){
   syncGeneratedLabelSnapshot();
   persist();
 }
-function updateRearSocaLabel(s){document.querySelectorAll('[data-rear-soca-id="'+s+'"]').forEach(el=>{const meta=app.socaMeta[s]||defaultMeta(),bg=el.querySelector('.bg'),text=el.querySelector('.rearLabelText');el.style.color=meta.text||'#000000';if(bg)bg.style.background=rearSocaBackground();if(text){text.textContent=cleanSocaName(app.socaNames[s],s);applyRearTextStyle(text,meta.rearFormat);fitRearText(text)}applySpareStyles(el)})}
+function updateRearSocaLabel(s){document.querySelectorAll('[data-rear-soca-id="'+s+'"]').forEach(el=>{const meta=app.socaMeta[s]||defaultMeta(),bg=el.querySelector('.bg'),text=el.querySelector('.rearLabelText');el.style.color=meta.text||'#000000';if(bg)bg.style.background=rearSocaBackground(meta);if(text){text.textContent=cleanSocaName(app.socaNames[s],s);applyRearTextStyle(text,meta.rearFormat);fitRearText(text)}applySpareStyles(el)})}
 function updateRearAuxLabel(didx,g,j){const d=app.distros[didx];if(!d)return;const l=auxLabel(d,g,j);document.querySelectorAll('[data-rear-aux-id="'+didx+'_'+g+'_'+j+'"]').forEach(el=>{const bg=el.querySelector('.bg'),text=el.querySelector('.auxText');el.style.color=l.text||'#000000';if(bg)bg.style.background=cssStripe(l.c1||'',l.c2||'',l.useC2===true,l.c3||'',l.useC3===true);if(text){text.textContent=l.top||l.bottom||'';applyRearTextStyle(text,l.rearFormat);fitAuxText(text)}applySpareStyles(el)})}
 function updateRearOutputLabel(didx,g,j){const d=app.distros[didx];if(!d)return;const l=outputLabel(d,g,j);document.querySelectorAll('[data-rear-output-id="'+didx+'_'+g+'_'+j+'"]').forEach(el=>{const bg=el.querySelector('.bg'),text=el.querySelector('.outputText');el.style.color=l.textColour||'#000000';if(bg)bg.style.background=cssStripe(l.c1||'',l.c2||'',l.useC2===true,l.c3||'',l.useC3===true);if(text){text.textContent=l.text||'';applyRearTextStyle(text,l.rearFormat);fitOutputText(text)}applySpareStyles(el)})}
 
