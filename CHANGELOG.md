@@ -1,3 +1,9 @@
+## V35.3 — Power colour cells and generated timestamp
+
+- Set Power Sheet Colour cells to a 70–90 px range and added a contrast outline to their colour names.
+- Added a 1 px black border to live Fixture Patch colour bubbles.
+- Changed generated-label headings to show `Labels Generated At - HH:mm, on dd/mm/yy`.
+
 ## V35.2 — Power colours and Labels panel
 
 - Added three project-colour inputs per Socapex in Power Calcs, mapped to its master colours and preserved per-way overrides.

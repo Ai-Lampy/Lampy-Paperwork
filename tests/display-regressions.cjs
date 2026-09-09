@@ -632,10 +632,16 @@ assert(html.includes('.projectTab.active,.sheetTab.active{background:rgb(0, 96, 
 assert(html.includes('.btn{border:2px solid #000;background:rgb(217, 217, 217);border-radius:7px;padding:10px 12px;cursor:pointer}'));
 console.log('PASS: V35.1 Labels presentation, per-Socapex rear colours and navigation styling.');
 
-// V35.2 Power colours, automatic Socapex names, Label Format pane and rear PDF layers.
+// V35.3 Power colour-cell sizing, colour text outlines, Patch bubbles and generated timestamps.
+assert.equal(appVersion,'35.3');
 assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(html.includes(".powerSheetTable{table-layout:auto!important;border-collapse:collapse;font-family:Georgia,'Times New Roman',serif;font-size:14px;border:2px solid #000}"));
-assert(html.includes('.powerSocaColourCol{width:96px;min-width:96px;padding:2px!important}'));
+assert(html.includes('.powerSocaColourCol{width:90px;min-width:70px;max-width:90px;padding:2px!important}'));
+assert(html.includes('.powerSocaColourInput{text-shadow:1px 1px 0 var(--colour-text-outline),-1px 1px 0 var(--colour-text-outline),1px -1px 0 var(--colour-text-outline),-1px -1px 0 var(--colour-text-outline)}'));
+assert(source('colourInputStyle').includes('--colour-text-outline:${textColour}'));
+assert(source('powerSocaColourCellMarkup').includes("'color powerSocaColourInput'")&&source('powerSocaColourCellMarkup').includes(',true,true)'));
+assert(html.includes('.fixturePatchColour{font-weight:900;text-transform:uppercase;border:1px solid #000}'));
+assert(source('labelGenerationTimestamp').includes('Labels Generated At - ${two(date.getHours())}:${two(date.getMinutes())}, on ${two(date.getDate())}/${two(date.getMonth()+1)}/${String(date.getFullYear()).slice(-2)}'));
 assert(source('powerSocaColourCellMarkup').includes('rowspan=\"2\"'));
 assert(source('powerSheetRowMarkup').includes('powerSocaColourCellMarkup(socaIndex,way)'));
 assert(source('renderPowerSheetView').includes('<th class=\"powerSocaColourCol\">Colour</th>'));
@@ -649,7 +655,7 @@ assert(source('openLabelFormat').includes("$('labelFormatPane')?.classList.add('
 assert(html.includes('.showHideColumnsButton{display:inline-flex!important;align-items:center;justify-content:center;text-align:center;line-height:1.1}'));
 assert(source('drawPdfRearSocaStripeCanvas').includes('12*mm'));
 assert(source('preparePdfSocaColourLayers').includes('.rearLabel[data-rear-soca-colours]'));
-console.log('PASS: V35.2 Power colours, Soca defaults, Label Format pane and rear PDF colour capture.');
+console.log('PASS: V35.3 Power colour cells, Patch bubbles, generated timestamp and existing Labels behaviour.');
 
 // Guard against page CSS being written into a JavaScript export template.
 const activeStyleStart=html.indexOf('<style'),activeStyleEnd=html.indexOf('</style>'),bodyStart=html.indexOf('<body'),sharedToolbarCss='/* V34 shared navigation and toolbar layout. */';
