@@ -1,3 +1,8 @@
+## V35.4 — Labels and Power PDF corrections
+
+- Standardised Distro Labels exports with the shared first-page title, project/version header, later-page header and clean distro headings.
+- Kept the Power Sheet Colour column visible in PDF previews and exports, including its saved colour backgrounds and text.
+
 ## V35.3 — Power colour cells and generated timestamp
 
 - Set Power Sheet Colour cells to a 70–90 px range and added a contrast outline to their colour names.

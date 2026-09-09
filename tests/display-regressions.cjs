@@ -632,8 +632,8 @@ assert(html.includes('.projectTab.active,.sheetTab.active{background:rgb(0, 96, 
 assert(html.includes('.btn{border:2px solid #000;background:rgb(217, 217, 217);border-radius:7px;padding:10px 12px;cursor:pointer}'));
 console.log('PASS: V35.1 Labels presentation, per-Socapex rear colours and navigation styling.');
 
-// V35.3 Power colour-cell sizing, colour text outlines, Patch bubbles and generated timestamps.
-assert.equal(appVersion,'35.3');
+// V35.4 Power and Labels PDF corrections, plus V35.3 colour-cell styling.
+assert.equal(appVersion,'35.4');
 assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(html.includes(".powerSheetTable{table-layout:auto!important;border-collapse:collapse;font-family:Georgia,'Times New Roman',serif;font-size:14px;border:2px solid #000}"));
 assert(html.includes('.powerSocaColourCol{width:90px;min-width:70px;max-width:90px;padding:2px!important}'));
@@ -655,7 +655,12 @@ assert(source('openLabelFormat').includes("$('labelFormatPane')?.classList.add('
 assert(html.includes('.showHideColumnsButton{display:inline-flex!important;align-items:center;justify-content:center;text-align:center;line-height:1.1}'));
 assert(source('drawPdfRearSocaStripeCanvas').includes('12*mm'));
 assert(source('preparePdfSocaColourLayers').includes('.rearLabel[data-rear-soca-colours]'));
-console.log('PASS: V35.3 Power colour cells, Patch bubbles, generated timestamp and existing Labels behaviour.');
+assert(source('hideEmptyPowerPdfColumns').includes("header.classList.contains('powerSocaColourCol')"));
+assert(source('preparePowerPdfView').includes("control.matches('[data-power-soca-colour]')")&&source('preparePowerPdfView').includes("control.parentElement.style.backgroundColor=style.backgroundColor"));
+assert(source('distroPdfProjectHeader').includes('Distro Labels - ${escapeHtml(project)}'));
+assert(source('makeExportSection').includes('.distroPreviewHeadingControls'));
+assert(source('makeExportPageWithSection').includes('distroPdfProjectHeader()'));
+console.log('PASS: V35.4 Power and Labels PDF corrections, plus V35.3 colour-cell styling.');
 
 // Guard against page CSS being written into a JavaScript export template.
 const activeStyleStart=html.indexOf('<style'),activeStyleEnd=html.indexOf('</style>'),bodyStart=html.indexOf('<body'),sharedToolbarCss='/* V34 shared navigation and toolbar layout. */';
