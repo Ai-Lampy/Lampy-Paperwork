@@ -274,7 +274,7 @@ const field={dataset:{dcSource:'console',dcId:'c',dcKey:'ip',dcPortId:'eth1'},cl
 field.octets='10.0.0.1'.split('.').map(value=>({value}));
 field.classList={toggle:(name,on)=>on?field.classes.add(name):field.classes.delete(name)};
 const warnDevices=[{source:'console',id:'c',name:'Main',interfaces:[],ports:[{id:'eth1',category:'network',ip:'10.0.0.1'}]},{source:'network',id:'n',name:'Other',interfaces:[{slot:1,ipKey:'ip1',ip:'10.0.0.1'}],ports:[]}];
-const w=vm.createContext({document:{querySelectorAll:()=>[field],activeElement:null},compiledIpDevices:()=>warnDevices,deviceConfigPortsFor:device=>device.ports,hideDuplicateIpNote:()=>{},showDuplicateIpNote:()=>{},duplicateIpTarget:null,duplicateIpFrame:1});
+const w=vm.createContext({document:{querySelectorAll:()=>[field],activeElement:null},compiledIpDevices:()=>warnDevices,deviceConfigPortsFor:device=>device.ports,hideDuplicateIpNote:()=>{},showDuplicateIpNote:()=>{},duplicateIpTarget:null,duplicateIpFrame:1,duplicateIpTimer:null,clearTimeout:()=>{}});
 for(const name of ['duplicateIpKey','canonicalIpEndpoints','duplicateIpIndex','duplicateIpConflicts','duplicateIpFieldAlias','ipSegmentedState','refreshDuplicateIpWarnings'])vm.runInContext(source(name),w);
 w.refreshDuplicateIpWarnings();assert(field.classes.has('ipDuplicate'));assert(field.dataset.duplicateIpMessage.includes('Other'));
 warnDevices[1].interfaces[0].ip='10.0.0.2';w.refreshDuplicateIpWarnings();assert(!field.classes.has('ipDuplicate'));assert(!field.dataset.duplicateIpMessage);
@@ -633,7 +633,7 @@ assert(html.includes('.btn{border:2px solid #000;background:rgb(217, 217, 217);b
 console.log('PASS: V35.1 Labels presentation, per-Socapex rear colours and navigation styling.');
 
 // V35.5 Power PDF and Fixture Patch colour-bubble corrections, plus V35.3 styling.
-assert.equal(appVersion,'35.5');
+assert.equal(appVersion,'35.6');
 assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(html.includes(".powerSheetTable{table-layout:auto!important;border-collapse:collapse;font-family:Georgia,'Times New Roman',serif;font-size:14px;border:2px solid #000}"));
 assert(html.includes('.powerSocaColourCol{width:90px;min-width:70px;max-width:90px;padding:2px!important}'));
@@ -662,6 +662,16 @@ assert(source('distroPdfProjectHeader').includes('Distro Labels - ${escapeHtml(p
 assert(source('makeExportSection').includes('.distroPreviewHeadingControls'));
 assert(source('makeExportPageWithSection').includes('distroPdfProjectHeader()'));
 console.log('PASS: V35.5 Power PDF and Fixture Patch bubble corrections, plus prior Labels PDF styling.');
+
+// V35.6 keeps routine editing responsive as project size grows.
+assert(html.includes("const AUTOSAVE_DELAY=700"));
+assert(html.includes("const BACKGROUND_VALIDATION_DELAY=180"));
+assert(source('persist').includes('AUTOSAVE_DELAY'));
+assert(source('scheduleProjectValidation').includes('BACKGROUND_VALIDATION_DELAY'));
+assert(source('scheduleDuplicateIpWarnings').includes('BACKGROUND_VALIDATION_DELAY'));
+assert(source('normalisePatchFixture').includes('PATCH_FIXTURE_NORMALISED'));
+assert(source('patchFixtureRows').includes("some(row=>!row?.[PATCH_FIXTURE_NORMALISED])"));
+console.log('PASS: V35.6 cached Fixture Patch normalisation and debounced background work.');
 
 // Guard against page CSS being written into a JavaScript export template.
 const activeStyleStart=html.indexOf('<style'),activeStyleEnd=html.indexOf('</style>'),bodyStart=html.indexOf('<body'),sharedToolbarCss='/* V34 shared navigation and toolbar layout. */';

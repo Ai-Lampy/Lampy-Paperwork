@@ -1,3 +1,9 @@
+## V35.6 — Editing and autosave performance
+
+- Stopped repeatedly rebuilding normalised Fixture Patch rows during table rendering, validation and project summaries.
+- Debounced full-project validation and duplicate-IP checks so rapid edits trigger one background pass after input settles.
+- Delayed local autosave until the current edit burst finishes, reducing repeated multi-megabyte project serialisation.
+
 ## V35.5 — Power PDF and Fixture Patch bubble corrections
 
 - Kept the Colour column in live Power Calcs only; Power PDF preview and export omit it.
