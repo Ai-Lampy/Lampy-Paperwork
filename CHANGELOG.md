@@ -1,3 +1,8 @@
+## V35.12 — Power colour and position text readability
+
+- Reworked Power Calcs colour and position text contrast so light colours use black text, dark colours use white text, and every value uses a single thin outline without layered shadows.
+- Applied the same readable position treatment to Fan Outs.
+
 ## V35.11 — Shared page toolbars and Control capacity cards
 
 - Standardised live-page toolbars with an RGB(185, 185, 185) background and a 2 px black border, without changing PDF previews or modal controls.
