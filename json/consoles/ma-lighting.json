@@ -40,7 +40,8 @@
           "quantity": 1,
           "port": "ETH 1",
           "protocols": [
-            "Art-Net"
+            "MA-Net",
+			"sACN"
           ]
         },
         {
@@ -52,8 +53,9 @@
           "quantity": 1,
           "port": "ETH 2",
           "protocols": [
+            "MA-Net",
             "sACN",
-            "MA-Net"
+			"Art-Net"
           ]
         },
         {
@@ -65,7 +67,8 @@
           "quantity": 1,
           "port": "ETH 3",
           "protocols": [
-            "Web Link"
+            "MA-Net",
+			"Web-Link"
           ]
         }
       ],
@@ -138,7 +141,8 @@
           "quantity": 1,
           "port": "ETH 1",
           "protocols": [
-            "Art-Net"
+            "MA-Net",
+			"sACN"
           ]
         },
         {
@@ -150,8 +154,9 @@
           "quantity": 1,
           "port": "ETH 2",
           "protocols": [
+            "MA-Net",
             "sACN",
-            "MA-Net"
+			"Art-Net"
           ]
         },
         {
@@ -163,7 +168,8 @@
           "quantity": 1,
           "port": "ETH 3",
           "protocols": [
-            "Web Link"
+            "MA-Net",
+			"Web-Link"
           ]
         }
       ],
@@ -236,7 +242,8 @@
           "quantity": 1,
           "port": "ETH 1",
           "protocols": [
-            "Art-Net"
+            "MA-Net",
+			"sACN"
           ]
         },
         {
@@ -248,8 +255,9 @@
           "quantity": 1,
           "port": "ETH 2",
           "protocols": [
+            "MA-Net",
             "sACN",
-            "MA-Net"
+			"Art-Net"
           ]
         },
         {
@@ -261,7 +269,8 @@
           "quantity": 1,
           "port": "ETH 3",
           "protocols": [
-            "Web Link"
+            "MA-Net",
+			"Web Link"
           ]
         }
       ],
@@ -334,7 +343,8 @@
           "quantity": 1,
           "port": "ETH 1",
           "protocols": [
-            "Art-Net"
+            "MA-Net",
+			"sACN"
           ]
         },
         {
@@ -346,8 +356,9 @@
           "quantity": 1,
           "port": "ETH 2",
           "protocols": [
+            "MA-Net",
             "sACN",
-            "MA-Net"
+			"Art-Net"
           ]
         },
         {
@@ -359,7 +370,8 @@
           "quantity": 1,
           "port": "ETH 3",
           "protocols": [
-            "Web Link"
+            "MA-Net",
+			"Web Link"
           ]
         }
       ],
@@ -486,7 +498,8 @@
           "quantity": 1,
           "port": "ETH 1",
           "protocols": [
-            "Art-Net"
+            "MA-Net",
+			"sACN"
           ]
         },
         {
@@ -498,8 +511,7 @@
           "quantity": 1,
           "port": "ETH 2",
           "protocols": [
-            "sACN",
-            "MA-Net"
+            "Art-Net"
           ]
         }
       ],
@@ -565,7 +577,8 @@
           "quantity": 1,
           "port": "ETH 1",
           "protocols": [
-            "Art-Net"
+            "MA-Net",
+			"sACN"
           ]
         },
         {
@@ -577,8 +590,7 @@
           "quantity": 1,
           "port": "ETH 2",
           "protocols": [
-            "sACN",
-            "MA-Net"
+            "Art-Net"
           ]
         }
       ],
