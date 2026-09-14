@@ -1,3 +1,8 @@
+## V36.7 — VLAN column visibility
+
+- Hide VLAN columns in Device Config and Control tables while VLANs are disabled, without changing saved device VLAN assignments.
+- Removed the IP Address’ navigation tab. Existing network IP, subnet, protocol and VLAN values remain available in Device Config.
+
 ## V36.6 — Home, Power, Device Config and Rack Layout
 
 - Centred Home statistics and renamed the patched-universe statistic.
