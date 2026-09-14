@@ -1,3 +1,10 @@
+## V36.1 — VLAN selector and Power text fitting
+
+- Added an always-visible VLAN Template selector with Automatic, Generic, Luminex and Pathway choices. Automatic uses the one detected supported brand, or Generic when neither or both are present.
+- Removed the Global Subnet guidance line beneath Apply to all Devices.
+- Limited Power Position text outlines to white text in the live table, PDF preview and exported PDF.
+- Added centred Power Colour-cell text fitting down to 8 px.
+
 ## V36 — Brand-aware VLAN defaults
 
 - Added JSON-driven Generic, Luminex and Pathway VLAN templates, including the full Luminex 0–20 and Pathway 1–10 ranges.
