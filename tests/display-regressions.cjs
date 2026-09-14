@@ -736,8 +736,8 @@ assert(source('controlParameterSummaryMarkup').includes("row.mode+' Parameters'"
 console.log('PASS: V35.11 shared live-page toolbars and Control capacity Home Stats.');
 
 // V35.12 keeps Power colour and position text legible without layered shadows.
-assert(html.includes('.powerSocaColourInput{-webkit-text-stroke-width:1.3mm;-webkit-text-stroke-color:var(--colour-text-outline);text-shadow:none!important;paint-order:stroke fill}'));
-assert(html.includes('.powerSheetTable .positionCol .powerPositionText,.fanOutTable .positionCol .fanOutCellText{-webkit-text-stroke-width:1.3mm;-webkit-text-stroke-color:var(--power-position-outline,transparent);text-shadow:none!important;paint-order:stroke fill}'));
+assert(html.includes('.powerSocaColourInput{-webkit-text-stroke:.35px var(--colour-text-outline);text-shadow:none!important;paint-order:stroke fill}'));
+assert(html.includes('.powerSheetTable .positionCol .powerPositionText,.fanOutTable .positionCol .fanOutCellText{-webkit-text-stroke:.35px var(--power-position-outline,transparent);text-shadow:none!important;paint-order:stroke fill}'));
 assert(source('colourSetPresentation').includes("shadow:'none'"));
 assert(source('powerPositionCellStyle').includes('--power-position-outline:${presentation.outline}'));
 console.log('PASS: V35.12 Power colour and position text use one thin contrast outline without shadows.');
@@ -745,14 +745,14 @@ console.log('PASS: V35.12 Power colour and position text use one thin contrast o
 // V35.13 gives every multi-colour value a black outline.
 assert.equal(v359.colourSetPresentation(['#ffff00','#a855f7']).outline,'#000000');
 assert(source('controlPositionStripStyle').includes('--pos-text-outline:${presentation.outline}'));
-assert(html.includes('.controlPositionName,.positionPdfItem span{-webkit-text-stroke-width:1.3mm;-webkit-text-stroke-color:var(--pos-text-outline,transparent);paint-order:stroke fill;text-shadow:none!important}'));
+assert(html.includes('.controlPositionName{-webkit-text-stroke:.35px var(--pos-text-outline,transparent);paint-order:stroke fill;text-shadow:none!important}'));
 console.log('PASS: V35.13 multi-colour values use a black text outline.');
 
-// V35.14 gives all white colour text a 1.3 mm black outline in live and PDF output.
-assert(html.includes('.controlPositionName,.positionPdfItem span{-webkit-text-stroke-width:1.3mm;-webkit-text-stroke-color:var(--pos-text-outline,transparent);paint-order:stroke fill;text-shadow:none!important}'));
-assert(source('applyBackgroundColourTextPresentation').includes("outlineWidth='1.3mm'"));
+// V35.14 scopes the 1.3 mm black outline to Position Summary only.
+assert(html.includes('.homePositionStrip .controlPositionName,.positionPdfItem span{-webkit-text-stroke-width:1.3mm;-webkit-text-stroke-color:var(--pos-text-outline,transparent);paint-order:stroke fill;text-shadow:none!important}'));
+assert(source('applyBackgroundColourTextPresentation').includes("outlineWidth='.45mm'"));
 assert(source('pdfDrawPositionText').includes('const outline=1.3*PDF_MM_TO_PT'));
-console.log('PASS: V35.14 white colour text uses the 1.3 mm black outline rule.');
+console.log('PASS: V35.14 scopes the 1.3 mm black outline to Position Summary.');
 
 // Guard against page CSS being written into a JavaScript export template.
 const activeStyleStart=html.indexOf('<style'),activeStyleEnd=html.indexOf('</style>'),bodyStart=html.indexOf('<body'),sharedToolbarCss='/* V34 shared navigation and toolbar layout. */';
