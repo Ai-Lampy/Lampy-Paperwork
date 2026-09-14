@@ -620,7 +620,7 @@ assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(html.includes(".powerSocaNameText{position:absolute;inset:3px 6px;display:flex;align-items:center;justify-content:center;overflow:hidden;white-space:normal;overflow-wrap:normal;word-break:normal;text-align:center;line-height:1;cursor:text;-webkit-text-stroke-width:1.3mm}"));
 assert(html.includes(".rearLabelText{position:relative;z-index:1;max-width:100%;overflow:hidden;white-space:normal;overflow-wrap:normal;word-break:normal;-webkit-text-stroke-width:1.3mm!important}"));
 assert(html.includes(".rearLabel{width:var(--rear-soca-w);height:var(--rear-aux-h);border:1.2mm solid rgb(17, 17, 17);border-radius:2mm;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--top-font);font-weight:800;font-size:14pt;line-height:1;padding:1mm;box-sizing:border-box}"));
-assert(source('rearSocaBackground').includes('meta?.c1')&&source('rearSocaBackground').includes('meta?.c2')&&source('rearSocaBackground').includes('${c1} 10mm')&&source('rearSocaBackground').includes('${c2} 19mm'));
+assert(source('rearSocaBackground').includes('rearSocaColours(meta)')&&source('rearSocaBackground').includes('7+(index-1)*9')&&source('rearSocaBackground').includes('10+index*9'));
 assert(source('makeRearLabel').includes('rearSocaBackground(meta)'));
 assert(source('updateRearSocaLabel').includes('rearSocaBackground(meta)'));
 assert(source('fitRearText').includes('fitTextToBox(el,8)'));
@@ -633,12 +633,13 @@ assert(html.includes('.btn{border:2px solid #000;background:rgb(217, 217, 217);b
 console.log('PASS: V35.1 Labels presentation, per-Socapex rear colours and navigation styling.');
 
 // V35.5 Power PDF and Fixture Patch colour-bubble corrections, plus V35.3 styling.
-assert.equal(appVersion,'35.6');
+assert.equal(appVersion,'35.8');
 assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(html.includes(".powerSheetTable{table-layout:auto!important;border-collapse:collapse;font-family:Georgia,'Times New Roman',serif;font-size:14px;border:2px solid #000}"));
-assert(html.includes('.powerSocaColourCol{width:90px;min-width:70px;max-width:90px;padding:2px!important}'));
-assert(html.includes('.powerSocaColourInput{text-shadow:1px 1px 0 var(--colour-text-outline),-1px 1px 0 var(--colour-text-outline),1px -1px 0 var(--colour-text-outline),-1px -1px 0 var(--colour-text-outline)}'));
-assert(source('colourInputStyle').includes('--colour-text-outline:${textColour}'));
+assert(html.includes('.powerSocaColourCol,.powerSheetTable .fixIdCol{width:70px!important;min-width:70px!important;max-width:70px!important}'));
+assert(html.includes('.powerSheetTable .fixIdCol{width:70px!important;min-width:70px!important;max-width:70px!important;font-weight:800;font-size:16px}'));
+assert(html.includes('.powerSocaColourInput{-webkit-text-stroke:.6px var(--colour-text-outline);text-shadow:none}'));
+assert(source('colourInputStyle').includes("outlineColour=textColour==='#ffffff'?'#111111':'#ffffff'"));
 assert(source('powerSocaColourCellMarkup').includes("'color powerSocaColourInput'")&&source('powerSocaColourCellMarkup').includes(',true,true)'));
 assert(html.includes('.fixturePatchColour{font-weight:900;text-transform:uppercase;border:1px solid #000}'));
 assert(source('labelGenerationTimestamp').includes('Labels Generated At - ${two(date.getHours())}:${two(date.getMinutes())}, on ${two(date.getDate())}/${two(date.getMonth()+1)}/${String(date.getFullYear()).slice(-2)}'));
@@ -653,7 +654,7 @@ assert(!html.includes('id=\"labelFormatModal\"'));
 assert(html.includes('id=\"labelFormatPane\" class=\"frontEditorPane labelFormatPane\"'));
 assert(source('openLabelFormat').includes("$('labelFormatPane')?.classList.add('open')"));
 assert(html.includes('.showHideColumnsButton{display:inline-flex!important;align-items:center;justify-content:center;text-align:center;line-height:1.1}'));
-assert(source('drawPdfRearSocaStripeCanvas').includes('12*mm'));
+assert(source('drawPdfRearSocaStripeCanvas').includes('(index?12:7)*mm'));
 assert(source('preparePdfSocaColourLayers').includes('.rearLabel[data-rear-soca-colours]'));
 assert(source('preparePowerPdfView').includes('.powerSocaColourCol'));
 assert(!source('hideEmptyPowerPdfColumns').includes("header.classList.contains('powerSocaColourCol')"));
@@ -672,6 +673,24 @@ assert(source('scheduleDuplicateIpWarnings').includes('BACKGROUND_VALIDATION_DEL
 assert(source('normalisePatchFixture').includes('PATCH_FIXTURE_NORMALISED'));
 assert(source('patchFixtureRows').includes("some(row=>!row?.[PATCH_FIXTURE_NORMALISED])"));
 console.log('PASS: V35.6 cached Fixture Patch normalisation and debounced background work.');
+
+// V35.7 Power colour-cell width, clean outline and blank empty state.
+assert(source('powerSocaColourCellMarkup').includes("'color powerSocaColourInput','',true,true"));
+console.log('PASS: V35.7 Power colour-cell width, readable outline and blank empty state.');
+
+// V35.8 colours remain independent when Colour 1 is blank, including Rear Labels.
+assert(source('rearSocaColours').includes('if(meta?.useC3===true)add(meta?.c3)'));
+assert(source('makeRearLabel').includes('rearSocaColours(meta).join'));
+assert(source('updateRearSocaLabel').includes('rearSocaColours(meta).join'));
+assert(source('cssStripe').includes("if(!colours.length)return '#ffffff'"));
+assert(source('drawPdfRearSocaStripeCanvas').includes('bands.forEach'));
+const v358=vm.createContext({$:()=>({value:'4'})});
+vm.runInContext(source('rearSocaColours'),v358);vm.runInContext(source('rearSocaBackground'),v358);vm.runInContext(source('cssStripe'),v358);
+const independentColours={c1:'',c2:'#ff0000',c3:'#0000ff',useC2:true,useC3:true};
+assert.deepEqual(JSON.parse(JSON.stringify(v358.rearSocaColours(independentColours))),['#ff0000','#0000ff']);
+assert(v358.rearSocaBackground(independentColours).includes('#ff0000')&&v358.rearSocaBackground(independentColours).includes('#0000ff'));
+assert(v358.cssStripe('',independentColours.c2,true,independentColours.c3,true).includes('#ff0000')&&v358.cssStripe('',independentColours.c2,true,independentColours.c3,true).includes('#0000ff'));
+console.log('PASS: V35.8 independent Colour 2/3 rendering and Rear Label Colour 3 output.');
 
 // Guard against page CSS being written into a JavaScript export template.
 const activeStyleStart=html.indexOf('<style'),activeStyleEnd=html.indexOf('</style>'),bodyStart=html.indexOf('<body'),sharedToolbarCss='/* V34 shared navigation and toolbar layout. */';

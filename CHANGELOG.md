@@ -1,3 +1,15 @@
+## V35.8 — Independent Socapex colour rendering
+
+- Added Colour 3 to Rear Socapex Label backgrounds and their PDF colour-capture data.
+- Allowed Colour 2 and Colour 3 to render when Colour 1 is blank in Power Calcs, Fan Outs and label backgrounds.
+- Updated rear-label PDF stripe drawing to render every enabled Socapex colour.
+
+## V35.7 — Power colour-cell readability
+
+- Matched the live Power Calcs Colour column width to the Fix ID columns.
+- Replaced the heavy same-colour text shadow with a clean contrasting letter outline.
+- Removed placeholder text from empty Power colour fields so unselected cells remain blank.
+
 ## V35.6 — Editing and autosave performance
 
 - Stopped repeatedly rebuilding normalised Fixture Patch rows during table rendering, validation and project summaries.
