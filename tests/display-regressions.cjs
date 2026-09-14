@@ -754,11 +754,12 @@ assert(source('applyBackgroundColourTextPresentation').includes("outlineWidth='.
 assert(source('pdfDrawPositionText').includes('const outline=1.3*PDF_MM_TO_PT'));
 console.log('PASS: V35.14 scopes the 1.3 mm black outline to Position Summary.');
 
-// V35.14 keeps the Power Calcs table readable where it uses white text.
-assert(html.includes('.powerSheetTable .powerSocaColourInput{-webkit-text-stroke:.5mm var(--colour-text-outline)}'));
-assert(html.includes('.powerSheetTable .positionCol .powerPositionText{-webkit-text-stroke:.5mm var(--power-position-outline,transparent)}'));
-assert(html.includes('.powerSheetTable tbody .ampsCol,.powerSheetTable tbody .ampsCol input{-webkit-text-stroke:.5mm #000;paint-order:stroke fill}'));
-console.log('PASS: V35.14 Power Calcs white text has a 0.5 mm black outline.');
+// V35.14 keeps Power Calcs white text readable with its own 0.5 mm black outline.
+assert(html.includes('.powerSheetTable .powerSocaColourInput{-webkit-text-stroke-width:.5mm;-webkit-text-stroke-color:var(--colour-text-outline)}'));
+assert(html.includes('.powerSheetTable .positionCol .powerPositionText{-webkit-text-stroke-width:.5mm;-webkit-text-stroke-color:var(--power-position-outline,transparent)}'));
+assert(html.includes('.powerSheetTable tbody .ampsCol,.powerSheetTable tbody .ampsCol input{-webkit-text-stroke-width:.5mm;-webkit-text-stroke-color:#000;paint-order:stroke fill}'));
+assert(source('powerSheetRowMarkup').includes('--power-soca-outline:${powerWhiteTextOutline(rearFormat.textColor)}'));
+console.log('PASS: V35.14 Power Calcs white text uses a 0.5 mm black outline.');
 
 // Guard against page CSS being written into a JavaScript export template.
 const activeStyleStart=html.indexOf('<style'),activeStyleEnd=html.indexOf('</style>'),bodyStart=html.indexOf('<body'),sharedToolbarCss='/* V34 shared navigation and toolbar layout. */';
