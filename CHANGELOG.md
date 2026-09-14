@@ -1,3 +1,7 @@
+## V35.13 — Multi-colour text contrast
+
+- Applied a black text outline to every multi-colour value, including striped position displays and Position Summary exports.
+
 ## V35.12 — Power colour and position text readability
 
 - Reworked Power Calcs colour and position text contrast so light colours use black text, dark colours use white text, and every value uses a single thin outline without layered shadows.

@@ -633,7 +633,7 @@ assert(html.includes('.btn{border:2px solid #000;background:rgb(217, 217, 217);b
 console.log('PASS: V35.1 Labels presentation, per-Socapex rear colours and navigation styling.');
 
 // V35.5 Power PDF and Fixture Patch colour-bubble corrections, plus V35.3 styling.
-assert.equal(appVersion,'35.12');
+assert.equal(appVersion,'35.13');
 assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(html.includes(".powerSheetTable{table-layout:auto!important;border-collapse:collapse;font-family:Georgia,'Times New Roman',serif;font-size:14px;border:2px solid #000}"));
 assert(html.includes('.powerSocaColourCol,.powerSheetTable .fixIdCol{width:70px!important;min-width:70px!important;max-width:70px!important}'));
@@ -741,6 +741,12 @@ assert(html.includes('.powerSheetTable .positionCol .powerPositionText,.fanOutTa
 assert(source('colourSetPresentation').includes("shadow:'none'"));
 assert(source('powerPositionCellStyle').includes('--power-position-outline:${presentation.outline}'));
 console.log('PASS: V35.12 Power colour and position text use one thin contrast outline without shadows.');
+
+// V35.13 gives every multi-colour value a black outline.
+assert.equal(v359.colourSetPresentation(['#ffff00','#a855f7']).outline,'#000000');
+assert(source('controlPositionStripStyle').includes('--pos-text-outline:${presentation.outline}'));
+assert(html.includes('.controlPositionName,.positionPdfItem span{-webkit-text-stroke:.35px var(--pos-text-outline,transparent);paint-order:stroke fill;text-shadow:none!important}'));
+console.log('PASS: V35.13 multi-colour values use a black text outline.');
 
 // Guard against page CSS being written into a JavaScript export template.
 const activeStyleStart=html.indexOf('<style'),activeStyleEnd=html.indexOf('</style>'),bodyStart=html.indexOf('<body'),sharedToolbarCss='/* V34 shared navigation and toolbar layout. */';
