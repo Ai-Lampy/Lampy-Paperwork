@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="Lampy Paperwork — browser-based lighting paperwork, fixture patch, power, network, rack and MVR tools." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111'/%3E%3Cpath d='M21 9h22v8l-5 9v9h-4v20h-4V35h-4v-9l-5-9z' fill='%23fff'/%3E%3C/svg%3E" />
-<title>Lampy Paperwork V35.9</title>
+<title>Lampy Paperwork V35.10</title>
 <style>
 :root{--label-w:18mm;--label-h:34mm;--label-gap:0.5mm;--gap-y:2mm;--radius:3mm;--border:1mm;--border-col:#ffffff;--stripe:4mm;--front-aux-w:18mm;--front-aux-h:34mm;--front-output-w:72mm;--front-output-h:34mm;--rear-soca-w:70mm;--rear-soca-h:50mm;--rear-aux-w:85mm;--rear-aux-h:30mm;--rear-aux-gap:5mm;--rear-output-w:90mm;--rear-output-h:60mm;--top-size:18pt;--bottom-size:14pt;--top-align:center;--bottom-align:center;--top-v-align:center;--bottom-v-align:center;--top-font:Cochin,'Times New Roman',Times,serif;--bottom-font:Cochin,'Times New Roman',Times,serif;--top-weight:700;--bottom-weight:700;--top-transform:none;--bottom-transform:none;--top-text-align:center;--bottom-text-align:center}
 *{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f6f7f9;color:#111}h1{margin:0;font-size:28px}h2,h3{margin:0 0 12px}button,input,select,textarea{font-style:inherit;font-variant-caps:inherit;font-weight:inherit;font-width:inherit;font-size:inherit;line-height:inherit;font-family:inherit;font-size-adjust:inherit;font-kerning:inherit;font-variant-alternates:inherit;font-variant-ligatures:inherit;font-variant-numeric:inherit;font-variant-east-asian:inherit;font-variant-position:inherit;font-variant-emoji:inherit;font-feature-settings:inherit;font-optical-sizing:inherit;font-variation-settings:inherit}.reportIssueBtn{border:2px solid #111;background:#fff;color:#111;border-radius:60px;padding:8px 8px;font-weight:900;text-decoration:none;white-space:nowrap}.reportIssueBtn:hover{background:#111;color:#fff}.btn{border:2px solid #000;background:rgb(217, 217, 217);border-radius:7px;padding:10px 12px;cursor:pointer}.btn:hover{background:#f7f9fc}.btn.primary{background:#00a61d;color:#fff;border:2px solid #000;font-weight:700}.btn.danger{color:#b42318}.btn.add{font-weight:800;font-size:18px;line-height:1;padding:8px;background:#00a61d;color:#fff;border:2px solid #000}.gear{font-size:24px;border:1px solid #d9dee7;background:#fff;border-radius:999px;width:44px;height:44px;cursor:pointer}.gear:hover{background:#f7f9fc}.tourLogoSlot{display:flex;align-items:center;justify-content:flex-end;width:165px;min-width:0;max-width:100%}.tourLogo{display:block;max-width:160px;max-height:54px;object-fit:contain}.tourLogoExport{position:absolute;top:5mm;right:5mm;max-width:34mm;max-height:18mm;object-fit:contain;z-index:3}.tourLogoUploadPreview{border:1px dashed #cfd6e1;border-radius:8px;background:#fff;min-height:130px;display:flex;align-items:center;justify-content:center;padding:14px}.tourLogoUploadPreview img{max-width:260px;max-height:120px;object-fit:contain}.logoActions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}.menuButton{position:fixed;right:18px;top:18px;z-index:18;border:1px solid #d9dee7;background:#111;color:#fff;border-radius:999px;width:46px;height:46px;font-size:24px;font-weight:900;cursor:pointer;box-shadow:0 10px 28px rgba(16,24,40,.18)}.menuButton:hover{background:#2a2a2a}.actionSidebar{position:fixed;right:18px;top:74px;width:min(260px,calc(100vw - 36px));z-index:17;border:1px solid #dfe3ea;border-radius:10px;background:#fff;box-shadow:0 18px 48px rgba(16,24,40,.22);padding:12px;transform:translateX(calc(100% + 28px));transition:transform .18s ease}.actionMenuOpen .actionSidebar{transform:translateX(0)}.actionSidebar h2{font-size:15px;margin:0 0 10px}.actionSidebar .btn{width:100%;margin:0 0 8px;text-align:left;font-weight:800}
@@ -348,7 +348,7 @@ textarea{min-height:45px}
 .networkPortSettings .networkPortUniverse{width:90px}
 .networkPortSettings input,.networkPortSettings select{height:36px}
 .networkPortSettings .networkPortName{min-width:150px}
-.networkPortSettings .networkPortPosition{min-width:170px;background-color:var(--pos-base,#fff);background-image:var(--pos-pattern,none);color:#111;font-weight:800}
+.networkPortSettings .networkPortPosition{min-width:170px;background-color:var(--pos-base,#fff);background-image:var(--pos-pattern,none);color:var(--pos-text,#111);text-shadow:var(--pos-text-shadow,none);font-weight:800}
 .networkPortDirectionButtons{display:flex;gap:5px;justify-content:center}
 .networkPortDirectionButton{min-width:48px;height:34px;padding:4px 8px;border:2px solid #b9b9b9;background:#fff;font-weight:900}
 .networkPortDirectionButton[aria-pressed="true"]{background:#111;color:#fff;border-color:#111}
@@ -737,7 +737,7 @@ button.homeStat:hover,button.homeStat:focus-visible{background:#fff;outline:3px 
 <script src="js/ui-support.js" defer></script>
 <script>
 'use strict';
-const VERSION='35.9';
+const VERSION='35.10';
 const AUTOSAVE_DELAY=700;
 const BACKGROUND_VALIDATION_DELAY=180;
 const DEFAULT_FONT="Cochin,'Times New Roman',Times,serif";
@@ -1293,7 +1293,7 @@ function updateGeneratedSocaNamesForDistro(idx,previousName){
   }
 }
 function frontLabelFixtureDisplay(label,options={}){const index=Number.isInteger(options.index)?options.index:null;if(!options.live&&index!==null&&labelsHaveBeenGenerated())return generatedLabelFixtureName(index,label);const ids=String(label?.top||'').split(/\s*,\s*/).map(value=>value.trim()).filter(Boolean),patches=ids.map(fixturePatchByFixId).filter(Boolean);if(!patches.length)return String(label?.bottom||'');return [...new Set(patches.map(patch=>fixtureDisplayName(patch,'labels')).filter(Boolean))].join(', ')||String(label?.bottom||'')}
-function makeLabel(i){const l=app.labels[i]||blankLabel();const el=document.createElement('div');el.className='label '+($('grid').checked?'gridLine':'');el.dataset.i=i;const style=effectiveLabelStyle(i);el.style.color=style.text;el.innerHTML='<div class="bg"></div><div class="half topHalf"></div><div class="half bottomHalf"></div>';el.querySelector('.bg').style.background=cssStripe(style.c1,style.c2,style.useC2,style.c3,style.useC3);el.querySelector('.topHalf').textContent=l.top||'';el.querySelector('.bottomHalf').textContent=frontLabelFixtureDisplay(l,{index:i});el.addEventListener('click',e=>{e.stopPropagation();openFrontWayEditor(i)});applyWayTextStyle(el,l);return el}
+function makeLabel(i){const l=app.labels[i]||blankLabel();const el=document.createElement('div');el.className='label '+($('grid').checked?'gridLine':'');el.dataset.i=i;const style=effectiveLabelStyle(i);el.innerHTML='<div class="bg"></div><div class="half topHalf"></div><div class="half bottomHalf"></div>';el.querySelector('.bg').style.background=cssStripe(style.c1,style.c2,style.useC2,style.c3,style.useC3);el.querySelector('.topHalf').textContent=l.top||'';el.querySelector('.bottomHalf').textContent=frontLabelFixtureDisplay(l,{index:i});el.addEventListener('click',e=>{e.stopPropagation();openFrontWayEditor(i)});applyWayTextStyle(el,l);applyLabelColourRule(el,style);return el}
 function fitTextToBox(el,minPt=1){
   if(!el)return;
   el.style.fontSize='';
@@ -1321,6 +1321,7 @@ function clearTextStyle(el){el.dataset.basePt='';el.style.fontFamily='';el.style
 function applyMasterTextStyle(el,scope,override=null){const fmt=override?normaliseMasterLabelFormat(override,scope):normaliseMasterLabelFormat(labelFormatSettings[scope]||labelFormatSettings.front,scope);el.dataset.basePt=fmt.fontSize;el.style.fontFamily=fmt.fontFamily;el.style.fontWeight=fmt.bold?'700':'400';el.style.fontStyle=fmt.italic?'italic':'normal';el.style.color=fmt.textColor;el.style.textDecoration=fmt.underline?'underline':'none';el.style.webkitTextStroke=fmt.outline?'.45mm '+autoOutlineColour(fmt.textColor):'0 transparent';el.style.paintOrder='stroke fill'}
 function applyWayPartTextStyle(el,fmt,masterFmt=null){if(!el)return;clearTextStyle(el);applyMasterTextStyle(el,'front',masterFmt);if(!fmt.formatOn)return;el.dataset.basePt=fmt.fontSize||16;el.style.fontFamily=fmt.fontFamily||DEFAULT_FONT;el.style.color=fmt.text||el.style.color;el.style.fontWeight=fmt.bold===false?'400':'700';el.style.fontStyle=fmt.italic?'italic':'normal';el.style.textDecoration=fmt.underline?'underline':'none';el.style.webkitTextStroke=fmt.outline?'1mm '+(fmt.outlineColour||autoOutlineColour(el.style.color||'#000000')):'0 transparent';el.style.paintOrder='stroke fill'}
 function applyWayTextStyle(label,l,s=null){if(!label)return;const soca=Number.isInteger(s)?s:Math.floor((parseInt(label.dataset.i,10)||0)/6),master=frontMasterFormatForSoca(soca);applyWayPartTextStyle(label.querySelector('.topHalf'),wayTextFormat(l,'top'),master);applyWayPartTextStyle(label.querySelector('.bottomHalf'),wayTextFormat(l,'bottom'),master)}
+function applyLabelColourRule(label,style,outlineWidth='.45mm'){const colours=labelBackgroundColours(style);label?.querySelectorAll('.topHalf,.bottomHalf,.auxText,.outputText,.rearLabelText').forEach(text=>applyBackgroundColourTextPresentation(text,colours,outlineWidth))}
 function applyAuxTextStyle(text,l){
   clearTextStyle(text);
   applyMasterTextStyle(text,'front');
@@ -1361,6 +1362,7 @@ function applyPowerSocaRearTextStyle(element,s){
   if(!element)return;
   const fmt=normaliseRearFormat(app.socaMeta[s]?.rearFormat);
   applyRearTextStyle(element,fmt);
+  applyBackgroundColourTextPresentation(element,labelBackgroundColours(effectiveSocaStyle(s)),'1.3mm');
   element.style.textAlign='center';
   element.style.lineHeight='1';
   fitTextToBox(element,1);
@@ -1379,6 +1381,7 @@ function makeAuxLabel(l,style,auxId){
   const text=el.querySelector('.auxText');
   text.textContent=l.top||l.bottom||'';
   applyAuxTextStyle(text,l);
+  applyBackgroundColourTextPresentation(text,labelBackgroundColours(style));
   return el;
 }
 
@@ -1432,7 +1435,7 @@ function updateAuxPreviewLabel(didx,g,j){
   document.querySelectorAll('[data-aux-id="'+didx+'_'+g+'_'+j+'"]').forEach(el=>{
     el.style.color=style.text;
     const bg=el.querySelector('.bg'); if(bg)bg.style.background=cssStripe(style.c1,style.c2,style.useC2,style.c3,style.useC3);
-    const text=el.querySelector('.auxText'); if(text){text.textContent=l.top||l.bottom||'';applyAuxTextStyle(text,l);fitAuxText(text);}
+    const text=el.querySelector('.auxText'); if(text){text.textContent=l.top||l.bottom||'';applyAuxTextStyle(text,l);applyBackgroundColourTextPresentation(text,labelBackgroundColours(style));fitAuxText(text);}
     applySpareStyles(el);
   });
   updateRearAuxLabel(didx,g,j);
@@ -1459,6 +1462,7 @@ function makeOutputLabel(l,style,outputId){
   const text=el.querySelector('.outputText');
   text.textContent=l.text||'';
   applyOutputTextStyle(text,l);
+  applyBackgroundColourTextPresentation(text,labelBackgroundColours(style));
   return el;
 }
 function makeOutputBlock(d,didx){
@@ -1499,6 +1503,7 @@ function makeRearLabel(s){
   const text=el.querySelector('.rearLabelText');
   text.textContent=cleanSocaName(app.socaNames[s],s);
   applyRearTextStyle(text,meta.rearFormat);
+  applyBackgroundColourTextPresentation(text,rearSocaColours(meta),'1.3mm');
   return el;
 }
 function makeRearAuxLabel(l,rearAuxId){
@@ -1514,6 +1519,7 @@ function makeRearAuxLabel(l,rearAuxId){
   const text=el.querySelector('.auxText');
   text.textContent=l.top||l.bottom||'';
   applyRearTextStyle(text,l.rearFormat);
+  applyBackgroundColourTextPresentation(text,labelBackgroundColours(l),'1.3mm');
   return el;
 }
 function makeRearOutputLabel(l,rearOutputId){
@@ -1529,6 +1535,7 @@ function makeRearOutputLabel(l,rearOutputId){
   const text=el.querySelector('.outputText');
   text.textContent=l.text||'';
   applyRearTextStyle(text,l.rearFormat);
+  applyBackgroundColourTextPresentation(text,labelBackgroundColours(l),'1.3mm');
   return el;
 }
 function makeRearLabelsBlock(range){
@@ -1598,7 +1605,7 @@ function updateOutputPreviewLabel(didx,g,j){
   document.querySelectorAll('[data-output-id="'+didx+'_'+g+'_'+j+'"]').forEach(el=>{
     el.style.color=style.text;
     const bg=el.querySelector('.bg'); if(bg)bg.style.background=cssStripe(style.c1,style.c2,style.useC2,style.c3,style.useC3);
-    const text=el.querySelector('.outputText'); if(text){text.textContent=l.text||'';applyOutputTextStyle(text,l);fitOutputText(text)}
+    const text=el.querySelector('.outputText'); if(text){text.textContent=l.text||'';applyOutputTextStyle(text,l);applyBackgroundColourTextPresentation(text,labelBackgroundColours(style));fitOutputText(text)}
     applySpareStyles(el);
   });
   updateRearOutputLabel(didx,g,j);
@@ -1647,16 +1654,18 @@ function patchPositionColoursForFixId(fixId){
   const patch=fixturePatchByFixId(fixId);
   if(!patch)return null;
   const pos=positionForName(patch.location);
-  return {patch,colour1:String(patch.colour1||pos?.colour1||''),colour2:String(patch.colour2||pos?.colour2||'')};
+  return {patch,colour1:String(patch.colour1||pos?.colour1||''),colour2:String(patch.colour2||pos?.colour2||''),colour3:String(pos?.colour3||'')};
 }
 function applyFixIdColoursToLabel(label,fixId){
   const match=patchPositionColoursForFixId(fixId);
   if(!label||!match)return false;
-  const {colour1,colour2}=match;
+  const {colour1,colour2,colour3}=match;
   label.override=true;
   label.c1=colour1||'';
   label.c2=colour2||'';
+  label.c3=colour3||'';
   label.useC2=!!String(colour2||'').trim();
+  label.useC3=!!String(colour3||'').trim();
   return true;
 }
 function fixtureWatts(row){
@@ -1711,15 +1720,15 @@ function powerSheetSlotResult(fixId,duplicateIds=null){
   if(!text)return {empty:true,type:'',shortName:'',position:'',positionColours:[],watts:null,error:''};
   const patch=fixturePatchByFixId(text);
   if(!patch)return {empty:false,type:'',shortName:'',position:'',positionColours:[],watts:null,error:'Fix ID not found'};
-  const position=patch.location||'',positionColours=position?[patch.colour1,patch.colour2].map(value=>colourTextToHex(value,'')).filter(Boolean):[];
+  const position=patch.location||'',savedPosition=position?(ensureProjectInfo().positions||[]).find(item=>positionKey(item.name)===positionKey(position)):null,positionColours=position?[patch.colour1||savedPosition?.colour1,patch.colour2||savedPosition?.colour2,savedPosition?.colour3].map(value=>colourTextToHex(value,'')).filter(Boolean):[];
   if((duplicateIds?.get(text.toLowerCase())||0)>1)return {empty:false,type:patch.fixture||'',shortName:patch.shortName||patch.fixture||'',position,positionColours,watts:fixtureWatts(patch),error:'Duplicate Fix ID'};
   return {empty:false,type:patch.fixture||'',shortName:patch.shortName||patch.fixture||'',position,positionColours,watts:fixtureWatts(patch),error:fixtureWatts(patch)>0?'':'Missing wattage'};
 }
 function powerPositionCellStyle(result){
   const colours=[...new Set(result?.positionColours||[])];
   if(!colours.length)return '';
-  const background=colours.length>1?cssStripe(colours[0],colours[1],true):colours[0],textColour=contrastText(colours[0]);
-  return `background:${background};color:${textColour};text-shadow:${patchColourTextShadow(textColour)}`;
+  const background=colours.length>1?cssStripe(colours[0],colours[1],true,colours[2]||'',!!colours[2]):colours[0],presentation=colourSetPresentation(colours);
+  return `background:${background};color:${presentation.text};text-shadow:${presentation.shadow}`;
 }
 function updatePowerPositionCell(cell,result){
   if(!cell)return;
@@ -2369,8 +2378,8 @@ function controlPositionStripStyle(pos){
   const colours=[pos?.colour1,pos?.colour2,pos?.colour3].map(value=>colourTextToHex(value,'')).filter(Boolean);
   if(!colours.length)return '';
   const bands=colours.map((colour,index)=>`${escapeAttr(colour)} ${index*30}px,${escapeAttr(colour)} ${(index+1)*30}px`).join(',');
-  const white=colours.length===1&&normaliseHex(colours[0],'').toLowerCase()==='#ffffff',text=white?'--pos-text:#111;--pos-text-shadow:none;':'';
-  return `--pos-base:${escapeAttr(colours[0])};--pos-pattern:repeating-linear-gradient(135deg,${bands});${text}`;
+  const presentation=colourSetPresentation(colours);
+  return `--pos-base:${escapeAttr(colours[0])};--pos-pattern:repeating-linear-gradient(135deg,${bands});--pos-text:${presentation.text};--pos-text-shadow:${presentation.shadow};`;
 }
 function controlPositionStripMarkup(item){const pos=positionForName(item.location);if(!pos)return '';const style=controlPositionStripStyle(pos);if(!style)return '';return `<div class="controlPositionStrip" style="${style}" title="${escapeAttr(pos.name)}"><span class="controlPositionName">${escapeHtml(pos.name)}</span></div>`}
 function controlDeviceImageSrc(item,type){const ref=type==='npu'?npuRefForItem(item):consoleRefForItem(item);return ref?.image||ref?.imageUrl||item.image||''}
@@ -2398,8 +2407,8 @@ function networkDeviceProtocolOptions(ref,selected=''){const protocols=[...new S
 function networkDeviceDefaultProtocol(ref,current=''){const selected=String(current||'').trim();if(selected)return selected;const protocols=(ref?.protocols||[]).map(value=>String(value||'').trim()).filter(Boolean),type=String(ref?.type||'').trim().toLowerCase(),sacn=protocols.find(value=>value.toLowerCase()==='sacn');if(sacn&&(type==='dmx node'||type.includes('network switch')))return sacn;if(type==='dmx node')return 'sACN';return protocols[0]||''}
 function networkDeviceHasOctoPorts(item,ref){return String(ref?.id||item?.referenceId||'')==='Pathway-Pathport-Octo-DMX-Gateway'||/pathport\\s+octo/i.test(String(ref?.name||item?.model||item?.item||''))}
 function networkDmxPortDefinitions(ref){const details=Array.isArray(ref?.portDetails)?ref.portDetails:[];return details.filter(port=>/xlr[\s-]*5/i.test(String(port.connector||''))).flatMap(port=>Array.from({length:Math.max(1,parseInt(port.quantity||1,10)||1)},()=>({direction:String(port.direction||'').trim(),facing:String(port.facing||'').trim()}))).map((port,index)=>({...port,port:String.fromCharCode(65+index)}))}
-function networkPortPositionStyle(location){const pos=positionForName(location);return pos?controlPositionStripStyle(pos):'--pos-base:#fff;--pos-pattern:none'}
-function networkPortLocationOptions(selected=''){const positions=positionSummaryRows(),active=String(selected||'').trim(),values=[...new Set([active,...positions.map(position=>position.name)].filter(Boolean))];return '<option value="">Select Position</option>'+values.map(value=>{const pos=positions.find(position=>position.name===value),colour=colourTextToHex(pos?.colour1||'','#fff');return `<option value="${escapeAttr(value)}" style="background:${escapeAttr(colour)}" ${value===active?'selected':''}>${escapeHtml(value)}</option>`}).join('')}
+function networkPortPositionStyle(location){const pos=positionForName(location);return pos?controlPositionStripStyle(pos):'--pos-base:#fff;--pos-pattern:none;--pos-text:#111;--pos-text-shadow:none'}
+function networkPortLocationOptions(selected=''){const positions=positionSummaryRows(),active=String(selected||'').trim(),values=[...new Set([active,...positions.map(position=>position.name)].filter(Boolean))];return '<option value="">Select Position</option>'+values.map(value=>{const pos=positions.find(position=>position.name===value),colours=[pos?.colour1,pos?.colour2,pos?.colour3].map(item=>colourTextToHex(item,'')).filter(Boolean),colour=colours[0]||'#fff',presentation=colourSetPresentation(colours);return `<option value="${escapeAttr(value)}" style="background:${escapeAttr(colour)};color:${presentation.text};text-shadow:${presentation.shadow}" ${value===active?'selected':''}>${escapeHtml(value)}</option>`}).join('')}
 function networkPortDirectionButtons(index,selected=''){const active=String(selected||'').trim().toLowerCase()==='input'?'input':'output';return `<div class="networkPortDirectionButtons"><input data-network-port-direction="${index}" type="hidden" value="${active}"><button class="btn networkPortDirectionButton" type="button" aria-pressed="${active==='input'}" onclick="setNetworkPortDirection(this,'input')">IN</button><button class="btn networkPortDirectionButton" type="button" aria-pressed="${active==='output'}" onclick="setNetworkPortDirection(this,'output')">OUT</button></div>`}
 function setNetworkPortDirection(button,value){const wrap=button?.closest('.networkPortDirectionButtons'),input=wrap?.querySelector('[data-network-port-direction]');if(!wrap||!input)return;input.value=value;wrap.querySelectorAll('.networkPortDirectionButton').forEach(item=>item.setAttribute('aria-pressed',String(item===button)))}
 function updateNetworkPortPositionStyle(select){const style=networkPortPositionStyle(select?.value||'');style.split(';').filter(Boolean).forEach(rule=>{const split=rule.indexOf(':');if(split>0)select.style.setProperty(rule.slice(0,split),rule.slice(split+1))})}
@@ -2919,7 +2928,7 @@ function deviceConfigInterfaceTwoRow(device,row,view='deviceConfig'){if(!deviceC
 const DEVICE_CONFIG_WIDTH_DEFAULTS=[[30,30],[45,70],[40,60],[100,130],[60,60],[100,180],[110,110],[110,110],[40,100],[40,100],[40,150],[80,120],[200,400],[34,34]];
 function deviceConfigTableMarkup(devices){let row=0;const headers=[['status',''],['facing',''],['sub','Port'],['name','Name'],['patch','Universe'],['type','Type'],['ip','IP Address'],['subnet','Subnet'],['protocol','TX Protocol'],['direction','Port Direction'],['vlan','VLAN'],['location','Location'],['notes','Notes'],['delete','']];return `<table class="deviceConfigTable" data-device-config-width-table="true"><thead><tr class="deviceConfigColumnHeadings">${headers.map(([key,label])=>`<th class="deviceConfig${key.charAt(0).toUpperCase()+key.slice(1)}Col" ${['facing','delete'].includes(key)?'':deviceConfigColumnAttr(key)}${key==='status'?' aria-label="Expand or collapse device"':''}${key==='delete'?' aria-label="Delete device"':''}${['facing','delete'].includes(key)?'':` onclick="setDeviceConfigSort('${key}')"`}>${label}${!['status','facing','delete'].includes(key)&&deviceConfigSort.key===key?(deviceConfigSort.direction==='asc'?' ↑':' ↓'):''}</th>`).join('')}</tr></thead><tbody>${devices.map(device=>{let html=deviceConfigRowWithLocation(deviceConfigParentRow(device,row),device,device.location||'',row++,'',true);if(deviceConfigExpandedDevices.has(ipDeviceOrderKey(device))){const interfaceRow=deviceConfigInterfaceTwoRow(device,row);if(interfaceRow){html+=deviceConfigRowWithLocation(interfaceRow,device,device.location||'',row++,'',true)}deviceConfigVisiblePorts(device).forEach(port=>{html+=deviceConfigRowWithLocation(deviceConfigPortRow(device,port,row),device,port.location||'',row++,port.id)})}return html}).join('')}</tbody></table>`}
 function controlTableCellAttrs(device,key,row,col){return `data-device-config-cell="1" data-dc-row="${row}" data-dc-col="${col}" data-control-source="${escapeAttr(device.source)}" data-control-id="${escapeAttr(device.id)}" data-control-key="${escapeAttr(key)}"`}
-function controlLocationCellStyle(location){const position=positionForName(location),style=controlPositionStripStyle(position);return style?`${style};background-color:var(--pos-base,#fff);background-image:var(--pos-pattern,none);color:#fff`:''}
+function controlLocationCellStyle(location){const position=positionForName(location),style=controlPositionStripStyle(position);return style?`${style};background-color:var(--pos-base,#fff);background-image:var(--pos-pattern,none);color:var(--pos-text,#111);text-shadow:var(--pos-text-shadow,none)`:''}
 function controlTableParentExtraCells(device,row,view='control'){const shift=view==='deviceConfig'?1:0,item=ipAddressSourceItem(device.source,device.id),ref=device.reference||deviceConfigReference(device,item),rack=canonicalDeviceRackPlacement(device.source,device.id),location=rack?rack.rack.location:item.location||'',role=device.source==='console'?String(item.role||''):'',mode=String(item.softwareMode||''),software=device.source==='console'?controlDeviceSoftwareVersionText(item,'console'):'',capacity=storedDeviceCapacity(item,device.source),locationStyle=controlLocationCellStyle(location);return `<td class="controlTableExtra controlLocationCell${locationStyle?' positionStyled':''}" style="${escapeAttr(locationStyle)}">${rack?`<span class="deviceConfigReadOnly" title="Managed by Rack Layout">${escapeHtml(location||'No Location')}</span>`:`<input type="text" ${controlTableCellAttrs(device,'location',row,10+shift)} value="${escapeAttr(location)}" onchange="updateControlTableField(this)">`}</td><td class="controlTableExtra">${device.source==='console'?`<select ${controlTableCellAttrs(device,'role',row,11+shift)} onchange="updateControlTableField(this)"><option value="" ${role?'':'selected'}>Unassigned</option><option value="master" ${role==='master'?'selected':''}>Master</option><option value="backup" ${role==='backup'?'selected':''}>Backup</option></select>`:'<span class="deviceConfigReadOnly">N/A</span>'}</td><td class="controlTableExtra"><select ${controlTableCellAttrs(device,'softwareMode',row,12+shift)} onchange="updateControlTableField(this)">${modeOptionsMarkup(ref,mode)}</select></td><td class="controlTableExtra">${device.source==='console'?`${consoleTableVersionSelect(device,item,row,13+shift)}`:'<span class="deviceConfigReadOnly">—</span>'}</td><td class="controlParametersCell">${escapeHtml(device.source==='console'?compactConsoleCapacityText(capacity):controlTableCapacityText(capacity))}</td>`}
 function controlTableAppendCells(markup,cells,view='control'){const shift=view==='deviceConfig'?1:0,rowEnd=markup.lastIndexOf('</tr>'),notesStart=markup.lastIndexOf('<td class="deviceConfigNotesCol',rowEnd)>=0?markup.lastIndexOf('<td class="deviceConfigNotesCol',rowEnd):markup.lastIndexOf('<td',rowEnd);if(rowEnd<0||notesStart<0)return markup;const notes=markup.slice(notesStart,rowEnd).replaceAll(`data-dc-col="${10+shift}"`,`data-dc-col="${15+shift}"`);return markup.slice(0,notesStart)+cells+notes+markup.slice(rowEnd)}
 function controlTableBlankExtraCells(){return '<td></td><td></td><td></td><td></td><td></td>'}
@@ -3186,7 +3195,10 @@ function ipAddressLocationGroups(devices){
 function ipAddressTableMarkup(devices,showVlans){const showIp2=devices.some(device=>device.interfaces.some(network=>network.slot===2));return `<table class="ipAddressTable"><thead><tr><th class="ipItemCol">Item</th><th class="ipNameCol">Name</th><th class="ipLocationCol">Location</th><th class="ipValueCol">IP ~ 1</th>${showIp2?'<th class="ipValueCol">IP ~ 2</th>':''}<th class="ipSubnetCol">Subnet</th>${showVlans?'<th class="ipVlanCol">VLAN</th>':''}<th class="ipNotesCol">Notes</th></tr></thead>${devices.map(device=>`<tbody class="ipDeviceGroup">${ipAddressDeviceRows(device,showVlans,showIp2)}</tbody>`).join('')}</table>`}
 function renderIpAddressView(){const sheet=$('sheet'),devices=compiledIpDevices(),view=document.createElement('div'),setup=ipVlanSetup(),showVlans=setup.enabled,groups=ipAddressLocationGroups(devices);view.className='ipAddressView';view.innerHTML=`<div class="ipAddressToolbar"><div class="sheetToolbarActions"><button class="btn" type="button" onclick="openIpAddressFormat()">Format</button><button class="btn" type="button" onclick="openIpDeviceOrder()">Re-order</button><button class="btn add" type="button" onclick="addIpNetworkDevice()">+ Network Device</button></div></div>${ipVlanLegendMarkup()}${devices.length?`<div class="ipLocationGroups">${groups.map(group=>`<section class="ipLocationGroup"><h3 class="ipLocationGroupTitle">${escapeHtml(group.location)}</h3>${ipAddressTableMarkup(group.items,showVlans)}</section>`).join('')}</div>`:'<div class="blankState">No network devices have been added yet.<div class="blankStateActions"><button class="btn primary" type="button" onclick="addIpNetworkDevice()">+ Network Device</button></div></div>'}`;sheet.appendChild(view);applyIpAddressFormat(view);applySpareStyles(view);if($('ipDeviceOrderPane')?.classList.contains('open'))renderIpDeviceOrderPane()}
 function contrastText(hex){const h=normaliseHex(hex||'#ffffff').replace('#',''),r=parseInt(h.slice(0,2),16),g=parseInt(h.slice(2,4),16),b=parseInt(h.slice(4,6),16);return ((r*299+g*587+b*114)/1000)<140?'#ffffff':'#111111'}
-function colourFieldPresentation(value){const colour=colourTextToHex(value,''),white=!colour||normaliseHex(colour,'').toLowerCase()==='#ffffff';return {background:colour||'#ffffff',text:white?'#111111':'#ffffff',outline:white?'transparent':'#000000',shadow:white?'none':'1px 1px 0 #000,-1px 1px 0 #000,1px -1px 0 #000,-1px -1px 0 #000'}}
+function colourSetPresentation(values){const colours=[...new Set((Array.isArray(values)?values:[values]).map(value=>colourTextToHex(value,'')).filter(Boolean))],white=!colours.length||(colours.length===1&&normaliseHex(colours[0],'').toLowerCase()==='#ffffff');return {colours,text:white?'#111111':'#ffffff',outline:white?'transparent':'#000000',shadow:white?'none':'1px 1px 0 #000,-1px 1px 0 #000,1px -1px 0 #000,-1px -1px 0 #000'}}
+function colourFieldPresentation(value){const presentation=colourSetPresentation([value]);return {background:presentation.colours[0]||'#ffffff',text:presentation.text,outline:presentation.outline,shadow:presentation.shadow}}
+function labelBackgroundColours(style){return [style?.c1,style?.useC2===true?style?.c2:'',style?.useC3===true?style?.c3:''].filter(Boolean)}
+function applyBackgroundColourTextPresentation(element,values,outlineWidth='.45mm'){if(!element)return;const presentation=colourSetPresentation(values);element.style.color=presentation.text;element.style.textShadow='none';element.style.setProperty('-webkit-text-stroke-color',presentation.outline,'important');element.style.setProperty('-webkit-text-stroke-width',presentation.outline==='transparent'?'0':outlineWidth,'important');element.style.paintOrder='stroke fill'}
 function applyColourFieldPresentation(inp,value){if(!inp)return;const style=colourFieldPresentation(value);inp.style.background=style.background;inp.style.color=style.text;inp.style.textShadow=style.shadow;inp.style.setProperty('--colour-text-outline',style.outline)}
 function colourDisplayName(value){const hex=colourTextToHex(value,'');if(!hex)return String(value||'').trim();return colourNamesByHex[hex.toLowerCase()]||String(value||'').trim()}
 function colourInputText(value){return colourDisplayName(value)}
@@ -4036,8 +4048,8 @@ async function powerPdfDomPdfBytes(){
           }
           powerPdfDrawDomBorders(doc,box,style,scaleX,scaleY);
           if(positionColours.length){
-            const text=powerPdfExportText(textEl.textContent),textStyle=getComputedStyle(textEl),size=patchPdfDomTextSize(textStyle,textScaleY,12),bold=/bold/i.test(textStyle.fontWeight)||parseInt(textStyle.fontWeight,10)>=600,font=pdfFontFromStyle(textStyle,bold),colour=pdfCssColour(textStyle.color,'#000000'),outline=colour==='#ffffff'?'#000000':'#ffffff',pad=2,offset=.45;
-            [[-offset,0],[offset,0],[0,-offset],[0,offset]].forEach(([dx,dy])=>pdfDrawCellText(doc,text,box.x+pad+dx,box.y+pad+dy,Math.max(1,box.w-(pad*2)),Math.max(1,box.h-(pad*2)),size,bold,'center',2,outline,font));
+            const text=powerPdfExportText(textEl.textContent),textStyle=getComputedStyle(textEl),size=patchPdfDomTextSize(textStyle,textScaleY,12),bold=/bold/i.test(textStyle.fontWeight)||parseInt(textStyle.fontWeight,10)>=600,font=pdfFontFromStyle(textStyle,bold),presentation=colourSetPresentation(positionColours),colour=presentation.text,outline=presentation.outline,pad=2,offset=.45;
+            if(outline!=='transparent')[[-offset,0],[offset,0],[0,-offset],[0,offset]].forEach(([dx,dy])=>pdfDrawCellText(doc,text,box.x+pad+dx,box.y+pad+dy,Math.max(1,box.w-(pad*2)),Math.max(1,box.h-(pad*2)),size,bold,'center',2,outline,font));
             pdfDrawCellText(doc,text,box.x+pad,box.y+pad,Math.max(1,box.w-(pad*2)),Math.max(1,box.h-(pad*2)),size,bold,'center',2,colour,font);
           }else drawText(textEl,{text:powerPdfExportText(textEl.textContent),pad:2,maxLines:isFanOutTable&&!cell.classList.contains('socaName')?1:2,bold:styledSocaName?undefined:(isColumnHeader||/wayCol|ampsCol/.test(cell.className)),align:'center'});
         });
@@ -4395,9 +4407,9 @@ function updateRearFormat(inp){
   syncGeneratedLabelSnapshot();
   persist();
 }
-function updateRearSocaLabel(s){document.querySelectorAll('[data-rear-soca-id="'+s+'"]').forEach(el=>{const meta=app.socaMeta[s]||defaultMeta(),bg=el.querySelector('.bg'),text=el.querySelector('.rearLabelText');el.style.color=meta.text||'#000000';if(bg)bg.style.background=rearSocaBackground(meta);el.dataset.rearSocaColours=rearSocaColours(meta).join(',');if(text){text.textContent=cleanSocaName(app.socaNames[s],s);applyRearTextStyle(text,meta.rearFormat);fitRearText(text)}applySpareStyles(el)})}
-function updateRearAuxLabel(didx,g,j){const d=app.distros[didx];if(!d)return;const l=auxLabel(d,g,j);document.querySelectorAll('[data-rear-aux-id="'+didx+'_'+g+'_'+j+'"]').forEach(el=>{const bg=el.querySelector('.bg'),text=el.querySelector('.auxText');el.style.color=l.text||'#000000';if(bg)bg.style.background=cssStripe(l.c1||'',l.c2||'',l.useC2===true,l.c3||'',l.useC3===true);if(text){text.textContent=l.top||l.bottom||'';applyRearTextStyle(text,l.rearFormat);fitAuxText(text)}applySpareStyles(el)})}
-function updateRearOutputLabel(didx,g,j){const d=app.distros[didx];if(!d)return;const l=outputLabel(d,g,j);document.querySelectorAll('[data-rear-output-id="'+didx+'_'+g+'_'+j+'"]').forEach(el=>{const bg=el.querySelector('.bg'),text=el.querySelector('.outputText');el.style.color=l.textColour||'#000000';if(bg)bg.style.background=cssStripe(l.c1||'',l.c2||'',l.useC2===true,l.c3||'',l.useC3===true);if(text){text.textContent=l.text||'';applyRearTextStyle(text,l.rearFormat);fitOutputText(text)}applySpareStyles(el)})}
+function updateRearSocaLabel(s){document.querySelectorAll('[data-rear-soca-id="'+s+'"]').forEach(el=>{const meta=app.socaMeta[s]||defaultMeta(),bg=el.querySelector('.bg'),text=el.querySelector('.rearLabelText');if(bg)bg.style.background=rearSocaBackground(meta);el.dataset.rearSocaColours=rearSocaColours(meta).join(',');if(text){text.textContent=cleanSocaName(app.socaNames[s],s);applyRearTextStyle(text,meta.rearFormat);applyBackgroundColourTextPresentation(text,rearSocaColours(meta),'1.3mm');fitRearText(text)}applySpareStyles(el)})}
+function updateRearAuxLabel(didx,g,j){const d=app.distros[didx];if(!d)return;const l=auxLabel(d,g,j);document.querySelectorAll('[data-rear-aux-id="'+didx+'_'+g+'_'+j+'"]').forEach(el=>{const bg=el.querySelector('.bg'),text=el.querySelector('.auxText');if(bg)bg.style.background=cssStripe(l.c1||'',l.c2||'',l.useC2===true,l.c3||'',l.useC3===true);if(text){text.textContent=l.top||l.bottom||'';applyRearTextStyle(text,l.rearFormat);applyBackgroundColourTextPresentation(text,labelBackgroundColours(l),'1.3mm');fitAuxText(text)}applySpareStyles(el)})}
+function updateRearOutputLabel(didx,g,j){const d=app.distros[didx];if(!d)return;const l=outputLabel(d,g,j);document.querySelectorAll('[data-rear-output-id="'+didx+'_'+g+'_'+j+'"]').forEach(el=>{const bg=el.querySelector('.bg'),text=el.querySelector('.outputText');if(bg)bg.style.background=cssStripe(l.c1||'',l.c2||'',l.useC2===true,l.c3||'',l.useC3===true);if(text){text.textContent=l.text||'';applyRearTextStyle(text,l.rearFormat);applyBackgroundColourTextPresentation(text,labelBackgroundColours(l),'1.3mm');fitOutputText(text)}applySpareStyles(el)})}
 
 function removeAuxGroup(didx,g){const d=app.distros[didx];if(!d||!Array.isArray(d.auxGroups))return;if(!confirm('Remove Aux Outlets '+((g*3)+1)+' > '+((g*3)+3)+'?'))return;const info=ensureProjectInfo(),key=powerSheetKey(didx);if(Array.isArray(info.powerAuxSheets[key]))info.powerAuxSheets[key].splice(g*3,3);d.auxGroups.splice(g,1);app.collapsed.soca.delete('aux_'+didx+'_'+g);app.collapsed.previews.delete(auxPreviewKey(didx,g));persist();render();renderDistroCards()}
 function removeOutputGroup(didx,g){
@@ -4529,7 +4541,7 @@ function renderFrontEditorPane(){
   bindFrontPaneEvents(body);
   pane.classList.add('open');
 }
-function updatePreviewLabel(i){const el=document.querySelector('.label[data-i="'+i+'"]');if(!el)return;const l=app.labels[i]||blankLabel(),style=effectiveLabelStyle(i);el.style.color=style.text;el.querySelector('.bg').style.background=cssStripe(style.c1,style.c2,style.useC2,style.c3,style.useC3);el.querySelector('.topHalf').textContent=l.top||'';el.querySelector('.bottomHalf').textContent=frontLabelFixtureDisplay(l,{index:i});applyWayTextStyle(el,l);fitLabel(el);applySpareStyles(el)}
+function updatePreviewLabel(i){const el=document.querySelector('.label[data-i="'+i+'"]');if(!el)return;const l=app.labels[i]||blankLabel(),style=effectiveLabelStyle(i);el.querySelector('.bg').style.background=cssStripe(style.c1,style.c2,style.useC2,style.c3,style.useC3);el.querySelector('.topHalf').textContent=l.top||'';el.querySelector('.bottomHalf').textContent=frontLabelFixtureDisplay(l,{index:i});applyWayTextStyle(el,l);applyLabelColourRule(el,style);fitLabel(el);applySpareStyles(el)}
 function updateSocaPreview(s){for(let j=0;j<6;j++)updatePreviewLabel(s*6+j)}
 function updateSocaMeta(inp){const s=parseInt(inp.dataset.soca,10),key=inp.dataset.meta;app.socaMeta[s]=app.socaMeta[s]||defaultMeta();const meta=app.socaMeta[s],isColour=['c1','c2','c3','text'].includes(key),raw=String(inp.value||'').trim();if(isColour&&raw&&!colourTextToHex(raw,'')){styleColourTextInput(inp);return}if(isColour&&key!=='text'&&!raw){meta[key]='';if(key==='c2')meta.useC2=false;if(key==='c3')meta.useC3=false;styleColourTextInput(inp)}else{meta[key]=inp.type==='checkbox'?inp.checked:(isColour?colourTextToHex(inp.value,key==='text'?'#000000':'#ffffff'):inp.value);if(key==='c2')meta.useC2=true;if(key==='c3')meta.useC3=true;if(isColour)setColourTextInput(inp,meta[key])}if(key==='useC2'){const editor=inp.closest('.socaEditor');const colour2=editor&&editor.querySelector('[data-meta="c2"]');if(colour2)colour2.disabled=!inp.checked}syncGeneratedLabelSnapshot();persist();updateSocaPreview(s);updateRearSocaLabel(s)}
 function togglePreviewRange(key,start,end){const collapse=!app.collapsed.previews.has(key);if(collapse)app.collapsed.previews.add(key);else app.collapsed.previews.delete(key);for(let s=start;s<end;s++)collapse?app.collapsed.soca.add(s):app.collapsed.soca.delete(s);persist();render()}

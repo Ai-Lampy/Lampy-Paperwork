@@ -1,3 +1,9 @@
+## V35.10 — Position and label colour contrast
+
+- Applied the Position Summary text-colour rule to position references in Power, Fan Outs, Control, Device Config and Network fields.
+- Applied the same background-based black or outlined-white text rule to Front, Rear, Aux and Output label previews and PDF output.
+- Carried Position Colour 3 into Power position displays and labels linked from Fixture Patch positions.
+
 ## V35.9 — Shared colour-field text rule
 
 - Standardised editable colour fields across the app: blank or white fields use black text without an outline.

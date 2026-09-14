@@ -466,7 +466,7 @@ console.log('PASS: V33.6 Device Config parent delete action and rack-placement c
 // V33.6 white and uncoloured Position Summary text stays black.
 assert(html.includes('color:var(--pos-text,#fff)'));
 assert(html.includes('.positionPdfItem.noColour span{color:#111;text-shadow:none}'));
-assert(source('controlPositionStripStyle').includes("--pos-text:#111;--pos-text-shadow:none;"));
+assert(source('controlPositionStripStyle').includes('colourSetPresentation(colours)'));
 assert(source('drawPositionSummaryBlock').includes("blackText?'#111111':'#ffffff'"));
 assert(source('drawPositionSummaryHeader').includes("title='Position Summary - '+projectName"));
 assert(source('drawPositionSummaryHeader').includes("sideReserve=100"));
@@ -633,7 +633,7 @@ assert(html.includes('.btn{border:2px solid #000;background:rgb(217, 217, 217);b
 console.log('PASS: V35.1 Labels presentation, per-Socapex rear colours and navigation styling.');
 
 // V35.5 Power PDF and Fixture Patch colour-bubble corrections, plus V35.3 styling.
-assert.equal(appVersion,'35.9');
+assert.equal(appVersion,'35.10');
 assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(html.includes(".powerSheetTable{table-layout:auto!important;border-collapse:collapse;font-family:Georgia,'Times New Roman',serif;font-size:14px;border:2px solid #000}"));
 assert(html.includes('.powerSocaColourCol,.powerSheetTable .fixIdCol{width:70px!important;min-width:70px!important;max-width:70px!important}'));
@@ -694,6 +694,7 @@ console.log('PASS: V35.8 independent Colour 2/3 rendering and Rear Label Colour 
 
 // V35.9 applies the Position Summary text rule to every editable colour field.
 const v359=vm.createContext({colourTextToHex:value=>String(value||''),normaliseHex:value=>String(value||'')});
+vm.runInContext(source('colourSetPresentation'),v359);
 vm.runInContext(source('colourFieldPresentation'),v359);
 assert.deepEqual(JSON.parse(JSON.stringify(v359.colourFieldPresentation(''))),{background:'#ffffff',text:'#111111',outline:'transparent',shadow:'none'});
 assert.equal(v359.colourFieldPresentation('#ffffff').text,'#111111');
@@ -706,6 +707,26 @@ assert(source('colourInputControl').includes('text-shadow:none;--colour-text-out
 assert(source('patchColourCss').includes('colourFieldPresentation'));
 assert(source('patchPdfColourMarkup').includes('colourFieldPresentation'));
 console.log('PASS: V35.9 shared colour-field text and outline rule.');
+
+// V35.10 applies the same contrast rule to position references and Labels.
+const v3510=vm.createContext({colourTextToHex:value=>String(value||''),normaliseHex:value=>String(value||'')});
+vm.runInContext(source('colourSetPresentation'),v3510);
+assert.equal(v3510.colourSetPresentation([]).text,'#111111');
+assert.equal(v3510.colourSetPresentation(['#ffffff']).outline,'transparent');
+assert.equal(v3510.colourSetPresentation(['#ffffff','#ff0000']).text,'#ffffff');
+assert.equal(v3510.colourSetPresentation(['#ffffff','#ff0000']).outline,'#000000');
+assert(source('controlPositionStripStyle').includes('colourSetPresentation(colours)'));
+assert(source('controlLocationCellStyle').includes('color:var(--pos-text,#111)'));
+assert(source('powerPositionCellStyle').includes('colourSetPresentation(colours)'));
+assert(source('powerSheetSlotResult').includes('savedPosition?.colour3'));
+assert(source('networkPortPositionStyle').includes('--pos-text:#111;--pos-text-shadow:none'));
+assert(source('networkPortLocationOptions').includes('colourSetPresentation(colours)'));
+assert(source('makeLabel').includes('applyLabelColourRule(el,style)'));
+assert(source('makeRearLabel').includes("applyBackgroundColourTextPresentation(text,rearSocaColours(meta),'1.3mm')"));
+assert(source('makeRearAuxLabel').includes('applyBackgroundColourTextPresentation'));
+assert(source('makeRearOutputLabel').includes('applyBackgroundColourTextPresentation'));
+assert(source('applyFixIdColoursToLabel').includes('label.useC3'));
+console.log('PASS: V35.10 shared position-reference and Labels contrast rule.');
 
 // Guard against page CSS being written into a JavaScript export template.
 const activeStyleStart=html.indexOf('<style'),activeStyleEnd=html.indexOf('</style>'),bodyStart=html.indexOf('<body'),sharedToolbarCss='/* V34 shared navigation and toolbar layout. */';
