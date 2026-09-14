@@ -1,3 +1,9 @@
+## V36.6 — Home, Power, Device Config and Rack Layout
+
+- Centred Home statistics and renamed the patched-universe statistic.
+- Simplified Power and Phase Totals toolbars, leaving only the relevant actions in each view.
+- Kept Device Config locations on parent device rows and styled the Rack Layout toolbar and workspace header.
+
 ## V36.5 — Control table and switch VLANs
 
 - Removed Show/Hide Columns and Format from Control’s Table View toolbar.
