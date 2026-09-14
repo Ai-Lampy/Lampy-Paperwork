@@ -810,10 +810,14 @@ assert(html.includes('#vlanSetupPane #vlanTemplateChoice{height:30px}'));
 assert(html.includes('.vlanSetupTable .vlanColourCol{width:55px}'));
 assert(html.includes('.vlanSetupTable .vlanColourPicker summary{width:35px;height:25px}'));
 assert(html.includes('.vlanSetupTable .vlanUseCol{width:60px}'));
-assert(html.includes('.vlanSetupToggle{width:40px;padding:8px 6px;font-weight:900;height:30px}'));
+assert(html.includes('.vlanSetupToggle{width:40px;height:30px;max-width:100%;box-sizing:border-box;display:inline-flex!important;align-items:center;justify-content:center;padding:2px 4px;font-size:16px;line-height:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:900;vertical-align:middle}'));
 assert(html.includes('.vlanSetupTable .vlanNumberCol input{-moz-appearance:textfield;appearance:textfield}'));
-assert(source('vlanTemplateControlsMarkup').includes('VLAN Setup<select'));
+assert(html.includes('.vlanTemplateCard{margin:0}.vlanTemplateCard .row{margin:0}'));
+assert(source('vlanTemplateControlsMarkup').includes('vlanTemplateCard'));
 console.log('PASS: V36.3 VLAN Setup selector, input and table controls.');
+
+assert(html.includes('.deviceConfigDeleteButton{width:32px;height:20px;border:0;border-radius:4px;background:transparent;color:#c00000;font:900 18px/1 Arial,sans-serif;cursor:pointer}'));
+console.log('PASS: V36.3 Device Config delete control dimensions.');
 
 // Guard against page CSS being written into a JavaScript export template.
 const activeStyleStart=html.indexOf('<style'),activeStyleEnd=html.indexOf('</style>'),bodyStart=html.indexOf('<body'),sharedToolbarCss='/* V34 shared navigation and toolbar layout. */';

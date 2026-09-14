@@ -2,6 +2,8 @@
 
 - Renamed the template field to VLAN Setup and refined the selector, Global Subnet, VLAN number and table controls.
 - Removed VLAN-number steppers and set the supplied Colour, Use and toggle dimensions.
+- Centred the VLAN Use toggle text and removed margins from the VLAN Setup card.
+- Set the Device Config delete control to 32 × 20 px.
 
 ## V36.2 — VLAN Setup layout
 
