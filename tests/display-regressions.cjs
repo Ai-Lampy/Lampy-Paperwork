@@ -128,7 +128,7 @@ const portContext=vm.createContext({normaliseVlan:value=>String(value||'0')});vm
 assert(source('deviceConfigPortsFor').includes("if(!Object.hasOwn(raw,'location'))base.location=device.location||''"));
 assert(source('updateDeviceConfigField').includes("if(key==='location'&&!portId)render()"));
 assert(config.includes('deviceConfigDeleteButton'));assert(config.includes('❌'));assert(!control.includes('deviceConfigDeleteButton'));
-assert.deepEqual(JSON.parse(JSON.stringify(vm.runInContext('DEVICE_CONFIG_WIDTH_DEFAULTS',c))),[[30,30],[45,70],[40,60],[100,130],[60,60],[100,180],[110,110],[110,110],[40,100],[40,100],[40,150],[80,120],[200,400],[34,34]]);
+assert.deepEqual(JSON.parse(JSON.stringify(vm.runInContext('DEVICE_CONFIG_WIDTH_DEFAULTS',c))),[[30,30],[45,70],[40,60],[100,130],[60,60],[100,180],[110,110],[110,110],[40,100],[40,100],[40,150],[80,120],[80,90],[110,180],[70,110],[80,120],[90,220],[34,34]]);
 const directionContext=vm.createContext({escapeHtml:c.escapeHtml,escapeAttr:c.escapeAttr});vm.runInContext(source('connectorDefaultDirection'),directionContext);vm.runInContext(source('deviceConfigDirectionSelect'),directionContext);const directionDevice={source:'network',id:'n'};assert.equal(directionContext.connectorDefaultDirection('XLR-5 female','input'),'output');assert.equal(directionContext.connectorDefaultDirection('XLR-5 male','output'),'input');assert.equal(directionContext.connectorDefaultDirection('RJ45','network'),'network');assert(!directionContext.deviceConfigDirectionSelect(directionDevice,{id:'p',direction:'network',directions:['network']},0,9).includes('<select'));const bidirectional=directionContext.deviceConfigDirectionSelect(directionDevice,{id:'p',type:'XLR-5 female',direction:'',directions:['input','output']},0,9);assert(bidirectional.includes('<select'));assert(bidirectional.includes('>Input<'));assert(bidirectional.includes('>Output<'));assert(bidirectional.includes('value="output" selected'));assert(!bidirectional.includes('>Network<'));assert(directionContext.deviceConfigDirectionSelect(directionDevice,{id:'p',direction:'output',directions:[]},0,9).includes('>Bidirectional<'));
 add('bytesToBase64','base64ToBytes','sha256Base64','packageProjectPayload','unpackProjectPayload');
 (async()=>{const p={appVersion:'32',app:{controlNetwork:{consoles:[avo,backup,main],npus:[]}}};const out=await c.unpackProjectPayload(await c.packageProjectPayload(p));assert.equal(JSON.stringify(out),JSON.stringify(p));const located={app:{controlNetwork:{networkDevices:[{id:'n',deviceConfigPorts:[{id:'p',location:'Dimmer City'}]}]}}};const locatedOut=await c.unpackProjectPayload(await c.packageProjectPayload(located));assert.equal(locatedOut.app.controlNetwork.networkDevices[0].deviceConfigPorts[0].location,'Dimmer City');console.log('PASS: Avolites reference limits/images/ports; D9 and D3 TNP examples; mixed/backup/legacy totals; expansion isolation; 110px limits; UI capacity labels; position counts; project package round trip.');})().catch(e=>{console.error(e);process.exitCode=1});
@@ -231,7 +231,7 @@ const legacySummary=c.consoleHomeSummaryMarkup({...avoSecond,protocol1:'Art-Net'
 
 for(const available of [500,1280,2400]){const widths=c.calculateDeviceConfigWidths(Array(13).fill(300),available,false);assert(widths[6]>=110);assert(widths[7]>=110);if(available>=1280)assert(Math.abs(widths.reduce((sum,value)=>sum+value,0)-available)<0.001)}
 for(const available of [500,1280,2400]){const widths=c.calculateDeviceConfigWidths(Array(16).fill(300),available,true);assert.equal(widths[5],110);assert.equal(widths[6],110);assert(widths[10]<=80);assert(widths[8]<=60)}
-const deviceLimits=[[30,30],[45,70],[40,60],[100,130],[60,60],[100,180],[110,110],[110,110],[40,100],[40,100],[40,150],[80,120],[200,400]];
+const deviceLimits=[[30,30],[45,70],[40,60],[100,130],[60,60],[100,180],[110,110],[110,110],[40,100],[40,100],[40,150],[80,120],[80,90],[110,180],[70,110],[80,120],[90,220],[34,34]];
 deviceLimits.forEach(([min,max],index)=>assert.deepEqual(JSON.parse(JSON.stringify(c.deviceConfigColumnLimits(index,false))),{min,max}));
 c.deviceConfigExpandedDevices.add('console:a');c.controlExpandedDevices.clear();
 const dcConsole=c.controlDeviceConfigTableMarkup([dev],'deviceConfig');
@@ -633,7 +633,7 @@ assert(html.includes('.btn{border:2px solid #000;background:rgb(217, 217, 217);b
 console.log('PASS: V35.1 Labels presentation, per-Socapex rear colours and navigation styling.');
 
 // V35.5 Power PDF and Fixture Patch colour-bubble corrections, plus V35.3 styling.
-assert.equal(appVersion,'36.3');
+assert.equal(appVersion,'36.4');
 assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(html.includes(".powerSheetTable{table-layout:auto!important;border-collapse:collapse;font-family:Georgia,'Times New Roman',serif;font-size:14px;border:2px solid #000}"));
 assert(html.includes('.powerSocaColourCol,.powerSheetTable .fixIdCol{width:70px!important;min-width:70px!important;max-width:70px!important}'));
@@ -762,7 +762,7 @@ assert(source('powerSheetRowMarkup').includes('--power-soca-outline:${powerWhite
 console.log('PASS: V35.14 Power Calcs white text uses a 0.5 mm black outline.');
 
 // V36 uses JSON VLAN templates without replacing customised project settings.
-assert.equal(appVersion,'36.3');
+assert.equal(appVersion,'36.4');
 const vlanTemplateJson=JSON.parse(fs.readFileSync(root+'json/vlan_colour_options.json','utf8'));
 const vlanContext=vm.createContext({
  DEFAULT_IP_VLANS:Array.from({length:11},(_,index)=>({id:String(index),name:['Untagged/MGMT','sACN','Art-Net','RoboCam'][index]||'',colour:['#ffffff','#e5b7b7','#b7cbe4','#ffd5b3'][index]||'#ffffff',selected:false})),
@@ -783,14 +783,14 @@ assert(source('applyVlanTemplate').includes('selectedById'));assert(source('appl
 console.log('PASS: V36 JSON VLAN templates, vendor detection, edit protection and retained VLAN state.');
 
 // V36.1 keeps automatic VLAN choice explicit and Power text readable.
-assert.equal(appVersion,'36.3');
+assert.equal(appVersion,'36.4');
 assert(source('vlanTemplateControlsMarkup').includes("['automatic','Automatic']"));assert(source('setVlanTemplateChoice').includes("value==='automatic'"));assert(source('automaticVlanTemplate').includes("brands.length===1?brands[0]:'Generic'"));assert(!source('renderVlanSetupPane').includes('A non-empty Global Subnet is used for new devices'));
 assert(source('powerPositionCellStyle').includes('powerWhiteTextOutline(presentation.text)'));assert(source('powerPositionCellStyle').includes("presentation.text==='#ffffff'?'.5mm':'0'"));assert(html.includes('.powerSheetTable .positionCol .powerPositionText{-webkit-text-stroke-width:var(--power-position-stroke-width,0);-webkit-text-stroke-color:var(--power-position-outline,transparent);paint-order:stroke fill}'));
 assert(source('fitPowerSocaColourText').includes('size>8'));assert(source('fitPowerSocaColourText').includes('powerSheetTextWidth'));assert(source('renderPowerSheetView').includes('fitPowerSocaColourText(view)'));assert(source('powerPdfSourceViews').includes('fitPowerSocaColourText(view)'));assert(html.includes('outline=powerWhiteTextOutline(presentation.text)'));
 console.log('PASS: V36.1 always-visible VLAN template selection and Power text fitting.');
 
 // V36.2 keeps VLAN Setup compact without template helper text.
-assert.equal(appVersion,'36.3');
+assert.equal(appVersion,'36.4');
 assert(html.includes('#vlanSetupPane label{display:block;font-size:13px;color:#333;font-weight:700;border:none;margin:0px;padding:0px}'));
 assert(html.includes('.vlanSetupTable .vlanNumberCol{width:72px}'));
 assert(html.includes('.vlanSetupTable .vlanColourCol{width:55px}'));
@@ -802,7 +802,7 @@ assert(!source('vlanTemplateControlsMarkup').includes('Template changes preserve
 console.log('PASS: V36.2 VLAN Setup labels, compact rows and column widths.');
 
 // V36.3 refines VLAN Setup controls without changing VLAN data.
-assert.equal(appVersion,'36.3');
+assert.equal(appVersion,'36.4');
 assert(html.includes('.logoTitleRow{margin-bottom:0px}'));
 assert(html.includes('.vlanGlobalSubnetCard .ipSegmentedField{border:none;border-radius:6px;background:#fff;padding:2px 5px}'));
 assert(html.includes('#vlanSetupPane label{display:block;font-size:13px;color:#333;font-weight:700;border:none;margin:0px;padding:0px}'));
@@ -818,6 +818,11 @@ console.log('PASS: V36.3 VLAN Setup selector, input and table controls.');
 
 assert(html.includes('.deviceConfigDeleteButton{width:32px;height:20px;border:0;border-radius:4px;background:transparent;color:#c00000;font:900 18px/1 Arial,sans-serif;cursor:pointer}'));
 console.log('PASS: V36.3 Device Config delete control dimensions.');
+
+// V36.4 corrects Device Config's full trailing-column map so Mode is not starved by Role.
+assert.equal(appVersion,'36.4');
+assert(html.includes("const DEVICE_CONFIG_WIDTH_DEFAULTS=[[30,30],[45,70],[40,60],[100,130],[60,60],[100,180],[110,110],[110,110],[40,100],[40,100],[40,150],[80,120],[80,90],[110,180],[70,110],[80,120],[90,220],[34,34]];"));
+console.log('PASS: V36.4 Device Config Role and Mode width allocation.');
 
 // Guard against page CSS being written into a JavaScript export template.
 const activeStyleStart=html.indexOf('<style'),activeStyleEnd=html.indexOf('</style>'),bodyStart=html.indexOf('<body'),sharedToolbarCss='/* V34 shared navigation and toolbar layout. */';
