@@ -200,7 +200,7 @@ assert(!statsMarkup.includes('Theoretical packed-channel estimate'));assert(stat
 assert(c.controlParameterSummaryMarkup().includes('Universes Available'));
 c.app.controlNetwork.consoles.push(main);
 statsMarkup=renderStats();assert(statsMarkup.includes('Parameters Required'));assert(statsMarkup.includes('Parameters Available'));assert(statsMarkup.includes('Universes Available'));
-assert(c.controlParameterSummaryMarkup().includes('Parameters Available'));
+assert(c.controlParameterSummaryMarkup().includes('Mode 3 Parameters'));
 c.app.controlNetwork.consoles=[main];statsMarkup=renderStats();assert(!statsMarkup.includes('Universes Available'));assert(!statsMarkup.includes('Channel Count'));assert(statsMarkup.includes('Parameters Available'));
 c.app.controlNetwork.consoles=[];statsMarkup=renderStats();assert(!statsMarkup.includes('Universes Available'));assert(statsMarkup.includes('Parameters Required'));
 c.app.controlNetwork.consoles=[d9Console];c.app.controlNetwork.npus=[{npuId:'npu',softwareMode:'Mode 3'}];assert(renderStats().includes('Parameters Available'));
@@ -633,7 +633,7 @@ assert(html.includes('.btn{border:2px solid #000;background:rgb(217, 217, 217);b
 console.log('PASS: V35.1 Labels presentation, per-Socapex rear colours and navigation styling.');
 
 // V35.5 Power PDF and Fixture Patch colour-bubble corrections, plus V35.3 styling.
-assert.equal(appVersion,'35.10');
+assert.equal(appVersion,'35.11');
 assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(html.includes(".powerSheetTable{table-layout:auto!important;border-collapse:collapse;font-family:Georgia,'Times New Roman',serif;font-size:14px;border:2px solid #000}"));
 assert(html.includes('.powerSocaColourCol,.powerSheetTable .fixIdCol{width:70px!important;min-width:70px!important;max-width:70px!important}'));
@@ -727,6 +727,13 @@ assert(source('makeRearAuxLabel').includes('applyBackgroundColourTextPresentatio
 assert(source('makeRearOutputLabel').includes('applyBackgroundColourTextPresentation'));
 assert(source('applyFixIdColoursToLabel').includes('label.useC3'));
 console.log('PASS: V35.10 shared position-reference and Labels contrast rule.');
+
+// V35.11 unifies live page toolbars and uses Fixture Patch Home Stats in Control.
+assert(html.includes('.sheetWrap .homeDashboardToolbar,.sheetWrap .fixturePatchToolbar,.sheetWrap .powerSheetToolbar,.sheetWrap .fanOutToolbar,.sheetWrap .controlNetworkToolbar,.sheetWrap .networkDeviceConfigToolbar,.sheetWrap .ipAddressToolbar,.sheetWrap .distroLabelNav,.sheetWrap .positionsToolbar,.sheetWrap .universeDetailToolbar,.sheetWrap .rackWorkspaceHeader{background:rgb(185,185,185);border:2px solid #000}'));
+assert(html.includes('.controlParameterStats{display:flex;align-items:center;gap:6px;flex-wrap:wrap}'));
+assert(source('controlParameterSummaryMarkup').includes('homeStat controlParameterStat'));
+assert(source('controlParameterSummaryMarkup').includes("row.mode+' Parameters'"));
+console.log('PASS: V35.11 shared live-page toolbars and Control capacity Home Stats.');
 
 // Guard against page CSS being written into a JavaScript export template.
 const activeStyleStart=html.indexOf('<style'),activeStyleEnd=html.indexOf('</style>'),bodyStart=html.indexOf('<body'),sharedToolbarCss='/* V34 shared navigation and toolbar layout. */';

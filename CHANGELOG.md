@@ -1,3 +1,8 @@
+## V35.11 — Shared page toolbars and Control capacity cards
+
+- Standardised live-page toolbars with an RGB(185, 185, 185) background and a 2 px black border, without changing PDF previews or modal controls.
+- Replaced Control’s underlined parameter text with Fixture Patch-style Home Stat cards for each available mode and universe capacity.
+
 ## V35.10 — Position and label colour contrast
 
 - Applied the Position Summary text-colour rule to position references in Power, Fan Outs, Control, Device Config and Network fields.
