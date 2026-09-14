@@ -737,7 +737,7 @@ console.log('PASS: V35.11 shared live-page toolbars and Control capacity Home St
 
 // V35.12 keeps Power colour and position text legible without layered shadows.
 assert(html.includes('.powerSocaColourInput{-webkit-text-stroke:.35px var(--colour-text-outline);text-shadow:none!important;paint-order:stroke fill}'));
-assert(html.includes('.powerSheetTable .positionCol .powerPositionText,.fanOutTable .positionCol .fanOutCellText{-webkit-text-stroke:.35px var(--power-position-outline,transparent);text-shadow:none!important;paint-order:stroke fill}'));
+assert(html.includes('.fanOutTable .positionCol .fanOutCellText{-webkit-text-stroke:.35px var(--power-position-outline,transparent);text-shadow:none!important;paint-order:stroke fill}'));
 assert(source('colourSetPresentation').includes("shadow:'none'"));
 assert(source('powerPositionCellStyle').includes('--power-position-outline:${presentation.outline}'));
 console.log('PASS: V35.12 Power colour and position text use one thin contrast outline without shadows.');
@@ -753,6 +753,12 @@ assert(html.includes('.homePositionStrip .controlPositionName,.positionPdfItem s
 assert(source('applyBackgroundColourTextPresentation').includes("outlineWidth='.45mm'"));
 assert(source('pdfDrawPositionText').includes('const outline=1.3*PDF_MM_TO_PT'));
 console.log('PASS: V35.14 scopes the 1.3 mm black outline to Position Summary.');
+
+// V35.14 keeps the Power Calcs table readable where it uses white text.
+assert(html.includes('.powerSheetTable .powerSocaColourInput{-webkit-text-stroke:.5mm var(--colour-text-outline)}'));
+assert(html.includes('.powerSheetTable .positionCol .powerPositionText{-webkit-text-stroke:.5mm var(--power-position-outline,transparent)}'));
+assert(html.includes('.powerSheetTable tbody .ampsCol,.powerSheetTable tbody .ampsCol input{-webkit-text-stroke:.5mm #000;paint-order:stroke fill}'));
+console.log('PASS: V35.14 Power Calcs white text has a 0.5 mm black outline.');
 
 // Guard against page CSS being written into a JavaScript export template.
 const activeStyleStart=html.indexOf('<style'),activeStyleEnd=html.indexOf('</style>'),bodyStart=html.indexOf('<body'),sharedToolbarCss='/* V34 shared navigation and toolbar layout. */';
