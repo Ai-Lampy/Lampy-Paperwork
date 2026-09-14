@@ -1,3 +1,8 @@
+## V36.2 — VLAN Setup layout
+
+- Removed VLAN Template helper text and tightened the VLAN Setup selector and table layout.
+- Set the Colour and Use columns to 70 px and 45 px, retained the 72 px VLAN column, and made every table row 40 px high.
+
 ## V36.1 — VLAN selector and Power text fitting
 
 - Added an always-visible VLAN Template selector with Automatic, Generic, Luminex and Pathway choices. Automatic uses the one detected supported brand, or Generic when neither or both are present.

@@ -633,7 +633,7 @@ assert(html.includes('.btn{border:2px solid #000;background:rgb(217, 217, 217);b
 console.log('PASS: V35.1 Labels presentation, per-Socapex rear colours and navigation styling.');
 
 // V35.5 Power PDF and Fixture Patch colour-bubble corrections, plus V35.3 styling.
-assert.equal(appVersion,'36.1');
+assert.equal(appVersion,'36.2');
 assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(html.includes(".powerSheetTable{table-layout:auto!important;border-collapse:collapse;font-family:Georgia,'Times New Roman',serif;font-size:14px;border:2px solid #000}"));
 assert(html.includes('.powerSocaColourCol,.powerSheetTable .fixIdCol{width:70px!important;min-width:70px!important;max-width:70px!important}'));
@@ -762,7 +762,7 @@ assert(source('powerSheetRowMarkup').includes('--power-soca-outline:${powerWhite
 console.log('PASS: V35.14 Power Calcs white text uses a 0.5 mm black outline.');
 
 // V36 uses JSON VLAN templates without replacing customised project settings.
-assert.equal(appVersion,'36.1');
+assert.equal(appVersion,'36.2');
 const vlanTemplateJson=JSON.parse(fs.readFileSync(root+'json/vlan_colour_options.json','utf8'));
 const vlanContext=vm.createContext({
  DEFAULT_IP_VLANS:Array.from({length:11},(_,index)=>({id:String(index),name:['Untagged/MGMT','sACN','Art-Net','RoboCam'][index]||'',colour:['#ffffff','#e5b7b7','#b7cbe4','#ffd5b3'][index]||'#ffffff',selected:false})),
@@ -779,15 +779,27 @@ vlanContext.app.controlNetwork.networkDevices=[{manufacturer:'luminex'}];assert.
 vlanContext.app.controlNetwork.networkDevices=[{manufacturer:'Luminex'},{manufacturer:'Pathway'}];assert.deepEqual(JSON.parse(JSON.stringify(vlanContext.detectedVlanTemplateBrands())),['Luminex','Pathway']);
 const retained=vlanContext.normaliseVlanSetup({enabled:true,templateSource:'Luminex',templateCustomised:false,vlans:[{id:'0',name:'ISL',colour:'#ffffff',selected:true}]});assert.equal(retained.enabled,true);assert.equal(retained.vlans[0].selected,true);assert(vlanContext.vlanSetupCanAutoApply(retained));
 const custom=vlanContext.normaliseVlanSetup({enabled:false,templateSource:'Pathway',templateCustomised:true,vlans:[{id:'1',name:'Tour VLAN',colour:'#123456',selected:true}]});assert.equal(custom.vlans[0].name,'Tour VLAN');assert.equal(custom.vlans[0].colour,'#123456');assert(!vlanContext.vlanSetupCanAutoApply(custom));
-assert(source('applyVlanTemplate').includes('selectedById'));assert(source('applyVlanTemplate').includes('...setup'));assert(source('updateVlanSetupField').includes('templateCustomised=true'));assert(source('selectVlanColour').includes('templateCustomised=true'));assert(source('saveNetworkDeviceFromModal').includes('syncVlanTemplateDefaults()'));assert(source('removeNetworkEquipmentDevice').includes('syncVlanTemplateDefaults()'));assert(source('removeIpNetworkDevice').includes('syncVlanTemplateDefaults()'));assert(source('loadNetworkExpansionReference').includes('syncVlanTemplateDefaults()'));assert(source('vlanTemplateControlsMarkup').includes('Both Luminex and Pathway devices'));
+assert(source('applyVlanTemplate').includes('selectedById'));assert(source('applyVlanTemplate').includes('...setup'));assert(source('updateVlanSetupField').includes('templateCustomised=true'));assert(source('selectVlanColour').includes('templateCustomised=true'));assert(source('saveNetworkDeviceFromModal').includes('syncVlanTemplateDefaults()'));assert(source('removeNetworkEquipmentDevice').includes('syncVlanTemplateDefaults()'));assert(source('removeIpNetworkDevice').includes('syncVlanTemplateDefaults()'));assert(source('loadNetworkExpansionReference').includes('syncVlanTemplateDefaults()'));assert(source('vlanTemplateControlsMarkup').includes("['automatic','Automatic']"));
 console.log('PASS: V36 JSON VLAN templates, vendor detection, edit protection and retained VLAN state.');
 
 // V36.1 keeps automatic VLAN choice explicit and Power text readable.
-assert.equal(appVersion,'36.1');
+assert.equal(appVersion,'36.2');
 assert(source('vlanTemplateControlsMarkup').includes("['automatic','Automatic']"));assert(source('setVlanTemplateChoice').includes("value==='automatic'"));assert(source('automaticVlanTemplate').includes("brands.length===1?brands[0]:'Generic'"));assert(!source('renderVlanSetupPane').includes('A non-empty Global Subnet is used for new devices'));
 assert(source('powerPositionCellStyle').includes('powerWhiteTextOutline(presentation.text)'));assert(source('powerPositionCellStyle').includes("presentation.text==='#ffffff'?'.5mm':'0'"));assert(html.includes('.powerSheetTable .positionCol .powerPositionText{-webkit-text-stroke-width:var(--power-position-stroke-width,0);-webkit-text-stroke-color:var(--power-position-outline,transparent);paint-order:stroke fill}'));
 assert(source('fitPowerSocaColourText').includes('size>8'));assert(source('fitPowerSocaColourText').includes('powerSheetTextWidth'));assert(source('renderPowerSheetView').includes('fitPowerSocaColourText(view)'));assert(source('powerPdfSourceViews').includes('fitPowerSocaColourText(view)'));assert(html.includes('outline=powerWhiteTextOutline(presentation.text)'));
 console.log('PASS: V36.1 always-visible VLAN template selection and Power text fitting.');
+
+// V36.2 keeps VLAN Setup compact without template helper text.
+assert.equal(appVersion,'36.2');
+assert(html.includes('#vlanSetupPane label{display:block;font-size:13px;color:#333;font-weight:700}'));
+assert(html.includes('.vlanSetupTable .vlanNumberCol{width:72px}'));
+assert(html.includes('.vlanSetupTable .vlanColourCol{width:70px}'));
+assert(html.includes('.vlanSetupTable .vlanUseCol{width:45px}'));
+assert(html.includes('.vlanSetupTable th,.vlanSetupTable td{height:40px;'));
+assert(html.includes('.vlanSetupTable input{height:32px!important;text-align:center}'));
+assert(html.includes('.vlanSetupTable .vlanColourPicker summary{width:58px;height:32px}'));
+assert(!source('vlanTemplateControlsMarkup').includes('Template changes preserve'));
+console.log('PASS: V36.2 VLAN Setup labels, compact rows and column widths.');
 
 // Guard against page CSS being written into a JavaScript export template.
 const activeStyleStart=html.indexOf('<style'),activeStyleEnd=html.indexOf('</style>'),bodyStart=html.indexOf('<body'),sharedToolbarCss='/* V34 shared navigation and toolbar layout. */';
