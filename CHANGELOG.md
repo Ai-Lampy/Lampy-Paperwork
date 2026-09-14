@@ -1,3 +1,7 @@
+## V35.14 — White text outline
+
+- Applied a 1.3 mm black outline to every white colour-text value in live views, labels, Position Summary previews and Position Summary PDFs.
+
 ## V35.13 — Multi-colour text contrast
 
 - Applied a black text outline to every multi-colour value, including striped position displays and Position Summary exports.

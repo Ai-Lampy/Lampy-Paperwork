@@ -633,7 +633,7 @@ assert(html.includes('.btn{border:2px solid #000;background:rgb(217, 217, 217);b
 console.log('PASS: V35.1 Labels presentation, per-Socapex rear colours and navigation styling.');
 
 // V35.5 Power PDF and Fixture Patch colour-bubble corrections, plus V35.3 styling.
-assert.equal(appVersion,'35.13');
+assert.equal(appVersion,'35.14');
 assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(html.includes(".powerSheetTable{table-layout:auto!important;border-collapse:collapse;font-family:Georgia,'Times New Roman',serif;font-size:14px;border:2px solid #000}"));
 assert(html.includes('.powerSocaColourCol,.powerSheetTable .fixIdCol{width:70px!important;min-width:70px!important;max-width:70px!important}'));
@@ -736,8 +736,8 @@ assert(source('controlParameterSummaryMarkup').includes("row.mode+' Parameters'"
 console.log('PASS: V35.11 shared live-page toolbars and Control capacity Home Stats.');
 
 // V35.12 keeps Power colour and position text legible without layered shadows.
-assert(html.includes('.powerSocaColourInput{-webkit-text-stroke:.35px var(--colour-text-outline);text-shadow:none!important;paint-order:stroke fill}'));
-assert(html.includes('.powerSheetTable .positionCol .powerPositionText,.fanOutTable .positionCol .fanOutCellText{-webkit-text-stroke:.35px var(--power-position-outline,transparent);text-shadow:none!important;paint-order:stroke fill}'));
+assert(html.includes('.powerSocaColourInput{-webkit-text-stroke-width:1.3mm;-webkit-text-stroke-color:var(--colour-text-outline);text-shadow:none!important;paint-order:stroke fill}'));
+assert(html.includes('.powerSheetTable .positionCol .powerPositionText,.fanOutTable .positionCol .fanOutCellText{-webkit-text-stroke-width:1.3mm;-webkit-text-stroke-color:var(--power-position-outline,transparent);text-shadow:none!important;paint-order:stroke fill}'));
 assert(source('colourSetPresentation').includes("shadow:'none'"));
 assert(source('powerPositionCellStyle').includes('--power-position-outline:${presentation.outline}'));
 console.log('PASS: V35.12 Power colour and position text use one thin contrast outline without shadows.');
@@ -745,8 +745,14 @@ console.log('PASS: V35.12 Power colour and position text use one thin contrast o
 // V35.13 gives every multi-colour value a black outline.
 assert.equal(v359.colourSetPresentation(['#ffff00','#a855f7']).outline,'#000000');
 assert(source('controlPositionStripStyle').includes('--pos-text-outline:${presentation.outline}'));
-assert(html.includes('.controlPositionName,.positionPdfItem span{-webkit-text-stroke:.35px var(--pos-text-outline,transparent);paint-order:stroke fill;text-shadow:none!important}'));
+assert(html.includes('.controlPositionName,.positionPdfItem span{-webkit-text-stroke-width:1.3mm;-webkit-text-stroke-color:var(--pos-text-outline,transparent);paint-order:stroke fill;text-shadow:none!important}'));
 console.log('PASS: V35.13 multi-colour values use a black text outline.');
+
+// V35.14 gives all white colour text a 1.3 mm black outline in live and PDF output.
+assert(html.includes('.controlPositionName,.positionPdfItem span{-webkit-text-stroke-width:1.3mm;-webkit-text-stroke-color:var(--pos-text-outline,transparent);paint-order:stroke fill;text-shadow:none!important}'));
+assert(source('applyBackgroundColourTextPresentation').includes("outlineWidth='1.3mm'"));
+assert(source('pdfDrawPositionText').includes('const outline=1.3*PDF_MM_TO_PT'));
+console.log('PASS: V35.14 white colour text uses the 1.3 mm black outline rule.');
 
 // Guard against page CSS being written into a JavaScript export template.
 const activeStyleStart=html.indexOf('<style'),activeStyleEnd=html.indexOf('</style>'),bodyStart=html.indexOf('<body'),sharedToolbarCss='/* V34 shared navigation and toolbar layout. */';
