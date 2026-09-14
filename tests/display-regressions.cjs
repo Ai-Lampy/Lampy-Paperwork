@@ -835,7 +835,7 @@ console.log('PASS: V36.5 Control Table controls and Network Switch VLAN assignme
 
 // V36.6 centres Home statistics, simplifies Power actions, and keeps locations on Device Config parents.
 assert.equal(appVersion,'36.6');
-assert(html.includes('.homeStats{justify-content:center}'));
+assert(html.includes('.homeStats{grid-template-columns:repeat(auto-fit,115px)!important;justify-content:center}'));
 assert(source('homeStatsMarkup').includes("'Universes Patched'"));
 assert(html.includes('.btn.unpatch{border:2px solid #000}'));
 const powerToolbarSource=source('powerSheetToolbarMarkup');
