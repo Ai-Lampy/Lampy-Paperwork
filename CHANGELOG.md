@@ -1,3 +1,8 @@
+## V36.3 — VLAN Setup controls
+
+- Renamed the template field to VLAN Setup and refined the selector, Global Subnet, VLAN number and table controls.
+- Removed VLAN-number steppers and set the supplied Colour, Use and toggle dimensions.
+
 ## V36.2 — VLAN Setup layout
 
 - Removed VLAN Template helper text and tightened the VLAN Setup selector and table layout.
