@@ -1,8 +1,13 @@
+## V36 — Brand-aware VLAN defaults
+
+- Added JSON-driven Generic, Luminex and Pathway VLAN templates, including the full Luminex 0–20 and Pathway 1–10 ranges.
+- Detects project network-device manufacturers and applies the matching template only when the VLAN setup is new, legacy-default or template-managed without edits.
+- Preserves VLAN enabled state, selected VLAN toggles, device assignments and user-edited VLAN names and colours. When both supported brands are present, VLAN Setup asks you to choose and load a template.
+
 ## V35.14 — Position Summary white text outline
 
 - Applied a 1.3 mm black outline to white Position Summary text in the live summary, preview and exported PDF only.
 - Applied a separate 0.5 mm black outline to white text in the Power Calcs table.
-- Applied a 0.5 mm black outline to white text in the Power Calcs table.
 
 ## V35.13 — Multi-colour text contrast
 

@@ -1,13 +1,13 @@
 {
-  "title": "Lampy Paperwork V35 Walk-through",
+  "title": "Lampy Paperwork V36 Walk-through",
   "sections": [
     {
-      "title": "New in V35: Generated Labels and Network Toolbar",
+      "title": "New in V36: Brand-aware VLAN defaults",
       "type": "unordered",
       "items": [
-        "Labels opens Table View until you press Generate Labels. Front RCBO Labels and Rear Labels remain empty before generation.",
-        "Generate Labels saves the current Power-derived label content. Use Update Labels after Power changes to refresh the Front and Rear previews and their export.",
-        "Network Device Config combines its page tabs and Device Config actions in one toolbar.",
+        "Generic VLAN defaults load when no supported network-device brand is in the project. Adding Luminex or Pathway devices loads the matching template while the setup remains unedited.",
+        "If both Luminex and Pathway devices are present, VLAN Setup asks you to choose Generic, Luminex or Pathway before loading a template.",
+        "Editing a VLAN name or colour keeps your configuration. Templates do not change device VLAN assignments, selected VLANs or VLAN enabled status.",
         "Save status shows unsaved changes, successful saves and storage failures. Use Download recovery if saving fails. If another tab changes the project, download a recovery copy before reloading.",
         "Project imports validate data before replacing your project. ZIP imports check paths, extraction limits and file integrity.",
         "Revision tracking includes distro labels, output settings, positions, network settings and GDTF metadata. Saved custom fixtures remain selectable after reload."
@@ -73,7 +73,7 @@
         "Use + Network Device in IP Address' for IP-only equipment. Add reference-library rack hardware from Rack Layout.",
         "Global Subnet can automatically supply the subnet for new devices. Manually changing an interface subnet excludes it from later global updates until Apply to all Devices is used.",
         "Each device can contain two IP addresses. Subnet and VLAN values are stored per interface, while the device name, location, and notes remain shared.",
-        "The VLAN reference shows VLAN 0 Untagged/MGMT, VLAN 1 sACN, VLAN 2 Art-Net, and VLAN 3 RoboCam with matching table colours.",
+        "VLAN Setup uses the Generic, Luminex or Pathway template selected for the project. Names and colours remain editable, and device VLAN assignments remain unchanged when a template is loaded.",
         "A Notes value of SPARE uses the project-wide SPARE styling automatically."
       ]
     },

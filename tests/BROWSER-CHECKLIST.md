@@ -1,4 +1,4 @@
-# V35 browser release checks
+# V36 browser release checks
 
 **Use this checklist only when the user explicitly requests browser testing.** Interface changes, implementation requests and releases do not authorise browser testing. Static validation remains the default.
 
@@ -17,6 +17,7 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 | ZIP/GDTF import, corrupt ZIP rejected, built GDTF thumbnail | Required | Required | Required |
 | Device Config single-port parent promotion, multi-port children and full-width tables | Required | Required | Required |
 | Device Config VLAN Setup opens and refreshes; IP Address' has no VLAN Setup action | Required | Required | Required |
+| Generic, Luminex and Pathway VLAN templates detect project devices, preserve custom edits and retain VLAN status and assignments | Required | Required | Required |
 | Device Config Shift ranges, list drag-fill, Facing column and constrained directions | Required | Required | Required |
 | DMX Node and Network Switch management fields remain on parent rows | Required | Required | Required |
 | Filters start collapsed; Global Subnet defaults new devices and applies only on command | Required | Required | Required |
@@ -29,4 +30,3 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 | 1,000-fixture project editing, navigation and exports | Required | Required | Required |
 
 `node tests/release-regressions.cjs` covers calculation, migration, import and storage failures plus a 10,000-fixture data round trip. This is not a claim that the browser matrix or large-project rendering has passed. Record browser/version and actual outcomes when publishing.
-
