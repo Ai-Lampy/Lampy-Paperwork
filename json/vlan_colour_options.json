@@ -65,24 +65,109 @@
     "Luminex": {
       "vlans": [
         {
+          "id": 0,
+          "name": "ISL",
+          "hex": "#9E9D9D"
+        },
+        {
           "id": 1,
           "name": "Management",
-          "hex": "#FFFFFF"
+          "hex": "#24416B"
         },
         {
           "id": 2,
-          "name": "Lighting",
-          "hex": "#E5B7B7"
+          "name": "Group02",
+          "hex": "#F20D0D"
         },
         {
           "id": 3,
-          "name": "Video",
-          "hex": "#B7CBE4"
+          "name": "Group03",
+          "hex": "#009B3A"
         },
         {
           "id": 4,
-          "name": "Audio",
-          "hex": "#FFD5B3"
+          "name": "Group04",
+          "hex": "#00A6C8"
+        },
+        {
+          "id": 5,
+          "name": "Group05",
+          "hex": "#8A168C"
+        },
+        {
+          "id": 6,
+          "name": "Group06",
+          "hex": "#F28C00"
+        },
+        {
+          "id": 7,
+          "name": "Group07",
+          "hex": "#E5D100"
+        },
+        {
+          "id": 8,
+          "name": "Group08",
+          "hex": "#B0006D"
+        },
+        {
+          "id": 9,
+          "name": "Group09",
+          "hex": "#007B83"
+        },
+        {
+          "id": 10,
+          "name": "Group10",
+          "hex": "#9D4C59"
+        },
+        {
+          "id": 11,
+          "name": "Group11",
+          "hex": "#234AC7"
+        },
+        {
+          "id": 12,
+          "name": "Group12",
+          "hex": "#00672E"
+        },
+        {
+          "id": 13,
+          "name": "Group13",
+          "hex": "#934B3E"
+        },
+        {
+          "id": 14,
+          "name": "Group14",
+          "hex": "#C20A0A"
+        },
+        {
+          "id": 15,
+          "name": "Group15",
+          "hex": "#541078"
+        },
+        {
+          "id": 16,
+          "name": "Group16",
+          "hex": "#777000"
+        },
+        {
+          "id": 17,
+          "name": "Group17",
+          "hex": "#4B9800"
+        },
+        {
+          "id": 18,
+          "name": "Group18",
+          "hex": "#7A258C"
+        },
+        {
+          "id": 19,
+          "name": "Group19",
+          "hex": "#37545E"
+        },
+        {
+          "id": 20,
+          "name": "Group20",
+          "hex": "#1583C4"
         }
       ]
     },
@@ -90,23 +175,63 @@
       "vlans": [
         {
           "id": 1,
-          "name": "Management",
-          "hex": "#FFFFFF"
+          "name": "VLAN 1",
+          "colour": "Pink",
+          "hex": "#FF40FF"
         },
         {
           "id": 2,
-          "name": "Lighting",
-          "hex": "#E5B7B7"
+          "name": "VLAN 2",
+          "colour": "Orange",
+          "hex": "#FF9300"
         },
         {
           "id": 3,
-          "name": "Video",
-          "hex": "#B7CBE4"
+          "name": "VLAN 3",
+          "colour": "Blue",
+          "hex": "#0432FF"
         },
         {
           "id": 4,
-          "name": "Audio",
-          "hex": "#FFD5B3"
+          "name": "VLAN 4",
+          "colour": "Red",
+          "hex": "#FF2600"
+        },
+        {
+          "id": 5,
+          "name": "VLAN 5",
+          "colour": "Brown",
+          "hex": "#AB7942"
+        },
+        {
+          "id": 6,
+          "name": "VLAN 6",
+          "colour": "Purple",
+          "hex": "#942092"
+        },
+        {
+          "id": 7,
+          "name": "VLAN 7",
+          "colour": "Green",
+          "hex": "#73FB79"
+        },
+        {
+          "id": 8,
+          "name": "VLAN 8",
+          "colour": "Light Purple",
+          "hex": "#D883FF"
+        },
+        {
+          "id": 9,
+          "name": "VLAN 9",
+          "colour": "Cyan",
+          "hex": "#76D6FF"
+        },
+        {
+          "id": 10,
+          "name": "VLAN 10",
+          "colour": "Purple",
+          "hex": "#9437FF"
         }
       ]
     }
