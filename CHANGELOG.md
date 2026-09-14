@@ -1,3 +1,8 @@
+## V36.5 — Control table and switch VLANs
+
+- Removed Show/Hide Columns and Format from Control’s Table View toolbar.
+- Added VLAN assignment to every visible Network Switch port. A single-port switch retains its VLAN selector on the promoted parent row.
+
 ## V36.4 — Device Config Mode width
 
 - Corrected Device Config’s trailing-column width map: Role is compact and Mode now receives 110–180 px, preventing the Mode heading and values from wrapping.

@@ -118,7 +118,7 @@ const oldSegmented=c.deviceConfigSegmentedInput,oldProtocol=c.deviceConfigProtoc
 const managementBase={...multi,interfaces:[{slot:1,ip:'10.0.0.1',ipKey:'ip1',subnet:'255.255.255.0',subnetKey:'subnet1',vlan:'2',vlanKey:'vlan1'}],ports:multi.ports.map((port,index)=>({...port,facing:index?'rear':'front'}))},dmxNode={...managementBase,reference:{type:'DMX Node'}},networkSwitch={...managementBase,reference:{type:'Network Switch'}};
 assert.equal(c.deviceConfigNetworkParentMode(dmxNode),'dmx-node');assert.equal(c.deviceConfigPromotedNetworkPort(dmxNode),null);assert.equal(c.deviceConfigVisiblePorts(dmxNode).length,2);assert.equal(c.deviceConfigHasSecondaryInterface({...dmxNode,interfaces:[...dmxNode.interfaces,{slot:2}]}),false);
 const singleNode={...dmxNode,ports:[dmxNode.ports[0]]},singleSwitch={...networkSwitch,ports:[networkSwitch.ports[0]]};assert.equal(c.deviceConfigPromotedNetworkPort(singleNode)?.id,'eth-1');assert.equal(c.deviceConfigVisiblePorts(singleNode).length,0);assert.equal(c.deviceConfigPromotedNetworkPort(singleSwitch)?.id,'eth-1');assert.equal(c.deviceConfigVisiblePorts(singleSwitch).length,0);
-const nodeParent=c.deviceConfigParentRow(dmxNode,0),switchParent=c.deviceConfigParentRow(networkSwitch,0),nodePort=c.deviceConfigPortRow(dmxNode,dmxNode.ports[0],1);assert(nodeParent.includes('<seg data-key="ip1">'));assert(nodeParent.includes('<protocol>'));assert(nodeParent.includes('<vlan>'));assert(switchParent.includes('<seg data-key="ip1">'));assert(!switchParent.includes('<protocol>'));assert(!switchParent.includes('<vlan>'));assert(!nodePort.includes('<seg'));assert(!nodePort.includes('<protocol>'));assert(!nodePort.includes('<vlan>'));assert(nodePort.includes('>Front<'));
+const nodeParent=c.deviceConfigParentRow(dmxNode,0),switchParent=c.deviceConfigParentRow(networkSwitch,0),nodePort=c.deviceConfigPortRow(dmxNode,dmxNode.ports[0],1),switchPort=c.deviceConfigPortRow(networkSwitch,networkSwitch.ports[0],1),singleSwitchParent=c.deviceConfigParentRow(singleSwitch,0);assert(nodeParent.includes('<seg data-key="ip1">'));assert(nodeParent.includes('<protocol>'));assert(nodeParent.includes('<vlan>'));assert(switchParent.includes('<seg data-key="ip1">'));assert(!switchParent.includes('<protocol>'));assert(!switchParent.includes('<vlan>'));assert(!nodePort.includes('<seg'));assert(!nodePort.includes('<protocol>'));assert(!nodePort.includes('<vlan>'));assert(nodePort.includes('>Front<'));assert(switchPort.includes('<vlan>'));assert(singleSwitchParent.includes('<vlan>'));
 c.deviceConfigSegmentedInput=oldSegmented;c.deviceConfigProtocolSelect=oldProtocol;c.deviceConfigVlanSelect=oldVlan;
 for(const [markup,count] of [[control,16],[config,14]])for(const [,row] of markup.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/g))assert.equal((row.match(/<t[dh]\b/g)||[]).length,count);
 assert(config.includes('>Location<'));assert(config.includes('deviceConfigFacingCol'));assert(config.includes('data-dc-key="location"'));assert(config.includes('data-dc-col="11"'));assert(config.includes('data-dc-col="12"'));
@@ -633,7 +633,7 @@ assert(html.includes('.btn{border:2px solid #000;background:rgb(217, 217, 217);b
 console.log('PASS: V35.1 Labels presentation, per-Socapex rear colours and navigation styling.');
 
 // V35.5 Power PDF and Fixture Patch colour-bubble corrections, plus V35.3 styling.
-assert.equal(appVersion,'36.4');
+assert.equal(appVersion,'36.5');
 assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(html.includes(".powerSheetTable{table-layout:auto!important;border-collapse:collapse;font-family:Georgia,'Times New Roman',serif;font-size:14px;border:2px solid #000}"));
 assert(html.includes('.powerSocaColourCol,.powerSheetTable .fixIdCol{width:70px!important;min-width:70px!important;max-width:70px!important}'));
@@ -762,7 +762,7 @@ assert(source('powerSheetRowMarkup').includes('--power-soca-outline:${powerWhite
 console.log('PASS: V35.14 Power Calcs white text uses a 0.5 mm black outline.');
 
 // V36 uses JSON VLAN templates without replacing customised project settings.
-assert.equal(appVersion,'36.4');
+assert.equal(appVersion,'36.5');
 const vlanTemplateJson=JSON.parse(fs.readFileSync(root+'json/vlan_colour_options.json','utf8'));
 const vlanContext=vm.createContext({
  DEFAULT_IP_VLANS:Array.from({length:11},(_,index)=>({id:String(index),name:['Untagged/MGMT','sACN','Art-Net','RoboCam'][index]||'',colour:['#ffffff','#e5b7b7','#b7cbe4','#ffd5b3'][index]||'#ffffff',selected:false})),
@@ -783,14 +783,14 @@ assert(source('applyVlanTemplate').includes('selectedById'));assert(source('appl
 console.log('PASS: V36 JSON VLAN templates, vendor detection, edit protection and retained VLAN state.');
 
 // V36.1 keeps automatic VLAN choice explicit and Power text readable.
-assert.equal(appVersion,'36.4');
+assert.equal(appVersion,'36.5');
 assert(source('vlanTemplateControlsMarkup').includes("['automatic','Automatic']"));assert(source('setVlanTemplateChoice').includes("value==='automatic'"));assert(source('automaticVlanTemplate').includes("brands.length===1?brands[0]:'Generic'"));assert(!source('renderVlanSetupPane').includes('A non-empty Global Subnet is used for new devices'));
 assert(source('powerPositionCellStyle').includes('powerWhiteTextOutline(presentation.text)'));assert(source('powerPositionCellStyle').includes("presentation.text==='#ffffff'?'.5mm':'0'"));assert(html.includes('.powerSheetTable .positionCol .powerPositionText{-webkit-text-stroke-width:var(--power-position-stroke-width,0);-webkit-text-stroke-color:var(--power-position-outline,transparent);paint-order:stroke fill}'));
 assert(source('fitPowerSocaColourText').includes('size>8'));assert(source('fitPowerSocaColourText').includes('powerSheetTextWidth'));assert(source('renderPowerSheetView').includes('fitPowerSocaColourText(view)'));assert(source('powerPdfSourceViews').includes('fitPowerSocaColourText(view)'));assert(html.includes('outline=powerWhiteTextOutline(presentation.text)'));
 console.log('PASS: V36.1 always-visible VLAN template selection and Power text fitting.');
 
 // V36.2 keeps VLAN Setup compact without template helper text.
-assert.equal(appVersion,'36.4');
+assert.equal(appVersion,'36.5');
 assert(html.includes('#vlanSetupPane label{display:block;font-size:13px;color:#333;font-weight:700;border:none;margin:0px;padding:0px}'));
 assert(html.includes('.vlanSetupTable .vlanNumberCol{width:72px}'));
 assert(html.includes('.vlanSetupTable .vlanColourCol{width:55px}'));
@@ -802,7 +802,7 @@ assert(!source('vlanTemplateControlsMarkup').includes('Template changes preserve
 console.log('PASS: V36.2 VLAN Setup labels, compact rows and column widths.');
 
 // V36.3 refines VLAN Setup controls without changing VLAN data.
-assert.equal(appVersion,'36.4');
+assert.equal(appVersion,'36.5');
 assert(html.includes('.logoTitleRow{margin-bottom:0px}'));
 assert(html.includes('.vlanGlobalSubnetCard .ipSegmentedField{border:none;border-radius:6px;background:#fff;padding:2px 5px}'));
 assert(html.includes('#vlanSetupPane label{display:block;font-size:13px;color:#333;font-weight:700;border:none;margin:0px;padding:0px}'));
@@ -820,9 +820,18 @@ assert(html.includes('.deviceConfigDeleteButton{width:32px;height:20px;border:0;
 console.log('PASS: V36.3 Device Config delete control dimensions.');
 
 // V36.4 corrects Device Config's full trailing-column map so Mode is not starved by Role.
-assert.equal(appVersion,'36.4');
+assert.equal(appVersion,'36.5');
 assert(html.includes("const DEVICE_CONFIG_WIDTH_DEFAULTS=[[30,30],[45,70],[40,60],[100,130],[60,60],[100,180],[110,110],[110,110],[40,100],[40,100],[40,150],[80,120],[80,90],[110,180],[70,110],[80,120],[90,220],[34,34]];"));
 console.log('PASS: V36.4 Device Config Role and Mode width allocation.');
+
+// V36.5 keeps Control Table View focused and permits VLAN assignment on every switch port.
+assert.equal(appVersion,'36.5');
+assert(!source('renderConsolesTab').includes('openDeviceConfigColumns()'));
+assert(!source('renderConsolesTab').includes('openDeviceConfigFormat()'));
+assert(source('renderConsolesTab').includes('expandAllControlDevices()'));
+assert(source('deviceConfigPortRow').includes("parentMode==='network-switch'"));
+assert(source('deviceConfigParentRow').includes("parentMode!=='network-switch'||!!singlePort"));
+console.log('PASS: V36.5 Control Table controls and Network Switch VLAN assignment.');
 
 // Guard against page CSS being written into a JavaScript export template.
 const activeStyleStart=html.indexOf('<style'),activeStyleEnd=html.indexOf('</style>'),bodyStart=html.indexOf('<body'),sharedToolbarCss='/* V34 shared navigation and toolbar layout. */';
