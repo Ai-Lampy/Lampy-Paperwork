@@ -1,50 +1,114 @@
 {
-  "schema": "lampy_vlan_colour_options_v1",
-  "description": "Dedicated colour choices for IP Address VLAN legends and VLAN table cells.",
-  "colours": [
-    {
-      "name": "",
-      "hex": "#FFFFFF"
+  "schema": "3",
+  "description": "Brand-specific default VLAN names and colours, with a shared fallback colour palette.",
+  "defaultBrand": "Generic",
+  "brands": {
+    "Generic": {
+      "vlans": [
+        {
+          "id": 1,
+          "name": "VLAN 1",
+          "hex": "#FFFFFF"
+        },
+        {
+          "id": 2,
+          "name": "VLAN 2",
+          "hex": "#E5B7B7"
+        },
+        {
+          "id": 3,
+          "name": "VLAN 3",
+          "hex": "#B7CBE4"
+        },
+        {
+          "id": 4,
+          "name": "VLAN 4",
+          "hex": "#FFD5B3"
+        },
+        {
+          "id": 5,
+          "name": "VLAN 5",
+          "hex": "#FF0000"
+        },
+        {
+          "id": 6,
+          "name": "VLAN 6",
+          "hex": "#FF881A"
+        },
+        {
+          "id": 7,
+          "name": "VLAN 7",
+          "hex": "#FFFF3D"
+        },
+        {
+          "id": 8,
+          "name": "VLAN 8",
+          "hex": "#00B311"
+        },
+        {
+          "id": 9,
+          "name": "VLAN 9",
+          "hex": "#008EE6"
+        },
+        {
+          "id": 10,
+          "name": "VLAN 10",
+          "hex": "#9C54FF"
+        },
+        {
+          "id": 11,
+          "name": "VLAN 11",
+          "hex": "#9E9D9D"
+        }
+      ]
     },
-    {
-      "name": "",
-      "hex": "#E5B7B7"
+    "Luminex": {
+      "vlans": [
+        {
+          "id": 1,
+          "name": "Management",
+          "hex": "#FFFFFF"
+        },
+        {
+          "id": 2,
+          "name": "Lighting",
+          "hex": "#E5B7B7"
+        },
+        {
+          "id": 3,
+          "name": "Video",
+          "hex": "#B7CBE4"
+        },
+        {
+          "id": 4,
+          "name": "Audio",
+          "hex": "#FFD5B3"
+        }
+      ]
     },
-    {
-      "name": "",
-      "hex": "#B7CBE4"
-    },
-    {
-      "name": "",
-      "hex": "#FFD5B3"
-    },
-    {
-      "name": "",
-      "hex": "#FF0000"
-    },
-    {
-      "name": "",
-      "hex": "#FF881A"
-    },
-    {
-      "name": "",
-      "hex": "#FFFF3D"
-    },
-    {
-      "name": "",
-      "hex": "#00B311"
-    },
-    {
-      "name": "",
-      "hex": "#008EE6"
-    },
-    {
-      "name": "",
-      "hex": "#9C54FF"
-    },
-    {
-      "name": "",
-      "hex": "#9E9D9D"
+    "Pathway": {
+      "vlans": [
+        {
+          "id": 1,
+          "name": "Management",
+          "hex": "#FFFFFF"
+        },
+        {
+          "id": 2,
+          "name": "Lighting",
+          "hex": "#E5B7B7"
+        },
+        {
+          "id": 3,
+          "name": "Video",
+          "hex": "#B7CBE4"
+        },
+        {
+          "id": 4,
+          "name": "Audio",
+          "hex": "#FFD5B3"
+        }
+      ]
     }
-  ]
+  }
 }
