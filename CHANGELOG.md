@@ -1,3 +1,9 @@
+## V35.9 — Shared colour-field text rule
+
+- Standardised editable colour fields across the app: blank or white fields use black text without an outline.
+- All other colour fields now use white text with a black outline, matching Position Summary output.
+- Applied the same rule to Fixture Patch colour bubbles and their PDF output.
+
 ## V35.8 — Independent Socapex colour rendering
 
 - Added Colour 3 to Rear Socapex Label backgrounds and their PDF colour-capture data.

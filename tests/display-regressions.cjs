@@ -633,13 +633,13 @@ assert(html.includes('.btn{border:2px solid #000;background:rgb(217, 217, 217);b
 console.log('PASS: V35.1 Labels presentation, per-Socapex rear colours and navigation styling.');
 
 // V35.5 Power PDF and Fixture Patch colour-bubble corrections, plus V35.3 styling.
-assert.equal(appVersion,'35.8');
+assert.equal(appVersion,'35.9');
 assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(html.includes(".powerSheetTable{table-layout:auto!important;border-collapse:collapse;font-family:Georgia,'Times New Roman',serif;font-size:14px;border:2px solid #000}"));
 assert(html.includes('.powerSocaColourCol,.powerSheetTable .fixIdCol{width:70px!important;min-width:70px!important;max-width:70px!important}'));
 assert(html.includes('.powerSheetTable .fixIdCol{width:70px!important;min-width:70px!important;max-width:70px!important;font-weight:800;font-size:16px}'));
 assert(html.includes('.powerSocaColourInput{-webkit-text-stroke:.6px var(--colour-text-outline);text-shadow:none}'));
-assert(source('colourInputStyle').includes("outlineColour=textColour==='#ffffff'?'#111111':'#ffffff'"));
+assert(source('colourInputStyle').includes('colourFieldPresentation(value)'));
 assert(source('powerSocaColourCellMarkup').includes("'color powerSocaColourInput'")&&source('powerSocaColourCellMarkup').includes(',true,true)'));
 assert(html.includes('.fixturePatchColour{font-weight:900;text-transform:uppercase;border:1px solid #000}'));
 assert(source('labelGenerationTimestamp').includes('Labels Generated At - ${two(date.getHours())}:${two(date.getMinutes())}, on ${two(date.getDate())}/${two(date.getMonth()+1)}/${String(date.getFullYear()).slice(-2)}'));
@@ -691,6 +691,21 @@ assert.deepEqual(JSON.parse(JSON.stringify(v358.rearSocaColours(independentColou
 assert(v358.rearSocaBackground(independentColours).includes('#ff0000')&&v358.rearSocaBackground(independentColours).includes('#0000ff'));
 assert(v358.cssStripe('',independentColours.c2,true,independentColours.c3,true).includes('#ff0000')&&v358.cssStripe('',independentColours.c2,true,independentColours.c3,true).includes('#0000ff'));
 console.log('PASS: V35.8 independent Colour 2/3 rendering and Rear Label Colour 3 output.');
+
+// V35.9 applies the Position Summary text rule to every editable colour field.
+const v359=vm.createContext({colourTextToHex:value=>String(value||''),normaliseHex:value=>String(value||'')});
+vm.runInContext(source('colourFieldPresentation'),v359);
+assert.deepEqual(JSON.parse(JSON.stringify(v359.colourFieldPresentation(''))),{background:'#ffffff',text:'#111111',outline:'transparent',shadow:'none'});
+assert.equal(v359.colourFieldPresentation('#ffffff').text,'#111111');
+assert.equal(v359.colourFieldPresentation('#ffff00').text,'#ffffff');
+assert.equal(v359.colourFieldPresentation('#ffff00').outline,'#000000');
+assert(source('setColourTextInput').includes('applyColourFieldPresentation'));
+assert(source('styleColourTextInput').includes('applyColourFieldPresentation'));
+assert(source('stylePositionColourInput').includes('applyColourFieldPresentation'));
+assert(source('colourInputControl').includes('text-shadow:none;--colour-text-outline:transparent'));
+assert(source('patchColourCss').includes('colourFieldPresentation'));
+assert(source('patchPdfColourMarkup').includes('colourFieldPresentation'));
+console.log('PASS: V35.9 shared colour-field text and outline rule.');
 
 // Guard against page CSS being written into a JavaScript export template.
 const activeStyleStart=html.indexOf('<style'),activeStyleEnd=html.indexOf('</style>'),bodyStart=html.indexOf('<body'),sharedToolbarCss='/* V34 shared navigation and toolbar layout. */';
