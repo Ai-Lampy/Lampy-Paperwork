@@ -1,0 +1,168 @@
+{
+  "vendor": {
+    "name": "Christie Lites UK",
+    "lengthUnit": "ft"
+  },
+  "cables": {
+    "Data": [
+      {
+        "name": "XLR-3",
+        "direction": "male-female",
+        "connectors": {
+          "male": "XLR-3",
+          "female": "XLR-3"
+        },
+        "lengths": [4,8,16,24,48,72,96,144,304]
+      },
+      {
+        "name": "XLR-4",
+        "direction": "male-female",
+        "connectors": {
+          "male": "XLR-4",
+          "female": "XLR-4"
+        },
+        "lengths": [4,8,16,24,32,40,48,56,72,96,144]
+      },
+      {
+        "name": "XLR-5",
+        "direction": "male-female",
+        "connectors": {
+          "male": "XLR-5",
+          "female": "XLR-5"
+        },
+        "lengths": [4,8,16,24,32,40,48,56,64,72,80,88,96,144]
+      },
+	  {
+		  "name": "XLR-5 Black",
+		  "direction": "male-female",
+		  "connectors": {
+			  "male": "XLR-5",
+			  "female": "XLR-5"
+		  },
+		  "lengths": [4,8,16,24,32,40,48,56,64,72,96,144]
+	  },
+	  {
+		  "name": "XLR-7",
+		  "direction": "male-female",
+		  "connectors": {
+			  "male": "XLR-7",
+			  "female": "XLR-7"
+		  },
+		  "lengths": [8,16,24,32,48,64,96,144]
+	  },
+      {
+        "name": "Ethernet",
+        "direction": "bidirectional",
+        "connectors": {
+          "end": "RJ45"
+        },
+        "lengths": [4,8,16]
+      },
+      {
+        "name": "Ethercon",
+        "direction": "bidirectional",
+        "connectors": {
+          "end": "etherCON"
+        },
+        "lengths": [24,48,72,96,144,164,304]
+      },
+	  {
+		  "name": "OpticalCON Quad Fiber",
+		  "direction": "bidirectional",
+		  "connectors": {
+			  "end": "Quad Fiber"
+		  },
+		  "lengths": [144,304,504]
+	  },
+	  {
+		  "name": "Whirlwind 12-Pair",
+		  "direction": "male-female",
+		  "connectors": {
+			  "male": "WW 12-Pin",
+			  "female": "WW 12-Pin"
+		  },
+		  "lengths": [24,96,144,304]
+	  }
+    ],
+    "Multi": [
+      {
+        "name": "Socapex 19-Pin",
+        "direction": "male-female",
+        "connectors": {
+          "male": "Socapex 19-Pin",
+          "female": "Socapex 19-Pin"
+        },
+        "lengths": [8,16,24,32,40,48,56,64,72,80,88,96,144]
+      }
+    ],
+    "Mains": [
+      {
+        "name": "32A 3ø",
+        "direction": "male-female",
+        "connectors": {
+          "male": "CEE 32A 3ø",
+          "female": "CEE 32A 3ø"
+        },
+        "lengths": [8,24,48,72,96,144,504]
+      },
+      {
+        "name": "63A 3ø",
+        "direction": "male-female",
+        "connectors": {
+          "male": "CEE 63A 3ø",
+          "female": "CEE 63A 3ø"
+        },
+        "lengths": [8,24,48,72,96]
+      },
+      {
+        "name": "125A 3ø",
+        "direction": "male-female",
+        "connectors": {
+          "male": "CEE 125A 3ø",
+          "female": "CEE 125A 3ø"
+        },
+        "lengths": [8,24,48,96]
+      }
+    ],
+    "TRS": [
+      {
+        "name": "TRUE 1",
+        "direction": "male-female",
+        "connectors": {
+          "male": "powerCON TRUE1",
+          "female": "powerCON TRUE1"
+        },
+        "lengths": [4,8,16,24,32,40,48,64,72,80,88,96,144]
+      },
+      {
+        "name": "13A",
+        "direction": "male-female",
+        "connectors": {
+          "male": "13A Plug",
+          "female": "13A Socket"
+        },
+        "lengths": [8,16,24,48,72,96]
+      }
+    ],
+	"Motor": [
+		{
+			"name": "Socapex 7-Pin",
+			"direction": "male-female",
+			"connectors": {
+				"male": "Socapex 7-Pin",
+				"female": "Socapex 7-Pin"
+			},
+			"lengths": [8,16,24,32,40,48,56,64,72,80,88,96,144]
+			},
+		{
+			"name": "Tajimi Motor Control",
+			"direction": "male-female",
+			"connectors": {
+				"male": "Tajimi",
+				"female": "Tajimi"
+			},
+			"lengths": [24,48,96,144]
+		}
+	]
+  }
+}
