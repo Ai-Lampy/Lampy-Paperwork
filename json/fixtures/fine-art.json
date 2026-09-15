@@ -18,12 +18,14 @@
           "Standard 23ch": {
             "channels": 23,
             "gdtfMode": "Standard 23ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 21
           },
           "PixTen48": {
             "channels": 48,
             "gdtfMode": "PixTen48",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 56
           }
         }
       },
@@ -46,17 +48,20 @@
           "STND": {
             "channels": 32,
             "gdtfMode": "STND",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "16BT": {
             "channels": 35,
             "gdtfMode": "16BT",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "EXTN": {
             "channels": 42,
             "gdtfMode": "EXTN",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           }
         },
         "suggestedFileName": "Fine_Art__FINE_1000ZLH_PERF.gdtf"
@@ -80,17 +85,20 @@
           "STND": {
             "channels": 26,
             "gdtfMode": "STND",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "16Bit": {
             "channels": 29,
             "gdtfMode": "16Bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "EXTN": {
             "channels": 34,
             "gdtfMode": "EXTN",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           }
         },
         "suggestedFileName": "Fine_Art__FINE_1000ZLH_SPOT2.gdtf"
@@ -114,17 +122,20 @@
           "EXTN 54": {
             "channels": 54,
             "gdtfMode": "EXTN 54",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           },
           "16 bit": {
             "channels": 35,
             "gdtfMode": "16 bit",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           },
           "Stand32": {
             "channels": 32,
             "gdtfMode": "Stand32",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 32
           }
         },
         "suggestedFileName": "Fine_Art__FINE_1200E_2_PERF.gdtf"
@@ -148,17 +159,20 @@
           "16BT": {
             "channels": 35,
             "gdtfMode": "16BT",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "STND": {
             "channels": 32,
             "gdtfMode": "STND",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "EXTN": {
             "channels": 42,
             "gdtfMode": "EXTN",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           }
         },
         "suggestedFileName": "Fine_Art__FINE_1200L_PERF.gdtf"
@@ -182,17 +196,20 @@
           "EXTN": {
             "channels": 21,
             "gdtfMode": "EXTN",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "16BT": {
             "channels": 17,
             "gdtfMode": "16BT",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 13
           },
           "stnd": {
             "channels": 15,
             "gdtfMode": "stnd",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           }
         },
         "suggestedFileName": "Fine_Art__FINE_120LS_BEAM_IP.gdtf"
@@ -216,17 +233,20 @@
           "STND": {
             "channels": 32,
             "gdtfMode": "STND",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "16BT": {
             "channels": 35,
             "gdtfMode": "16BT",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "EXTN": {
             "channels": 42,
             "gdtfMode": "EXTN",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           }
         },
         "suggestedFileName": "Fine_Art__FINE_1400L_BSWF.gdtf"
@@ -250,17 +270,20 @@
           "EXTN": {
             "channels": 44,
             "gdtfMode": "EXTN",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "16 Bit 40": {
             "channels": 40,
             "gdtfMode": "16 Bit 40",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           },
           "Stand 32": {
             "channels": 32,
             "gdtfMode": "Stand 32",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           }
         },
         "suggestedFileName": "Fine_Art__FINE_1400LB_BSWF_IP.gdtf"
@@ -284,17 +307,20 @@
           "11CH": {
             "channels": 11,
             "gdtfMode": "11CH",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "6CH ": {
             "channels": 6,
             "gdtfMode": "6CH ",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "5CH": {
             "channels": 5,
             "gdtfMode": "5CH",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           }
         },
         "suggestedFileName": "Fine_Art__FINE_1514_DG.gdtf"
@@ -318,17 +344,20 @@
           "STND-16CH": {
             "channels": 16,
             "gdtfMode": "STND-16CH",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "HSI-11CH": {
             "channels": 11,
             "gdtfMode": "HSI-11CH",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "EXTN-24CH": {
             "channels": 24,
             "gdtfMode": "EXTN-24CH",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           }
         },
         "suggestedFileName": "Fine_Art__FINE_1519_WASH.gdtf"
@@ -353,22 +382,26 @@
           "STND": {
             "channels": 21,
             "gdtfMode": "STND",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Shape": {
             "channels": 35,
             "gdtfMode": "Shape",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "RGB": {
             "channels": 132,
             "gdtfMode": "RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 125
           },
           "RGBW": {
             "channels": 169,
             "gdtfMode": "RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 162
           }
         },
         "suggestedFileName": "Fine_Art__FINE_1537_PIXIE.gdtf"
@@ -392,17 +425,20 @@
           "STND": {
             "channels": 34,
             "gdtfMode": "STND",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           },
           "16BT": {
             "channels": 41,
             "gdtfMode": "16BT",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 35
           },
           "EXTN": {
             "channels": 45,
             "gdtfMode": "EXTN",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           }
         },
         "suggestedFileName": "Fine_Art__FINE_1700_LH_ISPOT.gdtf"
@@ -427,22 +463,26 @@
           "STND": {
             "channels": 39,
             "gdtfMode": "STND",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 36
           },
           "16BT": {
             "channels": 48,
             "gdtfMode": "16BT",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "EXTN": {
             "channels": 52,
             "gdtfMode": "EXTN",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 40
           },
           "PERF": {
             "channels": 48,
             "gdtfMode": "PERF",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           }
         },
         "suggestedFileName": "Fine_Art__FINE_1700LC_ISPOT.gdtf"
@@ -466,17 +506,20 @@
           "EXTN 46": {
             "channels": 46,
             "gdtfMode": "EXTN 46",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "16 Bit 42": {
             "channels": 42,
             "gdtfMode": "16 Bit 42",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           },
           "Stand  34": {
             "channels": 34,
             "gdtfMode": "Stand  34",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 31
           }
         },
         "suggestedFileName": "Fine_Art__FINE_1700LH_ISPOT_IP.gdtf"
@@ -500,17 +543,20 @@
           "STND": {
             "channels": 32,
             "gdtfMode": "STND",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           },
           "16BT": {
             "channels": 40,
             "gdtfMode": "16BT",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           },
           "EXTN": {
             "channels": 44,
             "gdtfMode": "EXTN",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           }
         },
         "suggestedFileName": "Fine_Art__FINE_2000LH_iSPOT.gdtf"
@@ -533,12 +579,14 @@
           "STND": {
             "channels": 21,
             "gdtfMode": "STND",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "16BT": {
             "channels": 25,
             "gdtfMode": "16BT",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           }
         },
         "suggestedFileName": "Fine_Art__FINE_2500E_WASH.gdtf"
@@ -562,17 +610,20 @@
           "9CH": {
             "channels": 9,
             "gdtfMode": "9CH",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "6CH": {
             "channels": 9,
             "gdtfMode": "6CH",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "5CH": {
             "channels": 5,
             "gdtfMode": "5CH",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           }
         },
         "suggestedFileName": "Fine_Art__FINE_372_DG.gdtf"
@@ -596,17 +647,20 @@
           "EXTN 23": {
             "channels": 23,
             "gdtfMode": "EXTN 23",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "16BIT 1": {
             "channels": 21,
             "gdtfMode": "16BIT 1",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "STND": {
             "channels": 17,
             "gdtfMode": "STND",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           }
         },
         "suggestedFileName": "Fine_Art__FINE_380_BEAM.gdtf"
@@ -630,17 +684,20 @@
           "STND": {
             "channels": 20,
             "gdtfMode": "STND",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "16BT ": {
             "channels": 24,
             "gdtfMode": "16BT ",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 21
           },
           "EXTN": {
             "channels": 27,
             "gdtfMode": "EXTN",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 21
           }
         },
         "suggestedFileName": "Fine_Art__FINE_380_BSW.gdtf"
@@ -665,22 +722,26 @@
           "7CH": {
             "channels": 7,
             "gdtfMode": "7CH",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "DIRS": {
             "channels": 17,
             "gdtfMode": "DIRS",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 18
           },
           "RGB": {
             "channels": 4,
             "gdtfMode": "RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "STD0": {
             "channels": 5,
             "gdtfMode": "STD0",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           }
         },
         "suggestedFileName": "Fine_Art__FINE_400CL.gdtf"
@@ -704,17 +765,20 @@
           "Mode 3  10CH": {
             "channels": 10,
             "gdtfMode": "Mode 3  10CH",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "Mode1 6ch": {
             "channels": 6,
             "gdtfMode": "Mode1 6ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "Mode2 7ch": {
             "channels": 7,
             "gdtfMode": "Mode2 7ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           }
         },
         "suggestedFileName": "Fine_Art__FINE_400D_LEKO.gdtf"
@@ -739,22 +803,26 @@
           "STND": {
             "channels": 21,
             "gdtfMode": "STND",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Shape": {
             "channels": 35,
             "gdtfMode": "Shape",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "RBG": {
             "channels": 57,
             "gdtfMode": "RBG",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 50
           },
           "RGBW": {
             "channels": 69,
             "gdtfMode": "RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 62
           }
         },
         "suggestedFileName": "Fine_Art__FINE_4012_PIXIE.gdtf"
@@ -779,22 +847,26 @@
           "STND": {
             "channels": 21,
             "gdtfMode": "STND",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Shape": {
             "channels": 35,
             "gdtfMode": "Shape",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "RBG": {
             "channels": 33,
             "gdtfMode": "RBG",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           },
           "RGBW": {
             "channels": 37,
             "gdtfMode": "RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           }
         },
         "suggestedFileName": "Fine_Art__FINE_4019_WASH_PLUS.gdtf"
@@ -819,22 +891,26 @@
           "STND": {
             "channels": 21,
             "gdtfMode": "STND",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Shape": {
             "channels": 35,
             "gdtfMode": "Shape",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "RGB": {
             "channels": 132,
             "gdtfMode": "RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 125
           },
           "RGBW": {
             "channels": 169,
             "gdtfMode": "RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 162
           }
         },
         "suggestedFileName": "Fine_Art__FINE_4037_PIXIE_PLUS.gdtf"
@@ -859,22 +935,26 @@
           "STND": {
             "channels": 21,
             "gdtfMode": "STND",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Shape": {
             "channels": 35,
             "gdtfMode": "Shape",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "RGB": {
             "channels": 132,
             "gdtfMode": "RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 125
           },
           "RGBW": {
             "channels": 169,
             "gdtfMode": "RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 162
           }
         },
         "suggestedFileName": "Fine_Art__FINE_4037_WASH.gdtf"
@@ -899,22 +979,26 @@
           "STND": {
             "channels": 21,
             "gdtfMode": "STND",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "Shape": {
             "channels": 35,
             "gdtfMode": "Shape",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "RGB": {
             "channels": 132,
             "gdtfMode": "RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 125
           },
           "RGBW": {
             "channels": 169,
             "gdtfMode": "RGBW",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 162
           }
         },
         "suggestedFileName": "Fine_Art__FINE_4037_WASH_PLUS.gdtf"
@@ -936,7 +1020,8 @@
           "STND": {
             "channels": 0,
             "gdtfMode": "STND",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 0
           }
         },
         "suggestedFileName": "Fine_Art__FINE_407_WASH.gdtf"
@@ -960,17 +1045,20 @@
           "EXTN-31CH": {
             "channels": 31,
             "gdtfMode": "EXTN-31CH",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "16BIT-25CH": {
             "channels": 25,
             "gdtfMode": "16BIT-25CH",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           },
           "Stand-22CH": {
             "channels": 22,
             "gdtfMode": "Stand-22CH",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 19
           }
         },
         "suggestedFileName": "Fine_Art__FINE_420L_SPOT.gdtf"
@@ -993,12 +1081,14 @@
           "STND": {
             "channels": 30,
             "gdtfMode": "STND",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "16 BT": {
             "channels": 34,
             "gdtfMode": "16 BT",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 29
           }
         },
         "suggestedFileName": "Fine_Art__FINE_470_BSW.gdtf"
@@ -1022,17 +1112,20 @@
           "EXTN": {
             "channels": 32,
             "gdtfMode": "EXTN",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 26
           },
           "16BT ": {
             "channels": 28,
             "gdtfMode": "16BT ",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           },
           "STND": {
             "channels": 24,
             "gdtfMode": "STND",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 21
           }
         },
         "suggestedFileName": "Fine_Art__FINE_600_BSW_II.gdtf"
@@ -1056,17 +1149,20 @@
           "EXTN 34CH": {
             "channels": 34,
             "gdtfMode": "EXTN 34CH",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "16 BIT 30CH": {
             "channels": 30,
             "gdtfMode": "16 BIT 30CH",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 24
           },
           "STAND 23CH": {
             "channels": 23,
             "gdtfMode": "STAND 23CH",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 20
           }
         },
         "suggestedFileName": "Fine_Art__FINE_600LB_BSW_IP.gdtf"
@@ -1090,17 +1186,20 @@
           "EXTN": {
             "channels": 45,
             "gdtfMode": "EXTN",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 39
           },
           "16bit 41ch": {
             "channels": 41,
             "gdtfMode": "16bit 41ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 35
           },
           "STAND 23CH": {
             "channels": 33,
             "gdtfMode": "STAND 23CH",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 30
           }
         },
         "suggestedFileName": "Fine_Art__FINE_600LB_BSWF_IP.gdtf"
@@ -1125,22 +1224,26 @@
           "Stand-16": {
             "channels": 16,
             "gdtfMode": "Stand-16",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           },
           "Pixels-65": {
             "channels": 9,
             "gdtfMode": "Pixels-65",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "Strobe-11": {
             "channels": 11,
             "gdtfMode": "Strobe-11",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "Pixels- 66": {
             "channels": 65,
             "gdtfMode": "Pixels- 66",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 64
           }
         },
         "suggestedFileName": "Fine_Art__FINE_960C_STROBE_IP.gdtf"

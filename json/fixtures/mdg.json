@@ -20,7 +20,8 @@
           }
         }
       },
-      "shortName": "ATME"
+      "shortName": "ATME",
+      "weight": 16.8
     },
     {
       "fixture": "The ONE",
@@ -41,7 +42,8 @@
           }
         }
       },
-      "shortName": "The ONE"
+      "shortName": "The ONE",
+      "weight": 33.5
     },
     {
       "fixture": "theFAN",

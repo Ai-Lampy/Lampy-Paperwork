@@ -17,7 +17,8 @@
           "Direct": {
             "channels": 7,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         }
       },
@@ -26,7 +27,7 @@
     {
       "fixture": "ColorSource Fresnel V",
       "watts": 147,
-      "weight": 8.4,
+      "weight": 6.24,
       "modes": {
         "Direct Mode": 9,
         "Standard Mode": 7,
@@ -43,27 +44,32 @@
           "Direct Mode": {
             "channels": 9,
             "gdtfMode": "Direct Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "Standard Mode": {
             "channels": 7,
             "gdtfMode": "Standard Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "6ch Mode": {
             "channels": 6,
             "gdtfMode": "6ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "RGB Mode": {
             "channels": 6,
             "gdtfMode": "RGB Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch Mode": {
             "channels": 1,
             "gdtfMode": "1ch Mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           }
         }
       },
@@ -128,22 +134,26 @@
           "5ch(Default)": {
             "channels": 5,
             "gdtfMode": "5ch(Default)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "6ch (Direct)": {
             "channels": 6,
             "gdtfMode": "6ch (Direct)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           },
           "3ch(RGB)": {
             "channels": 3,
             "gdtfMode": "3ch(RGB)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           }
         }
       },
@@ -205,7 +215,8 @@
           "Direct": {
             "channels": 8,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           }
         }
       },
@@ -227,7 +238,8 @@
           "Direct": {
             "channels": 5,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           }
         }
       },
@@ -276,7 +288,7 @@
     {
       "fixture": "ColorSource Spot jr",
       "watts": 100,
-      "weight": 4.9,
+      "weight": 5.4,
       "modes": {
         "5ch": 5,
         "RGB": 3,
@@ -292,22 +304,26 @@
           "5ch": {
             "channels": 5,
             "gdtfMode": "5ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "RGB": {
             "channels": 3,
             "gdtfMode": "RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "Direct": {
             "channels": 6,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           }
         }
       },
@@ -332,22 +348,26 @@
           "Direct": {
             "channels": 9,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 9
           },
           "Standard": {
             "channels": 7,
             "gdtfMode": "Standard",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "1CH": {
             "channels": 1,
             "gdtfMode": "1CH",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "RGB": {
             "channels": 3,
             "gdtfMode": "RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           }
         }
       },
@@ -430,7 +450,8 @@
           "Direct": {
             "channels": 9,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           }
         },
         "suggestedFileName": "ETC__Desire_D22_Studio_HD.gdtf"
@@ -762,17 +783,20 @@
           "Standard mode": {
             "channels": 3,
             "gdtfMode": "Standard mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "HSIC": {
             "channels": 6,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "Direct": {
             "channels": 9,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           }
         },
         "suggestedFileName": "ETC__ETC_Desire_D40_Studio_HD.gdtf"
@@ -821,32 +845,38 @@
           "Direct": {
             "channels": 10,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         },
         "suggestedFileName": "ETC__Fos_4_Fresnel_10_in_Daylight_HDR.gdtf"
@@ -873,32 +903,38 @@
           "Direct": {
             "channels": 12,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         },
         "suggestedFileName": "ETC__Fos_4_Fresnel_10_in_Lustr_X8.gdtf"
@@ -908,7 +944,7 @@
     {
       "fixture": "fos/4 Fresnel 5 Daylight HDR",
       "watts": 160,
-      "weight": 8.6,
+      "weight": 7.8,
       "modes": {
         "Direct": 10,
         "Expanded": 11,
@@ -926,32 +962,38 @@
           "Direct": {
             "channels": 10,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         }
       },
@@ -960,7 +1002,7 @@
     {
       "fixture": "fos/4 Fresnel 5 Lustr X8",
       "watts": 160,
-      "weight": 8.6,
+      "weight": 7.8,
       "modes": {
         "Direct": 12,
         "Expanded": 11,
@@ -978,32 +1020,38 @@
           "Direct": {
             "channels": 12,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         }
       },
@@ -1030,32 +1078,38 @@
           "Direct": {
             "channels": 10,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         }
       },
@@ -1082,32 +1136,38 @@
           "Direct": {
             "channels": 12,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         }
       },
@@ -1116,7 +1176,7 @@
     {
       "fixture": "fos/4 Panel 16x24 Daylight HDR",
       "watts": 670,
-      "weight": 20.2,
+      "weight": 25.4,
       "modes": {
         "Direct": 10,
         "Expanded": 11,
@@ -1134,32 +1194,38 @@
           "Direct": {
             "channels": 10,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         }
       },
@@ -1168,7 +1234,7 @@
     {
       "fixture": "fos/4 Panel 16x24 Lustr X8",
       "watts": 670,
-      "weight": 20.2,
+      "weight": 25.4,
       "modes": {
         "Direct": 12,
         "Expanded": 11,
@@ -1186,32 +1252,38 @@
           "Direct": {
             "channels": 12,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         }
       },
@@ -1220,7 +1292,7 @@
     {
       "fixture": "fos/4 Panel 24x24 Daylight HDR",
       "watts": 1000,
-      "weight": 29.0,
+      "weight": 35.8,
       "modes": {
         "Direct": 10,
         "Expanded": 11,
@@ -1238,32 +1310,38 @@
           "Direct": {
             "channels": 10,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         }
       },
@@ -1272,7 +1350,7 @@
     {
       "fixture": "fos/4 Panel 24x24 Lustr X8",
       "watts": 1000,
-      "weight": 29.0,
+      "weight": 35.8,
       "modes": {
         "Direct": 12,
         "Expanded": 11,
@@ -1290,32 +1368,38 @@
           "Direct": {
             "channels": 12,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         }
       },
@@ -1324,7 +1408,7 @@
     {
       "fixture": "fos/4 Panel 8x24 Daylight HDR",
       "watts": 340,
-      "weight": 12.4,
+      "weight": 14.5,
       "modes": {
         "Direct": 10,
         "Expanded": 11,
@@ -1342,32 +1426,38 @@
           "Direct": {
             "channels": 10,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         }
       },
@@ -1376,7 +1466,7 @@
     {
       "fixture": "fos/4 Panel 8x24 Lustr X8",
       "watts": 340,
-      "weight": 12.4,
+      "weight": 14.5,
       "modes": {
         "Direct": 12,
         "Expanded": 11,
@@ -1394,32 +1484,38 @@
           "Direct": {
             "channels": 12,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         }
       },
@@ -1931,7 +2027,8 @@
           "Standard mode": {
             "channels": 6,
             "gdtfMode": "Standard mode",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 6
           }
         }
       },
@@ -2411,32 +2508,38 @@
           "Direct": {
             "channels": 10,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         },
         "suggestedFileName": "ETC__Source_Four_LED_Series_3_Daylight_HDR_10_Degree.gdtf"
@@ -2463,32 +2566,38 @@
           "Direct": {
             "channels": 10,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         },
         "suggestedFileName": "ETC__Source_Four_LED_Series_3_Daylight_HDR_14_Degree.gdtf"
@@ -2515,32 +2624,38 @@
           "Direct": {
             "channels": 10,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         },
         "suggestedFileName": "ETC__Source_Four_LED_Series_3_Daylight_HDR_19_Degree.gdtf"
@@ -2567,32 +2682,38 @@
           "Direct": {
             "channels": 10,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         },
         "suggestedFileName": "ETC__Source_Four_LED_Series_3_Daylight_HDR_26_Degree.gdtf"
@@ -2619,32 +2740,38 @@
           "Direct": {
             "channels": 10,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         },
         "suggestedFileName": "ETC__Source_Four_LED_Series_3_Daylight_HDR_36_Degree.gdtf"
@@ -2671,32 +2798,38 @@
           "Direct": {
             "channels": 10,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         },
         "suggestedFileName": "ETC__Source_Four_LED_Series_3_Daylight_HDR_5_Degree.gdtf"
@@ -2723,32 +2856,38 @@
           "Direct": {
             "channels": 10,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         },
         "suggestedFileName": "ETC__Source_Four_LED_Series_3_Daylight_HDR_50_Degree.gdtf"
@@ -2775,32 +2914,38 @@
           "Direct": {
             "channels": 10,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 10
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         },
         "suggestedFileName": "ETC__Source_Four_LED_Series_3_Daylight_HDR_70_Degree.gdtf"
@@ -2873,32 +3018,38 @@
           "Direct": {
             "channels": 12,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         },
         "suggestedFileName": "ETC__Source_Four_LED_Series_3_Lustr_X8_10_Degree.gdtf"
@@ -2925,32 +3076,38 @@
           "Direct": {
             "channels": 12,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         },
         "suggestedFileName": "ETC__Source_Four_LED_Series_3_Lustr_X8_14_Degree.gdtf"
@@ -2977,32 +3134,38 @@
           "Direct": {
             "channels": 12,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         },
         "suggestedFileName": "ETC__Source_Four_LED_Series_3_Lustr_X8_19_Degree.gdtf"
@@ -3029,32 +3192,38 @@
           "Direct": {
             "channels": 12,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         },
         "suggestedFileName": "ETC__Source_Four_LED_Series_3_Lustr_X8_26_Degree.gdtf"
@@ -3081,32 +3250,38 @@
           "Direct": {
             "channels": 12,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         },
         "suggestedFileName": "ETC__Source_Four_LED_Series_3_Lustr_X8_36_Degree.gdtf"
@@ -3133,32 +3308,38 @@
           "Direct": {
             "channels": 12,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         },
         "suggestedFileName": "ETC__Source_Four_LED_Series_3_Lustr_X8_5_Degree.gdtf"
@@ -3185,32 +3366,38 @@
           "Direct": {
             "channels": 12,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         },
         "suggestedFileName": "ETC__Source_Four_LED_Series_3_Lustr_X8_50_Degree.gdtf"
@@ -3237,32 +3424,38 @@
           "Direct": {
             "channels": 12,
             "gdtfMode": "Direct",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 12
           },
           "Expanded": {
             "channels": 11,
             "gdtfMode": "Expanded",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 11
           },
           "Studio": {
             "channels": 7,
             "gdtfMode": "Studio",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           },
           "3ch RGB": {
             "channels": 3,
             "gdtfMode": "3ch RGB",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "1ch": {
             "channels": 1,
             "gdtfMode": "1ch",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 1
           },
           "HSIC": {
             "channels": 8,
             "gdtfMode": "HSIC",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 7
           }
         },
         "suggestedFileName": "ETC__Source_Four_LED_Series_3_Lustr_X8_70_Degree.gdtf"

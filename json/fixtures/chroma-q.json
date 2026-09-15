@@ -1526,7 +1526,7 @@
         "HSIx1 Strobe On Top": 17,
         "RGBA Od/Ev Strobe On Top": 14,
         "RGB Od/Ev Strobe On Top": 11,
-        "HSI Od/Ev Strobe On Top [11ch]": 11,
+        "HSI Od/Ev Strobe On Top": 12,
         "RGBAx4 Strobe Random": 11,
         "RGBx4 Strobe Random": 9,
         "HSIx4 Strobe Random": 9,
@@ -1537,8 +1537,7 @@
         "RGBx1 Strobe Random": 18,
         "HSIx1 Strobe Random": 18,
         "RGBA Od/Ev Strobe Random": 15,
-        "RGB Od/Ev Strobe Random": 12,
-        "HSI Od/Ev Strobe On Top [12ch]": 12
+        "RGB Od/Ev Strobe Random": 12
       },
       "gdtf": {
         "status": "matched",
@@ -1762,8 +1761,8 @@
             "status": "matched",
             "parameters": 13
           },
-          "HSI Od/Ev Strobe On Top [11ch]": {
-            "channels": 11,
+          "HSI Od/Ev Strobe On Top": {
+            "channels": 12,
             "gdtfMode": "HSI Od/Ev Strobe On Top",
             "status": "matched",
             "parameters": 12
@@ -1833,12 +1832,6 @@
             "gdtfMode": "RGB Od/Ev Strobe Random",
             "status": "matched",
             "parameters": 14
-          },
-          "HSI Od/Ev Strobe On Top [12ch]": {
-            "channels": 12,
-            "gdtfMode": "HSI Od/Ev Strobe On Top",
-            "status": "matched",
-            "parameters": 12
           }
         }
       },

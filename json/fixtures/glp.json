@@ -4,7 +4,7 @@
     {
       "fixture": "impression FR1",
       "watts": 100,
-      "weight": 5.0,
+      "weight": 4.0,
       "modes": {
         "Mode 16Ch": 16
       },
@@ -79,7 +79,7 @@
     {
       "fixture": "impression S500 Profile",
       "watts": 750,
-      "weight": 26.9,
+      "weight": 26.85,
       "modes": {
         "Normal Mode": 35
       },
@@ -102,7 +102,7 @@
     {
       "fixture": "impression S500 Wash",
       "watts": 750,
-      "weight": 26.6,
+      "weight": 26.85,
       "modes": {
         "Normal Mode": 27
       },
@@ -190,7 +190,7 @@
     {
       "fixture": "impression X4 Bar 20",
       "watts": 400,
-      "weight": 14.5,
+      "weight": 16.0,
       "modes": {
         "Norm": 33,
         "Comp": 19,
@@ -536,7 +536,7 @@
     {
       "fixture": "impression X5 IP",
       "watts": 700,
-      "weight": 21,
+      "weight": 22.0,
       "modes": {
         "Mode 1 Basic RGBL (24ch)": 24,
         "Mode 1 Basic RGB (24ch)": 24,
@@ -622,7 +622,7 @@
     {
       "fixture": "impression X5 IP Bar 1000",
       "watts": 750,
-      "weight": 27,
+      "weight": 27.2,
       "modes": {
         "Mode 1 Basic RGBL (20ch)": 20,
         "Mode 1 Basic RGB (20ch)": 20,
@@ -708,7 +708,7 @@
     {
       "fixture": "JDC Burst 1",
       "watts": 1400,
-      "weight": 14,
+      "weight": 14.1,
       "modes": {
         "Mode 1 Basic RGBW (19ch)": 19,
         "Mode 2 FX RGBW (37ch)": 37,
@@ -1140,47 +1140,56 @@
           "M1 Compressed": {
             "channels": 3,
             "gdtfMode": "M1 Compressed",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "M1 Compressed virtual DIM": {
             "channels": 3,
             "gdtfMode": "M1 Compressed virtual DIM",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "M2 Simple": {
             "channels": 5,
             "gdtfMode": "M2 Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "M3 Normal": {
             "channels": 8,
             "gdtfMode": "M3 Normal",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "M5 Effect": {
             "channels": 22,
             "gdtfMode": "M5 Effect",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "M4 Patterns": {
             "channels": 17,
             "gdtfMode": "M4 Patterns",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "M6 Segment Square": {
             "channels": 50,
             "gdtfMode": "M6 Segment Square",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 66
           },
           "M7 Segment Line": {
             "channels": 41,
             "gdtfMode": "M7 Segment Line",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 54
           },
           "M8 Segment Ring": {
             "channels": 17,
             "gdtfMode": "M8 Segment Ring",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 22
           }
         }
       },
@@ -1210,47 +1219,56 @@
           "M1 Compressed": {
             "channels": 3,
             "gdtfMode": "M1 Compressed",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "M1 Compressed virtual DIM": {
             "channels": 3,
             "gdtfMode": "M1 Compressed virtual DIM",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "M2 Simple": {
             "channels": 5,
             "gdtfMode": "M2 Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "M3 Normal": {
             "channels": 8,
             "gdtfMode": "M3 Normal",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "M5 Effect": {
             "channels": 22,
             "gdtfMode": "M5 Effect",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "M4 Patterns": {
             "channels": 17,
             "gdtfMode": "M4 Patterns",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "M6 Segment Square": {
             "channels": 26,
             "gdtfMode": "M6 Segment Square",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           },
           "M7 Segment Line": {
             "channels": 74,
             "gdtfMode": "M7 Segment Line",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 98
           },
           "M8 Segment Ring": {
             "channels": 38,
             "gdtfMode": "M8 Segment Ring",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 50
           }
         }
       },
@@ -1280,47 +1298,56 @@
           "M1 Compressed": {
             "channels": 3,
             "gdtfMode": "M1 Compressed",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "M1 Compressed virtual DIM": {
             "channels": 3,
             "gdtfMode": "M1 Compressed virtual DIM",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "M2 Simple": {
             "channels": 5,
             "gdtfMode": "M2 Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "M3 Normal": {
             "channels": 8,
             "gdtfMode": "M3 Normal",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "M5 Effect": {
             "channels": 22,
             "gdtfMode": "M5 Effect",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           },
           "M4 Patterns": {
             "channels": 17,
             "gdtfMode": "M4 Patterns",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "M8 Segment Ring": {
             "channels": 29,
             "gdtfMode": "M8 Segment Ring",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 38
           },
           "M7 Segment Line": {
             "channels": 26,
             "gdtfMode": "M7 Segment Line",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 34
           },
           "M6 Segment Square": {
             "channels": 50,
             "gdtfMode": "M6 Segment Square",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 66
           }
         }
       },
@@ -1346,27 +1373,32 @@
           "M1 Compressed": {
             "channels": 6,
             "gdtfMode": "M1 Compressed",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 3
           },
           "M1 Compressed virtual DIM": {
             "channels": 6,
             "gdtfMode": "M1 Compressed virtual DIM",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 4
           },
           "M2 Simple": {
             "channels": 9,
             "gdtfMode": "M2 Simple",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 5
           },
           "M3 Normal": {
             "channels": 12,
             "gdtfMode": "M3 Normal",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 8
           },
           "M4 Effect": {
             "channels": 23,
             "gdtfMode": "M4 Effect",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 25
           }
         }
       },
@@ -1395,42 +1427,50 @@
           "M1 - Basic RGBL (24ch)": {
             "channels": 24,
             "gdtfMode": "M1 - Basic RGBL (24ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "M1 - Basic RGB (24ch)": {
             "channels": 24,
             "gdtfMode": "M1 - Basic RGB (24ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 17
           },
           "M2 - Normal RGBL (35ch)": {
             "channels": 35,
             "gdtfMode": "M2 - Normal RGBL (35ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "M2 - Normal RGB (35ch)": {
             "channels": 35,
             "gdtfMode": "M2 - Normal RGB (35ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 27
           },
           "M3 - Multi-pix-Advanced RGBL (68ch)": {
             "channels": 68,
             "gdtfMode": "M3 - Multi-pix-Advanced RGBL (68ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "M3 - Multi-pix-Advanced RGB (68ch)": {
             "channels": 68,
             "gdtfMode": "M3 - Multi-pix-Advanced RGB (68ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 28
           },
           "M4 - Multi-pix-Compressed RGB (49ch)": {
             "channels": 49,
             "gdtfMode": "M4 - Multi-pix-Compressed RGB (49ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 14
           },
           "M5 - Multi-pix-Compressed RGBL (61ch)": {
             "channels": 61,
             "gdtfMode": "M5 - Multi-pix-Compressed RGBL (61ch)",
-            "status": "matched"
+            "status": "matched",
+            "parameters": 15
           }
         }
       },
@@ -1439,7 +1479,7 @@
     {
       "fixture": "WildBar 16",
       "watts": 700,
-      "weight": 23,
+      "weight": 22.3,
       "modes": {
         "M1 Basic / RGBL (28ch)": 28,
         "M2 Pixel / RGBL PE Externel (31ch)": 31,

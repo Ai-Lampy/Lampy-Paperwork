@@ -20,7 +20,8 @@
           }
         }
       },
-      "shortName": "2-Lite"
+      "shortName": "2-Lite",
+      "weight": 6.4
     },
     {
       "fixture": "4-Lite Linear Mole",
@@ -68,7 +69,8 @@
           }
         }
       },
-      "shortName": "4-Lite"
+      "shortName": "4-Lite",
+      "weight": 6.4
     },
     {
       "fixture": "8-Lite Mole",
@@ -96,7 +98,8 @@
           }
         }
       },
-      "shortName": "8-Lite"
+      "shortName": "8-Lite",
+      "weight": 6.4
     },
     {
       "fixture": "Dimmer",
