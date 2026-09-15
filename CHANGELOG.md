@@ -1,3 +1,8 @@
+## V38.2 — Add Device form layout
+
+- Updated the Add Device IP and subnet controls to the supplied compact segmented-field sizing.
+- Reordered the setup fields to Name, Location, IP Address, Subnet, Protocol and Notes.
+
 ## V38.1 — Add Device menu correction
 
 - Removed Port Configuration from the pre-add **+ Device** menu. Port Configuration remains available after the device has been added to the project.
