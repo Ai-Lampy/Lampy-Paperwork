@@ -1,3 +1,8 @@
+## V40.1 — Loom toolbar and card layout
+
+- Moved Looms and Cable List tabs into the Looms toolbar, equalised Cable List columns and compacted Loom header actions.
+- Updated Loom Viewer table headers to #8d8d8d.
+
 ## V40 — Loom layout and Cable List
 
 - Narrowed Loom cards and applied project Label fonts to compact Loom table bodies.
