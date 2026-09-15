@@ -1,3 +1,19 @@
+## V37.4 — VLAN Setup controls
+
+- Moved Disable VLANs into the VLAN Setup side-pane header and made Generic the default visible template choice.
+
+## V37.3 — Pathway network device metadata
+
+- Removed Pathway processing-engine metadata. Pathway network devices now expose their supported protocols only.
+
+## V37.2 — Global Subnet panel layering
+
+- Raised the Device Config Global Subnet panel above page content so it remains visible when opened.
+
+## V37.1 — Device Config list drag-fill
+
+- Made the Device Config fill handle retain its vertical target while dragging and apply list values, including VLANs, to compatible target lists.
+
 ## V37 — Device Config locations and Global Subnet
 
 - Moved Global Subnet to Device Config, added collapsible location groups and group deletion, and removed unused toolbar actions.
