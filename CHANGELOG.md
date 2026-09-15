@@ -1,3 +1,8 @@
+## V39.2 — Editable Loom builder and collapsible cards
+
+- Added grouped existing-cable editing, builder-row removal and label/note-preserving quantity changes.
+- Made Loom headings expand and collapse without affecting their edit and delete actions.
+
 ## V39.1 — Loom styling and cable picker correction
 
 - Updated the Loom builder table, + Cable control and Loom Viewer delete-column styling.
