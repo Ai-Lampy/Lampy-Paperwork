@@ -1,3 +1,9 @@
+## V37.5 — Device Config interaction fixes
+
+- Kept the VLAN Setup side pane above the Device Config toolbar and allowed the Global Subnet panel to escape the table scroll container.
+- Corrected Device Config list drag-fill target detection under pointer capture.
+- Restored Pathway DMX Node TX Protocol choices from the device reference protocols.
+
 ## V37.4 — VLAN Setup controls
 
 - Moved Disable VLANs into the VLAN Setup side-pane header and made Generic the default visible template choice.
