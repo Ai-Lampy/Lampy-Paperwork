@@ -1,3 +1,8 @@
+## V38.3 — Add Device information and controls
+
+- Removed Notes from the pre-add Device Config Info & Setup panel while retaining it when editing an added device.
+- Updated supplied library-card and form-control styling.
+
 ## V38.2 — Add Device form layout
 
 - Updated the Add Device IP and subnet controls to the supplied compact segmented-field sizing.

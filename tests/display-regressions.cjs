@@ -634,7 +634,7 @@ assert(html.includes('.btn{border:2px solid #000;background:rgb(217, 217, 217);b
 console.log('PASS: V35.1 Labels presentation, per-Socapex rear colours and navigation styling.');
 
 // V35.5 Power PDF and Fixture Patch colour-bubble corrections, plus V35.3 styling.
-assert.equal(appVersion,'38.2');
+assert.equal(appVersion,'38.3');
 assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(html.includes(".powerSheetTable{table-layout:auto!important;border-collapse:collapse;font-family:Georgia,'Times New Roman',serif;font-size:14px;border:2px solid #000}"));
 assert(html.includes('.powerSocaColourCol,.powerSheetTable .fixIdCol{width:70px!important;min-width:70px!important;max-width:70px!important}'));
@@ -763,7 +763,7 @@ assert(source('powerSheetRowMarkup').includes('--power-soca-outline:${powerWhite
 console.log('PASS: V35.14 Power Calcs white text uses a 0.5 mm black outline.');
 
 // V36 uses JSON VLAN templates without replacing customised project settings.
-assert.equal(appVersion,'38.2');
+assert.equal(appVersion,'38.3');
 const vlanTemplateJson=JSON.parse(fs.readFileSync(root+'json/vlan_colour_options.json','utf8'));
 const vlanContext=vm.createContext({
  DEFAULT_IP_VLANS:Array.from({length:11},(_,index)=>({id:String(index),name:['Untagged/MGMT','sACN','Art-Net','RoboCam'][index]||'',colour:['#ffffff','#e5b7b7','#b7cbe4','#ffd5b3'][index]||'#ffffff',selected:false})),
@@ -784,14 +784,14 @@ assert(source('applyVlanTemplate').includes('selectedById'));assert(source('appl
 console.log('PASS: V36 JSON VLAN templates, vendor detection, edit protection and retained VLAN state.');
 
 // V36.1 keeps VLAN templates and Power text readable.
-assert.equal(appVersion,'38.2');
+assert.equal(appVersion,'38.3');
 assert(!source('vlanTemplateControlsMarkup').includes("['automatic','Automatic']"));assert(!source('setVlanTemplateChoice').includes("value==='automatic'"));assert(source('automaticVlanTemplate').includes("brands.length===1?brands[0]:'Generic'"));assert(!source('renderVlanSetupPane').includes('A non-empty Global Subnet is used for new devices'));
 assert(source('powerPositionCellStyle').includes('powerWhiteTextOutline(presentation.text)'));assert(source('powerPositionCellStyle').includes("presentation.text==='#ffffff'?'.5mm':'0'"));assert(html.includes('.powerSheetTable .positionCol .powerPositionText{-webkit-text-stroke-width:var(--power-position-stroke-width,0);-webkit-text-stroke-color:var(--power-position-outline,transparent);paint-order:stroke fill}'));
 assert(source('fitPowerSocaColourText').includes('size>8'));assert(source('fitPowerSocaColourText').includes('powerSheetTextWidth'));assert(source('renderPowerSheetView').includes('fitPowerSocaColourText(view)'));assert(source('powerPdfSourceViews').includes('fitPowerSocaColourText(view)'));assert(html.includes('outline=powerWhiteTextOutline(presentation.text)'));
 console.log('PASS: V36.1 always-visible VLAN template selection and Power text fitting.');
 
 // V36.2 keeps VLAN Setup compact without template helper text.
-assert.equal(appVersion,'38.2');
+assert.equal(appVersion,'38.3');
 assert(html.includes('#vlanSetupPane label{display:block;font-size:13px;color:#333;font-weight:700;border:none;margin:0px;padding:0px}'));
 assert(html.includes('.vlanSetupTable .vlanNumberCol{width:72px}'));
 assert(html.includes('.vlanSetupTable .vlanColourCol{width:55px}'));
@@ -803,7 +803,7 @@ assert(!source('vlanTemplateControlsMarkup').includes('Template changes preserve
 console.log('PASS: V36.2 VLAN Setup labels, compact rows and column widths.');
 
 // V36.3 refines VLAN Setup controls without changing VLAN data.
-assert.equal(appVersion,'38.2');
+assert.equal(appVersion,'38.3');
 assert(html.includes('.logoTitleRow{margin-bottom:0px}'));
 assert(html.includes('.vlanGlobalSubnetCard .ipSegmentedField{border:none;border-radius:6px;background:#fff;padding:2px 5px}'));
 assert(html.includes('#vlanSetupPane label{display:block;font-size:13px;color:#333;font-weight:700;border:none;margin:0px;padding:0px}'));
@@ -821,12 +821,12 @@ assert(html.includes('.deviceConfigDeleteButton{width:32px;height:20px;border:0;
 console.log('PASS: V36.3 Device Config delete control dimensions.');
 
 // V36.4 corrects Device Config's full trailing-column map so Mode is not starved by Role.
-assert.equal(appVersion,'38.2');
+assert.equal(appVersion,'38.3');
 assert(html.includes("const DEVICE_CONFIG_WIDTH_DEFAULTS=[[30,30],[45,70],[40,60],[100,130],[60,60],[100,180],[110,110],[110,110],[40,100],[40,100],[40,150],[80,120],[80,90],[110,180],[70,110],[80,120],[90,220],[34,34]];"));
 console.log('PASS: V36.4 Device Config Role and Mode width allocation.');
 
 // V36.5 keeps Control Table View focused and permits VLAN assignment on every switch port.
-assert.equal(appVersion,'38.2');
+assert.equal(appVersion,'38.3');
 assert(!source('renderConsolesTab').includes('openDeviceConfigColumns()'));
 assert(!source('renderConsolesTab').includes('openDeviceConfigFormat()'));
 assert(source('renderConsolesTab').includes('expandAllControlDevices()'));
@@ -835,7 +835,7 @@ assert(source('deviceConfigParentRow').includes("parentMode!=='network-switch'||
 console.log('PASS: V36.5 Control Table controls and Network Switch VLAN assignment.');
 
 // V36.6 centres Home statistics, simplifies Power actions, and keeps locations on Device Config parents.
-assert.equal(appVersion,'38.2');
+assert.equal(appVersion,'38.3');
 assert(html.includes('.homeStats{grid-template-columns:repeat(auto-fit,115px)!important;justify-content:center}'));
 assert(source('homeStatsMarkup').includes("'Universes Patched'"));
 assert(html.includes('.btn.unpatch{border:2px solid #000}'));
@@ -851,7 +851,7 @@ assert(html.includes('.rackWorkspaceHeader{background:#fff;border:2px solid #000
 console.log('PASS: V36.6 Home, Power, Device Config and Rack Layout updates.');
 
 // V36.7 hides shared VLAN columns whenever the VLAN feature is disabled.
-assert.equal(appVersion,'38.2');
+assert.equal(appVersion,'38.3');
 assert(source('deviceConfigColumnVisible').includes("key==='vlan'&&!ipVlanSetup().enabled"));
 assert(html.includes('.deviceConfigTable [hidden]{display:none!important}'));
 assert(source('deviceConfigPortRow').includes("parentMode==='dmx-node'&&deviceConfigIsLuminex(device)"));
@@ -859,13 +859,13 @@ assert(source('deviceConfigVisiblePorts').includes("sort((a,b)=>(a.category==='n
 console.log('PASS: V36.7 hides Device Config and Control VLAN columns when disabled.');
 
 // V36.7 removes the redundant IP Address route while retaining a safe legacy redirect.
-assert.equal(appVersion,'38.2');
+assert.equal(appVersion,'38.3');
 assert(source('setSheetTab').includes("tab==='networkEquipment'||tab==='ipAddresses'"));
 assert(!source('setSheetTab').includes("'deviceConfig','ipAddresses','distroLabels'"));
 console.log('PASS: V36.7 removes the IP Address tab and redirects legacy routes.');
 
 // V37 moves Global Subnet to Device Config and makes locations actionable groups.
-assert.equal(appVersion,'38.2');
+assert.equal(appVersion,'38.3');
 const deviceConfigViewSource=source('renderDeviceConfigView');
 assert(!deviceConfigViewSource.includes('expandAllDeviceConfig()'));
 assert(!deviceConfigViewSource.includes('collapseAllDeviceConfig()'));
@@ -899,14 +899,14 @@ assert(source('vlanTemplateControlsMarkup').includes("[['Generic','Generic'],['L
 console.log('PASS: V37.4 VLAN header control and Generic template choice.');
 
 // V37.5 fixes pane layering, Global Subnet clipping, list drag-fill and Pathway protocol fallback.
-assert.equal(appVersion,'38.2');
+assert.equal(appVersion,'38.3');
 assert(source('renderDeviceConfigView').includes("classList.toggle('deviceConfigSubnetOpen',deviceConfigGlobalSubnetOpen)"));
 assert(source('deviceConfigParentRow').includes('singlePort?.protocols?.length?singlePort.protocols:null'));
 assert(source('attachDeviceConfigFillHandle').indexOf("const fromPoint=document.elementFromPoint")<source('attachDeviceConfigFillHandle').indexOf("fromEvent=pointerEvent.target"));
 console.log('PASS: V37.5 Device Config overlays, list filling and Pathway protocols.');
 
 // V37.6 shares DMX port positions between Device Config and Port Configuration.
-assert.equal(appVersion,'38.2');
+assert.equal(appVersion,'38.3');
 assert(source('deviceConfigPortsFor').includes("base.location=legacy?.location||''"));
 assert(source('saveDeviceConfigPorts').includes('location:port.location'));
 assert(source('deviceConfigTableMarkup').includes('deviceConfigRowWithPortLocation'));
@@ -920,7 +920,7 @@ assert(!source('saveRackPortConfiguration').includes('deviceConfigPorts=[]'));
 console.log('PASS: V37.6 Device Config DMX port positions and Port Configuration navigation.');
 
 // V37.7 loads Generic on first VLAN activation and tracks native list cells by geometry.
-assert.equal(appVersion,'38.2');
+assert.equal(appVersion,'38.3');
 assert(source('enableVlans').includes("templateSource:'Generic'"));
 assert(source('enableVlans').includes('await loadVlanColourReference()'));
 assert(source('enableVlans').includes("templateMode:'manual'"));
@@ -931,7 +931,7 @@ assert(source('attachDeviceConfigFillHandle').includes("document.removeEventList
 console.log('PASS: V37.7 Generic VLAN activation and native list-cell fill targeting.');
 
 // V38 adds sequential DMX-port configuration and inline network-device setup.
-assert.equal(appVersion,'38.2');
+assert.equal(appVersion,'38.3');
 add('networkPortUniverseRange','shiftedNetworkPortUniverse');
 assert.deepEqual(JSON.parse(JSON.stringify(c.networkPortUniverseRange(20,4))),{start:20,end:23,values:['20','21','22','23']});
 assert.deepEqual(JSON.parse(JSON.stringify(c.networkPortUniverseRange('',3))),{start:1,end:3,values:['1','2','3']});
@@ -972,9 +972,16 @@ const addDeviceSetupMarkup=source('networkDeviceConfigurationMarkup');
 const addDeviceNetworkFieldOrder=['networkDeviceIp1','networkDeviceSubnet1','networkDeviceProtocol'].map(id=>addDeviceSetupMarkup.indexOf(id));
 assert(addDeviceNetworkFieldOrder.every(index=>index>=0));
 assert.deepEqual([...addDeviceNetworkFieldOrder].sort((a,b)=>a-b),addDeviceNetworkFieldOrder);
-assert(addDeviceSetupMarkup.includes('networkDeviceLocationOptions\" value=\"${escapeAttr(item.location)}\" placeholder=\"Position\"></div>${networkFields}<div class=\"full\"><label for=\"networkDeviceNotes\"'));
+assert(addDeviceSetupMarkup.includes('networkDeviceLocationOptions\" value=\"${escapeAttr(item.location)}\" placeholder=\"Position\"></div>${networkFields}${notesField}'));
 for(const id of ['networkDeviceName','networkDeviceLocation','networkDeviceProtocol','networkDeviceNotes'])assert(addDeviceSetupMarkup.includes(`for="${id}"`));
 console.log('PASS: V38.2 Add Device form sizing and field order.');
+
+// V38.3 keeps Notes for existing-device editing only and applies the supplied form styles.
+assert(html.includes('input[type=text],input[type=number],select,textarea{width:100%;height:35px;border:2px solid rgb(128,128,128);border-radius:6px;padding:8px;background:rgb(255,255,255);font-weight:800}textarea{min-height:35px}'));
+assert(html.includes('.consoleLibraryInfoCard{border:1px solid #d9dee7;border-radius:7px;background:#fff;padding:9px;margin-bottom:10px}'));
+assert(addDeviceSetupMarkup.includes("notesField=includePortConfiguration?`<div class=\"full\"><label for=\"networkDeviceNotes\">Notes</label>"));
+assert(addDeviceSetupMarkup.includes('${networkFields}${notesField}${includePortConfiguration?networkPortSettingsMarkup(item,ref):\'\'}'));
+console.log('PASS: V38.3 Add Device Notes visibility and supplied styles.');
 
 // Guard against page CSS being written into a JavaScript export template.
 const activeStyleStart=html.indexOf('<style'),activeStyleEnd=html.indexOf('</style>'),bodyStart=html.indexOf('<body'),sharedToolbarCss='/* V34 shared navigation and toolbar layout. */';
