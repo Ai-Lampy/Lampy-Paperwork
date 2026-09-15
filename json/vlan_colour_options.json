@@ -71,27 +71,27 @@
         },
         {
           "id": 1,
-          "name": "Management",
+          "name": "MGMT",
           "hex": "#24416B"
         },
         {
           "id": 2,
-          "name": "Group02",
+          "name": "sACN",
           "hex": "#F20D0D"
         },
         {
           "id": 3,
-          "name": "Group03",
+          "name": "Art-Net",
           "hex": "#009B3A"
         },
         {
           "id": 4,
-          "name": "Group04",
+          "name": "MA-Net",
           "hex": "#00A6C8"
         },
         {
           "id": 5,
-          "name": "Group05",
+          "name": "Titan-Net",
           "hex": "#8A168C"
         },
         {
@@ -175,31 +175,31 @@
       "vlans": [
         {
           "id": 1,
-          "name": "VLAN 1",
+          "name": "MGMT",
           "colour": "Pink",
           "hex": "#FF40FF"
         },
         {
           "id": 2,
-          "name": "VLAN 2",
+          "name": "sACN",
           "colour": "Orange",
           "hex": "#FF9300"
         },
         {
           "id": 3,
-          "name": "VLAN 3",
+          "name": "Art-Net",
           "colour": "Blue",
           "hex": "#0432FF"
         },
         {
           "id": 4,
-          "name": "VLAN 4",
+          "name": "MA-Net",
           "colour": "Red",
           "hex": "#FF2600"
         },
         {
           "id": 5,
-          "name": "VLAN 5",
+          "name": "Titan-Net",
           "colour": "Brown",
           "hex": "#AB7942"
         },
