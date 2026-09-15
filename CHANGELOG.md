@@ -1,3 +1,10 @@
+## V38 — DMX Quick Config and Add Device
+
+- Added sequential Quick Config, port selection and ±1/5/10 universe controls to every DMX Node Port Configuration table.
+- Added a Device Config **+ Device** picker with Manufacturer, Device and combined Info & Setup columns so network devices can be configured before they are added.
+- Showed separate front/rear VLAN controls for multi-network-port DMX Nodes in Rack Layout and removed the ambiguous parent-row VLAN control from Device Config.
+- Kept DMX port assignments synchronized with Device Config and Rack Layout without changing the project-file schema.
+
 ## V37.7 — VLAN activation and Device Config fill
 
 - Load the current Generic VLAN template when VLANs are enabled for the first time.

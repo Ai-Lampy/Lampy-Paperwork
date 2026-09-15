@@ -1,13 +1,13 @@
 {
-  "title": "Lampy Paperwork V37 Walk-through",
+  "title": "Lampy Paperwork V38 Walk-through",
   "sections": [
     {
-      "title": "New in V37: Device Config and VLAN workflow",
+      "title": "New in V38: DMX ports and device setup",
       "type": "unordered",
       "items": [
-        "Global Subnet is available from Device Config. It supplies subnets to new devices and updates existing interfaces only when Apply to All Devices is pressed.",
-        "Device Config groups devices by location. Open or close a location from its title, or delete every device in that group after confirmation.",
-        "Generic VLAN defaults load when no supported network-device brand is in the project. Adding Luminex or Pathway devices loads the matching template while the setup remains unedited. Disabled VLANs hide their table columns and template choices.",
+        "Use Quick Config in DMX Node Port Configuration to assign consecutive universes to every port. Select individual ports or Select All to adjust assigned universes by 1, 5 or 10.",
+        "Use + Device in Device Config to choose a manufacturer and device, review its information, enter its settings and add it to the project from one menu.",
+        "Global Subnet, location groups and Generic, Luminex or Pathway VLAN templates remain available in Device Config. Disabled VLANs stay out of device tables.",
         "Save status shows unsaved changes, successful saves and storage failures. Use Download recovery if saving fails. If another tab changes the project, download a recovery copy before reloading.",
         "Project imports validate data before replacing your project. ZIP imports check paths, extraction limits and file integrity.",
         "Revision tracking includes distro labels, output settings, positions, network settings and GDTF metadata. Saved custom fixtures remain selectable after reload."
@@ -62,15 +62,15 @@
         "Consoles and NPUs added in Control appear automatically in Device Config. When at least one NPU exists, Control displays separate Consoles and NPU sub-tabs.",
         "Control groups consoles and NPUs by project position. Consoles are ordered Master, Backup, unassigned, then by name; NPUs remain sorted by name.",
         "Choose Card View for device summary cards or Table View for Device Config-style editing, expandable ports, keyboard navigation, copy and paste, selection, and vertical drag-fill. The last Control view is remembered by the browser.",
-        "Device names, locations, roles, modes, software, parameters, IP addresses, port settings, protocols, VLANs and notes remain linked between Control, Device Config and Rack Layout. Rack position, mounting face and physical dimensions remain controlled by Rack Layout.",
+        "Device names, locations, roles, modes, software, parameters, IP addresses, port settings, protocols, VLANs and notes remain linked between Control, Device Config and Rack Layout. Multi-network-port DMX Nodes show a separate front/rear VLAN field for each physical network port in Rack Layout. Rack position, mounting face and physical dimensions remain controlled by Rack Layout.",
         "Device Config branches are collapsed by default. Expand a device to see its Ethernet, fibre, XLR-5 DMX, and supported secondary-interface records.",
         "Use arrow keys, Enter, Shift+Enter, Tab, and Shift+Tab to move through Device Config. Copy, paste, select ranges, or drag the fill handle vertically through compatible cells.",
         "Rack Layout provides Front, Side, and Rear views. Front and Rear are mounting faces; Side is a depth overview where existing devices can still be moved vertically.",
         "New racks default to 700 mm deep. Rack Depth can be edited, but every device must retain at least 100 mm of space behind it for cabling.",
         "Front- and rear-mounted devices may share a U only when their combined depths plus the 100 mm cable space fit inside the rack.",
         "Use Simple view for names and device types, or Detailed view for the front and rear line images supplied by the device library.",
-        "Use Port Configuration on supported DMX Nodes to assign universes, directions, names, and project positions. Assigned position colours appear on mapped DMX sockets in Detailed Rack Layout views.",
-        "Add IP-only equipment and reference-library rack hardware from Device Config or Rack Layout.",
+        "Use Port Configuration on supported DMX Nodes to assign universes, directions, names, and project positions. Quick Config fills every port consecutively, while selected-port controls adjust existing universe values by 1, 5 or 10. Assigned position colours appear on mapped DMX sockets in Detailed Rack Layout views.",
+        "Use + Device to add and configure network equipment from Device Config. Reference-library rack hardware can also be added from Rack Layout.",
         "Global Subnet can automatically supply the subnet for new devices. Manually changing an interface subnet excludes it from later global updates until Apply to all Devices is used.",
         "Each device can contain two IP addresses. Subnet and VLAN values are stored per interface, while the device name, location, and notes remain shared.",
         "VLAN Setup uses the Generic, Luminex or Pathway template selected for the project. Names and colours remain editable, and device VLAN assignments remain unchanged when a template is loaded.",
