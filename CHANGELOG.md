@@ -1,3 +1,8 @@
+## V37.6 — Device Config DMX port locations
+
+- Added position-aware Location selectors to DMX Node child ports and synchronized them with Port Configuration.
+- Added Device Config access to Port Configuration with Previous and Next navigation across eligible devices.
+
 ## V37.5 — Device Config interaction fixes
 
 - Kept the VLAN Setup side pane above the Device Config toolbar and allowed the Global Subnet panel to escape the table scroll container.
