@@ -43,7 +43,6 @@
         ],
         "poeIn": false
       },
-      "processingEngines": null,
       "protocols": [
         "sACN",
         "Art-Net",
@@ -110,7 +109,6 @@
         ],
         "poeIn": false
       },
-      "processingEngines": null,
       "protocols": [
         "DMX512",
         "RDM",
