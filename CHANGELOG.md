@@ -1,7 +1,11 @@
+## V38.1 — Add Device menu correction
+
+- Removed Port Configuration from the pre-add **+ Device** menu. Port Configuration remains available after the device has been added to the project.
+
 ## V38 — DMX Quick Config and Add Device
 
 - Added sequential Quick Config, port selection and ±1/5/10 universe controls to every DMX Node Port Configuration table.
-- Added a Device Config **+ Device** picker with Manufacturer, Device and combined Info & Setup columns so network devices can be configured before they are added.
+- Added a Device Config **+ Device** picker with Manufacturer, Device and combined Info & Setup columns so core network settings can be entered before a device is added. Port Configuration remains in its dedicated workflow after the device is added.
 - Showed separate front/rear VLAN controls for multi-network-port DMX Nodes in Rack Layout and removed the ambiguous parent-row VLAN control from Device Config.
 - Kept DMX port assignments synchronized with Device Config and Rack Layout without changing the project-file schema.
 
