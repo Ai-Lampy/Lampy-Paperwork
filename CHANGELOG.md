@@ -1,3 +1,9 @@
+## V39.1 — Loom styling and cable picker correction
+
+- Updated the Loom builder table, + Cable control and Loom Viewer delete-column styling.
+- Kept catalogue cable choices open after selecting a category.
+- Added the requested repeating two- and three-colour Loom heading backgrounds and heading text stroke.
+
 ## V39 — Looms base setup
 
 - Added the Looms workspace between Rack Layout and Labels.
