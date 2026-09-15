@@ -2,6 +2,7 @@
 
 - Hide VLAN columns in Device Config and Control tables while VLANs are disabled, without changing saved device VLAN assignments.
 - Removed the IP Address’ navigation tab. Existing network IP, subnet, protocol and VLAN values remain available in Device Config.
+- Enforced hidden VLAN cells in Device Config, enabled Luminex DMX Node network-port VLANs, and placed physical network ports first in Device Config child rows.
 
 ## V36.6 — Home, Power, Device Config and Rack Layout
 
