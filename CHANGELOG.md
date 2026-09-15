@@ -1,3 +1,8 @@
+## V37 — Device Config locations and Global Subnet
+
+- Moved Global Subnet to Device Config, added collapsible location groups and group deletion, and removed unused toolbar actions.
+- Kept disabled VLAN columns and template controls out of Device Config and VLAN Setup, including rack-added LumiNode devices.
+
 ## V36.7 — VLAN column visibility
 
 - Hide VLAN columns in Device Config and Control tables while VLANs are disabled, without changing saved device VLAN assignments.
