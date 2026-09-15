@@ -1,3 +1,8 @@
+## V40 — Loom layout and Cable List
+
+- Narrowed Loom cards and applied project Label fonts to compact Loom table bodies.
+- Added category-menu Back navigation and the read-only, category-organised Cable List.
+
 ## V39.2 — Editable Loom builder and collapsible cards
 
 - Added grouped existing-cable editing, builder-row removal and label/note-preserving quantity changes.

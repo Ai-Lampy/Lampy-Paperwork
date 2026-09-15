@@ -1,12 +1,12 @@
 {
-  "title": "Lampy Paperwork V39 Walk-through",
+  "title": "Lampy Paperwork V40 Walk-through",
   "sections": [
     {
-      "title": "New in V39: Looms",
+      "title": "New in V40: Loom Cable List",
       "type": "unordered",
       "items": [
-        "Open Looms between Rack Layout and Labels. Use + Loom to build a colour-coded loom from five starter cable rows.",
-        "When Production Info selects Christie Lites UK, choose a cable category then a catalogue cable and length. Without a matching vendor catalogue, cable types and lengths remain fully editable.",
+        "Use the Looms and Cable List sub-tabs. Cable List groups all saved Loom cables by category, cable type and length, with totals and the Looms that use each cable.",
+        "Loom Viewer tables now use the project Label font in a compact 12 px layout. When selecting catalogue cables, use Back to return from a category\u2019s cable options to the category list.",
         "Quantity expands each builder row into individual cables. Edit labels, cable types, lengths and notes in the Loom Viewer using the same keyboard, selection, copy/paste and drag-fill pattern as Device Config.",
         "Global Subnet, location groups and Generic, Luminex or Pathway VLAN templates remain available in Device Config. Disabled VLANs stay out of device tables.",
         "Save status shows unsaved changes, successful saves and storage failures. Use Download recovery if saving fails. If another tab changes the project, download a recovery copy before reloading.",
