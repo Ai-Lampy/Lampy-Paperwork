@@ -325,7 +325,7 @@ menuContext.updateProjectErrorsMenu();assert(menu.innerHTML.includes('No project
 for(let i=0;i<7;i++)menuContext.projectErrors.set(String(i),{id:String(i),description:'Error '+i,order:i});
 menuContext.updateProjectErrorsMenu();assert.equal((menu.innerHTML.match(/data-error-key=/g)||[]).length,5);assert(menu.innerHTML.indexOf('Error 6')<menu.innerHTML.indexOf('Error 5'));assert(!menu.innerHTML.includes('Error 1'));
 assert(source('handleProjectErrorsKeydown').includes("event.key==='Escape'"));assert(source('updateProjectErrorsPage').includes('host.dataset.content===content'));
-for(const file of ['info_txt/welcome_message.json','info_txt/walkthrough.json']){const doc=JSON.parse(fs.readFileSync(root+file));assert(doc.title.includes('V38'));assert(JSON.stringify(doc).includes('Quick Config'));assert(JSON.stringify(doc).length>300)}
+for(const file of ['info_txt/welcome_message.json','info_txt/walkthrough.json']){const doc=JSON.parse(fs.readFileSync(root+file));assert(doc.title.includes('V39'));assert(JSON.stringify(doc).includes('Loom'));assert(JSON.stringify(doc).length>300)}
 console.log('PASS: V32 console-only caps/text fitting, Network routing, grouped errors, validation boundaries, recency/resolution, and current major-release JSON.');
 assert.equal(menuContext.projectErrorToken("fixture-id:FOH's"),'fixture-id%3AFOH%27s');
 navigation.setSheetTab('networkEquipment');assert.equal(navigation.activeNetworkSubTab,'deviceConfig');
@@ -634,7 +634,7 @@ assert(html.includes('.btn{border:2px solid #000;background:rgb(217, 217, 217);b
 console.log('PASS: V35.1 Labels presentation, per-Socapex rear colours and navigation styling.');
 
 // V35.5 Power PDF and Fixture Patch colour-bubble corrections, plus V35.3 styling.
-assert.equal(appVersion,'38.3');
+assert.equal(appVersion,'39');
 assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(html.includes(".powerSheetTable{table-layout:auto!important;border-collapse:collapse;font-family:Georgia,'Times New Roman',serif;font-size:14px;border:2px solid #000}"));
 assert(html.includes('.powerSocaColourCol,.powerSheetTable .fixIdCol{width:70px!important;min-width:70px!important;max-width:70px!important}'));
@@ -763,7 +763,7 @@ assert(source('powerSheetRowMarkup').includes('--power-soca-outline:${powerWhite
 console.log('PASS: V35.14 Power Calcs white text uses a 0.5 mm black outline.');
 
 // V36 uses JSON VLAN templates without replacing customised project settings.
-assert.equal(appVersion,'38.3');
+assert.equal(appVersion,'39');
 const vlanTemplateJson=JSON.parse(fs.readFileSync(root+'json/vlan_colour_options.json','utf8'));
 const vlanContext=vm.createContext({
  DEFAULT_IP_VLANS:Array.from({length:11},(_,index)=>({id:String(index),name:['Untagged/MGMT','sACN','Art-Net','RoboCam'][index]||'',colour:['#ffffff','#e5b7b7','#b7cbe4','#ffd5b3'][index]||'#ffffff',selected:false})),
@@ -784,14 +784,14 @@ assert(source('applyVlanTemplate').includes('selectedById'));assert(source('appl
 console.log('PASS: V36 JSON VLAN templates, vendor detection, edit protection and retained VLAN state.');
 
 // V36.1 keeps VLAN templates and Power text readable.
-assert.equal(appVersion,'38.3');
+assert.equal(appVersion,'39');
 assert(!source('vlanTemplateControlsMarkup').includes("['automatic','Automatic']"));assert(!source('setVlanTemplateChoice').includes("value==='automatic'"));assert(source('automaticVlanTemplate').includes("brands.length===1?brands[0]:'Generic'"));assert(!source('renderVlanSetupPane').includes('A non-empty Global Subnet is used for new devices'));
 assert(source('powerPositionCellStyle').includes('powerWhiteTextOutline(presentation.text)'));assert(source('powerPositionCellStyle').includes("presentation.text==='#ffffff'?'.5mm':'0'"));assert(html.includes('.powerSheetTable .positionCol .powerPositionText{-webkit-text-stroke-width:var(--power-position-stroke-width,0);-webkit-text-stroke-color:var(--power-position-outline,transparent);paint-order:stroke fill}'));
 assert(source('fitPowerSocaColourText').includes('size>8'));assert(source('fitPowerSocaColourText').includes('powerSheetTextWidth'));assert(source('renderPowerSheetView').includes('fitPowerSocaColourText(view)'));assert(source('powerPdfSourceViews').includes('fitPowerSocaColourText(view)'));assert(html.includes('outline=powerWhiteTextOutline(presentation.text)'));
 console.log('PASS: V36.1 always-visible VLAN template selection and Power text fitting.');
 
 // V36.2 keeps VLAN Setup compact without template helper text.
-assert.equal(appVersion,'38.3');
+assert.equal(appVersion,'39');
 assert(html.includes('#vlanSetupPane label{display:block;font-size:13px;color:#333;font-weight:700;border:none;margin:0px;padding:0px}'));
 assert(html.includes('.vlanSetupTable .vlanNumberCol{width:72px}'));
 assert(html.includes('.vlanSetupTable .vlanColourCol{width:55px}'));
@@ -803,7 +803,7 @@ assert(!source('vlanTemplateControlsMarkup').includes('Template changes preserve
 console.log('PASS: V36.2 VLAN Setup labels, compact rows and column widths.');
 
 // V36.3 refines VLAN Setup controls without changing VLAN data.
-assert.equal(appVersion,'38.3');
+assert.equal(appVersion,'39');
 assert(html.includes('.logoTitleRow{margin-bottom:0px}'));
 assert(html.includes('.vlanGlobalSubnetCard .ipSegmentedField{border:none;border-radius:6px;background:#fff;padding:2px 5px}'));
 assert(html.includes('#vlanSetupPane label{display:block;font-size:13px;color:#333;font-weight:700;border:none;margin:0px;padding:0px}'));
@@ -821,12 +821,12 @@ assert(html.includes('.deviceConfigDeleteButton{width:32px;height:20px;border:0;
 console.log('PASS: V36.3 Device Config delete control dimensions.');
 
 // V36.4 corrects Device Config's full trailing-column map so Mode is not starved by Role.
-assert.equal(appVersion,'38.3');
+assert.equal(appVersion,'39');
 assert(html.includes("const DEVICE_CONFIG_WIDTH_DEFAULTS=[[30,30],[45,70],[40,60],[100,130],[60,60],[100,180],[110,110],[110,110],[40,100],[40,100],[40,150],[80,120],[80,90],[110,180],[70,110],[80,120],[90,220],[34,34]];"));
 console.log('PASS: V36.4 Device Config Role and Mode width allocation.');
 
 // V36.5 keeps Control Table View focused and permits VLAN assignment on every switch port.
-assert.equal(appVersion,'38.3');
+assert.equal(appVersion,'39');
 assert(!source('renderConsolesTab').includes('openDeviceConfigColumns()'));
 assert(!source('renderConsolesTab').includes('openDeviceConfigFormat()'));
 assert(source('renderConsolesTab').includes('expandAllControlDevices()'));
@@ -835,7 +835,7 @@ assert(source('deviceConfigParentRow').includes("parentMode!=='network-switch'||
 console.log('PASS: V36.5 Control Table controls and Network Switch VLAN assignment.');
 
 // V36.6 centres Home statistics, simplifies Power actions, and keeps locations on Device Config parents.
-assert.equal(appVersion,'38.3');
+assert.equal(appVersion,'39');
 assert(html.includes('.homeStats{grid-template-columns:repeat(auto-fit,115px)!important;justify-content:center}'));
 assert(source('homeStatsMarkup').includes("'Universes Patched'"));
 assert(html.includes('.btn.unpatch{border:2px solid #000}'));
@@ -851,7 +851,7 @@ assert(html.includes('.rackWorkspaceHeader{background:#fff;border:2px solid #000
 console.log('PASS: V36.6 Home, Power, Device Config and Rack Layout updates.');
 
 // V36.7 hides shared VLAN columns whenever the VLAN feature is disabled.
-assert.equal(appVersion,'38.3');
+assert.equal(appVersion,'39');
 assert(source('deviceConfigColumnVisible').includes("key==='vlan'&&!ipVlanSetup().enabled"));
 assert(html.includes('.deviceConfigTable [hidden]{display:none!important}'));
 assert(source('deviceConfigPortRow').includes("parentMode==='dmx-node'&&deviceConfigIsLuminex(device)"));
@@ -859,13 +859,13 @@ assert(source('deviceConfigVisiblePorts').includes("sort((a,b)=>(a.category==='n
 console.log('PASS: V36.7 hides Device Config and Control VLAN columns when disabled.');
 
 // V36.7 removes the redundant IP Address route while retaining a safe legacy redirect.
-assert.equal(appVersion,'38.3');
+assert.equal(appVersion,'39');
 assert(source('setSheetTab').includes("tab==='networkEquipment'||tab==='ipAddresses'"));
 assert(!source('setSheetTab').includes("'deviceConfig','ipAddresses','distroLabels'"));
 console.log('PASS: V36.7 removes the IP Address tab and redirects legacy routes.');
 
 // V37 moves Global Subnet to Device Config and makes locations actionable groups.
-assert.equal(appVersion,'38.3');
+assert.equal(appVersion,'39');
 const deviceConfigViewSource=source('renderDeviceConfigView');
 assert(!deviceConfigViewSource.includes('expandAllDeviceConfig()'));
 assert(!deviceConfigViewSource.includes('collapseAllDeviceConfig()'));
@@ -882,7 +882,7 @@ assert(html.includes('.deviceConfigGlobalSubnetMenu{position:absolute'));
 assert(html.includes('.sheetWrap.deviceConfigSubnetOpen{overflow:visible}'));
 assert(!html.includes('.networkDeviceConfigToolbar{position:relative;z-index:50'));
 assert(html.includes('.deviceConfigGlobalSubnetMenu{position:absolute;right:0;bottom:calc(100% + 8px);z-index:1000'));
-assert(fs.readFileSync(root+'tests/BROWSER-CHECKLIST.md','utf8').startsWith('# V38 browser release checks'));
+assert(fs.readFileSync(root+'tests/BROWSER-CHECKLIST.md','utf8').startsWith('# V39 browser release checks'));
 console.log('PASS: V37 Device Config locations, Global Subnet and disabled VLAN controls.');
 
 // V37.3 Pathway devices expose protocols without Luminex-only processing-engine metadata.
@@ -899,14 +899,14 @@ assert(source('vlanTemplateControlsMarkup').includes("[['Generic','Generic'],['L
 console.log('PASS: V37.4 VLAN header control and Generic template choice.');
 
 // V37.5 fixes pane layering, Global Subnet clipping, list drag-fill and Pathway protocol fallback.
-assert.equal(appVersion,'38.3');
+assert.equal(appVersion,'39');
 assert(source('renderDeviceConfigView').includes("classList.toggle('deviceConfigSubnetOpen',deviceConfigGlobalSubnetOpen)"));
 assert(source('deviceConfigParentRow').includes('singlePort?.protocols?.length?singlePort.protocols:null'));
 assert(source('attachDeviceConfigFillHandle').indexOf("const fromPoint=document.elementFromPoint")<source('attachDeviceConfigFillHandle').indexOf("fromEvent=pointerEvent.target"));
 console.log('PASS: V37.5 Device Config overlays, list filling and Pathway protocols.');
 
 // V37.6 shares DMX port positions between Device Config and Port Configuration.
-assert.equal(appVersion,'38.3');
+assert.equal(appVersion,'39');
 assert(source('deviceConfigPortsFor').includes("base.location=legacy?.location||''"));
 assert(source('saveDeviceConfigPorts').includes('location:port.location'));
 assert(source('deviceConfigTableMarkup').includes('deviceConfigRowWithPortLocation'));
@@ -920,7 +920,7 @@ assert(!source('saveRackPortConfiguration').includes('deviceConfigPorts=[]'));
 console.log('PASS: V37.6 Device Config DMX port positions and Port Configuration navigation.');
 
 // V37.7 loads Generic on first VLAN activation and tracks native list cells by geometry.
-assert.equal(appVersion,'38.3');
+assert.equal(appVersion,'39');
 assert(source('enableVlans').includes("templateSource:'Generic'"));
 assert(source('enableVlans').includes('await loadVlanColourReference()'));
 assert(source('enableVlans').includes("templateMode:'manual'"));
@@ -931,7 +931,7 @@ assert(source('attachDeviceConfigFillHandle').includes("document.removeEventList
 console.log('PASS: V37.7 Generic VLAN activation and native list-cell fill targeting.');
 
 // V38 adds sequential DMX-port configuration and inline network-device setup.
-assert.equal(appVersion,'38.3');
+assert.equal(appVersion,'39');
 add('networkPortUniverseRange','shiftedNetworkPortUniverse');
 assert.deepEqual(JSON.parse(JSON.stringify(c.networkPortUniverseRange(20,4))),{start:20,end:23,values:['20','21','22','23']});
 assert.deepEqual(JSON.parse(JSON.stringify(c.networkPortUniverseRange('',3))),{start:1,end:3,values:['1','2','3']});
@@ -989,3 +989,27 @@ assert(activeStyleStart>=0&&activeStyleEnd>activeStyleStart&&activeStyleEnd<body
 assert(html.slice(activeStyleStart,activeStyleEnd).includes(sharedToolbarCss),'Shared toolbar CSS must be in the active stylesheet');
 assert.equal(html.split(sharedToolbarCss).length-1,1,'Shared toolbar CSS must occur exactly once');
 console.log('PASS: shared toolbar CSS remains in the active stylesheet.');
+
+// V39 Looms stores independent project data and offers vendor-aware catalogue editing.
+assert.equal(appVersion,'39');
+assert(html.includes('data-sheet-tab="looms"')&&html.indexOf('data-sheet-tab="rackLayout"')<html.indexOf('data-sheet-tab="looms"')&&html.indexOf('data-sheet-tab="looms"')<html.indexOf('data-sheet-tab="distroLabels"'));
+assert(html.includes("const CABLE_CATALOGUE_MANIFEST_URL='json/cable/manifest.json';"));
+const loomManifest=JSON.parse(fs.readFileSync(root+'json/cable/manifest.json','utf8'));
+assert.deepEqual(loomManifest.catalogues,[{vendor:'Christie Lites UK',file:'json/cable/christie_lites_cable.json'}]);
+const loomContext=vm.createContext({Date,Math,normaliseBlankColour:value=>String(value||'').trim(),crypto:{randomUUID:()=> 'uuid'}});
+for(const name of ['loomId','normaliseLoomUnit','normaliseLoomLength','loomLengthText','normaliseLoomCable','normaliseLoom','normaliseLooms'])vm.runInContext(source(name),loomContext);
+assert.deepEqual(JSON.parse(JSON.stringify(loomContext.normaliseLooms(undefined))),[]);
+assert.equal(loomContext.loomLengthText('24','ft'),"24'");assert.equal(loomContext.loomLengthText('24','m'),'24m');
+const expanded=loomContext.normaliseLoom({name:'Data',cables:[{cableType:'XLR-5',length:"24'",unit:'ft'},{cableType:'XLR-5',length:'24m',unit:'m'}]});
+assert.equal(expanded.cables.length,2);assert.equal(expanded.cables[0].unit,'ft');assert.equal(expanded.cables[1].unit,'m');
+assert(source('blankLoomDraft').includes('length:5'));
+assert(source('saveLoomEditor').includes('Array.from({length:parseInt(row.quantity,10)}'));
+assert(source('renderLoomEditor').includes('Add Loom &amp; Build More'));
+assert(source('renderLoomsView').includes('Edit Loom')&&source('renderLoomsView').includes('Delete Loom'));
+assert(source('deleteLoomCable').includes('confirm('));
+assert(source('attachLoomTableEvents').includes("'copy'")&&source('attachLoomTableEvents').includes("'paste'")&&source('attachLoomTableEvents').includes("'keydown'"));
+assert(source('startLoomFill').includes('pointermove')&&source('startLoomFill').includes('persist()'));
+assert(source('appPayload').includes('looms:normaliseLooms(app.looms)'));
+assert(source('loadProjectPayload').includes('looms:normaliseLooms(candidate.looms)'));
+assert(source('render').includes("if(activeSheetTab==='looms'){renderLoomsView();return}"));
+console.log('PASS: V39 Looms catalogue, project migration, quantity expansion, editor actions and spreadsheet interactions.');

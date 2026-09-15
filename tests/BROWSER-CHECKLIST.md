@@ -1,4 +1,4 @@
-# V38 browser release checks
+# V39 browser release checks
 
 **Use this checklist only when the user explicitly requests browser testing.** Interface changes, implementation requests and releases do not authorise browser testing. Static validation remains the default.
 
@@ -19,6 +19,7 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 | Device Config VLAN Setup and Global Subnet controls open, close and refresh correctly | Required | Required | Required |
 | Device Config + Device picker filters Manufacturer and Device lists, shows Info & Setup, and saves preconfigured network devices | Required | Required | Required |
 | DMX Node Quick Config fills consecutive universes; Select All and ±1/5/10 controls update only selected ports | Required | Required | Required |
+| Looms build, save, reload, edit and delete cable rows; Christie Lites catalogue selection and manual cable entry both remain available | Required | Required | Required |
 | Multi-network-port DMX Nodes show front/rear VLAN controls in Rack Layout and no VLAN value on the Device Config parent row | Required | Required | Required |
 | Generic, Luminex and Pathway VLAN templates detect project devices, preserve custom edits and retain VLAN status and assignments | Required | Required | Required |
 | Device Config Shift ranges, list drag-fill, Facing column and constrained directions | Required | Required | Required |

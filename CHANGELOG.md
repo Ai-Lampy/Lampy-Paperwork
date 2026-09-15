@@ -1,3 +1,9 @@
+## V39 — Looms base setup
+
+- Added the Looms workspace between Rack Layout and Labels.
+- Added saved project looms, vendor-catalogue cable selection, manual cable entry, quantity expansion and editable cable viewer tables.
+- Added the Christie Lites UK cable-catalogue manifest and right-side Loom builder.
+
 ## V38.3 — Add Device information and controls
 
 - Removed Notes from the pre-add Device Config Info & Setup panel while retaining it when editing an added device.

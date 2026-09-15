@@ -1,9 +1,9 @@
 {
-  "title": "Welcome to Lampy Paperwork V38",
+  "title": "Welcome to Lampy Paperwork V39",
   "paragraphs": [
     "Lampy Paperwork is a browser-based workspace for creating and managing the technical paperwork used on live entertainment productions. It brings fixture patching, power, distro and Fan Out documentation, control systems, network devices, rack layouts, exports, and project records together in one place.",
     "The app keeps related project information connected, reduces repeated data entry, and produces clear paperwork that can move with a production from planning through delivery.",
-    "V38 adds Quick Config for assigning and adjusting DMX Node port universes. Network devices can now be selected, reviewed and configured from the new Device Config + Device menu before they are added to the project. Rack Layout shows separate VLAN settings for each physical network port on multi-port DMX Nodes.",
+    "V39 adds Looms. Build colour-coded looms from your selected Lighting Vendor cable catalogue when it is available, or enter custom cable types and lengths. Each expanded cable can be labelled, edited and noted from the Loom Viewer.",
     "Lampy Paperwork remains under active development. Features, layouts, workflows, and saved data may change while the app is tested and improved. Download and keep regular copies of your Lampy project file.",
     "Please report bugs, request missing library items, or suggest improvements through the GitHub issue tracker:",
     "https://github.com/Ai-Lampy/Lampy-Paperwork/issues",

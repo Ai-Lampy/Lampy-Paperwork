@@ -1,12 +1,13 @@
 {
-  "title": "Lampy Paperwork V38 Walk-through",
+  "title": "Lampy Paperwork V39 Walk-through",
   "sections": [
     {
-      "title": "New in V38: DMX ports and device setup",
+      "title": "New in V39: Looms",
       "type": "unordered",
       "items": [
-        "Use Quick Config in DMX Node Port Configuration to assign consecutive universes to every port. Select individual ports or Select All to adjust assigned universes by 1, 5 or 10.",
-        "Use + Device in Device Config to choose a manufacturer and device, review its information, enter its settings and add it to the project from one menu.",
+        "Open Looms between Rack Layout and Labels. Use + Loom to build a colour-coded loom from five starter cable rows.",
+        "When Production Info selects Christie Lites UK, choose a cable category then a catalogue cable and length. Without a matching vendor catalogue, cable types and lengths remain fully editable.",
+        "Quantity expands each builder row into individual cables. Edit labels, cable types, lengths and notes in the Loom Viewer using the same keyboard, selection, copy/paste and drag-fill pattern as Device Config.",
         "Global Subnet, location groups and Generic, Luminex or Pathway VLAN templates remain available in Device Config. Disabled VLANs stay out of device tables.",
         "Save status shows unsaved changes, successful saves and storage failures. Use Download recovery if saving fails. If another tab changes the project, download a recovery copy before reloading.",
         "Project imports validate data before replacing your project. ZIP imports check paths, extraction limits and file integrity.",

@@ -30,12 +30,12 @@
       }
     }
     visit(data);
-    for(const key of ['labels','socaNames','socaMeta','distros','fixturePatch','patchSheets']){
+    for(const key of ['labels','socaNames','socaMeta','distros','looms','fixturePatch','patchSheets']){
       if(source[key]!==undefined&&!Array.isArray(source[key]))throw Error(key+' must be an array');
       if(source[key]?.length>100000)throw Error(key+' exceeds the supported size');
     }
     for(const key of ['projectInfo','controlNetwork','gdtfFiles','gdtfMatches','collapsed'])if(source[key]!==undefined&&(!source[key]||typeof source[key]!=='object'||Array.isArray(source[key])))throw Error(key+' must be an object');
-    for(const key of ['distros','fixturePatch','patchSheets','labels','socaMeta'])for(const item of source[key]||[])if(!item||typeof item!=='object'||Array.isArray(item))throw Error('Invalid '+key+' entry');
+    for(const key of ['distros','looms','fixturePatch','patchSheets','labels','socaMeta'])for(const item of source[key]||[])if(!item||typeof item!=='object'||Array.isArray(item))throw Error('Invalid '+key+' entry');
     for(const distro of source.distros||[])if(distro.count!==undefined&&(!Number.isInteger(Number(distro.count))||Number(distro.count)<1||Number(distro.count)>1000))throw Error('Invalid distro circuit count');
     return source;
   }
