@@ -1,3 +1,8 @@
+## V37.7 — VLAN activation and Device Config fill
+
+- Load the current Generic VLAN template when VLANs are enabled for the first time.
+- Made Device Config list-cell drag-fill track native VLAN selects reliably and commit the selected VLAN through the full dragged range.
+
 ## V37.6 — Device Config DMX port locations
 
 - Added position-aware Location selectors to DMX Node child ports and synchronized them with Port Configuration.
