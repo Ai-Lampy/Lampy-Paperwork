@@ -1,3 +1,7 @@
+## V40.4 — Loom ends and Extension layout
+
+- Added Loom end-orientation choices, Feeder and Extension headings, and persistent right-side Extension stacks.
+
 ## V40.3 — Loom extensions
 
 - Added linked Extension Looms, grouped alongside their parent, with a parent-delete choice.
