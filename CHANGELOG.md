@@ -1,3 +1,8 @@
+## V40.6 — Yellow headings and Loom card layout
+
+- Added white, black-outlined text for the project Yellow in Position Summary and Loom headings.
+- Refined Loom card heading layout and Ends Together row borders.
+
 ## V40.5 — Loom table refinement and Power project errors
 
 - Refined Loom table rows and compacted Feeder actions.
