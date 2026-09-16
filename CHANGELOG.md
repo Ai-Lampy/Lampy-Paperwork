@@ -1,3 +1,8 @@
+## V40.5 — Loom table refinement and Power project errors
+
+- Refined Loom table rows and compacted Feeder actions.
+- Added Power supply warnings to Project Errors, with direct navigation to the affected supply.
+
 ## V40.4 — Loom ends and Extension layout
 
 - Added Loom end-orientation choices, Feeder and Extension headings, and persistent right-side Extension stacks.

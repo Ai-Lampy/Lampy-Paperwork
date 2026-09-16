@@ -5,7 +5,7 @@ function source(name){const start=html.search(new RegExp('(?:async )?function '+
 const c=vm.createContext({console,LampyCore,crypto:require('crypto').webcrypto,window:{},clearTimeout,Map,Set,Number,Array});
 function add(...names){for(const name of names)vm.runInContext(source(name),c)}
 const plain=value=>JSON.parse(JSON.stringify(value));
-add('normalisePatchMode','modeWatts','distroVoltage','powerSheetRowResults','powerSheetSlotResult','fixtureWatts','normalisePowerSheetRow','blankPhaseTotals','powerSheetPhaseTotals','powerDistroConfiguration','powerSupplyTotals','addPhaseTotals','formatPhaseAmps','escapeHtml','escapeAttr','escapeJsAttr','powerSupplyWarningMarkup');
+add('normalisePatchMode','modeWatts','distroVoltage','powerSheetRowResults','powerSheetSlotResult','fixtureWatts','normalisePowerSheetRow','blankPhaseTotals','powerSheetPhaseTotals','powerDistroConfiguration','powerSupplyTotals','addPhaseTotals','formatPhaseAmps','escapeHtml','escapeAttr','escapeJsAttr','powerSupplyWarningEntries','powerSupplyWarningMarkup','collectPowerSupplyErrors');
 c.ensureProjectInfo=()=>({powerSupplies:[]});c.patchFixturesFor=()=>[];const fixtures={1:{fixture:'Known',watts:2300},2:{fixture:'Unknown'},3:{fixture:'Zero',watts:0}};c.fixturePatchByFixId=id=>fixtures[id];
 assert.equal(c.powerSheetRowResults({fixIds:['1']},230).amps,10);
 for(const id of ['2','3','404']){const result=c.powerSheetRowResults({fixIds:['1',id]},230);assert.equal(result.incomplete,true);assert.equal(result.amps,null)}
@@ -16,6 +16,10 @@ assert.equal(LampyCore.phaseIndex({input:'125A 3ø',phasing:'Single Phase'},5),0
 assert.equal(LampyCore.phaseIndex({input:'125A 3ø',phasing:'Single Phase'},6),1);
 c.powerSupplyTotals=()=>({p1:100,p2:0,p3:0});assert.match(c.powerSupplyWarningMarkup({input:'32A 3ø'},[]),/32 A/);
 c.powerSupplyTotals=()=>({p1:NaN,p2:0,p3:0});assert.match(c.powerSupplyWarningMarkup({input:'32A 3ø'},[]),/Incomplete/);
+c.ensureProjectInfo=()=>({powerSupplies:[{id:'sr1',name:'SR 1',input:'32A 3ø',distros:[0]}]});
+let powerErrors=c.collectPowerSupplyErrors([]);assert.deepEqual(plain(powerErrors.map(error=>error.id)),['power-supply:sr1:incomplete-load']);assert.equal(powerErrors[0].description,'SR 1: Incomplete load data — check assigned circuits.');
+c.powerSupplyTotals=()=>({p1:40,p2:0,p3:0});powerErrors=c.collectPowerSupplyErrors([]);assert.deepEqual(plain(powerErrors.map(error=>error.id)),['power-supply:sr1:overload']);
+c.ensureProjectInfo=()=>({powerSupplies:[{id:'sr1',name:'SR 1',input:'',distros:[0]}]});c.powerSupplyTotals=()=>({p1:0,p2:0,p3:0});powerErrors=c.collectPowerSupplyErrors([]);assert.deepEqual(plain(powerErrors.map(error=>error.id)),['power-supply:sr1:invalid-rating']);
 assert.equal(c.formatPhaseAmps(NaN),'Incomplete');
 console.log('PASS: circuit voltage, missing loads, single/three-phase allocation and supply warnings');
 
