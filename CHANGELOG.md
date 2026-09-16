@@ -1,3 +1,8 @@
+## V40.3 — Loom extensions
+
+- Added linked Extension Looms, grouped alongside their parent, with a parent-delete choice.
+- Updated the Loom toolbar and card-heading spacing.
+
 ## V40.2 — Loom toolbar navigation
 
 - Matched the Looms toolbar structure to other sub-tab pages and added Looms hover-menu routes.
