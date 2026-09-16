@@ -1,3 +1,7 @@
+## V40.2 — Loom toolbar navigation
+
+- Matched the Looms toolbar structure to other sub-tab pages and added Looms hover-menu routes.
+
 ## V40.1 — Loom toolbar and card layout
 
 - Moved Looms and Cable List tabs into the Looms toolbar, equalised Cable List columns and compacted Loom header actions.
