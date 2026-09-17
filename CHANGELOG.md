@@ -1,3 +1,7 @@
+## V40.9 — Loom editor spacing and Extension ordering
+
+- Refined Loom editor controls and alphabetised Extension Looms under each Feeder.
+
 ## V40.8 — Control text outlines and Loom type editing
 
 - Added Control position outlines and editable Feeder or EXT Loom type selection.
