@@ -2,6 +2,7 @@
 
 - Refined Loom headings, builder controls and cable selection.
 - Set Fan Out Fix ID, Fix Type and Position body text sizes.
+- Set Fan Out rows to 25px and the Power Colour column to 50px with a 12px header.
 
 ## V40.6 — Yellow headings and Loom card layout
 

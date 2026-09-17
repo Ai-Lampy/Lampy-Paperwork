@@ -637,7 +637,7 @@ console.log('PASS: V35.1 Labels presentation, per-Socapex rear colours and navig
 assert.equal(appVersion,'40.7');
 assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(html.includes(".powerSheetTable{table-layout:auto!important;border-collapse:collapse;font-family:Georgia,'Times New Roman',serif;font-size:14px;border:2px solid #000}"));
-assert(html.includes('.powerSocaColourCol,.powerSheetTable .fixIdCol{width:70px!important;min-width:70px!important;max-width:70px!important}'));
+assert(html.includes('.powerSocaColourCol{width:50px!important;min-width:50px!important;max-width:50px!important}.powerSheetTable .fixIdCol{width:70px!important;min-width:70px!important;max-width:70px!important}'));
 assert(html.includes('.powerSheetTable .fixIdCol{width:70px!important;min-width:70px!important;max-width:70px!important;font-weight:800;font-size:16px}'));
 assert(html.includes('.powerSocaColourInput{-webkit-text-stroke:.6px var(--colour-text-outline);text-shadow:none}'));
 assert(source('colourInputStyle').includes('colourFieldPresentation(value)'));
