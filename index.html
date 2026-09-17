@@ -5055,7 +5055,7 @@ function attachEvents(){
     if($('ipAddressFormatPane')?.classList.contains('open')&&!e.target?.closest?.('#ipAddressFormatPane,.ipAddressToolbar'))closeIpAddressFormat();
     if(deviceConfigGlobalSubnetOpen&&!e.target?.closest?.('#deviceConfigGlobalSubnetControl'))closeDeviceConfigGlobalSubnet();
     if($('vlanSetupPane')?.classList.contains('open')&&!e.target?.closest?.('#vlanSetupPane,.networkDeviceConfigToolbar,.deviceConfigToolbar,#colourMenu'))closeVlanSetup();
-    if($('loomEditorPane')?.classList.contains('open')&&!e.target?.closest?.('#loomEditorPane,#loomCableMenu,#colourMenu,[data-open-loom-editor]'))closeLoomEditor();if(!e.target?.closest?.('#loomCableMenu,[data-loom-key="cableType"],[data-loom-builder-cable]'))hideLoomCableMenu();
+    const loomEditorPane=$('loomEditorPane'),loomClickPath=e.composedPath?.()||[];if(loomEditorPane?.classList.contains('open')&&!loomClickPath.includes(loomEditorPane)&&!e.target?.closest?.('#loomCableMenu,#colourMenu,[data-open-loom-editor]'))closeLoomEditor();if(!e.target?.closest?.('#loomCableMenu,[data-loom-key="cableType"],[data-loom-builder-cable]'))hideLoomCableMenu();
     if($('ipDeviceOrderPane')?.classList.contains('open')&&!e.target?.closest?.('#ipDeviceOrderPane,.ipAddressToolbar'))closeIpDeviceOrder();
     if($('rackEditorPane')?.classList.contains('open')&&!e.target?.closest?.('#rackEditorPane,.rackLayoutView,.controlNetworkTabAction'))closeRackEditor();
     if($('patchFormatPane')?.classList.contains('open')&&!e.target?.closest?.('#patchFormatPane,.fixturePatchToolbar'))closePatchFormatModal();

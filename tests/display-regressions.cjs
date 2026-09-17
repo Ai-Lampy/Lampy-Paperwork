@@ -1159,6 +1159,8 @@ assert(source('loomCardMarkup').includes("extension?'EXT':'Feeder'"));
 assert(source('showLoomCableMenu').includes('window.scrollY+rect.bottom+4'));
 assert(source('renderLoomsView').includes('data-open-loom-editor'));
 assert(html.includes('data-open-loom-editor]'));
+assert(html.includes("const loomEditorPane=$('loomEditorPane'),loomClickPath=e.composedPath?.()||[]"));
+assert(html.includes('!loomClickPath.includes(loomEditorPane)'));
 console.log('PASS: V40.7 Loom pane controls, full cable picker and outside close.');
 
 // V40.7 keeps Fan Out body text readable independently of the saved table format.
