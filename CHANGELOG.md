@@ -1,3 +1,8 @@
+## V40.7 — Loom pane and builder refinement
+
+- Refined Loom headings, builder controls and cable selection.
+- Set Fan Out Fix ID, Fix Type and Position body text sizes.
+
 ## V40.6 — Yellow headings and Loom card layout
 
 - Added white, black-outlined text for the project Yellow in Position Summary and Loom headings.
