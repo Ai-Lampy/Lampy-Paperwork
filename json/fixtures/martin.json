@@ -6,22 +6,23 @@
       "watts": 120,
       "weight": 8.5,
       "modes": {
-        "1 Chan": 1
+        "Fan": 1
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__AF_1_Fan.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@JEM_AF_1@JEM_AF1.gdtf",
         "modes": {
-          "1 Chan": {
+          "Fan": {
             "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Fan",
+            "status": "matched",
+            "parameters": 1
           }
         }
       },
-      "shortName": "AF 1 Fan"
+      "shortName": "AF1"
     },
     {
       "fixture": "AF 2 Fan",
@@ -78,7 +79,7 @@
     },
     {
       "fixture": "Atomic 3000 LED",
-      "watts": 1100.0,
+      "watts": 740.0,
       "weight": 7.8,
       "modes": {
         "3 Channel": 3,
@@ -115,7 +116,7 @@
     },
     {
       "fixture": "ELP Manet 8F",
-      "watts": 492.0,
+      "watts": 530.0,
       "weight": 14.0,
       "modes": {
         "Compact": 11,
@@ -148,11 +149,11 @@
           }
         }
       },
-      "shortName": "ELP Manet 8F"
+      "shortName": "ELPMan8F"
     },
     {
       "fixture": "ELP PAR",
-      "watts": 280.0,
+      "watts": 300.0,
       "weight": 7.8,
       "modes": {
         "Basic": 14,
@@ -178,11 +179,11 @@
           }
         }
       },
-      "shortName": "ELP PAR"
+      "shortName": "ELPPAR"
     },
     {
       "fixture": "ELP PAR IP",
-      "watts": 280.0,
+      "watts": 300.0,
       "weight": 9.1,
       "modes": {
         "Basic": 14,
@@ -208,33 +209,57 @@
           }
         }
       },
-      "shortName": "ELP PAR IP"
+      "shortName": "ELPPARIP"
     },
     {
       "fixture": "ERA 150 Wash",
-      "watts": 315,
+      "watts": 340.0,
       "weight": 7.3,
       "modes": {
-        "Single Mode": 18
+        "Basic": 18
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__ERA_150_Wash.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@ERA_150_Wash@20230226NoMeas.gdtf",
         "modes": {
-          "Single Mode": {
+          "Basic": {
             "channels": 18,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched",
+            "parameters": 11
           }
         }
       },
-      "shortName": "ERA 150 Wash"
+      "shortName": "ERA150Was"
+    },
+    {
+      "fixture": "ERA 300 Profile",
+      "watts": 375.0,
+      "weight": 17.0,
+      "modes": {
+        "Basic": 21
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__ERA_300_Profile.gdtf",
+        "file": "fixtures/martin/Martin_Professional@ERA_300_Profile@20230226.gdtf",
+        "modes": {
+          "Basic": {
+            "channels": 21,
+            "gdtfMode": "Basic",
+            "status": "matched",
+            "parameters": 18
+          }
+        }
+      },
+      "shortName": "ERA300Pro"
     },
     {
       "fixture": "ERA 400 Performance CLD",
-      "watts": 455,
+      "watts": 455.0,
       "weight": 22.5,
       "modes": {
         "Basic": 30,
@@ -260,11 +285,11 @@
           }
         }
       },
-      "shortName": "ERA 400 Performance CLD"
+      "shortName": "ERA400PerCLD"
     },
     {
       "fixture": "ERA 400 Performance WRM",
-      "watts": 300.0,
+      "watts": 455.0,
       "weight": 22.5,
       "modes": {
         "Basic": 30,
@@ -290,11 +315,11 @@
           }
         }
       },
-      "shortName": "ERA 400 Performance WRM"
+      "shortName": "ERA400PerWRM"
     },
     {
       "fixture": "ERA 600 Performance",
-      "watts": 856,
+      "watts": 780.0,
       "weight": 32.3,
       "modes": {
         "Basic": 41
@@ -313,33 +338,34 @@
           }
         }
       },
-      "shortName": "ERA 600 Performance"
+      "shortName": "ERA600Per"
     },
     {
       "fixture": "ERA 600 Profile",
-      "watts": 856,
+      "watts": 780.0,
       "weight": 31.3,
       "modes": {
-        "Single Mode": 35
+        "Basic": 35
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__ERA_600_Profile.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@ERA_600_Profile@20230226.gdtf",
         "modes": {
-          "Single Mode": {
+          "Basic": {
             "channels": 35,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched",
+            "parameters": 24
           }
         }
       },
-      "shortName": "ERA 600 Profile"
+      "shortName": "ERA600Pro"
     },
     {
       "fixture": "ERA 700 Performance IP",
-      "watts": 990,
+      "watts": 856.0,
       "weight": 39.7,
       "modes": {
         "Basic": 42,
@@ -365,11 +391,11 @@
           }
         }
       },
-      "shortName": "ERA 700 Performance IP"
+      "shortName": "ERA700PerIP"
     },
     {
       "fixture": "ERA 800 Performance",
-      "watts": 800.0,
+      "watts": 1270.0,
       "weight": 41.0,
       "modes": {
         "Basic": 42
@@ -388,11 +414,34 @@
           }
         }
       },
-      "shortName": "ERA 800 Performance"
+      "shortName": "ERA800Per"
+    },
+    {
+      "fixture": "ERA 800 Profile",
+      "watts": 1270.0,
+      "weight": 40.0,
+      "modes": {
+        "Basic": 36
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__ERA_800_Profile.gdtf",
+        "file": "fixtures/martin/Martin_Professional@ERA_800_Profile@20230226.gdtf",
+        "modes": {
+          "Basic": {
+            "channels": 36,
+            "gdtfMode": "Basic",
+            "status": "matched",
+            "parameters": 25
+          }
+        }
+      },
+      "shortName": "ERA800Pro"
     },
     {
       "fixture": "Exterior Dot-1 Pro",
-      "watts": 33.0,
+      "watts": 100.0,
       "weight": 2.48,
       "modes": {
         "Standard": 6,
@@ -467,11 +516,11 @@
           }
         }
       },
-      "shortName": "Exterior Dot-1 Pro"
+      "shortName": "EXTDot1Pro"
     },
     {
       "fixture": "Exterior Dot-4 Pro",
-      "watts": 64.0,
+      "watts": 100.0,
       "weight": 2.96,
       "modes": {
         "Standard": 6,
@@ -546,11 +595,11 @@
           }
         }
       },
-      "shortName": "Exterior Dot-4 Pro"
+      "shortName": "EXTDot4Pro"
     },
     {
       "fixture": "Exterior Dot-9 Pro",
-      "watts": 106.92,
+      "watts": 100.0,
       "weight": 2.75,
       "modes": {
         "Standard": 6,
@@ -625,11 +674,11 @@
           }
         }
       },
-      "shortName": "Exterior Dot-9 Pro"
+      "shortName": "EXTDot9Pro"
     },
     {
       "fixture": "Exterior Dot-HP Pro",
-      "watts": 4.8,
+      "watts": 5.7,
       "weight": 0.4,
       "modes": {
         "Standard": 6,
@@ -676,11 +725,1016 @@
           }
         }
       },
-      "shortName": "Exterior Dot-HP Pro"
+      "shortName": "EXTDotHPPro"
+    },
+    {
+      "fixture": "Exterior Linear Pro Cove CTC 1ft",
+      "watts": 12.0,
+      "weight": 0.85,
+      "modes": {
+        "1 Segment": 3,
+        "Standard": 3,
+        "2 Segment": 6
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__Exterior_Linear_Pro_Cove_CTC_1ft.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Exterior_Linear_Pro_Cove_CTC_1ft@20260823NoMeas.gdtf",
+        "modes": {
+          "1 Segment": {
+            "channels": 3,
+            "gdtfMode": "1 Segment",
+            "status": "matched",
+            "parameters": 4
+          },
+          "Standard": {
+            "channels": 3,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 2
+          },
+          "2 Segment": {
+            "channels": 6,
+            "gdtfMode": "2 Segment",
+            "status": "matched",
+            "parameters": 8
+          }
+        }
+      },
+      "shortName": "EXTLinProCoCTC 1ft"
+    },
+    {
+      "fixture": "Exterior Linear Pro Cove CTC 4ft",
+      "watts": 48.0,
+      "weight": 2.8,
+      "modes": {
+        "1 Segment": 3,
+        "Standard": 3,
+        "8 Segment": 24,
+        "4 Segment": 12
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__Exterior_Linear_Pro_Cove_CTC_4ft.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Exterior_Linear_Pro_Cove_CTC_4ft@20260823NoMeas.gdtf",
+        "modes": {
+          "1 Segment": {
+            "channels": 3,
+            "gdtfMode": "1 Segment",
+            "status": "matched",
+            "parameters": 4
+          },
+          "Standard": {
+            "channels": 3,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 2
+          },
+          "8 Segment": {
+            "channels": 24,
+            "gdtfMode": "8 Segment",
+            "status": "matched",
+            "parameters": 32
+          },
+          "4 Segment": {
+            "channels": 12,
+            "gdtfMode": "4 Segment",
+            "status": "matched",
+            "parameters": 16
+          }
+        }
+      },
+      "shortName": "EXTLinProCoCTC 4ft"
+    },
+    {
+      "fixture": "Exterior Linear Pro Cove QUAD 1ft",
+      "watts": 12.0,
+      "weight": 0.85,
+      "modes": {
+        "1 Segment": 3,
+        "Standard": 6,
+        "2 Segment": 6,
+        "Raw": 4,
+        "Ext 2 Segment": 12,
+        "Ext Standard": 10
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__Exterior_Linear_Pro_Cove_QUAD_1ft.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Exterior_Linear_Pro_Cove_QUAD_1ft@20260823NoMeas.gdtf",
+        "modes": {
+          "1 Segment": {
+            "channels": 3,
+            "gdtfMode": "1 Segment",
+            "status": "matched",
+            "parameters": 4
+          },
+          "Standard": {
+            "channels": 6,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 5
+          },
+          "2 Segment": {
+            "channels": 6,
+            "gdtfMode": "2 Segment",
+            "status": "matched",
+            "parameters": 8
+          },
+          "Raw": {
+            "channels": 4,
+            "gdtfMode": "Raw",
+            "status": "matched",
+            "parameters": 5
+          },
+          "Ext 2 Segment": {
+            "channels": 12,
+            "gdtfMode": "Ext 2 Segment",
+            "status": "matched",
+            "parameters": 13
+          },
+          "Ext Standard": {
+            "channels": 10,
+            "gdtfMode": "Ext Standard",
+            "status": "matched",
+            "parameters": 9
+          }
+        }
+      },
+      "shortName": "EXTLinProCoQUAD 1ft"
+    },
+    {
+      "fixture": "Exterior Linear Pro Cove QUAD 4ft",
+      "watts": 48.0,
+      "weight": 2.8,
+      "modes": {
+        "1 Segment": 3,
+        "Standard": 6,
+        "8 Segment": 24,
+        "4 Segment": 12,
+        "Raw": 4,
+        "Ext 8 Segment": 30,
+        "Ext 4 Segment": 18,
+        "Ext Standard": 10
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__Exterior_Linear_Pro_Cove_QUAD_4ft.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Exterior_Linear_Pro_Cove_QUAD_4ft@20260823NoMeas.gdtf",
+        "modes": {
+          "1 Segment": {
+            "channels": 3,
+            "gdtfMode": "1 Segment",
+            "status": "matched",
+            "parameters": 4
+          },
+          "Standard": {
+            "channels": 6,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 5
+          },
+          "8 Segment": {
+            "channels": 24,
+            "gdtfMode": "8 Segment",
+            "status": "matched",
+            "parameters": 32
+          },
+          "4 Segment": {
+            "channels": 12,
+            "gdtfMode": "4 Segment",
+            "status": "matched",
+            "parameters": 16
+          },
+          "Raw": {
+            "channels": 4,
+            "gdtfMode": "Raw",
+            "status": "matched",
+            "parameters": 5
+          },
+          "Ext 8 Segment": {
+            "channels": 30,
+            "gdtfMode": "Ext 8 Segment",
+            "status": "matched",
+            "parameters": 37
+          },
+          "Ext 4 Segment": {
+            "channels": 18,
+            "gdtfMode": "Ext 4 Segment",
+            "status": "matched",
+            "parameters": 21
+          },
+          "Ext Standard": {
+            "channels": 10,
+            "gdtfMode": "Ext Standard",
+            "status": "matched",
+            "parameters": 9
+          }
+        }
+      },
+      "shortName": "EXTLinProCoQUAD 4ft"
+    },
+    {
+      "fixture": "Exterior Linear Pro DV QUAD 1ft",
+      "watts": 12.0,
+      "weight": 0.85,
+      "modes": {
+        "1 Segment": 3,
+        "Standard": 6,
+        "2 Segment": 6,
+        "Raw": 4,
+        "Ext 2 Segment": 12,
+        "Ext Standard": 10
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__Exterior_Linear_Pro_DV_QUAD_1ft.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Exterior_Linear_Pro_DV_QUAD_1ft@20260823NoMeas.gdtf",
+        "modes": {
+          "1 Segment": {
+            "channels": 3,
+            "gdtfMode": "1 Segment",
+            "status": "matched",
+            "parameters": 4
+          },
+          "Standard": {
+            "channels": 6,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 5
+          },
+          "2 Segment": {
+            "channels": 6,
+            "gdtfMode": "2 Segment",
+            "status": "matched",
+            "parameters": 8
+          },
+          "Raw": {
+            "channels": 4,
+            "gdtfMode": "Raw",
+            "status": "matched",
+            "parameters": 5
+          },
+          "Ext 2 Segment": {
+            "channels": 12,
+            "gdtfMode": "Ext 2 Segment",
+            "status": "matched",
+            "parameters": 13
+          },
+          "Ext Standard": {
+            "channels": 10,
+            "gdtfMode": "Ext Standard",
+            "status": "matched",
+            "parameters": 9
+          }
+        }
+      },
+      "shortName": "EXTLinProDvQUAD 1ft"
+    },
+    {
+      "fixture": "Exterior Linear Pro DV QUAD 4ft",
+      "watts": 48.0,
+      "weight": 2.8,
+      "modes": {
+        "1 Segment": 3,
+        "Standard": 6,
+        "8 Segment": 24,
+        "4 Segment": 12,
+        "Raw": 4,
+        "Ext 8 Segment": 30,
+        "Ext 4 Segment": 18,
+        "Ext Standard": 10
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__Exterior_Linear_Pro_DV_QUAD_4ft.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Exterior_Linear_Pro_DV_QUAD_4ft@20260823NoMeas.gdtf",
+        "modes": {
+          "1 Segment": {
+            "channels": 3,
+            "gdtfMode": "1 Segment",
+            "status": "matched",
+            "parameters": 4
+          },
+          "Standard": {
+            "channels": 6,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 5
+          },
+          "8 Segment": {
+            "channels": 24,
+            "gdtfMode": "8 Segment",
+            "status": "matched",
+            "parameters": 32
+          },
+          "4 Segment": {
+            "channels": 12,
+            "gdtfMode": "4 Segment",
+            "status": "matched",
+            "parameters": 16
+          },
+          "Raw": {
+            "channels": 4,
+            "gdtfMode": "Raw",
+            "status": "matched",
+            "parameters": 5
+          },
+          "Ext 8 Segment": {
+            "channels": 30,
+            "gdtfMode": "Ext 8 Segment",
+            "status": "matched",
+            "parameters": 37
+          },
+          "Ext 4 Segment": {
+            "channels": 18,
+            "gdtfMode": "Ext 4 Segment",
+            "status": "matched",
+            "parameters": 21
+          },
+          "Ext Standard": {
+            "channels": 10,
+            "gdtfMode": "Ext Standard",
+            "status": "matched",
+            "parameters": 9
+          }
+        }
+      },
+      "shortName": "EXTLinProDvQUAD 4ft"
+    },
+    {
+      "fixture": "Exterior Linear Pro Graze CTC 1ft",
+      "watts": 12.0,
+      "weight": 0.85,
+      "modes": {
+        "1 Segment": 3,
+        "Standard": 3,
+        "2 Segment": 6
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__Exterior_Linear_Pro_Graze_CTC_1ft.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Exterior_Linear_Pro_Graze_CTC_1ft@20260823NoMeas.gdtf",
+        "modes": {
+          "1 Segment": {
+            "channels": 3,
+            "gdtfMode": "1 Segment",
+            "status": "matched",
+            "parameters": 4
+          },
+          "Standard": {
+            "channels": 3,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 2
+          },
+          "2 Segment": {
+            "channels": 6,
+            "gdtfMode": "2 Segment",
+            "status": "matched",
+            "parameters": 8
+          }
+        }
+      },
+      "shortName": "EXTLinProGrCTC 1ft"
+    },
+    {
+      "fixture": "Exterior Linear Pro Graze CTC 4ft",
+      "watts": 48.0,
+      "weight": 2.8,
+      "modes": {
+        "1 Segment": 3,
+        "Standard": 3,
+        "8 Segment": 24,
+        "4 Segment": 12
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__Exterior_Linear_Pro_Graze_CTC_4ft.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Exterior_Linear_Pro_Graze_CTC_4ft@20260823NoMeas.gdtf",
+        "modes": {
+          "1 Segment": {
+            "channels": 3,
+            "gdtfMode": "1 Segment",
+            "status": "matched",
+            "parameters": 4
+          },
+          "Standard": {
+            "channels": 3,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 2
+          },
+          "8 Segment": {
+            "channels": 24,
+            "gdtfMode": "8 Segment",
+            "status": "matched",
+            "parameters": 32
+          },
+          "4 Segment": {
+            "channels": 12,
+            "gdtfMode": "4 Segment",
+            "status": "matched",
+            "parameters": 16
+          }
+        }
+      },
+      "shortName": "EXTLinProGrCTC 4ft"
+    },
+    {
+      "fixture": "Exterior Linear Pro Graze QUAD 1ft",
+      "watts": 12.0,
+      "weight": 0.85,
+      "modes": {
+        "1 Segment": 3,
+        "Standard": 6,
+        "2 Segment": 6,
+        "Raw": 4,
+        "Ext 2 Segment": 12,
+        "Ext Standard": 10
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__Exterior_Linear_Pro_Graze_QUAD_1ft.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Exterior_Linear_Pro_Graze_QUAD_1ft@20260823NoMeas.gdtf",
+        "modes": {
+          "1 Segment": {
+            "channels": 3,
+            "gdtfMode": "1 Segment",
+            "status": "matched",
+            "parameters": 4
+          },
+          "Standard": {
+            "channels": 6,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 5
+          },
+          "2 Segment": {
+            "channels": 6,
+            "gdtfMode": "2 Segment",
+            "status": "matched",
+            "parameters": 8
+          },
+          "Raw": {
+            "channels": 4,
+            "gdtfMode": "Raw",
+            "status": "matched",
+            "parameters": 5
+          },
+          "Ext 2 Segment": {
+            "channels": 12,
+            "gdtfMode": "Ext 2 Segment",
+            "status": "matched",
+            "parameters": 13
+          },
+          "Ext Standard": {
+            "channels": 10,
+            "gdtfMode": "Ext Standard",
+            "status": "matched",
+            "parameters": 9
+          }
+        }
+      },
+      "shortName": "EXTLinProGrQUAD 1ft"
+    },
+    {
+      "fixture": "Exterior Linear Pro Graze QUAD 4ft",
+      "watts": 48.0,
+      "weight": 2.8,
+      "modes": {
+        "1 Segment": 3,
+        "Standard": 6,
+        "8 Segment": 24,
+        "4 Segment": 12,
+        "Raw": 4,
+        "Ext 8 Segment": 30,
+        "Ext 4 Segment": 18,
+        "Ext Standard": 10
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__Exterior_Linear_Pro_Graze_QUAD_4ft.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Exterior_Linear_Pro_Graze_QUAD_4ft@20260823NoMeas.gdtf",
+        "modes": {
+          "1 Segment": {
+            "channels": 3,
+            "gdtfMode": "1 Segment",
+            "status": "matched",
+            "parameters": 4
+          },
+          "Standard": {
+            "channels": 6,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 5
+          },
+          "8 Segment": {
+            "channels": 24,
+            "gdtfMode": "8 Segment",
+            "status": "matched",
+            "parameters": 32
+          },
+          "4 Segment": {
+            "channels": 12,
+            "gdtfMode": "4 Segment",
+            "status": "matched",
+            "parameters": 16
+          },
+          "Raw": {
+            "channels": 4,
+            "gdtfMode": "Raw",
+            "status": "matched",
+            "parameters": 5
+          },
+          "Ext 8 Segment": {
+            "channels": 30,
+            "gdtfMode": "Ext 8 Segment",
+            "status": "matched",
+            "parameters": 37
+          },
+          "Ext 4 Segment": {
+            "channels": 18,
+            "gdtfMode": "Ext 4 Segment",
+            "status": "matched",
+            "parameters": 21
+          },
+          "Ext Standard": {
+            "channels": 10,
+            "gdtfMode": "Ext Standard",
+            "status": "matched",
+            "parameters": 9
+          }
+        }
+      },
+      "shortName": "EXTLinProGrQUAD 4ft"
+    },
+    {
+      "fixture": "Exterior Projection Pro Compact",
+      "watts": 180.0,
+      "weight": 13.9,
+      "modes": {
+        "Basic": 13,
+        "Extended": 14
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__Exterior_Projection_Pro_Compact.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Exterior_Projection_Pro_Compact@20260621.gdtf",
+        "modes": {
+          "Basic": {
+            "channels": 13,
+            "gdtfMode": "Basic",
+            "status": "matched",
+            "parameters": 19
+          },
+          "Extended": {
+            "channels": 14,
+            "gdtfMode": "Extended",
+            "status": "matched",
+            "parameters": 20
+          }
+        }
+      },
+      "shortName": "EXTProProCom"
+    },
+    {
+      "fixture": "Exterior Wash Pro L CTC",
+      "watts": 150.0,
+      "weight": 12.4,
+      "modes": {
+        "Basic": 3,
+        "Standard": 3
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__Exterior_Wash_Pro_L_CTC.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Exterior_Wash_Pro_L_CTC@20240418NoMeas.gdtf",
+        "modes": {
+          "Basic": {
+            "channels": 3,
+            "gdtfMode": "Basic",
+            "status": "matched",
+            "parameters": 6
+          },
+          "Standard": {
+            "channels": 3,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 4
+          }
+        }
+      },
+      "shortName": "EXTWasProLCTC"
+    },
+    {
+      "fixture": "Exterior Wash Pro L QUAD",
+      "watts": 150.0,
+      "weight": 12.4,
+      "modes": {
+        "Basic": 3,
+        "Raw": 4,
+        "Standard": 6,
+        "Extended": 7,
+        "ICMY": 4
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__Exterior_Wash_Pro_L_QUAD.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Exterior_Wash_Pro_L_QUAD@20250214NoMeas.gdtf",
+        "modes": {
+          "Basic": {
+            "channels": 3,
+            "gdtfMode": "Basic",
+            "status": "matched",
+            "parameters": 6
+          },
+          "Raw": {
+            "channels": 4,
+            "gdtfMode": "Raw",
+            "status": "matched",
+            "parameters": 7
+          },
+          "Standard": {
+            "channels": 6,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 7
+          },
+          "Extended": {
+            "channels": 7,
+            "gdtfMode": "Extended",
+            "status": "matched",
+            "parameters": 8
+          },
+          "ICMY": {
+            "channels": 4,
+            "gdtfMode": "ICMY",
+            "status": "matched",
+            "parameters": 6
+          }
+        }
+      },
+      "shortName": "EXTWasProLQUAD"
+    },
+    {
+      "fixture": "Exterior Wash Pro M CTC",
+      "watts": 75.0,
+      "weight": 7.3,
+      "modes": {
+        "Basic": 3,
+        "Standard": 3
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__Exterior_Wash_Pro_M_CTC.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Exterior_Wash_Pro_M_CTC@20240418NoMeas.gdtf",
+        "modes": {
+          "Basic": {
+            "channels": 3,
+            "gdtfMode": "Basic",
+            "status": "matched",
+            "parameters": 6
+          },
+          "Standard": {
+            "channels": 3,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 4
+          }
+        }
+      },
+      "shortName": "EXTWasProMCTC"
+    },
+    {
+      "fixture": "Exterior Wash Pro M QUAD",
+      "watts": 75.0,
+      "weight": 7.3,
+      "modes": {
+        "Basic": 3,
+        "Raw": 4,
+        "Standard": 6,
+        "Extended": 7,
+        "ICMY": 4
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__Exterior_Wash_Pro_M_QUAD.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Exterior_Wash_Pro_M_QUAD@20250214NoMeas.gdtf",
+        "modes": {
+          "Basic": {
+            "channels": 3,
+            "gdtfMode": "Basic",
+            "status": "matched",
+            "parameters": 6
+          },
+          "Raw": {
+            "channels": 4,
+            "gdtfMode": "Raw",
+            "status": "matched",
+            "parameters": 7
+          },
+          "Standard": {
+            "channels": 6,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 7
+          },
+          "Extended": {
+            "channels": 7,
+            "gdtfMode": "Extended",
+            "status": "matched",
+            "parameters": 8
+          },
+          "ICMY": {
+            "channels": 4,
+            "gdtfMode": "ICMY",
+            "status": "matched",
+            "parameters": 6
+          }
+        }
+      },
+      "shortName": "EXTWasProMQUAD"
+    },
+    {
+      "fixture": "Exterior Wash Pro S CTC",
+      "watts": 35.0,
+      "weight": 4.4,
+      "modes": {
+        "Basic": 3,
+        "Standard": 3
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__Exterior_Wash_Pro_S_CTC.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Exterior_Wash_Pro_S_CTC@20240418NoMeas.gdtf",
+        "modes": {
+          "Basic": {
+            "channels": 3,
+            "gdtfMode": "Basic",
+            "status": "matched",
+            "parameters": 6
+          },
+          "Standard": {
+            "channels": 3,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 4
+          }
+        }
+      },
+      "shortName": "EXTWasProSCTC"
+    },
+    {
+      "fixture": "Exterior Wash Pro S QUAD",
+      "watts": 35.0,
+      "weight": 4.4,
+      "modes": {
+        "Basic": 3,
+        "Raw": 4,
+        "Standard": 6,
+        "Extended": 7,
+        "ICMY": 4
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__Exterior_Wash_Pro_S_QUAD.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Exterior_Wash_Pro_S_QUAD@20250214NoMeas.gdtf",
+        "modes": {
+          "Basic": {
+            "channels": 3,
+            "gdtfMode": "Basic",
+            "status": "matched",
+            "parameters": 6
+          },
+          "Raw": {
+            "channels": 4,
+            "gdtfMode": "Raw",
+            "status": "matched",
+            "parameters": 7
+          },
+          "Standard": {
+            "channels": 6,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 7
+          },
+          "Extended": {
+            "channels": 7,
+            "gdtfMode": "Extended",
+            "status": "matched",
+            "parameters": 8
+          },
+          "ICMY": {
+            "channels": 4,
+            "gdtfMode": "ICMY",
+            "status": "matched",
+            "parameters": 6
+          }
+        }
+      },
+      "shortName": "EXTWasProSQUAD"
+    },
+    {
+      "fixture": "Exterior Wash Pro XL CTC",
+      "watts": 250.0,
+      "weight": 17.7,
+      "modes": {
+        "Basic": 3,
+        "Standard": 3
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__Exterior_Wash_Pro_XL_CTC.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Exterior_Wash_Pro_XL_CTC@20240418NoMeas.gdtf",
+        "modes": {
+          "Basic": {
+            "channels": 3,
+            "gdtfMode": "Basic",
+            "status": "matched",
+            "parameters": 6
+          },
+          "Standard": {
+            "channels": 3,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 4
+          }
+        }
+      },
+      "shortName": "EXTWasProXLCTC"
+    },
+    {
+      "fixture": "Exterior Wash Pro XL QUAD",
+      "watts": 250.0,
+      "weight": 17.7,
+      "modes": {
+        "Basic": 3,
+        "Raw": 4,
+        "Standard": 6,
+        "Extended": 7,
+        "ICMY": 4
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__Exterior_Wash_Pro_XL_QUAD.gdtf",
+        "file": "fixtures/martin/Martin_Professional@Exterior_Wash_Pro_XL_QUAD@20250214NoMeas.gdtf",
+        "modes": {
+          "Basic": {
+            "channels": 3,
+            "gdtfMode": "Basic",
+            "status": "matched",
+            "parameters": 6
+          },
+          "Raw": {
+            "channels": 4,
+            "gdtfMode": "Raw",
+            "status": "matched",
+            "parameters": 7
+          },
+          "Standard": {
+            "channels": 6,
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 7
+          },
+          "Extended": {
+            "channels": 7,
+            "gdtfMode": "Extended",
+            "status": "matched",
+            "parameters": 8
+          },
+          "ICMY": {
+            "channels": 4,
+            "gdtfMode": "ICMY",
+            "status": "matched",
+            "parameters": 6
+          }
+        }
+      },
+      "shortName": "EXTWasProXLQUAD"
+    },
+    {
+      "fixture": "JEM ZR45",
+      "watts": null,
+      "weight": null,
+      "modes": {
+        "1 Channel": 1
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__JEM_ZR45.gdtf",
+        "file": "fixtures/martin/Martin_Professional@JEM_ZR45@InitialV1.gdtf",
+        "modes": {
+          "1 Channel": {
+            "channels": 1,
+            "gdtfMode": "1 Channel",
+            "status": "matched",
+            "parameters": 1
+          }
+        }
+      },
+      "shortName": "JEM ZR45"
+    },
+    {
+      "fixture": "MAC 2000 Profile II",
+      "watts": null,
+      "weight": 38.0,
+      "modes": {
+        "16 bit": 24
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__MAC_2000_Profile_II.gdtf",
+        "file": "fixtures/martin/Martin_Professional@MAC_2000_Profile_II@Roughly_working.gdtf",
+        "modes": {
+          "16 bit": {
+            "channels": 24,
+            "gdtfMode": "16 bit",
+            "status": "matched",
+            "parameters": 20
+          }
+        }
+      },
+      "shortName": "2k profile"
+    },
+    {
+      "fixture": "MAC 250",
+      "watts": null,
+      "weight": 17.0,
+      "modes": {
+        "Basic": 15
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__MAC_250.gdtf",
+        "file": "fixtures/martin/Martin_Professional@MAC_250@81523v2.gdtf",
+        "modes": {
+          "Basic": {
+            "channels": 15,
+            "gdtfMode": "Basic",
+            "status": "matched",
+            "parameters": 12
+          }
+        }
+      },
+      "shortName": "Mac 250"
+    },
+    {
+      "fixture": "MAC 700 Profile",
+      "watts": null,
+      "weight": 40.4,
+      "modes": {
+        "16 Bit Extended Mode": 31,
+        "16 Bit Basic Mode": 23
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__MAC_700_Profile.gdtf",
+        "file": "fixtures/martin/Martin_Professional@MAC_700_Profile@V1-0.gdtf",
+        "modes": {
+          "16 Bit Extended Mode": {
+            "channels": 31,
+            "gdtfMode": "16 Bit Extended Mode",
+            "status": "matched",
+            "parameters": 20
+          },
+          "16 Bit Basic Mode": {
+            "channels": 23,
+            "gdtfMode": "16 Bit Basic Mode",
+            "status": "matched",
+            "parameters": 20
+          }
+        }
+      },
+      "shortName": "Mac700"
     },
     {
       "fixture": "MAC Allure Profile",
-      "watts": 420.0,
+      "watts": 480.0,
       "weight": 17.6,
       "modes": {
         "Basic": 32,
@@ -706,11 +1760,11 @@
           }
         }
       },
-      "shortName": "Allure Profile"
+      "shortName": "MACAllPro"
     },
     {
       "fixture": "MAC Allure Wash PC",
-      "watts": 420.0,
+      "watts": 480.0,
       "weight": 17.6,
       "modes": {
         "Basic": 28,
@@ -736,11 +1790,11 @@
           }
         }
       },
-      "shortName": "MAC Allure Wash PC"
+      "shortName": "MACAllWas"
     },
     {
       "fixture": "MAC Aura",
-      "watts": 199.0,
+      "watts": 235.0,
       "weight": 5.6,
       "modes": {
         "Standard": 14,
@@ -766,51 +1820,62 @@
           }
         }
       },
-      "shortName": "Allure Wash PC"
+      "shortName": "MACAur"
     },
     {
       "fixture": "MAC Aura PXL",
-      "watts": 560,
+      "watts": 500.0,
       "weight": 15.6,
       "modes": {
+        "Compact": 17,
         "Basic": 32,
         "Extended": 89,
-        "Compact": 17,
-        "Ludicrous": 512
+        "Ludicrous": 512,
+        "Compact Direct": 17
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__MAC_Aura_PXL.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@MAC_Aura_PXL@20260823.gdtf",
         "modes": {
+          "Compact": {
+            "channels": 17,
+            "gdtfMode": "Compact",
+            "status": "matched",
+            "parameters": 11
+          },
           "Basic": {
             "channels": 32,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched",
+            "parameters": 26
           },
           "Extended": {
             "channels": 89,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Compact": {
-            "channels": 17,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended",
+            "status": "matched",
+            "parameters": 30
           },
           "Ludicrous": {
             "channels": 512,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Ludicrous",
+            "status": "matched",
+            "parameters": 34
+          },
+          "Compact Direct": {
+            "channels": 17,
+            "gdtfMode": "Compact Direct",
+            "status": "matched",
+            "parameters": 10
           }
         }
       },
-      "shortName": "Aura PXL"
+      "shortName": "MACAurPXL"
     },
     {
       "fixture": "MAC Aura Raven XIP",
-      "watts": 1020,
+      "watts": 1020.0,
       "weight": 28.8,
       "modes": {
         "Compact": 22,
@@ -864,79 +1929,92 @@
           }
         }
       },
-      "shortName": "Raven XIP"
+      "shortName": "MACAurRav"
     },
     {
       "fixture": "MAC Aura XB",
-      "watts": 400,
+      "watts": 350.0,
       "weight": 6.5,
       "modes": {
         "Standard": 14,
         "Extended": 25
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__MAC_Aura_XB.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@MAC_Aura_XB@20230201NoMeas.gdtf",
         "modes": {
           "Standard": {
             "channels": 14,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Standard",
+            "status": "matched",
+            "parameters": 12
           },
           "Extended": {
             "channels": 25,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended",
+            "status": "matched",
+            "parameters": 23
           }
         }
       },
-      "shortName": "Aura XB"
+      "shortName": "MACAurXB"
     },
     {
       "fixture": "MAC Aura XIP",
-      "watts": 340,
-      "weight": 8.6,
+      "watts": 285.0,
+      "weight": 8.95,
       "modes": {
+        "Compact": 20,
         "Basic": 36,
         "Extended": 57,
-        "Compact": 20,
-        "Ludicrous": 93
+        "Ludicrous": 93,
+        "Compact Direct": 20
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__MAC_Aura_XIP.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@MAC_Aura_XIP@20260823.gdtf",
         "modes": {
+          "Compact": {
+            "channels": 20,
+            "gdtfMode": "Compact",
+            "status": "matched",
+            "parameters": 13
+          },
           "Basic": {
             "channels": 36,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched",
+            "parameters": 29
           },
           "Extended": {
             "channels": 57,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Compact": {
-            "channels": 20,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended",
+            "status": "matched",
+            "parameters": 33
           },
           "Ludicrous": {
             "channels": 93,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Ludicrous",
+            "status": "matched",
+            "parameters": 37
+          },
+          "Compact Direct": {
+            "channels": 20,
+            "gdtfMode": "Compact Direct",
+            "status": "matched",
+            "parameters": 12
           }
         }
       },
-      "shortName": "Aura XIP"
+      "shortName": "MACAurXIP"
     },
     {
       "fixture": "MAC Axiom Hybrid",
-      "watts": 600,
+      "watts": 600.0,
       "weight": 24.8,
       "modes": {
         "Basic": 23
@@ -955,12 +2033,12 @@
           }
         }
       },
-      "shortName": "Axiom Hybrid"
+      "shortName": "MACAxiHyb"
     },
     {
       "fixture": "MAC Encore Performance CLD",
-      "watts": 580,
-      "weight": 31,
+      "watts": 590.0,
+      "weight": 31.0,
       "modes": {
         "Basic": 38
       },
@@ -978,11 +2056,11 @@
           }
         }
       },
-      "shortName": "Encore Perf CLD"
+      "shortName": "MACEncPerCLD"
     },
     {
       "fixture": "MAC Encore Performance WRM",
-      "watts": 468.0,
+      "watts": 590.0,
       "weight": 31.0,
       "modes": {
         "Basic": 38
@@ -1001,11 +2079,11 @@
           }
         }
       },
-      "shortName": "Encore Perf WRM"
+      "shortName": "MACEncPerWRM"
     },
     {
       "fixture": "MAC Encore Two",
-      "watts": 760.0,
+      "watts": 945.0,
       "weight": 36.8,
       "modes": {
         "Basic": 52,
@@ -1045,11 +2123,34 @@
           }
         }
       },
-      "shortName": "Encore Two"
+      "shortName": "MACEncTwo"
+    },
+    {
+      "fixture": "MAC Encore Wash CLD",
+      "watts": 590.0,
+      "weight": 28.5,
+      "modes": {
+        "Basic": 24
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__MAC_Encore_Wash_CLD.gdtf",
+        "file": "fixtures/martin/Martin_Professional@MAC_Encore_Wash_CLD@20230316NoMeas.gdtf",
+        "modes": {
+          "Basic": {
+            "channels": 24,
+            "gdtfMode": "Basic",
+            "status": "matched",
+            "parameters": 23
+          }
+        }
+      },
+      "shortName": "MACEncWasCLD"
     },
     {
       "fixture": "MAC Encore Wash WRM",
-      "watts": 468.0,
+      "watts": 590.0,
       "weight": 28.5,
       "modes": {
         "Basic": 24
@@ -1068,45 +2169,55 @@
           }
         }
       },
-      "shortName": "Encore Wash WRM"
+      "shortName": "MACEncWasWRM"
     },
     {
       "fixture": "MAC One",
-      "watts": 180,
+      "watts": 160.0,
       "weight": 4.4,
       "modes": {
-        "Basic": 36,
         "Compact": 20,
-        "Ludicrous": 108
+        "Basic": 36,
+        "Ludicrous": 108,
+        "Compact Direct": 20
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__MAC_One.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@MAC_One@20260228.gdtf",
         "modes": {
-          "Basic": {
-            "channels": 36,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
           "Compact": {
             "channels": 20,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Compact",
+            "status": "matched",
+            "parameters": 13
+          },
+          "Basic": {
+            "channels": 36,
+            "gdtfMode": "Basic",
+            "status": "matched",
+            "parameters": 29
           },
           "Ludicrous": {
             "channels": 108,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Ludicrous",
+            "status": "matched",
+            "parameters": 33
+          },
+          "Compact Direct": {
+            "channels": 20,
+            "gdtfMode": "Compact Direct",
+            "status": "matched",
+            "parameters": 12
           }
         }
       },
-      "shortName": "MAC One"
+      "shortName": "MACOne"
     },
     {
       "fixture": "MAC One Beam",
-      "watts": 55,
+      "watts": 45.0,
       "weight": 4.95,
       "modes": {
         "Compact": 19,
@@ -1139,68 +2250,72 @@
           }
         }
       },
-      "shortName": "MAC One Beam"
+      "shortName": "MACOneBeam"
     },
     {
       "fixture": "MAC Quantum Profile",
-      "watts": 750,
+      "watts": 575.0,
       "weight": 23.2,
       "modes": {
         "Basic": 19,
         "Extended": 27
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__MAC_Quantum_Profile.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@MAC_Quantum_Profile@20230316NoMeas.gdtf",
         "modes": {
           "Basic": {
             "channels": 19,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched",
+            "parameters": 16
           },
           "Extended": {
             "channels": 27,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended",
+            "status": "matched",
+            "parameters": 21
           }
         }
       },
-      "shortName": "Quantum Profile"
+      "shortName": "MACQuaPro"
     },
     {
       "fixture": "MAC Quantum Wash",
-      "watts": 950,
-      "weight": 21,
+      "watts": 880.0,
+      "weight": 21.0,
       "modes": {
         "Basic": 17,
         "Extended": 33
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__MAC_Quantum_Wash.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@MAC_Quantum_Wash@20230316NoMeas.gdtf",
         "modes": {
           "Basic": {
             "channels": 17,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched",
+            "parameters": 11
           },
           "Extended": {
             "channels": 33,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended",
+            "status": "matched",
+            "parameters": 32
           }
         }
       },
-      "shortName": "Quantum Wash"
+      "shortName": "MACQuaWas"
     },
     {
       "fixture": "MAC Ultra Performance",
-      "watts": 1450,
-      "weight": 44,
+      "watts": 1380.0,
+      "weight": 44.0,
       "modes": {
         "Basic": 48,
         "Extended": 58,
@@ -1210,7 +2325,7 @@
         "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__MAC_Ultra_Performance.gdtf",
-        "file": "fixtures/martin/Martin_Professional@MAC_Ultra_Performance@20260228.gdtf",
+        "file": "fixtures/martin/Martin_Professional@MAC_Ultra_Performance@20260914.gdtf",
         "modes": {
           "Basic": {
             "channels": 48,
@@ -1232,12 +2347,12 @@
           }
         }
       },
-      "shortName": "Ultra Perf"
+      "shortName": "MACUltPer"
     },
     {
       "fixture": "MAC Ultra Wash",
-      "watts": 1450,
-      "weight": 39,
+      "watts": 1350.0,
+      "weight": 39.0,
       "modes": {
         "Basic": 29,
         "Compact": 23
@@ -1246,7 +2361,7 @@
         "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__MAC_Ultra_Wash.gdtf",
-        "file": "fixtures/martin/Martin_Professional@MAC_Ultra_Wash@20260228.gdtf",
+        "file": "fixtures/martin/Martin_Professional@MAC_Ultra_Wash@20260914.gdtf",
         "modes": {
           "Basic": {
             "channels": 29,
@@ -1262,11 +2377,11 @@
           }
         }
       },
-      "shortName": "Ultra Wash"
+      "shortName": "MACUltWas"
     },
     {
       "fixture": "MAC Viper AirFX",
-      "watts": 1225,
+      "watts": 1225.0,
       "weight": 35.7,
       "modes": {
         "Basic": 20,
@@ -1292,39 +2407,41 @@
           }
         }
       },
-      "shortName": "Viper AirFX"
+      "shortName": "MACVipAirFX"
     },
     {
       "fixture": "MAC Viper Performance",
-      "watts": 1225,
+      "watts": 1225.0,
       "weight": 37.9,
       "modes": {
         "Basic": 32,
         "Extended": 40
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__MAC_Viper_Performance.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@MAC_Viper_Performance@20230516NoMeas.gdtf",
         "modes": {
           "Basic": {
             "channels": 32,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched",
+            "parameters": 29
           },
           "Extended": {
             "channels": 40,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended",
+            "status": "matched",
+            "parameters": 34
           }
         }
       },
-      "shortName": "Viper Perf"
+      "shortName": "MACVipPer"
     },
     {
       "fixture": "MAC Viper Profile",
-      "watts": 1225,
+      "watts": 1225.0,
       "weight": 37.2,
       "modes": {
         "Basic": 26,
@@ -1350,73 +2467,115 @@
           }
         }
       },
-      "shortName": "Viper Pro"
+      "shortName": "MACVipPro"
     },
     {
-      "fixture": "MAC Viper Wash DX",
-      "watts": 1225,
+      "fixture": "MAC Viper Wash",
+      "watts": 1225.0,
       "weight": 34.1,
       "modes": {
         "Basic": 18,
         "Extended": 24
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
-        "suggestedFileName": "Martin__MAC_Viper_Wash_DX.gdtf",
-        "file": "",
+        "suggestedFileName": "Martin__MAC_Viper_Wash.gdtf",
+        "file": "fixtures/martin/Martin_Professional@MAC_Viper_Wash@20230516NoMeas.gdtf",
         "modes": {
           "Basic": {
             "channels": 18,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched",
+            "parameters": 16
           },
           "Extended": {
             "channels": 24,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended",
+            "status": "matched",
+            "parameters": 21
           }
         }
       },
-      "shortName": "Viper Wash DX"
+      "shortName": "MACVipWas"
+    },
+    {
+      "fixture": "MAC Viper Wash DX",
+      "watts": 1225.0,
+      "weight": 34.1,
+      "modes": {
+        "Basic": 18,
+        "Extended": 24
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__MAC_Viper_Wash_DX.gdtf",
+        "file": "fixtures/martin/Martin_Professional@MAC_Viper_Wash_DX@20230516NoMeas.gdtf",
+        "modes": {
+          "Basic": {
+            "channels": 18,
+            "gdtfMode": "Basic",
+            "status": "matched",
+            "parameters": 18
+          },
+          "Extended": {
+            "channels": 24,
+            "gdtfMode": "Extended",
+            "status": "matched",
+            "parameters": 23
+          }
+        }
+      },
+      "shortName": "MACVipWasDX"
     },
     {
       "fixture": "MAC Viper XIP",
-      "watts": 1040,
-      "weight": 37,
+      "watts": 945.0,
+      "weight": 37.0,
       "modes": {
         "Basic": 54,
         "Extended": 64,
-        "Ludicrous": 70
+        "Ludicrous": 70,
+        "Compact": 48
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__MAC_Viper_XIP.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@MAC_Viper_XIP@20260504.gdtf",
         "modes": {
           "Basic": {
             "channels": 54,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Basic",
+            "status": "matched",
+            "parameters": 41
           },
           "Extended": {
             "channels": 64,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Extended",
+            "status": "matched",
+            "parameters": 41
           },
           "Ludicrous": {
             "channels": 70,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Ludicrous",
+            "status": "matched",
+            "parameters": 47
+          },
+          "Compact": {
+            "channels": 48,
+            "gdtfMode": "Compact",
+            "status": "matched",
+            "parameters": 35
           }
         }
       },
-      "shortName": "Viper XIP"
+      "shortName": "MACVipXIP"
     },
     {
       "fixture": "MAC_101",
-      "watts": 1000.0,
+      "watts": 235.0,
       "weight": 3.7,
       "modes": {
         "Basic": 8,
@@ -1442,34 +2601,1668 @@
           }
         }
       },
-      "shortName": "Mac 101"
+      "shortName": "Mac101"
     },
     {
-      "fixture": "Macula Base Station",
+      "fixture": "VC-Grid 15 16x16",
       "watts": null,
-      "weight": 20.1,
+      "weight": 0.311,
       "modes": {
-        "PresetBank": 2
+        "DMX_RGB": 3,
+        "DMX_Pixel": 192,
+        "P3_Intensity": 1,
+        "P3_RGB": 3,
+        "P3_Basic": 5,
+        "P3_Hybrid 1 Segment": 6,
+        "P3_Hybrid 2 Segments": 9,
+        "P3_Hybrid 4 Segments": 15,
+        "P3_Hybrid 8 Segments": 27,
+        "P3_Hybrid 16 Segments": 51,
+        "P3_Hybrid 32 Segments": 99,
+        "P3_Hybrid 64 Segments": 195,
+        "P3_Hybrid 128 Segments": 387,
+        "P3_Hybrid 256 Segments": 510,
+        "P3_PixelMap 1 Segment": 3,
+        "P3_PixelMap 2 Segments": 6,
+        "P3_PixelMap 4 Segments": 12,
+        "P3_PixelMap 8 Segments": 24,
+        "P3_PixelMap 16 Segments": 48,
+        "P3_PixelMap 32 Segments": 96,
+        "P3_PixelMap 64 Segments": 192,
+        "P3_PixelMap 128 Segments": 384,
+        "P3_PixelMap 256 Segments": 510
       },
       "gdtf": {
         "status": "matched",
         "folder": "fixtures/martin",
-        "suggestedFileName": "Martin_Professional__Macula_Base_Station.gdtf",
-        "file": "fixtures/martin/Martin_Professional@Macula_Base_Station@20260810.gdtf",
+        "suggestedFileName": "Martin__VC_Grid_15_16x16.gdtf",
+        "file": "fixtures/martin/Martin_Professional@VC-Grid_15_16x16@20210126.gdtf",
         "modes": {
-          "PresetBank": {
-            "channels": 2,
-            "gdtfMode": "PresetBank",
+          "DMX_RGB": {
+            "channels": 3,
+            "gdtfMode": "DMX_RGB",
             "status": "matched",
-            "parameters": 2
+            "parameters": 3
+          },
+          "DMX_Pixel": {
+            "channels": 192,
+            "gdtfMode": "DMX_Pixel",
+            "status": "matched",
+            "parameters": 192
+          },
+          "P3_Intensity": {
+            "channels": 1,
+            "gdtfMode": "P3_Intensity",
+            "status": "matched",
+            "parameters": 1
+          },
+          "P3_RGB": {
+            "channels": 3,
+            "gdtfMode": "P3_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_Basic": {
+            "channels": 5,
+            "gdtfMode": "P3_Basic",
+            "status": "matched",
+            "parameters": 4
+          },
+          "P3_Hybrid 1 Segment": {
+            "channels": 6,
+            "gdtfMode": "P3_Hybrid 1 Segment",
+            "status": "matched",
+            "parameters": 5
+          },
+          "P3_Hybrid 2 Segments": {
+            "channels": 9,
+            "gdtfMode": "P3_Hybrid 2 Segments",
+            "status": "matched",
+            "parameters": 8
+          },
+          "P3_Hybrid 4 Segments": {
+            "channels": 15,
+            "gdtfMode": "P3_Hybrid 4 Segments",
+            "status": "matched",
+            "parameters": 14
+          },
+          "P3_Hybrid 8 Segments": {
+            "channels": 27,
+            "gdtfMode": "P3_Hybrid 8 Segments",
+            "status": "matched",
+            "parameters": 26
+          },
+          "P3_Hybrid 16 Segments": {
+            "channels": 51,
+            "gdtfMode": "P3_Hybrid 16 Segments",
+            "status": "matched",
+            "parameters": 50
+          },
+          "P3_Hybrid 32 Segments": {
+            "channels": 99,
+            "gdtfMode": "P3_Hybrid 32 Segments",
+            "status": "matched",
+            "parameters": 98
+          },
+          "P3_Hybrid 64 Segments": {
+            "channels": 195,
+            "gdtfMode": "P3_Hybrid 64 Segments",
+            "status": "matched",
+            "parameters": 194
+          },
+          "P3_Hybrid 128 Segments": {
+            "channels": 387,
+            "gdtfMode": "P3_Hybrid 128 Segments",
+            "status": "matched",
+            "parameters": 386
+          },
+          "P3_Hybrid 256 Segments": {
+            "channels": 510,
+            "gdtfMode": "P3_Hybrid 256 Segments",
+            "status": "matched",
+            "parameters": 770
+          },
+          "P3_PixelMap 1 Segment": {
+            "channels": 3,
+            "gdtfMode": "P3_PixelMap 1 Segment",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_PixelMap 2 Segments": {
+            "channels": 6,
+            "gdtfMode": "P3_PixelMap 2 Segments",
+            "status": "matched",
+            "parameters": 6
+          },
+          "P3_PixelMap 4 Segments": {
+            "channels": 12,
+            "gdtfMode": "P3_PixelMap 4 Segments",
+            "status": "matched",
+            "parameters": 12
+          },
+          "P3_PixelMap 8 Segments": {
+            "channels": 24,
+            "gdtfMode": "P3_PixelMap 8 Segments",
+            "status": "matched",
+            "parameters": 24
+          },
+          "P3_PixelMap 16 Segments": {
+            "channels": 48,
+            "gdtfMode": "P3_PixelMap 16 Segments",
+            "status": "matched",
+            "parameters": 48
+          },
+          "P3_PixelMap 32 Segments": {
+            "channels": 96,
+            "gdtfMode": "P3_PixelMap 32 Segments",
+            "status": "matched",
+            "parameters": 96
+          },
+          "P3_PixelMap 64 Segments": {
+            "channels": 192,
+            "gdtfMode": "P3_PixelMap 64 Segments",
+            "status": "matched",
+            "parameters": 192
+          },
+          "P3_PixelMap 128 Segments": {
+            "channels": 384,
+            "gdtfMode": "P3_PixelMap 128 Segments",
+            "status": "matched",
+            "parameters": 384
+          },
+          "P3_PixelMap 256 Segments": {
+            "channels": 510,
+            "gdtfMode": "P3_PixelMap 256 Segments",
+            "status": "matched",
+            "parameters": 768
           }
         }
       },
-      "shortName": "Macula Base"
+      "shortName": "VCG15 16x16"
+    },
+    {
+      "fixture": "VC-Grid 25 8x8",
+      "watts": null,
+      "weight": 0.14,
+      "modes": {
+        "DMX_RGB": 3,
+        "DMX_Pixel": 192,
+        "P3_Intensity": 1,
+        "P3_RGB": 3,
+        "P3_Basic": 5,
+        "P3_Hybrid 1 Segment": 6,
+        "P3_Hybrid 2 Segments": 9,
+        "P3_Hybrid 4 Segments": 15,
+        "P3_Hybrid 8 Segments": 27,
+        "P3_Hybrid 16 Segments": 51,
+        "P3_Hybrid 32 Segments": 99,
+        "P3_Hybrid 64 Segments": 195,
+        "P3_PixelMap 1 Segment": 3,
+        "P3_PixelMap 2 Segments": 6,
+        "P3_PixelMap 4 Segments": 12,
+        "P3_PixelMap 8 Segments": 24,
+        "P3_PixelMap 16 Segments": 48,
+        "P3_PixelMap 32 Segments": 96,
+        "P3_PixelMap 64 Segments": 192
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__VC_Grid_25_8x8.gdtf",
+        "file": "fixtures/martin/Martin_Professional@VC-Grid_25_8x8@20210125.gdtf",
+        "modes": {
+          "DMX_RGB": {
+            "channels": 3,
+            "gdtfMode": "DMX_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "DMX_Pixel": {
+            "channels": 192,
+            "gdtfMode": "DMX_Pixel",
+            "status": "matched",
+            "parameters": 192
+          },
+          "P3_Intensity": {
+            "channels": 1,
+            "gdtfMode": "P3_Intensity",
+            "status": "matched",
+            "parameters": 1
+          },
+          "P3_RGB": {
+            "channels": 3,
+            "gdtfMode": "P3_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_Basic": {
+            "channels": 5,
+            "gdtfMode": "P3_Basic",
+            "status": "matched",
+            "parameters": 4
+          },
+          "P3_Hybrid 1 Segment": {
+            "channels": 6,
+            "gdtfMode": "P3_Hybrid 1 Segment",
+            "status": "matched",
+            "parameters": 5
+          },
+          "P3_Hybrid 2 Segments": {
+            "channels": 9,
+            "gdtfMode": "P3_Hybrid 2 Segments",
+            "status": "matched",
+            "parameters": 8
+          },
+          "P3_Hybrid 4 Segments": {
+            "channels": 15,
+            "gdtfMode": "P3_Hybrid 4 Segments",
+            "status": "matched",
+            "parameters": 14
+          },
+          "P3_Hybrid 8 Segments": {
+            "channels": 27,
+            "gdtfMode": "P3_Hybrid 8 Segments",
+            "status": "matched",
+            "parameters": 26
+          },
+          "P3_Hybrid 16 Segments": {
+            "channels": 51,
+            "gdtfMode": "P3_Hybrid 16 Segments",
+            "status": "matched",
+            "parameters": 50
+          },
+          "P3_Hybrid 32 Segments": {
+            "channels": 99,
+            "gdtfMode": "P3_Hybrid 32 Segments",
+            "status": "matched",
+            "parameters": 98
+          },
+          "P3_Hybrid 64 Segments": {
+            "channels": 195,
+            "gdtfMode": "P3_Hybrid 64 Segments",
+            "status": "matched",
+            "parameters": 194
+          },
+          "P3_PixelMap 1 Segment": {
+            "channels": 3,
+            "gdtfMode": "P3_PixelMap 1 Segment",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_PixelMap 2 Segments": {
+            "channels": 6,
+            "gdtfMode": "P3_PixelMap 2 Segments",
+            "status": "matched",
+            "parameters": 6
+          },
+          "P3_PixelMap 4 Segments": {
+            "channels": 12,
+            "gdtfMode": "P3_PixelMap 4 Segments",
+            "status": "matched",
+            "parameters": 12
+          },
+          "P3_PixelMap 8 Segments": {
+            "channels": 24,
+            "gdtfMode": "P3_PixelMap 8 Segments",
+            "status": "matched",
+            "parameters": 24
+          },
+          "P3_PixelMap 16 Segments": {
+            "channels": 48,
+            "gdtfMode": "P3_PixelMap 16 Segments",
+            "status": "matched",
+            "parameters": 48
+          },
+          "P3_PixelMap 32 Segments": {
+            "channels": 96,
+            "gdtfMode": "P3_PixelMap 32 Segments",
+            "status": "matched",
+            "parameters": 96
+          },
+          "P3_PixelMap 64 Segments": {
+            "channels": 192,
+            "gdtfMode": "P3_PixelMap 64 Segments",
+            "status": "matched",
+            "parameters": 192
+          }
+        }
+      },
+      "shortName": "VCG25 8x8"
+    },
+    {
+      "fixture": "VC-Grid 30 8x8",
+      "watts": null,
+      "weight": 0.157,
+      "modes": {
+        "DMX_RGB": 3,
+        "DMX_Pixel": 192,
+        "P3_Intensity": 1,
+        "P3_RGB": 3,
+        "P3_Basic": 5,
+        "P3_Hybrid 1 Segment": 6,
+        "P3_Hybrid 2 Segments": 9,
+        "P3_Hybrid 4 Segments": 15,
+        "P3_Hybrid 8 Segments": 27,
+        "P3_Hybrid 16 Segments": 51,
+        "P3_Hybrid 32 Segments": 99,
+        "P3_Hybrid 64 Segments": 195,
+        "P3_PixelMap 1 Segment": 3,
+        "P3_PixelMap 2 Segments": 6,
+        "P3_PixelMap 4 Segments": 12,
+        "P3_PixelMap 8 Segments": 24,
+        "P3_PixelMap 16 Segments": 48,
+        "P3_PixelMap 32 Segments": 96,
+        "P3_PixelMap 64 Segments": 192
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__VC_Grid_30_8x8.gdtf",
+        "file": "fixtures/martin/Martin_Professional@VC-Grid_30_8x8@20210123.gdtf",
+        "modes": {
+          "DMX_RGB": {
+            "channels": 3,
+            "gdtfMode": "DMX_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "DMX_Pixel": {
+            "channels": 192,
+            "gdtfMode": "DMX_Pixel",
+            "status": "matched",
+            "parameters": 192
+          },
+          "P3_Intensity": {
+            "channels": 1,
+            "gdtfMode": "P3_Intensity",
+            "status": "matched",
+            "parameters": 1
+          },
+          "P3_RGB": {
+            "channels": 3,
+            "gdtfMode": "P3_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_Basic": {
+            "channels": 5,
+            "gdtfMode": "P3_Basic",
+            "status": "matched",
+            "parameters": 4
+          },
+          "P3_Hybrid 1 Segment": {
+            "channels": 6,
+            "gdtfMode": "P3_Hybrid 1 Segment",
+            "status": "matched",
+            "parameters": 5
+          },
+          "P3_Hybrid 2 Segments": {
+            "channels": 9,
+            "gdtfMode": "P3_Hybrid 2 Segments",
+            "status": "matched",
+            "parameters": 8
+          },
+          "P3_Hybrid 4 Segments": {
+            "channels": 15,
+            "gdtfMode": "P3_Hybrid 4 Segments",
+            "status": "matched",
+            "parameters": 14
+          },
+          "P3_Hybrid 8 Segments": {
+            "channels": 27,
+            "gdtfMode": "P3_Hybrid 8 Segments",
+            "status": "matched",
+            "parameters": 26
+          },
+          "P3_Hybrid 16 Segments": {
+            "channels": 51,
+            "gdtfMode": "P3_Hybrid 16 Segments",
+            "status": "matched",
+            "parameters": 50
+          },
+          "P3_Hybrid 32 Segments": {
+            "channels": 99,
+            "gdtfMode": "P3_Hybrid 32 Segments",
+            "status": "matched",
+            "parameters": 98
+          },
+          "P3_Hybrid 64 Segments": {
+            "channels": 195,
+            "gdtfMode": "P3_Hybrid 64 Segments",
+            "status": "matched",
+            "parameters": 194
+          },
+          "P3_PixelMap 1 Segment": {
+            "channels": 3,
+            "gdtfMode": "P3_PixelMap 1 Segment",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_PixelMap 2 Segments": {
+            "channels": 6,
+            "gdtfMode": "P3_PixelMap 2 Segments",
+            "status": "matched",
+            "parameters": 6
+          },
+          "P3_PixelMap 4 Segments": {
+            "channels": 12,
+            "gdtfMode": "P3_PixelMap 4 Segments",
+            "status": "matched",
+            "parameters": 12
+          },
+          "P3_PixelMap 8 Segments": {
+            "channels": 24,
+            "gdtfMode": "P3_PixelMap 8 Segments",
+            "status": "matched",
+            "parameters": 24
+          },
+          "P3_PixelMap 16 Segments": {
+            "channels": 48,
+            "gdtfMode": "P3_PixelMap 16 Segments",
+            "status": "matched",
+            "parameters": 48
+          },
+          "P3_PixelMap 32 Segments": {
+            "channels": 96,
+            "gdtfMode": "P3_PixelMap 32 Segments",
+            "status": "matched",
+            "parameters": 96
+          },
+          "P3_PixelMap 64 Segments": {
+            "channels": 192,
+            "gdtfMode": "P3_PixelMap 64 Segments",
+            "status": "matched",
+            "parameters": 192
+          }
+        }
+      },
+      "shortName": "VCG30 8x8"
+    },
+    {
+      "fixture": "VC-Grid 60 4x4",
+      "watts": null,
+      "weight": 0.123,
+      "modes": {
+        "DMX_RGB": 3,
+        "DMX_Pixel": 48,
+        "P3_Intensity": 1,
+        "P3_RGB": 3,
+        "P3_Basic": 5,
+        "P3_Hybrid 1 Segment": 6,
+        "P3_Hybrid 2 Segments": 9,
+        "P3_Hybrid 4 Segments": 15,
+        "P3_Hybrid 8 Segments": 27,
+        "P3_Hybrid 16 Segments": 51,
+        "P3_PixelMap 1 Segment": 3,
+        "P3_PixelMap 2 Segments": 6,
+        "P3_PixelMap 4 Segments": 12,
+        "P3_PixelMap 8 Segments": 24,
+        "P3_PixelMap 16 Segments": 48
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__VC_Grid_60_4x4.gdtf",
+        "file": "fixtures/martin/Martin_Professional@VC-Grid_60_4x4@20210122.gdtf",
+        "modes": {
+          "DMX_RGB": {
+            "channels": 3,
+            "gdtfMode": "DMX_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "DMX_Pixel": {
+            "channels": 48,
+            "gdtfMode": "DMX_Pixel",
+            "status": "matched",
+            "parameters": 48
+          },
+          "P3_Intensity": {
+            "channels": 1,
+            "gdtfMode": "P3_Intensity",
+            "status": "matched",
+            "parameters": 1
+          },
+          "P3_RGB": {
+            "channels": 3,
+            "gdtfMode": "P3_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_Basic": {
+            "channels": 5,
+            "gdtfMode": "P3_Basic",
+            "status": "matched",
+            "parameters": 4
+          },
+          "P3_Hybrid 1 Segment": {
+            "channels": 6,
+            "gdtfMode": "P3_Hybrid 1 Segment",
+            "status": "matched",
+            "parameters": 5
+          },
+          "P3_Hybrid 2 Segments": {
+            "channels": 9,
+            "gdtfMode": "P3_Hybrid 2 Segments",
+            "status": "matched",
+            "parameters": 8
+          },
+          "P3_Hybrid 4 Segments": {
+            "channels": 15,
+            "gdtfMode": "P3_Hybrid 4 Segments",
+            "status": "matched",
+            "parameters": 14
+          },
+          "P3_Hybrid 8 Segments": {
+            "channels": 27,
+            "gdtfMode": "P3_Hybrid 8 Segments",
+            "status": "matched",
+            "parameters": 26
+          },
+          "P3_Hybrid 16 Segments": {
+            "channels": 51,
+            "gdtfMode": "P3_Hybrid 16 Segments",
+            "status": "matched",
+            "parameters": 50
+          },
+          "P3_PixelMap 1 Segment": {
+            "channels": 3,
+            "gdtfMode": "P3_PixelMap 1 Segment",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_PixelMap 2 Segments": {
+            "channels": 6,
+            "gdtfMode": "P3_PixelMap 2 Segments",
+            "status": "matched",
+            "parameters": 6
+          },
+          "P3_PixelMap 4 Segments": {
+            "channels": 12,
+            "gdtfMode": "P3_PixelMap 4 Segments",
+            "status": "matched",
+            "parameters": 12
+          },
+          "P3_PixelMap 8 Segments": {
+            "channels": 24,
+            "gdtfMode": "P3_PixelMap 8 Segments",
+            "status": "matched",
+            "parameters": 24
+          },
+          "P3_PixelMap 16 Segments": {
+            "channels": 48,
+            "gdtfMode": "P3_PixelMap 16 Segments",
+            "status": "matched",
+            "parameters": 48
+          }
+        }
+      },
+      "shortName": "VCG60 4x4"
+    },
+    {
+      "fixture": "VC-Grid 60 8x8",
+      "watts": null,
+      "weight": 0.5,
+      "modes": {
+        "DMX_RGB": 3,
+        "DMX_Pixel": 192,
+        "P3_Intensity": 1,
+        "P3_RGB": 3,
+        "P3_Basic": 5,
+        "P3_Hybrid 1 Segment": 6,
+        "P3_Hybrid 2 Segments": 9,
+        "P3_Hybrid 4 Segments": 15,
+        "P3_Hybrid 8 Segments": 27,
+        "P3_Hybrid 16 Segments": 51,
+        "P3_Hybrid 32 Segments": 99,
+        "P3_Hybrid 64 Segments": 195,
+        "P3_PixelMap 1 Segment": 3,
+        "P3_PixelMap 2 Segments": 6,
+        "P3_PixelMap 4 Segments": 12,
+        "P3_PixelMap 8 Segments": 24,
+        "P3_PixelMap 16 Segments": 48,
+        "P3_PixelMap 32 Segments": 96,
+        "P3_PixelMap 64 Segments": 192
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__VC_Grid_60_8x8.gdtf",
+        "file": "fixtures/martin/Martin_Professional@VC-Grid_60_8x8@20210122.gdtf",
+        "modes": {
+          "DMX_RGB": {
+            "channels": 3,
+            "gdtfMode": "DMX_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "DMX_Pixel": {
+            "channels": 192,
+            "gdtfMode": "DMX_Pixel",
+            "status": "matched",
+            "parameters": 192
+          },
+          "P3_Intensity": {
+            "channels": 1,
+            "gdtfMode": "P3_Intensity",
+            "status": "matched",
+            "parameters": 1
+          },
+          "P3_RGB": {
+            "channels": 3,
+            "gdtfMode": "P3_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_Basic": {
+            "channels": 5,
+            "gdtfMode": "P3_Basic",
+            "status": "matched",
+            "parameters": 4
+          },
+          "P3_Hybrid 1 Segment": {
+            "channels": 6,
+            "gdtfMode": "P3_Hybrid 1 Segment",
+            "status": "matched",
+            "parameters": 5
+          },
+          "P3_Hybrid 2 Segments": {
+            "channels": 9,
+            "gdtfMode": "P3_Hybrid 2 Segments",
+            "status": "matched",
+            "parameters": 8
+          },
+          "P3_Hybrid 4 Segments": {
+            "channels": 15,
+            "gdtfMode": "P3_Hybrid 4 Segments",
+            "status": "matched",
+            "parameters": 14
+          },
+          "P3_Hybrid 8 Segments": {
+            "channels": 27,
+            "gdtfMode": "P3_Hybrid 8 Segments",
+            "status": "matched",
+            "parameters": 26
+          },
+          "P3_Hybrid 16 Segments": {
+            "channels": 51,
+            "gdtfMode": "P3_Hybrid 16 Segments",
+            "status": "matched",
+            "parameters": 50
+          },
+          "P3_Hybrid 32 Segments": {
+            "channels": 99,
+            "gdtfMode": "P3_Hybrid 32 Segments",
+            "status": "matched",
+            "parameters": 98
+          },
+          "P3_Hybrid 64 Segments": {
+            "channels": 195,
+            "gdtfMode": "P3_Hybrid 64 Segments",
+            "status": "matched",
+            "parameters": 194
+          },
+          "P3_PixelMap 1 Segment": {
+            "channels": 3,
+            "gdtfMode": "P3_PixelMap 1 Segment",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_PixelMap 2 Segments": {
+            "channels": 6,
+            "gdtfMode": "P3_PixelMap 2 Segments",
+            "status": "matched",
+            "parameters": 6
+          },
+          "P3_PixelMap 4 Segments": {
+            "channels": 12,
+            "gdtfMode": "P3_PixelMap 4 Segments",
+            "status": "matched",
+            "parameters": 12
+          },
+          "P3_PixelMap 8 Segments": {
+            "channels": 24,
+            "gdtfMode": "P3_PixelMap 8 Segments",
+            "status": "matched",
+            "parameters": 24
+          },
+          "P3_PixelMap 16 Segments": {
+            "channels": 48,
+            "gdtfMode": "P3_PixelMap 16 Segments",
+            "status": "matched",
+            "parameters": 48
+          },
+          "P3_PixelMap 32 Segments": {
+            "channels": 96,
+            "gdtfMode": "P3_PixelMap 32 Segments",
+            "status": "matched",
+            "parameters": 96
+          },
+          "P3_PixelMap 64 Segments": {
+            "channels": 192,
+            "gdtfMode": "P3_PixelMap 64 Segments",
+            "status": "matched",
+            "parameters": 192
+          }
+        }
+      },
+      "shortName": "VCG60 8x8"
+    },
+    {
+      "fixture": "VC-Strip 15 16x1",
+      "watts": null,
+      "weight": 0.033,
+      "modes": {
+        "DMX_RGB": 3,
+        "DMX_Pixel": 48,
+        "P3_Intensity": 1,
+        "P3_RGB": 3,
+        "P3_Basic": 5,
+        "P3_Hybrid 1 Segment": 6,
+        "P3_Hybrid 2 Segments": 9,
+        "P3_Hybrid 4 Segments": 15,
+        "P3_Hybrid 8 Segments": 27,
+        "P3_Hybrid 16 Segments": 51,
+        "P3_PixelMap 1 Segment": 3,
+        "P3_PixelMap 2 Segments": 6,
+        "P3_PixelMap 4 Segments": 12,
+        "P3_PixelMap 8 Segments": 24,
+        "P3_PixelMap 16 Segments": 48
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__VC_Strip_15_16x1.gdtf",
+        "file": "fixtures/martin/Martin_Professional@VC-Strip_15_16x1@20210126.gdtf",
+        "modes": {
+          "DMX_RGB": {
+            "channels": 3,
+            "gdtfMode": "DMX_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "DMX_Pixel": {
+            "channels": 48,
+            "gdtfMode": "DMX_Pixel",
+            "status": "matched",
+            "parameters": 48
+          },
+          "P3_Intensity": {
+            "channels": 1,
+            "gdtfMode": "P3_Intensity",
+            "status": "matched",
+            "parameters": 1
+          },
+          "P3_RGB": {
+            "channels": 3,
+            "gdtfMode": "P3_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_Basic": {
+            "channels": 5,
+            "gdtfMode": "P3_Basic",
+            "status": "matched",
+            "parameters": 4
+          },
+          "P3_Hybrid 1 Segment": {
+            "channels": 6,
+            "gdtfMode": "P3_Hybrid 1 Segment",
+            "status": "matched",
+            "parameters": 5
+          },
+          "P3_Hybrid 2 Segments": {
+            "channels": 9,
+            "gdtfMode": "P3_Hybrid 2 Segments",
+            "status": "matched",
+            "parameters": 8
+          },
+          "P3_Hybrid 4 Segments": {
+            "channels": 15,
+            "gdtfMode": "P3_Hybrid 4 Segments",
+            "status": "matched",
+            "parameters": 14
+          },
+          "P3_Hybrid 8 Segments": {
+            "channels": 27,
+            "gdtfMode": "P3_Hybrid 8 Segments",
+            "status": "matched",
+            "parameters": 26
+          },
+          "P3_Hybrid 16 Segments": {
+            "channels": 51,
+            "gdtfMode": "P3_Hybrid 16 Segments",
+            "status": "matched",
+            "parameters": 50
+          },
+          "P3_PixelMap 1 Segment": {
+            "channels": 3,
+            "gdtfMode": "P3_PixelMap 1 Segment",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_PixelMap 2 Segments": {
+            "channels": 6,
+            "gdtfMode": "P3_PixelMap 2 Segments",
+            "status": "matched",
+            "parameters": 6
+          },
+          "P3_PixelMap 4 Segments": {
+            "channels": 12,
+            "gdtfMode": "P3_PixelMap 4 Segments",
+            "status": "matched",
+            "parameters": 12
+          },
+          "P3_PixelMap 8 Segments": {
+            "channels": 24,
+            "gdtfMode": "P3_PixelMap 8 Segments",
+            "status": "matched",
+            "parameters": 24
+          },
+          "P3_PixelMap 16 Segments": {
+            "channels": 48,
+            "gdtfMode": "P3_PixelMap 16 Segments",
+            "status": "matched",
+            "parameters": 48
+          }
+        }
+      },
+      "shortName": "VCS15 16x1"
+    },
+    {
+      "fixture": "VC-Strip 15 32x1",
+      "watts": null,
+      "weight": 0.054,
+      "modes": {
+        "DMX_RGB": 3,
+        "DMX_Pixel": 96,
+        "P3_Intensity": 1,
+        "P3_RGB": 3,
+        "P3_Basic": 5,
+        "P3_Hybrid 1 Segment": 6,
+        "P3_Hybrid 2 Segments": 9,
+        "P3_Hybrid 4 Segments": 15,
+        "P3_Hybrid 8 Segments": 27,
+        "P3_Hybrid 16 Segments": 51,
+        "P3_Hybrid 32 Segments": 99,
+        "P3_PixelMap 1 Segment": 3,
+        "P3_PixelMap 2 Segments": 6,
+        "P3_PixelMap 4 Segments": 12,
+        "P3_PixelMap 8 Segments": 24,
+        "P3_PixelMap 16 Segments": 48,
+        "P3_PixelMap 32 Segments": 96
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__VC_Strip_15_32x1.gdtf",
+        "file": "fixtures/martin/Martin_Professional@VC-Strip_15_32x1@20210126.gdtf",
+        "modes": {
+          "DMX_RGB": {
+            "channels": 3,
+            "gdtfMode": "DMX_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "DMX_Pixel": {
+            "channels": 96,
+            "gdtfMode": "DMX_Pixel",
+            "status": "matched",
+            "parameters": 96
+          },
+          "P3_Intensity": {
+            "channels": 1,
+            "gdtfMode": "P3_Intensity",
+            "status": "matched",
+            "parameters": 1
+          },
+          "P3_RGB": {
+            "channels": 3,
+            "gdtfMode": "P3_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_Basic": {
+            "channels": 5,
+            "gdtfMode": "P3_Basic",
+            "status": "matched",
+            "parameters": 4
+          },
+          "P3_Hybrid 1 Segment": {
+            "channels": 6,
+            "gdtfMode": "P3_Hybrid 1 Segment",
+            "status": "matched",
+            "parameters": 5
+          },
+          "P3_Hybrid 2 Segments": {
+            "channels": 9,
+            "gdtfMode": "P3_Hybrid 2 Segments",
+            "status": "matched",
+            "parameters": 8
+          },
+          "P3_Hybrid 4 Segments": {
+            "channels": 15,
+            "gdtfMode": "P3_Hybrid 4 Segments",
+            "status": "matched",
+            "parameters": 14
+          },
+          "P3_Hybrid 8 Segments": {
+            "channels": 27,
+            "gdtfMode": "P3_Hybrid 8 Segments",
+            "status": "matched",
+            "parameters": 26
+          },
+          "P3_Hybrid 16 Segments": {
+            "channels": 51,
+            "gdtfMode": "P3_Hybrid 16 Segments",
+            "status": "matched",
+            "parameters": 50
+          },
+          "P3_Hybrid 32 Segments": {
+            "channels": 99,
+            "gdtfMode": "P3_Hybrid 32 Segments",
+            "status": "matched",
+            "parameters": 98
+          },
+          "P3_PixelMap 1 Segment": {
+            "channels": 3,
+            "gdtfMode": "P3_PixelMap 1 Segment",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_PixelMap 2 Segments": {
+            "channels": 6,
+            "gdtfMode": "P3_PixelMap 2 Segments",
+            "status": "matched",
+            "parameters": 6
+          },
+          "P3_PixelMap 4 Segments": {
+            "channels": 12,
+            "gdtfMode": "P3_PixelMap 4 Segments",
+            "status": "matched",
+            "parameters": 12
+          },
+          "P3_PixelMap 8 Segments": {
+            "channels": 24,
+            "gdtfMode": "P3_PixelMap 8 Segments",
+            "status": "matched",
+            "parameters": 24
+          },
+          "P3_PixelMap 16 Segments": {
+            "channels": 48,
+            "gdtfMode": "P3_PixelMap 16 Segments",
+            "status": "matched",
+            "parameters": 48
+          },
+          "P3_PixelMap 32 Segments": {
+            "channels": 96,
+            "gdtfMode": "P3_PixelMap 32 Segments",
+            "status": "matched",
+            "parameters": 96
+          }
+        }
+      },
+      "shortName": "VCS15 32x1"
+    },
+    {
+      "fixture": "VC-Strip 25 16x1",
+      "watts": null,
+      "weight": 0.043,
+      "modes": {
+        "DMX_RGB": 3,
+        "DMX_Pixel": 48,
+        "P3_Intensity": 1,
+        "P3_RGB": 3,
+        "P3_Basic": 5,
+        "P3_Hybrid 1 Segment": 6,
+        "P3_Hybrid 2 Segments": 9,
+        "P3_Hybrid 4 Segments": 15,
+        "P3_Hybrid 8 Segments": 27,
+        "P3_Hybrid 16 Segments": 51,
+        "P3_PixelMap 1 Segment": 3,
+        "P3_PixelMap 2 Segments": 6,
+        "P3_PixelMap 4 Segments": 12,
+        "P3_PixelMap 8 Segments": 24,
+        "P3_PixelMap 16 Segments": 48
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__VC_Strip_25_16x1.gdtf",
+        "file": "fixtures/martin/Martin_Professional@VC-Strip_25_16x1@20210125.gdtf",
+        "modes": {
+          "DMX_RGB": {
+            "channels": 3,
+            "gdtfMode": "DMX_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "DMX_Pixel": {
+            "channels": 48,
+            "gdtfMode": "DMX_Pixel",
+            "status": "matched",
+            "parameters": 48
+          },
+          "P3_Intensity": {
+            "channels": 1,
+            "gdtfMode": "P3_Intensity",
+            "status": "matched",
+            "parameters": 1
+          },
+          "P3_RGB": {
+            "channels": 3,
+            "gdtfMode": "P3_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_Basic": {
+            "channels": 5,
+            "gdtfMode": "P3_Basic",
+            "status": "matched",
+            "parameters": 4
+          },
+          "P3_Hybrid 1 Segment": {
+            "channels": 6,
+            "gdtfMode": "P3_Hybrid 1 Segment",
+            "status": "matched",
+            "parameters": 5
+          },
+          "P3_Hybrid 2 Segments": {
+            "channels": 9,
+            "gdtfMode": "P3_Hybrid 2 Segments",
+            "status": "matched",
+            "parameters": 8
+          },
+          "P3_Hybrid 4 Segments": {
+            "channels": 15,
+            "gdtfMode": "P3_Hybrid 4 Segments",
+            "status": "matched",
+            "parameters": 14
+          },
+          "P3_Hybrid 8 Segments": {
+            "channels": 27,
+            "gdtfMode": "P3_Hybrid 8 Segments",
+            "status": "matched",
+            "parameters": 26
+          },
+          "P3_Hybrid 16 Segments": {
+            "channels": 51,
+            "gdtfMode": "P3_Hybrid 16 Segments",
+            "status": "matched",
+            "parameters": 50
+          },
+          "P3_PixelMap 1 Segment": {
+            "channels": 3,
+            "gdtfMode": "P3_PixelMap 1 Segment",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_PixelMap 2 Segments": {
+            "channels": 6,
+            "gdtfMode": "P3_PixelMap 2 Segments",
+            "status": "matched",
+            "parameters": 6
+          },
+          "P3_PixelMap 4 Segments": {
+            "channels": 12,
+            "gdtfMode": "P3_PixelMap 4 Segments",
+            "status": "matched",
+            "parameters": 12
+          },
+          "P3_PixelMap 8 Segments": {
+            "channels": 24,
+            "gdtfMode": "P3_PixelMap 8 Segments",
+            "status": "matched",
+            "parameters": 24
+          },
+          "P3_PixelMap 16 Segments": {
+            "channels": 48,
+            "gdtfMode": "P3_PixelMap 16 Segments",
+            "status": "matched",
+            "parameters": 48
+          }
+        }
+      },
+      "shortName": "VCS25 16x1"
+    },
+    {
+      "fixture": "VC-Strip 25 8x1",
+      "watts": null,
+      "weight": 0.026,
+      "modes": {
+        "DMX_RGB": 3,
+        "DMX_Pixel": 24,
+        "P3_Intensity": 1,
+        "P3_RGB": 3,
+        "P3_Basic": 5,
+        "P3_Hybrid 1 Segment": 6,
+        "P3_Hybrid 2 Segments": 9,
+        "P3_Hybrid 4 Segments": 15,
+        "P3_Hybrid 8 Segments": 27,
+        "P3_PixelMap 1 Segment": 3,
+        "P3_PixelMap 2 Segments": 6,
+        "P3_PixelMap 4 Segments": 12,
+        "P3_PixelMap 8 Segments": 24
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__VC_Strip_25_8x1.gdtf",
+        "file": "fixtures/martin/Martin_Professional@VC-Strip_25_8x1@20210125.gdtf",
+        "modes": {
+          "DMX_RGB": {
+            "channels": 3,
+            "gdtfMode": "DMX_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "DMX_Pixel": {
+            "channels": 24,
+            "gdtfMode": "DMX_Pixel",
+            "status": "matched",
+            "parameters": 24
+          },
+          "P3_Intensity": {
+            "channels": 1,
+            "gdtfMode": "P3_Intensity",
+            "status": "matched",
+            "parameters": 1
+          },
+          "P3_RGB": {
+            "channels": 3,
+            "gdtfMode": "P3_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_Basic": {
+            "channels": 5,
+            "gdtfMode": "P3_Basic",
+            "status": "matched",
+            "parameters": 4
+          },
+          "P3_Hybrid 1 Segment": {
+            "channels": 6,
+            "gdtfMode": "P3_Hybrid 1 Segment",
+            "status": "matched",
+            "parameters": 5
+          },
+          "P3_Hybrid 2 Segments": {
+            "channels": 9,
+            "gdtfMode": "P3_Hybrid 2 Segments",
+            "status": "matched",
+            "parameters": 8
+          },
+          "P3_Hybrid 4 Segments": {
+            "channels": 15,
+            "gdtfMode": "P3_Hybrid 4 Segments",
+            "status": "matched",
+            "parameters": 14
+          },
+          "P3_Hybrid 8 Segments": {
+            "channels": 27,
+            "gdtfMode": "P3_Hybrid 8 Segments",
+            "status": "matched",
+            "parameters": 26
+          },
+          "P3_PixelMap 1 Segment": {
+            "channels": 3,
+            "gdtfMode": "P3_PixelMap 1 Segment",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_PixelMap 2 Segments": {
+            "channels": 6,
+            "gdtfMode": "P3_PixelMap 2 Segments",
+            "status": "matched",
+            "parameters": 6
+          },
+          "P3_PixelMap 4 Segments": {
+            "channels": 12,
+            "gdtfMode": "P3_PixelMap 4 Segments",
+            "status": "matched",
+            "parameters": 12
+          },
+          "P3_PixelMap 8 Segments": {
+            "channels": 24,
+            "gdtfMode": "P3_PixelMap 8 Segments",
+            "status": "matched",
+            "parameters": 24
+          }
+        }
+      },
+      "shortName": "VCS25 8x1"
+    },
+    {
+      "fixture": "VC-Strip 30 16x1",
+      "watts": null,
+      "weight": 0.051,
+      "modes": {
+        "DMX_RGB": 3,
+        "DMX_Pixel": 48,
+        "P3_Intensity": 1,
+        "P3_RGB": 3,
+        "P3_Basic": 5,
+        "P3_Hybrid 1 Segment": 6,
+        "P3_Hybrid 2 Segments": 9,
+        "P3_Hybrid 4 Segments": 15,
+        "P3_Hybrid 8 Segments": 27,
+        "P3_Hybrid 16 Segments": 51,
+        "P3_PixelMap 1 Segment": 3,
+        "P3_PixelMap 2 Segments": 6,
+        "P3_PixelMap 4 Segments": 12,
+        "P3_PixelMap 8 Segments": 24,
+        "P3_PixelMap 16 Segments": 48
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__VC_Strip_30_16x1.gdtf",
+        "file": "fixtures/martin/Martin_Professional@VC-Strip_30_16x1@20210123.gdtf",
+        "modes": {
+          "DMX_RGB": {
+            "channels": 3,
+            "gdtfMode": "DMX_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "DMX_Pixel": {
+            "channels": 48,
+            "gdtfMode": "DMX_Pixel",
+            "status": "matched",
+            "parameters": 48
+          },
+          "P3_Intensity": {
+            "channels": 1,
+            "gdtfMode": "P3_Intensity",
+            "status": "matched",
+            "parameters": 1
+          },
+          "P3_RGB": {
+            "channels": 3,
+            "gdtfMode": "P3_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_Basic": {
+            "channels": 5,
+            "gdtfMode": "P3_Basic",
+            "status": "matched",
+            "parameters": 4
+          },
+          "P3_Hybrid 1 Segment": {
+            "channels": 6,
+            "gdtfMode": "P3_Hybrid 1 Segment",
+            "status": "matched",
+            "parameters": 5
+          },
+          "P3_Hybrid 2 Segments": {
+            "channels": 9,
+            "gdtfMode": "P3_Hybrid 2 Segments",
+            "status": "matched",
+            "parameters": 8
+          },
+          "P3_Hybrid 4 Segments": {
+            "channels": 15,
+            "gdtfMode": "P3_Hybrid 4 Segments",
+            "status": "matched",
+            "parameters": 14
+          },
+          "P3_Hybrid 8 Segments": {
+            "channels": 27,
+            "gdtfMode": "P3_Hybrid 8 Segments",
+            "status": "matched",
+            "parameters": 26
+          },
+          "P3_Hybrid 16 Segments": {
+            "channels": 51,
+            "gdtfMode": "P3_Hybrid 16 Segments",
+            "status": "matched",
+            "parameters": 50
+          },
+          "P3_PixelMap 1 Segment": {
+            "channels": 3,
+            "gdtfMode": "P3_PixelMap 1 Segment",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_PixelMap 2 Segments": {
+            "channels": 6,
+            "gdtfMode": "P3_PixelMap 2 Segments",
+            "status": "matched",
+            "parameters": 6
+          },
+          "P3_PixelMap 4 Segments": {
+            "channels": 12,
+            "gdtfMode": "P3_PixelMap 4 Segments",
+            "status": "matched",
+            "parameters": 12
+          },
+          "P3_PixelMap 8 Segments": {
+            "channels": 24,
+            "gdtfMode": "P3_PixelMap 8 Segments",
+            "status": "matched",
+            "parameters": 24
+          },
+          "P3_PixelMap 16 Segments": {
+            "channels": 48,
+            "gdtfMode": "P3_PixelMap 16 Segments",
+            "status": "matched",
+            "parameters": 48
+          }
+        }
+      },
+      "shortName": "VCS30 16x1"
+    },
+    {
+      "fixture": "VC-Strip 30 8x1",
+      "watts": null,
+      "weight": 0.031,
+      "modes": {
+        "DMX_RGB": 3,
+        "DMX_Pixel": 24,
+        "P3_Intensity": 1,
+        "P3_RGB": 3,
+        "P3_Basic": 5,
+        "P3_Hybrid 1 Segment": 6,
+        "P3_Hybrid 2 Segments": 9,
+        "P3_Hybrid 4 Segments": 15,
+        "P3_Hybrid 8 Segments": 27,
+        "P3_PixelMap 1 Segment": 3,
+        "P3_PixelMap 2 Segments": 6,
+        "P3_PixelMap 4 Segments": 12,
+        "P3_PixelMap 8 Segments": 24
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__VC_Strip_30_8x1.gdtf",
+        "file": "fixtures/martin/Martin_Professional@VC-Strip_30_8x1@20210123.gdtf",
+        "modes": {
+          "DMX_RGB": {
+            "channels": 3,
+            "gdtfMode": "DMX_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "DMX_Pixel": {
+            "channels": 24,
+            "gdtfMode": "DMX_Pixel",
+            "status": "matched",
+            "parameters": 24
+          },
+          "P3_Intensity": {
+            "channels": 1,
+            "gdtfMode": "P3_Intensity",
+            "status": "matched",
+            "parameters": 1
+          },
+          "P3_RGB": {
+            "channels": 3,
+            "gdtfMode": "P3_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_Basic": {
+            "channels": 5,
+            "gdtfMode": "P3_Basic",
+            "status": "matched",
+            "parameters": 4
+          },
+          "P3_Hybrid 1 Segment": {
+            "channels": 6,
+            "gdtfMode": "P3_Hybrid 1 Segment",
+            "status": "matched",
+            "parameters": 5
+          },
+          "P3_Hybrid 2 Segments": {
+            "channels": 9,
+            "gdtfMode": "P3_Hybrid 2 Segments",
+            "status": "matched",
+            "parameters": 8
+          },
+          "P3_Hybrid 4 Segments": {
+            "channels": 15,
+            "gdtfMode": "P3_Hybrid 4 Segments",
+            "status": "matched",
+            "parameters": 14
+          },
+          "P3_Hybrid 8 Segments": {
+            "channels": 27,
+            "gdtfMode": "P3_Hybrid 8 Segments",
+            "status": "matched",
+            "parameters": 26
+          },
+          "P3_PixelMap 1 Segment": {
+            "channels": 3,
+            "gdtfMode": "P3_PixelMap 1 Segment",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_PixelMap 2 Segments": {
+            "channels": 6,
+            "gdtfMode": "P3_PixelMap 2 Segments",
+            "status": "matched",
+            "parameters": 6
+          },
+          "P3_PixelMap 4 Segments": {
+            "channels": 12,
+            "gdtfMode": "P3_PixelMap 4 Segments",
+            "status": "matched",
+            "parameters": 12
+          },
+          "P3_PixelMap 8 Segments": {
+            "channels": 24,
+            "gdtfMode": "P3_PixelMap 8 Segments",
+            "status": "matched",
+            "parameters": 24
+          }
+        }
+      },
+      "shortName": "VCS30 8x1"
+    },
+    {
+      "fixture": "VC-Strip 60 4x1",
+      "watts": null,
+      "weight": 0.032,
+      "modes": {
+        "DMX_RGB": 3,
+        "DMX_Pixel": 12,
+        "P3_Intensity": 1,
+        "P3_RGB": 3,
+        "P3_Basic": 5,
+        "P3_Hybrid 1 Segment": 6,
+        "P3_Hybrid 2 Segments": 9,
+        "P3_Hybrid 4 Segments": 15,
+        "P3_PixelMap 1 Segment": 3,
+        "P3_PixelMap 2 Segments": 6,
+        "P3_PixelMap 4 Segments": 12
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__VC_Strip_60_4x1.gdtf",
+        "file": "fixtures/martin/Martin_Professional@VC-Strip_60_4x1@20210122.gdtf",
+        "modes": {
+          "DMX_RGB": {
+            "channels": 3,
+            "gdtfMode": "DMX_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "DMX_Pixel": {
+            "channels": 12,
+            "gdtfMode": "DMX_Pixel",
+            "status": "matched",
+            "parameters": 12
+          },
+          "P3_Intensity": {
+            "channels": 1,
+            "gdtfMode": "P3_Intensity",
+            "status": "matched",
+            "parameters": 1
+          },
+          "P3_RGB": {
+            "channels": 3,
+            "gdtfMode": "P3_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_Basic": {
+            "channels": 5,
+            "gdtfMode": "P3_Basic",
+            "status": "matched",
+            "parameters": 4
+          },
+          "P3_Hybrid 1 Segment": {
+            "channels": 6,
+            "gdtfMode": "P3_Hybrid 1 Segment",
+            "status": "matched",
+            "parameters": 5
+          },
+          "P3_Hybrid 2 Segments": {
+            "channels": 9,
+            "gdtfMode": "P3_Hybrid 2 Segments",
+            "status": "matched",
+            "parameters": 8
+          },
+          "P3_Hybrid 4 Segments": {
+            "channels": 15,
+            "gdtfMode": "P3_Hybrid 4 Segments",
+            "status": "matched",
+            "parameters": 14
+          },
+          "P3_PixelMap 1 Segment": {
+            "channels": 3,
+            "gdtfMode": "P3_PixelMap 1 Segment",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_PixelMap 2 Segments": {
+            "channels": 6,
+            "gdtfMode": "P3_PixelMap 2 Segments",
+            "status": "matched",
+            "parameters": 6
+          },
+          "P3_PixelMap 4 Segments": {
+            "channels": 12,
+            "gdtfMode": "P3_PixelMap 4 Segments",
+            "status": "matched",
+            "parameters": 12
+          }
+        }
+      },
+      "shortName": "VCS60 4x1"
+    },
+    {
+      "fixture": "VC-Strip 60 8x1",
+      "watts": null,
+      "weight": 0.053,
+      "modes": {
+        "DMX_RGB": 3,
+        "DMX_Pixel": 24,
+        "P3_Intensity": 1,
+        "P3_RGB": 3,
+        "P3_Basic": 5,
+        "P3_Hybrid 1 Segment": 6,
+        "P3_Hybrid 2 Segments": 9,
+        "P3_Hybrid 4 Segments": 15,
+        "P3_Hybrid 8 Segments": 27,
+        "P3_PixelMap 1 Segment": 3,
+        "P3_PixelMap 2 Segments": 6,
+        "P3_PixelMap 4 Segments": 12,
+        "P3_PixelMap 8 Segments": 24
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/martin",
+        "suggestedFileName": "Martin__VC_Strip_60_8x1.gdtf",
+        "file": "fixtures/martin/Martin_Professional@VC-Strip_60_8x1@20210122.gdtf",
+        "modes": {
+          "DMX_RGB": {
+            "channels": 3,
+            "gdtfMode": "DMX_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "DMX_Pixel": {
+            "channels": 24,
+            "gdtfMode": "DMX_Pixel",
+            "status": "matched",
+            "parameters": 24
+          },
+          "P3_Intensity": {
+            "channels": 1,
+            "gdtfMode": "P3_Intensity",
+            "status": "matched",
+            "parameters": 1
+          },
+          "P3_RGB": {
+            "channels": 3,
+            "gdtfMode": "P3_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_Basic": {
+            "channels": 5,
+            "gdtfMode": "P3_Basic",
+            "status": "matched",
+            "parameters": 4
+          },
+          "P3_Hybrid 1 Segment": {
+            "channels": 6,
+            "gdtfMode": "P3_Hybrid 1 Segment",
+            "status": "matched",
+            "parameters": 5
+          },
+          "P3_Hybrid 2 Segments": {
+            "channels": 9,
+            "gdtfMode": "P3_Hybrid 2 Segments",
+            "status": "matched",
+            "parameters": 8
+          },
+          "P3_Hybrid 4 Segments": {
+            "channels": 15,
+            "gdtfMode": "P3_Hybrid 4 Segments",
+            "status": "matched",
+            "parameters": 14
+          },
+          "P3_Hybrid 8 Segments": {
+            "channels": 27,
+            "gdtfMode": "P3_Hybrid 8 Segments",
+            "status": "matched",
+            "parameters": 26
+          },
+          "P3_PixelMap 1 Segment": {
+            "channels": 3,
+            "gdtfMode": "P3_PixelMap 1 Segment",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_PixelMap 2 Segments": {
+            "channels": 6,
+            "gdtfMode": "P3_PixelMap 2 Segments",
+            "status": "matched",
+            "parameters": 6
+          },
+          "P3_PixelMap 4 Segments": {
+            "channels": 12,
+            "gdtfMode": "P3_PixelMap 4 Segments",
+            "status": "matched",
+            "parameters": 12
+          },
+          "P3_PixelMap 8 Segments": {
+            "channels": 24,
+            "gdtfMode": "P3_PixelMap 8 Segments",
+            "status": "matched",
+            "parameters": 24
+          }
+        }
+      },
+      "shortName": "VCS60 8x1"
     },
     {
       "fixture": "VDO Atomic Bold",
-      "watts": 400,
+      "watts": 400.0,
       "weight": 9.32,
       "modes": {
         "1 Channel": 1,
@@ -1523,11 +4316,11 @@
           }
         }
       },
-      "shortName": "Atomic Bold"
+      "shortName": "VDOAtoBLD"
     },
     {
       "fixture": "VDO Atomic Dot CLD",
-      "watts": 55,
+      "watts": 50.0,
       "weight": 2.2,
       "modes": {
         "1 Channel": 1,
@@ -1574,11 +4367,11 @@
           }
         }
       },
-      "shortName": "Atomic Dot CLD"
+      "shortName": "VDOAtoDOTCLD"
     },
     {
       "fixture": "VDO Atomic Dot WRM",
-      "watts": 55,
+      "watts": 50.0,
       "weight": 2.2,
       "modes": {
         "1 Channel": 1,
@@ -1625,7 +4418,7 @@
           }
         }
       },
-      "shortName": "Atomic Dot WRM"
+      "shortName": "VDOAtoDOTWRM"
     },
     {
       "fixture": "VDO Dotron",
@@ -1690,167 +4483,687 @@
           }
         }
       },
-      "shortName": "Dotron"
+      "shortName": "VDODot"
     },
     {
       "fixture": "VDO Fatron 20 1000 mm",
       "watts": 60,
-      "weight": 2.8,
+      "weight": 2.5,
       "modes": {
-        "RGB": 3,
-        "Basic": 10,
-        "Segment": 55,
-        "Pixel": 157
+        "DMX_RGB": 3,
+        "DMX_Basic": 10,
+        "DMX_Segments": 37,
+        "DMX_Pixel": 157,
+        "P3_Intensity": 1,
+        "P3_RGB": 3,
+        "P3_Basic": 5,
+        "P3_Hybrid 1 Segment": 6,
+        "P3_Hybrid 2 Segments": 9,
+        "P3_Hybrid 5 Segments": 18,
+        "P3_Hybrid 10 Segments": 33,
+        "P3_Hybrid 25 Segments": 78,
+        "P3_Hybrid 50 Segments": 153,
+        "P3_Hybrid 100 Segments": 303,
+        "P3_Hybrid 200 Segments": 510,
+        "P3_PixelMap 1 Segment": 3,
+        "P3_PixelMap 2 Segments": 6,
+        "P3_PixelMap 5 Segments": 15,
+        "P3_PixelMap 10 Segments": 30,
+        "P3_PixelMap 25 Segments": 75,
+        "P3_PixelMap 50 Segments": 150,
+        "P3_PixelMap 100 Segments": 300,
+        "P3_PixelMap 200 Segments": 510
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__VDO_Fatron_20_1000_mm.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@VDO_Fatron_20_1000mm@20210127.gdtf",
         "modes": {
-          "RGB": {
+          "DMX_RGB": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "DMX_RGB",
+            "status": "matched",
+            "parameters": 3
           },
-          "Basic": {
+          "DMX_Basic": {
             "channels": 10,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "DMX_Basic",
+            "status": "matched",
+            "parameters": 9
           },
-          "Segment": {
-            "channels": 55,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "DMX_Segments": {
+            "channels": 37,
+            "gdtfMode": "DMX_Segments",
+            "status": "matched",
+            "parameters": 36
           },
-          "Pixel": {
+          "DMX_Pixel": {
             "channels": 157,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "DMX_Pixel",
+            "status": "matched",
+            "parameters": 156
+          },
+          "P3_Intensity": {
+            "channels": 1,
+            "gdtfMode": "P3_Intensity",
+            "status": "matched",
+            "parameters": 1
+          },
+          "P3_RGB": {
+            "channels": 3,
+            "gdtfMode": "P3_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_Basic": {
+            "channels": 5,
+            "gdtfMode": "P3_Basic",
+            "status": "matched",
+            "parameters": 4
+          },
+          "P3_Hybrid 1 Segment": {
+            "channels": 6,
+            "gdtfMode": "P3_Hybrid 1 Segment",
+            "status": "matched",
+            "parameters": 5
+          },
+          "P3_Hybrid 2 Segments": {
+            "channels": 9,
+            "gdtfMode": "P3_Hybrid 2 Segments",
+            "status": "matched",
+            "parameters": 8
+          },
+          "P3_Hybrid 5 Segments": {
+            "channels": 18,
+            "gdtfMode": "P3_Hybrid 5 Segments",
+            "status": "matched",
+            "parameters": 17
+          },
+          "P3_Hybrid 10 Segments": {
+            "channels": 33,
+            "gdtfMode": "P3_Hybrid 10 Segments",
+            "status": "matched",
+            "parameters": 32
+          },
+          "P3_Hybrid 25 Segments": {
+            "channels": 78,
+            "gdtfMode": "P3_Hybrid 25 Segments",
+            "status": "matched",
+            "parameters": 77
+          },
+          "P3_Hybrid 50 Segments": {
+            "channels": 153,
+            "gdtfMode": "P3_Hybrid 50 Segments",
+            "status": "matched",
+            "parameters": 152
+          },
+          "P3_Hybrid 100 Segments": {
+            "channels": 303,
+            "gdtfMode": "P3_Hybrid 100 Segments",
+            "status": "matched",
+            "parameters": 302
+          },
+          "P3_Hybrid 200 Segments": {
+            "channels": 510,
+            "gdtfMode": "P3_Hybrid 200 Segments",
+            "status": "matched",
+            "parameters": 602
+          },
+          "P3_PixelMap 1 Segment": {
+            "channels": 3,
+            "gdtfMode": "P3_PixelMap 1 Segment",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_PixelMap 2 Segments": {
+            "channels": 6,
+            "gdtfMode": "P3_PixelMap 2 Segments",
+            "status": "matched",
+            "parameters": 6
+          },
+          "P3_PixelMap 5 Segments": {
+            "channels": 15,
+            "gdtfMode": "P3_PixelMap 5 Segments",
+            "status": "matched",
+            "parameters": 15
+          },
+          "P3_PixelMap 10 Segments": {
+            "channels": 30,
+            "gdtfMode": "P3_PixelMap 10 Segments",
+            "status": "matched",
+            "parameters": 30
+          },
+          "P3_PixelMap 25 Segments": {
+            "channels": 75,
+            "gdtfMode": "P3_PixelMap 25 Segments",
+            "status": "matched",
+            "parameters": 75
+          },
+          "P3_PixelMap 50 Segments": {
+            "channels": 150,
+            "gdtfMode": "P3_PixelMap 50 Segments",
+            "status": "matched",
+            "parameters": 150
+          },
+          "P3_PixelMap 100 Segments": {
+            "channels": 300,
+            "gdtfMode": "P3_PixelMap 100 Segments",
+            "status": "matched",
+            "parameters": 300
+          },
+          "P3_PixelMap 200 Segments": {
+            "channels": 510,
+            "gdtfMode": "P3_PixelMap 200 Segments",
+            "status": "matched",
+            "parameters": 600
           }
         }
       },
-      "shortName": "Fatron 20 1000 mm"
+      "shortName": "VDOFat20 1000"
     },
     {
       "fixture": "VDO Fatron 20 320 mm",
       "watts": 20,
-      "weight": 0.95,
+      "weight": 0.85,
       "modes": {
-        "RGB": 3,
-        "Basic": 10,
-        "Segment": 19,
-        "Pixel": 37
+        "DMX_RGB": 3,
+        "DMX_Basic": 10,
+        "DMX_Segments": 19,
+        "DMX_Pixel": 55,
+        "P3_Intensity": 1,
+        "P3_RGB": 3,
+        "P3_Basic": 5,
+        "P3_Hybrid 1 Segment": 6,
+        "P3_Hybrid 2 Segments": 9,
+        "P3_Hybrid 4 Segments": 15,
+        "P3_Hybrid 8 Segments": 27,
+        "P3_Hybrid 16 Segments": 51,
+        "P3_Hybrid 32 Segments": 99,
+        "P3_Hybrid 64 Segments": 195,
+        "P3_PixelMap 1 Segment": 3,
+        "P3_PixelMap 2 Segments": 6,
+        "P3_PixelMap 4 Segments": 12,
+        "P3_PixelMap 8 Segments": 24,
+        "P3_PixelMap 16 Segments": 48,
+        "P3_PixelMap 32 Segments": 96,
+        "P3_PixelMap 64 Segments": 192
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__VDO_Fatron_20_320_mm.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@VDO_Fatron_20_320mm@20201222.gdtf",
         "modes": {
-          "RGB": {
+          "DMX_RGB": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "DMX_RGB",
+            "status": "matched",
+            "parameters": 3
           },
-          "Basic": {
+          "DMX_Basic": {
             "channels": 10,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "DMX_Basic",
+            "status": "matched",
+            "parameters": 9
           },
-          "Segment": {
+          "DMX_Segments": {
             "channels": 19,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "DMX_Segments",
+            "status": "matched",
+            "parameters": 18
           },
-          "Pixel": {
-            "channels": 37,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "DMX_Pixel": {
+            "channels": 55,
+            "gdtfMode": "DMX_Pixel",
+            "status": "matched",
+            "parameters": 54
+          },
+          "P3_Intensity": {
+            "channels": 1,
+            "gdtfMode": "P3_Intensity",
+            "status": "matched",
+            "parameters": 1
+          },
+          "P3_RGB": {
+            "channels": 3,
+            "gdtfMode": "P3_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_Basic": {
+            "channels": 5,
+            "gdtfMode": "P3_Basic",
+            "status": "matched",
+            "parameters": 4
+          },
+          "P3_Hybrid 1 Segment": {
+            "channels": 6,
+            "gdtfMode": "P3_Hybrid 1 Segment",
+            "status": "matched",
+            "parameters": 5
+          },
+          "P3_Hybrid 2 Segments": {
+            "channels": 9,
+            "gdtfMode": "P3_Hybrid 2 Segments",
+            "status": "matched",
+            "parameters": 8
+          },
+          "P3_Hybrid 4 Segments": {
+            "channels": 15,
+            "gdtfMode": "P3_Hybrid 4 Segments",
+            "status": "matched",
+            "parameters": 14
+          },
+          "P3_Hybrid 8 Segments": {
+            "channels": 27,
+            "gdtfMode": "P3_Hybrid 8 Segments",
+            "status": "matched",
+            "parameters": 26
+          },
+          "P3_Hybrid 16 Segments": {
+            "channels": 51,
+            "gdtfMode": "P3_Hybrid 16 Segments",
+            "status": "matched",
+            "parameters": 50
+          },
+          "P3_Hybrid 32 Segments": {
+            "channels": 99,
+            "gdtfMode": "P3_Hybrid 32 Segments",
+            "status": "matched",
+            "parameters": 98
+          },
+          "P3_Hybrid 64 Segments": {
+            "channels": 195,
+            "gdtfMode": "P3_Hybrid 64 Segments",
+            "status": "matched",
+            "parameters": 194
+          },
+          "P3_PixelMap 1 Segment": {
+            "channels": 3,
+            "gdtfMode": "P3_PixelMap 1 Segment",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_PixelMap 2 Segments": {
+            "channels": 6,
+            "gdtfMode": "P3_PixelMap 2 Segments",
+            "status": "matched",
+            "parameters": 6
+          },
+          "P3_PixelMap 4 Segments": {
+            "channels": 12,
+            "gdtfMode": "P3_PixelMap 4 Segments",
+            "status": "matched",
+            "parameters": 12
+          },
+          "P3_PixelMap 8 Segments": {
+            "channels": 24,
+            "gdtfMode": "P3_PixelMap 8 Segments",
+            "status": "matched",
+            "parameters": 24
+          },
+          "P3_PixelMap 16 Segments": {
+            "channels": 48,
+            "gdtfMode": "P3_PixelMap 16 Segments",
+            "status": "matched",
+            "parameters": 48
+          },
+          "P3_PixelMap 32 Segments": {
+            "channels": 96,
+            "gdtfMode": "P3_PixelMap 32 Segments",
+            "status": "matched",
+            "parameters": 96
+          },
+          "P3_PixelMap 64 Segments": {
+            "channels": 192,
+            "gdtfMode": "P3_PixelMap 64 Segments",
+            "status": "matched",
+            "parameters": 192
           }
         }
       },
-      "shortName": "Fatron 20 320 mm"
+      "shortName": "VDOFat20 320"
     },
     {
       "fixture": "VDO Sceptron 10 1000 mm",
       "watts": 30,
-      "weight": 1.4,
+      "weight": 1.2,
       "modes": {
-        "RGB": 3,
-        "Basic": 10,
-        "Segment": 103,
-        "Pixel": 307
+        "DMX_RGB": 3,
+        "DMX_Basic": 10,
+        "DMX_Segments": 22,
+        "DMX_Pixel": 307,
+        "P3_Intensity": 1,
+        "P3_RGB": 3,
+        "P3_Basic": 5,
+        "P3_Hybrid 1 Segment": 6,
+        "P3_Hybrid 2 Segments": 9,
+        "P3_Hybrid 4 Segments": 15,
+        "P3_Hybrid 5 Segments": 18,
+        "P3_Hybrid 10 Segments": 33,
+        "P3_Hybrid 20 Segments": 63,
+        "P3_Hybrid 25 Segments": 78,
+        "P3_Hybrid 50 Segments": 153,
+        "P3_Hybrid 100 Segments": 303,
+        "P3_PixelMap 1 Segment": 3,
+        "P3_PixelMap 2 Segments": 6,
+        "P3_PixelMap 4 Segments": 12,
+        "P3_PixelMap 5 Segments": 15,
+        "P3_PixelMap 10 Segments": 30,
+        "P3_PixelMap 20 Segments": 60,
+        "P3_PixelMap 25 Segments": 75,
+        "P3_PixelMap 50 Segments": 150,
+        "P3_PixelMap 100 Segments": 300
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__VDO_Sceptron_10_1000_mm.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@VDO_Sceptron_10_1000mm@20201223.gdtf",
         "modes": {
-          "RGB": {
+          "DMX_RGB": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "DMX_RGB",
+            "status": "matched",
+            "parameters": 3
           },
-          "Basic": {
+          "DMX_Basic": {
             "channels": 10,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "DMX_Basic",
+            "status": "matched",
+            "parameters": 9
           },
-          "Segment": {
-            "channels": 103,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "DMX_Segments": {
+            "channels": 22,
+            "gdtfMode": "DMX_Segments",
+            "status": "matched",
+            "parameters": 21
           },
-          "Pixel": {
+          "DMX_Pixel": {
             "channels": 307,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "DMX_Pixel",
+            "status": "matched",
+            "parameters": 306
+          },
+          "P3_Intensity": {
+            "channels": 1,
+            "gdtfMode": "P3_Intensity",
+            "status": "matched",
+            "parameters": 1
+          },
+          "P3_RGB": {
+            "channels": 3,
+            "gdtfMode": "P3_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_Basic": {
+            "channels": 5,
+            "gdtfMode": "P3_Basic",
+            "status": "matched",
+            "parameters": 4
+          },
+          "P3_Hybrid 1 Segment": {
+            "channels": 6,
+            "gdtfMode": "P3_Hybrid 1 Segment",
+            "status": "matched",
+            "parameters": 5
+          },
+          "P3_Hybrid 2 Segments": {
+            "channels": 9,
+            "gdtfMode": "P3_Hybrid 2 Segments",
+            "status": "matched",
+            "parameters": 8
+          },
+          "P3_Hybrid 4 Segments": {
+            "channels": 15,
+            "gdtfMode": "P3_Hybrid 4 Segments",
+            "status": "matched",
+            "parameters": 14
+          },
+          "P3_Hybrid 5 Segments": {
+            "channels": 18,
+            "gdtfMode": "P3_Hybrid 5 Segments",
+            "status": "matched",
+            "parameters": 17
+          },
+          "P3_Hybrid 10 Segments": {
+            "channels": 33,
+            "gdtfMode": "P3_Hybrid 10 Segments",
+            "status": "matched",
+            "parameters": 32
+          },
+          "P3_Hybrid 20 Segments": {
+            "channels": 63,
+            "gdtfMode": "P3_Hybrid 20 Segments",
+            "status": "matched",
+            "parameters": 62
+          },
+          "P3_Hybrid 25 Segments": {
+            "channels": 78,
+            "gdtfMode": "P3_Hybrid 25 Segments",
+            "status": "matched",
+            "parameters": 77
+          },
+          "P3_Hybrid 50 Segments": {
+            "channels": 153,
+            "gdtfMode": "P3_Hybrid 50 Segments",
+            "status": "matched",
+            "parameters": 152
+          },
+          "P3_Hybrid 100 Segments": {
+            "channels": 303,
+            "gdtfMode": "P3_Hybrid 100 Segments",
+            "status": "matched",
+            "parameters": 302
+          },
+          "P3_PixelMap 1 Segment": {
+            "channels": 3,
+            "gdtfMode": "P3_PixelMap 1 Segment",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_PixelMap 2 Segments": {
+            "channels": 6,
+            "gdtfMode": "P3_PixelMap 2 Segments",
+            "status": "matched",
+            "parameters": 6
+          },
+          "P3_PixelMap 4 Segments": {
+            "channels": 12,
+            "gdtfMode": "P3_PixelMap 4 Segments",
+            "status": "matched",
+            "parameters": 12
+          },
+          "P3_PixelMap 5 Segments": {
+            "channels": 15,
+            "gdtfMode": "P3_PixelMap 5 Segments",
+            "status": "matched",
+            "parameters": 15
+          },
+          "P3_PixelMap 10 Segments": {
+            "channels": 30,
+            "gdtfMode": "P3_PixelMap 10 Segments",
+            "status": "matched",
+            "parameters": 30
+          },
+          "P3_PixelMap 20 Segments": {
+            "channels": 60,
+            "gdtfMode": "P3_PixelMap 20 Segments",
+            "status": "matched",
+            "parameters": 60
+          },
+          "P3_PixelMap 25 Segments": {
+            "channels": 75,
+            "gdtfMode": "P3_PixelMap 25 Segments",
+            "status": "matched",
+            "parameters": 75
+          },
+          "P3_PixelMap 50 Segments": {
+            "channels": 150,
+            "gdtfMode": "P3_PixelMap 50 Segments",
+            "status": "matched",
+            "parameters": 150
+          },
+          "P3_PixelMap 100 Segments": {
+            "channels": 300,
+            "gdtfMode": "P3_PixelMap 100 Segments",
+            "status": "matched",
+            "parameters": 300
           }
         }
       },
-      "shortName": "Sceptron 10 1000 mm"
+      "shortName": "VDOSce10 1000"
     },
     {
       "fixture": "VDO Sceptron 10 320 mm",
       "watts": 10,
-      "weight": 0.5,
+      "weight": 0.4,
       "modes": {
-        "RGB": 3,
-        "Basic": 10,
-        "Segment": 13,
-        "Pixel": 22
+        "DMX_RGB": 3,
+        "DMX_Basic": 10,
+        "DMX_Segments": 13,
+        "DMX_Pixel": 103,
+        "P3_Intensity": 1,
+        "P3_RGB": 3,
+        "P3_Basic": 5,
+        "P3_Hybrid 1 Segment": 6,
+        "P3_Hybrid 2 Segments": 9,
+        "P3_Hybrid 4 Segments": 15,
+        "P3_Hybrid 8 Segments": 27,
+        "P3_Hybrid 16 Segments": 51,
+        "P3_Hybrid 32 Segments": 99,
+        "P3_PixelMap 1 Segment": 3,
+        "P3_PixelMap 2 Segments": 6,
+        "P3_PixelMap 4 Segments": 12,
+        "P3_PixelMap 8 Segments": 24,
+        "P3_PixelMap 16 Segments": 48,
+        "P3_PixelMap 32 Segments": 96
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__VDO_Sceptron_10_320_mm.gdtf",
-        "file": "",
+        "file": "fixtures/martin/Martin_Professional@VDO_Sceptron_10_320mm@20201223.gdtf",
         "modes": {
-          "RGB": {
+          "DMX_RGB": {
             "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "DMX_RGB",
+            "status": "matched",
+            "parameters": 3
           },
-          "Basic": {
+          "DMX_Basic": {
             "channels": 10,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "DMX_Basic",
+            "status": "matched",
+            "parameters": 9
           },
-          "Segment": {
+          "DMX_Segments": {
             "channels": 13,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "DMX_Segments",
+            "status": "matched",
+            "parameters": 12
           },
-          "Pixel": {
-            "channels": 22,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "DMX_Pixel": {
+            "channels": 103,
+            "gdtfMode": "DMX_Pixel",
+            "status": "matched",
+            "parameters": 102
+          },
+          "P3_Intensity": {
+            "channels": 1,
+            "gdtfMode": "P3_Intensity",
+            "status": "matched",
+            "parameters": 1
+          },
+          "P3_RGB": {
+            "channels": 3,
+            "gdtfMode": "P3_RGB",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_Basic": {
+            "channels": 5,
+            "gdtfMode": "P3_Basic",
+            "status": "matched",
+            "parameters": 4
+          },
+          "P3_Hybrid 1 Segment": {
+            "channels": 6,
+            "gdtfMode": "P3_Hybrid 1 Segment",
+            "status": "matched",
+            "parameters": 5
+          },
+          "P3_Hybrid 2 Segments": {
+            "channels": 9,
+            "gdtfMode": "P3_Hybrid 2 Segments",
+            "status": "matched",
+            "parameters": 8
+          },
+          "P3_Hybrid 4 Segments": {
+            "channels": 15,
+            "gdtfMode": "P3_Hybrid 4 Segments",
+            "status": "matched",
+            "parameters": 14
+          },
+          "P3_Hybrid 8 Segments": {
+            "channels": 27,
+            "gdtfMode": "P3_Hybrid 8 Segments",
+            "status": "matched",
+            "parameters": 26
+          },
+          "P3_Hybrid 16 Segments": {
+            "channels": 51,
+            "gdtfMode": "P3_Hybrid 16 Segments",
+            "status": "matched",
+            "parameters": 50
+          },
+          "P3_Hybrid 32 Segments": {
+            "channels": 99,
+            "gdtfMode": "P3_Hybrid 32 Segments",
+            "status": "matched",
+            "parameters": 98
+          },
+          "P3_PixelMap 1 Segment": {
+            "channels": 3,
+            "gdtfMode": "P3_PixelMap 1 Segment",
+            "status": "matched",
+            "parameters": 3
+          },
+          "P3_PixelMap 2 Segments": {
+            "channels": 6,
+            "gdtfMode": "P3_PixelMap 2 Segments",
+            "status": "matched",
+            "parameters": 6
+          },
+          "P3_PixelMap 4 Segments": {
+            "channels": 12,
+            "gdtfMode": "P3_PixelMap 4 Segments",
+            "status": "matched",
+            "parameters": 12
+          },
+          "P3_PixelMap 8 Segments": {
+            "channels": 24,
+            "gdtfMode": "P3_PixelMap 8 Segments",
+            "status": "matched",
+            "parameters": 24
+          },
+          "P3_PixelMap 16 Segments": {
+            "channels": 48,
+            "gdtfMode": "P3_PixelMap 16 Segments",
+            "status": "matched",
+            "parameters": 48
+          },
+          "P3_PixelMap 32 Segments": {
+            "channels": 96,
+            "gdtfMode": "P3_PixelMap 32 Segments",
+            "status": "matched",
+            "parameters": 96
           }
         }
       },
-      "shortName": "Sceptron 10 320 mm"
+      "shortName": "VDOSce10 320"
     },
     {
       "fixture": "VDO Sceptron 20 1000 mm",
@@ -1999,7 +5312,7 @@
           }
         }
       },
-      "shortName": "Sceptron 20 1000 mm"
+      "shortName": "VDOSce20 1000"
     },
     {
       "fixture": "VDO Sceptron 20 320 mm",
@@ -2134,7 +5447,7 @@
           }
         }
       },
-      "shortName": "Sceptron 20 320 mm"
+      "shortName": "VDOSce20 320"
     },
     {
       "fixture": "VDO Sceptron 40 1000 mm",
@@ -2241,7 +5554,7 @@
           }
         }
       },
-      "shortName": "Sceptron 40 1000 mm"
+      "shortName": "VDOSce40 1000"
     },
     {
       "fixture": "VDO Sceptron 40 320 mm",
@@ -2362,11 +5675,11 @@
           }
         }
       },
-      "shortName": "Sceptron 40 320 mm"
+      "shortName": "VDOSce40 320"
     },
     {
       "fixture": "VDO Sceptron XB 1000 mm",
-      "watts": 30,
+      "watts": 30.0,
       "weight": 1.6,
       "modes": {
         "Compact": 8,
@@ -2462,11 +5775,11 @@
           }
         }
       },
-      "shortName": "Sceptron XB 1000 mm"
+      "shortName": "VDOSceXB 1000"
     },
     {
       "fixture": "VDO Sceptron XB 320 mm",
-      "watts": 11,
+      "watts": 10.4,
       "weight": 0.6,
       "modes": {
         "Compact": 8,
@@ -2562,7 +5875,7 @@
           }
         }
       },
-      "shortName": "Sceptron XB 320 mm"
+      "shortName": "VDOSceXB 320"
     }
   ]
 }
