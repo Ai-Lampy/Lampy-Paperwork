@@ -1,3 +1,7 @@
+## V40.8 — Control text outlines and Loom type editing
+
+- Added Control position outlines and editable Feeder or EXT Loom type selection.
+
 ## V40.7 — Loom pane and builder refinement
 
 - Refined Loom headings, builder controls and cable selection.
