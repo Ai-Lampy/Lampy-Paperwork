@@ -1,0 +1,86 @@
+{
+  "manufacturer": "Magmatic",
+  "fixtures": [
+    {
+      "fixture": "Prisma Par 50",
+      "watts": 83,
+      "weight": 3.2,
+      "modes": {
+        "6CH  ": 6,
+        "3CH": 3,
+        "2CH": 2,
+        "1CH": 1
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/magmatic",
+        "suggestedFileName": "Magmatic__Prisma_Par_50.gdtf",
+        "file": "fixtures/magmatic/Magmatic@Prisma_Par_50@2024-03-09_First_Release.gdtf",
+        "modes": {
+          "6CH  ": {
+            "channels": 6,
+            "gdtfMode": "6CH  ",
+            "status": "matched",
+            "parameters": 5
+          },
+          "3CH": {
+            "channels": 3,
+            "gdtfMode": "3CH",
+            "status": "matched",
+            "parameters": 2
+          },
+          "2CH": {
+            "channels": 2,
+            "gdtfMode": "2CH",
+            "status": "matched",
+            "parameters": 1
+          },
+          "1CH": {
+            "channels": 1,
+            "gdtfMode": "1CH",
+            "status": "matched",
+            "parameters": 1
+          }
+        }
+      },
+      "shortName": "PrsmP50"
+    },
+    {
+      "fixture": "Sidewinder",
+      "watts": 1560,
+      "weight": 13.4,
+      "modes": {
+        "1-CH": 1,
+        "4-CH": 4,
+        "7-CH": 7
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/magmatic",
+        "suggestedFileName": "Magmatic__Sidewinder.gdtf",
+        "file": "fixtures/magmatic/Magmatic@SIDEWINDER@25-27-06_First_Release.gdtf",
+        "modes": {
+          "1-CH": {
+            "channels": 1,
+            "gdtfMode": "1-CH",
+            "status": "matched",
+            "parameters": 1
+          },
+          "4-CH": {
+            "channels": 4,
+            "gdtfMode": "4-CH",
+            "status": "matched",
+            "parameters": 4
+          },
+          "7-CH": {
+            "channels": 7,
+            "gdtfMode": "7-CH",
+            "status": "matched",
+            "parameters": 7
+          }
+        }
+      },
+      "shortName": "Sidewinder"
+    }
+  ]
+}
