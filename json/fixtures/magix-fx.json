@@ -3,7 +3,7 @@
   "fixtures": [
     {
       "fixture": " Swirlfan II",
-      "watts": null,
+      "watts": 850,
       "weight": 19.0,
       "modes": {
         "Safety Version": 2,
