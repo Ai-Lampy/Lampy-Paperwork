@@ -706,7 +706,7 @@
           }
         }
       },
-      "shortName": "MAC Allure Profile"
+      "shortName": "Allure Profile"
     },
     {
       "fixture": "MAC Allure Wash PC",
@@ -766,7 +766,7 @@
           }
         }
       },
-      "shortName": "MACAur"
+      "shortName": "Allure Wash PC"
     },
     {
       "fixture": "MAC Aura PXL",
@@ -806,7 +806,7 @@
           }
         }
       },
-      "shortName": "MAC Aura PXL"
+      "shortName": "Aura PXL"
     },
     {
       "fixture": "MAC Aura Raven XIP",
@@ -864,7 +864,7 @@
           }
         }
       },
-      "shortName": "MAC Aura Raven XIP"
+      "shortName": "Raven XIP"
     },
     {
       "fixture": "MAC Aura XB",
@@ -892,7 +892,7 @@
           }
         }
       },
-      "shortName": "MAC Aura XB"
+      "shortName": "Aura XB"
     },
     {
       "fixture": "MAC Aura XIP",
@@ -932,7 +932,7 @@
           }
         }
       },
-      "shortName": "MAC Aura XIP"
+      "shortName": "Aura XIP"
     },
     {
       "fixture": "MAC Axiom Hybrid",
@@ -955,7 +955,7 @@
           }
         }
       },
-      "shortName": "MAC Axiom Hybrid"
+      "shortName": "Axiom Hybrid"
     },
     {
       "fixture": "MAC Encore Performance CLD",
@@ -978,7 +978,7 @@
           }
         }
       },
-      "shortName": "MAC Encore Performance CLD"
+      "shortName": "Encore Perf CLD"
     },
     {
       "fixture": "MAC Encore Performance WRM",
@@ -1001,7 +1001,7 @@
           }
         }
       },
-      "shortName": "MAC Encore Performance WRM"
+      "shortName": "Encore Perf WRM"
     },
     {
       "fixture": "MAC Encore Two",
@@ -1045,7 +1045,7 @@
           }
         }
       },
-      "shortName": "MAC Encore Two"
+      "shortName": "Encore Two"
     },
     {
       "fixture": "MAC Encore Wash WRM",
@@ -1068,7 +1068,7 @@
           }
         }
       },
-      "shortName": "MAC Encore Wash WRM"
+      "shortName": "Encore Wash WRM"
     },
     {
       "fixture": "MAC One",
@@ -1167,7 +1167,7 @@
           }
         }
       },
-      "shortName": "MAC Quantum Profile"
+      "shortName": "Quantum Profile"
     },
     {
       "fixture": "MAC Quantum Wash",
@@ -1195,7 +1195,7 @@
           }
         }
       },
-      "shortName": "MAC Quantum Wash"
+      "shortName": "Quantum Wash"
     },
     {
       "fixture": "MAC Ultra Performance",
@@ -1232,7 +1232,7 @@
           }
         }
       },
-      "shortName": "MAC Ultra Performance"
+      "shortName": "Ultra Perf"
     },
     {
       "fixture": "MAC Ultra Wash",
@@ -1262,7 +1262,7 @@
           }
         }
       },
-      "shortName": "MAC Ultra Wash"
+      "shortName": "Ultra Wash"
     },
     {
       "fixture": "MAC Viper AirFX",
@@ -1292,7 +1292,7 @@
           }
         }
       },
-      "shortName": "MAC Viper AirFX"
+      "shortName": "Viper AirFX"
     },
     {
       "fixture": "MAC Viper Performance",
@@ -1320,7 +1320,7 @@
           }
         }
       },
-      "shortName": "MAC Viper Performance"
+      "shortName": "Viper Perf"
     },
     {
       "fixture": "MAC Viper Profile",
@@ -1350,7 +1350,7 @@
           }
         }
       },
-      "shortName": "MAC Viper Profile"
+      "shortName": "Viper Pro"
     },
     {
       "fixture": "MAC Viper Wash DX",
@@ -1378,7 +1378,7 @@
           }
         }
       },
-      "shortName": "MAC Viper Wash DX"
+      "shortName": "Viper Wash DX"
     },
     {
       "fixture": "MAC Viper XIP",
@@ -1412,7 +1412,7 @@
           }
         }
       },
-      "shortName": "MAC Viper XIP"
+      "shortName": "Viper XIP"
     },
     {
       "fixture": "MAC_101",
@@ -1442,7 +1442,7 @@
           }
         }
       },
-      "shortName": "Mac101"
+      "shortName": "Mac 101"
     },
     {
       "fixture": "Macula Base Station",
@@ -1465,7 +1465,7 @@
           }
         }
       },
-      "shortName": "MaculaBase"
+      "shortName": "Macula Base"
     },
     {
       "fixture": "VDO Atomic Bold",
