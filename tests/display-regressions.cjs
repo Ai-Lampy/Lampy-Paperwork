@@ -191,7 +191,7 @@ assert.equal(layout.stats[0].visible,false);assert.equal(layout.stats[0].size,'w
 assert.equal(JSON.stringify(c.normaliseHomeLayout(layout)),JSON.stringify(layout));
 const reordered=JSON.parse(JSON.stringify(layout));reordered.stats.unshift(reordered.stats.splice(reordered.stats.findIndex(item=>item.id==='channel-count'),1)[0]);reordered.stats[0].visible=false;
 assert.equal(JSON.stringify(c.normaliseHomeLayout(reordered)),JSON.stringify(reordered));
-c.ensureHomeLayout=()=>layout;c.patchFixtureRows=()=>[{channels:513}];c.fixtureParametersRequired=()=>12;c.homeCustomising=false;c.homeLayoutControlsMarkup=()=>'';c.activeControlNetworkTab='consoles';
+c.ensureHomeLayout=()=>layout;c.patchFixtureRows=()=>[{channels:513}];c.fixtureParametersRequired=()=>12;c.normaliseLooms=value=>Array.isArray(value)?value:[];c.app.looms=[];c.homeCustomising=false;c.homeLayoutControlsMarkup=()=>'';c.activeControlNetworkTab='consoles';
 const renderStats=()=>c.homeStatsMarkup({universeCount:7,socapexCount:0},[],1);
 c.app.controlNetwork.consoles=[d9Console];
 let statsMarkup=renderStats();
@@ -634,7 +634,7 @@ assert(html.includes('.btn{border:2px solid #000;background:rgb(217, 217, 217);b
 console.log('PASS: V35.1 Labels presentation, per-Socapex rear colours and navigation styling.');
 
 // V35.5 Power PDF and Fixture Patch colour-bubble corrections, plus V35.3 styling.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(html.includes(".powerSheetTable{table-layout:auto!important;border-collapse:collapse;font-family:Georgia,'Times New Roman',serif;font-size:14px;border:2px solid #000}"));
 assert(html.includes('.powerSocaColourCol{width:50px!important;min-width:50px!important;max-width:50px!important}.powerSheetTable .fixIdCol{width:70px!important;min-width:70px!important;max-width:70px!important}'));
@@ -763,7 +763,7 @@ assert(source('powerSheetRowMarkup').includes('--power-soca-outline:${powerWhite
 console.log('PASS: V35.14 Power Calcs white text uses a 0.5 mm black outline.');
 
 // V36 uses JSON VLAN templates without replacing customised project settings.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 const vlanTemplateJson=JSON.parse(fs.readFileSync(root+'json/vlan_colour_options.json','utf8'));
 const vlanContext=vm.createContext({
  DEFAULT_IP_VLANS:Array.from({length:11},(_,index)=>({id:String(index),name:['Untagged/MGMT','sACN','Art-Net','RoboCam'][index]||'',colour:['#ffffff','#e5b7b7','#b7cbe4','#ffd5b3'][index]||'#ffffff',selected:false})),
@@ -784,14 +784,14 @@ assert(source('applyVlanTemplate').includes('selectedById'));assert(source('appl
 console.log('PASS: V36 JSON VLAN templates, vendor detection, edit protection and retained VLAN state.');
 
 // V36.1 keeps VLAN templates and Power text readable.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 assert(!source('vlanTemplateControlsMarkup').includes("['automatic','Automatic']"));assert(!source('setVlanTemplateChoice').includes("value==='automatic'"));assert(source('automaticVlanTemplate').includes("brands.length===1?brands[0]:'Generic'"));assert(!source('renderVlanSetupPane').includes('A non-empty Global Subnet is used for new devices'));
 assert(source('powerPositionCellStyle').includes('powerWhiteTextOutline(presentation.text)'));assert(source('powerPositionCellStyle').includes("presentation.text==='#ffffff'?'.5mm':'0'"));assert(html.includes('.powerSheetTable .positionCol .powerPositionText{-webkit-text-stroke-width:var(--power-position-stroke-width,0);-webkit-text-stroke-color:var(--power-position-outline,transparent);paint-order:stroke fill}'));
 assert(source('fitPowerSocaColourText').includes('size>8'));assert(source('fitPowerSocaColourText').includes('powerSheetTextWidth'));assert(source('renderPowerSheetView').includes('fitPowerSocaColourText(view)'));assert(source('powerPdfSourceViews').includes('fitPowerSocaColourText(view)'));assert(html.includes('outline=powerWhiteTextOutline(presentation.text)'));
 console.log('PASS: V36.1 always-visible VLAN template selection and Power text fitting.');
 
 // V36.2 keeps VLAN Setup compact without template helper text.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 assert(html.includes('#vlanSetupPane label{display:block;font-size:13px;color:#333;font-weight:700;border:none;margin:0px;padding:0px}'));
 assert(html.includes('.vlanSetupTable .vlanNumberCol{width:72px}'));
 assert(html.includes('.vlanSetupTable .vlanColourCol{width:55px}'));
@@ -803,7 +803,7 @@ assert(!source('vlanTemplateControlsMarkup').includes('Template changes preserve
 console.log('PASS: V36.2 VLAN Setup labels, compact rows and column widths.');
 
 // V36.3 refines VLAN Setup controls without changing VLAN data.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 assert(html.includes('.logoTitleRow{margin-bottom:0px}'));
 assert(html.includes('.vlanGlobalSubnetCard .ipSegmentedField{border:none;border-radius:6px;background:#fff;padding:2px 5px}'));
 assert(html.includes('#vlanSetupPane label{display:block;font-size:13px;color:#333;font-weight:700;border:none;margin:0px;padding:0px}'));
@@ -821,12 +821,12 @@ assert(html.includes('.deviceConfigDeleteButton{width:32px;height:20px;border:0;
 console.log('PASS: V36.3 Device Config delete control dimensions.');
 
 // V36.4 corrects Device Config's full trailing-column map so Mode is not starved by Role.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 assert(html.includes("const DEVICE_CONFIG_WIDTH_DEFAULTS=[[30,30],[45,70],[40,60],[100,130],[60,60],[100,180],[110,110],[110,110],[40,100],[40,100],[40,150],[80,120],[80,90],[110,180],[70,110],[80,120],[90,220],[34,34]];"));
 console.log('PASS: V36.4 Device Config Role and Mode width allocation.');
 
 // V36.5 keeps Control Table View focused and permits VLAN assignment on every switch port.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 assert(!source('renderConsolesTab').includes('openDeviceConfigColumns()'));
 assert(!source('renderConsolesTab').includes('openDeviceConfigFormat()'));
 assert(source('renderConsolesTab').includes('expandAllControlDevices()'));
@@ -835,7 +835,7 @@ assert(source('deviceConfigParentRow').includes("parentMode!=='network-switch'||
 console.log('PASS: V36.5 Control Table controls and Network Switch VLAN assignment.');
 
 // V36.6 centres Home statistics, simplifies Power actions, and keeps locations on Device Config parents.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 assert(html.includes('.homeStats{grid-template-columns:repeat(auto-fit,115px)!important;justify-content:center}'));
 assert(source('homeStatsMarkup').includes("'Universes Patched'"));
 assert(html.includes('.btn.unpatch{border:2px solid #000}'));
@@ -851,7 +851,7 @@ assert(html.includes('.rackWorkspaceHeader{background:#fff;border:2px solid #000
 console.log('PASS: V36.6 Home, Power, Device Config and Rack Layout updates.');
 
 // V36.7 hides shared VLAN columns whenever the VLAN feature is disabled.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 assert(source('deviceConfigColumnVisible').includes("key==='vlan'&&!ipVlanSetup().enabled"));
 assert(html.includes('.deviceConfigTable [hidden]{display:none!important}'));
 assert(source('deviceConfigPortRow').includes("parentMode==='dmx-node'&&deviceConfigIsLuminex(device)"));
@@ -859,13 +859,13 @@ assert(source('deviceConfigVisiblePorts').includes("sort((a,b)=>(a.category==='n
 console.log('PASS: V36.7 hides Device Config and Control VLAN columns when disabled.');
 
 // V36.7 removes the redundant IP Address route while retaining a safe legacy redirect.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 assert(source('setSheetTab').includes("tab==='networkEquipment'||tab==='ipAddresses'"));
 assert(!source('setSheetTab').includes("'deviceConfig','ipAddresses','distroLabels'"));
 console.log('PASS: V36.7 removes the IP Address tab and redirects legacy routes.');
 
 // V37 moves Global Subnet to Device Config and makes locations actionable groups.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 const deviceConfigViewSource=source('renderDeviceConfigView');
 assert(!deviceConfigViewSource.includes('expandAllDeviceConfig()'));
 assert(!deviceConfigViewSource.includes('collapseAllDeviceConfig()'));
@@ -899,14 +899,14 @@ assert(source('vlanTemplateControlsMarkup').includes("[['Generic','Generic'],['L
 console.log('PASS: V37.4 VLAN header control and Generic template choice.');
 
 // V37.5 fixes pane layering, Global Subnet clipping, list drag-fill and Pathway protocol fallback.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 assert(source('renderDeviceConfigView').includes("classList.toggle('deviceConfigSubnetOpen',deviceConfigGlobalSubnetOpen)"));
 assert(source('deviceConfigParentRow').includes('singlePort?.protocols?.length?singlePort.protocols:null'));
 assert(source('attachDeviceConfigFillHandle').indexOf("const fromPoint=document.elementFromPoint")<source('attachDeviceConfigFillHandle').indexOf("fromEvent=pointerEvent.target"));
 console.log('PASS: V37.5 Device Config overlays, list filling and Pathway protocols.');
 
 // V37.6 shares DMX port positions between Device Config and Port Configuration.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 assert(source('deviceConfigPortsFor').includes("base.location=legacy?.location||''"));
 assert(source('saveDeviceConfigPorts').includes('location:port.location'));
 assert(source('deviceConfigTableMarkup').includes('deviceConfigRowWithPortLocation'));
@@ -920,7 +920,7 @@ assert(!source('saveRackPortConfiguration').includes('deviceConfigPorts=[]'));
 console.log('PASS: V37.6 Device Config DMX port positions and Port Configuration navigation.');
 
 // V37.7 loads Generic on first VLAN activation and tracks native list cells by geometry.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 assert(source('enableVlans').includes("templateSource:'Generic'"));
 assert(source('enableVlans').includes('await loadVlanColourReference()'));
 assert(source('enableVlans').includes("templateMode:'manual'"));
@@ -931,7 +931,7 @@ assert(source('attachDeviceConfigFillHandle').includes("document.removeEventList
 console.log('PASS: V37.7 Generic VLAN activation and native list-cell fill targeting.');
 
 // V38 adds sequential DMX-port configuration and inline network-device setup.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 add('networkPortUniverseRange','shiftedNetworkPortUniverse');
 assert.deepEqual(JSON.parse(JSON.stringify(c.networkPortUniverseRange(20,4))),{start:20,end:23,values:['20','21','22','23']});
 assert.deepEqual(JSON.parse(JSON.stringify(c.networkPortUniverseRange('',3))),{start:1,end:3,values:['1','2','3']});
@@ -991,7 +991,7 @@ assert.equal(html.split(sharedToolbarCss).length-1,1,'Shared toolbar CSS must oc
 console.log('PASS: shared toolbar CSS remains in the active stylesheet.');
 
 // V39 Looms stores independent project data and offers vendor-aware catalogue editing.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 assert(html.includes('data-sheet-tab="looms"')&&html.indexOf('data-sheet-tab="rackLayout"')<html.indexOf('data-sheet-tab="looms"')&&html.indexOf('data-sheet-tab="looms"')<html.indexOf('data-sheet-tab="distroLabels"'));
 assert(html.includes("const CABLE_CATALOGUE_MANIFEST_URL='json/cable/manifest.json';"));
 const loomManifest=JSON.parse(fs.readFileSync(root+'json/cable/manifest.json','utf8'));
@@ -1015,11 +1015,11 @@ assert(source('render').includes("if(activeSheetTab==='looms'){renderLoomsView()
 console.log('PASS: V39 Looms catalogue, project migration, quantity expansion, editor actions and spreadsheet interactions.');
 
 // V39.1 keeps Loom builder styling and the category-to-cable picker transition stable.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 assert(html.includes('.loomBuildTable th{background:rgb(185,185,185);color:#000;font:inherit;font-weight:800}'));
 assert(html.includes('.btn.add{font-weight:800;font-size:14px;line-height:1;padding:8px;background:#00a61d;color:#fff;border:2px solid #000}'));
 assert(source('renderLoomEditor').includes('>+ Cable</button>'));
-assert(html.includes('.loomTable th:last-child,.loomTable td:last-child{width:30px;min-width:30px;max-width:30px;padding:1px}'));
+assert(html.includes('.loomTable th:last-child,.loomTable td:last-child{width:30px;min-width:30px;max-width:30px;padding:1px;border-right:none}'));
 assert(html.includes('-webkit-text-stroke-width:.8mm;-webkit-text-stroke-color:#000;paint-order:stroke fill'));
 const loomStyleContext=vm.createContext({Array});vm.runInContext(source('loomHeadingBackground'),loomStyleContext);
 assert.equal(loomStyleContext.loomHeadingBackground(['#00b311']),'#00b311');
@@ -1030,7 +1030,7 @@ assert(source('showLoomCableMenu').includes('event.stopPropagation();chooseLoomC
 console.log('PASS: V39.1 Loom styling, three-colour headings and persistent catalogue selection.');
 
 // V39.2 edits grouped Loom cables without discarding retained cable labels or notes.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 assert(html.includes('.loomCard.loomCardCollapsed .loomTable{display:none}'));
 assert(html.includes('.loomBuildTable th:last-child,.loomBuildTable td:last-child{width:34px;padding:1px}'));
 assert(source('renderLoomEditor').includes('style="margin-bottom:10px;"'));
@@ -1047,10 +1047,10 @@ assert(source('loomCardMarkup').includes('onclick="event.stopPropagation()"'));
 console.log('PASS: V39.2 grouped Loom editing, retained cable data and collapsible viewer cards.');
 
 // V40 keeps Looms compact and provides a derived, category-organised Cable List.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 assert(html.includes('.loomGroup{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start;border-bottom:4px solid #9b9b9b;padding-bottom:10px}'));assert(html.includes('.loomCard{width:100%;border:2px solid #000'));
 assert(html.includes('.loomTable{width:100%;border-collapse:collapse;table-layout:fixed;font-family:var(--top-font)}'));
-assert(html.includes('.loomTable tbody td{height:20px;border:1px dashed #9b9b9b}'));
+assert(html.includes('.loomTable tbody td{height:20px;border:0}.loomTable tbody td[data-loom-cell]{border-bottom:1px dashed #9b9b9b}'));
 assert(html.includes('font:800 12px/1 var(--top-font)'));
 assert(html.includes('.loomCableMenuBack{border:1px solid #667085!important'));
 assert(source('showLoomCableMenu').includes('data-loom-cable-back'));
@@ -1064,7 +1064,7 @@ assert(source('activeApplicationPageName').includes("'Looms ~ Cable List'"));
 console.log('PASS: V40 compact Loom styling, category Back navigation and aggregate Cable List.');
 
 // V40.1 places Loom navigation in its toolbar and compacts Loom card actions.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 assert(html.includes('.loomCardActions{grid-column:3;justify-self:end;display:flex;flex-direction:row;gap:4px;align-items:center;transform:scale(.8);transform-origin:right center}'));
 assert(html.includes('.loomTable th{background:#8d8d8d;color:#fff'));
 assert(html.includes('.loomCableListTable{width:100%;border-collapse:collapse;table-layout:fixed'));
@@ -1073,7 +1073,7 @@ assert(!source('renderLoomsView').includes('tableDistroTabs distroLabelTabs loom
 console.log('PASS: V40.1 Loom toolbar tabs, equal Cable List columns and compact card actions.');
 
 // V40.2 keeps Loom navigation consistent between the page toolbar and main-tab hover menu.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 assert(html.includes('.loomsToolbar{display:flex;justify-content:space-between;gap:12px;align-items:center;border:2px solid #000;border-radius:8px;background:rgb(185,185,185);padding:2px 12px}'));
 assert(html.includes('.loomSubTabs{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:10px}'));
 assert(source('renderLoomsView').includes('<div class="loomsToolbar"><div>${tabs}</div>${activeLoomSubTab'));
@@ -1082,7 +1082,7 @@ assert(source('sheetSubMenuRoutes').includes("label:'Cable List'"));
 console.log('PASS: V40.2 Loom toolbar matches shared sub-tab navigation and main-tab hover routes.');
 
 // V40.3 keeps extension Looms linked, ordered beside their parent and safely deletable.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 assert(html.includes('.loomsToolbar{display:flex;justify-content:space-between;gap:12px;align-items:center;border:2px solid #000;border-radius:8px;background:rgb(185,185,185);padding:2px 12px}'));
 assert(html.includes('.loomCardHeading{cursor:pointer;position:relative;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;height:40px;min-height:40px;padding:0 12px'));
 assert(html.includes('.loomGroup{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start;border-bottom:4px solid #9b9b9b;padding-bottom:10px}'));
@@ -1096,7 +1096,7 @@ assert(source('deleteLoom').includes('linked extension')&&source('deleteLoom').i
 console.log('PASS: V40.3 linked Loom extensions, grouped cards and delete choices.');
 
 // V40.4 adds saved Loom end orientation and keeps every Extension in its Feeder's right-side stack.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 assert(html.includes('.loomCardSubheading{grid-column:1;justify-self:start;margin:0;padding:0 6px;text-align:left;font-family:var(--top-font);font-size:18px;font-weight:900;color:#000;background:#fefefe;border:1px solid #000;border-radius:30px}'));
 assert(html.includes('.loomCardExtensionButton{padding:4px 6px;font-size:18px;font-weight:800}'));
 assert(html.includes('.loomEndsTogetherRow td{color:#c00000;font-weight:900'));
@@ -1113,12 +1113,12 @@ assert(source('toggleLoomCard').includes('loomDescendantIds(id).forEach'));
 console.log('PASS: V40.4 Loom end settings, Feeder/Extension layout and focussed extension creation.');
 
 // V40.5 refines Loom cards and makes every supply warning a navigable Project Error.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 assert(html.includes('.loomCardHeading{cursor:pointer;position:relative;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;height:40px;min-height:40px;padding:0 12px'));
 assert(html.includes('.loomCardActions{grid-column:3;justify-self:end;display:flex;flex-direction:row;gap:4px;align-items:center;transform:scale(.8);transform-origin:right center}'));
 assert(html.includes('.loomCardActions .btn.danger{width:30px;height:30px;padding:4px;font-size:12px;line-height:1}'));
-assert(html.includes('.loomTable tbody td{height:20px;border:1px dashed #9b9b9b}'));
-assert(html.includes('.loomEndsTogetherRow td{color:#c00000;font-weight:900;border:1px solid #000!important;border-top:2px solid #000!important}'));
+assert(html.includes('.loomTable tbody td{height:20px;border:0}.loomTable tbody td[data-loom-cell]{border-bottom:1px dashed #9b9b9b}'));
+assert(html.includes('.loomEndsTogetherRow td{color:#c00000;font-weight:900;border-top:2px solid #000!important}'));
 assert(source('loomCardMarkup').includes('aria-label="Delete Loom"')&&source('loomCardMarkup').includes('>Edit</button>'));
 assert(source('powerSupplyWarningEntries').includes('incomplete-load')&&source('powerSupplyWarningEntries').includes('invalid-rating')&&source('powerSupplyWarningEntries').includes('overload'));
 assert(source('collectProjectErrors').includes('collectPowerSupplyErrors(distroRanges())'));
@@ -1126,7 +1126,7 @@ assert(source('openProjectError').includes("target.kind==='power'")&&source('ope
 console.log('PASS: V40.5 Loom refinement and Power supply Project Errors.');
 
 // V40.6 reserves white outlined text for the project Yellow in Position Summary and Loom headings.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 const v406=vm.createContext({normaliseHex:value=>String(value||''),colourSetPresentation:values=>({text:'#111111',outline:'#ffffff'}),colourTextToHex:value=>String(value||''),loomHeadingBackground:()=>'#ffff3d'});
 for(const name of ['projectYellowTextPresentation','positionSummaryColourPresentation','loomHeadingStyle'])vm.runInContext(source(name),v406);
 assert.deepEqual(JSON.parse(JSON.stringify(v406.positionSummaryColourPresentation(['#FFFF3D']))),{text:'#ffffff',outline:'#000000'});
@@ -1139,12 +1139,12 @@ assert(source('drawPositionSummaryBlock').includes('positionSummaryColourPresent
 assert(source('controlPositionStripStyle').includes('positionSummary?positionSummaryColourPresentation(colours)'));
 assert(html.includes('.loomCardHeading{cursor:pointer;position:relative;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;height:40px;min-height:40px;padding:0 12px'));
 assert(html.includes('.loomCardSubheading{grid-column:1;justify-self:start;margin:0;padding:0 6px;text-align:left;font-family:var(--top-font);font-size:18px;font-weight:900;color:#000;background:#fefefe;border:1px solid #000;border-radius:30px}'));
-assert(html.includes('.loomEndsTogetherRow td{color:#c00000;font-weight:900;border:1px solid #000!important;border-top:2px solid #000!important}'));
+assert(html.includes('.loomEndsTogetherRow td{color:#c00000;font-weight:900;border-top:2px solid #000!important}'));
 const loomCardSource=source('loomCardMarkup');assert(loomCardSource.includes('>+ Ext</button>')&&loomCardSource.indexOf('>+ Ext</button>')<loomCardSource.indexOf('>Edit</button>'));assert(loomCardSource.includes('extension?\'EXT\':\'Feeder\''));
 console.log('PASS: V40.6 Yellow Position Summary and Loom heading layout.');
 
 // V40.7 refines Loom pane controls, outside closing and full-height cable choices.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 assert(html.includes('.loomCardSubheading{grid-column:1;justify-self:start;margin:0;padding:0 6px;text-align:left;font-family:var(--top-font);font-size:18px;font-weight:900;color:#000;background:#fefefe;border:1px solid #000;border-radius:30px}'));
 assert(html.includes('.loomBuildTable{width:100%;border-collapse:collapse;table-layout:fixed;margin-top:12px}'));
 assert(html.includes('.loomBuildTable th:nth-child(1),.loomBuildTable td:nth-child(1){width:120px}'));
@@ -1164,13 +1164,13 @@ assert(html.includes('!loomClickPath.includes(loomEditorPane)'));
 console.log('PASS: V40.7 Loom pane controls, full cable picker and outside close.');
 
 // V40.7 keeps Fan Out body text readable independently of the saved table format.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 assert(html.includes('.fanOutTable tbody .fixIdCol .fanOutCellText{font-size:18px!important}'));
 assert(html.includes('.fanOutTable tbody .fixTypeCol .fanOutCellText,.fanOutTable tbody .positionCol .fanOutCellText{font-size:14px!important}'));
 console.log('PASS: V40.7 Fan Out body-cell font sizes.');
 
 // V40.9 retains Control outlines and preserves valid Loom parent relationships when changing type.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 assert(html.includes('.controlNetworkView .consolePositionName{-webkit-text-stroke-width:1mm;-webkit-text-stroke-color:#000;paint-order:stroke fill}'));
 assert(html.includes('.controlLocationCell.positionStyled{font-family:Cochin'));
 assert(html.includes('-webkit-text-stroke-width:.1mm;-webkit-text-stroke-color:#000;paint-order:stroke fill}.controlLocationCell.positionStyled input'));
@@ -1184,7 +1184,7 @@ assert(source('saveLoomEditor').includes('loom.parentLoomId=parentLoomId'));
 console.log('PASS: V40.9 Control outlines and Loom type editing.');
 
 // V40.9 spaces the Loom editor consistently and orders Extension Looms by name.
-assert.equal(appVersion,'40.9');
+assert.equal(appVersion,'40.10');
 assert(html.includes('.loomsList{display:grid;gap:10px}'));
 assert(html.includes('.loomGroup{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start;border-bottom:4px solid #9b9b9b;padding-bottom:10px}'));
 assert(html.includes('.loomPaneActions{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap;margin-top:16px}'));
@@ -1192,3 +1192,34 @@ assert(html.includes('.loomTypeTabs{display:flex;gap:10px;flex-wrap:wrap;border-
 assert(source('loomNameCompare').includes("sensitivity:'base'"));
 assert(source('loomDisplayGroups').includes('expand(parent).sort(loomNameCompare)'));
 console.log('PASS: V40.9 Loom editor spacing and alphabetical Extension ordering.');
+
+// V40.10 refines Loom borders, replaces the Home Socapex stat and makes Position colours authoritative.
+assert.equal(appVersion,'40.10');
+assert(html.includes('.tourLogoSlot{display:flex;align-items:center;justify-content:center;width:165px'));
+assert(html.includes('.loomCardHeading{cursor:pointer;position:relative;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;height:40px;min-height:40px;padding:0 12px;background:var(--loom-background,#fff)'));
+assert(html.includes('.loomTable th:first-child,.loomTable td:first-child{border-left:none}'));
+assert(html.includes('.loomTable th:last-child,.loomTable td:last-child{width:30px;min-width:30px;max-width:30px;padding:1px;border-right:none}'));
+assert(html.includes('.loomEndsTogetherRow td{color:#c00000;font-weight:900;border-top:2px solid #000!important}'));
+assert(html.includes('.loomTable tbody td[data-loom-cell]{border-bottom:1px dashed #9b9b9b}'));
+assert(html.includes('.powerSocaColourInput:not(:focus){color:transparent!important;-webkit-text-stroke-color:transparent!important;text-shadow:none!important}'));
+assert(html.includes("const HOME_STAT_LAYOUT_IDS=['fixtures','universes','consoles','parameters-required','channel-count','parameters-available','universes-available','distros','looms','data-racks']"));
+assert(source('normaliseHomeLayout').includes("storedId==='socapexes'?'looms':storedId"));
+assert(source('homeStatsMarkup').includes("looms:[normaliseLooms(app.looms).length,'Looms','looms']"));
+assert(source('renderHomeView').includes("'fixture-info':{title:'Fixture Summary'"));
+const v4010layout=vm.createContext({});
+vm.runInContext("const HOME_STAT_LAYOUT_IDS=['fixtures','universes','consoles','parameters-required','channel-count','parameters-available','universes-available','distros','looms','data-racks'];const HOME_SUMMARY_LAYOUT_IDS=['fixture-info','position-summary','dmx-universes','console-network-summary','revision-summary'];",v4010layout);
+vm.runInContext(source('normaliseHomeLayout'),v4010layout);
+const migratedLoomLayout=JSON.parse(JSON.stringify(v4010layout.normaliseHomeLayout({stats:[{id:'socapexes',size:'wide',visible:false}],summaries:[]})));
+assert.equal(migratedLoomLayout.stats[0].id,'looms');assert.equal(migratedLoomLayout.stats[0].size,'wide');assert.equal(migratedLoomLayout.stats[0].visible,false);
+const v4010=vm.createContext({app:{fixturePatch:[{location:'FOH',colour1:'#ff0000',colour2:'#0000ff'}],controlNetwork:{consoles:[],npus:[],networkDevices:[],racks:[]}},project:{positions:[{name:'foh',colour1:'',colour2:'#00ff00',colour3:''}]},normalisePosition:value=>({name:String(value?.name||value?.location||'').trim(),colour1:String(value?.colour1||''),colour2:String(value?.colour2||''),colour3:String(value?.colour3||'')}),normaliseBlankColour:value=>String(value||'').trim(),ensureProjectInfo:()=>v4010.project,patchFixtureRows:()=>v4010.app.fixturePatch,syncRackMountedNetworkLocations:()=>{}});
+for(const name of ['positionKey','positionLocationItems','syncPositionsFromPatch'])vm.runInContext(source(name),v4010);
+v4010.syncPositionsFromPatch();
+assert.equal(v4010.app.fixturePatch[0].colour1,'');
+assert.equal(v4010.app.fixturePatch[0].colour2,'#00ff00');
+assert.equal(v4010.app.fixturePatch[0].location,'foh');
+const v4010new=vm.createContext({app:{fixturePatch:[{location:'Deck',colour1:'#ff0000',colour2:'#0000ff'}],controlNetwork:{consoles:[],npus:[],networkDevices:[],racks:[]}},project:{positions:[]},normalisePosition:value=>value,normaliseBlankColour:value=>String(value||'').trim(),ensureProjectInfo:()=>v4010new.project,patchFixtureRows:()=>v4010new.app.fixturePatch,syncRackMountedNetworkLocations:()=>{}});
+for(const name of ['positionKey','positionLocationItems','syncPositionsFromPatch'])vm.runInContext(source(name),v4010new);
+v4010new.syncPositionsFromPatch();
+assert.deepEqual(JSON.parse(JSON.stringify(v4010new.project.positions[0])),{name:'Deck',colour1:'#ff0000',colour2:'#0000ff',colour3:''});
+assert(source('updatePatchRowField').includes("field==='address'||field==='universe'||field==='location'"));
+console.log('PASS: V40.10 Loom borders, Home Loom summary, Position colour syncing and centred tour logo.');

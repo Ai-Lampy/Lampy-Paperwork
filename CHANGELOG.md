@@ -1,3 +1,10 @@
+## V40.10 — Loom borders, Home Loom summary and Position colour syncing
+
+- Refined Loom table borders and centred uploaded tour logos.
+- Replaced the Home Socapexes statistic with a Loom count and renamed Fixture Summary.
+- Made matching Position Summary colours authoritative for Fixture Patch rows.
+- Hid Power colour names until their cells receive focus.
+
 ## V40.9 — Loom editor spacing and Extension ordering
 
 - Refined Loom editor controls and alphabetised Extension Looms under each Feeder.
