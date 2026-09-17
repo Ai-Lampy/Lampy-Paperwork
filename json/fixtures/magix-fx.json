@@ -173,6 +173,29 @@
         }
       },
       "shortName": "Stadiumblaster"
+    },
+    {
+      "fixture": "FX-BLOWER via FX-SWITCHPACK II",
+      "watts": 1560,
+      "weight": 16.29,
+      "modes": {
+        "FX-Switchpack II - Safety + Output": 2
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/magix_fx",
+        "suggestedFileName": "MagicFX__FX-BLOWER_via_FX-SWITCHPACK_II.gdtf",
+        "file": "fixtures/magix_fx/MagicFX@FX-BLOWER_via_FX-SWITCHPACK_II@Lampy_1.0.gdtf",
+        "modes": {
+          "FX-Switchpack II - Safety + Output": {
+            "channels": 2,
+            "gdtfMode": "FX-Switchpack II - Safety + Output",
+            "status": "matched",
+            "parameters": 2
+          }
+        }
+      },
+      "shortName": "FX-BLOWER"
     }
   ]
 }
