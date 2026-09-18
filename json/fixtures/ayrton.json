@@ -64,7 +64,7 @@
           }
         }
       },
-      "shortName": "AX6"
+      "shortName": "Argo 6-FX"
     },
     {
       "fixture": "Argo 6 WASH",
@@ -108,7 +108,7 @@
           }
         }
       },
-      "shortName": "A6W"
+      "shortName": "Argo 6-Wash"
     },
     {
       "fixture": "Bora",
@@ -233,7 +233,7 @@
           }
         }
       },
-      "shortName": "CBR 2"
+      "shortName": "Cobra 2"
     },
     {
       "fixture": "Diablo Profile S",
@@ -908,7 +908,7 @@
           }
         }
       },
-      "shortName": "NB1202"
+      "shortName": "Nando 1202"
     },
     {
       "fixture": "Nando 502",
@@ -966,7 +966,7 @@
           }
         }
       },
-      "shortName": "ND502"
+      "shortName": "Nando 502"
     },
     {
       "fixture": "NandoBeam-S3",
@@ -1003,7 +1003,7 @@
           }
         }
       },
-      "shortName": "NBS3"
+      "shortName": "NandoBeam-S3"
     },
     {
       "fixture": "NandoBeam-S6",
@@ -1040,7 +1040,7 @@
           }
         }
       },
-      "shortName": "NBS6"
+      "shortName": "NandoBeam-S6"
     },
     {
       "fixture": "NandoBeam-S9",
@@ -1077,7 +1077,7 @@
           }
         }
       },
-      "shortName": "NBS9"
+      "shortName": "NandoBeam-S9"
     },
     {
       "fixture": "Perseo Profile",

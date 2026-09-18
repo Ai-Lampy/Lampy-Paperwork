@@ -2555,7 +2555,7 @@
           }
         }
       },
-      "shortName": "iESPRITE"
+      "shortName": "iEsprite"
     },
     {
       "fixture": "iEsprite LTL FS",
@@ -3421,7 +3421,7 @@
           }
         }
       },
-      "shortName": "iT12"
+      "shortName": "iT12 Profile"
     },
     {
       "fixture": "iTetra 2",
@@ -3479,7 +3479,7 @@
           }
         }
       },
-      "shortName": "iTetra2"
+      "shortName": "iTetra 2"
     },
     {
       "fixture": "LEDBeam 150 FW RGBA",
@@ -4147,7 +4147,7 @@
           }
         }
       },
-      "shortName": "OnePATT"
+      "shortName": "onePATT"
     },
     {
       "fixture": "PAINTE",

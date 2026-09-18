@@ -43,7 +43,7 @@
         },
         "suggestedFileName": "Elation__Artiste_Van_Gogh.gdtf"
       },
-      "shortName": "ArtVanGogh"
+      "shortName": "Artiste Van Gogh"
     },
     {
       "fixture": "ACL 360 Bar",
@@ -80,7 +80,7 @@
         },
         "suggestedFileName": "Elation__ACL_360_Bar.gdtf"
       },
-      "shortName": "ACL 360B"
+      "shortName": "ACL 360 Bar"
     },
     {
       "fixture": "ACL 360i",
@@ -175,7 +175,7 @@
         },
         "suggestedFileName": "Elation__Artiste_DaVinci.gdtf"
       },
-      "shortName": "ArtDVinci"
+      "shortName": "Artiste DaVinci"
     },
     {
       "fixture": "Artiste Mondrian",
@@ -219,7 +219,7 @@
         },
         "suggestedFileName": "Elation__Artiste_Mondrian.gdtf"
       },
-      "shortName": "ArtMon"
+      "shortName": "Artiste Mondrian"
     },
     {
       "fixture": "Artiste Monet",
@@ -293,7 +293,7 @@
         },
         "suggestedFileName": "Elation__Artiste_Picasso.gdtf"
       },
-      "shortName": "ArtPic"
+      "shortName": "Artiste Picasso"
     },
     {
       "fixture": "Chorus Line 16",
@@ -330,7 +330,7 @@
         },
         "suggestedFileName": "Elation__Chorus_Line_16.gdtf"
       },
-      "shortName": "ChrsL16"
+      "shortName": "CL 16"
     },
     {
       "fixture": "Chorus Line 8",
@@ -367,7 +367,7 @@
         },
         "suggestedFileName": "Elation__Chorus_Line_8.gdtf"
       },
-      "shortName": "ChrsL8"
+      "shortName": "CL 8"
     },
     {
       "fixture": "COLOUR 5 Profile",
@@ -418,7 +418,7 @@
         },
         "suggestedFileName": "Elation__COLOUR_5_Profile.gdtf"
       },
-      "shortName": "Clr5prof"
+      "shortName": "CLR 5 Prof"
     },
     {
       "fixture": "CUEPIX 16IP",
@@ -611,7 +611,7 @@
         },
         "suggestedFileName": "Elation__CUEPIX_16IP_DTW.gdtf"
       },
-      "shortName": "CuePix16IPDTW"
+      "shortName": "CuePix16 IP-DTW"
     },
     {
       "fixture": "Cuepix Blinder WW2",
@@ -655,7 +655,7 @@
         },
         "suggestedFileName": "Elation__Cuepix_Blinder_WW2.gdtf"
       },
-      "shortName": "CuepixWW2"
+      "shortName": "Blinder WW2"
     },
     {
       "fixture": "CUEPIX BLINDER WW4",
@@ -713,7 +713,7 @@
         },
         "suggestedFileName": "Elation__CUEPIX_BLINDER_WW4.gdtf"
       },
-      "shortName": "CuePixBlndWW4"
+      "shortName": "Blinder WW4"
     },
     {
       "fixture": "CW Profile HP",
@@ -743,7 +743,7 @@
         },
         "suggestedFileName": "Elation__CW_Profile_HP.gdtf"
       },
-      "shortName": "CWProfHP"
+      "shortName": "CW Prof HP"
     },
     {
       "fixture": "CW Profile HP IP",
@@ -787,7 +787,7 @@
         },
         "suggestedFileName": "Elation__CW_Profile_HP_IP.gdtf"
       },
-      "shortName": "CWProfHPIP"
+      "shortName": "CW Prof HP IP"
     },
     {
       "fixture": "Dartz 360",
@@ -910,7 +910,7 @@
           }
         }
       },
-      "shortName": "DTW 350 IP (2 Cell)"
+      "shortName": "DTW 350 IP"
     },
     {
       "fixture": "DTW BAR 1000",
@@ -1089,7 +1089,7 @@
         },
         "suggestedFileName": "Elation__Fuze_Max_Profile.gdtf"
       },
-      "shortName": "FuzeMaxProf"
+      "shortName": "Fuze Max Prof"
     },
     {
       "fixture": "Fuze Max Spot",
@@ -1161,7 +1161,7 @@
         },
         "suggestedFileName": "Elation__Fuze_Max_Spot.gdtf"
       },
-      "shortName": "FzMxSpot"
+      "shortName": "Fuze Max Spot"
     },
     {
       "fixture": "FUZE PAR Z120 IP",
@@ -1261,7 +1261,7 @@
         },
         "suggestedFileName": "Elation__FUZE_PAR_Z120_IP.gdtf"
       },
-      "shortName": "FuzPrZ60"
+      "shortName": "Fuze Z120-IP"
     },
     {
       "fixture": "FUZE PAR Z175",
@@ -1403,7 +1403,7 @@
         },
         "suggestedFileName": "Elation__FUZE_PAR_Z175.gdtf"
       },
-      "shortName": "FuzPrZ175"
+      "shortName": "Fuze Z175"
     },
     {
       "fixture": "FUZE PAR Z60 IP",
@@ -1503,7 +1503,7 @@
         },
         "suggestedFileName": "Elation__FUZE_PAR_Z60_IP.gdtf"
       },
-      "shortName": "FuzPrZ60"
+      "shortName": "Fuze Z60-IP"
     },
     {
       "fixture": "Fuze Pendant",
@@ -1575,7 +1575,7 @@
         },
         "suggestedFileName": "Elation__Fuze_Pendant.gdtf"
       },
-      "shortName": "FuzPdnt"
+      "shortName": "Fuze Pendant"
     },
     {
       "fixture": "Fuze Pendant Compact",
@@ -1647,7 +1647,7 @@
         },
         "suggestedFileName": "Elation__Fuze_Pendant_Compact.gdtf"
       },
-      "shortName": "FuzPdntCmpt"
+      "shortName": "Fuze Pendant Comp"
     },
     {
       "fixture": "Fuze PFX",
@@ -1677,7 +1677,7 @@
         },
         "suggestedFileName": "Elation__Fuze_PFX.gdtf"
       },
-      "shortName": "FuzePFX"
+      "shortName": "Fuze PFX"
     },
     {
       "fixture": "Fuze Profile",
@@ -1749,7 +1749,7 @@
         },
         "suggestedFileName": "Elation__Fuze_Profile.gdtf"
       },
-      "shortName": "Fuze Profile"
+      "shortName": "Fuze Prof"
     },
     {
       "fixture": "Fuze Profile CW",
@@ -1793,7 +1793,7 @@
         },
         "suggestedFileName": "Elation__Fuze_Profile_CW.gdtf"
       },
-      "shortName": "FzProCW"
+      "shortName": "Fuze Prof-CW"
     },
     {
       "fixture": "Fuze SFX",
@@ -1923,7 +1923,7 @@
         },
         "suggestedFileName": "Elation__Fuze_Teatro.gdtf"
       },
-      "shortName": "FzTeatro"
+      "shortName": "Fuze Teatro"
     },
     {
       "fixture": "Fuze Wash 500 Barndoor",
@@ -2023,7 +2023,7 @@
         },
         "suggestedFileName": "Elation__Fuze_Wash_500_Barndoor.gdtf"
       },
-      "shortName": "FuzW500BN"
+      "shortName": "Fuze Wash 500 Barndoor"
     },
     {
       "fixture": "Fuze Wash 575",
@@ -2053,7 +2053,7 @@
         },
         "suggestedFileName": "Elation__Fuze_Wash_575.gdtf"
       },
-      "shortName": "FzWsh575"
+      "shortName": "Fuze Wash 575"
     },
     {
       "fixture": "Fuze Wash FR",
@@ -2125,7 +2125,7 @@
         },
         "suggestedFileName": "Elation__Fuze_Wash_FR.gdtf"
       },
-      "shortName": "FzwshFR"
+      "shortName": "Fuze Wash FR"
     },
     {
       "fixture": "Fuze Wash Z120",
@@ -2169,7 +2169,7 @@
         },
         "suggestedFileName": "Elation__Fuze_Wash_Z120.gdtf"
       },
-      "shortName": "FzWshZ120"
+      "shortName": "Fuze Wash Z120"
     },
     {
       "fixture": "Fuze Wash Z350",
@@ -2241,7 +2241,7 @@
         },
         "suggestedFileName": "Elation__Fuze_Wash_Z350.gdtf"
       },
-      "shortName": "FzWshZ350"
+      "shortName": "Fuze Wash Z350"
     },
     {
       "fixture": "KL Batten 12",
@@ -2411,7 +2411,7 @@
         },
         "suggestedFileName": "Elation__KL_Batten_12.gdtf"
       },
-      "shortName": "KLBAT12"
+      "shortName": "KL BAT-12"
     },
     {
       "fixture": "KL Batten 48",
@@ -2623,7 +2623,7 @@
         },
         "suggestedFileName": "Elation__KL_Batten_48.gdtf"
       },
-      "shortName": "KLBAT48"
+      "shortName": "KL BAT-48"
     },
     {
       "fixture": "KL Core IP",
@@ -2765,7 +2765,7 @@
         },
         "suggestedFileName": "Elation__KL_Core_IP.gdtf"
       },
-      "shortName": "KLCoreIP"
+      "shortName": "KL Core-IP"
     },
     {
       "fixture": "KL Fresnel 4",
@@ -2816,7 +2816,7 @@
         },
         "suggestedFileName": "Elation__KL_Fresnel_4.gdtf"
       },
-      "shortName": "KLFrsnl4"
+      "shortName": "KL Fresnel 4"
     },
     {
       "fixture": "KL Fresnel 4 CW",
@@ -2867,7 +2867,7 @@
         },
         "suggestedFileName": "Elation__KL_Fresnel_4_CW.gdtf"
       },
-      "shortName": "KLFrsnl4CW"
+      "shortName": "KL Fresnel 4 CW"
     },
     {
       "fixture": "KL Fresnel 6",
@@ -2918,7 +2918,7 @@
         },
         "suggestedFileName": "Elation__KL_Fresnel_6.gdtf"
       },
-      "shortName": "KLFrsnl6"
+      "shortName": "KL Fresnel 6"
     },
     {
       "fixture": "KL Fresnel 6 CW PO",
@@ -2969,7 +2969,7 @@
         },
         "suggestedFileName": "Elation__KL_Fresnel_6_CW_PO.gdtf"
       },
-      "shortName": "KLFrsnl6CWPO"
+      "shortName": "KL Fresnel 6 CW PO"
     },
     {
       "fixture": "KL Fresnel 8",
@@ -3020,7 +3020,7 @@
         },
         "suggestedFileName": "Elation__KL_Fresnel_8.gdtf"
       },
-      "shortName": "KLFrsnl8"
+      "shortName": "KL Fresnel 8"
     },
     {
       "fixture": "KL Fresnel 8 CW",
@@ -3071,7 +3071,7 @@
         },
         "suggestedFileName": "Elation__KL_Fresnel_8_CW.gdtf"
       },
-      "shortName": "KLFrsnl8CW"
+      "shortName": "KL Fresnel 8 CW"
     },
     {
       "fixture": "LIMELIGHT PAR S",
@@ -3136,7 +3136,7 @@
         },
         "suggestedFileName": "Elation__LIMELIGHT_PAR_S.gdtf"
       },
-      "shortName": "LmLtPrS"
+      "shortName": "LIMELIGHT PAR S"
     },
     {
       "fixture": "Magma Prime Hazer",
@@ -3303,7 +3303,7 @@
         },
         "suggestedFileName": "Elation__Paladin_Brick.gdtf"
       },
-      "shortName": "PalBrck"
+      "shortName": "Pal Brick"
     },
     {
       "fixture": "Paladin Cube",
@@ -3396,7 +3396,7 @@
         },
         "suggestedFileName": "Elation__Paladin_Cube.gdtf"
       },
-      "shortName": "PalCube"
+      "shortName": "Pal Cube"
     },
     {
       "fixture": "Paladin Panel",
@@ -3489,7 +3489,7 @@
         },
         "suggestedFileName": "Elation__Paladin_Panel.gdtf"
       },
-      "shortName": "PalPnl"
+      "shortName": "Pal Panel"
     },
     {
       "fixture": "Paragon LT",
@@ -3533,7 +3533,7 @@
         },
         "suggestedFileName": "Elation__Paragon_LT.gdtf"
       },
-      "shortName": "PrgnLT"
+      "shortName": "Para-LT"
     },
     {
       "fixture": "Paragon S",
@@ -3577,7 +3577,7 @@
         },
         "suggestedFileName": "Elation__Paragon_S.gdtf"
       },
-      "shortName": "Prgn S"
+      "shortName": "Para-S"
     },
     {
       "fixture": "Pixel Bar 120IP",
@@ -3642,7 +3642,7 @@
         },
         "suggestedFileName": "Elation__Pixel_Bar_120IP.gdtf"
       },
-      "shortName": "PixBr120"
+      "shortName": "Pix Bar 120-IP"
     },
     {
       "fixture": "Pixel Bar 30IP",
@@ -3714,7 +3714,7 @@
         },
         "suggestedFileName": "Elation__Pixel_Bar_30IP.gdtf"
       },
-      "shortName": "PixBr30"
+      "shortName": "Pix Bar 30-IP"
     },
     {
       "fixture": "Platinum Beam 5R Extreme",
@@ -3751,7 +3751,7 @@
         },
         "suggestedFileName": "Elation__Platinum_Beam_5R_Extreme.gdtf"
       },
-      "shortName": "PlatBeam5rExt"
+      "shortName": "Beam 5R EXT"
     },
     {
       "fixture": "Platinum FLX",
@@ -3788,7 +3788,7 @@
         },
         "suggestedFileName": "Elation__Platinum_FLX.gdtf"
       },
-      "shortName": "PlatFlx"
+      "shortName": "FLX"
     },
     {
       "fixture": "Proteus Atlas",
@@ -3832,7 +3832,7 @@
         },
         "suggestedFileName": "Elation__Proteus_Atlas.gdtf"
       },
-      "shortName": "ProAtls"
+      "shortName": "Atlas"
     },
     {
       "fixture": "Proteus Beam",
@@ -3890,7 +3890,7 @@
         },
         "suggestedFileName": "Elation__Proteus_Beam.gdtf"
       },
-      "shortName": "ProBeam"
+      "shortName": "Proteus Beam"
     },
     {
       "fixture": "Proteus Brutus",
@@ -3992,7 +3992,7 @@
         },
         "suggestedFileName": "Elation__Proteus_Brutus_FS.gdtf"
       },
-      "shortName": "ProBruFS"
+      "shortName": "Proteus Brutus FS"
     },
     {
       "fixture": "Proteus Excalibur",
@@ -4080,7 +4080,7 @@
         },
         "suggestedFileName": "Elation__Proteus_Hybrid.gdtf"
       },
-      "shortName": "Proteus_Hybrid"
+      "shortName": "Proteus Hybrid"
     },
     {
       "fixture": "Proteus Hybrid Max",
@@ -4124,7 +4124,7 @@
         },
         "suggestedFileName": "Elation__Proteus_Hybrid_Max.gdtf"
       },
-      "shortName": "ProHybrdMx"
+      "shortName": "Proteus Hybrid Max"
     },
     {
       "fixture": "Proteus Hybrid Max OPS",
@@ -4168,7 +4168,7 @@
         },
         "suggestedFileName": "Elation__Proteus_Hybrid_Max_OPS.gdtf"
       },
-      "shortName": "ProHybrdMxOPS"
+      "shortName": "Proteus Hybrid Max OPS"
     },
     {
       "fixture": "Proteus Lucius",
@@ -4256,7 +4256,7 @@
         },
         "suggestedFileName": "Elation__Proteus_Lucius_OPS.gdtf"
       },
-      "shortName": "Proteus Lucius"
+      "shortName": "Proteus Lucius OPS"
     },
     {
       "fixture": "Proteus Maximus",
@@ -4300,7 +4300,7 @@
         },
         "suggestedFileName": "Elation__Proteus_Maximus.gdtf"
       },
-      "shortName": "ProMax"
+      "shortName": "Proteus Maximus"
     },
     {
       "fixture": "Proteus Odeon",
@@ -4416,7 +4416,7 @@
         },
         "suggestedFileName": "Elation__Proteus_Radius.gdtf"
       },
-      "shortName": "ProRad"
+      "shortName": "Proteus Radius"
     },
     {
       "fixture": "Proteus Rayzor 760",
@@ -4481,7 +4481,7 @@
         },
         "suggestedFileName": "Elation__Proteus_Rayzor_760.gdtf"
       },
-      "shortName": "ProRay760"
+      "shortName": "Proteus Rayzor 760"
     },
     {
       "fixture": "Proteus Rayzor 760 OPS",
@@ -4546,7 +4546,7 @@
         },
         "suggestedFileName": "Elation__Proteus_Rayzor_760_OPS.gdtf"
       },
-      "shortName": "ProRay760ops"
+      "shortName": "Proteus Rayzor 760 OPS"
     },
     {
       "fixture": "Proteus Rayzor Blade L",
@@ -4648,7 +4648,7 @@
         },
         "suggestedFileName": "Elation__Proton_3K_Color.gdtf"
       },
-      "shortName": "Proton3KColor"
+      "shortName": "Proton 3K Color"
     },
     {
       "fixture": "PROTRON ECLYPSE",
@@ -4832,7 +4832,7 @@
         },
         "suggestedFileName": "Elation__PROTRON_ECLYPSE.gdtf"
       },
-      "shortName": "PrtnEclypse"
+      "shortName": "PROTRON ECLYPSE"
     },
     {
       "fixture": "Pulse Bar L",
@@ -4911,7 +4911,7 @@
         },
         "suggestedFileName": "Elation__Pulse_Bar_L.gdtf"
       },
-      "shortName": "PulsbrL"
+      "shortName": "Pulse Bar L"
     },
     {
       "fixture": "Pulse Bar S",
@@ -4990,7 +4990,7 @@
         },
         "suggestedFileName": "Elation__Pulse_Bar_S.gdtf"
       },
-      "shortName": "PulsbrS"
+      "shortName": "Pulse Bar S"
     },
     {
       "fixture": "Pulse Panel",
@@ -5069,7 +5069,7 @@
         },
         "suggestedFileName": "Elation__Pulse_Panel.gdtf"
       },
-      "shortName": "PulsPnl"
+      "shortName": "Pulse Panel"
     },
     {
       "fixture": "Pulse Panel FX",
@@ -5169,7 +5169,7 @@
         },
         "suggestedFileName": "Elation__Pulse_Panel_FX.gdtf"
       },
-      "shortName": "PulsPnlFX"
+      "shortName": "Pulse Panel FX"
     },
     {
       "fixture": "Rayzor 760",
@@ -5234,7 +5234,7 @@
         },
         "suggestedFileName": "Elation__Rayzor_760.gdtf"
       },
-      "shortName": "Ray760"
+      "shortName": "Rayzor 760"
     },
     {
       "fixture": "REBEL Profile",
@@ -5264,7 +5264,7 @@
         },
         "suggestedFileName": "Elation__REBEL_Profile.gdtf"
       },
-      "shortName": "RblPrf"
+      "shortName": "REBEL Prof"
     },
     {
       "fixture": "REBEL Wash 12",
@@ -5364,7 +5364,7 @@
         },
         "suggestedFileName": "Elation__REBEL_Wash_12.gdtf"
       },
-      "shortName": "RblWsh12"
+      "shortName": "REBEL Wash 12"
     },
     {
       "fixture": "SEVEN BATTEN 14",
@@ -5464,7 +5464,7 @@
         },
         "suggestedFileName": "Elation__SEVEN_BATTEN_14.gdtf"
       },
-      "shortName": "SEVBAT14"
+      "shortName": "Batten-14"
     },
     {
       "fixture": "Seven Batten 42",
@@ -5564,7 +5564,7 @@
         },
         "suggestedFileName": "Elation__Seven_Batten_42.gdtf"
       },
-      "shortName": "SEVBAT42"
+      "shortName": "Batten-42"
     },
     {
       "fixture": "Seven Batten 72",
@@ -5664,7 +5664,7 @@
         },
         "suggestedFileName": "Elation__Seven_Batten_72.gdtf"
       },
-      "shortName": "SEVBAT72"
+      "shortName": "Batten-72"
     },
     {
       "fixture": "SEVEN PAR 19IP",
@@ -5729,7 +5729,7 @@
         },
         "suggestedFileName": "Elation__SEVEN_PAR_19IP.gdtf"
       },
-      "shortName": "SIXP19IP"
+      "shortName": "Par 19-IP"
     },
     {
       "fixture": "SEVEN PAR 7IP",
@@ -5794,7 +5794,7 @@
         },
         "suggestedFileName": "Elation__SEVEN_PAR_7IP.gdtf"
       },
-      "shortName": "SIXP7IP"
+      "shortName": "Par 7-IP"
     },
     {
       "fixture": "SIX plus BAR L",
@@ -5950,7 +5950,7 @@
         },
         "suggestedFileName": "Elation__SIX_plus_BAR_L.gdtf"
       },
-      "shortName": "SIX+BrL"
+      "shortName": "6+ Bar-L"
     },
     {
       "fixture": "SIX plus BAR S",
@@ -6113,7 +6113,7 @@
         },
         "suggestedFileName": "Elation__SIX_plus_BAR_S.gdtf"
       },
-      "shortName": "SIX+BrS"
+      "shortName": "6+ Bar-S"
     },
     {
       "fixture": "SIX plus PAR L",
@@ -6220,7 +6220,7 @@
         },
         "suggestedFileName": "Elation__SIX_plus_PAR_L.gdtf"
       },
-      "shortName": "SIXPARL"
+      "shortName": "6+ Par-L"
     },
     {
       "fixture": "SIX plus PAR L OPS",
@@ -6327,7 +6327,7 @@
         },
         "suggestedFileName": "Elation__SIX_plus_PAR_L_OPS.gdtf"
       },
-      "shortName": "SIXPARL"
+      "shortName": "6+ Par-L-OPS"
     },
     {
       "fixture": "SIX plus PAR S",
@@ -6434,7 +6434,7 @@
         },
         "suggestedFileName": "Elation__SIX_plus_PAR_S.gdtf"
       },
-      "shortName": "SIXPARs"
+      "shortName": "6+ Par-S"
     },
     {
       "fixture": "SIX plus PAR S OPS",
@@ -6541,7 +6541,7 @@
         },
         "suggestedFileName": "Elation__SIX_plus_PAR_S_OPS.gdtf"
       },
-      "shortName": "SIXPARs"
+      "shortName": "6+ Par-S-OPS"
     },
     {
       "fixture": "SIXBAR 1000",
@@ -6613,7 +6613,7 @@
         },
         "suggestedFileName": "Elation__SIXBAR_1000.gdtf"
       },
-      "shortName": "SIXBR1000"
+      "shortName": "Bar 1000"
     },
     {
       "fixture": "SIXBAR 1000 IP",
@@ -6685,7 +6685,7 @@
         },
         "suggestedFileName": "Elation__SIXBAR_1000_IP.gdtf"
       },
-      "shortName": "SIXBR1000IP"
+      "shortName": "Bar 1000-IP"
     },
     {
       "fixture": "SIXBAR 500",
@@ -6757,7 +6757,7 @@
         },
         "suggestedFileName": "Elation__SIXBAR_500.gdtf"
       },
-      "shortName": "SIXBR500"
+      "shortName": "Bar 500"
     },
     {
       "fixture": "SIXPAR 100",
@@ -6845,7 +6845,7 @@
         },
         "suggestedFileName": "Elation__SIXPAR_100_IP.gdtf"
       },
-      "shortName": "Sixpar100IP"
+      "shortName": "Sixpar100-IP"
     },
     {
       "fixture": "SIXPAR 200",
@@ -6933,7 +6933,7 @@
         },
         "suggestedFileName": "Elation__SIXPAR_200_IP.gdtf"
       },
-      "shortName": "SIXPAR200IP"
+      "shortName": "SIXPAR200-IP"
     },
     {
       "fixture": "SIXPAR 300",
@@ -7021,7 +7021,7 @@
         },
         "suggestedFileName": "Elation__SIXPAR_300_IP.gdtf"
       },
-      "shortName": "SIXPAR300IP"
+      "shortName": "SIXPAR300-IP"
     },
     {
       "fixture": "Smarty Hybrid",
@@ -7065,7 +7065,7 @@
         },
         "suggestedFileName": "Elation__Smarty_Hybrid.gdtf"
       },
-      "shortName": "SmtyHybd"
+      "shortName": "Smarty Hybrid"
     },
     {
       "fixture": "Smarty Max",
@@ -7195,7 +7195,7 @@
         },
         "suggestedFileName": "Elation__SOL_I_Blinder.gdtf"
       },
-      "shortName": "SOLBlnd"
+      "shortName": "SOL Blinder"
     },
     {
       "fixture": "Therma Tour 800",
@@ -7332,7 +7332,7 @@
         },
         "suggestedFileName": "Elation__VOLT_plus_BAR_S.gdtf"
       },
-      "shortName": "VOLT+BrS"
+      "shortName": "VOLT+ Bar-S"
     },
     {
       "fixture": "VOLT plus PAR L",
@@ -7404,7 +7404,7 @@
         },
         "suggestedFileName": "Elation__VOLT_plus_PAR_L.gdtf"
       },
-      "shortName": "VOLTPARL"
+      "shortName": "VOLT+ Par-L"
     },
     {
       "fixture": "VOLT plus PAR S",
@@ -7476,7 +7476,7 @@
         },
         "suggestedFileName": "Elation__VOLT_plus_PAR_S.gdtf"
       },
-      "shortName": "VOLTPARs"
+      "shortName": "VOLT+ Par-S"
     },
     {
       "fixture": "WW Profile HP",
@@ -7506,7 +7506,7 @@
         },
         "suggestedFileName": "Elation__WW_Profile_HP.gdtf"
       },
-      "shortName": "WWProfHP"
+      "shortName": "WW Prof-HP"
     },
     {
       "fixture": "WW Profile HP IP",
@@ -7550,7 +7550,7 @@
         },
         "suggestedFileName": "Elation__WW_Profile_HP_IP.gdtf"
       },
-      "shortName": "WWProfHPIP"
+      "shortName": "WW Prof-HP-IP"
     }
   ]
 }

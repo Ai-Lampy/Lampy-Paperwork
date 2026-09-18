@@ -411,7 +411,7 @@
           }
         }
       },
-      "shortName": "CF 3 12"
+      "shortName": "CF 3-12"
     },
     {
       "fixture": "Color Force 3 48",
@@ -847,7 +847,7 @@
           }
         }
       },
-      "shortName": "CF 3 48"
+      "shortName": "CF 3-48"
     },
     {
       "fixture": "Color Force 3 72",
@@ -1103,7 +1103,7 @@
           }
         }
       },
-      "shortName": "CF 3 72"
+      "shortName": "CF 3-72"
     },
     {
       "fixture": "Color Force II 12",
@@ -1483,7 +1483,7 @@
           }
         }
       },
-      "shortName": "CF II 12"
+      "shortName": "CF II-12"
     },
     {
       "fixture": "Color Force II 12 Plus",
@@ -1835,7 +1835,7 @@
           }
         }
       },
-      "shortName": "CF II 12 Plus"
+      "shortName": "CF II-12+"
     },
     {
       "fixture": "Color Force II 48",
@@ -2530,7 +2530,7 @@
           }
         }
       },
-      "shortName": "CF II 48"
+      "shortName": "CF II-48"
     },
     {
       "fixture": "Color Force II 48 Plus",
@@ -3225,7 +3225,7 @@
           }
         }
       },
-      "shortName": "CF II 48 Plus"
+      "shortName": "CF II-48+"
     },
     {
       "fixture": "Color Force II 72",
@@ -4256,7 +4256,7 @@
           }
         }
       },
-      "shortName": "CF II 72"
+      "shortName": "CF II-72"
     },
     {
       "fixture": "Color Force II 72 Plus",
@@ -5287,7 +5287,7 @@
           }
         }
       },
-      "shortName": "CF II 72 Plus"
+      "shortName": "CF II-72+"
     }
   ]
 }

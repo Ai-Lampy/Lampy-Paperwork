@@ -64,7 +64,7 @@
           }
         }
       },
-      "shortName": "LEDko FullSpectrum 6 HD Studio+"
+      "shortName": "LEDko 6 HD Studio+"
     },
     {
       "fixture": "LEDko FullSpectrum 6 HD-R",
@@ -129,7 +129,7 @@
           }
         }
       },
-      "shortName": "LEDko FullSpectrum 6 HD-R"
+      "shortName": "LEDko 6 HD-R"
     },
     {
       "fixture": "ReLite Led Kit VariWhite HD Plus for DeSisti Leonardo 1K",
@@ -194,7 +194,7 @@
           }
         }
       },
-      "shortName": "ReLite Led Kit VariWhite HD Plus for DeSisti Leonardo 1K"
+      "shortName": "ReLite Led Kit VariWhite HD+ for DeSisti Leonardo 1K"
     },
     {
       "fixture": "ReLite Led Kit VariWhite HD Plus for DeSisti Leonardo 2K",
@@ -259,7 +259,7 @@
           }
         }
       },
-      "shortName": "ReLite Led Kit VariWhite HD Plus for DeSisti Leonardo 2K"
+      "shortName": "ReLite Led Kit VariWhite HD+ for DeSisti Leonardo 2K"
     },
     {
       "fixture": "Romeo 600 FS6 HD Theater",
@@ -389,7 +389,7 @@
           }
         }
       },
-      "shortName": "Romeo 700 FullSpectrum 6 HD Studio Plus"
+      "shortName": "Romeo 700 FS6 HD Theater"
     }
   ]
 }

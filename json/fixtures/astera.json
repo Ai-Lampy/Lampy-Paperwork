@@ -1170,7 +1170,7 @@
           }
         }
       },
-      "shortName": "AX1 PixTube"
+      "shortName": "AX1"
     },
     {
       "fixture": "AX10 SpotMax",
@@ -1396,7 +1396,7 @@
           }
         }
       },
-      "shortName": "AX10 SpotMax"
+      "shortName": "AX10"
     },
     {
       "fixture": "AX2-100 PixelBar",
@@ -2567,7 +2567,7 @@
           }
         }
       },
-      "shortName": "AX2-100 PixBar"
+      "shortName": "AX2-100"
     },
     {
       "fixture": "AX2-50 PixelBar",
@@ -3738,7 +3738,7 @@
           }
         }
       },
-      "shortName": "AX2-50 PixBar"
+      "shortName": "AX2-50"
     },
     {
       "fixture": "AX3 LightDrop",
@@ -3964,7 +3964,7 @@
           }
         }
       },
-      "shortName": "AX3 LightDrop"
+      "shortName": "AX3"
     },
     {
       "fixture": "AX5 TriplePAR",
@@ -4190,7 +4190,7 @@
           }
         }
       },
-      "shortName": "AX5 TriPAR"
+      "shortName": "AX5"
     },
     {
       "fixture": "AX9 PowerPAR",
@@ -4416,7 +4416,7 @@
           }
         }
       },
-      "shortName": "AX9 PwrPAR"
+      "shortName": "AX9"
     },
     {
       "fixture": "Helios Tube",
@@ -5587,7 +5587,7 @@
           }
         }
       },
-      "shortName": "Helios Tube"
+      "shortName": "Helios"
     },
     {
       "fixture": "HydraPanel",
@@ -7929,7 +7929,7 @@
           }
         }
       },
-      "shortName": "Hyperion Tube"
+      "shortName": "Hyperion"
     },
     {
       "fixture": "LeoFresnel",
@@ -8365,7 +8365,7 @@
           }
         }
       },
-      "shortName": "LeoFres"
+      "shortName": "Leo Fresnel"
     },
     {
       "fixture": "LunaBulb",
@@ -8591,7 +8591,7 @@
           }
         }
       },
-      "shortName": "LunaBulb"
+      "shortName": "Luna Bulb"
     },
     {
       "fixture": "NYX Bulb",
@@ -9479,7 +9479,7 @@
           }
         }
       },
-      "shortName": "PlutoFres"
+      "shortName": "Pluto Fresnel"
     },
     {
       "fixture": "QuikBeam",
