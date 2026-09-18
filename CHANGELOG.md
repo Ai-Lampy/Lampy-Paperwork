@@ -1,3 +1,7 @@
+## V42.1 — Fan Out position rendering
+
+- Matched Fan Out Position cells to the Power Calculations Position presentation, including backgrounds, contrast text and conditional outlines.
+
 ## V42 — Fixture Summary and Patch Navigation
 
 - Added a shared Fixture Summary side pane to Fixture Patch while retaining the same summary on Home.
@@ -5,6 +9,7 @@
 - Added direct GDTF attachment from fixture information with fixture-identity and mode validation.
 - Reworked unlocked Fixture Patch coordinates so keyboard navigation, selection and paste cross every editable field while skipping read-only columns.
 - Removed the Project Errors page header and moved initial focus to the active Errors tab.
+- Moved Fixture Patch Format and fixture-name mode controls into the filter/control bar and standardised the primary toolbar action sizes.
 
 ## V41.1 — Stable Loom Card Headers
 
