@@ -1,3 +1,12 @@
+## V43 — Home and Position Summary
+
+- Expanded Project Info to 1300 px and placed Home visibility controls beside their Production fields.
+- Made uploaded Tour Logos mandatory on PDF previews and exports.
+- Removed Home Stat heroes from customisation and fixed Revision Summary last at Big size.
+- Added Small/Big summary controls and balanced two-column Fixture Summary content when Big.
+- Added saved Name, Colour and Manual Position ordering with direct up/down controls.
+- Added separate configurable Rectangle and Box PDF grids with fixed header and footer protection.
+
 ## V42.1 — Fan Out position rendering
 
 - Matched Fan Out Position cells to the Power Calculations Position presentation, including backgrounds, contrast text and conditional outlines.
