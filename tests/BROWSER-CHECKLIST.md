@@ -1,4 +1,4 @@
-# V41 browser release checks
+# V42 browser release checks
 
 **Use this checklist only when the user explicitly requests browser testing.** Interface changes, implementation requests and releases do not authorise browser testing. Static validation remains the default.
 
@@ -9,6 +9,10 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 | Startup, visible welcome dismissal, keyboard focus | Required | Required | Required |
 | Fixture picker with apostrophes in names | Required | Required | Required |
 | Add Fixtures duplicate-ID warning remains in-flow with both resolution actions visible | Required | Required | Required |
+| Unlocked Fixture Patch navigation crosses every editable field and skips read-only or hidden columns | Required | Required | Required |
+| Fixture Summary matches Home, closes on outside click/Escape, and refreshes after edits | Required | Required | Required |
+| Fixture information overrides survive save/load and affect every mode and newly added matching fixtures | Required | Required | Required |
+| Add GDTF File accepts a matching fixture and rejects mismatched fixture identity or mode data | Required | Required | Required |
 | Unpatch retains fixture rows with blank Universe and Address; delete removes only selected fixture rows | Required | Required | Required |
 | Errors group by page; Ignore and Restore move selected errors and update the active badge | Required | Required | Required |
 | 2,300 W fixture on 230 V circuit reports 10 A | Required | Required | Required |

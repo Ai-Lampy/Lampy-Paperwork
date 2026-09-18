@@ -1,3 +1,11 @@
+## V42 — Fixture Summary and Patch Navigation
+
+- Added a shared Fixture Summary side pane to Fixture Patch while retaining the same summary on Home.
+- Added project-wide Short Name, Weight and Wattage overrides that update every mode, imported Patch sheets and future fixture additions.
+- Added direct GDTF attachment from fixture information with fixture-identity and mode validation.
+- Reworked unlocked Fixture Patch coordinates so keyboard navigation, selection and paste cross every editable field while skipping read-only columns.
+- Removed the Project Errors page header and moved initial focus to the active Errors tab.
+
 ## V41.1 — Stable Loom Card Headers
 
 - Kept Loom titles centred within equal reserved side columns so long names no longer move or resize the Feeder/EXT badge and action buttons.

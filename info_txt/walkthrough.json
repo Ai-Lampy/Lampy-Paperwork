@@ -1,14 +1,14 @@
 {
-  "title": "Lampy Paperwork V41 Walk-through",
+  "title": "Lampy Paperwork V42 Walk-through",
   "sections": [
     {
-      "title": "New in V41: Patch and Error Management",
+      "title": "New in V42: Fixture Summary and Patch Navigation",
       "type": "unordered",
       "items": [
-        "Unpatch clears Universe and Address while keeping the fixture in the Master Patch. Fixture Type Options can unpatch or delete only the checked fixtures.",
-        "A fixture may remain in the patch without an address. Missing Universe or Address values stay blank and appear as Fixture Patch errors.",
-        "Project Errors groups issues by Fixture Patch, Device Config and Power. Select individual errors or a whole group, then move them between Active and Ignored.",
-        "Ignored errors remain saved with the project while the problem exists and do not contribute to the red active-error badge. Fixing an ignored error clears its saved ignore state."
+        "Open Fixture Summary from Fixture Patch to review the same grouped fixture list shown on Home.",
+        "Select a fixture summary item to view its information. Use Edit to change Short Name, Weight and Wattage for every mode and patched instance of that fixture type.",
+        "When GDTF information is unavailable, use Add GDTF File. Lampy accepts a file only when its manufacturer, fixture identity and mode data match the selected fixture.",
+        "Unlock a Fixture Patch group and use Arrow keys, Enter, Shift+Enter, Tab and Shift+Tab to move through every editable text, list and colour field. Read-only columns are skipped."
       ]
     },
     {
@@ -33,7 +33,7 @@
         "Open Power and assign distros to supplies. Enter fixture IDs to link each way to Fixture Patch data, then check phase totals, RCBO warnings, Aux outlets, and the PDF preview.",
         "Use Control to add consoles and NPUs, including roles, locations, parameters, protocols, IP addresses, DMX ports, and reference images. When NPUs exist, use the Consoles and NPU sub-tabs to switch between them, and choose Card View or Table View for the required workflow. Add switches, nodes and other network-capable hardware through Rack Layout or Device Config.",
         "Open Rack Layout to create racks, set their U size and depth, and place project or library devices from the Front or Rear view. Use Side view to inspect device depths and cable clearance.",
-        "Open Network → Device Config to review the synchronized device tree, expand individual ports, and edit patch, IP, subnet, protocol, direction, VLAN, and notes data.",
+        "Open Network \u2192 Device Config to review the synchronized device tree, expand individual ports, and edit patch, IP, subnet, protocol, direction, VLAN, and notes data.",
         "Use Global Subnet in Device Config to set the default subnet for new devices and apply it to existing network interfaces when required.",
         "Review the Fan Outs tab generated from Power and export the required Fan Out paperwork.",
         "Use Labels to complete Front RCBO Labels, Rear Labels, and Table View, then preview and export the required label pages.",
@@ -44,7 +44,7 @@
       "title": "Fixture Patch, GDTF, and MVR",
       "type": "unordered",
       "items": [
-        "The fixture library shows GDTF ✅ only when a repository file has a fully matched manufacturer, fixture type, mode, and channel count. GDTF ❌ means an exact match is not currently available.",
+        "The fixture library shows GDTF \u2705 only when a repository file has a fully matched manufacturer, fixture type, mode, and channel count. GDTF \u274c means an exact match is not currently available.",
         "Use Import to load CSV, Excel, XLSM, or MVR files. Imported comparison tabs highlight new, removed, and changed patch data before it is merged into the master patch.",
         "Fixture Patch Export groups paper, orientation, DPI, zoom, column, and GDTF controls inside Formatting Options. PDF, Excel, and MVR actions, temporary PDF logo controls, and the hidden-column report remain directly accessible below it.",
         "MVR export checks fixture IDs, DMX addresses, modes, duplicate ranges, and GDTF availability before building the file.",
@@ -83,7 +83,7 @@
         "Use the arrow keys, Enter, Shift+Enter, Tab, and Shift+Tab to move between editable Power Calcs cells. Drag the selected cell's blue fill handle vertically to copy a value through a compatible column.",
         "Choose Full Name or Short Name independently for the Power display.",
         "Select a 16 Amp or 10 Amp RCBO in each distro settings. A way is warned above 15.01 A for a 16 Amp RCBO or above 9.01 A for a 10 Amp RCBO.",
-        "Aux outlets are grouped in threes for Phase 1, Phase 2, and Phase 3. Only Aux outlets enabled for power calculations contribute to the totals. Configured 3ø Outputs are shown separately.",
+        "Aux outlets are grouped in threes for Phase 1, Phase 2, and Phase 3. Only Aux outlets enabled for power calculations contribute to the totals. Configured 3\u00f8 Outputs are shown separately.",
         "Use Power Calcs for detailed assignments, Fan Outs for display-only Socapex paperwork, and Phase Totals when it is available for supply and connected-distro review.",
         "The PDF preview keeps Socapex groups together, starts each distro on a new page, shows four Socapexes per page, and finishes with the supply phase-total summary."
       ]
