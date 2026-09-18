@@ -1,6 +1,7 @@
 ## V42.1 — Fan Out position rendering
 
 - Matched Fan Out Position cells to the Power Calculations Position presentation, including backgrounds, contrast text and conditional outlines.
+- Stopped Fixture Patch position typing from creating a saved Position Summary entry for every intermediate character.
 
 ## V42 — Fixture Summary and Patch Navigation
 

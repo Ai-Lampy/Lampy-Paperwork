@@ -1363,3 +1363,14 @@ assert(source('fanOutSlotCellsMarkup').includes('powerPositionCellStyle(result)'
 assert(html.includes('.powerSheetTable .positionCol .powerPositionText,.fanOutTable .positionCol .powerPositionText{-webkit-text-stroke-width:var(--power-position-stroke-width,0);-webkit-text-stroke-color:var(--power-position-outline,transparent);paint-order:stroke fill;text-shadow:none!important}'));
 assert(!html.includes('.fanOutTable .positionCol .fanOutCellText{-webkit-text-stroke:.35px'));
 console.log('PASS: V42.1 Fan Out positions match Power Calculations.');
+
+// V42.1 commits Patch positions once instead of creating one Position Summary entry per keystroke.
+const patchPositionCommitSource=source('updatePatchRowField');
+assert(patchPositionCommitSource.includes("if(field==='location'&&!finalise)return"));
+assert(patchPositionCommitSource.includes("(field==='location'&&finalise)||field==='colour1'||field==='colour2'"));
+const patchPositionRow={id:'fixture-1',location:'Existing Position'};
+const patchPositionContext=vm.createContext({patchFixtureRows:()=>[patchPositionRow],patchGroupUnlocked:()=>true});
+vm.runInContext(source('updatePatchRowField'),patchPositionContext);
+patchPositionContext.updatePatchRowField({dataset:{patchId:'fixture-1',patchField:'location'},value:'N'},false);
+assert.equal(patchPositionRow.location,'Existing Position');
+console.log('PASS: V42.1 Fixture Patch position creation waits for a committed value.');
