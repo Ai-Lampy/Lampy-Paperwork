@@ -1,4 +1,4 @@
-# V40 browser release checks
+# V41 browser release checks
 
 **Use this checklist only when the user explicitly requests browser testing.** Interface changes, implementation requests and releases do not authorise browser testing. Static validation remains the default.
 
@@ -8,6 +8,9 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 | --- | --- | --- | --- |
 | Startup, visible welcome dismissal, keyboard focus | Required | Required | Required |
 | Fixture picker with apostrophes in names | Required | Required | Required |
+| Add Fixtures duplicate-ID warning remains in-flow with both resolution actions visible | Required | Required | Required |
+| Unpatch retains fixture rows with blank Universe and Address; delete removes only selected fixture rows | Required | Required | Required |
+| Errors group by page; Ignore and Restore move selected errors and update the active badge | Required | Required | Required |
 | 2,300 W fixture on 230 V circuit reports 10 A | Required | Required | Required |
 | Unknown watts show incomplete circuit and phase totals | Required | Required | Required |
 | Add, resize and delete first/middle distros; preserve other labels | Required | Required | Required |

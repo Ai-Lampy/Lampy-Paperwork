@@ -1,3 +1,11 @@
+## V41 — Fixture Patch and Error Management
+
+- Kept unpatched fixtures in the Master Patch by clearing their Universe and Address, with separate selected-fixture delete actions in Fixture Type Options.
+- Preserved deliberately blank Universe and Address values through add, edit, import and save/load while continuing to report them in Project Errors.
+- Corrected the duplicate Fix ID warning layout so both decisions remain visible without overlapping Add Fixtures.
+- Grouped Project Errors by destination page and added saved Active/Ignored workflows with group selection, bulk Ignore and Restore actions, and active-only badge counts.
+- Fitted Loom card titles between 30 px and 22 px, allowing individual headings to grow to 55 px, and completed the Loom delete-column dashed borders.
+
 ## V40.10 — Loom borders, Home Loom summary and Position colour syncing
 
 - Refined Loom table borders and centred uploaded tour logos.
