@@ -4447,21 +4447,36 @@
     },
     {
       "fixture": "picklePATT",
-      "watts": 750,
-      "weight": 14.0,
+      "watts": 575.0,
+      "weight": 5.3,
       "modes": {
-        "Mode 1": 1
+        "External dimmer - virtual": 0,
+        "External dimmer - 8 bit": 1,
+        "External dimmer - 16 bit": 2
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__picklePATT.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@picklePATT@Lampy_2026-09-18.gdtf",
         "modes": {
-          "Mode 1": {
+          "External dimmer - virtual": {
+            "channels": 0,
+            "gdtfMode": "External dimmer - virtual",
+            "status": "matched",
+            "parameters": 2
+          },
+          "External dimmer - 8 bit": {
             "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "External dimmer - 8 bit",
+            "status": "matched",
+            "parameters": 2
+          },
+          "External dimmer - 16 bit": {
+            "channels": 2,
+            "gdtfMode": "External dimmer - 16 bit",
+            "status": "matched",
+            "parameters": 2
           }
         }
       },
@@ -5277,63 +5292,71 @@
     },
     {
       "fixture": "T10 Fresnel",
-      "watts": 275,
+      "watts": 275.0,
       "weight": 9.9,
       "modes": {
-        "Mode 1": 18,
-        "Mode 2": 9,
-        "Mode 3": 22,
-        "Mode 4": 5,
-        "Mode 5": 1,
-        "Mode 6": 24,
-        "Mode 7": 13,
-        "Mode 8": 28
+        "Mode 1 - 16-bit CMY": 18,
+        "Mode 2 - 8-bit CMY": 9,
+        "Mode 3 - 16-bit RGBAL": 22,
+        "Mode 4 - White light + dimmer": 5,
+        "Mode 5 - Only Dimmer": 1,
+        "Mode 6 - 16-bit CMY (optional module)": 24,
+        "Mode 7 - 8-bit CMY (optional module)": 13,
+        "Mode 8 - 16-bit RGBAL (optional module)": 28
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__T10_Fresnel.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_T10_Profile@2026-07-20_Color_control_channel_update.gdtf",
         "modes": {
-          "Mode 1": {
+          "Mode 1 - 16-bit CMY": {
             "channels": 18,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - 16-bit CMY",
+            "status": "matched",
+            "parameters": 27
           },
-          "Mode 2": {
+          "Mode 2 - 8-bit CMY": {
             "channels": 9,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 - 8-bit CMY",
+            "status": "matched",
+            "parameters": 22
           },
-          "Mode 3": {
+          "Mode 3 - 16-bit RGBAL": {
             "channels": 22,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 3 - 16-bit RGBAL",
+            "status": "matched",
+            "parameters": 29
           },
-          "Mode 4": {
+          "Mode 4 - White light + dimmer": {
             "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 4 - White light + dimmer",
+            "status": "matched",
+            "parameters": 17
           },
-          "Mode 5": {
+          "Mode 5 - Only Dimmer": {
             "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 5 - Only Dimmer",
+            "status": "matched",
+            "parameters": 15
           },
-          "Mode 6": {
+          "Mode 6 - 16-bit CMY (optional module)": {
             "channels": 24,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 6 - 16-bit CMY (optional module)",
+            "status": "matched",
+            "parameters": 30
           },
-          "Mode 7": {
+          "Mode 7 - 8-bit CMY (optional module)": {
             "channels": 13,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 7 - 8-bit CMY (optional module)",
+            "status": "matched",
+            "parameters": 25
           },
-          "Mode 8": {
+          "Mode 8 - 16-bit RGBAL (optional module)": {
             "channels": 28,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 8 - 16-bit RGBAL (optional module)",
+            "status": "matched",
+            "parameters": 32
           }
         }
       },
@@ -5341,63 +5364,71 @@
     },
     {
       "fixture": "T10 PC",
-      "watts": 275,
+      "watts": 275.0,
       "weight": 9.9,
       "modes": {
-        "Mode 1": 18,
-        "Mode 2": 9,
-        "Mode 3": 22,
-        "Mode 4": 5,
-        "Mode 5": 1,
-        "Mode 6": 24,
-        "Mode 7": 13,
-        "Mode 8": 28
+        "Mode 1 - 16-bit CMY": 18,
+        "Mode 2 - 8-bit CMY": 9,
+        "Mode 3 - 16-bit RGBAL": 22,
+        "Mode 4 - White light + dimmer": 5,
+        "Mode 5 - Only Dimmer": 1,
+        "Mode 6 - 16-bit CMY (optional module)": 24,
+        "Mode 7 - 8-bit CMY (optional module)": 13,
+        "Mode 8 - 16-bit RGBAL (optional module)": 28
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__T10_PC.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_T10_Profile@2026-07-20_Color_control_channel_update.gdtf",
         "modes": {
-          "Mode 1": {
+          "Mode 1 - 16-bit CMY": {
             "channels": 18,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - 16-bit CMY",
+            "status": "matched",
+            "parameters": 27
           },
-          "Mode 2": {
+          "Mode 2 - 8-bit CMY": {
             "channels": 9,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 - 8-bit CMY",
+            "status": "matched",
+            "parameters": 22
           },
-          "Mode 3": {
+          "Mode 3 - 16-bit RGBAL": {
             "channels": 22,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 3 - 16-bit RGBAL",
+            "status": "matched",
+            "parameters": 29
           },
-          "Mode 4": {
+          "Mode 4 - White light + dimmer": {
             "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 4 - White light + dimmer",
+            "status": "matched",
+            "parameters": 17
           },
-          "Mode 5": {
+          "Mode 5 - Only Dimmer": {
             "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 5 - Only Dimmer",
+            "status": "matched",
+            "parameters": 15
           },
-          "Mode 6": {
+          "Mode 6 - 16-bit CMY (optional module)": {
             "channels": 24,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 6 - 16-bit CMY (optional module)",
+            "status": "matched",
+            "parameters": 30
           },
-          "Mode 7": {
+          "Mode 7 - 8-bit CMY (optional module)": {
             "channels": 13,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 7 - 8-bit CMY (optional module)",
+            "status": "matched",
+            "parameters": 25
           },
-          "Mode 8": {
+          "Mode 8 - 16-bit RGBAL (optional module)": {
             "channels": 28,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 8 - 16-bit RGBAL (optional module)",
+            "status": "matched",
+            "parameters": 32
           }
         }
       },
@@ -5477,63 +5508,71 @@
     },
     {
       "fixture": "T11 Fresnel",
-      "watts": 420,
+      "watts": 440.0,
       "weight": 14.5,
       "modes": {
-        "Mode 1": 18,
-        "Mode 2": 9,
-        "Mode 3": 22,
-        "Mode 4": 5,
-        "Mode 5": 1,
-        "Mode 6": 24,
-        "Mode 7": 13,
-        "Mode 8": 28
+        "Mode 1 - 16-bit CMY": 18,
+        "Mode 2 - 8-bit CMY": 9,
+        "Mode 3 - 16-bit RGBAL": 22,
+        "Mode 4 - White light + dimmer": 5,
+        "Mode 5 - Only Dimmer": 1,
+        "Mode 6 - 16-bit CMY (optional module)": 24,
+        "Mode 7 - 8-bit CMY (optional module)": 13,
+        "Mode 8 - 16-bit RGBAL (optional module)": 28
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__T11_Fresnel.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_T11_Profile@2026-07-20_Color_control_channel_update.gdtf",
         "modes": {
-          "Mode 1": {
+          "Mode 1 - 16-bit CMY": {
             "channels": 18,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - 16-bit CMY",
+            "status": "matched",
+            "parameters": 27
           },
-          "Mode 2": {
+          "Mode 2 - 8-bit CMY": {
             "channels": 9,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 - 8-bit CMY",
+            "status": "matched",
+            "parameters": 22
           },
-          "Mode 3": {
+          "Mode 3 - 16-bit RGBAL": {
             "channels": 22,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 3 - 16-bit RGBAL",
+            "status": "matched",
+            "parameters": 29
           },
-          "Mode 4": {
+          "Mode 4 - White light + dimmer": {
             "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 4 - White light + dimmer",
+            "status": "matched",
+            "parameters": 17
           },
-          "Mode 5": {
+          "Mode 5 - Only Dimmer": {
             "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 5 - Only Dimmer",
+            "status": "matched",
+            "parameters": 15
           },
-          "Mode 6": {
+          "Mode 6 - 16-bit CMY (optional module)": {
             "channels": 24,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 6 - 16-bit CMY (optional module)",
+            "status": "matched",
+            "parameters": 30
           },
-          "Mode 7": {
+          "Mode 7 - 8-bit CMY (optional module)": {
             "channels": 13,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 7 - 8-bit CMY (optional module)",
+            "status": "matched",
+            "parameters": 25
           },
-          "Mode 8": {
+          "Mode 8 - 16-bit RGBAL (optional module)": {
             "channels": 28,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 8 - 16-bit RGBAL (optional module)",
+            "status": "matched",
+            "parameters": 32
           }
         }
       },
@@ -5541,63 +5580,71 @@
     },
     {
       "fixture": "T11 PC",
-      "watts": 420,
+      "watts": 440.0,
       "weight": 15.3,
       "modes": {
-        "Mode 1": 18,
-        "Mode 2": 9,
-        "Mode 3": 22,
-        "Mode 4": 5,
-        "Mode 5": 1,
-        "Mode 6": 24,
-        "Mode 7": 13,
-        "Mode 8": 28
+        "Mode 1 - 16-bit CMY": 18,
+        "Mode 2 - 8-bit CMY": 9,
+        "Mode 3 - 16-bit RGBAL": 22,
+        "Mode 4 - White light + dimmer": 5,
+        "Mode 5 - Only Dimmer": 1,
+        "Mode 6 - 16-bit CMY (optional module)": 24,
+        "Mode 7 - 8-bit CMY (optional module)": 13,
+        "Mode 8 - 16-bit RGBAL (optional module)": 28
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__T11_PC.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_T11_Profile@2026-07-20_Color_control_channel_update.gdtf",
         "modes": {
-          "Mode 1": {
+          "Mode 1 - 16-bit CMY": {
             "channels": 18,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - 16-bit CMY",
+            "status": "matched",
+            "parameters": 27
           },
-          "Mode 2": {
+          "Mode 2 - 8-bit CMY": {
             "channels": 9,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 2 - 8-bit CMY",
+            "status": "matched",
+            "parameters": 22
           },
-          "Mode 3": {
+          "Mode 3 - 16-bit RGBAL": {
             "channels": 22,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 3 - 16-bit RGBAL",
+            "status": "matched",
+            "parameters": 29
           },
-          "Mode 4": {
+          "Mode 4 - White light + dimmer": {
             "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 4 - White light + dimmer",
+            "status": "matched",
+            "parameters": 17
           },
-          "Mode 5": {
+          "Mode 5 - Only Dimmer": {
             "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 5 - Only Dimmer",
+            "status": "matched",
+            "parameters": 15
           },
-          "Mode 6": {
+          "Mode 6 - 16-bit CMY (optional module)": {
             "channels": 24,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 6 - 16-bit CMY (optional module)",
+            "status": "matched",
+            "parameters": 30
           },
-          "Mode 7": {
+          "Mode 7 - 8-bit CMY (optional module)": {
             "channels": 13,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 7 - 8-bit CMY (optional module)",
+            "status": "matched",
+            "parameters": 25
           },
-          "Mode 8": {
+          "Mode 8 - 16-bit RGBAL (optional module)": {
             "channels": 28,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 8 - 16-bit RGBAL (optional module)",
+            "status": "matched",
+            "parameters": 32
           }
         }
       },
@@ -5677,63 +5724,57 @@
     },
     {
       "fixture": "T15 Fresnel",
-      "watts": 750,
-      "weight": 24.0,
+      "watts": 440.0,
+      "weight": 12.0,
       "modes": {
-        "Mode 1": 18,
-        "Mode 2": 9,
-        "Mode 3": 22,
-        "Mode 4": 5,
-        "Mode 5": 1,
-        "Mode 6": 24,
-        "Mode 7": 13,
-        "Mode 8": 28
+        "Mode 1 - 16-bit CMY": 20,
+        "Mode 2 - 8-bit CMY": 10,
+        "Mode 3 - 16-bit RGBAL": 24,
+        "Mode 4 - White light + dimmer": 7,
+        "Mode 5 - Zoom and dimmer": 2,
+        "Mode 6 - Only dimmer": 1
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__T15_Fresnel.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_T15_Fresnel@2026-09-03_RDM_update_Beam_type_fix.gdtf",
         "modes": {
-          "Mode 1": {
-            "channels": 18,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 1 - 16-bit CMY": {
+            "channels": 20,
+            "gdtfMode": "Mode 1 - 16-bit CMY",
+            "status": "matched",
+            "parameters": 16
           },
-          "Mode 2": {
-            "channels": 9,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 2 - 8-bit CMY": {
+            "channels": 10,
+            "gdtfMode": "Mode 2 - 8-bit CMY",
+            "status": "matched",
+            "parameters": 11
           },
-          "Mode 3": {
-            "channels": 22,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 4": {
-            "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 5": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 6": {
+          "Mode 3 - 16-bit RGBAL": {
             "channels": 24,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 3 - 16-bit RGBAL",
+            "status": "matched",
+            "parameters": 18
           },
-          "Mode 7": {
-            "channels": 13,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 4 - White light + dimmer": {
+            "channels": 7,
+            "gdtfMode": "Mode 4 - White light + dimmer",
+            "status": "matched",
+            "parameters": 6
           },
-          "Mode 8": {
-            "channels": 28,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 5 - Zoom and dimmer": {
+            "channels": 2,
+            "gdtfMode": "Mode 5 - Zoom and dimmer",
+            "status": "matched",
+            "parameters": 4
+          },
+          "Mode 6 - Only dimmer": {
+            "channels": 1,
+            "gdtfMode": "Mode 6 - Only dimmer",
+            "status": "matched",
+            "parameters": 3
           }
         }
       },
@@ -5741,131 +5782,61 @@
     },
     {
       "fixture": "T15 PC",
-      "watts": 750,
-      "weight": 24.8,
+      "watts": 440.0,
+      "weight": 14.5,
       "modes": {
-        "Mode 1": 18,
-        "Mode 2": 9,
-        "Mode 3": 22,
-        "Mode 4": 5,
-        "Mode 5": 1,
-        "Mode 6": 24,
-        "Mode 7": 13,
-        "Mode 8": 28
+        "Mode 1 - 16-bit CMY": 20,
+        "Mode 2 - 8-bit CMY": 10,
+        "Mode 3 - 16-bit RGBAL": 24,
+        "Mode 4 - White light + dimmer": 7,
+        "Mode 5 - Zoom and dimmer": 2,
+        "Mode 6 - Only dimmer": 1
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__T15_PC.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_T15_Fresnel@2026-09-03_RDM_update_Beam_type_fix.gdtf",
         "modes": {
-          "Mode 1": {
-            "channels": 18,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 1 - 16-bit CMY": {
+            "channels": 20,
+            "gdtfMode": "Mode 1 - 16-bit CMY",
+            "status": "matched",
+            "parameters": 16
           },
-          "Mode 2": {
-            "channels": 9,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 2 - 8-bit CMY": {
+            "channels": 10,
+            "gdtfMode": "Mode 2 - 8-bit CMY",
+            "status": "matched",
+            "parameters": 11
           },
-          "Mode 3": {
-            "channels": 22,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 4": {
-            "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 5": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 6": {
+          "Mode 3 - 16-bit RGBAL": {
             "channels": 24,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 3 - 16-bit RGBAL",
+            "status": "matched",
+            "parameters": 18
           },
-          "Mode 7": {
-            "channels": 13,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 4 - White light + dimmer": {
+            "channels": 7,
+            "gdtfMode": "Mode 4 - White light + dimmer",
+            "status": "matched",
+            "parameters": 6
           },
-          "Mode 8": {
-            "channels": 28,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 5 - Zoom and dimmer": {
+            "channels": 2,
+            "gdtfMode": "Mode 5 - Zoom and dimmer",
+            "status": "matched",
+            "parameters": 4
+          },
+          "Mode 6 - Only dimmer": {
+            "channels": 1,
+            "gdtfMode": "Mode 6 - Only dimmer",
+            "status": "matched",
+            "parameters": 3
           }
         }
       },
       "shortName": "T15 PC"
-    },
-    {
-      "fixture": "T15 Profile",
-      "watts": 750,
-      "weight": 25.2,
-      "modes": {
-        "Mode 1": 18,
-        "Mode 2": 9,
-        "Mode 3": 22,
-        "Mode 4": 5,
-        "Mode 5": 1,
-        "Mode 6": 24,
-        "Mode 7": 13,
-        "Mode 8": 28
-      },
-      "gdtf": {
-        "status": "pending-download",
-        "folder": "fixtures/robe",
-        "suggestedFileName": "Robe__T15_Profile.gdtf",
-        "file": "",
-        "modes": {
-          "Mode 1": {
-            "channels": 18,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 2": {
-            "channels": 9,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 3": {
-            "channels": 22,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 4": {
-            "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 5": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 6": {
-            "channels": 24,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 7": {
-            "channels": 13,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 8": {
-            "channels": 28,
-            "gdtfMode": "",
-            "status": "pending-match"
-          }
-        }
-      },
-      "shortName": "T15 Profile"
     },
     {
       "fixture": "T2 Fresnel",
@@ -6291,63 +6262,36 @@
     },
     {
       "fixture": "T31 Cyc",
-      "watts": 300,
-      "weight": 9.5,
+      "watts": 270.0,
+      "weight": 15.8,
       "modes": {
-        "Mode 1": 18,
-        "Mode 2": 9,
-        "Mode 3": 22,
-        "Mode 4": 5,
-        "Mode 5": 1,
-        "Mode 6": 24,
-        "Mode 7": 13,
-        "Mode 8": 28
+        "Mode 1 - CMY": 28,
+        "Mode 1 - RGB": 28,
+        "Mode 2 - RGBAL": 32
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__T31_Cyc.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_T31_CYC@2026-07-21_Color_control_channel_update.gdtf",
         "modes": {
-          "Mode 1": {
-            "channels": 18,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 2": {
-            "channels": 9,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 3": {
-            "channels": 22,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 4": {
-            "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 5": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 6": {
-            "channels": 24,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 7": {
-            "channels": 13,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 8": {
+          "Mode 1 - CMY": {
             "channels": 28,
-            "gdtfMode": "",
-            "status": "pending-match"
+            "gdtfMode": "Mode 1 - CMY",
+            "status": "matched",
+            "parameters": 23
+          },
+          "Mode 1 - RGB": {
+            "channels": 28,
+            "gdtfMode": "Mode 1 - RGB",
+            "status": "matched",
+            "parameters": 23
+          },
+          "Mode 2 - RGBAL": {
+            "channels": 32,
+            "gdtfMode": "Mode 2 - RGBAL",
+            "status": "matched",
+            "parameters": 25
           }
         }
       },
@@ -6392,63 +6336,36 @@
     },
     {
       "fixture": "T32 Cyc",
-      "watts": 600,
-      "weight": 17.5,
+      "watts": 500.0,
+      "weight": 29.9,
       "modes": {
-        "Mode 1": 18,
-        "Mode 2": 9,
-        "Mode 3": 22,
-        "Mode 4": 5,
-        "Mode 5": 1,
-        "Mode 6": 24,
-        "Mode 7": 13,
-        "Mode 8": 28
+        "Mode 1 - CMY": 38,
+        "Mode 1 - RGB": 38,
+        "Mode 2 - RGBAL": 42
       },
       "gdtf": {
-        "status": "pending-download",
+        "status": "matched",
         "folder": "fixtures/robe",
         "suggestedFileName": "Robe__T32_Cyc.gdtf",
-        "file": "",
+        "file": "fixtures/robe/Robe_Lighting@Robin_T32_CYC@2026-07-21_Color_control_channel_update.gdtf",
         "modes": {
-          "Mode 1": {
-            "channels": 18,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 1 - CMY": {
+            "channels": 38,
+            "gdtfMode": "Mode 1 - CMY",
+            "status": "matched",
+            "parameters": 31
           },
-          "Mode 2": {
-            "channels": 9,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 1 - RGB": {
+            "channels": 38,
+            "gdtfMode": "Mode 1 - RGB",
+            "status": "matched",
+            "parameters": 31
           },
-          "Mode 3": {
-            "channels": 22,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 4": {
-            "channels": 5,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 5": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 6": {
-            "channels": 24,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 7": {
-            "channels": 13,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Mode 8": {
-            "channels": 28,
-            "gdtfMode": "",
-            "status": "pending-match"
+          "Mode 2 - RGBAL": {
+            "channels": 42,
+            "gdtfMode": "Mode 2 - RGBAL",
+            "status": "matched",
+            "parameters": 33
           }
         }
       },
