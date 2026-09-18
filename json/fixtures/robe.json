@@ -3,7 +3,7 @@
   "fixtures": [
     {
       "fixture": "100 LEDBeam",
-      "watts": 180.0,
+      "watts": 200.0,
       "weight": 4.5,
       "modes": {
         "Mode 1 Three LED Zones 16bit": 35,
@@ -61,7 +61,7 @@
     },
     {
       "fixture": "1200 LEDWash",
-      "watts": 1200.0,
+      "watts": 550.0,
       "weight": 18.2,
       "modes": {
         "Mode 1 Extended with all zones 16bit": 45,
@@ -119,7 +119,7 @@
     },
     {
       "fixture": "300 LEDWash",
-      "watts": 190.0,
+      "watts": 200.0,
       "weight": 8.2,
       "modes": {
         "Mode 1 Extended with all zones 16bit": 37,
@@ -170,7 +170,7 @@
     },
     {
       "fixture": "300X LEDWash",
-      "watts": 285.0,
+      "watts": 200.0,
       "weight": 8.2,
       "modes": {
         "Mode 1 Extended with all zones 16bit": 37,
@@ -221,7 +221,7 @@
     },
     {
       "fixture": "600 LEDWash",
-      "watts": 370.0,
+      "watts": 415.0,
       "weight": 10.6,
       "modes": {
         "Mode 1 Extended with all zones 16bit": 37,
@@ -279,7 +279,7 @@
     },
     {
       "fixture": "600 LEDWash SW",
-      "watts": 370.0,
+      "watts": 415.0,
       "weight": 10.6,
       "modes": {
         "Mode 1 Zones 16bit": 24,
@@ -330,7 +330,7 @@
     },
     {
       "fixture": "600X LEDWash",
-      "watts": 555.0,
+      "watts": 430.0,
       "weight": 10.6,
       "modes": {
         "Mode 1 Extended with all zones 16bit": 37,
@@ -388,7 +388,7 @@
     },
     {
       "fixture": "800 LEDWash SW",
-      "watts": 370.0,
+      "watts": 430.0,
       "weight": 10.6,
       "modes": {
         "Mode 1 Zones 16bit": 25,
@@ -446,7 +446,7 @@
     },
     {
       "fixture": "800X LEDWash",
-      "watts": 555.0,
+      "watts": 430.0,
       "weight": 11.0,
       "modes": {
         "Mode 1 Extended with all zones 16bit": 38,
@@ -504,7 +504,7 @@
     },
     {
       "fixture": "Actor 6",
-      "watts": 555.0,
+      "watts": 415.0,
       "weight": 8.8,
       "modes": {
         "mode 1 - zone mode": 32,
@@ -561,8 +561,45 @@
       "shortName": "Actor 6"
     },
     {
+      "fixture": "Arianne 12",
+      "watts": 1700.0,
+      "weight": 30.0,
+      "modes": {
+        "Mode 1 - LB Compatible": 22,
+        "Mode 2 - Festival": 27,
+        "Mode 3 - Full+ScreenPix": 66
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Arianne_12.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Arianne_12@2026-09-02_Initial_release_to_share.gdtf",
+        "modes": {
+          "Mode 1 - LB Compatible": {
+            "channels": 22,
+            "gdtfMode": "Mode 1 - LB Compatible",
+            "status": "matched",
+            "parameters": 14
+          },
+          "Mode 2 - Festival": {
+            "channels": 27,
+            "gdtfMode": "Mode 2 - Festival",
+            "status": "matched",
+            "parameters": 19
+          },
+          "Mode 3 - Full+ScreenPix": {
+            "channels": 66,
+            "gdtfMode": "Mode 3 - Full+ScreenPix",
+            "status": "matched",
+            "parameters": 46
+          }
+        }
+      },
+      "shortName": "Arianne12"
+    },
+    {
       "fixture": "Arianne 2",
-      "watts": 330,
+      "watts": 330.0,
       "weight": 11.5,
       "modes": {
         "Mode 1 - LB Compatible": 22,
@@ -598,8 +635,45 @@
       "shortName": "Arianne2"
     },
     {
+      "fixture": "Arianne 4",
+      "watts": 550.0,
+      "weight": 15.5,
+      "modes": {
+        "Mode 1 - LB Compatible": 22,
+        "Mode 2 - Festival": 27,
+        "Mode 3 - Full+ScreenPix": 50
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__Arianne_4.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_Arianne_4@2026-09-02_Initial_release_to_share.gdtf",
+        "modes": {
+          "Mode 1 - LB Compatible": {
+            "channels": 22,
+            "gdtfMode": "Mode 1 - LB Compatible",
+            "status": "matched",
+            "parameters": 14
+          },
+          "Mode 2 - Festival": {
+            "channels": 27,
+            "gdtfMode": "Mode 2 - Festival",
+            "status": "matched",
+            "parameters": 19
+          },
+          "Mode 3 - Full+ScreenPix": {
+            "channels": 50,
+            "gdtfMode": "Mode 3 - Full+ScreenPix",
+            "status": "matched",
+            "parameters": 36
+          }
+        }
+      },
+      "shortName": "Arianne4"
+    },
+    {
       "fixture": "Arianne 6",
-      "watts": 950,
+      "watts": 950.0,
       "weight": 18.0,
       "modes": {
         "Mode 1 - LB Compatible": 22,
@@ -636,7 +710,7 @@
     },
     {
       "fixture": "BMFL Blade",
-      "watts": 2000,
+      "watts": 2000.0,
       "weight": 37.9,
       "modes": {
         "Mode 1 - Standard 16 bit": 49,
@@ -662,12 +736,12 @@
           }
         }
       },
-      "shortName": "BMFL Blade"
+      "shortName": "BMFLBlade"
     },
     {
       "fixture": "BMFL Followspot",
-      "watts": 2000,
-      "weight": 35,
+      "watts": 2000.0,
+      "weight": 35.0,
       "modes": {
         "Mode 1 - Standard 16 bit": 33,
         "Mode 2 - Reduced 8 bit": 27
@@ -692,12 +766,12 @@
           }
         }
       },
-      "shortName": "BMFL Followspot"
+      "shortName": "BMFL FollowSpot"
     },
     {
       "fixture": "BMFL Followspot LT",
-      "watts": 2000,
-      "weight": 35,
+      "watts": 2000.0,
+      "weight": 35.0,
       "modes": {
         "Mode 1 - Standard 16 bit": 33,
         "Mode 2 - Reduced 8 bit": 27
@@ -722,12 +796,12 @@
           }
         }
       },
-      "shortName": "BMFL Followspot LT"
+      "shortName": "BMFL FollowSpot LT"
     },
     {
       "fixture": "BMFL Spot",
-      "watts": 2000,
-      "weight": 36,
+      "watts": 2000.0,
+      "weight": 36.0,
       "modes": {
         "Mode 1 - Standard 16 bit": 41,
         "Mode 2 - Reduced 8 bit ": 33
@@ -756,7 +830,7 @@
     },
     {
       "fixture": "BMFL Wash",
-      "watts": 1700.0,
+      "watts": 2000.0,
       "weight": 35.0,
       "modes": {
         "Mode 1 - Standard 16 bit": 25,
@@ -786,7 +860,7 @@
     },
     {
       "fixture": "BMFL Wash XF",
-      "watts": 1700.0,
+      "watts": 2000.0,
       "weight": 35.8,
       "modes": {
         "Mode 1 - Standard 16 bit": 34,
@@ -816,7 +890,7 @@
     },
     {
       "fixture": "BMFL WashBeam",
-      "watts": 1700.0,
+      "watts": 2000.0,
       "weight": 38.4,
       "modes": {
         "Mode 1 - Standard 16 bit": 48,
@@ -846,7 +920,7 @@
     },
     {
       "fixture": "BMFL WashBeam EV",
-      "watts": 1700.0,
+      "watts": 2000.0,
       "weight": 38.4,
       "modes": {
         "Mode 1 - Standard 16 bit": 48,
@@ -876,7 +950,7 @@
     },
     {
       "fixture": "ColorStrobe",
-      "watts": 1800.0,
+      "watts": 1300.0,
       "weight": 16.8,
       "modes": {
         "Mode 1 - RGBW No zones 8bit": 9,
@@ -927,7 +1001,7 @@
     },
     {
       "fixture": "ColorStrobe IP",
-      "watts": 420.0,
+      "watts": 440.0,
       "weight": 15.3,
       "modes": {
         "Mode 1 - RGBW": 9,
@@ -985,7 +1059,7 @@
     },
     {
       "fixture": "CUETE",
-      "watts": 440,
+      "watts": 220.0,
       "weight": 11.5,
       "modes": {
         "Mode 1 - Standard": 29
@@ -1008,7 +1082,7 @@
     },
     {
       "fixture": "CycBar 15",
-      "watts": 225.0,
+      "watts": 170.0,
       "weight": 11.1,
       "modes": {
         "Mode 1 - Standard 16 - bit": 16,
@@ -1066,7 +1140,7 @@
     },
     {
       "fixture": "CycBar 15X",
-      "watts": 225.0,
+      "watts": 170.0,
       "weight": 11.1,
       "modes": {
         "Mode 1 - Standard 16 - bit": 16,
@@ -1124,7 +1198,7 @@
     },
     {
       "fixture": "CycFX 8",
-      "watts": 85.0,
+      "watts": 415.0,
       "weight": 12.0,
       "modes": {
         "Mode 1 - 8 bit": 14,
@@ -1189,7 +1263,7 @@
     },
     {
       "fixture": "DL4S Profile",
-      "watts": 500.0,
+      "watts": 550.0,
       "weight": 22.7,
       "modes": {
         "Mode 1 RGBW": 47,
@@ -1247,7 +1321,7 @@
     },
     {
       "fixture": "DL4X Spot",
-      "watts": 500.0,
+      "watts": 550.0,
       "weight": 22.7,
       "modes": {
         "Mode 1 RGBW": 35,
@@ -1305,7 +1379,7 @@
     },
     {
       "fixture": "DL7F Wash",
-      "watts": 800.0,
+      "watts": 1000.0,
       "weight": 35.8,
       "modes": {
         "Mode 1 - RGB": 34,
@@ -1363,7 +1437,7 @@
     },
     {
       "fixture": "DL7S Profile",
-      "watts": 800.0,
+      "watts": 1000.0,
       "weight": 35.9,
       "modes": {
         "Mode 1 - RGB": 51,
@@ -1421,7 +1495,7 @@
     },
     {
       "fixture": "DLX Spot",
-      "watts": 500.0,
+      "watts": 550.0,
       "weight": 20.8,
       "modes": {
         "Mode 1 RGBW": 35,
@@ -1479,7 +1553,7 @@
     },
     {
       "fixture": "Esprite",
-      "watts": 650.0,
+      "watts": 950.0,
       "weight": 28.2,
       "modes": {
         "Mode 1 - Standard 16 bit": 49,
@@ -1530,7 +1604,7 @@
     },
     {
       "fixture": "Esprite Fresnel",
-      "watts": 650.0,
+      "watts": 950.0,
       "weight": 26.3,
       "modes": {
         "Mode 1 - Standard 16 bit": 34,
@@ -1574,7 +1648,7 @@
     },
     {
       "fixture": "Esprite FS",
-      "watts": 650.0,
+      "watts": 950.0,
       "weight": 29.4,
       "modes": {
         "Mode 1 - Standard 16 bit": 49,
@@ -1625,7 +1699,7 @@
     },
     {
       "fixture": "Esprite PC",
-      "watts": 650.0,
+      "watts": 950.0,
       "weight": 26.3,
       "modes": {
         "Mode 1 - Standard 16 bit": 34,
@@ -1709,7 +1783,7 @@
     },
     {
       "fixture": "Footsie1 MC",
-      "watts": 100.0,
+      "watts": 45.0,
       "weight": 10.6,
       "modes": {
         "Mode 1 Simple": 5,
@@ -1746,7 +1820,7 @@
     },
     {
       "fixture": "Footsie1 Slim RGBW",
-      "watts": 724.0,
+      "watts": 45.0,
       "weight": 7.5,
       "modes": {
         "Mode 1 Simple": 5,
@@ -1783,7 +1857,7 @@
     },
     {
       "fixture": "Footsie1 Slim TW",
-      "watts": 724.0,
+      "watts": 45.0,
       "weight": 7.5,
       "modes": {
         "Mode 1 Simple": 2,
@@ -1820,7 +1894,7 @@
     },
     {
       "fixture": "Footsie1 Slim WW",
-      "watts": 724.0,
+      "watts": 45.0,
       "weight": 7.5,
       "modes": {
         "Mode 1 Simple": 1,
@@ -1857,7 +1931,7 @@
     },
     {
       "fixture": "Footsie1 TW",
-      "watts": 724.0,
+      "watts": 45.0,
       "weight": 11.3,
       "modes": {
         "Mode 1 Simple": 2,
@@ -1934,7 +2008,7 @@
     },
     {
       "fixture": "Footsie2 MC",
-      "watts": 200.0,
+      "watts": 85.0,
       "weight": 19.7,
       "modes": {
         "Mode 1 Simple": 5,
@@ -1971,7 +2045,7 @@
     },
     {
       "fixture": "Footsie2 RGBW",
-      "watts": 1448.0,
+      "watts": 85.0,
       "weight": 21.2,
       "modes": {
         "Mode 1 Simple": 5,
@@ -2008,7 +2082,7 @@
     },
     {
       "fixture": "Footsie2 Slim WW",
-      "watts": 1467.5,
+      "watts": 85.0,
       "weight": 13.3,
       "modes": {
         "Mode 1 Simple": 1,
@@ -2045,7 +2119,7 @@
     },
     {
       "fixture": "Footsie2 TW Frost Shield",
-      "watts": 1448.0,
+      "watts": 85.0,
       "weight": 23.49,
       "modes": {
         "Mode 1 Simple": 2,
@@ -2082,7 +2156,7 @@
     },
     {
       "fixture": "Footsie2 WW",
-      "watts": 1467.5,
+      "watts": 85.0,
       "weight": 21.2,
       "modes": {
         "Mode 1 Simple": 1,
@@ -2119,7 +2193,7 @@
     },
     {
       "fixture": "Footsie2 WW Frost Shield",
-      "watts": 1467.5,
+      "watts": 85.0,
       "weight": 23.49,
       "modes": {
         "Mode 1 Simple": 1,
@@ -2156,7 +2230,7 @@
     },
     {
       "fixture": "FORTE",
-      "watts": 1250,
+      "watts": 1250.0,
       "weight": 39.8,
       "modes": {
         "Mode 1 - Standard 16 bit": 54,
@@ -2186,7 +2260,7 @@
     },
     {
       "fixture": "Forte Fresnel",
-      "watts": 1000.0,
+      "watts": 1250.0,
       "weight": 38.1,
       "modes": {
         "Mode 1 - Standard 16 bit": 35
@@ -2209,7 +2283,7 @@
     },
     {
       "fixture": "Forte FS",
-      "watts": 1000.0,
+      "watts": 1250.0,
       "weight": 42.2,
       "modes": {
         "Mode 1 - Standard 16 bit": 54,
@@ -2239,7 +2313,7 @@
     },
     {
       "fixture": "Forte HCF",
-      "watts": 1000.0,
+      "watts": 1250.0,
       "weight": 39.8,
       "modes": {
         "Mode 1 - Standard 16 bit": 54,
@@ -2269,7 +2343,7 @@
     },
     {
       "fixture": "Forte PC",
-      "watts": 1000.0,
+      "watts": 1250.0,
       "weight": 38.5,
       "modes": {
         "Mode 1 - Standard 16 bit": 35
@@ -2292,7 +2366,7 @@
     },
     {
       "fixture": "GigaPointe",
-      "watts": 500,
+      "watts": 500.0,
       "weight": 26.5,
       "modes": {
         "Mode 1 - MegaPointe": 39,
@@ -2351,7 +2425,7 @@
     },
     {
       "fixture": "iBar 15",
-      "watts": 850,
+      "watts": 170.0,
       "weight": 11.1,
       "modes": {
         "Mode 1 - Standard 16 - bit": 16,
@@ -2405,11 +2479,11 @@
           }
         }
       },
-      "shortName": "iBar 15"
+      "shortName": "iBar15"
     },
     {
       "fixture": "iBeam 350",
-      "watts": 450,
+      "watts": 460.0,
       "weight": 15.5,
       "modes": {
         "Mode 1 - Standard 16 - bit": 22,
@@ -2446,7 +2520,7 @@
     },
     {
       "fixture": "iBolt",
-      "watts": 700,
+      "watts": 700.0,
       "weight": 54.4,
       "modes": {
         "Mode 1 - Standard 16 bit": 37
@@ -2509,7 +2583,7 @@
     },
     {
       "fixture": "iEsprite LTL FS",
-      "watts": 950,
+      "watts": 950.0,
       "weight": 37.0,
       "modes": {
         "Mode 1 - Standard 16bit": 53
@@ -2532,7 +2606,7 @@
     },
     {
       "fixture": "iEsprite LTL WB",
-      "watts": 750.0,
+      "watts": 950.0,
       "weight": 37.0,
       "modes": {
         "Mode 1 - Standard 16bit": 53
@@ -2555,7 +2629,7 @@
     },
     {
       "fixture": "iForte",
-      "watts": 1250,
+      "watts": 1250.0,
       "weight": 42.5,
       "modes": {
         "Mode 1 - Standard 16 bit": 54,
@@ -2581,11 +2655,11 @@
           }
         }
       },
-      "shortName": "iForte"
+      "shortName": "iFORTE"
     },
     {
       "fixture": "iForte Fresnel",
-      "watts": 1000.0,
+      "watts": 1250.0,
       "weight": 41.0,
       "modes": {
         "Mode 1 - Standard 16 bit": 39
@@ -2608,7 +2682,7 @@
     },
     {
       "fixture": "iForte FS",
-      "watts": 1000.0,
+      "watts": 1250.0,
       "weight": 43.8,
       "modes": {
         "Mode 1 - Standard 16 bit": 54,
@@ -2660,7 +2734,7 @@
     },
     {
       "fixture": "iForte LTX WB",
-      "watts": 1000.0,
+      "watts": 1250.0,
       "weight": 48.0,
       "modes": {
         "Mode 1 - Standard 16 bit": 54
@@ -2683,7 +2757,7 @@
     },
     {
       "fixture": "iPainte",
-      "watts": 440,
+      "watts": 440.0,
       "weight": 25.5,
       "modes": {
         "Mode 1 - Standard 16 bit": 44,
@@ -2713,7 +2787,7 @@
     },
     {
       "fixture": "iPAINTE LTM WB",
-      "watts": 700,
+      "watts": 700.0,
       "weight": 29.9,
       "modes": {
         "Mode 1 - Standard 16bit": 51
@@ -2770,7 +2844,7 @@
     },
     {
       "fixture": "iParFect 150 FW RGBA",
-      "watts": 220.0,
+      "watts": 180.0,
       "weight": 7.3,
       "modes": {
         "Mode 1 - Standard 16 - bit": 17,
@@ -2807,7 +2881,7 @@
     },
     {
       "fixture": "iParFect 150 FW RGBW",
-      "watts": 220.0,
+      "watts": 180.0,
       "weight": 7.3,
       "modes": {
         "Mode 1 - Standard 16 - bit": 17,
@@ -2844,7 +2918,7 @@
     },
     {
       "fixture": "iPointe",
-      "watts": 310.0,
+      "watts": 550.0,
       "weight": 38.0,
       "modes": {
         "Mode 1 - Standard 16 - bit": 39,
@@ -2874,7 +2948,7 @@
     },
     {
       "fixture": "iPointe65",
-      "watts": 310.0,
+      "watts": 550.0,
       "weight": 38.0,
       "modes": {
         "Mode 1 - Standard 16 - bit": 39,
@@ -2903,8 +2977,52 @@
       "shortName": "iPointe65"
     },
     {
+      "fixture": "iProMotion",
+      "watts": 140.0,
+      "weight": 21.3,
+      "modes": {
+        "Mode 1 - CMY 1": 26,
+        "Mode 2 - CMY": 34,
+        "Mode 1 - CMY - for older sw version": 25,
+        "Mode 2 - CMY - for older sw version": 33
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iProMotion.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_iProMotion@2025-11-18__Control_channel_revision.gdtf",
+        "modes": {
+          "Mode 1 - CMY 1": {
+            "channels": 26,
+            "gdtfMode": "Mode 1 - CMY 1",
+            "status": "matched",
+            "parameters": 23
+          },
+          "Mode 2 - CMY": {
+            "channels": 34,
+            "gdtfMode": "Mode 2 - CMY",
+            "status": "matched",
+            "parameters": 31
+          },
+          "Mode 1 - CMY - for older sw version": {
+            "channels": 25,
+            "gdtfMode": "Mode 1 - CMY - for older sw version",
+            "status": "matched",
+            "parameters": 22
+          },
+          "Mode 2 - CMY - for older sw version": {
+            "channels": 33,
+            "gdtfMode": "Mode 2 - CMY - for older sw version",
+            "status": "matched",
+            "parameters": 30
+          }
+        }
+      },
+      "shortName": "iProMotion"
+    },
+    {
       "fixture": "iSpiider",
-      "watts": 820.0,
+      "watts": 660.0,
       "weight": 24.7,
       "modes": {
         "Mode 10 - Pattern full RGBW": 123,
@@ -2990,7 +3108,7 @@
     },
     {
       "fixture": "iSpiider X",
-      "watts": 660,
+      "watts": 660.0,
       "weight": 18.0,
       "modes": {
         "Mode 10 - Pattern full RGBW": 123,
@@ -3072,11 +3190,83 @@
           }
         }
       },
-      "shortName": "iSpiider X"
+      "shortName": "iSpiiderX"
+    },
+    {
+      "fixture": "iT10 Profile",
+      "watts": 350.0,
+      "weight": 19.8,
+      "modes": {
+        "Mode 1 - 16-bit CMY": 24,
+        "Mode 2 - 16-bit RGBAL": 28,
+        "Mode 3 - 16-bit CMY + Framing module": 35,
+        "Mode 4 - 16-bit  RGBAL + Framing module": 39,
+        "Mode 5 - 16-bit CMY + Gobo module": 32,
+        "Mode 6 - 16-bit  RGBAL + Gobo module": 36,
+        "Mode 7 - 16-bit CMY + Gobo + Framing module": 43,
+        "Mode 8- 16-bit RGBAL Gobo+ Framing": 47
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__iT10_Profile.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_iT10_Profile@2026-09-02_Initial_release_to_share.gdtf",
+        "modes": {
+          "Mode 1 - 16-bit CMY": {
+            "channels": 24,
+            "gdtfMode": "Mode 1 - 16-bit CMY",
+            "status": "matched",
+            "parameters": 19
+          },
+          "Mode 2 - 16-bit RGBAL": {
+            "channels": 28,
+            "gdtfMode": "Mode 2 - 16-bit RGBAL",
+            "status": "matched",
+            "parameters": 21
+          },
+          "Mode 3 - 16-bit CMY + Framing module": {
+            "channels": 35,
+            "gdtfMode": "Mode 3 - 16-bit CMY + Framing module",
+            "status": "matched",
+            "parameters": 29
+          },
+          "Mode 4 - 16-bit  RGBAL + Framing module": {
+            "channels": 39,
+            "gdtfMode": "Mode 4 - 16-bit  RGBAL + Framing module",
+            "status": "matched",
+            "parameters": 31
+          },
+          "Mode 5 - 16-bit CMY + Gobo module": {
+            "channels": 32,
+            "gdtfMode": "Mode 5 - 16-bit CMY + Gobo module",
+            "status": "matched",
+            "parameters": 25
+          },
+          "Mode 6 - 16-bit  RGBAL + Gobo module": {
+            "channels": 36,
+            "gdtfMode": "Mode 6 - 16-bit  RGBAL + Gobo module",
+            "status": "matched",
+            "parameters": 27
+          },
+          "Mode 7 - 16-bit CMY + Gobo + Framing module": {
+            "channels": 43,
+            "gdtfMode": "Mode 7 - 16-bit CMY + Gobo + Framing module",
+            "status": "matched",
+            "parameters": 35
+          },
+          "Mode 8- 16-bit RGBAL Gobo+ Framing": {
+            "channels": 47,
+            "gdtfMode": "Mode 8- 16-bit RGBAL Gobo+ Framing",
+            "status": "matched",
+            "parameters": 37
+          }
+        }
+      },
+      "shortName": "iT10"
     },
     {
       "fixture": "iT12 Fresnel",
-      "watts": 420,
+      "watts": 640.0,
       "weight": 25.3,
       "modes": {
         "Mode 1 - 16-bit CMY": 24,
@@ -3482,7 +3672,7 @@
     },
     {
       "fixture": "LEDBeam 200",
-      "watts": 330,
+      "watts": 330.0,
       "weight": 5.9,
       "modes": {
         "Mode 1 - Arianne Compatible": 22,
@@ -3519,7 +3709,7 @@
     },
     {
       "fixture": "LEDBeam 350",
-      "watts": 450,
+      "watts": 450.0,
       "weight": 9.85,
       "modes": {
         "Mode 1 - Standard 16 - bit": 22,
@@ -3556,7 +3746,7 @@
     },
     {
       "fixture": "LEDBeam 350 FW",
-      "watts": 450,
+      "watts": 450.0,
       "weight": 9.85,
       "modes": {
         "Mode 1 - Standard 16 - bit": 22,
@@ -3593,7 +3783,7 @@
     },
     {
       "fixture": "LEDBeam 350 RGBA",
-      "watts": 400.0,
+      "watts": 450.0,
       "weight": 9.85,
       "modes": {
         "Mode 1 - Standard 16 - bit": 22,
@@ -3629,8 +3819,45 @@
       "shortName": "LEDBeam 350 RGBA"
     },
     {
+      "fixture": "LEDBeam 400",
+      "watts": 550.0,
+      "weight": 11.0,
+      "modes": {
+        "Mode 1 - Arianne Compatible": 22,
+        "Mode 2 - Festival": 27,
+        "Mode 3 - Full+Screenpix": 50
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__LEDBeam_400.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_LEDBeam_400@2026-09-02_Initial_release_to_share.gdtf",
+        "modes": {
+          "Mode 1 - Arianne Compatible": {
+            "channels": 22,
+            "gdtfMode": "Mode 1 - Arianne Compatible",
+            "status": "matched",
+            "parameters": 14
+          },
+          "Mode 2 - Festival": {
+            "channels": 27,
+            "gdtfMode": "Mode 2 - Festival",
+            "status": "matched",
+            "parameters": 19
+          },
+          "Mode 3 - Full+Screenpix": {
+            "channels": 50,
+            "gdtfMode": "Mode 3 - Full+Screenpix",
+            "status": "matched",
+            "parameters": 36
+          }
+        }
+      },
+      "shortName": "LB400"
+    },
+    {
       "fixture": "LEDForce 18 RGBW",
-      "watts": 90.0,
+      "watts": 95.0,
       "weight": 4.9,
       "modes": {
         "Mode 1 RGBW": 4,
@@ -3660,7 +3887,7 @@
     },
     {
       "fixture": "LEDForce 7 RGBW",
-      "watts": 35.0,
+      "watts": 38.0,
       "weight": 1.9,
       "modes": {
         "Mode 1 RGBW": 4,
@@ -3712,8 +3939,8 @@
     },
     {
       "fixture": "MegaPointe",
-      "watts": 670,
-      "weight": 22,
+      "watts": 670.0,
+      "weight": 22.0,
       "modes": {
         "Mode 1 - Standard 16 - bit": 39,
         "Mode 2 - Reduced 8 - bit": 34
@@ -3742,7 +3969,7 @@
     },
     {
       "fixture": "MiniMe",
-      "watts": 90.0,
+      "watts": 100.0,
       "weight": 5.2,
       "modes": {
         "Mode 1 - Standard": 24
@@ -3765,7 +3992,7 @@
     },
     {
       "fixture": "miniPointe",
-      "watts": 280,
+      "watts": 260.0,
       "weight": 11.8,
       "modes": {
         "Mode 1 - Standard 16bit": 22,
@@ -3802,7 +4029,7 @@
     },
     {
       "fixture": "MMX WashBeam",
-      "watts": 800.0,
+      "watts": 1020.0,
       "weight": 25.5,
       "modes": {
         "Mode 1 - Standard": 34,
@@ -3839,7 +4066,7 @@
     },
     {
       "fixture": "MolyPATT",
-      "watts": 300,
+      "watts": 20.0,
       "weight": 4.8,
       "modes": {
         "Needs external dimmer - 8 bit dimmer": 1,
@@ -3868,6 +4095,57 @@
       "shortName": "MolyPATT"
     },
     {
+      "fixture": "MySVOPATT",
+      "watts": 2300.0,
+      "weight": 67.4,
+      "modes": {
+        "Mode 1 - Wash": 30,
+        "Mode 2 - Individual LED modules": 130,
+        "Mode 3 - LED modules and pixels": 389,
+        "Mode 4 - Pixel mode": 291,
+        "Mode 5 - One channel mode 2700K": 6
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__MySVOPATT.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@MySVOPATT@2026-09-02_Initial_release_to_share.gdtf",
+        "modes": {
+          "Mode 1 - Wash": {
+            "channels": 30,
+            "gdtfMode": "Mode 1 - Wash",
+            "status": "matched",
+            "parameters": 21
+          },
+          "Mode 2 - Individual LED modules": {
+            "channels": 130,
+            "gdtfMode": "Mode 2 - Individual LED modules",
+            "status": "matched",
+            "parameters": 89
+          },
+          "Mode 3 - LED modules and pixels": {
+            "channels": 389,
+            "gdtfMode": "Mode 3 - LED modules and pixels",
+            "status": "matched",
+            "parameters": 407
+          },
+          "Mode 4 - Pixel mode": {
+            "channels": 291,
+            "gdtfMode": "Mode 4 - Pixel mode",
+            "status": "matched",
+            "parameters": 340
+          },
+          "Mode 5 - One channel mode 2700K": {
+            "channels": 6,
+            "gdtfMode": "Mode 5 - One channel mode 2700K",
+            "status": "matched",
+            "parameters": 8
+          }
+        }
+      },
+      "shortName": "MySVPTT"
+    },
+    {
       "fixture": "onePATT",
       "watts": 300,
       "weight": 9.5,
@@ -3891,7 +4169,7 @@
     },
     {
       "fixture": "PAINTE",
-      "watts": 440,
+      "watts": 440.0,
       "weight": 19.6,
       "modes": {
         "Mode 1 - Standard 16 bit": 44,
@@ -3917,11 +4195,11 @@
           }
         }
       },
-      "shortName": "PAINTE"
+      "shortName": "Painte"
     },
     {
       "fixture": "Painte Spot",
-      "watts": 310.0,
+      "watts": 440.0,
       "weight": 18.08,
       "modes": {
         "Mode 1 - Standard 16 bit": 35,
@@ -4119,7 +4397,7 @@
     },
     {
       "fixture": "PATT 2013",
-      "watts": 750,
+      "watts": 750.0,
       "weight": 7.2,
       "modes": {
         "Needs external dimmer - mode with virtual channels": 0,
@@ -4152,11 +4430,11 @@
           }
         }
       },
-      "shortName": "PATT 2013"
+      "shortName": "PATT2013"
     },
     {
       "fixture": "PATT 2017",
-      "watts": 300,
+      "watts": 210.0,
       "weight": 10.3,
       "modes": {
         "Mode 1 - Wash": 13,
@@ -4217,7 +4495,7 @@
           }
         }
       },
-      "shortName": "PATT 2017"
+      "shortName": "PATT2017"
     },
     {
       "fixture": "picklePATT",
@@ -4243,7 +4521,7 @@
     },
     {
       "fixture": "pixelPATT",
-      "watts": 280.0,
+      "watts": 210.0,
       "weight": 12.0,
       "modes": {
         "Mode 1 - Wash": 13,
@@ -4308,7 +4586,7 @@
     },
     {
       "fixture": "Pointe",
-      "watts": 280.0,
+      "watts": 470.0,
       "weight": 15.0,
       "modes": {
         "Mode 1 - Standard 16bit": 24,
@@ -4345,7 +4623,7 @@
     },
     {
       "fixture": "ProMotion",
-      "watts": 90.0,
+      "watts": 140.0,
       "weight": 12.0,
       "modes": {
         "Mode 1 - CMY": 25,
@@ -4374,8 +4652,31 @@
       "shortName": "ProMotion"
     },
     {
+      "fixture": "RoboSpot MotionCamera",
+      "watts": 35.0,
+      "weight": 5.7,
+      "modes": {
+        "Mode 1 - standard": 8
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__RoboSpot_MotionCamera.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@RoboSpot_MotionCamera@2024-06-14__3D_models_revision.gdtf",
+        "modes": {
+          "Mode 1 - standard": {
+            "channels": 8,
+            "gdtfMode": "Mode 1 - standard",
+            "status": "matched",
+            "parameters": 6
+          }
+        }
+      },
+      "shortName": "MotionCamera"
+    },
+    {
       "fixture": "Scan 575XT",
-      "watts": 350.0,
+      "watts": 575.0,
       "weight": 22.0,
       "modes": {
         "Mode 1": 16,
@@ -4412,7 +4713,7 @@
     },
     {
       "fixture": "SilverScan",
-      "watts": 440,
+      "watts": 400.0,
       "weight": 16.5,
       "modes": {
         "Mode 1 - Standard": 32,
@@ -4442,7 +4743,7 @@
     },
     {
       "fixture": "Spiider",
-      "watts": 660,
+      "watts": 660.0,
       "weight": 13.25,
       "modes": {
         "Mode 10 - Pattern full RGBW": 123,
@@ -4528,7 +4829,7 @@
     },
     {
       "fixture": "Spikie",
-      "watts": 60.0,
+      "watts": 100.0,
       "weight": 7.5,
       "modes": {
         "Mode 1 Standard 16-bit": 27,
@@ -4558,7 +4859,7 @@
     },
     {
       "fixture": "Spikie+",
-      "watts": 100,
+      "watts": 100.0,
       "weight": 7.5,
       "modes": {
         "Mode 1 Standard 16-bit": 27,
@@ -4588,7 +4889,7 @@
     },
     {
       "fixture": "Spote",
-      "watts": 70.0,
+      "watts": 130.0,
       "weight": 10.5,
       "modes": {
         "Mode 1 - Standard": 25
@@ -4611,7 +4912,7 @@
     },
     {
       "fixture": "SuperSpikie",
-      "watts": 250.0,
+      "watts": 330.0,
       "weight": 18.5,
       "modes": {
         "Mode 1 Full": 31
@@ -4714,7 +5015,7 @@
     },
     {
       "fixture": "SVOPATT Classic",
-      "watts": 2400,
+      "watts": 2400.0,
       "weight": 36.3,
       "modes": {
         "Mode 1 - Wash": 19,
@@ -4758,7 +5059,7 @@
     },
     {
       "fixture": "T.5 Profile",
-      "watts": 550,
+      "watts": 480.0,
       "weight": 20.8,
       "modes": {
         "Mode 1 - CMY": 49,
@@ -4809,7 +5110,7 @@
     },
     {
       "fixture": "T1 Fresnel",
-      "watts": 550.0,
+      "watts": 750.0,
       "weight": 22.6,
       "modes": {
         "Mode 1 - CMY": 35,
@@ -4860,7 +5161,7 @@
     },
     {
       "fixture": "T1 PC",
-      "watts": 550.0,
+      "watts": 750.0,
       "weight": 22.6,
       "modes": {
         "Mode 1 - CMY": 35,
@@ -4911,7 +5212,7 @@
     },
     {
       "fixture": "T1 Profile",
-      "watts": 750,
+      "watts": 750.0,
       "weight": 24.3,
       "modes": {
         "Mode 1 - CMY": 49,
@@ -4958,11 +5259,11 @@
           }
         }
       },
-      "shortName": "T1 Profile"
+      "shortName": "T1Profile"
     },
     {
       "fixture": "T1 Profile FS",
-      "watts": 650.0,
+      "watts": 750.0,
       "weight": 25.5,
       "modes": {
         "Mode 1 - CMY": 49,
@@ -5141,7 +5442,7 @@
     },
     {
       "fixture": "T10 Profile",
-      "watts": 275,
+      "watts": 275.0,
       "weight": 10.6,
       "modes": {
         "Mode 1 - 16-bit CMY": 18,
@@ -5209,7 +5510,7 @@
           }
         }
       },
-      "shortName": "T10 Profile"
+      "shortName": "T10Profile"
     },
     {
       "fixture": "T11 Fresnel",
@@ -5341,7 +5642,7 @@
     },
     {
       "fixture": "T11 Profile",
-      "watts": 420,
+      "watts": 440.0,
       "weight": 15.3,
       "modes": {
         "Mode 1 - 16-bit CMY": 18,
@@ -5409,7 +5710,7 @@
           }
         }
       },
-      "shortName": "T11 Profile"
+      "shortName": "T11Profile"
     },
     {
       "fixture": "T15 Fresnel",
@@ -5605,7 +5906,7 @@
     },
     {
       "fixture": "T2 Fresnel",
-      "watts": 850.0,
+      "watts": 1150.0,
       "weight": 33.5,
       "modes": {
         "Mode 1 - CMY": 35,
@@ -5656,7 +5957,7 @@
     },
     {
       "fixture": "T2 PC",
-      "watts": 850.0,
+      "watts": 1150.0,
       "weight": 33.0,
       "modes": {
         "Mode 1 - CMY": 35,
@@ -5707,7 +6008,7 @@
     },
     {
       "fixture": "T2 Profile",
-      "watts": 1150,
+      "watts": 1150.0,
       "weight": 36.9,
       "modes": {
         "Mode 1 - CMY": 52,
@@ -5758,8 +6059,8 @@
     },
     {
       "fixture": "T2 Profile FS",
-      "watts": 1150,
-      "weight": 38,
+      "watts": 1150.0,
+      "weight": 38.0,
       "modes": {
         "Mode 1 - CMY": 52,
         "Mode 1 - RGB": 52,
@@ -5805,11 +6106,11 @@
           }
         }
       },
-      "shortName": "T2 Profile FS"
+      "shortName": "T2ProfileFS"
     },
     {
       "fixture": "T3 Fresnel",
-      "watts": 1700,
+      "watts": 1700.0,
       "weight": 45.0,
       "modes": {
         "Mode 1 - CMY": 35,
@@ -5860,7 +6161,7 @@
     },
     {
       "fixture": "T3 PC",
-      "watts": 1700,
+      "watts": 1700.0,
       "weight": 45.6,
       "modes": {
         "Mode 1 - CMY": 35,
@@ -5911,7 +6212,7 @@
     },
     {
       "fixture": "T3 Profile",
-      "watts": 1700,
+      "watts": 1700.0,
       "weight": 45.6,
       "modes": {
         "Mode 1 - CMY": 52,
@@ -5966,6 +6267,64 @@
         }
       },
       "shortName": "T3 Profile"
+    },
+    {
+      "fixture": "T3 Profile FS",
+      "watts": 1700.0,
+      "weight": 46.8,
+      "modes": {
+        "Mode 1 - CMY": 52,
+        "Mode 1 - RGB": 52,
+        "Mode 2 - Reduced CMY": 37,
+        "Mode 2 - Reduced RGB": 37,
+        "Mode 3 - RGBALG": 56,
+        "Mode 4 - Enhanced gobo control": 57
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/robe",
+        "suggestedFileName": "Robe__T3_Profile_FS.gdtf",
+        "file": "fixtures/robe/Robe_Lighting@Robin_T3_Profile_FS@2026-08-21_Prism_empty_wheel_slots_revision.gdtf",
+        "modes": {
+          "Mode 1 - CMY": {
+            "channels": 52,
+            "gdtfMode": "Mode 1 - CMY",
+            "status": "matched",
+            "parameters": 42
+          },
+          "Mode 1 - RGB": {
+            "channels": 52,
+            "gdtfMode": "Mode 1 - RGB",
+            "status": "matched",
+            "parameters": 42
+          },
+          "Mode 2 - Reduced CMY": {
+            "channels": 37,
+            "gdtfMode": "Mode 2 - Reduced CMY",
+            "status": "matched",
+            "parameters": 34
+          },
+          "Mode 2 - Reduced RGB": {
+            "channels": 37,
+            "gdtfMode": "Mode 2 - Reduced RGB",
+            "status": "matched",
+            "parameters": 34
+          },
+          "Mode 3 - RGBALG": {
+            "channels": 56,
+            "gdtfMode": "Mode 3 - RGBALG",
+            "status": "matched",
+            "parameters": 44
+          },
+          "Mode 4 - Enhanced gobo control": {
+            "channels": 57,
+            "gdtfMode": "Mode 4 - Enhanced gobo control",
+            "status": "matched",
+            "parameters": 44
+          }
+        }
+      },
+      "shortName": "T3FS"
     },
     {
       "fixture": "T31 Cyc",
@@ -6033,7 +6392,7 @@
     },
     {
       "fixture": "T31 CYC Slim",
-      "watts": 320.0,
+      "watts": 740.0,
       "weight": 13.4,
       "modes": {
         "Mode 1 - CMY": 25,
@@ -6134,7 +6493,7 @@
     },
     {
       "fixture": "T32 CYC Slim",
-      "watts": 640.0,
+      "watts": 600.0,
       "weight": 21.5,
       "modes": {
         "Mode 1 - CMY": 31,
@@ -6171,7 +6530,7 @@
     },
     {
       "fixture": "Tarrantula",
-      "watts": 1000,
+      "watts": 1000.0,
       "weight": 21.0,
       "modes": {
         "Mode 6-Pattern full RGBW": 196,
@@ -6229,7 +6588,7 @@
     },
     {
       "fixture": "Tetra1",
-      "watts": 200,
+      "watts": 300.0,
       "weight": 11.3,
       "modes": {
         "Mode 6 Pattern full RGBW": 81,
@@ -6287,7 +6646,7 @@
     },
     {
       "fixture": "Tetra2",
-      "watts": 600,
+      "watts": 600.0,
       "weight": 18.1,
       "modes": {
         "Mode 6-Pattern full RGBW": 128,
@@ -6345,7 +6704,7 @@
     },
     {
       "fixture": "TetraX",
-      "watts": 320,
+      "watts": 320.0,
       "weight": 16.3,
       "modes": {
         "Mode 6-Pattern full RGBW": 98,
@@ -6403,7 +6762,7 @@
     },
     {
       "fixture": "TX1 PosiProfile",
-      "watts": 640,
+      "watts": 640.0,
       "weight": 24.3,
       "modes": {
         "Mode 1 - CMY": 40,
@@ -6485,11 +6844,11 @@
           }
         }
       },
-      "shortName": "TX1 PosiProfileile"
+      "shortName": "TX1 PosiProfile"
     },
     {
       "fixture": "Viva",
-      "watts": 350.0,
+      "watts": 500.0,
       "weight": 17.5,
       "modes": {
         "Mode 1 - Standard 16 bit": 30,
@@ -6519,7 +6878,7 @@
     },
     {
       "fixture": "Viva CMY",
-      "watts": 350.0,
+      "watts": 500.0,
       "weight": 19.0,
       "modes": {
         "Mode 1 - Standard 16 bit": 32,
@@ -6549,7 +6908,7 @@
     },
     {
       "fixture": "WTF!",
-      "watts": 1300,
+      "watts": 1300.0,
       "weight": 32.4,
       "modes": {
         "Mode 1-Simple Wash": 32,
@@ -6597,342 +6956,6 @@
         }
       },
       "shortName": "WTF"
-    },
-    {
-      "fixture": "MySVOPATT",
-      "watts": 2300,
-      "weight": 67.4,
-      "modes": {
-        "Mode 1 - Wash": 30,
-        "Mode 2 - Individual LED modules": 130,
-        "Mode 3 - LED modules and pixels": 389,
-        "Mode 4 - Pixel mode": 291,
-        "Mode 5 - One channel mode 2700K": 6
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/robe",
-        "suggestedFileName": "Robe__MySVOPATT.gdtf",
-        "file": "fixtures/robe/Robe_Lighting@MySVOPATT@2026-09-02_Initial_release_to_share.gdtf",
-        "modes": {
-          "Mode 1 - Wash": {
-            "channels": 30,
-            "gdtfMode": "Mode 1 - Wash",
-            "status": "matched",
-            "parameters": 21
-          },
-          "Mode 2 - Individual LED modules": {
-            "channels": 130,
-            "gdtfMode": "Mode 2 - Individual LED modules",
-            "status": "matched",
-            "parameters": 89
-          },
-          "Mode 3 - LED modules and pixels": {
-            "channels": 389,
-            "gdtfMode": "Mode 3 - LED modules and pixels",
-            "status": "matched",
-            "parameters": 407
-          },
-          "Mode 4 - Pixel mode": {
-            "channels": 291,
-            "gdtfMode": "Mode 4 - Pixel mode",
-            "status": "matched",
-            "parameters": 340
-          },
-          "Mode 5 - One channel mode 2700K": {
-            "channels": 6,
-            "gdtfMode": "Mode 5 - One channel mode 2700K",
-            "status": "matched",
-            "parameters": 8
-          }
-        }
-      },
-      "shortName": "MySVPTT"
-    },
-    {
-      "fixture": "Arianne 12",
-      "watts": 1700,
-      "weight": 30.0,
-      "modes": {
-        "Mode 1 - LB Compatible": 22,
-        "Mode 2 - Festival": 27,
-        "Mode 3 - Full+ScreenPix": 66
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/robe",
-        "suggestedFileName": "Robe__Arianne_12.gdtf",
-        "file": "fixtures/robe/Robe_Lighting@Robin_Arianne_12@2026-09-02_Initial_release_to_share.gdtf",
-        "modes": {
-          "Mode 1 - LB Compatible": {
-            "channels": 22,
-            "gdtfMode": "Mode 1 - LB Compatible",
-            "status": "matched",
-            "parameters": 14
-          },
-          "Mode 2 - Festival": {
-            "channels": 27,
-            "gdtfMode": "Mode 2 - Festival",
-            "status": "matched",
-            "parameters": 19
-          },
-          "Mode 3 - Full+ScreenPix": {
-            "channels": 66,
-            "gdtfMode": "Mode 3 - Full+ScreenPix",
-            "status": "matched",
-            "parameters": 46
-          }
-        }
-      },
-      "shortName": "Arianne12"
-    },
-    {
-      "fixture": "Arianne 4",
-      "watts": 550,
-      "weight": 15.5,
-      "modes": {
-        "Mode 1 - LB Compatible": 22,
-        "Mode 2 - Festival": 27,
-        "Mode 3 - Full+ScreenPix": 50
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/robe",
-        "suggestedFileName": "Robe__Arianne_4.gdtf",
-        "file": "fixtures/robe/Robe_Lighting@Robin_Arianne_4@2026-09-02_Initial_release_to_share.gdtf",
-        "modes": {
-          "Mode 1 - LB Compatible": {
-            "channels": 22,
-            "gdtfMode": "Mode 1 - LB Compatible",
-            "status": "matched",
-            "parameters": 14
-          },
-          "Mode 2 - Festival": {
-            "channels": 27,
-            "gdtfMode": "Mode 2 - Festival",
-            "status": "matched",
-            "parameters": 19
-          },
-          "Mode 3 - Full+ScreenPix": {
-            "channels": 50,
-            "gdtfMode": "Mode 3 - Full+ScreenPix",
-            "status": "matched",
-            "parameters": 36
-          }
-        }
-      },
-      "shortName": "Arianne4"
-    },
-    {
-      "fixture": "LEDBeam 400",
-      "watts": 550,
-      "weight": 11.0,
-      "modes": {
-        "Mode 1 - Arianne Compatible": 22,
-        "Mode 2 - Festival": 27,
-        "Mode 3 - Full+Screenpix": 50
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/robe",
-        "suggestedFileName": "Robe__LEDBeam_400.gdtf",
-        "file": "fixtures/robe/Robe_Lighting@Robin_LEDBeam_400@2026-09-02_Initial_release_to_share.gdtf",
-        "modes": {
-          "Mode 1 - Arianne Compatible": {
-            "channels": 22,
-            "gdtfMode": "Mode 1 - Arianne Compatible",
-            "status": "matched",
-            "parameters": 14
-          },
-          "Mode 2 - Festival": {
-            "channels": 27,
-            "gdtfMode": "Mode 2 - Festival",
-            "status": "matched",
-            "parameters": 19
-          },
-          "Mode 3 - Full+Screenpix": {
-            "channels": 50,
-            "gdtfMode": "Mode 3 - Full+Screenpix",
-            "status": "matched",
-            "parameters": 36
-          }
-        }
-      },
-      "shortName": "LB400"
-    },
-    {
-      "fixture": "T3 Profile FS",
-      "watts": 1700,
-      "weight": 46.8,
-      "modes": {
-        "Mode 1 - CMY": 52,
-        "Mode 1 - RGB": 52,
-        "Mode 2 - Reduced CMY": 37,
-        "Mode 2 - Reduced RGB": 37,
-        "Mode 3 - RGBALG": 56,
-        "Mode 4 - Enhanced gobo control": 57
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/robe",
-        "suggestedFileName": "Robe__T3_Profile_FS.gdtf",
-        "file": "fixtures/robe/Robe_Lighting@Robin_T3_Profile_FS@2026-08-21_Prism_empty_wheel_slots_revision.gdtf",
-        "modes": {
-          "Mode 1 - CMY": {
-            "channels": 52,
-            "gdtfMode": "Mode 1 - CMY",
-            "status": "matched",
-            "parameters": 42
-          },
-          "Mode 1 - RGB": {
-            "channels": 52,
-            "gdtfMode": "Mode 1 - RGB",
-            "status": "matched",
-            "parameters": 42
-          },
-          "Mode 2 - Reduced CMY": {
-            "channels": 37,
-            "gdtfMode": "Mode 2 - Reduced CMY",
-            "status": "matched",
-            "parameters": 34
-          },
-          "Mode 2 - Reduced RGB": {
-            "channels": 37,
-            "gdtfMode": "Mode 2 - Reduced RGB",
-            "status": "matched",
-            "parameters": 34
-          },
-          "Mode 3 - RGBALG": {
-            "channels": 56,
-            "gdtfMode": "Mode 3 - RGBALG",
-            "status": "matched",
-            "parameters": 44
-          },
-          "Mode 4 - Enhanced gobo control": {
-            "channels": 57,
-            "gdtfMode": "Mode 4 - Enhanced gobo control",
-            "status": "matched",
-            "parameters": 44
-          }
-        }
-      },
-      "shortName": "T3FS"
-    },
-    {
-      "fixture": "iProMotion",
-      "watts": 140,
-      "weight": 21.3,
-      "modes": {
-        "Mode 1 - CMY 1": 26,
-        "Mode 2 - CMY": 34,
-        "Mode 1 - CMY - for older sw version": 25,
-        "Mode 2 - CMY - for older sw version": 33
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/robe",
-        "suggestedFileName": "Robe__iProMotion.gdtf",
-        "file": "fixtures/robe/Robe_Lighting@Robin_iProMotion@2025-11-18__Control_channel_revision.gdtf",
-        "modes": {
-          "Mode 1 - CMY 1": {
-            "channels": 26,
-            "gdtfMode": "Mode 1 - CMY 1",
-            "status": "matched",
-            "parameters": 23
-          },
-          "Mode 2 - CMY": {
-            "channels": 34,
-            "gdtfMode": "Mode 2 - CMY",
-            "status": "matched",
-            "parameters": 31
-          },
-          "Mode 1 - CMY - for older sw version": {
-            "channels": 25,
-            "gdtfMode": "Mode 1 - CMY - for older sw version",
-            "status": "matched",
-            "parameters": 22
-          },
-          "Mode 2 - CMY - for older sw version": {
-            "channels": 33,
-            "gdtfMode": "Mode 2 - CMY - for older sw version",
-            "status": "matched",
-            "parameters": 30
-          }
-        }
-      },
-      "shortName": "iProMotion"
-    },
-    {
-      "fixture": "iT10 Profile",
-      "watts": 350,
-      "weight": 19.8,
-      "modes": {
-        "Mode 1 - 16-bit CMY": 24,
-        "Mode 2 - 16-bit RGBAL": 28,
-        "Mode 3 - 16-bit CMY + Framing module": 35,
-        "Mode 4 - 16-bit  RGBAL + Framing module": 39,
-        "Mode 5 - 16-bit CMY + Gobo module": 32,
-        "Mode 6 - 16-bit  RGBAL + Gobo module": 36,
-        "Mode 7 - 16-bit CMY + Gobo + Framing module": 43,
-        "Mode 8- 16-bit RGBAL Gobo+ Framing": 47
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/robe",
-        "suggestedFileName": "Robe__iT10_Profile.gdtf",
-        "file": "fixtures/robe/Robe_Lighting@Robin_iT10_Profile@2026-09-02_Initial_release_to_share.gdtf",
-        "modes": {
-          "Mode 1 - 16-bit CMY": {
-            "channels": 24,
-            "gdtfMode": "Mode 1 - 16-bit CMY",
-            "status": "matched",
-            "parameters": 19
-          },
-          "Mode 2 - 16-bit RGBAL": {
-            "channels": 28,
-            "gdtfMode": "Mode 2 - 16-bit RGBAL",
-            "status": "matched",
-            "parameters": 21
-          },
-          "Mode 3 - 16-bit CMY + Framing module": {
-            "channels": 35,
-            "gdtfMode": "Mode 3 - 16-bit CMY + Framing module",
-            "status": "matched",
-            "parameters": 29
-          },
-          "Mode 4 - 16-bit  RGBAL + Framing module": {
-            "channels": 39,
-            "gdtfMode": "Mode 4 - 16-bit  RGBAL + Framing module",
-            "status": "matched",
-            "parameters": 31
-          },
-          "Mode 5 - 16-bit CMY + Gobo module": {
-            "channels": 32,
-            "gdtfMode": "Mode 5 - 16-bit CMY + Gobo module",
-            "status": "matched",
-            "parameters": 25
-          },
-          "Mode 6 - 16-bit  RGBAL + Gobo module": {
-            "channels": 36,
-            "gdtfMode": "Mode 6 - 16-bit  RGBAL + Gobo module",
-            "status": "matched",
-            "parameters": 27
-          },
-          "Mode 7 - 16-bit CMY + Gobo + Framing module": {
-            "channels": 43,
-            "gdtfMode": "Mode 7 - 16-bit CMY + Gobo + Framing module",
-            "status": "matched",
-            "parameters": 35
-          },
-          "Mode 8- 16-bit RGBAL Gobo+ Framing": {
-            "channels": 47,
-            "gdtfMode": "Mode 8- 16-bit RGBAL Gobo+ Framing",
-            "status": "matched",
-            "parameters": 37
-          }
-        }
-      },
-      "shortName": "iT10"
     }
   ]
 }
