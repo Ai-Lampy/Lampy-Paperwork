@@ -1,3 +1,11 @@
+## V41.1 — Stable Loom Card Headers
+
+- Kept Loom titles centred within equal reserved side columns so long names no longer move or resize the Feeder/EXT badge and action buttons.
+- Prevented Loom header controls from shrinking or wrapping while retaining responsive title fitting between 30 px and 22 px and header growth up to 55 px.
+- Added collapsible Project Error groups, combined errors for the same fixture into one selectable row, and moved bulk actions into the error-tab toolbar.
+- Added an active-error count to the Active tab and enlarged the aligned row and group selection controls.
+- Matched unlocked Fixture Patch keyboard navigation to the Loom table across text, colour and list cells, including Mode.
+
 ## V41 — Fixture Patch and Error Management
 
 - Kept unpatched fixtures in the Master Patch by clearing their Universe and Address, with separate selected-fixture delete actions in Fixture Type Options.
