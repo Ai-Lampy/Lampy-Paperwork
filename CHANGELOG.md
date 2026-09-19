@@ -1,7 +1,12 @@
+## V43.3 — Power and Fan Out stripe outlines
+
+- Set Power Calcs and Fan Out multi-colour Position white-band outlines to 0.3 mm.
+- Added the same 0.3 mm white-band outline to multi-colour Socapex cells and their PDF output.
+
 ## V43.2 — Shared white-stripe outlines
 
-- Extended the 0.5 mm black white-stripe outline to multi-colour Position cells in Power Calcs and Fan Outs.
 - Applied the same white-stripe outline to multi-colour Loom headings.
+- Rebuilt Position Summary downloads from the prepared high-resolution preview pages so exported text, headers, logos and footers match the preview.
 
 ## V43.1 — Position white-stripe outlines
 
