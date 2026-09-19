@@ -1,3 +1,8 @@
+## V43.1 — Position white-stripe outlines
+
+- Added a 0.5 mm black outline to every white band in multi-colour Position backgrounds.
+- Applied the outlined white bands to live Position references, PDF preview and vector PDF export.
+
 ## V43 — Home and Position Summary
 
 - Expanded Project Info to 1300 px and placed Home visibility controls beside their Production fields.
@@ -6,6 +11,7 @@
 - Added Small/Big summary controls and balanced two-column Fixture Summary content when Big.
 - Added saved Name, Colour and Manual Position ordering with direct up/down controls.
 - Added separate configurable Rectangle and Box PDF grids with fixed header and footer protection.
+- Corrected Position Summary vector exports so labels use crisp single-pass outlined text, preview-matched sizing and rounded cards.
 
 ## V42.1 — Fan Out position rendering
 
