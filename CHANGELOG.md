@@ -1,3 +1,8 @@
+## V43.2 — Shared white-stripe outlines
+
+- Extended the 0.5 mm black white-stripe outline to multi-colour Position cells in Power Calcs and Fan Outs.
+- Applied the same white-stripe outline to multi-colour Loom headings.
+
 ## V43.1 — Position white-stripe outlines
 
 - Added a 0.5 mm black outline to every white band in multi-colour Position backgrounds.
