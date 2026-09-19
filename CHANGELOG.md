@@ -1,6 +1,8 @@
 ## V43.5 — Fixture Patch controls
 
 - Removed the Format button from Fixture Patch.
+- Placed Clear Filters before Show/Hide Columns in the Fixture Patch controls.
+- Removed the Loom title outline when a Loom uses one white colour.
 
 ## V43.4 — Power PDF Position colours
 
