@@ -1,3 +1,7 @@
+## V43.5 — Fixture Patch controls
+
+- Removed the Format button from Fixture Patch.
+
 ## V43.4 — Power PDF Position colours
 
 - Preserved every Position colour background in Power Calcs and Fan Out PDF exports by rendering Position cells through the same high-resolution colour layer used by Socapex cells.
