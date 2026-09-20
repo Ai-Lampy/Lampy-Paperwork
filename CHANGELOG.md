@@ -7,6 +7,7 @@
 - Added persistent Vendor Logo and 2nd Logo export controls to the first-page header settings.
 - Combined first-page title styling, linked line 2 at 2 pt smaller, derived remaining-page headers from the Footer style and limited the supported title and footer sizes.
 - Replaced raw footer fields with preset selectors plus Custom editing while preserving existing template strings and reserved footer space on every PDF page.
+- Kept Home Hero and Home Grid cards, the Report Issue link, Power Supply cards, Console and NPU cards, Rack Device Library and Rack/Device Settings on the fixed Arial application font.
 
 ## V44.1 — Global Project Settings and table typography
 
