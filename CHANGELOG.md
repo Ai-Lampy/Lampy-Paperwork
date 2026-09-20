@@ -1,3 +1,13 @@
+## V47 — Power update
+
+- Capped the Power Calcs toolbar and table at 1400 px, reduced the Colour column to 30 px and standardised the main Power action buttons.
+- Kept all three phase values on one row inside each Distro phase summary card.
+- Added compound Power Fix ID parsing for `&`, `+`, comma, `/`, `>`, and spaced-hyphen separators without changing saved project data.
+- Combined fixture types, positions, wattage, amperage, duplicate checks, Fixtures Not Added results, RCBO labels and Fan Out output for every ID in a compound cell.
+- Rebuilt Power and Fan Outs PDF output so each Distro begins on a new page with its own full header and enabled logos.
+- Added the Power PDF Supply line, moved Supply and Distro phase summaries after each Distro's final Socapex and added a final grouped Totals page.
+- Fitted Power and Fan Out PDF tables to the selected orientation while retaining reserved header and footer areas.
+
 ## V46 — Fixture Patch update
 
 - Expanded the Fixture Patch workspace to 1400 px, standardised its main toolbar actions and made default fixture titles follow the Project Font.
