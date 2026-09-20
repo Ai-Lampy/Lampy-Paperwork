@@ -1,15 +1,15 @@
 {
-  "title": "Lampy Paperwork V46 Walk-through",
+  "title": "Lampy Paperwork V47 Walk-through",
   "sections": [
     {
-      "title": "New in V46: Fixture Patch update",
+      "title": "New in V47: Power update",
       "type": "unordered",
       "items": [
-        "Fixture Patch uses the wider 1400 px workspace and the Project Font for default fixture titles.",
-        "Patch Fixture saves and returns to the patch. Patch & Add More saves and returns to the retained manufacturer in the fixture library.",
-        "Fixture Patch Export Output Options set independent Main Header and Sub-heading sizes from 8 pt to 30 pt.",
-        "Patch PDF output starts every fixture type on a new page, hides empty columns per fixture type and repeats titles and headers on continuation pages.",
-        "Show Fixture Summary adds a first-page manufacturer, fixture type, mode and quantity summary. Show Patch Revision Notes adds the final revision page."
+        "Power Calcs supports multiple Fix IDs in one cell using &, +, comma, /, > or a spaced hyphen.",
+        "Compound Fix IDs resolve fixture types, positions and wattage together; mixed fixture types display on separate lines.",
+        "The Power Calcs toolbar and table are capped at 1400 px and the Colour column is 30 px wide.",
+        "Power and Fan Outs PDF exports start every distro on a new page with its own full header and enabled logos.",
+        "Power PDF output places Supply and Distro phase summaries after the final Socapex and finishes with a grouped Totals page."
       ]
     },
     {
@@ -81,12 +81,13 @@
       "type": "unordered",
       "items": [
         "Fixture IDs link Power to Fixture Patch names, watts, positions, and position colours. Duplicate fixture IDs are highlighted.",
+        "Enter multiple IDs in one Fix ID cell with &, +, comma, /, > or a spaced hyphen. IDs remain individually validated and included in load totals.",
         "Use the arrow keys, Enter, Shift+Enter, Tab, and Shift+Tab to move between editable Power Calcs cells. Drag the selected cell's blue fill handle vertically to copy a value through a compatible column.",
         "Choose Full Name or Short Name independently for the Power display.",
         "Select a 16 Amp or 10 Amp RCBO in each distro settings. A way is warned above 15.01 A for a 16 Amp RCBO or above 9.01 A for a 10 Amp RCBO.",
         "Aux outlets are grouped in threes for Phase 1, Phase 2, and Phase 3. Only Aux outlets enabled for power calculations contribute to the totals. Configured 3ø Outputs are shown separately.",
         "Use Power Calcs for detailed assignments, Fan Outs for display-only Socapex paperwork, and Phase Totals when it is available for supply and connected-distro review.",
-        "The PDF preview keeps Socapex groups together, starts each distro on a new page, shows four Socapexes per page, and finishes with the supply phase-total summary."
+        "Power and Fan Outs PDFs start each distro on a new page. Power places phase summaries after the final Socapex and ends with Totals."
       ]
     },
     {
