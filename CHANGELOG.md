@@ -1,3 +1,14 @@
+## V47.7 — Power PDF page fitting
+
+- Added 2 px spacing between the Power PDF title, Distro heading and Supply heading.
+- Expanded Power and Fan Out table pages with fewer visible data columns to fill the available page width.
+- Hid the remaining-page header whenever a new Distro page displays the full page title and logos.
+
+## V47.6 — Power table controls and header labels
+
+- Removed the temporary Power Calcs column-width adjuster while retaining the reviewed V47.5 widths.
+- Added reliable hover and keyboard-focus labels for the hidden Colour and Way column headings.
+
 ## V47.5 — Power widths and Supply cards
 
 - Updated the Power Calcs Reset widths to the reviewed Colour, Socapex, Way, Fix ID, Fix Type, Position, Watts and Amps values.

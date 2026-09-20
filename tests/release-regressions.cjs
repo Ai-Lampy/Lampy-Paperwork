@@ -1,16 +1,17 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),path=require('path'),zlib=require('zlib');
 const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const LampyCore=require('../js/project-core.js'),LampyArchive=require('../js/archive.js');
-assert(html.includes('<title>Lampy Paperwork V47.5</title>'));
-assert(html.includes("const VERSION='47.5';"));
+assert(html.includes('<title>Lampy Paperwork V47.7</title>'));
+assert(html.includes("const VERSION='47.7';"));
 const v472WidthLimits={colour:[30,40],socapex:[75,180],way:[20,30],fixId:[50,80],fixType:[60,190],position:[85,180],watts:[40,45],amps:[66,75]};
 const v475WidthCurrent={colour:30,socapex:112,way:26,fixId:59,fixType:117,position:115,watts:45,amps:72};
 const v472WidthSource=html.slice(html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS='),html.indexOf('let powerColumnWidthSettings=',html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS=')));
 for(const [key,[min,max]] of Object.entries(v472WidthLimits))assert(v472WidthSource.includes(`${key}:{label:`)&&v472WidthSource.includes(`min:${min},max:${max}`),`${key} Power width limits`);
 for(const [key,current] of Object.entries(v475WidthCurrent))assert(new RegExp(`${key}:\\{label:[^\\n]+current:${current},`).test(v472WidthSource),`${key} Power current width`);
 const v473RenderPowerSource=html.slice(html.indexOf('function renderPowerSheetView('),html.indexOf('function renderFanOutView(',html.indexOf('function renderPowerSheetView(')));
-assert(v473RenderPowerSource.includes('class="powerSocaColourCol" scope="col" aria-label="Colour" title="Colour"></th>'));
-assert(v473RenderPowerSource.includes('class="wayCol" scope="col" aria-label="Way" title="Way"></th>'));
+assert(v473RenderPowerSource.includes('class="powerSocaColourCol powerHeaderTooltip" scope="col" aria-label="Colour" data-column-label="Colour" tabindex="0"></th>'));
+assert(v473RenderPowerSource.includes('class="wayCol powerHeaderTooltip" scope="col" aria-label="Way" data-column-label="Way" tabindex="0"></th>'));
+assert(!v473RenderPowerSource.includes('powerColumnWidthAdjusterMarkup()'));
 assert(html.includes('.powerPhaseSummary{width:auto!important;height:auto!important;min-height:0!important;padding:8px!important}'));
 assert(html.includes('.powerSupplySummary{width:auto!important;min-width:0!important;padding-right:12px!important;border-right:2px solid #9b9b9b'));
 assert(html.includes('tbody .wayCol{font-size:12px!important}'));
@@ -19,7 +20,17 @@ assert(html.includes('tbody .fixTypeCol .powerFixTypeText{font-size:14px!importa
 assert(html.includes('tbody .positionCol .powerPositionText{font-size:14px!important}'));
 assert(html.includes('.powerSupplyCard{width:auto!important;height:auto!important;flex:0 0 auto!important'));
 assert(html.includes('.powerSupplyCard .powerSupplySummary strong{font-size:18px!important;line-height:1;overflow:hidden;text-overflow:ellipsis;padding-bottom:4px}'));
-console.log('PASS: V47.5 release version, reviewed Power widths and content-sized Supply cards.');
+assert(!html.includes('function powerColumnWidthAdjusterMarkup'));
+assert(html.includes('.powerHeaderTooltip:hover::after'));
+assert(html.includes('.powerPdfDocumentHeader{display:grid!important;grid-auto-flow:row;row-gap:2px'));
+const v477LayoutSource=html.slice(html.indexOf('function powerPdfContentLayout('),html.indexOf('function fitPowerPdfContent(',html.indexOf('function powerPdfContentLayout(')));
+const v477FitSource=html.slice(html.indexOf('function fitPowerPdfContent('),html.indexOf('function powerPdfContentWouldOverflow(',html.indexOf('function fitPowerPdfContent(')));
+const v477PageSource=html.slice(html.indexOf('function createPowerPdfPage('),html.indexOf('function appendPowerPdfPreviewPage(',html.indexOf('function createPowerPdfPage(')));
+assert(v477LayoutSource.includes("width','max-content'"));
+assert(v477FitSource.includes('layout.tablePage?layout.widthScale'));
+assert(v477PageSource.includes("querySelector('.pdfLaterPageHeader')?.remove()"));
+assert(v477PageSource.includes("classList.remove('pdfLaterPage')"));
+console.log('PASS: V47.7 release version, Power PDF spacing, sparse-table scaling and Distro-page headers.');
 function source(name){const start=html.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const text=html.slice(start,end+1);try{new Function('return ('+text+')');return text}catch{}}throw Error(name)}
 const c=vm.createContext({console,LampyCore,crypto:require('crypto').webcrypto,window:{},clearTimeout,Map,Set,Number,Array});
 function add(...names){for(const name of names)vm.runInContext(source(name),c)}
