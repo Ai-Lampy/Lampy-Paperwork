@@ -1,3 +1,10 @@
+## V47.1 — Power widths and summary cards
+
+- Added temporary Min, Current and Max width controls for every main Power Calcs column group, shared by repeated columns and Power PDF output without changing project files.
+- Kept adjusted Power tables within the 1400 px and browser-width limits, with a Reset action for the V47 defaults.
+- Matched Supply summary cards to the 275 × 100 px Distro phase-summary layout across Power Calcs, Phase Totals and PDF summaries.
+- Removed Phase 1, Phase 2 and Phase 3 captions from Supply phase-total boxes while retaining the phase colours and amp totals.
+
 ## V47 — Power update
 
 - Capped the Power Calcs toolbar and table at 1400 px, reduced the Colour column to 30 px and standardised the main Power action buttons.

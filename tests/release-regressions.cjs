@@ -33,8 +33,8 @@ const restored=plain(c.app);c.app=restored;c.ensureSocaData();c.syncDistroSocape
 console.log('PASS: legacy ownership migration, first/middle deletion, resize and JSON round trip');
 
 const hostile="x');auditMarker();//";let called=false,received='';vm.runInNewContext("receive('"+c.escapeJsAttr(hostile)+"')",{receive:value=>received=value,auditMarker:()=>called=true});assert.equal(received,hostile);assert.equal(called,false);
-add('powerSupplyCardMarkup');c.supplyDistroNames=()=>[];c.supplyCardPhaseTotalsMarkup=()=>'';c.optionDefault=()=>'';c.distroOptions={};
-const markup=c.powerSupplyCardMarkup({id:hostile},[]);assert(!markup.includes('onclick='));assert(markup.includes('data-open-supply='));
+add('distroCardPhaseTotalsMarkup','supplyCardPhaseTotalsMarkup','powerSupplyCardMarkup');c.supplyDistroNames=()=>[];c.powerSupplyTotals=()=>({p1:1,p2:2,p3:3});c.optionDefault=()=>'';c.distroOptions={};
+const markup=c.powerSupplyCardMarkup({id:hostile},[]);assert(!markup.includes('onclick='));assert(markup.includes('data-open-supply='));assert(markup.includes('height:100px'));assert(markup.includes('width:275px'));assert(!markup.includes('Phase 1'));assert(!markup.includes('Phase 2'));assert(!markup.includes('Phase 3'));
 const good={labels:[],distros:[],fixturePatch:[]};LampyCore.validateProject(good);
 for(const bad of [{},[],{labels:'wrong'},JSON.parse('{"labels":[],"__proto__":{"x":1}}'),{labels:[],distros:[{id:hostile}]},{labels:[],distros:[{count:10000000}]},{labels:[],projectInfo:{logoUrl:'javascript:alert(1)'}}])assert.throws(()=>LampyCore.validateProject(bad));
 const stage=vm.createContext({LampyCore,app:{labels:[{top:'KEEP'}]},normaliseLabel:x=>x,normaliseSocaMeta:x=>x,normaliseDistro:()=>{throw Error('Malformed nested data')}});vm.runInContext(source('loadProjectPayload'),stage);assert.throws(()=>stage.loadProjectPayload({labels:[],distros:[{count:1}]}));assert.equal(stage.app.labels[0].top,'KEEP');
