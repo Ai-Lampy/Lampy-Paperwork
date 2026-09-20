@@ -1,8 +1,8 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),path=require('path'),zlib=require('zlib');
 const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const LampyCore=require('../js/project-core.js'),LampyArchive=require('../js/archive.js');
-assert(html.includes('<title>Lampy Paperwork V47.9</title>'));
-assert(html.includes("const VERSION='47.9';"));
+assert(html.includes('<title>Lampy Paperwork V47.10</title>'));
+assert(html.includes("const VERSION='47.10';"));
 const v472WidthLimits={colour:[30,40],socapex:[75,180],way:[20,30],fixId:[50,80],fixType:[60,190],position:[85,180],watts:[40,45],amps:[66,75]};
 const v475WidthCurrent={colour:30,socapex:112,way:26,fixId:59,fixType:117,position:115,watts:45,amps:72};
 const v472WidthSource=html.slice(html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS='),html.indexOf('let powerColumnWidthSettings=',html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS=')));
@@ -54,7 +54,20 @@ const v479PdfSource=html.slice(html.indexOf('function renderPowerPdfPreview('),h
 assert(v479PdfSource.includes("'extras'"));
 assert(!v479PdfSource.includes("'aux'"));
 assert(!v479PdfSource.includes("'output'"));
-console.log('PASS: V47.9 release version, Power drafts, outlet colours, simplified tables and combined PDF extras.');
+assert(html.includes('.powerAuxSheet .auxNumberCol{width:45px;min-width:45px;max-width:45px;font-weight:900}'));
+assert(html.includes('.powerAuxSheet thead .auxNumberCol{font-size:14px}'));
+assert(html.includes('.powerAuxSheet tbody .auxNumberCol{font-size:16px}'));
+assert(html.includes('.powerAuxSheet .auxLabelCol{width:auto!important;min-width:50px;max-width:200px'));
+assert(html.includes('.powerAuxIncludeBtn{width:60px;min-width:60px;padding-left:4px;padding-right:4px;font-size:18px;font-weight:800;transform:scale(.7);transform-origin:center}'));
+assert(html.includes('function powerExtraColourCellMarkup('));
+const v4710AuxRowSource=html.slice(html.indexOf('function powerSheetAuxRowMarkup('),html.indexOf('function powerAuxSheetMarkup(',html.indexOf('function powerSheetAuxRowMarkup(')));
+assert(v4710AuxRowSource.indexOf('auxIncludeCol')<v4710AuxRowSource.indexOf('powerExtraColourCellMarkup'));
+const v4710OutputSource=html.slice(html.indexOf('function powerOutputSheetMarkup('),html.indexOf('function powerSheetToolbarMarkup(',html.indexOf('function powerOutputSheetMarkup(')));
+assert(v4710OutputSource.indexOf('powerExtraLabelCellMarkup')<v4710OutputSource.indexOf('powerExtraColourCellMarkup'));
+assert(html.includes('<th class="auxIncludeCol">Include in Power Calcs?</th><th class="powerExtraColourCol">Colours</th>'));
+assert(html.includes('<th class="auxLabelCol">Label</th><th class="powerExtraColourCol">Colours</th>'));
+assert(html.includes(".powerExtraColourCol').forEach(el=>el.remove())"));
+console.log('PASS: V47.10 release version, Power drafts, outlet colours and Aux layout controls.');
 function source(name){const start=html.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const text=html.slice(start,end+1);try{new Function('return ('+text+')');return text}catch{}}throw Error(name)}
 const c=vm.createContext({console,LampyCore,crypto:require('crypto').webcrypto,window:{},clearTimeout,Map,Set,Number,Array});
 function add(...names){for(const name of names)vm.runInContext(source(name),c)}

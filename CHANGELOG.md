@@ -1,3 +1,9 @@
+## V47.10 — Aux table sizing and colour controls
+
+- Set the Aux Way column to 45 px with 14 px header text and 16 px body text.
+- Limited Aux Label cells to 50–200 px and scaled Include controls to 0.7.
+- Moved Aux and 3ø colour controls into a dedicated final column on every applicable row.
+
 ## V47.9 — Power setup and outlet colours
 
 - Added shared Col 1, Col 2 and Col 3 controls to Power Calcs Aux and 3ø label cells, with matching live, Labels and PDF colour rendering.
