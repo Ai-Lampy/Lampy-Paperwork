@@ -1,11 +1,13 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),path=require('path'),zlib=require('zlib');
 const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const LampyCore=require('../js/project-core.js'),LampyArchive=require('../js/archive.js');
-assert(html.includes('<title>Lampy Paperwork V47.4</title>'));
-assert(html.includes("const VERSION='47.4';"));
+assert(html.includes('<title>Lampy Paperwork V47.5</title>'));
+assert(html.includes("const VERSION='47.5';"));
 const v472WidthLimits={colour:[30,40],socapex:[75,180],way:[20,30],fixId:[50,80],fixType:[60,190],position:[85,180],watts:[40,45],amps:[66,75]};
+const v475WidthCurrent={colour:30,socapex:112,way:26,fixId:59,fixType:117,position:115,watts:45,amps:72};
 const v472WidthSource=html.slice(html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS='),html.indexOf('let powerColumnWidthSettings=',html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS=')));
 for(const [key,[min,max]] of Object.entries(v472WidthLimits))assert(v472WidthSource.includes(`${key}:{label:`)&&v472WidthSource.includes(`min:${min},max:${max}`),`${key} Power width limits`);
+for(const [key,current] of Object.entries(v475WidthCurrent))assert(new RegExp(`${key}:\\{label:[^\\n]+current:${current},`).test(v472WidthSource),`${key} Power current width`);
 const v473RenderPowerSource=html.slice(html.indexOf('function renderPowerSheetView('),html.indexOf('function renderFanOutView(',html.indexOf('function renderPowerSheetView(')));
 assert(v473RenderPowerSource.includes('class="powerSocaColourCol" scope="col" aria-label="Colour" title="Colour"></th>'));
 assert(v473RenderPowerSource.includes('class="wayCol" scope="col" aria-label="Way" title="Way"></th>'));
@@ -15,7 +17,9 @@ assert(html.includes('tbody .wayCol{font-size:12px!important}'));
 assert(html.includes('tbody .fixIdCol input{font-size:16px!important}'));
 assert(html.includes('tbody .fixTypeCol .powerFixTypeText{font-size:14px!important}'));
 assert(html.includes('tbody .positionCol .powerPositionText{font-size:14px!important}'));
-console.log('PASS: V47.4 release version, retained Power refinements and Export header/footer fields.');
+assert(html.includes('.powerSupplyCard{width:auto!important;height:auto!important;flex:0 0 auto!important'));
+assert(html.includes('.powerSupplyCard .powerSupplySummary strong{font-size:18px!important;line-height:1;overflow:hidden;text-overflow:ellipsis;padding-bottom:4px}'));
+console.log('PASS: V47.5 release version, reviewed Power widths and content-sized Supply cards.');
 function source(name){const start=html.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const text=html.slice(start,end+1);try{new Function('return ('+text+')');return text}catch{}}throw Error(name)}
 const c=vm.createContext({console,LampyCore,crypto:require('crypto').webcrypto,window:{},clearTimeout,Map,Set,Number,Array});
 function add(...names){for(const name of names)vm.runInContext(source(name),c)}
@@ -49,7 +53,7 @@ console.log('PASS: legacy ownership migration, first/middle deletion, resize and
 
 const hostile="x');auditMarker();//";let called=false,received='';vm.runInNewContext("receive('"+c.escapeJsAttr(hostile)+"')",{receive:value=>received=value,auditMarker:()=>called=true});assert.equal(received,hostile);assert.equal(called,false);
 add('distroCardPhaseTotalsMarkup','supplyCardPhaseTotalsMarkup','powerSupplyCardMarkup');c.supplyDistroNames=()=>[];c.powerSupplyTotals=()=>({p1:1,p2:2,p3:3});c.optionDefault=()=>'';c.distroOptions={};
-const markup=c.powerSupplyCardMarkup({id:hostile},[]);assert(!markup.includes('onclick='));assert(markup.includes('data-open-supply='));assert(markup.includes('height:100px'));assert(markup.includes('width:275px'));assert(!markup.includes('Phase 1'));assert(!markup.includes('Phase 2'));assert(!markup.includes('Phase 3'));
+const markup=c.powerSupplyCardMarkup({id:hostile},[]);assert(!markup.includes('onclick='));assert(markup.includes('data-open-supply='));assert(markup.includes('height:auto!important'));assert(markup.includes('width:auto!important'));assert(markup.includes('flex:0 0 auto!important'));assert(!markup.includes('height:100px'));assert(!markup.includes('width:275px'));assert(!markup.includes('Phase 1'));assert(!markup.includes('Phase 2'));assert(!markup.includes('Phase 3'));
 const good={labels:[],distros:[],fixturePatch:[]};LampyCore.validateProject(good);
 for(const bad of [{},[],{labels:'wrong'},JSON.parse('{"labels":[],"__proto__":{"x":1}}'),{labels:[],distros:[{id:hostile}]},{labels:[],distros:[{count:10000000}]},{labels:[],projectInfo:{logoUrl:'javascript:alert(1)'}}])assert.throws(()=>LampyCore.validateProject(bad));
 const stage=vm.createContext({LampyCore,app:{labels:[{top:'KEEP'}]},normaliseLabel:x=>x,normaliseSocaMeta:x=>x,normaliseDistro:()=>{throw Error('Malformed nested data')}});vm.runInContext(source('loadProjectPayload'),stage);assert.throws(()=>stage.loadProjectPayload({labels:[],distros:[{count:1}]}));assert.equal(stage.app.labels[0].top,'KEEP');

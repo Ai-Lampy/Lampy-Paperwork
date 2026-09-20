@@ -1,3 +1,9 @@
+## V47.5 — Power widths and Supply cards
+
+- Updated the Power Calcs Reset widths to the reviewed Colour, Socapex, Way, Fix ID, Fix Type, Position, Watts and Amps values.
+- Changed Power Supply cards to intrinsic width and height across live summaries, Phase Totals and PDF output.
+- Added 4 px bottom padding beneath Power Supply names.
+
 ## V47.4 — Export header and footer fields
 
 - Added Left, Centre and Right token-template fields for headers on pages after the first.
