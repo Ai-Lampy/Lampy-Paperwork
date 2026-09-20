@@ -1,11 +1,13 @@
-## V44 — Global Project Settings
+## V44.1 — Global Project Settings and table typography
 
 - Replaced the Project Info modal with a full Project Settings page containing General, Project Info, Production Info, Logos and Exports.
 - Added saved Header, Sub-header and Body typography defaults, kg/lb and Metric/Imperial display settings, and a project default voltage for new or blank distro voltages.
 - Added project PDF defaults for paper, orientation and DPI, configurable first-page and later-page headers, token-based three-position footers, and live chrome previews.
 - Kept the Tour Logo mandatory in PDF exports and moved Personal and Lighting Vendor logo controls into Project Settings.
 - Added migration for older project data and retained existing page-specific formatting and generated-label snapshots.
-- Added font-loading infrastructure and waits before PDF capture; licensed font files remain required before the new bundled families can be embedded.
+- Added local Font Book family choices and waits for fonts to resolve before PDF capture.
+- Applied project Header, Sub-header and Body fonts to table headings, table bodies and table controls throughout the app and PDF previews.
+- Made every font-list option preview its own typeface independently of the current project font.
 
 ## V43.5 — Fixture Patch controls
 
