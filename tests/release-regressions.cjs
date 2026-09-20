@@ -5,9 +5,10 @@ function source(name){const start=html.search(new RegExp('(?:async )?function '+
 const c=vm.createContext({console,LampyCore,crypto:require('crypto').webcrypto,window:{},clearTimeout,Map,Set,Number,Array});
 function add(...names){for(const name of names)vm.runInContext(source(name),c)}
 const plain=value=>JSON.parse(JSON.stringify(value));
-add('normalisePatchMode','modeWatts','distroVoltage','powerSheetRowResults','powerSheetSlotResult','fixtureWatts','normalisePowerSheetRow','blankPhaseTotals','powerSheetPhaseTotals','powerDistroConfiguration','powerSupplyTotals','addPhaseTotals','formatPhaseAmps','escapeHtml','escapeAttr','escapeJsAttr','powerSupplyWarningEntries','powerSupplyWarningMarkup','collectPowerSupplyErrors');
-c.ensureProjectInfo=()=>({powerSupplies:[]});c.patchFixturesFor=()=>[];const fixtures={1:{fixture:'Known',watts:2300},2:{fixture:'Unknown'},3:{fixture:'Zero',watts:0}};c.fixturePatchByFixId=id=>fixtures[id];
+add('normalisePatchMode','modeWatts','distroVoltage','powerFixIdTokens','powerSheetRowResults','powerSheetSlotResult','fixtureWatts','normalisePowerSheetRow','blankPhaseTotals','powerSheetPhaseTotals','powerDistroConfiguration','powerSupplyTotals','addPhaseTotals','formatPhaseAmps','escapeHtml','escapeAttr','escapeJsAttr','powerSupplyWarningEntries','powerSupplyWarningMarkup','collectPowerSupplyErrors');
+c.ensureProjectInfo=()=>({powerSupplies:[]});c.patchFixturesFor=()=>[];const fixtures={1:{fixture:'Known',watts:2300},2:{fixture:'Unknown'},3:{fixture:'Zero',watts:0},4:{fixture:'Known',watts:2300}};c.fixturePatchByFixId=id=>fixtures[id];
 assert.equal(c.powerSheetRowResults({fixIds:['1']},230).amps,10);
+assert.deepEqual(plain(c.powerFixIdTokens('1 & 4')),['1','4']);assert.equal(c.powerSheetRowResults({fixIds:['1 & 4']},230).amps,20);
 for(const id of ['2','3','404']){const result=c.powerSheetRowResults({fixIds:['1',id]},230);assert.equal(result.incomplete,true);assert.equal(result.amps,null)}
 c.powerSheetRowsForRange=()=>Array.from({length:3},()=>({fixIds:['1']}));c.powerSheetDuplicateFixIds=()=>new Map();c.powerAuxRowsForRange=()=>[];
 assert.deepEqual(plain(c.powerSheetPhaseTotals({d:{voltage:'230V',input:'32A 1ø'}})),{p1:30,p2:0,p3:0});

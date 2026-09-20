@@ -1,4 +1,4 @@
-# V46 browser release checks
+# V47 browser release checks
 
 **Use this checklist only when the user explicitly requests browser testing.** Interface changes, implementation requests and releases do not authorise browser testing. Static validation remains the default.
 
@@ -47,6 +47,9 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 | `+ Supply` loads JSON labels, starts blank and cancels cleanly if loading fails | Required | Required | Required |
 | Power and label PDF preview/download; inspect physical dimensions | Required | Required | Required |
 | Power Calcs, Fan Outs and conditional Phase Totals navigation | Required | Required | Required |
+| Power Calcs compound Fix IDs resolve every supported separator, mixed fixture types, positions, watts and duplicate warnings | Required | Required | Required |
+| Power and Fan Outs PDF exports start each distro with full headers/logos, fit both orientations and protect footer space | Required | Required | Required |
+| Power PDF summaries follow the final Socapex and the final Totals page groups every Supply with its assigned Distros | Required | Required | Required |
 | Labels distro navigation and Front/Rear/Table controls | Required | Required | Required |
 | Labels starts in Table View before generation; generated Front/Rear labels persist, freeze Power updates, update on command and export correctly | Required | Required | Required |
 | Network Device Config tabs and actions share one toolbar | Required | Required | Required |
