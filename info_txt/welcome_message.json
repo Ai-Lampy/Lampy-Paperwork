@@ -1,9 +1,9 @@
 {
-  "title": "Welcome to Lampy Paperwork V44",
+  "title": "Welcome to Lampy Paperwork V45",
   "paragraphs": [
     "Lampy Paperwork is a browser-based workspace for creating and managing the technical paperwork used on live entertainment productions. It brings fixture patching, power, distro and Fan Out documentation, control systems, network devices, rack layouts, exports, and project records together in one place.",
-    "V43 improves Home customisation, Project Info visibility controls, Position ordering, and configurable Position Summary PDF grids.",
-    "V42 adds Fixture Summary to Fixture Patch, project-wide fixture information editing, direct GDTF attachment, and complete spreadsheet-style Patch navigation.",
+    "V45 completes Project Settings with one Project Font, fixed Arial application controls, reorganised owner and production settings, and simplified PDF header and footer controls. Fixture Patch and the other project pages use the selected Project Font for document content.",
+    "V44 introduced project-wide typography, units, voltage, logo and PDF export defaults.",
     "Lampy Paperwork remains under active development. Features, layouts, workflows, and saved data may change while the app is tested and improved. Download and keep regular copies of your Lampy project file.",
     "Please report bugs, request missing library items, or suggest improvements through the GitHub issue tracker:",
     "https://github.com/Ai-Lampy/Lampy-Paperwork/issues",

@@ -1,15 +1,16 @@
 {
-  "title": "Lampy Paperwork V44 Walk-through",
+  "title": "Lampy Paperwork V45 Walk-through",
   "sections": [
     {
-      "title": "New in V44: Project Settings",
+      "title": "New in V45: Project Settings refinement",
       "type": "unordered",
       "items": [
         "Open Project Settings from Actions to edit General, Project Info, Production Info, Logos and Exports.",
-        "Set separate Header, Sub-header and Body fonts, weight and measurement units, and the default voltage for new distros.",
-        "Set project PDF paper, orientation and DPI defaults. Each open export preview can temporarily override them.",
-        "Configure first-page and later-page headers plus Left, Centre and Right footer templates with project tokens.",
-        "The Tour Logo remains automatic on PDF exports; Personal and Lighting Vendor logos retain their own project and export controls."
+        "Choose one Project Font for document content. Application navigation, toolbars, menus and form controls stay in Arial.",
+        "Use General to set the Project Font, units, default voltage and Project Owner contact details.",
+        "Use Production Info to choose which production fields are shown on documents and manage the centred Lighting Vendor logo preview.",
+        "Use Exports to set paper, orientation and DPI defaults, persistent Vendor and 2nd Logo choices, Page Title styling and footer content.",
+        "Footer positions can use a preset or Custom template. Remaining-page headers inherit the Footer style, and every exported page reserves footer space."
       ]
     },
     {

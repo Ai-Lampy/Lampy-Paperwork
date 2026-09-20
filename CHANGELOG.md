@@ -1,3 +1,13 @@
+## V45 — Global Project Settings refinement
+
+- Added Typewriter (American Typewriter), Baskerville, Audiowide, Comic Sans and Noteworthy to project and PDF font lists.
+- Replaced separate Header, Sub-header and Body choices with one Project Font while keeping the three saved fields synchronised for compatibility.
+- Kept navigation, toolbars, buttons, menus, side panes and settings controls on Arial so project fonts cannot change the application layout.
+- Moved Project Owner, E-mail, Phone Number and the PDF-owner option into General, added the Production Info document-visibility heading and centred the Lighting Vendor logo.
+- Added persistent Vendor Logo and 2nd Logo export controls to the first-page header settings.
+- Combined first-page title styling, linked line 2 at 2 pt smaller, derived remaining-page headers from the Footer style and limited the supported title and footer sizes.
+- Replaced raw footer fields with preset selectors plus Custom editing while preserving existing template strings and reserved footer space on every PDF page.
+
 ## V44.1 — Global Project Settings and table typography
 
 - Replaced the Project Info modal with a full Project Settings page containing General, Project Info, Production Info, Logos and Exports.

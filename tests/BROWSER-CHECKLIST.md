@@ -1,4 +1,4 @@
-# V44 browser release checks
+# V45 browser release checks
 
 **Use this checklist only when the user explicitly requests browser testing.** Interface changes, implementation requests and releases do not authorise browser testing. Static validation remains the default.
 
@@ -8,10 +8,10 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 | --- | --- | --- | --- |
 | Startup, visible welcome dismissal, keyboard focus | Required | Required | Required |
 | Project Settings page navigation, linked Project/Production fields and mandatory Tour Logo PDF output | Required | Required | Required |
-| General typography, units and custom voltage settings save/load and refresh the app | Required | Required | Required |
+| Project Font, units, custom voltage and Project Owner settings save/load and refresh the app without changing application-control fonts | Required | Required | Required |
 | Export defaults initialise each preview; preview changes remain session-only | Required | Required | Required |
-| Header/footer style controls, tokens, blank-field cleanup and reserved footer area render correctly | Required | Required | Required |
-| Personal and Lighting Vendor logo visibility/export controls update the live header preview | Required | Required | Required |
+| Page Title styling, linked line 2, footer presets/custom templates, remaining-header inheritance and reserved footer areas render correctly | Required | Required | Required |
+| Vendor and 2nd Logo visibility/export controls persist and update the live first-page header preview | Required | Required | Required |
 | Home customisation keeps stats fixed, Revision Summary last/Big and Big Fixture Summary in two columns | Required | Required | Required |
 | Position Summary Name, Colour and Manual ordering persist and arrow controls reorder correctly | Required | Required | Required |
 | Position Summary Rectangle/Box default and custom PDF grids protect headers and footers | Required | Required | Required |
