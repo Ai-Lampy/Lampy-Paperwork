@@ -1,3 +1,9 @@
+## V47.4 — Export header and footer fields
+
+- Added Left, Centre and Right token-template fields for headers on pages after the first.
+- Limited Header and Footer custom templates to two lines across settings previews and PDF exports.
+- Refined Export settings-card spacing and compacted the first-page logo controls.
+
 ## V47.3 — Power card and table refinement
 
 - Changed Distro phase summaries to automatic dimensions with 8 px padding and added the requested Supply-summary divider treatment.

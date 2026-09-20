@@ -1,8 +1,8 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),path=require('path'),zlib=require('zlib');
 const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const LampyCore=require('../js/project-core.js'),LampyArchive=require('../js/archive.js');
-assert(html.includes('<title>Lampy Paperwork V47.3</title>'));
-assert(html.includes("const VERSION='47.3';"));
+assert(html.includes('<title>Lampy Paperwork V47.4</title>'));
+assert(html.includes("const VERSION='47.4';"));
 const v472WidthLimits={colour:[30,40],socapex:[75,180],way:[20,30],fixId:[50,80],fixType:[60,190],position:[85,180],watts:[40,45],amps:[66,75]};
 const v472WidthSource=html.slice(html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS='),html.indexOf('let powerColumnWidthSettings=',html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS=')));
 for(const [key,[min,max]] of Object.entries(v472WidthLimits))assert(v472WidthSource.includes(`${key}:{label:`)&&v472WidthSource.includes(`min:${min},max:${max}`),`${key} Power width limits`);
@@ -15,7 +15,7 @@ assert(html.includes('tbody .wayCol{font-size:12px!important}'));
 assert(html.includes('tbody .fixIdCol input{font-size:16px!important}'));
 assert(html.includes('tbody .fixTypeCol .powerFixTypeText{font-size:14px!important}'));
 assert(html.includes('tbody .positionCol .powerPositionText{font-size:14px!important}'));
-console.log('PASS: V47.3 release version, Power width limits, summary cards and table typography.');
+console.log('PASS: V47.4 release version, retained Power refinements and Export header/footer fields.');
 function source(name){const start=html.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const text=html.slice(start,end+1);try{new Function('return ('+text+')');return text}catch{}}throw Error(name)}
 const c=vm.createContext({console,LampyCore,crypto:require('crypto').webcrypto,window:{},clearTimeout,Map,Set,Number,Array});
 function add(...names){for(const name of names)vm.runInContext(source(name),c)}
@@ -76,14 +76,19 @@ console.log('PASS: quota recovery, multi-tab guard, revisions, supply assignment
 
 const settingsContext=vm.createContext({APP_FONT_OPTIONS:[{value:'Arial,Helvetica,sans-serif'},{value:'"American Typewriter",Courier,serif'}],PROJECT_DEFAULT_FONT:'Arial,Helvetica,sans-serif',ensureProjectInfo:()=>({file:{projectName:'Arena',version:'',versionDate:'',projectOwner:'Owner',email:'',phoneNumber:'0123',includeOwnerDetailsInPdfFooters:true}}),formatDisplayDate:value=>value});
 vm.runInContext('const PDF_TITLE_SIZES=[10,12,14,16,18,20,22,24,26,28,30],PDF_FOOTER_SIZES=[5,6,7,8,9,10];',settingsContext);
-for(const name of ['defaultPdfTextStyle','defaultProjectSettings','normaliseProjectFont','normalisePdfTextStyle','normalisePdfSize','normaliseProjectSettings','pdfTemplateValues','expandPdfTemplate'])vm.runInContext(source(name),settingsContext);
+for(const name of ['defaultPdfTextStyle','defaultProjectSettings','normaliseProjectFont','normalisePdfTextStyle','normalisePdfSize','limitPdfTemplateLines','normaliseProjectSettings','pdfTemplateValues','expandPdfTemplate'])vm.runInContext(source(name),settingsContext);
 const migrated=plain(settingsContext.normaliseProjectSettings({units:{weight:'lb',measurement:'imperial'},power:{voltage:208},pdf:{paper:'A3',orientation:'portrait',dpi:300}}));
 assert.equal(migrated.units.weight,'lb');assert.equal(migrated.units.measurement,'imperial');assert.equal(migrated.power.voltage,208);assert.equal(migrated.pdf.paper,'A3');assert.equal(migrated.pdf.orientation,'portrait');assert.equal(migrated.pdf.dpi,300);
 const defaults=plain(settingsContext.normaliseProjectSettings({power:{voltage:-1},pdf:{dpi:999}}));assert.equal(defaults.power.voltage,230);assert.equal(defaults.pdf.dpi,450);
+assert.equal(defaults.pdf.laterHeader.left,'');assert.equal(defaults.pdf.laterHeader.centre,'{document}');assert.equal(defaults.pdf.laterHeader.right,'');
+const legacyHeader=plain(settingsContext.normaliseProjectSettings({pdf:{laterHeader:{align:'right'}}}));assert.equal(legacyHeader.pdf.laterHeader.left,'');assert.equal(legacyHeader.pdf.laterHeader.centre,'');assert.equal(legacyHeader.pdf.laterHeader.right,'{document}');assert.equal(legacyHeader.pdf.laterHeader.align,'right');
+const twoLineChrome=plain(settingsContext.normaliseProjectSettings({pdf:{laterHeader:{left:'Header 1\nHeader 2\nHeader 3',centre:'',right:''},footer:{left:'Footer 1\nFooter 2\nFooter 3'}}}));assert.equal(twoLineChrome.pdf.laterHeader.left,'Header 1\nHeader 2');assert.equal(twoLineChrome.pdf.footer.left,'Footer 1\nFooter 2');
 const unified=plain(settingsContext.normaliseProjectSettings({typography:{headerFont:'Arial,Helvetica,sans-serif',bodyFont:'"American Typewriter",Courier,serif'},pdf:{firstHeader:{title:{size:25,font:'"American Typewriter",Courier,serif',bold:false,italic:true,underline:true,colour:'#123456'}},footer:{style:{size:11}}}}));
 assert.deepEqual(Object.values(unified.typography),['"American Typewriter",Courier,serif','"American Typewriter",Courier,serif','"American Typewriter",Courier,serif']);assert.equal(unified.pdf.firstHeader.title.size,24);assert.equal(unified.pdf.firstHeader.subtitle.size,22);assert.equal(unified.pdf.firstHeader.subtitle.font,unified.pdf.firstHeader.title.font);assert.equal(unified.pdf.footer.style.size,10);
 const tokens=settingsContext.pdfTemplateValues('Power',2,5);assert.equal(settingsContext.expandPdfTemplate('{project} • Version {version}',tokens),'Arena');assert.equal(settingsContext.expandPdfTemplate('{owner}\n{email} \\ {phone}',tokens),'Owner\n0123');
 assert(source('distroVoltage').includes('projectDefaultVoltage()'));assert(source('beginPdfLogoPreview').includes('project.projectSettings?.pdf'));assert(source('patchPdfPageToJpeg').includes('document.fonts?.ready'));
+assert(source('renderExportSettings').includes('Remaining-page Header'));assert(source('renderExportSettings').includes('projectSettingsHeaderTemplates'));assert(!source('renderExportSettings').includes('Header line 2 uses the Page Title style at 2 pt smaller.'));
+assert(source('pdfTemplateControlMarkup').includes('textarea rows="2"'));assert(source('createExportPage').includes('if(pageIndex>0)'));assert(source('finalisePdfPageChrome').includes('settings.laterHeader.centre'));
 console.log('PASS: V45 settings normalization, unified project font, PDF styles, footer tokens, voltage fallback and font-ready PDF capture');
 
 function zip(name,data,compressed=false){const filename=Buffer.from(name),content=Buffer.from(data),packed=compressed?zlib.deflateRawSync(content):content,crc=LampyArchive.crc32(content),local=Buffer.alloc(30),central=Buffer.alloc(46),end=Buffer.alloc(22);local.writeUInt32LE(0x04034b50);local.writeUInt16LE(compressed?8:0,8);local.writeUInt32LE(crc,14);local.writeUInt32LE(packed.length,18);local.writeUInt32LE(content.length,22);local.writeUInt16LE(filename.length,26);central.writeUInt32LE(0x02014b50);central.writeUInt16LE(compressed?8:0,10);central.writeUInt32LE(crc,16);central.writeUInt32LE(packed.length,20);central.writeUInt32LE(content.length,24);central.writeUInt16LE(filename.length,28);end.writeUInt32LE(0x06054b50);end.writeUInt16LE(1,8);end.writeUInt16LE(1,10);end.writeUInt32LE(central.length+filename.length,12);end.writeUInt32LE(local.length+filename.length+packed.length,16);return Buffer.concat([local,filename,packed,central,filename,end])}
