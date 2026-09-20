@@ -1,8 +1,8 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),path=require('path'),zlib=require('zlib');
 const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const LampyCore=require('../js/project-core.js'),LampyArchive=require('../js/archive.js');
-assert(html.includes('<title>Lampy Paperwork V47.7</title>'));
-assert(html.includes("const VERSION='47.7';"));
+assert(html.includes('<title>Lampy Paperwork V47.8</title>'));
+assert(html.includes("const VERSION='47.8';"));
 const v472WidthLimits={colour:[30,40],socapex:[75,180],way:[20,30],fixId:[50,80],fixType:[60,190],position:[85,180],watts:[40,45],amps:[66,75]};
 const v475WidthCurrent={colour:30,socapex:112,way:26,fixId:59,fixType:117,position:115,watts:45,amps:72};
 const v472WidthSource=html.slice(html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS='),html.indexOf('let powerColumnWidthSettings=',html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS=')));
@@ -22,15 +22,28 @@ assert(html.includes('.powerSupplyCard{width:auto!important;height:auto!importan
 assert(html.includes('.powerSupplyCard .powerSupplySummary strong{font-size:18px!important;line-height:1;overflow:hidden;text-overflow:ellipsis;padding-bottom:4px}'));
 assert(!html.includes('function powerColumnWidthAdjusterMarkup'));
 assert(html.includes('.powerHeaderTooltip:hover::after'));
-assert(html.includes('.powerPdfDocumentHeader{display:grid!important;grid-auto-flow:row;row-gap:2px'));
+assert(html.includes('.powerPdfDocumentHeader{display:grid!important;grid-auto-flow:row;row-gap:5px'));
 const v477LayoutSource=html.slice(html.indexOf('function powerPdfContentLayout('),html.indexOf('function fitPowerPdfContent(',html.indexOf('function powerPdfContentLayout(')));
 const v477FitSource=html.slice(html.indexOf('function fitPowerPdfContent('),html.indexOf('function powerPdfContentWouldOverflow(',html.indexOf('function fitPowerPdfContent(')));
 const v477PageSource=html.slice(html.indexOf('function createPowerPdfPage('),html.indexOf('function appendPowerPdfPreviewPage(',html.indexOf('function createPowerPdfPage(')));
 assert(v477LayoutSource.includes("width','max-content'"));
-assert(v477FitSource.includes('layout.tablePage?layout.widthScale'));
+assert(v477FitSource.includes('layout.tablePage&&!layout.mainPowerTable?layout.widthScale'));
 assert(v477PageSource.includes("querySelector('.pdfLaterPageHeader')?.remove()"));
 assert(v477PageSource.includes("classList.remove('pdfLaterPage')"));
-console.log('PASS: V47.7 release version, Power PDF spacing, sparse-table scaling and Distro-page headers.');
+assert(html.includes('.pdfUnifiedHeaderLeft,.pdfUnifiedHeaderRight{display:grid;align-items:start;min-width:0;min-height:0;margin-top:8px;margin-bottom:8px}'));
+assert(html.includes('.pdfUnifiedHeader .lightingVendorLogo{margin:0 10px}'));
+assert(html.includes('.pdfUnifiedHeader .pdfTourLogo{margin-top:0;margin-right:10px}'));
+assert(html.includes('.exportPage.pdfLaterPage{padding-top:35px!important}'));
+const v478HideSource=html.slice(html.indexOf('function hideEmptyPowerPdfColumns('),html.indexOf('function fitPowerSheetHeaders(',html.indexOf('function hideEmptyPowerPdfColumns(')));
+const v478WidthDistributionSource=html.slice(html.indexOf('function powerPdfExpandedColumnWidths('),html.indexOf('function powerPdfSetColumnWidth(',html.indexOf('function powerPdfExpandedColumnWidths(')));
+const v478ExpandSource=html.slice(html.indexOf('function expandSparsePowerPdfColumns('),html.indexOf('function powerPdfContentLayout(',html.indexOf('function expandSparsePowerPdfColumns(')));
+const v478BoundsSource=html.slice(html.indexOf('function powerPdfContentLayout('),html.indexOf('function fitPowerPdfContent(',html.indexOf('function powerPdfContentLayout(')));
+assert(v478HideSource.includes("column.style.setProperty('display','none','important')"));
+assert(v478ExpandSource.includes("if(content.querySelector('.fanOutView'))return false"));
+assert(v478WidthDistributionSource.includes("['fixId','fixType','position'].includes"));
+assert(v478BoundsSource.includes("page.querySelector('.pdfPageFooter')"));
+assert(v478BoundsSource.includes('footerTop-8'));
+console.log('PASS: V47.8 release version, PDF chrome, protected content bounds and proportional Power widths.');
 function source(name){const start=html.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const text=html.slice(start,end+1);try{new Function('return ('+text+')');return text}catch{}}throw Error(name)}
 const c=vm.createContext({console,LampyCore,crypto:require('crypto').webcrypto,window:{},clearTimeout,Map,Set,Number,Array});
 function add(...names){for(const name of names)vm.runInContext(source(name),c)}

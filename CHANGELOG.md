@@ -1,3 +1,9 @@
+## V47.8 — Power PDF spacing and table fitting
+
+- Refined shared PDF header and logo spacing and increased Power document-heading spacing to 5 px.
+- Reserved the rendered footer area when fitting Power PDF content so tables cannot obscure page chrome.
+- Expanded visible Power Fix ID, Fix Type and Position columns proportionally on sparse table pages.
+
 ## V47.7 — Power PDF page fitting
 
 - Added 2 px spacing between the Power PDF title, Distro heading and Supply heading.
