@@ -1,6 +1,12 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),path=require('path'),zlib=require('zlib');
 const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const LampyCore=require('../js/project-core.js'),LampyArchive=require('../js/archive.js');
+assert(html.includes('<title>Lampy Paperwork V47.2</title>'));
+assert(html.includes("const VERSION='47.2';"));
+const v472WidthLimits={colour:[30,40],socapex:[75,180],way:[20,30],fixId:[50,80],fixType:[60,190],position:[85,180],watts:[40,45],amps:[66,75]};
+const v472WidthSource=html.slice(html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS='),html.indexOf('let powerColumnWidthSettings=',html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS=')));
+for(const [key,[min,max]] of Object.entries(v472WidthLimits))assert(v472WidthSource.includes(`${key}:{label:`)&&v472WidthSource.includes(`min:${min},max:${max}`),`${key} Power width limits`);
+console.log('PASS: V47.2 release version and requested Power width limits.');
 function source(name){const start=html.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const text=html.slice(start,end+1);try{new Function('return ('+text+')');return text}catch{}}throw Error(name)}
 const c=vm.createContext({console,LampyCore,crypto:require('crypto').webcrypto,window:{},clearTimeout,Map,Set,Number,Array});
 function add(...names){for(const name of names)vm.runInContext(source(name),c)}

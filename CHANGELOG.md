@@ -1,3 +1,8 @@
+## V47.2 — Power column width limits
+
+- Updated the temporary Power Calcs column controls to use the requested Min and Max widths for Colour, Socapex, Way, Fix ID, Fix Type, Position, Watts and Amps.
+- Kept Current widths responsive within the revised limits for the live table and Power PDF output.
+
 ## V47.1 — Power widths and summary cards
 
 - Added temporary Min, Current and Max width controls for every main Power Calcs column group, shared by repeated columns and Power PDF output without changing project files.

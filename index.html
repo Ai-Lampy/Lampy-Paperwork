@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="Lampy Paperwork — browser-based lighting paperwork, fixture patch, power, network, rack and MVR tools." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111'/%3E%3Cpath d='M21 9h22v8l-5 9v9h-4v20h-4V35h-4v-9l-5-9z' fill='%23fff'/%3E%3C/svg%3E" />
-<title>Lampy Paperwork V47.1</title>
+<title>Lampy Paperwork V47.2</title>
 <style>
 :root{--label-w:18mm;--label-h:34mm;--label-gap:0.5mm;--gap-y:2mm;--radius:3mm;--border:1mm;--border-col:#ffffff;--stripe:4mm;--front-aux-w:18mm;--front-aux-h:34mm;--front-output-w:72mm;--front-output-h:34mm;--rear-soca-w:70mm;--rear-soca-h:50mm;--rear-aux-w:85mm;--rear-aux-h:30mm;--rear-aux-gap:5mm;--rear-output-w:90mm;--rear-output-h:60mm;--top-size:18pt;--bottom-size:14pt;--top-align:center;--bottom-align:center;--top-v-align:center;--bottom-v-align:center;--top-font:Cochin,'Times New Roman',Times,serif;--bottom-font:Cochin,'Times New Roman',Times,serif;--top-weight:700;--bottom-weight:700;--top-transform:none;--bottom-transform:none;--top-text-align:center;--bottom-text-align:center;--app-font:Arial,Helvetica,sans-serif;--project-header-font:Arial,Helvetica,sans-serif;--project-subheader-font:Arial,Helvetica,sans-serif;--project-body-font:Arial,Helvetica,sans-serif}
 *{box-sizing:border-box}body{margin:0;font-family:var(--project-body-font);background:#f6f7f9;color:#111}h1{margin:0;font-size:28px;font-family:var(--project-header-font)}h2{font-family:var(--project-header-font)}h3,h4{font-family:var(--project-subheader-font)}h2,h3{margin:0 0 12px}button,input,select,textarea{font-style:inherit;font-variant-caps:inherit;font-weight:inherit;font-width:inherit;font-size:inherit;line-height:inherit;font-family:inherit;font-size-adjust:inherit;font-kerning:inherit;font-variant-alternates:inherit;font-variant-ligatures:inherit;font-variant-numeric:inherit;font-variant-east-asian:inherit;font-variant-position:inherit;font-variant-emoji:inherit;font-feature-settings:inherit;font-optical-sizing:inherit;font-variation-settings:inherit}.reportIssueBtn{border:2px solid #111;background:#fff;color:#111;border-radius:60px;padding:8px 8px;font-weight:900;text-decoration:none;white-space:nowrap}.reportIssueBtn:hover{background:#111;color:#fff}.btn{border:2px solid #000;background:rgb(217, 217, 217);border-radius:7px;padding:10px 12px;cursor:pointer}.btn:hover{background:#f7f9fc}.btn.primary{background:#00a61d;color:#fff;border:2px solid #000;font-weight:700}.btn.danger{color:#b42318}.btn.add{font-weight:800;font-size:14px;line-height:1;padding:8px;background:#00a61d;color:#fff;border:2px solid #000}.gear{font-size:24px;border:1px solid #d9dee7;background:#fff;border-radius:999px;width:44px;height:44px;cursor:pointer}.gear:hover{background:#f7f9fc}.tourLogoSlot{display:flex;align-items:center;justify-content:center;width:165px;min-width:0;max-width:100%}.tourLogo{display:block;max-width:160px;max-height:54px;object-fit:contain}.tourLogoExport{position:absolute;top:5mm;right:5mm;max-width:34mm;max-height:18mm;object-fit:contain;z-index:3}.tourLogoUploadPreview{border:1px dashed #cfd6e1;border-radius:8px;background:#fff;min-height:130px;display:flex;align-items:center;justify-content:center;padding:14px}.tourLogoUploadPreview img{max-width:260px;max-height:120px;object-fit:contain}.logoActions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}.menuButton{position:fixed;right:18px;top:18px;z-index:18;border:1px solid #d9dee7;background:#111;color:#fff;border-radius:999px;width:46px;height:46px;font-size:24px;font-weight:900;cursor:pointer;box-shadow:0 10px 28px rgba(16,24,40,.18)}.menuButton:hover{background:#2a2a2a}.actionSidebar{position:fixed;right:18px;top:74px;width:min(260px,calc(100vw - 36px));z-index:17;border:1px solid #dfe3ea;border-radius:10px;background:#fff;box-shadow:0 18px 48px rgba(16,24,40,.22);padding:12px;transform:translateX(calc(100% + 28px));transition:transform .18s ease}.actionMenuOpen .actionSidebar{transform:translateX(0)}.actionSidebar h2{font-size:15px;margin:0 0 10px}.actionSidebar .btn{width:100%;margin:0 0 8px;text-align:left;font-weight:800}
@@ -787,7 +787,7 @@ a.reportIssueBtn,.homeHero,.homeHero *,.homeGrid,.homeGrid *,.powerSupplyCard,.p
 <script src="js/ui-support.js" defer></script>
 <script>
 'use strict';
-const VERSION='47.1';
+const VERSION='47.2';
 const AUTOSAVE_DELAY=700;
 const BACKGROUND_VALIDATION_DELAY=180;
 const DEFAULT_FONT="Cochin,'Times New Roman',Times,serif";
@@ -992,14 +992,14 @@ let fixturePatchViewOptions={sortBy:'fixId',sortDir:'asc',filters:{type:'',unive
 const PATCH_FIXED_COLUMN_WIDTHS={colour1:110,colour2:110};
 const PATCH_COLUMN_WIDTHS={fixId:{min:45,max:80},universe:{min:45,max:80},address:{min:45,max:80},fixture:{min:80,max:220},mode:{min:90,max:280},channels:{min:45,max:80},location:{min:90,max:260},notes:{min:90,max:150}};
 const POWER_COLUMN_WIDTH_DEFAULTS={
-  colour:{label:'Colour',min:30,max:45,current:30,count:1,css:'--power-colour-width'},
-  socapex:{label:'Socapex',min:78,max:180,current:130,count:1,css:'--power-socapex-width'},
-  way:{label:'Way',min:32,max:60,current:42,count:1,css:'--power-way-width'},
-  fixId:{label:'Fix ID',min:45,max:110,current:100,count:4,css:'--power-fix-id-width'},
-  fixType:{label:'Fix Type',min:70,max:190,current:162,count:4,css:'--power-fix-type-width'},
-  position:{label:'Position',min:60,max:180,current:110,count:4,css:'--power-position-width'},
-  watts:{label:'Watts',min:40,max:90,current:74,count:4,css:'--power-watts-width'},
-  amps:{label:'Amps',min:70,max:120,current:90,count:1,css:'--power-amps-width'}
+  colour:{label:'Colour',min:30,max:40,current:30,count:1,css:'--power-colour-width'},
+  socapex:{label:'Socapex',min:75,max:180,current:130,count:1,css:'--power-socapex-width'},
+  way:{label:'Way',min:20,max:30,current:30,count:1,css:'--power-way-width'},
+  fixId:{label:'Fix ID',min:50,max:80,current:80,count:4,css:'--power-fix-id-width'},
+  fixType:{label:'Fix Type',min:60,max:190,current:162,count:4,css:'--power-fix-type-width'},
+  position:{label:'Position',min:85,max:180,current:110,count:4,css:'--power-position-width'},
+  watts:{label:'Watts',min:40,max:45,current:45,count:4,css:'--power-watts-width'},
+  amps:{label:'Amps',min:66,max:75,current:75,count:1,css:'--power-amps-width'}
 };
 let powerColumnWidthSettings=powerDefaultColumnWidths();
 
