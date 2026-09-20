@@ -1,14 +1,15 @@
 {
-  "title": "Lampy Paperwork V43 Walk-through",
+  "title": "Lampy Paperwork V44 Walk-through",
   "sections": [
     {
-      "title": "New in V43: Home and Position Summary",
+      "title": "New in V44: Project Settings",
       "type": "unordered",
       "items": [
-        "Project Info now places Home visibility controls beside each Production field and automatically includes the Tour Logo on PDF exports.",
-        "Home statistics stay fixed while summary cards can use Small or Big layouts; Revision Summary remains last and Big.",
-        "Position Summary supports Name, Colour and saved Manual ordering.",
-        "Position Summary PDF exports support separate Rectangle and Box column and row grids."
+        "Open Project Settings from Actions to edit General, Project Info, Production Info, Logos and Exports.",
+        "Set separate Header, Sub-header and Body fonts, weight and measurement units, and the default voltage for new distros.",
+        "Set project PDF paper, orientation and DPI defaults. Each open export preview can temporarily override them.",
+        "Configure first-page and later-page headers plus Left, Centre and Right footer templates with project tokens.",
+        "The Tour Logo remains automatic on PDF exports; Personal and Lighting Vendor logos retain their own project and export controls."
       ]
     },
     {
@@ -26,7 +27,7 @@
       "title": "Recommended Workflow",
       "type": "ordered",
       "items": [
-        "Press the menu button to open Actions, then open Project Info and enter the project name, dates, production details, and logos.",
+        "Press the menu button to open Actions, then open Project Settings and enter the project name, dates, production details, logos, general defaults, and export defaults.",
         "Add each distro with + Distro. Set its name, type, supply, voltage, RCBO rating, Socapex count, and any Aux or additional outputs.",
         "Build the Fixture Patch by adding fixtures from the library or importing CSV, Excel, XLSM, or MVR data.",
         "Open the full-page Positions workspace from Home Position Summary or Fixture Patch to create positions and assign up to three colours. Position names and colours are shared with the patch, power calculations, labels, Control, Rack Layout and Device Config.",
