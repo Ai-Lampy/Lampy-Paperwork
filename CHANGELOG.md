@@ -1,3 +1,9 @@
+## V47.3 — Power card and table refinement
+
+- Changed Distro phase summaries to automatic dimensions with 8 px padding and added the requested Supply-summary divider treatment.
+- Hid the Colour and Way header text while retaining accessible names and native hover labels.
+- Set Power Calcs body text to 12 px for Way, 16 px for Fix ID and 14 px for Fix Type and Position across live and PDF output.
+
 ## V47.2 — Power column width limits
 
 - Updated the temporary Power Calcs column controls to use the requested Min and Max widths for Colour, Socapex, Way, Fix ID, Fix Type, Position, Watts and Amps.
