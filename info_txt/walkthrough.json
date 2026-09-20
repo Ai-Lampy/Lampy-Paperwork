@@ -1,16 +1,15 @@
 {
-  "title": "Lampy Paperwork V45 Walk-through",
+  "title": "Lampy Paperwork V46 Walk-through",
   "sections": [
     {
-      "title": "New in V45: Project Settings refinement",
+      "title": "New in V46: Fixture Patch update",
       "type": "unordered",
       "items": [
-        "Open Project Settings from Actions to edit General, Project Info, Production Info, Logos and Exports.",
-        "Choose one Project Font for document content. Application navigation, toolbars, menus and form controls stay in Arial.",
-        "Use General to set the Project Font, units, default voltage and Project Owner contact details.",
-        "Use Production Info to choose which production fields are shown on documents and manage the centred Lighting Vendor logo preview.",
-        "Use Exports to set paper, orientation and DPI defaults, persistent Vendor and 2nd Logo choices, Page Title styling and footer content.",
-        "Footer positions can use a preset or Custom template. Remaining-page headers inherit the Footer style, and every exported page reserves footer space."
+        "Fixture Patch uses the wider 1400 px workspace and the Project Font for default fixture titles.",
+        "Patch Fixture saves and returns to the patch. Patch & Add More saves and returns to the retained manufacturer in the fixture library.",
+        "Fixture Patch Export Output Options set independent Main Header and Sub-heading sizes from 8 pt to 30 pt.",
+        "Patch PDF output starts every fixture type on a new page, hides empty columns per fixture type and repeats titles and headers on continuation pages.",
+        "Show Fixture Summary adds a first-page manufacturer, fixture type, mode and quantity summary. Show Patch Revision Notes adds the final revision page."
       ]
     },
     {
@@ -48,7 +47,7 @@
       "items": [
         "The fixture library shows GDTF ✅ only when a repository file has a fully matched manufacturer, fixture type, mode, and channel count. GDTF ❌ means an exact match is not currently available.",
         "Use Import to load CSV, Excel, XLSM, or MVR files. Imported comparison tabs highlight new, removed, and changed patch data before it is merged into the master patch.",
-        "Fixture Patch Export groups paper, orientation, DPI, zoom, column, and GDTF controls inside Formatting Options. PDF, Excel, and MVR actions, temporary PDF logo controls, and the hidden-column report remain directly accessible below it.",
+        "Fixture Patch Export groups paper, orientation, DPI, header sizes, optional summary and revision pages, zoom, column and GDTF controls inside Output Options.",
         "MVR export checks fixture IDs, DMX addresses, modes, duplicate ranges, and GDTF availability before building the file.",
         "V33 imports supported MVR 1.5 and 1.6 patch data, including fixture positions, layers, classes, UUID metadata, and embedded GDTF filenames with or without the .gdtf extension.",
         "MVR export uses standards-formatted UUIDs and DMX addresses, creates one layer per Lampy fixture position, and embeds the exact matched GDTF file and mode.",

@@ -1,3 +1,12 @@
+## V46 — Fixture Patch update
+
+- Expanded the Fixture Patch workspace to 1400 px, standardised its main toolbar actions and made default fixture titles follow the Project Font.
+- Added Patch Fixture and Patch & Add More workflows, including duplicate Fix ID continuation that preserves the selected action.
+- Renamed Fixture Patch PDF Formatting Options to Output Options and added saved 8–30 pt Main Header and Sub-heading sizes.
+- Rebuilt Patch PDF pagination so each fixture type starts on a new page, continuation pages repeat the title and table header, and empty columns hide independently per fixture type.
+- Added width-aware portrait and landscape table scaling with top-left anchoring and scaled-height pagination to protect footers.
+- Added optional Fixture Summary and Patch Revision Notes pages, enabled by default, with final page totals and footer tokens recalculated after assembly.
+
 ## V45 — Global Project Settings refinement
 
 - Added Typewriter (American Typewriter), Baskerville, Audiowide, Comic Sans and Noteworthy to project and PDF font lists.

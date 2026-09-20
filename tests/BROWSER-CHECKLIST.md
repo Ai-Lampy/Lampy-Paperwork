@@ -1,4 +1,4 @@
-# V45 browser release checks
+# V46 browser release checks
 
 **Use this checklist only when the user explicitly requests browser testing.** Interface changes, implementation requests and releases do not authorise browser testing. Static validation remains the default.
 
@@ -17,6 +17,9 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 | Position Summary Rectangle/Box default and custom PDF grids protect headers and footers | Required | Required | Required |
 | Fixture picker with apostrophes in names | Required | Required | Required |
 | Add Fixtures duplicate-ID warning remains in-flow with both resolution actions visible | Required | Required | Required |
+| Patch Fixture closes Patch Options; Patch & Add More returns to the retained manufacturer after normal and duplicate-ID saves | Required | Required | Required |
+| Fixture Patch PDF starts each fixture type on a new page, hides empty columns per type, fits both orientations and repeats continuation headers | Required | Required | Required |
+| Fixture Patch PDF Fixture Summary and Patch Revision Notes toggles persist and page/footer totals update | Required | Required | Required |
 | Unlocked Fixture Patch navigation crosses every editable field and skips read-only or hidden columns | Required | Required | Required |
 | Fixture Summary matches Home, closes on outside click/Escape, and refreshes after edits | Required | Required | Required |
 | Fixture information overrides survive save/load and affect every mode and newly added matching fixtures | Required | Required | Required |
