@@ -1,3 +1,9 @@
+## V47.11 — Outlet colours and temporary widths
+
+- Set the Aux Way column to 35 px without minimum or maximum width rules while retaining its 14 px header and 16 px body text.
+- Replaced the outlet palette button with three inline colour fields sized to match the Include control.
+- Added session-only Min, Current and Max width controls to the Aux tables and every 3ø Outlet table.
+
 ## V47.10 — Aux table sizing and colour controls
 
 - Set the Aux Way column to 45 px with 14 px header text and 16 px body text.

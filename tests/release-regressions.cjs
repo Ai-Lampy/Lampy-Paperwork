@@ -1,8 +1,8 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),path=require('path'),zlib=require('zlib');
 const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const LampyCore=require('../js/project-core.js'),LampyArchive=require('../js/archive.js');
-assert(html.includes('<title>Lampy Paperwork V47.10</title>'));
-assert(html.includes("const VERSION='47.10';"));
+assert(html.includes('<title>Lampy Paperwork V47.11</title>'));
+assert(html.includes("const VERSION='47.11';"));
 const v472WidthLimits={colour:[30,40],socapex:[75,180],way:[20,30],fixId:[50,80],fixType:[60,190],position:[85,180],watts:[40,45],amps:[66,75]};
 const v475WidthCurrent={colour:30,socapex:112,way:26,fixId:59,fixType:117,position:115,watts:45,amps:72};
 const v472WidthSource=html.slice(html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS='),html.indexOf('let powerColumnWidthSettings=',html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS=')));
@@ -46,7 +46,7 @@ assert(v478BoundsSource.includes('footerTop-8'));
 assert(html.includes('id="distroSettingsModal" class="frontEditorPane hidden"'));
 assert(html.includes('Save Distro'));
 assert(html.includes('Save Supply'));
-assert(html.includes('data-power-extra-colour-button'));
+assert(html.includes('data-power-extra-colour="${key}"'));
 assert(html.includes('data-power-position-colours'));
 assert(html.includes('<th class="auxNumberCol">Way</th>'));
 assert(html.includes('<th class="powerOutputTypeCol">Type</th><th class="auxLabelCol">Label</th>'));
@@ -54,7 +54,8 @@ const v479PdfSource=html.slice(html.indexOf('function renderPowerPdfPreview('),h
 assert(v479PdfSource.includes("'extras'"));
 assert(!v479PdfSource.includes("'aux'"));
 assert(!v479PdfSource.includes("'output'"));
-assert(html.includes('.powerAuxSheet .auxNumberCol{width:45px;min-width:45px;max-width:45px;font-weight:900}'));
+assert(html.includes('.powerAuxSheet .auxNumberCol{width:35px;font-weight:900}'));
+assert(!html.includes('.powerAuxSheet .auxNumberCol{width:35px;min-width'));
 assert(html.includes('.powerAuxSheet thead .auxNumberCol{font-size:14px}'));
 assert(html.includes('.powerAuxSheet tbody .auxNumberCol{font-size:16px}'));
 assert(html.includes('.powerAuxSheet .auxLabelCol{width:auto!important;min-width:50px;max-width:200px'));
@@ -66,8 +67,14 @@ const v4710OutputSource=html.slice(html.indexOf('function powerOutputSheetMarkup
 assert(v4710OutputSource.indexOf('powerExtraLabelCellMarkup')<v4710OutputSource.indexOf('powerExtraColourCellMarkup'));
 assert(html.includes('<th class="auxIncludeCol">Include in Power Calcs?</th><th class="powerExtraColourCol">Colours</th>'));
 assert(html.includes('<th class="auxLabelCol">Label</th><th class="powerExtraColourCol">Colours</th>'));
-assert(html.includes(".powerExtraColourCol').forEach(el=>el.remove())"));
-console.log('PASS: V47.10 release version, Power drafts, outlet colours and Aux layout controls.');
+assert(source('preparePowerPdfView').includes('.powerExtraColourCol,.powerExtraWidthAdjuster'));
+assert(html.includes('.powerExtraColourField,.powerAuxIncludeBtn{width:60px!important;min-width:60px!important;height:42px!important;transform:scale(.7)'));
+assert((source('powerExtraColourCellMarkup').match(/field\('c[123]'\)/g)||[]).length===3);
+assert(source('powerAuxSheetMarkup').includes("powerExtraWidthAdjusterMarkup('aux')"));
+assert(source('powerOutputSheetMarkup').includes("powerExtraWidthAdjusterMarkup('output',key)"));
+assert(source('preparePowerPdfView').includes('.powerExtraWidthAdjuster'));
+assert(!source('revisionTrackedState').includes('powerExtraWidthSettings'));
+console.log('PASS: V47.11 release version, inline outlet colours and temporary Aux/output widths.');
 function source(name){const start=html.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const text=html.slice(start,end+1);try{new Function('return ('+text+')');return text}catch{}}throw Error(name)}
 const c=vm.createContext({console,LampyCore,crypto:require('crypto').webcrypto,window:{},clearTimeout,Map,Set,Number,Array});
 function add(...names){for(const name of names)vm.runInContext(source(name),c)}
