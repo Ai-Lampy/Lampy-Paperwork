@@ -1,3 +1,10 @@
+## V47.9 — Power setup and outlet colours
+
+- Added shared Col 1, Col 2 and Col 3 controls to Power Calcs Aux and 3ø label cells, with matching live, Labels and PDF colour rendering.
+- Changed Add Distro and Add Supply to draft-based side panes with explicit Save actions and discard-on-close behaviour.
+- Renamed the Aux first column to Way and simplified 3ø Output tables to Type and Label columns.
+- Combined each Distro's Aux and 3ø Output sections onto one footer-safe PDF page.
+
 ## V47.8 — Power PDF spacing and table fitting
 
 - Refined shared PDF header and logo spacing and increased Power document-heading spacing to 5 px.

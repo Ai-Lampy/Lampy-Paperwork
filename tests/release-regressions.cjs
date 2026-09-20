@@ -1,8 +1,8 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),path=require('path'),zlib=require('zlib');
 const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const LampyCore=require('../js/project-core.js'),LampyArchive=require('../js/archive.js');
-assert(html.includes('<title>Lampy Paperwork V47.8</title>'));
-assert(html.includes("const VERSION='47.8';"));
+assert(html.includes('<title>Lampy Paperwork V47.9</title>'));
+assert(html.includes("const VERSION='47.9';"));
 const v472WidthLimits={colour:[30,40],socapex:[75,180],way:[20,30],fixId:[50,80],fixType:[60,190],position:[85,180],watts:[40,45],amps:[66,75]};
 const v475WidthCurrent={colour:30,socapex:112,way:26,fixId:59,fixType:117,position:115,watts:45,amps:72};
 const v472WidthSource=html.slice(html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS='),html.indexOf('let powerColumnWidthSettings=',html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS=')));
@@ -43,11 +43,25 @@ assert(v478ExpandSource.includes("if(content.querySelector('.fanOutView'))return
 assert(v478WidthDistributionSource.includes("['fixId','fixType','position'].includes"));
 assert(v478BoundsSource.includes("page.querySelector('.pdfPageFooter')"));
 assert(v478BoundsSource.includes('footerTop-8'));
-console.log('PASS: V47.8 release version, PDF chrome, protected content bounds and proportional Power widths.');
+assert(html.includes('id="distroSettingsModal" class="frontEditorPane hidden"'));
+assert(html.includes('Save Distro'));
+assert(html.includes('Save Supply'));
+assert(html.includes('data-power-extra-colour-button'));
+assert(html.includes('data-power-position-colours'));
+assert(html.includes('<th class="auxNumberCol">Way</th>'));
+assert(html.includes('<th class="powerOutputTypeCol">Type</th><th class="auxLabelCol">Label</th>'));
+const v479PdfSource=html.slice(html.indexOf('function renderPowerPdfPreview('),html.indexOf('function updatePowerPdfPaperSettings(',html.indexOf('function renderPowerPdfPreview(')));
+assert(v479PdfSource.includes("'extras'"));
+assert(!v479PdfSource.includes("'aux'"));
+assert(!v479PdfSource.includes("'output'"));
+console.log('PASS: V47.9 release version, Power drafts, outlet colours, simplified tables and combined PDF extras.');
 function source(name){const start=html.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const text=html.slice(start,end+1);try{new Function('return ('+text+')');return text}catch{}}throw Error(name)}
 const c=vm.createContext({console,LampyCore,crypto:require('crypto').webcrypto,window:{},clearTimeout,Map,Set,Number,Array});
 function add(...names){for(const name of names)vm.runInContext(source(name),c)}
 const plain=value=>JSON.parse(JSON.stringify(value));
+add('powerExtraLabelColours');
+assert.deepEqual(plain(c.powerExtraLabelColours({c1:'#111111',c2:'#222222',c3:'#333333',useC2:true,useC3:true})),['#111111','#222222','#333333']);
+assert.deepEqual(plain(c.powerExtraLabelColours({c1:'#111111',c2:'#222222',c3:'#333333',useC2:false,useC3:false})),['#111111']);
 add('normalisePatchMode','modeWatts','distroVoltage','powerFixIdTokens','powerSheetRowResults','powerSheetSlotResult','fixtureWatts','normalisePowerSheetRow','blankPhaseTotals','powerSheetPhaseTotals','powerDistroConfiguration','powerSupplyTotals','addPhaseTotals','formatPhaseAmps','escapeHtml','escapeAttr','escapeJsAttr','powerSupplyWarningEntries','powerSupplyWarningMarkup','collectPowerSupplyErrors');
 c.ensureProjectInfo=()=>({powerSupplies:[]});c.patchFixturesFor=()=>[];const fixtures={1:{fixture:'Known',watts:2300},2:{fixture:'Unknown'},3:{fixture:'Zero',watts:0},4:{fixture:'Known',watts:2300}};c.fixturePatchByFixId=id=>fixtures[id];
 assert.equal(c.powerSheetRowResults({fixIds:['1']},230).amps,10);
@@ -92,11 +106,13 @@ vm.runInContext('projectStorageConflict=false',c);const persistenceModes=[];c.ap
 c.ensureProjectInfo=()=>({});assert('Distro Labels' in c.revisionTrackedState());
 add('togglePowerSupplyDistro');const supplies={powerSupplies:[{id:'a',distros:[0]},{id:'b',distros:[]}]};c.ensureProjectInfo=()=>supplies;c.renderPowerSheetView=()=>{};c.renderPowerSupplyPane=()=>{};c.distroRanges=()=>[];c.togglePowerSupplyDistro({dataset:{supplyId:'b',supplyDistro:'0'},checked:true});assert.deepEqual(supplies.powerSupplies.map(s=>Array.from(s.distros)),[[],[0]]);c.togglePowerSupplyDistro({dataset:{supplyId:'b',supplyDistro:'0'},checked:false});assert.equal(supplies.powerSupplies[1].distros.length,0);
 const supplyContext=vm.createContext({escapeAttr:c.escapeAttr,escapeHtml:c.escapeHtml,alert:message=>supplyContext.alertMessage=message,Date:{now:()=>123},activePowerSupplyId:'',persist:()=>{},renderPowerSheetView:()=>{},distroRanges:()=>[],openPowerSupplyPane:()=>{}});
-vm.runInContext("let supplyReference=[],supplyReferencePromise=null,supplyReferenceState='idle';",supplyContext);for(const name of ['normaliseSupplyReference','inputSupplyOptions','addPowerSupply'])vm.runInContext(source(name),supplyContext);
+vm.runInContext("let supplyReference=[],supplyReferencePromise=null,supplyReferenceState='idle',powerSupplyPaneMode='edit',powerSupplyDraft=null;",supplyContext);for(const name of ['normaliseSupplyReference','inputSupplyOptions','addPowerSupply'])vm.runInContext(source(name),supplyContext);
 const supplyJson=JSON.parse(fs.readFileSync(path.join(root,'json/power_supply.json'),'utf8')),normalised=supplyContext.normaliseSupplyReference({supplies:[...supplyJson.supplies,{label:supplyJson.supplies[0].label},{label:''}]});assert.deepEqual(Array.from(normalised,item=>item.label),[...new Set(supplyJson.supplies.map(item=>item.label))]);
 vm.runInContext("supplyReference=[{label:'32A 3ø'},{label:'63A 3ø'}]",supplyContext);assert(supplyContext.inputSupplyOptions('').startsWith('<option value="" selected>Select Input Supply</option>'));assert(supplyContext.inputSupplyOptions('Legacy Supply').includes('Legacy Supply (Saved)'));
 const newSupplyProject={powerSupplies:[]};supplyContext.ensureProjectInfo=()=>newSupplyProject;supplyContext.loadSupplyReference=async()=>[];
-(async()=>{await supplyContext.addPowerSupply();assert.equal(newSupplyProject.powerSupplies.length,0);assert(supplyContext.alertMessage.includes('No supply was added.'));supplyContext.loadSupplyReference=async()=>normalised;await supplyContext.addPowerSupply();assert.equal(newSupplyProject.powerSupplies.length,1);assert.equal(newSupplyProject.powerSupplies[0].input,'')})().catch(error=>{console.error(error);process.exitCode=1});
+(async()=>{await supplyContext.addPowerSupply();assert.equal(newSupplyProject.powerSupplies.length,0);assert(supplyContext.alertMessage.includes('No supply was added.'));supplyContext.loadSupplyReference=async()=>normalised;await supplyContext.addPowerSupply();assert.equal(newSupplyProject.powerSupplies.length,0);assert.equal(vm.runInContext('powerSupplyPaneMode',supplyContext),'add');assert.equal(vm.runInContext('powerSupplyDraft.name',supplyContext),'Supply 1')})().catch(error=>{console.error(error);process.exitCode=1});
+const supplyDraftProject={powerSupplies:[{id:'old',name:'Old',input:'32A 3ø',distros:[0,1]}]},supplyDraftContext=vm.createContext({ensureProjectInfo:()=>supplyDraftProject,closePowerSupplyPane:()=>{},persist:()=>supplyDraftContext.persisted++,renderPowerSheetView:()=>supplyDraftContext.rendered++,distroRanges:()=>[],persisted:0,rendered:0});
+vm.runInContext("let powerSupplyDraft={id:'new',name:'New',input:'63A 3ø',distros:[1,2]};",supplyDraftContext);vm.runInContext(source('savePowerSupplyDraft'),supplyDraftContext);supplyDraftContext.savePowerSupplyDraft();assert.deepEqual(supplyDraftProject.powerSupplies.map(supply=>Array.from(supply.distros)),[[0],[1,2]]);assert.equal(supplyDraftContext.persisted,1);assert.equal(supplyDraftContext.rendered,1);
 assert(source('saveDeviceConfigPorts').includes("device.source==='network'&&index<2"));assert(source('updateDeviceConfigPortField').includes("if(key==='subnet')port.subnetGlobal=false"));assert(source('updateCanonicalNetworkAlias').includes("'console','npu','network'"));
 const subnetContext=vm.createContext({app:{projectInfo:{vlanSetup:{globalSubnet:'255.255.0.0'}}},persist:()=>subnetContext.persisted++,render:()=>subnetContext.rendered++,renderVlanSetupPane:()=>subnetContext.paneRendered++,persisted:0,rendered:0,paneRendered:0,networkDeviceSupportsTwoIps:item=>item.two===true,normaliseDeviceConfigPort:raw=>({category:raw.category||'network'})});for(const name of ['ipAddressOctets','normaliseIpAddressValue','globalSubnetForNewDevice','globalSubnetInheritanceEnabled','applyGlobalSubnetToDevices','applyGlobalSubnetToAllDevices'])vm.runInContext(source(name),subnetContext);const subnetProject={vlanSetup:{globalSubnet:'255.255.0.0',globalSubnetEnabled:false}},subnetData={consoles:[{deviceConfigPorts:[{id:'network',category:'network',subnet:'old'},{id:'dmx',category:'dmx',subnet:'keep'}]}],npus:[{}],networkDevices:[{two:true}]};subnetContext.ensureProjectInfo=()=>subnetProject;subnetContext.app.controlNetwork=subnetData;assert.equal(subnetContext.globalSubnetForNewDevice(),'255.255.0.0');assert.equal(subnetContext.globalSubnetInheritanceEnabled(),true);subnetContext.applyGlobalSubnetToAllDevices();assert.equal(subnetData.consoles[0].subnet1,'255.255.0.0');assert.equal(subnetData.consoles[0].subnet2,'255.255.0.0');assert.equal(subnetData.consoles[0].deviceConfigPorts[0].subnet,'255.255.0.0');assert.equal(subnetData.consoles[0].deviceConfigPorts[1].subnet,'keep');assert.equal(subnetData.npus[0].subnet,'255.255.0.0');assert.equal(subnetData.networkDevices[0].subnet1,'255.255.0.0');assert.equal(subnetData.networkDevices[0].subnet2,'255.255.0.0');assert.equal(subnetData.networkDevices[0].subnet1Global,true);assert.equal(subnetContext.persisted,1);
 assert(!source('renderVlanSetupPane').includes('globalSubnetToggle'));assert(!source('commitIpSegmentedField').includes('applyGlobalSubnetToDevices'));assert(!html.includes('function toggleGlobalSubnet('));
