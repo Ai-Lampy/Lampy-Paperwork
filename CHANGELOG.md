@@ -1,3 +1,9 @@
+## V48.2 — Phase-summary connector alignment
+
+- Made linked Power phase-summary groups fit tightly around their Supply and Distro cards.
+- Centred Supply lines and every branch arrow from the cards' rendered positions, including stacks with differing card heights.
+- Recalculated live connectors after summary updates, Project Font loading and responsive resizing while keeping PDF summaries unchanged.
+
 ## V48.1 — Power phase-summary cards
 
 - Removed the Distro phase caption and assigned-Distro metadata from the shared Power summary cards while retaining Supply names and Input Supply details.

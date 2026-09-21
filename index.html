@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="Lampy Paperwork — browser-based lighting paperwork, fixture patch, power, network, rack and MVR tools." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111'/%3E%3Cpath d='M21 9h22v8l-5 9v9h-4v20h-4V35h-4v-9l-5-9z' fill='%23fff'/%3E%3C/svg%3E" />
-<title>Lampy Paperwork V48.1</title>
+<title>Lampy Paperwork V48.2</title>
 <style>
 :root{--label-w:18mm;--label-h:34mm;--label-gap:0.5mm;--gap-y:2mm;--radius:3mm;--border:1mm;--border-col:#ffffff;--stripe:4mm;--front-aux-w:18mm;--front-aux-h:34mm;--front-output-w:72mm;--front-output-h:34mm;--rear-soca-w:70mm;--rear-soca-h:50mm;--rear-aux-w:85mm;--rear-aux-h:30mm;--rear-aux-gap:5mm;--rear-output-w:90mm;--rear-output-h:60mm;--top-size:18pt;--bottom-size:14pt;--top-align:center;--bottom-align:center;--top-v-align:center;--bottom-v-align:center;--top-font:Cochin,'Times New Roman',Times,serif;--bottom-font:Cochin,'Times New Roman',Times,serif;--top-weight:700;--bottom-weight:700;--top-transform:none;--bottom-transform:none;--top-text-align:center;--bottom-text-align:center;--app-font:Arial,Helvetica,sans-serif;--project-header-font:Arial,Helvetica,sans-serif;--project-subheader-font:Arial,Helvetica,sans-serif;--project-body-font:Arial,Helvetica,sans-serif}
 *{box-sizing:border-box}body{margin:0;font-family:var(--project-body-font);background:#f6f7f9;color:#111}h1{margin:0;font-size:28px;font-family:var(--project-header-font)}h2{font-family:var(--project-header-font)}h3,h4{font-family:var(--project-subheader-font)}h2,h3{margin:0 0 12px}button,input,select,textarea{font-style:inherit;font-variant-caps:inherit;font-weight:inherit;font-width:inherit;font-size:inherit;line-height:inherit;font-family:inherit;font-size-adjust:inherit;font-kerning:inherit;font-variant-alternates:inherit;font-variant-ligatures:inherit;font-variant-numeric:inherit;font-variant-east-asian:inherit;font-variant-position:inherit;font-variant-emoji:inherit;font-feature-settings:inherit;font-optical-sizing:inherit;font-variation-settings:inherit}.reportIssueBtn{border:2px solid #111;background:#fff;color:#111;border-radius:60px;padding:8px 8px;font-weight:900;text-decoration:none;white-space:nowrap}.reportIssueBtn:hover{background:#111;color:#fff}.btn{border:2px solid #000;background:rgb(217, 217, 217);border-radius:7px;padding:10px 12px;cursor:pointer}.btn:hover{background:#f7f9fc}.btn.primary{background:#00a61d;color:#fff;border:2px solid #000;font-weight:700}.btn.danger{color:#b42318}.btn.add{font-weight:800;font-size:14px;line-height:1;padding:8px;background:#00a61d;color:#fff;border:2px solid #000}.gear{font-size:24px;border:1px solid #d9dee7;background:#fff;border-radius:999px;width:44px;height:44px;cursor:pointer}.gear:hover{background:#f7f9fc}.tourLogoSlot{display:flex;align-items:center;justify-content:center;width:165px;min-width:0;max-width:100%}.tourLogo{display:block;max-width:160px;max-height:54px;object-fit:contain}.tourLogoExport{position:absolute;top:5mm;right:5mm;max-width:34mm;max-height:18mm;object-fit:contain;z-index:3}.tourLogoUploadPreview{border:1px dashed #cfd6e1;border-radius:8px;background:#fff;min-height:130px;display:flex;align-items:center;justify-content:center;padding:14px}.tourLogoUploadPreview img{max-width:260px;max-height:120px;object-fit:contain}.logoActions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}.menuButton{position:fixed;right:18px;top:18px;z-index:18;border:1px solid #d9dee7;background:#111;color:#fff;border-radius:999px;width:46px;height:46px;font-size:24px;font-weight:900;cursor:pointer;box-shadow:0 10px 28px rgba(16,24,40,.18)}.menuButton:hover{background:#2a2a2a}.actionSidebar{position:fixed;right:18px;top:74px;width:min(260px,calc(100vw - 36px));z-index:17;border:1px solid #dfe3ea;border-radius:10px;background:#fff;box-shadow:0 18px 48px rgba(16,24,40,.22);padding:12px;transform:translateX(calc(100% + 28px));transition:transform .18s ease}.actionMenuOpen .actionSidebar{transform:translateX(0)}.actionSidebar h2{font-size:15px;margin:0 0 10px}.actionSidebar .btn{width:100%;margin:0 0 8px;text-align:left;font-weight:800}
@@ -776,9 +776,9 @@ a.reportIssueBtn,.homeHero,.homeHero *,.homeGrid,.homeGrid *,.consoleControlCard
 .powerSheetTable:not(.powerExtraSheet) tbody .fixIdCol,.powerSheetTable:not(.powerExtraSheet) tbody .fixIdCol input{font-size:16px!important}
 .powerSheetTable:not(.powerExtraSheet) tbody .fixTypeCol,.powerSheetTable:not(.powerExtraSheet) tbody .fixTypeCol .powerFixTypeText{font-size:14px!important}
 .powerSheetTable:not(.powerExtraSheet) tbody .positionCol,.powerSheetTable:not(.powerExtraSheet) tbody .positionCol .powerPositionText{font-size:14px!important}
-/* V48.1 live Supply-to-Distro phase-summary links. */
-#sheet .powerPhaseLinkedGroup{display:grid;grid-template-columns:max-content 72px max-content;align-items:center;width:max-content;max-width:100%;font-family:var(--project-body-font)}
-#sheet .powerPhaseConnectorGraphic{display:block;width:72px;height:100%;min-height:1px;overflow:visible}
+/* V48.2 live Supply-to-Distro phase-summary links. */
+#sheet .powerPhaseLinkedGroup{display:grid;grid-template-columns:max-content 72px max-content;align-items:center;align-self:start;width:max-content;max-width:100%;height:auto;min-height:0;font-family:var(--project-body-font)}
+#sheet .powerPhaseConnectorGraphic{display:block;align-self:start;width:72px;height:auto;min-height:1px;overflow:visible}
 #sheet .powerPhaseConnectorGraphic line{stroke:#000;stroke-width:2px;vector-effect:non-scaling-stroke}
 #sheet .powerPhaseConnectorGraphic polygon{fill:#000}
 #sheet .powerPhaseDistroStack{display:grid;gap:10px;align-content:center}
@@ -873,7 +873,7 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 <script src="js/ui-support.js" defer></script>
 <script>
 'use strict';
-const VERSION='48.1';
+const VERSION='48.2';
 const AUTOSAVE_DELAY=700;
 const BACKGROUND_VALIDATION_DELAY=180;
 const DEFAULT_FONT="Cochin,'Times New Roman',Times,serif";
@@ -2047,8 +2047,11 @@ function formatPhaseAmps(value){return Number.isFinite(value)?value.toFixed(2)+'
 function distroCardPhaseTotalsMarkup(totals){const phaseStyle='text-align:center;vertical-align:middle;width:58px!important;min-width:58px!important;padding:5px 2px 4px!important;border:1.2px solid #000;font-size:12px';return `<div class="phaseTotals" style="width:180px!important;margin-top:0!important;grid-template-columns:repeat(3,58px)!important;gap:3px"><div class="phaseTotal phase1" style="${phaseStyle}"><span>${formatPhaseAmps(totals.p1)}</span></div><div class="phaseTotal phase2" style="${phaseStyle}"><span>${formatPhaseAmps(totals.p2)}</span></div><div class="phaseTotal phase3" style="${phaseStyle}"><span>${formatPhaseAmps(totals.p3)}</span></div></div>`}
 function phaseTotalsMarkup(title,totals){return `<div class="powerPhaseSummary" style="border:2px solid rgb(0,0,0);width:auto;height:auto;padding:8px"><div class="powerSupplyHead" style="column-gap:6px;width:100%;vertical-align:middle"><div class="powerSupplySummary" style="width:auto;padding-right:12px;border-right:2px solid #9b9b9b;margin-right:6px"><strong style="font-size:18px">${escapeHtml(title)}</strong></div>${distroCardPhaseTotalsMarkup(totals)}</div></div>`}
 function supplyCardPhaseTotalsMarkup(totals){return distroCardPhaseTotalsMarkup(totals)}
-function powerPhaseConnectorGraphic(count){count=Math.max(1,parseInt(count,10)||1);const height=count*100,centre=height/2,branches=Array.from({length:count},(_,index)=>50+(index*100)),lines=[`<line x1="0" y1="${centre}" x2="36" y2="${centre}"></line>`];if(count>1)lines.push(`<line x1="36" y1="${branches[0]}" x2="36" y2="${branches[branches.length-1]}"></line>`);branches.forEach(y=>{lines.push(`<line x1="36" y1="${y}" x2="64" y2="${y}"></line>`);lines.push(`<polygon points="72,${y} 62,${y-7} 62,${y+7}"></polygon>`)});return `<svg class="powerPhaseConnectorGraphic" viewBox="0 0 72 ${height}" preserveAspectRatio="none" aria-hidden="true" focusable="false">${lines.join('')}</svg>`}
+function powerPhaseConnectorGraphic(count){count=Math.max(1,parseInt(count,10)||1);const branches=Array.from({length:count},(_,index)=>`<g data-power-phase-branch="${index}"><line x1="36" y1="0" x2="64" y2="0"></line><polygon points="72,0 62,-7 62,7"></polygon></g>`).join('');return `<svg class="powerPhaseConnectorGraphic" viewBox="0 0 72 1" preserveAspectRatio="none" aria-hidden="true" focusable="false"><line data-power-phase-supply-line x1="0" y1="0" x2="36" y2="0"></line><line data-power-phase-trunk x1="36" y1="0" x2="36" y2="0" ${count>1?'':'hidden'}></line>${branches}</svg>`}
 function powerPhaseLinkedGroupMarkup(supplyCard,distroCards){const cards=(distroCards||[]).filter(Boolean);if(!cards.length)return supplyCard;return `<div class="powerPhaseLinkedGroup" data-power-phase-links="${cards.length}">${supplyCard}${powerPhaseConnectorGraphic(cards.length)}<div class="powerPhaseDistroStack">${cards.join('')}</div></div>`}
+function powerPhaseConnectorGeometry(groupRect,supplyRect,cardRects){if(!groupRect||!supplyRect||!cardRects?.length)return null;const top=Number(groupRect.top)||0,height=Math.max(1,Math.ceil(Number(groupRect.height)||0)),centre=rect=>Number(rect.top)+Number(rect.height)/2-top,branchYs=cardRects.map(centre);return {height,supplyY:centre(supplyRect),branchYs,trunkStart:branchYs[0],trunkEnd:branchYs[branchYs.length-1]}}
+function fitPowerPhaseLinkedGroup(group){const svg=group?.querySelector?.('.powerPhaseConnectorGraphic'),supply=group?.querySelector?.(':scope > .powerSupplyCard'),cards=[...(group?.querySelectorAll?.('.powerPhaseDistroStack > .powerPhaseSummary')||[])];if(!svg||!supply||!cards.length)return;svg.style.height='1px';const geometry=powerPhaseConnectorGeometry(group.getBoundingClientRect(),supply.getBoundingClientRect(),cards.map(card=>card.getBoundingClientRect()));if(!geometry)return;svg.style.height=geometry.height+'px';svg.setAttribute('viewBox',`0 0 72 ${geometry.height}`);const supplyLine=svg.querySelector('[data-power-phase-supply-line]'),trunk=svg.querySelector('[data-power-phase-trunk]'),branches=[...svg.querySelectorAll('[data-power-phase-branch]')];if(supplyLine){supplyLine.setAttribute('y1',geometry.supplyY);supplyLine.setAttribute('y2',geometry.supplyY);supplyLine.setAttribute('x2',cards.length===1?'64':'36')}if(trunk){trunk.toggleAttribute('hidden',cards.length===1);trunk.setAttribute('y1',geometry.trunkStart);trunk.setAttribute('y2',geometry.trunkEnd)}branches.forEach((branch,index)=>{const y=geometry.branchYs[index];if(!Number.isFinite(y)){branch.setAttribute('hidden','');return}branch.removeAttribute('hidden');const line=branch.querySelector('line'),arrow=branch.querySelector('polygon');if(line){line.setAttribute('y1',y);line.setAttribute('y2',y);line.setAttribute('x1',cards.length===1?'64':'36')}if(arrow)arrow.setAttribute('points',`72,${y} 62,${y-7} 62,${y+7}`)});group.dataset.powerPhaseFitted='true'}
+function fitPowerPhaseLinkedGroups(root=document){root?.querySelectorAll?.('.powerPhaseLinkedGroup').forEach(fitPowerPhaseLinkedGroup)}
 function inputSupplyOptions(selected){const active=String(selected||''),labels=supplyReference.map(item=>item.label),legacy=active&&!labels.includes(active)?`<option value="${escapeAttr(active)}" selected>${escapeHtml(active)} (Saved)</option>`:'';return `<option value="" ${active?'':'selected'}>Select Input Supply</option>${legacy}${labels.map(label=>`<option value="${escapeAttr(label)}" ${label===active?'selected':''}>${escapeHtml(label)}</option>`).join('')}`}
 function assignedPowerSupplyId(didx){return (ensureProjectInfo().powerSupplies||[]).find(supply=>(supply.distros||[]).includes(didx))?.id||''}
 function projectPowerSupplyOptions(didx){const selected=assignedPowerSupplyId(didx),supplies=ensureProjectInfo().powerSupplies||[];return `<option value="" ${selected?'':'selected'}>No Supply Assigned</option>${supplies.map(supply=>`<option value="${escapeAttr(supply.id)}" ${supply.id===selected?'selected':''}>${escapeHtml((supply.name||'Supply')+' - '+(supply.input||'Input Supply not selected'))}</option>`).join('')}`}
@@ -2176,7 +2179,7 @@ function updatePowerSheetDisplay(rowIndex,range,refreshSummary=true,duplicateIds
   if(!deferFit){fitPowerFixTypeText();schedulePowerSheetHeaderFit()}
   if(refreshSummary)refreshPowerPhaseSummary(range);
 }
-function refreshPowerPhaseSummary(range){const host=document.querySelector('[data-power-summary-host]');if(host)host.innerHTML=powerSuppliesMarkup(distroRanges(),range)}
+function refreshPowerPhaseSummary(range){const host=document.querySelector('[data-power-summary-host]');if(host){host.innerHTML=powerSuppliesMarkup(distroRanges(),range);scheduleResponsiveSheetLayout()}}
 let powerPhaseSummaryTimer=null,powerFixIdCommitTimer=null;
 function schedulePowerPhaseSummary(range){
   if(powerPhaseSummaryTimer)clearTimeout(powerPhaseSummaryTimer);
@@ -2493,7 +2496,7 @@ function renderPowerSheetView(ranges){
   const range=ranges.find(r=>r.idx===activePowerDistro)||ranges[0];
   if(activePowerSubTab==='totals'&&!powerPhaseTotalsAvailable(ranges))activePowerSubTab='calcs';
   view.innerHTML=powerSheetToolbarMarkup(true);
-  if(activePowerSubTab==='totals'){view.insertAdjacentHTML('beforeend',powerPhaseTotalsOverviewMarkup(ranges));sheet.appendChild(view);return}
+  if(activePowerSubTab==='totals'){view.insertAdjacentHTML('beforeend',powerPhaseTotalsOverviewMarkup(ranges));sheet.appendChild(view);scheduleResponsiveSheetLayout();runAfterProjectFontsReady(scheduleResponsiveSheetLayout);return}
   if(activePowerSubTab==='fanOuts'){renderFanOutContent(view,ranges);sheet.appendChild(view);return}
   const rows=powerSheetRowsForRange(range);
   syncFilledPowerRowsToRcbo(range);
@@ -2520,7 +2523,7 @@ function renderPowerSheetView(ranges){
   setupPowerGrid(view);
   applyPowerTableFormat(view);
   requestAnimationFrame(()=>{applyPowerColumnWidths(table);fitPowerSocaNames(view);fitPowerFixTypeText(view);fitPowerSocaColourText(view);fitPowerSheetHeaders(view);fitPowerExtraLabelText(view)});
-  runAfterProjectFontsReady(()=>requestAnimationFrame(()=>fitPowerExtraLabelText(view)));
+  runAfterProjectFontsReady(()=>requestAnimationFrame(()=>{fitPowerExtraLabelText(view);scheduleResponsiveSheetLayout()}));
 }
 function protocolOptionMarkup(selected='',ref=null){const protocols=[...new Set([...(ref?.protocols?.length?ref.protocols:(consoleReference.protocols||[])),selected].map(value=>String(value||'').trim()).filter(Boolean))];return ['<option value="">Select Protocol</option>'].concat(protocols.map(p=>`<option value="${escapeAttr(p)}" ${p===selected?'selected':''}>${escapeHtml(p)}</option>`)).join('')}
 function positionDatalistMarkup(id='controlPositionOptions'){const options=positionSummaryRows().map(pos=>`<option value="${escapeAttr(pos.name)}"></option>`).join('');return `<datalist id="${escapeAttr(id)}">${options}</datalist>`}
@@ -3428,6 +3431,7 @@ function scheduleResponsiveSheetLayout(){
     positions.forEach(({text,size})=>{text.style.fontSize=size+'px'});
     prepareLiveResponsiveTargets(sheet);
     fitLiveResponsiveLayouts(sheet);
+    fitPowerPhaseLinkedGroups(sheet);
   });
 }
 function layoutTextMeasure(font){
