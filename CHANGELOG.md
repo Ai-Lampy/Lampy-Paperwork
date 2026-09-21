@@ -1,3 +1,8 @@
+## V48.3 — Power Distro tabs
+
+- Applied the Project Font to Power Distro tabs and their settings controls.
+- Added 2 px black borders, 8 px corner radii and a blue active-tab background.
+
 ## V48.2 — Phase-summary connector alignment
 
 - Made linked Power phase-summary groups fit tightly around their Supply and Distro cards.

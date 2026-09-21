@@ -1,8 +1,8 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),path=require('path'),zlib=require('zlib');
 const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const LampyCore=require('../js/project-core.js'),LampyArchive=require('../js/archive.js');
-assert(html.includes('<title>Lampy Paperwork V48.2</title>'));
-assert(html.includes("const VERSION='48.2';"));
+assert(html.includes('<title>Lampy Paperwork V48.3</title>'));
+assert(html.includes("const VERSION='48.3';"));
 const v472WidthLimits={colour:[30,40],socapex:[75,180],way:[20,30],fixId:[50,80],fixType:[60,190],position:[85,180],watts:[40,45],amps:[66,75]};
 const v475WidthCurrent={colour:30,socapex:112,way:26,fixId:59,fixType:117,position:115,watts:45,amps:72};
 const v472WidthSource=html.slice(html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS='),html.indexOf('let powerColumnWidthSettings=',html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS=')));
@@ -122,7 +122,10 @@ assert(source('renderPowerSheetView').includes('runAfterProjectFontsReady(schedu
 assert(source('powerSuppliesMarkup').includes('powerPhaseLinkedGroupMarkup'));
 assert(source('powerPhaseTotalsOverviewMarkup').includes('powerPhaseLinkedGroupMarkup'));
 assert(!source('preparePowerPdfTotals').includes('powerPhaseLinkedGroupMarkup'));
-console.log('PASS: V48.2 release version, measured Power connector alignment and responsive layout.');
+assert(html.includes('.powerDistroTabs,.powerDistroTabs button{font-family:var(--project-body-font)}'));
+assert(html.includes('.powerDistroTabWrap,.powerDistroTabWrap.active{border:2px solid #000;border-radius:8px}'));
+assert(html.includes('.powerDistroTab.active{background:rgb(0,96,255);color:#fff;border-color:#000}'));
+console.log('PASS: V48.3 release version, Power Distro tabs and measured connector alignment.');
 function source(name){const start=html.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const text=html.slice(start,end+1);try{new Function('return ('+text+')');return text}catch{}}throw Error(name)}
 const c=vm.createContext({console,LampyCore,crypto:require('crypto').webcrypto,window:{},clearTimeout,Map,Set,Number,Array});
 function add(...names){for(const name of names)vm.runInContext(source(name),c)}
