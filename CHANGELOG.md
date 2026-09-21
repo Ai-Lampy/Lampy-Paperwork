@@ -1,3 +1,8 @@
+## V47.14 — Aux colour retention
+
+- Preserved all three Aux colour-field values and their enabled states when Include is turned off or on.
+- Committed the visible colour controls before rebuilding the Aux table so an in-progress valid colour edit is not lost.
+
 ## V47.13 — Aux and 3ø table styling
 
 - Hid the Aux Way header text while retaining its accessible name and hover or keyboard-focus label, and reduced Way body text to 14 px.
