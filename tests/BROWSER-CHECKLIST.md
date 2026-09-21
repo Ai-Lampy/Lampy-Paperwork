@@ -1,4 +1,4 @@
-# V48 browser release checks
+# V49 browser release checks
 
 **Use this checklist only when the user explicitly requests browser testing.** Interface changes, implementation requests and releases do not authorise browser testing. Static validation remains the default.
 
@@ -10,6 +10,9 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 | At a 1500 px viewport, verify the 1450 px page wrapper and 1410 px usable sheet; repeat at narrow widths with no document-level horizontal overflow | Required | Required | Required |
 | Fixture Patch, Power Calcs, Device Config, Rack Layout and Front/Rear Labels fill the sheet, preserve transformed height and recalculate after resizing | Required | Required | Required |
 | Home, Control, Network, Looms, Table View, Errors, Positions, Universe Detail and Project Settings stay within the page while controls wrap at their normal size | Required | Required | Required |
+| Unified Control shows Consoles then NPUs in Card and Table views, including empty sections and shared add/expand/collapse actions | Required | Required | Required |
+| Control Table location groups collapse independently, sorting keeps child rows attached, and spreadsheet navigation/copy/paste/drag-fill works | Required | Required | Required |
+| Control Location cells mirror matching Position Summary colours and Power Position styling; card position names use the Project Font | Required | Required | Required |
 | Print, PDF preview and exported documents retain their document geometry without live responsive transforms | Required | Required | Required |
 | Project Settings page navigation, linked Project/Production fields and mandatory Tour Logo PDF output | Required | Required | Required |
 | Project Font, units, custom voltage and Project Owner settings save/load and refresh the app without changing application-control fonts | Required | Required | Required |

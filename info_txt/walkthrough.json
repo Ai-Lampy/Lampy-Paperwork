@@ -1,6 +1,17 @@
 {
-  "title": "Lampy Paperwork V48 Walk-through",
+  "title": "Lampy Paperwork V49 Walk-through",
   "sections": [
+    {
+      "title": "New in V49: Unified Control",
+      "type": "unordered",
+      "items": [
+        "Control now shows Consoles first and NPUs second in one page, with both sections visible in Card View and Table View.",
+        "The shared Control toolbar adds either device type and expands or collapses every Console and NPU parent row.",
+        "Control Table View uses collapsible Device Config-style location groups, independent sorting and spreadsheet keyboard, selection, copy, paste and drag-fill controls.",
+        "Matching Control Location cells use Position Summary colours and the same solid or striped presentation as Power Position cells.",
+        "Card position names use the Project Font while card controls retain the App Font."
+      ]
+    },
     {
       "title": "New in V48: Browser-width layouts",
       "type": "unordered",
@@ -32,7 +43,7 @@
         "Build the Fixture Patch by adding fixtures from the library or importing CSV, Excel, XLSM, or MVR data.",
         "Open the full-page Positions workspace from Home Position Summary or Fixture Patch to create positions and assign up to three colours. Position names and colours are shared with the patch, power calculations, labels, Control, Rack Layout and Device Config.",
         "Open Power and assign distros to supplies. Enter fixture IDs to link each way to Fixture Patch data, then check phase totals, RCBO warnings, Aux outlets, and the PDF preview.",
-        "Use Control to add consoles and NPUs, including roles, locations, parameters, protocols, IP addresses, DMX ports, and reference images. When NPUs exist, use the Consoles and NPU sub-tabs to switch between them, and choose Card View or Table View for the required workflow. Add switches, nodes and other network-capable hardware through Rack Layout or Device Config.",
+        "Use Control to add consoles and NPUs, including roles, locations, parameters, protocols, IP addresses, DMX ports, and reference images. Consoles and NPUs appear together in separate Control sections; choose Card View or Table View for the required workflow. Add switches, nodes and other network-capable hardware through Rack Layout or Device Config.",
         "Open Rack Layout to create racks, set their U size and depth, and place project or library devices from the Front or Rear view. Use Side view to inspect device depths and cable clearance.",
         "Open Network → Device Config to review the synchronized device tree, expand individual ports, and edit patch, IP, subnet, protocol, direction, VLAN, and notes data.",
         "Use Global Subnet in Device Config to set the default subnet for new devices and apply it to existing network interfaces when required.",
@@ -58,7 +69,7 @@
       "title": "Control, Device Config and Rack Layout",
       "type": "unordered",
       "items": [
-        "Consoles and NPUs added in Control appear automatically in Device Config. When at least one NPU exists, Control displays separate Consoles and NPU sub-tabs.",
+        "Consoles and NPUs added in Control appear automatically in Device Config. Control displays Consoles and NPUs together as separate sections, including empty sections with their add action.",
         "Control groups consoles and NPUs by project position. Consoles are ordered Master, Backup, unassigned, then by name; NPUs remain sorted by name.",
         "Choose Card View for device summary cards or Table View for Device Config-style editing, expandable ports, keyboard navigation, copy and paste, selection, and vertical drag-fill. The last Control view is remembered by the browser.",
         "Device names, locations, roles, modes, software, parameters, IP addresses, port settings, protocols, VLANs and notes remain linked between Control, Device Config and Rack Layout. Multi-network-port DMX Nodes show a separate front/rear VLAN field for each physical network port in Rack Layout. Rack position, mounting face and physical dimensions remain controlled by Rack Layout.",

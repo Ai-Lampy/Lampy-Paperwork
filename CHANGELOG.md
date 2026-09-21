@@ -1,3 +1,10 @@
+## V49 — Unified Control page
+
+- Merged Consoles and NPUs into one Control page with separate, always-visible sections in Card View and Table View.
+- Matched Control Table location groups, table interactions and responsive sizing to Device Config while keeping independent session sorting and collapse state.
+- Applied Position Summary colours to Control Location cells using Power Position styling and the Project Font to card-position names.
+- Removed the Console/NPU sub-tabs and Control navigation submenu while retaining shared add, expand and collapse actions.
+
 ## V48.4 — Power widths and PDF phase summaries
 
 - Removed the remaining temporary Aux and 3ø column-width adjusters and fixed their reviewed column widths.

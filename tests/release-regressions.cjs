@@ -1,8 +1,8 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),path=require('path'),zlib=require('zlib');
 const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const LampyCore=require('../js/project-core.js'),LampyArchive=require('../js/archive.js');
-assert(html.includes('<title>Lampy Paperwork V48.4</title>'));
-assert(html.includes("const VERSION='48.4';"));
+assert(html.includes('<title>Lampy Paperwork V49</title>'));
+assert(html.includes("const VERSION='49';"));
 const v472WidthLimits={colour:[30,40],socapex:[75,180],way:[20,30],fixId:[50,80],fixType:[60,190],position:[85,180],watts:[40,45],amps:[66,75]};
 const v475WidthCurrent={colour:30,socapex:112,way:26,fixId:59,fixType:117,position:115,watts:45,amps:72};
 const v472WidthSource=html.slice(html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS='),html.indexOf('let powerColumnWidthSettings=',html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS=')));
@@ -219,3 +219,15 @@ function zip(name,data,compressed=false){const filename=Buffer.from(name),conten
  LampyCore.validateProject(arena);const copy=JSON.parse(JSON.stringify(arena));LampyCore.validateProject(copy);assert.deepEqual(copy,arena);
  console.log('PASS: stored/deflated ZIP, CRC corruption, unsafe paths, extraction bounds and 10,000-fixture round trip');
 })().catch(error=>{console.error(error);process.exitCode=1});
+
+assert(html.includes('<title>Lampy Paperwork V49</title>'));
+assert(html.includes("const VERSION='49';"));
+assert(!html.includes('function controlSubTabsMarkup('));
+assert(!html.includes('function setControlNetworkTab('));
+assert(source('renderConsolesTab').includes("controlUnifiedSectionMarkup('console')"));
+assert(source('renderConsolesTab').includes("controlUnifiedSectionMarkup('npu')"));
+assert(source('controlLocationCellStyle').includes('powerPositionCellStyle'));
+assert(html.includes('.controlNetworkView .controlPositionName{font-family:var(--project-body-font)}'));
+assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/welcome_message.json'))).title.includes('V49'));
+assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/walkthrough.json'))).title.includes('V49'));
+console.log('PASS: V49 unified Control release metadata and core presentation hooks.');
