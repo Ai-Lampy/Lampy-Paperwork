@@ -1,3 +1,10 @@
+## V48.1 — Power phase-summary cards
+
+- Removed the Distro phase caption and assigned-Distro metadata from the shared Power summary cards while retaining Supply names and Input Supply details.
+- Applied the project-selected font to Supply and Distro phase-summary cards in the live app and PDF output.
+- Added live Supply-to-Distro connector arrows, including branched links for Supplies assigned to multiple Distros.
+- Stacked assigned Distro phase cards to the right of their Supply on Power Calcs and Phase Totals.
+
 ## V48 — Global browser-width layout
 
 - Added responsive outer and sheet gutters, producing a 1450 px page wrapper and 1410 px usable sheet at a 1500 px viewport.
