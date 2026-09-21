@@ -1,15 +1,15 @@
 {
-  "title": "Lampy Paperwork V47 Walk-through",
+  "title": "Lampy Paperwork V48 Walk-through",
   "sections": [
     {
-      "title": "New in V47: Power update",
+      "title": "New in V48: Browser-width layouts",
       "type": "unordered",
       "items": [
-        "Power Calcs supports multiple Fix IDs in one cell using &, +, comma, /, > or a spaced hyphen.",
-        "Compound Fix IDs resolve fixture types, positions and wattage together; mixed fixture types display on separate lines.",
-        "The Power Calcs toolbar and table are capped at 1400 px and the Colour column is 30 px wide.",
-        "Power and Fan Outs PDF exports start every distro on a new page with its own full header and enabled logos.",
-        "Power PDF output places Supply and Distro phase summaries after the final Socapex and finishes with a grouped Totals page."
+        "Every live page remains inside the browser width with responsive outer and sheet gutters.",
+        "Fixture Patch and Power Calcs tables scale to fill the available sheet width.",
+        "Device Config distributes its columns across the sheet and scales only below its readable minimum.",
+        "Rack Layout and label layouts scale as complete workspaces while preserving their internal proportions.",
+        "Home cards and application controls reflow without changing their control sizes, while print and PDF output keep their document geometry."
       ]
     },
     {

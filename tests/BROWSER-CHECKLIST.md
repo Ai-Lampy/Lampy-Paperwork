@@ -1,4 +1,4 @@
-# V47 browser release checks
+# V48 browser release checks
 
 **Use this checklist only when the user explicitly requests browser testing.** Interface changes, implementation requests and releases do not authorise browser testing. Static validation remains the default.
 
@@ -7,6 +7,10 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 | Check | Chrome/Chromium | Firefox | Safari |
 | --- | --- | --- | --- |
 | Startup, visible welcome dismissal, keyboard focus | Required | Required | Required |
+| At a 1500 px viewport, verify the 1450 px page wrapper and 1410 px usable sheet; repeat at narrow widths with no document-level horizontal overflow | Required | Required | Required |
+| Fixture Patch, Power Calcs, Device Config, Rack Layout and Front/Rear Labels fill the sheet, preserve transformed height and recalculate after resizing | Required | Required | Required |
+| Home, Control, Network, Looms, Table View, Errors, Positions, Universe Detail and Project Settings stay within the page while controls wrap at their normal size | Required | Required | Required |
+| Print, PDF preview and exported documents retain their document geometry without live responsive transforms | Required | Required | Required |
 | Project Settings page navigation, linked Project/Production fields and mandatory Tour Logo PDF output | Required | Required | Required |
 | Project Font, units, custom voltage and Project Owner settings save/load and refresh the app without changing application-control fonts | Required | Required | Required |
 | Export defaults initialise each preview; preview changes remain session-only | Required | Required | Required |

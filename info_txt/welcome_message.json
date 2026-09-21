@@ -1,8 +1,8 @@
 {
-  "title": "Welcome to Lampy Paperwork V47",
+  "title": "Welcome to Lampy Paperwork V48",
   "paragraphs": [
     "Lampy Paperwork is a browser-based workspace for creating and managing the technical paperwork used on live entertainment productions. It brings fixture patching, power, distro and Fan Out documentation, control systems, network devices, rack layouts, exports, and project records together in one place.",
-    "V47 adds compound Fix IDs to Power Calcs, constrains the live Power layout, and rebuilds Power Calcs and Fan Outs PDF sections with per-distro headers, summaries and final totals.",
+    "V48 keeps every live page inside the browser width. Primary tables, rack workspaces and label layouts now use the full available sheet width while toolbars and cards wrap at their existing control sizes.",
     "V44 introduced project-wide typography, units, voltage, logo and PDF export defaults.",
     "Lampy Paperwork remains under active development. Features, layouts, workflows, and saved data may change while the app is tested and improved. Download and keep regular copies of your Lampy project file.",
     "Please report bugs, request missing library items, or suggest improvements through the GitHub issue tracker:",

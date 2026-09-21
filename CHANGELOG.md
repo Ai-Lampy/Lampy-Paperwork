@@ -1,3 +1,11 @@
+## V48 — Global browser-width layout
+
+- Added responsive outer and sheet gutters, producing a 1450 px page wrapper and 1410 px usable sheet at a 1500 px viewport.
+- Constrained every live application page to the browser width while allowing toolbars, cards, filters and control groups to wrap at their existing control sizes.
+- Made Fixture Patch, Power Calcs, Device Config, Rack Layout and label layouts fill the available sheet width with measured scaling and reserved transformed heights.
+- Extended live containment to Control, Network, Looms, Rear Labels, Table View, Errors, Positions, Universe Detail and Project Settings.
+- Recalculated responsive layouts after rendering, resizing and font loading while leaving print, PDF preview and export geometry unchanged.
+
 ## V47.14 — Aux colour retention
 
 - Preserved all three Aux colour-field values and their enabled states when Include is turned off or on.
