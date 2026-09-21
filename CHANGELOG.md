@@ -1,3 +1,9 @@
+## V48.4 — Power widths and PDF phase summaries
+
+- Removed the remaining temporary Aux and 3ø column-width adjusters and fixed their reviewed column widths.
+- Added the linked Supply-to-Distro phase-summary layout to Power PDF previews and downloads, including centred single and branched connectors.
+- Added matching vector connector lines and arrowheads while retaining standalone cards for unassigned Distros.
+
 ## V48.3 — Power Distro tabs
 
 - Applied the Project Font to Power Distro tabs and their settings controls.
