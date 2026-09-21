@@ -1,3 +1,15 @@
+## V47.13 — Aux and 3ø table styling
+
+- Hid the Aux Way header text while retaining its accessible name and hover or keyboard-focus label, and reduced Way body text to 14 px.
+- Added 30–12 px responsive fitting, 3 px padding and contrast-aware 1 mm outlines to Aux and 3ø label cells.
+- Removed Aux Watts number steppers, standardised Aux body-cell padding and enlarged the shared outlet colour fields to 70 × 50 px.
+
+## V47.12 — Aux and 3ø table width defaults
+
+- Updated the Aux Way, Label, Watts, Amps, Include and Colours Min, Current and Max width defaults from the reviewed layout.
+- Updated each 3ø Type, Label and Colours table width profile from the reviewed layout.
+- Made the new Current values the live CSS fallbacks and Reset values while retaining session-only adjustment.
+
 ## V47.11 — Outlet colours and temporary widths
 
 - Set the Aux Way column to 35 px without minimum or maximum width rules while retaining its 14 px header and 16 px body text.
