@@ -1,3 +1,8 @@
+## V49.3 — Position colour-field outlines
+
+- Applied the shared colour text stroke to Position Card View and every editable colour field.
+- Restored the 0.5mm black outline on white text over Yellow and other non-white colours while keeping single-White fields black without an outline.
+
 ## V49.2 — Unified Position colour rendering
 
 - Unified Position and Location colour text: blank and single-white backgrounds use black text without an outline; every other coloured background uses white text with the required black outline.
