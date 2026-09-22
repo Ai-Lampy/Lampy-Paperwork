@@ -1,3 +1,11 @@
+## V50 — Device Config update
+
+- Matched Device Config toolbar and Location-cell presentation to the shared Power and Control rules.
+- Added independent session sorting for every Location table with fixed Expand/Collapse and Delete columns.
+- Moved Port Configuration to its own Network sub-tab with compatible-device tabs and save-on-switch behaviour.
+- Moved Global Subnet into a viewport-level overlay so it remains above table and responsive layout layers.
+- Added Device Config PDF preview and export with Location visibility, per-row inclusion, preview-only tree collapse, repeated VLAN settings and paginated headers and footers.
+
 ## V49.5 — Power Socapex two-colour pattern
 
 - Updated two-colour Socapex cells in Power Calcs and Fan Outs to use the requested offset 6mm/7mm stripe geometry.

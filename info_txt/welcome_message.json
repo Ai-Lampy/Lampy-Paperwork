@@ -1,8 +1,8 @@
 {
-  "title": "Welcome to Lampy Paperwork V49",
+  "title": "Welcome to Lampy Paperwork V50",
   "paragraphs": [
     "Lampy Paperwork is a browser-based workspace for creating and managing the technical paperwork used on live entertainment productions. It brings fixture patching, power, distro and Fan Out documentation, control systems, network devices, rack layouts, exports, and project records together in one place.",
-    "V49 combines Consoles and NPUs on one Control page. Card View and Table View now show both sections together, and matching Locations use Position Summary colours.",
+    "V50 updates Device Config with independent table sorting, shared Location styling, a dedicated Port Configuration page and an interactive PDF export.",
     "V44 introduced project-wide typography, units, voltage, logo and PDF export defaults.",
     "Lampy Paperwork remains under active development. Features, layouts, workflows, and saved data may change while the app is tested and improved. Download and keep regular copies of your Lampy project file.",
     "Please report bugs, request missing library items, or suggest improvements through the GitHub issue tracker:",

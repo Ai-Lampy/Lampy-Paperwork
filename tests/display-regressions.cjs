@@ -129,7 +129,7 @@ const portContext=vm.createContext({normaliseVlan:value=>String(value||'0')});vm
 assert(source('deviceConfigPortsFor').includes("if(!Object.hasOwn(raw,'location')&&!(definition.category==='dmx'&&device.source==='network'))base.location=device.location||''"));
 assert(source('updateDeviceConfigField').includes("if(key==='location'&&!portId)render()"));
 assert(config.includes('deviceConfigDeleteButton'));assert(config.includes('❌'));assert(!control.includes('deviceConfigDeleteButton'));
-assert.deepEqual(JSON.parse(JSON.stringify(vm.runInContext('DEVICE_CONFIG_WIDTH_DEFAULTS',c))),[[30,30],[45,70],[40,60],[100,130],[60,60],[100,180],[110,110],[110,110],[40,100],[40,100],[40,150],[80,120],[80,90],[110,180],[70,110],[80,120],[90,220],[34,34]]);
+assert.deepEqual(JSON.parse(JSON.stringify(vm.runInContext('DEVICE_CONFIG_WIDTH_DEFAULTS',c))),[[20,20],[45,70],[40,60],[100,130],[60,60],[100,180],[110,110],[110,110],[40,100],[40,100],[40,150],[80,120],[80,90],[110,180],[70,110],[80,120],[90,220],[34,34]]);
 const directionContext=vm.createContext({escapeHtml:c.escapeHtml,escapeAttr:c.escapeAttr});vm.runInContext(source('connectorDefaultDirection'),directionContext);vm.runInContext(source('deviceConfigDirectionSelect'),directionContext);const directionDevice={source:'network',id:'n'};assert.equal(directionContext.connectorDefaultDirection('XLR-5 female','input'),'output');assert.equal(directionContext.connectorDefaultDirection('XLR-5 male','output'),'input');assert.equal(directionContext.connectorDefaultDirection('RJ45','network'),'network');assert(!directionContext.deviceConfigDirectionSelect(directionDevice,{id:'p',direction:'network',directions:['network']},0,9).includes('<select'));const bidirectional=directionContext.deviceConfigDirectionSelect(directionDevice,{id:'p',type:'XLR-5 female',direction:'',directions:['input','output']},0,9);assert(bidirectional.includes('<select'));assert(bidirectional.includes('>Input<'));assert(bidirectional.includes('>Output<'));assert(bidirectional.includes('value="output" selected'));assert(!bidirectional.includes('>Network<'));assert(directionContext.deviceConfigDirectionSelect(directionDevice,{id:'p',direction:'output',directions:[]},0,9).includes('>Bidirectional<'));
 add('bytesToBase64','base64ToBytes','sha256Base64','packageProjectPayload','unpackProjectPayload');
 (async()=>{const p={appVersion:'32',app:{controlNetwork:{consoles:[avo,backup,main],npus:[]}}};const out=await c.unpackProjectPayload(await c.packageProjectPayload(p));assert.equal(JSON.stringify(out),JSON.stringify(p));const located={app:{controlNetwork:{networkDevices:[{id:'n',deviceConfigPorts:[{id:'p',location:'Dimmer City'}]}]}}};const locatedOut=await c.unpackProjectPayload(await c.packageProjectPayload(located));assert.equal(locatedOut.app.controlNetwork.networkDevices[0].deviceConfigPorts[0].location,'Dimmer City');console.log('PASS: Avolites reference limits/images/ports; D9 and D3 TNP examples; mixed/backup/legacy totals; expansion isolation; 110px limits; UI capacity labels; position counts; project package round trip.');})().catch(e=>{console.error(e);process.exitCode=1});
@@ -232,11 +232,11 @@ const legacySummary=c.consoleHomeSummaryMarkup({...avoSecond,protocol1:'Art-Net'
 
 for(const available of [500,1280,2400]){const widths=c.calculateDeviceConfigWidths(Array(13).fill(300),available,false);assert(widths[6]>=110);assert(widths[7]>=110);if(available>=1280)assert(Math.abs(widths.reduce((sum,value)=>sum+value,0)-available)<0.001)}
 for(const available of [500,1280,2400]){const widths=c.calculateDeviceConfigWidths(Array(16).fill(300),available,true);assert.equal(widths[5],110);assert.equal(widths[6],110);assert(widths[10]<=80);assert(widths[8]<=60)}
-const deviceLimits=[[30,30],[45,70],[40,60],[100,130],[60,60],[100,180],[110,110],[110,110],[40,100],[40,100],[40,150],[80,120],[80,90],[110,180],[70,110],[80,120],[90,220],[34,34]];
+const deviceLimits=[[20,20],[45,70],[40,60],[100,130],[60,60],[100,180],[110,110],[110,110],[40,100],[40,100],[40,150],[80,120],[80,90],[110,180],[70,110],[80,120],[90,220],[34,34]];
 deviceLimits.forEach(([min,max],index)=>assert.deepEqual(JSON.parse(JSON.stringify(c.deviceConfigColumnLimits(index,false))),{min,max}));
 c.deviceConfigExpandedDevices.add('console:a');c.controlExpandedDevices.clear();
 const dcConsole=c.controlDeviceConfigTableMarkup([dev],'deviceConfig');
-assert(dcConsole.includes('data-table-view="deviceConfig"'));assert(dcConsole.includes("'console:a','deviceConfig'"));assert(dcConsole.includes("setDeviceConfigSort('name')"));
+assert(dcConsole.includes('data-table-view="deviceConfig"'));assert(dcConsole.includes("'console:a','deviceConfig'"));assert(dcConsole.includes("setDeviceConfigTableSort("));
 for(const [,row]of dcConsole.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/g))assert.equal((row.match(/<t[dh]\b/g)||[]).length,18);
 assert(dcConsole.includes('data-dc-col="16"'));assert(dcConsole.includes('deviceConfigFacingCol'));
 const mixedTables=c.deviceConfigGroupTablesMarkup([dev,{...dev,id:'n',source:'network'}]);assert.equal((mixedTables.match(/<table /g)||[]).length,2);
@@ -327,7 +327,7 @@ for(let i=0;i<7;i++)menuContext.projectErrors.set(String(i),{id:String(i),descri
 menuContext.updateProjectErrorsMenu();assert.equal((menu.innerHTML.match(/data-error-key=/g)||[]).length,5);assert(menu.innerHTML.indexOf('Error 6')<menu.innerHTML.indexOf('Error 5'));assert(!menu.innerHTML.includes('Error 1'));
 menuProject.ignoredProjectErrors=['6'];menu.dataset.content='';menuContext.updateProjectErrorsMenu();assert(!menu.innerHTML.includes('Error 6'));assert(menu.innerHTML.includes('Error 5'));
 assert(source('handleProjectErrorsKeydown').includes("event.key==='Escape'"));assert(source('updateProjectErrorsPage').includes('groupedProjectErrors(visible)'));
-for(const file of ['info_txt/welcome_message.json','info_txt/walkthrough.json']){const doc=JSON.parse(fs.readFileSync(root+file));assert(doc.title.includes('V49'));assert(JSON.stringify(doc).toLowerCase().includes('browser'));assert(JSON.stringify(doc).length>300)}
+for(const file of ['info_txt/welcome_message.json','info_txt/walkthrough.json']){const doc=JSON.parse(fs.readFileSync(root+file));assert(doc.title.includes('V50'));assert(JSON.stringify(doc).toLowerCase().includes('browser'));assert(JSON.stringify(doc).length>300)}
 console.log('PASS: V32 console-only caps/text fitting, Network routing, grouped errors, validation boundaries, recency/resolution, and current major-release JSON.');
 assert.equal(menuContext.projectErrorToken("fixture-id:FOH's"),'fixture-id%3AFOH%27s');
 navigation.setSheetTab('networkEquipment');assert.equal(navigation.activeNetworkSubTab,'deviceConfig');
@@ -638,7 +638,7 @@ assert(html.includes('.btn{border:2px solid #000;background:rgb(217, 217, 217);b
 console.log('PASS: V35.1 Labels presentation, per-Socapex rear colours and navigation styling.');
 
 // V35.5 Power PDF and Fixture Patch colour-bubble corrections, plus V35.3 styling.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes(`<title>Lampy Paperwork V${appVersion}</title>`));
 assert(html.includes(".powerSheetTable{table-layout:auto!important;border-collapse:collapse;font-family:Georgia,'Times New Roman',serif;font-size:14px;border:2px solid #000}"));
 assert(html.includes('.powerSocaColourCol{width:50px!important;min-width:50px!important;max-width:50px!important}.powerSheetTable .fixIdCol{width:70px!important;min-width:70px!important;max-width:70px!important}'));
@@ -768,7 +768,7 @@ assert(source('powerSheetRowMarkup').includes('--power-soca-outline:${socaPresen
 console.log('PASS: V35.14 Power Calcs white text uses a 0.5 mm black outline.');
 
 // V36 uses JSON VLAN templates without replacing customised project settings.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 const vlanTemplateJson=JSON.parse(fs.readFileSync(root+'json/vlan_colour_options.json','utf8'));
 const vlanContext=vm.createContext({
  DEFAULT_IP_VLANS:Array.from({length:11},(_,index)=>({id:String(index),name:['Untagged/MGMT','sACN','Art-Net','RoboCam'][index]||'',colour:['#ffffff','#e5b7b7','#b7cbe4','#ffd5b3'][index]||'#ffffff',selected:false})),
@@ -789,14 +789,14 @@ assert(source('applyVlanTemplate').includes('selectedById'));assert(source('appl
 console.log('PASS: V36 JSON VLAN templates, vendor detection, edit protection and retained VLAN state.');
 
 // V36.1 keeps VLAN templates and Power text readable.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(!source('vlanTemplateControlsMarkup').includes("['automatic','Automatic']"));assert(!source('setVlanTemplateChoice').includes("value==='automatic'"));assert(source('automaticVlanTemplate').includes("brands.length===1?brands[0]:'Generic'"));assert(!source('renderVlanSetupPane').includes('A non-empty Global Subnet is used for new devices'));
 assert(source('powerPositionCellStyle').includes('--power-position-outline:${presentation.outline}'));assert(source('powerPositionCellStyle').includes("presentation.outline==='transparent'?'0':'.5mm'"));assert(html.includes('.powerSheetTable .positionCol .powerPositionText,.fanOutTable .positionCol .powerPositionText{-webkit-text-stroke-width:var(--power-position-stroke-width,0);-webkit-text-stroke-color:var(--power-position-outline,transparent);paint-order:stroke fill;text-shadow:none!important}'));
 assert(source('fitPowerSocaColourText').includes('size>8'));assert(source('fitPowerSocaColourText').includes('powerSheetTextWidth'));assert(source('renderPowerSheetView').includes('fitPowerSocaColourText(view)'));assert(source('powerPdfSourceViews').includes('fitPowerSocaColourText(view)'));assert(source('powerPositionCellStyle').includes('presentation.outline'));
 console.log('PASS: V36.1 always-visible VLAN template selection and Power text fitting.');
 
 // V36.2 keeps VLAN Setup compact without template helper text.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('#vlanSetupPane label{display:block;font-size:13px;color:#333;font-weight:700;border:none;margin:0px;padding:0px}'));
 assert(html.includes('.vlanSetupTable .vlanNumberCol{width:72px}'));
 assert(html.includes('.vlanSetupTable .vlanColourCol{width:55px}'));
@@ -808,7 +808,7 @@ assert(!source('vlanTemplateControlsMarkup').includes('Template changes preserve
 console.log('PASS: V36.2 VLAN Setup labels, compact rows and column widths.');
 
 // V36.3 refines VLAN Setup controls without changing VLAN data.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.logoTitleRow{margin-bottom:0px}'));
 assert(html.includes('.vlanGlobalSubnetCard .ipSegmentedField{border:none;border-radius:6px;background:#fff;padding:2px 5px}'));
 assert(html.includes('#vlanSetupPane label{display:block;font-size:13px;color:#333;font-weight:700;border:none;margin:0px;padding:0px}'));
@@ -826,12 +826,12 @@ assert(html.includes('.deviceConfigDeleteButton{width:32px;height:20px;border:0;
 console.log('PASS: V36.3 Device Config delete control dimensions.');
 
 // V36.4 corrects Device Config's full trailing-column map so Mode is not starved by Role.
-assert.equal(appVersion,'49.5');
-assert(html.includes("const DEVICE_CONFIG_WIDTH_DEFAULTS=[[30,30],[45,70],[40,60],[100,130],[60,60],[100,180],[110,110],[110,110],[40,100],[40,100],[40,150],[80,120],[80,90],[110,180],[70,110],[80,120],[90,220],[34,34]];"));
+assert.equal(appVersion,'50');
+assert(html.includes("const DEVICE_CONFIG_WIDTH_DEFAULTS=[[20,20],[45,70],[40,60],[100,130],[60,60],[100,180],[110,110],[110,110],[40,100],[40,100],[40,150],[80,120],[80,90],[110,180],[70,110],[80,120],[90,220],[34,34]];"));
 console.log('PASS: V36.4 Device Config Role and Mode width allocation.');
 
 // V36.5 keeps Control Table View focused and permits VLAN assignment on every switch port.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(!source('renderConsolesTab').includes('openDeviceConfigColumns()'));
 assert(!source('renderConsolesTab').includes('openDeviceConfigFormat()'));
 assert(source('renderConsolesTab').includes('expandAllControlDevices()'));
@@ -840,7 +840,7 @@ assert(source('deviceConfigParentRow').includes("parentMode!=='network-switch'||
 console.log('PASS: V36.5 Control Table controls and Network Switch VLAN assignment.');
 
 // V36.6 centres Home statistics, simplifies Power actions, and keeps locations on Device Config parents.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.homeStats{grid-template-columns:repeat(auto-fit,115px)!important;justify-content:center}'));
 assert(source('homeStatsMarkup').includes("'Universes Patched'"));
 assert(html.includes('.btn.unpatch{border:2px solid #000}'));
@@ -856,7 +856,7 @@ assert(html.includes('.rackWorkspaceHeader{background:#fff;border:2px solid #000
 console.log('PASS: V36.6 Home, Power, Device Config and Rack Layout updates.');
 
 // V36.7 hides shared VLAN columns whenever the VLAN feature is disabled.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(source('deviceConfigColumnVisible').includes("key==='vlan'&&!ipVlanSetup().enabled"));
 assert(html.includes('.deviceConfigTable [hidden]{display:none!important}'));
 assert(source('deviceConfigPortRow').includes("parentMode==='dmx-node'&&deviceConfigIsLuminex(device)"));
@@ -864,13 +864,13 @@ assert(source('deviceConfigVisiblePorts').includes("sort((a,b)=>(a.category==='n
 console.log('PASS: V36.7 hides Device Config and Control VLAN columns when disabled.');
 
 // V36.7 removes the redundant IP Address route while retaining a safe legacy redirect.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(source('setSheetTab').includes("tab==='networkEquipment'||tab==='ipAddresses'"));
 assert(!source('setSheetTab').includes("'deviceConfig','ipAddresses','distroLabels'"));
 console.log('PASS: V36.7 removes the IP Address tab and redirects legacy routes.');
 
 // V37 moves Global Subnet to Device Config and makes locations actionable groups.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 const deviceConfigViewSource=source('renderDeviceConfigView');
 assert(!deviceConfigViewSource.includes('expandAllDeviceConfig()'));
 assert(!deviceConfigViewSource.includes('collapseAllDeviceConfig()'));
@@ -880,14 +880,14 @@ assert(deviceConfigViewSource.includes('deviceConfigLocationGroup'));
 assert(!deviceConfigViewSource.includes('cell.hidden=false'));
 assert(source('renderVlanSetupPane').includes("if(!setup.enabled){body.innerHTML='<div class=\"settingsCard full vlanSetupIntro\""));
 assert(!source('renderVlanSetupPane').includes('globalSubnet='));
-assert(source('deviceConfigGlobalSubnetMarkup').includes('Apply to All Devices'));
+assert(source('syncDeviceConfigGlobalSubnetOverlay').includes('Apply to All Devices'));
 assert(source('deleteDeviceConfigLocation').includes('Their rack placements will also be removed.'));
 assert(source('deviceConfigLocationIsOpen').includes('deviceConfigOpenLocations.add(key)'));
-assert(html.includes('.deviceConfigGlobalSubnetMenu{position:absolute'));
+assert(html.includes('.deviceConfigGlobalSubnetOverlay{position:fixed;z-index:100000'));
 assert(html.includes('.sheetWrap.deviceConfigSubnetOpen{overflow:visible}'));
 assert(!html.includes('.networkDeviceConfigToolbar{position:relative;z-index:50'));
-assert(html.includes('.deviceConfigGlobalSubnetMenu{position:absolute;right:0;bottom:calc(100% + 8px);z-index:1000'));
-assert(fs.readFileSync(root+'tests/BROWSER-CHECKLIST.md','utf8').startsWith('# V49 browser release checks'));
+assert(source('syncDeviceConfigGlobalSubnetOverlay').includes('document.body.appendChild(overlay)'));
+assert(fs.readFileSync(root+'tests/BROWSER-CHECKLIST.md','utf8').startsWith('# V50 browser release checks'));
 console.log('PASS: V37 Device Config locations, Global Subnet and disabled VLAN controls.');
 
 // V37.3 Pathway devices expose protocols without Luminex-only processing-engine metadata.
@@ -904,20 +904,20 @@ assert(source('vlanTemplateControlsMarkup').includes("[['Generic','Generic'],['L
 console.log('PASS: V37.4 VLAN header control and Generic template choice.');
 
 // V37.5 fixes pane layering, Global Subnet clipping, list drag-fill and Pathway protocol fallback.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(source('renderDeviceConfigView').includes("classList.toggle('deviceConfigSubnetOpen',deviceConfigGlobalSubnetOpen)"));
 assert(source('deviceConfigParentRow').includes('singlePort?.protocols?.length?singlePort.protocols:null'));
 assert(source('attachDeviceConfigFillHandle').indexOf("const fromPoint=document.elementFromPoint")<source('attachDeviceConfigFillHandle').indexOf("fromEvent=pointerEvent.target"));
 console.log('PASS: V37.5 Device Config overlays, list filling and Pathway protocols.');
 
 // V37.6 shares DMX port positions between Device Config and Port Configuration.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(source('deviceConfigPortsFor').includes("base.location=legacy?.location||''"));
 assert(source('saveDeviceConfigPorts').includes('location:port.location'));
 assert(source('deviceConfigTableMarkup').includes('deviceConfigRowWithPortLocation'));
 assert(source('deviceConfigPortLocationSelect').includes('networkPortLocationOptions(port.location)'));
 assert(source('deviceConfigPortLocationSelect').includes('updateDeviceConfigPortLocation(this)'));
-assert(source('deviceConfigGlobalSubnetMarkup').includes('openDeviceConfigPortConfiguration()'));
+assert(!source('deviceConfigGlobalSubnetMarkup').includes('openDeviceConfigPortConfiguration()'));assert(source('networkSubTabsMarkup').includes('Port Configuration'));
 assert(source('rackPortConfigurationNavigationMarkup').includes('&lt; Previous'));
 assert(source('rackPortConfigurationNavigationMarkup').includes('Next &gt;'));
 assert(source('saveRackPortConfiguration').includes('location:setting.location'));
@@ -925,7 +925,7 @@ assert(!source('saveRackPortConfiguration').includes('deviceConfigPorts=[]'));
 console.log('PASS: V37.6 Device Config DMX port positions and Port Configuration navigation.');
 
 // V37.7 loads Generic on first VLAN activation and tracks native list cells by geometry.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(source('enableVlans').includes("templateSource:'Generic'"));
 assert(source('enableVlans').includes('await loadVlanColourReference()'));
 assert(source('enableVlans').includes("templateMode:'manual'"));
@@ -936,7 +936,7 @@ assert(source('attachDeviceConfigFillHandle').includes("document.removeEventList
 console.log('PASS: V37.7 Generic VLAN activation and native list-cell fill targeting.');
 
 // V38 adds sequential DMX-port configuration and inline network-device setup.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 add('networkPortUniverseRange','shiftedNetworkPortUniverse');
 assert.deepEqual(JSON.parse(JSON.stringify(c.networkPortUniverseRange(20,4))),{start:20,end:23,values:['20','21','22','23']});
 assert.deepEqual(JSON.parse(JSON.stringify(c.networkPortUniverseRange('',3))),{start:1,end:3,values:['1','2','3']});
@@ -996,7 +996,7 @@ assert.equal(html.split(sharedToolbarCss).length-1,1,'Shared toolbar CSS must oc
 console.log('PASS: shared toolbar CSS remains in the active stylesheet.');
 
 // V39 Looms stores independent project data and offers vendor-aware catalogue editing.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('data-sheet-tab="looms"')&&html.indexOf('data-sheet-tab="rackLayout"')<html.indexOf('data-sheet-tab="looms"')&&html.indexOf('data-sheet-tab="looms"')<html.indexOf('data-sheet-tab="distroLabels"'));
 assert(html.includes("const CABLE_CATALOGUE_MANIFEST_URL='json/cable/manifest.json';"));
 const loomManifest=JSON.parse(fs.readFileSync(root+'json/cable/manifest.json','utf8'));
@@ -1020,7 +1020,7 @@ assert(source('render').includes("if(activeSheetTab==='looms'){renderLoomsView()
 console.log('PASS: V39 Looms catalogue, project migration, quantity expansion, editor actions and spreadsheet interactions.');
 
 // V39.1 keeps Loom builder styling and the category-to-cable picker transition stable.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.loomBuildTable th{background:rgb(185,185,185);color:#000;font-family:var(--project-subheader-font);font-weight:800}'));
 assert(html.includes('.btn.add{font-weight:800;font-size:14px;line-height:1;padding:8px;background:#00a61d;color:#fff;border:2px solid #000}'));
 assert(source('renderLoomEditor').includes('>+ Cable</button>'));
@@ -1035,7 +1035,7 @@ assert(source('showLoomCableMenu').includes('event.stopPropagation();chooseLoomC
 console.log('PASS: V39.1 Loom styling, three-colour headings and persistent catalogue selection.');
 
 // V39.2 edits grouped Loom cables without discarding retained cable labels or notes.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.loomCard.loomCardCollapsed .loomTable{display:none}'));
 assert(html.includes('.loomBuildTable th:last-child,.loomBuildTable td:last-child{width:34px;padding:1px}'));
 assert(source('renderLoomEditor').includes('style="margin-bottom:10px;"'));
@@ -1052,7 +1052,7 @@ assert(source('loomCardMarkup').includes('onclick="event.stopPropagation()"'));
 console.log('PASS: V39.2 grouped Loom editing, retained cable data and collapsible viewer cards.');
 
 // V40 keeps Looms compact and provides a derived, category-organised Cable List.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.loomGroup{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start;border-bottom:4px solid #9b9b9b;padding-bottom:10px}'));assert(html.includes('.loomCard{width:100%;border:2px solid #000'));
 assert(html.includes('.loomTable{width:100%;border-collapse:collapse;table-layout:fixed;font-family:var(--project-body-font)}'));
 assert(html.includes('.loomTable tbody td{height:20px;border:0}.loomTable tbody td[data-loom-cell],.loomTable tbody td.loomDeleteCell{border-bottom:1px dashed #9b9b9b}'));
@@ -1069,7 +1069,7 @@ assert(source('activeApplicationPageName').includes("'Looms ~ Cable List'"));
 console.log('PASS: V40 compact Loom styling, category Back navigation and aggregate Cable List.');
 
 // V40.1 places Loom navigation in its toolbar and compacts Loom card actions.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.loomCardActions{grid-column:3;align-self:center;justify-self:end;display:flex;flex-direction:row;flex-wrap:nowrap;gap:4px;align-items:center;width:max-content;max-width:100%;white-space:nowrap;transform:scale(.8);transform-origin:right center}'));
 assert(html.includes('.loomTable th{background:#8d8d8d;color:#fff'));
 assert(html.includes('.loomCableListTable{width:100%;border-collapse:collapse;table-layout:fixed'));
@@ -1078,7 +1078,7 @@ assert(!source('renderLoomsView').includes('tableDistroTabs distroLabelTabs loom
 console.log('PASS: V40.1 Loom toolbar tabs, equal Cable List columns and compact card actions.');
 
 // V40.2 keeps Loom navigation consistent between the page toolbar and main-tab hover menu.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.loomsToolbar{display:flex;justify-content:space-between;gap:12px;align-items:center;border:2px solid #000;border-radius:8px;background:rgb(185,185,185);padding:2px 12px}'));
 assert(html.includes('.loomSubTabs{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:10px}'));
 assert(source('renderLoomsView').includes('<div class="loomsToolbar"><div>${tabs}</div>${activeLoomSubTab'));
@@ -1087,7 +1087,7 @@ assert(source('sheetSubMenuRoutes').includes("label:'Cable List'"));
 console.log('PASS: V40.2 Loom toolbar matches shared sub-tab navigation and main-tab hover routes.');
 
 // V40.3 keeps extension Looms linked, ordered beside their parent and safely deletable.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.loomsToolbar{display:flex;justify-content:space-between;gap:12px;align-items:center;border:2px solid #000;border-radius:8px;background:rgb(185,185,185);padding:2px 12px}'));
 assert(html.includes('.loomCardHeading{cursor:pointer;position:relative;display:grid;grid-template-columns:minmax(0,160px) minmax(0,1fr) minmax(0,160px);align-items:center;gap:4px;height:40px;min-height:40px;max-height:55px;padding:0 4px'));
 assert(html.includes('.loomGroup{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start;border-bottom:4px solid #9b9b9b;padding-bottom:10px}'));
@@ -1101,7 +1101,7 @@ assert(source('deleteLoom').includes('linked extension')&&source('deleteLoom').i
 console.log('PASS: V40.3 linked Loom extensions, grouped cards and delete choices.');
 
 // V40.4 adds saved Loom end orientation and keeps every Extension in its Feeder's right-side stack.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.loomCardSubheading{grid-column:1;align-self:center;justify-self:start;min-width:0;max-width:100%;flex:0 0 auto;white-space:nowrap;margin:0;padding:0 6px;text-align:left;font-family:var(--project-subheader-font);font-size:18px;font-weight:900;color:#000;background:#fefefe;border:1px solid #000;border-radius:30px}'));
 assert(html.includes('.loomCardExtensionButton{flex:0 0 auto;inline-size:max-content;white-space:nowrap;padding:4px 6px;font-size:18px;font-weight:800}'));
 assert(html.includes('.loomEndsTogetherRow td{color:#c00000;font-weight:900'));
@@ -1118,7 +1118,7 @@ assert(source('toggleLoomCard').includes('loomDescendantIds(id).forEach'));
 console.log('PASS: V40.4 Loom end settings, Feeder/Extension layout and focussed extension creation.');
 
 // V40.5 refines Loom cards and makes every supply warning a navigable Project Error.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.loomCardHeading{cursor:pointer;position:relative;display:grid;grid-template-columns:minmax(0,160px) minmax(0,1fr) minmax(0,160px);align-items:center;gap:4px;height:40px;min-height:40px;max-height:55px;padding:0 4px'));
 assert(html.includes('.loomCardActions{grid-column:3;align-self:center;justify-self:end;display:flex;flex-direction:row;flex-wrap:nowrap;gap:4px;align-items:center;width:max-content;max-width:100%;white-space:nowrap;transform:scale(.8);transform-origin:right center}'));
 assert(html.includes('.loomCardActions .btn.danger{width:30px;height:30px;padding:4px;font-size:12px;line-height:1}'));
@@ -1131,7 +1131,7 @@ assert(source('openProjectError').includes("target.kind==='power'")&&source('ope
 console.log('PASS: V40.5 Loom refinement and Power supply Project Errors.');
 
 // V40.6 uses the shared colour rule for Position Summary and Loom headings.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 const v406=vm.createContext({normaliseHex:value=>String(value||'').toLowerCase(),colourTextToHex:value=>String(value||''),loomHeadingBackground:()=>''});
 vm.runInContext(source('colourSetPresentation'),v406);vm.runInContext(source('loomHeadingStyle'),v406);
 assert.deepEqual(JSON.parse(JSON.stringify(v406.colourSetPresentation(['#FFFF3D']))),{colours:['#FFFF3D'],text:'#ffffff',outline:'#000000',shadow:'none'});
@@ -1150,7 +1150,7 @@ const loomCardSource=source('loomCardMarkup');assert(loomCardSource.includes('>+
 console.log('PASS: V40.6 shared Position Summary and Loom heading colour rule.');
 
 // V40.7 refines Loom pane controls, outside closing and full-height cable choices.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.loomCardSubheading{grid-column:1;align-self:center;justify-self:start;min-width:0;max-width:100%;flex:0 0 auto;white-space:nowrap;margin:0;padding:0 6px;text-align:left;font-family:var(--project-subheader-font);font-size:18px;font-weight:900;color:#000;background:#fefefe;border:1px solid #000;border-radius:30px}'));
 assert(html.includes('.loomBuildTable{width:100%;border-collapse:collapse;table-layout:fixed;margin-top:12px}'));
 assert(html.includes('.loomBuildTable th:nth-child(1),.loomBuildTable td:nth-child(1){width:120px}'));
@@ -1170,13 +1170,13 @@ assert(html.includes('!loomClickPath.includes(loomEditorPane)'));
 console.log('PASS: V40.7 Loom pane controls, full cable picker and outside close.');
 
 // V40.7 keeps Fan Out body text readable independently of the saved table format.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.fanOutTable tbody .fixIdCol .fanOutCellText{font-size:18px!important}'));
 assert(html.includes('.fanOutTable tbody .fixTypeCol .fanOutCellText,.fanOutTable tbody .positionCol .fanOutCellText{font-size:14px!important}'));
 console.log('PASS: V40.7 Fan Out body-cell font sizes.');
 
 // V40.9 retains Control outlines and preserves valid Loom parent relationships when changing type.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.controlNetworkView .consolePositionName{-webkit-text-stroke-width:.5mm;-webkit-text-stroke-color:var(--pos-text-outline,transparent);paint-order:stroke fill}'));
 assert(html.includes('.controlLocationCell.positionStyled{font-family:Cochin'));
 assert(!html.includes('-webkit-text-stroke-width:.1mm;-webkit-text-stroke-color:#000;paint-order:stroke fill}.controlLocationCell.positionStyled input'));
@@ -1191,7 +1191,7 @@ assert(source('saveLoomEditor').includes('loom.parentLoomId=parentLoomId'));
 console.log('PASS: V40.9 Control outlines and Loom type editing.');
 
 // V40.9 spaces the Loom editor consistently and orders Extension Looms by name.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.loomsList{display:grid;gap:10px}'));
 assert(html.includes('.loomGroup{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start;border-bottom:4px solid #9b9b9b;padding-bottom:10px}'));
 assert(html.includes('.loomPaneActions{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap;margin-top:16px}'));
@@ -1201,7 +1201,7 @@ assert(source('loomDisplayGroups').includes('expand(parent).sort(loomNameCompare
 console.log('PASS: V40.9 Loom editor spacing and alphabetical Extension ordering.');
 
 // V40.10 refines Loom borders, replaces the Home Socapex stat and makes Position colours authoritative.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.tourLogoSlot{display:flex;align-items:center;justify-content:center;width:165px'));
 assert(html.includes('.loomCardHeading{cursor:pointer;position:relative;display:grid;grid-template-columns:minmax(0,160px) minmax(0,1fr) minmax(0,160px);align-items:center;gap:4px;height:40px;min-height:40px;max-height:55px;padding:0 4px;background:var(--loom-background,#fff)'));
 assert(html.includes('.loomTable th:first-child,.loomTable td:first-child{border-left:none}'));
@@ -1232,7 +1232,7 @@ assert(source('updatePatchRowField').includes("field==='address'||field==='unive
 console.log('PASS: V40.10 Loom borders, Home Loom summary, Position colour syncing and centred tour logo.');
 
 // V41 retains unpatched fixtures and adds saved Active/Ignored error management.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(source('loomViewerRowMarkup').includes('class="loomDeleteCell"'));
 assert(source('fitLoomCardTitle').includes('size>22'));
 assert(source('fitLoomCardTitle').includes('Math.min(55'));
@@ -1265,7 +1265,7 @@ const grouped=JSON.parse(JSON.stringify(v41groups.groupedProjectErrors([{id:'p',
 console.log('PASS: V41 Loom title fitting, retained unpatched fixtures and grouped Active/Ignored errors.');
 
 // V41.1 keeps Loom titles centred without allowing title fitting to resize the side controls.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.loomCardHeading{cursor:pointer;position:relative;display:grid;grid-template-columns:minmax(0,160px) minmax(0,1fr) minmax(0,160px);align-items:center;gap:4px;height:40px;min-height:40px;max-height:55px;padding:0 4px'));
 assert(html.includes('.loomCardTitle{grid-column:2;align-self:stretch;min-width:0;max-width:100%;overflow:hidden;display:flex;align-items:center;justify-content:center}'));
 assert(html.includes('.loomCardSubheading{grid-column:1;align-self:center;justify-self:start;min-width:0;max-width:100%;flex:0 0 auto;white-space:nowrap'));
@@ -1322,7 +1322,7 @@ assert.equal(patchNavContext.fixturePatchKeyboardNavigating,false);
 console.log('PASS: V41.1 Loom-style Fixture Patch keyboard navigation across text and list cells.');
 
 // V42 shares Fixture Summary, persists project fixture overrides and uses a compact Patch grid.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(!source('renderProjectErrorsPage').includes('projectErrorsHeader'));
 assert(!html.includes('.projectErrorsHeader{'));
 assert(source('openProjectErrorsPage').includes('data-project-errors-tab'));
@@ -1363,7 +1363,7 @@ assert(html.includes('.fixturePatchToolbarActions>.btn{display:inline-flex;align
 console.log('PASS: V42 Fixture Patch controls and uniform toolbar actions.');
 
 // V42.1 shares the Power Position presentation with Fan Out Position cells.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(source('fanOutSlotCellsMarkup').includes('fanOutCellText powerFixTypeText powerPositionText'));
 assert(source('fanOutSlotCellsMarkup').includes('powerPositionCellStyle(result)'));
 assert(html.includes('.powerSheetTable .positionCol .powerPositionText,.fanOutTable .positionCol .powerPositionText{-webkit-text-stroke-width:var(--power-position-stroke-width,0);-webkit-text-stroke-color:var(--power-position-outline,transparent);paint-order:stroke fill;text-shadow:none!important}'));
@@ -1383,7 +1383,7 @@ console.log('PASS: V42.1 Fixture Patch position creation waits for a committed v
 
 
 // V43 fixes Home customisation and adds saved Position ordering and PDF grids.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.projectSettingsView{width:min(1300px,100%)'));
 assert(html.includes('.projectProductionFieldRow{display:grid;grid-template-columns:350px 160px'));
 assert(source('homeStat').includes('draggable="false"'));
@@ -1427,7 +1427,7 @@ assert.equal(pctx.normaliseProjectInfo({exportLogos:{tour:false}}).exportLogos.t
 console.log('PASS: V43 Home customisation, mandatory Tour Logo, Position ordering and PDF grids.');
 
 // V43.1 outlines white bands in every shared multi-colour Position background.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 const positionStripeContext=vm.createContext({escapeAttr:value=>String(value),normaliseHex:value=>String(value||'').toLowerCase()});
 vm.runInContext(source('outlinedStripeBandStops'),positionStripeContext);
 vm.runInContext(source('positionStripeBands'),positionStripeContext);
@@ -1442,14 +1442,14 @@ assert(source('drawPositionSummaryStripeFill').includes("whiteBands.forEach(poin
 console.log('PASS: V43.1 multi-colour Position white bands use a 0.5 mm black outline.');
 
 // V43.2 applies the shared white-band outline to Loom headings.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 const outlinedLoomHeading=loomStyleContext.loomHeadingBackground(['#ff0000','#ffffff','#0060d2']);
 assert(outlinedLoomHeading.includes('#000 4mm,#000 calc(4mm + .5mm)'));
 assert(outlinedLoomHeading.includes('#ffffff calc(4mm + .5mm),#ffffff calc(10mm - .5mm)'));
 console.log('PASS: V43.2 Looms outline white multi-colour bands.');
 
 // V43.3 uses a 0.3 mm white-band outline for Power, Fan Outs and Socapex cells.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 const powerStripeContext=vm.createContext({escapeAttr:value=>String(value),normaliseHex:value=>String(value||'').toLowerCase(),$:()=>({value:'4'})});
 vm.runInContext(source('outlinedStripeBandStops'),powerStripeContext);
 vm.runInContext(source('positionStripeBands'),powerStripeContext);
@@ -1466,7 +1466,7 @@ assert(source('powerPdfDomPdfBytes').includes('stripeWidth,0,.3'));
 console.log('PASS: V43.3 Power Calcs, Fan Outs and Socapex cells use 0.3 mm white-band outlines.');
 
 // V43.4 renders every Power and Fan Out Position background through a PDF colour layer.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(source('preparePdfSocaColourLayers').includes(".positionCol[data-power-position-colours]"));
 assert(source('preparePdfSocaColourLayers').includes("drawPdfSocaStripeCanvas,'.powerPositionText,.powerExtraLabelText,input'"));
 assert(source('preparePdfSocaColourLayers').includes("!text.matches('.powerSocaNameText')"));
@@ -1475,7 +1475,7 @@ assert(source('fanOutPreviewPdfBytes').includes('patchPdfPageToJpeg(page)'));
 console.log('PASS: V43.4 Power Calcs and Fan Out PDFs retain every Position colour background.');
 
 // V43.5 removes the Fixture Patch Format button while retaining the other filter actions.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(!source('patchControlsMarkup').includes('openPatchFormatModal()'));
 assert(source('patchControlsMarkup').includes("fixtureNameModeControl('patch')"));
 assert(source('patchControlsMarkup').includes('openPatchColumnsModal()'));
@@ -1542,11 +1542,11 @@ assert(source('pdfTemplateControlMarkup').includes('Custom'));
 assert(source('applyPdfProjectSettings').includes('size:Math.max(8,first.title.size-2)'));
 assert(source('applyPdfProjectSettings').includes("set('--pdf-later-font',footer.font)"));
 assert(html.includes('padding:5mm 5mm 14mm'));
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 console.log('PASS: V45 Project Font, Arial application controls, owner relocation, production layout and simplified PDF chrome.');
 
 // V46 Fixture Patch update.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.fixturePatchView{width:1400px;min-width:1400px;margin:0 auto}'));
 assert(html.includes('.fixturePatchToolbar,.fixturePatchControlBody,.fixturePatchPage{width:1400px'));
 assert(html.includes('.fixturePatchToolbarActions{scale:.9'));
@@ -1579,7 +1579,7 @@ assert(source('renderFixturePatchPdfPreview').includes('finalisePdfPageChrome'))
 console.log('PASS: V46 Fixture Patch layout, add workflows, saved output options and paginated PDF supplements.');
 
 // V47 Power update.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.powerSheetView{width:min(1400px,100%);max-width:1400px;min-width:0'));
 assert(html.includes('.powerSheetToolbar{width:min(1400px,100%);max-width:1400px'));
 assert(html.includes('.powerSheetToolbarActions>.powerPrimaryAction{font-size:14px;font-weight:800;padding:8px}'));
@@ -1613,11 +1613,11 @@ assert(source('renderPowerPdfPreview').includes("extraClass:'powerPdfTotalsPage'
 assert(source('createPowerPdfPage').includes('appendExportLogo(page,0)'));
 assert(source('powerPdfContentLayout').includes('widthScale=maxW/naturalW'));
 assert(source('powerPdfContentLayout').includes('heightScale=maxH/naturalH'));
-assert(fs.readFileSync(root+'tests/BROWSER-CHECKLIST.md','utf8').startsWith('# V49 browser release checks'));
+assert(fs.readFileSync(root+'tests/BROWSER-CHECKLIST.md','utf8').startsWith('# V50 browser release checks'));
 console.log('PASS: V47 compound Power Fix IDs, constrained layout, per-distro PDF headers and final Totals page.');
 
 // V47.1 Power width distribution and compact Supply summary cards.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 const widthDefaultsSource=html.slice(html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS='),html.indexOf('let powerColumnWidthSettings=',html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS=')));
 for(const key of ['colour','socapex','way','fixId','fixType','position','watts','amps'])assert(widthDefaultsSource.includes(`${key}:{label:`));
 assert(!html.includes('function powerColumnWidthAdjusterMarkup'));
@@ -1646,7 +1646,7 @@ assert(source('powerPdfDistroSummaryMarkup').includes('powerPdfSupplyCardMarkup(
 console.log('PASS: V47.2 requested Power width limits and matched Supply/Distro summary cards.');
 
 // V47.3 automatic phase summaries, labelled blank headers and Power body typography.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.powerPhaseSummary{width:auto!important;height:auto!important;min-height:0!important;padding:8px!important}'));
 assert(html.includes('.powerSupplySummary{width:auto!important;min-width:0!important;padding-right:12px!important;border-right:2px solid #9b9b9b'));
 const phaseSummarySource=source('phaseTotalsMarkup');
@@ -1670,7 +1670,7 @@ for(const [key,[min,max]] of Object.entries(requestedPowerWidthLimits)){assert.e
 console.log('PASS: V47.3 Power summary dimensions, hidden labelled headers and exact body typography.');
 
 // V47.4 three-position later-page headers and two-line page chrome.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('#projectExportsTab .settingsCard{margin-bottom:12px}'));
 assert(html.includes('#projectExportsTab .vendorLogoControls{margin-bottom:8px;scale:.8;transform-origin:left center}'));
 assert(html.includes('.projectSettingsHeaderTemplates,.projectSettingsFooterTemplates{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:10px}'));
@@ -1713,7 +1713,7 @@ assert(source('powerPdfDomPdfBytes').includes('maxLines:2'));
 console.log('PASS: V47.4 Export spacing, later-page headers, migration and two-line DOM/vector PDF chrome.');
 
 // V47.5 reviewed Power widths and intrinsic Supply-card sizing.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 const v475WidthCurrent={colour:30,socapex:112,way:26,fixId:59,fixType:117,position:115,watts:45,amps:72};
 for(const [key,current] of Object.entries(v475WidthCurrent))assert.equal(configuredPowerWidths[key].current,current);
 for(const [css,current] of Object.entries({'--power-colour-width':30,'--power-socapex-width':112,'--power-way-width':26,'--power-fix-id-width':59,'--power-fix-type-width':117,'--power-position-width':115,'--power-watts-width':45,'--power-amps-width':72}))assert(html.includes(`var(${css},${current}px)`));
@@ -1730,7 +1730,7 @@ assert(source('powerPdfDistroSummaryMarkup').includes('phaseTotalsMarkup'));
 console.log('PASS: V47.5 Power width defaults, PDF propagation and content-sized Supply cards.');
 
 // V47.6 removes temporary controls and exposes reliable Colour/Way header labels.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(!html.includes('powerColumnWidthAdjuster'));
 assert(!source('renderPowerSheetView').includes('Temporary'));
 assert(source('renderPowerSheetView').includes('powerSocaColourCol powerHeaderTooltip'));
@@ -1746,7 +1746,7 @@ assert(html.includes('.powerHeaderTooltip:focus-visible::after'));
 console.log('PASS: V47.6 fixed Power widths and hover/focus labels for hidden Colour and Way headings.');
 
 // V47.7 expands sparse Power tables and keeps full-title pages free of later-page chrome.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.powerPdfDocumentHeader{display:grid!important;grid-auto-flow:row;row-gap:5px'));
 assert(source('powerPdfContentLayout').includes("view?.style.setProperty('width','max-content','important')"));
 assert(source('powerPdfContentLayout').includes("table.style.setProperty('width','max-content','important')"));
@@ -1758,7 +1758,7 @@ assert(source('createPowerPdfPage').includes('appendExportLogo(page,0)'));
 console.log('PASS: V47.7 Power PDF heading spacing, sparse-table scaling and Distro-page header cleanup.');
 
 // V47.8 reserves PDF chrome and widens sparse main Power columns without enlarging whole tables.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.pdfUnifiedHeaderLeft,.pdfUnifiedHeaderRight{display:grid;align-items:start;min-width:0;min-height:0;margin-top:8px;margin-bottom:8px}'));
 assert(html.includes('.pdfUnifiedHeader .lightingVendorLogo{margin:0 10px}'));
 assert(html.includes('.pdfUnifiedHeader .pdfTourLogo{margin-top:0;margin-right:10px}'));
@@ -1787,7 +1787,7 @@ for(const groups of [1,2,3]){
 console.log('PASS: V47.8 PDF chrome spacing, footer protection and proportional sparse Power widths.');
 
 // V47.9 keeps Power additions as drafts, shares outlet colours and combines PDF extras.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('id="distroSettingsModal" class="frontEditorPane hidden"'));
 assert(html.includes('Save Distro'));
 assert(html.includes('Save Supply'));
@@ -1811,7 +1811,7 @@ assert(source('preparePowerPdfView').includes("rowMode==='extras'"));
 console.log('PASS: V47.9 draft Power setup, shared outlet colours, simplified tables and combined PDF extras.');
 
 // V47.10 refines Aux widths and moves colour controls to the end of each outlet row.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.powerAuxSheet .auxLabelCol{width:auto!important;min-width:50px;max-width:200px'));
 assert(html.includes('transform:scale(.7);transform-origin:center'));
 assert(source('powerExtraColourCellMarkup').includes('powerExtraColourCol'));
@@ -1823,7 +1823,7 @@ assert(source('preparePowerPdfView').includes('.powerExtraColourCol'));
 console.log('PASS: V47.10 Aux sizing, Include scaling and right-side outlet colour controls.');
 
 // V47.11 displays three outlet colour fields; V48.4 removes its temporary width controls.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(/\.powerAuxSheet \.auxNumberCol\{width:\d+px;font-weight:900\}/.test(html));
 assert(html.includes('.powerAuxSheet thead .auxNumberCol{font-size:14px}'));
 assert(html.includes('.powerAuxSheet tbody .auxNumberCol{font-size:14px}'));
@@ -1834,14 +1834,14 @@ assert(!html.includes('powerExtraWidthSettings'));
 console.log('PASS: V47.11 Aux Way sizing and three inline colour fields remain after adjuster removal.');
 
 // V47.12 reviewed widths are now fixed by V48.4.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.powerAuxSheet .auxNumberCol{width:25px;font-weight:900}'));
 assert(!html.includes('.powerAuxSheet .auxNumberCol{width:25px;min-width'));
 for(const rule of ['.powerAuxSheet .auxNumberCol{width:25px!important}', '.powerAuxSheet .auxLabelCol{width:125px!important}', '.powerAuxSheet .auxWattsCol{width:70px!important}', '.powerAuxSheet .ampsCol{width:70px!important}', '.powerAuxSheet .auxIncludeCol{width:70px!important}', '.powerOutputSheet .powerOutputTypeCol{width:70px!important}', '.powerOutputSheet .auxLabelCol{width:150px!important}', '.powerAuxSheet .powerExtraColourCol,.powerOutputSheet .powerExtraColourCol{width:200px!important}'])assert(html.includes(rule),rule);
 console.log('PASS: V47.12 reviewed Aux and 3ø widths remain as fixed V48.4 rules.');
 
 // V47.13 refines shared Aux and 3ø typography, controls and responsive fitting.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.powerAuxSheet tbody .auxNumberCol{font-size:14px}'));
 assert(source('powerAuxSheetMarkup').includes('class="auxNumberCol powerHeaderTooltip" scope="col" aria-label="Way" title="Way" data-column-label="Way" tabindex="0"></th>'));
 assert(html.includes('.powerExtraLabelCell{position:relative;background:#fff;padding:3px!important}'));
@@ -1862,7 +1862,7 @@ assert(html.includes('.powerExtraColourField{width:70px!important;min-width:70px
 console.log('PASS: V47.13 Aux and 3ø table styling and responsive label fitting.');
 
 // V47.14 commits every visible Aux colour before Include rebuilds the table.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 const v4714Label={c1:'#111111',c2:'#222222',c3:'#333333',useC2:true,useC3:true};
 const v4714Context=vm.createContext({auxLabel:()=>v4714Label,colourTextToHex:(value,fallback)=>({Red:'#ff0000',Blue:'#0000ff'}[value]||fallback)});
 vm.runInContext(source('retainPowerAuxColourSettings'),v4714Context);
@@ -1877,7 +1877,7 @@ assert(!source('togglePowerAuxInclude').includes('powerExtraWidthSettings='));
 console.log('PASS: V47.14 Aux Include toggles retain all colour settings.');
 
 // V48 constrains every live page and scales approved primary content to the sheet width.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('--app-outer-gutter:clamp(12px,1.6666667vw,25px)'));
 assert(html.includes('--app-inner-gutter:clamp(10px,1.3333333vw,20px)'));
 assert(html.includes('width:calc(100vw - (2 * var(--app-outer-gutter)))'));
@@ -1913,7 +1913,7 @@ assert(source('render').includes("observeResponsiveSheetElement(sheet.closest('.
 console.log('PASS: V48 browser-width gutters, full-width primary scaling, measured heights and print isolation.');
 
 // V48.2 measures phase-card connectors from their rendered card centres.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 const v482PhaseMarkup=source('phaseTotalsMarkup');
 const v482SupplyMarkup=source('powerSupplyCardMarkup');
 assert(!v482PhaseMarkup.includes('Distro Phase Totals'));
@@ -1960,14 +1960,14 @@ assert(source('preparePowerPdfTotals').includes('powerPhaseLinkedGroupMarkup'));
 console.log('PASS: V48.2 tight phase-summary groups and measured per-card connector alignment.');
 
 // V48.3 applies project typography and the requested Distro-tab presentation.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('.powerDistroTabs,.powerDistroTabs button{font-family:var(--project-body-font)}'));
 assert(html.includes('.powerDistroTabWrap,.powerDistroTabWrap.active{border:2px solid #000;border-radius:8px}'));
 assert(html.includes('.powerDistroTab.active{background:rgb(0,96,255);color:#fff;border-color:#000}'));
 console.log('PASS: V48.3 Power Distro tab typography, borders and active presentation.');
 
 // V48.4 fixes Aux and 3ø widths and carries linked phase summaries into Power PDF output.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(!html.includes('powerExtraWidth'));
 assert(source('powerPdfDistroSummaryMarkup').includes('powerPhaseLinkedGroupMarkup'));
 assert(source('powerPdfDistroSummaryMarkup').includes(':distroCard'));
@@ -1998,7 +1998,7 @@ assert(!source('renderFanOutPdfPreview').includes('powerPhaseLinkedGroupMarkup')
 console.log('PASS: V48.4 fixed outlet widths and linked Power PDF phase summaries.');
 
 // V49 unifies Consoles and NPUs while keeping Control table state independent.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(!html.includes('function controlSubTabsMarkup('));
 assert(!html.includes('function setControlNetworkTab('));
 assert(!source('sheetSubMenuRoutes').includes("tab==='controlNetwork'"));
@@ -2028,13 +2028,13 @@ assert(source('powerMultiColourBackground').includes("positionStripeBands(values
 assert(html.includes('-webkit-text-stroke-width:var(--power-position-stroke-width,0)!important'));
 assert(html.includes('font-size:14px!important;font-weight:900!important;color:var(--control-location-text,inherit)!important'));
 assert(!html.includes('.controlNetworkView .controlLocationCell.positionStyled input,.controlNetworkView .controlLocationCell.positionStyled select{-webkit-text-stroke-width:.1mm'));
-assert(JSON.parse(fs.readFileSync(root+'info_txt/welcome_message.json')).title.includes('V49'));
-assert(JSON.parse(fs.readFileSync(root+'info_txt/walkthrough.json')).title.includes('V49'));
-assert(fs.readFileSync(root+'tests/BROWSER-CHECKLIST.md','utf8').startsWith('# V49 browser release checks'));
+assert(JSON.parse(fs.readFileSync(root+'info_txt/welcome_message.json')).title.includes('V50'));
+assert(JSON.parse(fs.readFileSync(root+'info_txt/walkthrough.json')).title.includes('V50'));
+assert(fs.readFileSync(root+'tests/BROWSER-CHECKLIST.md','utf8').startsWith('# V50 browser release checks'));
 console.log('PASS: V49.2 unified Control and Position colour styling.');
 
 // V49.2 unifies Position and Location colour rendering across DOM and PDF paths.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 const v492Colour=vm.createContext({
   escapeAttr:value=>String(value),
   normaliseHex:(value,fallback='')=>/^#[0-9a-f]{6}$/i.test(String(value||''))?String(value).toLowerCase():fallback,
@@ -2087,7 +2087,7 @@ assert(!html.includes('function patchColourTextShadow('));
 console.log('PASS: V49.2 unified live, preview, canvas and vector Position colour rendering.');
 
 // V49.3 applies the shared stroke variables to editable colour fields.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(html.includes('[data-colour-input]{-webkit-text-stroke:var(--colour-text-stroke-width,0) var(--colour-text-outline,transparent)!important;paint-order:stroke fill;text-shadow:none!important}'));
 assert(source('renderPositionsView').includes("'positionMenuColour'"));
 assert(source('colourInputControl').includes('data-colour-input="1"'));
@@ -2105,7 +2105,7 @@ assert(v493Field.colourInputStyle('#ffffff').includes('--colour-text-stroke-widt
 console.log('PASS: V49.3 Position Card View and editable colour-field outlines.');
 
 // V49.4 restores multi-colour Position Summary backgrounds in captured PDFs.
-assert.equal(appVersion,'49.5');
+assert.equal(appVersion,'50');
 assert(source('positionPdfItemMarkup').includes('positionSummaryColours(row)'));
 assert(source('positionPdfItemMarkup').includes('data-position-summary-colours'));
 assert(source('preparePdfSocaColourLayers').includes(".positionPdfItem[data-position-summary-colours]:not(.spareAuto)"));
@@ -2126,8 +2126,8 @@ assert(v494YellowWhite.includes('data-position-summary-colours="#ffff3d,#ffffff"
 assert(v494YellowLavender.includes('data-position-summary-colours="#ffff3d,#a855f7"'));
 console.log('PASS: V49.4 Position Summary PDF multi-colour capture.');
 
-// V49.5 applies the requested two-colour Socapex pattern everywhere it renders.
-assert.equal(appVersion,'49.5');
+// V50 applies the requested two-colour Socapex pattern everywhere it renders.
+assert.equal(appVersion,'50');
 const v495Soca=vm.createContext({
   $:()=>({value:'4'}),
   escapeAttr:value=>String(value),
@@ -2147,4 +2147,46 @@ assert(source('drawPdfSocaNameStripeCanvas').includes("colour==='#ffffff'"));
 assert(source('drawPowerSocaStripeFill').includes('secondWidth=7*pxPerMm'));
 assert(source('drawPowerSocaStripeFill').includes("doc.cmd.push(`${pdfPt(.3*PDF_MM_TO_PT)} w 1 j`)"));
 assert(source('powerPdfDomPdfBytes').includes('if(styledSocaName)drawPowerSocaStripeFill'));
-console.log('PASS: V49.5 Power Calcs, Fan Out and PDF Socapex two-colour pattern.');
+console.log('PASS: V50 Power Calcs, Fan Out and PDF Socapex two-colour pattern.');
+
+// V50 updates Device Config navigation, table behaviour and PDF output.
+assert.equal(appVersion,'50');
+assert(source('renderDeviceConfigView').includes('openDeviceConfigPdfPreview()'));
+assert(!source('deviceConfigGlobalSubnetMarkup').includes('Port Configuration'));
+assert(source('networkSubTabsMarkup').includes("['portConfiguration','Port Configuration']"));
+assert(source('setNetworkSubTab').includes("activeNetworkSubTab=tab==='portConfiguration'"));
+assert(source('renderDeviceConfigPortConfigurationView').includes('deviceConfigPortTabs'));
+assert(source('selectDeviceConfigPortDevice').includes('commitDeviceConfigPortConfiguration()'));
+assert(source('saveDeviceConfigPortConfiguration').includes("activeNetworkSubTab='deviceConfig'"));
+assert(!source('cancelDeviceConfigPortConfiguration').includes('commitDeviceConfigPortConfiguration'));
+assert(source('deviceConfigRowWithLocation').includes('controlLocationCellStyle(actual)'));
+assert(source('deviceConfigRowWithPortLocation').includes('controlLocationCellStyle(port.location)'));
+assert(html.includes('.deviceConfigView .controlLocationCell.positionStyled'));
+assert(html.includes('font-size:14px!important;font-weight:900!important;color:var(--control-location-text,inherit)!important'));
+assert(html.includes('.deviceConfigToolbar .btn,.deviceConfigPortToolbar .btn{width:auto;min-width:0;padding:8px'));
+assert(html.includes('.deviceConfigTable .deviceConfigStatusCol{width:20px!important;min-width:20px!important;max-width:20px!important'));
+assert(html.includes('.deviceConfigTable .deviceConfigDeleteCol{width:34px!important;min-width:34px!important;max-width:34px!important'));
+assert(source('deviceConfigGroupTablesMarkup').includes("`${groupKey}:console`"));
+assert(source('deviceConfigGroupTablesMarkup').includes("`${groupKey}:devices`"));
+assert(source('setDeviceConfigTableSort').includes('deviceConfigTableSortState(tableKey)'));
+assert(source('clearProjectState').includes('deviceConfigTableSorts.clear()'));
+assert(source('loadProjectPayload').includes('deviceConfigTableSorts.clear()'));
+const v50Sort=vm.createContext({deviceConfigSortValue:(device,key)=>device[key]||''});
+vm.runInContext('const deviceConfigTableSorts=new Map();',v50Sort);vm.runInContext(source('deviceConfigTableSortState'),v50Sort);vm.runInContext(source('deviceConfigSortDevices'),v50Sort);
+vm.runInContext("deviceConfigTableSorts.set('room:console',{key:'name',direction:'desc'});deviceConfigTableSorts.set('room:devices',{key:'name',direction:'asc'})",v50Sort);
+const sortInput=[{name:'A'},{name:'B'}];assert.deepEqual(JSON.parse(JSON.stringify(v50Sort.deviceConfigSortDevices(sortInput,'room:console').map(item=>item.name))),['B','A']);assert.deepEqual(JSON.parse(JSON.stringify(v50Sort.deviceConfigSortDevices(sortInput,'room:devices').map(item=>item.name))),['A','B']);
+assert(source('syncDeviceConfigGlobalSubnetOverlay').includes('document.body.appendChild(overlay)'));
+assert(source('syncDeviceConfigGlobalSubnetOverlay').includes("window.addEventListener('scroll'"));
+assert(html.includes('.deviceConfigGlobalSubnetOverlay{position:fixed;z-index:100000'));
+assert(source('deviceConfigPdfSourceGroups').includes('deviceConfigExpandedDevices.add'));
+assert(source('deviceConfigPdfPrepareTable').includes('deviceConfigPdfEye'));
+assert(source('deviceConfigPdfPrepareTable').includes('deviceConfigPdfExcluded'));
+assert(source('deviceConfigPdfPrepareTable').includes('if(preview&&parentKey&&deviceConfigPdfSession?.collapsedParents.has(parentKey))'));
+assert(source('toggleDeviceConfigPdfTree').includes('collapsedParents'));
+assert(source('deviceConfigPdfVlanGridMarkup').includes('VLAN settings'));
+assert(source('renderDeviceConfigPdfPages').includes('deviceConfigPdfLocationHeading'));
+assert(source('renderDeviceConfigPdfPages').includes('finalisePdfPageChrome(pages)'));
+assert(source('deviceConfigPdfContentFits').includes("querySelector('.pdfPageFooter')"));
+assert(source('deviceConfigPreviewPdfBytes').includes('document.fonts?.ready'));
+assert(source('deviceConfigPreviewPdfBytes').includes('patchPdfPageToJpeg(page)'));
+console.log('PASS: V50 Device Config tables, Port Configuration, overlay and interactive PDF export.');

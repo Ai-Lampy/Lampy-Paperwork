@@ -1,6 +1,16 @@
 {
-  "title": "Lampy Paperwork V49 Walk-through",
+  "title": "Lampy Paperwork V50 Walk-through",
   "sections": [
+    {
+      "title": "New in V50: Device Config",
+      "type": "unordered",
+      "items": [
+        "Device Config tables sort independently within each Location group and keep device ports attached to their parent.",
+        "Port Configuration is a dedicated Network sub-tab with one tab per compatible DMX-node device and save-on-switch editing.",
+        "Device Config Export opens every tree, repeats the VLAN settings grid on each page and provides separate preview collapse and row-inclusion controls.",
+        "Global Subnet opens above the page as a viewport-level panel, while all Device Config Location cells use the shared Position colour presentation."
+      ]
+    },
     {
       "title": "New in V49: Unified Control",
       "type": "unordered",

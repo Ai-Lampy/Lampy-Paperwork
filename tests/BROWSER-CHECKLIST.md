@@ -1,4 +1,4 @@
-# V49 browser release checks
+# V50 browser release checks
 
 **Use this checklist only when the user explicitly requests browser testing.** Interface changes, implementation requests and releases do not authorise browser testing. Static validation remains the default.
 
@@ -49,6 +49,10 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 | Multi-network-port DMX Nodes show front/rear VLAN controls in Rack Layout and no VLAN value on the Device Config parent row | Required | Required | Required |
 | Generic, Luminex and Pathway VLAN templates detect project devices, preserve custom edits and retain VLAN status and assignments | Required | Required | Required |
 | Device Config Shift ranges, list drag-fill, Facing column and constrained directions | Required | Required | Required |
+| Device Config tables sort independently; first and Delete columns stay aligned across Console and device tables | Required | Required | Required |
+| Network Port Configuration sub-tab saves on device-tab changes and Cancel discards the current unsaved form | Required | Required | Required |
+| Global Subnet overlays all page content and closes by button, outside click and Escape | Required | Required | Required |
+| Device Config PDF repeats the VLAN grid, supports Location and per-row visibility, preview-only tree collapse and footer-safe continuation pages | Required | Required | Required |
 | DMX Node and Network Switch management fields remain on parent rows | Required | Required | Required |
 | Filters start collapsed; location groups expand, collapse and delete safely; Global Subnet defaults new devices and applies only on command | Required | Required | Required |
 | `+ Supply` loads JSON labels, starts blank and cancels cleanly if loading fails | Required | Required | Required |
