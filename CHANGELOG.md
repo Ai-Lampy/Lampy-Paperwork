@@ -1,3 +1,8 @@
+## V49.5 — Power Socapex two-colour pattern
+
+- Updated two-colour Socapex cells in Power Calcs and Fan Outs to use the requested offset 6mm/7mm stripe geometry.
+- Matched captured and vector PDF rendering, including the 0.3mm black edges around white bands.
+
 ## V49.4 — Position Summary PDF colours
 
 - Restored two- and three-colour Position Summary backgrounds in captured PDF exports.
