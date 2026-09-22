@@ -1,3 +1,8 @@
+## V49.4 — Position Summary PDF colours
+
+- Restored two- and three-colour Position Summary backgrounds in captured PDF exports.
+- Added Position Summary colour metadata to the PDF capture layer so exported stripes retain the live 30px geometry and 0.5mm white-band edges.
+
 ## V49.3 — Position colour-field outlines
 
 - Applied the shared colour text stroke to Position Card View and every editable colour field.
