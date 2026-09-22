@@ -1,8 +1,8 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),path=require('path'),zlib=require('zlib');
 const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const LampyCore=require('../js/project-core.js'),LampyArchive=require('../js/archive.js');
-assert(html.includes('<title>Lampy Paperwork V49.1</title>'));
-assert(html.includes("const VERSION='49.1';"));
+assert(html.includes('<title>Lampy Paperwork V49.2</title>'));
+assert(html.includes("const VERSION='49.2';"));
 const v472WidthLimits={colour:[30,40],socapex:[75,180],way:[20,30],fixId:[50,80],fixType:[60,190],position:[85,180],watts:[40,45],amps:[66,75]};
 const v475WidthCurrent={colour:30,socapex:112,way:26,fixId:59,fixType:117,position:115,watts:45,amps:72};
 const v472WidthSource=html.slice(html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS='),html.indexOf('let powerColumnWidthSettings=',html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS=')));
@@ -220,16 +220,26 @@ function zip(name,data,compressed=false){const filename=Buffer.from(name),conten
  console.log('PASS: stored/deflated ZIP, CRC corruption, unsafe paths, extraction bounds and 10,000-fixture round trip');
 })().catch(error=>{console.error(error);process.exitCode=1});
 
-assert(html.includes('<title>Lampy Paperwork V49.1</title>'));
-assert(html.includes("const VERSION='49.1';"));
+assert(html.includes('<title>Lampy Paperwork V49.2</title>'));
+assert(html.includes("const VERSION='49.2';"));
 assert(!html.includes('function controlSubTabsMarkup('));
 assert(!html.includes('function setControlNetworkTab('));
 assert(source('renderConsolesTab').includes("controlUnifiedSectionMarkup('console')"));
 assert(source('renderConsolesTab').includes("controlUnifiedSectionMarkup('npu')"));
 assert(source('controlLocationCellStyle').includes('powerPositionCellStyle'));
-assert(source('controlLocationCellStyle').includes("whiteOnly?'#000000':'#ffffff'"));
+assert(source('controlLocationCellStyle').includes('colourSetPresentation(colours)'));
 assert(source('controlLocationCellStyle').includes('--control-location-text'));
 assert(html.includes('.controlNetworkView .controlPositionName{font-family:var(--project-body-font)}'));
 assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/welcome_message.json'))).title.includes('V49'));
 assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/walkthrough.json'))).title.includes('V49'));
-console.log('PASS: V49.1 Control Location text styling and release metadata.');
+console.log('PASS: V49.2 Control Location text styling and release metadata.');
+
+const changelog=fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8');
+assert(changelog.startsWith('## V49.2 — Unified Position colour rendering'));
+assert(html.includes("const VERSION='49.2';"));
+assert(!html.includes('function projectYellowTextPresentation('));
+assert(!html.includes('function positionSummaryColourPresentation('));
+assert(!html.includes('function powerWhiteTextOutline('));
+assert(html.includes("[data-front-label-colours]:not(.spareAuto)"));
+assert(html.includes("[data-rear-label-colours]:not(.spareAuto)"));
+console.log('PASS: V49.2 release metadata and unified Position rendering paths.');

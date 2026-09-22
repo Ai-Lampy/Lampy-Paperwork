@@ -1,3 +1,10 @@
+## V49.2 — Unified Position colour rendering
+
+- Unified Position and Location colour text: blank and single-white backgrounds use black text without an outline; every other coloured background uses white text with the required black outline.
+- Applied the specified text-outline and white-band edge widths across Position Summary, Power, Fan Outs, Control, Device Config, Fixture Patch, Looms and Labels.
+- Standardised Home Position Summary and Rear Socapex, Aux and 3ø labels on exact 30px colour bands with 0.5mm white-band edges.
+- Matched DOM, captured preview, canvas and vector PDF rendering while preserving the RCBO Front Label structure and Spare/VLAN rules.
+
 ## V49.1 — Control Location text colour
 
 - Set coloured Control Table Location text to white with the existing black outline.
