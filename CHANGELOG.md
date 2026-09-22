@@ -1,3 +1,9 @@
+## V49.1 — Control Location text colour
+
+- Set coloured Control Table Location text to white with the existing black outline.
+- Kept black text without an outline when the Position Summary background is white alone.
+- Applied the rule to editable and rack-managed Location values.
+
 ## V49 — Unified Control page
 
 - Merged Consoles and NPUs into one Control page with separate, always-visible sections in Card View and Table View.
