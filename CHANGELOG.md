@@ -1,3 +1,12 @@
+## V50.1 — Complete Device Config corrections
+
+- Resolve Device Config widths by column identity, retaining fixed 20px Expand/Collapse and 34px Delete columns.
+- Add independent Console-table sorting for Location, Role, Mode, SW and Capacity using displayed values.
+- Complete Device Config integration with shared PDF paper, orientation, DPI, zoom, logo and status controls.
+- Use display-only export rows and preserve Location fonts, outlines and multi-colour capture backgrounds.
+- Add Review and Print Preview modes with shared row inclusion; Print Preview and download reuse the same paginated pages.
+- Wait for fonts and header images before pagination, protect headers, repeated VLAN grids and footers, and discard stale render requests.
+
 ## V50 — Device Config update
 
 - Matched Device Config toolbar and Location-cell presentation to the shared Power and Control rules.

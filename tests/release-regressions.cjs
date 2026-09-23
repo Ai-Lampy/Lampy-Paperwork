@@ -1,8 +1,8 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),path=require('path'),zlib=require('zlib');
 const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const LampyCore=require('../js/project-core.js'),LampyArchive=require('../js/archive.js');
-assert(html.includes('<title>Lampy Paperwork V50</title>'));
-assert(html.includes("const VERSION='50';"));
+assert(html.includes('<title>Lampy Paperwork V50.1</title>'));
+assert(html.includes("const VERSION='50.1';"));
 const v472WidthLimits={colour:[30,40],socapex:[75,180],way:[20,30],fixId:[50,80],fixType:[60,190],position:[85,180],watts:[40,45],amps:[66,75]};
 const v475WidthCurrent={colour:30,socapex:112,way:26,fixId:59,fixType:117,position:115,watts:45,amps:72};
 const v472WidthSource=html.slice(html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS='),html.indexOf('let powerColumnWidthSettings=',html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS=')));
@@ -220,8 +220,8 @@ function zip(name,data,compressed=false){const filename=Buffer.from(name),conten
  console.log('PASS: stored/deflated ZIP, CRC corruption, unsafe paths, extraction bounds and 10,000-fixture round trip');
 })().catch(error=>{console.error(error);process.exitCode=1});
 
-assert(html.includes('<title>Lampy Paperwork V50</title>'));
-assert(html.includes("const VERSION='50';"));
+assert(html.includes('<title>Lampy Paperwork V50.1</title>'));
+assert(html.includes("const VERSION='50.1';"));
 assert(!html.includes('function controlSubTabsMarkup('));
 assert(!html.includes('function setControlNetworkTab('));
 assert(source('renderConsolesTab').includes("controlUnifiedSectionMarkup('console')"));
@@ -235,8 +235,8 @@ assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/walkthrough.json'))).
 console.log('PASS: V49.2 Control Location text styling and release metadata.');
 
 const changelog=fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8');
-assert(changelog.startsWith('## V50 — Device Config update'));
-assert(html.includes("const VERSION='50';"));
+assert(changelog.startsWith('## V50.1 — Complete Device Config corrections'));
+assert(html.includes("const VERSION='50.1';"));
 assert(!html.includes('function projectYellowTextPresentation('));
 assert(!html.includes('function positionSummaryColourPresentation('));
 assert(!html.includes('function powerWhiteTextOutline('));
@@ -244,37 +244,37 @@ assert(html.includes("[data-front-label-colours]:not(.spareAuto)"));
 assert(html.includes("[data-rear-label-colours]:not(.spareAuto)"));
 console.log('PASS: V49.2 release metadata and unified Position rendering paths.');
 
-assert(html.includes('<title>Lampy Paperwork V50</title>'));
-assert(html.includes("const VERSION='50';"));
+assert(html.includes('<title>Lampy Paperwork V50.1</title>'));
+assert(html.includes("const VERSION='50.1';"));
 assert(html.includes('[data-colour-input]{-webkit-text-stroke:var(--colour-text-stroke-width,0) var(--colour-text-outline,transparent)!important'));
-assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V50 — Device Config update'));
+assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V50.1 — Complete Device Config corrections'));
 console.log('PASS: V49.3 editable colour-field outline release metadata.');
 
-assert(html.includes('<title>Lampy Paperwork V50</title>'));
-assert(html.includes("const VERSION='50';"));
+assert(html.includes('<title>Lampy Paperwork V50.1</title>'));
+assert(html.includes("const VERSION='50.1';"));
 assert(source('positionPdfItemMarkup').includes('data-position-summary-colours'));
 assert(source('preparePdfSocaColourLayers').includes('drawPdfPositionSummaryStripeCanvas'));
-assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V50 — Device Config update'));
+assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V50.1 — Complete Device Config corrections'));
 console.log('PASS: V49.4 Position Summary PDF colour release metadata.');
 
-assert(html.includes('<title>Lampy Paperwork V50</title>'));
-assert(html.includes("const VERSION='50';"));
+assert(html.includes('<title>Lampy Paperwork V50.1</title>'));
+assert(html.includes("const VERSION='50.1';"));
 assert(source('powerSheetRowMarkup').includes('powerSocaMultiColourBackground'));
 assert(source('fanOutRowMarkup').includes('powerSocaMultiColourBackground'));
 assert(source('preparePdfSocaColourLayers').includes('drawPdfSocaNameStripeCanvas'));
 assert(source('powerPdfDomPdfBytes').includes('drawPowerSocaStripeFill'));
-assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V50 — Device Config update'));
+assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V50.1 — Complete Device Config corrections'));
 console.log('PASS: V50 Socapex two-colour pattern release metadata.');
 
-assert(html.includes('<title>Lampy Paperwork V50</title>'));
-assert(html.includes("const VERSION='50';"));
-assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V50 — Device Config update'));
+assert(html.includes('<title>Lampy Paperwork V50.1</title>'));
+assert(html.includes("const VERSION='50.1';"));
+assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V50.1 — Complete Device Config corrections'));
 assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/welcome_message.json'),'utf8')).title.includes('V50'));
 assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/walkthrough.json'),'utf8')).title.includes('V50'));
 assert(fs.readFileSync(path.join(root,'tests/BROWSER-CHECKLIST.md'),'utf8').startsWith('# V50 browser release checks'));
 assert(source('networkSubTabsMarkup').includes('Port Configuration'));
 assert(source('renderDeviceConfigView').includes('openDeviceConfigPdfPreview'));
-assert(source('renderDeviceConfigPdfPages').includes('finalisePdfPageChrome'));
+assert(source('buildDeviceConfigPdfPages').includes('finalisePdfPageChrome'));
 assert(source('deviceConfigPdfVlanGridMarkup').includes('VLAN settings'));
 assert(source('deviceConfigPdfPrepareTable').includes('deviceConfigPdfExcluded'));
 assert(source('syncDeviceConfigGlobalSubnetOverlay').includes('document.body.appendChild(overlay)'));
