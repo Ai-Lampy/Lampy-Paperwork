@@ -1,3 +1,11 @@
+## V50.2 — Highlight-based PDF Patch Import
+
+- Added local PDF import with page thumbnails, zoom, rotation and labelled column highlights.
+- Read selected text or recognise scanned selections with bundled English OCR; keep all extraction and review data in session memory.
+- Added editable row review, source highlighting, adjustable row guides, confirmed mode filling and reviewed Position/colour-code splitting.
+- Require library/mode resolution and review of OCR, duplicate IDs and address/footprint conflicts before final import.
+- Stage new fixture definitions until confirmation and preserve the existing Master/comparison patch workflow.
+
 ## V50.1 — Complete Device Config corrections
 
 - Resolve Device Config widths by column identity, retaining fixed 20px Expand/Collapse and 34px Delete columns.
