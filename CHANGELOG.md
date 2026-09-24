@@ -1,3 +1,10 @@
+## V50.5 — GDTF mode parameter counts
+
+- Show both DMX channels and parameter counts for every mode in Fixture Information.
+- Expand GDTF geometry references when counting logical parameters, including nested pixel instances and virtual dimmers, without counting coarse/fine offsets twice.
+- Refresh matched fixture-library parameter metadata using the same parser as the application. Sceptron XB 1000 mm PixelMap 100 Pixels now reports 400 parameters per fixture (15,200 for 38 fixtures).
+- Add reproducible library-count validation and regressions for geometry instances, mode isolation, virtual attributes, fine channels and the Sceptron totals. Preserve channel footprints, project data and label snapshots.
+
 ## V50.4 — Remove PDF Patch Import
 
 - Removed the highlight-based PDF Patch Import workflow, its review interface, session handling and PDF/OCR dependencies.
