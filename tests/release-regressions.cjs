@@ -1,8 +1,8 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),path=require('path'),zlib=require('zlib');
 const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const LampyCore=require('../js/project-core.js'),LampyArchive=require('../js/archive.js');
-assert(html.includes('<title>Lampy Paperwork V50.3</title>'));
-assert(html.includes("const VERSION='50.3';"));
+assert(html.includes('<title>Lampy Paperwork V50.4</title>'));
+assert(html.includes("const VERSION='50.4';"));
 const v472WidthLimits={colour:[30,40],socapex:[75,180],way:[20,30],fixId:[50,80],fixType:[60,190],position:[85,180],watts:[40,45],amps:[66,75]};
 const v475WidthCurrent={colour:30,socapex:112,way:26,fixId:59,fixType:117,position:115,watts:45,amps:72};
 const v472WidthSource=html.slice(html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS='),html.indexOf('let powerColumnWidthSettings=',html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS=')));
@@ -220,8 +220,8 @@ function zip(name,data,compressed=false){const filename=Buffer.from(name),conten
  console.log('PASS: stored/deflated ZIP, CRC corruption, unsafe paths, extraction bounds and 10,000-fixture round trip');
 })().catch(error=>{console.error(error);process.exitCode=1});
 
-assert(html.includes('<title>Lampy Paperwork V50.3</title>'));
-assert(html.includes("const VERSION='50.3';"));
+assert(html.includes('<title>Lampy Paperwork V50.4</title>'));
+assert(html.includes("const VERSION='50.4';"));
 assert(!html.includes('function controlSubTabsMarkup('));
 assert(!html.includes('function setControlNetworkTab('));
 assert(source('renderConsolesTab').includes("controlUnifiedSectionMarkup('console')"));
@@ -235,8 +235,8 @@ assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/walkthrough.json'))).
 console.log('PASS: V49.2 Control Location text styling and release metadata.');
 
 const changelog=fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8');
-assert(changelog.startsWith('## V50.3 — Fixture address review'));
-assert(html.includes("const VERSION='50.3';"));
+assert(changelog.startsWith('## V50.4 — Remove PDF Patch Import'));
+assert(html.includes("const VERSION='50.4';"));
 assert(!html.includes('function projectYellowTextPresentation('));
 assert(!html.includes('function positionSummaryColourPresentation('));
 assert(!html.includes('function powerWhiteTextOutline('));
@@ -244,31 +244,31 @@ assert(html.includes("[data-front-label-colours]:not(.spareAuto)"));
 assert(html.includes("[data-rear-label-colours]:not(.spareAuto)"));
 console.log('PASS: V49.2 release metadata and unified Position rendering paths.');
 
-assert(html.includes('<title>Lampy Paperwork V50.3</title>'));
-assert(html.includes("const VERSION='50.3';"));
+assert(html.includes('<title>Lampy Paperwork V50.4</title>'));
+assert(html.includes("const VERSION='50.4';"));
 assert(html.includes('[data-colour-input]{-webkit-text-stroke:var(--colour-text-stroke-width,0) var(--colour-text-outline,transparent)!important'));
-assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V50.3 — Fixture address review'));
+assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V50.4 — Remove PDF Patch Import'));
 console.log('PASS: V49.3 editable colour-field outline release metadata.');
 
-assert(html.includes('<title>Lampy Paperwork V50.3</title>'));
-assert(html.includes("const VERSION='50.3';"));
+assert(html.includes('<title>Lampy Paperwork V50.4</title>'));
+assert(html.includes("const VERSION='50.4';"));
 assert(source('positionPdfItemMarkup').includes('data-position-summary-colours'));
 assert(source('preparePdfSocaColourLayers').includes('drawPdfPositionSummaryStripeCanvas'));
-assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V50.3 — Fixture address review'));
+assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V50.4 — Remove PDF Patch Import'));
 console.log('PASS: V49.4 Position Summary PDF colour release metadata.');
 
-assert(html.includes('<title>Lampy Paperwork V50.3</title>'));
-assert(html.includes("const VERSION='50.3';"));
+assert(html.includes('<title>Lampy Paperwork V50.4</title>'));
+assert(html.includes("const VERSION='50.4';"));
 assert(source('powerSheetRowMarkup').includes('powerSocaMultiColourBackground'));
 assert(source('fanOutRowMarkup').includes('powerSocaMultiColourBackground'));
 assert(source('preparePdfSocaColourLayers').includes('drawPdfSocaNameStripeCanvas'));
 assert(source('powerPdfDomPdfBytes').includes('drawPowerSocaStripeFill'));
-assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V50.3 — Fixture address review'));
+assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V50.4 — Remove PDF Patch Import'));
 console.log('PASS: V50 Socapex two-colour pattern release metadata.');
 
-assert(html.includes('<title>Lampy Paperwork V50.3</title>'));
-assert(html.includes("const VERSION='50.3';"));
-assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V50.3 — Fixture address review'));
+assert(html.includes('<title>Lampy Paperwork V50.4</title>'));
+assert(html.includes("const VERSION='50.4';"));
+assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V50.4 — Remove PDF Patch Import'));
 assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/welcome_message.json'),'utf8')).title.includes('V50'));
 assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/walkthrough.json'),'utf8')).title.includes('V50'));
 assert(fs.readFileSync(path.join(root,'tests/BROWSER-CHECKLIST.md'),'utf8').startsWith('# V50 browser release checks'));
@@ -280,15 +280,18 @@ assert(source('deviceConfigPdfPrepareTable').includes('deviceConfigPdfExcluded')
 assert(source('syncDeviceConfigGlobalSubnetOverlay').includes('document.body.appendChild(overlay)'));
 console.log('PASS: V50 Device Config release metadata and export paths.');
 
-const pdfImportManifest=JSON.parse(fs.readFileSync(path.join(root,'js/vendor/pdf-import-manifest.json'),'utf8'));
-for(const [asset,digest] of Object.entries(pdfImportManifest.files)){const bytes=fs.readFileSync(path.join(root,'js/vendor',asset));assert.equal(require('crypto').createHash('sha256').update(bytes).digest('hex'),digest,asset)}
-assert(html.includes('js/pdf-patch-import.js'));assert(html.includes('js/pdf-patch-import.css'));assert(html.includes('Import PDF'));
-assert(pdfImportManifest.files['tesseract/lang/eng.traineddata.gz']);assert(pdfImportManifest.files['pdfjs/LICENSE']);assert(pdfImportManifest.files['tesseract/lang/LICENSE']);
-console.log('PASS: V50.2 pinned PDF/OCR assets, licences and release metadata.');
+// Removed PDF import must not leave runtime dependencies or entry points behind.
+for(const removed of ['js/pdf-patch-import.js','js/pdf-patch-import.css','js/vendor/pdf-import-manifest.json','js/vendor/pdfjs','js/vendor/tesseract','tests/pdf-patch-import.cjs'])assert(!fs.existsSync(path.join(root,removed)),removed);
+assert(!/pdfPatchImport|PdfPatchImport|LampyPdfImport|Import PDF|pdf-patch-import/.test(html));
+assert(source('choosePatchImportFile').includes("if(kind==='mvr')"));
+assert(!source('choosePatchImportFile').includes('application/pdf'));
+assert(html.includes('Import CSV/Excel'));assert(html.includes('Import .MVR'));
+for(const reader of ['mvrPatchRows','parseCsvRows','xlsxWorkbookSheets','xmlWorksheetRows'])assert(source('readPatchImportFile').includes(reader));
+console.log('PASS: PDF patch import removed; CSV/Excel and MVR imports retained.');
 
 assert(html.includes('js/patch-address-review.js'));
-assert(html.includes("const VERSION='50.3';"));
-assert(changelog.startsWith('## V50.3 — Fixture address review'));
+assert(html.includes("const VERSION='50.4';"));
+assert(changelog.startsWith('## V50.4 — Remove PDF Patch Import'));
 assert(source('confirmPatchGroupEdit').includes('LampyPatchAddress.grouped'));
 assert(source('confirmPatchAddressReview').includes("recordFixturePatchUndo('Review fixture addresses')"));
 assert(source('confirmPatchAddressReview').includes('draft.snapshot!==patchAddressSnapshot()'));

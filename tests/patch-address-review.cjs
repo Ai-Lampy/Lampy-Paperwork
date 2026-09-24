@@ -59,5 +59,5 @@ assert.match(html,/#patchGroupEditModal>\.modalCard\{max-height:95vh/);
 assert.match(source('attachFixturePatchFillHandle'),/if\(field==='address'\).*reviewPatchAddressEdits\(edits,\[\],true\);return/s);
 assert.match(html,/if\(e.key==='Escape'&&patchAddressReview\)/);
 assert.match(html,/if\(id==='patchAddressReviewModal'\)\{closePatchAddressReview\(\);return\}/);
-assert.match(html,/const VERSION='50\.3'/);
+assert.match(html,/const VERSION='50\.4'/);
 console.log('PASS: V50.3 position filtering, footprint sequences, downstream scope, staged edits/paste/keyboard, conflicts, cancellation, stale review and undo.');

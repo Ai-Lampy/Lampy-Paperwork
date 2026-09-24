@@ -1,3 +1,9 @@
+## V50.4 — Remove PDF Patch Import
+
+- Removed the highlight-based PDF Patch Import workflow, its review interface, session handling and PDF/OCR dependencies.
+- Retained CSV/Excel and MVR patch imports, all PDF exports and the V50.3 fixture-address review workflow.
+- Removed obsolete PDF-import tests and added release checks for the retained import paths and removed assets.
+
 ## V50.3 — Fixture address review
 
 - Added Position filtering and a 95vh height limit to Fixture Type Options.
