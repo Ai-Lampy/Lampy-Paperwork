@@ -1,3 +1,10 @@
+## V50.7 — Fixture Summary totals and notes
+
+- Show the exported fixture quantity above Patched Universes, keeping both totals with the final summary row.
+- Add project-saved Fixture Summary Notes and a Show Notes preference in PDF Output Options; empty notes remain hidden.
+- Paginate wrapped notes below the totals and onto continuation pages without shrinking the summary table or overlapping footers. Share the same lines between preview, captured PDF and vector PDF.
+- Add regressions for totals, notes persistence and visibility, wrapping, pagination and export parity without browser testing.
+
 ## V50.6 — Fixture Summary and merged patch columns
 
 - Size and centre PDF Fixture Summary columns from their content within the requested percentage limits; show manufacturer first, DMX Channels and a visually blank Quantity heading.
