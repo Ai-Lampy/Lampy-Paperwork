@@ -1,3 +1,11 @@
+## V50.6 — Fixture Summary and merged patch columns
+
+- Size and centre PDF Fixture Summary columns from their content within the requested percentage limits; show manufacturer first, DMX Channels and a visually blank Quantity heading.
+- Group summary quantities by manufacturer, fixture, mode and footprint. Show the exported selection's distinct patched-universe count with the final summary row, within the reserved footer area.
+- Add a saved optional Universe / Address column with a required custom separator, separate live inputs and matching PDF/Excel values. Preserve independent column visibility when unmerging.
+- Stage combined address edits, paste and fill through address review; preserve keyboard navigation, filtering and underlying project fixture fields.
+- Validate summary sizing/pagination, separator parsing, merged editing, address-review cancellation and export parity without browser testing.
+
 ## V50.5 — GDTF mode parameter counts
 
 - Show both DMX channels and parameter counts for every mode in Fixture Information.

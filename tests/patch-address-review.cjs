@@ -43,14 +43,14 @@ function context(){
 }
 // Drive the actual delegated paste/keyboard callbacks without a browser.
 {
- const {c,events}=context(),handlers={},controls=[{dataset:{patchId:'edited',patchField:'address',patchGridRow:'0',patchGridCol:'0'},disabled:false,tagName:'INPUT',value:'60'},{dataset:{patchId:'later',patchField:'address',patchGridRow:'1',patchGridCol:'0'},disabled:false,tagName:'INPUT',value:'100'}],cells=controls.map(control=>({querySelector:()=>control})),table={querySelectorAll:()=>[],addEventListener:(name,callback)=>handlers[name]=callback};
- c.fixturePatchEditableCells=()=>cells;c.fixturePatchControlAcceptsValue=()=>true;c.focusFixturePatchCell=()=>{throw Error('Must not navigate past a pending review')};vm.runInContext(source('attachFixturePatchTableEvents'),c);c.attachFixturePatchTableEvents(table);
+ const {c,events}=context(),handlers={},controls=[{dataset:{patchId:'edited',patchField:'address',patchGridRow:'0',patchGridCol:'0'},disabled:false,tagName:'INPUT',value:'60'},{dataset:{patchId:'later',patchField:'address',patchGridRow:'1',patchGridCol:'0'},disabled:false,tagName:'INPUT',value:'100'}],cells=controls.map(control=>({dataset:{},querySelector:()=>control})),table={querySelectorAll:()=>[],addEventListener:(name,callback)=>handlers[name]=callback};
+ controls.forEach((control,index)=>control.closest=()=>cells[index]);vm.runInContext(source('patchCellPasteEdits'),c);c.fixturePatchEditableCells=()=>cells;c.fixturePatchControlAcceptsValue=()=>true;c.focusFixturePatchCell=()=>{throw Error('Must not navigate past a pending review')};vm.runInContext(source('attachFixturePatchTableEvents'),c);c.attachFixturePatchTableEvents(table);
  handlers.paste({target:{closest:()=>cells[0]},preventDefault(){},clipboardData:{getData:()=> '210\n240'}});assert.equal(events.reviews,1);assert.equal(events.saves,0);assert.equal(c.app.fixturePatch[1].address,'60');assert.equal(c.patchAddressReview.proposals.find(r=>r.id==='later').address,'240');c.closePatchAddressReview();
  controls[0].value='300';controls[0].closest=()=>cells[0];handlers.keydown({key:'Tab',target:controls[0],preventDefault(){}});assert.equal(events.reviews,2);assert.equal(events.saves,0);
 }
 // Drag-fill uses one staged operation and preserves its explicit target value.
 {
- const {c,events}=context(),handlers={},windowHandlers={},controls=[{dataset:{patchId:'edited',patchField:'address',patchGridRow:'0',patchGridCol:'0'},value:'60'},{dataset:{patchId:'later',patchField:'address',patchGridRow:'1',patchGridCol:'0'},value:'100'}],table={querySelectorAll:()=>[]},cells=controls.map(control=>({classList:{add(){},remove(){}},querySelector:()=>control,closest:selector=>selector==='.fixturePatchEditableTable'?table:null}));
+ const {c,events}=context(),handlers={},windowHandlers={},controls=[{dataset:{patchId:'edited',patchField:'address',patchGridRow:'0',patchGridCol:'0'},value:'60'},{dataset:{patchId:'later',patchField:'address',patchGridRow:'1',patchGridCol:'0'},value:'100'}],table={querySelectorAll:()=>[]},cells=controls.map(control=>({dataset:{},classList:{add(){},remove(){}},querySelector:()=>control,closest:selector=>selector==='.fixturePatchEditableTable'?table:null}));
  const target={querySelector:()=>controls[1],closest:()=>table};c.fixturePatchEditableCells=()=>cells;c.document.body={classList:{add(){},remove(){}}};c.document.elementFromPoint=()=>({closest:()=>target});c.window={addEventListener:(name,callback)=>windowHandlers[name]=callback,removeEventListener(){}};
  const handle={parentElement:cells[0],setPointerCapture(){},addEventListener:(name,callback)=>handlers[name]=callback};vm.runInContext(source('attachFixturePatchFillHandle'),c);c.attachFixturePatchFillHandle(handle);handlers.pointerdown({preventDefault(){},stopPropagation(){},pointerId:1});windowHandlers.pointermove({clientX:0,clientY:0});windowHandlers.pointerup();
  assert.equal(events.reviews,1);assert.equal(events.saves,0);assert.equal(c.app.fixturePatch[2].address,'100');assert.equal(c.patchAddressReview.proposals.find(r=>r.id==='later').address,'60');
@@ -59,5 +59,5 @@ assert.match(html,/#patchGroupEditModal>\.modalCard\{max-height:95vh/);
 assert.match(source('attachFixturePatchFillHandle'),/if\(field==='address'\).*reviewPatchAddressEdits\(edits,\[\],true\);return/s);
 assert.match(html,/if\(e.key==='Escape'&&patchAddressReview\)/);
 assert.match(html,/if\(id==='patchAddressReviewModal'\)\{closePatchAddressReview\(\);return\}/);
-assert.match(html,/const VERSION='50\.5'/);
+assert.match(html,/const VERSION='50\.6'/);
 console.log('PASS: V50.3 position filtering, footprint sequences, downstream scope, staged edits/paste/keyboard, conflicts, cancellation, stale review and undo.');
