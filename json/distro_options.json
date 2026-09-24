@@ -69,8 +69,14 @@
       "value": "63A 3ø"
     },
     {
-      "value": "125A 3ø",
-      "default": true
-    }
+      "value": "125A 3ø"
+    },
+	{
+		"value": "200A P/Lock - 3P + N + E",
+		"default": true
+	},
+	{
+		"value": "400A P/Lock - 3P + N + E"
+	}
   ]
 }
