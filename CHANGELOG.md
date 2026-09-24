@@ -1,3 +1,11 @@
+## V50.3 — Fixture address review
+
+- Added Position filtering and a 95vh height limit to Fixture Type Options.
+- Readdress selected fixtures in numeric Fix ID order using their current or proposed mode footprints, without requiring Mode selection.
+- Stage unlocked address edits, paste and drag-fill in a shared review, including later-addressed fixtures across types on the same universe.
+- Show editable green/red address proposals with collision and footprint errors. Confirm once to apply valid values and clear only unresolved invalid addresses; cancel leaves the patch unchanged.
+- Added stale-proposal protection and one-step undo for confirmed address reviews.
+
 ## V50.2 — Highlight-based PDF Patch Import
 
 - Added local PDF import with page thumbnails, zoom, rotation and labelled column highlights.
