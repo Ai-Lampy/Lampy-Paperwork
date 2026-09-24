@@ -43,13 +43,13 @@
             "channels": 9,
             "gdtfMode": "Standard",
             "status": "matched",
-            "parameters": 6
+            "parameters": 9
           },
           "Turbo": {
             "channels": 10,
             "gdtfMode": "Turbo",
             "status": "matched",
-            "parameters": 7
+            "parameters": 10
           },
           "Basic": {
             "channels": 3,
@@ -79,13 +79,13 @@
             "channels": 76,
             "gdtfMode": "Standard",
             "status": "matched",
-            "parameters": 18
+            "parameters": 67
           },
           "Advanced": {
             "channels": 122,
             "gdtfMode": "Advanced",
             "status": "matched",
-            "parameters": 22
+            "parameters": 113
           }
         }
       },

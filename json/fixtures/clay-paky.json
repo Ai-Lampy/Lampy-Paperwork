@@ -677,31 +677,31 @@
             "channels": 40,
             "gdtfMode": "Pixels RGBA",
             "status": "matched",
-            "parameters": 5
+            "parameters": 50
           },
           "Single Cell 100ch": {
             "channels": 100,
             "gdtfMode": "Single Cell 100ch",
             "status": "matched",
-            "parameters": 4
+            "parameters": 200
           },
           "Double Cell 50ch": {
             "channels": 50,
             "gdtfMode": "Double Cell 50ch",
             "status": "matched",
-            "parameters": 2
+            "parameters": 100
           },
           "Basic+RGBA+DoubleCell": {
             "channels": 109,
             "gdtfMode": "Basic+RGBA+DoubleCell",
             "status": "matched",
-            "parameters": 25
+            "parameters": 168
           },
           "Basic+RGBA+SingleCell": {
             "channels": 159,
             "gdtfMode": "Basic+RGBA+SingleCell",
             "status": "matched",
-            "parameters": 27
+            "parameters": 268
           }
         }
       },
@@ -790,13 +790,13 @@
             "channels": 16,
             "gdtfMode": "RGBW",
             "status": "matched",
-            "parameters": 5
+            "parameters": 20
           },
           "Strobe": {
             "channels": 8,
             "gdtfMode": "Strobe",
             "status": "matched",
-            "parameters": 2
+            "parameters": 16
           }
         }
       },
@@ -841,13 +841,13 @@
             "channels": 32,
             "gdtfMode": "RGBW",
             "status": "matched",
-            "parameters": 5
+            "parameters": 40
           },
           "Strobe": {
             "channels": 20,
             "gdtfMode": "Strobe",
             "status": "matched",
-            "parameters": 2
+            "parameters": 40
           }
         }
       },

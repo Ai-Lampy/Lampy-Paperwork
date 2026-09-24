@@ -24,7 +24,7 @@
             "channels": 127,
             "gdtfMode": "Extended_Pixel_1",
             "status": "matched",
-            "parameters": 60
+            "parameters": 140
           },
           "Standard": {
             "channels": 50,
@@ -36,19 +36,19 @@
             "channels": 76,
             "gdtfMode": "Extended_Pixel_2",
             "status": "matched",
-            "parameters": 60
+            "parameters": 140
           },
           "Extended_Pixel_1_+_Liquid": {
             "channels": 956,
             "gdtfMode": "Extended_Pixel_1_+_Liquid",
             "status": "matched",
-            "parameters": 63
+            "parameters": 1094
           },
           "Extended_Pixel_2_+_Liquid": {
             "channels": 956,
             "gdtfMode": "Extended_Pixel_2_+_Liquid",
             "status": "matched",
-            "parameters": 63
+            "parameters": 1094
           },
           "Basic": {
             "channels": 26,
@@ -98,7 +98,7 @@
             "channels": 127,
             "gdtfMode": "Extended_Pixel",
             "status": "matched",
-            "parameters": 44
+            "parameters": 124
           },
           "Basic": {
             "channels": 26,
@@ -678,25 +678,25 @@
             "channels": 184,
             "gdtfMode": "Extended_Chase",
             "status": "matched",
-            "parameters": 35
+            "parameters": 131
           },
           "Extended": {
             "channels": 174,
             "gdtfMode": "Extended",
             "status": "matched",
-            "parameters": 26
+            "parameters": 122
           },
           "Extended+Liquid": {
             "channels": 900,
             "gdtfMode": "Extended+Liquid",
             "status": "matched",
-            "parameters": 29
+            "parameters": 1022
           },
           "Extended_Chase+Liquid": {
             "channels": 900,
             "gdtfMode": "Extended_Chase+Liquid",
             "status": "matched",
-            "parameters": 38
+            "parameters": 1031
           }
         }
       },
@@ -726,7 +726,7 @@
             "channels": 180,
             "gdtfMode": "Extended_540_Pixel",
             "status": "matched",
-            "parameters": 29
+            "parameters": 206
           }
         }
       },
@@ -774,7 +774,7 @@
             "channels": 34,
             "gdtfMode": "Extended",
             "status": "matched",
-            "parameters": 20
+            "parameters": 35
           },
           "Standard": {
             "channels": 22,
@@ -874,7 +874,7 @@
             "channels": 150,
             "gdtfMode": "Extended Pixel 1U",
             "status": "matched",
-            "parameters": 50
+            "parameters": 170
           },
           "Extended Ring 1U": {
             "channels": 50,
@@ -898,7 +898,7 @@
             "channels": 112,
             "gdtfMode": "Extended Pixel 2U",
             "status": "matched",
-            "parameters": 50
+            "parameters": 170
           },
           "Extended Ring 2U": {
             "channels": 38,
@@ -932,7 +932,7 @@
             "channels": 86,
             "gdtfMode": "Extended Pixel 1U",
             "status": "matched",
-            "parameters": 45
+            "parameters": 90
           },
           "Extended Ring 1U": {
             "channels": 46,
@@ -956,7 +956,7 @@
             "channels": 48,
             "gdtfMode": "Extended Pixel 2U",
             "status": "matched",
-            "parameters": 45
+            "parameters": 90
           },
           "Extended Ring 2U": {
             "channels": 38,
@@ -1329,7 +1329,7 @@
             "channels": 79,
             "gdtfMode": "Extended Pixel 1",
             "status": "matched",
-            "parameters": 55
+            "parameters": 80
           },
           "Standard": {
             "channels": 50,
@@ -1341,19 +1341,19 @@
             "channels": 51,
             "gdtfMode": "Extended Pixel 2",
             "status": "matched",
-            "parameters": 55
+            "parameters": 80
           },
           "Extended Pixel 1 + Liquid": {
             "channels": 414,
             "gdtfMode": "Extended Pixel 1 + Liquid",
             "status": "matched",
-            "parameters": 58
+            "parameters": 494
           },
           "Extended Pixel 2 + Liquid": {
             "channels": 414,
             "gdtfMode": "Extended Pixel 2 + Liquid",
             "status": "matched",
-            "parameters": 58
+            "parameters": 494
           },
           "Basic": {
             "channels": 26,
@@ -1403,7 +1403,7 @@
             "channels": 79,
             "gdtfMode": "Extended Pixel",
             "status": "matched",
-            "parameters": 39
+            "parameters": 64
           },
           "Basic": {
             "channels": 26,
@@ -1438,7 +1438,7 @@
             "channels": 199,
             "gdtfMode": "Extended Pixel 1",
             "status": "matched",
-            "parameters": 65
+            "parameters": 230
           },
           "Standard": {
             "channels": 50,
@@ -1450,19 +1450,19 @@
             "channels": 148,
             "gdtfMode": "Extended Pixel 2 ",
             "status": "matched",
-            "parameters": 65
+            "parameters": 230
           },
           "Extended Pixel 1 + Liquid": {
             "channels": 1770,
             "gdtfMode": "Extended Pixel 1 + Liquid",
             "status": "matched",
-            "parameters": 68
+            "parameters": 1994
           },
           "Extended Pixel 2 + Liquid": {
             "channels": 1770,
             "gdtfMode": "Extended Pixel 2 + Liquid",
             "status": "matched",
-            "parameters": 68
+            "parameters": 1994
           },
           "Extended Ring": {
             "channels": 54,
@@ -1512,7 +1512,7 @@
             "channels": 199,
             "gdtfMode": "Extended Pixel",
             "status": "matched",
-            "parameters": 49
+            "parameters": 214
           },
           "Basic": {
             "channels": 26,

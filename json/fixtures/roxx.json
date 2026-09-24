@@ -539,37 +539,37 @@
             "channels": 297,
             "gdtfMode": "Full Access Extended Mode ",
             "status": "matched",
-            "parameters": 42
+            "parameters": 192
           },
           "Full Access Mode": {
             "channels": 166,
             "gdtfMode": "Full Access Mode",
             "status": "matched",
-            "parameters": 42
+            "parameters": 192
           },
           "Pure Mode 16 Bit": {
             "channels": 269,
             "gdtfMode": "Pure Mode 16 Bit",
             "status": "matched",
-            "parameters": 14
+            "parameters": 164
           },
           "Pure Mode 8 Bit": {
             "channels": 138,
             "gdtfMode": "Pure Mode 8 Bit",
             "status": "matched",
-            "parameters": 14
+            "parameters": 164
           },
           "Pure Mode 8 Bit S2 Merge": {
             "channels": 50,
             "gdtfMode": "Pure Mode 8 Bit S2 Merge",
             "status": "matched",
-            "parameters": 14
+            "parameters": 56
           },
           "Standard Mode": {
             "channels": 44,
             "gdtfMode": "Standard Mode",
             "status": "matched",
-            "parameters": 35
+            "parameters": 44
           },
           "Easy Mode": {
             "channels": 27,
@@ -610,31 +610,31 @@
             "channels": 275,
             "gdtfMode": "Full Access Extended Mode ",
             "status": "matched",
-            "parameters": 95
+            "parameters": 190
           },
           "Full Access Mode": {
             "channels": 178,
             "gdtfMode": "Full Access Mode",
             "status": "matched",
-            "parameters": 95
+            "parameters": 190
           },
           "Pure Mode 16 Bit": {
             "channels": 209,
             "gdtfMode": "Pure Mode 16 Bit",
             "status": "matched",
-            "parameters": 29
+            "parameters": 124
           },
           "Pure Mode 8 Bit": {
             "channels": 112,
             "gdtfMode": "Pure Mode 8 Bit",
             "status": "matched",
-            "parameters": 29
+            "parameters": 124
           },
           "Standard Mode": {
             "channels": 71,
             "gdtfMode": "Standard Mode",
             "status": "matched",
-            "parameters": 44
+            "parameters": 71
           },
           "Easy Mode": {
             "channels": 39,
@@ -730,7 +730,7 @@
             "channels": 80,
             "gdtfMode": "80CH Pixel",
             "status": "matched",
-            "parameters": 12
+            "parameters": 104
           },
           "7CH DIRECT": {
             "channels": 7,
@@ -1193,25 +1193,25 @@
             "channels": 16,
             "gdtfMode": "Pure Mode (16 CH)",
             "status": "matched",
-            "parameters": 8
+            "parameters": 20
           },
           "Pure Mode (29 CH)": {
             "channels": 29,
             "gdtfMode": "Pure Mode (29 CH)",
             "status": "matched",
-            "parameters": 8
+            "parameters": 20
           },
           "Full Access Mode (28 CH)": {
             "channels": 28,
             "gdtfMode": "Full Access Mode (28 CH)",
             "status": "matched",
-            "parameters": 20
+            "parameters": 32
           },
           "Full Access (44 CH)": {
             "channels": 44,
             "gdtfMode": "Full Access (44 CH)",
             "status": "matched",
-            "parameters": 20
+            "parameters": 32
           }
         }
       },
@@ -1281,13 +1281,13 @@
             "channels": 81,
             "gdtfMode": "81CH Pure Mode",
             "status": "matched",
-            "parameters": 12
+            "parameters": 104
           },
           "154CH Pure Mode": {
             "channels": 154,
             "gdtfMode": "154CH Pure Mode",
             "status": "matched",
-            "parameters": 12
+            "parameters": 104
           },
           "9CH Dual Mode": {
             "channels": 9,
@@ -1305,13 +1305,13 @@
             "channels": 95,
             "gdtfMode": "95CH Full Access Mode",
             "status": "matched",
-            "parameters": 26
+            "parameters": 118
           },
           "168CH Full Access Mode": {
             "channels": 168,
             "gdtfMode": "168CH Full Access Mode",
             "status": "matched",
-            "parameters": 26
+            "parameters": 118
           }
         }
       },

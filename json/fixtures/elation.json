@@ -63,7 +63,7 @@
             "channels": 43,
             "gdtfMode": "Extended",
             "status": "matched",
-            "parameters": 16
+            "parameters": 40
           },
           "Stand": {
             "channels": 19,
@@ -2340,13 +2340,13 @@
             "channels": 6,
             "gdtfMode": "RGB 2 Cell 6CH",
             "status": "matched",
-            "parameters": 7
+            "parameters": 10
           },
           "RGBA 2 Cell 8CH": {
             "channels": 8,
             "gdtfMode": "RGBA 2 Cell 8CH",
             "status": "matched",
-            "parameters": 9
+            "parameters": 12
           },
           " HSI 2 Cell 6CH": {
             "channels": 6,
@@ -2358,7 +2358,7 @@
             "channels": 20,
             "gdtfMode": "RGBMA 2 Cell 20CH",
             "status": "matched",
-            "parameters": 11
+            "parameters": 14
           },
           "Standard  2 Cell 20CH": {
             "channels": 20,
@@ -2376,13 +2376,13 @@
             "channels": 12,
             "gdtfMode": "RGB 4 Cell 12CH",
             "status": "matched",
-            "parameters": 4
+            "parameters": 16
           },
           "RGBA 4 Cell 16CH": {
             "channels": 16,
             "gdtfMode": "RGBA 4 Cell 16CH",
             "status": "matched",
-            "parameters": 5
+            "parameters": 20
           },
           "HSI 4 Cell 12CH": {
             "channels": 12,
@@ -2612,13 +2612,13 @@
             "channels": 104,
             "gdtfMode": "Standard  16 Cell 104CH",
             "status": "matched",
-            "parameters": 28
+            "parameters": 103
           },
           "Extended 16 Cell 217ch": {
             "channels": 217,
             "gdtfMode": "Extended 16 Cell 217ch",
             "status": "matched",
-            "parameters": 45
+            "parameters": 120
           }
         },
         "suggestedFileName": "Elation__KL_Batten_48.gdtf"
@@ -3601,43 +3601,43 @@
             "channels": 360,
             "gdtfMode": "120x1",
             "status": "matched",
-            "parameters": 4
+            "parameters": 480
           },
           "60x2": {
             "channels": 180,
             "gdtfMode": "60x2",
             "status": "matched",
-            "parameters": 4
+            "parameters": 240
           },
           "30x4": {
             "channels": 90,
             "gdtfMode": "30x4",
             "status": "matched",
-            "parameters": 4
+            "parameters": 120
           },
           "15x8": {
             "channels": 45,
             "gdtfMode": "15x8",
             "status": "matched",
-            "parameters": 4
+            "parameters": 60
           },
           "12x10": {
             "channels": 36,
             "gdtfMode": "12x10",
             "status": "matched",
-            "parameters": 4
+            "parameters": 48
           },
           "2x60": {
             "channels": 6,
             "gdtfMode": "2x60",
             "status": "matched",
-            "parameters": 7
+            "parameters": 66
           },
           "4x30": {
             "channels": 12,
             "gdtfMode": "4x30",
             "status": "matched",
-            "parameters": 13
+            "parameters": 42
           }
         },
         "suggestedFileName": "Elation__Pixel_Bar_120IP.gdtf"
@@ -3667,49 +3667,49 @@
             "channels": 90,
             "gdtfMode": "30x1",
             "status": "matched",
-            "parameters": 4
+            "parameters": 120
           },
           "15x2": {
             "channels": 45,
             "gdtfMode": "15x2",
             "status": "matched",
-            "parameters": 4
+            "parameters": 60
           },
           "10x3": {
             "channels": 30,
             "gdtfMode": "10x3",
             "status": "matched",
-            "parameters": 4
+            "parameters": 40
           },
           "5x6": {
             "channels": 18,
             "gdtfMode": "5x6",
             "status": "matched",
-            "parameters": 4
+            "parameters": 24
           },
           "1x30": {
             "channels": 3,
             "gdtfMode": "1x30",
             "status": "matched",
-            "parameters": 4
+            "parameters": 33
           },
           "2x15": {
             "channels": 6,
             "gdtfMode": "2x15",
             "status": "matched",
-            "parameters": 7
+            "parameters": 21
           },
           "3x10": {
             "channels": 9,
             "gdtfMode": "3x10",
             "status": "matched",
-            "parameters": 10
+            "parameters": 19
           },
           "6x5": {
             "channels": 15,
             "gdtfMode": "6x5",
             "status": "matched",
-            "parameters": 16
+            "parameters": 21
           }
         },
         "suggestedFileName": "Elation__Pixel_Bar_30IP.gdtf"
@@ -4440,13 +4440,13 @@
             "channels": 80,
             "gdtfMode": "Extended 360Pan/Tilt",
             "status": "matched",
-            "parameters": 25
+            "parameters": 82
           },
           "Pixels 360Pan/Tilt": {
             "channels": 52,
             "gdtfMode": "Pixels 360Pan/Tilt",
             "status": "matched",
-            "parameters": 24
+            "parameters": 54
           },
           "Standard 360Pan/Tilt": {
             "channels": 25,
@@ -4458,19 +4458,19 @@
             "channels": 28,
             "gdtfMode": "SparkLED",
             "status": "matched",
-            "parameters": 1
+            "parameters": 28
           },
           "Extended 540Pan/270Tilt": {
             "channels": 80,
             "gdtfMode": "Extended 540Pan/270Tilt",
             "status": "matched",
-            "parameters": 25
+            "parameters": 82
           },
           "Pixels 540Pan/270Tilt": {
             "channels": 52,
             "gdtfMode": "Pixels 540Pan/270Tilt",
             "status": "matched",
-            "parameters": 24
+            "parameters": 54
           },
           "Standard 540Pan/270Tilt": {
             "channels": 25,
@@ -4505,13 +4505,13 @@
             "channels": 80,
             "gdtfMode": "Extended 360Pan/Tilt",
             "status": "matched",
-            "parameters": 25
+            "parameters": 82
           },
           "Pixels 360Pan/Tilt": {
             "channels": 52,
             "gdtfMode": "Pixels 360Pan/Tilt",
             "status": "matched",
-            "parameters": 24
+            "parameters": 54
           },
           "Standard 360Pan/Tilt": {
             "channels": 25,
@@ -4523,19 +4523,19 @@
             "channels": 28,
             "gdtfMode": "SparkLED",
             "status": "matched",
-            "parameters": 1
+            "parameters": 28
           },
           "Extended 540Pan/270Tilt": {
             "channels": 80,
             "gdtfMode": "Extended 540Pan/270Tilt",
             "status": "matched",
-            "parameters": 25
+            "parameters": 82
           },
           "Pixels 540Pan/270Tilt": {
             "channels": 52,
             "gdtfMode": "Pixels 540Pan/270Tilt",
             "status": "matched",
-            "parameters": 24
+            "parameters": 54
           },
           "Standard 540Pan/270Tilt": {
             "channels": 25,
@@ -4575,31 +4575,31 @@
             "channels": 76,
             "gdtfMode": "PIXEL 76CH",
             "status": "matched",
-            "parameters": 27
+            "parameters": 82
           },
           "PIXEL PLUS CH140": {
             "channels": 140,
             "gdtfMode": "PIXEL PLUS CH140",
             "status": "matched",
-            "parameters": 28
+            "parameters": 146
           },
           "PIXEL COMP 108CH": {
             "channels": 108,
             "gdtfMode": "PIXEL COMP 108CH",
             "status": "matched",
-            "parameters": 28
+            "parameters": 114
           },
           "PIXEL SPARK LED 120CH": {
             "channels": 120,
             "gdtfMode": "PIXEL SPARK LED 120CH",
             "status": "matched",
-            "parameters": 29
+            "parameters": 126
           },
           "EXTENDED 188CH": {
             "channels": 188,
             "gdtfMode": "EXTENDED 188CH",
             "status": "matched",
-            "parameters": 29
+            "parameters": 194
           }
         },
         "suggestedFileName": "Elation__Proteus_Rayzor_Blade_L.gdtf"
@@ -4888,7 +4888,7 @@
             "channels": 234,
             "gdtfMode": "Pixel Focus 234CH",
             "status": "matched",
-            "parameters": 24
+            "parameters": 334
           },
           "Basic Full Control 132CH": {
             "channels": 132,
@@ -4900,13 +4900,13 @@
             "channels": 220,
             "gdtfMode": "Raw Mode 220CH",
             "status": "matched",
-            "parameters": 10
+            "parameters": 320
           },
           "Full Control 242CH": {
             "channels": 242,
             "gdtfMode": "Full Control 242CH",
             "status": "matched",
-            "parameters": 32
+            "parameters": 342
           }
         },
         "suggestedFileName": "Elation__Pulse_Bar_L.gdtf"
@@ -4973,19 +4973,19 @@
             "channels": 110,
             "gdtfMode": "Raw Mode 110CH",
             "status": "matched",
-            "parameters": 10
+            "parameters": 160
           },
           "Pixel Focus 124CH": {
             "channels": 124,
             "gdtfMode": "Pixel Focus 124CH",
             "status": "matched",
-            "parameters": 24
+            "parameters": 174
           },
           "Full Control 132CH": {
             "channels": 132,
             "gdtfMode": "Full Control 132CH",
             "status": "matched",
-            "parameters": 32
+            "parameters": 182
           }
         },
         "suggestedFileName": "Elation__Pulse_Bar_S.gdtf"
@@ -5040,31 +5040,31 @@
             "channels": 60,
             "gdtfMode": "60CH",
             "status": "matched",
-            "parameters": 29
+            "parameters": 72
           },
           "170CH": {
             "channels": 170,
             "gdtfMode": "170CH",
             "status": "matched",
-            "parameters": 23
+            "parameters": 206
           },
           "88CH": {
             "channels": 88,
             "gdtfMode": "88CH",
             "status": "matched",
-            "parameters": 42
+            "parameters": 106
           },
           "178CH": {
             "channels": 178,
             "gdtfMode": "178CH",
             "status": "matched",
-            "parameters": 31
+            "parameters": 214
           },
           "156CH": {
             "channels": 156,
             "gdtfMode": "156CH",
             "status": "matched",
-            "parameters": 9
+            "parameters": 192
           }
         },
         "suggestedFileName": "Elation__Pulse_Panel.gdtf"
@@ -5122,49 +5122,49 @@
             "channels": 90,
             "gdtfMode": "Basic Full Control- No Pan 90CH",
             "status": "matched",
-            "parameters": 44
+            "parameters": 108
           },
           "Basic Full Control 93CH": {
             "channels": 93,
             "gdtfMode": "Basic Full Control 93CH",
             "status": "matched",
-            "parameters": 46
+            "parameters": 110
           },
           "Simple Pixel Pro 65CH": {
             "channels": 65,
             "gdtfMode": "Simple Pixel Pro 65CH",
             "status": "matched",
-            "parameters": 65
+            "parameters": 135
           },
           "Simple Pixel Pro No Pan 62CH": {
             "channels": 62,
             "gdtfMode": "Simple Pixel Pro No Pan 62CH",
             "status": "matched",
-            "parameters": 63
+            "parameters": 133
           },
           "Pixel Focus 175CH": {
             "channels": 175,
             "gdtfMode": "Pixel Focus 175CH",
             "status": "matched",
-            "parameters": 26
+            "parameters": 209
           },
           "LED Panel 156CH": {
             "channels": 156,
             "gdtfMode": "LED Panel 156CH",
             "status": "matched",
-            "parameters": 9
+            "parameters": 192
           },
           "Raw Mode 161CH": {
             "channels": 161,
             "gdtfMode": "Raw Mode 161CH",
             "status": "matched",
-            "parameters": 12
+            "parameters": 195
           },
           "Full Control 183CH": {
             "channels": 183,
             "gdtfMode": "Full Control 183CH",
             "status": "matched",
-            "parameters": 34
+            "parameters": 217
           }
         },
         "suggestedFileName": "Elation__Pulse_Panel_FX.gdtf"
@@ -5193,13 +5193,13 @@
             "channels": 80,
             "gdtfMode": "Extended 360Pan/Tilt",
             "status": "matched",
-            "parameters": 25
+            "parameters": 82
           },
           "Pixels 360Pan/Tilt": {
             "channels": 52,
             "gdtfMode": "Pixels 360Pan/Tilt",
             "status": "matched",
-            "parameters": 24
+            "parameters": 54
           },
           "Standard 360Pan/Tilt": {
             "channels": 25,
@@ -5211,19 +5211,19 @@
             "channels": 28,
             "gdtfMode": "SparkLED",
             "status": "matched",
-            "parameters": 1
+            "parameters": 28
           },
           "Extended 540Pan/270Tilt": {
             "channels": 80,
             "gdtfMode": "Extended 540Pan/270Tilt",
             "status": "matched",
-            "parameters": 25
+            "parameters": 80
           },
           "Pixels 540Pan/270Tilt": {
             "channels": 52,
             "gdtfMode": "Pixels 540Pan/270Tilt",
             "status": "matched",
-            "parameters": 24
+            "parameters": 54
           },
           "Standard 540Pan/270Tilt": {
             "channels": 25,
@@ -5299,7 +5299,7 @@
             "channels": 68,
             "gdtfMode": "Pixels Pan540 Tilt270",
             "status": "matched",
-            "parameters": 20
+            "parameters": 75
           },
           "Extended Pan540 Tilt270": {
             "channels": 28,
@@ -5317,7 +5317,7 @@
             "channels": 68,
             "gdtfMode": "Pixels Pan360 Tilt270",
             "status": "matched",
-            "parameters": 20
+            "parameters": 75
           },
           "Extended Pan360 Tilt270": {
             "channels": 28,
@@ -5335,13 +5335,13 @@
             "channels": 68,
             "gdtfMode": "Pixels Pan360 Tilt360",
             "status": "matched",
-            "parameters": 19
+            "parameters": 63
           },
           "Extended Pan360 Tilt360": {
             "channels": 28,
             "gdtfMode": "Extended Pan360 Tilt360",
             "status": "matched",
-            "parameters": 20
+            "parameters": 31
           },
           "Standard Pan540 Tilt360": {
             "channels": 21,
@@ -5353,7 +5353,7 @@
             "channels": 68,
             "gdtfMode": "Pixels Pan540 Tilt360",
             "status": "matched",
-            "parameters": 20
+            "parameters": 75
           },
           "Extended Pan540 Tilt360": {
             "channels": 28,
@@ -5855,7 +5855,7 @@
             "channels": 75,
             "gdtfMode": "75CH",
             "status": "matched",
-            "parameters": 10
+            "parameters": 87
           },
           "Dimmer  1CH": {
             "channels": 1,
@@ -5933,19 +5933,19 @@
             "channels": 72,
             "gdtfMode": "Raw 12 Cell 72CH",
             "status": "matched",
-            "parameters": 7
+            "parameters": 84
           },
           "12 Cell Ext 154CH": {
             "channels": 154,
             "gdtfMode": "12 Cell Ext 154CH",
             "status": "matched",
-            "parameters": 15
+            "parameters": 81
           },
           "12 Cell Std 82CH": {
             "channels": 82,
             "gdtfMode": "12 Cell Std 82CH",
             "status": "matched",
-            "parameters": 15
+            "parameters": 81
           }
         },
         "suggestedFileName": "Elation__SIX_plus_BAR_L.gdtf"
@@ -7315,19 +7315,19 @@
             "channels": 47,
             "gdtfMode": "47CH",
             "status": "matched",
-            "parameters": 17
+            "parameters": 52
           },
           "83CH": {
             "channels": 83,
             "gdtfMode": "83CH",
             "status": "matched",
-            "parameters": 17
+            "parameters": 52
           },
           "36CH": {
             "channels": 36,
             "gdtfMode": "36CH",
             "status": "matched",
-            "parameters": 7
+            "parameters": 42
           }
         },
         "suggestedFileName": "Elation__VOLT_plus_BAR_S.gdtf"

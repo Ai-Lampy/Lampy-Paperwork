@@ -371,7 +371,7 @@
             "channels": 70,
             "gdtfMode": "Mode1: Full 4 groups 16bits",
             "status": "matched",
-            "parameters": 13
+            "parameters": 37
           },
           "Mode2: Full 1 group 16bits": {
             "channels": 22,
@@ -401,7 +401,7 @@
             "channels": 72,
             "gdtfMode": "Mode6: 4 groups individual 16b",
             "status": "matched",
-            "parameters": 9
+            "parameters": 36
           }
         }
       },

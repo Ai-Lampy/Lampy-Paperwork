@@ -145,7 +145,7 @@
             "channels": 33,
             "gdtfMode": "Norm",
             "status": "matched",
-            "parameters": 20
+            "parameters": 32
           },
           "Comp": {
             "channels": 19,
@@ -157,31 +157,31 @@
             "channels": 34,
             "gdtfMode": "High Resolution",
             "status": "matched",
-            "parameters": 20
+            "parameters": 32
           },
           "Single Pixel Mode": {
             "channels": 48,
             "gdtfMode": "Single Pixel Mode",
             "status": "matched",
-            "parameters": 12
+            "parameters": 57
           },
           "Single Pixel High Resolution": {
             "channels": 49,
             "gdtfMode": "Single Pixel High Resolution",
             "status": "matched",
-            "parameters": 12
+            "parameters": 57
           },
           "Dual Pixel Mode": {
             "channels": 28,
             "gdtfMode": "Dual Pixel Mode",
             "status": "matched",
-            "parameters": 12
+            "parameters": 32
           },
           "Dual Pixel High Resolution": {
             "channels": 29,
             "gdtfMode": "Dual Pixel High Resolution",
             "status": "matched",
-            "parameters": 12
+            "parameters": 32
           }
         }
       },
@@ -210,7 +210,7 @@
             "channels": 33,
             "gdtfMode": "Norm",
             "status": "matched",
-            "parameters": 20
+            "parameters": 32
           },
           "Comp": {
             "channels": 19,
@@ -222,31 +222,31 @@
             "channels": 34,
             "gdtfMode": "High Resolution",
             "status": "matched",
-            "parameters": 20
+            "parameters": 32
           },
           "Single Pixel Mode": {
             "channels": 88,
             "gdtfMode": "Single Pixel Mode",
             "status": "matched",
-            "parameters": 12
+            "parameters": 107
           },
           "Single Pixel High Resolution": {
             "channels": 89,
             "gdtfMode": "Single Pixel High Resolution",
             "status": "matched",
-            "parameters": 12
+            "parameters": 107
           },
           "Dual Pixel Mode": {
             "channels": 48,
             "gdtfMode": "Dual Pixel Mode",
             "status": "matched",
-            "parameters": 12
+            "parameters": 57
           },
           "Dual Pixel High Resolution": {
             "channels": 49,
             "gdtfMode": "Dual Pixel High Resolution",
             "status": "matched",
-            "parameters": 12
+            "parameters": 57
           }
         }
       },
@@ -337,25 +337,25 @@
             "channels": 89,
             "gdtfMode": "Mode 4 Mulipix Advanced RGBL (89ch)",
             "status": "matched",
-            "parameters": 28
+            "parameters": 100
           },
           "Mode 4 Mulipix Advanced RGB (89ch)": {
             "channels": 89,
             "gdtfMode": "Mode 4 Mulipix Advanced RGB (89ch)",
             "status": "matched",
-            "parameters": 28
+            "parameters": 100
           },
           "Mode 5 Mulipix Compressed RGB (71ch)": {
             "channels": 70,
             "gdtfMode": "Mode 5 Mulipix Compressed RGB (71ch)",
             "status": "matched",
-            "parameters": 14
+            "parameters": 86
           },
           "Mode 6 Mulipix Compressed RGBL (89ch)": {
             "channels": 89,
             "gdtfMode": "Mode 6 Mulipix Compressed RGBL (89ch)",
             "status": "matched",
-            "parameters": 15
+            "parameters": 105
           }
         }
       },
@@ -417,25 +417,25 @@
             "channels": 84,
             "gdtfMode": "Mode 4 Mulipix Advanced RGBL (84ch)",
             "status": "matched",
-            "parameters": 27
+            "parameters": 95
           },
           "Mode 4 Mulipix Advanced RGB (84ch)": {
             "channels": 84,
             "gdtfMode": "Mode 4 Mulipix Advanced RGB (84ch)",
             "status": "matched",
-            "parameters": 27
+            "parameters": 95
           },
           "Mode 5 Mulipix Compressed RGB (63ch)": {
             "channels": 63,
             "gdtfMode": "Mode 5 Mulipix Compressed RGB (63ch)",
             "status": "matched",
-            "parameters": 11
+            "parameters": 79
           },
           "Mode 6 Mulipix Compressed RGBL (81ch)": {
             "channels": 81,
             "gdtfMode": "Mode 6 Mulipix Compressed RGBL (81ch)",
             "status": "matched",
-            "parameters": 12
+            "parameters": 97
           },
           "Mode 3 Segments RGB (48ch)": {
             "channels": 48,
@@ -509,25 +509,25 @@
             "channels": 51,
             "gdtfMode": "Mode 4 Mulipix Advanced RGBL (51ch)",
             "status": "matched",
-            "parameters": 26
+            "parameters": 50
           },
           "Mode 4 Mulipix Advanced RGB (51ch)": {
             "channels": 51,
             "gdtfMode": "Mode 4 Mulipix Advanced RGB (51ch)",
             "status": "matched",
-            "parameters": 26
+            "parameters": 50
           },
           "Mode 5 Mulipix Compressed RGB (32ch)": {
             "channels": 32,
             "gdtfMode": "Mode 5 Mulipix Compressed RGB (32ch)",
             "status": "matched",
-            "parameters": 12
+            "parameters": 36
           },
           "Mode 6 Mulipix Compressed RGBL (39ch)": {
             "channels": 39,
             "gdtfMode": "Mode 6 Mulipix Compressed RGBL (39ch)",
             "status": "matched",
-            "parameters": 13
+            "parameters": 43
           }
         }
       },
@@ -595,25 +595,25 @@
             "channels": 89,
             "gdtfMode": "Mode 4 Mulipix Advanced RGBL (89ch)",
             "status": "matched",
-            "parameters": 28
+            "parameters": 100
           },
           "Mode 4 Mulipix Advanced RGB (89ch)": {
             "channels": 89,
             "gdtfMode": "Mode 4 Mulipix Advanced RGB (89ch)",
             "status": "matched",
-            "parameters": 28
+            "parameters": 100
           },
           "Mode 5 Mulipix Compressed RGB (71ch)": {
             "channels": 70,
             "gdtfMode": "Mode 5 Mulipix Compressed RGB (71ch)",
             "status": "matched",
-            "parameters": 14
+            "parameters": 86
           },
           "Mode 6 Mulipix Compressed RGBL (89ch)": {
             "channels": 89,
             "gdtfMode": "Mode 6 Mulipix Compressed RGBL (89ch)",
             "status": "matched",
-            "parameters": 15
+            "parameters": 105
           }
         }
       },
@@ -675,25 +675,25 @@
             "channels": 84,
             "gdtfMode": "Mode 4 Mulipix Advanced RGBL (84ch)",
             "status": "matched",
-            "parameters": 27
+            "parameters": 95
           },
           "Mode 4 Mulipix Advanced RGB (84ch)": {
             "channels": 84,
             "gdtfMode": "Mode 4 Mulipix Advanced RGB (84ch)",
             "status": "matched",
-            "parameters": 27
+            "parameters": 95
           },
           "Mode 5 Mulipix Compressed RGB (63ch)": {
             "channels": 63,
             "gdtfMode": "Mode 5 Mulipix Compressed RGB (63ch)",
             "status": "matched",
-            "parameters": 11
+            "parameters": 79
           },
           "Mode 6 Mulipix Compressed RGBL (81ch)": {
             "channels": 81,
             "gdtfMode": "Mode 6 Mulipix Compressed RGBL (81ch)",
             "status": "matched",
-            "parameters": 12
+            "parameters": 97
           },
           "Mode 3 Segments RGB (48ch)": {
             "channels": 48,
@@ -767,49 +767,49 @@
             "channels": 87,
             "gdtfMode": "Mode 3 12-Segment RGBW (87ch)",
             "status": "matched",
-            "parameters": 28
+            "parameters": 94
           },
           "Mode 4 24-Segment RGBW (135ch)": {
             "channels": 135,
             "gdtfMode": "Mode 4 24-Segment RGBW (135ch)",
             "status": "matched",
-            "parameters": 28
+            "parameters": 154
           },
           "Mode 5 48-Segment RGBW (231ch)": {
             "channels": 231,
             "gdtfMode": "Mode 5 48-Segment RGBW (231ch)",
             "status": "matched",
-            "parameters": 28
+            "parameters": 274
           },
           "DMX Mode 6 FX 12-Segment RGBW (105ch)": {
             "channels": 105,
             "gdtfMode": "DMX Mode 6 FX 12-Segment RGBW (105ch)",
             "status": "matched",
-            "parameters": 44
+            "parameters": 110
           },
           "DMX Mode 7 FX 24-Segment RGBW (153ch)": {
             "channels": 153,
             "gdtfMode": "DMX Mode 7 FX 24-Segment RGBW (153ch)",
             "status": "matched",
-            "parameters": 44
+            "parameters": 170
           },
           "DMX Mode 8 FX 48-Segment RGBW (249ch)": {
             "channels": 249,
             "gdtfMode": "DMX Mode 8 FX 48-Segment RGBW (249ch)",
             "status": "matched",
-            "parameters": 44
+            "parameters": 290
           },
           "Mode 9 Legacy sPix (68ch)": {
             "channels": 68,
             "gdtfMode": "Mode 9 Legacy sPix (68ch)",
             "status": "matched",
-            "parameters": 24
+            "parameters": 79
           },
           "Mode 10 Legacy sPix Pro (62ch)": {
             "channels": 62,
             "gdtfMode": "Mode 10 Legacy sPix Pro (62ch)",
             "status": "matched",
-            "parameters": 18
+            "parameters": 73
           },
           "Mode 1 Basic RGB (19ch)": {
             "channels": 19,
@@ -839,37 +839,37 @@
             "channels": 87,
             "gdtfMode": "Mode 3 12-Segment RGB (87ch)",
             "status": "matched",
-            "parameters": 28
+            "parameters": 94
           },
           "Mode 4 24-Segment RGB (135ch)": {
             "channels": 135,
             "gdtfMode": "Mode 4 24-Segment RGB (135ch)",
             "status": "matched",
-            "parameters": 28
+            "parameters": 154
           },
           "Mode 5 48-Segment RGB (231ch)": {
             "channels": 231,
             "gdtfMode": "Mode 5 48-Segment RGB (231ch)",
             "status": "matched",
-            "parameters": 28
+            "parameters": 274
           },
           "DMX Mode 6 FX 12-Segment RGB (105ch)": {
             "channels": 105,
             "gdtfMode": "DMX Mode 6 FX 12-Segment RGB (105ch)",
             "status": "matched",
-            "parameters": 44
+            "parameters": 110
           },
           "DMX Mode 7 FX 24-Segment RGB (153ch)": {
             "channels": 153,
             "gdtfMode": "DMX Mode 7 FX 24-Segment RGB (153ch)",
             "status": "matched",
-            "parameters": 44
+            "parameters": 170
           },
           "DMX Mode 8 FX 48-Segment RGB (249ch)": {
             "channels": 249,
             "gdtfMode": "DMX Mode 8 FX 48-Segment RGB (249ch)",
             "status": "matched",
-            "parameters": 44
+            "parameters": 290
           }
         }
       },
@@ -898,43 +898,43 @@
             "channels": 32,
             "gdtfMode": "Mode 1 RGBW Strobe (32ch)",
             "status": "matched",
-            "parameters": 16
+            "parameters": 30
           },
           "Mode 2 W Strobe + RGB Strobe (68ch)": {
             "channels": 68,
             "gdtfMode": "Mode 2 W Strobe + RGB Strobe (68ch)",
             "status": "matched",
-            "parameters": 33
+            "parameters": 64
           },
           "Mode 3 W Strobe  RGB Pixel (168ch)": {
             "channels": 168,
             "gdtfMode": "Mode 3 W Strobe  RGB Pixel (168ch)",
             "status": "matched",
-            "parameters": 27
+            "parameters": 204
           },
           "Mode 4 W + RGB Strobe + W Pixel (94ch)": {
             "channels": 94,
             "gdtfMode": "Mode 4 W + RGB Strobe + W Pixel (94ch)",
             "status": "matched",
-            "parameters": 27
+            "parameters": 90
           },
           "Mode 5 Multipix (196ch)": {
             "channels": 196,
             "gdtfMode": "Mode 5 Multipix (196ch)",
             "status": "matched",
-            "parameters": 22
+            "parameters": 232
           },
           "Mode 6 Multipix Advanced (316ch)": {
             "channels": 316,
             "gdtfMode": "Mode 6 Multipix Advanced (316ch)",
             "status": "matched",
-            "parameters": 22
+            "parameters": 392
           },
           "Mode 7 Multipix Quadpix (76ch)": {
             "channels": 76,
             "gdtfMode": "Mode 7 Multipix Quadpix (76ch)",
             "status": "matched",
-            "parameters": 22
+            "parameters": 82
           }
         }
       },
@@ -975,31 +975,31 @@
             "channels": 84,
             "gdtfMode": "Mode 3 W Strobe  RGB Pixel (84ch)",
             "status": "matched",
-            "parameters": 26
+            "parameters": 102
           },
           "Mode 4 W + RGB Strobe + W Pixel (47ch)": {
             "channels": 47,
             "gdtfMode": "Mode 4 W + RGB Strobe + W Pixel (47ch)",
             "status": "matched",
-            "parameters": 26
+            "parameters": 45
           },
           "Mode 5 Multipix (98ch)": {
             "channels": 98,
             "gdtfMode": "Mode 5 Multipix (98ch)",
             "status": "matched",
-            "parameters": 21
+            "parameters": 116
           },
           "Mode 6 Multipix Advanced (158ch)": {
             "channels": 158,
             "gdtfMode": "Mode 6 Multipix Advanced (158ch)",
             "status": "matched",
-            "parameters": 21
+            "parameters": 196
           },
           "Mode 7 Multipix Quadpix (38ch)": {
             "channels": 38,
             "gdtfMode": "Mode 7 Multipix Quadpix (38ch)",
             "status": "matched",
-            "parameters": 21
+            "parameters": 41
           }
         }
       },
@@ -1022,7 +1022,7 @@
             "channels": 62,
             "gdtfMode": "Mode 4 SPix PRO (62ch)",
             "status": "matched",
-            "parameters": 18
+            "parameters": 73
           }
         }
       },
@@ -1061,19 +1061,19 @@
             "channels": 91,
             "gdtfMode": "M3 - Segment 12-12",
             "status": "matched",
-            "parameters": 41
+            "parameters": 96
           },
           "M4 - Segment 12-24 (DEFAULT)": {
             "channels": 127,
             "gdtfMode": "M4 - Segment 12-24 (DEFAULT)",
             "status": "matched",
-            "parameters": 41
+            "parameters": 144
           },
           "M5 - JDC1 Spix Patch": {
             "channels": 68,
             "gdtfMode": "M5 - JDC1 Spix Patch",
             "status": "matched",
-            "parameters": 24
+            "parameters": 79
           }
         }
       },
@@ -1110,7 +1110,7 @@
             "channels": 70,
             "gdtfMode": "Mode 3 Multi Beam (70ch)",
             "status": "matched",
-            "parameters": 12
+            "parameters": 48
           }
         }
       },
@@ -1452,25 +1452,25 @@
             "channels": 68,
             "gdtfMode": "M3 - Multi-pix-Advanced RGBL (68ch)",
             "status": "matched",
-            "parameters": 28
+            "parameters": 72
           },
           "M3 - Multi-pix-Advanced RGB (68ch)": {
             "channels": 68,
             "gdtfMode": "M3 - Multi-pix-Advanced RGB (68ch)",
             "status": "matched",
-            "parameters": 28
+            "parameters": 72
           },
           "M4 - Multi-pix-Compressed RGB (49ch)": {
             "channels": 49,
             "gdtfMode": "M4 - Multi-pix-Compressed RGB (49ch)",
             "status": "matched",
-            "parameters": 14
+            "parameters": 58
           },
           "M5 - Multi-pix-Compressed RGBL (61ch)": {
             "channels": 61,
             "gdtfMode": "M5 - Multi-pix-Compressed RGBL (61ch)",
             "status": "matched",
-            "parameters": 15
+            "parameters": 70
           }
         }
       },
@@ -1512,7 +1512,7 @@
             "channels": 79,
             "gdtfMode": "M2 Pixel / RGBL PE Internal (79ch)",
             "status": "matched",
-            "parameters": 27
+            "parameters": 87
           },
           "M1 Basic / RGB (28ch)": {
             "channels": 28,
@@ -1530,19 +1530,19 @@
             "channels": 79,
             "gdtfMode": "M2 Pixel / RGB PE Internal (79ch)",
             "status": "matched",
-            "parameters": 27
+            "parameters": 87
           },
           "M3 RGBL Pixel / RGBL PE Internal (95ch)": {
             "channels": 95,
             "gdtfMode": "M3 RGBL Pixel / RGBL PE Internal (95ch)",
             "status": "matched",
-            "parameters": 28
+            "parameters": 103
           },
           "M3 RGBL Pixel / RGB PE Internal (95ch)": {
             "channels": 95,
             "gdtfMode": "M3 RGBL Pixel / RGB PE Internal (95ch)",
             "status": "matched",
-            "parameters": 28
+            "parameters": 103
           }
         }
       },

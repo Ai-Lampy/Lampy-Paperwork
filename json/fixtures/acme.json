@@ -245,7 +245,7 @@
             "channels": 30,
             "gdtfMode": "Mode 2 30DMX",
             "status": "matched",
-            "parameters": 10
+            "parameters": 34
           },
           "Mode 1 14DMX": {
             "channels": 14,
@@ -347,13 +347,13 @@
             "channels": 50,
             "gdtfMode": "Mode 2 50CH",
             "status": "matched",
-            "parameters": 27
+            "parameters": 55
           },
           "Mode 3 58CH": {
             "channels": 58,
             "gdtfMode": "Mode 3 58CH",
             "status": "matched",
-            "parameters": 27
+            "parameters": 55
           }
         }
       },
@@ -568,7 +568,7 @@
             "channels": 133,
             "gdtfMode": "Mode 2 133CH",
             "status": "matched",
-            "parameters": 13
+            "parameters": 148
           }
         }
       },
@@ -612,7 +612,7 @@
             "channels": 41,
             "gdtfMode": "Mode 2 41CH",
             "status": "matched",
-            "parameters": 14
+            "parameters": 44
           },
           "Mode 3 20CH": {
             "channels": 20,
@@ -624,7 +624,7 @@
             "channels": 42,
             "gdtfMode": "Mode 4 42CH",
             "status": "matched",
-            "parameters": 15
+            "parameters": 45
           }
         }
       },
@@ -676,7 +676,7 @@
             "channels": 230,
             "gdtfMode": "Mode 2 230CH",
             "status": "matched",
-            "parameters": 31
+            "parameters": 324
           },
           "Mode 3 43CH": {
             "channels": 43,
@@ -688,13 +688,13 @@
             "channels": 100,
             "gdtfMode": "Mode 4 100CH",
             "status": "matched",
-            "parameters": 31
+            "parameters": 134
           },
           "Mode 5 20+80CH": {
             "channels": 20,
             "gdtfMode": "Mode 5 20+80CH",
             "status": "matched",
-            "parameters": 14
+            "parameters": 13
           },
           "Mode 6 20+210CH": {
             "channels": 20,
@@ -730,7 +730,7 @@
             "channels": 79,
             "gdtfMode": "Mode 1 79 DMX",
             "status": "matched",
-            "parameters": 16
+            "parameters": 88
           },
           "Mode 2 16 DMX": {
             "channels": 16,
@@ -780,7 +780,7 @@
             "channels": 44,
             "gdtfMode": "Mode 2 44CH",
             "status": "matched",
-            "parameters": 16
+            "parameters": 48
           },
           "Mode 3 19CH": {
             "channels": 19,
@@ -1404,55 +1404,55 @@
             "channels": 26,
             "gdtfMode": "Mode 4 26CH",
             "status": "matched",
-            "parameters": 16
+            "parameters": 30
           },
           "Mode 5 56CH": {
             "channels": 56,
             "gdtfMode": "Mode 5 56CH",
             "status": "matched",
-            "parameters": 6
+            "parameters": 80
           },
           "Mode 6 10CH": {
             "channels": 10,
             "gdtfMode": "Mode 6 10CH",
             "status": "matched",
-            "parameters": 8
+            "parameters": 14
           },
           "Mode 7 18CH": {
             "channels": 18,
             "gdtfMode": "Mode 7 18CH",
             "status": "matched",
-            "parameters": 8
+            "parameters": 26
           },
           "Mode 8 34CH": {
             "channels": 34,
             "gdtfMode": "Mode 8 34CH",
             "status": "matched",
-            "parameters": 8
+            "parameters": 50
           },
           "Mode 9 37CH": {
             "channels": 37,
             "gdtfMode": "Mode 9 37CH",
             "status": "matched",
-            "parameters": 11
+            "parameters": 53
           },
           "Mode 10 62CH": {
             "channels": 62,
             "gdtfMode": "Mode 10 62CH",
             "status": "matched",
-            "parameters": 12
+            "parameters": 86
           },
           "Mode 11 39CH": {
             "channels": 39,
             "gdtfMode": "Mode 11 39CH",
             "status": "matched",
-            "parameters": 27
+            "parameters": 55
           },
           "Mode 12 68CH": {
             "channels": 68,
             "gdtfMode": "Mode 12 68CH",
             "status": "matched",
-            "parameters": 56
+            "parameters": 84
           }
         }
       },
@@ -1504,13 +1504,13 @@
             "channels": 195,
             "gdtfMode": "Mode 2 195CH",
             "status": "matched",
-            "parameters": 70
+            "parameters": 236
           },
           "Mode 3 153CH": {
             "channels": 153,
             "gdtfMode": "Mode 3 153CH",
             "status": "matched",
-            "parameters": 72
+            "parameters": 178
           },
           "Mode 4 27CH": {
             "channels": 27,
@@ -1522,13 +1522,13 @@
             "channels": 168,
             "gdtfMode": "Mode 5 168CH",
             "status": "matched",
-            "parameters": 80
+            "parameters": 216
           },
           "Mode 6 163CH": {
             "channels": 163,
             "gdtfMode": "Mode 6 163CH",
             "status": "matched",
-            "parameters": 35
+            "parameters": 216
           }
         }
       },
@@ -1894,19 +1894,19 @@
             "channels": 168,
             "gdtfMode": "Mode 1 168 DMX",
             "status": "matched",
-            "parameters": 19
+            "parameters": 225
           },
           "Mode 2 108 DMX": {
             "channels": 108,
             "gdtfMode": "Mode 2 108 DMX",
             "status": "matched",
-            "parameters": 19
+            "parameters": 141
           },
           "Mode 3 99 DMX": {
             "channels": 99,
             "gdtfMode": "Mode 3 99 DMX",
             "status": "matched",
-            "parameters": 19
+            "parameters": 133
           },
           "Mode 4 27 DMX": {
             "channels": 27,
@@ -2210,7 +2210,7 @@
             "channels": 170,
             "gdtfMode": "Mode 5 170DMX",
             "status": "matched",
-            "parameters": 29
+            "parameters": 205
           }
         }
       },
@@ -2240,7 +2240,7 @@
             "channels": 28,
             "gdtfMode": "Mode 1 28CH",
             "status": "matched",
-            "parameters": 8
+            "parameters": 33
           },
           "Mode 2 10CH": {
             "channels": 10,

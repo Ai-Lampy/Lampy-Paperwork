@@ -23,37 +23,37 @@
             "channels": 9,
             "gdtfMode": "Super Simple",
             "status": "matched",
-            "parameters": 8
+            "parameters": 10
           },
           "Simple": {
             "channels": 15,
             "gdtfMode": "Simple",
             "status": "matched",
-            "parameters": 13
+            "parameters": 15
           },
           "Standard": {
             "channels": 22,
             "gdtfMode": "Standard",
             "status": "matched",
-            "parameters": 13
+            "parameters": 25
           },
           "Standard Fine": {
             "channels": 37,
             "gdtfMode": "Standard Fine",
             "status": "matched",
-            "parameters": 13
+            "parameters": 25
           },
           "Pixel": {
             "channels": 34,
             "gdtfMode": "Pixel",
             "status": "matched",
-            "parameters": 13
+            "parameters": 40
           },
           "Pixel fine": {
             "channels": 61,
             "gdtfMode": "Pixel fine",
             "status": "matched",
-            "parameters": 13
+            "parameters": 35
           }
         }
       },
@@ -528,37 +528,37 @@
             "channels": 12,
             "gdtfMode": "Super Simple",
             "status": "matched",
-            "parameters": 8
+            "parameters": 12
           },
           "Simple": {
             "channels": 17,
             "gdtfMode": "Simple",
             "status": "matched",
-            "parameters": 13
+            "parameters": 17
           },
           "Standard": {
             "channels": 32,
             "gdtfMode": "Standard",
             "status": "matched",
-            "parameters": 13
+            "parameters": 37
           },
           "Standard Fine": {
             "channels": 57,
             "gdtfMode": "Standard Fine",
             "status": "matched",
-            "parameters": 13
+            "parameters": 37
           },
           "Pixel": {
             "channels": 52,
             "gdtfMode": "Pixel",
             "status": "matched",
-            "parameters": 13
+            "parameters": 62
           },
           "Pixel Fine": {
             "channels": 97,
             "gdtfMode": "Pixel Fine",
             "status": "matched",
-            "parameters": 13
+            "parameters": 62
           }
         }
       },

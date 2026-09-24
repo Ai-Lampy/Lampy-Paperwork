@@ -512,7 +512,7 @@
             "channels": 300,
             "gdtfMode": "PixelMap per Pixel",
             "status": "matched",
-            "parameters": 4
+            "parameters": 400
           }
         }
       },
@@ -591,7 +591,7 @@
             "channels": 192,
             "gdtfMode": "PixelMap per Pixel",
             "status": "matched",
-            "parameters": 4
+            "parameters": 256
           }
         }
       },
@@ -670,7 +670,7 @@
             "channels": 108,
             "gdtfMode": "PixelMap per Pixel",
             "status": "matched",
-            "parameters": 4
+            "parameters": 144
           }
         }
       },
@@ -721,7 +721,7 @@
             "channels": 48,
             "gdtfMode": "PixelMap",
             "status": "matched",
-            "parameters": 4
+            "parameters": 64
           }
         }
       },
@@ -1855,13 +1855,13 @@
             "channels": 89,
             "gdtfMode": "Extended",
             "status": "matched",
-            "parameters": 30
+            "parameters": 102
           },
           "Ludicrous": {
             "channels": 512,
             "gdtfMode": "Ludicrous",
             "status": "matched",
-            "parameters": 34
+            "parameters": 666
           },
           "Compact Direct": {
             "channels": 17,
@@ -1907,19 +1907,19 @@
             "channels": 149,
             "gdtfMode": "Extended",
             "status": "matched",
-            "parameters": 34
+            "parameters": 178
           },
           "Ludicrous": {
             "channels": 266,
             "gdtfMode": "Ludicrous",
             "status": "matched",
-            "parameters": 190
+            "parameters": 334
           },
           "Plaid": {
             "channels": 851,
             "gdtfMode": "Plaid",
             "status": "matched",
-            "parameters": 38
+            "parameters": 1114
           },
           "Compact Direct": {
             "channels": 22,
@@ -1994,13 +1994,13 @@
             "channels": 57,
             "gdtfMode": "Extended",
             "status": "matched",
-            "parameters": 33
+            "parameters": 57
           },
           "Ludicrous": {
             "channels": 93,
             "gdtfMode": "Ludicrous",
             "status": "matched",
-            "parameters": 37
+            "parameters": 105
           },
           "Compact Direct": {
             "channels": 20,
@@ -2203,7 +2203,7 @@
             "channels": 108,
             "gdtfMode": "Ludicrous",
             "status": "matched",
-            "parameters": 33
+            "parameters": 125
           },
           "Compact Direct": {
             "channels": 20,
@@ -2246,7 +2246,7 @@
             "channels": 107,
             "gdtfMode": "Ludicrous",
             "status": "matched",
-            "parameters": 33
+            "parameters": 125
           }
         }
       },
@@ -4312,7 +4312,7 @@
             "channels": 243,
             "gdtfMode": "Extended",
             "status": "matched",
-            "parameters": 29
+            "parameters": 313
           }
         }
       },
@@ -4363,7 +4363,7 @@
             "channels": 64,
             "gdtfMode": "Extended",
             "status": "matched",
-            "parameters": 21
+            "parameters": 81
           }
         }
       },
@@ -4414,7 +4414,7 @@
             "channels": 64,
             "gdtfMode": "Extended",
             "status": "matched",
-            "parameters": 21
+            "parameters": 81
           }
         }
       },
@@ -5717,25 +5717,25 @@
             "channels": 29,
             "gdtfMode": "Extended 5 Segments",
             "status": "matched",
-            "parameters": 17
+            "parameters": 33
           },
           "Extended 10 Segments": {
             "channels": 44,
             "gdtfMode": "Extended 10 Segments",
             "status": "matched",
-            "parameters": 17
+            "parameters": 53
           },
           "Extended 25 Segments": {
             "channels": 89,
             "gdtfMode": "Extended 25 Segments",
             "status": "matched",
-            "parameters": 17
+            "parameters": 113
           },
           "Extended 100 Pixels": {
             "channels": 314,
             "gdtfMode": "Extended 100 Pixels",
             "status": "matched",
-            "parameters": 17
+            "parameters": 413
           },
           "Compact Direct": {
             "channels": 8,
@@ -5753,25 +5753,25 @@
             "channels": 15,
             "gdtfMode": "PixelMap 5 Segments",
             "status": "matched",
-            "parameters": 4
+            "parameters": 20
           },
           "PixelMap 10 Segments": {
             "channels": 30,
             "gdtfMode": "PixelMap 10 Segments",
             "status": "matched",
-            "parameters": 4
+            "parameters": 40
           },
           "PixelMap 25 Segments": {
             "channels": 75,
             "gdtfMode": "PixelMap 25 Segments",
             "status": "matched",
-            "parameters": 4
+            "parameters": 100
           },
           "PixelMap 100 Pixels": {
             "channels": 300,
             "gdtfMode": "PixelMap 100 Pixels",
             "status": "matched",
-            "parameters": 4
+            "parameters": 400
           }
         }
       },
@@ -5817,25 +5817,25 @@
             "channels": 20,
             "gdtfMode": "Extended 2 Segments",
             "status": "matched",
-            "parameters": 17
+            "parameters": 21
           },
           "Extended 4 Segments": {
             "channels": 26,
             "gdtfMode": "Extended 4 Segments",
             "status": "matched",
-            "parameters": 17
+            "parameters": 29
           },
           "Extended 8 Segments": {
             "channels": 38,
             "gdtfMode": "Extended 8 Segments",
             "status": "matched",
-            "parameters": 17
+            "parameters": 45
           },
           "Extended 32 Pixels": {
             "channels": 110,
             "gdtfMode": "Extended 32 Pixels",
             "status": "matched",
-            "parameters": 17
+            "parameters": 141
           },
           "Compact Direct": {
             "channels": 8,
@@ -5853,25 +5853,25 @@
             "channels": 6,
             "gdtfMode": "PixelMap 2 Segments",
             "status": "matched",
-            "parameters": 4
+            "parameters": 8
           },
           "PixelMap 4 Segments": {
             "channels": 12,
             "gdtfMode": "PixelMap 4 Segments",
             "status": "matched",
-            "parameters": 4
+            "parameters": 16
           },
           "PixelMap 8 Segments": {
             "channels": 24,
             "gdtfMode": "PixelMap 8 Segments",
             "status": "matched",
-            "parameters": 4
+            "parameters": 32
           },
           "PixelMap 32 Pixels": {
             "channels": 96,
             "gdtfMode": "PixelMap 32 Pixels",
             "status": "matched",
-            "parameters": 4
+            "parameters": 128
           }
         }
       },

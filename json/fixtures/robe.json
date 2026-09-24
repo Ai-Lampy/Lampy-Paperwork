@@ -969,31 +969,31 @@
             "channels": 9,
             "gdtfMode": "Mode 1 - RGBW No zones 8bit",
             "status": "matched",
-            "parameters": 11
+            "parameters": 22
           },
           "Mode 2 - RGBW No zones 16bit": {
             "channels": 14,
             "gdtfMode": "Mode 2 - RGBW No zones 16bit",
             "status": "matched",
-            "parameters": 11
+            "parameters": 22
           },
           "Mode 3 - RGBW No zones with effects 8bit": {
             "channels": 18,
             "gdtfMode": "Mode 3 - RGBW No zones with effects 8bit",
             "status": "matched",
-            "parameters": 20
+            "parameters": 31
           },
           "Mode 4 - 4 zones": {
             "channels": 28,
             "gdtfMode": "Mode 4 - 4 zones",
             "status": "matched",
-            "parameters": 30
+            "parameters": 41
           },
           "Mode 5 - 12 zones": {
             "channels": 84,
             "gdtfMode": "Mode 5 - 12 zones",
             "status": "matched",
-            "parameters": 8
+            "parameters": 85
           }
         }
       },
@@ -1045,7 +1045,7 @@
             "channels": 42,
             "gdtfMode": "Mode 5 - Six zone mode",
             "status": "matched",
-            "parameters": 8
+            "parameters": 43
           },
           "Mode 6 - Simple RGBW": {
             "channels": 4,
@@ -1114,25 +1114,25 @@
             "channels": 61,
             "gdtfMode": "Mode 3 - Extended 16 - bit + RGB pixels",
             "status": "matched",
-            "parameters": 15
+            "parameters": 71
           },
           "Mode 4 - Extended 16 - bit + RGBD pixels": {
             "channels": 62,
             "gdtfMode": "Mode 4 - Extended 16 - bit + RGBD pixels",
             "status": "matched",
-            "parameters": 15
+            "parameters": 71
           },
           "Mode 5 - Extended 16 - bit + RGB pixels + LED Frequency setting": {
             "channels": 47,
             "gdtfMode": "Mode 5 - Extended 16 - bit + RGB pixels + LED Frequency setting",
             "status": "matched",
-            "parameters": 6
+            "parameters": 62
           },
           "Mode 6 - RGB pixels": {
             "channels": 45,
             "gdtfMode": "Mode 6 - RGB pixels",
             "status": "matched",
-            "parameters": 4
+            "parameters": 60
           }
         }
       },
@@ -1172,25 +1172,25 @@
             "channels": 61,
             "gdtfMode": "Mode 3 - Extended 16 - bit + RGB pixels",
             "status": "matched",
-            "parameters": 15
+            "parameters": 71
           },
           "Mode 4 - Extended 16 - bit + RGBD pixels": {
             "channels": 62,
             "gdtfMode": "Mode 4 - Extended 16 - bit + RGBD pixels",
             "status": "matched",
-            "parameters": 15
+            "parameters": 71
           },
           "Mode 5 - Extended 16 - bit + RGB pixels + LED Frequency setting": {
             "channels": 47,
             "gdtfMode": "Mode 5 - Extended 16 - bit + RGB pixels + LED Frequency setting",
             "status": "matched",
-            "parameters": 6
+            "parameters": 62
           },
           "Mode 6 - RGB pixels": {
             "channels": 45,
             "gdtfMode": "Mode 6 - RGB pixels",
             "status": "matched",
-            "parameters": 4
+            "parameters": 60
           }
         }
       },
@@ -2422,25 +2422,25 @@
             "channels": 61,
             "gdtfMode": "Mode 3 - Extended 16 - bit + RGB pixels",
             "status": "matched",
-            "parameters": 15
+            "parameters": 71
           },
           "Mode 4 - Extended 16 - bit + RGBD pixels": {
             "channels": 62,
             "gdtfMode": "Mode 4 - Extended 16 - bit + RGBD pixels",
             "status": "matched",
-            "parameters": 15
+            "parameters": 71
           },
           "Mode 5 - Extended 16 - bit + RGB pixels + LED Frequency setting": {
             "channels": 47,
             "gdtfMode": "Mode 5 - Extended 16 - bit + RGB pixels + LED Frequency setting",
             "status": "matched",
-            "parameters": 6
+            "parameters": 62
           },
           "Mode 6 - RGB pixels": {
             "channels": 45,
             "gdtfMode": "Mode 6 - RGB pixels",
             "status": "matched",
-            "parameters": 4
+            "parameters": 60
           }
         }
       },
@@ -2989,25 +2989,25 @@
             "channels": 123,
             "gdtfMode": "Mode 10 - Pattern full RGBW",
             "status": "matched",
-            "parameters": 53
+            "parameters": 133
           },
           "Mode 9 - Pattern full RGB": {
             "channels": 115,
             "gdtfMode": "Mode 9 - Pattern full RGB",
             "status": "matched",
-            "parameters": 50
+            "parameters": 114
           },
           "Mode 8 - Pixel RGBW ": {
             "channels": 110,
             "gdtfMode": "Mode 8 - Pixel RGBW ",
             "status": "matched",
-            "parameters": 40
+            "parameters": 120
           },
           "Mode 7 - Pixel RGB": {
             "channels": 102,
             "gdtfMode": "Mode 7 - Pixel RGB",
             "status": "matched",
-            "parameters": 37
+            "parameters": 101
           },
           "Mode 6 - Pattern": {
             "channels": 47,
@@ -3043,7 +3043,7 @@
             "channels": 101,
             "gdtfMode": "Mode 4 - Full RGBW",
             "status": "matched",
-            "parameters": 37
+            "parameters": 101
           }
         }
       },
@@ -3075,25 +3075,25 @@
             "channels": 123,
             "gdtfMode": "Mode 10 - Pattern full RGBW",
             "status": "matched",
-            "parameters": 53
+            "parameters": 133
           },
           "Mode 9 - Pattern full RGB": {
             "channels": 115,
             "gdtfMode": "Mode 9 - Pattern full RGB",
             "status": "matched",
-            "parameters": 50
+            "parameters": 114
           },
           "Mode 8 - Pixel RGBW ": {
             "channels": 110,
             "gdtfMode": "Mode 8 - Pixel RGBW ",
             "status": "matched",
-            "parameters": 40
+            "parameters": 120
           },
           "Mode 7 - Pixel RGB": {
             "channels": 102,
             "gdtfMode": "Mode 7 - Pixel RGB",
             "status": "matched",
-            "parameters": 37
+            "parameters": 101
           },
           "Mode 6 - Pattern": {
             "channels": 47,
@@ -3129,7 +3129,7 @@
             "channels": 101,
             "gdtfMode": "Mode 4 - Full RGBW",
             "status": "matched",
-            "parameters": 37
+            "parameters": 101
           }
         }
       },
@@ -3445,37 +3445,37 @@
             "channels": 128,
             "gdtfMode": "Mode 6-Pattern full RGBW",
             "status": "matched",
-            "parameters": 44
+            "parameters": 136
           },
           "Mode 5-Pattern full RGB": {
             "channels": 127,
             "gdtfMode": "Mode 5-Pattern full RGB",
             "status": "matched",
-            "parameters": 43
+            "parameters": 118
           },
           "Mode 4-Pixel RGBW": {
             "channels": 115,
             "gdtfMode": "Mode 4-Pixel RGBW",
             "status": "matched",
-            "parameters": 31
+            "parameters": 123
           },
           "Mode 3-Pixel RGB": {
             "channels": 114,
             "gdtfMode": "Mode 3-Pixel RGB",
             "status": "matched",
-            "parameters": 30
+            "parameters": 105
           },
           "Mode 2-Pattern": {
             "channels": 56,
             "gdtfMode": "Mode 2-Pattern",
             "status": "matched",
-            "parameters": 39
+            "parameters": 46
           },
           "Mode 1-Wash": {
             "channels": 34,
             "gdtfMode": "Mode 1-Wash",
             "status": "matched",
-            "parameters": 26
+            "parameters": 33
           }
         }
       },
@@ -4113,31 +4113,31 @@
             "channels": 46,
             "gdtfMode": "Mode 3 - Pixel RGB",
             "status": "matched",
-            "parameters": 17
+            "parameters": 41
           },
           "Mode 4 - Pixel RGBW": {
             "channels": 47,
             "gdtfMode": "Mode 4 - Pixel RGBW",
             "status": "matched",
-            "parameters": 18
+            "parameters": 48
           },
           "Mode 5 - Pattern full RGB": {
             "channels": 59,
             "gdtfMode": "Mode 5 - Pattern full RGB",
             "status": "matched",
-            "parameters": 30
+            "parameters": 54
           },
           "Mode 6 - Pattern full RGBW": {
             "channels": 60,
             "gdtfMode": "Mode 6 - Pattern full RGBW",
             "status": "matched",
-            "parameters": 31
+            "parameters": 61
           },
           "Mode 7 - Pixel RGBW only": {
             "channels": 28,
             "gdtfMode": "Mode 7 - Pixel RGBW only",
             "status": "matched",
-            "parameters": 5
+            "parameters": 35
           },
           "Mode 7 - One PATT only": {
             "channels": 4,
@@ -4415,31 +4415,31 @@
             "channels": 45,
             "gdtfMode": "Mode 3 - Pixel RGB",
             "status": "matched",
-            "parameters": 22
+            "parameters": 42
           },
           "Mode 4 - Pixel RGBW": {
             "channels": 47,
             "gdtfMode": "Mode 4 - Pixel RGBW",
             "status": "matched",
-            "parameters": 24
+            "parameters": 49
           },
           "Mode 5 - Pattern full RGB": {
             "channels": 58,
             "gdtfMode": "Mode 5 - Pattern full RGB",
             "status": "matched",
-            "parameters": 35
+            "parameters": 55
           },
           "Mode 6 - Pattern full RGBW": {
             "channels": 60,
             "gdtfMode": "Mode 6 - Pattern full RGBW",
             "status": "matched",
-            "parameters": 37
+            "parameters": 62
           },
           "Mode 7 - Pixel RGBW only": {
             "channels": 28,
             "gdtfMode": "Mode 7 - Pixel RGBW only",
             "status": "matched",
-            "parameters": 11
+            "parameters": 36
           }
         }
       },
@@ -4517,31 +4517,31 @@
             "channels": 46,
             "gdtfMode": "Mode 3 - Pixel RGB",
             "status": "matched",
-            "parameters": 21
+            "parameters": 41
           },
           "Mode 4 - Pixel RGBW": {
             "channels": 47,
             "gdtfMode": "Mode 4 - Pixel RGBW",
             "status": "matched",
-            "parameters": 23
+            "parameters": 48
           },
           "Mode 5 - Pattern full RGB": {
             "channels": 59,
             "gdtfMode": "Mode 5 - Pattern full RGB",
             "status": "matched",
-            "parameters": 34
+            "parameters": 54
           },
           "Mode 6 - Pattern full RGBW": {
             "channels": 60,
             "gdtfMode": "Mode 6 - Pattern full RGBW",
             "status": "matched",
-            "parameters": 36
+            "parameters": 61
           },
           "Mode 7 - Pixel RGBW only": {
             "channels": 28,
             "gdtfMode": "Mode 7 - Pixel RGBW only",
             "status": "matched",
-            "parameters": 10
+            "parameters": 35
           }
         }
       },
@@ -4730,25 +4730,25 @@
             "channels": 123,
             "gdtfMode": "Mode 10 - Pattern full RGBW",
             "status": "matched",
-            "parameters": 53
+            "parameters": 133
           },
           "Mode 9 - Pattern full RGB": {
             "channels": 115,
             "gdtfMode": "Mode 9 - Pattern full RGB",
             "status": "matched",
-            "parameters": 50
+            "parameters": 114
           },
           "Mode 8 - Pixel RGBW ": {
             "channels": 110,
             "gdtfMode": "Mode 8 - Pixel RGBW ",
             "status": "matched",
-            "parameters": 40
+            "parameters": 120
           },
           "Mode 7 - Pixel RGB": {
             "channels": 102,
             "gdtfMode": "Mode 7 - Pixel RGB",
             "status": "matched",
-            "parameters": 37
+            "parameters": 101
           },
           "Mode 6 - Pattern": {
             "channels": 47,
@@ -4784,7 +4784,7 @@
             "channels": 101,
             "gdtfMode": "Mode 4 - Full RGBW",
             "status": "matched",
-            "parameters": 37
+            "parameters": 101
           }
         }
       },
@@ -6430,25 +6430,25 @@
             "channels": 196,
             "gdtfMode": "Mode 6-Pattern full RGBW",
             "status": "matched",
-            "parameters": 64
+            "parameters": 224
           },
           "Mode 5-Pattern full RGB": {
             "channels": 176,
             "gdtfMode": "Mode 5-Pattern full RGB",
             "status": "matched",
-            "parameters": 59
+            "parameters": 187
           },
           "Mode 4-Pixel RGBW": {
             "channels": 183,
             "gdtfMode": "Mode 4-Pixel RGBW",
             "status": "matched",
-            "parameters": 51
+            "parameters": 211
           },
           "Mode 3-Pixel RGB": {
             "channels": 163,
             "gdtfMode": "Mode 3-Pixel RGB",
             "status": "matched",
-            "parameters": 46
+            "parameters": 174
           },
           "Mode 2-Pattern": {
             "channels": 48,
@@ -6488,25 +6488,25 @@
             "channels": 81,
             "gdtfMode": "Mode 6 Pattern full RGBW",
             "status": "matched",
-            "parameters": 42
+            "parameters": 82
           },
           "Mode 5 - Pattern full RGB": {
             "channels": 80,
             "gdtfMode": "Mode 5 - Pattern full RGB",
             "status": "matched",
-            "parameters": 41
+            "parameters": 73
           },
           "Mode 4 - Pixel RGBW": {
             "channels": 68,
             "gdtfMode": "Mode 4 - Pixel RGBW",
             "status": "matched",
-            "parameters": 29
+            "parameters": 69
           },
           "Mode 3 - Pixel RGB": {
             "channels": 67,
             "gdtfMode": "Mode 3 - Pixel RGB",
             "status": "matched",
-            "parameters": 28
+            "parameters": 60
           },
           "Mode 2 - Pattern": {
             "channels": 45,
@@ -6546,37 +6546,37 @@
             "channels": 128,
             "gdtfMode": "Mode 6-Pattern full RGBW",
             "status": "matched",
-            "parameters": 44
+            "parameters": 136
           },
           "Mode 5-Pattern full RGB": {
             "channels": 127,
             "gdtfMode": "Mode 5-Pattern full RGB",
             "status": "matched",
-            "parameters": 43
+            "parameters": 118
           },
           "Mode 4-Pixel RGBW": {
             "channels": 115,
             "gdtfMode": "Mode 4-Pixel RGBW",
             "status": "matched",
-            "parameters": 31
+            "parameters": 123
           },
           "Mode 3-Pixel RGB": {
             "channels": 114,
             "gdtfMode": "Mode 3-Pixel RGB",
             "status": "matched",
-            "parameters": 30
+            "parameters": 105
           },
           "Mode 2-Pattern": {
             "channels": 56,
             "gdtfMode": "Mode 2-Pattern",
             "status": "matched",
-            "parameters": 39
+            "parameters": 46
           },
           "Mode 1-Wash": {
             "channels": 34,
             "gdtfMode": "Mode 1-Wash",
             "status": "matched",
-            "parameters": 26
+            "parameters": 33
           }
         }
       },
@@ -6604,37 +6604,37 @@
             "channels": 98,
             "gdtfMode": "Mode 6-Pattern full RGBW",
             "status": "matched",
-            "parameters": 44
+            "parameters": 98
           },
           "Mode 5-Pattern full RGB": {
             "channels": 97,
             "gdtfMode": "Mode 5-Pattern full RGB",
             "status": "matched",
-            "parameters": 43
+            "parameters": 89
           },
           "Mode 4-Pixel RGBW": {
             "channels": 85,
             "gdtfMode": "Mode 4-Pixel RGBW",
             "status": "matched",
-            "parameters": 31
+            "parameters": 85
           },
           "Mode 3-Pixel RGB": {
             "channels": 84,
             "gdtfMode": "Mode 3-Pixel RGB",
             "status": "matched",
-            "parameters": 30
+            "parameters": 76
           },
           "Mode 2-Pattern": {
             "channels": 62,
             "gdtfMode": "Mode 2-Pattern",
             "status": "matched",
-            "parameters": 39
+            "parameters": 53
           },
           "Mode 1-Wash": {
             "channels": 42,
             "gdtfMode": "Mode 1-Wash",
             "status": "matched",
-            "parameters": 26
+            "parameters": 40
           }
         }
       },
@@ -6825,13 +6825,13 @@
             "channels": 106,
             "gdtfMode": "Mode 4-Pixel mode",
             "status": "matched",
-            "parameters": 30
+            "parameters": 127
           },
           "Mode 5-full mode": {
             "channels": 140,
             "gdtfMode": "Mode 5-full mode",
             "status": "matched",
-            "parameters": 51
+            "parameters": 148
           }
         }
       },

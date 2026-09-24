@@ -85,19 +85,19 @@
             "channels": 30,
             "gdtfMode": "10x RGB mode",
             "status": "matched",
-            "parameters": 4
+            "parameters": 40
           },
           "20x RGB mode": {
             "channels": 60,
             "gdtfMode": "20x RGB mode",
             "status": "matched",
-            "parameters": 4
+            "parameters": 80
           },
           "40x RGB mode": {
             "channels": 120,
             "gdtfMode": "40x RGB mode",
             "status": "matched",
-            "parameters": 4
+            "parameters": 160
           }
         }
       },
@@ -136,19 +136,19 @@
             "channels": 30,
             "gdtfMode": "10x RGB mode",
             "status": "matched",
-            "parameters": 4
+            "parameters": 40
           },
           "20x RGB mode": {
             "channels": 60,
             "gdtfMode": "20x RGB mode",
             "status": "matched",
-            "parameters": 4
+            "parameters": 80
           },
           "40x RGB mode": {
             "channels": 120,
             "gdtfMode": "40x RGB mode",
             "status": "matched",
-            "parameters": 4
+            "parameters": 160
           }
         }
       },
@@ -188,7 +188,7 @@
             "channels": 34,
             "gdtfMode": "34Ch Mode",
             "status": "matched",
-            "parameters": 20
+            "parameters": 50
           },
           "73Ch Mode": {
             "channels": 73,
@@ -200,13 +200,13 @@
             "channels": 145,
             "gdtfMode": "145Ch Mode",
             "status": "matched",
-            "parameters": 8
+            "parameters": 193
           },
           "158Ch Mode": {
             "channels": 158,
             "gdtfMode": "158Ch Mode",
             "status": "matched",
-            "parameters": 21
+            "parameters": 206
           }
         }
       },
