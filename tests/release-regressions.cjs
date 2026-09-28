@@ -1,14 +1,14 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),path=require('path'),zlib=require('zlib');
 const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const LampyCore=require('../js/project-core.js'),LampyArchive=require('../js/archive.js');
-assert(html.includes('<title>Lampy Paperwork V50.8</title>'));
-assert(html.includes("const VERSION='50.8';"));
+assert(html.includes('<title>Lampy Paperwork V50.10</title>'));
+assert(html.includes("const VERSION='50.10';"));
 const v472WidthLimits={colour:[30,40],socapex:[75,180],way:[20,30],fixId:[50,80],fixType:[60,190],position:[85,180],watts:[40,45],amps:[66,75]};
 const v475WidthCurrent={colour:30,socapex:112,way:26,fixId:59,fixType:117,position:115,watts:45,amps:72};
 const v472WidthSource=html.slice(html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS='),html.indexOf('let powerColumnWidthSettings=',html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS=')));
 for(const [key,[min,max]] of Object.entries(v472WidthLimits))assert(v472WidthSource.includes(`${key}:{label:`)&&v472WidthSource.includes(`min:${min},max:${max}`),`${key} Power width limits`);
 for(const [key,current] of Object.entries(v475WidthCurrent))assert(new RegExp(`${key}:\\{label:[^\\n]+current:${current},`).test(v472WidthSource),`${key} Power current width`);
-const v473RenderPowerSource=html.slice(html.indexOf('function renderPowerSheetView('),html.indexOf('function renderFanOutView(',html.indexOf('function renderPowerSheetView(')));
+const v473RenderPowerSource=html.slice(html.indexOf('function renderPowerSheetView('),html.indexOf('function powerFormatCss(',html.indexOf('function renderPowerSheetView(')));
 assert(v473RenderPowerSource.includes('class="powerSocaColourCol powerHeaderTooltip" scope="col" aria-label="Colour" data-column-label="Colour" tabindex="0"></th>'));
 assert(v473RenderPowerSource.includes('class="wayCol powerHeaderTooltip" scope="col" aria-label="Way" data-column-label="Way" tabindex="0"></th>'));
 assert(!v473RenderPowerSource.includes('powerColumnWidthAdjusterMarkup()'));
@@ -59,7 +59,7 @@ assert(!html.includes('.powerAuxSheet .auxNumberCol{width:25px;min-width'));
 assert(html.includes('.powerAuxSheet thead .auxNumberCol{font-size:14px}'));
 assert(html.includes('.powerAuxSheet tbody .auxNumberCol{font-size:14px}'));
 assert(html.includes('.powerAuxSheet .auxLabelCol{width:auto!important;min-width:50px;max-width:200px'));
-assert(html.includes('.powerAuxIncludeBtn{width:60px;min-width:60px;padding-left:4px;padding-right:4px;font-size:18px;font-weight:800;transform:scale(.7);transform-origin:center}'));
+assert(hasCssDeclarations('.powerAuxIncludeBtn','width:60px;min-width:60px;padding-left:4px;padding-right:4px;font-size:18px;font-weight:800;transform:scale(.7);transform-origin:center'));
 assert(html.includes('function powerExtraColourCellMarkup('));
 const v4710AuxRowSource=html.slice(html.indexOf('function powerSheetAuxRowMarkup('),html.indexOf('function powerAuxSheetMarkup(',html.indexOf('function powerSheetAuxRowMarkup(')));
 assert(v4710AuxRowSource.indexOf('auxIncludeCol')<v4710AuxRowSource.indexOf('powerExtraColourCellMarkup'));
@@ -220,8 +220,8 @@ function zip(name,data,compressed=false){const filename=Buffer.from(name),conten
  console.log('PASS: stored/deflated ZIP, CRC corruption, unsafe paths, extraction bounds and 10,000-fixture round trip');
 })().catch(error=>{console.error(error);process.exitCode=1});
 
-assert(html.includes('<title>Lampy Paperwork V50.8</title>'));
-assert(html.includes("const VERSION='50.8';"));
+assert(html.includes('<title>Lampy Paperwork V50.10</title>'));
+assert(html.includes("const VERSION='50.10';"));
 assert(!html.includes('function controlSubTabsMarkup('));
 assert(!html.includes('function setControlNetworkTab('));
 assert(source('renderConsolesTab').includes("controlUnifiedSectionMarkup('console')"));
@@ -235,8 +235,8 @@ assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/walkthrough.json'))).
 console.log('PASS: V49.2 Control Location text styling and release metadata.');
 
 const changelog=fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8');
-assert(changelog.startsWith('## V50.8 — Project Settings refinement'));
-assert(html.includes("const VERSION='50.8';"));
+assert(changelog.startsWith('## V50.10 — Audit optimization candidate'));
+assert(html.includes("const VERSION='50.10';"));
 assert(!html.includes('function projectYellowTextPresentation('));
 assert(!html.includes('function positionSummaryColourPresentation('));
 assert(!html.includes('function powerWhiteTextOutline('));
@@ -244,31 +244,31 @@ assert(html.includes("[data-front-label-colours]:not(.spareAuto)"));
 assert(html.includes("[data-rear-label-colours]:not(.spareAuto)"));
 console.log('PASS: V49.2 release metadata and unified Position rendering paths.');
 
-assert(html.includes('<title>Lampy Paperwork V50.8</title>'));
-assert(html.includes("const VERSION='50.8';"));
+assert(html.includes('<title>Lampy Paperwork V50.10</title>'));
+assert(html.includes("const VERSION='50.10';"));
 assert(html.includes('[data-colour-input]{-webkit-text-stroke:var(--colour-text-stroke-width,0) var(--colour-text-outline,transparent)!important'));
-assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V50.8 — Project Settings refinement'));
+assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V50.10 — Audit optimization candidate'));
 console.log('PASS: V49.3 editable colour-field outline release metadata.');
 
-assert(html.includes('<title>Lampy Paperwork V50.8</title>'));
-assert(html.includes("const VERSION='50.8';"));
+assert(html.includes('<title>Lampy Paperwork V50.10</title>'));
+assert(html.includes("const VERSION='50.10';"));
 assert(source('positionPdfItemMarkup').includes('data-position-summary-colours'));
 assert(source('preparePdfSocaColourLayers').includes('drawPdfPositionSummaryStripeCanvas'));
-assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V50.8 — Project Settings refinement'));
+assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V50.10 — Audit optimization candidate'));
 console.log('PASS: V49.4 Position Summary PDF colour release metadata.');
 
-assert(html.includes('<title>Lampy Paperwork V50.8</title>'));
-assert(html.includes("const VERSION='50.8';"));
+assert(html.includes('<title>Lampy Paperwork V50.10</title>'));
+assert(html.includes("const VERSION='50.10';"));
 assert(source('powerSheetRowMarkup').includes('powerSocaMultiColourBackground'));
 assert(source('fanOutRowMarkup').includes('powerSocaMultiColourBackground'));
 assert(source('preparePdfSocaColourLayers').includes('drawPdfSocaNameStripeCanvas'));
 assert(source('powerPdfDomPdfBytes').includes('drawPowerSocaStripeFill'));
-assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V50.8 — Project Settings refinement'));
+assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V50.10 — Audit optimization candidate'));
 console.log('PASS: V50 Socapex two-colour pattern release metadata.');
 
-assert(html.includes('<title>Lampy Paperwork V50.8</title>'));
-assert(html.includes("const VERSION='50.8';"));
-assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V50.8 — Project Settings refinement'));
+assert(html.includes('<title>Lampy Paperwork V50.10</title>'));
+assert(html.includes("const VERSION='50.10';"));
+assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V50.10 — Audit optimization candidate'));
 assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/welcome_message.json'),'utf8')).title.includes('V50'));
 assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/walkthrough.json'),'utf8')).title.includes('V50'));
 assert(fs.readFileSync(path.join(root,'tests/BROWSER-CHECKLIST.md'),'utf8').startsWith('# V50 browser release checks'));
@@ -290,9 +290,18 @@ for(const reader of ['mvrPatchRows','parseCsvRows','xlsxWorkbookSheets','xmlWork
 console.log('PASS: PDF patch import removed; CSV/Excel and MVR imports retained.');
 
 assert(html.includes('js/patch-address-review.js'));
-assert(html.includes("const VERSION='50.8';"));
-assert(changelog.startsWith('## V50.8 — Project Settings refinement'));
+assert(html.includes("const VERSION='50.10';"));
+assert(changelog.startsWith('## V50.10 — Audit optimization candidate'));
 assert(source('confirmPatchGroupEdit').includes('LampyPatchAddress.grouped'));
 assert(source('confirmPatchAddressReview').includes("recordFixturePatchUndo('Review fixture addresses')"));
 assert(source('confirmPatchAddressReview').includes('draft.snapshot!==patchAddressSnapshot()'));
 console.log('PASS: V50.3 address review release metadata, staged group addressing and stale-proposal protection.');
+
+// CSS consolidation can split declarations across rules without changing their selector.
+function hasCssDeclarations(selector, declarations) {
+  const css = html.match(/<style>([\s\S]*?)<\/style>/)[1].replace(/\/\*[\s\S]*?\*\//g, '');
+  const bodies = [...css.matchAll(/([^{}]+)\{([^{}]*)\}/g)]
+    .filter(match => match[1].trim() === selector).map(match => match[2]);
+  return declarations.split(';').filter(Boolean).every(declaration =>
+    bodies.some(body => body.split(';').some(value => value.trim() === declaration.trim())));
+}

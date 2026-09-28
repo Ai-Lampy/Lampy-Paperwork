@@ -22,7 +22,7 @@
   return proposals;
  }
  function validate(original,proposals){
-  const ids=new Set(proposals.map(row=>row.id)),errors=new Map(proposals.map(row=>[row.id,[]])),spans=[];
+  const ids=new Set(proposals.map(row=>row.id)),errors=new Map(proposals.map(row=>[row.id,[]])),spansByUniverse=new Map();
   const add=(id,message)=>{if(errors.has(id)&&!errors.get(id).includes(message))errors.get(id).push(message)};
   for(const row of [...original.filter(row=>!ids.has(row.id)),...proposals]){
    const address=text(row.address);if(!address)continue;
@@ -30,10 +30,12 @@
    if(!integer(address)||Number(address)>512)add(row.id,'Address must be an integer from 1 to 512.');
    if(!integer(row.channels))add(row.id,'Channel footprint is missing or invalid.');
    if(!integer(address)||!integer(row.channels)||!integer(row.universe))continue;
-   const start=Number(address),end=start+Number(row.channels)-1;
+   const start=Number(address),end=start+Number(row.channels)-1,universe=universeKey(row.universe);
+   let spans=spansByUniverse.get(universe);
+   if(!spans){spans=[];spansByUniverse.set(universe,spans)}
    if(end>512)add(row.id,`Footprint ends at ${end}, beyond 512.`);
-   for(const old of spans)if(old.universe===universeKey(row.universe)&&start<=old.end&&end>=old.start){add(row.id,`Overlaps Fix ID ${text(old.row.fixId)||'—'} (${Math.max(start,old.start)}–${Math.min(end,old.end)}).`);add(old.row.id,`Overlaps Fix ID ${text(row.fixId)||'—'} (${Math.max(start,old.start)}–${Math.min(end,old.end)}).`)}
-   spans.push({row,universe:universeKey(row.universe),start,end});
+   for(const old of spans)if(start<=old.end&&end>=old.start){add(row.id,`Overlaps Fix ID ${text(old.row.fixId)||'—'} (${Math.max(start,old.start)}–${Math.min(end,old.end)}).`);add(old.row.id,`Overlaps Fix ID ${text(row.fixId)||'—'} (${Math.max(start,old.start)}–${Math.min(end,old.end)}).`)}
+   spans.push({row,start,end});
   }
   return proposals.map(row=>({id:row.id,errors:errors.get(row.id),state:errors.get(row.id).length?'invalid':text(row.address)?'valid':'blank'}));
  }

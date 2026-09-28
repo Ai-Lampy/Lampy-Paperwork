@@ -1,3 +1,12 @@
+## V50.10 — Audit optimization candidate
+
+- Removed 12 unused legacy helpers, including the retired Position Summary vector-rendering path; regression checks now cover the current application routes.
+
+- Consolidate repeated CSS declarations while retaining cascade order and responsive/print conditions.
+- Share position text-outline styling, preserving the separate Home/PDF stroke size.
+- Remove the unused stripe variable and superseded position-shadow declarations.
+- Retain the V50.8 JavaScript audit changes in this isolated candidate.
+
 ## V50.8 — Project Settings refinement
 
 - Add saved Job Type and Subtype selections, displayed first in Home project details.

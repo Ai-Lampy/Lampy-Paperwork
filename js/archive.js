@@ -2,7 +2,16 @@
 (function(root){
   'use strict';
   const LIMIT=256*1024*1024, ENTRY_LIMIT=64*1024*1024, MAX_ENTRIES=10000;
-  function crc32(bytes){let crc=0xffffffff;for(const byte of bytes){crc^=byte;for(let bit=0;bit<8;bit++)crc=(crc>>>1)^((crc&1)?0xedb88320:0)}return (crc^0xffffffff)>>>0;}
+  // One checksum implementation for archive import validation and application exports.
+  const crcTable=Uint32Array.from({length:256},(_,value)=>{
+    for(let bit=0;bit<8;bit++)value=(value>>>1)^((value&1)?0xedb88320:0);
+    return value>>>0;
+  });
+  function crc32(bytes){
+    let crc=0xffffffff;
+    for(const byte of bytes)crc=crcTable[(crc^byte)&255]^(crc>>>8);
+    return (crc^0xffffffff)>>>0;
+  }
   async function inflate(data,limit=ENTRY_LIMIT){
     if(!root.DecompressionStream)throw Error('This browser does not support compressed imports');
     const reader=new Blob([data]).stream().pipeThrough(new DecompressionStream('deflate-raw')).getReader(),chunks=[];let size=0;

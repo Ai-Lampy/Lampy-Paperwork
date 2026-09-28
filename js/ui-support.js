@@ -4,9 +4,13 @@
   let sequence=0,scheduled=false;
   function labelControls(){
     scheduled=false;
+    const controlsByParent=new WeakMap();
     document.querySelectorAll('label:not([for])').forEach(label=>{
       if(label.querySelector('input,select,textarea'))return;
-      const parent=label.parentElement,controls=parent?.querySelectorAll('input:not([type=hidden]),select,textarea');
+      const parent=label.parentElement;
+      if(!parent)return;
+      if(!controlsByParent.has(parent))controlsByParent.set(parent,parent.querySelectorAll('input:not([type=hidden]),select,textarea'));
+      const controls=controlsByParent.get(parent);
       if(controls?.length!==1)return;const control=controls[0];
       if(!control.id)control.id='lampy-field-'+(++sequence);
       label.htmlFor=control.id;
