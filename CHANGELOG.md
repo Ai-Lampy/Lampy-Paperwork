@@ -1,3 +1,10 @@
+## V50.8 — Project Settings refinement
+
+- Add saved Job Type and Subtype selections, displayed first in Home project details.
+- Arrange collapsible Tour, Vendor and Personal logo cards around the full-width Header Preview with an 8px responsive grid.
+- Combine linked Project, Production and custom fields in two-line header/footer templates. Preserve saved templates, owner visibility and shared PDF rendering.
+- Add project-saved custom fields with stable references, missing-field warnings and immediate preview updates.
+
 ## V50.7 — Fixture Summary totals and notes
 
 - Show the exported fixture quantity above Patched Universes, keeping both totals with the final summary row.
