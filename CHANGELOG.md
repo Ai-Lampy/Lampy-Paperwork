@@ -1,3 +1,15 @@
+## V50.12 — Production Info field sizing
+
+- Set Production Info fields to 300px, visibility buttons to 100px and the grid to three columns with 10px × 24px gaps.
+- Align the visibility heading with the updated 300px/100px row layout. Preserve visibility-button behaviour and active styling.
+
+## V50.11 — Vendor address and contact fields
+
+- Rename Vendor Details to Vendor Address and populate it from the vendor catalogue address; add Vendor Contact from phoneNumber.
+- Keep Vendor Rep as manually entered project data, never populated or cleared by vendor catalogue selection.
+- Refresh catalogue-linked address/contact values for existing selected vendors while preserving unmatched saved details and existing address template references.
+- Include Vendor Contact in document visibility, Home and PDF template fields.
+
 ## V50.10 — Audit optimization candidate
 
 - Removed 12 unused legacy helpers, including the retired Position Summary vector-rendering path; regression checks now cover the current application routes.
