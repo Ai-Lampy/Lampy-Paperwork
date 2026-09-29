@@ -1,0 +1,22 @@
+'use strict';
+const assert=require('assert/strict'),fs=require('fs'),path=require('path'),vm=require('vm');
+const html=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8');
+function source(name){const start=html.indexOf('function '+name+'(');assert(start>=0,name);for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const code=html.slice(start,end+1);try{new Function('return ('+code+')');return code}catch{}}throw Error(name)}
+let counter=0,saves=0;const project={production:{tourManager:'Manager',lightingVendor:'A',vendorRep:'Rep',vendorRepEmail:'rep@example.test'},productionContacts:{},productionVisible:{tourManager:false},logoVisibility:{},exportLogos:{}};
+const c=vm.createContext({ensureProjectInfo:()=>project,loomId:()=> 'row_'+(++counter),escapeHtml:s=>String(s).replaceAll('<','&lt;'),escapeAttr:s=>String(s).replaceAll('"','&quot;'),persist:()=>saves++,renderProductionInfo(){},refreshHomeIfActive(){},renderExportSettings(){},refreshOpenPdfPreview(){},renderProjectSettingsPdfPreview(){},updateProjectHeaderLogos(){},$:()=>null,lightingVendorReference:[{name:'B',address:'Address',phoneNumber:'123'}],productionFieldDefs:[['tourManager','Tour Manager'],['vendorRep','Vendor Rep'],['vendorRepEmail','Rep Email']]});
+for(const name of ['normaliseProductionContacts','productionContactRows','productionContactControls','addProductionContact','updateProductionContact','productionContactHeroMarkup','productionHeroItem','pdfProductionContactFields','updateProjectProductionField'])vm.runInContext(source(name),c);
+assert.equal(Object.keys(c.normaliseProductionContacts(undefined,['tourManager'])).length,1);assert.equal(c.normaliseProductionContacts(undefined,['tourManager']).tourManager.length,0);
+c.addProductionContact('tourManager');c.addProductionContact('tourManager');assert.equal(project.productionContacts.tourManager.length,2);assert.equal(saves,2);
+const row=project.productionContacts.tourManager[0],control={dataset:{contactParent:'tourManager',contactId:row.id},value:'Email value'};
+control.value='email';c.updateProductionContact(control,'type');control.value='person@example.test';c.updateProductionContact(control,'value');assert.equal(row.type,'email');assert.equal(row.value,'person@example.test');
+assert(c.productionHeroItem('tourManager','Tour Manager').includes('person@example.test'),'child has independent visibility');
+c.updateProductionContact(control,'visible');assert(!c.productionHeroItem('tourManager','Tour Manager').includes('person@example.test'));assert.equal(c.pdfProductionContactFields()[0].value,'');assert.equal(row.value,'person@example.test');
+const restored=c.normaliseProductionContacts(JSON.parse(JSON.stringify(project.productionContacts)),Object.keys(project.production));assert.equal(restored.tourManager[0].id,row.id);assert.equal(restored.tourManager[0].visible,false);assert.equal(restored.tourManager[0].value,row.value);
+const markup=c.productionContactControls('tourManager','Tour Manager');assert(markup.includes('<option value="mobile"'));assert(markup.includes('<option value="email" selected'));assert(markup.includes('type="email"'));assert(markup.includes('aria-pressed="false"'));
+c.addProductionContact('vendorRep');c.addProductionContact('vendorRepEmail');
+c.updateProjectProductionField({dataset:{projectProduction:'lightingVendor'},value:'A'});assert.equal(project.production.vendorRep,'Rep','same vendor keeps manually entered rep');assert.equal(project.production.vendorRepEmail,'rep@example.test');
+c.updateProjectProductionField({dataset:{projectProduction:'lightingVendor'},value:'B'});assert.equal(project.production.vendorRep,'');assert.equal(project.production.vendorRepEmail,'');assert.equal(project.productionContacts.vendorRep.length,0);assert.equal(project.productionContacts.vendorRepEmail.length,0);assert.equal(project.productionContacts.tourManager.length,2);assert.equal(project.production.vendorDetails,'Address');
+assert(source('renderProductionInfo').indexOf("field('vendorRep',")<source('renderProductionInfo').indexOf("field('vendorRepEmail',"));
+assert(source('renderProductionInfo').includes('productionContactControls(key,label)'));
+assert(source('normaliseProjectInfo').includes('normaliseProductionContacts'));
+console.log('PASS: Rep Email, multiple saved child contacts, independent visibility, contact types and vendor-change clearing.');

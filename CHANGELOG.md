@@ -1,3 +1,9 @@
+## V50.13 — Production contact fields
+
+- Add a manual Rep Email field beside Vendor Rep, including its existing document-visibility control.
+- Add a + button beside every Production Info field title to create saved Mobile/Email contact rows with independent visibility.
+- Clear Vendor Rep, Rep Email and their child contacts when switching vendors; preserve other production contacts. Expose contacts to Home and linked PDF fields without changing catalogue data.
+
 ## V50.12 — Production Info field sizing
 
 - Set Production Info fields to 300px, visibility buttons to 100px and the grid to three columns with 10px × 24px gaps.
