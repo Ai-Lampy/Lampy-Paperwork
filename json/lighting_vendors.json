@@ -3,77 +3,92 @@
     {
       "name": "4 Wall Europe",
       "logo": "images/lighting_vendors/4Wall.png",
-      "details": "Unit E & F Glenfield Business Park, Philips Rd, Blackburn, BB1 5PF"
+      "address": "Unit E & F Glenfield Business Park, Philips Rd, Blackburn, BB1 5PF",
+      "phoneNumber": "01254 698808"
     },
     {
       "name": "Adlib",
       "logo": "images/lighting_vendors/adlib.png",
-      "details": "Knowsley Business Park, Adlib House, Kitling Rd, Knowsley, Prescot, L34 9JS"
+      "address": "Knowsley Business Park, Adlib House, Kitling Rd, Knowsley, Prescot, L34 9JS",
+      "phoneNumber": "0151 4862214"
     },
     {
       "name": "Christie Lites UK",
       "logo": "images/lighting_vendors/christie_lites.png",
-      "details": "44 Sayer Dr, Coventry, CV5 9PX"
+      "address": "44 Sayer Dr, Coventry, CV5 9PX",
+      "phoneNumber": "02476 017270"
     },
-	{
-		"name": "Colour Sound Experiment",
-		"logo": "images/lighting_vendors/CSE.png",
-		"details": "St Leonards Road, London, NW10 6ST"
-	},
-	{
-		"name": "Creative Technology UK",
-		"logo": "images/lighting_vendors/CT.png",
-		"details": "Unit E2, Sussex Manor Business Park, Gatwick Road, Crawley, RH10 9NH"
-	},
-	{
-		"name": "Impact Production Services",
-		"logo": "images/lighting_vendors/IPS.png",
-		"details": "Second Avenue, Bletchley, Milton Keynes, MK1 1ED"
-	},
+    {
+      "name": "Colour Sound Experiment",
+      "logo": "images/lighting_vendors/CSE.png",
+      "address": "St Leonards Road, London, NW10 6ST",
+      "phoneNumber": "020 8965 9119"
+    },
+    {
+      "name": "Creative Technology UK",
+      "logo": "images/lighting_vendors/CT.png",
+      "address": "Unit E2, Sussex Manor Business Park, Gatwick Road, Crawley, RH10 9NH",
+      "phoneNumber": "01293 582000"
+    },
+    {
+      "name": "Impact Production Services",
+      "logo": "images/lighting_vendors/IPS.png",
+      "address": "Second Avenue, Bletchley, Milton Keynes, MK1 1ED",
+      "phoneNumber": "01908 657950"
+    },
     {
       "name": "Lights | Control | Rigging",
       "logo": "images/lighting_vendors/LCR.png",
-      "details": "Unit C, Tower business park, Commercial Rd, Darwen, BB3 0FJ"
+      "address": "Unit C, Tower business park, Commercial Rd, Darwen, BB3 0FJ",
+      "phoneNumber": "01772 286412"
     },
-	{
-		"name": "Lite Alternative LTD",
-		"logo": "images/lighting_vendors/lite_alt.png",
-		"details": "Unit 4, Duttons Way, Shadsworth Business Park, Blackburn, BB1 2QR"
-	},
-	{
-		"name": "LiteUp",
-		"logo": "images/lighting_vendors/lite_up.png",
-		"details": "Unit 9, Matrix Park, Talbot Rd, Fareham, PO15 5AP"
-	},
+    {
+      "name": "Lite Alternative LTD",
+      "logo": "images/lighting_vendors/lite_alt.png",
+      "address": "Unit 4, Duttons Way, Shadsworth Business Park, Blackburn, BB1 2QR",
+      "phoneNumber": "01254 279654"
+    },
+    {
+      "name": "LiteUp",
+      "logo": "images/lighting_vendors/lite_up.png",
+      "address": "Unit 9, Matrix Park, Talbot Rd, Fareham, PO15 5AP",
+      "phoneNumber": "01329 739005"
+    },
     {
       "name": "Neg Earth Lights",
       "logo": "images/lighting_vendors/neg_earth.png",
-      "details": "Light House, Western Rd, London, NW10 7LT"
+      "address": "Light House, Western Rd, London, NW10 7LT",
+      "phoneNumber": "020 8963 0327"
     },
     {
       "name": "PRG UK",
       "logo": "images/lighting_vendors/PRG.png",
-      "details": "The Cofton Centre, 350 Groveley Ln, Cofton Hackett, Birmingham, B31 4PT"
+      "address": "The Cofton Centre, 350 Groveley Ln, Cofton Hackett, Birmingham, B31 4PT",
+      "phoneNumber": "0345 470 6400"
     },
-	{
-		"name": "TSL Lighting",
-		"logo": "images/lighting_vendors/TSL.png",
-		"details": "Gateway House, Kingsland Buisness Park, Basingstoke, RG24 8LJ"
-	},
+    {
+      "name": "TSL Lighting",
+      "logo": "images/lighting_vendors/TSL.png",
+      "address": "Gateway House, Kingsland Buisness Park, Basingstoke, RG24 8LJ",
+      "phoneNumber": "020 8629 2025"
+    },
     {
       "name": "Siyan LTD",
       "logo": "images/lighting_vendors/siyan.png",
-      "details": "Unit 7, Globe Park, First Ave (off Parkway), Marlow, SL7 1YA"
+      "address": "Unit 7, Globe Park, First Ave (off Parkway), Marlow, SL7 1YA",
+      "phoneNumber": "01494 532820"
     },
     {
       "name": "Solotech UK",
-	  "logo": "images/lighting_vendors/solotech.png",
-      "details": "Unit 1, Connexion II, Blythe Gate, Blythe Valley Park, Solihull, B90 8DX"
+      "logo": "images/lighting_vendors/solotech.png",
+      "address": "Unit 1, Connexion II, Blythe Gate, Blythe Valley Park, Solihull, B90 8DX",
+      "phoneNumber": "0333 041 6980"
     },
     {
       "name": "Sonalyst",
       "logo": "images/lighting_vendors/sonalyst.png",
-      "details": "Aberavon Rd, Port Talbot, SA12 7DJ"
+      "address": "Aberavon Rd, Port Talbot, SA12 7DJ",
+      "phoneNumber": "01639 821122"
     }
   ]
 }
