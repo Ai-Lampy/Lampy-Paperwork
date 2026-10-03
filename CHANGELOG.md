@@ -1,3 +1,9 @@
+## V51.1 — Oops patch history
+
+- Replaced the patch Undo buttons with Oops immediately after Delete Patch, showing the five latest committed data operations.
+- Added coalesced field edits, bulk changes, fixture creation/removal, imports, reviews, Fixture Information and manual GDTF history; complete patch deletion is now undoable.
+- Restoring an older entry reverses it and newer patch operations while preserving unrelated project changes. History stays in session memory and resets on project load/clear.
+
 ## V51 — Fixture Patch and Universe Detail
 
 - Added Fixture Patch / Universe Detail navigation, selection buttons for columns and a populated-patch action menu.
