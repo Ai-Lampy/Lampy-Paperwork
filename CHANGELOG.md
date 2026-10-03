@@ -1,3 +1,9 @@
+## V51.9 — Distro button text fitting
+
+- Keep Distro action labels on one line within their 35px buttons using 14px, weight-800 text.
+- Use compact output and P/Lock labels while retaining full accessible names and hover descriptions.
+- Align the P/Lock button with Input Connector and allow footer actions to wrap on narrow screens.
+
 ## V51.8 — Power pane and feed presentation
 
 - Use 35px, weight-800 Distro action buttons and add Aux outlets in groups of three with connector-specific table headings.

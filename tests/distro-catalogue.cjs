@@ -64,6 +64,8 @@ assert(html.includes('.distroSettingsLayout{display:grid;grid-template-columns:r
 assert(html.includes('@media(max-width:480px){.distroSettingsLayout{grid-template-columns:minmax(0,1fr)}}'));
 assert(cxt.distroSettingsMarkup(configured(4),true).includes('Add 3 Aux Outs'));
 assert(!cxt.distroSettingsMarkup(configured(4),true).includes('Add 1 × 125A'));
+for(const draft of [true,false]){const controls=cxt.distroSettingsMarkup(configured(0),draft);for(const rating of [32,63,125]){assert(controls.includes('>Add 1 × '+rating+'/3ø</button>'));assert(controls.includes('title="Add 1 × '+rating+'A 3Ph'));}assert(controls.includes('>P/Lock Adaptor?</button>'));assert(controls.includes('aria-label="Include P/Lock Adaptor?"'));}
+assert(html.includes('.distroSettingsLayout .distroPlockControl{align-self:end}'));assert(html.includes('.distroSettingsLayout .btn{min-width:0;white-space:nowrap}'));assert(!html.includes('.distroSettingsLayout .btn{white-space:normal}'));
 let saves=0,renders=0,alerts=[];cxt.persist=()=>saves++;cxt.render=()=>renders++;cxt.alert=m=>alerts.push(m);cxt.confirm=()=>true;cxt.ensureSocaData=()=>{};cxt.syncDistroSocapexCounts=(render,save)=>{assert.equal(render,false);assert.equal(save,false)};cxt.closeDistroSettings=()=>{cxt.distroDraft=null};cxt.renderDistroCards=()=>{};
 add('saveDistroDraft','reviewedDistroFeed','distroChangeType','updateDistroDraftField','distroConnectionProblems','updateDistroField','removeDistro','removeOutputGroup','powerDistroConfiguration','blankPhaseTotals','addPhaseTotals','powerDistroOwnPhaseTotals','powerSheetPhaseTotals','powerSupplyTotals','powerSupplyWarningEntries','powerSupplyWarningMarkup','formatPhaseAmps','distroCardPhaseTotalsMarkup','supplyCardPhaseTotalsMarkup','phaseTotalsMarkup','powerSupplyCardMarkup','powerPhaseConnectorGraphic','powerPhaseLinkedGroupMarkup','distroTreeMarkup','powerFeedOverview','powerSuppliesMarkup','powerPhaseTotalsOverviewMarkup','powerPdfAssignedSupply','powerPdfDistroSummaryMarkup','preparePowerPdfTotals');
 // A visible name edit and final creation retain all hidden catalogue/default data.
@@ -176,7 +178,7 @@ assert.equal(cxt.distroDraft.feed,null);assert.equal(cxt.distroDraftSupplyId,'')
 assert(cxt.distroSettingsMarkup(cxt.distroDraft,true).includes(cxt.distroDraftFeedNotice));
 // Existing saved configurations still require destructive-change confirmation.
 cxt.distroDraft=null;const savedType=copy(feedParent);assert.equal(cxt.distroChangeType(feedParent,catalogue.distroType[4].value),false);assert.equal(confirmCount,1);assert.deepEqual(copy(feedParent),savedType);
-assert(html.includes('#distroSettingsModal .btn,#singleDistroSettingsModal .btn{height:35px;font-weight:800;'));
+assert(html.includes('#distroSettingsModal .btn,#singleDistroSettingsModal .btn{height:35px;min-height:35px;font-size:14px;line-height:1;font-weight:800;'));
 // Mixed connector group headings and the legacy fallback survive export preparation.
 const auxContext=vm.createContext({powerAuxRowsForRange:()=>Array.from({length:9},()=>({include:false})),powerSheetAuxRowMarkup:()=>'<tr></tr>',escapeHtml:cxt.escapeHtml});
 vm.runInContext(source('powerAuxSheetMarkup'),auxContext);const auxMarkup=auxContext.powerAuxSheetMarkup({d:{auxGroups:[{connector:'16A CEE Form'},{connector:'True 1'},{}]}});
