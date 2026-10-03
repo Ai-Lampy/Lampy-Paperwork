@@ -6,7 +6,8 @@
   function singlePhase(input){return /1\s*[øφ]|single\s*phase/i.test(String(input||''));}
   function phaseIndex(distro,index,aux=false){
     if(singlePhase(distro?.input))return 0;
-    return !aux&&singlePhase(distro?.phasing)?Math.floor(index/6)%3:index%3;
+    const catalogue=root.LampyDistro||(typeof require==='function'?require('./distro-catalogue.js'):null);
+    return catalogue?catalogue.phaseIndex(distro||{},index,aux):(!aux&&singlePhase(distro?.phasing)?Math.floor(index/6)%3:index%3);
   }
   function validSubnet(value){
     const parts=String(value||'').split('.');
@@ -37,6 +38,8 @@
     for(const key of ['projectInfo','controlNetwork','gdtfFiles','gdtfMatches','collapsed'])if(source[key]!==undefined&&(!source[key]||typeof source[key]!=='object'||Array.isArray(source[key])))throw Error(key+' must be an object');
     for(const key of ['distros','looms','fixturePatch','patchSheets','labels','socaMeta'])for(const item of source[key]||[])if(!item||typeof item!=='object'||Array.isArray(item))throw Error('Invalid '+key+' entry');
     for(const distro of source.distros||[])if(distro.count!==undefined&&(!Number.isInteger(Number(distro.count))||Number(distro.count)<1||Number(distro.count)>1000))throw Error('Invalid distro circuit count');
+    const catalogue=root.LampyDistro||(typeof require==='function'?require('./distro-catalogue.js'):null);
+    catalogue?.validateSaved(source.distros||[]);
     return source;
   }
   root.LampyCore={MAX_PROJECT_BYTES,supplyRating,singlePhase,phaseIndex,validSubnet,validateProject};

@@ -1,8 +1,8 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),path=require('path'),zlib=require('zlib');
 const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const LampyCore=require('../js/project-core.js'),LampyArchive=require('../js/archive.js');
-assert(html.includes('<title>Lampy Paperwork V51.3</title>'));
-assert(html.includes("const VERSION='51.3';"));
+assert(html.includes('<title>Lampy Paperwork V51.4</title>'));
+assert(html.includes("const VERSION='51.4';"));
 const v472WidthLimits={colour:[30,40],socapex:[75,180],way:[20,30],fixId:[50,80],fixType:[60,190],position:[85,180],watts:[40,45],amps:[66,75]};
 const v475WidthCurrent={colour:30,socapex:112,way:26,fixId:59,fixType:117,position:115,watts:45,amps:72};
 const v472WidthSource=html.slice(html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS='),html.indexOf('let powerColumnWidthSettings=',html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS=')));
@@ -110,14 +110,14 @@ assert(source('fitPowerPhaseLinkedGroup').includes("line.setAttribute('y1',y)"))
 assert(source('scheduleResponsiveSheetLayout').includes('fitPowerPhaseLinkedGroups(sheet)'));
 assert(source('refreshPowerPhaseSummary').includes('scheduleResponsiveSheetLayout()'));
 assert(source('renderPowerSheetView').includes('runAfterProjectFontsReady(scheduleResponsiveSheetLayout)'));
-assert(source('powerSuppliesMarkup').includes('powerPhaseLinkedGroupMarkup'));
-assert(source('powerPhaseTotalsOverviewMarkup').includes('powerPhaseLinkedGroupMarkup'));
-assert(source('preparePowerPdfTotals').includes('powerPhaseLinkedGroupMarkup'));
+assert(source('powerSuppliesMarkup').includes('powerFeedOverview'));
+assert(source('powerPhaseTotalsOverviewMarkup').includes('powerFeedOverview'));
+assert(source('preparePowerPdfTotals').includes('powerFeedOverview'));
 assert(html.includes('.powerDistroTabs,.powerDistroTabs button{font-family:var(--project-body-font)}'));
 assert(html.includes('.powerDistroTabWrap,.powerDistroTabWrap.active{border:2px solid #000;border-radius:8px}'));
 assert(html.includes('.powerDistroTab.active{background:rgb(0,96,255);color:#fff;border-color:#000}'));
-assert(source('powerPdfDistroSummaryMarkup').includes('powerPhaseLinkedGroupMarkup'));
-assert(source('powerPdfDistroSummaryMarkup').includes(':distroCard'));
+assert(source('powerPdfDistroSummaryMarkup').includes('powerFeedOverview'));
+assert(source('powerPdfDistroSummaryMarkup').includes('powerFeedOverview'));
 assert(html.includes('.powerPdfContent .powerPhaseLinkedGroup'));
 assert(source('powerPdfContentLayout').includes('fitPowerPhaseLinkedGroups(content)'));
 assert(source('powerPdfDrawPhaseConnectors').includes("querySelectorAll('line')"));
@@ -128,20 +128,20 @@ assert(source('powerPdfDomPdfBytes').includes('powerPdfDrawPhaseConnectors(doc,p
 assert(!source('renderFanOutPdfPreview').includes('powerPhaseLinkedGroupMarkup'));
 console.log('PASS: V48.4 release version, fixed outlet widths and linked Power PDF phase summaries.');
 function source(name){const start=html.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const text=html.slice(start,end+1);try{new Function('return ('+text+')');return text}catch{}}throw Error(name)}
-const c=vm.createContext({console,LampyCore,crypto:require('crypto').webcrypto,window:{},clearTimeout,Map,Set,Number,Array});
+const c=vm.createContext({console,LampyCore,LampyDistro:require('../js/distro-catalogue.js'),crypto:require('crypto').webcrypto,window:{},clearTimeout,Map,Set,Number,Array});
 function add(...names){for(const name of names)vm.runInContext(source(name),c)}
 const plain=value=>JSON.parse(JSON.stringify(value));
 add('powerExtraLabelColours');
 assert.deepEqual(plain(c.powerExtraLabelColours({c1:'#111111',c2:'#222222',c3:'#333333',useC2:true,useC3:true})),['#111111','#222222','#333333']);
 assert.deepEqual(plain(c.powerExtraLabelColours({c1:'#111111',c2:'#222222',c3:'#333333',useC2:false,useC3:false})),['#111111']);
-add('normalisePatchMode','modeWatts','distroVoltage','powerFixIdTokens','powerSheetRowResults','powerSheetSlotResult','fixtureWatts','normalisePowerSheetRow','blankPhaseTotals','powerSheetPhaseTotals','powerDistroConfiguration','powerSupplyTotals','addPhaseTotals','formatPhaseAmps','escapeHtml','escapeAttr','escapeJsAttr','powerSupplyWarningEntries','powerSupplyWarningMarkup','collectPowerSupplyErrors');
-c.ensureProjectInfo=()=>({powerSupplies:[]});c.patchFixturesFor=()=>[];const fixtures={1:{fixture:'Known',watts:2300},2:{fixture:'Unknown'},3:{fixture:'Zero',watts:0},4:{fixture:'Known',watts:2300}};c.fixturePatchByFixId=id=>fixtures[id];
+add('normalisePatchMode','modeWatts','distroVoltage','powerFixIdTokens','powerSheetRowResults','powerSheetSlotResult','fixtureWatts','normalisePowerSheetRow','blankPhaseTotals','powerDistroOwnPhaseTotals','powerSheetPhaseTotals','powerDistroConfiguration','powerSupplyTotals','addPhaseTotals','formatPhaseAmps','escapeHtml','escapeAttr','escapeJsAttr','powerSupplyWarningEntries','powerSupplyWarningMarkup','collectPowerSupplyErrors');
+c.app={distros:[]};c.distroAssignedSupply=()=>null;c.distroFeedRoot=d=>d;c.ensureProjectInfo=()=>({powerSupplies:[]});c.patchFixturesFor=()=>[];const fixtures={1:{fixture:'Known',watts:2300},2:{fixture:'Unknown'},3:{fixture:'Zero',watts:0},4:{fixture:'Known',watts:2300}};c.fixturePatchByFixId=id=>fixtures[id];
 assert.equal(c.powerSheetRowResults({fixIds:['1']},230).amps,10);
 assert.deepEqual(plain(c.powerFixIdTokens('1 & 4')),['1','4']);assert.equal(c.powerSheetRowResults({fixIds:['1 & 4']},230).amps,20);
 for(const id of ['2','3','404']){const result=c.powerSheetRowResults({fixIds:['1',id]},230);assert.equal(result.incomplete,true);assert.equal(result.amps,null)}
 c.powerSheetRowsForRange=()=>Array.from({length:3},()=>({fixIds:['1']}));c.powerSheetDuplicateFixIds=()=>new Map();c.powerAuxRowsForRange=()=>[];
-assert.deepEqual(plain(c.powerSheetPhaseTotals({d:{voltage:'230V',input:'32A 1ø'}})),{p1:30,p2:0,p3:0});
-assert.deepEqual(plain(c.powerSheetPhaseTotals({d:{voltage:'230V',input:'32A 3ø',phasing:'Three Phase'}})),{p1:10,p2:10,p3:10});
+assert.deepEqual(plain(c.powerDistroOwnPhaseTotals({d:{voltage:'230V',input:'32A 1ø'}})),{p1:30,p2:0,p3:0});
+assert.deepEqual(plain(c.powerDistroOwnPhaseTotals({d:{voltage:'230V',input:'32A 3ø',phasing:'Three Phase'}})),{p1:10,p2:10,p3:10});
 assert.equal(LampyCore.phaseIndex({input:'125A 3ø',phasing:'Single Phase'},5),0);
 assert.equal(LampyCore.phaseIndex({input:'125A 3ø',phasing:'Single Phase'},6),1);
 c.powerSupplyTotals=()=>({p1:100,p2:0,p3:0});assert.match(c.powerSupplyWarningMarkup({input:'32A 3ø'},[]),/32 A/);
@@ -177,13 +177,13 @@ assert.equal(c.flushPersist(),false);assert.equal(status,'error');c.localStorage
 vm.runInContext('projectStorageConflict=false',c);const persistenceModes=[];c.appPayload=include=>{persistenceModes.push(include);return {include}};let saveAttempts=0;c.localStorage={setItem(){if(++saveAttempts===1)throw Error('QuotaExceededError')}};assert.equal(c.flushPersist(),true);assert.equal(status,'saved-light');assert.deepEqual(persistenceModes,[true,false]);
 c.ensureProjectInfo=()=>({});assert('Distro Labels' in c.revisionTrackedState());
 add('togglePowerSupplyDistro');const supplies={powerSupplies:[{id:'a',distros:[0]},{id:'b',distros:[]}]};c.ensureProjectInfo=()=>supplies;c.renderPowerSheetView=()=>{};c.renderPowerSupplyPane=()=>{};c.distroRanges=()=>[];c.togglePowerSupplyDistro({dataset:{supplyId:'b',supplyDistro:'0'},checked:true});assert.deepEqual(supplies.powerSupplies.map(s=>Array.from(s.distros)),[[],[0]]);c.togglePowerSupplyDistro({dataset:{supplyId:'b',supplyDistro:'0'},checked:false});assert.equal(supplies.powerSupplies[1].distros.length,0);
-const supplyContext=vm.createContext({escapeAttr:c.escapeAttr,escapeHtml:c.escapeHtml,alert:message=>supplyContext.alertMessage=message,Date:{now:()=>123},activePowerSupplyId:'',persist:()=>{},renderPowerSheetView:()=>{},distroRanges:()=>[],openPowerSupplyPane:()=>{}});
+const supplyContext=vm.createContext({app:{distros:[]},escapeAttr:c.escapeAttr,escapeHtml:c.escapeHtml,alert:message=>supplyContext.alertMessage=message,Date:{now:()=>123},activePowerSupplyId:'',persist:()=>{},renderPowerSheetView:()=>{},distroRanges:()=>[],openPowerSupplyPane:()=>{}});
 vm.runInContext("let supplyReference=[],supplyReferencePromise=null,supplyReferenceState='idle',powerSupplyPaneMode='edit',powerSupplyDraft=null;",supplyContext);for(const name of ['normaliseSupplyReference','inputSupplyOptions','addPowerSupply'])vm.runInContext(source(name),supplyContext);
 const supplyJson=JSON.parse(fs.readFileSync(path.join(root,'json/power_supply.json'),'utf8')),normalised=supplyContext.normaliseSupplyReference({supplies:[...supplyJson.supplies,{label:supplyJson.supplies[0].label},{label:''}]});assert.deepEqual(Array.from(normalised,item=>item.label),[...new Set(supplyJson.supplies.map(item=>item.label))]);
 vm.runInContext("supplyReference=[{label:'32A 3ø'},{label:'63A 3ø'}]",supplyContext);assert(supplyContext.inputSupplyOptions('').startsWith('<option value="" selected>Select Input Supply</option>'));assert(supplyContext.inputSupplyOptions('Legacy Supply').includes('Legacy Supply (Saved)'));
 const newSupplyProject={powerSupplies:[]};supplyContext.ensureProjectInfo=()=>newSupplyProject;supplyContext.loadSupplyReference=async()=>[];
 (async()=>{await supplyContext.addPowerSupply();assert.equal(newSupplyProject.powerSupplies.length,0);assert(supplyContext.alertMessage.includes('No supply was added.'));supplyContext.loadSupplyReference=async()=>normalised;await supplyContext.addPowerSupply();assert.equal(newSupplyProject.powerSupplies.length,0);assert.equal(vm.runInContext('powerSupplyPaneMode',supplyContext),'add');assert.equal(vm.runInContext('powerSupplyDraft.name',supplyContext),'Supply 1')})().catch(error=>{console.error(error);process.exitCode=1});
-const supplyDraftProject={powerSupplies:[{id:'old',name:'Old',input:'32A 3ø',distros:[0,1]}]},supplyDraftContext=vm.createContext({ensureProjectInfo:()=>supplyDraftProject,closePowerSupplyPane:()=>{},persist:()=>supplyDraftContext.persisted++,renderPowerSheetView:()=>supplyDraftContext.rendered++,distroRanges:()=>[],persisted:0,rendered:0});
+const supplyDraftProject={powerSupplies:[{id:'old',name:'Old',input:'32A 3ø',distros:[0,1]}]},supplyDraftContext=vm.createContext({app:{distros:[]},ensureProjectInfo:()=>supplyDraftProject,closePowerSupplyPane:()=>{},persist:()=>supplyDraftContext.persisted++,renderPowerSheetView:()=>supplyDraftContext.rendered++,distroRanges:()=>[],persisted:0,rendered:0});
 vm.runInContext("let powerSupplyDraft={id:'new',name:'New',input:'63A 3ø',distros:[1,2]};",supplyDraftContext);vm.runInContext(source('savePowerSupplyDraft'),supplyDraftContext);supplyDraftContext.savePowerSupplyDraft();assert.deepEqual(supplyDraftProject.powerSupplies.map(supply=>Array.from(supply.distros)),[[0],[1,2]]);assert.equal(supplyDraftContext.persisted,1);assert.equal(supplyDraftContext.rendered,1);
 assert(source('saveDeviceConfigPorts').includes("device.source==='network'&&index<2"));assert(source('updateDeviceConfigPortField').includes("if(key==='subnet')port.subnetGlobal=false"));assert(source('updateCanonicalNetworkAlias').includes("'console','npu','network'"));
 const subnetContext=vm.createContext({app:{projectInfo:{vlanSetup:{globalSubnet:'255.255.0.0'}}},persist:()=>subnetContext.persisted++,render:()=>subnetContext.rendered++,renderVlanSetupPane:()=>subnetContext.paneRendered++,persisted:0,rendered:0,paneRendered:0,networkDeviceSupportsTwoIps:item=>item.two===true,normaliseDeviceConfigPort:raw=>({category:raw.category||'network'})});for(const name of ['ipAddressOctets','normaliseIpAddressValue','globalSubnetForNewDevice','globalSubnetInheritanceEnabled','applyGlobalSubnetToDevices','applyGlobalSubnetToAllDevices'])vm.runInContext(source(name),subnetContext);const subnetProject={vlanSetup:{globalSubnet:'255.255.0.0',globalSubnetEnabled:false}},subnetData={consoles:[{deviceConfigPorts:[{id:'network',category:'network',subnet:'old'},{id:'dmx',category:'dmx',subnet:'keep'}]}],npus:[{}],networkDevices:[{two:true}]};subnetContext.ensureProjectInfo=()=>subnetProject;subnetContext.app.controlNetwork=subnetData;assert.equal(subnetContext.globalSubnetForNewDevice(),'255.255.0.0');assert.equal(subnetContext.globalSubnetInheritanceEnabled(),true);subnetContext.applyGlobalSubnetToAllDevices();assert.equal(subnetData.consoles[0].subnet1,'255.255.0.0');assert.equal(subnetData.consoles[0].subnet2,'255.255.0.0');assert.equal(subnetData.consoles[0].deviceConfigPorts[0].subnet,'255.255.0.0');assert.equal(subnetData.consoles[0].deviceConfigPorts[1].subnet,'keep');assert.equal(subnetData.npus[0].subnet,'255.255.0.0');assert.equal(subnetData.networkDevices[0].subnet1,'255.255.0.0');assert.equal(subnetData.networkDevices[0].subnet2,'255.255.0.0');assert.equal(subnetData.networkDevices[0].subnet1Global,true);assert.equal(subnetContext.persisted,1);
@@ -220,8 +220,8 @@ function zip(name,data,compressed=false){const filename=Buffer.from(name),conten
  console.log('PASS: stored/deflated ZIP, CRC corruption, unsafe paths, extraction bounds and 10,000-fixture round trip');
 })().catch(error=>{console.error(error);process.exitCode=1});
 
-assert(html.includes('<title>Lampy Paperwork V51.3</title>'));
-assert(html.includes("const VERSION='51.3';"));
+assert(html.includes('<title>Lampy Paperwork V51.4</title>'));
+assert(html.includes("const VERSION='51.4';"));
 assert(!html.includes('function controlSubTabsMarkup('));
 assert(!html.includes('function setControlNetworkTab('));
 assert(source('renderConsolesTab').includes("controlUnifiedSectionMarkup('console')"));
@@ -235,8 +235,8 @@ assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/walkthrough.json'))).
 console.log('PASS: V49.2 Control Location text styling and release metadata.');
 
 const changelog=fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8');
-assert(changelog.startsWith('## V51.3 — Production contacts, Vendor tab and logo fitting'));
-assert(html.includes("const VERSION='51.3';"));
+assert(changelog.startsWith('## V51.4 — Catalogue-driven Distro options and feeds'));
+assert(html.includes("const VERSION='51.4';"));
 assert(!html.includes('function projectYellowTextPresentation('));
 assert(!html.includes('function positionSummaryColourPresentation('));
 assert(!html.includes('function powerWhiteTextOutline('));
@@ -244,31 +244,31 @@ assert(html.includes("[data-front-label-colours]:not(.spareAuto)"));
 assert(html.includes("[data-rear-label-colours]:not(.spareAuto)"));
 console.log('PASS: V49.2 release metadata and unified Position rendering paths.');
 
-assert(html.includes('<title>Lampy Paperwork V51.3</title>'));
-assert(html.includes("const VERSION='51.3';"));
+assert(html.includes('<title>Lampy Paperwork V51.4</title>'));
+assert(html.includes("const VERSION='51.4';"));
 assert(html.includes('[data-colour-input]{-webkit-text-stroke:var(--colour-text-stroke-width,0) var(--colour-text-outline,transparent)!important'));
-assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V51.3 — Production contacts, Vendor tab and logo fitting'));
+assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V51.4 — Catalogue-driven Distro options and feeds'));
 console.log('PASS: V49.3 editable colour-field outline release metadata.');
 
-assert(html.includes('<title>Lampy Paperwork V51.3</title>'));
-assert(html.includes("const VERSION='51.3';"));
+assert(html.includes('<title>Lampy Paperwork V51.4</title>'));
+assert(html.includes("const VERSION='51.4';"));
 assert(source('positionPdfItemMarkup').includes('data-position-summary-colours'));
 assert(source('preparePdfSocaColourLayers').includes('drawPdfPositionSummaryStripeCanvas'));
-assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V51.3 — Production contacts, Vendor tab and logo fitting'));
+assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V51.4 — Catalogue-driven Distro options and feeds'));
 console.log('PASS: V49.4 Position Summary PDF colour release metadata.');
 
-assert(html.includes('<title>Lampy Paperwork V51.3</title>'));
-assert(html.includes("const VERSION='51.3';"));
+assert(html.includes('<title>Lampy Paperwork V51.4</title>'));
+assert(html.includes("const VERSION='51.4';"));
 assert(source('powerSheetRowMarkup').includes('powerSocaMultiColourBackground'));
 assert(source('fanOutRowMarkup').includes('powerSocaMultiColourBackground'));
 assert(source('preparePdfSocaColourLayers').includes('drawPdfSocaNameStripeCanvas'));
 assert(source('powerPdfDomPdfBytes').includes('drawPowerSocaStripeFill'));
-assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V51.3 — Production contacts, Vendor tab and logo fitting'));
+assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V51.4 — Catalogue-driven Distro options and feeds'));
 console.log('PASS: V50 Socapex two-colour pattern release metadata.');
 
-assert(html.includes('<title>Lampy Paperwork V51.3</title>'));
-assert(html.includes("const VERSION='51.3';"));
-assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V51.3 — Production contacts, Vendor tab and logo fitting'));
+assert(html.includes('<title>Lampy Paperwork V51.4</title>'));
+assert(html.includes("const VERSION='51.4';"));
+assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V51.4 — Catalogue-driven Distro options and feeds'));
 assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/welcome_message.json'),'utf8')).title.includes('V51'));
 assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/walkthrough.json'),'utf8')).title.includes('V51'));
 assert(fs.readFileSync(path.join(root,'tests/BROWSER-CHECKLIST.md'),'utf8').startsWith('# V51 browser release checks'));
@@ -290,8 +290,8 @@ for(const reader of ['mvrPatchRows','parseCsvRows','xlsxWorkbookSheets','xmlWork
 console.log('PASS: PDF patch import removed; CSV/Excel and MVR imports retained.');
 
 assert(html.includes('js/patch-address-review.js'));
-assert(html.includes("const VERSION='51.3';"));
-assert(changelog.startsWith('## V51.3 — Production contacts, Vendor tab and logo fitting'));
+assert(html.includes("const VERSION='51.4';"));
+assert(changelog.startsWith('## V51.4 — Catalogue-driven Distro options and feeds'));
 assert(source('confirmPatchGroupEdit').includes('LampyPatchAddress.grouped'));
 assert(source('confirmPatchAddressReview').includes("recordFixturePatchUndo(draft.universeDestination?"));
 assert(source('confirmPatchAddressReview').includes('draft.snapshot!==patchAddressSnapshot()'));
@@ -305,3 +305,5 @@ function hasCssDeclarations(selector, declarations) {
   return declarations.split(';').filter(Boolean).every(declaration =>
     bodies.some(body => body.split(';').some(value => value.trim() === declaration.trim())));
 }
+
+require('./distro-catalogue.cjs');

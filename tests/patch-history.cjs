@@ -58,7 +58,7 @@ function context(){
  for(const name of ['finishPatchAdd','confirmUnpatchFixtures','deleteFixturePatch','confirmPatchImport','makePatchSheetMaster','deleteImportedPatchSheet','saveFixtureInfoEditor','confirmPatchGroupEditLegacy','confirmPatchAddressReview','bulkImportedPatchAction','bulkImportedPatchCellAction','readFixtureInfoGdtfFile','readGdtfUploadFile'])assert(source(name).includes('recordFixturePatchUndo('),name);
  for(const name of ['clearProjectState','loadProjectPayload'])assert(source(name).includes('resetFixturePatchUndo()'));
  assert(source('attachFixturePatchTableEvents').includes("runPatchUndoBatch('Paste fixture values'"));assert(source('attachFixturePatchFillHandle').includes("runPatchUndoBatch('Fill '"));assert(source('updatePatchRowField').includes('beginPatchFieldUndo(inp)'));
- assert(html.includes('<title>Lampy Paperwork V51.3</title>'));assert(source('deleteFixturePatch').includes('using Oops'));assert(!source('deleteFixturePatch').includes('fixturePatchUndoHistory=[]'));
+ assert(html.includes('<title>Lampy Paperwork V51.4</title>'));assert(source('deleteFixturePatch').includes('using Oops'));assert(!source('deleteFixturePatch').includes('fixturePatchUndoHistory=[]'));
 }
 console.log('PASS: V51.1 five-operation Oops history, coalescing, scoped restoration, bulk changes, deletion assets and session isolation.');
 

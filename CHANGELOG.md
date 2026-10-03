@@ -1,3 +1,10 @@
+## V51.4 — Catalogue-driven Distro options and feeds
+
+- Apply the new Distro catalogue to creation and settings, including fixed quantities, optional connector batches, phase mappings and saved hardware details.
+- Add stable, validated multi-level Distro feeds with adaptor confirmation and inclusive phase totals.
+- Share nested feed summaries, numbered connections and overload warnings across live Power views and PDF exports.
+- Preserve existing configurations, custom outputs and generated-label snapshots.
+
 ## V51.3 — Production contacts, Vendor tab and logo fitting
 
 - Added Add contact details tooltips and red delete buttons for saved and new child contacts.
