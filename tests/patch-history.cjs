@@ -54,11 +54,11 @@ function context(){
 // Panel, release and handler integration checks.
 {
  const {c}=context();c.toggleFixturePatchUndoList();assert(c.fixturePatchUndoListMarkup().includes('No patch changes to undo'));assert(c.patchOopsMarkup().includes('aria-expanded="true"'));c.closePatchOops();assert.equal(c.showPatchUndoList,false);
- const toolbar=source('renderFixturePatchView');assert(toolbar.includes('>Delete Patch</button>${patchOopsMarkup()}'));assert(!html.includes('>Undo Patch Changes</button>'));assert(!source('importedPatchBannerMarkup').includes('toggleFixturePatchUndoList'));assert(html.includes("fixturePatchUndoHistory=fixturePatchUndoHistory.slice(0,5)"));assert(!source('appPayload').includes('fixturePatchUndoHistory'));
+ const toolbar=source('renderFixturePatchView');assert(toolbar.includes('>Unpatch Fixture</button>${patchOopsMarkup()}'));assert(!html.includes('>Undo Patch Changes</button>'));assert(!source('importedPatchBannerMarkup').includes('toggleFixturePatchUndoList'));assert(html.includes("fixturePatchUndoHistory=fixturePatchUndoHistory.slice(0,5)"));assert(!source('appPayload').includes('fixturePatchUndoHistory'));
  for(const name of ['finishPatchAdd','confirmUnpatchFixtures','deleteFixturePatch','confirmPatchImport','makePatchSheetMaster','deleteImportedPatchSheet','saveFixtureInfoEditor','confirmPatchGroupEditLegacy','confirmPatchAddressReview','bulkImportedPatchAction','bulkImportedPatchCellAction','readFixtureInfoGdtfFile','readGdtfUploadFile'])assert(source(name).includes('recordFixturePatchUndo('),name);
  for(const name of ['clearProjectState','loadProjectPayload'])assert(source(name).includes('resetFixturePatchUndo()'));
  assert(source('attachFixturePatchTableEvents').includes("runPatchUndoBatch('Paste fixture values'"));assert(source('attachFixturePatchFillHandle').includes("runPatchUndoBatch('Fill '"));assert(source('updatePatchRowField').includes('beginPatchFieldUndo(inp)'));
- assert(html.includes('<title>Lampy Paperwork V51.1</title>'));assert(source('deleteFixturePatch').includes('using Oops'));assert(!source('deleteFixturePatch').includes('fixturePatchUndoHistory=[]'));
+ assert(html.includes('<title>Lampy Paperwork V51.3</title>'));assert(source('deleteFixturePatch').includes('using Oops'));assert(!source('deleteFixturePatch').includes('fixturePatchUndoHistory=[]'));
 }
 console.log('PASS: V51.1 five-operation Oops history, coalescing, scoped restoration, bulk changes, deletion assets and session isolation.');
 

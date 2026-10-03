@@ -1,3 +1,15 @@
+## V51.3 — Production contacts, Vendor tab and logo fitting
+
+- Added Add contact details tooltips and red delete buttons for saved and new child contacts.
+- Moved Lighting Vendor into its own Project Settings tab and synchronised its logo controls with Logos.
+- Fit Tour Logos to the app-header slot without cropping, distortion or changing saved images and PDF logo sizing.
+
+## V51.2 — Fixture Patch toolbar refinement
+
+- Reordered Fixture Patch navigation to Patch, imported comparisons and Universe Detail.
+- Moved page tabs left and statistics to the toolbar centre; retained wrapping and existing action sizes.
+- Added a circular three-line menu with Delete Patch, returned Export to the toolbar and retained empty-patch Import and Oops access.
+
 ## V51.1 — Oops patch history
 
 - Replaced the patch Undo buttons with Oops immediately after Delete Patch, showing the five latest committed data operations.

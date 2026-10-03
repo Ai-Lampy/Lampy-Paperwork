@@ -42,7 +42,7 @@ const markup=c.pdfTemplateControlMarkup('footer','left','Left','{project} | {cus
 // Actual logo renderer retains controls and stores each disclosure independently.
 {
  const cards=['tour','vendor','personal'].map(key=>({dataset:{logoSection:key},open:true,addEventListener(type,fn){this.toggle=fn}}));
- const host={querySelectorAll:q=>q==='[data-logo-section]'?cards:[]};
+ const host={querySelector:()=>null,querySelectorAll:q=>q==='[data-logo-section]'?cards:[]};
  const p=vm.createContext({projectLogoSectionOpen:{tour:true,vendor:true,personal:true},$:id=>id==='projectLogoTab'?host:null,ensureProjectInfo:()=>({...project,exportLogos:{vendor:true,secondary:true},logoVisibility:{vendor:true,secondary:true}}),projectLogo:()=>({dataUrl:''}),secondaryLogo:()=>({dataUrl:''}),selectedLightingVendor:()=>null,selectedVendorLogo:()=>null,escapeHtml:escape,logoToggleButton:label=>label});
  add(p,'renderLogoInfo');p.renderLogoInfo();const out=host.innerHTML;assert(out.indexOf('<summary>Tour Logo')<out.indexOf('First-page Header Preview'));assert(out.indexOf('First-page Header Preview')<out.indexOf('<summary>Lighting Vendor Logo'));assert(out.indexOf('<summary>Lighting Vendor Logo')<out.indexOf('<summary>Personal Logo'));
  for(const id of ['tourLogoUpload','secondaryLogoUpload','vendorLogoOverrideUpload'])assert(out.includes(id));

@@ -3,7 +3,7 @@ const assert=require('assert/strict'),fs=require('fs'),path=require('path'),vm=r
 const html=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8');
 function source(name){const start=html.indexOf('function '+name+'(');assert(start>=0,name);for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const code=html.slice(start,end+1);try{new Function('return ('+code+')');return code}catch{}}throw Error(name)}
 const project={production:{lightingVendor:'A',vendorRep:'Personal rep',vendorDetails:'Saved address'},logoVisibility:{vendor:true},exportLogos:{vendor:true}};
-let saves=0;const c=vm.createContext({ensureProjectInfo:()=>project,lightingVendorReference:[],persist:()=>saves++,updateProjectHeaderLogos(){},renderProductionInfo(){},refreshHomeIfActive(){},refreshOpenPdfPreview(){},renderProjectSettingsPdfPreview(){},$:()=>null});
+let saves=0;const c=vm.createContext({ensureProjectInfo:()=>project,lightingVendorReference:[],persist:()=>saves++,updateProjectHeaderLogos(){},renderProductionInfo(){},renderLogoInfo(){},renderExportSettings(){},refreshHomeIfActive(){},refreshOpenPdfPreview(){},renderProjectSettingsPdfPreview(){},$:()=>null});
 for(const name of ['normaliseLightingVendors','syncLightingVendorFields','updateProjectProductionField'])vm.runInContext(source(name),c);
 c.lightingVendorReference=c.normaliseLightingVendors({vendors:[{name:'A',address:'New address',phoneNumber:'01234',rep:'Do not import',details:'Obsolete'},{name:'B',address:'B address',phoneNumber:'0987'}]});
 assert.equal(c.lightingVendorReference[0].rep,undefined);assert.equal(c.lightingVendorReference[0].details,undefined);
