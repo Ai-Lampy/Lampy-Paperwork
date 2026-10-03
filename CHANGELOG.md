@@ -1,3 +1,10 @@
+## V51.7 — Individual output deletion and rating order
+
+- Correct 3ø deletion to remove only the selected output row, preserving other labels and feed connections.
+- Display 3ø output groups from smallest to largest rating without reordering saved data.
+- Add a delete control to each group of three Aux outlets and remove its matching Power rows.
+- Retain scroll position, confirmation, feed-disconnection warnings and PDF exclusion of delete controls.
+
 ## V51.6 — Power output deletion and scroll retention
 
 - Add a delete button to the right of each 3ø Output table, retaining confirmation and downstream-feed disconnection checks.

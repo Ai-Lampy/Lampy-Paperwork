@@ -106,10 +106,9 @@ const group={offsetWidth:600,dataset:{},getBoundingClientRect:()=>({top:100,heig
 cxt.fitPowerPhaseLinkedGroup(group);assert.deepEqual(branches.map(b=>b.line.attrs.y1),[50,150]);assert.equal(supplyLine.attrs.y1,90);assert.equal(trunk.attrs.y1,50);assert.equal(trunk.attrs.y2,150);assert.equal(svg.style.height,'220px');
 // V51.6 live output deletion reuses the confirmed, feed-aware group removal.
 assert(source('powerOutputSheetMarkup').includes('data-power-remove-output="${groupIndex}"'));
-assert(source('powerOutputSheetMarkup').includes('aria-label="Delete ${escapeAttr(group.type'));
-assert(source('renderPowerSheetView').includes('removeOutputGroup(range.idx,Number(button.dataset.powerRemoveOutput))'));
-assert(source('preparePowerPdfView').includes("view.querySelectorAll('.powerOutputDelete').forEach(button=>button.remove())"));
-assert(source('preparePowerPdfView').includes("row.replaceWith(...row.childNodes)"));
+assert(source('powerOutputSheetMarkup').includes('data-power-remove-output-index="${index}"'));
+assert(source('renderPowerSheetView').includes('removeSingleOutput(range.idx,Number(button.dataset.powerRemoveOutput),Number(button.dataset.powerRemoveOutputIndex))'));
+assert(source('preparePowerPdfView').includes("view.querySelectorAll('.powerOutletAction').forEach(cell=>cell.remove())"));
 assert(source('bindDistroSettings').includes('preservePowerViewScroll(()=>{if(draft)renderDistroCards()'));
 // Simulate the page and pane collapsing during a rebuild and subsequent layout frames.
 const frames=[],scrollElement=(parent=null)=>({parentElement:parent,isConnected:true,scrollLeft:3,scrollTop:480,style:{minHeight:''},offsetHeight:900,firstElementChild:{},scrollTo(p){this.scrollLeft=p.left;this.scrollTop=p.top;assert.equal(p.behavior,'instant')}});
@@ -127,6 +126,35 @@ const includeContext=vm.createContext({parseInt,powerAuxRowsForRange:()=>include
 vm.runInContext(source('togglePowerAuxInclude'),includeContext);const includeButton={dataset:{powerAuxInclude:'0'},closest:()=>({})};
 includeContext.togglePowerAuxInclude({},includeButton);assert(includeRows[0].include);includeContext.togglePowerAuxInclude({},includeButton);assert(!includeRows[0].include);assert.equal(includeSaves,2);assert.equal(includeRenders,2);assert.equal(retained,2);
 console.log('PASS: V51.6 output deletion controls, PDF exclusion, scroll restoration and Include save-once behaviour.');
+// V51.7 single-row deletion preserves sibling outlets, labels, identities and feeds.
+add('removeSingleOutput','removeAuxGroup','sortedPowerOutputGroups');
+const deletionParent=configured(0,'delete-parent'),deletionChild=configured(2,'delete-child'),otherChild=configured(2,'other-child');
+for(let i=0;i<3;i++)optional(deletionParent,'63A 3Ph CEE Form');
+deletionParent.outputGroups=copy(deletionParent.outputGroups.map(g=>cxt.normaliseOutputGroup(g)));
+const outputIds=D.outlets(deletionParent).map(o=>o.id);deletionChild.feed={distroId:deletionParent.id,outletId:outputIds[1]};otherChild.feed={distroId:deletionParent.id,outletId:outputIds[2]};
+cxt.app.distros=[deletionParent,deletionChild,otherChild];const siblings=copy(deletionParent.outputGroups[0].labels);let priorSaves=saves;
+cxt.confirm=()=>false;cxt.removeSingleOutput(0,0,1);assert.deepEqual(copy(deletionParent.outputGroups[0].labels),siblings);assert.equal(saves,priorSaves);assert(deletionChild.feed);
+let prompt='';cxt.confirm=message=>{prompt=message;return true};cxt.removeSingleOutput(0,0,1);
+assert(prompt.includes('delete-child'));assert(!prompt.includes('other-child'));assert.equal(deletionChild.feed,null);assert.equal(otherChild.feed.outletId,outputIds[2]);
+assert.equal(saves,priorSaves+1);assert.equal(deletionParent.outputGroups[0].qty,2);assert.deepEqual(copy(deletionParent.outputGroups[0].labels),[siblings[0],siblings[2]]);
+assert.deepEqual(copy(cxt.normaliseDistro(deletionParent).outputGroups[0].labels),[siblings[0],siblings[2]]);
+cxt.removeSingleOutput(0,0,0);assert.equal(deletionParent.outputGroups[0].qty,1);cxt.removeSingleOutput(0,0,0);assert.equal(deletionParent.outputGroups.length,0);assert.equal(otherChild.feed,null);
+priorSaves=saves;cxt.removeSingleOutput(0,0,0);assert.equal(saves,priorSaves);
+const ordered={outputGroups:[{type:'125/3ø'},{type:'32/3ø'},{type:'Custom'},{type:'63/3ø'},{type:'32/3ø',connector:'32A 3Ph CEE Form'}]},beforeOrder=copy(ordered);
+assert.deepEqual(copy(cxt.sortedPowerOutputGroups(ordered).map(o=>o.groupIndex)),[1,4,3,0,2]);assert.deepEqual(ordered,beforeOrder);
+// Rendered output order retains original edit/delete indexes; every row has its own action.
+const rowContext=vm.createContext({escapeHtml:cxt.escapeHtml,escapeAttr:cxt.escapeAttr,outputGroupCount:d=>d.outputGroups.length,outputGroup:(d,g)=>d.outputGroups[g],powerExtraLabelCellMarkup:()=>'<td>Label</td>',powerExtraColourCellMarkup:()=>'<td>Colours</td>'});
+vm.runInContext(source('sortedPowerOutputGroups')+';'+source('powerOutputSheetMarkup'),rowContext);
+const rowGroups=beforeOrder.outputGroups.map((g,i)=>({...g,qty:i===0?2:1,labels:Array.from({length:i===0?2:1},()=>({text:'Keep'}))}));
+const rowMarkup=rowContext.powerOutputSheetMarkup({idx:0,d:{outputGroups:rowGroups}});
+assert.deepEqual([...rowMarkup.matchAll(/data-power-remove-output="(\d+)"/g)].map(m=>Number(m[1])),[1,4,3,0,0,2]);assert.equal((rowMarkup.match(/data-power-remove-output-index=/g)||[]).length,6);
+assert(!rowMarkup.includes('output group'));assert(source('powerSheetAuxRowMarkup').includes('rowspan="3"'));assert(source('powerSheetAuxRowMarkup').includes('way===0?'));
+assert(source('renderPowerSheetView').includes('removeAuxGroup(range.idx,Number(button.dataset.powerRemoveAux))'));
+// Aux group deletion removes only its three load rows and labels, and saves once.
+const auxD=configured();optional(auxD,'True 1');optional(auxD,'True 1');cxt.app.distros=[auxD];const auxBefore=copy(auxD.auxGroups),loadRows=Array.from({length:12},(_,i)=>({id:i,include:true,watts:[i]}));
+info.powerAuxSheets={'0':copy(loadRows)};cxt.powerSheetKey=()=> '0';cxt.auxPreviewKey=(d,g)=>d+'_'+g;priorSaves=saves;cxt.confirm=()=>false;cxt.removeAuxGroup(0,1);assert.equal(saves,priorSaves);assert.deepEqual(copy(auxD.auxGroups),auxBefore);
+cxt.confirm=()=>true;cxt.removeAuxGroup(0,1);assert.equal(saves,priorSaves+1);assert.deepEqual(copy(auxD.auxGroups),[auxBefore[0],...auxBefore.slice(2)]);assert.deepEqual(copy(info.powerAuxSheets['0']),[...loadRows.slice(0,3),...loadRows.slice(6)]);
+console.log('PASS: V51.7 per-output deletion, sibling feed retention, rating ordering and three-outlet Aux deletion.');
 // Catalogue load failures clear old choices and keep creation disabled.
 add('normaliseDistroOptions','loadDistroOptions');cxt.distroDraft=null;cxt.activeSingleDistro=null;cxt.DISTRO_OPTIONS_URL='json/distro_options.json';cxt.$=()=>({textContent:''});cxt.console={warn:()=>{}};cxt.fetchJSONWithFallback=async()=>{throw Error('Unreadable catalogue')};
 (async()=>{await cxt.loadDistroOptions();assert.match(cxt.distroCatalogueError,/Unreadable catalogue/);assert.equal(cxt.distroOptions.distroType.length,0);assert.equal(cxt.createDistroDraft(),null);cxt.fetchJSONWithFallback=async()=>raw;await cxt.loadDistroOptions();assert.equal(cxt.distroCatalogueError,'');assert.equal(cxt.createDistroDraft().count,12);console.log('PASS: V51.4 output deletion, draft cancellation, stale feeds, load validation and measured scaled connectors.');})().catch(error=>{console.error(error);process.exitCode=1});
