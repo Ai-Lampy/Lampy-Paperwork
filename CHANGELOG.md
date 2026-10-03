@@ -1,3 +1,10 @@
+## V51.5 — Distro side-pane layout
+
+- Apply the shared two-column layout to Add Distro and Distro Settings, with full-width Name, Supply and RCBO controls.
+- Group catalogue-driven Aux and three-phase output additions beneath Additional Outputs.
+- Hide extra configuration fields and metadata while preserving saved values, feed validation and draft/save behaviour.
+- Stack the pane controls on narrow screens.
+
 ## V51.4 — Catalogue-driven Distro options and feeds
 
 - Apply the new Distro catalogue to creation and settings, including fixed quantities, optional connector batches, phase mappings and saved hardware details.

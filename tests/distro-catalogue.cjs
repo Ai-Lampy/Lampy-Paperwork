@@ -43,13 +43,36 @@ let roundTrip=cxt.normaliseDistro(copy(a));assert.equal(roundTrip.outputGroups[0
 const legacy=cxt.normaliseDistro({count:8,type:'Saved Custom',phasing:'Single Phase',outputGroups:[{type:'Custom',qty:12,labels:Array.from({length:12},(_,i)=>({text:'Keep '+i}))}],auxGroups:[{labels:[{top:'Keep'},{},{}]}]});assert.equal(legacy.count,8);assert.equal(legacy.wayMapping,'soca_per_phase');assert.equal(legacy.catalogue,null);assert.equal(legacy.outputGroups[0].labels.length,12);assert.equal(legacy.auxGroups[0].labels[0].top,'Keep');
 assert.match(cxt.distroSelectOptions(['PowerLock 3P + N + E'],''),/^<option value="" selected>Select an option<\/option>/);
 const savedMeta=copy(a.catalogue);catalogue.distroType[0].weightKg=999;assert.deepEqual(copy(cxt.normaliseDistro(a).catalogue),savedMeta);catalogue.distroType[0].weightKg=149;
-const markup=cxt.distroSettingsMarkup(a,false);for(const label of ['Input Connector','Input Supply','Feed Source','Phase Mapping','149 kg','855 × 1200 × 600','readonly'])assert(markup.includes(label),label);
-assert(!markup.includes('data-single-distro="count"'));assert(!html.includes('outputQtyCustom'));
-assert(cxt.distroSettingsMarkup(configured(4),true).includes('+ 3 × Aux Outlets'));
-assert(!cxt.distroSettingsMarkup(configured(4),true).includes('+ 1 × 125A'));
+// Both panes expose only the approved configuration fields, with catalogue output actions.
+for(let i=0;i<5;i++)for(const draft of [false,true]){
+ const d=configured(i),before=copy(d),markup=cxt.distroSettingsMarkup(d,draft),attribute=draft?'data-distro-draft':'data-single-distro';
+ assert.deepEqual([...markup.matchAll(new RegExp(attribute+'="([^"]+)"','g'))].map(m=>m[1]),['name','type','wayMapping','inputConnector','rcbo']);
+ const labels=['Distro Name','Distro Type','Phase Mapping','Input Connector','Include P/Lock Adaptor?','>Supply</label>','>RCBO</label>','Additional Outputs','Aux Out Type','3ø Outs'];
+ let previous=-1;for(const label of labels){const position=markup.indexOf(label);assert(position>previous,label);previous=position}
+ for(const removed of ['Number of Socapexes','Input Supply','Feed Source','Circuit Voltage','Dimensions','Weight',' × Aux Outlets • ','readonly'])assert(!markup.includes(removed),removed);
+ for(const key of ['name','supply','rcbo'])assert(markup.includes('<div class="full"><label for="'+(draft?'newDistro':'editDistro')+'-'+key+'">'));
+ const definitions=d.catalogue.type.outputs.filter(o=>o.optional);
+ assert.equal((markup.match(/data-distro-add=/g)||[]).length,definitions.length);
+ for(const o of definitions)assert(markup.includes(o.phaseSource?'Add '+o.quantity+' Aux Outs':'Add '+o.quantity+' × '+o.connector));
+ assert(markup.includes('No Source Assigned'));assert(markup.includes('value="supply:supply"'));assert(markup.includes('value="output:'));
+ assert.deepEqual(copy(d),before,'Rendering must preserve hidden settings and outputs');
+}
+assert(!html.includes('outputQtyCustom'));assert(!html.includes('id="sheetStatus"'));
+assert(!source('renderSingleDistroSettings').includes('toggleSingleDistroTableC3'));
+assert(source('renderSingleDistroSettings').includes('distroSettingsMarkup(d,false)'));assert(source('renderDistroCards').includes('distroSettingsMarkup(distroDraft,true)'));
+assert(html.includes('.distroSettingsLayout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))'));
+assert(html.includes('@media(max-width:480px){.distroSettingsLayout{grid-template-columns:minmax(0,1fr)}}'));
+assert(cxt.distroSettingsMarkup(configured(4),true).includes('Add 3 Aux Outs'));
+assert(!cxt.distroSettingsMarkup(configured(4),true).includes('Add 1 × 125A'));
 let saves=0,renders=0,alerts=[];cxt.persist=()=>saves++;cxt.render=()=>renders++;cxt.alert=m=>alerts.push(m);cxt.confirm=()=>true;cxt.ensureSocaData=()=>{};cxt.syncDistroSocapexCounts=(render,save)=>{assert.equal(render,false);assert.equal(save,false)};cxt.closeDistroSettings=()=>{cxt.distroDraft=null};cxt.renderDistroCards=()=>{};
 add('saveDistroDraft','reviewedDistroFeed','distroChangeType','updateDistroDraftField','distroConnectionProblems','updateDistroField','removeDistro','removeOutputGroup','powerDistroConfiguration','blankPhaseTotals','addPhaseTotals','powerDistroOwnPhaseTotals','powerSheetPhaseTotals','powerSupplyTotals','powerSupplyWarningEntries','powerSupplyWarningMarkup','formatPhaseAmps','distroCardPhaseTotalsMarkup','supplyCardPhaseTotalsMarkup','phaseTotalsMarkup','powerSupplyCardMarkup','powerPhaseConnectorGraphic','powerPhaseLinkedGroupMarkup','distroTreeMarkup','powerFeedOverview','powerSuppliesMarkup','powerPhaseTotalsOverviewMarkup','powerPdfAssignedSupply','powerPdfDistroSummaryMarkup','preparePowerPdfTotals');
-const before=copy(cxt.app);cxt.distroDraft=cxt.createDistroDraft();assert.deepEqual(copy(cxt.app),before);assert.equal(saves,0);assert.equal(cxt.distroDraft.count,12);cxt.distroDraftSupplyId='supply:supply';cxt.saveDistroDraft();assert.equal(saves,1);assert.equal(cxt.app.distros.length,5);assert(info.powerSupplies[0].distros.includes(4));cxt.saveDistroDraft();assert.equal(saves,1);
+// A visible name edit and final creation retain all hidden catalogue/default data.
+const hiddenDraft=cxt.createDistroDraft(),hiddenBefore=copy(hiddenDraft);cxt.distroDraft=hiddenDraft;
+cxt.updateDistroDraftField({dataset:{distroDraft:'name'},value:'Renamed draft'});
+assert.deepEqual(copy(cxt.distroDraft),{...hiddenBefore,name:'Renamed draft'});
+const editBefore=copy(a),editSaves=saves;cxt.updateDistroField(0,{dataset:{distro:'name'},value:'Renamed saved'});
+assert.deepEqual(copy(a),{...editBefore,name:'Renamed saved'});assert.equal(saves,editSaves+1);a.name=editBefore.name;saves=0;
+const before=copy(cxt.app);cxt.distroDraft=cxt.createDistroDraft();const hiddenSaved=copy(cxt.distroDraft);assert.deepEqual(copy(cxt.app),before);assert.equal(saves,0);assert.equal(cxt.distroDraft.count,12);cxt.distroDraftSupplyId='supply:supply';cxt.saveDistroDraft();assert.equal(saves,1);assert.equal(cxt.app.distros.length,5);for(const key of ['input','voltage','count','catalogue'])assert.deepEqual(copy(cxt.app.distros[4][key]),hiddenSaved[key]);assert(info.powerSupplies[0].distros.includes(4));cxt.saveDistroDraft();assert.equal(saves,1);
 cxt.distroCatalogueError='Invalid catalogue';assert.equal(cxt.createDistroDraft(),null);assert(cxt.distroSettingsMarkup(a,false).includes('role="alert"'));cxt.distroCatalogueError='';
 cxt.app.distros=all=[a,b,c,e];info.powerSupplies[0].distros=[0];cxt.commitDistroFeed(b,'supply:supply',null);assert.equal(b.feed,null);assert(info.powerSupplies[0].distros.includes(1));b.feed={distroId:a.id,outletId:D.outlets(a)[0].id,adaptor:false};cxt.commitDistroFeed(b,'output:'+a.id+':'+b.feed.outletId,b.feed);assert(!info.powerSupplies[0].distros.includes(1));
 cxt.distroRanges=()=>all.map((d,idx)=>({d,idx}));cxt.powerDistroOwnPhaseTotals=r=>own(r.d);assert.deepEqual(copy(cxt.powerSupplyTotals(info.powerSupplies[0],cxt.distroRanges())),{p1:10,p2:4,p3:8});
