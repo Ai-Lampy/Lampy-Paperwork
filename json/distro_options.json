@@ -1,43 +1,497 @@
 {
-  "distroType": [
+  "socapexWayMappings": [
     {
-      "value": "72 Way / 12 Socapex",
-      "socapexes": 12,
-      "default": true
+      "id": "alternating",
+      "name": "1-2-3 1-2-3",
+      "mapping": {
+        "L1": {
+          "socas": "all",
+          "ways": [
+            1,
+            4
+          ]
+        },
+        "L2": {
+          "socas": "all",
+          "ways": [
+            2,
+            5
+          ]
+        },
+        "L3": {
+          "socas": "all",
+          "ways": [
+            3,
+            6
+          ]
+        }
+      }
     },
     {
-      "value": "48 Way / 8 Socapex",
-      "socapexes": 8
+      "id": "paired",
+      "name": "1-1 2-2 3-3",
+      "mapping": {
+        "L1": {
+          "socas": "all",
+          "ways": [
+            1,
+            2
+          ]
+        },
+        "L2": {
+          "socas": "all",
+          "ways": [
+            3,
+            4
+          ]
+        },
+        "L3": {
+          "socas": "all",
+          "ways": [
+            5,
+            6
+          ]
+        }
+      }
     },
     {
-      "value": "36 Way / 6 Socapex",
-      "socapexes": 6
-    },
-    {
-      "value": "24 Way / 4 Socapex",
-      "socapexes": 4
-    },
-    {
-      "value": "12 Way / 2 Socapex",
-      "socapexes": 2
+      "id": "soca_per_phase",
+      "name": "Soca Per Phase",
+      "availability": {
+        "connector": "Socapex 19-Pin",
+        "quantityMultipleOf": 3
+      },
+      "mapping": {
+        "L1": {
+          "socaPattern": {
+            "start": 1,
+            "step": 3
+          },
+          "ways": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        "L2": {
+          "socaPattern": {
+            "start": 2,
+            "step": 3
+          },
+          "ways": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        "L3": {
+          "socaPattern": {
+            "start": 3,
+            "step": 3
+          },
+          "ways": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      }
     }
   ],
-  "socapexPhasing": [
+  "distroType": [
     {
-      "value": "Single Phase"
+      "name": "72 Way / 12 Socapex",
+      "outputs": [
+        {
+          "connector": "Socapex 19-Pin",
+		  "id": "socapex",
+          "quantity": 12,
+          "circuitsPerConnector": 6,
+          "totalCircuits": 72,
+          "feedSupply": false,
+          "optional": false,
+		  "outputNaming": {
+			  "prefix": "Soca",
+			  "start": 1
+		  },
+          "defaultWayMapping": "alternating",
+          "supportedWayMappings": [
+            "alternating",
+            "paired",
+            "soca_per_phase"
+          ]
+        },
+		{
+			"connectorOptions": [
+				"16A CEE Form",
+				"True 1"
+			],
+			"quantity": 6,
+			"circuitsPerConnector": 1,
+			"totalCircuits": 6,
+			"feedSupply": false,
+			"optional": true,
+			"outputNaming": {
+				"prefix": "Aux Out",
+				"start": 1
+			},
+			"phaseSource": {
+				"type": "wayMapping",
+				"reference": "socapex"
+			}
+		},
+        {
+          "connector": "32A 3Ph CEE Form",
+          "quantity": 1,
+          "circuitsPerConnector": null,
+          "totalCircuits": 1,
+          "phases": 3,
+          "feedSupply": true,
+          "optional": true
+        },
+		{
+			"connector": "63A 3Ph CEE Form",
+			"quantity": 1,
+			"circuitsPerConnector": null,
+			"totalCircuits": 1,
+			"phases": 3,
+			"feedSupply": true,
+			"optional": true
+		},
+		{
+			"connector": "125A 3Ph CEE Form",
+			"quantity": 1,
+			"circuitsPerConnector": null,
+			"totalCircuits": 1,
+			"phases": 3,
+			"feedSupply": true,
+			"optional": true
+		}
+      ],
+      "inputConnector": "PowerLock 3P + N + E",
+      "dimensions": {
+        "width_mm": 855,
+        "height_mm": 1200,
+        "depth_mm": 600
+      },
+      "weight": 149
     },
     {
-      "value": "Three Phase",
-      "default": true
-    }
+      "name": "48 Way / 8 Socapex",
+      "outputs": [
+		  {
+			  "connector": "Socapex 19-Pin",
+			  "id": "socapex",
+			  "quantity": 8,
+			  "circuitsPerConnector": 6,
+			  "totalCircuits": 48,
+			  "feedSupply": false,
+			  "optional": false,
+			  "outputNaming": {
+				  "prefix": "Soca",
+				  "start": 1
+			  },
+			  "defaultWayMapping": "alternating",
+			  "supportedWayMappings": [
+				  "alternating",
+				  "paired",
+				  "soca_per_phase"
+			  ]
+		  },
+		  {
+			  "connectorOptions": [
+				  "16A CEE Form",
+				  "True 1"
+			  ],
+			  "quantity": 6,
+			  "circuitsPerConnector": 1,
+			  "totalCircuits": 6,
+			  "feedSupply": false,
+			  "optional": true,
+			  "outputNaming": {
+				  "prefix": "Aux Out",
+				  "start": 1
+			  },
+			  "phaseSource": {
+				  "type": "wayMapping",
+				  "reference": "socapex"
+			  }
+		  },
+		  {
+			  "connector": "32A 3Ph CEE Form",
+			  "quantity": 1,
+			  "circuitsPerConnector": null,
+			  "totalCircuits": 1,
+			  "phases": 3,
+			  "feedSupply": true,
+			  "optional": true
+		  },
+		  {
+			  "connector": "63A 3Ph CEE Form",
+			  "quantity": 1,
+			  "circuitsPerConnector": null,
+			  "totalCircuits": 1,
+			  "phases": 3,
+			  "feedSupply": true,
+			  "optional": true
+		  }
+      ],
+      "inputConnector": "Power Lock 3P + N + E",
+      "dimensions": {
+        "width_mm": null,
+        "height_mm": null,
+        "depth_mm": null
+      },
+      "weight_kg": null
+    },
+	{
+		"name": "36 Way / 6 Socapex",
+		"outputs": [
+			{
+				"connector": "Socapex 19-Pin",
+				"id": "socapex",
+				"quantity": 6,
+				"circuitsPerConnector": 6,
+				"totalCircuits": 36,
+				"feedSupply": false,
+				"optional": false,
+				"outputNaming": {
+					"prefix": "Soca",
+					"start": 1
+				},
+				"defaultWayMapping": "alternating",
+				"supportedWayMappings": [
+					"alternating",
+					"paired",
+					"soca_per_phase"
+				]
+			},
+			{
+				"connectorOptions": [
+					"16A CEE Form",
+					"True 1"
+				],
+				"quantity": 3,
+				"circuitsPerConnector": 1,
+				"totalCircuits": 3,
+				"feedSupply": false,
+				"optional": true,
+				"outputNaming": {
+					"prefix": "Aux Out",
+					"start": 1
+				},
+				"phaseSource": {
+					"type": "wayMapping",
+					"reference": "socapex"
+				}
+			},
+			{
+				"connector": "32A 3Ph CEE Form",
+				"quantity": 1,
+				"circuitsPerConnector": null,
+				"totalCircuits": 1,
+				"phases": 3,
+				"feedSupply": true,
+				"optional": true
+			},
+			{
+				"connector": "63A 3Ph CEE Form",
+				"quantity": 1,
+				"circuitsPerConnector": null,
+				"totalCircuits": 1,
+				"phases": 3,
+				"feedSupply": true,
+				"optional": true
+			},
+			{
+				"connector": "125A 3Ph CEE Form",
+				"quantity": 1,
+				"circuitsPerConnector": null,
+				"totalCircuits": 1,
+				"phases": 3,
+				"feedSupply": true,
+				"optional": true
+			}
+		],
+		"inputConnectorOptions": [
+			"63A 3Ph CEE Form",
+			"125A 3Ph CEE Form",
+			"Power Lock 3P + N + E"
+		],
+		"dimensions": {
+			"width_mm": 600,
+			"height_mm": 600,
+			"depth_mm": 700
+		},
+		"weight_kg": null
+	},
+	{
+		"name": "24 Way / 4 Socapex",
+		"outputs": [
+			{
+				"connector": "Socapex 19-Pin",
+				"id": "socapex",
+				"quantity": 4,
+				"circuitsPerConnector": 6,
+				"totalCircuits": 24,
+				"feedSupply": false,
+				"optional": false,
+				"outputNaming": {
+					"prefix": "Soca",
+					"start": 1
+				},
+				"defaultWayMapping": "alternating",
+				"supportedWayMappings": [
+					"alternating",
+					"paired",
+					"soca_per_phase"
+				]
+			},
+			{
+				"connectorOptions": [
+					"16A CEE Form",
+					"True 1"
+				],
+				"quantity": 3,
+				"circuitsPerConnector": 1,
+				"totalCircuits": 3,
+				"feedSupply": false,
+				"optional": true,
+				"outputNaming": {
+					"prefix": "Aux Out",
+					"start": 1
+				},
+				"phaseSource": {
+					"type": "wayMapping",
+					"reference": "socapex"
+				}
+			},
+			{
+				"connector": "32A 3Ph Cee Form",
+				"quantity": 1,
+				"circuitsPerConnector": null,
+				"totalCircuits": 1,
+				"phases": 3,
+				"feedSupply": true,
+				"optional": true
+			},
+			{
+				"connector": "63A 3Ph Cee Form",
+				"quantity": 1,
+				"circuitsPerConnector": null,
+				"totalCircuits": 1,
+				"phases": 3,
+				"feedSupply": true,
+				"optional": true
+			},
+			{
+				"connector": "125A 3Ph Cee Form",
+				"quantity": 1,
+				"circuitsPerConnector": null,
+				"totalCircuits": 1,
+				"phases": 3,
+				"feedSupply": true,
+				"optional": true
+			}
+		],
+		"inputConnectorOptions": [
+			"63A 3Ph CEE Form",
+			"125A 3Ph CEE Form",
+			"Power Lock 3P + N + E"
+		],
+		"dimensions": {
+			"width_mm": null,
+			"height_mm": null,
+			"depth_mm": null
+		},
+		"weight_kg": null
+	},
+	{
+		"name": "12 Way / 2 Socapex",
+		"outputs": [
+			{
+				"connector": "Socapex 19-Pin",
+				"id": "socapex",
+				"quantity": 2,
+				"circuitsPerConnector": 6,
+				"totalCircuits": 12,
+				"feedSupply": false,
+				"optional": false,
+				"outputNaming": {
+					"prefix": "Soca",
+					"start": 1
+				},
+				"defaultWayMapping": "alternating",
+				"supportedWayMappings": [
+					"alternating",
+					"paired",
+					"soca_per_phase"
+				]
+			},
+			{
+				"connectorOptions": [
+					"16A CEE Form",
+					"True 1"
+				],
+				"quantity": 3,
+				"circuitsPerConnector": 1,
+				"totalCircuits": 3,
+				"feedSupply": false,
+				"optional": true,
+				"outputNaming": {
+					"prefix": "Aux Out",
+					"start": 1
+				},
+				"phaseSource": {
+					"type": "wayMapping",
+					"reference": "socapex"
+				}
+			},
+			{
+				"connector": "32A 3Ph Cee Form",
+				"quantity": 1,
+				"circuitsPerConnector": null,
+				"totalCircuits": 1,
+				"phases": 3,
+				"feedSupply": true,
+				"optional": true
+			},
+			{
+				"connector": "63A 3Ph Cee Form",
+				"quantity": 1,
+				"circuitsPerConnector": null,
+				"totalCircuits": 1,
+				"phases": 3,
+				"feedSupply": true,
+				"optional": true
+			}
+		],
+		"inputConnectorOptions": [
+			"32A 3Ph CEE Form",
+			"63A 3Ph CEE Form",
+			"125A 3Ph CEE Form"
+		],
+		"dimensions": {
+			"width_mm": null,
+			"height_mm": null,
+			"depth_mm": null
+		},
+		"weight_kg": null
+	}
   ],
   "outputVoltage": [
     {
       "value": "230V",
       "default": true
-    },
-    {
-      "value": "400V"
     },
     {
       "value": "110V"
@@ -71,12 +525,12 @@
     {
       "value": "125A 3ø"
     },
-	{
-		"value": "200A P/Lock - 3P + N + E",
-		"default": true
-	},
-	{
-		"value": "400A P/Lock - 3P + N + E"
-	}
+    {
+      "value": "200A P/Lock - 3P + N + E",
+      "default": true
+    },
+    {
+      "value": "400A P/Lock - 3P + N + E"
+    }
   ]
 }
