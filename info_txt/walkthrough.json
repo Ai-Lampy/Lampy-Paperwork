@@ -1,6 +1,17 @@
 {
-  "title": "Lampy Paperwork V50 Walk-through",
+  "title": "Lampy Paperwork V51 Walk-through",
   "sections": [
+    {
+      "title": "New in V51: Fixture Patch and Universe Detail",
+      "type": "unordered",
+      "items": [
+        "Open Universe Detail under Fixture Patch, or select a universe from Home. This view edits the Master Patch.",
+        "Select Patched Fixtures to highlight their footprints. Use Shift for a range or Select All, then Move Selected to Universe. Starting addresses are retained.",
+        "Drag a patched footprint to propose an address. Green indicates a valid destination; red displays a conflict or overflow. Confirm in the address-review dialogue; Cancel leaves the patch unchanged.",
+        "The Menu button contains Import, Export and both summaries when a patch has fixtures. Column visibility uses selection buttons.",
+        "PDF column buttons affect only the open export session. Empty columns remain omitted per fixture type. Additional-page switches sit between Hidden Columns and PDF Logos; the summary quantity header reads Qty."
+      ]
+    },
     {
       "title": "New in V50: Device Config",
       "type": "unordered",

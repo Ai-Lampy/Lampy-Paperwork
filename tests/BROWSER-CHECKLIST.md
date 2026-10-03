@@ -1,4 +1,4 @@
-# V50 browser release checks
+# V51 browser release checks
 
 **Use this checklist only when the user explicitly requests browser testing.** Interface changes, implementation requests and releases do not authorise browser testing. Static validation remains the default.
 
@@ -6,6 +6,10 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 
 | Check | Chrome/Chromium | Firefox | Safari |
 | --- | --- | --- | --- |
+| Fixture Patch sub-tabs, Home universe routes, populated Menu and empty Import action | Required | Required | Required |
+| Universe selection, green footprints, # IDs, hover/focus details, Shift selection and reviewed moves | Required | Required | Required |
+| Drag across wrapped/scaled universe grid; green/red validity; Escape, pointer cancellation, outside drop and review cancellation retain original data | Required | Required | Required |
+| PDF session column buttons reflect empty columns, isolate live preferences, preserve per-type omissions and show Qty / relocated page toggles | Required | Required | Required |
 | Startup, visible welcome dismissal, keyboard focus | Required | Required | Required |
 | At a 1500 px viewport, verify the 1450 px page wrapper and 1410 px usable sheet; repeat at narrow widths with no document-level horizontal overflow | Required | Required | Required |
 | Fixture Patch, Power Calcs, Device Config, Rack Layout and Front/Rear Labels fill the sheet, preserve transformed height and recalculate after resizing | Required | Required | Required |

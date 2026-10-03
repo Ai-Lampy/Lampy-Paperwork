@@ -29,7 +29,7 @@ assert.deepEqual(plain(c.patchPdfSummaryRows(groups).map(r=>r.quantity)),[2,1,1,
 for(const width of [720,1050]){assert.deepEqual(plain(c.patchSummaryColumnWidths(width,[0,0,0,0])),[.15,.15,.05,.05].map(n=>width*n));assert.deepEqual(plain(c.patchSummaryColumnWidths(width,[9999,9999,9999,9999])),[.4,.35,.15,.1].map(n=>width*n))}
 const element=()=>({classList:{add(){}},style:{}});c.document={createElement:element};
 const markup=c.patchPdfSupplementElement('summary',c.patchPdfSummaryRows(groups),{widths:[200,160,60,50],final:true,universes:2}).innerHTML;
-assert(markup.includes('A Spot'));assert(markup.includes('<th>Channels</th>'));assert(markup.includes('<th aria-label="Quantity" title="Quantity"></th>'));assert(markup.includes('Patched Universes: 2'));assert(markup.includes('width:470px'));assert(!markup.includes('Parameters'));
+assert(markup.includes('A Spot'));assert(markup.includes('<th>Channels</th>'));assert(markup.includes('<th aria-label="Quantity" title="Quantity">Qty</th>'));assert(markup.includes('Patched Universes: 2'));assert(markup.includes('width:470px'));assert(!markup.includes('Parameters'));
 assert(!c.patchPdfSupplementElement('summary',[],{}).innerHTML.includes('Patched Universes'));
 assert(html.includes('.patchPdfSummaryTable{margin-inline:auto}'));
 assert(html.includes('.patchPdfSummary .patchPdfSummaryTable th,.patchPdfSummary .patchPdfSummaryTable td{overflow-wrap:anywhere;vertical-align:middle}'));

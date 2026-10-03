@@ -1,3 +1,9 @@
+## V51 — Fixture Patch and Universe Detail
+
+- Added Fixture Patch / Universe Detail navigation, selection buttons for columns and a populated-patch action menu.
+- Added fixture footprint selection, numbered Fix ID labels, Position tooltips and reviewed single-fixture address dragging and selected/all-fixture universe moves.
+- Isolated PDF column choices to each export session, retained per-type empty-column removal, displayed Qty and moved additional-page controls beside Hidden Columns and PDF Logos.
+
 ## V50.13 — Production contact fields
 
 - Add a manual Rep Email field beside Vendor Rep, including its existing document-visibility control.
