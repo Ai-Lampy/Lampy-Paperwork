@@ -5,7 +5,14 @@
   const id=()=>root.crypto.randomUUID();
   const positive=value=>Number.isInteger(value)&&value>0;
   const rating=value=>{const m=/^\s*(\d+(?:\.\d+)?)\s*A\b/i.exec(String(value||''));return m?Number(m[1]):null};
-  const connectorKey=value=>String(value||'').toLowerCase().replace(/power\s*lock/g,'powerlock').replace(/\s+/g,' ').trim();
+  function connectorPresentation(value){
+    const raw=String(value||'').trim();
+    if(/^(?:(?:200|400)A\s+)?(?:power\s*lock|p\/lock)\s+3P\s*\+\s*N\s*\+\s*E$/i.test(raw))return {key:'powerlock3pne',label:'Powerlock'};
+    const match=/^(\d+)A\s+(?:3[øØ]|3Ph\s+CEE\s*Form)$/i.exec(raw)||/^(\d+)\/3[øØ]$/.exec(raw);
+    if(match)return {key:match[1]+'/3ø',label:match[1]+'/3ø'};
+    return null;
+  }
+  const connectorKey=value=>connectorPresentation(value)?.key||String(value||'').toLowerCase().replace(/power\s*lock/g,'powerlock').replace(/\s+/g,' ').trim();
   function normalise(data){
     if(!data||!Array.isArray(data.socapexWayMappings)||!Array.isArray(data.distroType))throw Error('Invalid Distro catalogue structure.');
     const mappings=clone(data.socapexWayMappings),ids=new Set();
@@ -81,7 +88,7 @@
     if(!(definition.connectorOptions||[definition.connector]).includes(connector))throw Error('Select a supported connector.');
     if(definition.phaseSource){
       d.auxGroups=d.auxGroups||[];let number=Math.max(definition.outputNaming?.start||1,...d.auxGroups.map((g,index)=>(g.startNumber||index*3+1)+g.labels.length));
-      for(let n=0;n<definition.quantity;n+=3){const group=makeAux();group.connector=connector;group.catalogueKey=definition.catalogueKey;group.startNumber=number;group.labels.forEach(l=>{l.top=(definition.outputNaming?.prefix||'Aux Out')+' '+number++});d.auxGroups.push(group)}
+      const group=makeAux();group.connector=connector;group.catalogueKey=definition.catalogueKey;group.startNumber=number;group.labels.forEach(l=>{l.top=(definition.outputNaming?.prefix||'Aux Out')+' '+number++});d.auxGroups.push(group);
     }else{
       d.outputGroups=d.outputGroups||[];const type=connector.match(/^(\d+)A\s+3Ph/i)?.[1];const display=type?type+'/3ø':connector;
       let group=d.outputGroups.find(g=>g.connector===connector&&g.catalogueKey===definition.catalogueKey);
@@ -96,6 +103,6 @@
     const outputIds=distros.flatMap(d=>outlets(d).map(o=>o.id));if(outputIds.some(v=>!v)||new Set(outputIds).size!==outputIds.length)throw Error('Missing or duplicate feed output IDs.');
     for(const d of linked){const error=connectionError(d,d.feed,distros);if(error)throw Error((d.name||'Distro')+': '+error)}
   }
-  root.LampyDistro={validateSaved,normalise,phaseIndex,availableMappings,configure,savedFields,outlets,parent,children,rootDistro,connectionError,totals,warnings,addOptional,connectorKey};
+  root.LampyDistro={validateSaved,normalise,phaseIndex,availableMappings,configure,savedFields,outlets,parent,children,rootDistro,connectionError,totals,warnings,addOptional,connectorKey,connectorPresentation};
   if(typeof module!=='undefined')module.exports=root.LampyDistro;
 })(globalThis);

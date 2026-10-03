@@ -1,3 +1,10 @@
+## V51.8 — Power pane and feed presentation
+
+- Use 35px, weight-800 Distro action buttons and add Aux outlets in groups of three with connector-specific table headings.
+- Change unsaved Distro types without confirmation and show inline feed/adaptor guidance for project Supplies and Distro outputs.
+- Show parent Distro and connector details in live and PDF feed summaries.
+- Omit the final Power PDF Totals page when exactly one Supply exists, retaining per-Distro summaries and page totals.
+
 ## V51.7 — Individual output deletion and rating order
 
 - Correct 3ø deletion to remove only the selected output row, preserving other labels and feed connections.
