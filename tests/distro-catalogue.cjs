@@ -104,6 +104,29 @@ const supplyLine=element(),trunk=element(),branches=[0,1].map(()=>{const line=el
 const cardRect=[{top:110,height:30},{top:150,height:50}],cards=cardRect.map(r=>({matches:()=>false,getBoundingClientRect:()=>r}));
 const group={offsetWidth:600,dataset:{},getBoundingClientRect:()=>({top:100,height:110,width:300}),querySelector:q=>q.includes('Graphic')?svg:{getBoundingClientRect:()=>({top:125,height:40})},querySelectorAll:()=>cards};
 cxt.fitPowerPhaseLinkedGroup(group);assert.deepEqual(branches.map(b=>b.line.attrs.y1),[50,150]);assert.equal(supplyLine.attrs.y1,90);assert.equal(trunk.attrs.y1,50);assert.equal(trunk.attrs.y2,150);assert.equal(svg.style.height,'220px');
+// V51.6 live output deletion reuses the confirmed, feed-aware group removal.
+assert(source('powerOutputSheetMarkup').includes('data-power-remove-output="${groupIndex}"'));
+assert(source('powerOutputSheetMarkup').includes('aria-label="Delete ${escapeAttr(group.type'));
+assert(source('renderPowerSheetView').includes('removeOutputGroup(range.idx,Number(button.dataset.powerRemoveOutput))'));
+assert(source('preparePowerPdfView').includes("view.querySelectorAll('.powerOutputDelete').forEach(button=>button.remove())"));
+assert(source('preparePowerPdfView').includes("row.replaceWith(...row.childNodes)"));
+assert(source('bindDistroSettings').includes('preservePowerViewScroll(()=>{if(draft)renderDistroCards()'));
+// Simulate the page and pane collapsing during a rebuild and subsequent layout frames.
+const frames=[],scrollElement=(parent=null)=>({parentElement:parent,isConnected:true,scrollLeft:3,scrollTop:480,style:{minHeight:''},offsetHeight:900,firstElementChild:{},scrollTo(p){this.scrollLeft=p.left;this.scrollTop=p.top;assert.equal(p.behavior,'instant')}});
+const outer=scrollElement(),sheetScroll=scrollElement(outer),paneScroll=scrollElement();let wx=7,wy=800;
+const scrollContext=vm.createContext({Map,window:{get scrollX(){return wx},get scrollY(){return wy},scrollTo(p){wx=p.left;wy=p.top;assert.equal(p.behavior,'instant')}},document:{querySelectorAll:()=>[paneScroll]},$:()=>sheetScroll,activeSheetTab:'powerSheet',activePowerDistro:0,requestAnimationFrame:fn=>frames.push(fn),prepareLiveResponsiveTargets:()=>{},fitLiveResponsiveLayouts:()=>{},fitPowerPhaseLinkedGroups:()=>{}});
+vm.runInContext(source('preservePowerViewScroll'),scrollContext);
+scrollContext.preservePowerViewScroll(()=>{assert.equal(sheetScroll.style.minHeight,'900px');sheetScroll.firstElementChild={};outer.scrollTop=sheetScroll.scrollTop=paneScroll.scrollTop=0;wy=0});
+assert.equal(wy,800);assert.equal(wx,7);for(const el of [outer,sheetScroll,paneScroll])assert.equal(el.scrollTop,480);assert.equal(sheetScroll.style.minHeight,'');
+while(frames.length){wy=0;frames.shift()();assert.equal(wy,800)}
+scrollContext.preservePowerViewScroll(()=>{});scrollContext.activeSheetTab='home';wy=40;frames.shift()();assert.equal(wy,40,'Do not restore a stale page after navigation');
+assert.throws(()=>scrollContext.preservePowerViewScroll(()=>{throw Error('Cancelled update')}),/Cancelled/);assert.equal(sheetScroll.style.minHeight,'');
+// Inclusion commits once and retains colours, with rendering inside the scroll guard.
+let includeSaves=0,includeRenders=0,inGuard=false,retained=0;const includeRows=[{include:false}];
+const includeContext=vm.createContext({parseInt,powerAuxRowsForRange:()=>includeRows,retainPowerAuxColourSettings:()=>retained++,persist:()=>includeSaves++,distroRanges:()=>[],preservePowerViewScroll:fn=>{inGuard=true;fn();inGuard=false},renderPowerSheetView:()=>{assert(inGuard);includeRenders++}});
+vm.runInContext(source('togglePowerAuxInclude'),includeContext);const includeButton={dataset:{powerAuxInclude:'0'},closest:()=>({})};
+includeContext.togglePowerAuxInclude({},includeButton);assert(includeRows[0].include);includeContext.togglePowerAuxInclude({},includeButton);assert(!includeRows[0].include);assert.equal(includeSaves,2);assert.equal(includeRenders,2);assert.equal(retained,2);
+console.log('PASS: V51.6 output deletion controls, PDF exclusion, scroll restoration and Include save-once behaviour.');
 // Catalogue load failures clear old choices and keep creation disabled.
 add('normaliseDistroOptions','loadDistroOptions');cxt.distroDraft=null;cxt.activeSingleDistro=null;cxt.DISTRO_OPTIONS_URL='json/distro_options.json';cxt.$=()=>({textContent:''});cxt.console={warn:()=>{}};cxt.fetchJSONWithFallback=async()=>{throw Error('Unreadable catalogue')};
 (async()=>{await cxt.loadDistroOptions();assert.match(cxt.distroCatalogueError,/Unreadable catalogue/);assert.equal(cxt.distroOptions.distroType.length,0);assert.equal(cxt.createDistroDraft(),null);cxt.fetchJSONWithFallback=async()=>raw;await cxt.loadDistroOptions();assert.equal(cxt.distroCatalogueError,'');assert.equal(cxt.createDistroDraft().count,12);console.log('PASS: V51.4 output deletion, draft cancellation, stale feeds, load validation and measured scaled connectors.');})().catch(error=>{console.error(error);process.exitCode=1});

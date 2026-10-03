@@ -1,3 +1,9 @@
+## V51.6 — Power output deletion and scroll retention
+
+- Add a delete button to the right of each 3ø Output table, retaining confirmation and downstream-feed disconnection checks.
+- Preserve page and side-pane scroll positions when adding optional outputs or toggling Aux inclusion in Power Calcs.
+- Exclude output delete controls from PDF previews and downloads.
+
 ## V51.5 — Distro side-pane layout
 
 - Apply the shared two-column layout to Add Distro and Distro Settings, with full-width Name, Supply and RCBO controls.
