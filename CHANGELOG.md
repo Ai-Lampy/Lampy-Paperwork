@@ -1,3 +1,21 @@
+## V51.12 — Compact application footer
+
+- Reduce footer padding, heading sizes, logo size and divider spacing.
+- Arrange each link group in two columns and remove repeated descriptive text while retaining all navigation and help links.
+- Keep responsive wrapping, keyboard focus and print/PDF exclusion.
+
+## V51.11 — Footer styling correction
+
+- Match the footer to Paperwork’s white panels, grey borders, rounded corners, App Font and blue interaction states.
+- Align it with the existing page gutters and use the app’s connector mark instead of separate footer branding.
+- Retain grouped links, responsive stacking, keyboard navigation and print/PDF exclusion.
+
+## V51.10 — Application footer
+
+- Add a dark green footer with lime accents, inspired by AI-Lampy Tool Tracker.
+- Group Paperwork navigation, production pages and help links with keyboard focus styling and responsive columns.
+- Keep the current version and copyright visible, and exclude the footer from print and document exports.
+
 ## V51.9 — Distro button text fitting
 
 - Keep Distro action labels on one line within their 35px buttons using 14px, weight-800 text.
