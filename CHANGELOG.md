@@ -1,3 +1,10 @@
+## V51.13 — Paperwork branding and information
+
+- Use the supplied Lampy Paperwork logo in a compact document-style footer; remove Tool Tracker and the copied navigation columns.
+- Add Paperwork-specific disclaimers, privacy/storage information and copyright/third-party credits in keyboard-accessible information dialogs.
+- Add a working sitemap for application pages, settings, imported patch comparisons and project racks.
+- Keep the footer and information dialogs outside print and PDF documents.
+
 ## V51.12 — Compact application footer
 
 - Reduce footer padding, heading sizes, logo size and divider spacing.
