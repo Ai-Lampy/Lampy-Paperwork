@@ -1,0 +1,41 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
+const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),sidebar=fs.readFileSync(path.join(root,'js/app-sidebar.js'),'utf8'),css=fs.readFileSync(path.join(root,'js/app-sidebar.css'),'utf8');
+function source(name){const start=html.indexOf('function '+name+'(');for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const s=html.slice(start,end+1);try{new Function('return ('+s+')');return s}catch{}}throw Error(name)}
+const nodes=new Map(),timers=new Map();let timerId=0,recoveries=0;
+function element(){return {dataset:{},style:{},children:[],hidden:false,setAttribute(k,v){this[k]=v},appendChild(child){this.children.push(child);if(child.id)nodes.set(child.id,child)},replaceChildren(){this.children=[]},addEventListener(k,f){this[k]=f}}}
+const status=vm.createContext({$:id=>nodes.get(id),projectStorageConflict:false,projectRestoreFailed:false,projectSaveStatusTimer:null,document:{body:element(),createElement:element},setTimeout:(f,ms)=>{timers.set(++timerId,{f,ms});return timerId},clearTimeout:id=>timers.delete(id),downloadRecoveryProject:()=>recoveries++});
+vm.runInContext(source('setSaveStatus'),status);
+status.setSaveStatus('pending');assert(!nodes.has('projectSaveStatus'));
+status.setSaveStatus('restored');assert(!nodes.has('projectSaveStatus'));
+status.setSaveStatus('saved');assert.equal(nodes.get('projectSaveStatus').hidden,false);assert.equal([...timers.values()][0].ms,4000);
+[...timers.values()][0].f();assert.equal(nodes.get('projectSaveStatus').hidden,true);
+status.setSaveStatus('saved');status.setSaveStatus('pending');assert.equal(nodes.get('projectSaveStatus').hidden,true);
+status.setSaveStatus('error');assert.equal(nodes.get('projectSaveStatus').hidden,true);assert.equal(nodes.get('projectSaveWarning').hidden,false);nodes.get('projectSaveWarning').children[1].click();assert.equal(recoveries,1);
+status.setSaveStatus('saved');assert.equal(nodes.get('projectSaveWarning').hidden,true);assert.equal(nodes.get('projectSaveStatus').hidden,false);
+status.projectStorageConflict=true;status.setSaveStatus('saved');assert.equal(nodes.get('projectSaveStatus').hidden,true);assert.equal(nodes.get('projectSaveWarning').hidden,false);
+status.projectStorageConflict=false;status.setSaveStatus('saved-light');assert.match(nodes.get('projectSaveStatus').textContent,/GDTF files were omitted/);
+let now=0,saves=0,blocked='',fails=false,intervals=[],states=[],events={};
+const autosave=vm.createContext({Date:{now:()=>now},PROJECT_AUTOSAVE_INTERVAL:900000,projectAutoSaveTimer:null,projectAutoSaveLastAt:0,applicationUpdateBlockedReason:()=>blocked,saveApplicationForUpdate(){if(fails)throw Error('quota');saves++},setSaveStatus:value=>states.push(value),setInterval:(f,ms)=>{intervals.push({f,ms});return 1},setTimeout:f=>f(),window:{addEventListener:(key,f)=>events[key]=f},document:{hidden:false,addEventListener:(key,f)=>events[key]=f},console:{warn(){}}});
+for(const name of ['runProjectAutoSave','initialiseProjectAutoSave'])vm.runInContext(source(name),autosave);
+assert(html.includes('const PROJECT_AUTOSAVE_INTERVAL=15*60*1000;'));
+autosave.initialiseProjectAutoSave();autosave.initialiseProjectAutoSave();assert.equal(intervals.length,1);assert.equal(intervals[0].ms,900000);
+now=899999;events.click();assert.equal(saves,0);
+now=900000;intervals[0].f();assert.equal(saves,1);assert.equal(states.at(-1),'saved');events.focus();assert.equal(saves,1);
+now=1800000;blocked='unfinished address review';intervals[0].f();assert.equal(saves,1);
+blocked='';events.click();assert.equal(saves,2);
+now=2700000;fails=true;intervals[0].f();assert.equal(saves,2);assert.equal(states.at(-1),'error');assert.equal(autosave.projectAutoSaveLastAt,1800000);
+fails=false;events.focusout();assert.equal(saves,3);
+assert(source('runProjectAutoSave').includes('saveApplicationForUpdate()'));assert(!source('runProjectAutoSave').includes('download'));
+// Header-specific wrappers leave export helpers and Personal Logo unchanged.
+const logos=vm.createContext({escapeAttr:value=>String(value).replaceAll('"','&quot;')});vm.runInContext(source('headerHomeLogoMarkup'),logos);
+assert.equal(logos.headerHomeLogoMarkup('','Tour Logo'),'');
+assert.match(logos.headerHomeLogoMarkup('<img class="tourLogo">','Tour Logo'),/onclick="setSheetTab\('home'\)"/);
+assert.match(logos.headerHomeLogoMarkup('<img>','Vendor "Logo"'),/aria-label="Vendor &quot;Logo&quot; — Home"/);
+assert(source('updateProjectHeaderLogos').includes("headerHomeLogoMarkup(vendorLogoImgMarkup"));
+assert(source('updateTourLogoSlot').includes("headerHomeLogoMarkup(logoImgMarkup('tourLogo'),'Tour Logo')"));
+assert(!source('vendorLogoImgMarkup').includes('headerLogoHome'));assert(!source('logoImgMarkup').includes('headerLogoHome'));
+assert(sidebar.includes('footer.append(menuButton)'));assert(sidebar.includes('footer.append(actions);aside.append(footer)'));
+assert(css.includes('.appNavigationFooter{position:relative;flex:0 0 auto;margin-top:auto;'));
+assert(css.includes('.appNavigationFooter>.menuButton{position:static;'));
+assert(css.includes('inset:auto auto calc(100% + 8px) 0'));
+console.log('PASS: save-only transient status, separate recovery errors, 15-minute snapshots with deferred retry, sidebar Menu and header-only Home logo links.');

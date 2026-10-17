@@ -1,3 +1,9 @@
+## V52.6 — Saving and navigation controls
+
+- Show the save-status bar briefly after a successful save; keep storage/recovery failures in a separate warning.
+- Save a complete browser project snapshot every 15 minutes, retaining existing recovery saves and protecting in-progress editors and conflicting tabs.
+- Move Menu to the bottom of the navigation sidebar and make Vendor/Tour header logos open Home.
+
 ## V52.5 — Sidebar colours and white pages
 
 - Apply the requested grey sidebar, black divider, padding and light page-tab text.
