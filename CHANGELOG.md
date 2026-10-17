@@ -1,5 +1,7 @@
 ## V53 — Navigation and page help
 
+- Refresh the welcome for ailampy.com/paperwork/ and info@ailampy.com, highlight page Help with a large flashing arrow and direct Help action, temporarily disable walk-through entry points, and use a cog for Project Settings.
+
 - Refresh Welcome, Walk-through, browser checklist and matching fallback content for V53. Gate releases on major-version documentation, fallback parity and latest changelog/version consistency, with negative regression cases.
 
 - Highlight active sub-pages and limit compact hover groups to inactive pages; suppress the Home hover name and duplicate single-patch shortcut.

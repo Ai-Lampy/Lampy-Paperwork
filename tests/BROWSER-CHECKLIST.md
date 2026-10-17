@@ -20,7 +20,7 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 | Universe selection, green footprints, # IDs, hover/focus details, Shift selection and reviewed moves | Required | Required | Required |
 | Drag across wrapped/scaled universe grid; green/red validity; Escape, pointer cancellation, outside drop and review cancellation retain original data | Required | Required | Required |
 | PDF session column buttons reflect empty columns, isolate live preferences, preserve per-type omissions and show Qty / relocated page toggles | Required | Required | Required |
-| Startup, visible welcome dismissal, keyboard focus | Required | Required | Required |
+| Welcome: current site/email links, large arrow to Open Help, reduced-motion handling, focus containment and dismissal; walk-through stays disabled | Required | Required | Required |
 | At a 1500px viewport, verify 200px expanded / 60px compact navigation, full remaining workspace width and 10px header/app-shell padding; repeat at narrow widths with no document-level horizontal overflow | Required | Required | Required |
 | Fixture Patch, Power Calcs, Device Config, Rack Layout and Front/Rear Labels fill the sheet, preserve transformed height and recalculate after resizing | Required | Required | Required |
 | Home, Control, Network, Looms, Table View, Errors, Positions, Universe Detail and Project Settings stay within the page while controls wrap at their normal size | Required | Required | Required |

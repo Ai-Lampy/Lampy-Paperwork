@@ -5,6 +5,7 @@
       "title": "New in V53: Navigation and page help",
       "type": "unordered",
       "items": [
+        "The walk-through is temporarily disabled. Use the page-specific Help button above Menu; this guide is retained for future use.",
         "Select a page in the left sidebar. Selecting another page group closes the previous group in both expanded and compact navigation. The active sub-page is highlighted.",
         "Use the collapse/expand control beside the app logo to switch between full labels and the compact icon rail. Menu at the bottom opens project actions; it does not resize the sidebar.",
         "In compact navigation, the active group shows its sub-page icons. Hover or focus a sub-page for its name. Hover an inactive group for its destinations; Home omits its own name. A single patch sheet does not repeat the Patch shortcut.",

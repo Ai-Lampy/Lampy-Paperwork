@@ -46,3 +46,22 @@ Promise.all([context.loadWelcomeMessage(),context.loadWalkthrough()]).then(([wel
  assert.deepEqual(plain(welcome),actual.welcome);assert.deepEqual(plain(walkthrough),actual.walkthrough);
  console.log('PASS: actual offline welcome/walkthrough loaders and empty-data normalisers retain the complete V53 guidance.');
 }).catch(error=>{console.error(error);process.exitCode=1});
+
+// Welcome links and temporary walkthrough suspension must also work offline.
+assert(actual.welcome.paragraphs.includes('https://ailampy.com/paperwork/'));
+assert(JSON.stringify(actual.welcome).includes('info@ailampy.com'));
+assert(!JSON.stringify(actual.welcome).includes('github.io'));
+assert(actual.html.includes('const WALKTHROUGH_ENABLED=false;'));
+const welcomeContext=vm.createContext({WALKTHROUGH_ENABLED:false,LampySidebar:require('../js/app-sidebar.js'),escapeHtml:value=>String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;'),walkthroughSkipped(){throw Error('Disabled walkthrough must not access preferences')},$(){throw Error('Disabled walkthrough must not access DOM')}});
+for(const name of ['welcomeParagraphMarkup','welcomeHelpMarkup','maybeOpenWalkthroughAfterWelcome','openWalkthrough']){
+ const start=actual.html.search(new RegExp('(?:async )?function '+name+'\\(')),end=actual.html.indexOf('\n',start);assert(start>=0,name);vm.runInContext(actual.html.slice(start,end),welcomeContext);
+}
+assert(welcomeContext.welcomeParagraphMarkup('https://ailampy.com/paperwork/').includes('href="https://ailampy.com/paperwork/"'));
+assert(welcomeContext.welcomeParagraphMarkup('Contact info@ailampy.com').includes('href="mailto:info@ailampy.com"'));
+assert(!welcomeContext.welcomeParagraphMarkup('<img src=x onerror=alert(1)>').includes('<img'));
+const callout=welcomeContext.welcomeHelpMarkup();assert(callout.includes('welcomeHelpArrow'));assert(callout.indexOf('welcomeHelpArrow')<callout.indexOf('welcomeOpenHelp'));assert(callout.includes('aria-hidden="true"'));assert(callout.includes('Open Help'));
+assert(actual.html.includes('animation:welcomeHelpFlash 1s ease-in-out 4'));
+assert(actual.html.includes('@media(prefers-reduced-motion:reduce){.welcomeHelpArrow{animation:none}}'));
+assert(actual.html.includes('[data-walkthrough-entry][hidden]{display:none!important}'));
+assert.equal([...actual.html.matchAll(/<button[^>]+onclick="openWalkthrough\([^>]+>/g)].filter(m=>!m[0].includes('hidden disabled')).length,0);
+Promise.all([welcomeContext.maybeOpenWalkthroughAfterWelcome(),welcomeContext.openWalkthrough(),welcomeContext.openWalkthrough({auto:true})]).then(()=>console.log('PASS: welcome site/email, escaped text, Help callout, bounded/reduced-motion arrow and disabled walkthrough launch paths.')).catch(error=>{console.error(error);process.exitCode=1});

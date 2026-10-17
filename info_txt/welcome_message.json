@@ -1,13 +1,13 @@
 {
   "title": "Welcome to Lampy Paperwork V53",
   "paragraphs": [
-    "Lampy Paperwork is a browser-based workspace for creating and managing the technical paperwork used on live entertainment productions. It brings fixture patching, power, distro and Fan Out documentation, control systems, network devices, rack layouts, exports, and project records together in one place.",
-    "V53 refines sidebar navigation with highlighted sub-pages, compact hover menus and page-specific Help above Menu. Open Project Settings beneath Home. Individual loom cards start collapsed and remember which you open in this browser.",
-    "V51 updates Fixture Patch with Universe Detail navigation, selectable footprints, reviewed universe moves and address dragging, a compact action menu and independent PDF column controls.",
-    "V44 introduced project-wide typography, units, voltage, logo and PDF export defaults.",
-    "Lampy Paperwork remains under active development. Features, layouts, workflows, and saved data may change while the app is tested and improved. Download and keep regular copies of your Lampy project file.",
-    "Please report bugs, request missing library items, or suggest improvements through the GitHub issue tracker:",
-    "https://github.com/Ai-Lampy/Lampy-Paperwork/issues",
-    "Thank you for testing Lampy Paperwork."
+    "Create and manage your show paperwork in one browser workspace: Fixture Patch, Power, Control, Network, Rack Layout, Looms and Labels.",
+    "V53 makes navigation clearer with highlighted sub-pages, compact hover menus and Project Settings beneath Home. Individual loom cards remember which you open in this browser.",
+    "New: page-specific Help. Look for the circled question mark above Menu at the bottom of the sidebar. Press it on any page for guidance about that page.",
+    "The walk-through is temporarily disabled. Use Help whenever you need guidance.",
+    "Open Lampy Paperwork at:",
+    "https://ailampy.com/paperwork/",
+    "Questions, feedback or support: info@ailampy.com",
+    "Lampy Paperwork remains under active development. Check your paperwork before use and download regular project-file backups."
   ]
 }
