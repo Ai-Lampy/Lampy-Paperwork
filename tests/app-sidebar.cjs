@@ -97,7 +97,7 @@ for(const compact of [false,true])for(const active of [false,true])for(const exp
 assert(source.includes("if(page)expanded.add(page.dataset.sheetTab)"));
 assert(source.includes('if(activePage!==lastActivePage)'));
 assert(source.includes("menu.hidden=!visible"));
-assert(source.includes("if(compact)item.title=item.textContent;else item.removeAttribute('title')"));
+assert(source.includes("menu.querySelectorAll('button').forEach(item=>item.removeAttribute('title'))"));
 assert(css.includes('.appNavigationCompact .appNavigation .appNavigationSubLabel{display:none}'));
 assert.equal(button['aria-label'],'Rear Labels');
 assert.equal(new Set(['universe','fan','ports','looms'].map(sidebar.iconMarkup)).size,4);
@@ -109,3 +109,17 @@ assert(header.slice(header.indexOf('<aside class="actionSidebar"')).includes('hr
 assert(header.includes('class="btn" onclick="closeActionMenu()" href='));
 assert(source.includes("aside.querySelectorAll('button,a[href]')"));
 console.log('PASS: automatic sub-pages, active compact icons, distinct glyphs, Report Issue in Menu and Errors after Tour Logo.');
+
+const compactPrefix='.appNavigationCompact .appNavigation ';
+assert.equal(declarations(compactPrefix+'.sheetTab.active')['border-bottom'],'1px solid white');
+assert.equal(declarations(compactPrefix+'.sheetTabMenuHost:has(>.sheetTab.active)').border,'1px solid white');
+assert.equal(declarations(compactPrefix+'.sheetSubMenu,'+compactPrefix+'.sheetTabMenuHost.menuDismissed .sheetSubMenu').padding,'4px');
+assert.equal(declarations(compactPrefix+'.sheetSubMenu[hidden],'+compactPrefix+'.sheetTabMenuHost.menuDismissed .sheetSubMenu[hidden]').display,'none!important');
+assert.equal(declarations('.appNavigation .sheetTab.active')['border-bottom'],undefined);
+assert(source.includes("closest('[data-sheet-tab],.sheetSubMenu button');if(button)showFlyout(button)"));
+assert(source.includes(".filter(item=>item.getClientRects().length)"));
+for(const current of ['fixturePatch','network','home']){
+ const visible=['fixturePatch','network'].filter(key=>sidebar.subPagesVisible(true,key===current,true));
+ assert.deepEqual(visible,current==='home'?[]:[current]);
+}
+console.log('PASS: compact-only borders/padding, hidden-menu precedence, current-page-only submenus and sub-page hover/focus names.');

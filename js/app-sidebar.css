@@ -73,7 +73,10 @@ body.hasAppNavigation>.topHeader>.top{padding-right:10px}
 .appNavigationSubIcon svg{width:16px;height:16px}
 .appNavigationSubLabel{min-width:0;overflow-wrap:anywhere}
 
-.appNavigationCompact .appNavigation .sheetSubMenu{padding:4px 0;gap:2px}
+.appNavigationCompact .appNavigation .sheetTab.active{background:rgb(0,96,255);color:rgb(255,255,255);border-bottom:1px solid white}
+.appNavigationCompact .appNavigation .sheetTabMenuHost:has(>.sheetTab.active){background:linear-gradient(rgb(0,96,255) 44px,transparent 44px);border:1px solid white}
+.appNavigationCompact .appNavigation .sheetSubMenu,.appNavigationCompact .appNavigation .sheetTabMenuHost.menuDismissed .sheetSubMenu{position:static;grid-column-start:1;grid-column-end:-1;grid-row-start:2;grid-row-end:auto;gap:2px;width:100%;min-width:0;max-width:100%;max-height:none;overflow:visible;padding:4px;border:0;box-shadow:none;background:rgb(155,155,155);display:grid!important}
+.appNavigationCompact .appNavigation .sheetSubMenu[hidden],.appNavigationCompact .appNavigation .sheetTabMenuHost.menuDismissed .sheetSubMenu[hidden]{display:none!important}
 .appNavigationCompact .appNavigation .sheetSubMenu button{justify-content:center;min-height:34px;padding:8px 0;border-radius:6px}
 .appNavigationCompact .appNavigation .appNavigationSubLabel{display:none}
 .appNavigationCompact .appNavigation .sheetSubMenu .appNavigationSubIcon{flex-basis:18px}

@@ -1,3 +1,9 @@
+## V52.9 — Minimised sidebar selection
+
+- Keep only the current page’s sub-pages visible in minimised navigation, with explicit hidden-menu styling.
+- Apply white active-page borders and 4px submenu padding only to the minimised sidebar.
+- Show sub-page names immediately on hover or keyboard focus in minimised navigation.
+
 ## V52.8 — Sidebar sub-pages and header actions
 
 - Open sub-pages when selecting a page; show the active page’s sub-page icons in the minimised sidebar.
