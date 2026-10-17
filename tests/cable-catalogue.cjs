@@ -4,6 +4,7 @@ const raw=JSON.parse(fs.readFileSync(path.join(root,'json/cable/christie_lites_c
 function source(name){const start=html.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const value=html.slice(start,end+1);try{new Function('return ('+value+')');return value}catch{}}throw Error(name)}
 const plain=v=>JSON.parse(JSON.stringify(v)),clone=v=>JSON.parse(JSON.stringify(v));
 const all=catalogue.categories.flatMap(c=>c.cables),whirlwind=all.find(c=>c.name==='Whirlwind 12-Pair');
+assert(all.find(c=>c.name==='32A 3ø').aliases.includes('32A 3Ph'));
 assert.equal(all.length,20);assert.equal(catalogue.looms.length,6);assert.equal(catalogue.unit,'ft');
 assert(!whirlwind.lengths.includes('504'));assert.deepEqual(whirlwind.loomOnlyLengths,['504']);
 for(const cable of all){assert.deepEqual(cable.lengths,[...cable.lengths].sort((a,b)=>+a-+b));assert(cable.connectors.start&&cable.connectors.end)}

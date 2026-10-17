@@ -1,3 +1,8 @@
+## V51.21 — Christie Lites 32A cable alias
+
+- Add 32A 3Ph as an alias for the Christie Lites 32A 3ø cable without changing loom members or stock availability.
+- Verify canonical and alias loom references retain identical quantities, lengths and connector metadata.
+
 ## V51.20 — Cable aliases
 
 - Resolve nested and legacy loom member references through canonical cable names or declared aliases, ignoring case and surrounding whitespace.
