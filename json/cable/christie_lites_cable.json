@@ -59,9 +59,9 @@
           32,
           40,
           48,
-          72,
           56,
           64,
+          72,
           80,
           88,
           96,
@@ -118,7 +118,7 @@
         ]
       },
       {
-        "name": "Ethercon",
+        "name": "EtherCON",
         "direction": "bidirectional",
         "connectors": {
           "end": "etherCON"
@@ -139,9 +139,9 @@
           "end": "Quad Fiber"
         },
         "lengths": [
+          144,
           304,
-          504,
-          144
+          504
         ]
       },
       {
@@ -152,10 +152,13 @@
           "female": "WW 12-Pin"
         },
         "lengths": [
-          304,
-          144,
+          24,
           96,
-          24
+          144,
+          304
+        ],
+        "loomOnlyLengths": [
+          504
         ]
       },
       {
@@ -173,8 +176,6 @@
         "name": "XLR-3 MALE > MALE",
         "direction": "male-male",
         "connectors": {
-          "male": "XLR-3",
-          "female": "XLR-3",
           "start": "XLR-3",
           "end": "XLR-3"
         },
@@ -186,8 +187,6 @@
         "name": "XLR-3 FEMALE > FEMALE",
         "direction": "female-female",
         "connectors": {
-          "male": "XLR-3",
-          "female": "XLR-3",
           "start": "XLR-3",
           "end": "XLR-3"
         },
@@ -210,8 +209,6 @@
         "name": "XLR-5 MALE > MALE",
         "direction": "male-male",
         "connectors": {
-          "male": "",
-          "female": "",
           "start": "XLR-5",
           "end": "XLR-5"
         },
@@ -223,8 +220,6 @@
         "name": "XLR-5 FEMALE > FEMALE",
         "direction": "female-female",
         "connectors": {
-          "male": "",
-          "female": "",
           "start": "XLR-5",
           "end": "XLR-5"
         },
@@ -249,11 +244,11 @@
           32,
           40,
           48,
+          64,
           72,
           80,
           88,
           96,
-          64,
           144,
           304
         ]
@@ -314,9 +309,9 @@
           32,
           40,
           48,
-          72,
           56,
           64,
+          72,
           80,
           88,
           96,
@@ -336,11 +331,11 @@
           8,
           24,
           48,
-          96,
           72,
+          96,
           144,
-          504,
-          304
+          304,
+          504
         ]
       },
       {
@@ -354,8 +349,8 @@
           8,
           24,
           48,
-          96,
-          72
+          72,
+          96
         ]
       },
       {
@@ -466,8 +461,8 @@
           16,
           24,
           32,
-          48,
           40,
+          48,
           56,
           64,
           72,
@@ -506,7 +501,7 @@
           "quantity": 1
         },
         {
-          "cableType": "32A 3Ph",
+          "cableType": "32A 3ø",
           "quantity": 1
         },
         {
@@ -538,7 +533,7 @@
     },
     {
       "id": "544d38fb-3b70-4721-aa48-6e37fbdb1830",
-      "name": "Snake W-1 CEE 32A 3Ph + Fibre  304'",
+      "name": "Snake W-1 CEE 32A 3Ph + Fibre 304'",
       "lengths": [
         304
       ],
@@ -548,7 +543,7 @@
           "quantity": 3
         },
         {
-          "cableType": "32A 3Ph",
+          "cableType": "32A 3ø",
           "quantity": 1
         },
         {
@@ -590,7 +585,7 @@
           "quantity": 3
         },
         {
-          "cableType": "32A 3Ph",
+          "cableType": "32A 3ø",
           "quantity": 1
         },
         {

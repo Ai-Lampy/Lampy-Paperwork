@@ -6,59 +6,73 @@
     },
     {
       "vendor": "4 Wall Europe",
-      "file": "json/cable/4_wall_europe_cable.json"
+      "file": "json/cable/4_wall_europe_cable.json",
+      "optional": true
     },
     {
       "vendor": "Adlib",
-      "file": "json/cable/adlib_cable.json"
+      "file": "json/cable/adlib_cable.json",
+      "optional": true
     },
     {
       "vendor": "Colour Sound Experiment",
-      "file": "json/cable/colour_sound_experiment_cable.json"
+      "file": "json/cable/colour_sound_experiment_cable.json",
+      "optional": true
     },
     {
       "vendor": "Creative Technology UK",
-      "file": "json/cable/CT_uk_cable.json"
+      "file": "json/cable/CT_uk_cable.json",
+      "optional": true
     },
     {
       "vendor": "Impact Production Services",
-      "file": "json/cable/IPS_cable.json"
+      "file": "json/cable/IPS_cable.json",
+      "optional": true
     },
     {
       "vendor": "Lights | Control | Rigging",
-      "file": "json/cable/LCR_cable.json"
+      "file": "json/cable/LCR_cable.json",
+      "optional": true
     },
     {
       "vendor": "Lite Alternative LTD",
-      "file": "json/cable/lite_alternative_cable.json"
+      "file": "json/cable/lite_alternative_cable.json",
+      "optional": true
     },
     {
       "vendor": "Liteup",
-      "file": "json/cable/liteup_cable.json"
+      "file": "json/cable/liteup_cable.json",
+      "optional": true
     },
     {
       "vendor": "Neg Earth Lights",
-      "file": "json/cable/neg_earth_cable.json"
+      "file": "json/cable/neg_earth_cable.json",
+      "optional": true
     },
     {
       "vendor": "PRG UK",
-      "file": "json/cable/prg_uk_cable.json"
+      "file": "json/cable/prg_uk_cable.json",
+      "optional": true
     },
     {
       "vendor": "TSL Lighting",
-      "file": "json/cable/tsl_cable.json"
+      "file": "json/cable/tsl_cable.json",
+      "optional": true
     },
     {
       "vendor": "Siyan LTD",
-      "file": "json/cable/siyan_cable.json"
+      "file": "json/cable/siyan_cable.json",
+      "optional": true
     },
     {
       "vendor": "Solotech UK",
-      "file": "json/cable/solotech_uk_cable.json"
+      "file": "json/cable/solotech_uk_cable.json",
+      "optional": true
     },
     {
       "vendor": "Sonalyst",
-      "file": "json/cable/sonalyst_cable.json"
+      "file": "json/cable/sonalyst_cable.json",
+      "optional": true
     }
   ]
 }
