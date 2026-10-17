@@ -1,26 +1,37 @@
-/* Navigation is outside every export surface. */
-body.hasAppNavigation{--navigation-width:256px;padding-left:var(--navigation-width)}
+/* Live navigation only. Isolated from the horizontal page-toolbar layout. */
+body.hasAppNavigation{--navigation-width:256px;padding-left:var(--navigation-width);transition:padding-left 180ms ease}
 body.appNavigationCompact{--navigation-width:60px}
 body.hasAppNavigation>.topHeader,body.hasAppNavigation>.appShell,body.hasAppNavigation>.appFooter{width:calc(100% - 2 * var(--app-outer-gutter));max-width:calc(100% - 2 * var(--app-outer-gutter))}
-.appNavigation{position:fixed;inset:0 auto 0 0;width:var(--navigation-width);height:100dvh;z-index:16;display:flex;flex-direction:column;background:#f6f7f9;border-right:2px solid #000;padding:12px 8px;font-family:var(--app-font);color:#111}
-.appNavigationBrand{height:72px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.appNavigationBrand img{width:210px;max-width:100%;height:64px;object-fit:contain}.appNavigationBrand>span{display:none;font-weight:900;font-size:20px}
-.appNavigationToggle,.appNavigationMobileToggle{border:2px solid #000;border-radius:8px;background:#d9d9d9;color:#111;min-width:38px;height:38px;cursor:pointer;font:800 20px var(--app-font)}
-.appNavigationToggle{align-self:flex-end;margin-bottom:12px}.appNavigationMobileToggle{display:none}
-.appNavigation .previewHead{width:100%;max-width:100%;min-width:0;margin:0;padding:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;flex:1}
-.appNavigation .sheetTabs{display:flex;flex-direction:column;align-items:stretch;gap:4px;width:100%;padding:0;margin:0;border:0;background:none}
-.appNavigation .sheetTabMenuHost{display:grid;grid-template-columns:minmax(0,1fr) 30px;align-items:center;position:relative;width:100%;gap:0}
-.appNavigation .sheetTab{display:flex;align-items:center;gap:10px;min-width:0;width:100%;min-height:46px;text-align:left;border:2px solid transparent;border-radius:8px;background:transparent;color:#111;padding:8px;font:800 14px var(--app-font);white-space:normal}
-.appNavigation .sheetTab:hover{background:#e1e4e8}.appNavigation .sheetTab.active{background:#0060ff;border-color:#000;color:#fff}
-.appNavigationIcon{flex:0 0 20px;text-align:center;font-size:21px;line-height:1}.appNavigationLabel{overflow-wrap:anywhere}
-.appNavigationDisclosure{border:0;background:transparent;cursor:pointer;font-size:20px;color:#111;height:38px;padding:0}
-.appNavigation .sheetSubMenu,.appNavigation .sheetTabMenuHost.menuDismissed .sheetSubMenu{position:static;display:grid!important;grid-column:1 / -1;gap:4px;width:100%;min-width:0;max-width:100%;max-height:none;overflow:visible;padding:4px 0 6px 22px;border:0;box-shadow:none;background:transparent}
+.appNavigation{position:fixed;inset:0 auto 0 0;width:var(--navigation-width);height:100dvh;z-index:16;display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;background:#f6f7f9;border-right:1px solid #d9dee7;padding:12px 8px;font-family:var(--app-font);color:#111;transition:width 180ms ease}
+.appNavigationHead{display:flex;align-items:center;gap:8px;min-height:52px;flex:0 0 auto;margin-bottom:12px;padding:0 4px}
+.appNavigationBrand{display:flex;align-items:center;min-width:0;flex:1}
+.appNavigationBrand img{display:block;width:180px;max-width:100%;height:48px;object-fit:contain}.appNavigationBrand>span{display:none;font-weight:800;font-size:16px}
+.appNavigationToggle,.appNavigationMobileToggle{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid transparent;border-radius:6px;background:transparent;color:#475467;width:32px;height:32px;padding:6px;cursor:pointer}
+.appNavigationToggle:hover,.appNavigationMobileToggle:hover{background:#e4e7ec;color:#111}.appNavigationMobileToggle{display:none}
+.appNavigation svg{display:block;width:20px;height:20px;flex-shrink:0;pointer-events:none}
+.appNavigationMobileToggle svg{width:20px;height:20px}
+.appNavigation .appNavigationContent{display:block;width:100%;max-width:100%;min-width:0;min-height:0;margin:0;padding:0 0 8px;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;flex:1 1 0;scrollbar-width:thin;scrollbar-color:#b9bec7 transparent}
+.appNavigation .sheetTabs{display:flex;flex-direction:column;flex-wrap:nowrap;align-items:stretch;justify-content:flex-start;gap:4px;width:100%;height:auto;padding:0;margin:0;border:0;background:none}
+.appNavigation .sheetTabMenuHost{display:grid;grid-template-columns:minmax(0,1fr) 32px;align-items:center;align-content:start;position:relative;flex:0 0 auto;width:100%;gap:0;border-radius:7px}
+.appNavigation .sheetTab{display:flex;align-items:center;gap:12px;min-width:0;width:100%;min-height:44px;text-align:left;border:0;border-radius:7px;background:transparent;color:#344054;padding:10px 12px;font:600 14px/20px var(--app-font);white-space:nowrap;transition:background-color 140ms ease,color 140ms ease}
+.appNavigation .sheetTabMenuHost:has(>.sheetTab:hover){background:#e4e7ec}
+.appNavigation .sheetTab.active{background:#0060ff;color:#fff}
+.appNavigation .sheetTabMenuHost:has(>.sheetTab.active){background:linear-gradient(#0060ff 44px,transparent 44px)}
+.appNavigationIcon{display:flex;flex:0 0 20px;align-items:center;justify-content:center}.appNavigationLabel{overflow:hidden;text-overflow:ellipsis}
+.appNavigationDisclosure{grid-column:2;grid-row:1;display:flex;align-items:center;justify-content:center;align-self:start;border:0;border-radius:6px;background:transparent;cursor:pointer;color:#667085;height:44px;padding:6px;width:32px}
+.appNavigationDisclosure svg{width:16px;height:16px;transition:transform 160ms ease}.appNavigationDisclosure[aria-expanded="true"] svg{transform:rotate(180deg)}
+.appNavigation .sheetTab.active~.appNavigationDisclosure{color:#fff}.appNavigationDisclosure:hover{background:#0000000c}
+.appNavigation .sheetSubMenu,.appNavigation .sheetTabMenuHost.menuDismissed .sheetSubMenu{position:static;display:grid!important;grid-column:1 / -1;grid-row:2;gap:2px;width:100%;min-width:0;max-width:100%;max-height:none;overflow:visible;padding:6px 4px 6px 32px;border:0;box-shadow:none;background:#f6f7f9}
 .appNavigation .sheetSubMenu[hidden],.appNavigation .sheetTabMenuHost.menuDismissed .sheetSubMenu[hidden]{display:none!important}
-.appNavigation .sheetSubMenu button{width:100%;min-width:0;text-align:left;font:700 13px var(--app-font);padding:8px;border-radius:6px;white-space:normal}
-.appNavigation button:focus-visible,.appNavigationMobileToggle:focus-visible{outline:3px solid #0060ff;outline-offset:2px}
-.appNavigationCompact .appNavigationBrand img,.appNavigationCompact .appNavigationLabel{display:none}.appNavigationCompact .appNavigationBrand>span{display:block}
-.appNavigationCompact .appNavigation .sheetTabMenuHost{grid-template-columns:1fr}.appNavigationCompact .appNavigation .sheetTab{padding:8px;justify-content:center}
-.appNavigationCompact .appNavigationDisclosure{height:20px;font-size:16px}.appNavigationCompact .appNavigationToggle{align-self:center}
-.appNavigationBackdrop{position:fixed;inset:0;background:#0006;z-index:89}.appNavigationBackdrop[hidden]{display:none}
-@media(max-width:767px){body.hasAppNavigation{padding-left:0;--navigation-width: min(288px,85vw)}.appNavigation{z-index:90;transform:translateX(-100%)}.appNavigationOpen .appNavigation{transform:none}.appNavigationMobileToggle{display:block;margin-bottom:8px}.appNavigationOpen{overflow:hidden}}
+.appNavigation .sheetSubMenu button{width:100%;min-width:0;min-height:34px;text-align:left;font:500 13px/18px var(--app-font);color:#475467;background:transparent;padding:8px 12px;border:0;border-left:1px solid #d0d5dd;border-radius:0 5px 5px 0;white-space:normal;transition:background-color 140ms ease,color 140ms ease}
+.appNavigation .sheetSubMenu button:hover{background:#e4e7ec;color:#111}
+.appNavigation button:focus-visible,.appNavigationMobileToggle:focus-visible{outline:2px solid #0060ff;outline-offset:2px}
+.appNavigation .sheetTab.active:focus-visible{outline-color:#111}
+.appNavigationCompact .appNavigationHead{padding:0;justify-content:center;min-height:52px}
+.appNavigationCompact .appNavigationBrand{display:none}.appNavigationCompact .appNavigationLabel{display:none}
+.appNavigationCompact .appNavigation .sheetTabMenuHost{grid-template-columns:1fr}.appNavigationCompact .appNavigation .sheetTab{padding:12px;justify-content:center}
+.appNavigationCompact .appNavigationDisclosure{display:none}.appNavigationCompact .appNavigationToggle svg{transform:rotate(180deg)}
+.appNavigationBackdrop{position:fixed;inset:0;background:#10182855;z-index:89}.appNavigationBackdrop[hidden]{display:none}
+@media(max-width:767px){body.hasAppNavigation{padding-left:0;--navigation-width:min(288px,85vw)}.appNavigation{z-index:90;transform:translateX(-100%);transition:transform 180ms ease;box-shadow:8px 0 24px #10182818}.appNavigationOpen .appNavigation{transform:none}.appNavigationMobileToggle{display:inline-flex;margin-bottom:8px}.appNavigationOpen{overflow:hidden}}
+@media(prefers-reduced-motion:reduce){body.hasAppNavigation,.appNavigation,.appNavigation .sheetTab,.appNavigationDisclosure svg,.appNavigation .sheetSubMenu button{transition:none}}
 @media print{body.hasAppNavigation{padding-left:0!important}.appNavigation,.appNavigationBackdrop,.appNavigationMobileToggle{display:none!important}body.hasAppNavigation>.topHeader,body.hasAppNavigation>.appShell,body.hasAppNavigation>.appFooter{width:100%!important;max-width:100%!important}}

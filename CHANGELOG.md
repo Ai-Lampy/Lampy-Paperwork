@@ -1,3 +1,9 @@
+## V52.1 — Refined navigation sidebar
+
+- Isolate navigation from the old toolbar centring and wrapping rules so tabs start directly beneath the compact header.
+- Align the logo and collapse control on one row; use consistent line icons, lighter controls, inset sub-pages and smooth hover/drawer states with reduced-motion support.
+- Preserve page routes, compact preferences, keyboard navigation and print/PDF isolation.
+
 ## V52 — Application navigation sidebar
 
 - Store release metadata in js/app-version.json; update polling and release validation to use this location.

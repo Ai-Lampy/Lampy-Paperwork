@@ -21,3 +21,20 @@ assert(css.includes('overscroll-behavior:contain'));assert(css.includes('@media 
 assert(html.includes('renderSheetTabMenus();window.LampySidebar?.refresh();updateApplicationChrome()'));
 assert(html.includes('LampySidebar.init({changed:()=>{scheduleResponsiveSheetLayout();scheduleApplicationTitleFit()}})'));
 console.log('Application sidebar regressions passed');
+
+// The previous horizontal toolbar centred the entire menu halfway down the rail.
+// Lock the independent content wrapper and its top-aligned, single-column flow.
+function declarations(selector){const start=css.indexOf(selector+'{');assert(start>=0,selector);return Object.fromEntries(css.slice(start+selector.length+1,css.indexOf('}',start)).split(';').filter(Boolean).map(item=>{const i=item.indexOf(':');return [item.slice(0,i),item.slice(i+1)]}));}
+assert(source.includes("nav.classList.remove('previewHead')"));
+assert(source.includes("nav.classList.add('appNavigationContent')"));
+const content=declarations('.appNavigation .appNavigationContent'),tabs=declarations('.appNavigation .sheetTabs');
+assert.equal(content.display,'block');assert.equal(content['min-height'],'0');assert.equal(content['overflow-y'],'auto');
+assert.equal(tabs['justify-content'],'flex-start');assert.equal(tabs['flex-wrap'],'nowrap');assert.equal(tabs.height,'auto');
+assert.equal(declarations('.appNavigation .sheetTabMenuHost').flex,'0 0 auto');
+assert.equal(declarations('.appNavigationDisclosure')['grid-row'],'1');
+assert.equal(declarations('.appNavigation .sheetSubMenu,.appNavigation .sheetTabMenuHost.menuDismissed .sheetSubMenu')['grid-row'],'2');
+assert.equal(declarations('.appNavigationHead').display,'flex');
+assert(source.includes('stroke="currentColor"'));assert(source.includes('focusable="false"'));
+assert(!source.includes("icon.textContent=icons"));
+assert(css.includes('@media(prefers-reduced-motion:reduce)'));
+console.log('PASS: sidebar top alignment, non-wrapping rail, independent scroll, inline header and disclosure row placement.');
