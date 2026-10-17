@@ -1,6 +1,16 @@
 {
-  "title": "Lampy Paperwork V51 Walk-through",
+  "title": "Lampy Paperwork V52 Walk-through",
   "sections": [
+    {
+      "title": "New in V52: Navigation sidebar",
+      "type": "unordered",
+      "items": [
+        "Select a page in the left sidebar. Use the arrow beside a page to show its sub-pages, including imported patches and racks.",
+        "Use the sidebar menu button to switch between full labels and the compact icon rail. Hover over an icon to see its page name.",
+        "On narrow screens, open navigation with the menu button above the page header. Selecting a page closes the drawer. Escape or clicking outside also closes it.",
+        "Sidebar size is remembered in this browser. It does not change saved project data or PDF layouts."
+      ]
+    },
     {
       "title": "New in V51: Fixture Patch and Universe Detail",
       "type": "unordered",

@@ -1,4 +1,4 @@
-# V51 browser release checks
+# V52 browser release checks
 
 **Use this checklist only when the user explicitly requests browser testing.** Interface changes, implementation requests and releases do not authorise browser testing. Static validation remains the default.
 
@@ -6,6 +6,9 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 
 | Check | Chrome/Chromium | Firefox | Safari |
 | --- | --- | --- | --- |
+| Sidebar page routes, dynamic Patch/Rack sub-pages, active states, compact preference and keyboard focus | Required | Required | Required |
+| Mobile drawer: open/close, Escape, outside click, focus containment and return; sidebar-only scrolling | Required | Required | Required |
+| Expanded/compact sidebar content fitting and unchanged print/PDF geometry | Required | Required | Required |
 | Fixture Patch sub-tabs, Home universe routes, populated Menu and empty Import action | Required | Required | Required |
 | Universe selection, green footprints, # IDs, hover/focus details, Shift selection and reviewed moves | Required | Required | Required |
 | Drag across wrapped/scaled universe grid; green/red validity; Escape, pointer cancellation, outside drop and review cancellation retain original data | Required | Required | Required |

@@ -1,3 +1,13 @@
+## V52 — Application navigation sidebar
+
+- Store release metadata in js/app-version.json; update polling and release validation to use this location.
+
+- Update the Welcome Message, Walk-through and browser checklist for the V52 navigation.
+
+- Replace the horizontal page navigation with an icon-and-label sidebar using Paperwork styling, collapsible sub-pages and a compact icon rail.
+- Add a narrow-screen navigation drawer with keyboard focus handling; retain existing page routes and browser-only sidebar preferences.
+- Fit live content to the remaining workspace and exclude navigation from print and PDF output.
+
 ## V51.23 — Save and reload update notices
 
 - Check published release metadata every five minutes and when returning to the app; show a non-blocking Save & reload notice for newer versions.

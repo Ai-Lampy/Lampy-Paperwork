@@ -13,7 +13,7 @@
   const check=async()=>{
    if(stopped||busy||doc.hidden||now()-last<30000)return;
    last=now();busy=true;const controller=new AbortController(),timeout=win.setTimeout(()=>controller.abort(),10000);
-   try{const url=new URL('json/app-version.json',base);url.searchParams.set('check',String(last));const r=await fetcher(url,{cache:'no-store',signal:controller.signal});if(r.ok){const data=await r.json();if(!stopped&&data.application==='lampy-paperwork'&&newerVersion(latest,data.version)){latest=data.version;available(latest);}}}catch{/* Offline, missing or incomplete releases do not interrupt work. */}finally{win.clearTimeout(timeout);busy=false;}
+   try{const url=new URL('js/app-version.json',base);url.searchParams.set('check',String(last));const r=await fetcher(url,{cache:'no-store',signal:controller.signal});if(r.ok){const data=await r.json();if(!stopped&&data.application==='lampy-paperwork'&&newerVersion(latest,data.version)){latest=data.version;available(latest);}}}catch{/* Offline, missing or incomplete releases do not interrupt work. */}finally{win.clearTimeout(timeout);busy=false;}
   };
   const timer=win.setInterval(check,interval);doc.addEventListener('visibilitychange',check);win.addEventListener('focus',check);check();
   return ()=>{stopped=true;win.clearInterval(timer);doc.removeEventListener('visibilitychange',check);win.removeEventListener('focus',check);};
