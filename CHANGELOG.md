@@ -1,3 +1,9 @@
+## V51.22 — Category-first Looms picker
+
+- Rename Catalogue Looms to Looms and replace the expanded stock lists with a category-first field and menu matching the cable builder.
+- Show loom lengths after category selection, with Back navigation and direct project addition.
+- Preserve custom drafts, saved connector metadata and side-pane scroll containment.
+
 ## V51.21 — Christie Lites 32A cable alias
 
 - Add 32A 3Ph as an alias for the Christie Lites 32A 3ø cable without changing loom members or stock availability.
