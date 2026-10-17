@@ -85,10 +85,27 @@ assert.equal(declarations('.appNavigation .sheetSubMenu button')['border-left'],
 assert(source.includes('if(!collapsed||media.matches||suppressFocus)return'));
 assert(css.includes('--navigation-width:min(200px,85vw)'));
 for(const [parent,label,icon] of [['fixturePatch','Imported show','fixturePatch'],['fixturePatch','Universe Detail','universe'],['network','Device Config','network'],['network','Port Configuration','ports'],['powerSheet','Fan Outs','fan'],['powerSheet','Phase Totals','totals'],['rackLayout','Rack A','rackLayout'],['looms','Cable List','list'],['distroLabels','Front RCBO Labels','distroLabels'],['distroLabels','Rear Labels','rear'],['distroLabels','Table View','fixturePatch']])assert.equal(sidebar.subPageIcon(parent,label),icon);
-const doc={createElement:()=>({setAttribute(key,value){this[key]=value}})},button={textContent:'Rear Labels',querySelector(){return this.children?.[0]},replaceChildren(...children){this.children=children}};
+const doc={createElement:()=>({setAttribute(key,value){this[key]=value}})},button={setAttribute(key,value){this[key]=value},removeAttribute(key){delete this[key]},textContent:'Rear Labels',querySelector(){return this.children?.[0]},replaceChildren(...children){this.children=children}};
 sidebar.decorateSubPage(button,'distroLabels',doc);
 assert.equal(button.children[1].textContent,'Rear Labels');assert.equal(button.children[0]['aria-hidden'],'true');assert(button.children[0].innerHTML.includes('<svg'));
 const first=button.children;sidebar.decorateSubPage(button,'distroLabels',doc);assert.equal(button.children,first);
 console.log('PASS: 200px sidebar, expanded hover suppression, requested styles and labelled sub-page icons.');
 
 assert.equal(declarations('body.hasAppNavigation>.topHeader>.top')['padding-right'],'10px');
+
+for(const compact of [false,true])for(const active of [false,true])for(const expanded of [false,true])assert.equal(sidebar.subPagesVisible(compact,active,expanded),compact?active:expanded);
+assert(source.includes("if(page)expanded.add(page.dataset.sheetTab)"));
+assert(source.includes('if(activePage!==lastActivePage)'));
+assert(source.includes("menu.hidden=!visible"));
+assert(source.includes("if(compact)item.title=item.textContent;else item.removeAttribute('title')"));
+assert(css.includes('.appNavigationCompact .appNavigation .appNavigationSubLabel{display:none}'));
+assert.equal(button['aria-label'],'Rear Labels');
+assert.equal(new Set(['universe','fan','ports','looms'].map(sidebar.iconMarkup)).size,4);
+for(const key of ['universe','fan','ports','looms'])assert(sidebar.iconMarkup(key).includes('aria-hidden="true"'));
+const header=html.slice(html.indexOf('<header class="topHeader">'),html.indexOf('</header>')+9),headerActions=header.slice(header.indexOf('<div class="topActions">'),header.indexOf('<button class="menuButton"'));
+assert(headerActions.indexOf('id="tourLogoSlot"')<headerActions.indexOf('id="projectErrorsButton"'));
+assert(!headerActions.includes('Report Issue'));
+assert(header.slice(header.indexOf('<aside class="actionSidebar"')).includes('href="https://github.com/Ai-Lampy/Lampy-Paperwork/issues"'));
+assert(header.includes('class="btn" onclick="closeActionMenu()" href='));
+assert(source.includes("aside.querySelectorAll('button,a[href]')"));
+console.log('PASS: automatic sub-pages, active compact icons, distinct glyphs, Report Issue in Menu and Errors after Tour Logo.');

@@ -1,3 +1,9 @@
+## V52.8 — Sidebar sub-pages and header actions
+
+- Open sub-pages when selecting a page; show the active page’s sub-page icons in the minimised sidebar.
+- Replace Universe Detail, Fan Outs, Port Configuration and Looms icons.
+- Move Report Issue into Menu and place Errors to the right of the Tour Logo.
+
 ## V52.7 — Sidebar width and sub-page icons
 
 - Set the top header’s inner right padding to 10px.

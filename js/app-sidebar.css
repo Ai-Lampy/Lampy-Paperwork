@@ -72,3 +72,10 @@ body.hasAppNavigation>.topHeader>.top{padding-right:10px}
 .appNavigationSubIcon{display:flex;flex:0 0 16px;align-items:center;justify-content:center}
 .appNavigationSubIcon svg{width:16px;height:16px}
 .appNavigationSubLabel{min-width:0;overflow-wrap:anywhere}
+
+.appNavigationCompact .appNavigation .sheetSubMenu{padding:4px 0;gap:2px}
+.appNavigationCompact .appNavigation .sheetSubMenu button{justify-content:center;min-height:34px;padding:8px 0;border-radius:6px}
+.appNavigationCompact .appNavigation .appNavigationSubLabel{display:none}
+.appNavigationCompact .appNavigation .sheetSubMenu .appNavigationSubIcon{flex-basis:18px}
+.appNavigationCompact .appNavigation .sheetSubMenu svg{width:18px;height:18px}
+.actionSidebar a.btn{display:block;color:#111;text-decoration:none;font-family:var(--app-font)}

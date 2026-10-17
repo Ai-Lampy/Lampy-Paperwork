@@ -12,11 +12,11 @@
     controlNetwork:'M4 5h16M4 12h16M4 19h16M8 3v4M16 10v4M9 17v4',
     network:'M9 3h6v5H9zM3 16h6v5H3zM15 16h6v5h-6zM12 8v4M6 16v-4h12v4',
     rackLayout:'M4 3h16v18H4zM4 9h16M4 15h16M7 6h1M7 12h1M7 18h1M12 6h5M12 12h5M12 18h5',
-    looms:'M5 3v7a4 4 0 0 0 4 4h6a4 4 0 0 1 4 4v3M19 3v3a4 4 0 0 1-4 4H9a4 4 0 0 0-4 4v7M3 3h4M17 3h4M3 21h4M17 21h4',
+    looms:'M3 4h4v4H3zM3 16h4v4H3zM17 4h4v4h-4zM17 16h4v4h-4zM7 6h2l6 12h2M7 18h2L15 6h2M10 10h4v4h-4z',
     distroLabels:'M3 3h9l9 9-9 9-9-9zM7 7h.01',
-    universe:'M3 3h18v18H3zM3 9h18M3 15h18M9 3v18M15 3v18',
-    ports:'M3 7h18v10H3zM6 10v4M10 10v4M14 10v4M18 10v4',
-    fan:'M4 3v6h16V3M12 9v12M4 21h16',
+    universe:'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20M2 12h20M4 6h16M4 18h16M12 2c-6 5-6 15 0 20M12 2c6 5 6 15 0 20',
+    ports:'M3 3h8v8H3zM6 6v2M8 6v2M14 16h7v5h-7zM7 11v7h7M15 4h6M18 2v4M15 9h6M17 7v4',
+    fan:'M10 18h4v4h-4zM12 18v-7M12 11 4 7M12 11l8-4M2 2h4v5H2zM10 2h4v5h-4zM18 2h4v5h-4zM12 7v4',
     totals:'M4 20V10h4v10M10 20V4h4v16M16 20v-7h4v7',
     list:'M8 5h13M8 12h13M8 19h13M3 5h1M3 12h1M3 19h1',
     rear:'M4 4h16v16H4zM7 8h10M7 12h10M7 16h6',
@@ -33,8 +33,9 @@
     if(button.querySelector('.appNavigationSubIcon'))return;
     const label=button.textContent,icon=doc.createElement('span'),text=doc.createElement('span');
     icon.className='appNavigationSubIcon';icon.setAttribute('aria-hidden','true');icon.innerHTML=iconMarkup(subPageIcon(parent,label));
-    text.className='appNavigationSubLabel';text.textContent=label;button.replaceChildren(icon,text);
+    button.setAttribute('aria-label',label);text.className='appNavigationSubLabel';text.textContent=label;button.replaceChildren(icon,text);
   }
+  function subPagesVisible(compact,active,expanded){return compact?active:expanded}
   function flyoutPosition(anchor,viewport,width,height){return {left:Math.max(8,Math.min(anchor.right+8,viewport.width-width-8)),top:Math.max(8,Math.min(anchor.top,viewport.height-height-8))}}
   let controller;
   function init({changed=()=>{}}={}){
@@ -50,7 +51,7 @@
     if(actions)footer.append(actions);aside.append(footer);
     const backdrop=doc.createElement('div');backdrop.className='appNavigationBackdrop';backdrop.hidden=true;aside.before(backdrop);
     let storage;try{storage=root.localStorage}catch{}
-    const media=root.matchMedia('(max-width: 767px)'),expanded=new Set();let collapsed=readPreference(storage),open=false,previousFocus=null;
+    const media=root.matchMedia('(max-width: 767px)'),expanded=new Set();let collapsed=readPreference(storage),open=false,previousFocus=null,lastActivePage=null;
     const toggle=aside.querySelector('.appNavigationToggle');
     const flyout=doc.createElement('nav');flyout.className='appNavigationFlyout';flyout.id='appNavigationFlyout';flyout.hidden=true;doc.body.append(flyout);
     let flyoutSource=null,leaveTimer=null,suppressFocus=false;
@@ -75,7 +76,8 @@
     nav.addEventListener('scroll',()=>hideFlyout());root.addEventListener('resize',()=>hideFlyout());
     function paint(){hideFlyout();const state=layoutState(collapsed,media.matches,open);doc.body.classList.add('hasAppNavigation');doc.body.classList.toggle('appNavigationCompact',collapsed&&!media.matches);doc.body.classList.toggle('appNavigationOpen',media.matches&&open);aside.inert=state.hidden;aside.setAttribute('aria-hidden',String(state.hidden));backdrop.hidden=!(media.matches&&open);toggle.setAttribute('aria-expanded',String(state.expanded));toggle.setAttribute('aria-label',media.matches?'Close navigation':collapsed?'Expand navigation':'Collapse navigation');trigger.setAttribute('aria-expanded',String(open));refresh();changed()}
     function close(){if(!open)return;if(doc.body.classList.contains('actionMenuOpen'))menuButton?.click();open=false;paint();previousFocus?.focus?.()}
-    function refresh(){hideFlyout();aside.querySelectorAll('[data-sheet-tab]').forEach(button=>{
+    aside.addEventListener('click',event=>{const page=event.target.closest('[data-sheet-tab]');if(page)expanded.add(page.dataset.sheetTab)},true);
+    function refresh(){hideFlyout();const activePage=aside.querySelector('[data-sheet-tab].active')?.dataset.sheetTab;if(activePage!==lastActivePage){if(activePage)expanded.add(activePage);lastActivePage=activePage}aside.querySelectorAll('[data-sheet-tab]').forEach(button=>{
       const key=button.dataset.sheetTab,label=button.dataset.navLabel||button.textContent.trim();button.dataset.navLabel=label;button.setAttribute('aria-label',label);button.removeAttribute('title');
       if(!button.querySelector('.appNavigationIcon')){button.textContent='';const icon=doc.createElement('span');icon.className='appNavigationIcon';icon.setAttribute('aria-hidden','true');icon.innerHTML=iconMarkup(key);const text=doc.createElement('span');text.className='appNavigationLabel';text.textContent=label;button.append(icon,text)}
       if(button.classList.contains('active'))button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');
@@ -84,14 +86,14 @@
       let disclosure=host.querySelector('.appNavigationDisclosure');
       if(!menu){disclosure?.remove();button.style.gridColumn='1 / -1';return}button.style.gridColumn='';menu.removeAttribute('role');menu.querySelectorAll('button').forEach(item=>decorateSubPage(item,key,doc));menu.querySelectorAll('[role]').forEach(item=>item.removeAttribute('role'));
       if(!disclosure){disclosure=doc.createElement('button');disclosure.type='button';disclosure.className='appNavigationDisclosure';disclosure.innerHTML=iconMarkup('chevron');host.append(disclosure);disclosure.addEventListener('click',()=>{if(collapsed&&!media.matches){collapsed=false;writePreference(storage,false)}expanded.has(key)?expanded.delete(key):expanded.add(key);paint()})}
-      disclosure.setAttribute('aria-label',label+' sub-pages');disclosure.setAttribute('aria-controls',menu.id);disclosure.setAttribute('aria-expanded',String(expanded.has(key)));menu.hidden=!expanded.has(key)||(collapsed&&!media.matches);
+      disclosure.setAttribute('aria-label',label+' sub-pages');disclosure.setAttribute('aria-controls',menu.id);const compact=collapsed&&!media.matches,visible=subPagesVisible(compact,button.classList.contains('active'),expanded.has(key));disclosure.setAttribute('aria-expanded',String(visible));menu.hidden=!visible;menu.querySelectorAll('button').forEach(item=>{if(compact)item.title=item.textContent;else item.removeAttribute('title')});
     })}
     toggle.addEventListener('click',()=>{if(media.matches)close();else{collapsed=!collapsed;writePreference(storage,collapsed);paint()}});
     trigger.addEventListener('click',()=>{previousFocus=doc.activeElement;open=true;paint();toggle.focus()});backdrop.addEventListener('click',close);
     aside.addEventListener('click',event=>{if(event.target.closest('[data-sheet-tab],.sheetSubMenu button')&&media.matches){close();doc.getElementById('sheet')?.focus({preventScroll:true})}});
-    doc.addEventListener('keydown',event=>{if(!media.matches||!open)return;if(event.key==='Escape'){event.preventDefault();event.stopImmediatePropagation();close()}else if(event.key==='Tab'){const buttons=[...aside.querySelectorAll('button')].filter(b=>b.getClientRects().length&&!b.disabled),first=buttons[0],last=buttons.at(-1);if(event.shiftKey&&(doc.activeElement===first||!aside.contains(doc.activeElement))){event.preventDefault();last?.focus()}else if(!event.shiftKey&&(doc.activeElement===last||!aside.contains(doc.activeElement))){event.preventDefault();first?.focus()}}},true);
-    actions?.addEventListener('click',event=>{if(media.matches&&event.target.closest('button')){open=false;paint()}});
+    doc.addEventListener('keydown',event=>{if(!media.matches||!open)return;if(event.key==='Escape'){event.preventDefault();event.stopImmediatePropagation();close()}else if(event.key==='Tab'){const buttons=[...aside.querySelectorAll('button,a[href]')].filter(b=>b.getClientRects().length&&!b.disabled),first=buttons[0],last=buttons.at(-1);if(event.shiftKey&&(doc.activeElement===first||!aside.contains(doc.activeElement))){event.preventDefault();last?.focus()}else if(!event.shiftKey&&(doc.activeElement===last||!aside.contains(doc.activeElement))){event.preventDefault();first?.focus()}}},true);
+    actions?.addEventListener('click',event=>{if(media.matches&&event.target.closest('button,a[href]')){open=false;paint()}});
     media.addEventListener('change',()=>{open=false;paint()});controller={refresh};paint();return controller;
   }
-  const api={init,refresh:()=>controller?.refresh(),readPreference,writePreference,layoutState,flyoutPosition,subPageIcon,decorateSubPage};if(typeof module==='object'&&module.exports)module.exports=api;else root.LampySidebar=api;
+  const api={init,refresh:()=>controller?.refresh(),readPreference,writePreference,layoutState,flyoutPosition,subPageIcon,decorateSubPage,subPagesVisible,iconMarkup};if(typeof module==='object'&&module.exports)module.exports=api;else root.LampySidebar=api;
 })(typeof window==='undefined'?globalThis:window);
