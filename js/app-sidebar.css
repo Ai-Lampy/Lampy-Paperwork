@@ -43,3 +43,8 @@ body.hasAppNavigation>.appShell>.wrap>.previewPanel{padding:0;border-radius:0;bo
 .appNavigationFlyout button.appNavigationFlyoutTitle{font-weight:800;color:#111}
 .appNavigationFlyout button:hover{background:#eef2f6}.appNavigationFlyout button:focus-visible{outline:2px solid #0060ff;outline-offset:-2px;background:#eef2f6}
 @media print{.appNavigationFlyout{display:none!important}}
+
+@media screen{
+ body.hasAppNavigation>.topHeader,body.hasAppNavigation>.appShell{padding-left:10px;padding-right:10px}
+ body.hasAppNavigation>.appFooter{margin-left:10px;width:98%;max-width:calc(100% - 10px)}
+}

@@ -1,3 +1,8 @@
+## V52.4 — Workspace spacing
+
+- Set live header and application shell left/right padding to 10px.
+- Set the footer to 98% width with a 10px left margin, capped to prevent narrow-screen overflow. Preserve print/PDF spacing.
+
 ## V52.3 — Sidebar hover navigation
 
 - Move the project save-status bar to the bottom-right corner.

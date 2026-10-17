@@ -24,7 +24,7 @@ console.log('Application sidebar regressions passed');
 
 // The previous horizontal toolbar centred the entire menu halfway down the rail.
 // Lock the independent content wrapper and its top-aligned, single-column flow.
-function declarations(selector){const start=css.indexOf(selector+'{');assert(start>=0,selector);return Object.fromEntries(css.slice(start+selector.length+1,css.indexOf('}',start)).split(';').filter(Boolean).map(item=>{const i=item.indexOf(':');return [item.slice(0,i),item.slice(i+1)]}));}
+function declarations(selector){let start=css.indexOf(selector+'{');while(start>0&&css[start-1]===',')start=css.indexOf(selector+'{',start+1);assert(start>=0,selector);return Object.fromEntries(css.slice(start+selector.length+1,css.indexOf('}',start)).split(';').filter(Boolean).map(item=>{const i=item.indexOf(':');return [item.slice(0,i),item.slice(i+1)]}));}
 assert(source.includes("nav.classList.remove('previewHead')"));
 assert(source.includes("nav.classList.add('appNavigationContent')"));
 const content=declarations('.appNavigation .appNavigationContent'),tabs=declarations('.appNavigation .sheetTabs');
@@ -60,3 +60,9 @@ console.log('PASS: flyout viewport bounds, current sub-page routing, pointer han
 
 assert(html.includes('position:fixed;bottom:8px;right:8px;z-index:9999'));
 assert(!html.includes('position:fixed;bottom:8px;left:8px;z-index:9999'));
+
+assert.equal(declarations('body.hasAppNavigation>.topHeader,body.hasAppNavigation>.appShell')['padding-left'],'10px');
+assert.equal(declarations('body.hasAppNavigation>.topHeader,body.hasAppNavigation>.appShell')['padding-right'],'10px');
+assert.equal(declarations('body.hasAppNavigation>.appFooter')['margin-left'],'10px');
+assert.equal(declarations('body.hasAppNavigation>.appFooter').width,'98%');
+assert.equal(declarations('body.hasAppNavigation>.appFooter')['max-width'],'calc(100% - 10px)');
