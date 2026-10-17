@@ -1,8 +1,11 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),path=require('path'),zlib=require('zlib');
+// Documentation follows the current major release, including during point releases.
 const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+const documentationMajor=html.match(/const VERSION='([^']+)'/)[1].split('.')[0];
+require('./release-documentation.cjs');
 const LampyCore=require('../js/project-core.js'),LampyArchive=require('../js/archive.js');
-assert(html.includes('<title>Lampy Paperwork V52.11</title>'));
-assert(html.includes("const VERSION='52.11';"));
+assert(html.includes('<title>Lampy Paperwork V53</title>'));
+assert(html.includes("const VERSION='53';"));
 const v472WidthLimits={colour:[30,40],socapex:[75,180],way:[20,30],fixId:[50,80],fixType:[60,190],position:[85,180],watts:[40,45],amps:[66,75]};
 const v475WidthCurrent={colour:30,socapex:112,way:26,fixId:59,fixType:117,position:115,watts:45,amps:72};
 const v472WidthSource=html.slice(html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS='),html.indexOf('let powerColumnWidthSettings=',html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS=')));
@@ -220,8 +223,8 @@ function zip(name,data,compressed=false){const filename=Buffer.from(name),conten
  console.log('PASS: stored/deflated ZIP, CRC corruption, unsafe paths, extraction bounds and 10,000-fixture round trip');
 })().catch(error=>{console.error(error);process.exitCode=1});
 
-assert(html.includes('<title>Lampy Paperwork V52.11</title>'));
-assert(html.includes("const VERSION='52.11';"));
+assert(html.includes('<title>Lampy Paperwork V53</title>'));
+assert(html.includes("const VERSION='53';"));
 assert(!html.includes('function controlSubTabsMarkup('));
 assert(!html.includes('function setControlNetworkTab('));
 assert(source('renderConsolesTab').includes("controlUnifiedSectionMarkup('console')"));
@@ -230,13 +233,13 @@ assert(source('controlLocationCellStyle').includes('powerPositionCellStyle'));
 assert(source('controlLocationCellStyle').includes('colourSetPresentation(colours)'));
 assert(source('controlLocationCellStyle').includes('--control-location-text'));
 assert(html.includes('.controlNetworkView .controlPositionName{font-family:var(--project-body-font)}'));
-assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/welcome_message.json'))).title.includes('V52'));
-assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/walkthrough.json'))).title.includes('V52'));
+assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/welcome_message.json'))).title.includes('V'+documentationMajor));
+assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/walkthrough.json'))).title.includes('V'+documentationMajor));
 console.log('PASS: V49.2 Control Location text styling and release metadata.');
 
 const changelog=fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8');
-assert(changelog.startsWith('## V52.11 — Sidebar reopening correction'));
-assert(html.includes("const VERSION='52.11';"));
+assert(changelog.startsWith('## V53 — Navigation and page help'));
+assert(html.includes("const VERSION='53';"));
 assert(!html.includes('function projectYellowTextPresentation('));
 assert(!html.includes('function positionSummaryColourPresentation('));
 assert(!html.includes('function powerWhiteTextOutline('));
@@ -244,34 +247,34 @@ assert(html.includes("[data-front-label-colours]:not(.spareAuto)"));
 assert(html.includes("[data-rear-label-colours]:not(.spareAuto)"));
 console.log('PASS: V49.2 release metadata and unified Position rendering paths.');
 
-assert(html.includes('<title>Lampy Paperwork V52.11</title>'));
-assert(html.includes("const VERSION='52.11';"));
+assert(html.includes('<title>Lampy Paperwork V53</title>'));
+assert(html.includes("const VERSION='53';"));
 assert(html.includes('[data-colour-input]{-webkit-text-stroke:var(--colour-text-stroke-width,0) var(--colour-text-outline,transparent)!important'));
-assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V52.11 — Sidebar reopening correction'));
+assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V53 — Navigation and page help'));
 console.log('PASS: V49.3 editable colour-field outline release metadata.');
 
-assert(html.includes('<title>Lampy Paperwork V52.11</title>'));
-assert(html.includes("const VERSION='52.11';"));
+assert(html.includes('<title>Lampy Paperwork V53</title>'));
+assert(html.includes("const VERSION='53';"));
 assert(source('positionPdfItemMarkup').includes('data-position-summary-colours'));
 assert(source('preparePdfSocaColourLayers').includes('drawPdfPositionSummaryStripeCanvas'));
-assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V52.11 — Sidebar reopening correction'));
+assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V53 — Navigation and page help'));
 console.log('PASS: V49.4 Position Summary PDF colour release metadata.');
 
-assert(html.includes('<title>Lampy Paperwork V52.11</title>'));
-assert(html.includes("const VERSION='52.11';"));
+assert(html.includes('<title>Lampy Paperwork V53</title>'));
+assert(html.includes("const VERSION='53';"));
 assert(source('powerSheetRowMarkup').includes('powerSocaMultiColourBackground'));
 assert(source('fanOutRowMarkup').includes('powerSocaMultiColourBackground'));
 assert(source('preparePdfSocaColourLayers').includes('drawPdfSocaNameStripeCanvas'));
 assert(source('powerPdfDomPdfBytes').includes('drawPowerSocaStripeFill'));
-assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V52.11 — Sidebar reopening correction'));
+assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V53 — Navigation and page help'));
 console.log('PASS: V50 Socapex two-colour pattern release metadata.');
 
-assert(html.includes('<title>Lampy Paperwork V52.11</title>'));
-assert(html.includes("const VERSION='52.11';"));
-assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V52.11 — Sidebar reopening correction'));
-assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/welcome_message.json'),'utf8')).title.includes('V52'));
-assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/walkthrough.json'),'utf8')).title.includes('V52'));
-assert(fs.readFileSync(path.join(root,'tests/BROWSER-CHECKLIST.md'),'utf8').startsWith('# V52 browser release checks'));
+assert(html.includes('<title>Lampy Paperwork V53</title>'));
+assert(html.includes("const VERSION='53';"));
+assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V53 — Navigation and page help'));
+assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/welcome_message.json'),'utf8')).title.includes('V'+documentationMajor));
+assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/walkthrough.json'),'utf8')).title.includes('V'+documentationMajor));
+assert(fs.readFileSync(path.join(root,'tests/BROWSER-CHECKLIST.md'),'utf8').startsWith('# V'+documentationMajor+' browser release checks'));
 assert(source('networkSubTabsMarkup').includes('Port Configuration'));
 assert(source('renderDeviceConfigView').includes('openDeviceConfigPdfPreview'));
 assert(source('buildDeviceConfigPdfPages').includes('finalisePdfPageChrome'));
@@ -290,8 +293,8 @@ for(const reader of ['mvrPatchRows','parseCsvRows','xlsxWorkbookSheets','xmlWork
 console.log('PASS: PDF patch import removed; CSV/Excel and MVR imports retained.');
 
 assert(html.includes('js/patch-address-review.js'));
-assert(html.includes("const VERSION='52.11';"));
-assert(changelog.startsWith('## V52.11 — Sidebar reopening correction'));
+assert(html.includes("const VERSION='53';"));
+assert(changelog.startsWith('## V53 — Navigation and page help'));
 assert(source('confirmPatchGroupEdit').includes('LampyPatchAddress.grouped'));
 assert(source('confirmPatchAddressReview').includes("recordFixturePatchUndo(draft.universeDestination?"));
 assert(source('confirmPatchAddressReview').includes('draft.snapshot!==patchAddressSnapshot()'));
@@ -314,6 +317,6 @@ require('./app-updates.cjs');
 
 require('./app-sidebar.cjs');
 
-assert(fs.readFileSync(path.join(root,'tests/BROWSER-CHECKLIST.md'),'utf8').startsWith('# V52 browser release checks'));
+assert(fs.readFileSync(path.join(root,'tests/BROWSER-CHECKLIST.md'),'utf8').startsWith('# V'+documentationMajor+' browser release checks'));
 
 require('./saving-navigation.cjs');

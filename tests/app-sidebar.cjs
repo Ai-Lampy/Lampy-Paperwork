@@ -51,7 +51,7 @@ console.log('PASS: full-width expanded, compact and mobile workspace without wra
 assert.deepEqual(sidebar.flyoutPosition({right:60,top:80},{width:1500,height:900},240,200),{left:68,top:80});
 assert.deepEqual(sidebar.flyoutPosition({right:256,top:850},{width:800,height:900},240,200),{left:264,top:692});
 assert.deepEqual(sidebar.flyoutPosition({right:700,top:0},{width:800,height:900},240,884),{left:552,top:8});
-assert(source.includes("querySelectorAll('.sheetSubMenu button').forEach(item=>addAction(item))"));
+assert(source.includes("querySelectorAll('.sheetSubMenu button:not(.appNavigationDuplicate)').forEach(item=>addAction(item))"));
 assert(source.includes("hideFlyout();original.click()"));
 assert(source.includes("flyout.addEventListener('pointerenter',cancelLeave)"));
 assert(source.includes("event.key==='ArrowRight'"));assert(source.includes('hideFlyout(true)'));
@@ -149,3 +149,45 @@ assert.equal(groupSizing.height,'max-content');assert.equal(groupSizing['grid-te
 assert.equal(submenuSizing.height,'max-content');assert.equal(submenuSizing['align-content'],'start');assert.equal(submenuSizing['grid-auto-rows'],'max-content');
 assert.equal(declarations('.appNavigation .sheetSubMenu button')['align-self'],'start');
 console.log('PASS: both sidebar modes close previous groups and submenu grids use intrinsic non-stretching rows.');
+
+// V53: destination state, compact labels, Home settings, contextual help and loom preferences.
+const vm=require('node:vm');
+function appFunction(name){const start=html.indexOf('function '+name+'(');assert(start>=0,name);for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const code=html.slice(start,end+1);try{new Function('return ('+code+')');return code}catch{}}throw Error(name)}
+assert.equal(sidebar.flyoutMode('home',true),'none');
+assert.equal(sidebar.flyoutMode('home',false),'group');
+assert.equal(sidebar.flyoutMode('powerSheet',true),'name');
+assert.equal(sidebar.flyoutMode('powerSheet',false),'group');
+assert.equal(sidebar.flyoutMode(undefined,true),'name');
+assert.equal(sidebar.flyoutMode(undefined,false),'name');
+assert(source.includes("if(button.dataset.sheetTab!=='home')addAction(button,true)"));
+assert(source.includes("if(mode==='group')button.parentElement"));
+assert(css.includes('button[aria-current="page"]{background:#0060ff'));
+assert(css.includes('.appNavigationCompact .appNavigation .sheetSubMenu button.appNavigationDuplicate{display:none}'));
+assert(html.includes("if(route.active)item.setAttribute('aria-current','page')"));
+assert.equal(sidebar.subPageIcon('home','Project Settings'),'settings');
+assert.notEqual(sidebar.iconMarkup('rear'),sidebar.iconMarkup('distroLabels'));
+assert(source.indexOf('footer.append(helpButton)')<source.indexOf('footer.append(menuButton)'));
+assert(source.includes("root.openAppInfo('help')"));
+assert(!html.slice(html.indexOf('<aside class="actionSidebar"'),html.indexOf('</header>')).includes('>Project Settings</button>'));
+assert(html.includes('.projectErrorsControl{position:relative;padding-left:6px}'));
+const context=vm.createContext({activeSheetTab:'home',activePatchSheetId:'master',activePowerSubTab:'calcs',activeNetworkSubTab:'deviceConfig',activeControlNetworkTab:'consoles',activeRackTabId:'r1',activeLoomSubTab:'looms',activeDistroLabelTab:'labels',activeUniverseDetail:1,app:{patchSheets:[],controlNetwork:{racks:[{id:'r1',name:'Rack'}]}},distroRanges:()=>[],powerPhaseTotalsAvailable:()=>true,normalisePatchSheets:v=>v,setSheetTab:tab=>context.activeSheetTab=tab,openProjectSettings:()=>context.activeSheetTab='projectSettings'});
+for(const name of ['sheetSubMenuRoutes','applicationPageHelp'])vm.runInContext(appFunction(name),context);
+context.sheetSubMenuRoutes('home')[0].run();assert.equal(context.activeSheetTab,'projectSettings');assert.equal(context.sheetSubMenuRoutes('home')[0].active,true);
+context.activeSheetTab='fixturePatch';let routes=context.sheetSubMenuRoutes('fixturePatch');assert(routes[0].active);assert(routes[0].compactDuplicate);
+context.app.patchSheets=[{id:'a',name:'Show A'},{id:'b',name:'Show B'}];context.activePatchSheetId='b';routes=context.sheetSubMenuRoutes('fixturePatch');assert(!routes[0].compactDuplicate);assert.deepEqual(Array.from(routes.filter(r=>r.active),r=>r.label),['Show B']);assert.equal(routes.at(-1).label,'Universe Detail');
+for(const [page,group,key,value,label] of [['powerSheet','powerSheet','activePowerSubTab','fanOuts','Fan Outs'],['deviceConfig','network','activeNetworkSubTab','portConfiguration','Port Configuration'],['looms','looms','activeLoomSubTab','cableList','Cable List'],['distroLabels','distroLabels','activeDistroLabelTab','rear','Rear Labels'],['controlNetwork','rackLayout','activeControlNetworkTab','racks','Rack']]){context.activeSheetTab=page;context[key]=value;assert.deepEqual(Array.from(context.sheetSubMenuRoutes(group).filter(r=>r.active),r=>r.label),[label]);assert(context.applicationPageHelp().length>50)}
+const data=new Map(),localStorage={getItem:key=>data.get(key),setItem:(key,value)=>data.set(key,value)};
+function loomContext(){const c=vm.createContext({localStorage,collapsedLoomCards:new Set(),knownLoomCardStates:new Set(),loomById:id=>({id}),loomDescendantIds:()=>new Set(['child']),render(){}});for(const name of ['initialiseLoomCardState','saveLoomCardState','toggleLoomCard'])vm.runInContext(appFunction(name),c);return c}
+let looms=loomContext();looms.initialiseLoomCardState('a');assert(looms.collapsedLoomCards.has('a'));looms.toggleLoomCard('a');assert(!looms.collapsedLoomCards.has('a'));looms.initialiseLoomCardState('a');assert(!looms.collapsedLoomCards.has('a'));
+looms=loomContext();looms.initialiseLoomCardState('a');assert(!looms.collapsedLoomCards.has('a'));looms.initialiseLoomCardState('new');assert(looms.collapsedLoomCards.has('new'));looms.toggleLoomCard('a');assert(looms.collapsedLoomCards.has('child'));
+looms=loomContext();looms.initialiseLoomCardState('a');assert(looms.collapsedLoomCards.has('a'));looms.localStorage={getItem(){throw Error()},setItem(){throw Error()}};assert.doesNotThrow(()=>looms.toggleLoomCard('a'));
+assert(appFunction('loadProjectPayload').includes('knownLoomCardStates.clear()'));assert(!appFunction('appPayload').includes('knownLoomCardStates'));
+console.log('PASS: V53 active destinations, compact hover policy, single-patch shortcut, contextual Help, Home Settings and reload-safe loom disclosure preferences.');
+
+// The compact inactive-group flyout must not resurrect the hidden single-patch shortcut.
+assert(source.includes("querySelectorAll('.sheetSubMenu button:not(.appNavigationDuplicate)')"));
+const labelOutline='M3 3h9l9 9-9 9-9-9zM7 7h.01';
+assert(sidebar.iconMarkup('rear').includes(labelOutline));
+assert(sidebar.iconMarkup('distroLabels').includes(labelOutline));
+assert(sidebar.iconMarkup('rear').includes('M9 16V9h3'));
+console.log('PASS: compact flyouts suppress duplicate Patch and Rear Labels retains the label outline with an R.');

@@ -1,4 +1,4 @@
-# V52 browser release checks
+# V53 browser release checks
 
 **Use this checklist only when the user explicitly requests browser testing.** Interface changes, implementation requests and releases do not authorise browser testing. Static validation remains the default.
 
@@ -7,6 +7,13 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 | Check | Chrome/Chromium | Firefox | Safari |
 | --- | --- | --- | --- |
 | Sidebar page routes, dynamic Patch/Rack sub-pages, active states, compact preference and keyboard focus | Required | Required | Required |
+| V53 compact hover: no Home heading, inactive groups show destinations, sub-pages show only their name, single-patch shortcut is not duplicated in rail or flyout | Required | Required | Required |
+| Active sub-page highlighting; switching page groups closes the previous group in both sidebar modes; Looms and label-with-R icons | Required | Required | Required |
+| Home → Project Settings works from expanded/compact navigation and is absent from Menu | Required | Required | Required |
+| Help above Menu describes each current page/sub-page; close, Escape, backdrop, focus return and mobile drawer behaviour | Required | Required | Required |
+| Loom cards start collapsed; opened cards survive navigation and reload; collapsing parent closes extensions; denied storage does not break controls | Required | Required | Required |
+| V53 welcome and walkthrough render from JSON and with JSON loading unavailable; content matches in both cases | Required | Required | Required |
+| Errors control retains 6px left padding, count and acknowledgement behaviour | Required | Required | Required |
 | Mobile drawer: open/close, Escape, outside click, focus containment and return; sidebar-only scrolling | Required | Required | Required |
 | Expanded/compact sidebar content fitting and unchanged print/PDF geometry | Required | Required | Required |
 | Fixture Patch sub-tabs, Home universe routes, populated Menu and empty Import action | Required | Required | Required |
@@ -14,7 +21,7 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 | Drag across wrapped/scaled universe grid; green/red validity; Escape, pointer cancellation, outside drop and review cancellation retain original data | Required | Required | Required |
 | PDF session column buttons reflect empty columns, isolate live preferences, preserve per-type omissions and show Qty / relocated page toggles | Required | Required | Required |
 | Startup, visible welcome dismissal, keyboard focus | Required | Required | Required |
-| At a 1500 px viewport, verify the 1450 px page wrapper and 1410 px usable sheet; repeat at narrow widths with no document-level horizontal overflow | Required | Required | Required |
+| At a 1500px viewport, verify 200px expanded / 60px compact navigation, full remaining workspace width and 10px header/app-shell padding; repeat at narrow widths with no document-level horizontal overflow | Required | Required | Required |
 | Fixture Patch, Power Calcs, Device Config, Rack Layout and Front/Rear Labels fill the sheet, preserve transformed height and recalculate after resizing | Required | Required | Required |
 | Home, Control, Network, Looms, Table View, Errors, Positions, Universe Detail and Project Settings stay within the page while controls wrap at their normal size | Required | Required | Required |
 | Unified Control shows Consoles then NPUs in Card and Table views, including empty sections and shared add/expand/collapse actions | Required | Required | Required |
@@ -67,7 +74,7 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 | Power Calcs, Fan Outs and conditional Phase Totals navigation | Required | Required | Required |
 | Power Calcs compound Fix IDs resolve every supported separator, mixed fixture types, positions, watts and duplicate warnings | Required | Required | Required |
 | Power and Fan Outs PDF exports start each distro with full headers/logos, fit both orientations and protect footer space | Required | Required | Required |
-| Power PDF summaries follow the final Socapex and the final Totals page groups every Supply with its assigned Distros | Required | Required | Required |
+| Power PDF summaries follow the final Socapex; omit final Totals for exactly one Supply and retain them for zero/multiple Supplies | Required | Required | Required |
 | Labels distro navigation and Front/Rear/Table controls | Required | Required | Required |
 | Labels starts in Table View before generation; generated Front/Rear labels persist, freeze Power updates, update on command and export correctly | Required | Required | Required |
 | Network Device Config tabs and actions share one toolbar | Required | Required | Required |

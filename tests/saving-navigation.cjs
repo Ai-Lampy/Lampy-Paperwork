@@ -36,7 +36,7 @@ assert(source('updateTourLogoSlot').includes("headerHomeLogoMarkup(logoImgMarkup
 assert(!source('vendorLogoImgMarkup').includes('headerLogoHome'));assert(!source('logoImgMarkup').includes('headerLogoHome'));
 assert(sidebar.includes('footer.append(menuButton)'));assert(sidebar.includes('footer.append(actions);aside.append(footer)'));
 assert(css.includes('.appNavigationFooter{position:relative;flex:0 0 auto;margin-top:auto;'));
-assert(css.includes('.appNavigationFooter>.menuButton{position:static;'));
+assert(css.includes('.appNavigationFooter>:is(.menuButton,.appNavigationHelp){position:static;'));
 assert(css.includes('inset:auto auto calc(100% + 8px) 0'));
 console.log('PASS: save-only transient status, separate recovery errors, 15-minute snapshots with deferred retry, sidebar Menu and header-only Home logo links.');
 

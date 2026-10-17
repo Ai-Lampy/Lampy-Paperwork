@@ -12,21 +12,23 @@
     controlNetwork:'M4 5h16M4 12h16M4 19h16M8 3v4M16 10v4M9 17v4',
     network:'M9 3h6v5H9zM3 16h6v5H3zM15 16h6v5h-6zM12 8v4M6 16v-4h12v4',
     rackLayout:'M4 3h16v18H4zM4 9h16M4 15h16M7 6h1M7 12h1M7 18h1M12 6h5M12 12h5M12 18h5',
-    looms:'M3 4h4v4H3zM3 16h4v4H3zM17 4h4v4h-4zM17 16h4v4h-4zM7 6h2l6 12h2M7 18h2L15 6h2M10 10h4v4h-4z',
+    looms:'M3 4v5c0 6 18 0 18 6v5M7 4v4c0 5 10 1 10 7v5M11 4v3c0 4 2 5 2 8v5M2 2h10v2H2zM12 20h10v2H12z',
     distroLabels:'M3 3h9l9 9-9 9-9-9zM7 7h.01',
     universe:'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20M2 12h20M4 6h16M4 18h16M12 2c-6 5-6 15 0 20M12 2c6 5 6 15 0 20',
     ports:'M3 3h8v8H3zM6 6v2M8 6v2M14 16h7v5h-7zM7 11v7h7M15 4h6M18 2v4M15 9h6M17 7v4',
     fan:'M10 18h4v4h-4zM12 18v-7M12 11 4 7M12 11l8-4M2 2h4v5H2zM10 2h4v5h-4zM18 2h4v5h-4zM12 7v4',
     totals:'M4 20V10h4v10M10 20V4h4v16M16 20v-7h4v7',
     list:'M8 5h13M8 12h13M8 19h13M3 5h1M3 12h1M3 19h1',
-    rear:'M4 4h16v16H4zM7 8h10M7 12h10M7 16h6',
+    rear:'M3 3h9l9 9-9 9-9-9zM7 7h.01M9 16V9h3a2 2 0 0 1 0 4H9m3 0 3 3',
+    settings:'M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6 2.1-2.1M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10',
+    help:'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20M9 8a3 3 0 1 1 4 3c-1 .5-1 1-1 3M12 17h.01',
     collapse:'M4 4h16v16H4zM9 4v16m7-11-3 3 3 3',
     menu:'M4 6h16M4 12h16M4 18h16',
     chevron:'m6 9 6 6 6-6'
   };
   function iconMarkup(name){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="'+(iconPaths[name]||iconPaths.menu)+'"/></svg>'}
   function subPageIcon(parent,label){
-    const names={'Patch':'fixturePatch','Universe Detail':'universe','Device Config':'network','Port Configuration':'ports','Power Calcs':'powerSheet','Fan Outs':'fan','Phase Totals':'totals','Looms':'looms','Cable List':'list','Front RCBO Labels':'distroLabels','Rear Labels':'rear','Table View':'fixturePatch'};
+    const names={'Project Settings':'settings','Patch':'fixturePatch','Universe Detail':'universe','Device Config':'network','Port Configuration':'ports','Power Calcs':'powerSheet','Fan Outs':'fan','Phase Totals':'totals','Looms':'looms','Cable List':'list','Front RCBO Labels':'distroLabels','Rear Labels':'rear','Table View':'fixturePatch'};
     return parent==='rackLayout'?'rackLayout':parent==='fixturePatch'&&label!=='Universe Detail'?'fixturePatch':names[label]||parent;
   }
   function decorateSubPage(button,parent,doc){
@@ -37,6 +39,7 @@
   }
   function resetExpandedPages(expanded,activePage){expanded.clear();if(activePage)expanded.add(activePage)}
   function subPagesVisible(compact,active,expanded){return compact?active:expanded}
+  function flyoutMode(mainPage,active){return mainPage==='home'&&active?'none':mainPage&&!active?'group':'name'}
   function flyoutPosition(anchor,viewport,width,height){return {left:Math.max(8,Math.min(anchor.right+8,viewport.width-width-8)),top:Math.max(8,Math.min(anchor.top,viewport.height-height-8))}}
   let controller;
   function init({changed=()=>{}}={}){
@@ -47,6 +50,7 @@
     nav.before(aside);aside.append(nav);nav.classList.remove('previewHead');nav.classList.add('appNavigationContent');nav.setAttribute('role','navigation');nav.setAttribute('aria-label','Paperwork pages');
     const trigger=doc.createElement('button');trigger.type='button';trigger.className='appNavigationMobileToggle';trigger.innerHTML=iconMarkup('menu');trigger.setAttribute('aria-label','Open navigation');trigger.setAttribute('aria-controls',aside.id);doc.querySelector('.topHeader').prepend(trigger);
     const footer=doc.createElement('div');footer.className='appNavigationFooter';
+    const helpButton=doc.createElement('button');helpButton.type='button';helpButton.className='appNavigationHelp';helpButton.setAttribute('aria-label','Help for this page');helpButton.setAttribute('aria-haspopup','dialog');helpButton.setAttribute('aria-controls','appInfoDialog');helpButton.title='Help';helpButton.innerHTML=iconMarkup('help')+'<span class="appNavigationLabel">Help</span>';helpButton.addEventListener('click',()=>{close();root.openAppInfo('help')});footer.append(helpButton);
     const menuButton=doc.querySelector('.menuButton'),actions=doc.getElementById('actionSidebar');
     if(menuButton){menuButton.removeAttribute('style');menuButton.setAttribute('aria-label','Menu');menuButton.title='Menu';menuButton.innerHTML=iconMarkup('menu')+'<span class="appNavigationLabel">Menu</span>';footer.append(menuButton)}
     if(actions)footer.append(actions);aside.append(footer);
@@ -60,10 +64,10 @@
     function hideFlyout(restore=false){cancelLeave();const source=flyoutSource;flyoutSource=null;flyout.hidden=true;flyout.replaceChildren();if(source){source.removeAttribute('aria-expanded');source.removeAttribute('aria-controls')}if(restore&&source){suppressFocus=true;source.focus();suppressFocus=false}}
     function scheduleLeave(){cancelLeave();leaveTimer=root.setTimeout(()=>{if(!flyout.contains(doc.activeElement)&&doc.activeElement!==flyoutSource)hideFlyout()},200)}
     function showFlyout(button){
-      if(!collapsed||media.matches||suppressFocus)return;cancelLeave();if(flyoutSource===button)return;hideFlyout();flyoutSource=button;
+      if(!collapsed||media.matches||suppressFocus)return;cancelLeave();if(flyoutSource===button)return;hideFlyout();const mode=flyoutMode(button.dataset.sheetTab,button.classList.contains('active'));if(mode==='none')return;flyoutSource=button;
       const label=button.dataset.navLabel||button.textContent.trim();flyout.setAttribute('aria-label',label+' navigation');
       function addAction(original,heading=false){const item=doc.createElement('button');item.type='button';item.textContent=heading?label:original.textContent;item.className=heading?'appNavigationFlyoutTitle':'';if(!heading)decorateSubPage(item,button.dataset.sheetTab,doc);item.addEventListener('click',()=>{hideFlyout();original.click();doc.getElementById('sheet')?.focus({preventScroll:true})});flyout.append(item)}
-      addAction(button,true);button.parentElement.querySelectorAll('.sheetSubMenu button').forEach(item=>addAction(item));
+      if(button.dataset.sheetTab!=='home')addAction(button,true);if(mode==='group')button.parentElement.querySelectorAll('.sheetSubMenu button:not(.appNavigationDuplicate)').forEach(item=>addAction(item));
       button.setAttribute('aria-controls',flyout.id);button.setAttribute('aria-expanded','true');flyout.hidden=false;
       const bounds=button.getBoundingClientRect(),position=flyoutPosition({right:aside.getBoundingClientRect().right,top:bounds.top},{width:doc.documentElement.clientWidth,height:root.innerHeight},flyout.offsetWidth,flyout.offsetHeight);
       flyout.style.left=position.left+'px';flyout.style.top=position.top+'px';
@@ -96,5 +100,5 @@
     actions?.addEventListener('click',event=>{if(media.matches&&event.target.closest('button,a[href]')){open=false;paint()}});
     media.addEventListener('change',()=>{open=false;paint()});controller={refresh};paint();return controller;
   }
-  const api={init,refresh:()=>controller?.refresh(),readPreference,writePreference,layoutState,flyoutPosition,subPageIcon,decorateSubPage,subPagesVisible,iconMarkup,resetExpandedPages};if(typeof module==='object'&&module.exports)module.exports=api;else root.LampySidebar=api;
+  const api={init,refresh:()=>controller?.refresh(),readPreference,writePreference,layoutState,flyoutPosition,subPageIcon,decorateSubPage,subPagesVisible,iconMarkup,resetExpandedPages,flyoutMode};if(typeof module==='object'&&module.exports)module.exports=api;else root.LampySidebar=api;
 })(typeof window==='undefined'?globalThis:window);

@@ -1,14 +1,18 @@
 {
-  "title": "Lampy Paperwork V52 Walk-through",
+  "title": "Lampy Paperwork V53 Walk-through",
   "sections": [
     {
-      "title": "New in V52: Navigation sidebar",
+      "title": "New in V53: Navigation and page help",
       "type": "unordered",
       "items": [
-        "Select a page in the left sidebar. Use the arrow beside a page to show its sub-pages, including imported patches and racks.",
-        "Use the sidebar menu button to switch between full labels and the compact icon rail. Hover over an icon to see its page name.",
-        "On narrow screens, open navigation with the menu button above the page header. Selecting a page closes the drawer. Escape or clicking outside also closes it.",
-        "Sidebar size is remembered in this browser. It does not change saved project data or PDF layouts."
+        "Select a page in the left sidebar. Selecting another page group closes the previous group in both expanded and compact navigation. The active sub-page is highlighted.",
+        "Use the collapse/expand control beside the app logo to switch between full labels and the compact icon rail. Menu at the bottom opens project actions; it does not resize the sidebar.",
+        "In compact navigation, the active group shows its sub-page icons. Hover or focus a sub-page for its name. Hover an inactive group for its destinations; Home omits its own name. A single patch sheet does not repeat the Patch shortcut.",
+        "Open Home → Project Settings to edit project information, contacts, logos and export defaults. Project Settings is no longer in Menu.",
+        "Press the circled question-mark Help button above Menu for guidance about the current page. Close the dialog with its close button, Escape or its backdrop.",
+        "Individual loom cards start collapsed. Click a loom heading to open or close it. Open-card preferences survive page switching and reloads in this browser without changing project data.",
+        "On narrow screens, open navigation with the button above the page header. Selecting a page closes the drawer. Escape or clicking outside also closes it.",
+        "Sidebar size is remembered in this browser. Navigation and loom disclosure preferences do not change PDF layouts."
       ]
     },
     {
@@ -18,7 +22,7 @@
         "Open Universe Detail under Fixture Patch, or select a universe from Home. This view edits the Master Patch.",
         "Select Patched Fixtures to highlight their footprints. Use Shift for a range or Select All, then Move Selected to Universe. Starting addresses are retained.",
         "Drag a patched footprint to propose an address. Green indicates a valid destination; red displays a conflict or overflow. Confirm in the address-review dialogue; Cancel leaves the patch unchanged.",
-        "The Menu button contains Import, Export and both summaries when a patch has fixtures. Column visibility uses selection buttons.",
+        "The circular Fixture Patch menu contains Import, Fixture Summary, Position Summary and Delete Patch. Export stays in the toolbar. Oops restores recent patch changes; column visibility uses selection buttons.",
         "PDF column buttons affect only the open export session. Empty columns remain omitted per fixture type. Additional-page switches sit between Hidden Columns and PDF Logos; the summary quantity header reads Qty."
       ]
     },
@@ -47,7 +51,7 @@
       "title": "New in V48: Browser-width layouts",
       "type": "unordered",
       "items": [
-        "Every live page remains inside the browser width with responsive outer and sheet gutters.",
+        "Every live page fits the space between the sidebar and the right edge, with 10px header and application-shell padding. There is no fixed page-width wrapper.",
         "Fixture Patch and Power Calcs tables scale to fill the available sheet width.",
         "Device Config distributes its columns across the sheet and scales only below its readable minimum.",
         "Rack Layout and label layouts scale as complete workspaces while preserving their internal proportions.",
@@ -59,7 +63,7 @@
       "type": "unordered",
       "items": [
         "Network opens Device Config, which is the shared place to review and edit network devices, interfaces, addresses, subnets and VLAN assignments.",
-        "Press Errors beside Report Issue to see the five most recently detected active issues. The red badge counts Active errors only; Show All Errors opens the grouped review page.",
+        "Press Errors to the right of the Tour Logo to review recent active issues. The badge counts active errors. New errors pulse red until acknowledged; Show All Errors opens the grouped review page. Report Issue is in Menu.",
         "Use Active and Ignored to review errors by page. Select individual errors or Select All within a group, then use Ignore Errors or Restore Errors.",
         "Select an affected record to reveal its field. The app checks duplicate or invalid IP addresses, fixture patch data and Power supply warnings.",
         "Corrected errors disappear. An ignored error becomes Active if the same problem is corrected and later returns."
@@ -69,8 +73,8 @@
       "title": "Recommended Workflow",
       "type": "ordered",
       "items": [
-        "Press the menu button to open Actions, then open Project Settings and enter the project name, dates, production details, logos, general defaults, and export defaults.",
-        "Add each distro with + Distro. Set its name, type, supply, voltage, RCBO rating, Socapex count, and any Aux or additional outputs.",
+        "Open Home → Project Settings and enter the project name, dates, production details, logos, general defaults and export defaults.",
+        "In Power, use + Distro to set its name, catalogue type, phase mapping, input connector, Supply feed source, P/Lock adaptor and RCBO. Add supported Aux and 3ø outputs. Catalogue settings provide the Socapex count and input rating; new Distros use the project voltage.",
         "Build the Fixture Patch by adding fixtures from the library or importing CSV, Excel, XLSM, or MVR data.",
         "Open the full-page Positions workspace from Home Position Summary or Fixture Patch to create positions and assign up to three colours. Position names and colours are shared with the patch, power calculations, labels, Control, Rack Layout and Device Config.",
         "Open Power and assign distros to supplies. Enter fixture IDs to link each way to Fixture Patch data, then check phase totals, RCBO warnings, Aux outlets, and the PDF preview.",
@@ -89,7 +93,7 @@
       "items": [
         "The fixture library shows GDTF ✅ only when a repository file has a fully matched manufacturer, fixture type, mode, and channel count. GDTF ❌ means an exact match is not currently available.",
         "Use Import to load CSV, Excel, XLSM, or MVR files. Imported comparison tabs highlight new, removed, and changed patch data before it is merged into the master patch.",
-        "Fixture Patch Export groups paper, orientation, DPI, header sizes, optional summary and revision pages, zoom, column and GDTF controls inside Output Options.",
+        "Fixture Patch Export provides Output Options, independent column controls and PDF Logos. Show Fixture Summary and Show Patch Revision Notes sit in their own card between Hidden Columns and PDF Logos.",
         "MVR export checks fixture IDs, DMX addresses, modes, duplicate ranges, and GDTF availability before building the file.",
         "V33 imports supported MVR 1.5 and 1.6 patch data, including fixture positions, layers, classes, UUID metadata, and embedded GDTF filenames with or without the .gdtf extension.",
         "MVR export uses standards-formatted UUIDs and DMX addresses, creates one layer per Lampy fixture position, and embeds the exact matched GDTF file and mode.",
@@ -127,9 +131,9 @@
         "Use the arrow keys, Enter, Shift+Enter, Tab, and Shift+Tab to move between editable Power Calcs cells. Drag the selected cell's blue fill handle vertically to copy a value through a compatible column.",
         "Choose Full Name or Short Name independently for the Power display.",
         "Select a 16 Amp or 10 Amp RCBO in each distro settings. A way is warned above 15.01 A for a 16 Amp RCBO or above 9.01 A for a 10 Amp RCBO.",
-        "Aux outlets are grouped in threes for Phase 1, Phase 2, and Phase 3. Only Aux outlets enabled for power calculations contribute to the totals. Configured 3ø Outputs are shown separately.",
+        "Add Aux outlets three at a time. Each connector-labelled group follows the selected Distro phase mapping. Only enabled Aux outlets contribute to power calculations. Configured 3ø Outputs appear separately.",
         "Use Power Calcs for detailed assignments, Fan Outs for display-only Socapex paperwork, and Phase Totals when it is available for supply and connected-distro review.",
-        "Power and Fan Outs PDFs start each distro on a new page. Power places phase summaries after the final Socapex and ends with Totals."
+        "Power and Fan Outs PDFs start each Distro on a new page. Power includes linked phase summaries and omits the final Totals page when the project has exactly one Supply."
       ]
     },
     {
@@ -161,13 +165,13 @@
         "Use Customise Home to reorder, resize, hide, restore, or collapse dashboard cards. Changes are stored with the current project; Set as Browser Default applies the chosen layout to future and legacy projects.",
         "Use Edit at the top of Position Summary to open the Positions workspace. Renaming a position updates linked fixtures and devices; removing one clears it from affected project records after confirmation.",
         "Opening Universes from Home displays a full-page Universe Detail view with one tab per patched universe. Use Back to Home when finished.",
-        "Move the pointer over a main Sheet tab, or focus it with the keyboard, to display its available sub-tabs and project pages for faster navigation.",
+        "In compact navigation, hover or focus an inactive page group to see its destinations. Active-group sub-pages appear directly in the sidebar and show only their own name on hover.",
         "Fixture group title lines always use the full fixture name. Full Name and Short Name options affect supported table cells and labels only.",
         "Use the Fixture Patch lock before editing rows, and watch for duplicate fixture IDs or overlapping DMX addresses. Show/Hide Columns is available beside Clear Filters in the Filter & Sort controls.",
         "Supply cards can be collapsed after setup to keep Power tidy.",
-        "Project logos are controlled in Project Info and can be included in supported exports.",
+        "Manage project logos in Home → Project Settings → Logos; vendor controls are also available in Lighting Vendor. Logos can be included in supported exports.",
         "All project, GDTF, and MVR processing is local to the browser. Lampy Paperwork does not import grandMA3 .show files or modify grandMA3 system libraries.",
-        "Use Report Issue for bugs, missing fixture requests, or feature suggestions."
+        "Use Menu → Report Issue for bugs, missing fixture requests or feature suggestions."
       ]
     }
   ]

@@ -1,3 +1,13 @@
+## V53 — Navigation and page help
+
+- Refresh Welcome, Walk-through, browser checklist and matching fallback content for V53. Gate releases on major-version documentation, fallback parity and latest changelog/version consistency, with negative regression cases.
+
+- Highlight active sub-pages and limit compact hover groups to inactive pages; suppress the Home hover name and duplicate single-patch shortcut.
+- Move Project Settings beneath Home, add page-specific Help above Menu, and refresh Looms and Rear Labels icons.
+- Start individual loom cards collapsed and remember opened cards in browser storage across reloads and navigation.
+- Suppress the duplicate single-patch shortcut in compact hover menus and use the label outline with an R for Rear Labels.
+- Add 6px left padding to the Errors control. Preserve sidebar group closing and content-height layout.
+
 ## V52.11 — Sidebar reopening correction
 
 - Reopen expanded navigation with the current page’s sub-pages, clearing stale expanded groups from previously visited pages.
