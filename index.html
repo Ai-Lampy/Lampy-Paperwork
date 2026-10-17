@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="Lampy Paperwork — browser-based lighting paperwork, fixture patch, power, network, rack and MVR tools." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111'/%3E%3Cpath d='M21 9h22v8l-5 9v9h-4v20h-4V35h-4v-9l-5-9z' fill='%23fff'/%3E%3C/svg%3E" />
-<title>Lampy Paperwork V52.9</title>
+<title>Lampy Paperwork V52.11</title>
 <style>
 :root{--label-w:18mm;--label-h:34mm;--label-gap:0.5mm;--gap-y:2mm;--radius:3mm;--border:1mm;--border-col:#ffffff;--front-aux-w:18mm;--front-aux-h:34mm;--front-output-w:72mm;--front-output-h:34mm;--rear-soca-w:70mm;--rear-soca-h:50mm;--rear-aux-w:85mm;--rear-aux-h:30mm;--rear-aux-gap:5mm;--rear-output-w:90mm;--rear-output-h:60mm;--top-size:18pt;--bottom-size:14pt;--top-align:center;--bottom-align:center;--top-v-align:center;--bottom-v-align:center;--top-font:Cochin,'Times New Roman',Times,serif;--bottom-font:Cochin,'Times New Roman',Times,serif;--top-weight:700;--bottom-weight:700;--top-transform:none;--bottom-transform:none;--top-text-align:center;--bottom-text-align:center;--app-font:Arial,Helvetica,sans-serif;--project-header-font:Arial,Helvetica,sans-serif;--project-subheader-font:Arial,Helvetica,sans-serif;--project-body-font:Arial,Helvetica,sans-serif}
 *{box-sizing:border-box}body{margin:0;font-family:var(--project-body-font);background:#f6f7f9;color:#111}h1{margin:0;font-size:28px;font-family:var(--project-header-font)}h2{font-family:var(--project-header-font)}h3,h4{font-family:var(--project-subheader-font)}h2,h3{margin:0 0 12px}button,input,select,textarea{font-style:inherit;font-variant-caps:inherit;font-weight:inherit;font-width:inherit;font-size:inherit;line-height:inherit;font-family:inherit;font-size-adjust:inherit;font-kerning:inherit;font-variant-alternates:inherit;font-variant-ligatures:inherit;font-variant-numeric:inherit;font-variant-east-asian:inherit;font-variant-position:inherit;font-variant-emoji:inherit;font-feature-settings:inherit;font-optical-sizing:inherit;font-variation-settings:inherit}.reportIssueBtn{border:2px solid #111;background:#fff;color:#111;border-radius:60px;padding:8px 8px;font-weight:900;text-decoration:none;white-space:nowrap}.reportIssueBtn:hover{background:#111;color:#fff}.btn{border:2px solid #000;background:rgb(217, 217, 217);border-radius:7px;padding:10px 12px;cursor:pointer}.btn:hover{background:#f7f9fc}.btn.primary{background:#00a61d;color:#fff;border:2px solid #000;font-weight:700}.btn.danger{color:#b42318}.btn.add{font-weight:800;font-size:14px;line-height:1;padding:8px;background:#00a61d;color:#fff;border:2px solid #000}.gear{font-size:24px;border:1px solid #d9dee7;background:#fff;border-radius:999px;width:44px;height:44px;cursor:pointer}.gear:hover{background:#f7f9fc}.tourLogoSlot{display:flex;align-items:center;justify-content:center;width:165px;min-width:0;max-width:100%}.tourLogo{display:block;max-width:160px;max-height:54px;object-fit:contain}.tourLogoExport{position:absolute;top:5mm;right:5mm;z-index:3}.tourLogoUploadPreview{border:1px dashed #cfd6e1;border-radius:8px;background:#fff;min-height:130px;display:flex;align-items:center;justify-content:center;padding:14px}.tourLogoUploadPreview img{max-width:260px;max-height:120px;object-fit:contain}.logoActions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}.menuButton{position:fixed;right:18px;top:18px;z-index:18;border:1px solid #d9dee7;background:#111;color:#fff;border-radius:999px;width:46px;height:46px;font-size:24px;font-weight:900;cursor:pointer;box-shadow:0 10px 28px rgba(16,24,40,.18)}.menuButton:hover{background:#2a2a2a}.actionSidebar{position:fixed;right:18px;top:74px;width:min(260px,calc(100vw - 36px));z-index:17;border:1px solid #dfe3ea;border-radius:10px;background:#fff;box-shadow:0 18px 48px rgba(16,24,40,.22);padding:12px;transform:translateX(calc(100% + 28px));transition:transform .18s ease}.actionMenuOpen .actionSidebar{transform:translateX(0)}.actionSidebar h2{font-size:15px;margin:0 0 10px}.actionSidebar .btn{width:100%;margin:0 0 8px;text-align:left;font-weight:800}
@@ -960,13 +960,13 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 .productionContactRow .productionVisibilityButton{flex:0 0 100px}
 .productionContactRemove{flex:0 0 24px;width:24px;height:24px;padding:0;border:1px solid #c00000;border-radius:5px;background:#fff;color:#c00000;font:800 20px/1 var(--app-font);cursor:pointer}
 .productionContactAdd:focus-visible,.productionContactRemove:focus-visible{outline:2px solid #0060ff;outline-offset:2px}
-#tourLogoSlot{width:165px;max-width:100%;height:54px;min-height:0;overflow:hidden}
+#tourLogoSlot{width:165px;max-width:100%;height:54px;min-height:0;overflow:hidden;border-right:2px solid #9b9b9b;padding-right:6px}
 #tourLogoSlot>.tourLogo{width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;object-position:center}
 </style>
 <style id="dynamicPrintPageStyle">@page{size:A4 landscape;margin:5mm}
 </style>
-<link rel="stylesheet" href="js/app-sidebar.css?v=52.9">
-<script src="js/app-sidebar.js?v=52.9"></script>
+<link rel="stylesheet" href="js/app-sidebar.css?v=52.11">
+<script src="js/app-sidebar.js?v=52.11"></script>
 </head>
 <body>
 <header class="topHeader"><div class="top"><div id="projectHeaderLogoSlot" class="topLogoGroup"></div><div class="topTitle"><h1 id="appTitle">Untitled Project</h1></div><div class="topActions"><div id="tourLogoSlot" class="tourLogoSlot"></div><div class="projectErrorsControl"><button type="button" class="reportIssueBtn" id="projectErrorsButton" aria-haspopup="menu" aria-expanded="false" aria-controls="projectErrorsMenu" onclick="toggleProjectErrorsMenu()">Errors<span id="projectErrorsBadge" class="projectErrorsBadge" hidden></span></button><div id="projectErrorsMenu" class="projectErrorsMenu" role="menu" hidden></div></div></div></div>
@@ -1046,17 +1046,17 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 <div id="positionPdfModal" class="modal hidden"><div class="modalCard" style="width:min(1200px,100%);"><div class="modalHead"><h2>Position Summary Export</h2><button class="close" onclick="closePositionSummaryPreview()">×</button></div><div class="exportControls"><div class="ctl"><label>Paper Size</label><select id="positionPdfPaperSize"><option value="A4">A4</option><option value="A3">A3</option><option value="A2">A2</option><option value="A1">A1</option><option value="A0">A0</option></select></div><div class="ctl"><label>Orientation</label><select id="positionPdfOrientation"><option value="landscape">Landscape</option><option value="portrait">Portrait</option></select></div><div class="ctl" data-pdf-preview-dpi-control><label>Export DPI</label><select data-pdf-preview-dpi onchange="updatePdfPreviewDpi(this)"><option value="150">150 DPI</option><option value="300" selected>300 DPI</option><option value="450">450 DPI</option></select></div><div class="ctl"><label>Zoom</label><div class="zoomControls"><button class="btn" type="button" data-position-pdf-zoom="fit">Fit</button><button class="btn" type="button" data-position-pdf-zoom="0.5">50%</button><button class="btn" type="button" data-position-pdf-zoom="0.75">75%</button><button class="btn" type="button" data-position-pdf-zoom="1">100%</button><button class="btn" type="button" data-position-pdf-zoom="1.25">125%</button></div></div><div class="ctl"><label>Layout</label><select id="positionPdfLayout" onchange="updatePositionSummaryLayout(this.value)"><option value="rectangles">Rectangles</option><option value="boxes">Boxes</option></select></div><div class="ctl"><label>Columns</label><input id="positionPdfColumns" type="number" min="1" max="8" value="2" onchange="updatePositionSummaryGrid()"></div><div class="ctl"><label>Rows</label><input id="positionPdfRows" type="number" min="1" max="12" value="6" onchange="updatePositionSummaryGrid()"></div><div class="ctl"><button class="btn primary" type="button" onclick="downloadPositionSummary()">Export to PDF</button></div><div class="ctl" data-pdf-logo-preview-controls></div><div class="hint" id="positionPdfInfo"></div></div><div class="pdfPageStage"><div id="positionPdfPages"></div></div></div></div>
 <aside id="distroSettingsModal" class="frontEditorPane hidden"><div class="frontEditorHead"><h2>Add Distro</h2><button class="close" type="button" onclick="closeDistroSettings()">×</button></div><div class="frontEditorBody"><div id="distroCards"></div></div></aside>
 <aside id="singleDistroSettingsModal" class="frontEditorPane hidden"><div class="frontEditorHead"><h2 id="singleDistroSettingsTitle">Distro Settings</h2><button class="close" onclick="closeSingleDistroSettings()">×</button></div><div id="singleDistroSettingsBody" class="frontEditorBody"></div></aside>
-<script src="js/distro-catalogue.js?v=52.9"></script>
-<script src="js/cable-catalogue.js?v=52.9"></script>
-<script src="js/project-core.js?v=52.9"></script>
-<script src="js/archive.js?v=52.9"></script>
-<script src="js/ui-support.js?v=52.9" defer></script>
-<script src="js/patch-address-review.js?v=52.9" defer></script>
-<script src="js/patch-history.js?v=52.9"></script>
-<script src="js/app-updates.js?v=52.9"></script>
+<script src="js/distro-catalogue.js?v=52.11"></script>
+<script src="js/cable-catalogue.js?v=52.11"></script>
+<script src="js/project-core.js?v=52.11"></script>
+<script src="js/archive.js?v=52.11"></script>
+<script src="js/ui-support.js?v=52.11" defer></script>
+<script src="js/patch-address-review.js?v=52.11" defer></script>
+<script src="js/patch-history.js?v=52.11"></script>
+<script src="js/app-updates.js?v=52.11"></script>
 <script>
 'use strict';
-const VERSION='52.9';
+const VERSION='52.11';
 const AUTOSAVE_DELAY=700;
 const BACKGROUND_VALIDATION_DELAY=180;
 const DEFAULT_FONT="Cochin,'Times New Roman',Times,serif";
@@ -1482,7 +1482,7 @@ function logoImgMarkup(cls='tourLogo',logo=projectLogo(),alt='Tour Logo'){const 
 function vendorLogoImgMarkup(cls='tourLogoExport',vendor=selectedVendorLogo(),alt='Lighting Vendor Logo'){const src=logoSource(vendor);return src?`<img class="${escapeAttr(cls)}" src="${escapeAttr(src)}" alt="${escapeAttr(vendor.name||alt)}" data-bundled-vendor-logo="${escapeAttr(vendor.assetPath||'')}" onerror="handleBundledVendorLogoError(this)">`:''}
 function handleBundledVendorLogoError(image){const assetPath=String(image?.dataset?.bundledVendorLogo||'').trim();if(assetPath)failedBundledVendorLogos.add(assetPath);image?.remove();updateProjectHeaderLogos();if(activeSheetTab==='projectSettings'&&activeProjectTab==='production')renderProductionInfo();if(pdfPreviewLogoState){pdfPreviewLogoState.logos.vendor=false;syncPdfPreviewLogoControls();if(pdfPreviewLogoState.mode==='distro')renderExportPages();else if(pdfPreviewLogoState.mode==='patch')renderFixturePatchPdfPreview();else if(pdfPreviewLogoState.mode==='position')renderPositionSummaryPreview();else if(pdfPreviewLogoState.mode==='deviceConfig')renderDeviceConfigPdfPages();else renderPowerPdfPreview()}}
 function headerHomeLogoMarkup(markup,label){return markup?`<button type="button" class="headerLogoHome" aria-label="${escapeAttr(label)} — Home" onclick="setSheetTab('home')">${markup}</button>`:''}
-function updateProjectHeaderLogos(){const slot=$('projectHeaderLogoSlot');if(!slot)return;const project=ensureProjectInfo(),visibility=project.logoVisibility||{vendor:false,secondary:false},items=[];if(visibility.vendor){const vendor=selectedVendorLogo();if(vendor)items.push(headerHomeLogoMarkup(vendorLogoImgMarkup('projectHeaderLogo',vendor,'Lighting Vendor Logo'),'Lighting Vendor Logo'))}if(visibility.secondary&&logoSource(project.secondaryLogo))items.push(logoImgMarkup('projectHeaderLogo',project.secondaryLogo,'Personal Logo'));slot.innerHTML=items.join('')}
+function updateProjectHeaderLogos(){const slot=$('projectHeaderLogoSlot');if(!slot)return;const project=ensureProjectInfo(),visibility=project.logoVisibility||{vendor:false,secondary:false},items=[];if(visibility.vendor){const vendor=selectedVendorLogo();if(vendor)items.push(headerHomeLogoMarkup(vendorLogoImgMarkup('projectHeaderLogo topVendorLogo',vendor,'Lighting Vendor Logo'),'Lighting Vendor Logo'))}if(visibility.secondary&&logoSource(project.secondaryLogo))items.push(logoImgMarkup('projectHeaderLogo',project.secondaryLogo,'Personal Logo'));slot.innerHTML=items.join('')}
 function updateTourLogoSlot(){const slot=$('tourLogoSlot'),markup=headerHomeLogoMarkup(logoImgMarkup('tourLogo'),'Tour Logo');if(slot&&markup!==renderedTourLogoMarkup){slot.innerHTML=markup;renderedTourLogoMarkup=markup}updateProjectHeaderLogos()}
 let pdfPreviewLogoState=null;
 function exportLogoAvailability(){const project=ensureProjectInfo();return {tour:!!logoSource(project.logo),vendor:!!selectedVendorLogo(),secondary:!!logoSource(project.secondaryLogo)}}
@@ -3304,7 +3304,7 @@ function updateCanonicalNetworkAlias(source,id,key,value){
 }
 let activeNetworkSubTab='deviceConfig',projectErrors=new Map(),projectErrorSequence=0,projectValidationFrame=null,projectValidationTimer=null,projectErrorsListeners=false,activeProjectErrorsTab='active',selectedProjectErrorIds=new Set(),collapsedProjectErrorGroups=new Set();
 function networkSubTabsMarkup(){return `<div class="controlNetworkTabs">${[['deviceConfig','Device Config'],['portConfiguration','Port Configuration']].map(([tab,label])=>`<button type="button" class="sheetTab ${activeNetworkSubTab===tab?'active':''}" onclick="setNetworkSubTab('${tab}')">${label}</button>`).join('')}</div>`}
-function resetProjectErrors(){projectErrors.clear();projectErrorSequence=0;selectedProjectErrorIds.clear();collapsedProjectErrorGroups.clear();activeProjectErrorsTab='active';if(projectValidationTimer!==null)clearTimeout(projectValidationTimer);projectValidationTimer=null;if(projectValidationFrame!==null)cancelAnimationFrame(projectValidationFrame);projectValidationFrame=null;closeProjectErrorsMenu(false)}
+function resetProjectErrors(){acknowledgedProjectErrors.clear();updateProjectErrorAttention([]);projectErrors.clear();projectErrorSequence=0;selectedProjectErrorIds.clear();collapsedProjectErrorGroups.clear();activeProjectErrorsTab='active';if(projectValidationTimer!==null)clearTimeout(projectValidationTimer);projectValidationTimer=null;if(projectValidationFrame!==null)cancelAnimationFrame(projectValidationFrame);projectValidationFrame=null;closeProjectErrorsMenu(false)}
 function detectProjectErrors(endpoints,rows,confirmed=new Set()){
   const errors=[],ids=new Map(),ranges=[],add=(id,description,targets)=>errors.push({id,description,targets});
   const target=entry=>({kind:'ip',alias:entry.aliases[0],label:entry.name+' — '+entry.port});
@@ -3348,6 +3348,17 @@ function collectProjectErrors(){
   document.querySelectorAll('#sheet .ipSegmentedField').forEach(field=>{const entry=aliases.get(duplicateIpFieldAlias(field));if(!entry)return;const state=ipSegmentedState(field);if(!state.valid)entry.ip=state.parts.join('.')});
   return [...detectProjectErrors(endpoints,app.fixturePatch||[],confirmedDuplicateAddressKeys),...collectPowerSupplyErrors(distroRanges()),...collectDistroFeedErrors()];
 }
+let acknowledgedProjectErrors=new Set();
+function projectErrorAttentionKey(error){return JSON.stringify([error.id,error.description])}
+function updateProjectErrorAttention(active){
+  const keys=new Set(active.map(projectErrorAttentionKey));
+  acknowledgedProjectErrors=new Set([...acknowledgedProjectErrors].filter(key=>keys.has(key)));
+  $('projectErrorsButton')?.classList.toggle('projectErrorsAttention',[...keys].some(key=>!acknowledgedProjectErrors.has(key)));
+}
+function acknowledgeProjectErrors(){
+  acknowledgedProjectErrors=new Set(activeProjectErrorList().map(projectErrorAttentionKey));
+  $('projectErrorsButton')?.classList.remove('projectErrorsAttention');
+}
 function refreshProjectErrors(){
   if(projectValidationTimer!==null)clearTimeout(projectValidationTimer);projectValidationTimer=null;
   if(projectValidationFrame!==null)cancelAnimationFrame(projectValidationFrame);projectValidationFrame=null;
@@ -3356,14 +3367,14 @@ function refreshProjectErrors(){
   if(retained.length!==(project.ignoredProjectErrors||[]).length){project.ignoredProjectErrors=retained;persist()}
   const visibleIds=new Set(visibleProjectErrorList().map(error=>error.id));selectedProjectErrorIds=new Set([...selectedProjectErrorIds].filter(id=>visibleIds.has(id)));
   const active=activeProjectErrorList(),badge=$('projectErrorsBadge');if(badge){badge.textContent=String(active.length);badge.hidden=!active.length}
-  $('projectErrorsButton')?.setAttribute('aria-label','Errors: '+active.length+' active');updateProjectErrorsMenu();if(activeSheetTab==='errors')updateProjectErrorsPage();
+  updateProjectErrorAttention(active);$('projectErrorsButton')?.setAttribute('aria-label','Errors: '+active.length+' active');updateProjectErrorsMenu();if(activeSheetTab==='errors')updateProjectErrorsPage();
 }
 function scheduleProjectValidation(){
   if(!projectErrorsListeners){projectErrorsListeners=true;document.addEventListener('input',event=>{if(event.target.closest?.('#sheet'))scheduleProjectValidation()});document.addEventListener('change',event=>{if(event.target.closest?.('#sheet'))scheduleProjectValidation()});document.addEventListener('pointerdown',event=>{if(!event.target.closest?.('.projectErrorsControl'))closeProjectErrorsMenu(false)});document.addEventListener('keydown',handleProjectErrorsKeydown)}
   if(projectValidationFrame!==null)return;if(projectValidationTimer!==null)clearTimeout(projectValidationTimer);projectValidationTimer=setTimeout(()=>{projectValidationTimer=null;if(projectValidationFrame===null)projectValidationFrame=requestAnimationFrame(refreshProjectErrors)},BACKGROUND_VALIDATION_DELAY);
 }
 function closeProjectErrorsMenu(restore=true){const menu=$('projectErrorsMenu'),open=menu&&!menu.hidden;if(menu)menu.hidden=true;$('projectErrorsButton')?.setAttribute('aria-expanded','false');if(open&&restore)$('projectErrorsButton')?.focus()}
-function toggleProjectErrorsMenu(){const menu=$('projectErrorsMenu');if(!menu)return;if(!menu.hidden){closeProjectErrorsMenu();return}refreshProjectErrors();menu.hidden=false;$('projectErrorsButton').setAttribute('aria-expanded','true');menu.querySelector('button')?.focus()}
+function toggleProjectErrorsMenu(){const menu=$('projectErrorsMenu');if(!menu)return;if(!menu.hidden){acknowledgeProjectErrors();closeProjectErrorsMenu();return}refreshProjectErrors();acknowledgeProjectErrors();menu.hidden=false;$('projectErrorsButton').setAttribute('aria-expanded','true');menu.querySelector('button')?.focus()}
 function updateProjectErrorsMenu(){
   const menu=$('projectErrorsMenu');if(!menu)return;const items=activeProjectErrorList().slice(0,5),markup=items.map(error=>`<button role="menuitem" data-error-key="${escapeAttr(error.id)}" onclick="openProjectError('${projectErrorToken(error.id)}')">${escapeHtml(error.description)}</button>`).join('')||'<div>No active project errors</div>',content=markup+'<button role="menuitem" data-show-all onclick="openProjectErrorsPage()">Show All Errors</button>';
   if(menu.dataset.content===content)return;const focus=menu.contains(document.activeElement),key=document.activeElement?.dataset?.errorKey;menu.innerHTML=content;menu.dataset.content=content;if(focus)([...menu.querySelectorAll('button')].find(button=>button.dataset.errorKey===key)||menu.querySelector('button'))?.focus();

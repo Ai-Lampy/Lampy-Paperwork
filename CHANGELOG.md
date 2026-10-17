@@ -1,3 +1,17 @@
+## V52.11 — Sidebar reopening correction
+
+- Reopen expanded navigation with the current page’s sub-pages, clearing stale expanded groups from previously visited pages.
+- Close the previous sub-page group when selecting another group in either sidebar mode or opening another disclosure.
+- Prevent expanded submenu rows stretching by using explicit content-sized grid tracks.
+- Apply the same reset when reopening the mobile drawer while preserving manual collapse controls.
+- Retain V52.10 header logo dividers and error acknowledgement behaviour.
+
+## V52.10 — Header logo dividers and error alerts
+
+- Add the requested Vendor and Tour Logo dividers and padding in the app header.
+- Pulse the Errors button red for new active errors until clicked, retaining the error count and respecting reduced-motion preferences.
+- Keep acknowledgements in session memory and restart attention for new or recurring errors.
+
 ## V52.9 — Minimised sidebar selection
 
 - Keep only the current page’s sub-pages visible in minimised navigation, with explicit hidden-menu styling.

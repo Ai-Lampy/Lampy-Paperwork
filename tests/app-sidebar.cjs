@@ -29,7 +29,7 @@ assert(source.includes("nav.classList.remove('previewHead')"));
 assert(source.includes("nav.classList.add('appNavigationContent')"));
 const content=declarations('.appNavigation .appNavigationContent'),tabs=declarations('.appNavigation .sheetTabs');
 assert.equal(content.display,'block');assert.equal(content['min-height'],'0');assert.equal(content['overflow-y'],'auto');
-assert.equal(tabs['justify-content'],'flex-start');assert.equal(tabs['flex-wrap'],'nowrap');assert.equal(tabs.height,'auto');
+assert.equal(tabs['justify-content'],'flex-start');assert.equal(tabs['flex-wrap'],'nowrap');assert.equal(tabs.height,'max-content');
 assert.equal(declarations('.appNavigation .sheetTabMenuHost').flex,'0 0 auto');
 assert.equal(declarations('.appNavigationDisclosure')['grid-row'],'1');
 assert.equal(declarations('.appNavigation .sheetSubMenu,.appNavigation .sheetTabMenuHost.menuDismissed .sheetSubMenu')['grid-row'],'2');
@@ -94,7 +94,7 @@ console.log('PASS: 200px sidebar, expanded hover suppression, requested styles a
 assert.equal(declarations('body.hasAppNavigation>.topHeader>.top')['padding-right'],'10px');
 
 for(const compact of [false,true])for(const active of [false,true])for(const expanded of [false,true])assert.equal(sidebar.subPagesVisible(compact,active,expanded),compact?active:expanded);
-assert(source.includes("if(page)expanded.add(page.dataset.sheetTab)"));
+assert(source.includes("if(page)resetExpandedPages(expanded,page.dataset.sheetTab)"));
 assert(source.includes('if(activePage!==lastActivePage)'));
 assert(source.includes("menu.hidden=!visible"));
 assert(source.includes("menu.querySelectorAll('button').forEach(item=>item.removeAttribute('title'))"));
@@ -123,3 +123,29 @@ for(const current of ['fixturePatch','network','home']){
  assert.deepEqual(visible,current==='home'?[]:[current]);
 }
 console.log('PASS: compact-only borders/padding, hidden-menu precedence, current-page-only submenus and sub-page hover/focus names.');
+
+// Reopening must not resurrect groups previously visited in either sidebar mode.
+const reopened=new Set(['fixturePatch','network','looms']);
+sidebar.resetExpandedPages(reopened,'powerSheet');assert.deepEqual([...reopened],['powerSheet']);
+assert.equal(sidebar.subPagesVisible(false,false,reopened.has('fixturePatch')),false);
+assert.equal(sidebar.subPagesVisible(false,true,reopened.has('powerSheet')),true);
+sidebar.resetExpandedPages(reopened,'home');assert.deepEqual([...reopened],['home']);
+sidebar.resetExpandedPages(reopened,undefined);assert.equal(reopened.size,0);
+assert(source.includes('if(state.expanded&&!wasExpanded)resetExpandedPages'));
+assert(source.includes('wasExpanded=state.expanded'));
+assert(source.includes('expanded.has(key)?expanded.delete(key):resetExpandedPages(expanded,key);paint()'));
+console.log('PASS: desktop/mobile reopen clears stale groups, selects the current group and preserves manual disclosure toggles.');
+
+assert(source.includes('if(activePage!==lastActivePage){resetExpandedPages(expanded,activePage)'));
+for(const key of ['powerSheet','network','fixturePatch','home']){
+ sidebar.resetExpandedPages(reopened,key);
+ for(const compact of [false,true]){
+  const visible=['powerSheet','network','fixturePatch'].filter(page=>sidebar.subPagesVisible(compact,page===key,reopened.has(page)));
+  assert.deepEqual(visible,key==='home'?[]:[key]);
+ }
+}
+const groupSizing=declarations('.appNavigation .sheetTabMenuHost'),submenuSizing=declarations('.appNavigation .sheetSubMenu,.appNavigation .sheetTabMenuHost.menuDismissed .sheetSubMenu');
+assert.equal(groupSizing.height,'max-content');assert.equal(groupSizing['grid-template-rows'],'44px max-content');
+assert.equal(submenuSizing.height,'max-content');assert.equal(submenuSizing['align-content'],'start');assert.equal(submenuSizing['grid-auto-rows'],'max-content');
+assert.equal(declarations('.appNavigation .sheetSubMenu button')['align-self'],'start');
+console.log('PASS: both sidebar modes close previous groups and submenu grids use intrinsic non-stretching rows.');

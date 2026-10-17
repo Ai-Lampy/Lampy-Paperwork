@@ -35,6 +35,7 @@
     icon.className='appNavigationSubIcon';icon.setAttribute('aria-hidden','true');icon.innerHTML=iconMarkup(subPageIcon(parent,label));
     button.setAttribute('aria-label',label);text.className='appNavigationSubLabel';text.textContent=label;button.replaceChildren(icon,text);
   }
+  function resetExpandedPages(expanded,activePage){expanded.clear();if(activePage)expanded.add(activePage)}
   function subPagesVisible(compact,active,expanded){return compact?active:expanded}
   function flyoutPosition(anchor,viewport,width,height){return {left:Math.max(8,Math.min(anchor.right+8,viewport.width-width-8)),top:Math.max(8,Math.min(anchor.top,viewport.height-height-8))}}
   let controller;
@@ -51,7 +52,7 @@
     if(actions)footer.append(actions);aside.append(footer);
     const backdrop=doc.createElement('div');backdrop.className='appNavigationBackdrop';backdrop.hidden=true;aside.before(backdrop);
     let storage;try{storage=root.localStorage}catch{}
-    const media=root.matchMedia('(max-width: 767px)'),expanded=new Set();let collapsed=readPreference(storage),open=false,previousFocus=null,lastActivePage=null;
+    const media=root.matchMedia('(max-width: 767px)'),expanded=new Set();let collapsed=readPreference(storage),open=false,previousFocus=null,lastActivePage=null,wasExpanded=false;
     const toggle=aside.querySelector('.appNavigationToggle');
     const flyout=doc.createElement('nav');flyout.className='appNavigationFlyout';flyout.id='appNavigationFlyout';flyout.hidden=true;doc.body.append(flyout);
     let flyoutSource=null,leaveTimer=null,suppressFocus=false;
@@ -74,10 +75,10 @@
     doc.addEventListener('pointerdown',event=>{if(flyoutSource&&!flyout.contains(event.target)&&!flyoutSource.contains(event.target))hideFlyout()});
     doc.addEventListener('keydown',event=>{if(!flyoutSource)return;if(event.key==='Escape'){event.preventDefault();event.stopImmediatePropagation();hideFlyout(true)}else if(event.key==='ArrowRight'&&event.target===flyoutSource){event.preventDefault();flyout.querySelector('button')?.focus()}else if(event.key==='ArrowLeft'&&flyout.contains(event.target)){event.preventDefault();hideFlyout(true)}else if(event.key==='Tab'&&!event.shiftKey&&event.target===flyoutSource){event.preventDefault();flyout.querySelector('button')?.focus()}else if(event.key==='Tab'&&flyout.contains(event.target)){const items=[...flyout.querySelectorAll('button')];if(event.shiftKey&&event.target===items[0]){event.preventDefault();hideFlyout(true)}else if(!event.shiftKey&&event.target===items.at(-1)){event.preventDefault();const pages=[...aside.querySelectorAll('[data-sheet-tab],.sheetSubMenu button')].filter(item=>item.getClientRects().length),next=pages[pages.indexOf(flyoutSource)+1];hideFlyout();if(next)next.focus();else doc.getElementById('sheet')?.focus({preventScroll:true})}}},true);
     nav.addEventListener('scroll',()=>hideFlyout());root.addEventListener('resize',()=>hideFlyout());
-    function paint(){hideFlyout();const state=layoutState(collapsed,media.matches,open);doc.body.classList.add('hasAppNavigation');doc.body.classList.toggle('appNavigationCompact',collapsed&&!media.matches);doc.body.classList.toggle('appNavigationOpen',media.matches&&open);aside.inert=state.hidden;aside.setAttribute('aria-hidden',String(state.hidden));backdrop.hidden=!(media.matches&&open);toggle.setAttribute('aria-expanded',String(state.expanded));toggle.setAttribute('aria-label',media.matches?'Close navigation':collapsed?'Expand navigation':'Collapse navigation');trigger.setAttribute('aria-expanded',String(open));refresh();changed()}
+    function paint(){hideFlyout();const state=layoutState(collapsed,media.matches,open);if(state.expanded&&!wasExpanded)resetExpandedPages(expanded,aside.querySelector('[data-sheet-tab].active')?.dataset.sheetTab);wasExpanded=state.expanded;doc.body.classList.add('hasAppNavigation');doc.body.classList.toggle('appNavigationCompact',collapsed&&!media.matches);doc.body.classList.toggle('appNavigationOpen',media.matches&&open);aside.inert=state.hidden;aside.setAttribute('aria-hidden',String(state.hidden));backdrop.hidden=!(media.matches&&open);toggle.setAttribute('aria-expanded',String(state.expanded));toggle.setAttribute('aria-label',media.matches?'Close navigation':collapsed?'Expand navigation':'Collapse navigation');trigger.setAttribute('aria-expanded',String(open));refresh();changed()}
     function close(){if(!open)return;if(doc.body.classList.contains('actionMenuOpen'))menuButton?.click();open=false;paint();previousFocus?.focus?.()}
-    aside.addEventListener('click',event=>{const page=event.target.closest('[data-sheet-tab]');if(page)expanded.add(page.dataset.sheetTab)},true);
-    function refresh(){hideFlyout();const activePage=aside.querySelector('[data-sheet-tab].active')?.dataset.sheetTab;if(activePage!==lastActivePage){if(activePage)expanded.add(activePage);lastActivePage=activePage}aside.querySelectorAll('[data-sheet-tab]').forEach(button=>{
+    aside.addEventListener('click',event=>{const page=event.target.closest('[data-sheet-tab]');if(page)resetExpandedPages(expanded,page.dataset.sheetTab)},true);
+    function refresh(){hideFlyout();const activePage=aside.querySelector('[data-sheet-tab].active')?.dataset.sheetTab;if(activePage!==lastActivePage){resetExpandedPages(expanded,activePage);lastActivePage=activePage}aside.querySelectorAll('[data-sheet-tab]').forEach(button=>{
       const key=button.dataset.sheetTab,label=button.dataset.navLabel||button.textContent.trim();button.dataset.navLabel=label;button.setAttribute('aria-label',label);button.removeAttribute('title');
       if(!button.querySelector('.appNavigationIcon')){button.textContent='';const icon=doc.createElement('span');icon.className='appNavigationIcon';icon.setAttribute('aria-hidden','true');icon.innerHTML=iconMarkup(key);const text=doc.createElement('span');text.className='appNavigationLabel';text.textContent=label;button.append(icon,text)}
       if(button.classList.contains('active'))button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');
@@ -85,7 +86,7 @@
       button.removeAttribute('aria-haspopup');button.removeAttribute('aria-controls');
       let disclosure=host.querySelector('.appNavigationDisclosure');
       if(!menu){disclosure?.remove();button.style.gridColumn='1 / -1';return}button.style.gridColumn='';menu.removeAttribute('role');menu.querySelectorAll('button').forEach(item=>decorateSubPage(item,key,doc));menu.querySelectorAll('[role]').forEach(item=>item.removeAttribute('role'));
-      if(!disclosure){disclosure=doc.createElement('button');disclosure.type='button';disclosure.className='appNavigationDisclosure';disclosure.innerHTML=iconMarkup('chevron');host.append(disclosure);disclosure.addEventListener('click',()=>{if(collapsed&&!media.matches){collapsed=false;writePreference(storage,false)}expanded.has(key)?expanded.delete(key):expanded.add(key);paint()})}
+      if(!disclosure){disclosure=doc.createElement('button');disclosure.type='button';disclosure.className='appNavigationDisclosure';disclosure.innerHTML=iconMarkup('chevron');host.append(disclosure);disclosure.addEventListener('click',()=>{if(collapsed&&!media.matches){collapsed=false;writePreference(storage,false)}expanded.has(key)?expanded.delete(key):resetExpandedPages(expanded,key);paint()})}
       disclosure.setAttribute('aria-label',label+' sub-pages');disclosure.setAttribute('aria-controls',menu.id);const compact=collapsed&&!media.matches,visible=subPagesVisible(compact,button.classList.contains('active'),expanded.has(key));disclosure.setAttribute('aria-expanded',String(visible));menu.hidden=!visible;menu.querySelectorAll('button').forEach(item=>item.removeAttribute('title'));
     })}
     toggle.addEventListener('click',()=>{if(media.matches)close();else{collapsed=!collapsed;writePreference(storage,collapsed);paint()}});
@@ -95,5 +96,5 @@
     actions?.addEventListener('click',event=>{if(media.matches&&event.target.closest('button,a[href]')){open=false;paint()}});
     media.addEventListener('change',()=>{open=false;paint()});controller={refresh};paint();return controller;
   }
-  const api={init,refresh:()=>controller?.refresh(),readPreference,writePreference,layoutState,flyoutPosition,subPageIcon,decorateSubPage,subPagesVisible,iconMarkup};if(typeof module==='object'&&module.exports)module.exports=api;else root.LampySidebar=api;
+  const api={init,refresh:()=>controller?.refresh(),readPreference,writePreference,layoutState,flyoutPosition,subPageIcon,decorateSubPage,subPagesVisible,iconMarkup,resetExpandedPages};if(typeof module==='object'&&module.exports)module.exports=api;else root.LampySidebar=api;
 })(typeof window==='undefined'?globalThis:window);

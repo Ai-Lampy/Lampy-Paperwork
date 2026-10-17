@@ -43,7 +43,7 @@ assert(markup.includes('productionContactRemove'));assert(markup.includes('>−<
 }
 assert(html.includes('.productionContactAddWrap:hover .productionContactTooltip,.productionContactAddWrap:focus-within .productionContactTooltip{display:block}'));
 assert(html.includes('.productionContactRow{display:flex;flex-wrap:wrap;gap:10px;align-items:center}'));assert(html.includes('background:#fff;color:#c00000;font:800 20px/1 var(--app-font)'));
-assert(html.includes('#tourLogoSlot{width:165px;max-width:100%;height:54px;min-height:0;overflow:hidden}'));assert(html.includes('#tourLogoSlot>.tourLogo{width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;object-position:center}'));
+assert(html.includes('#tourLogoSlot{width:165px;max-width:100%;height:54px;min-height:0;overflow:hidden;border-right:2px solid #9b9b9b;padding-right:6px}'));assert(html.includes('#tourLogoSlot>.tourLogo{width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;object-position:center}'));
 // Actual asynchronous upload paths refresh shared panels once, preserve logo data and fit via header-only CSS.
 (async()=>{
  let project={logo:{dataUrl:'old'},exportLogos:{},logoVisibility:{},vendorLogoOverride:{}},saved=0,refreshed=0;const slot={innerHTML:''};
