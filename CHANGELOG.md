@@ -1,3 +1,10 @@
+## V52.7 — Sidebar width and sub-page icons
+
+- Set the top header’s inner right padding to 10px.
+
+- Set expanded navigation to 200px and apply the requested white text, black disclosure arrows and grey submenus.
+- Show hover navigation only in the collapsed sidebar and add icons to every sub-page.
+
 ## V52.6 — Saving and navigation controls
 
 - Show the save-status bar briefly after a successful save; keep storage/recovery failures in a separate warning.

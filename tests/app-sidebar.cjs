@@ -8,7 +8,7 @@ sidebar.writePreference(storage,true);assert.equal(sidebar.readPreference(storag
 sidebar.writePreference(storage,false);assert.equal(sidebar.readPreference(storage),false);
 const blocked={getItem(){throw Error('blocked')},setItem(){throw Error('blocked')}};
 assert.equal(sidebar.readPreference(blocked),false);assert.doesNotThrow(()=>sidebar.writePreference(blocked,true));
-assert.deepEqual(sidebar.layoutState(false,false,false),{width:256,hidden:false,expanded:true});
+assert.deepEqual(sidebar.layoutState(false,false,false),{width:200,hidden:false,expanded:true});
 assert.deepEqual(sidebar.layoutState(true,false,false),{width:60,hidden:false,expanded:false});
 for(const compact of [false,true]){
  assert.deepEqual(sidebar.layoutState(compact,true,false),{width:0,hidden:true,expanded:false});
@@ -43,7 +43,7 @@ const workspace=declarations('body.hasAppNavigation>.topHeader,body.hasAppNaviga
 assert.equal(workspace.width,'100%');assert.equal(workspace['max-width'],'100%');
 assert.equal(workspace['margin-left'],'0');assert.equal(workspace['margin-right'],'0');
 assert.equal(declarations('body.hasAppNavigation>.appShell>.wrap>.previewPanel').padding,'0');
-assert.equal(1500-sidebar.layoutState(false,false,false).width,1244);
+assert.equal(1500-sidebar.layoutState(false,false,false).width,1300);
 assert.equal(1500-sidebar.layoutState(true,false,false).width,1440);
 assert.equal(375-sidebar.layoutState(false,true,false).width,375);
 console.log('PASS: full-width expanded, compact and mobile workspace without wrapper gutters.');
@@ -71,6 +71,24 @@ assert.equal(declarations('.appNavigation').background,'#9b9b9b');
 assert.equal(declarations('.appNavigation')['border-right'],'2px solid #000');
 assert.equal(declarations('.appNavigation').padding,'12px 6px');
 assert.equal(declarations('.appNavigation')['padding-left'],'10px');
-assert.equal(declarations('.appNavigation .sheetTab').color,'#f2f2f2');
+assert.equal(declarations('.appNavigation .sheetTab').color,'#ffffff');
 assert(css.includes('body.hasAppNavigation #sheet>:is(.homeView,.fixturePatchView,.powerSheetView'));
 assert(css.includes('.projectSettingsView,.tableView){background:#fff}'));
+
+assert.equal(declarations('body.hasAppNavigation')['--navigation-width'],'200px');
+assert.equal(declarations('.appNavigationDisclosure').color,'#000000');
+assert.equal(declarations('.appNavigation .sheetTab').font,'14px/20px var(--app-font)');
+assert.equal(content['scrollbar-color'],'#f5f5f5 transparent');
+assert.equal(declarations('.appNavigation .sheetSubMenu,.appNavigation .sheetTabMenuHost.menuDismissed .sheetSubMenu').background,'#9b9b9b');
+assert.equal(declarations('.appNavigation .sheetSubMenu button').color,'#ffffff');
+assert.equal(declarations('.appNavigation .sheetSubMenu button')['border-left'],undefined);
+assert(source.includes('if(!collapsed||media.matches||suppressFocus)return'));
+assert(css.includes('--navigation-width:min(200px,85vw)'));
+for(const [parent,label,icon] of [['fixturePatch','Imported show','fixturePatch'],['fixturePatch','Universe Detail','universe'],['network','Device Config','network'],['network','Port Configuration','ports'],['powerSheet','Fan Outs','fan'],['powerSheet','Phase Totals','totals'],['rackLayout','Rack A','rackLayout'],['looms','Cable List','list'],['distroLabels','Front RCBO Labels','distroLabels'],['distroLabels','Rear Labels','rear'],['distroLabels','Table View','fixturePatch']])assert.equal(sidebar.subPageIcon(parent,label),icon);
+const doc={createElement:()=>({setAttribute(key,value){this[key]=value}})},button={textContent:'Rear Labels',querySelector(){return this.children?.[0]},replaceChildren(...children){this.children=children}};
+sidebar.decorateSubPage(button,'distroLabels',doc);
+assert.equal(button.children[1].textContent,'Rear Labels');assert.equal(button.children[0]['aria-hidden'],'true');assert(button.children[0].innerHTML.includes('<svg'));
+const first=button.children;sidebar.decorateSubPage(button,'distroLabels',doc);assert.equal(button.children,first);
+console.log('PASS: 200px sidebar, expanded hover suppression, requested styles and labelled sub-page icons.');
+
+assert.equal(declarations('body.hasAppNavigation>.topHeader>.top')['padding-right'],'10px');
