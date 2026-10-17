@@ -66,3 +66,11 @@ assert.equal(declarations('body.hasAppNavigation>.topHeader,body.hasAppNavigatio
 assert.equal(declarations('body.hasAppNavigation>.appFooter')['margin-left'],'10px');
 assert.equal(declarations('body.hasAppNavigation>.appFooter').width,'98%');
 assert.equal(declarations('body.hasAppNavigation>.appFooter')['max-width'],'calc(100% - 10px)');
+
+assert.equal(declarations('.appNavigation').background,'#9b9b9b');
+assert.equal(declarations('.appNavigation')['border-right'],'2px solid #000');
+assert.equal(declarations('.appNavigation').padding,'12px 6px');
+assert.equal(declarations('.appNavigation')['padding-left'],'10px');
+assert.equal(declarations('.appNavigation .sheetTab').color,'#f2f2f2');
+assert(css.includes('body.hasAppNavigation #sheet>:is(.homeView,.fixturePatchView,.powerSheetView'));
+assert(css.includes('.projectSettingsView,.tableView){background:#fff}'));

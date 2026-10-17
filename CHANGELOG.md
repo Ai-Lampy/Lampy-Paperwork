@@ -1,3 +1,8 @@
+## V52.5 — Sidebar colours and white pages
+
+- Apply the requested grey sidebar, black divider, padding and light page-tab text.
+- Give live pages solid white backgrounds while preserving coloured content and print/PDF styling.
+
 ## V52.4 — Workspace spacing
 
 - Set live header and application shell left/right padding to 10px.
