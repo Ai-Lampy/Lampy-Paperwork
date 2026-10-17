@@ -12,7 +12,17 @@
           "male": "XLR-3",
           "female": "XLR-3"
         },
-        "lengths": [4,8,16,24,48,72,96,144,304]
+        "lengths": [
+          4,
+          8,
+          16,
+          24,
+          48,
+          72,
+          96,
+          144,
+          304
+        ]
       },
       {
         "name": "XLR-4",
@@ -21,7 +31,18 @@
           "male": "XLR-4",
           "female": "XLR-4"
         },
-        "lengths": [4,8,16,24,32,40,48,56,72,96,144]
+        "lengths": [
+          4,
+          8,
+          16,
+          24,
+          32,
+          40,
+          48,
+          72,
+          96,
+          144
+        ]
       },
       {
         "name": "XLR-5",
@@ -30,33 +51,71 @@
           "male": "XLR-5",
           "female": "XLR-5"
         },
-        "lengths": [4,8,16,24,32,40,48,56,64,72,80,88,96,144]
+        "lengths": [
+          4,
+          8,
+          16,
+          24,
+          32,
+          40,
+          48,
+          72,
+          56,
+          64,
+          80,
+          88,
+          96,
+          144
+        ]
       },
-	  {
-		  "name": "XLR-5 Black",
-		  "direction": "male-female",
-		  "connectors": {
-			  "male": "XLR-5",
-			  "female": "XLR-5"
-		  },
-		  "lengths": [4,8,16,24,32,40,48,56,64,72,96,144]
-	  },
-	  {
-		  "name": "XLR-7",
-		  "direction": "male-female",
-		  "connectors": {
-			  "male": "XLR-7",
-			  "female": "XLR-7"
-		  },
-		  "lengths": [8,16,24,32,48,64,96,144]
-	  },
+      {
+        "name": "XLR-5 Black",
+        "direction": "male-female",
+        "connectors": {
+          "male": "XLR-5",
+          "female": "XLR-5"
+        },
+        "lengths": [
+          8,
+          16,
+          24,
+          32,
+          48,
+          56,
+          64,
+          72,
+          96,
+          144
+        ]
+      },
+      {
+        "name": "XLR-7",
+        "direction": "male-female",
+        "connectors": {
+          "male": "XLR-7",
+          "female": "XLR-7"
+        },
+        "lengths": [
+          8,
+          16,
+          24,
+          32,
+          48,
+          96,
+          144
+        ]
+      },
       {
         "name": "Ethernet",
         "direction": "bidirectional",
         "connectors": {
           "end": "RJ45"
         },
-        "lengths": [4,8,16]
+        "lengths": [
+          4,
+          8,
+          16
+        ]
       },
       {
         "name": "Ethercon",
@@ -64,64 +123,114 @@
         "connectors": {
           "end": "etherCON"
         },
-        "lengths": [24,48,72,96,144,164,304]
-      },
-	  {
-		  "name": "OpticalCON Quad Fiber",
-		  "direction": "bidirectional",
-		  "connectors": {
-			  "end": "Quad Fiber"
-		  },
-		  "lengths": [144,304,504]
-	  },
-	  {
-		  "name": "Whirlwind 12-Pair",
-		  "direction": "male-female",
-		  "connectors": {
-			  "male": "WW 12-Pin",
-			  "female": "WW 12-Pin"
-		  },
-		  "lengths": [24,96,144,304]
-	  }
-    ],
-    "Multi": [
-      {
-        "name": "Socapex 19-Pin",
-        "direction": "male-female",
-        "connectors": {
-          "male": "Socapex 19-Pin",
-          "female": "Socapex 19-Pin"
-        },
-        "lengths": [8,16,24,32,40,48,56,64,72,80,88,96,144]
-      }
-    ],
-    "Mains": [
-      {
-        "name": "32A 3ø",
-        "direction": "male-female",
-        "connectors": {
-          "male": "CEE 32A 3ø",
-          "female": "CEE 32A 3ø"
-        },
-        "lengths": [8,24,48,72,96,144,504]
+        "lengths": [
+          24,
+          48,
+          72,
+          96,
+          144,
+          304
+        ]
       },
       {
-        "name": "63A 3ø",
-        "direction": "male-female",
+        "name": "OpticalCON Quad Fiber",
+        "direction": "bidirectional",
         "connectors": {
-          "male": "CEE 63A 3ø",
-          "female": "CEE 63A 3ø"
+          "end": "Quad Fiber"
         },
-        "lengths": [8,24,48,72,96]
+        "lengths": [
+          304,
+          504,
+          144
+        ]
       },
       {
-        "name": "125A 3ø",
+        "name": "Whirlwind 12-Pair",
         "direction": "male-female",
         "connectors": {
-          "male": "CEE 125A 3ø",
-          "female": "CEE 125A 3ø"
+          "male": "WW 12-Pin",
+          "female": "WW 12-Pin"
         },
-        "lengths": [8,24,48,96]
+        "lengths": [
+          304,
+          144,
+          96,
+          24
+        ]
+      },
+      {
+        "name": "XLR-3 MALE > XLR-5 FEMALE",
+        "direction": "male-female",
+        "connectors": {
+          "male": "XLR-3",
+          "female": "XLR-5"
+        },
+        "lengths": [
+          4
+        ]
+      },
+      {
+        "name": "XLR-3 MALE > MALE",
+        "direction": "male-male",
+        "connectors": {
+          "male": "XLR-3",
+          "female": "XLR-3",
+          "start": "XLR-3",
+          "end": "XLR-3"
+        },
+        "lengths": [
+          4
+        ]
+      },
+      {
+        "name": "XLR-3 FEMALE > FEMALE",
+        "direction": "female-female",
+        "connectors": {
+          "male": "XLR-3",
+          "female": "XLR-3",
+          "start": "XLR-3",
+          "end": "XLR-3"
+        },
+        "lengths": [
+          4
+        ]
+      },
+      {
+        "name": "XLR-5 MALE > XLR-3 FEMALE",
+        "direction": "male-female",
+        "connectors": {
+          "male": "XLR-5",
+          "female": "XLR-3"
+        },
+        "lengths": [
+          4
+        ]
+      },
+      {
+        "name": "XLR-5 MALE > MALE",
+        "direction": "male-male",
+        "connectors": {
+          "male": "",
+          "female": "",
+          "start": "XLR-5",
+          "end": "XLR-5"
+        },
+        "lengths": [
+          4
+        ]
+      },
+      {
+        "name": "XLR-5 FEMALE > FEMALE",
+        "direction": "female-female",
+        "connectors": {
+          "male": "",
+          "female": "",
+          "start": "XLR-5",
+          "end": "XLR-5"
+        },
+        "lengths": [
+          4
+        ]
       }
     ],
     "TRS": [
@@ -132,7 +241,22 @@
           "male": "powerCON TRUE1",
           "female": "powerCON TRUE1"
         },
-        "lengths": [4,8,16,24,32,40,48,64,72,80,88,96,144]
+        "lengths": [
+          4,
+          8,
+          16,
+          24,
+          32,
+          40,
+          48,
+          72,
+          80,
+          88,
+          96,
+          64,
+          144,
+          304
+        ]
       },
       {
         "name": "13A",
@@ -141,28 +265,365 @@
           "male": "13A Plug",
           "female": "13A Socket"
         },
-        "lengths": [8,16,24,48,72,96]
+        "lengths": [
+          8,
+          16,
+          24,
+          48,
+          72,
+          96
+        ]
+      },
+      {
+        "name": "Schuko",
+        "direction": "male-female",
+        "connectors": {
+          "male": "Schuko",
+          "female": "Schuko"
+        },
+        "lengths": [
+          48,
+          96
+        ]
+      },
+      {
+        "name": "IEC",
+        "direction": "male-female",
+        "connectors": {
+          "male": "IEC",
+          "female": "IEC"
+        },
+        "lengths": [
+          6
+        ]
       }
     ],
-	"Motor": [
-		{
-			"name": "Socapex 7-Pin",
-			"direction": "male-female",
-			"connectors": {
-				"male": "Socapex 7-Pin",
-				"female": "Socapex 7-Pin"
-			},
-			"lengths": [8,16,24,32,40,48,56,64,72,80,88,96,144]
-			},
-		{
-			"name": "Tajimi Motor Control",
-			"direction": "male-female",
-			"connectors": {
-				"male": "Tajimi",
-				"female": "Tajimi"
-			},
-			"lengths": [24,48,96,144]
-		}
-	]
-  }
+    "Multi": [
+      {
+        "name": "Socapex 19-Pin",
+        "direction": "male-female",
+        "connectors": {
+          "male": "Socapex 19-Pin",
+          "female": "Socapex 19-Pin"
+        },
+        "lengths": [
+          4,
+          8,
+          16,
+          24,
+          32,
+          40,
+          48,
+          72,
+          56,
+          64,
+          80,
+          88,
+          96,
+          144
+        ]
+      }
+    ],
+    "Mains": [
+      {
+        "name": "32A 3ø",
+        "direction": "male-female",
+        "connectors": {
+          "male": "CEE 32A 3ø",
+          "female": "CEE 32A 3ø"
+        },
+        "lengths": [
+          8,
+          24,
+          48,
+          96,
+          72,
+          144,
+          504,
+          304
+        ]
+      },
+      {
+        "name": "63A 3ø",
+        "direction": "male-female",
+        "connectors": {
+          "male": "CEE 63A 3ø",
+          "female": "CEE 63A 3ø"
+        },
+        "lengths": [
+          8,
+          24,
+          48,
+          96,
+          72
+        ]
+      },
+      {
+        "name": "125A 3ø",
+        "direction": "male-female",
+        "connectors": {
+          "male": "CEE 125A 3ø",
+          "female": "CEE 125A 3ø"
+        },
+        "lengths": [
+          8,
+          24,
+          48,
+          96
+        ]
+      },
+      {
+        "name": "Powerlock - 140mm",
+        "direction": "male-female",
+        "connectors": {
+          "male": "Powerlock (3P + N + E)",
+          "female": "Powerlock (3P + N + E)"
+        },
+        "lengths": [
+          8,
+          24,
+          48,
+          96
+        ]
+      },
+      {
+        "name": "63A 3ø > Tails",
+        "direction": "female-male",
+        "connectors": {
+          "male": "Tails",
+          "female": "CEE 63A 3ø"
+        },
+        "lengths": [
+          8
+        ]
+      },
+      {
+        "name": "Powerlock MALE > 125A 3ø FEMALE",
+        "direction": "male-female",
+        "connectors": {
+          "male": "Powerlock (3P + N + E)",
+          "female": "CEE 125A 3ø"
+        },
+        "lengths": [
+          4
+        ]
+      },
+      {
+        "name": "Powerlock MALE > 63A 3ø FEMALE",
+        "direction": "male-female",
+        "connectors": {
+          "male": "Powerlock (3P + N + E)",
+          "female": "CEE 63A 3ø"
+        },
+        "lengths": [
+          4
+        ]
+      },
+      {
+        "name": "125A 3ø > Tails",
+        "direction": "female-male",
+        "connectors": {
+          "male": "Tails",
+          "female": "CEE 125A 3ø"
+        },
+        "lengths": [
+          8
+        ]
+      },
+      {
+        "name": "125A 3ø MALE > Powerlock FEMALE",
+        "direction": "male-female",
+        "connectors": {
+          "male": "CEE 125A 3ø",
+          "female": "Powerlock (3P + N + E)"
+        },
+        "lengths": [
+          4
+        ]
+      },
+      {
+        "name": "63A 3ø MALE > Powerlock FEMALE",
+        "direction": "male-female",
+        "connectors": {
+          "male": "CEE 63A 3ø",
+          "female": "Powerlock (3P + N + E)"
+        },
+        "lengths": [
+          4
+        ]
+      }
+    ],
+    "Motor": [
+      {
+        "name": "Socapex 7-Pin",
+        "direction": "male-female",
+        "connectors": {
+          "male": "Socapex 7-Pin",
+          "female": "Socapex 7-Pin"
+        },
+        "lengths": [
+          8,
+          16,
+          24,
+          32,
+          48,
+          40,
+          56,
+          64,
+          72,
+          80,
+          88,
+          96,
+          144
+        ]
+      },
+      {
+        "name": "Tajimi Motor Control",
+        "direction": "male-female",
+        "connectors": {
+          "male": "Tajimi",
+          "female": "Tajimi"
+        },
+        "lengths": [
+          24,
+          48,
+          96,
+          144
+        ]
+      }
+    ]
+  },
+  "looms": [
+    {
+      "id": "4b849404-4ec7-495f-910a-0e4790c65e12",
+      "name": "Snake W-1 CEE 32A + EtherCON 3Ph 304'",
+      "lengths": [
+        304
+      ],
+      "cables": [
+        {
+          "cableType": "Whirlwind 12-Pair",
+          "quantity": 1
+        },
+        {
+          "cableType": "32A 3Ph",
+          "quantity": 1
+        },
+        {
+          "cableType": "EtherCON",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": "162cd45a-781a-4679-95e0-69a0d08e8071",
+      "name": "Snake W-1 TRUE1 + EtherCON 304'",
+      "lengths": [
+        304
+      ],
+      "cables": [
+        {
+          "cableType": "Whirlwind 12-Pair",
+          "quantity": 1
+        },
+        {
+          "cableType": "TRUE 1",
+          "quantity": 2
+        },
+        {
+          "cableType": "EtherCON",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": "544d38fb-3b70-4721-aa48-6e37fbdb1830",
+      "name": "Snake W-1 CEE 32A 3Ph + Fibre  304'",
+      "lengths": [
+        304
+      ],
+      "cables": [
+        {
+          "cableType": "OpticalCON Quad Fiber",
+          "quantity": 3
+        },
+        {
+          "cableType": "32A 3Ph",
+          "quantity": 1
+        },
+        {
+          "cableType": "Whirlwind 12-Pair",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "8a9d940a-cad4-4643-8b47-72d444dac49e",
+      "name": "Snake W-1 TRUE1 + Fibre 304'",
+      "lengths": [
+        304
+      ],
+      "cables": [
+        {
+          "cableType": "TRUE 1",
+          "quantity": 2
+        },
+        {
+          "cableType": "OpticalCON Quad Fiber",
+          "quantity": 3
+        },
+        {
+          "cableType": "Whirlwind 12-Pair",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "0d0ae06c-432b-4167-9790-680367617bce",
+      "name": "Snake W-1 CEE 32A 3Ph + Fibre 504'",
+      "lengths": [
+        504
+      ],
+      "cables": [
+        {
+          "cableType": "OpticalCON Quad Fiber",
+          "quantity": 3
+        },
+        {
+          "cableType": "32A 3Ph",
+          "quantity": 1
+        },
+        {
+          "cableType": "Whirlwind 12-Pair",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "796b97cb-fe05-4534-aaed-6e7386b3fdaf",
+      "name": "Robo Spot Station",
+      "lengths": [
+        24,
+        48
+      ],
+      "cables": [
+        {
+          "cableType": "EtherCON",
+          "quantity": 3
+        },
+        {
+          "cableType": "XLR-5",
+          "quantity": 2
+        },
+        {
+          "cableType": "XLR-3",
+          "quantity": 1
+        },
+        {
+          "cableType": "TRUE 1",
+          "quantity": 1
+        }
+      ]
+    }
+  ]
 }

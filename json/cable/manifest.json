@@ -3,6 +3,62 @@
     {
       "vendor": "Christie Lites UK",
       "file": "json/cable/christie_lites_cable.json"
+    },
+    {
+      "vendor": "4 Wall Europe",
+      "file": "json/cable/4_wall_europe_cable.json"
+    },
+    {
+      "vendor": "Adlib",
+      "file": "json/cable/adlib_cable.json"
+    },
+    {
+      "vendor": "Colour Sound Experiment",
+      "file": "json/cable/colour_sound_experiment_cable.json"
+    },
+    {
+      "vendor": "Creative Technology UK",
+      "file": "json/cable/CT_uk_cable.json"
+    },
+    {
+      "vendor": "Impact Production Services",
+      "file": "json/cable/IPS_cable.json"
+    },
+    {
+      "vendor": "Lights | Control | Rigging",
+      "file": "json/cable/LCR_cable.json"
+    },
+    {
+      "vendor": "Lite Alternative LTD",
+      "file": "json/cable/lite_alternative_cable.json"
+    },
+    {
+      "vendor": "Liteup",
+      "file": "json/cable/liteup_cable.json"
+    },
+    {
+      "vendor": "Neg Earth Lights",
+      "file": "json/cable/neg_earth_cable.json"
+    },
+    {
+      "vendor": "PRG UK",
+      "file": "json/cable/prg_uk_cable.json"
+    },
+    {
+      "vendor": "TSL Lighting",
+      "file": "json/cable/tsl_cable.json"
+    },
+    {
+      "vendor": "Siyan LTD",
+      "file": "json/cable/siyan_cable.json"
+    },
+    {
+      "vendor": "Solotech UK",
+      "file": "json/cable/solotech_uk_cable.json"
+    },
+    {
+      "vendor": "Sonalyst",
+      "file": "json/cable/sonalyst_cable.json"
     }
   ]
 }
