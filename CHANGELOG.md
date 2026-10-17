@@ -1,3 +1,34 @@
+## V51.20 — Cable aliases
+
+- Resolve nested and legacy loom member references through canonical cable names or declared aliases, ignoring case and surrounding whitespace.
+- Reject aliases shared by different cables or conflicting with another cable’s canonical name, regardless of catalogue order.
+- Validate alias arrays and retain canonical cable names, directions, connectors and length checks when adding looms.
+
+## V51.19 — Nested catalogue loom categories
+
+- Recognise Stock / Pre-Made Looms and FOH Snake entries as looms within the cable category structure; preserve direct additions and category names.
+- Keep the 20 individual cables and six looms separate, without restoring removed adaptors.
+- Correct 32A loom references, restore the 504 ft Whirlwind loom-only length and sort catalogue lengths.
+- Validate nested loom identities, quantities, members and available lengths instead of accepting them as ordinary cables; retain legacy top-level loom support.
+
+## V51.18 — Grouped stock looms
+
+- Group catalogue looms under Pre-Made/Stock and FOH Snakes in the side pane.
+- Add the selected stock loom and length directly to the project with one save, preserving unfinished custom drafts.
+- Retain cable directions, connector data and extension-parent links for stock additions.
+
+## V51.17 — Compact Looms tables
+
+- Remove connector descriptions from the main Looms tables and Cable List.
+- Preserve cable direction and connector metadata in saved projects and cable grouping.
+- Remove unused connector-description markup and styling.
+
+## V51.16 — Cable picker presentation and scrolling
+
+- Remove connector descriptions from cable-type rows in the Loom side pane while retaining saved metadata.
+- Keep the cable menu inside the scrolling side pane and prevent background-page scrolling while the pane is open.
+- Bound live-table cable menus to the viewport with contained scrolling.
+
 ## V51.15 — Cable picker and length corrections
 
 - Preserve existing cable length units when selecting a cable type or entering a numeric length; explicit unit suffixes still change units.

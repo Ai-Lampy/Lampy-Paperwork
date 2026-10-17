@@ -15,20 +15,35 @@
   const vendor=text(data?.vendor?.name||data?.vendor||fallbackVendor),unit=text(data?.vendor?.lengthUnit||data?.lengthUnit).toLowerCase();
   if(!vendor||!['ft','m'].includes(unit))throw Error('Cable catalogue requires a vendor and lengthUnit (ft or m)');
   if(!data?.cables||typeof data.cables!=='object'||Array.isArray(data.cables))throw Error(vendor+': cables must contain category arrays');
-  const byName=new Map();
-  const categories=Object.entries(data.cables).map(([category,items])=>{if(!text(category)||!Array.isArray(items))throw Error('Invalid cable category');return {name:text(category),cables:items.map(item=>{
-   const name=text(item?.name);if(!name||byName.has(key(name)))throw Error('Missing or duplicate cable name: '+name);
-   if(item.direction&&!directions.includes(item.direction))throw Error(name+': unknown direction');
-   const meta=metadata(item);if(meta.direction&&(!meta.connectors.start||!meta.connectors.end))throw Error(name+': both connectors are required');
-   const cable={name,category:text(category),lengths:lengths(item.lengths,name),loomOnlyLengths:item.loomOnlyLengths?lengths(item.loomOnlyLengths,name+' loom-only'):[],...meta};if(cable.loomOnlyLengths.some(n=>cable.lengths.includes(n)))throw Error(name+': loom-only and individual lengths overlap');byName.set(key(name),cable);return cable;
-  })}});
+  const byName=new Map(),categories=[],nestedLooms=[];
+  for(const [category,items] of Object.entries(data.cables)){
+   if(!text(category)||!Array.isArray(items))throw Error('Invalid cable category');
+   const reserved=['stock/pre-madelooms','pre-made/stock','fohsnake','fohsnakes'].includes(key(category).replace(/\s/g,''));
+   const group={name:text(category),cables:[]};
+   for(const item of items){
+    if(!item||typeof item!=='object'||Array.isArray(item))throw Error(category+': invalid entry');
+    if(reserved||Object.hasOwn(item,'cables')){if(item.direction||item.connectors)throw Error(category+': loom cannot define cable connectors');nestedLooms.push({...item,category:text(category)});continue}
+    const name=text(item.name);if(!name||byName.has(key(name)))throw Error('Missing or duplicate cable name: '+name);
+    if(!directions.includes(item.direction))throw Error(name+': missing or unknown direction');
+    if(!item.connectors||typeof item.connectors!=='object'||Array.isArray(item.connectors)||Object.values(item.connectors).some(v=>typeof v!=='string'))throw Error(name+': invalid connectors');
+    const meta=metadata(item);if(!meta.connectors.start||!meta.connectors.end)throw Error(name+': both connectors are required');
+    if(item.aliases!==undefined&&(!Array.isArray(item.aliases)||item.aliases.some(alias=>typeof alias!=='string'||!text(alias))))throw Error(name+': aliases must be non-empty strings in an array');
+    const aliases=[...new Map((item.aliases||[]).map(alias=>[key(alias),text(alias)])).values()];
+    const cable={name,aliases,category:text(category),lengths:lengths(item.lengths,name),loomOnlyLengths:item.loomOnlyLengths?lengths(item.loomOnlyLengths,name+' loom-only'):[],...meta};
+    if(cable.loomOnlyLengths.some(n=>cable.lengths.includes(n)))throw Error(name+': loom-only and individual lengths overlap');
+    byName.set(key(name),cable);group.cables.push(cable);
+   }
+   if(group.cables.length)categories.push(group);
+  }
+  const byReference=new Map(byName);
+  for(const cable of byName.values())for(const alias of cable.aliases){const existing=byReference.get(key(alias));if(existing&&existing!==cable)throw Error('Ambiguous cable name or alias '+alias+': '+existing.name+' / '+cable.name);byReference.set(key(alias),cable)}
   if(data.looms!==undefined&&!Array.isArray(data.looms))throw Error('Catalogue looms must be an array');
   const ids=new Set(),names=new Set();
-  const looms=(data.looms||[]).map(loom=>{
+  const looms=[...nestedLooms,...(data.looms||[])].map(loom=>{
    const id=text(loom.id),name=text(loom.name);if(!id||!name||ids.has(id)||names.has(key(name)))throw Error('Missing or duplicate loom ID/name');ids.add(id);names.add(key(name));
    const sizes=lengths(loom.lengths,name);if(!Array.isArray(loom.cables)||!loom.cables.length)throw Error(name+': cables are required');
-   const cables=loom.cables.map(part=>{const cable=byName.get(key(part.cableType));if(!cable)throw Error(name+': unknown cable '+text(part.cableType));if(!Number.isInteger(part.quantity)||part.quantity<1)throw Error(name+': quantity must be a positive integer');for(const length of sizes)if(!cable.lengths.includes(length)&&!cable.loomOnlyLengths.includes(length))throw Error(name+': '+cable.name+' does not list '+length+unit);return {cableType:cable.name,category:cable.category,quantity:part.quantity,...metadata(cable)}});
-   return {id,name,lengths:sizes,cables};
+   const cables=loom.cables.map(part=>{if(!part||typeof part!=='object'||Array.isArray(part))throw Error(name+': invalid cable member');const cable=byReference.get(key(part.cableType));if(!cable)throw Error(name+': unknown cable '+text(part.cableType));if(!Number.isInteger(part.quantity)||part.quantity<1)throw Error(name+': quantity must be a positive integer');for(const length of sizes)if(!cable.lengths.includes(length)&&!cable.loomOnlyLengths.includes(length))throw Error(name+': '+cable.name+' does not list '+length+unit);return {cableType:cable.name,category:cable.category,quantity:part.quantity,...metadata(cable)}});
+   return {id,name,category:text(loom.category)||'Pre-Made/Stock',lengths:sizes,cables};
   });
   return {vendor,unit,categories,looms};
  }
