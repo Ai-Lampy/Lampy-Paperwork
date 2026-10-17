@@ -1,3 +1,9 @@
+## V51.23 — Save and reload update notices
+
+- Check published release metadata every five minutes and when returning to the app; show a non-blocking Save & reload notice for newer versions.
+- Preserve project and settings in browser storage before refreshing, and refuse reload during editing, file operations, storage conflicts or incomplete saves.
+- Support both GitHub Pages and /paperwork/ without changing deployment or routing. Existing V51.22 tabs need one manual refresh to receive the watcher.
+
 ## V51.22 — Category-first Looms picker
 
 - Rename Catalogue Looms to Looms and replace the expanded stock lists with a category-first field and menu matching the cable builder.

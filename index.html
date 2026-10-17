@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="Lampy Paperwork — browser-based lighting paperwork, fixture patch, power, network, rack and MVR tools." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111'/%3E%3Cpath d='M21 9h22v8l-5 9v9h-4v20h-4V35h-4v-9l-5-9z' fill='%23fff'/%3E%3C/svg%3E" />
-<title>Lampy Paperwork V51.22</title>
+<title>Lampy Paperwork V51.23</title>
 <style>
 :root{--label-w:18mm;--label-h:34mm;--label-gap:0.5mm;--gap-y:2mm;--radius:3mm;--border:1mm;--border-col:#ffffff;--front-aux-w:18mm;--front-aux-h:34mm;--front-output-w:72mm;--front-output-h:34mm;--rear-soca-w:70mm;--rear-soca-h:50mm;--rear-aux-w:85mm;--rear-aux-h:30mm;--rear-aux-gap:5mm;--rear-output-w:90mm;--rear-output-h:60mm;--top-size:18pt;--bottom-size:14pt;--top-align:center;--bottom-align:center;--top-v-align:center;--bottom-v-align:center;--top-font:Cochin,'Times New Roman',Times,serif;--bottom-font:Cochin,'Times New Roman',Times,serif;--top-weight:700;--bottom-weight:700;--top-transform:none;--bottom-transform:none;--top-text-align:center;--bottom-text-align:center;--app-font:Arial,Helvetica,sans-serif;--project-header-font:Arial,Helvetica,sans-serif;--project-subheader-font:Arial,Helvetica,sans-serif;--project-body-font:Arial,Helvetica,sans-serif}
 *{box-sizing:border-box}body{margin:0;font-family:var(--project-body-font);background:#f6f7f9;color:#111}h1{margin:0;font-size:28px;font-family:var(--project-header-font)}h2{font-family:var(--project-header-font)}h3,h4{font-family:var(--project-subheader-font)}h2,h3{margin:0 0 12px}button,input,select,textarea{font-style:inherit;font-variant-caps:inherit;font-weight:inherit;font-width:inherit;font-size:inherit;line-height:inherit;font-family:inherit;font-size-adjust:inherit;font-kerning:inherit;font-variant-alternates:inherit;font-variant-ligatures:inherit;font-variant-numeric:inherit;font-variant-east-asian:inherit;font-variant-position:inherit;font-variant-emoji:inherit;font-feature-settings:inherit;font-optical-sizing:inherit;font-variation-settings:inherit}.reportIssueBtn{border:2px solid #111;background:#fff;color:#111;border-radius:60px;padding:8px 8px;font-weight:900;text-decoration:none;white-space:nowrap}.reportIssueBtn:hover{background:#111;color:#fff}.btn{border:2px solid #000;background:rgb(217, 217, 217);border-radius:7px;padding:10px 12px;cursor:pointer}.btn:hover{background:#f7f9fc}.btn.primary{background:#00a61d;color:#fff;border:2px solid #000;font-weight:700}.btn.danger{color:#b42318}.btn.add{font-weight:800;font-size:14px;line-height:1;padding:8px;background:#00a61d;color:#fff;border:2px solid #000}.gear{font-size:24px;border:1px solid #d9dee7;background:#fff;border-radius:999px;width:44px;height:44px;cursor:pointer}.gear:hover{background:#f7f9fc}.tourLogoSlot{display:flex;align-items:center;justify-content:center;width:165px;min-width:0;max-width:100%}.tourLogo{display:block;max-width:160px;max-height:54px;object-fit:contain}.tourLogoExport{position:absolute;top:5mm;right:5mm;z-index:3}.tourLogoUploadPreview{border:1px dashed #cfd6e1;border-radius:8px;background:#fff;min-height:130px;display:flex;align-items:center;justify-content:center;padding:14px}.tourLogoUploadPreview img{max-width:260px;max-height:120px;object-fit:contain}.logoActions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}.menuButton{position:fixed;right:18px;top:18px;z-index:18;border:1px solid #d9dee7;background:#111;color:#fff;border-radius:999px;width:46px;height:46px;font-size:24px;font-weight:900;cursor:pointer;box-shadow:0 10px 28px rgba(16,24,40,.18)}.menuButton:hover{background:#2a2a2a}.actionSidebar{position:fixed;right:18px;top:74px;width:min(260px,calc(100vw - 36px));z-index:17;border:1px solid #dfe3ea;border-radius:10px;background:#fff;box-shadow:0 18px 48px rgba(16,24,40,.22);padding:12px;transform:translateX(calc(100% + 28px));transition:transform .18s ease}.actionMenuOpen .actionSidebar{transform:translateX(0)}.actionSidebar h2{font-size:15px;margin:0 0 10px}.actionSidebar .btn{width:100%;margin:0 0 8px;text-align:left;font-weight:800}
@@ -790,6 +790,10 @@ button.homeStat:hover,button.homeStat:focus-visible{background:#fff;outline:3px 
 .distroSettingsLayout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:end}.distroSettingsLayout>*{min-width:0}.distroSettingsLayout input,.distroSettingsLayout select,.distroSettingsLayout .btn{width:100%;max-width:100%;box-sizing:border-box}.distroSettingsLayout .btn{min-width:0;white-space:nowrap}.distroSettingsLayout .distroPlockControl{align-self:end}.distroSettingsLayout .distroOutputsHeading{margin:8px 0 0;text-align:center;font-family:var(--app-font);font-size:18px}.distroOptionalOutput{display:grid;gap:6px;min-width:0;max-width:100%;align-self:start}.distroOptionalOutput h4{margin:0;font:700 13px var(--app-font);color:#333;border-bottom:1.5px solid #969393;padding-bottom:3px}@media(max-width:480px){.distroSettingsLayout{grid-template-columns:minmax(0,1fr)}}.distroActions{flex-wrap:wrap}.powerFeedNode{display:grid;gap:4px;width:max-content;min-width:0}.powerFeedLabel{font:700 12px var(--project-body-font);white-space:nowrap}.powerFeedWarning{font:700 12px var(--app-font);max-width:360px;color:#a40000}.powerFeedNode>.powerPhaseSummary{margin:0}.powerFeedNode .powerPhaseLinkedGroup{max-width:none}
 /* Catalogue loom selection and end information. */
 .loomCatalogueControls{border-bottom:1px solid #b9b9b9;margin-bottom:12px;padding-bottom:8px}.loomStockChoices{display:grid;gap:6px;margin:8px 0}.loomStockChoices .btn{white-space:normal;text-align:left;padding:8px}.loomStockCategory summary{cursor:pointer;font-weight:800;padding:8px 0}.loomCatalogueChoices{display:flex;flex-wrap:wrap;gap:8px}.loomCatalogueChoices select:first-child{flex:1 1 220px;min-width:0}.loomCatalogueChoices select:nth-child(2){width:110px}.loomCatalogueChoices .btn{font:800 13px var(--app-font);padding:6px 8px}.loomCatalogueControls .hint{margin:6px 0 0}.loomCatalogueStatus{font:400 13px/1.4 var(--app-font);padding:8px;border:1px solid #b9b9b9;border-radius:6px;margin:8px 0;background:#fafafa;overflow-wrap:anywhere}.loomCatalogueStatus span{display:block;color:#667085}
+
+.appUpdateNotice{position:sticky;top:0;z-index:19;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;padding:8px 16px;border-bottom:2px solid #000;background:var(--app-panel-bg,#f7f9fc);color:var(--app-text,#111);font:700 14px var(--app-font,Arial,sans-serif)}
+.appUpdateNotice[hidden]{display:none}.appUpdateNotice small{font-weight:400}.appUpdateNotice .btn{padding:8px;font-weight:800}.appUpdateNotice .updateError{color:#b00020;flex-basis:100%;text-align:center}
+@media print{.appUpdateNotice{display:none!important}}
 </style>
 <style>.deviceConfigDeleteCol{width:34px!important;min-width:34px!important;padding:1px!important}.deviceConfigDeleteButton{width:32px;height:20px;border:0;border-radius:4px;background:transparent;color:#c00000;font:900 18px/1 Arial,sans-serif;cursor:pointer}.deviceConfigDeleteButton:hover,.deviceConfigDeleteButton:focus-visible{background:#fff0f0;outline:2px solid #c00000;outline-offset:-1px}
 </style>
@@ -1040,16 +1044,17 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 <div id="positionPdfModal" class="modal hidden"><div class="modalCard" style="width:min(1200px,100%);"><div class="modalHead"><h2>Position Summary Export</h2><button class="close" onclick="closePositionSummaryPreview()">×</button></div><div class="exportControls"><div class="ctl"><label>Paper Size</label><select id="positionPdfPaperSize"><option value="A4">A4</option><option value="A3">A3</option><option value="A2">A2</option><option value="A1">A1</option><option value="A0">A0</option></select></div><div class="ctl"><label>Orientation</label><select id="positionPdfOrientation"><option value="landscape">Landscape</option><option value="portrait">Portrait</option></select></div><div class="ctl" data-pdf-preview-dpi-control><label>Export DPI</label><select data-pdf-preview-dpi onchange="updatePdfPreviewDpi(this)"><option value="150">150 DPI</option><option value="300" selected>300 DPI</option><option value="450">450 DPI</option></select></div><div class="ctl"><label>Zoom</label><div class="zoomControls"><button class="btn" type="button" data-position-pdf-zoom="fit">Fit</button><button class="btn" type="button" data-position-pdf-zoom="0.5">50%</button><button class="btn" type="button" data-position-pdf-zoom="0.75">75%</button><button class="btn" type="button" data-position-pdf-zoom="1">100%</button><button class="btn" type="button" data-position-pdf-zoom="1.25">125%</button></div></div><div class="ctl"><label>Layout</label><select id="positionPdfLayout" onchange="updatePositionSummaryLayout(this.value)"><option value="rectangles">Rectangles</option><option value="boxes">Boxes</option></select></div><div class="ctl"><label>Columns</label><input id="positionPdfColumns" type="number" min="1" max="8" value="2" onchange="updatePositionSummaryGrid()"></div><div class="ctl"><label>Rows</label><input id="positionPdfRows" type="number" min="1" max="12" value="6" onchange="updatePositionSummaryGrid()"></div><div class="ctl"><button class="btn primary" type="button" onclick="downloadPositionSummary()">Export to PDF</button></div><div class="ctl" data-pdf-logo-preview-controls></div><div class="hint" id="positionPdfInfo"></div></div><div class="pdfPageStage"><div id="positionPdfPages"></div></div></div></div>
 <aside id="distroSettingsModal" class="frontEditorPane hidden"><div class="frontEditorHead"><h2>Add Distro</h2><button class="close" type="button" onclick="closeDistroSettings()">×</button></div><div class="frontEditorBody"><div id="distroCards"></div></div></aside>
 <aside id="singleDistroSettingsModal" class="frontEditorPane hidden"><div class="frontEditorHead"><h2 id="singleDistroSettingsTitle">Distro Settings</h2><button class="close" onclick="closeSingleDistroSettings()">×</button></div><div id="singleDistroSettingsBody" class="frontEditorBody"></div></aside>
-<script src="js/distro-catalogue.js"></script>
-<script src="js/cable-catalogue.js"></script>
-<script src="js/project-core.js"></script>
-<script src="js/archive.js"></script>
-<script src="js/ui-support.js" defer></script>
-<script src="js/patch-address-review.js" defer></script>
-<script src="js/patch-history.js"></script>
+<script src="js/distro-catalogue.js?v=51.23"></script>
+<script src="js/cable-catalogue.js?v=51.23"></script>
+<script src="js/project-core.js?v=51.23"></script>
+<script src="js/archive.js?v=51.23"></script>
+<script src="js/ui-support.js?v=51.23" defer></script>
+<script src="js/patch-address-review.js?v=51.23" defer></script>
+<script src="js/patch-history.js?v=51.23"></script>
+<script src="js/app-updates.js?v=51.23"></script>
 <script>
 'use strict';
-const VERSION='51.22';
+const VERSION='51.23';
 const AUTOSAVE_DELAY=700;
 const BACKGROUND_VALIDATION_DELAY=180;
 const DEFAULT_FONT="Cochin,'Times New Roman',Times,serif";
@@ -1644,7 +1649,7 @@ function controlNetworkRevisionNotes(before,after){return [...revisionArrayChang
 function detailedRevisionNotes(area,before,after){if(area==='Project Info')return projectInfoRevisionNotes(before,after);if(area==='Fixture Patch')return fixturePatchRevisionNotes(before,after);if(area==='Power Calculations')return powerRevisionNotes(before,after);if(area==='Control'||area==='Control/Network')return controlNetworkRevisionNotes(before,after);return []}
 function addAutomaticRevisionChanges(area,changes){const revision=ensureWorkingRevision(),touchedGroups=new Set();revision.log=Array.isArray(revision.log)?revision.log:[];(changes||[]).forEach(change=>{const key=String(change.key||('area:'+area)),existing=revision.log.find(entry=>entry.area===area&&entry.key===key),value={area,key,text:String(change.text||area+' data changed.'),updatedAt:new Date().toISOString()},group=revisionAutoSummaryGroup(key);if(existing)Object.assign(existing,value);else revision.log.push({id:revisionNoteId(),...value});if(group)touchedGroups.add(group)});refreshRevisionAutoSummaries(revision,touchedGroups)}
 function captureRevisionChanges(){const next=currentRevisionSignatures();if(!revisionStateSignatures){revisionStateSignatures=next;return}Object.keys(next).forEach(area=>{if(next[area]===revisionStateSignatures[area])return;const before=safeJSONParse(revisionStateSignatures[area]||'{}',{}),after=safeJSONParse(next[area]||'{}',{}),notes=detailedRevisionNotes(area,before,after);addAutomaticRevisionChanges(area,notes.length?notes:[{key:'area:'+area,text:area+' data changed.'}])});revisionStateSignatures=currentRevisionSignatures()}
-let projectStorageConflict=false,projectRestoreFailed=false;
+let projectStorageConflict=false,projectRestoreFailed=false,appUpdateReloading=false;
 function setSaveStatus(state){
  let host=$('projectSaveStatus');if(!host&&document.body){host=document.createElement('div');host.id='projectSaveStatus';host.setAttribute('role','status');host.setAttribute('aria-live','polite');host.style.cssText='position:fixed;bottom:8px;left:8px;z-index:9999;padding:6px 10px;border:1px solid #777;background:white;border-radius:6px;font:12px Arial;max-width:90vw';document.body.appendChild(host)}
  if(!host)return;const failed=state==='error'||projectStorageConflict||projectRestoreFailed;host.replaceChildren();host.style.borderColor=failed?'#b00020':'#777';host.dataset.state=failed?'error':state;
@@ -1653,7 +1658,7 @@ function setSaveStatus(state){
 }
 function downloadRecoveryProject(){let payload=JSON.stringify(projectFilePayload());if(projectRestoreFailed){try{payload=localStorage.getItem(STORAGE_KEY)||payload}catch(error){}}const url=URL.createObjectURL(new Blob([payload],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='Lampy-recovery.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
 window.addEventListener('storage',event=>{if(event.key===STORAGE_KEY){projectStorageConflict=true;setSaveStatus('error')}});
-window.addEventListener('beforeunload',event=>{if(projectStorageConflict||projectRestoreFailed||!flushPersist()){event.preventDefault();event.returnValue=''}});
+window.addEventListener('beforeunload',event=>{if(appUpdateReloading)return;if(projectStorageConflict||projectRestoreFailed||!flushPersist()){event.preventDefault();event.returnValue=''}});
 function flushPersist(){if(projectStorageConflict||projectRestoreFailed){setSaveStatus('error');return false}if(persistTimer){clearTimeout(persistTimer);persistTimer=null}if(persistIdleHandle!==null&&'cancelIdleCallback' in window){cancelIdleCallback(persistIdleHandle);persistIdleHandle=null}try{ensureSocaData();syncRackMountedNetworkLocations();if(!suppressRevisionCapture)captureRevisionChanges();localStorage.setItem(STORAGE_KEY,JSON.stringify(appPayload(true)));setSaveStatus('saved');return true}catch(error){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(appPayload(false)));console.warn('Saved a lightweight local project copy without embedded GDTF files',error);setSaveStatus('saved-light');return true}catch(fallbackError){console.warn('Could not persist project data locally',fallbackError);setSaveStatus('error');return false}}}
 function persist(){if(patchUndoBatchDepth){patchUndoSaveRequested=true;return}commitFixturePatchUndo();setSaveStatus('pending');scheduleProjectValidation();scheduleDuplicateIpWarnings();if(persistTimer)clearTimeout(persistTimer);if(persistIdleHandle!==null&&'cancelIdleCallback' in window){cancelIdleCallback(persistIdleHandle);persistIdleHandle=null}persistTimer=setTimeout(()=>{persistTimer=null;if('requestIdleCallback' in window)persistIdleHandle=requestIdleCallback(()=>{persistIdleHandle=null;flushPersist()},{timeout:1000});else flushPersist()},AUTOSAVE_DELAY)}
 function scheduleInteractiveRender(){if(interactiveRenderFrame)return;interactiveRenderFrame=requestAnimationFrame(()=>{interactiveRenderFrame=null;render()})}
@@ -6254,6 +6259,39 @@ function attachEvents(){
 function runWhenIdle(task){if('requestIdleCallback' in window)requestIdleCallback(()=>task(),{timeout:750});else setTimeout(task,0)}
 function init(){loadSettings();loadLocalProject();ensureProjectInfo();attachEvents();initRackPopoutSync();loadDistroOptions().then(()=>{if(activeSheetTab==='powerSheet')render()});loadSupplyReference();loadLightingVendors();loadVlanColourReference();loadCableCatalogueReference();render();runWhenIdle(()=>Promise.allSettled([loadFixturePatchReference(),loadColourReference()]).then(()=>{if(activeSheetTab==='fixturePatch'||activeSheetTab==='home')render()}));runWhenIdle(()=>Promise.allSettled([loadConsoleReference(),loadNetworkExpansionReference(),loadNpuReference()]).then(()=>{if(activeSheetTab==='controlNetwork'||activeSheetTab==='deviceConfig'||activeSheetTab==='ipAddresses'||activeSheetTab==='rackLayout')render()}))}
 init();
+
+function applicationUpdateBlockedReason(){
+ if(projectStorageConflict||projectRestoreFailed)return 'Saving is paused. Resolve the project recovery warning before reloading.';
+ if(patchUndoBatchDepth)return 'Finish the current patch operation before reloading.';
+ if([...document.querySelectorAll('.modal:not(.hidden), .frontEditorPane.open, .consoleEditorPane:not(.hidden), dialog[open]')].some(el=>el.getClientRects().length))return 'Save or close the open editor or dialogue before reloading. Your entries have been kept.';
+ if([...document.querySelectorAll('input[type=file]')].some(el=>el.files?.length))return 'Wait for the file operation to finish before reloading.';
+ const active=document.activeElement;
+ if(active?.matches('input,textarea,select,[contenteditable="true"]'))return 'Finish editing the current field, then choose Save & reload.';
+ return '';
+}
+function saveApplicationForUpdate(){
+ commitFixturePatchUndo();
+ if(!flushPersist())throw new Error('Could not save your project. Reload cancelled.');
+ // A lightweight quota fallback is not sufficient: embedded GDTF data must survive.
+ const full=JSON.stringify(appPayload(true));
+ if(localStorage.getItem(STORAGE_KEY)!==full)throw new Error('The complete project could not fit in browser storage. Save a project file before updating. Reload cancelled.');
+ // Preserve the complete reopenable envelope, including view options and imported reference data.
+ const snapshot=JSON.stringify(projectFilePayload());localStorage.setItem(STORAGE_KEY,snapshot);
+ if(localStorage.getItem(STORAGE_KEY)!==snapshot)throw new Error('Could not verify the complete project. Reload cancelled.');
+ const settings=JSON.stringify(settingsPayload());localStorage.setItem(SETTINGS_KEY,settings);
+ if(localStorage.getItem(SETTINGS_KEY)!==settings)throw new Error('Could not verify saved settings. Reload cancelled.');
+}
+function initialiseApplicationUpdates(){
+ const notice=document.createElement('aside');notice.className='appUpdateNotice';notice.hidden=true;notice.setAttribute('aria-label','Application update');
+ notice.innerHTML='<span class="updateMessage" role="status"></span><button type="button" class="btn primary">Save &amp; reload</button><small>Saves your project in this browser before reloading.</small><span class="updateError" role="alert"></span>';
+ document.body.prepend(notice);
+ const button=notice.querySelector('button'),error=notice.querySelector('.updateError');
+ button.addEventListener('pointerdown',event=>event.preventDefault());
+ button.addEventListener('click',()=>{try{LampyUpdates.saveAndReload({blocked:applicationUpdateBlockedReason,save:saveApplicationForUpdate,reload:()=>{appUpdateReloading=true;button.disabled=true;window.location.replace(LampyUpdates.freshURL(window.location.href));}});}catch(e){appUpdateReloading=false;button.disabled=false;error.textContent=e.message||'Saving failed. Reload cancelled.';}});
+ LampyUpdates.watch(VERSION,version=>{notice.hidden=false;notice.querySelector('.updateMessage').textContent='Lampy Paperwork V'+version+' is available.';});
+}
+initialiseApplicationUpdates();
+
 </script>
 
 <div id="welcomeOverlay" class="welcomeOverlay">
