@@ -38,3 +38,25 @@ assert(source.includes('stroke="currentColor"'));assert(source.includes('focusab
 assert(!source.includes("icon.textContent=icons"));
 assert(css.includes('@media(prefers-reduced-motion:reduce)'));
 console.log('PASS: sidebar top alignment, non-wrapping rail, independent scroll, inline header and disclosure row placement.');
+
+const workspace=declarations('body.hasAppNavigation>.topHeader,body.hasAppNavigation>.appShell,body.hasAppNavigation>.appFooter');
+assert.equal(workspace.width,'100%');assert.equal(workspace['max-width'],'100%');
+assert.equal(workspace['margin-left'],'0');assert.equal(workspace['margin-right'],'0');
+assert.equal(declarations('body.hasAppNavigation>.appShell>.wrap>.previewPanel').padding,'0');
+assert.equal(1500-sidebar.layoutState(false,false,false).width,1244);
+assert.equal(1500-sidebar.layoutState(true,false,false).width,1440);
+assert.equal(375-sidebar.layoutState(false,true,false).width,375);
+console.log('PASS: full-width expanded, compact and mobile workspace without wrapper gutters.');
+
+assert.deepEqual(sidebar.flyoutPosition({right:60,top:80},{width:1500,height:900},240,200),{left:68,top:80});
+assert.deepEqual(sidebar.flyoutPosition({right:256,top:850},{width:800,height:900},240,200),{left:264,top:692});
+assert.deepEqual(sidebar.flyoutPosition({right:700,top:0},{width:800,height:900},240,884),{left:552,top:8});
+assert(source.includes("querySelectorAll('.sheetSubMenu button').forEach(item=>addAction(item))"));
+assert(source.includes("hideFlyout();original.click()"));
+assert(source.includes("flyout.addEventListener('pointerenter',cancelLeave)"));
+assert(source.includes("event.key==='ArrowRight'"));assert(source.includes('hideFlyout(true)'));
+assert(css.includes('@media print{.appNavigationFlyout{display:none!important}}'));
+console.log('PASS: flyout viewport bounds, current sub-page routing, pointer handoff, keyboard access and print exclusion.');
+
+assert(html.includes('position:fixed;bottom:8px;right:8px;z-index:9999'));
+assert(!html.includes('position:fixed;bottom:8px;left:8px;z-index:9999'));

@@ -1,7 +1,8 @@
 /* Live navigation only. Isolated from the horizontal page-toolbar layout. */
 body.hasAppNavigation{--navigation-width:256px;padding-left:var(--navigation-width);transition:padding-left 180ms ease}
 body.appNavigationCompact{--navigation-width:60px}
-body.hasAppNavigation>.topHeader,body.hasAppNavigation>.appShell,body.hasAppNavigation>.appFooter{width:calc(100% - 2 * var(--app-outer-gutter));max-width:calc(100% - 2 * var(--app-outer-gutter))}
+body.hasAppNavigation>.topHeader,body.hasAppNavigation>.appShell,body.hasAppNavigation>.appFooter{width:100%;max-width:100%;min-width:0;margin-left:0;margin-right:0}
+body.hasAppNavigation>.appShell>.wrap>.previewPanel{padding:0;border-radius:0;box-shadow:none}
 .appNavigation{position:fixed;inset:0 auto 0 0;width:var(--navigation-width);height:100dvh;z-index:16;display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;background:#f6f7f9;border-right:1px solid #d9dee7;padding:12px 8px;font-family:var(--app-font);color:#111;transition:width 180ms ease}
 .appNavigationHead{display:flex;align-items:center;gap:8px;min-height:52px;flex:0 0 auto;margin-bottom:12px;padding:0 4px}
 .appNavigationBrand{display:flex;align-items:center;min-width:0;flex:1}
@@ -35,3 +36,10 @@ body.hasAppNavigation>.topHeader,body.hasAppNavigation>.appShell,body.hasAppNavi
 @media(max-width:767px){body.hasAppNavigation{padding-left:0;--navigation-width:min(288px,85vw)}.appNavigation{z-index:90;transform:translateX(-100%);transition:transform 180ms ease;box-shadow:8px 0 24px #10182818}.appNavigationOpen .appNavigation{transform:none}.appNavigationMobileToggle{display:inline-flex;margin-bottom:8px}.appNavigationOpen{overflow:hidden}}
 @media(prefers-reduced-motion:reduce){body.hasAppNavigation,.appNavigation,.appNavigation .sheetTab,.appNavigationDisclosure svg,.appNavigation .sheetSubMenu button{transition:none}}
 @media print{body.hasAppNavigation{padding-left:0!important}.appNavigation,.appNavigationBackdrop,.appNavigationMobileToggle{display:none!important}body.hasAppNavigation>.topHeader,body.hasAppNavigation>.appShell,body.hasAppNavigation>.appFooter{width:100%!important;max-width:100%!important}}
+
+.appNavigationFlyout{position:fixed;z-index:80;width:240px;max-width:calc(100vw - 16px);max-height:calc(100dvh - 16px);overflow-y:auto;overscroll-behavior:contain;padding:6px;background:#fff;border:1px solid #d0d5dd;border-radius:9px;box-shadow:0 8px 24px #10182824;font-family:var(--app-font)}
+.appNavigationFlyout[hidden]{display:none}
+.appNavigationFlyout button{display:block;width:100%;border:0;border-radius:5px;padding:9px 12px;text-align:left;background:transparent;color:#344054;font:500 14px/20px var(--app-font);cursor:pointer;overflow-wrap:anywhere}
+.appNavigationFlyout button.appNavigationFlyoutTitle{font-weight:800;color:#111}
+.appNavigationFlyout button:hover{background:#eef2f6}.appNavigationFlyout button:focus-visible{outline:2px solid #0060ff;outline-offset:-2px;background:#eef2f6}
+@media print{.appNavigationFlyout{display:none!important}}

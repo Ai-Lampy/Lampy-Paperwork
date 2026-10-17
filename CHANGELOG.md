@@ -1,3 +1,16 @@
+## V52.3 — Sidebar hover navigation
+
+- Move the project save-status bar to the bottom-right corner.
+
+- Show the page name and current sub-pages in a clickable flyout when hovering over or focusing sidebar page icons.
+- Keep flyouts within the viewport, allow pointer movement into them and support keyboard entry and Escape dismissal.
+- Preserve mobile tap navigation and keep flyouts out of print/PDF output.
+
+## V52.2 — Full-width application workspace
+
+- Remove the outer page gutters and sheet-wrapper padding in the live app so pages fill the space from the sidebar to the right edge.
+- Retain internal card/control spacing, responsive fitting and existing print/PDF geometry.
+
 ## V52.1 — Refined navigation sidebar
 
 - Isolate navigation from the old toolbar centring and wrapping rules so tabs start directly beneath the compact header.
