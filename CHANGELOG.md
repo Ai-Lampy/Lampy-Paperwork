@@ -1,3 +1,18 @@
+## V51.15 — Cable picker and length corrections
+
+- Preserve existing cable length units when selecting a cable type or entering a numeric length; explicit unit suffixes still change units.
+- Refresh length suggestions after typed, selected, pasted and filled cable-type changes, using the catalogue’s actual units.
+- Keep cable values and connector metadata unchanged while browsing picker categories or using Back.
+
+## V51.14 — Cable catalogues and preset looms
+
+- Load vendor cable catalogues independently and show unavailable status for missing catalogues while retaining custom entry.
+- Add catalogue loom presets to the draft editor, with length selection and quantity expansion only when saved.
+- Preserve and display cable directions and start/end connectors in saved looms and the Cable List.
+- Correct cable references, sort lengths and distinguish the 504 ft Whirlwind loom-only length from individual cable availability.
+- Validate available catalogues and explicitly optional manifest entries during release checks.
+- Correct Lighting Vendor logo paths and accept omitted catalogue contact details as blank.
+
 ## V51.13 — Paperwork branding and information
 
 - Use the supplied Lampy Paperwork logo in a compact document-style footer; remove Tool Tracker and the copied navigation columns.

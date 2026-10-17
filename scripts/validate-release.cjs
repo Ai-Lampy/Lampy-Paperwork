@@ -5,7 +5,13 @@ const version=html.match(/const VERSION='([^']+)'/)[1];assert(html.includes('<ti
 for(const match of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)){const src=match[1].match(/src="([^"]+)"/);new vm.Script(src?fs.readFileSync(path.join(root,src[1]),'utf8'):match[2])}
 let count=0;
 function refs(value){if(Array.isArray(value))return value.forEach(refs);if(value&&typeof value==='object')return Object.values(value).forEach(refs);if(typeof value!=='string')return;let ref=value;if(ref.startsWith('fixtures/')&&ref.endsWith('.gdtf'))ref='gdtf/'+ref;if(/^(images|json|gdtf|info_txt)\//.test(ref)&&!ref.includes('://'))assert(fs.existsSync(path.join(root,ref)),'Missing asset: '+ref)}
-for(const file of walk(path.join(root,'json')).filter(f=>f.endsWith('.json'))){refs(JSON.parse(fs.readFileSync(file,'utf8')));count++}
+const CableCatalogue=require('../js/cable-catalogue.js');
+const cableManifestPath=path.join(root,'json/cable/manifest.json');
+const cableEntries=CableCatalogue.manifest(JSON.parse(fs.readFileSync(cableManifestPath,'utf8')));
+let unavailableCatalogues=0;
+for(const entry of cableEntries){const file=path.join(root,entry.file);if(!fs.existsSync(file)){assert(entry.optional,'Missing required cable catalogue: '+entry.file);unavailableCatalogues++;continue}const catalogue=CableCatalogue.normalise(JSON.parse(fs.readFileSync(file,'utf8')));assert.equal(catalogue.vendor.toLowerCase(),entry.vendor.toLowerCase(),'Cable vendor mismatch: '+entry.file)}
+for(const file of walk(path.join(root,'json')).filter(f=>f.endsWith('.json'))){const data=JSON.parse(fs.readFileSync(file,'utf8'));if(file===cableManifestPath){cableEntries.filter(entry=>!entry.optional||fs.existsSync(path.join(root,entry.file))).forEach(entry=>refs(entry.file))}else refs(data);count++}
 for(const file of walk(path.join(root,'info_txt')).filter(f=>f.endsWith('.json')))JSON.parse(fs.readFileSync(file,'utf8'));
 assert(!/on(?:click|change|input)="[^"\n]*escapeAttr\(/.test(html),'HTML encoding used inside JavaScript handler');
 console.log(`PASS: V${version}, script syntax, ${count} JSON references and local asset paths`);
+if(unavailableCatalogues)console.log(`INFO: ${unavailableCatalogues} optional vendor cable catalogues are not supplied; the app will show unavailable status.`);
