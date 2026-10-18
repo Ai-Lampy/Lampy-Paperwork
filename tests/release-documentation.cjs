@@ -66,5 +66,5 @@ assert(actual.html.includes('[data-walkthrough-entry][hidden]{display:none!impor
 assert.equal([...actual.html.matchAll(/<button[^>]+onclick="openWalkthrough\([^>]+>/g)].filter(m=>!m[0].includes('hidden disabled')).length,0);
 Promise.all([welcomeContext.maybeOpenWalkthroughAfterWelcome(),welcomeContext.openWalkthrough(),welcomeContext.openWalkthrough({auto:true})]).then(()=>console.log('PASS: welcome site/email, escaped text, Help callout, bounded/reduced-motion arrow and disabled walkthrough launch paths.')).catch(error=>{console.error(error);process.exitCode=1});
 
-for(const phrase of ['New in V54','Edit Home','130px','custom production fields','spaced dot','Move Selected/Move All'])assert(guide.includes(phrase),`Missing V54 guidance: ${phrase}`);
-assert(actual.checklist.includes('Custom production fields'));assert(actual.checklist.includes('saved hidden columns'));assert(actual.checklist.includes('solid internal borders'));
+for(const phrase of ['New in V54','Edit Home','normal-scale','Add New Contact','spaced dot','Move Selected/Move All'])assert(guide.includes(phrase),`Missing V54 guidance: ${phrase}`);
+assert(actual.checklist.includes('Production Contacts'));assert(actual.checklist.includes('saved hidden columns'));assert(actual.checklist.includes('solid internal borders'));

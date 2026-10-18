@@ -53,27 +53,24 @@ assert(source('patchUniverseAddressControls').includes('aria-pressed'));
 // Custom production fields preserve identifiers across renaming, saving and visibility changes.
 let saves=0,refreshes=0,productionRenders=0,answer='Stage Manager';
 const project={production:{},productionVisible:{},productionContacts:{},customProductionFields:[]};
-const prod=vm.createContext({ensureProjectInfo:()=>project,productionFieldDefs:[],formatDisplayDate:value=>value||'',prompt:()=>answer,loomId:()=> 'production_stable',persist(){saves++},renderProductionInfo(){productionRenders++},refreshHomeIfActive(){refreshes++},renderExportSettings(){},refreshOpenPdfPreview(){},escapeHtml:String});
+const prod=vm.createContext({document:{querySelector:()=>({focus(){}})},ensureProjectInfo:()=>project,productionFieldDefs:[],formatDisplayDate:value=>value||'',prompt:()=>answer,loomId:()=> 'production_stable',persist(){saves++},renderProductionInfo(){productionRenders++},refreshHomeIfActive(){refreshes++},renderExportSettings(){},refreshOpenPdfPreview(){},escapeHtml:String});
 for(const name of ['normaliseCustomProductionFields','allProductionFieldDefs','refreshProductionLinkedViews','addCustomProductionField','renameCustomProductionField','productionHeroItem','productionContactHeroMarkup','updateProjectProductionVisibility','pdfLinkedFieldDefinitions','pdfLinkedTemplateValues','pdfProductionContactFields'])vm.runInContext(source(name),prod);
 prod.addCustomProductionField();assert.equal(saves,1);assert.equal(project.customProductionFields[0].id,'production_stable');assert.equal(project.productionVisible.production_stable,true);
 project.production.production_stable='Alice';prod.renameCustomProductionField({dataset:{productionName:'production_stable'},value:'Stage Lead'});assert.equal(productionRenders,2);assert.equal(project.customProductionFields[0].id,'production_stable');assert.equal(prod.pdfLinkedTemplateValues()['production.production_stable'],'Alice');
 assert(prod.productionHeroItem('production_stable','Stage Lead').includes('Alice'));
 prod.updateProjectProductionVisibility({dataset:{projectProductionVisible:'production_stable'},getAttribute:()=> 'true',setAttribute(){}});assert.equal(prod.productionHeroItem('production_stable','Stage Lead'),'');assert.equal(project.production.production_stable,'Alice');
 const restored=JSON.parse(JSON.stringify(project));assert.equal(prod.normaliseCustomProductionFields(restored.customProductionFields)[0].id,'production_stable');
-const previous=saves;answer=null;prod.addCustomProductionField();answer=' ';prod.addCustomProductionField();assert.equal(saves,previous);
+assert.equal(project.customProductionFields.length,1);assert(!source('addCustomProductionField').includes('prompt('));
 assert(source('normaliseProjectInfo').includes('normaliseCustomProductionFields(info.customProductionFields)'));
 const exportsMarkup=source('renderExportSettings');assert(exportsMarkup.indexOf('projectSettingsPdfPreview')<exportsMarkup.indexOf('<summary>Remaining-page Header'));
 assert(!exportsMarkup.includes('Remaining-page headers use the Footer font'));
 assert(!exportsMarkup.slice(exportsMarkup.indexOf('<summary>Footer')).includes('Field not listed?'));
 assert(source('settingsFirstHeaderPreview').includes('appendExportLogo(sample,0,ensureProjectInfo().exportLogos)'));assert(source('settingsFirstHeaderPreview').includes('applyPdfProjectSettings(sample,true)'));assert(!source('settingsFirstHeaderPreview').includes('pdfPageFooterMarkup'));
-assert(html.includes('#projectSettingsPdfPreview{width:130px;max-width:100%}'));
+assert(html.includes('#projectSettingsPdfPreview{width:100%;max-width:100%}'));
 console.log('PASS: patch persistence/width priorities, merge defaults, custom production identity/visibility and shared header-only previews.');
 
 const samples=[{parentElement:{clientWidth:130,style:{}},scrollHeight:120,style:{}},{parentElement:{clientWidth:600,style:{}},scrollHeight:180,style:{}}];
-const preview=vm.createContext({document:{querySelectorAll:()=>samples}});vm.runInContext(source('fitProjectSettingsHeaderSamples'),preview);preview.fitProjectSettingsHeaderSamples();assert.equal(samples[0].style.transform,'scale(0.1625)');assert.equal(samples[0].parentElement.style.height,'20px');assert.equal(samples[1].parentElement.style.height,'135px');samples[1].parentElement.clientWidth=400;preview.fitProjectSettingsHeaderSamples();assert.equal(samples[1].parentElement.style.height,'90px');
-assert(source('settingsFirstHeaderPreview').includes("image.addEventListener('load',fitProjectSettingsHeaderSamples"));assert(source('settingsFirstHeaderPreview').includes('document.fonts?.ready.then(fitProjectSettingsHeaderSamples)'));
-
-samples[0].parentElement.offsetHeight=24;samples[0].parentElement.clientHeight=20;preview.fitProjectSettingsHeaderSamples();assert.equal(samples[0].parentElement.style.height,'24px');
+const preview=vm.createContext({document:{querySelectorAll:()=>samples}});vm.runInContext(source('fitProjectSettingsHeaderSamples'),preview);preview.fitProjectSettingsHeaderSamples();samples.forEach(sample=>{assert.equal(sample.style.transform,'none');assert.equal(sample.style.width,'100%');assert.equal(sample.parentElement.style.height,'auto')});
 
 // Logo replacement/removal refreshes both settings and open export previews.
 (async()=>{
@@ -91,3 +88,25 @@ samples[0].parentElement.offsetHeight=24;samples[0].parentElement.clientHeight=2
  console.log('PASS: logo upload/removal refreshes settings and open export previews.');
 })().catch(error=>{console.error(error);process.exitCode=1});
 assert(source('renderProductionInfo').includes('onchange="renameCustomProductionField(this)"'));
+
+// Settings icons must all be distinct, including actual SVG artwork.
+const sidebar=require('../js/app-sidebar.js'),sections=['General','Project Info','Production Contacts','Lighting Vendor','Logos','Exports'];
+assert.equal(new Set(sections.map(label=>sidebar.subPageIcon('home',label))).size,6);
+assert.equal(new Set(sections.map(label=>sidebar.iconMarkup(sidebar.subPageIcon('home',label)))).size,6);
+assert(source('projectCustomFieldsMarkup').includes('Custom fields for Project Information'));
+assert(!source('patchUniverseAddressControls').includes('<input'));
+assert(!source('patchUniverseAddressControls').includes('Example:'));
+assert(source('renderProductionInfo').includes('Job Title'));assert(source('renderProductionInfo').includes('Add New Contact'));
+// Reorder standard and custom contacts together without changing identities or values.
+const orderProject={production:{a:'Alice',b:'Bob',production_c:'Chris'},productionOrder:[]};let orderSaves=0;
+const order=vm.createContext({ensureProjectInfo:()=>orderProject,allProductionFieldDefs:()=>[['a','Manager'],['b','Designer'],['production_c','Stage Lead'],['lightingVendor','Vendor']],refreshProductionLinkedViews(){orderSaves++},renderProductionOrderPane(){}});
+for(const name of ['orderedProductionFields','moveProductionContact'])vm.runInContext(source(name),order);
+order.moveProductionContact('production_c','a');assert.deepEqual(Array.from(orderProject.productionOrder),['production_c','a','b']);
+order.moveProductionContact('production_c',1);assert.deepEqual(Array.from(orderProject.productionOrder),['a','production_c','b']);
+order.moveProductionContact('a',-1);assert.equal(orderSaves,2);assert.equal(orderProject.production.production_c,'Chris');
+orderProject.productionOrder=JSON.parse(JSON.stringify(orderProject.productionOrder));assert.deepEqual(Array.from(order.orderedProductionFields(),item=>item[0]),['a','production_c','b']);
+assert(source('normaliseProjectInfo').includes('base.productionOrder='));
+vm.runInContext(source('universeViewerCellMarkup'),c);c.escapeHtml=String;c.escapeAttr=String;
+const footprint=c.universeViewerCellMarkup(1,new Map([[1,{id:'fixture',fixId:1,fixture:'Spot',mode:'Extended',location:'Truss',address:1,channels:10}]]),1);
+assert(footprint.includes('Spot · Extended · Truss'));
+console.log('PASS: V54.1 distinct settings icons, inline contacts, saved reordering, merge-only control and universe details.');

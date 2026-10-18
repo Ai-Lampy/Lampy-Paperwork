@@ -6,9 +6,9 @@
       "type": "unordered",
       "items": [
         "The walk-through remains temporarily disabled. Use the Help button above Menu for page-specific guidance.",
-        "Use Edit Home to customise the dashboard. Project Settings and its General, Project Info, Production Info, Lighting Vendor, Logos and Exports sections are available in the sidebar beneath Home.",
-        "Every Job Type now offers Festival, Europe and US Theatres/Sheds. Add named custom production fields in Production Info and control their visibility like standard fields.",
-        "Lighting Vendor retains saved contacts without add-contact buttons. The Logos preview uses the current PDF logo styles; Exports shows a 130px first-page header preview without a footer directly below First-page Header.",
+        "Use Edit Home to customise the dashboard. Project Settings and its General, Project Info, Production Contacts, Lighting Vendor, Logos and Exports sections are available in the sidebar beneath Home.",
+        "Every Job Type now offers Festival, Europe and US Theatres/Sheds. Use Add New Contact in Production Contacts to enter Job Title and Name. Set visibility and use Re-order to drag contacts or move them with Up/Down buttons.",
+        "Lighting Vendor retains saved contacts without add-contact buttons. The Logos preview uses the current PDF logo styles; Exports shows a full-width, normal-scale first-page header preview without a footer directly below First-page Header.",
         "Use the sidebar for Patch, imported comparison sheets and Universe Detail. Add Fixtures and Unpatch Fixture sit on the toolbar left; Export stays on the right. Hidden columns survive reloads and remaining columns expand with priority for Type, Mode and wrapped text.",
         "Merge Universe & Address has its own control beside the filters. New settings use a spaced dot, for example 1 . 101. Existing saved separators remain unchanged.",
         "Universe Detail keeps its universe selectors and Move Selected/Move All actions. Hover or focus a fixture footprint to highlight every channel it uses. The page title stays unchanged when selecting a universe.",

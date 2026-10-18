@@ -86,9 +86,9 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 
 - Home: compact Edit Home control, no Project Info button, title centred between unequal-width logos.
 - Project Settings: all six sections available in sidebar; all Job Types offer the three new subtypes.
-- Custom production fields: add, rename, edit, toggle visibility and reload; linked values and contact IDs remain intact.
+- Production Contacts: add Job Title and Name inline, rename, edit, reorder by drag or Up/Down, toggle visibility and reload; linked values and contact IDs remain intact.
 - Vendor fields: no add-contact buttons; existing contacts and uploads still work.
-- Header previews: current logo settings, 130px first-page preview below its settings, no first-page footer, later-page footer retained.
+- Header previews: current logo settings, full-width unscaled first-page preview below its settings, no first-page footer, later-page footer retained.
 - Patch: sidebar sheet selection, Add/Unpatch left, Export right; saved hidden columns survive immediate reload and project reopening.
 - Merge control: spaced-dot default, saved custom separators retained, review/cancel still protects address edits.
 - Patch widths: Type/Mode and wrapped text receive spare width; fixed columns and PDF width limits remain unchanged.

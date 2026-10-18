@@ -6,6 +6,12 @@
   function writePreference(storage,value){try{storage.setItem(preferenceKey,String(value))}catch{}}
   function layoutState(collapsed,mobile,open){return {width:mobile?0:collapsed?60:200,hidden:mobile&&!open,expanded:mobile?open:!collapsed}}
   const iconPaths={
+    general:'M4 6h16M4 12h16M4 18h16M7 4v4M17 10v4M10 16v4',
+    projectInfo:'M6 2h9l4 4v16H6zM14 2v5h5M10 11h5M10 15h5M10 19h3',
+    contacts:'M8 3a3 3 0 1 0 0 6 3 3 0 0 0 0-6M2 20v-4a6 6 0 0 1 12 0v4M17 5h5M17 10h5M17 15h5',
+    vendor:'M3 9h18L18 3H6zM4 9v12h16V9M8 21v-7h5v7',
+    logos:'M3 3h18v18H3zM3 18l6-7 4 4 3-3 5 6M15 6h2v2h-2z',
+    exports:'M5 14v7h14v-7M12 3v12M7 8l5-5 5 5',
     home:'M3 10 12 3l9 7M5 9v12h5v-7h4v7h5V9',
     fixturePatch:'M4 4h16v16H4zM4 9h16M9 4v16M14 9v11M4 14h16',
     powerSheet:'m13 2-9 12h7l-1 8 10-13h-7z',
@@ -28,7 +34,7 @@
   };
   function iconMarkup(name){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="'+(iconPaths[name]||iconPaths.menu)+'"/></svg>'}
   function subPageIcon(parent,label){
-    const names={'Project Settings':'settings','Patch':'fixturePatch','Universe Detail':'universe','Device Config':'network','Port Configuration':'ports','Power Calcs':'powerSheet','Fan Outs':'fan','Phase Totals':'totals','Looms':'looms','Cable List':'list','Front RCBO Labels':'distroLabels','Rear Labels':'rear','Table View':'fixturePatch'};
+    const names={'General':'general','Project Info':'projectInfo','Production Contacts':'contacts','Lighting Vendor':'vendor','Logos':'logos','Exports':'exports','Project Settings':'settings','Patch':'fixturePatch','Universe Detail':'universe','Device Config':'network','Port Configuration':'ports','Power Calcs':'powerSheet','Fan Outs':'fan','Phase Totals':'totals','Looms':'looms','Cable List':'list','Front RCBO Labels':'distroLabels','Rear Labels':'rear','Table View':'fixturePatch'};
     return parent==='rackLayout'?'rackLayout':parent==='fixturePatch'&&label!=='Universe Detail'?'fixturePatch':names[label]||parent;
   }
   function decorateSubPage(button,parent,doc){

@@ -1,3 +1,10 @@
+## V54.1 — Settings, contacts and layout corrections
+
+- Give each settings section a distinct sidebar icon and rename Production Contacts. Add inline Job Title/Name contacts and a saved, numbered drag/keyboard reorder pane.
+- Restore full-width, unscaled first-page previews without footers.
+- Simplify the patch merge control to one button; restore left-aligned Add/Unpatch sizing.
+- Compact the universe statistic and keep hovered footprints readable with type, mode and position details.
+
 ## V54 — Global interface refinement
 
 - Compact Home editing and centre the app title between logos.
