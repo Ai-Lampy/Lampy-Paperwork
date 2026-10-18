@@ -8,6 +8,7 @@
 - Simplify Universe Detail heading controls and highlight complete footprints on hover/focus without changing move/review actions.
 - Remove Power page tabs; Fan Outs inherits Power fixture-name mode and solid internal borders.
 - Update major-release guidance and regressions. Walk-through remains disabled.
+- Audit correction: refresh export previews after Tour/Personal logo replacement or removal, and refresh custom production headings and contact labels after renaming.
 
 ## V53 — Navigation and page help
 

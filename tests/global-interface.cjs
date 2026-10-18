@@ -1,7 +1,7 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const html=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8');
-function source(name){const start=html.indexOf('function '+name+'(');assert(start>=0,name);for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const code=html.slice(start,end+1);try{new Function('return ('+code+')');return code}catch{}}throw Error(name)}
+function source(name){let start=html.indexOf('function '+name+'(');assert(start>=0,name);if(html.slice(start-6,start)==='async ')start-=6;for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const code=html.slice(start,end+1);try{new Function('return ('+code+')');return code}catch{}}throw Error(name)}
 const c=vm.createContext({});
 for(const name of ['applicationTitlePlacement','fixtureNameMode','attachUniverseGridEvents'])vm.runInContext(source(name),c);
 // The title remains centred in the available gap, even with unequal logos/sidebar widths.
@@ -51,12 +51,12 @@ assert.equal(c.normalisePatchUniverseAddress().separator,' . ');assert.equal(c.n
 assert(!source('renderPatchColumnsModal').includes('patchUniverseAddressControls()'));assert(source('patchControlsMarkup').includes('patchUniverseAddressControls()'));
 assert(source('patchUniverseAddressControls').includes('aria-pressed'));
 // Custom production fields preserve identifiers across renaming, saving and visibility changes.
-let saves=0,refreshes=0,answer='Stage Manager';
+let saves=0,refreshes=0,productionRenders=0,answer='Stage Manager';
 const project={production:{},productionVisible:{},productionContacts:{},customProductionFields:[]};
-const prod=vm.createContext({ensureProjectInfo:()=>project,productionFieldDefs:[],formatDisplayDate:value=>value||'',prompt:()=>answer,loomId:()=> 'production_stable',persist(){saves++},renderProductionInfo(){},refreshHomeIfActive(){refreshes++},renderExportSettings(){},refreshOpenPdfPreview(){},escapeHtml:String});
+const prod=vm.createContext({ensureProjectInfo:()=>project,productionFieldDefs:[],formatDisplayDate:value=>value||'',prompt:()=>answer,loomId:()=> 'production_stable',persist(){saves++},renderProductionInfo(){productionRenders++},refreshHomeIfActive(){refreshes++},renderExportSettings(){},refreshOpenPdfPreview(){},escapeHtml:String});
 for(const name of ['normaliseCustomProductionFields','allProductionFieldDefs','refreshProductionLinkedViews','addCustomProductionField','renameCustomProductionField','productionHeroItem','productionContactHeroMarkup','updateProjectProductionVisibility','pdfLinkedFieldDefinitions','pdfLinkedTemplateValues','pdfProductionContactFields'])vm.runInContext(source(name),prod);
 prod.addCustomProductionField();assert.equal(saves,1);assert.equal(project.customProductionFields[0].id,'production_stable');assert.equal(project.productionVisible.production_stable,true);
-project.production.production_stable='Alice';prod.renameCustomProductionField({dataset:{productionName:'production_stable'},value:'Stage Lead'});assert.equal(project.customProductionFields[0].id,'production_stable');assert.equal(prod.pdfLinkedTemplateValues()['production.production_stable'],'Alice');
+project.production.production_stable='Alice';prod.renameCustomProductionField({dataset:{productionName:'production_stable'},value:'Stage Lead'});assert.equal(productionRenders,2);assert.equal(project.customProductionFields[0].id,'production_stable');assert.equal(prod.pdfLinkedTemplateValues()['production.production_stable'],'Alice');
 assert(prod.productionHeroItem('production_stable','Stage Lead').includes('Alice'));
 prod.updateProjectProductionVisibility({dataset:{projectProductionVisible:'production_stable'},getAttribute:()=> 'true',setAttribute(){}});assert.equal(prod.productionHeroItem('production_stable','Stage Lead'),'');assert.equal(project.production.production_stable,'Alice');
 const restored=JSON.parse(JSON.stringify(project));assert.equal(prod.normaliseCustomProductionFields(restored.customProductionFields)[0].id,'production_stable');
@@ -74,3 +74,20 @@ const preview=vm.createContext({document:{querySelectorAll:()=>samples}});vm.run
 assert(source('settingsFirstHeaderPreview').includes("image.addEventListener('load',fitProjectSettingsHeaderSamples"));assert(source('settingsFirstHeaderPreview').includes('document.fonts?.ready.then(fitProjectSettingsHeaderSamples)'));
 
 samples[0].parentElement.offsetHeight=24;samples[0].parentElement.clientHeight=20;preview.fitProjectSettingsHeaderSamples();assert.equal(samples[0].parentElement.style.height,'24px');
+
+// Logo replacement/removal refreshes both settings and open export previews.
+(async()=>{
+ let persisted=0,settings=0,exports=0,logos=0;
+ const project={logo:{},secondaryLogo:{},exportLogos:{},logoVisibility:{secondary:true}};
+ const context=vm.createContext({ensureProjectInfo:()=>project,activeSheetTab:'projectSettings',persist(){persisted++},renderLogoInfo(){logos++},renderExportSettings(){settings++},refreshOpenPdfPreview(){exports++},updateTourLogoSlot(){},updateProjectHeaderLogos(){},refreshHomeIfActive(){},compactUploadedLogo:async file=>({name:file.name,dataUrl:'data:image/png;base64,new'}),alert(message){throw Error(message)},console});
+ for(const name of ['handleTourLogoUpload','removeTourLogo','handleSecondaryLogoUpload','removeSecondaryLogo'])vm.runInContext(source(name),context);
+ await context.handleTourLogoUpload({target:{files:[{name:'tour.png',type:'image/png'}]}});
+ assert.equal(project.logo.name,'tour.png');assert.equal(settings,1);assert.equal(exports,1);
+ context.removeTourLogo();assert.equal(project.logo.dataUrl,'');assert.equal(settings,2);assert.equal(exports,2);
+ await context.handleSecondaryLogoUpload({target:{files:[{name:'personal.png',type:'image/png'}]}});
+ assert.equal(project.secondaryLogo.name,'personal.png');assert.equal(settings,3);assert.equal(exports,3);
+ context.removeSecondaryLogo();assert.equal(project.secondaryLogo.dataUrl,'');assert.equal(project.logoVisibility.secondary,false);
+ assert.equal(settings,4);assert.equal(exports,4);assert.equal(logos,4);assert.equal(persisted,4);
+ console.log('PASS: logo upload/removal refreshes settings and open export previews.');
+})().catch(error=>{console.error(error);process.exitCode=1});
+assert(source('renderProductionInfo').includes('onchange="renameCustomProductionField(this)"'));
