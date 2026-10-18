@@ -5,7 +5,7 @@ function source(name){const start=html.search(new RegExp('(?:async )?function '+
 function add(c,...names){names.forEach(name=>vm.runInContext(source(name),c))}
 const c=vm.createContext({console,escapeHtml:s=>String(s??'').replaceAll('&','&amp;').replaceAll('<','&lt;'),escapeAttr:s=>String(s??''),fixturePatchViewOptions:{columns:{universe:false,address:true},universeAddress:{enabled:false,separator:'',visible:true}},PATCH_COLUMNS:[{key:'fixId',field:'fixId'},{key:'universe',field:'universe'},{key:'address',field:'address'},{key:'mode',field:'mode'}]});
 add(c,'validPatchSeparator','normalisePatchUniverseAddress','patchUniverseAddressText','parsePatchUniverseAddress','patchColumnDefinitions','patchColumnVisible','patchVisibleColumns','patchColumnValue','fixturePatchXlsxValue','patchPdfExportColumns','patchPdfHiddenColumns','patchPdfSummaryRows','patchPdfPatchedUniverses','patchSummaryColumnWidths','patchPdfSupplementElement','patchSummaryPageOverflow');
-assert.deepEqual(plain(c.normalisePatchUniverseAddress()),{enabled:false,separator:'',visible:true});
+assert.deepEqual(plain(c.normalisePatchUniverseAddress()),{enabled:false,separator:' . ',visible:true});
 for(const separator of ['', '\n','x\t'])assert.equal(c.normalisePatchUniverseAddress({enabled:true,separator}).enabled,false);
 for(const separator of ['.',' / ','-','< >']){
  const saved=c.normalisePatchUniverseAddress({enabled:true,separator});assert.equal(saved.enabled,true);c.fixturePatchViewOptions.universeAddress=saved;

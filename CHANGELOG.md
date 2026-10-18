@@ -1,3 +1,14 @@
+## V54 — Global interface refinement
+
+- Compact Home editing and centre the app title between logos.
+- Move Project Settings sections into the sidebar; add shared job subtypes and saved custom production fields with visibility and linked values.
+- Remove Vendor add-contact controls while retaining saved contacts; share PDF header rendering across settings previews and place the 130px footer-free first-page preview below its controls.
+- Save patch column preferences in autosaves, move Add/Unpatch left, remove redundant sheet tabs, and add a separate merge control with a spaced-dot default.
+- Expand live patch columns to fill available width, prioritising Type, Mode and wrapped content while retaining PDF sizing.
+- Simplify Universe Detail heading controls and highlight complete footprints on hover/focus without changing move/review actions.
+- Remove Power page tabs; Fan Outs inherits Power fixture-name mode and solid internal borders.
+- Update major-release guidance and regressions. Walk-through remains disabled.
+
 ## V53 — Navigation and page help
 
 - Refresh the welcome for ailampy.com/paperwork/ and info@ailampy.com, highlight page Help with a large flashing arrow and direct Help action, temporarily disable walk-through entry points, and use a cog for Project Settings.

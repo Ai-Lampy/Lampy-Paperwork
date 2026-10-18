@@ -1,6 +1,20 @@
 {
-  "title": "Lampy Paperwork V53 Walk-through",
+  "title": "Lampy Paperwork V54 Walk-through",
   "sections": [
+    {
+      "title": "New in V54: Global interface refinement",
+      "type": "unordered",
+      "items": [
+        "The walk-through remains temporarily disabled. Use the Help button above Menu for page-specific guidance.",
+        "Use Edit Home to customise the dashboard. Project Settings and its General, Project Info, Production Info, Lighting Vendor, Logos and Exports sections are available in the sidebar beneath Home.",
+        "Every Job Type now offers Festival, Europe and US Theatres/Sheds. Add named custom production fields in Production Info and control their visibility like standard fields.",
+        "Lighting Vendor retains saved contacts without add-contact buttons. The Logos preview uses the current PDF logo styles; Exports shows a 130px first-page header preview without a footer directly below First-page Header.",
+        "Use the sidebar for Patch, imported comparison sheets and Universe Detail. Add Fixtures and Unpatch Fixture sit on the toolbar left; Export stays on the right. Hidden columns survive reloads and remaining columns expand with priority for Type, Mode and wrapped text.",
+        "Merge Universe & Address has its own control beside the filters. New settings use a spaced dot, for example 1 . 101. Existing saved separators remain unchanged.",
+        "Universe Detail keeps its universe selectors and Move Selected/Move All actions. Hover or focus a fixture footprint to highlight every channel it uses. The page title stays unchanged when selecting a universe.",
+        "Power and Fan Outs use sidebar navigation. Fan Outs inherits Power Calcs Full Name/Short Name selection and uses the same solid internal table borders."
+      ]
+    },
     {
       "title": "New in V53: Navigation and page help",
       "type": "unordered",
@@ -83,7 +97,7 @@
         "Open Rack Layout to create racks, set their U size and depth, and place project or library devices from the Front or Rear view. Use Side view to inspect device depths and cable clearance.",
         "Open Network → Device Config to review the synchronized device tree, expand individual ports, and edit patch, IP, subnet, protocol, direction, VLAN, and notes data.",
         "Use Global Subnet in Device Config to set the default subnet for new devices and apply it to existing network interfaces when required.",
-        "Review the Fan Outs tab generated from Power and export the required Fan Out paperwork.",
+        "Review the Fan Outs page generated from Power and export the required Fan Out paperwork.",
         "Use Labels to complete Front RCBO Labels, Rear Labels, and Table View, then preview and export the required label pages.",
         "Review Revisions from the Actions menu or Home card, then download the Lampy project file so the editable project can be reopened later."
       ]
@@ -93,7 +107,7 @@
       "type": "unordered",
       "items": [
         "The fixture library shows GDTF ✅ only when a repository file has a fully matched manufacturer, fixture type, mode, and channel count. GDTF ❌ means an exact match is not currently available.",
-        "Use Import to load CSV, Excel, XLSM, or MVR files. Imported comparison tabs highlight new, removed, and changed patch data before it is merged into the master patch.",
+        "Use Import to load CSV, Excel, XLSM, or MVR files. Imported comparison sheets in the sidebar highlight new, removed, and changed patch data before it is merged into the master patch.",
         "Fixture Patch Export provides Output Options, independent column controls and PDF Logos. Show Fixture Summary and Show Patch Revision Notes sit in their own card between Hidden Columns and PDF Logos.",
         "MVR export checks fixture IDs, DMX addresses, modes, duplicate ranges, and GDTF availability before building the file.",
         "V33 imports supported MVR 1.5 and 1.6 patch data, including fixture positions, layers, classes, UUID metadata, and embedded GDTF filenames with or without the .gdtf extension.",
@@ -163,9 +177,9 @@
       "type": "unordered",
       "items": [
         "The Home tab provides clickable totals for Fixtures, Universes, Consoles, parameters, Distros, Socapexes, and Data Racks. These open the relevant project page directly.",
-        "Use Customise Home to reorder, resize, hide, restore, or collapse dashboard cards. Changes are stored with the current project; Set as Browser Default applies the chosen layout to future and legacy projects.",
+        "Use Edit Home to reorder, resize, hide, restore, or collapse dashboard cards. Changes are stored with the current project; Set as Browser Default applies the chosen layout to future and legacy projects.",
         "Use Edit at the top of Position Summary to open the Positions workspace. Renaming a position updates linked fixtures and devices; removing one clears it from affected project records after confirmation.",
-        "Opening Universes from Home displays a full-page Universe Detail view with one tab per patched universe. Use Back to Home when finished.",
+        "Opening Universes from Home displays a full-page Universe Detail view with one tab per patched universe. Select Home in the sidebar when finished.",
         "In compact navigation, hover or focus an inactive page group to see its destinations. Active-group sub-pages appear directly in the sidebar and show only their own name on hover.",
         "Fixture group title lines always use the full fixture name. Full Name and Short Name options affect supported table cells and labels only.",
         "Use the Fixture Patch lock before editing rows, and watch for duplicate fixture IDs or overlapping DMX addresses. Show/Hide Columns is available beside Clear Filters in the Filter & Sort controls.",

@@ -1,4 +1,4 @@
-# V53 browser release checks
+# V54 browser release checks
 
 **Use this checklist only when the user explicitly requests browser testing.** Interface changes, implementation requests and releases do not authorise browser testing. Static validation remains the default.
 
@@ -16,7 +16,7 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 | Errors control retains 6px left padding, count and acknowledgement behaviour | Required | Required | Required |
 | Mobile drawer: open/close, Escape, outside click, focus containment and return; sidebar-only scrolling | Required | Required | Required |
 | Expanded/compact sidebar content fitting and unchanged print/PDF geometry | Required | Required | Required |
-| Fixture Patch sub-tabs, Home universe routes, populated Menu and empty Import action | Required | Required | Required |
+| Fixture Patch sidebar destinations, Home universe routes, populated Menu and empty Import action | Required | Required | Required |
 | Universe selection, green footprints, # IDs, hover/focus details, Shift selection and reviewed moves | Required | Required | Required |
 | Drag across wrapped/scaled universe grid; green/red validity; Escape, pointer cancellation, outside drop and review cancellation retain original data | Required | Required | Required |
 | PDF session column buttons reflect empty columns, isolate live preferences, preserve per-type omissions and show Qty / relocated page toggles | Required | Required | Required |
@@ -81,3 +81,16 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 | 1,000-fixture project editing, navigation and exports | Required | Required | Required |
 
 `node tests/release-regressions.cjs` covers calculation, migration, import and storage failures plus a 10,000-fixture data round trip. This is not a claim that the browser matrix or large-project rendering has passed. Record browser/version and actual outcomes when publishing.
+
+## V54 global interface checks
+
+- Home: compact Edit Home control, no Project Info button, title centred between unequal-width logos.
+- Project Settings: all six sections available in sidebar; all Job Types offer the three new subtypes.
+- Custom production fields: add, rename, edit, toggle visibility and reload; linked values and contact IDs remain intact.
+- Vendor fields: no add-contact buttons; existing contacts and uploads still work.
+- Header previews: current logo settings, 130px first-page preview below its settings, no first-page footer, later-page footer retained.
+- Patch: sidebar sheet selection, Add/Unpatch left, Export right; saved hidden columns survive immediate reload and project reopening.
+- Merge control: spaced-dot default, saved custom separators retained, review/cancel still protects address edits.
+- Patch widths: Type/Mode and wrapped text receive spare width; fixed columns and PDF width limits remain unchanged.
+- Universe Detail: statistic replaces heading toolbar; hover/focus highlights full footprints; Move Selected and Move All remain available.
+- Power/Fan Outs: no page-tab strip; name mode follows Power in live and PDF views; solid internal borders.

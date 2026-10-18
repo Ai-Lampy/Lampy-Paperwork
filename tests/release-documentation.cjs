@@ -44,7 +44,7 @@ assert.deepEqual(plain(context.normaliseWelcomeMessage({})),actual.welcome);
 assert.deepEqual(plain(context.normaliseWalkthrough({})),actual.walkthrough);
 Promise.all([context.loadWelcomeMessage(),context.loadWalkthrough()]).then(([welcome,walkthrough])=>{
  assert.deepEqual(plain(welcome),actual.welcome);assert.deepEqual(plain(walkthrough),actual.walkthrough);
- console.log('PASS: actual offline welcome/walkthrough loaders and empty-data normalisers retain the complete V53 guidance.');
+ console.log('PASS: actual offline welcome/walkthrough loaders and empty-data normalisers retain the complete current-release guidance.');
 }).catch(error=>{console.error(error);process.exitCode=1});
 
 // Welcome links and temporary walkthrough suspension must also work offline.
@@ -65,3 +65,6 @@ assert(actual.html.includes('@media(prefers-reduced-motion:reduce){.welcomeHelpA
 assert(actual.html.includes('[data-walkthrough-entry][hidden]{display:none!important}'));
 assert.equal([...actual.html.matchAll(/<button[^>]+onclick="openWalkthrough\([^>]+>/g)].filter(m=>!m[0].includes('hidden disabled')).length,0);
 Promise.all([welcomeContext.maybeOpenWalkthroughAfterWelcome(),welcomeContext.openWalkthrough(),welcomeContext.openWalkthrough({auto:true})]).then(()=>console.log('PASS: welcome site/email, escaped text, Help callout, bounded/reduced-motion arrow and disabled walkthrough launch paths.')).catch(error=>{console.error(error);process.exitCode=1});
+
+for(const phrase of ['New in V54','Edit Home','130px','custom production fields','spaced dot','Move Selected/Move All'])assert(guide.includes(phrase),`Missing V54 guidance: ${phrase}`);
+assert(actual.checklist.includes('Custom production fields'));assert(actual.checklist.includes('saved hidden columns'));assert(actual.checklist.includes('solid internal borders'));

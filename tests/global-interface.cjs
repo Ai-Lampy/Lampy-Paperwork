@@ -1,0 +1,76 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
+const html=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8');
+function source(name){const start=html.indexOf('function '+name+'(');assert(start>=0,name);for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const code=html.slice(start,end+1);try{new Function('return ('+code+')');return code}catch{}}throw Error(name)}
+const c=vm.createContext({});
+for(const name of ['applicationTitlePlacement','fixtureNameMode','attachUniverseGridEvents'])vm.runInContext(source(name),c);
+// The title remains centred in the available gap, even with unequal logos/sidebar widths.
+for(const left of [0,60,200,350])for(const width of [100,300,1000]){
+ const result=c.applicationTitlePlacement(left,width,1500,200);
+ assert.equal(result.offset+result.width/2,width/2);
+ assert(result.offset>=0&&result.offset+result.width<=width);
+}
+assert(!source('renderHomeView').includes('>Project Info</button>'));
+assert(source('renderHomeView').includes("'Edit Home'"));
+const display={power:'short',fanOut:'full',labels:'full',patch:'full'};
+c.ensureProjectInfo=()=>({fixtureNameDisplay:display});
+assert.equal(c.fixtureNameMode('fanOut'),'short');assert.equal(c.fixtureNameMode('labels'),'short');assert.equal(c.fixtureNameMode('patch'),'full');
+display.power='full';display.fanOut='short';assert.equal(c.fixtureNameMode('fanOut'),'full');
+assert(!source('powerSheetToolbarMarkup').includes("fixtureNameModeControl('fanOut')"));
+assert(!html.includes('function powerSubTabsMarkup('));
+assert(html.includes('.fanOutTable th,.fanOutTable td{border:1px solid #d4d4d4;'));
+const callbacks={},cells=['a','a','a','b','b'].map(id=>({dataset:{universeFixture:id},highlight:false,classList:{toggle(name,on){assert.equal(name,'universeFootprintHover');this.cell.highlight=on}},closest(){return this}}));
+cells.forEach(cell=>cell.classList.cell=cell);
+const grid={addEventListener(name,fn){(callbacks[name]??=[]).push(fn)},querySelectorAll:()=>cells};
+c.$=()=>null;c.attachUniverseGridEvents({querySelector:()=>grid});
+callbacks.pointerover[0]({target:cells[1]});assert.deepEqual(cells.map(cell=>cell.highlight),[true,true,true,false,false]);
+callbacks.pointerover[0]({target:cells[3]});assert.deepEqual(cells.map(cell=>cell.highlight),[false,false,false,true,true]);
+callbacks.pointerleave[0]();assert(cells.every(cell=>!cell.highlight));
+callbacks.focusin[0]({target:cells[0]});assert.deepEqual(cells.map(cell=>cell.highlight),[true,true,true,false,false]);
+callbacks.focusout[0]({relatedTarget:null});assert(cells.every(cell=>!cell.highlight));
+const universe=source('renderUniverseDetailView');
+assert(!universe.includes('universeDetailToolbar'));assert(!universe.includes('fixturePatchSubTabsMarkup'));
+assert(universe.includes('universeCountStat'));assert(universe.includes('moveSelectedUniverse()'));assert(universe.includes('moveActiveUniverse()'));
+console.log('PASS: global Home centring, shared Fan Out name mode, and full-footprint hover/focus.');
+// Live width allocation fills spare space without widening fixed columns or changing PDF widths.
+vm.runInContext(source('expandLivePatchColumns'),c);
+for(const space of [400,900,1800]){
+ const widths=[34,100,100,70],settings=[{fixed:34},{},{},{fixed:70}];
+ c.expandLivePatchColumns(widths,['fixId','fixture','mode','address'],settings,[34,220,160,70],space);
+ assert.equal(widths[0],34);assert.equal(widths[3],70);assert(Math.abs(widths.reduce((a,b)=>a+b)-space)<.001);assert(widths[1]>widths[2]);
+}
+const wrapped=[100,100,70];c.expandLivePatchColumns(wrapped,['notes','position','address'],[{},{},{fixed:70}],[300,100,70],700);assert.deepEqual(wrapped,[530,100,70]);
+assert(source('applyPatchTableColumnWidths').includes("!table.closest('.exportPage,.pdfPageStage')"));
+assert(source('scheduleResponsiveSheetLayout').includes('applyPatchTableColumnWidths'));
+const payloadContext=vm.createContext({VERSION:'54',app:{labels:[],socaNames:[],socaMeta:[],distros:[],looms:[],fixturePatch:[],patchSheets:[],gdtfFiles:{},gdtfMatches:{},controlNetwork:{},collapsed:{soca:[],previews:[],distros:[]}},activePatchSheetId:'master',fixturePatchViewOptions:{columns:{mode:false},universeAddress:{enabled:true,separator:' . '}},syncPositionsFromPatch(){},normaliseGdtfFiles:x=>x,normaliseLooms:x=>x,ensureProjectInfo:()=>({}),normalisePatchSheets:x=>x,normaliseGdtfMatches:x=>x,normaliseControlNetwork:x=>x,normalisePatchViewOptions:x=>x});
+vm.runInContext(source('appPayload'),payloadContext);
+const payload=JSON.parse(JSON.stringify(payloadContext.appPayload()));assert.equal(payload.fixturePatchViewOptions.columns.mode,false);assert.equal(payload.fixturePatchViewOptions.universeAddress.separator,' . ');
+assert(source('loadProjectPayload').includes('normalisePatchViewOptions(data?.fixturePatchViewOptions||source.fixturePatchViewOptions)'));
+vm.runInContext(source('validPatchSeparator'),c);vm.runInContext(source('normalisePatchUniverseAddress'),c);
+assert.equal(c.normalisePatchUniverseAddress().separator,' . ');assert.equal(c.normalisePatchUniverseAddress({separator:' / '}).separator,' / ');
+assert(!source('renderPatchColumnsModal').includes('patchUniverseAddressControls()'));assert(source('patchControlsMarkup').includes('patchUniverseAddressControls()'));
+assert(source('patchUniverseAddressControls').includes('aria-pressed'));
+// Custom production fields preserve identifiers across renaming, saving and visibility changes.
+let saves=0,refreshes=0,answer='Stage Manager';
+const project={production:{},productionVisible:{},productionContacts:{},customProductionFields:[]};
+const prod=vm.createContext({ensureProjectInfo:()=>project,productionFieldDefs:[],formatDisplayDate:value=>value||'',prompt:()=>answer,loomId:()=> 'production_stable',persist(){saves++},renderProductionInfo(){},refreshHomeIfActive(){refreshes++},renderExportSettings(){},refreshOpenPdfPreview(){},escapeHtml:String});
+for(const name of ['normaliseCustomProductionFields','allProductionFieldDefs','refreshProductionLinkedViews','addCustomProductionField','renameCustomProductionField','productionHeroItem','productionContactHeroMarkup','updateProjectProductionVisibility','pdfLinkedFieldDefinitions','pdfLinkedTemplateValues','pdfProductionContactFields'])vm.runInContext(source(name),prod);
+prod.addCustomProductionField();assert.equal(saves,1);assert.equal(project.customProductionFields[0].id,'production_stable');assert.equal(project.productionVisible.production_stable,true);
+project.production.production_stable='Alice';prod.renameCustomProductionField({dataset:{productionName:'production_stable'},value:'Stage Lead'});assert.equal(project.customProductionFields[0].id,'production_stable');assert.equal(prod.pdfLinkedTemplateValues()['production.production_stable'],'Alice');
+assert(prod.productionHeroItem('production_stable','Stage Lead').includes('Alice'));
+prod.updateProjectProductionVisibility({dataset:{projectProductionVisible:'production_stable'},getAttribute:()=> 'true',setAttribute(){}});assert.equal(prod.productionHeroItem('production_stable','Stage Lead'),'');assert.equal(project.production.production_stable,'Alice');
+const restored=JSON.parse(JSON.stringify(project));assert.equal(prod.normaliseCustomProductionFields(restored.customProductionFields)[0].id,'production_stable');
+const previous=saves;answer=null;prod.addCustomProductionField();answer=' ';prod.addCustomProductionField();assert.equal(saves,previous);
+assert(source('normaliseProjectInfo').includes('normaliseCustomProductionFields(info.customProductionFields)'));
+const exportsMarkup=source('renderExportSettings');assert(exportsMarkup.indexOf('projectSettingsPdfPreview')<exportsMarkup.indexOf('<summary>Remaining-page Header'));
+assert(!exportsMarkup.includes('Remaining-page headers use the Footer font'));
+assert(!exportsMarkup.slice(exportsMarkup.indexOf('<summary>Footer')).includes('Field not listed?'));
+assert(source('settingsFirstHeaderPreview').includes('appendExportLogo(sample,0,ensureProjectInfo().exportLogos)'));assert(source('settingsFirstHeaderPreview').includes('applyPdfProjectSettings(sample,true)'));assert(!source('settingsFirstHeaderPreview').includes('pdfPageFooterMarkup'));
+assert(html.includes('#projectSettingsPdfPreview{width:130px;max-width:100%}'));
+console.log('PASS: patch persistence/width priorities, merge defaults, custom production identity/visibility and shared header-only previews.');
+
+const samples=[{parentElement:{clientWidth:130,style:{}},scrollHeight:120,style:{}},{parentElement:{clientWidth:600,style:{}},scrollHeight:180,style:{}}];
+const preview=vm.createContext({document:{querySelectorAll:()=>samples}});vm.runInContext(source('fitProjectSettingsHeaderSamples'),preview);preview.fitProjectSettingsHeaderSamples();assert.equal(samples[0].style.transform,'scale(0.1625)');assert.equal(samples[0].parentElement.style.height,'20px');assert.equal(samples[1].parentElement.style.height,'135px');samples[1].parentElement.clientWidth=400;preview.fitProjectSettingsHeaderSamples();assert.equal(samples[1].parentElement.style.height,'90px');
+assert(source('settingsFirstHeaderPreview').includes("image.addEventListener('load',fitProjectSettingsHeaderSamples"));assert(source('settingsFirstHeaderPreview').includes('document.fonts?.ready.then(fitProjectSettingsHeaderSamples)'));
+
+samples[0].parentElement.offsetHeight=24;samples[0].parentElement.clientHeight=20;preview.fitProjectSettingsHeaderSamples();assert.equal(samples[0].parentElement.style.height,'24px');
