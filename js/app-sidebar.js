@@ -73,7 +73,7 @@
       if(!collapsed||media.matches||suppressFocus)return;cancelLeave();if(flyoutSource===button)return;hideFlyout();const mode=flyoutMode(button.dataset.sheetTab,button.classList.contains('active'));if(mode==='none')return;flyoutSource=button;
       const label=button.dataset.navLabel||button.textContent.trim();flyout.setAttribute('aria-label',label+' navigation');
       function addAction(original,heading=false){const item=doc.createElement('button');item.type='button';item.textContent=heading?label:original.textContent;item.className=heading?'appNavigationFlyoutTitle':'';if(!heading)decorateSubPage(item,button.dataset.sheetTab,doc);item.addEventListener('click',()=>{hideFlyout();original.click();doc.getElementById('sheet')?.focus({preventScroll:true})});flyout.append(item)}
-      if(button.dataset.sheetTab!=='home')addAction(button,true);if(mode==='group')button.parentElement.querySelectorAll('.sheetSubMenu button:not(.appNavigationDuplicate)').forEach(item=>addAction(item));
+      if(button.dataset.sheetTab!=='home')addAction(button,true);if(mode==='group')button.parentElement.querySelectorAll('.sheetSubMenu button:not(.appNavigationDuplicate):not(.appNavigationDisclosure)').forEach(item=>addAction(item));
       button.setAttribute('aria-controls',flyout.id);button.setAttribute('aria-expanded','true');flyout.hidden=false;
       const bounds=button.getBoundingClientRect(),position=flyoutPosition({right:aside.getBoundingClientRect().right,top:bounds.top},{width:doc.documentElement.clientWidth,height:root.innerHeight},flyout.offsetWidth,flyout.offsetHeight);
       flyout.style.left=position.left+'px';flyout.style.top=position.top+'px';
@@ -94,10 +94,10 @@
       if(button.classList.contains('active'))button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');
       const host=button.parentElement,menu=host.querySelector('.sheetSubMenu');host.onmouseenter=host.onmouseleave=host.onfocusin=null;
       button.removeAttribute('aria-haspopup');button.removeAttribute('aria-controls');
-      let disclosure=host.querySelector('.appNavigationDisclosure');
-      if(!menu){disclosure?.remove();button.style.gridColumn='1 / -1';return}button.style.gridColumn='';menu.removeAttribute('role');menu.querySelectorAll('button').forEach(item=>decorateSubPage(item,key,doc));menu.querySelectorAll('[role]').forEach(item=>item.removeAttribute('role'));
+      let disclosure=host.querySelector(':scope > .appNavigationDisclosure');
+      if(!menu){disclosure?.remove();button.style.gridColumn='1 / -1';return}button.style.gridColumn='';menu.removeAttribute('role');menu.querySelectorAll('button:not(.appNavigationDisclosure)').forEach(item=>decorateSubPage(item,key,doc));menu.querySelectorAll('[role]').forEach(item=>item.removeAttribute('role'));
       if(!disclosure){disclosure=doc.createElement('button');disclosure.type='button';disclosure.className='appNavigationDisclosure';disclosure.innerHTML=iconMarkup('chevron');host.append(disclosure);disclosure.addEventListener('click',()=>{if(collapsed&&!media.matches){collapsed=false;writePreference(storage,false)}expanded.has(key)?expanded.delete(key):resetExpandedPages(expanded,key);paint()})}
-      disclosure.setAttribute('aria-label',label+' sub-pages');disclosure.setAttribute('aria-controls',menu.id);const compact=collapsed&&!media.matches,visible=subPagesVisible(compact,button.classList.contains('active'),expanded.has(key));disclosure.setAttribute('aria-expanded',String(visible));menu.hidden=!visible;menu.querySelectorAll('button').forEach(item=>item.removeAttribute('title'));
+      disclosure.setAttribute('aria-label',label+' sub-pages');disclosure.setAttribute('aria-controls',menu.id);const compact=collapsed&&!media.matches,visible=subPagesVisible(compact,button.classList.contains('active'),expanded.has(key));disclosure.setAttribute('aria-expanded',String(visible));menu.hidden=!visible;menu.querySelectorAll('button:not(.appNavigationDisclosure)').forEach(item=>item.removeAttribute('title'));
     })}
     toggle.addEventListener('click',()=>{if(media.matches)close();else{collapsed=!collapsed;writePreference(storage,collapsed);paint()}});
     trigger.addEventListener('click',()=>{previousFocus=doc.activeElement;open=true;paint();toggle.focus()});backdrop.addEventListener('click',close);

@@ -94,3 +94,16 @@ body.hasAppNavigation>.topHeader>.top{padding-right:10px}
 .appNavigationCompact .appNavigation .sheetSubMenu button.appNavigationDuplicate{display:none}
 .appNavigationHelp svg{width:24px;height:24px;flex:0 0 24px}
 .appNavigationHelp:focus-visible{outline:2px solid #fff;outline-offset:-2px}
+
+.appNavigation .projectSettingsNavGroup{display:grid;grid-template-columns:minmax(0,1fr) 32px;grid-column:1/-1;min-width:0;align-items:center}
+.appNavigation .projectSettingsNavGroup>button:not(.appNavigationDisclosure){grid-row:1;grid-column:1}
+.appNavigation .projectSettingsNavChildren{grid-column:1/-1;display:grid;padding-left:8px;gap:2px}
+.appNavigation .projectSettingsNavChildren[hidden]{display:none}
+.appNavigationCompact .projectSettingsNavGroup{grid-template-columns:1fr}
+.appNavigationCompact .projectSettingsDisclosure{display:none}
+.appNavigationCompact .projectSettingsNavChildren,.appNavigationCompact .projectSettingsNavChildren[hidden]{display:grid;padding-left:0}
+
+.appNavigation .sheetSubMenu .projectSettingsDisclosure{color:#000;justify-content:center;padding:6px;height:44px;width:32px}
+.appNavigationCompact .appNavigation .sheetSubMenu .projectSettingsDisclosure{display:none}
+
+.appNavigationCompact .appNavigation .projectSettingsNavGroup[data-settings-active="false"] .projectSettingsNavChildren{display:none}

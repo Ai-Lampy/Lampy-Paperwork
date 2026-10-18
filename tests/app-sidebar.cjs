@@ -51,7 +51,7 @@ console.log('PASS: full-width expanded, compact and mobile workspace without wra
 assert.deepEqual(sidebar.flyoutPosition({right:60,top:80},{width:1500,height:900},240,200),{left:68,top:80});
 assert.deepEqual(sidebar.flyoutPosition({right:256,top:850},{width:800,height:900},240,200),{left:264,top:692});
 assert.deepEqual(sidebar.flyoutPosition({right:700,top:0},{width:800,height:900},240,884),{left:552,top:8});
-assert(source.includes("querySelectorAll('.sheetSubMenu button:not(.appNavigationDuplicate)').forEach(item=>addAction(item))"));
+assert(source.includes("querySelectorAll('.sheetSubMenu button:not(.appNavigationDuplicate):not(.appNavigationDisclosure)').forEach(item=>addAction(item))"));
 assert(source.includes("hideFlyout();original.click()"));
 assert(source.includes("flyout.addEventListener('pointerenter',cancelLeave)"));
 assert(source.includes("event.key==='ArrowRight'"));assert(source.includes('hideFlyout(true)'));
@@ -97,7 +97,7 @@ for(const compact of [false,true])for(const active of [false,true])for(const exp
 assert(source.includes("if(page)resetExpandedPages(expanded,page.dataset.sheetTab)"));
 assert(source.includes('if(activePage!==lastActivePage)'));
 assert(source.includes("menu.hidden=!visible"));
-assert(source.includes("menu.querySelectorAll('button').forEach(item=>item.removeAttribute('title'))"));
+assert(source.includes("menu.querySelectorAll('button:not(.appNavigationDisclosure)').forEach(item=>item.removeAttribute('title'))"));
 assert(css.includes('.appNavigationCompact .appNavigation .appNavigationSubLabel{display:none}'));
 assert.equal(button['aria-label'],'Rear Labels');
 assert.equal(new Set(['universe','fan','ports','looms'].map(sidebar.iconMarkup)).size,4);
@@ -170,9 +170,9 @@ assert(source.indexOf('footer.append(helpButton)')<source.indexOf('footer.append
 assert(source.includes("root.openAppInfo('help')"));
 assert(!html.slice(html.indexOf('<aside class="actionSidebar"'),html.indexOf('</header>')).includes('>Project Settings</button>'));
 assert(html.includes('.projectErrorsControl{position:relative;padding-left:6px}'));
-const context=vm.createContext({activeProjectTab:'general',activeSheetTab:'home',activePatchSheetId:'master',activePowerSubTab:'calcs',activeNetworkSubTab:'deviceConfig',activeControlNetworkTab:'consoles',activeRackTabId:'r1',activeLoomSubTab:'looms',activeDistroLabelTab:'labels',activeUniverseDetail:1,app:{patchSheets:[],controlNetwork:{racks:[{id:'r1',name:'Rack'}]}},distroRanges:()=>[],powerPhaseTotalsAvailable:()=>true,normalisePatchSheets:v=>v,setSheetTab:tab=>context.activeSheetTab=tab,openProjectSettings:()=>context.activeSheetTab='projectSettings'});
+const context=vm.createContext({projectSettingsNavExpanded:true,activeProjectTab:'general',activeSheetTab:'home',activePatchSheetId:'master',activePowerSubTab:'calcs',activeNetworkSubTab:'deviceConfig',activeControlNetworkTab:'consoles',activeRackTabId:'r1',activeLoomSubTab:'looms',activeDistroLabelTab:'labels',activeUniverseDetail:1,app:{patchSheets:[],controlNetwork:{racks:[{id:'r1',name:'Rack'}]}},distroRanges:()=>[],powerPhaseTotalsAvailable:()=>true,normalisePatchSheets:v=>v,setSheetTab:tab=>context.activeSheetTab=tab,openProjectSettings:()=>context.activeSheetTab='projectSettings'});
 for(const name of ['projectSettingsTabLabel','sheetSubMenuRoutes','applicationPageHelp'])vm.runInContext(appFunction(name),context);
-context.sheetSubMenuRoutes('home')[0].run();assert.equal(context.activeSheetTab,'projectSettings');assert.equal(context.sheetSubMenuRoutes('home')[1].active,true);assert.equal(context.sheetSubMenuRoutes('home')[1].label,'General');
+context.sheetSubMenuRoutes('home')[0].run();assert.equal(context.activeSheetTab,'projectSettings');assert.equal(context.sheetSubMenuRoutes('home')[0].active,true);assert.equal(context.sheetSubMenuRoutes('home')[0].label,'Project Settings');
 context.activeSheetTab='fixturePatch';let routes=context.sheetSubMenuRoutes('fixturePatch');assert(routes[0].active);assert(routes[0].compactDuplicate);
 context.app.patchSheets=[{id:'a',name:'Show A'},{id:'b',name:'Show B'}];context.activePatchSheetId='b';routes=context.sheetSubMenuRoutes('fixturePatch');assert(!routes[0].compactDuplicate);assert.deepEqual(Array.from(routes.filter(r=>r.active),r=>r.label),['Show B']);assert.equal(routes.at(-1).label,'Universe Detail');
 for(const [page,group,key,value,label] of [['powerSheet','powerSheet','activePowerSubTab','fanOuts','Fan Outs'],['deviceConfig','network','activeNetworkSubTab','portConfiguration','Port Configuration'],['looms','looms','activeLoomSubTab','cableList','Cable List'],['distroLabels','distroLabels','activeDistroLabelTab','rear','Rear Labels'],['controlNetwork','rackLayout','activeControlNetworkTab','racks','Rack']]){context.activeSheetTab=page;context[key]=value;assert.deepEqual(Array.from(context.sheetSubMenuRoutes(group).filter(r=>r.active),r=>r.label),[label]);assert(context.applicationPageHelp().length>50)}
@@ -185,7 +185,7 @@ assert(appFunction('loadProjectPayload').includes('knownLoomCardStates.clear()')
 console.log('PASS: V53 active destinations, compact hover policy, single-patch shortcut, contextual Help, Home Settings and reload-safe loom disclosure preferences.');
 
 // The compact inactive-group flyout must not resurrect the hidden single-patch shortcut.
-assert(source.includes("querySelectorAll('.sheetSubMenu button:not(.appNavigationDuplicate)')"));
+assert(source.includes("querySelectorAll('.sheetSubMenu button:not(.appNavigationDuplicate):not(.appNavigationDisclosure)')"));
 const labelOutline='M3 3h9l9 9-9 9-9-9zM7 7h.01';
 assert(sidebar.iconMarkup('rear').includes(labelOutline));
 assert(sidebar.iconMarkup('distroLabels').includes(labelOutline));

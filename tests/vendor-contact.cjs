@@ -18,3 +18,6 @@ assert(source('normaliseProjectInfo').includes('syncLightingVendorFields(base)')
 assert(source('renderProductionInfo').includes("field('vendorDetails','Vendor Address'"));assert(source('renderProductionInfo').includes('type="tel" readonly'));
 assert(source('pdfLinkedFieldDefinitions').includes("['vendorDetails','Vendor Address','production']"));assert(source('pdfLinkedFieldDefinitions').includes("['vendorContact','Vendor Contact','production']"));
 console.log('PASS: vendor address/contact catalogue mapping, selected-vendor refresh, saved compatibility and manual rep editing and vendor-change reset.');
+
+c.lightingVendorReference=c.normaliseLightingVendors({vendors:[{name:'Unavailable'}]});c.syncLightingVendorFields(project);assert.equal(project.production.vendorDetails,'Retain legacy details');assert.equal(project.production.vendorContact,'777');
+c.updateProjectProductionField({dataset:{projectProduction:'lightingVendor'},value:'Unavailable'});assert.equal(project.production.vendorDetails,'Retain legacy details');assert.equal(project.production.vendorContact,'777');

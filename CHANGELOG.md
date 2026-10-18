@@ -1,3 +1,10 @@
+## V54.2 — Vendor details and Project Settings controls
+
+- Preserve saved vendor address/phone details when a catalogue omits them and refresh the Lighting Vendor pane after loading.
+- Rename General to Project Settings with a gear icon and nested settings disclosure.
+- Delete custom production contacts with confirmation; show completed job titles as headings.
+- Align app and PDF header logos by their vertical centres.
+
 ## V54.1 — Settings, contacts and layout corrections
 
 - Give each settings section a distinct sidebar icon and rename Production Contacts. Add inline Job Title/Name contacts and a saved, numbered drag/keyboard reorder pane.

@@ -90,7 +90,7 @@ const preview=vm.createContext({document:{querySelectorAll:()=>samples}});vm.run
 assert(source('renderProductionInfo').includes('onchange="renameCustomProductionField(this)"'));
 
 // Settings icons must all be distinct, including actual SVG artwork.
-const sidebar=require('../js/app-sidebar.js'),sections=['General','Project Info','Production Contacts','Lighting Vendor','Logos','Exports'];
+const sidebar=require('../js/app-sidebar.js'),sections=['Project Settings','Project Info','Production Contacts','Lighting Vendor','Logos','Exports'];
 assert.equal(new Set(sections.map(label=>sidebar.subPageIcon('home',label))).size,6);
 assert.equal(new Set(sections.map(label=>sidebar.iconMarkup(sidebar.subPageIcon('home',label)))).size,6);
 assert(source('projectCustomFieldsMarkup').includes('Custom fields for Project Information'));
@@ -110,3 +110,22 @@ vm.runInContext(source('universeViewerCellMarkup'),c);c.escapeHtml=String;c.esca
 const footprint=c.universeViewerCellMarkup(1,new Map([[1,{id:'fixture',fixId:1,fixture:'Spot',mode:'Extended',location:'Truss',address:1,channels:10}]]),1);
 assert(footprint.includes('Spot · Extended · Truss'));
 console.log('PASS: V54.1 distinct settings icons, inline contacts, saved reordering, merge-only control and universe details.');
+
+// Custom-contact deletion is confirmed, scoped and saved once.
+let allowDelete=false,deletionSaves=0;
+const deletionProject={customProductionFields:[{id:'production_a',name:'Stage'},{id:'production_b',name:'Rigging'}],production:{production_a:'Alice',production_b:'Bob'},productionVisible:{production_a:true,production_b:false},productionContacts:{production_a:[{id:'email_a'}],production_b:[{id:'phone_b'}]},productionOrder:['production_b','production_a']};
+const deletion=vm.createContext({ensureProjectInfo:()=>deletionProject,confirm:()=>allowDelete,refreshProductionLinkedViews(){deletionSaves++},renderProductionOrderPane(){}});vm.runInContext(source('removeCustomProductionField'),deletion);
+const beforeDeletion=JSON.stringify(deletionProject);deletion.removeCustomProductionField('production_a');assert.equal(JSON.stringify(deletionProject),beforeDeletion);assert.equal(deletionSaves,0);
+allowDelete=true;deletion.removeCustomProductionField('production_a');assert.equal(deletionSaves,1);assert.equal(deletionProject.production.production_b,'Bob');assert.equal(deletionProject.productionVisible.production_b,false);assert.equal(deletionProject.productionContacts.production_b[0].id,'phone_b');assert.deepEqual(deletionProject.productionOrder,['production_b']);assert(!('production_a' in deletionProject.production));deletion.removeCustomProductionField('production_a');assert.equal(deletionSaves,1);
+assert(source('renderProductionInfo').includes('custom&&!String(label).trim()'));
+assert(source('renderSheetTabMenus').includes("toggle.className='appNavigationDisclosure projectSettingsDisclosure'"));
+assert(source('renderSheetTabMenus').includes("toggle.setAttribute('aria-expanded',String(projectSettingsNavExpanded))"));
+assert(html.includes('.pdfUnifiedHeader{align-items:center}'));
+console.log('PASS: V54.2 contact deletion/cancellation, completed titles, centred logos and settings disclosure.');
+// Build and operate the actual nested settings disclosure without a browser.
+function navNode(){return {children:[],dataset:{},attrs:{},classList:{contains:()=>true,add(){}},setAttribute(k,v){this.attrs[k]=v},removeAttribute(k){delete this.attrs[k]},addEventListener(){},querySelector(){return null},appendChild(node){if(node.parentElement){const siblings=node.parentElement.children;siblings.splice(siblings.indexOf(node),1)}this.children.push(node);node.parentElement=this;return node},append(...nodes){nodes.forEach(node=>this.appendChild(node))},get firstElementChild(){return this.children[0]},get nextSibling(){const siblings=this.parentElement?.children||[];return siblings[siblings.indexOf(this)+1]}}}
+const navHost=navNode(),navButton=navNode();navButton.dataset.sheetTab='home';navHost.appendChild(navButton);
+const navContext=vm.createContext({document:{querySelectorAll:()=>[navButton],createElement:navNode},activeSheetTab:'home',projectSettingsNavExpanded:true,closeSheetSubMenus(){},sheetSubMenuRoutes:()=>['Project Settings','Project Info','Production Contacts','Lighting Vendor','Logos','Exports'].map((label,i)=>({label,active:i===0,run(){}}))});
+vm.runInContext(source('renderSheetTabMenus'),navContext);navContext.renderSheetTabMenus();
+const navMenu=navHost.children[1],navGroup=navMenu.children[0],navToggle=navGroup.children[1],navChildren=navGroup.children[2];
+assert.equal(navGroup.children[0].textContent,'Project Settings');assert.equal(navChildren.children.length,5);assert.equal(navToggle.attrs['aria-expanded'],'true');assert.equal(navChildren.hidden,false);navToggle.onclick();assert.equal(navChildren.hidden,true);assert.equal(navToggle.attrs['aria-expanded'],'false');navToggle.onclick();assert.equal(navChildren.hidden,false);
