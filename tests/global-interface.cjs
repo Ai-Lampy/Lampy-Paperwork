@@ -129,3 +129,14 @@ const navContext=vm.createContext({document:{querySelectorAll:()=>[navButton],cr
 vm.runInContext(source('renderSheetTabMenus'),navContext);navContext.renderSheetTabMenus();
 const navMenu=navHost.children[1],navGroup=navMenu.children[0],navToggle=navGroup.children[1],navChildren=navGroup.children[2];
 assert.equal(navGroup.children[0].textContent,'Project Settings');assert.equal(navChildren.children.length,5);assert.equal(navToggle.attrs['aria-expanded'],'true');assert.equal(navChildren.hidden,false);navToggle.onclick();assert.equal(navChildren.hidden,true);assert.equal(navToggle.attrs['aria-expanded'],'false');navToggle.onclick();assert.equal(navChildren.hidden,false);
+// Home personnel consume the same saved order as Production Contacts.
+const homeProject={production:{tourManager:'Alice',lightingDesigner:'Bob',production_stage:'Chris',lightingVendor:'Vendor'},productionVisible:{tourManager:true,lightingDesigner:true,production_stage:true,lightingVendor:true},productionContacts:{production_stage:[{id:'child',type:'email',value:'chris@example.test',visible:true}]},customProductionFields:[{id:'production_stage',name:'Stage Manager'}],productionOrder:['production_stage','lightingDesigner','tourManager']};
+const homeOrder=vm.createContext({ensureProjectInfo:()=>homeProject,productionFieldDefs:[['tourManager','Tour Manager'],['lightingDesigner','Lighting Designer'],['lightingVendor','Lighting Vendor']],escapeHtml:String});
+for(const name of ['allProductionFieldDefs','orderedProductionFields','productionContactHeroMarkup','productionHeroItem','productionHeroLine','productionHeroMarkup'])vm.runInContext(source(name),homeOrder);
+function assertHomeOrder(names){const output=homeOrder.productionHeroMarkup();let last=-1;for(const name of names){const at=output.indexOf(name);assert(at>last,`${name} must follow the saved order`);last=at}return output}
+assertHomeOrder(['Chris','chris@example.test','Bob','Alice','Vendor']);
+homeProject.productionVisible.lightingDesigner=false;assert(!assertHomeOrder(['Chris','Alice','Vendor']).includes('Bob'));
+homeProject.productionOrder=['tourManager','production_stage','lightingDesigner'];assertHomeOrder(['Alice','Chris','Vendor']);
+homeProject.productionOrder=JSON.parse(JSON.stringify(homeProject.productionOrder));assertHomeOrder(['Alice','Chris','Vendor']);
+homeProject.productionOrder=[];homeProject.productionVisible.lightingDesigner=true;assertHomeOrder(['Alice','Bob','Chris','Vendor']);
+console.log('PASS: Home follows saved/default contact order, respects visibility and keeps child details with their contact.');

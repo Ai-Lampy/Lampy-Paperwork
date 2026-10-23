@@ -1,3 +1,8 @@
+## V54.5 — Home production contact order
+
+- Use the saved Production Contacts order for Home personnel, including custom contacts.
+- Preserve visibility settings, attached contact details and the separate vendor row.
+
 ## V54.4 — GLP JDC1 profile update
 
 - Replace the limited JDC1 GDTF with the complete six-mode profile.
