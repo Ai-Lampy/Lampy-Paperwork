@@ -1,3 +1,15 @@
+## V54.7 — Reviewed fixture mode names
+
+- Import three Chroma-Q Color Force II 12 display-name corrections from the mode review workbook.
+- Accept unique outer-whitespace-only workbook identities without changing library keys; reject ambiguous and duplicate resolved matches.
+- Preserve channel counts, GDTF mappings and other fixture data.
+
+## V54.6 — Fixture mode-name import workflow
+
+- Add update-fixture modes to import reviewed display names from the mode-name workbook.
+- Match stable manufacturer, fixture and internal mode identities; reject stale or invalid rows before writing.
+- Preserve channel counts, GDTF mappings and other fixture metadata. Blank corrections leave names unchanged.
+
 ## V54.5 — Home production contact order
 
 - Use the saved Production Contacts order for Home personnel, including custom contacts.
