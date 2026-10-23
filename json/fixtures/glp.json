@@ -1054,19 +1054,54 @@
       "watts": 1200,
       "weight": 11.6,
       "modes": {
-        "Mode 4 SPix PRO (62ch)": 62
+        "Mode 1 Compressed Pro (14ch)": 14,
+        "Mode 2 Normal (23ch)": 23,
+        "Mode 3 SPix (68ch)": 68,
+        "Mode 4 SPix PRO (62ch)": 62,
+        "Mode 5 1Pix Pro (17ch)": 17,
+        "Mode 6 Easy (11ch)": 11
       },
       "gdtf": {
         "status": "matched",
         "folder": "fixtures/glp",
         "suggestedFileName": "GLP__JDC1.gdtf",
-        "file": "fixtures/glp/GLP@JDC_1@MA3_Visualizer_Fixed_62ch.gdtf",
+        "file": "fixtures/glp/GLP@JDC_1@JDC_1.gdtf",
         "modes": {
+          "Mode 1 Compressed Pro (14ch)": {
+            "channels": 14,
+            "gdtfMode": "Mode 1 Compressed Pro (14ch)",
+            "status": "matched",
+            "parameters": 13
+          },
+          "Mode 2 Normal (23ch)": {
+            "channels": 23,
+            "gdtfMode": "Mode 2 Normal (23ch)",
+            "status": "matched",
+            "parameters": 22
+          },
+          "Mode 3 SPix (68ch)": {
+            "channels": 68,
+            "gdtfMode": "Mode 3 SPix (68ch)",
+            "status": "matched",
+            "parameters": 79
+          },
           "Mode 4 SPix PRO (62ch)": {
             "channels": 62,
             "gdtfMode": "Mode 4 SPix PRO (62ch)",
             "status": "matched",
             "parameters": 73
+          },
+          "Mode 5 1Pix Pro (17ch)": {
+            "channels": 17,
+            "gdtfMode": "Mode 5 1Pix Pro (17ch)",
+            "status": "matched",
+            "parameters": 17
+          },
+          "Mode 6 Easy (11ch)": {
+            "channels": 11,
+            "gdtfMode": "Mode 6 Easy (11ch)",
+            "status": "matched",
+            "parameters": 11
           }
         }
       },
