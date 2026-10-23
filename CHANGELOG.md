@@ -1,3 +1,8 @@
+## V54.3 — GLP fixture library update
+
+- Add the GLP impression FR10 Bar with its four GDTF modes, 740 W maximum load and 24 kg weight.
+- Link the new fixture to the supplied GLP GDTF and refresh the fixture Short Name workbook.
+
 ## V54.2 — Vendor details and Project Settings controls
 
 - Preserve saved vendor address/phone details when a catalogue omits them and refresh the Lighting Vendor pane after loading.
