@@ -25,6 +25,50 @@
       "shortName": "FR1"
     },
     {
+      "fixture": "impression FR10 Bar",
+      "watts": 740.0,
+      "weight": 24.0,
+      "modes": {
+        "M1 Normal (25ch)": 25,
+        "M2 Multi-Layer (51ch)": 51,
+        "M3 Multi Pix (57)": 57,
+        "M4 MultiPix Advanced (79ch)": 79
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/glp",
+        "suggestedFileName": "GLP__impression_FR10_Bar.gdtf",
+        "file": "fixtures/glp/GLP@impression_FR10_Bar@20260726_FR10Bar_byGLP_rework31.gdtf",
+        "modes": {
+          "M1 Normal (25ch)": {
+            "channels": 25,
+            "gdtfMode": "M1 Normal (25ch)",
+            "status": "matched",
+            "parameters": 23
+          },
+          "M2 Multi-Layer (51ch)": {
+            "channels": 51,
+            "gdtfMode": "M2 Multi-Layer (51ch)",
+            "status": "matched",
+            "parameters": 47
+          },
+          "M3 Multi Pix (57)": {
+            "channels": 57,
+            "gdtfMode": "M3 Multi Pix (57)",
+            "status": "matched",
+            "parameters": 65
+          },
+          "M4 MultiPix Advanced (79ch)": {
+            "channels": 79,
+            "gdtfMode": "M4 MultiPix Advanced (79ch)",
+            "status": "matched",
+            "parameters": 86
+          }
+        }
+      },
+      "shortName": "FR10 Bar"
+    },
+    {
       "fixture": "impression FR2 Wash",
       "watts": 200,
       "weight": 5.2,
