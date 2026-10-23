@@ -1,3 +1,8 @@
+## V54.4 — GLP JDC1 profile update
+
+- Replace the limited JDC1 GDTF with the complete six-mode profile.
+- Use the GDTF mode names, channel footprints and parameter counts for every JDC1 mode.
+
 ## V54.3 — GLP fixture library update
 
 - Add the GLP impression FR10 Bar with its four GDTF modes, 740 W maximum load and 24 kg weight.
