@@ -3,6 +3,25 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const html=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8');
 function source(name){let start=html.indexOf('function '+name+'(');assert(start>=0,name);if(html.slice(start-6,start)==='async ')start-=6;for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const code=html.slice(start,end+1);try{new Function('return ('+code+')');return code}catch{}}throw Error(name)}
 const c=vm.createContext({});
+// Patch rebuilds retain geometry before clearing the sheet and after layout frames.
+{
+ const frames=[],scrollNode=parent=>({parentElement:parent,isConnected:true,scrollLeft:10,scrollTop:540,style:{minHeight:''},offsetHeight:1800,firstElementChild:{},scrollTo(p){this.scrollLeft=p.left;this.scrollTop=p.top}});
+ const outer=scrollNode(null),sheet=scrollNode(outer);let x=20,y=950,renders=0;
+ const context=vm.createContext({Map,activeSheetTab:'fixturePatch',activePatchSheetId:'master',fixturePatchScrollRendering:false,$:()=>sheet,window:{get scrollX(){return x},get scrollY(){return y},scrollTo(p){x=p.left;y=p.top}},requestAnimationFrame:fn=>frames.push(fn),prepareLiveResponsiveTargets(){},fitLiveResponsiveLayouts(){y=0},render(){assert(context.fixturePatchScrollRendering);assert.equal(sheet.style.minHeight,'1800px');renders++;sheet.firstElementChild={};sheet.scrollTop=outer.scrollTop=0;y=0}});
+ vm.runInContext(source('renderFixturePatchKeepingScroll'),context);
+ context.renderFixturePatchKeepingScroll();assert.equal(renders,1);assert.equal(y,950);assert.equal(x,20);assert.equal(sheet.scrollTop,540);assert.equal(outer.scrollTop,540);assert.equal(sheet.style.minHeight,'');assert.equal(context.fixturePatchScrollRendering,false);
+ while(frames.length){y=0;frames.shift()();assert.equal(y,950)}
+ for(const stale of ['route','patch','content']){
+  context.activeSheetTab='fixturePatch';context.activePatchSheetId='master';y=950;context.renderFixturePatchKeepingScroll();
+  if(stale==='route')context.activeSheetTab='home';if(stale==='patch')context.activePatchSheetId='comparison';if(stale==='content')sheet.firstElementChild={};
+  y=42;while(frames.length)frames.shift()();assert.equal(y,42);
+ }
+ context.render=()=>{throw Error('render failed')};assert.throws(()=>context.renderFixturePatchKeepingScroll(),/render failed/);assert.equal(context.fixturePatchScrollRendering,false);assert.equal(sheet.style.minHeight,'');
+ const renderSource=source('render');assert(renderSource.indexOf('renderFixturePatchKeepingScroll()')<renderSource.indexOf('resetResponsiveSheetLayout()'));
+ assert(renderSource.includes("activeSheetTab==='fixturePatch'&&!fixturePatchScrollRendering"));assert(renderSource.includes("querySelector('.fixturePatchView')"));
+ assert(source('togglePatchGroupLock').includes('render()'));assert(source('updatePatchRowField').includes('render()'));assert(source('confirmPatchAddressReview').includes('render()'));
+ console.log('PASS: Fixture Patch lock/edit rebuilds retain window and ancestor scroll through fitting, reject stale restores and clear guards on errors.');
+}
 for(const name of ['applicationTitlePlacement','fixtureNameMode','attachUniverseGridEvents'])vm.runInContext(source(name),c);
 // The title remains centred in the available gap, even with unequal logos/sidebar widths.
 for(const left of [0,60,200,350])for(const width of [100,300,1000]){

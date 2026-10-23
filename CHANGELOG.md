@@ -1,3 +1,14 @@
+## V54.11 — Filtered Fixture Type Options
+
+- Show only fixtures visible under the current Patch filters when opening Fixture Type Options.
+- Keep selection, Position filtering and bulk actions restricted to those visible fixtures.
+
+## V54.10 — Fixture Patch scroll retention
+
+- Keep the page and sheet scroll position when toggling fixture locks or committing cell edits.
+- Protect the existing Patch view through rebuilds and responsive fitting, without restoring stale scroll positions after navigation.
+- Preserve address-review confirmation, keyboard navigation and undo behaviour.
+
 ## V54.9 — Power colour scroll retention
 
 - Preserve page and pane scroll positions while Socapex colour changes rebuild Power Calcs.

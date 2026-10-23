@@ -41,6 +41,35 @@ function context(){
  c.patchGroupEditPositionFilter='*';c.selectedPatchGroupEditIds=new Set(['edited','later']);c.document.querySelectorAll=()=>[{dataset:{patchGroupApply:'address'}}];c.$('patchGroupEdit_address').value='10';c.confirmPatchGroupEdit();assert.deepEqual(plain(c.patchAddressReview.proposals.map(r=>[r.id,r.address])),[['later','10'],['edited','30']]);assert.equal(events.saves,0);c.closePatchAddressReview();
  c.document.querySelectorAll=()=>['address','mode','universe'].map(field=>({dataset:{patchGroupApply:field}}));c.$('patchGroupEdit_mode').value='New';c.$('patchGroupEdit_universe').value='7';c.confirmPatchGroupEdit();assert.deepEqual(plain(c.patchAddressReview.proposals.map(r=>[r.id,r.address,r.channels,r.universe])),[['later','10',30,'7'],['edited','40',30,'7']]);assert.equal(c.app.fixturePatch[1].mode,'Standard');assert.equal(events.saves,0);
 }
+// Fixture Type Options must use the same filtered rows as the live Patch.
+{
+ const {c,events}=context();
+ c.activePatchGroupEditKey='Lamp';
+ c.patchGroupKey=r=>r.fixture;
+ c.activePatchRows=()=>c.app.fixturePatch;
+ c.activePatchSheet=()=>null;
+ c.patchCompareRows=(a,b)=>Number(a.fixId)-Number(b.fixId);
+ c.fixturePatchViewOptions={filters:{type:'',universe:'',position:''}};
+ c.renderPatchGroupEditModal=()=>{};
+ for(const name of ['visiblePatchRows','patchGroupEditRows','openPatchGroupEdit'])vm.runInContext(source(name),c);
+ const ids=()=>plain(c.selectedPatchGroupRows().map(r=>r.id));
+ c.app.fixturePatch[2].location='Back';
+ c.fixturePatchViewOptions.filters={type:'Lamp',universe:'1',position:'Front'};
+ c.openPatchGroupEdit('Lamp');assert.deepEqual(ids(),['prior','edited','last']);
+ c.toggleAllPatchGroupEditUnits(false);c.toggleAllPatchGroupEditUnits(true);assert.deepEqual(ids(),['prior','edited','last']);
+ c.setPatchGroupEditPositionFilter('back');assert.deepEqual(ids(),[]);
+ c.setPatchGroupEditPositionFilter('*');c.toggleAllPatchGroupEditUnits(true);
+ c.document.querySelectorAll=()=>[{dataset:{patchGroupApply:'address'}}];
+ c.$('patchGroupEdit_address').value='200';c.confirmPatchGroupEdit();
+ assert.deepEqual(plain(c.patchAddressReview.proposals.map(r=>r.id)),['prior','edited','last']);
+ assert.equal(events.saves,0);
+ c.fixturePatchViewOptions.filters={type:'Lamp',universe:'2',position:''};
+ c.openPatchGroupEdit('Lamp');assert.deepEqual(ids(),['other']);
+ c.fixturePatchViewOptions.filters={type:'Different',universe:'',position:''};
+ c.openPatchGroupEdit('Lamp');assert.deepEqual(ids(),[]);
+ c.fixturePatchViewOptions.filters={type:'',universe:'',position:''};
+ c.openPatchGroupEdit('Lamp');assert.equal(ids().length,5);
+}
 // Drive the actual delegated paste/keyboard callbacks without a browser.
 {
  const {c,events}=context(),handlers={},controls=[{dataset:{patchId:'edited',patchField:'address',patchGridRow:'0',patchGridCol:'0'},disabled:false,tagName:'INPUT',value:'60'},{dataset:{patchId:'later',patchField:'address',patchGridRow:'1',patchGridCol:'0'},disabled:false,tagName:'INPUT',value:'100'}],cells=controls.map(control=>({dataset:{},querySelector:()=>control})),table={querySelectorAll:()=>[],addEventListener:(name,callback)=>handlers[name]=callback};
@@ -59,5 +88,5 @@ assert.match(html,/#patchGroupEditModal>\.modalCard\{max-height:95vh/);
 assert.match(source('attachFixturePatchFillHandle'),/if\(field==='address'\).*reviewPatchAddressEdits\(edits,\[\],true\);return/s);
 assert.match(html,/if\(e.key==='Escape'&&patchAddressReview\)/);
 assert.match(html,/if\(id==='patchAddressReviewModal'\)\{closePatchAddressReview\(\);return\}/);
-assert.match(html,/const VERSION='54\.9'/);
+assert.match(html,/const VERSION='54\.11'/);
 console.log('PASS: V50.3 position filtering, footprint sequences, downstream scope, staged edits/paste/keyboard, conflicts, cancellation, stale review and undo.');
