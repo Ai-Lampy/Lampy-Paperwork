@@ -128,6 +128,28 @@ const includeContext=vm.createContext({parseInt,powerAuxRowsForRange:()=>include
 vm.runInContext(source('togglePowerAuxInclude'),includeContext);const includeButton={dataset:{powerAuxInclude:'0'},closest:()=>({})};
 includeContext.togglePowerAuxInclude({},includeButton);assert(includeRows[0].include);includeContext.togglePowerAuxInclude({},includeButton);assert(!includeRows[0].include);assert.equal(includeSaves,2);assert.equal(includeRenders,2);assert.equal(retained,2);
 console.log('PASS: V51.6 output deletion controls, PDF exclusion, scroll restoration and Include save-once behaviour.');
+// Colour commits must use the same scroll guard before any preview/layout update.
+scrollContext.activeSheetTab='powerSheet';wx=7;wy=800;
+let colourCommits=0,colourRenders=0;
+scrollContext.updateSocaMeta=()=>{colourCommits++;wy=0};
+scrollContext.distroRanges=()=>[];
+scrollContext.renderPowerSheetView=()=>{colourRenders++;sheetScroll.firstElementChild={};wy=0};
+vm.runInContext(source('updatePowerSocaColour'),scrollContext);
+for(const key of ['c1','c2','c3']){
+ scrollContext.updatePowerSocaColour({dataset:{powerSocaColour:'0',powerSocaColourKey:key}});
+ assert.equal(wy,800);assert.equal(wx,7);
+ while(frames.length){wy=0;frames.shift()();assert.equal(wy,800)}
+}
+assert.equal(colourCommits,3);assert.equal(colourRenders,3);
+scrollContext.updatePowerSocaColour({dataset:{powerSocaColour:'bad',powerSocaColourKey:'c1'}});
+assert.equal(colourCommits,3);
+let pickerFocus,hidden=0;const pickerEvents=[];
+const pickerInput={disabled:false,focus:options=>{pickerFocus=options},dispatchEvent:event=>pickerEvents.push(event.type)};
+const pickerContext=vm.createContext({document:{activeElement:null},activeColourInput:pickerInput,Event:class{constructor(type){this.type=type}},colourInputAllowsBlank:()=>true,styleColourTextInput:()=>{},colourInputFallback:()=>'',colourTextToHex:value=>value,setColourTextInput:(input,value)=>input.value=value,hideColourMenu:()=>hidden++});
+vm.runInContext(source('chooseColourOption'),pickerContext);
+for(const value of ['Red','']){pickerContext.chooseColourOption(value);assert.equal(pickerFocus.preventScroll,true);assert.equal(pickerInput.value,value)}
+assert.deepEqual(pickerEvents,['input','change','input','change']);assert.equal(hidden,2);
+console.log('PASS: three Power Socapex colours preserve scroll through rebuild/layout frames; palette selection and clearing focus without scrolling.');
 // V51.7 single-row deletion preserves sibling outlets, labels, identities and feeds.
 add('removeSingleOutput','removeAuxGroup','sortedPowerOutputGroups');
 const deletionParent=configured(0,'delete-parent'),deletionChild=configured(2,'delete-child'),otherChild=configured(2,'other-child');

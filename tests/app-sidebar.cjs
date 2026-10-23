@@ -173,6 +173,23 @@ assert(html.includes('.projectErrorsControl{position:relative;padding-left:6px}'
 const context=vm.createContext({projectSettingsNavExpanded:true,activeProjectTab:'general',activeSheetTab:'home',activePatchSheetId:'master',activePowerSubTab:'calcs',activeNetworkSubTab:'deviceConfig',activeControlNetworkTab:'consoles',activeRackTabId:'r1',activeLoomSubTab:'looms',activeDistroLabelTab:'labels',activeUniverseDetail:1,app:{patchSheets:[],controlNetwork:{racks:[{id:'r1',name:'Rack'}]}},distroRanges:()=>[],powerPhaseTotalsAvailable:()=>true,normalisePatchSheets:v=>v,setSheetTab:tab=>context.activeSheetTab=tab,openProjectSettings:()=>context.activeSheetTab='projectSettings'});
 for(const name of ['projectSettingsTabLabel','sheetSubMenuRoutes','applicationPageHelp'])vm.runInContext(appFunction(name),context);
 context.sheetSubMenuRoutes('home')[0].run();assert.equal(context.activeSheetTab,'projectSettings');assert.equal(context.sheetSubMenuRoutes('home')[0].active,true);assert.equal(context.sheetSubMenuRoutes('home')[0].label,'Project Settings');
+// Use the real navigation entry point: switching an internal Settings tab alone
+// does not navigate from another page (including the compact Home hover menu).
+let settingsRenders=0;
+context.ensureProjectInfo=()=>({});context.render=()=>settingsRenders++;
+vm.runInContext(appFunction('openProjectSettings'),context);
+vm.runInContext(appFunction('switchProjectTab'),context);
+for(const origin of ['home','fixturePatch','powerSheet','deviceConfig','looms','projectSettings']){
+ for(const [index,key] of ['general','file','production','vendor','logo','exports'].entries()){
+  context.activeSheetTab=origin;context.activeProjectTab='general';context.projectSettingsNavExpanded=false;
+  if(origin!=='projectSettings')assert.equal(context.sheetSubMenuRoutes('home').filter(route=>route.active).length,0);
+  const before=settingsRenders;context.sheetSubMenuRoutes('home')[index].run();
+  assert.equal(context.activeSheetTab,'projectSettings');assert.equal(context.activeProjectTab,key);
+  assert.equal(settingsRenders,before+1);assert.equal(context.projectSettingsNavExpanded,true);
+  assert.deepEqual(Array.from(context.sheetSubMenuRoutes('home').filter(route=>route.active),route=>route.label),[context.projectSettingsTabLabel(key)]);
+ }
+}
+console.log('PASS: every Home submenu opens and renders its Settings destination from other pages, with one active route.');
 context.activeSheetTab='fixturePatch';let routes=context.sheetSubMenuRoutes('fixturePatch');assert(routes[0].active);assert(routes[0].compactDuplicate);
 context.app.patchSheets=[{id:'a',name:'Show A'},{id:'b',name:'Show B'}];context.activePatchSheetId='b';routes=context.sheetSubMenuRoutes('fixturePatch');assert(!routes[0].compactDuplicate);assert.deepEqual(Array.from(routes.filter(r=>r.active),r=>r.label),['Show B']);assert.equal(routes.at(-1).label,'Universe Detail');
 for(const [page,group,key,value,label] of [['powerSheet','powerSheet','activePowerSubTab','fanOuts','Fan Outs'],['deviceConfig','network','activeNetworkSubTab','portConfiguration','Port Configuration'],['looms','looms','activeLoomSubTab','cableList','Cable List'],['distroLabels','distroLabels','activeDistroLabelTab','rear','Rear Labels'],['controlNetwork','rackLayout','activeControlNetworkTab','racks','Rack']]){context.activeSheetTab=page;context[key]=value;assert.deepEqual(Array.from(context.sheetSubMenuRoutes(group).filter(r=>r.active),r=>r.label),[label]);assert(context.applicationPageHelp().length>50)}

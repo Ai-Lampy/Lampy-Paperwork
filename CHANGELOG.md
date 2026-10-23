@@ -1,3 +1,15 @@
+## V54.9 — Power colour scroll retention
+
+- Preserve page and pane scroll positions while Socapex colour changes rebuild Power Calcs.
+- Return focus from the colour picker without scrolling the selected field into view.
+- Retain shared label updates, saved colours and responsive fitting.
+
+## V54.8 — Home submenu navigation
+
+- Open the selected Project Settings page from every Home sidebar submenu link, including the compact hover menu.
+- Highlight a Settings sub-page only while its page is open, and expand the Settings group on navigation.
+- Add behavioural coverage for all six destinations from Home, Patch, Power, Network, Looms and Settings.
+
 ## V54.7 — Reviewed fixture mode names
 
 - Import three Chroma-Q Color Force II 12 display-name corrections from the mode review workbook.
