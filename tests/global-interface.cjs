@@ -345,3 +345,25 @@ console.log('PASS: Home follows saved/default contact order, respects visibility
  }
  console.log('PASS: shared NPU catalogue, legacy loaders, preserved capacities and Network table DMX/Ethernet ports.');
 }
+// NPU software follows its unique matching Master, without mutating project data.
+{
+ const master={id:'master',consoleId:'ma',role:'master',softwareMode:'Mode 3',softwareVersionMode3:'2.5.1.1',softwareVersionMode2:'3.9.63.11'};
+ const npu={npuId:'pu',softwareMode:'Mode 3'};
+ const c=vm.createContext({app:{controlNetwork:{consoles:[master]}},consoleReference:{consoles:[{id:'ma',manufacturer:'MA Lighting'}]},npuReference:{npus:[{id:'pu',manufacturer:'MA Lighting'}]}});
+ for(const name of ['consoleManufacturerKey','npuRefForItem','consoleRefForItem','storedConsoleVersion','consoleVersionValue','consoleVersionForMode','npuMasterConsole','controlDeviceSoftwareVersionText'])vm.runInContext(source(name),c);
+ const snapshot=JSON.stringify(c.app);assert.equal(c.controlDeviceSoftwareVersionText(npu,'npu'),'2.5.1.1');assert.equal(JSON.stringify(c.app),snapshot);assert.deepEqual(npu,{npuId:'pu',softwareMode:'Mode 3'});
+ master.softwareVersionMode3='2.5.1.2';assert.equal(c.controlDeviceSoftwareVersionText(npu,'npu'),'2.5.1.2');
+ master.softwareVersionCustom='Custom 2.5';assert.equal(c.controlDeviceSoftwareVersionText(npu,'npu'),'Custom 2.5');master.softwareVersionCustom='';
+ master.softwareMode='Mode 2';assert.equal(c.controlDeviceSoftwareVersionText(npu,'npu'),'');
+ npu.softwareMode='Mode 2';assert.equal(c.controlDeviceSoftwareVersionText(npu,'npu'),'3.9.63.11');
+ master.role='backup';assert.equal(c.controlDeviceSoftwareVersionText(npu,'npu'),'');master.role='master';
+ c.app.controlNetwork.consoles.push({...master,id:'duplicate'});assert.equal(c.controlDeviceSoftwareVersionText(npu,'npu'),'');c.app.controlNetwork.consoles.pop();
+ c.consoleReference.consoles[0].manufacturer='Avolites';assert.equal(c.controlDeviceSoftwareVersionText(npu,'npu'),'');c.consoleReference.consoles[0].manufacturer='MA-Lighting';
+ assert.equal(c.controlDeviceSoftwareVersionText(npu,'npu'),'3.9.63.11');
+ c.app=JSON.parse(JSON.stringify(c.app));assert.equal(c.controlDeviceSoftwareVersionText(npu,'npu'),'3.9.63.11');
+ c.app.controlNetwork.consoles=[];assert.equal(c.controlDeviceSoftwareVersionText(npu,'npu'),'');
+ assert(source('controlTableParentExtraCells').includes("controlDeviceSoftwareVersionText(item,'npu')||'—'"));
+ for(const name of ['npuCardMarkup','rackNpuSettingsMarkup'])assert(source(name).includes("controlDeviceSoftwareVersionText(item,'npu')"));
+ for(const name of ['deviceConfigSortValue','controlTableSortValue'])assert(source(name).includes('controlDeviceSoftwareVersionText(item,device.source)'));
+ console.log('PASS: NPU Master-derived versions, edits, custom/Mode 2 values, missing/ambiguous Masters and save/load without mutation.');
+}

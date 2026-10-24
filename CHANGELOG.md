@@ -1,3 +1,9 @@
+## V54.21 — NPU Master software versions
+
+- Derive NPU software versions from the unique Master console with the same manufacturer and software mode.
+- Show the inherited read-only version in Control and Device Config tables, cards, Rack Settings and shared export rendering.
+- Keep versions current after Master edits or reassignment without duplicating saved version data; leave unmatched or ambiguous Masters unresolved.
+
 ## V54.20 — Network Device Config NPU tables
 
 - Render NPUs in their own Device Config table with Mode and Parameters, using the shared Control table renderer.
