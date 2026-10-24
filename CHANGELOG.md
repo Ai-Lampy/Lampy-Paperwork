@@ -1,3 +1,14 @@
+## V54.16 — Rack action scroll protection
+
+- Protect all existing Rack Layout refreshes, including movement, deletion, clearing devices, settings, view changes and Zoom/Fit.
+- Preserve page, library and settings scroll positions through responsive fitting, with guards against stale restoration after navigation.
+- Retain settings-panel scroll when deselecting a device. Keep the approved workspace widths and single/dual behaviour unchanged.
+
+## V54.15 — Rack selection scroll retention
+
+- Preserve page, library and settings scroll positions when selecting a rack device or rack settings.
+- Retain the approved single/dual workspace layout and library search during selection refreshes.
+
 ## V54.14 — Responsive single and dual rack workspace
 
 - Apply the approved preview: closing either side panel opens Front and Rear views; restore both panels to return to Front.

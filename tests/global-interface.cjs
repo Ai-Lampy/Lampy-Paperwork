@@ -31,17 +31,17 @@ const c=vm.createContext({});
  rebuild();panels['.rackLibraryGroups'].scrollTop=280;panels['.rackSettingsCard'].scrollTop=120;search.value='node';
  sheet.querySelector=selector=>selector==='.rackLayoutView'?{}:selector==='.rackLibrarySearch'?search:panels[selector];
  const c=vm.createContext({Map,activeSheetTab:'controlNetwork',activeControlNetworkTab:'racks',activeRackTabId:'rack1',$:()=>sheet,window:{get scrollX(){return x},get scrollY(){return y},scrollTo(p){x=p.left;y=p.top}},requestAnimationFrame:fn=>frames.push(fn),filterRackDeviceLibrary(input){assert.equal(input.value,'node')},prepareLiveResponsiveTargets(){},fitLiveResponsiveLayouts(){y=0},render(){renders++;assert.equal(sheet.style.minHeight,'1600px');rebuild();sheet.firstElementChild={};sheet.scrollTop=outer.scrollTop=0;y=0}});
- vm.runInContext(source('renderRackAdditionKeepingScroll'),c);c.renderRackAdditionKeepingScroll();
+ vm.runInContext(source('renderRackKeepingScroll'),c);c.renderRackKeepingScroll();
  assert.equal(renders,1);assert.equal(y,800);assert.equal(x,15);assert.equal(sheet.scrollTop,350);assert.equal(outer.scrollTop,350);
  assert.equal(panels['.rackLibraryGroups'].scrollTop,280);assert.equal(panels['.rackSettingsCard'].scrollTop,120);assert.equal(search.value,'node');assert.equal(sheet.style.minHeight,'');
  while(frames.length){y=0;frames.shift()();assert.equal(y,800)}
  for(const stale of ['page','group','rack','content']){
-  c.activeSheetTab='controlNetwork';c.activeControlNetworkTab='racks';c.activeRackTabId='rack1';y=800;c.renderRackAdditionKeepingScroll();
+  c.activeSheetTab='controlNetwork';c.activeControlNetworkTab='racks';c.activeRackTabId='rack1';y=800;c.renderRackKeepingScroll();
   if(stale==='page')c.activeSheetTab='home';if(stale==='group')c.activeControlNetworkTab='control';if(stale==='rack')c.activeRackTabId='rack2';if(stale==='content')sheet.firstElementChild={};
   y=42;while(frames.length)frames.shift()();assert.equal(y,42);
  }
- c.render=()=>{throw Error('failed')};assert.throws(()=>c.renderRackAdditionKeepingScroll(),/failed/);assert.equal(sheet.style.minHeight,'');
- for(const name of ['addRackLibraryDevice','addCustomRackDevice'])assert(source(name).includes('persist();renderRackAdditionKeepingScroll()'));
+ c.render=()=>{throw Error('failed')};assert.throws(()=>c.renderRackKeepingScroll(),/failed/);assert.equal(sheet.style.minHeight,'');assert.equal(c.rackScrollRendering,false);
+ for(const name of ['addRackLibraryDevice','addCustomRackDevice'])assert(source(name).includes('persist();renderRackKeepingScroll()'));
  assert(source('addRackAccessoryVariant').includes('addRackLibraryDevice('));
  console.log('PASS: rack additions retain page/panel scroll and search, with stale-navigation guards.');
 }
@@ -63,7 +63,7 @@ const c=vm.createContext({});
  console.log('PASS: approved rack workspaces fit without enlargement and retain measured heights.');
 }
 {
- const c=vm.createContext({rackViewFaces:new Map(),rackViewZooms:new Map(),rackClosedPanels:new Map(),activeRackSettingsDeviceId:'',renderRackAdditionKeepingScroll(){},escapeAttr:String});
+ const c=vm.createContext({rackViewFaces:new Map(),rackViewZooms:new Map(),rackClosedPanels:new Map(),activeRackSettingsDeviceId:'',renderRackKeepingScroll(){},escapeAttr:String});
  for(const name of ['rackClosedPanelSet','rackPanelClosed','setRackPanelClosed','setRackView','rackViewFor','rackViewModesMarkup'])vm.runInContext(source(name),c);
  c.setRackPanelClosed('r','library',true);assert.equal(c.rackViewFaces.get('r'),'dual');assert(c.rackPanelClosed('r','library'));
  c.setRackView('r','rear');assert.equal(c.rackViewFor({id:'r'}),'rear');assert(c.rackPanelClosed('r','library'));
@@ -79,6 +79,46 @@ const c=vm.createContext({});
  c.setRackView('r','front');assert(c.rackWorkspaceMarkup({id:'r'}).includes('<section>single</section>'));
  for(const [selector,columns] of [['.rackWorkspace.dual','365px 520px 520px 365px'],['.rackWorkspace.dual.libraryClosed','520px 520px 365px'],['.rackWorkspace.dual.settingsClosed','365px 520px 520px'],['.rackWorkspace.dual.libraryClosed.settingsClosed','700px 700px']])assert(html.includes(selector+'{grid-template-columns:'+columns+'}'));
  console.log('PASS: rack panel transitions, explicit view selection, dual markup and approved column widths.');
+}
+// Device and rack selection must use the same scroll-preserving refresh as additions.
+{
+ let refreshes=0;
+ const c=vm.createContext({activeRackSettingsRackId:'',activeRackSettingsDeviceId:'',suppressRackDeviceClickUntil:0,Date:{now:()=>100},renderRackKeepingScroll(){refreshes++}});
+ for(const name of ['selectRackSettings','selectRackDeviceSettings','openRackDeviceFromCanvas'])vm.runInContext(source(name),c);
+ c.openRackDeviceFromCanvas('rack','device');assert.equal(refreshes,1);assert.equal(c.activeRackSettingsRackId,'rack');assert.equal(c.activeRackSettingsDeviceId,'device');
+ c.selectRackDeviceSettings('rack','rear-device');assert.equal(refreshes,2);assert.equal(c.activeRackSettingsDeviceId,'rear-device');
+ c.selectRackSettings('rack');assert.equal(refreshes,3);assert.equal(c.activeRackSettingsDeviceId,'');
+ c.suppressRackDeviceClickUntil=200;c.openRackDeviceFromCanvas('rack','device');assert.equal(refreshes,3);assert.equal(c.activeRackSettingsDeviceId,'');
+ console.log('PASS: canvas/device-list and rack-settings selection retain scroll; post-drag click suppression remains intact.');
+}
+// All rack render callers pass the central guard before sheet geometry is cleared.
+{
+ const guard=source('render').split('scheduleProjectValidation();')[0];
+ let protectedRenders=0,ordinaryRenders=0;
+ const c=vm.createContext({activeSheetTab:'controlNetwork',activeControlNetworkTab:'racks',rackScrollRendering:false,fixturePatchScrollRendering:false,$:()=>({querySelector:()=>true}),renderRackKeepingScroll(){protectedRenders++},ordinary(){ordinaryRenders++}});
+ vm.runInContext(guard+'ordinary()}',c);
+ c.render();assert.equal(protectedRenders,1);assert.equal(ordinaryRenders,0);
+ c.rackScrollRendering=true;c.render();assert.equal(ordinaryRenders,1);
+ c.rackScrollRendering=false;c.activeControlNetworkTab='control';c.render();assert.equal(ordinaryRenders,2);
+ c.activeSheetTab='home';c.render();assert.equal(ordinaryRenders,3);
+ const renderSource=source('render');assert(renderSource.indexOf('renderRackKeepingScroll()')<renderSource.indexOf('resetResponsiveSheetLayout()'));
+}
+// Exercise device movement, deletion/cancellation, clearing, zoom and display actions.
+{
+ let refreshes=0,saves=0,valid=true,confirmed=true;
+ const rack={id:'r',name:'Rack',devices:[{id:'d',startU:1,rackSide:'left'}]};
+ const c=vm.createContext({app:{controlNetwork:{racks:[rack]}},activeRackSettingsRackId:'r',activeRackSettingsDeviceId:'d',rackDeviceDragState:{rackId:'r',deviceId:'d'},suppressRackDeviceClickUntil:0,rackViewZooms:new Map(),activeRackTabId:'r',render(){refreshes++},persist(){saves++},confirm:()=>confirmed,closeRackEditor(){},rackDragPlacementStart:()=>4,rackDeviceIsHalf:()=>false,rackDeviceFits:()=>({valid,messages:['Occupied']}),clearRackDropTarget(){},alert(){}});
+ for(const name of ['dropRackDevice','removeRackDevice','clearRackDevices','setRackDisplayMode','setRackZoom','normaliseRackZoom','fitRackToScreen','setActiveRackTab','setRackShowOppositeSideDevices'])vm.runInContext(source(name),c);
+ const event={preventDefault(){},stopPropagation(){},currentTarget:{}};
+ c.dropRackDevice(event,'r');assert.equal(rack.devices[0].startU,4);assert.equal(saves,1);assert.equal(refreshes,1);
+ valid=false;c.rackDeviceDragState={rackId:'r',deviceId:'d'};c.dropRackDevice(event,'r');assert.equal(saves,1);assert.equal(refreshes,2);
+ confirmed=false;c.removeRackDevice('r','d');assert.equal(refreshes,2);assert.equal(rack.devices.length,1);
+ confirmed=true;c.removeRackDevice('r','d');assert.equal(refreshes,3);assert.equal(saves,2);assert.equal(rack.devices.length,0);
+ rack.devices.push({id:'e'});c.clearRackDevices('r');assert.equal(refreshes,4);assert.equal(saves,3);
+ c.setRackDisplayMode('detailed');c.setRackZoom('r',.5);c.fitRackToScreen('r');c.setActiveRackTab('r');c.setRackShowOppositeSideDevices('r',true);assert.equal(refreshes,9);assert.equal(saves,5);
+ for(const name of ['saveRack','saveRackSettingsCard','saveRackDeviceSettingsCard','saveRackPortConfiguration','removeRack'])assert(source(name).includes('render()'),name);
+ assert(source('clearRackDeviceSelectionFromOutside').includes("scrollTo({left,top,behavior:'instant'})"));
+ console.log('PASS: central rack scroll guard covers movement, deletion, clearing, settings and zoom; cancelled actions do not refresh or save.');
 }
 for(const name of ['applicationTitlePlacement','fixtureNameMode','attachUniverseGridEvents'])vm.runInContext(source(name),c);
 // The title remains centred in the available gap, even with unequal logos/sidebar widths.
