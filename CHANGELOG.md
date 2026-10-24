@@ -1,3 +1,10 @@
+## V54.17 — Shared page scroll protection
+
+- Preserve page position across same-page refreshes throughout the app, including direct Home/Power and Project Settings section refreshes.
+- Restore search-field focus without scrolling in Device Config, Fixture Picker and import matching.
+- Discard delayed restoration after navigation, newer refreshes, focus changes or intentional scrolling. Preserve deliberate keyboard/error navigation and the approved layouts.
+- Repair JSON quoting in the Purple/Lavender colour names without changing the listed aliases.
+
 ## V54.16 — Rack action scroll protection
 
 - Protect all existing Rack Layout refreshes, including movement, deletion, clearing devices, settings, view changes and Zoom/Fit.

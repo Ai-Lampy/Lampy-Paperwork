@@ -120,6 +120,40 @@ const c=vm.createContext({});
  assert(source('clearRackDeviceSelectionFromOutside').includes("scrollTo({left,top,behavior:'instant'})"));
  console.log('PASS: central rack scroll guard covers movement, deletion, clearing, settings and zoom; cancelled actions do not refresh or save.');
 }
+// Shared protection covers every live page; navigation, focus and newer renders cancel stale restores.
+{
+ const frames=[],node=parent=>({parentElement:parent,isConnected:true,scrollLeft:12,scrollTop:420,scrollTo(p){this.scrollLeft=p.left;this.scrollTop=p.top}});
+ const outer=node(null),sheet=Object.assign(node(outer),{style:{minHeight:''},offsetHeight:1800,firstElementChild:{},dataset:{}}),pane=node(null);
+ let x=17,y=900;
+ const c=vm.createContext({Map,activeSheetTab:'home',activeProjectTab:'general',rackScrollRendering:false,fixturePatchScrollRendering:false,liveViewScrollRendering:false,liveViewScrollEpoch:0,$:()=>sheet,document:{activeElement:{},querySelectorAll:()=>[pane]},window:{get scrollX(){return x},get scrollY(){return y},scrollTo(p){x=p.left;y=p.top}},requestAnimationFrame:fn=>frames.push(fn),prepareLiveResponsiveTargets(){},fitLiveResponsiveLayouts(){y=0}});
+ for(const name of ['liveViewScrollRoute','shouldPreserveLiveViewScroll','preserveLiveViewScroll','cancelLiveViewScrollRestoration'])vm.runInContext(source(name),c);
+ const update=()=>{assert(c.liveViewScrollRendering);assert(!c.shouldPreserveLiveViewScroll());sheet.firstElementChild={};sheet.scrollTop=outer.scrollTop=pane.scrollTop=y=0};
+ for(const route of ['home','fixturePatch','powerSheet','controlNetwork','deviceConfig','networkEquipment','ipAddresses','universeDetail','positions','projectSettings','looms','errors','distroLabels']){
+  c.activeSheetTab=route;sheet.dataset.liveScrollRoute=c.liveViewScrollRoute();y=900;sheet.scrollTop=outer.scrollTop=pane.scrollTop=420;
+  assert(c.shouldPreserveLiveViewScroll(),route);c.preserveLiveViewScroll(update);
+  assert.equal(y,900);assert.equal(x,17);assert.equal(sheet.scrollTop,420);assert.equal(outer.scrollTop,420);assert.equal(pane.scrollTop,420);
+  while(frames.length){y=0;frames.shift()();assert.equal(y,900)}
+  assert.equal(sheet.style.minHeight,'');assert.equal(c.liveViewScrollRendering,false);
+ }
+ for(const stale of ['page','subpage','content','focus','newer','scroll']){
+  c.activeSheetTab='projectSettings';c.activeProjectTab='file';y=900;c.preserveLiveViewScroll(update);
+  if(stale==='page')c.activeSheetTab='home';if(stale==='subpage')c.activeProjectTab='logo';if(stale==='content')sheet.firstElementChild={};if(stale==='focus')c.document.activeElement={};if(stale==='newer')c.liveViewScrollEpoch++;if(stale==='scroll')c.cancelLiveViewScrollRestoration();
+  y=23;while(frames.length)frames.shift()();assert.equal(y,23,stale);
+ }
+ sheet.dataset.liveScrollRoute='different';assert(!c.shouldPreserveLiveViewScroll());
+ assert.throws(()=>c.preserveLiveViewScroll(()=>{throw Error('fail')}),/fail/);assert.equal(c.liveViewScrollRendering,false);assert.equal(sheet.style.minHeight,'');
+ for(const name of ['refreshHomeIfActive','renderPowerSheetView','renderProjectSettingsView','renderGeneralSettings','renderExportSettings','renderFileInfo','renderProductionInfo','renderLogoInfo'])assert(source(name).includes('preserveLiveViewScroll'),name);
+ for(const name of ['updateDeviceConfigFilter','updateFixturePatchSearch','updatePatchImportMatchFilter'])assert(source(name).includes('focus({preventScroll:true})'),name);
+ assert(source('navigateFromAppFooter').includes('cancelLiveViewScrollRestoration();window.scrollTo({top:0'));
+ assert(source('focusProjectErrorTarget').includes('cancelLiveViewScrollRestoration()'));
+ assert(source('attachEvents').includes("['wheel','touchstart','pointerdown','keydown']"));
+ assert(source('focusFixturePickerButton').includes('scrollIntoView'));
+ console.log('PASS: all live page routes retain scroll; stale page/subpage/content/focus/frame restores are rejected; deliberate navigation remains.');
+}
+{
+ const c=vm.createContext({activeSheetTab:'powerSheet',shouldPreserveLiveViewScroll(){throw Error('inactive Home must not restore scroll')}});
+ vm.runInContext(source('refreshHomeIfActive'),c);c.refreshHomeIfActive();
+}
 for(const name of ['applicationTitlePlacement','fixtureNameMode','attachUniverseGridEvents'])vm.runInContext(source(name),c);
 // The title remains centred in the available gap, even with unequal logos/sidebar widths.
 for(const left of [0,60,200,350])for(const width of [100,300,1000]){
