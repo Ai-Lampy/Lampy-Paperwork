@@ -1,3 +1,9 @@
+## V54.18 — Device Config address column sizing
+
+- Measure the full four-octet IP/Subnet inputs, including dots, gaps, padding and borders.
+- Remove the fixed address-column cap and retain measured readable widths when fitting narrow tables.
+- Use the full cell width for segmented inputs without changing Control tables or saved addresses.
+
 ## V54.17 — Shared page scroll protection
 
 - Preserve page position across same-page refreshes throughout the app, including direct Home/Power and Project Settings section refreshes.

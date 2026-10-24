@@ -291,3 +291,28 @@ homeProject.productionOrder=['tourManager','production_stage','lightingDesigner'
 homeProject.productionOrder=JSON.parse(JSON.stringify(homeProject.productionOrder));assertHomeOrder(['Alice','Chris','Vendor']);
 homeProject.productionOrder=[];homeProject.productionVisible.lightingDesigner=true;assertHomeOrder(['Alice','Bob','Chris','Vendor']);
 console.log('PASS: Home follows saved/default contact order, respects visibility and keeps child details with their contact.');
+// Device Config reserves the rendered space for all four octets, even at narrow widths.
+{
+ const c=vm.createContext({getComputedStyle:n=>n.style||{}});
+ for(const name of ['deviceConfigColumnLimits','calculateDeviceConfigWidths','deviceConfigSegmentedWidth'])vm.runInContext(source(name),c);
+ const inputs=['255','255','255','255'].map(value=>({value,style:{paddingLeft:'1px',paddingRight:'1px',borderLeftWidth:'0px',borderRightWidth:'0px'}}));
+ const segmented={style:{columnGap:'1px'},querySelectorAll:()=>inputs};
+ const cell={style:{paddingLeft:'5px',paddingRight:'5px',borderLeftWidth:'1px',borderRightWidth:'1px'},querySelector:()=>segmented};
+ const measure=text=>text.length*8;
+ assert.equal(c.deviceConfigSegmentedWidth(cell,measure),148);
+ inputs.forEach(input=>input.value='');assert.equal(c.deviceConfigSegmentedWidth(cell,measure),148);
+ inputs[0].value='888';assert.equal(c.deviceConfigSegmentedWidth(cell,text=>text==='888'?30:measure(text)),172);
+ assert.equal(c.deviceConfigSegmentedWidth({querySelector:()=>null},measure),0);
+ const keys=['status','name','ip','subnet','delete'];
+ for(const available of [250,500,1410]){
+  const widths=c.calculateDeviceConfigWidths([20,130,148,172,34],available,false,[],false,keys);
+  assert.equal(widths[0],20);assert.equal(widths[4],34);assert(widths[2]>=148);assert(widths[3]>=172);
+  if(available===1410)assert(Math.abs(widths.reduce((a,b)=>a+b,0)-available)<.001);
+ }
+ const hidden=c.calculateDeviceConfigWidths([20,130,148,172,34],250,false,[false,false,true,false,false],true,keys);assert.equal(hidden[2],0);assert(hidden[3]>=172);
+ assert.equal(c.deviceConfigColumnLimits(5,true,false,'ip').max,110);
+ assert(source('measureDeviceConfigTable').includes("table.dataset.tableView==='deviceConfig'?deviceConfigSegmentedWidth"));
+ assert(html.includes('.deviceConfigView .deviceConfigTable .ipSegmentedField{display:grid;width:100%'));
+ assert(html.includes('.deviceConfigView .deviceConfigTable .ipSegmentedField input{width:100%!important;min-width:0;box-sizing:border-box}'));
+ console.log('PASS: Device Config octet sizing retains readable IP/Subnet widths, fixed action columns and independent Control behaviour.');
+}
