@@ -1,3 +1,9 @@
+## V54.20 — Network Device Config NPU tables
+
+- Render NPUs in their own Device Config table with Mode and Parameters, using the shared Control table renderer.
+- Keep NPU parent IP, Subnet and protocol values visible with multiple Ethernet ports.
+- Preserve independent table sorting, port rows and saved device data.
+
 ## V54.19 — NPU catalogue schema alignment
 
 - Align grandMA NPU records with the Pathway devices and port-direction structure.
