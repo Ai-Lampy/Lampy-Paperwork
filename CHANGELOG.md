@@ -1,3 +1,19 @@
+## V54.14 — Responsive single and dual rack workspace
+
+- Apply the approved preview: closing either side panel opens Front and Rear views; restore both panels to return to Front.
+- Allow Front, Rear, Side and Dual views without reopening hidden panels. Redistribute single-view widths and use 520px dual cards with panels, or 700px cards with both panels hidden.
+- Fit the full workspace down on narrow screens without enlarging controls, preserving rack interactions and detached windows.
+
+## V54.13 — Stable rack panel scaling
+
+- Keep Rack Layout at the same scale when the Device Library or Rack Settings panel is minimised.
+- Continue fitting the workspace to the available browser width without enlarging the remaining panels.
+
+## V54.12 — Rack addition scroll retention
+
+- Retain page, library and settings scroll positions when adding rack devices or accessories.
+- Keep the library search through the refresh and prevent delayed scroll restoration after navigation.
+
 ## V54.11 — Filtered Fixture Type Options
 
 - Show only fixtures visible under the current Patch filters when opening Fixture Type Options.

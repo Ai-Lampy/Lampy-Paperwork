@@ -22,6 +22,64 @@ const c=vm.createContext({});
  assert(source('togglePatchGroupLock').includes('render()'));assert(source('updatePatchRowField').includes('render()'));assert(source('confirmPatchAddressReview').includes('render()'));
  console.log('PASS: Fixture Patch lock/edit rebuilds retain window and ancestor scroll through fitting, reject stale restores and clear guards on errors.');
 }
+// Rack additions retain page and rebuilt panel scroll, including the library filter.
+{
+ const frames=[],node=()=>({isConnected:true,scrollTop:350,scrollLeft:7,scrollTo(p){this.scrollTop=p.top;this.scrollLeft=p.left}});
+ const outer=node(),sheet=Object.assign(node(),{parentElement:outer,style:{minHeight:''},offsetHeight:1600,firstElementChild:{}});
+ let panels,search,x=15,y=800,renders=0;
+ const rebuild=()=>{panels={'.rackLibraryGroups':node(),'.rackSettingsCard':node()};search={value:''};Object.values(panels).forEach(n=>n.scrollTop=0)};
+ rebuild();panels['.rackLibraryGroups'].scrollTop=280;panels['.rackSettingsCard'].scrollTop=120;search.value='node';
+ sheet.querySelector=selector=>selector==='.rackLayoutView'?{}:selector==='.rackLibrarySearch'?search:panels[selector];
+ const c=vm.createContext({Map,activeSheetTab:'controlNetwork',activeControlNetworkTab:'racks',activeRackTabId:'rack1',$:()=>sheet,window:{get scrollX(){return x},get scrollY(){return y},scrollTo(p){x=p.left;y=p.top}},requestAnimationFrame:fn=>frames.push(fn),filterRackDeviceLibrary(input){assert.equal(input.value,'node')},prepareLiveResponsiveTargets(){},fitLiveResponsiveLayouts(){y=0},render(){renders++;assert.equal(sheet.style.minHeight,'1600px');rebuild();sheet.firstElementChild={};sheet.scrollTop=outer.scrollTop=0;y=0}});
+ vm.runInContext(source('renderRackAdditionKeepingScroll'),c);c.renderRackAdditionKeepingScroll();
+ assert.equal(renders,1);assert.equal(y,800);assert.equal(x,15);assert.equal(sheet.scrollTop,350);assert.equal(outer.scrollTop,350);
+ assert.equal(panels['.rackLibraryGroups'].scrollTop,280);assert.equal(panels['.rackSettingsCard'].scrollTop,120);assert.equal(search.value,'node');assert.equal(sheet.style.minHeight,'');
+ while(frames.length){y=0;frames.shift()();assert.equal(y,800)}
+ for(const stale of ['page','group','rack','content']){
+  c.activeSheetTab='controlNetwork';c.activeControlNetworkTab='racks';c.activeRackTabId='rack1';y=800;c.renderRackAdditionKeepingScroll();
+  if(stale==='page')c.activeSheetTab='home';if(stale==='group')c.activeControlNetworkTab='control';if(stale==='rack')c.activeRackTabId='rack2';if(stale==='content')sheet.firstElementChild={};
+  y=42;while(frames.length)frames.shift()();assert.equal(y,42);
+ }
+ c.render=()=>{throw Error('failed')};assert.throws(()=>c.renderRackAdditionKeepingScroll(),/failed/);assert.equal(sheet.style.minHeight,'');
+ for(const name of ['addRackLibraryDevice','addCustomRackDevice'])assert(source(name).includes('persist();renderRackAdditionKeepingScroll()'));
+ assert(source('addRackAccessoryVariant').includes('addRackLibraryDevice('));
+ console.log('PASS: rack additions retain page/panel scroll and search, with stale-navigation guards.');
+}
+// Approved rack layouts fit down only, with widths redistributed by panel/view state.
+{
+ const c=vm.createContext({});
+ for(const name of ['liveResponsiveScaleValue','fitLiveResponsiveHost'])vm.runInContext(source(name),c);
+ for(const available of [500,1000,1410,1800]){
+  for(const natural of [1437,1431,1400,1788,1417,1406]){
+   const target={scrollWidth:natural,offsetWidth:natural,scrollHeight:820,offsetHeight:820,style:{setProperty(){}}};
+   const content={firstElementChild:target,style:{},scrollHeight:820};
+   const host={clientWidth:available,dataset:{liveScaleKind:'rack',liveScaleFill:'false',liveScaleNatural:String(natural)},style:{},querySelector:()=>content};
+   c.fitLiveResponsiveHost(host);
+   assert.equal(Number(host.dataset.liveScale),Math.min(1,available/natural));
+   assert.equal(host.style.height,Math.ceil(820*Math.min(1,available/natural))+'px');
+   assert.equal(content.style.width,natural+'px');
+  }
+ }
+ console.log('PASS: approved rack workspaces fit without enlargement and retain measured heights.');
+}
+{
+ const c=vm.createContext({rackViewFaces:new Map(),rackViewZooms:new Map(),rackClosedPanels:new Map(),activeRackSettingsDeviceId:'',renderRackAdditionKeepingScroll(){},escapeAttr:String});
+ for(const name of ['rackClosedPanelSet','rackPanelClosed','setRackPanelClosed','setRackView','rackViewFor','rackViewModesMarkup'])vm.runInContext(source(name),c);
+ c.setRackPanelClosed('r','library',true);assert.equal(c.rackViewFaces.get('r'),'dual');assert(c.rackPanelClosed('r','library'));
+ c.setRackView('r','rear');assert.equal(c.rackViewFor({id:'r'}),'rear');assert(c.rackPanelClosed('r','library'));
+ c.setRackPanelClosed('r','settings',true);assert.equal(c.rackViewFaces.get('r'),'dual');
+ c.setRackPanelClosed('r','library',false);assert.equal(c.rackViewFaces.get('r'),'dual');
+ c.setRackPanelClosed('r','settings',false);assert.equal(c.rackViewFaces.get('r'),'front');
+ c.setRackView('r','dual');assert.equal(c.rackViewFor({id:'r'}),'front');assert(c.rackViewModesMarkup({id:'r'}).includes('Dual View'));
+ c.rackInventorySummary=()=>'';c.rackViewModesMarkup=()=>'';c.rackDisplayModesMarkup=()=>'';c.rackPanelRestoreMarkup=()=>'';c.rackDeviceLibraryMarkup=()=>'<aside>library</aside>';c.rackSettingsCardMarkup=()=>'<aside>settings</aside>';c.escapeHtml=String;
+ c.rackCardMarkup=(rack,face)=>'<section>'+ (face||'single')+'</section>';
+ vm.runInContext(source('rackWorkspaceMarkup'),c);
+ let markup=c.rackWorkspaceMarkup({id:'r',name:'Rack',units:12});assert(markup.includes('<section>front</section><section>rear</section>'));assert(markup.includes('library'));assert(markup.includes('settings'));
+ c.setRackPanelClosed('r','library',true);markup=c.rackWorkspaceMarkup({id:'r'});assert(!markup.includes('<aside>library'));assert(markup.includes('<section>rear'));
+ c.setRackView('r','front');assert(c.rackWorkspaceMarkup({id:'r'}).includes('<section>single</section>'));
+ for(const [selector,columns] of [['.rackWorkspace.dual','365px 520px 520px 365px'],['.rackWorkspace.dual.libraryClosed','520px 520px 365px'],['.rackWorkspace.dual.settingsClosed','365px 520px 520px'],['.rackWorkspace.dual.libraryClosed.settingsClosed','700px 700px']])assert(html.includes(selector+'{grid-template-columns:'+columns+'}'));
+ console.log('PASS: rack panel transitions, explicit view selection, dual markup and approved column widths.');
+}
 for(const name of ['applicationTitlePlacement','fixtureNameMode','attachUniverseGridEvents'])vm.runInContext(source(name),c);
 // The title remains centred in the available gap, even with unequal logos/sidebar widths.
 for(const left of [0,60,200,350])for(const width of [100,300,1000]){
