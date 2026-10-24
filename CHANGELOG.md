@@ -1,3 +1,9 @@
+## V54.19 — NPU catalogue schema alignment
+
+- Align grandMA NPU records with the Pathway devices and port-direction structure.
+- Identify Ethernet ports as network connections while preserving device identities, capacities and physical data.
+- Accept the shared devices list in the NPU loader while retaining legacy npus and processingUnits support.
+
 ## V54.18 — Device Config address column sizing
 
 - Measure the full four-octet IP/Subnet inputs, including dots, gaps, padding and borders.

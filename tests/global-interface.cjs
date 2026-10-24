@@ -316,3 +316,32 @@ console.log('PASS: Home follows saved/default contact order, respects visibility
  assert(html.includes('.deviceConfigView .deviceConfigTable .ipSegmentedField input{width:100%!important;min-width:0;box-sizing:border-box}'));
  console.log('PASS: Device Config octet sizing retains readable IP/Subnet widths, fixed action columns and independent Control behaviour.');
 }
+// Shared device catalogue shape must still load as NPUs, with usable Network table ports.
+{
+ const raw=JSON.parse(fs.readFileSync(path.join(__dirname,'../json/grandMA_NPU.json'),'utf8'));
+ const pathway=JSON.parse(fs.readFileSync(path.join(__dirname,'../json/rack_devices/pathway.json'),'utf8'));
+ assert.equal(raw.schemaVersion,pathway.schemaVersion);assert.equal(raw.devices.length,4);assert(!Object.hasOwn(raw,'npus'));
+ const c=vm.createContext({});
+ for(const name of ['normaliseAssetPath','normaliseRackU','normaliseUniverseLimits','normaliseControlSoftwareModes','normaliseReferencePortDirections','referencePortDirectionText','networkPortDetailText','networkReferencePortDetails','normaliseNetworkPower','normaliseNetworkDimensions','normaliseNpuReference','referencePortIsNetwork','connectorDefaultDirection','referencePortPhysicalLabel','deviceConfigPortDefinitions'])vm.runInContext(source(name),c);
+ const normalized=c.normaliseNpuReference(raw).npus;
+ assert.deepEqual(Array.from(normalized,n=>n.id),['ma-npu-m','ma-npu-l','ma-npu-xl','ma-npu']);
+ for(const [index,ref] of normalized.entries()){
+  const original=raw.devices[index];
+  assert.deepEqual(JSON.parse(JSON.stringify(ref.dimensionsMm)),original.dimensionsMm);
+  assert.equal(ref.weightKg,original.weightKg);assert.equal(ref.U,original.rack.heightU);
+  assert.deepEqual(Array.from(ref.softwareModes,m=>m.parameterCount),index===0?[4096,4096]:index===1?[4096,8192]:index===2?[4096,16384]:[4096]);
+  original.ports.forEach(port=>{assert.equal(typeof port.direction,'string');assert(!Object.hasOwn(port,'directions'))});
+  const ports=c.deviceConfigPortDefinitions({source:'npu'},{},ref);
+  const dmx=ports.filter(p=>p.category==='dmx'),network=ports.filter(p=>p.category==='network');
+  assert.equal(dmx.length,8);assert.equal(network.length,index===3?1:2);
+  assert(dmx.every(p=>p.direction==='output'&&!p.directionLocked));
+  assert(network.every(p=>p.direction==='network'&&p.directionLocked));
+  assert(ports.every(p=>p.facing==='rear'));assert.equal(new Set(ports.map(p=>p.id)).size,ports.length);
+  assert(!ports.some(p=>/USB/.test(p.type)));
+ }
+ for(const key of ['npus','processingUnits']){
+  const legacy=c.normaliseNpuReference({manufacturer:raw.manufacturer,[key]:raw.devices}).npus;
+  assert.equal(JSON.stringify(legacy),JSON.stringify(normalized));
+ }
+ console.log('PASS: shared NPU catalogue, legacy loaders, preserved capacities and Network table DMX/Ethernet ports.');
+}
