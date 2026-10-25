@@ -1,3 +1,9 @@
+## V54.26 — PDF page packing and Power fitting
+
+- Share Fixture Patch PDF pages between complete fixture-type tables; move tables intact and fit oversized tables above the footer.
+- Pair standalone feeder looms in both PDF columns while keeping extension groups together.
+- Remove live responsive wrappers from Power and Fan-Out export copies, avoiding stale heights, nested transforms and clipped tables. Measure core column widths without live transform scaling.
+
 ## V54.25 — Grouped Looms PDF layout
 
 - Match the app’s two-column layout: feeder on the left and its extensions stacked on the right.

@@ -20,11 +20,11 @@ c.loomPdfCreatePage=()=>{
  const content={children:[],style:{},appendChild(card){card.parent=this;this.children.push(card)},getBoundingClientRect(){const height=this.children.reduce((n,card)=>n+card.height,0)+Math.max(0,this.children.length-1)*12;return {top:50,height,bottom:50+height}}};
  const page={content,querySelector:()=>({getBoundingClientRect:()=>({top:256})})};pages.push(page);return {page,content};
 };
-c.document={createElement:()=>({set innerHTML(value){const count=[...value.matchAll(/<td/g)].length/4;this.card={height:30+count*40,markup:value,remove(){this.parent.children.splice(this.parent.children.indexOf(this),1)}}},get content(){return {firstElementChild:this.card}}})};
+c.document={createElement:()=>({set innerHTML(value){const count=Math.max(...value.split('<div class="loomPdfExtensionStack">').map(column=>[...column.matchAll(/<td/g)].length/4));this.card={height:30+count*40,markup:value,remove(){this.parent.children.splice(this.parent.children.indexOf(this),1)}}},get content(){return {firstElementChild:this.card}}})};
 const cables=Array.from({length:8},(_,i)=>({label:String(i),cableType:'DMX',length:'10',unit:'m',notes:''}));
 c.buildLoomPdfPages(host,[{...parent,cables}],{});assert.equal(finalised,1);assert.equal(pages[0].content.children.length,1);assert(pages[0].content.style.transform.startsWith('scale('));assert(pages[0].content.children[0].markup.includes('Male Ends Together'));
-pages.length=0;const small={...parent,endsTogether:''};c.buildLoomPdfPages(host,[small,{...small,id:"c"},{...small,id:"d"}],{});assert.equal(pages.length,2);assert.equal(pages[0].content.children.length,2);assert.equal(pages[1].content.children.length,1);assert(pages.every(page=>page.content.getBoundingClientRect().bottom<=250));
-pages.length=0;c.buildLoomPdfPages(host,[small,{...parent,id:"c",cables},{...small,id:"d"}],{});assert.equal(pages.length,3);assert.equal(pages[0].content.style.transform,undefined);assert(pages[1].content.style.transform.startsWith('scale('));assert.equal(pages[2].content.style.transform,undefined);
+pages.length=0;const small={...parent,endsTogether:''};c.buildLoomPdfPages(host,[small,{...small,id:"c"},{...small,id:"d"}],{});assert.equal(pages.length,1);assert.equal(pages[0].content.children.length,2);assert(pages.every(page=>page.content.getBoundingClientRect().bottom<=250));
+pages.length=0;c.buildLoomPdfPages(host,[small,{...parent,id:"c",cables},{...small,id:"d"}],{});assert.equal(pages.length,2);assert(pages[0].content.style.transform.startsWith('scale('));assert.equal(pages[1].content.style.transform,undefined);
 // Stale renders cannot replace a later session or later paper/logo settings.
 vm.runInContext('loomPdfSession={version:2}',c);const session=vm.runInContext('loomPdfSession',c);assert(c.loomPdfRenderCurrent(session,2));assert(!c.loomPdfRenderCurrent(session,1));assert(!c.loomPdfRenderCurrent({version:2},2));
 for(const text of ["mode==='looms'?'#loomPdfPaperSize'","mode==='looms'?'#loomPdfOrientation'","mode==='looms'?'[data-loom-pdf-zoom]'","else if(mode==='looms')renderLoomPdfPreview()",'closeLoomPdfPreview();','[data-loom-pdf-colours]'])assert(html.includes(text),text);
@@ -36,3 +36,8 @@ const grouped=c.loomPdfGroups(c.loomPdfSource());assert.equal(grouped.length,1);
 const groupMarkup=c.loomPdfGroupMarkup(grouped[0]);assert(groupMarkup.includes('loomPdfExtensionStack'));assert(groupMarkup.includes('>Extension</span>'));assert(groupMarkup.indexOf('FOH</h3>')<groupMarkup.indexOf('FOH EXT</h3>'));
 assert(html.includes('.loomPdfGroup{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))'));assert(html.includes('.loomPdfEnds td{text-align:center;color:#c00000;font-weight:900'));
 pages.length=0;c.buildLoomPdfPages(host,c.loomPdfSource(),{});assert.equal(pages.length,1);assert.equal(pages[0].content.children.length,1);assert(pages[0].content.children[0].markup.includes('FOH EXT'));
+
+const standalone=[{...parent,id:'one'},{...parent,id:'two'},{...parent,id:'three'}];const pairs=c.loomPdfPageGroups(standalone);assert.equal(pairs.length,2);assert.equal(pairs[0].length,2);assert.equal(pairs[1].length,1);assert(!c.loomPdfGroupMarkup(pairs[0]).includes('>Extension</span>'));
+const mixed=c.loomPdfPageGroups([...c.loomPdfSource(),...standalone]);assert.equal(mixed[0][1].parentLoomId,'a');assert.equal(mixed[1].length,2);
+
+const separated=c.loomPdfPageGroups([standalone[0],...c.loomPdfSource(),standalone[1]]);assert.equal(separated[0].length,2);assert.equal(separated[1][1].parentLoomId,'a');

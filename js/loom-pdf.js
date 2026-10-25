@@ -40,13 +40,21 @@ function loomPdfGroups(looms){
   for(const loom of looms){const key=loom.pdfGroupId||loom.id;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(loom)}
   return [...groups.values()];
 }
+function loomPdfPageGroups(looms){
+  const groups=loomPdfGroups(looms),packed=[];
+  while(groups.length){
+    const group=groups.shift(),partner=group.length===1?groups.findIndex(item=>item.length===1):-1;
+    packed.push(partner>=0?[...group,...groups.splice(partner,1)[0]]:group);
+  }
+  return packed;
+}
 function loomPdfGroupMarkup(looms){
   const parent=looms.find(loom=>!loom.parentLoomId)||looms[0],extensions=looms.filter(loom=>loom!==parent);
   return `<div class="loomPdfGroup"><div>${loomPdfCompleteSectionMarkup(parent)}</div><div class="loomPdfExtensionStack">${extensions.map(loomPdfCompleteSectionMarkup).join('')}</div></div>`;
 }
 function buildLoomPdfPages(host,looms,d){
   let state=null,full=false;
-  for(const group of loomPdfGroups(looms)){
+  for(const group of loomPdfPageGroups(looms)){
     if(!state||full){state=loomPdfCreatePage(host,d);full=false}
     const template=document.createElement('template');template.innerHTML=loomPdfGroupMarkup(group);
     const section=template.content.firstElementChild,existing=state.content.children.length;
@@ -62,7 +70,7 @@ function loomPdfRenderCurrent(session,version){return loomPdfSession===session&&
 function renderLoomPdfPreview(){
   const session=loomPdfSession;if(!session||session.exporting)return session?.pending;
   const version=++session.version,d=loomPdfDimensions(),looms=loomPdfSource(),stage=document.createElement('div');stage.className='loomPdfBuild';stage.inert=true;stage.setAttribute('aria-hidden','true');document.body.appendChild(stage);
-  const seed=loomPdfCreatePage(stage,d);seed.content.innerHTML=loomPdfGroups(looms).map(loomPdfGroupMarkup).join('');session.error=null;$('loomPdfInfo').textContent='Preparing loom pages…';
+  const seed=loomPdfCreatePage(stage,d);seed.content.innerHTML=loomPdfPageGroups(looms).map(loomPdfGroupMarkup).join('');session.error=null;$('loomPdfInfo').textContent='Preparing loom pages…';
   session.pending=(async()=>{try{
     await deviceConfigPdfAssetsReady(stage);if(!loomPdfRenderCurrent(session,version))return;
     stage.replaceChildren();const pages=buildLoomPdfPages(stage,looms,d);
