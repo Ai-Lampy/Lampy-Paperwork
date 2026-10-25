@@ -1,0 +1,28 @@
+{
+  "manufacturer": "Reel EFX",
+  "fixtures": [
+    {
+      "fixture": "DF-50 DMX",
+      "watts": null,
+      "weight": 16,
+      "modes": {
+        "1 Channel": 1
+      },
+      "gdtf": {
+        "status": "matched",
+        "folder": "fixtures/reel_efx",
+        "suggestedFileName": "Reel_EFX__DF-50_DMX.gdtf",
+        "file": "fixtures/reel_efx/Reel_EFX@DF-50_DMX@Lampy_2026-10-25.gdtf",
+        "modes": {
+          "1 Channel": {
+            "channels": 1,
+            "gdtfMode": "1 Channel",
+            "status": "matched",
+            "parameters": 1
+          }
+        }
+      },
+      "shortName": "DF-50"
+    }
+  ]
+}
