@@ -1,3 +1,9 @@
+## V54.24 — Looms PDF export
+
+- Add Looms PDF Export using shared paper, orientation, DPI, logo, header and footer controls.
+- Include all loom cards expanded, with feeders, extensions, colours, cable rows and Ends Together information; exclude Cable List.
+- Pack complete loom cards onto shared pages without splitting tables; scale an oversized card to fit one page and retain preview geometry in downloads without changing live card state.
+
 ## V54.23 — Reel EFX library registration
 
 - Register Reel EFX in the fixture-library manifest so DF-50 DMX loads in the app.
