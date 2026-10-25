@@ -1,3 +1,9 @@
+## V54.25 — Grouped Looms PDF layout
+
+- Match the app’s two-column layout: feeder on the left and its extensions stacked on the right.
+- Keep each feeder group together on one page, sharing pages where space permits and scaling oversized groups as a unit.
+- Label PDF extensions “Extension” and match the red Ends Together text.
+
 ## V54.24 — Looms PDF export
 
 - Add Looms PDF Export using shared paper, orientation, DPI, logo, header and footer controls.

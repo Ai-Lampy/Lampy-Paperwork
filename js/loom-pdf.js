@@ -2,14 +2,14 @@
 let loomPdfSession=null,loomPdfZoom='fit';
 function loomPdfSource(){
   return loomDisplayGroups().flatMap(group=>[group.parent,...group.extensions].map(loom=>({
-    ...loom,cables:(loom.cables||[]).map(cable=>({...cable})),
+    ...loom,pdfGroupId:group.parent.id,cables:(loom.cables||[]).map(cable=>({...cable})),
     feeder:loom.parentLoomId?(loomById(loom.parentLoomId)?.name||group.parent.name||'Unnamed Loom'):''
   })));
 }
 function loomPdfRowMarkup(cable){return `<tr>${[cable.label,cable.cableType,loomLengthText(cable.length,cable.unit),cable.notes].map(value=>`<td>${escapeHtml(value||'')}</td>`).join('')}</tr>`}
 function loomPdfSectionMarkup(loom){
   const colours=[...new Set([loom.colour1,loom.colour2,loom.colour3].map(value=>colourTextToHex(value,'')).filter(Boolean))];
-  return `<section class="loomPdfSection"><div class="loomPdfHeading" data-loom-pdf-colours="${escapeAttr(colours.join(','))}" style="${loomHeadingStyle(loom)}"><span class="loomPdfKind">${loom.parentLoomId?'EXT':'Feeder'}</span><h3>${escapeHtml(loom.name||'Unnamed Loom')}</h3></div>${loom.feeder?`<p class="loomPdfFeeder">Feeder: ${escapeHtml(loom.feeder)}</p>`:''}<table class="loomPdfTable"><colgroup><col style="width:20%"><col style="width:30%"><col style="width:15%"><col style="width:35%"></colgroup><thead><tr><th>Label</th><th>Cable</th><th>Length</th><th>Notes</th></tr></thead><tbody></tbody></table></section>`;
+  return `<section class="loomPdfSection"><div class="loomPdfHeading" data-loom-pdf-colours="${escapeAttr(colours.join(','))}" style="${loomHeadingStyle(loom)}"><span class="loomPdfKind">${loom.parentLoomId?'Extension':'Feeder'}</span><h3>${escapeHtml(loom.name||'Unnamed Loom')}</h3></div>${loom.feeder?`<p class="loomPdfFeeder">Feeder: ${escapeHtml(loom.feeder)}</p>`:''}<table class="loomPdfTable"><colgroup><col style="width:20%"><col style="width:30%"><col style="width:15%"><col style="width:35%"></colgroup><thead><tr><th>Label</th><th>Cable</th><th>Length</th><th>Notes</th></tr></thead><tbody></tbody></table></section>`;
 }
 function loomPdfRowGroups(loom){
   const rows=loom.cables.length?loom.cables.map(loomPdfRowMarkup):['<tr><td colspan="4">No cables in this loom.</td></tr>'];
@@ -35,11 +35,20 @@ function loomPdfCreatePage(host,d){
 function loomPdfFits(state){return state.content.getBoundingClientRect().bottom<=state.page.querySelector('.pdfPageFooter').getBoundingClientRect().top-6}
 function loomPdfFitOversized(state){const box=state.content.getBoundingClientRect(),space=state.page.querySelector('.pdfPageFooter').getBoundingClientRect().top-box.top-6;if(space<=0)throw new Error('The PDF header and footer leave no room for loom tables.');const scale=Math.min(1,space/Math.max(1,box.height));if(scale<1){state.content.style.transformOrigin='top left';state.content.style.transform=`scale(${scale})`}}
 function loomPdfCompleteSectionMarkup(loom){return loomPdfSectionMarkup(loom).replace('<tbody></tbody>',`<tbody>${loomPdfRowGroups(loom).join('')}</tbody>`)}
+function loomPdfGroups(looms){
+  const groups=new Map();
+  for(const loom of looms){const key=loom.pdfGroupId||loom.id;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(loom)}
+  return [...groups.values()];
+}
+function loomPdfGroupMarkup(looms){
+  const parent=looms.find(loom=>!loom.parentLoomId)||looms[0],extensions=looms.filter(loom=>loom!==parent);
+  return `<div class="loomPdfGroup"><div>${loomPdfCompleteSectionMarkup(parent)}</div><div class="loomPdfExtensionStack">${extensions.map(loomPdfCompleteSectionMarkup).join('')}</div></div>`;
+}
 function buildLoomPdfPages(host,looms,d){
   let state=null,full=false;
-  for(const loom of looms){
+  for(const group of loomPdfGroups(looms)){
     if(!state||full){state=loomPdfCreatePage(host,d);full=false}
-    const template=document.createElement('template');template.innerHTML=loomPdfCompleteSectionMarkup(loom);
+    const template=document.createElement('template');template.innerHTML=loomPdfGroupMarkup(group);
     const section=template.content.firstElementChild,existing=state.content.children.length;
     state.content.appendChild(section);
     // Move an entire card to the next page instead of splitting its cable rows.
@@ -53,7 +62,7 @@ function loomPdfRenderCurrent(session,version){return loomPdfSession===session&&
 function renderLoomPdfPreview(){
   const session=loomPdfSession;if(!session||session.exporting)return session?.pending;
   const version=++session.version,d=loomPdfDimensions(),looms=loomPdfSource(),stage=document.createElement('div');stage.className='loomPdfBuild';stage.inert=true;stage.setAttribute('aria-hidden','true');document.body.appendChild(stage);
-  const seed=loomPdfCreatePage(stage,d);seed.content.innerHTML=looms.map(loom=>loomPdfCompleteSectionMarkup(loom)).join('');session.error=null;$('loomPdfInfo').textContent='Preparing loom pages…';
+  const seed=loomPdfCreatePage(stage,d);seed.content.innerHTML=loomPdfGroups(looms).map(loomPdfGroupMarkup).join('');session.error=null;$('loomPdfInfo').textContent='Preparing loom pages…';
   session.pending=(async()=>{try{
     await deviceConfigPdfAssetsReady(stage);if(!loomPdfRenderCurrent(session,version))return;
     stage.replaceChildren();const pages=buildLoomPdfPages(stage,looms,d);
