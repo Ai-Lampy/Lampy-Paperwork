@@ -99,6 +99,10 @@
       "file": "portman.json"
     },
     {
+      "name": "Reel EFX",
+      "file": "reel-efx.json"
+    },
+    {
       "name": "Resolume",
       "file": "resolume.json"
     },
