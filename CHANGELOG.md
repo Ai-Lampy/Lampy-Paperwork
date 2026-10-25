@@ -1,3 +1,9 @@
+## V54.22 — Reel EFX DF-50 GDTF
+
+- Add the Reel EFX DF-50 DMX diffusion hazer to the fixture library.
+- Add a schema-valid one-channel GDTF profile with proportional 100-second duty-cycle control.
+- Record the official 16 kg weight and body dimensions; leave wattage blank because Reel EFX publishes voltage and current rather than a watt rating.
+
 ## V54.21 — NPU Master software versions
 
 - Derive NPU software versions from the unique Master console with the same manufacturer and software mode.
