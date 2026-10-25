@@ -1,3 +1,9 @@
+## V54.23 — Reel EFX library registration
+
+- Register Reel EFX in the fixture-library manifest so DF-50 DMX loads in the app.
+- Add DF-50 DMX to the mode-review workbook and CSV while retaining existing review edits.
+- Reject unregistered fixture catalogues, duplicate manifest entries and manufacturer mismatches during release validation.
+
 ## V54.22 — Reel EFX DF-50 GDTF
 
 - Add the Reel EFX DF-50 DMX diffusion hazer to the fixture library.

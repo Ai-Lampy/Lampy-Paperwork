@@ -8,6 +8,25 @@ for(const match of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)){con
 assert.equal(JSON.parse(fs.readFileSync(path.join(root,'js/app-version.json'),'utf8')).version,version,'Update metadata must match the app release');
 for(const match of html.matchAll(/<script src="js\/[^"]+\?v=([^"]+)"/g))assert.equal(match[1],version,'Script cache version must match release');
 let count=0;
+function validateFixtureManifest(manifest,catalogues){
+  assert.equal(manifest.format,'lampy-fixture-library-v2');
+  assert.equal(manifest.baseUrl,'json/fixtures/');
+  assert(Array.isArray(manifest.manufacturers),'Missing fixture manufacturers');
+  const names=new Set(),files=new Set(),available=new Map(catalogues.map(item=>[item.file,item.manufacturer]));
+  for(const entry of manifest.manufacturers){
+    assert(typeof entry.name==='string'&&entry.name.trim(),'Missing manufacturer name');
+    assert(typeof entry.file==='string'&&/^[^/\\]+\.json$/.test(entry.file),'Invalid fixture catalogue path');
+    const name=entry.name.toLowerCase(),file=entry.file.toLowerCase();
+    assert(!names.has(name),'Duplicate fixture manufacturer: '+entry.name);
+    assert(!files.has(file),'Duplicate fixture catalogue: '+entry.file);
+    assert(available.has(entry.file),'Missing fixture catalogue: '+entry.file);
+    assert.equal(available.get(entry.file),entry.name,'Fixture manufacturer mismatch: '+entry.file);
+    names.add(name);files.add(file);
+  }
+  for(const item of catalogues)assert(files.has(item.file.toLowerCase()),'Unregistered fixture catalogue: '+item.file);
+}
+const fixtureDirectory=path.join(root,'json/fixtures');
+validateFixtureManifest(JSON.parse(fs.readFileSync(path.join(root,'json/fixture_library_manifest.json'),'utf8')),fs.readdirSync(fixtureDirectory).filter(file=>file.endsWith('.json')).map(file=>({file,manufacturer:JSON.parse(fs.readFileSync(path.join(fixtureDirectory,file),'utf8')).manufacturer})));
 function refs(value){if(Array.isArray(value))return value.forEach(refs);if(value&&typeof value==='object')return Object.values(value).forEach(refs);if(typeof value!=='string')return;let ref=value;if(ref.startsWith('fixtures/')&&ref.endsWith('.gdtf'))ref='gdtf/'+ref;if(/^(images|json|gdtf|info_txt)\//.test(ref)&&!ref.includes('://'))assert(fs.existsSync(path.join(root,ref)),'Missing asset: '+ref)}
 const CableCatalogue=require('../js/cable-catalogue.js');
 const cableManifestPath=path.join(root,'json/cable/manifest.json');
