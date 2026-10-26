@@ -1,3 +1,10 @@
+## V54.27 — Fixture Patch front-page control summary
+
+- Apply the approved stacked cover: optional console tables below Fixture Summary, protocol names as headings, IP-only cells, compact NPU/parameter rows and fitted Console Type text.
+- Show bordered totals and notes on the right with Control enabled; without Control, place totals side by side below the summary and notes beneath them.
+- Provide three note fields, Add Note, bullet/numbered lists and an explicit Update Notes action. Retain older notes and save the committed entries and list style with the project.
+- Fill four displayed note lines per column, expanding to two then three columns when Control is off. Keep all cover sections on the first page and preserve captured/vector rendering.
+
 ## V54.26 — PDF page packing and Power fitting
 
 - Share Fixture Patch PDF pages between complete fixture-type tables; move tables intact and fit oversized tables above the footer.

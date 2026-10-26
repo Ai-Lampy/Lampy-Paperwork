@@ -19,7 +19,7 @@ assert(!c.patchPdfSupplementElement('summary',rows).innerHTML.includes('Total Nu
 assert(c.patchPdfSupplementElement('summary',[],{final:true,universes:0}).innerHTML.includes('Total Number of Fixtures = 0'));
 // Exercise notes editing: hide never clears text; controls follow whitespace state; save once.
 {
- const nodes={patchPdfSummaryNotes:{value:'Keep these notes'},patchPdfShowSummaryNotes:{checked:false},patchPdfShowSummaryNotesControl:{classList:{toggle:(name,hidden)=>nodes.hidden=hidden}}};let saves=0,renders=0;
+ const nodes={patchPdfSummaryNotes:{value:'Keep these notes',querySelectorAll(){return [{value:this.value}]}},patchPdfShowSummaryNotes:{checked:false},patchPdfShowSummaryNotesControl:{classList:{toggle:(name,hidden)=>nodes.hidden=hidden}}};let saves=0,renders=0;
  const p=vm.createContext({fixturePatchViewOptions:{pdf:{}},$:id=>nodes[id],persist:()=>saves++,renderFixturePatchPdfPreview:()=>renders++});add(p,'syncPatchPdfSummaryNotesVisibility','updatePatchPdfSummaryNotes');
  p.updatePatchPdfSummaryNotes();assert.equal(p.fixturePatchViewOptions.pdf.summaryNotes,'Keep these notes');assert.equal(p.fixturePatchViewOptions.pdf.showSummaryNotes,false);assert.equal(nodes.hidden,false);assert.equal(saves,1);assert.equal(renders,1);
  nodes.patchPdfSummaryNotes.value=' \n ';p.updatePatchPdfSummaryNotes();assert.equal(nodes.hidden,true);
@@ -66,13 +66,13 @@ for(const selector of ['.patchPdfFixtureTotal','.patchPdfUniverseTotal','.patchP
 assert(source('fixturePatchDomPdfBytes').includes('patchPdfDrawSummaryNoteLine'));
 assert(source('fixturePatchPreviewPdfBytes').includes('await preparePatchPdfExport()'));
 assert(source('preparePatchPdfExport').includes('await document.fonts.ready'));
-assert(source('renderFixturePatchPdfPreview').includes('appendPatchSummaryNotes(pages,d,summaryState,pdf)'));
-assert(html.includes('id="patchPdfSummaryNotes" rows="4"'));
+assert(source('renderFixturePatchPdfPreview').includes('appendPatchPdfFrontPage(pages,d,groups,pdf)'));
+assert(html.includes('id="patchPdfSummaryNotes"'));
 console.log('PASS: V50.7 fixture totals, saved notes, visibility, wrapping, continuation pages and vector line parity.');
 // Full render ordering includes notes pages before fixture tables and final token totals.
 {
  const pageList=[],order=[],totals=[],host={querySelectorAll:()=>pageList,querySelector:()=>pageList[0]};
- const p=vm.createContext({patchPdfRenderRequest:0,document:{fonts:{status:'loaded'}},$:()=>host,fixturePatchViewOptions:{pdf:{showSummary:true,showRevisionNotes:true,summaryNotes:'Notes'}},syncPatchPdfHiddenColumnsControl(){},patchPdfPaperDimensions:()=>({}),patchGroups:()=>[{items:[]}],patchPdfSummaryRows:()=>[],patchPdfPatchedUniverses:()=>0,patchPdfRevisionRows:()=>[],appendPatchSupplementPages:(host,d,kind)=>{order.push(kind);pageList.push(kind);return {page:kind}},appendPatchSummaryNotes:()=>{order.push('notes');pageList.push('notes','notes-continuation')},appendPatchPdfPage:()=>{pageList.push('fixtures');return {}},addPatchPdfGroup:()=>order.push('fixtures'),refreshPatchPdfMeasurements(){},finalisePdfPageChrome:pages=>totals.push(pages.length),runAfterProjectFontsReady:fn=>fn(),requestAnimationFrame:fn=>fn(),updatePatchPdfZoom(){}});
- add(p,'renderFixturePatchPdfPreview');p.renderFixturePatchPdfPreview();assert.deepEqual(order,['summary','notes','fixtures','revision']);assert.deepEqual(totals,[5,5]);
+ const p=vm.createContext({patchPdfRenderRequest:0,document:{fonts:{status:'loaded'}},$:()=>host,fixturePatchViewOptions:{pdf:{showSummary:true,showRevisionNotes:true,summaryNotes:'Notes'}},syncPatchPdfHiddenColumnsControl(){},patchPdfPaperDimensions:()=>({}),patchGroups:()=>[{items:[]}],patchPdfSummaryRows:()=>[],patchPdfPatchedUniverses:()=>0,patchPdfRevisionRows:()=>[],appendPatchSupplementPages:(host,d,kind)=>{order.push(kind);pageList.push(kind);return {page:kind}},appendPatchPdfFrontPage:()=>{order.push('front');pageList.push('front')},appendPatchPdfPage:()=>{pageList.push('fixtures');return {}},addPatchPdfGroup:()=>order.push('fixtures'),refreshPatchPdfMeasurements(){},finalisePdfPageChrome:pages=>totals.push(pages.length),runAfterProjectFontsReady:fn=>fn(),requestAnimationFrame:fn=>fn(),updatePatchPdfZoom(){}});
+ add(p,'renderFixturePatchPdfPreview');p.renderFixturePatchPdfPreview();assert.deepEqual(order,['front','fixtures','revision']);assert.deepEqual(totals,[3,3]);
  pageList.length=order.length=totals.length=0;p.fixturePatchViewOptions.pdf.showSummary=false;p.renderFixturePatchPdfPreview();assert.deepEqual(order,['fixtures','revision']);assert.deepEqual(totals,[2,2]);
 }
