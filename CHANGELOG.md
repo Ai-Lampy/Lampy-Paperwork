@@ -1,3 +1,15 @@
+## V54.30 — Rack devices and DMX port display
+
+- Render custom devices with the same simple card presentation in Detailed view.
+- Preserve the full U height of half-width devices in Side view; show their left/right identity and retain depth and mounting position.
+- Add Duplicate Device for custom rack devices with a fresh identity, valid-space placement, one save and retained page position.
+- Split two-colour DMX port overlays equally and show assigned universe numbers beneath ports, within the device footprint.
+
+## V54.29 — Martin JEM ZR45 GDTF revision
+
+- Link JEM ZR45 to the validated v1-1 GDTF revision with its embedded thumbnail.
+- Preserve the one-channel mode, parameter count and curated fixture data; remove the superseded InitialV1 archive.
+
 ## V54.28 — Fixture Patch PDF front-page controls
 
 - Moved the committed notes editor into its own Notes card and grouped Fixture Summary, Console Info, Universe Total and Notes visibility under Front Page.
