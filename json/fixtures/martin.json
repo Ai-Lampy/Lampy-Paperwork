@@ -1644,7 +1644,7 @@
         "status": "matched",
         "folder": "fixtures/martin",
         "suggestedFileName": "Martin__JEM_ZR45.gdtf",
-        "file": "fixtures/martin/Martin_Professional@JEM_ZR45@InitialV1.gdtf",
+        "file": "fixtures/martin/Martin_Professional@JEM_ZR45@v1-1.gdtf",
         "modes": {
           "1 Channel": {
             "channels": 1,
