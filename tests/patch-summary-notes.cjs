@@ -9,6 +9,10 @@ add(c,'defaultPatchViewOptions','normalisePatchViewOptions','normalisePatchUnive
 assert.equal(c.normalisePatchViewOptions({}).pdf.summaryNotes,'');assert.equal(c.normalisePatchViewOptions({}).pdf.showSummaryNotes,true);
 const saved=c.normalisePatchViewOptions({pdf:{summaryNotes:'First\r\nSecond',showSummaryNotes:false}}),loaded=c.normalisePatchViewOptions(plain(saved));assert.equal(loaded.pdf.summaryNotes,'First\nSecond');assert.equal(loaded.pdf.showSummaryNotes,false);
 assert.equal(c.normalisePatchViewOptions({pdf:{summaryNotes:{bad:true}}}).pdf.summaryNotes,'');
+assert.equal(c.normalisePatchViewOptions({}).pdf.showUniverseTotal,true);
+const frontSettings={showUniverseTotal:false,showSummary:false,showControl:true,showSummaryNotes:true,summaryNoteItems:['One','Two'],summaryNoteStyle:'numbered'};
+const restored=c.normalisePatchViewOptions(plain(c.normalisePatchViewOptions({pdf:frontSettings}))).pdf;for(const [key,value] of Object.entries(frontSettings))assert.deepEqual(plain(restored[key]),value);
+
 for(const width of [20,35]){const text='First line\n\nSecond with many words and AVeryLongWordThatMustWrapWithoutDroppingCharacters';const lines=plain(c.patchSummaryNoteLines(text,width,s=>s.length));assert(lines.every(l=>l.length<=width));assert(lines.includes(''));assert.equal(lines.join(''),text.replaceAll('\n',''));}
 assert.deepEqual(plain(c.patchSummaryNoteLines('a\r\nb\rc',50,s=>s.length)),['a','b','c']);
 c.document={createElement:()=>({classList:{add(){}}})};
@@ -73,6 +77,7 @@ console.log('PASS: V50.7 fixture totals, saved notes, visibility, wrapping, cont
 {
  const pageList=[],order=[],totals=[],host={querySelectorAll:()=>pageList,querySelector:()=>pageList[0]};
  const p=vm.createContext({patchPdfRenderRequest:0,document:{fonts:{status:'loaded'}},$:()=>host,fixturePatchViewOptions:{pdf:{showSummary:true,showRevisionNotes:true,summaryNotes:'Notes'}},syncPatchPdfHiddenColumnsControl(){},patchPdfPaperDimensions:()=>({}),patchGroups:()=>[{items:[]}],patchPdfSummaryRows:()=>[],patchPdfPatchedUniverses:()=>0,patchPdfRevisionRows:()=>[],appendPatchSupplementPages:(host,d,kind)=>{order.push(kind);pageList.push(kind);return {page:kind}},appendPatchPdfFrontPage:()=>{order.push('front');pageList.push('front')},appendPatchPdfPage:()=>{pageList.push('fixtures');return {}},addPatchPdfGroup:()=>order.push('fixtures'),refreshPatchPdfMeasurements(){},finalisePdfPageChrome:pages=>totals.push(pages.length),runAfterProjectFontsReady:fn=>fn(),requestAnimationFrame:fn=>fn(),updatePatchPdfZoom(){}});
+ const frontCode=fs.readFileSync(path.join(__dirname,'../js/patch-pdf-front-page.js'),'utf8');vm.runInContext(frontCode.split('\n').filter(line=>/^function (patchPdfHasFrontPage|patchPdfNoteItems)\(/.test(line)).join('\n'),p);
  add(p,'renderFixturePatchPdfPreview');p.renderFixturePatchPdfPreview();assert.deepEqual(order,['front','fixtures','revision']);assert.deepEqual(totals,[3,3]);
- pageList.length=order.length=totals.length=0;p.fixturePatchViewOptions.pdf.showSummary=false;p.renderFixturePatchPdfPreview();assert.deepEqual(order,['fixtures','revision']);assert.deepEqual(totals,[2,2]);
+ pageList.length=order.length=totals.length=0;Object.assign(p.fixturePatchViewOptions.pdf,{showSummary:false,showUniverseTotal:false,showSummaryNotes:false});p.renderFixturePatchPdfPreview();assert.deepEqual(order,['fixtures','revision']);assert.deepEqual(totals,[2,2]);
 }

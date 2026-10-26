@@ -40,10 +40,14 @@ function layoutPatchPdfNotes(front){
 }
 function appendPatchPdfFrontPage(pages,d,groups,pdf){
   const state=appendPatchPdfPage(pages,d),front=document.createElement('section'),tables=document.createElement('div'),details=document.createElement('aside');front.className='patchPdfFront';front.dataset.control=String(pdf.showControl===true);tables.className='patchPdfFrontTables';details.className='patchPdfFrontDetails';front.append(tables,details);state.page.appendChild(front);
-  if(pdf.showSummary!==false){const rows=patchPdfSummaryRows(groups),summary=patchPdfSupplementElement('summary',rows,{final:true,total:rows.reduce((sum,row)=>sum+row.quantity,0),universes:patchPdfPatchedUniverses(groups)});tables.appendChild(summary);const totals=summary.querySelector('.patchPdfSummaryTotals');if(totals)details.appendChild(totals)}
+  const totals=document.createElement('div');totals.className='patchPdfSummaryTotals';
+  const parameter=document.createElement('div');parameter.className='patchPdfParameterTotal';parameter.textContent='Parameter Count - '+fixtureParametersRequired().toLocaleString();totals.appendChild(parameter);
+  if(pdf.showSummary!==false){const rows=patchPdfSummaryRows(groups),summary=patchPdfSupplementElement('summary',rows);tables.appendChild(summary);const fixtureTotal=document.createElement('div');fixtureTotal.className='patchPdfFixtureTotal';fixtureTotal.textContent='Total Number of Fixtures = '+rows.reduce((sum,row)=>sum+row.quantity,0);totals.appendChild(fixtureTotal)}
+  if(pdf.showUniverseTotal!==false){const universeTotal=document.createElement('div');universeTotal.className='patchPdfUniverseTotal';universeTotal.textContent='Patched Universes: '+patchPdfPatchedUniverses(groups);totals.appendChild(universeTotal)}
+  details.appendChild(totals);
   if(pdf.showControl===true)tables.insertAdjacentHTML('beforeend',patchPdfControlMarkup());
   const items=patchPdfNoteItems(pdf).map(value=>value.trim()).filter(Boolean);
-  if(pdf.showSummary!==false&&pdf.showSummaryNotes!==false&&items.length){const notes=patchSummaryNotesBlock();notes.dataset.items=JSON.stringify(items);notes.dataset.listStyle=pdf.summaryNoteStyle==='numbered'?'numbered':'bullet';const body=document.createElement('div');body.className='patchPdfNotesBody';notes.appendChild(body);details.appendChild(notes)}
+  if(pdf.showSummaryNotes!==false&&items.length){const notes=patchSummaryNotesBlock();notes.dataset.items=JSON.stringify(items);notes.dataset.listStyle=pdf.summaryNoteStyle==='numbered'?'numbered':'bullet';const body=document.createElement('div');body.className='patchPdfNotesBody';notes.appendChild(body);details.appendChild(notes)}
   fitPatchPdfFrontPage(front);state.page.querySelectorAll('img').forEach(image=>{if(!image.complete){const refit=()=>{if(front.isConnected)fitPatchPdfFrontPage(front)};image.addEventListener('load',refit,{once:true});image.addEventListener('error',refit,{once:true})}});return state;
 }
 function patchPdfConsoleTypeSize(text,width,measure){let size=10;while(size>7&&measure(text,size)>width)size=Math.max(7,size-.25);return size}
@@ -74,4 +78,5 @@ function fitPatchPdfFrontPage(front){
   fitPatchPdfConsoleTypes(front);
 }
 function patchPdfFrontTextScale(el){const front=el.closest?.('.patchPdfFront');if(!front)return 1;const part=el.closest('.patchPdfFrontTables,.patchPdfFrontDetails');return (Number(front.dataset.frontScale)||1)*(Number(part?.dataset.frontScale)||1)}
-function updatePatchPdfFrontOptions(){fixturePatchViewOptions.pdf.showControl=$('patchPdfShowControl')?.checked===true;persist();renderFixturePatchPdfPreview()}
+function patchPdfHasFrontPage(pdf){return pdf.showSummary!==false||pdf.showControl===true||pdf.showUniverseTotal!==false||(pdf.showSummaryNotes!==false&&patchPdfNoteItems(pdf).some(value=>value.trim()))}
+function updatePatchPdfFrontOptions(){fixturePatchViewOptions.pdf.showControl=$('patchPdfShowControl')?.checked===true;fixturePatchViewOptions.pdf.showUniverseTotal=$('patchPdfShowUniverseTotal')?.checked!==false;persist();renderFixturePatchPdfPreview()}

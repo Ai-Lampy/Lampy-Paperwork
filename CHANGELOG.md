@@ -1,3 +1,11 @@
+## V54.28 — Fixture Patch PDF front-page controls
+
+- Moved the committed notes editor into its own Notes card and grouped Fixture Summary, Console Info, Universe Total and Notes visibility under Front Page.
+- Made universe totals and populated notes independently selectable without the fixture summary.
+- Changed the first-page header to Tour Name, then Fixture Patch - Version; moved Parameter Count above the fixture total with matching rounded borders and weight 800.
+- Matched Merge Universe & Address button height, font and padding to Clear Filters.
+- Preserved note drafts, list formatting, the approved stacked layout and preview/captured/vector export parity.
+
 ## V54.27 — Fixture Patch front-page control summary
 
 - Apply the approved stacked cover: optional console tables below Fixture Summary, protocol names as headings, IP-only cells, compact NPU/parameter rows and fitted Console Type text.
