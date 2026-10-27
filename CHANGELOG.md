@@ -9,7 +9,7 @@
 - Reorder Exports settings as PDF Page Settings, PDF File Names, First-page Header with its collapsible preview, Remaining-page Header, Remaining-page Preview and Footer.
 - Configure three-part PDF filenames globally or per document, with safe custom text, project-version prefixes and export dates. Preview structure choices persist as the document default and every PDF download uses the displayed naming policy.
 - Keep footer typography independent from remaining-page headers; support 5 pt footers and two-line, styled vector footer text.
-- Double Tour Logo stacks and centre them in the right header area across settings, PDF previews and exports, reserving space for the enlarged logo.
+- Scale Tour Logo stacks to 1.7 and centre them in the right header area across settings, PDF previews and exports, reserving space for the enlarged logo.
 
 ## V54.37 — GLP JDC mode display names
 
