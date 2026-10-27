@@ -1,5 +1,7 @@
 ## V55 — PDF settings and filenames
 
+- Add independent font, size, bold, italic, underline and colour controls to the Remaining-page Header card alongside the existing independent Footer controls.
+
 - Remove the retired walkthrough file and embedded guide; keep page-specific Help available.
 
 - Reorder Exports settings as PDF Page Settings, PDF File Names, First-page Header with its collapsible preview, Remaining-page Header, Remaining-page Preview and Footer.

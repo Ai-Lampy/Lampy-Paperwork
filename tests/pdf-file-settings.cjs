@@ -50,3 +50,9 @@ console.log('PASS: V55 filename defaults, per-document persistence, safe names, 
 vm.runInContext(source('preparePdfCaptureLogoScale'),ctx);
 const captureStyles={};ctx.preparePdfCaptureLogoScale({querySelectorAll:()=>[{style:{setProperty:(key,value)=>captureStyles[key]=value}}]});
 assert.equal(captureStyles.scale,'none');assert.equal(captureStyles.transform,'scale(2)');assert(source('patchPdfPageToJpeg').includes('onclone:preparePdfCaptureLogoScale'));
+
+// Remaining-page header and footer expose separate typography settings.
+for(const [fn,prefix] of [['pdfLaterHeaderStyleControlsMarkup','pdf.laterHeader.style'],['pdfFooterStyleControlsMarkup','pdf.footer.style']]){
+ const markup=source(fn);for(const field of ['font','size','colour'])assert(markup.includes(prefix+'.'+field));assert(markup.includes("pdfStyleToggleMarkup('"+prefix+"',style)"));
+}
+assert(source('renderExportSettings').includes('pdfLaterHeaderStyleControlsMarkup(later.style)'));
