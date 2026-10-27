@@ -1,3 +1,12 @@
+## V55 — PDF settings and filenames
+
+- Remove the retired walkthrough file and embedded guide; keep page-specific Help available.
+
+- Reorder Exports settings as PDF Page Settings, PDF File Names, First-page Header with its collapsible preview, Remaining-page Header, Remaining-page Preview and Footer.
+- Configure three-part PDF filenames globally or per document, with safe custom text, project-version prefixes and export dates. Preview structure choices persist as the document default and every PDF download uses the displayed naming policy.
+- Keep footer typography independent from remaining-page headers; support 5 pt footers and two-line, styled vector footer text.
+- Double Tour Logo stacks and centre them in the right header area across settings, PDF previews and exports, reserving space for the enlarged logo.
+
 ## V54.37 — GLP JDC mode display names
 
 - Import 18 corrected GLP JDC Burst 1 and six JDC1 mode display names from the reviewed workbook.

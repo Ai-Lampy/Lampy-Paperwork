@@ -1,4 +1,4 @@
-# V54 browser release checks
+# V55 browser release checks
 
 **Use this checklist only when the user explicitly requests browser testing.** Interface changes, implementation requests and releases do not authorise browser testing. Static validation remains the default.
 
@@ -6,6 +6,9 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 
 | Check | Chrome/Chromium | Firefox | Safari |
 | --- | --- | --- | --- |
+| V55 PDF settings order, first-header/preview collapse and independent footer font/size/style/colour | Required | Required | Required |
+| V55 three-part filenames, custom characters, global/per-document structures, preview saved choices and all seven PDF download names | Required | Required | Required |
+| V55 doubled Tour Logo stacks stay centred and clear of document content in settings, preview and export | Required | Required | Required |
 | Sidebar page routes, dynamic Patch/Rack sub-pages, active states, compact preference and keyboard focus | Required | Required | Required |
 | V53 compact hover: no Home heading, inactive groups show destinations, sub-pages show only their name, single-patch shortcut is not duplicated in rail or flyout | Required | Required | Required |
 | Active sub-page highlighting; switching page groups closes the previous group in both sidebar modes; Looms and label-with-R icons | Required | Required | Required |
