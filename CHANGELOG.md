@@ -1,9 +1,28 @@
+## V54.33 — Fixture mode display names
+
+- Import 13 corrected COLORado PXL Curve 12 mode display names and the Martin AF 1 Fan display name from the reviewed workbook.
+- Preserve internal mode identities, channel counts, parameters, GDTF mappings and all other fixture data.
+
+## V54.32 — Non-DMX fixtures and Reel EFX GDTF update
+
+- Support explicit zero-channel fixtures in the library, picker, patch, project validation and GDTF/MVR import and export. Non-DMX fixtures retain weight and power data but receive no universe or DMX address.
+- Add the standard Reel EFX DF-50 with a zero-channel Non-DMX mode and link DF-50 DMX to the updated GDTF. Correct inherited profile metadata and the invalid original revision date.
+- Preserve zero parameter counts, including the existing empty FINE 407 WASH mode, and add non-DMX regression coverage.
+
+## V54.31 — GDTF validation and Martin wiring names
+
+- Add repeatable, version-aware GDTF validation with corrected gamut support and logical network offsets above 512.
+- Give wiring objects unique names in the four Exterior Linear Pro Cove/Graze CTC profiles, preserving all control data and embedded assets.
+- Preserve MAC Aura Raven XIP unchanged and add validator regression coverage.
+
 ## V54.30 — Rack devices and DMX port display
 
 - Render custom devices with the same simple card presentation in Detailed view.
 - Preserve the full U height of half-width devices in Side view; show their left/right identity and retain depth and mounting position.
 - Add Duplicate Device for custom rack devices with a fresh identity, valid-space placement, one save and retained page position.
 - Split two-colour DMX port overlays equally and show assigned universe numbers beneath ports, within the device footprint.
+
+- Audit corrections: keep both overlapping half-width Side labels selectable and draggable, block duplication of unresolved library devices, and measure universe text within border-aware, non-overlapping port label slots.
 
 ## V54.29 — Martin JEM ZR45 GDTF revision
 
