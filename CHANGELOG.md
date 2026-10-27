@@ -1,3 +1,13 @@
+## V54.36 — Hazer and fog machine wattages
+
+- Set Martin JEM ZR45 to 2100 W and Reel EFX DF-50 and DF-50 DMX to 437 W.
+- Preserve mode names, channel counts, parameters, GDTF mappings and other fixture data.
+
+## V54.35 — GLP fixture mode display names
+
+- Import four corrected GLP impression FR10 Bar mode display names from the reviewed workbook.
+- Preserve internal mode identities, channel counts, parameters, GDTF mappings and all other fixture data.
+
 ## V54.34 — FINE 407 WASH DMX profile repair
 
 - Rebuild the empty FINE 407 WASH STND profile from Fine Art's official DMX table: 20 slots and 13 logical parameters, preserving the seven coarse/fine pairs and reserved control slot.
