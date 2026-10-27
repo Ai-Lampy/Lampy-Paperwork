@@ -41,7 +41,7 @@
           "port": "ETH 1",
           "protocols": [
             "MA-Net",
-			"sACN"
+            "sACN"
           ]
         },
         {
@@ -55,7 +55,7 @@
           "protocols": [
             "MA-Net",
             "sACN",
-			"Art-Net"
+            "Art-Net"
           ]
         },
         {
@@ -68,7 +68,7 @@
           "port": "ETH 3",
           "protocols": [
             "MA-Net",
-			"Web-Link"
+            "Web-Link"
           ]
         }
       ],
@@ -79,6 +79,14 @@
         "poeIn": false
       },
       "softwareVersions": [
+        {
+          "mode3": "2.5.1.1",
+          "mode2": "3.9.63.11"
+        },
+        {
+          "mode3": "2.5.1.0",
+          "mode2": "3.9.63.11"
+        },
         {
           "mode3": "2.5.0.3",
           "mode2": "3.9.63.10"
@@ -142,7 +150,7 @@
           "port": "ETH 1",
           "protocols": [
             "MA-Net",
-			"sACN"
+            "sACN"
           ]
         },
         {
@@ -156,7 +164,7 @@
           "protocols": [
             "MA-Net",
             "sACN",
-			"Art-Net"
+            "Art-Net"
           ]
         },
         {
@@ -169,7 +177,7 @@
           "port": "ETH 3",
           "protocols": [
             "MA-Net",
-			"Web-Link"
+            "Web-Link"
           ]
         }
       ],
@@ -180,6 +188,14 @@
         "poeIn": false
       },
       "softwareVersions": [
+        {
+          "mode3": "2.5.1.1",
+          "mode2": "3.9.63.11"
+        },
+        {
+          "mode3": "2.5.1.0",
+          "mode2": "3.9.63.11"
+        },
         {
           "mode3": "2.5.0.3",
           "mode2": "3.9.63.10"
@@ -243,7 +259,7 @@
           "port": "ETH 1",
           "protocols": [
             "MA-Net",
-			"sACN"
+            "sACN"
           ]
         },
         {
@@ -257,7 +273,7 @@
           "protocols": [
             "MA-Net",
             "sACN",
-			"Art-Net"
+            "Art-Net"
           ]
         },
         {
@@ -270,7 +286,7 @@
           "port": "ETH 3",
           "protocols": [
             "MA-Net",
-			"Web Link"
+            "Web Link"
           ]
         }
       ],
@@ -281,6 +297,14 @@
         "poeIn": false
       },
       "softwareVersions": [
+        {
+          "mode3": "2.5.1.1",
+          "mode2": "3.9.63.11"
+        },
+        {
+          "mode3": "2.5.1.0",
+          "mode2": "3.9.63.11"
+        },
         {
           "mode3": "2.5.0.3",
           "mode2": "3.9.63.10"
@@ -344,7 +368,7 @@
           "port": "ETH 1",
           "protocols": [
             "MA-Net",
-			"sACN"
+            "sACN"
           ]
         },
         {
@@ -358,7 +382,7 @@
           "protocols": [
             "MA-Net",
             "sACN",
-			"Art-Net"
+            "Art-Net"
           ]
         },
         {
@@ -371,7 +395,7 @@
           "port": "ETH 3",
           "protocols": [
             "MA-Net",
-			"Web Link"
+            "Web Link"
           ]
         }
       ],
@@ -382,6 +406,14 @@
         "poeIn": false
       },
       "softwareVersions": [
+        {
+          "mode3": "2.5.1.1",
+          "mode2": "3.9.63.11"
+        },
+        {
+          "mode3": "2.5.1.0",
+          "mode2": "3.9.63.11"
+        },
         {
           "mode3": "2.5.0.3",
           "mode2": "3.9.63.10"
@@ -444,6 +476,12 @@
       },
       "softwareVersions": [
         {
+          "mode3": "2.5.1.1"
+        },
+        {
+          "mode3": "2.5.1.0"
+        },
+        {
           "mode3": "2.5.0.3"
         },
         {
@@ -499,7 +537,7 @@
           "port": "ETH 1",
           "protocols": [
             "MA-Net",
-			"sACN"
+            "sACN"
           ]
         },
         {
@@ -522,6 +560,9 @@
         "poeIn": false
       },
       "softwareVersions": [
+        {
+          "mode2": "3.9.63.11"
+        },
         {
           "mode2": "3.9.63.10"
         },
@@ -578,7 +619,7 @@
           "port": "ETH 1",
           "protocols": [
             "MA-Net",
-			"sACN"
+            "sACN"
           ]
         },
         {
@@ -601,6 +642,9 @@
         "poeIn": false
       },
       "softwareVersions": [
+        {
+          "mode2": "3.9.63.11"
+        },
         {
           "mode2": "3.9.63.10"
         },
@@ -655,6 +699,9 @@
         "poeIn": false
       },
       "softwareVersions": [
+        {
+          "mode2": "3.9.63.11"
+        },
         {
           "mode2": "3.9.63.10"
         },
