@@ -1,3 +1,9 @@
+## V54.34 — FINE 407 WASH DMX profile repair
+
+- Rebuild the empty FINE 407 WASH STND profile from Fine Art's official DMX table: 20 slots and 13 logical parameters, preserving the seven coarse/fine pairs and reserved control slot.
+- Correct the library mapping, power to 330 W and weight to 6.8 kg. Preserve the internal STND mode identity and existing manufacturer assets.
+- Record the manual's tilt discrepancy: the channel table specifies 220 degrees, while the technical specification states 230 degrees. The profile follows the channel table.
+
 ## V54.33 — Fixture mode display names
 
 - Import 13 corrected COLORado PXL Curve 12 mode display names and the Martin AF 1 Fan display name from the reviewed workbook.
