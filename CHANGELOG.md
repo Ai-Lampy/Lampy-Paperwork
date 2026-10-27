@@ -1,3 +1,8 @@
+## V55.3 — MA Lighting software versions
+
+- Add Mode 3 versions 2.5.1.1 and 2.5.1.0, paired with Mode 2 version 3.9.63.11 on supported grandMA3 consoles.
+- Add 3.9.63.11 to grandMA2 consoles; retain older releases and mode-specific support. NPUs continue using their Master console software version.
+
 ## V55.2 — Loom cable colours and Box It
 
 - Add three-colour editing for individual loom cables with a compact right-side Save/Cancel rail. Keep colour changes temporary until confirmed and preserve other editor changes.
