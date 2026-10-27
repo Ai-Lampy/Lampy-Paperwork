@@ -6,7 +6,7 @@ function loomPdfSource(){
     feeder:loom.parentLoomId?(loomById(loom.parentLoomId)?.name||group.parent.name||'Unnamed Loom'):''
   })));
 }
-function loomPdfRowMarkup(cable){return `<tr>${[cable.label,cable.cableType,loomLengthText(cable.length,cable.unit),cable.notes].map(value=>`<td>${escapeHtml(value||'')}</td>`).join('')}</tr>`}
+function loomPdfRowMarkup(cable){return `<tr class="loomCableColouredRow" style="${loomCableRowStyle(cable)}">${[cable.label,cable.cableType,loomLengthText(cable.length,cable.unit),cable.notes].map(value=>`<td data-loom-cable-pdf-colours="${escapeAttr(loomCableColours(cable).join(','))}"><span>${escapeHtml(value||'')}</span></td>`).join('')}</tr>`}
 function loomPdfSectionMarkup(loom){
   const colours=[...new Set([loom.colour1,loom.colour2,loom.colour3].map(value=>colourTextToHex(value,'')).filter(Boolean))];
   return `<section class="loomPdfSection"><div class="loomPdfHeading" data-loom-pdf-colours="${escapeAttr(colours.join(','))}" style="${loomHeadingStyle(loom)}"><span class="loomPdfKind">${loom.parentLoomId?'Extension':'Feeder'}</span><h3>${escapeHtml(loom.name||'Unnamed Loom')}</h3></div>${loom.feeder?`<p class="loomPdfFeeder">Feeder: ${escapeHtml(loom.feeder)}</p>`:''}<table class="loomPdfTable"><colgroup><col style="width:20%"><col style="width:30%"><col style="width:15%"><col style="width:35%"></colgroup><thead><tr><th>Label</th><th>Cable</th><th>Length</th><th>Notes</th></tr></thead><tbody></tbody></table></section>`;
@@ -15,6 +15,7 @@ function loomPdfRowGroups(loom){
   const rows=loom.cables.length?loom.cables.map(loomPdfRowMarkup):['<tr><td colspan="4">No cables in this loom.</td></tr>'];
   const ends=loom.endsTogether==='male'?'Male Ends Together':loom.endsTogether==='female'?'Female Ends Together':'';
   if(ends)rows[rows.length-1]+=`<tr class="loomPdfEnds"><td colspan="4">${ends}</td></tr>`;
+  if(loom.boxIt)rows[rows.length-1]+=loomBoxItRowMarkup(loom,4);
   return rows;
 }
 function loomPdfDimensions(){const paper=$('loomPdfPaperSize')?.value||'A4',orient=$('loomPdfOrientation')?.value||'landscape',sizes={A4:[210,297],A3:[297,420],A2:[420,594],A1:[594,841],A0:[841,1189]},size=sizes[paper]||sizes.A4,w=orient==='portrait'?size[0]:size[1],h=orient==='portrait'?size[1]:size[0];return {paper,orient,w,h,ptW:w*72/25.4,ptH:h*72/25.4}}

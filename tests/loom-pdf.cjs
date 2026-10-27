@@ -6,6 +6,7 @@ const parent={id:'a',name:'FOH',colour1:'#ffff3d',colour2:'#ffffff',endsTogether
 const extension={id:'b',parentLoomId:'a',name:'FOH EXT',cables:[{label:'B',cableType:'CAT6',length:'20',unit:'m',notes:''}]};
 const collapsed=new Set(['a','b']),groups=[{parent,extensions:[extension]}];
 const c=vm.createContext({console,escapeHtml:escape,escapeAttr:escape,loomDisplayGroups:()=>groups,loomById:()=>parent,loomLengthText:(value,unit)=>value+unit,colourTextToHex:value=>value||'',loomHeadingStyle:()=> '--loom-title-stroke-width:.8mm',collapsedLoomCards:collapsed});
+c.colourSetPresentation=values=>({text:values.length?'#fff':'#000',outline:values.length?'#000':'transparent'});c.powerMultiColourBackground=values=>values[0]||'#fff';vm.runInContext(fs.readFileSync(path.join(root,'js/loom-colours.js'),'utf8'),c);
 vm.runInContext(code,c);
 const before=JSON.stringify(groups),source=c.loomPdfSource();assert.equal(source.length,2);assert.equal(source[1].feeder,'FOH');assert.equal(JSON.stringify(groups),before);assert.deepEqual([...collapsed],['a','b']);
 source[0].cables[0].notes='changed';assert.equal(parent.cables[0].notes,'<do not edit>');

@@ -1,3 +1,9 @@
+## V55.2 — Loom cable colours and Box It
+
+- Add three-colour editing for individual loom cables with a compact right-side Save/Cancel rail. Keep colour changes temporary until confirmed and preserve other editor changes.
+- Save cable colours by stable cable ID, render shared contrast and stripe rules in live tables and Looms PDFs, and preserve colours when editing loom quantities.
+- Add Box It travel instructions below Ends Together in live tables and PDF output.
+
 ## V55.1 — PDF header spacing
 
 - Apply the revised PDF header spacing: 10 px centre top margin, 24 mm right-logo minimum height without added padding, and 8 px top margins on both logo columns.

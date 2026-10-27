@@ -42,6 +42,7 @@ const escape=v=>String(v??'').replaceAll('&','&amp;').replaceAll('<','&lt;').rep
 const c=vm.createContext({LampyCableCatalogue:Cable,Date,Math,crypto:{randomUUID:()=>String(++ids)},normaliseBlankColour:v=>String(v||''),escapeHtml:escape,escapeAttr:escape,escapeJsAttr:escape,
  app:{looms:[]},ensureProjectInfo:()=>({production:{lightingVendor:'Christie Lites UK'}}),cableCatalogueReference:{catalogues:[catalogue]},
  loomEditorDraft:null,activeLoomEditorId:'',activeLoomExtensionParentId:'',collapsedLoomCards:new Set(),persist:()=>saves++,render:()=>renders++,renderLoomEditor:()=>renders++,confirm:()=>confirmation,alert:v=>alerts.push(v),hideLoomCableMenu(){},$:()=>({classList:{remove(){}}})});
+vm.runInContext(fs.readFileSync(path.join(root,'js/loom-colours.js'),'utf8'),c);
 for(const n of ['loomId','normaliseLoomUnit','normaliseLoomLength','loomLengthText','normaliseLoomCable','normaliseLoom','normaliseLooms','blankLoomBuildRow','blankLoomDraft','currentCableCatalogue','cableCategoryForType','cableLengthsForType','loomDraftRows','loomRowIsComplete','loomCableFromBuilderRow','loomById','loomDescendantIds','closeLoomEditor','saveLoomEditor','addCatalogueLoom','loomCableGroupKey','loomBuildRowsForLoom','reconcileLoomBuilderRows','setLoomCableTypeMetadata','loomCatalogueControlsMarkup','cableCatalogueStatusMarkup'])vm.runInContext(source(n),c);
 assert.equal(catalogue.looms.filter(l=>l.category==='FOH Snake').length,5);
 assert.equal(catalogue.looms.filter(l=>l.category==='Stock / Pre-Made Looms').length,1);
