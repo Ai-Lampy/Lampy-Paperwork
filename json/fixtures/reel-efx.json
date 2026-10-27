@@ -3,7 +3,7 @@
   "fixtures": [
     {
       "fixture": "DF-50",
-      "watts": null,
+      "watts": 437,
       "weight": 16,
       "modes": {
         "Non-DMX": 0
@@ -26,7 +26,7 @@
     },
     {
       "fixture": "DF-50 DMX",
-      "watts": null,
+      "watts": 437,
       "weight": 16,
       "modes": {
         "1 Channel": 1

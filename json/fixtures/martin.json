@@ -1635,7 +1635,7 @@
     },
     {
       "fixture": "JEM ZR45",
-      "watts": null,
+      "watts": 2100,
       "weight": null,
       "modes": {
         "1 Channel": 1

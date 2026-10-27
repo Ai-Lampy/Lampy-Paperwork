@@ -29,10 +29,10 @@
       "watts": 740.0,
       "weight": 24.0,
       "modes": {
-        "M1 Normal (25ch)": 25,
-        "M2 Multi-Layer (51ch)": 51,
-        "M3 Multi Pix (57)": 57,
-        "M4 MultiPix Advanced (79ch)": 79
+        "M1 Normal (25ch)": {"channels":25,"displayName":"M1 Normal"},
+        "M2 Multi-Layer (51ch)": {"channels":51,"displayName":"M2 Multi-Layer"},
+        "M3 Multi Pix (57)": {"channels":57,"displayName":"M3 Multi Pix"},
+        "M4 MultiPix Advanced (79ch)": {"channels":79,"displayName":"M4 MultiPix Advanced"}
       },
       "gdtf": {
         "status": "matched",
