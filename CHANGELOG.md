@@ -1,3 +1,8 @@
+## V54.37 — GLP JDC mode display names
+
+- Import 18 corrected GLP JDC Burst 1 and six JDC1 mode display names from the reviewed workbook.
+- Preserve internal mode identities, channel counts, parameters, GDTF mappings and all other fixture data.
+
 ## V54.36 — Hazer and fog machine wattages
 
 - Set Martin JEM ZR45 to 2100 W and Reel EFX DF-50 and DF-50 DMX to 437 W.
