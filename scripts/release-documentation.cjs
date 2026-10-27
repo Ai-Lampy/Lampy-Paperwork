@@ -7,7 +7,7 @@ function fallbackDocument(html,name){
  const code=html.slice(start,end);new vm.Script(code);
  return JSON.parse(JSON.stringify(vm.runInNewContext(code+';'+name+'()',{}, {timeout:1000})));
 }
-function validateDocumentation({html,welcome,walkthrough,checklist,changelog,manifest}){
+function validateDocumentation({html,welcome,checklist,changelog,manifest}){
  const version=html.match(/^const VERSION='(\d+(?:\.\d+)*)';$/m)?.[1];assert(version,'Missing release VERSION');const major=version.split('.')[0];
  assert(html.includes('<title>Lampy Paperwork V'+version+'</title>'),'Page title must match VERSION');
  assert.equal(manifest.version,version,'Update metadata must match VERSION');

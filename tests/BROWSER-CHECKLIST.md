@@ -6,7 +6,7 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 
 | Check | Chrome/Chromium | Firefox | Safari |
 | --- | --- | --- | --- |
-| V55 PDF settings order, first-header/preview collapse and independent footer font/size/style/colour | Required | Required | Required |
+| V55 PDF settings order, first-header/preview collapse and independent remaining-header and footer font/size/style/colour | Required | Required | Required |
 | V55 three-part filenames, custom characters, global/per-document structures, preview saved choices and all seven PDF download names | Required | Required | Required |
 | V55 doubled Tour Logo stacks stay centred and clear of document content in settings, preview and export | Required | Required | Required |
 | Sidebar page routes, dynamic Patch/Rack sub-pages, active states, compact preference and keyboard focus | Required | Required | Required |
@@ -15,7 +15,7 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 | Home → Project Settings works from expanded/compact navigation and is absent from Menu | Required | Required | Required |
 | Help above Menu describes each current page/sub-page; close, Escape, backdrop, focus return and mobile drawer behaviour | Required | Required | Required |
 | Loom cards start collapsed; opened cards survive navigation and reload; collapsing parent closes extensions; denied storage does not break controls | Required | Required | Required |
-| V53 welcome and walkthrough render from JSON and with JSON loading unavailable; content matches in both cases | Required | Required | Required |
+| Welcome renders from JSON and with JSON loading unavailable; content matches in both cases; retired walkthrough is absent | Required | Required | Required |
 | Errors control retains 6px left padding, count and acknowledgement behaviour | Required | Required | Required |
 | Mobile drawer: open/close, Escape, outside click, focus containment and return; sidebar-only scrolling | Required | Required | Required |
 | Expanded/compact sidebar content fitting and unchanged print/PDF geometry | Required | Required | Required |

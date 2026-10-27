@@ -1,5 +1,7 @@
 ## V55 — PDF settings and filenames
 
+- Fix the empty Exports page by binding Remaining-page Header controls to the existing saved settings. Add full renderer and settings-update regressions.
+
 - Add independent font, size, bold, italic, underline and colour controls to the Remaining-page Header card alongside the existing independent Footer controls.
 
 - Remove the retired walkthrough file and embedded guide; keep page-specific Help available.

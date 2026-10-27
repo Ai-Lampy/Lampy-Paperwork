@@ -52,7 +52,36 @@ const captureStyles={};ctx.preparePdfCaptureLogoScale({querySelectorAll:()=>[{st
 assert.equal(captureStyles.scale,'none');assert.equal(captureStyles.transform,'scale(2)');assert(source('patchPdfPageToJpeg').includes('onclone:preparePdfCaptureLogoScale'));
 
 // Remaining-page header and footer expose separate typography settings.
-for(const [fn,prefix] of [['pdfLaterHeaderStyleControlsMarkup','pdf.laterHeader.style'],['pdfFooterStyleControlsMarkup','pdf.footer.style']]){
+for(const [fn,prefix] of [['pdfLaterHeaderStyleControlsMarkup','pdf.laterHeader'],['pdfFooterStyleControlsMarkup','pdf.footer.style']]){
  const markup=source(fn);for(const field of ['font','size','colour'])assert(markup.includes(prefix+'.'+field));assert(markup.includes("pdfStyleToggleMarkup('"+prefix+"',style)"));
 }
-assert(source('renderExportSettings').includes('pdfLaterHeaderStyleControlsMarkup(later.style)'));
+assert(source('renderExportSettings').includes('pdfLaterHeaderStyleControlsMarkup(later)'));
+
+// Exercise the complete settings renderer, not just source-string assertions.
+const listeners=new Map(),renderHost={innerHTML:'',querySelectorAll(selector){return selector==='[data-style-toggle]'?['pdf.laterHeader.bold','pdf.laterHeader.italic','pdf.laterHeader.underline','pdf.footer.style.bold'].map(key=>({dataset:{styleToggle:key},addEventListener:(event,callback)=>listeners.set(key,callback)})):[]}};
+let renderProject={projectSettings:ctx.normaliseProjectSettings({}),file:{},production:{}},renderSaves=0;
+Object.assign(ctx,{ensureProjectInfo:()=>renderProject,$:id=>id==='projectExportsTab'?renderHost:null,shouldPreserveLiveViewScroll:()=>false,exportLogoAvailability:()=>({vendor:false,secondary:false}),logoToggleButton:()=>'',projectSettingsFontOptions:font=>`<option>${font}</option>`,styleFontSelects(){},renderProjectSettingsPdfPreview(){},refreshOpenPdfPreview(){},persist(){renderSaves++},applyProjectTypography(){},activeProjectTab:'exports',PDF_FOOTER_TEMPLATE_PRESETS:[['blank','Blank',''],['document','Document','{document}']],pdfTemplateFieldOptions:()=>'',pdfTemplateMissingFields:()=>''});
+for(const name of ['pdfStyleToggleMarkup','pdfPageTitleControlsMarkup','pdfLaterHeaderStyleControlsMarkup','pdfFooterStyleControlsMarkup','footerTemplatePresetKey','pdfTemplateControlMarkup','footerTemplateControlMarkup','headerTemplateControlMarkup','renderExportSettings','projectSettingSet','updateProjectSetting'])vm.runInContext(source(name),ctx);
+function renderAndCheck(){ctx.renderExportSettings();for(const title of ['PDF Page Settings','PDF File Names','First-page Header','Remaining-page Header','Remaining-page Preview','Footer'])assert(renderHost.innerHTML.includes(title),title)}
+renderAndCheck();
+const originalFooter=JSON.stringify(renderProject.projectSettings.pdf.footer);
+for(const [field,value] of [['font','Georgia'],['size','9'],['colour','#654321']])ctx.updateProjectSetting({dataset:{projectSetting:'pdf.laterHeader.'+field},value,type:'select-one',setCustomValidity(){}});
+for(const key of ['bold','italic','underline'])listeners.get('pdf.laterHeader.'+key)();
+assert.equal(renderSaves,6);assert.equal(JSON.stringify(renderProject.projectSettings.pdf.footer),originalFooter);
+assert.equal(renderProject.projectSettings.pdf.laterHeader.font,'Georgia');assert.equal(renderProject.projectSettings.pdf.laterHeader.size,9);assert.equal(renderProject.projectSettings.pdf.laterHeader.italic,true);
+renderProject.projectSettings=ctx.normaliseProjectSettings(JSON.parse(JSON.stringify(renderProject.projectSettings)));renderAndCheck();
+const applied={};ctx.applyPdfProjectSettings({style:{setProperty:(key,value)=>applied[key]=value},dataset:{}},false);
+assert.equal(applied['--pdf-later-font'],'Georgia');assert.equal(applied['--pdf-later-size'],'9pt');assert.equal(applied['--pdf-later-colour'],'#654321');assert.equal(applied['--pdf-later-style'],'italic');assert.equal(applied['--pdf-later-decoration'],'underline');assert.equal(applied['--pdf-footer-colour'],'#667085');
+// Legacy projects without V55 filename configuration also render all cards.
+renderProject.projectSettings=ctx.normaliseProjectSettings({pdf:{laterHeader:{font:'Georgia',size:12,centre:'Saved template'}}});renderAndCheck();
+assert(renderHost.innerHTML.includes('Saved template'));
+console.log('PASS: complete Exports rendering, independent header updates/toggles, save/load and legacy settings.');
+
+assert(renderHost.innerHTML.includes('value="12" selected'));
+const savedHeader=JSON.stringify(renderProject.projectSettings.pdf.laterHeader);
+for(const [field,value] of [['font','Georgia'],['size','5'],['colour','#123456']])ctx.updateProjectSetting({dataset:{projectSetting:'pdf.footer.style.'+field},value,type:'select-one',setCustomValidity(){}});
+listeners.get('pdf.footer.style.bold')();
+assert.equal(JSON.stringify(renderProject.projectSettings.pdf.laterHeader),savedHeader);
+assert.equal(renderProject.projectSettings.pdf.footer.style.size,5);
+ctx.applyPdfProjectSettings({style:{setProperty:(key,value)=>applied[key]=value},dataset:{}},false);
+assert.equal(applied['--pdf-footer-size'],'5pt');assert.equal(applied['--pdf-footer-colour'],'#123456');assert.equal(applied['--pdf-later-size'],'12pt');
