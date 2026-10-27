@@ -1,3 +1,8 @@
+## V55.1 — PDF header spacing
+
+- Apply the revised PDF header spacing: 10 px centre top margin, 24 mm right-logo minimum height without added padding, and 8 px top margins on both logo columns.
+- Remove the conflicting logo-column alignment override so the requested top alignment applies.
+
 ## V55 — PDF settings and filenames
 
 - Fix the empty Exports page by binding Remaining-page Header controls to the existing saved settings. Add full renderer and settings-update regressions.
