@@ -1007,21 +1007,21 @@
     },
     {
       "fixture": "FINE 407 WASH",
-      "watts": null,
-      "weight": null,
+      "watts": 330,
+      "weight": 6.8,
       "modes": {
-        "STND": 0
+        "STND": 20
       },
       "gdtf": {
         "status": "matched",
         "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_407_WASH@FINE_407___WASH.gdtf",
+        "file": "fixtures/fine-art/Fine_Art@FINE_407_WASH@Lampy_2026-10-27.gdtf",
         "modes": {
           "STND": {
-            "channels": 0,
+            "channels": 20,
             "gdtfMode": "STND",
             "status": "matched",
-            "parameters": 1
+            "parameters": 13
           }
         },
         "suggestedFileName": "Fine_Art__FINE_407_WASH.gdtf"

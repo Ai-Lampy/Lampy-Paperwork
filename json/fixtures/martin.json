@@ -6,7 +6,7 @@
       "watts": 120,
       "weight": 8.5,
       "modes": {
-        "Fan": 1
+        "Fan": {"channels":1,"displayName":"1CH"}
       },
       "gdtf": {
         "status": "matched",
