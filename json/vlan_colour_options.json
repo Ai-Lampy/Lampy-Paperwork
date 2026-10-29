@@ -173,6 +173,12 @@
     },
     "Pathway": {
       "vlans": [
+      {
+      “id”: 0,
+      “name”: Uplink,
+      “colour”: “White”,
+      “hex”: “#FFFFFF"
+      },
         {
           "id": 1,
           "name": "MGMT",
