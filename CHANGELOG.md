@@ -1,3 +1,8 @@
+## V55.4 — Pathway VLAN catalogue correction
+
+- Correct JSON quotation marks in the new Pathway Uplink entry (ID 0, White, #FFFFFF). Preserve the supplied VLAN names and colours.
+- Validate the 11-entry Pathway template and its Uplink row.
+
 ## V55.3 — MA Lighting software versions
 
 - Add Mode 3 versions 2.5.1.1 and 2.5.1.0, paired with Mode 2 version 3.9.63.11 on supported grandMA3 consoles.
