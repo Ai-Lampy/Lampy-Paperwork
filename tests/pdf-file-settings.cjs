@@ -85,3 +85,10 @@ assert.equal(JSON.stringify(renderProject.projectSettings.pdf.laterHeader),saved
 assert.equal(renderProject.projectSettings.pdf.footer.style.size,5);
 ctx.applyPdfProjectSettings({style:{setProperty:(key,value)=>applied[key]=value},dataset:{}},false);
 assert.equal(applied['--pdf-footer-size'],'5pt');assert.equal(applied['--pdf-footer-colour'],'#123456');assert.equal(applied['--pdf-later-size'],'12pt');
+
+// Both logo regions share a centre line even when the Tour region reserves 24mm.
+assert(html.includes('.pdfUnifiedHeaderLeft,.pdfUnifiedHeaderRight{display:grid;align-items:center;align-content:center;min-width:0;min-height:0;margin-top:8px}'));
+assert(html.includes('.pdfUnifiedHeaderLeft,.pdfUnifiedHeaderRight{align-self:center}'));
+assert(html.includes('.pdfUnifiedHeader .exportLogoStackLeft,.pdfUnifiedHeader .exportLogoStack{align-items:center}'));
+assert(!html.includes('.pdfUnifiedHeaderLeft,.pdfUnifiedHeaderRight{display:grid;align-items:start;'));
+assert(html.includes('.pdfUnifiedHeader .exportLogoStack{width:50%;max-width:34mm;justify-self:center;transform-origin:center}'));

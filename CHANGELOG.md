@@ -1,3 +1,8 @@
+## V55.5 — PDF logo centre alignment
+
+- Align Vendor, Personal and Tour logos on one horizontal centre line in the shared PDF header, including settings previews and all exports.
+- Centre logo content inside the taller Tour Logo container while preserving the 1.7 scale, logo dimensions and existing spacing.
+
 ## V55.4 — Pathway VLAN catalogue correction
 
 - Correct JSON quotation marks in the new Pathway Uplink entry (ID 0, White, #FFFFFF). Preserve the supplied VLAN names and colours.
