@@ -1,3 +1,8 @@
+## V55.7 — Device Config PDF saved visibility and sizing
+
+- Open Device Config exports in Print Preview. Save row exclusions and Location visibility with the project; retain exclusions by device/port identity across Location moves.
+- Use live-sized cells and uniformly scale content-sized tables to the selected paper, keeping measured wrapper heights and continuation widths consistent.
+
 ## V55.6 — Conditional PDF Vendor Logo divider
 
 - Add the grey Vendor Logo divider only when both Vendor and Personal logos are displayed in PDF headers and settings previews.
