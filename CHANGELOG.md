@@ -1,3 +1,9 @@
+## V55.6 — Conditional PDF Vendor Logo divider
+
+- Add the grey Vendor Logo divider only when both Vendor and Personal logos are displayed in PDF headers and settings previews.
+- Preserve centred logos and include the divider in captured and vector PDF exports.
+- Device Config PDFs reuse the app VLAN legend. Review fills the preview workspace with a Finish action, hides empty columns per device, and supports drag/Shift ranges for row inclusion without changing project data.
+
 ## V55.5 — PDF logo centre alignment
 
 - Align Vendor, Personal and Tour logos on one horizontal centre line in the shared PDF header, including settings previews and all exports.

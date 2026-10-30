@@ -92,3 +92,20 @@ assert(html.includes('.pdfUnifiedHeaderLeft,.pdfUnifiedHeaderRight{align-self:ce
 assert(html.includes('.pdfUnifiedHeader .exportLogoStackLeft,.pdfUnifiedHeader .exportLogoStack{align-items:center}'));
 assert(!html.includes('.pdfUnifiedHeaderLeft,.pdfUnifiedHeaderRight{display:grid;align-items:start;'));
 assert(html.includes('.pdfUnifiedHeader .exportLogoStack{width:50%;max-width:34mm;justify-self:center;transform-origin:center}'));
+
+// Divider depends on actual Personal Logo availability and export visibility.
+const logoContext=vm.createContext({ensureProjectInfo:()=>({secondaryLogo:{dataUrl:'personal'}}),logoSource:logo=>logo?.dataUrl||'',selectedVendorLogo:()=>({dataUrl:'vendor'}),vendorLogoImgMarkup:()=>'<img class="lightingVendorLogo">',logoImgMarkup:()=>'<img class="secondaryLogo">'});
+vm.runInContext(source('exportLeftLogoMarkup'),logoContext);
+for(const vendor of [false,true])for(const secondary of [false,true]){
+ const markup=logoContext.exportLeftLogoMarkup('tourLogoExport',{vendor,secondary});
+ assert.equal(markup.includes('pdfVendorLogoDivider'),vendor&&secondary);
+}
+logoContext.ensureProjectInfo=()=>({secondaryLogo:{}});
+assert(!logoContext.exportLeftLogoMarkup('tourLogoExport',{vendor:true,secondary:true}).includes('pdfVendorLogoDivider'));
+assert(html.includes('.pdfVendorLogoDivider{display:flex;align-items:center;border-right:2px solid #9b9b9b;padding-right:12px}'));
+for(const name of ['fixturePatchDomPdfBytes','powerPdfDomPdfBytes']){assert(source(name).includes('pdfDrawLogoDividers(doc,page,pageRect,scaleX,scaleY)'))}
+
+const dividerCalls=[];Object.assign(logoContext,{patchPdfElementBox:()=>({x:10,y:20,w:100,h:30}),pdfSetFill:(doc,colour)=>dividerCalls.push(colour),pdfRect:(doc,...args)=>dividerCalls.push(args)});
+vm.runInContext(source('pdfDrawLogoDividers'),logoContext);
+logoContext.pdfDrawLogoDividers({}, {querySelectorAll:selector=>{assert.equal(selector,'.pdfVendorLogoDivider');return [{}]}},{},.75,.75);
+assert.deepEqual(dividerCalls,['#9b9b9b',[108.5,20,1.5,30,'f']]);
