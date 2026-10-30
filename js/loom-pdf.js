@@ -65,7 +65,7 @@ function buildLoomPdfPages(host,looms,d){
     // Only a card too tall for an empty page is scaled, as one complete unit.
     if(!loomPdfFits(state)){loomPdfFitOversized(state);full=true}
   }
-  const pages=[...host.querySelectorAll('.exportPage')];finalisePdfPageChrome(pages);return pages;
+  const pages=[...host.querySelectorAll('.exportPage')];finalisePdfPageChrome(pages);syncLoomCableStripeGeometry(host);return pages;
 }
 function loomPdfRenderCurrent(session,version){return loomPdfSession===session&&session.version===version}
 function renderLoomPdfPreview(){

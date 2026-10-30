@@ -1,3 +1,10 @@
+## V55.8 — Linked Loom expansion
+
+- Expanding a feeder opens all its linked Extensions, matching the existing linked collapse behaviour.
+- Save the linked open/closed state for reloads while preserving independent Extension controls and unrelated loom states.
+- Replace inline cable colour fields with a compact floating three-colour picker. Shift-click adds rows, Shift-drag adds ranges, and the picker waits for Shift release. Preserve table geometry and draft-only Save/Cancel.
+- Align cable stripe backgrounds to a shared table origin across adjacent rows and columns, including PDF previews and captured exports.
+
 ## V55.7 — Device Config PDF saved visibility and sizing
 
 - Open Device Config exports in Print Preview. Save row exclusions and Location visibility with the project; retain exclusions by device/port identity across Location moves.

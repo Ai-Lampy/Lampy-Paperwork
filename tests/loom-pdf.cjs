@@ -14,6 +14,7 @@ const row=c.loomPdfRowMarkup(parent.cables[0]);assert(row.includes('&lt;do not e
 const section=c.loomPdfSectionMarkup(extension);assert(!section.includes('(continued)'));assert(section.includes('<th>Notes</th>'));assert(!section.includes('onclick'));assert(!section.includes('Delete'));
 assert(c.loomPdfRowGroups(parent)[0].includes('Male Ends Together'));assert.equal(c.loomPdfRowGroups({cables:[]}).length,1);
 // Run actual packing with measured complete cards and detachable nodes.
+c.syncLoomCableStripeGeometry=()=>{};
 const pages=[];let finalised=0;
 const host={querySelectorAll:()=>pages};
 c.finalisePdfPageChrome=items=>{finalised=items.length};

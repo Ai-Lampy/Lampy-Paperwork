@@ -208,3 +208,24 @@ assert(sidebar.iconMarkup('rear').includes(labelOutline));
 assert(sidebar.iconMarkup('distroLabels').includes(labelOutline));
 assert(sidebar.iconMarkup('rear').includes('M9 16V9h3'));
 console.log('PASS: compact flyouts suppress duplicate Patch and Rear Labels retains the label outline with an R.');
+
+// Feeder actions affect every descendant, including previously unseen nested Extensions.
+const linkedLooms=loomContext();let linkedRenders=0;linkedLooms.render=()=>linkedRenders++;linkedLooms.loomById=id=>id==='missing'?null:({id,parentLoomId:['child','nested'].includes(id)?'feeder':''});linkedLooms.loomDescendantIds=id=>new Set(id==='feeder'?['child','nested']:[]);
+linkedLooms.initialiseLoomCardState('unrelated');linkedLooms.toggleLoomCard('feeder');
+for(const id of ['feeder','child','nested']){assert(!linkedLooms.collapsedLoomCards.has(id));assert(linkedLooms.knownLoomCardStates.has(id))}
+assert(linkedLooms.collapsedLoomCards.has('unrelated'));assert.equal(linkedRenders,1);
+const linkedReload=loomContext();for(const id of ['feeder','child','nested']){linkedReload.initialiseLoomCardState(id);assert(!linkedReload.collapsedLoomCards.has(id))}
+linkedLooms.toggleLoomCard('child');assert(linkedLooms.collapsedLoomCards.has('child'));assert(!linkedLooms.collapsedLoomCards.has('feeder'));assert(!linkedLooms.collapsedLoomCards.has('nested'));
+linkedLooms.toggleLoomCard('feeder');for(const id of ['feeder','child','nested'])assert(linkedLooms.collapsedLoomCards.has(id));
+linkedLooms.toggleLoomCard('feeder');for(const id of ['feeder','child','nested'])assert(!linkedLooms.collapsedLoomCards.has(id));
+const beforeMissing=linkedRenders;linkedLooms.toggleLoomCard('missing');assert.equal(linkedRenders,beforeMissing);
+console.log('PASS: linked feeder/Extension expansion, nested descendants, independent Extension controls and restored disclosure state.');
+
+// Exercise real relationship traversal and rendered card markup, not mocked descendants.
+const realLoomStore=new Map(),realLoomStorage={getItem:key=>realLoomStore.get(key),setItem:(key,value)=>realLoomStore.set(key,value)};
+function linkedRenderContext(){const c=vm.createContext({app:{looms:[{id:'feed',name:'Feed',cables:[]},{id:'ext',name:'Extension',parentLoomId:'feed',cables:[]},{id:'ext2',name:'Nested',parentLoomId:'ext',cables:[]}]},normaliseLoomCable:value=>value,localStorage:realLoomStorage,collapsedLoomCards:new Set(),knownLoomCardStates:new Set(),normaliseBlankColour:value=>value||'',loomHeadingStyle:()=>'',escapeHtml:String,escapeAttr:String,escapeJsAttr:String,loomBoxItRowMarkup:()=>'',loomViewerRowMarkup:()=>'',render(){}});for(const name of ['normaliseLoom','normaliseLooms','loomById','loomDescendantIds','loomNameCompare','loomDisplayGroups','initialiseLoomCardState','saveLoomCardState','toggleLoomCard','loomEndsTogetherRowMarkup','loomCardMarkup'])vm.runInContext(appFunction(name),c);return c}
+const realLinked=linkedRenderContext();let realMarkup=[];realLinked.render=()=>{realMarkup=realLinked.loomDisplayGroups().flatMap(group=>[group.parent,...group.extensions]).map(loom=>realLinked.loomCardMarkup(loom))};realLinked.render();assert(realMarkup.every(markup=>markup.includes('loomCardCollapsed')));
+realLinked.toggleLoomCard('feed');assert.equal(realMarkup.length,3);assert(realMarkup.every(markup=>!markup.includes('loomCardCollapsed')));
+const restoredLinked=linkedRenderContext();assert(restoredLinked.loomDisplayGroups().flatMap(group=>[group.parent,...group.extensions]).every(loom=>!restoredLinked.loomCardMarkup(loom).includes('loomCardCollapsed')));
+realLinked.toggleLoomCard('feed');assert(realMarkup.every(markup=>markup.includes('loomCardCollapsed')));
+console.log('PASS: real feeder traversal, nested Extension card markup and reload restoration.');
