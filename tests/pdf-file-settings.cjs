@@ -109,3 +109,38 @@ const dividerCalls=[];Object.assign(logoContext,{patchPdfElementBox:()=>({x:10,y
 vm.runInContext(source('pdfDrawLogoDividers'),logoContext);
 logoContext.pdfDrawLogoDividers({}, {querySelectorAll:selector=>{assert.equal(selector,'.pdfVendorLogoDivider');return [{}]}},{},.75,.75);
 assert.deepEqual(dividerCalls,['#9b9b9b',[108.5,20,1.5,30,'f']]);
+
+// V55.9: document page defaults inherit independently and survive project round trips.
+for(const [mode,label] of names.documents){
+ for(const [field,value] of [['paper','A3'],['orientation','portrait'],['dpi','300']])ctx.updateProjectSetting({dataset:{projectSetting:`pdf.documentDefaults.${mode}.${field}`},value,type:'select-one',setCustomValidity(){}});
+ assert(renderHost.innerHTML.includes(`aria-label="${label} Paper Size"`));
+ const row=renderProject.projectSettings.pdf.documentDefaults[mode];assert.equal(row.paper,'A3');assert.equal(row.orientation,'portrait');assert.equal(row.dpi,300);
+}
+assert.equal(renderProject.projectSettings.pdf.paper,'A4');
+ctx.updateProjectSetting({dataset:{projectSetting:'pdf.documentDefaults.power.paper'},value:'',type:'select-one',setCustomValidity(){}});
+assert.equal(renderProject.projectSettings.pdf.documentDefaults.power.paper,undefined);
+assert.equal(renderProject.projectSettings.pdf.documentDefaults.fanOut.paper,'A3');
+renderProject.projectSettings=ctx.normaliseProjectSettings(JSON.parse(JSON.stringify(renderProject.projectSettings)));
+assert.equal(renderProject.projectSettings.pdf.documentDefaults.deviceConfig.dpi,300);
+const invalidDefaults=ctx.normaliseProjectSettings({pdf:{documentDefaults:{power:{paper:'Letter',orientation:'bad',dpi:999,headerMainSize:90},unknown:{paper:'A0'}}}}).pdf.documentDefaults;
+assert.deepEqual(JSON.parse(JSON.stringify(invalidDefaults.power)),{});assert.equal(invalidDefaults.unknown,undefined);
+const laterCard=renderHost.innerHTML.split('data-export-settings-card="later"')[1].split('</details>')[0];assert(laterCard.includes('id="projectSettingsLaterPdfPreview"'));
+
+// Exercise every actual preview initializer, control value and per-document header handler.
+const controls={},grid={rows:[],querySelectorAll(){return this.rows.map(row=>({remove:()=>{this.rows=this.rows.filter(item=>item!==row)}}))}},modal={querySelector:selector=>selector==='.pdfPreviewFormattingGrid'?grid:selector==='.pdfPreviewFormatting'?{}:null};
+grid.appendChild=row=>grid.rows.push(row);
+Object.assign(ctx,{$:id=>id==='testModal'?modal:(controls[id]||=( {value:''})),document:{querySelector:()=>null,createElement(){const select={addEventListener(event,fn){this.change=fn}};return {dataset:{},querySelector:()=>select,select,innerHTML:''}}},ensurePdfPreviewWorkspace(){},exportLogoAvailability:()=>({tour:false,vendor:false,secondary:false}),syncPdfPreviewLogoControls(){},syncPdfFilenamePreview(){},preparePdfPreviewFormatting(){},organisePdfPreviewSidePane(){}});
+for(const name of ['beginPdfLogoPreview','applyProjectPdfDefaultsToPreview','syncPdfHeaderSizeControls','updatePdfHeaderSize'])vm.runInContext(source(name),ctx);
+const pairs={patch:'patchPdf',power:'powerPdf',fanOut:'powerPdf',position:'positionPdf',deviceConfig:'deviceConfigPdf',looms:'loomPdf',distro:'export'};
+for(const [mode] of names.documents){
+ ctx.beginPdfLogoPreview(mode,'testModal');
+ assert.equal(controls[pairs[mode]+'PaperSize'].value,mode==='power'?'A4':'A3');assert.equal(controls[pairs[mode]+'Orientation'].value,'portrait');assert.equal(ctx.pdfPreviewLogoState.dpi,300);
+ if(mode==='patch')continue;
+ assert.equal(grid.rows.length,2);assert(grid.rows[0].innerHTML.includes('Main Header Size'));assert(grid.rows[1].innerHTML.includes('Sub Header Size'));
+ const saved=renderSaves;grid.rows[0].select.change({target:{value:'24'}});grid.rows[1].select.change({target:{value:'12'}});assert.equal(renderSaves,saved+2);
+ const page={style:{setProperty:(key,value)=>applied[key]=value},dataset:{}};ctx.applyPdfProjectSettings(page,true);assert.equal(applied['--pdf-title-size'],'24pt');assert.equal(applied['--pdf-subtitle-size'],'12pt');
+ ctx.beginPdfLogoPreview(mode,'testModal');assert.equal(ctx.pdfPreviewLogoState.headerMainSize,24);assert.equal(ctx.pdfPreviewLogoState.headerSubSize,12);
+}
+assert(source('preparePdfPreviewFormatting').includes('[data-pdf-header-size-control]'));
+assert(source('beginPdfLogoPreview').includes('syncPdfHeaderSizeControls(mode,modalId)'));
+console.log('PASS: seven independent PDF page defaults, standard inheritance, saved header sizes, actual control handlers, CSS size propagation and nested Remaining-page Preview.');

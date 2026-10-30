@@ -1,3 +1,9 @@
+## V55.9 — PDF export defaults and header sizes
+
+- Add Main Header Size and Sub Header Size controls to every PDF exporter, retaining Fixture Patch controls and saving other document sizes independently.
+- Add per-document paper, orientation and resolution defaults, with inheritance from the standard PDF Page Settings.
+- Keep Remaining-page Preview inside its header card so they expand and collapse together.
+
 ## V55.8 — Linked Loom expansion
 
 - Expanding a feeder opens all its linked Extensions, matching the existing linked collapse behaviour.
