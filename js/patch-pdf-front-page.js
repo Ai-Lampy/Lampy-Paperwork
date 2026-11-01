@@ -20,7 +20,7 @@ function patchPdfControlMarkup(data=patchPdfControlData()){
   if(!groups.size)groups.set('',{protocols:['Protocol 1','Protocol 2'],rows:[]});
   const tables=[...groups.values()].map((group,index)=>{
     const last=index===groups.size-1,headers=['Console Type','Console Name','Mode','Software Version',...group.protocols.map((name,i)=>name==='—'?'Protocol '+(i+1):name)];
-    return `<table class="patchPdfSupplementTable patchPdfControlTable"><thead><tr>${headers.map(value=>`<th>${escapeHtml(value)}</th>`).join('')}</tr></thead><tbody>${group.rows.map(row=>`<tr>${row.map((value,i)=>`<td${i===0?' data-console-type':''}>${escapeHtml(String(value))}</td>`).join('')}</tr>`).join('')||'<tr><td colspan="6">No consoles added.</td></tr>'}${last&&data.npus.length?`<tr class="patchPdfCompactControl"><th colspan="4">NPU Type</th><th colspan="2">Quantity</th></tr>${data.npus.map(row=>`<tr><td colspan="4">${escapeHtml(row.type)}</td><td colspan="2">${row.quantity}</td></tr>`).join('')}`:''}${last?`<tr class="patchPdfCompactControl"><th colspan="4">Parameters Available</th><td colspan="2"><span class="patchPdfCapacityValue">${escapeHtml(typeof data.parameters==='number'?data.parameters.toLocaleString():String(data.parameters))}</span> ${patchPdfCapacityMarkup(data.parameters)}</td></tr>`:''}</tbody></table>`;
+    return `<table class="patchPdfSupplementTable patchPdfControlTable"><thead><tr>${headers.map(value=>`<th>${escapeHtml(value)}</th>`).join('')}</tr></thead><tbody>${group.rows.map(row=>`<tr>${row.map((value,i)=>`<td${i===0?' data-console-type':''}>${escapeHtml(String(value))}</td>`).join('')}</tr>`).join('')||'<tr><td colspan="6">No consoles added.</td></tr>'}${last&&data.npus.length?`<tr class="patchPdfCompactControl"><th colspan="4">NPU Type</th><th colspan="2">Quantity</th></tr>${data.npus.map(row=>`<tr><td colspan="4">${escapeHtml(row.type)}</td><td colspan="2">${row.quantity}</td></tr>`).join('')}`:''}${last?`<tr class="patchPdfCompactControl"><th colspan="4">Parameters Available</th><td colspan="2"><span class="patchPdfCapacityPair"><span class="patchPdfCapacityValue">${escapeHtml(typeof data.parameters==='number'?data.parameters.toLocaleString():String(data.parameters))}</span> ${patchPdfCapacityMarkup(data.parameters)}</span></td></tr>`:''}</tbody></table>`;
   });return `<section class="patchPdfControl">${tables.join('')}</section>`;
 }
 function patchPdfNoteItems(pdf){return Array.isArray(pdf.summaryNoteItems)?pdf.summaryNoteItems.filter(value=>typeof value==='string'):String(pdf.summaryNotes||'').split(/\r?\n/)}
@@ -56,6 +56,13 @@ function appendPatchPdfFrontPage(pages,d,groups,pdf){
 function patchPdfConsoleTypeSize(text,width,measure){let size=10;while(size>7&&measure(text,size)>width)size=Math.max(7,size-.25);return size}
 function fitPatchPdfConsoleTypes(front){front.querySelectorAll('[data-console-type]').forEach(cell=>{cell.style.fontSize='10pt';const style=getComputedStyle(cell),width=cell.clientWidth-parseFloat(style.paddingLeft)-parseFloat(style.paddingRight);cell.style.fontSize=patchPdfConsoleTypeSize(cell.textContent,width,(text,size)=>patchTextWidth(text,`${style.fontStyle} ${style.fontWeight} ${size}pt ${style.fontFamily}`))+'pt'})}
 function patchPdfFrontSpace(front){const page=front.closest('.exportPage'),footer=page.querySelector('.pdfPageFooter'),factor=page.getBoundingClientRect().width/Math.max(1,page.offsetWidth);return (footer.getBoundingClientRect().top-front.getBoundingClientRect().top)/Math.max(.0001,factor)-8}
+function fitPatchPdfFixtureTotal(details){
+  const total=details.querySelector('.patchPdfFixtureTotal');if(!total)return;
+  total.style.fontSize='';const style=getComputedStyle(total),width=Math.max(1,total.clientWidth-parseFloat(style.paddingLeft||0)-parseFloat(style.paddingRight||0)),base=parseFloat(style.fontSize)||16;
+  const font=size=>`${style.fontStyle} ${style.fontWeight} ${size}px ${style.fontFamily}`;let size=base;
+  while(size>1&&patchTextWidth(total.textContent,font(size))>width)size=Math.max(1,size-.25);
+  total.style.fontSize=size+'px';
+}
 function fitPatchPdfFrontPage(front){
   if(!front)return;
   const tables=front.querySelector('.patchPdfFrontTables'),details=front.querySelector('.patchPdfFrontDetails'),notes=front.querySelector('.patchPdfSummaryNotes'),control=front.dataset.control==='true';
@@ -68,7 +75,7 @@ function fitPatchPdfFrontPage(front){
   if(notes){notes.style.width='100%';layoutPatchPdfNotes(front);const height=Math.max(1,notes.scrollHeight),scale=Math.min(1,space*.45/height);notesHeight=height*scale;notes.style.top=(space-notesHeight)+'px';notes.style.transform=`scale(${scale})`;notes.dataset.frontScale=String(scale)}
   const available=Math.max(1,space-notesHeight-(notes?16:0)),reserve=control?Math.min(230,front.clientWidth*.3):0,gap=control?24:0;
   tables.style.width=(front.clientWidth-reserve-gap)+'px';details.style.width=(control?reserve:front.clientWidth)+'px';
-  fitPatchPdfConsoleTypes(front);
+  fitPatchPdfConsoleTypes(front);fitPatchPdfFixtureTotal(details);
   const header=tables.querySelector('thead'),page=front.closest('.exportPage'),factor=page.getBoundingClientRect().width/Math.max(1,page.offsetWidth),top=control&&header?Math.max(0,(header.getBoundingClientRect().top-front.getBoundingClientRect().top)/Math.max(.0001,factor)):0;
   const tableHeight=tables.scrollHeight,detailHeight=details.scrollHeight,naturalHeight=control?Math.max(tableHeight,top+detailHeight):tableHeight+16+detailHeight,scale=Math.min(1,available/Math.max(1,naturalHeight));
   tables.style.transform=`scale(${scale})`;tables.dataset.frontScale=String(scale);

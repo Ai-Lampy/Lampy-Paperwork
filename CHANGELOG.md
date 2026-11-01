@@ -1,3 +1,10 @@
+## V55.11 — Fixture Patch PDF layout corrections
+
+- Keep Parameters Available and its capacity indicator together on one line in preview and PDF output.
+- Fit the fixture-total text to its existing card on one line without widening the card or moving tables.
+- Prevent the PDF vendor-logo wrapper shrinking beneath its image, keeping the conditional divider outside the logo.
+- Reduce Fixture Summary and Console Info header padding and line height while retaining compact NPU rows.
+
 ## V55.10 — Approved Fixture Patch front page
 
 - Anchor front-page notes above the footer with Console Info on or off; use four equal columns filled across each row, 10px text and a 14px heading.

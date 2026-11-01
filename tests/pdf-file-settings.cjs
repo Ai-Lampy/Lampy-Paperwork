@@ -102,7 +102,7 @@ for(const vendor of [false,true])for(const secondary of [false,true]){
 }
 logoContext.ensureProjectInfo=()=>({secondaryLogo:{}});
 assert(!logoContext.exportLeftLogoMarkup('tourLogoExport',{vendor:true,secondary:true}).includes('pdfVendorLogoDivider'));
-assert(html.includes('.pdfVendorLogoDivider{display:flex;align-items:center;border-right:2px solid #9b9b9b;padding-right:12px}'));
+assert(html.includes('.pdfVendorLogoDivider{display:flex;align-items:center;width:max-content;min-width:max-content;border-right:2px solid #9b9b9b;padding-right:12px}'));
 for(const name of ['fixturePatchDomPdfBytes','powerPdfDomPdfBytes']){assert(source(name).includes('pdfDrawLogoDividers(doc,page,pageRect,scaleX,scaleY)'))}
 
 const dividerCalls=[];Object.assign(logoContext,{patchPdfElementBox:()=>({x:10,y:20,w:100,h:30}),pdfSetFill:(doc,colour)=>dividerCalls.push(colour),pdfRect:(doc,...args)=>dividerCalls.push(args)});

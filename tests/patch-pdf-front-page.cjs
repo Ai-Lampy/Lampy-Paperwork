@@ -49,7 +49,7 @@ for(const label of ['Show Fixture Summary','Show Console Info','Show Universe To
 const organise=source('organisePdfPreviewSidePane');assert(organise.includes("pdfPreviewSideSection('Notes','patchPdfNotesOptions')"));assert(organise.includes("pdfPreviewSideSection('Front Page','patchPdfFrontOptions')"));assert(organise.includes("ctl.hasAttribute('data-patch-pdf-notes-control'))notesSection.appendChild(ctl)"));
 assert(source('fixturePatchDomPdfBytes').includes('.patchPdfParameterTotal'));assert(html.includes('.patchPdfParameterTotal{font-weight:800;grid-column:1/-1}'));
 assert(html.includes('.fixturePatchFilterActions .patchFilterActionButton{height:38px;padding:8px 6px;font-size:14px}'));assert(source('patchUniverseAddressControls').includes('btn patchFilterActionButton'));assert(source('patchControlsMarkup').includes('class="btn patchFilterActionButton" type="button" onclick="clearPatchFilters()"'));
-vm.runInContext(realFit,c);c.layoutPatchPdfNotes=()=>{};c.fitPatchPdfConsoleTypes=()=>{};
+vm.runInContext(realFit,c);c.layoutPatchPdfNotes=()=>{};c.fitPatchPdfConsoleTypes=()=>{};c.fitPatchPdfFixtureTotal=()=>{};
 const style=()=>({cssText:'',transform:'',height:''});const tables={style:style(),dataset:{},scrollHeight:800,querySelectorAll:()=>[],querySelector:()=>({getBoundingClientRect:()=>({top:120})})},details={style:style(),dataset:{},scrollHeight:600},notes={style:style(),dataset:{},scrollHeight:60};const page={offsetWidth:1000,getBoundingClientRect:()=>({width:500}),querySelector:()=>({getBoundingClientRect:()=>({top:304})})},front={style:style(),dataset:{control:'true'},clientWidth:1000,querySelector:selector=>selector.includes('Tables')?tables:selector.includes('Details')?details:notes,closest:()=>page,getBoundingClientRect:()=>({top:100})};
 for(const control of ['true','false'])for(const noteHeight of [60,600]){
  front.dataset.control=control;notes.scrollHeight=noteHeight;c.fitPatchPdfFrontPage(front);assert.equal(front.style.height,'400px');assert.equal(front.dataset.frontScale,'1');
@@ -61,3 +61,14 @@ assert(source('fixturePatchDomPdfBytes').includes("page.querySelectorAll('.patch
 assert(html.includes('border:1.5px solid #9b9b9b;border-radius:20px'));assert(html.includes('.patchPdfFront[data-control="false"] .patchPdfSummaryTotals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))'));assert(html.includes('font-size:9pt;padding:1mm 1.5mm'));
 assert(source('fixturePatchDomPdfBytes').includes('patchPdfFrontTextScale(cell)'));assert(source('patchPdfDrawSummaryNoteLine').includes("text.startsWith('• ')"));assert(source('fixturePatchDomPdfBytes').includes("pdfRoundRect(doc,box.x,box.y"));
 console.log('PASS: approved stacked cover, mixed protocol headers and IP-only cells, compact headers, console text fitting, three draft fields, explicit notes commit, legacy notes, four-column row-first notes, bottom placement and capacity indicators, one-page fitting and vector borders/bullets.');
+
+// V55.11: keep capacity siblings together and fit fixture total without widening cards.
+assert(markup.includes('class="patchPdfCapacityPair"><span class="patchPdfCapacityValue"'));
+assert(html.includes('.patchPdfCapacityPair>.patchPdfCapacityValue{display:inline}'));
+assert(html.includes('.patchPdfCapacityPair>.patchPdfCapacityStatus{display:block;flex:none;margin:0}'));
+assert(html.includes('.patchPdfFront .patchPdfSupplementTable thead th{font-size:10pt;line-height:1.1;padding:1mm 1.5mm}'));
+const totalContext=vm.createContext({getComputedStyle:()=>({fontSize:'16px',paddingLeft:'12px',paddingRight:'12px',fontStyle:'normal',fontWeight:'700',fontFamily:'Georgia'}),patchTextWidth:(text,font)=>text.length*parseFloat(font.match(/([0-9.]+)px/)[1])*.6});
+vm.runInContext(code,totalContext);
+for(const width of [160,230,400]){const total={style:{},clientWidth:width,textContent:'Total Number of Fixtures = 72000'};totalContext.fitPatchPdfFixtureTotal({querySelector:()=>total});assert(parseFloat(total.style.fontSize)<=16);assert(total.textContent.length*parseFloat(total.style.fontSize)*.6<=width-24);if(width===400)assert.equal(total.style.fontSize,'16px')}
+assert(html.includes('.pdfVendorLogoDivider>.lightingVendorLogo{flex:none}'));
+console.log('PASS: single-line capacity and fixture total, compact headers and non-shrinking vendor divider.');
