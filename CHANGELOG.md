@@ -1,3 +1,10 @@
+## V55.10 — Approved Fixture Patch front page
+
+- Anchor front-page notes above the footer with Console Info on or off; use four equal columns filled across each row, 10px text and a 14px heading.
+- Fit Fixture Summary and Console Info columns to their contents; retain compact headers, totals, editable notes and bullet/numbered lists.
+- Show a green capacity tick when Parameters Available meets or exceeds Parameter Count, or a red cross below it, including vector PDF output.
+- Reserve space for notes before fitting tables and totals, keeping the front page clear of its footer.
+
 ## V55.9 — PDF export defaults and header sizes
 
 - Add Main Header Size and Sub Header Size controls to every PDF exporter, retaining Fixture Patch controls and saving other document sizes independently.

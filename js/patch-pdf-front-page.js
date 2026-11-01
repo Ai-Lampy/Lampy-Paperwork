@@ -10,12 +10,17 @@ function patchPdfControlData(){
   const npus=new Map();for(const item of data.npus){const ref=npuRefForItem(item),type=[ref?.manufacturer||item.manufacturer,ref?.name||item.name].filter(Boolean).join(' ')||'Unknown NPU';npus.set(type,(npus.get(type)||0)+1)}
   return {consoles,npus:[...npus].map(([type,quantity])=>({type,quantity})),parameters:homeParametersAvailable()};
 }
+function patchPdfCapacityMarkup(available,required=fixtureParametersRequired()){
+  if(typeof available!=='number'||!Number.isFinite(available)||!Number.isFinite(required))return '';
+  const enough=available>=required,label=enough?'Sufficient parameter capacity':'Insufficient parameter capacity';
+  return `<svg class="patchPdfCapacityStatus" data-capacity="${enough?'sufficient':'insufficient'}" role="img" aria-label="${label}" viewBox="0 0 16 16" width="14" height="14" style="color:${enough?'#008a00':'#c00000'}"><path d="${enough?'M2 8 L6 12 L14 3':'M3 3 L13 13 M13 3 L3 13'}" fill="none" stroke="currentColor" stroke-width="2.5"/></svg>`;
+}
 function patchPdfControlMarkup(data=patchPdfControlData()){
   const groups=new Map();for(const row of data.consoles){const key=JSON.stringify(row.protocols);if(!groups.has(key))groups.set(key,{protocols:row.protocols,rows:[]});groups.get(key).rows.push(row.cells)}
   if(!groups.size)groups.set('',{protocols:['Protocol 1','Protocol 2'],rows:[]});
   const tables=[...groups.values()].map((group,index)=>{
     const last=index===groups.size-1,headers=['Console Type','Console Name','Mode','Software Version',...group.protocols.map((name,i)=>name==='—'?'Protocol '+(i+1):name)];
-    return `<table class="patchPdfSupplementTable patchPdfControlTable"><colgroup>${[19,14,11,14,21,21].map(width=>`<col style="width:${width}%">`).join('')}</colgroup><thead><tr>${headers.map(value=>`<th>${escapeHtml(value)}</th>`).join('')}</tr></thead><tbody>${group.rows.map(row=>`<tr>${row.map((value,i)=>`<td${i===0?' data-console-type':''}>${escapeHtml(String(value))}</td>`).join('')}</tr>`).join('')||'<tr><td colspan="6">No consoles added.</td></tr>'}${last&&data.npus.length?`<tr class="patchPdfCompactControl"><th colspan="4">NPU Type</th><th colspan="2">Quantity</th></tr>${data.npus.map(row=>`<tr><td colspan="4">${escapeHtml(row.type)}</td><td colspan="2">${row.quantity}</td></tr>`).join('')}`:''}${last?`<tr class="patchPdfCompactControl"><th colspan="4">Parameters Available</th><td colspan="2">${escapeHtml(typeof data.parameters==='number'?data.parameters.toLocaleString():String(data.parameters))}</td></tr>`:''}</tbody></table>`;
+    return `<table class="patchPdfSupplementTable patchPdfControlTable"><thead><tr>${headers.map(value=>`<th>${escapeHtml(value)}</th>`).join('')}</tr></thead><tbody>${group.rows.map(row=>`<tr>${row.map((value,i)=>`<td${i===0?' data-console-type':''}>${escapeHtml(String(value))}</td>`).join('')}</tr>`).join('')||'<tr><td colspan="6">No consoles added.</td></tr>'}${last&&data.npus.length?`<tr class="patchPdfCompactControl"><th colspan="4">NPU Type</th><th colspan="2">Quantity</th></tr>${data.npus.map(row=>`<tr><td colspan="4">${escapeHtml(row.type)}</td><td colspan="2">${row.quantity}</td></tr>`).join('')}`:''}${last?`<tr class="patchPdfCompactControl"><th colspan="4">Parameters Available</th><td colspan="2"><span class="patchPdfCapacityValue">${escapeHtml(typeof data.parameters==='number'?data.parameters.toLocaleString():String(data.parameters))}</span> ${patchPdfCapacityMarkup(data.parameters)}</td></tr>`:''}</tbody></table>`;
   });return `<section class="patchPdfControl">${tables.join('')}</section>`;
 }
 function patchPdfNoteItems(pdf){return Array.isArray(pdf.summaryNoteItems)?pdf.summaryNoteItems.filter(value=>typeof value==='string'):String(pdf.summaryNotes||'').split(/\r?\n/)}
@@ -24,19 +29,17 @@ function patchPdfNotesEditor(pdf){
   if($('patchPdfNoteStyle'))$('patchPdfNoteStyle').value=pdf.summaryNoteStyle==='numbered'?'numbered':'bullet';
 }
 function addPatchPdfNoteField(value='',focus=false){const host=$('patchPdfSummaryNotes');if(!host)return;const label=document.createElement('label'),input=document.createElement('textarea');label.textContent='Note '+(host.children.length+1);input.rows=2;input.value=value;input.setAttribute('aria-label',label.textContent);label.appendChild(input);host.appendChild(label);if(focus)input.focus()}
-function patchPdfNotesColumns(items,style,width,measure,maxColumns=3){
-  const values=items.map(value=>value.trim()).filter(Boolean),wrap=w=>values.flatMap((text,index)=>{const prefix=style==='numbered'?`${index+1}. `:'• ',indent=' '.repeat(prefix.length);return patchSummaryNoteLines(text,Math.max(1,w-measure(prefix)),measure).map((line,i)=>(i?indent:prefix)+line)});
-  let columns=1,lines=wrap(width/2-26);
-  if(lines.length>4){columns=2;lines=wrap((width-24)/2);if(lines.length>8){columns=maxColumns;lines=wrap((width-24*(columns-1))/columns)}}
-  const chunks=[];if(columns===1)chunks.push(lines);else for(let i=0;i<lines.length;i+=4)chunks.push(lines.slice(i,i+4));
+function patchPdfNotesColumns(items,style,width,measure){
+  const columns=4,columnWidth=Math.max(1,(width-72)/columns);
+  const chunks=items.map(value=>value.trim()).filter(Boolean).map((text,index)=>{const prefix=style==='numbered'?`${index+1}. `:'• ',indent=' '.repeat(prefix.length);return patchSummaryNoteLines(text,Math.max(1,columnWidth-measure(prefix)),measure).map((line,i)=>(i?indent:prefix)+line)});
   return {columns,chunks};
 }
 function layoutPatchPdfNotes(front){
   const notes=front.querySelector('.patchPdfSummaryNotes');if(!notes)return;
-  const body=notes.querySelector('.patchPdfNotesBody'),items=JSON.parse(notes.dataset.items),style=getComputedStyle(body),font=`${style.fontStyle} ${style.fontWeight} ${style.fontSize} ${style.fontFamily}`,details=front.querySelector('.patchPdfFrontDetails'),measure=text=>patchTextWidth(text,font),control=front.dataset.control==='true';
-  const layout=control?{columns:1,chunks:[items.flatMap((text,index)=>patchSummaryNoteLines(text,Math.max(1,details.clientWidth-32-24),measure).map((line,i)=>(i?'   ':notes.dataset.listStyle==='numbered'?`${index+1}. `:'• ')+line))]}:patchPdfNotesColumns(items,notes.dataset.listStyle,details.clientWidth-28,measure);
-  notes.classList.toggle('manyNotes',layout.columns>1);body.style.gridTemplateColumns=`repeat(${layout.columns},minmax(0,1fr))`;body.replaceChildren();
-  layout.chunks.forEach(lines=>{const column=document.createElement('div');lines.forEach(text=>{const line=document.createElement('div');line.className='patchPdfSummaryNoteLine';line.textContent=text;column.appendChild(line)});body.appendChild(column)});
+  const body=notes.querySelector('.patchPdfNotesBody'),items=JSON.parse(notes.dataset.items),style=getComputedStyle(body),font=`${style.fontStyle} ${style.fontWeight} ${style.fontSize} ${style.fontFamily}`,measure=text=>patchTextWidth(text,font);
+  const layout=patchPdfNotesColumns(items,notes.dataset.listStyle,Math.max(1,notes.clientWidth-27),measure);
+  body.style.gridTemplateColumns='repeat(4,minmax(0,1fr))';body.replaceChildren();
+  layout.chunks.forEach(lines=>{const item=document.createElement('div');lines.forEach(text=>{const line=document.createElement('div');line.className='patchPdfSummaryNoteLine';line.textContent=text;item.appendChild(line)});body.appendChild(item)});
 }
 function appendPatchPdfFrontPage(pages,d,groups,pdf){
   const state=appendPatchPdfPage(pages,d),front=document.createElement('section'),tables=document.createElement('div'),details=document.createElement('aside');front.className='patchPdfFront';front.dataset.control=String(pdf.showControl===true);tables.className='patchPdfFrontTables';details.className='patchPdfFrontDetails';front.append(tables,details);state.page.appendChild(front);
@@ -47,36 +50,30 @@ function appendPatchPdfFrontPage(pages,d,groups,pdf){
   details.appendChild(totals);
   if(pdf.showControl===true)tables.insertAdjacentHTML('beforeend',patchPdfControlMarkup());
   const items=patchPdfNoteItems(pdf).map(value=>value.trim()).filter(Boolean);
-  if(pdf.showSummaryNotes!==false&&items.length){const notes=patchSummaryNotesBlock();notes.dataset.items=JSON.stringify(items);notes.dataset.listStyle=pdf.summaryNoteStyle==='numbered'?'numbered':'bullet';const body=document.createElement('div');body.className='patchPdfNotesBody';notes.appendChild(body);details.appendChild(notes)}
+  if(pdf.showSummaryNotes!==false&&items.length){const notes=patchSummaryNotesBlock();notes.dataset.items=JSON.stringify(items);notes.dataset.listStyle=pdf.summaryNoteStyle==='numbered'?'numbered':'bullet';const body=document.createElement('div');body.className='patchPdfNotesBody';notes.appendChild(body);front.appendChild(notes)}
   fitPatchPdfFrontPage(front);state.page.querySelectorAll('img').forEach(image=>{if(!image.complete){const refit=()=>{if(front.isConnected)fitPatchPdfFrontPage(front)};image.addEventListener('load',refit,{once:true});image.addEventListener('error',refit,{once:true})}});return state;
 }
 function patchPdfConsoleTypeSize(text,width,measure){let size=10;while(size>7&&measure(text,size)>width)size=Math.max(7,size-.25);return size}
 function fitPatchPdfConsoleTypes(front){front.querySelectorAll('[data-console-type]').forEach(cell=>{cell.style.fontSize='10pt';const style=getComputedStyle(cell),width=cell.clientWidth-parseFloat(style.paddingLeft)-parseFloat(style.paddingRight);cell.style.fontSize=patchPdfConsoleTypeSize(cell.textContent,width,(text,size)=>patchTextWidth(text,`${style.fontStyle} ${style.fontWeight} ${size}pt ${style.fontFamily}`))+'pt'})}
 function patchPdfFrontSpace(front){const page=front.closest('.exportPage'),footer=page.querySelector('.pdfPageFooter'),factor=page.getBoundingClientRect().width/Math.max(1,page.offsetWidth);return (footer.getBoundingClientRect().top-front.getBoundingClientRect().top)/Math.max(.0001,factor)-8}
-function patchPdfStackedReferenceHeight(front){
-  const reference=document.createElement('div');reference.style.cssText='position:absolute;visibility:hidden;left:-100000px;top:0;width:'+front.clientWidth+'px;display:flex;flex-direction:column';
-  const tables=front.querySelector('.patchPdfFrontTables').cloneNode(true);tables.style.cssText='display:grid;gap:5mm;width:100%;position:static;transform:none';
-  tables.querySelectorAll('[data-console-type]').forEach(cell=>cell.style.fontSize='10pt');tables.querySelectorAll('.patchPdfCompactControl th,.patchPdfCompactControl td').forEach(cell=>{cell.style.fontSize='10pt';cell.style.padding='2mm 1.5mm';cell.style.lineHeight='normal'});
-  const control=tables.querySelector('.patchPdfControl');if(control){const title=document.createElement('h2');title.className='patchPdfSupplementTitle';title.textContent='Control';control.prepend(title)}
-  const totals=front.querySelector('.patchPdfSummaryTotals');if(totals)tables.querySelector('.patchPdfSummary')?.appendChild(totals.cloneNode(true));reference.appendChild(tables);
-  const notes=front.querySelector('.patchPdfSummaryNotes');if(notes){const copy=patchSummaryNotesBlock(),body=document.createElement('div');body.style.cssText='font-size:12pt;white-space:pre-wrap;line-height:1.35';body.textContent=JSON.parse(notes.dataset.items).join('\n');copy.appendChild(body);reference.appendChild(copy)}
-  front.closest('.exportPage').appendChild(reference);const height=reference.scrollHeight;reference.remove();return height;
-}
 function fitPatchPdfFrontPage(front){
-  if(!front)return;const tables=front.querySelector('.patchPdfFrontTables'),details=front.querySelector('.patchPdfFrontDetails');front.style.transform='none';front.style.height='auto';tables.style.transform='none';tables.dataset.frontScale='1';details.style.cssText='';details.dataset.frontScale='1';front.dataset.frontScale='1';
+  if(!front)return;
+  const tables=front.querySelector('.patchPdfFrontTables'),details=front.querySelector('.patchPdfFrontDetails'),notes=front.querySelector('.patchPdfSummaryNotes'),control=front.dataset.control==='true';
+  front.style.transform='none';front.dataset.frontScale='1';
+  for(const part of [tables,details,notes].filter(Boolean)){part.style.cssText='';part.dataset.frontScale='1'}
+  tables.querySelectorAll('colgroup').forEach(group=>group.remove());
   const space=patchPdfFrontSpace(front);if(space<=0)throw new Error('The PDF header and footer leave no room for the front-page content.');
-  if(front.dataset.control==='true'){
-    // Retain natural table widths. Fit the stacked tables as a unit, leaving a readable detail column.
-    const reserve=Math.min(220,front.clientWidth*.3),referenceHeight=patchPdfStackedReferenceHeight(front),scale=Math.min(1,(front.clientWidth-reserve-24)/Math.max(1,front.clientWidth),space/Math.max(1,referenceHeight,tables.scrollHeight));
-    tables.style.transform=`scale(${scale})`;tables.dataset.frontScale=String(scale);
-    const left=front.clientWidth*scale+24;details.style.left=left+'px';details.style.width=Math.max(1,front.clientWidth-left)+'px';
-    const header=tables.querySelector('thead'),pageFactor=front.closest('.exportPage').getBoundingClientRect().width/front.closest('.exportPage').offsetWidth,top=header?(header.getBoundingClientRect().top-front.getBoundingClientRect().top)/Math.max(.0001,pageFactor):0;details.style.top=top+'px';
-    layoutPatchPdfNotes(front);const detailScale=Math.min(1,Math.max(1,space-top)/Math.max(1,details.scrollHeight));details.style.transform=`scale(${detailScale})`;details.dataset.frontScale=String(detailScale);front.style.height=space+'px';
-  }else{
-    layoutPatchPdfNotes(front);const scale=Math.min(1,space/Math.max(1,front.scrollHeight));front.style.transform=`scale(${scale})`;front.dataset.frontScale=String(scale);
-  }
+  front.style.height=space+'px';
+  let notesHeight=0;
+  if(notes){notes.style.width='100%';layoutPatchPdfNotes(front);const height=Math.max(1,notes.scrollHeight),scale=Math.min(1,space*.45/height);notesHeight=height*scale;notes.style.top=(space-notesHeight)+'px';notes.style.transform=`scale(${scale})`;notes.dataset.frontScale=String(scale)}
+  const available=Math.max(1,space-notesHeight-(notes?16:0)),reserve=control?Math.min(230,front.clientWidth*.3):0,gap=control?24:0;
+  tables.style.width=(front.clientWidth-reserve-gap)+'px';details.style.width=(control?reserve:front.clientWidth)+'px';
   fitPatchPdfConsoleTypes(front);
+  const header=tables.querySelector('thead'),page=front.closest('.exportPage'),factor=page.getBoundingClientRect().width/Math.max(1,page.offsetWidth),top=control&&header?Math.max(0,(header.getBoundingClientRect().top-front.getBoundingClientRect().top)/Math.max(.0001,factor)):0;
+  const tableHeight=tables.scrollHeight,detailHeight=details.scrollHeight,naturalHeight=control?Math.max(tableHeight,top+detailHeight):tableHeight+16+detailHeight,scale=Math.min(1,available/Math.max(1,naturalHeight));
+  tables.style.transform=`scale(${scale})`;tables.dataset.frontScale=String(scale);
+  details.style.left=(control?(front.clientWidth-reserve)*scale:0)+'px';details.style.top=((control?top:tableHeight+16)*scale)+'px';details.style.transform=`scale(${scale})`;details.dataset.frontScale=String(scale);
 }
-function patchPdfFrontTextScale(el){const front=el.closest?.('.patchPdfFront');if(!front)return 1;const part=el.closest('.patchPdfFrontTables,.patchPdfFrontDetails');return (Number(front.dataset.frontScale)||1)*(Number(part?.dataset.frontScale)||1)}
+function patchPdfFrontTextScale(el){const front=el.closest?.('.patchPdfFront');if(!front)return 1;const part=el.closest('.patchPdfFrontTables,.patchPdfFrontDetails,.patchPdfSummaryNotes');return (Number(front.dataset.frontScale)||1)*(Number(part?.dataset.frontScale)||1)}
 function patchPdfHasFrontPage(pdf){return pdf.showSummary!==false||pdf.showControl===true||pdf.showUniverseTotal!==false||(pdf.showSummaryNotes!==false&&patchPdfNoteItems(pdf).some(value=>value.trim()))}
 function updatePatchPdfFrontOptions(){fixturePatchViewOptions.pdf.showControl=$('patchPdfShowControl')?.checked===true;fixturePatchViewOptions.pdf.showUniverseTotal=$('patchPdfShowUniverseTotal')?.checked!==false;persist();renderFixturePatchPdfPreview()}
