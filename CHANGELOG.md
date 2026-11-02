@@ -1,3 +1,8 @@
+## V55.20 — Exclude rack labels from Position Summary
+
+- Exclude generated rack-name/location labels, including existing saved entries, from Home Position Summary and its PDF output.
+- Retain actual shared positions such as FOH and SR Dimmers, and preserve stored Position data and rack assignments.
+
 ## V55.19 — Rack window controls and Position Summary
 
 - Scale rack panel-restore controls to 0.85.

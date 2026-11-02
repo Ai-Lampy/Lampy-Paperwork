@@ -391,3 +391,13 @@ console.log('PASS: Rack header paired controls, divider, 0.85 scale, left restor
  assert(html.includes('.rackPanelRestoreButtons{scale:.85;transform-origin:left center;'));
 }
 console.log('PASS: scaled restore controls, rack-only summary exclusion and independent pop-out zoom controls.');
+
+{
+ const racks=[{name:'Floor Data Rack',location:'SR Dimmers'},{name:'FOH Rack',location:'FOH'}],rows=['Floor Data Rack - SR Dimmers','FOH Rack - FOH','FOH','SR Dimmers','Truss 1 SR'].map(name=>({name}));
+ const c=vm.createContext({app:{controlNetwork:{racks}},syncPositionsFromPatch(){},positionKey:v=>String(v||'').trim().toLowerCase(),positionLocationItems:()=>[...racks,{location:'FOH'},{location:'SR Dimmers'},{location:'FOH Rack - FOH'}],positionRowsForSort:()=>rows});
+ vm.runInContext(source('positionSummaryRows'),c);
+ assert.deepEqual(Array.from(c.positionSummaryRows(),p=>p.name),['FOH','SR Dimmers','Truss 1 SR']);assert.equal(rows.length,5,'Saved positions remain intact');
+ assert(source('positionSummaryMarkup').includes('positionSummaryRows()'));
+ assert(source('renderPositionSummaryPreview').includes('positionSummaryRows()'));
+}
+console.log('PASS: screenshot rack labels excluded from shared Home/PDF rows while real positions remain.');
