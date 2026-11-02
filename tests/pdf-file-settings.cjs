@@ -144,3 +144,17 @@ for(const [mode] of names.documents){
 assert(source('preparePdfPreviewFormatting').includes('[data-pdf-header-size-control]'));
 assert(source('beginPdfLogoPreview').includes('syncPdfHeaderSizeControls(mode,modalId)'));
 console.log('PASS: seven independent PDF page defaults, standard inheritance, saved header sizes, actual control handlers, CSS size propagation and nested Remaining-page Preview.');
+
+// V55.13: examples use the edited structure, not a document's selected override.
+renderProject.file={version:'4',projectName:'Example Tour'};
+renderProject.projectSettings.pdf.fileNames=names.normalise({separate:true,parts:names.defaults(),structures:[{id:'power-name',document:'power',parts:[{field:'custom',custom:'Power: Prep'},{field:'project'},{field:'blank'}]}],selections:{patch:'power-name'}});
+ctx.ensureProjectInfo=()=>renderProject;
+const exampleMarkup=ctx.pdfFilenameSettingsMarkup();
+assert(exampleMarkup.includes('V4_Fixture Patch_Example Tour.pdf'));
+assert(exampleMarkup.includes('Power- Prep_Example Tour.pdf'));
+assert.equal((exampleMarkup.match(/class="pdfFilenameExample"/g)||[]).length,2);
+assert(exampleMarkup.indexOf('Example filename (Fixture Patch)')>exampleMarkup.indexOf('data-filename-id="default"'));
+assert(exampleMarkup.indexOf('Example filename (Power Calculations)')>exampleMarkup.indexOf('data-filename-id="power-name"'));
+assert(ctx.pdfFilenameExampleMarkup([{field:'custom',custom:'<test>'},{field:'blank'},{field:'blank'}],'looms').includes('-test-.pdf'));
+assert(!ctx.pdfFilenameExampleMarkup([{field:'custom',custom:'<test>'}],'looms').includes('<test>'));
+console.log('PASS: default and per-document settings examples match filename rules and ignore unrelated selected overrides.');

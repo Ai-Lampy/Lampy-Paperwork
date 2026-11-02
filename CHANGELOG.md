@@ -1,3 +1,8 @@
+## V55.13 — PDF filename examples
+
+- Show an example filename below the default filename fields and each document-specific structure in Settings → Exports.
+- Use current project values and the same sanitisation, blank-field handling and PDF extension as downloads; refresh examples when field options, custom text or document choices change.
+
 ## V55.12 — Fixture Patch PDF spacing
 
 - Reduce first-page top padding and accumulated header margins for Fixture Patch PDFs.
