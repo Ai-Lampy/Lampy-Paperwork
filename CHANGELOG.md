@@ -1,3 +1,9 @@
+## V55.19 — Rack window controls and Position Summary
+
+- Scale rack panel-restore controls to 0.85.
+- Omit rack-only locations from Position Summary without deleting saved Positions or hiding locations shared with fixtures/devices.
+- Add independent Zoom Out, Fit and Zoom In controls to rack pop-out windows, including Dual View.
+
 ## V55.18 — Remember Device Config sorting
 
 - Save each Location/table’s sort column and direction with the project and restore them after reload or project loading.

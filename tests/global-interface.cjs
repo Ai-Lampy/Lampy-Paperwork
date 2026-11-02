@@ -376,3 +376,18 @@ assert.equal((source('rackWorkspaceMarkup').match(/rackPanelRestoreMarkup\(rack\
 assert(html.includes('.rackWorkspaceHeader .rackModeButtonRow{flex-wrap:nowrap;scale:.85;transform-origin:right center}'));
 assert(html.includes('.rackModeButtonRow>.rackViewModes{border-right:2px solid #9b9b9b;padding-right:10px;margin-right:4px}'));
 console.log('PASS: Rack header paired controls, divider, 0.85 scale, left restores and removed inventory summary.');
+
+{
+ const rack={location:'Rack Only'},shared={location:'Stage'},rows=[{name:'Rack Only'},{name:'Stage'},{name:'Manual'}];
+ const c=vm.createContext({app:{controlNetwork:{racks:[rack,shared]}},syncPositionsFromPatch(){},positionKey:v=>String(v||'').toLowerCase(),positionLocationItems:()=>[rack,shared,{location:'Stage'}],positionRowsForSort:()=>rows});
+ vm.runInContext(source('positionSummaryRows'),c);
+ assert.deepEqual(Array.from(c.positionSummaryRows(),p=>p.name),['Stage','Manual']);assert.equal(rows.length,3);
+}
+{
+ let refreshes=0;const zooms=new Map(),c=vm.createContext({rackPopoutZooms:zooms,rackPopoutWindow:()=>({document:{querySelector:()=>({style:{getPropertyValue:()=>'.5'}})}}),normaliseRackZoom:n=>Math.max(.1,Math.min(2,n)),syncRackPopoutWindow:()=>refreshes++});
+ vm.runInContext(source('adjustRackPopoutZoom'),c);c.adjustRackPopoutZoom('r','.05');assert.equal(zooms.get('r'),.55);c.adjustRackPopoutZoom('r','fit');assert(!zooms.has('r'));assert.equal(refreshes,2);
+ assert(source('syncRackPopoutWindow').includes('rackPopoutZoomControlsMarkup()'));
+ assert(source('syncRackPopoutWindow').includes("button.dataset.rackPopoutZoom"));
+ assert(html.includes('.rackPanelRestoreButtons{scale:.85;transform-origin:left center;'));
+}
+console.log('PASS: scaled restore controls, rack-only summary exclusion and independent pop-out zoom controls.');
