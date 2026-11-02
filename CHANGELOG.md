@@ -1,3 +1,9 @@
+## V55.14 — Whole-device PDF pagination
+
+- Keep each Device Config device and its included ports/interfaces together on one PDF page in Review, Print Preview and downloads.
+- Move complete device trees to the next page when necessary; scale an oversized tree to fit within the reserved header, VLAN and footer area.
+- Preserve row exclusions, independent Review collapse and repeated Location/table headings.
+
 ## V55.13 — PDF filename examples
 
 - Show an example filename below the default filename fields and each document-specific structure in Settings → Exports.
