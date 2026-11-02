@@ -1,3 +1,9 @@
+## V55.16 — Remember Device Config PDF collapse
+
+- Save collapsed PDF devices with the project and restore them when reopening Device Config export or reloading the project.
+- Use stable device identities so moving a device to another Location preserves its PDF collapse preference.
+- Save expansion changes without changing individual row exclusions; older projects start expanded.
+
 ## V55.15 — Device Config PDF collapse parity
 
 - Honour devices collapsed in Review in Print Preview and downloaded Device Config PDFs.
