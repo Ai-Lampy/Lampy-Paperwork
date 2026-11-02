@@ -158,3 +158,17 @@ assert(exampleMarkup.indexOf('Example filename (Power Calculations)')>exampleMar
 assert(ctx.pdfFilenameExampleMarkup([{field:'custom',custom:'<test>'},{field:'blank'},{field:'blank'}],'looms').includes('-test-.pdf'));
 assert(!ctx.pdfFilenameExampleMarkup([{field:'custom',custom:'<test>'}],'looms').includes('<test>'));
 console.log('PASS: default and per-document settings examples match filename rules and ignore unrelated selected overrides.');
+
+// All exporters use Fixture Patch first-page spacing without sharing size values.
+assert(html.includes('.exportPage.pdfFirstPage{padding-top:3mm}'));
+assert(html.includes('.exportPage.pdfFirstPage .pdfUnifiedHeaderLeft,.exportPage.pdfFirstPage .pdfUnifiedHeaderRight{margin-top:0}'));
+assert(html.includes('.exportPage.pdfFirstPage .pdfUnifiedHeaderCenter{margin-top:0;padding-bottom:2mm}'));
+assert(html.includes('.exportPage.pdfFirstPage .pdfUnifiedHeader{margin-bottom:3mm}'));
+assert(!html.includes('.patchPdfPreviewPage.pdfFirstPage'));
+assert(!html.includes('.positionPdfPreviewPage .pdfUnifiedHeader{min-height:18mm}'));
+assert(html.includes('.powerPdfDocumentHeader{display:grid!important;grid-auto-flow:row;row-gap:3px;width:100%!important;max-width:100%!important;box-sizing:border-box;text-align:center!important;border:0!important;background:transparent!important;margin:0!important;padding:2px 12px!important}'));
+ctx.beginPdfLogoPreview('power','testModal');ctx.updatePdfHeaderSize('headerMainSize',28);
+ctx.beginPdfLogoPreview('fanOut','testModal');assert.equal(ctx.pdfPreviewLogoState.headerMainSize,24);
+ctx.beginPdfLogoPreview('power','testModal');assert.equal(ctx.pdfPreviewLogoState.headerMainSize,28);
+assert.equal(renderProject.projectSettings.pdf.documentDefaults.looms.headerMainSize,24);
+console.log('PASS: shared first-page header spacing, matching title padding and independent per-document sizes.');

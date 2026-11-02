@@ -1,3 +1,9 @@
+## V55.17 — Shared PDF header spacing
+
+- Apply Fixture Patch first-page top spacing, logo margins, title spacing and divider gap to all PDF previews and exported pages.
+- Match other title containers to Fixture Patch padding and line spacing; remove Position Summary’s separate minimum header height.
+- Preserve document-specific heading content, independent Main/Sub Header Size values and remaining-page templates.
+
 ## V55.16 — Remember Device Config PDF collapse
 
 - Save collapsed PDF devices with the project and restore them when reopening Device Config export or reloading the project.

@@ -68,7 +68,7 @@ assert(html.includes('.pdfVendorLogoDivider>.lightingVendorLogo{flex:none}'));
 console.log('PASS: single-line fixture total, compact headers and non-shrinking vendor divider.');
 
 assert(!code.includes('patchPdfCapacity'));assert(!html.includes('patchPdfCapacity'));assert(markup.includes('32,768</td>'));
-assert(html.includes('.patchPdfPreviewPage.pdfFirstPage{padding-top:3mm}'));
-assert(html.includes('.patchPdfPreviewPage.pdfFirstPage .pdfUnifiedHeaderCenter{margin-top:0;padding-bottom:2mm}'));
-assert(html.includes('.patchPdfPreviewPage.pdfFirstPage .pdfUnifiedHeader{margin-bottom:3mm}'));
+assert(html.includes('.exportPage.pdfFirstPage{padding-top:3mm}'));
+assert(html.includes('.exportPage.pdfFirstPage .pdfUnifiedHeaderCenter{margin-top:0;padding-bottom:2mm}'));
+assert(html.includes('.exportPage.pdfFirstPage .pdfUnifiedHeader{margin-bottom:3mm}'));
 console.log('PASS: removed capacity indicators, compact first-page header and totals reaching the right edge at every tested scale.');
