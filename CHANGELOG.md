@@ -1,3 +1,10 @@
+## V55.12 — Fixture Patch PDF spacing
+
+- Reduce first-page top padding and accumulated header margins for Fixture Patch PDFs.
+- Extend summary-total cards to the right printable edge even when tables need scaling, retaining the gap beside the tables.
+- Remove Parameters Available tick/cross markup, styles and vector drawing; retain the numeric total.
+- Preserve bottom notes, compact table headers and the conditional vendor divider.
+
 ## V55.11 — Fixture Patch PDF layout corrections
 
 - Keep Parameters Available and its capacity indicator together on one line in preview and PDF output.

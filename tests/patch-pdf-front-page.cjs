@@ -12,9 +12,6 @@ assert.deepEqual(plain(c.patchPdfNoteItems({summaryNotes:'Old\nNotes'})),['Old',
 assert.equal(c.patchPdfConsoleTypeSize('short',100,()=>50),10);assert.equal(c.patchPdfConsoleTypeSize('long',100,(s,size)=>size*12),8.25);assert.equal(c.patchPdfConsoleTypeSize('very long',10,()=>500),7);
 for(const count of [0,3,4,5,6,10,13]){const result=c.patchPdfNotesColumns(Array.from({length:count},(_,i)=>'Note '+(i+1)),'numbered',1000,s=>s.length*6);assert.equal(result.columns,4);assert.equal(result.chunks.length,count);for(let i=0;i<count;i++)assert.equal(result.chunks[i][0],`${i+1}. Note ${i+1}`)}
 const wrapped=c.patchPdfNotesColumns(['a\nb\nc\nd\ne','second'],'bullet',1000,s=>s.length*6);assert.equal(wrapped.columns,4);assert.equal(wrapped.chunks[0].length,5);assert.equal(wrapped.chunks[1][0],'• second');
-for(const available of [15200,32768])assert(c.patchPdfCapacityMarkup(available).includes('data-capacity="sufficient"'));
-for(const available of [0,15199])assert(c.patchPdfCapacityMarkup(available).includes('data-capacity="insufficient"'));
-assert.equal(c.patchPdfCapacityMarkup('—'),'');assert.equal(c.patchPdfCapacityMarkup(NaN),'');assert(!markup.includes('<colgroup>'));
 assert(!html.includes('patchPdfFrontLayout'));assert(html.includes('>Add Note</button>'));assert(html.includes('onclick="updatePatchPdfSummaryNotes()">Update Notes'));assert(!html.includes('oninput="updatePatchPdfSummaryNotes()"'));
 let saves=0,renders=0;const fields=[{value:'Draft'},{value:'line two'},{value:''}],controls={patchPdfSummaryNotes:{querySelectorAll:()=>fields},patchPdfShowSummaryNotes:{checked:false},patchPdfNoteStyle:{value:'numbered'}},pdf={summaryNotes:'Committed',showSummaryNotes:true};
 Object.assign(c,{$:id=>controls[id],fixturePatchViewOptions:{pdf},persist:()=>saves++,renderFixturePatchPdfPreview:()=>renders++,syncPatchPdfSummaryNotesVisibility(){}});vm.runInContext(source('updatePatchPdfSummaryNotesVisibility')+'\n'+source('updatePatchPdfSummaryNotes'),c);
@@ -54,21 +51,24 @@ const style=()=>({cssText:'',transform:'',height:''});const tables={style:style(
 for(const control of ['true','false'])for(const noteHeight of [60,600]){
  front.dataset.control=control;notes.scrollHeight=noteHeight;c.fitPatchPdfFrontPage(front);assert.equal(front.style.height,'400px');assert.equal(front.dataset.frontScale,'1');
  const notesTop=parseFloat(notes.style.top),notesScale=Number(notes.dataset.frontScale),tableScale=Number(tables.dataset.frontScale),detailScale=Number(details.dataset.frontScale);
- assert(Math.abs(notesTop+noteHeight*notesScale-400)<.001);assert(800*tableScale<=notesTop-16+.001);assert(parseFloat(details.style.top)+600*detailScale<=notesTop-16+.001);
+ assert(Math.abs(notesTop+noteHeight*notesScale-400)<.001);assert(800*tableScale<=notesTop-16+.001);assert(Math.abs(parseFloat(details.style.left)+parseFloat(details.style.width)*detailScale-front.clientWidth)<.001);assert(parseFloat(details.style.top)+600*detailScale<=notesTop-16+.001);
 }
 assert(html.includes('font-size:14px;border-bottom:'));assert(html.includes('row-gap:4px;font-size:10px'));
-assert(source('fixturePatchDomPdfBytes').includes("page.querySelectorAll('.patchPdfCapacityStatus')"));assert(source('fixturePatchDomPdfBytes').includes('.patchPdfFront .patchPdfSummaryNotes'));
+assert(source('fixturePatchDomPdfBytes').includes('.patchPdfFront .patchPdfSummaryNotes'));
 assert(html.includes('border:1.5px solid #9b9b9b;border-radius:20px'));assert(html.includes('.patchPdfFront[data-control="false"] .patchPdfSummaryTotals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))'));assert(html.includes('font-size:9pt;padding:1mm 1.5mm'));
 assert(source('fixturePatchDomPdfBytes').includes('patchPdfFrontTextScale(cell)'));assert(source('patchPdfDrawSummaryNoteLine').includes("text.startsWith('• ')"));assert(source('fixturePatchDomPdfBytes').includes("pdfRoundRect(doc,box.x,box.y"));
-console.log('PASS: approved stacked cover, mixed protocol headers and IP-only cells, compact headers, console text fitting, three draft fields, explicit notes commit, legacy notes, four-column row-first notes, bottom placement and capacity indicators, one-page fitting and vector borders/bullets.');
+console.log('PASS: approved stacked cover, mixed protocol headers and IP-only cells, compact headers, console text fitting, three draft fields, explicit notes commit, legacy notes, four-column row-first notes, bottom placement, one-page fitting and vector borders/bullets.');
 
 // V55.11: keep capacity siblings together and fit fixture total without widening cards.
-assert(markup.includes('class="patchPdfCapacityPair"><span class="patchPdfCapacityValue"'));
-assert(html.includes('.patchPdfCapacityPair>.patchPdfCapacityValue{display:inline}'));
-assert(html.includes('.patchPdfCapacityPair>.patchPdfCapacityStatus{display:block;flex:none;margin:0}'));
 assert(html.includes('.patchPdfFront .patchPdfSupplementTable thead th{font-size:10pt;line-height:1.1;padding:1mm 1.5mm}'));
 const totalContext=vm.createContext({getComputedStyle:()=>({fontSize:'16px',paddingLeft:'12px',paddingRight:'12px',fontStyle:'normal',fontWeight:'700',fontFamily:'Georgia'}),patchTextWidth:(text,font)=>text.length*parseFloat(font.match(/([0-9.]+)px/)[1])*.6});
 vm.runInContext(code,totalContext);
 for(const width of [160,230,400]){const total={style:{},clientWidth:width,textContent:'Total Number of Fixtures = 72000'};totalContext.fitPatchPdfFixtureTotal({querySelector:()=>total});assert(parseFloat(total.style.fontSize)<=16);assert(total.textContent.length*parseFloat(total.style.fontSize)*.6<=width-24);if(width===400)assert.equal(total.style.fontSize,'16px')}
 assert(html.includes('.pdfVendorLogoDivider>.lightingVendorLogo{flex:none}'));
-console.log('PASS: single-line capacity and fixture total, compact headers and non-shrinking vendor divider.');
+console.log('PASS: single-line fixture total, compact headers and non-shrinking vendor divider.');
+
+assert(!code.includes('patchPdfCapacity'));assert(!html.includes('patchPdfCapacity'));assert(markup.includes('32,768</td>'));
+assert(html.includes('.patchPdfPreviewPage.pdfFirstPage{padding-top:3mm}'));
+assert(html.includes('.patchPdfPreviewPage.pdfFirstPage .pdfUnifiedHeaderCenter{margin-top:0;padding-bottom:2mm}'));
+assert(html.includes('.patchPdfPreviewPage.pdfFirstPage .pdfUnifiedHeader{margin-bottom:3mm}'));
+console.log('PASS: removed capacity indicators, compact first-page header and totals reaching the right edge at every tested scale.');

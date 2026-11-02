@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="Lampy Paperwork — browser-based lighting paperwork, fixture patch, power, network, rack and MVR tools." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111'/%3E%3Cpath d='M21 9h22v8l-5 9v9h-4v20h-4V35h-4v-9l-5-9z' fill='%23fff'/%3E%3C/svg%3E" />
-<title>Lampy Paperwork V55.11</title>
+<title>Lampy Paperwork V55.12</title>
 <style>
 :root{--label-w:18mm;--label-h:34mm;--label-gap:0.5mm;--gap-y:2mm;--radius:3mm;--border:1mm;--border-col:#ffffff;--front-aux-w:18mm;--front-aux-h:34mm;--front-output-w:72mm;--front-output-h:34mm;--rear-soca-w:70mm;--rear-soca-h:50mm;--rear-aux-w:85mm;--rear-aux-h:30mm;--rear-aux-gap:5mm;--rear-output-w:90mm;--rear-output-h:60mm;--top-size:18pt;--bottom-size:14pt;--top-align:center;--bottom-align:center;--top-v-align:center;--bottom-v-align:center;--top-font:Cochin,'Times New Roman',Times,serif;--bottom-font:Cochin,'Times New Roman',Times,serif;--top-weight:700;--bottom-weight:700;--top-transform:none;--bottom-transform:none;--top-text-align:center;--bottom-text-align:center;--app-font:Arial,Helvetica,sans-serif;--project-header-font:Arial,Helvetica,sans-serif;--project-subheader-font:Arial,Helvetica,sans-serif;--project-body-font:Arial,Helvetica,sans-serif}
 *{box-sizing:border-box}body{margin:0;font-family:var(--project-body-font);background:#f6f7f9;color:#111}h1{margin:0;font-size:28px;font-family:var(--project-header-font)}h2{font-family:var(--project-header-font)}h3,h4{font-family:var(--project-subheader-font)}h2,h3{margin:0 0 12px}button,input,select,textarea{font-style:inherit;font-variant-caps:inherit;font-weight:inherit;font-width:inherit;font-size:inherit;line-height:inherit;font-family:inherit;font-size-adjust:inherit;font-kerning:inherit;font-variant-alternates:inherit;font-variant-ligatures:inherit;font-variant-numeric:inherit;font-variant-east-asian:inherit;font-variant-position:inherit;font-variant-emoji:inherit;font-feature-settings:inherit;font-optical-sizing:inherit;font-variation-settings:inherit}.reportIssueBtn{border:2px solid #111;background:#fff;color:#111;border-radius:60px;padding:8px 8px;font-weight:900;text-decoration:none;white-space:nowrap}.reportIssueBtn:hover{background:#111;color:#fff}.btn{border:2px solid #000;background:rgb(217, 217, 217);border-radius:7px;padding:10px 12px;cursor:pointer}.btn:hover{background:#f7f9fc}.btn.primary{background:#00a61d;color:#fff;border:2px solid #000;font-weight:700}.btn.danger{color:#b42318}.btn.add{font-weight:800;font-size:14px;line-height:1;padding:8px;background:#00a61d;color:#fff;border:2px solid #000}.gear{font-size:24px;border:1px solid #d9dee7;background:#fff;border-radius:999px;width:44px;height:44px;cursor:pointer}.gear:hover{background:#f7f9fc}.tourLogoSlot{display:flex;align-items:center;justify-content:center;width:165px;min-width:0;max-width:100%}.tourLogo{display:block;max-width:160px;max-height:54px;object-fit:contain}.tourLogoExport{position:absolute;top:5mm;right:5mm;z-index:3}.tourLogoUploadPreview{border:1px dashed #cfd6e1;border-radius:8px;background:#fff;min-height:130px;display:flex;align-items:center;justify-content:center;padding:14px}.tourLogoUploadPreview img{max-width:260px;max-height:120px;object-fit:contain}.logoActions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}.menuButton{position:fixed;right:18px;top:18px;z-index:18;border:1px solid #d9dee7;background:#111;color:#fff;border-radius:999px;width:46px;height:46px;font-size:24px;font-weight:900;cursor:pointer;box-shadow:0 10px 28px rgba(16,24,40,.18)}.menuButton:hover{background:#2a2a2a}.actionSidebar{position:fixed;right:18px;top:74px;width:min(260px,calc(100vw - 36px));z-index:17;border:1px solid #dfe3ea;border-radius:10px;background:#fff;box-shadow:0 18px 48px rgba(16,24,40,.22);padding:12px;transform:translateX(calc(100% + 28px));transition:transform .18s ease}.actionMenuOpen .actionSidebar{transform:translateX(0)}.actionSidebar h2{font-size:15px;margin:0 0 10px}.actionSidebar .btn{width:100%;margin:0 0 8px;text-align:left;font-weight:800}
@@ -859,7 +859,7 @@ button.homeStat:hover,button.homeStat:focus-visible{background:#fff;outline:3px 
 .patchPdfFront{width:100%;position:relative;display:flex;flex-direction:column;gap:5mm;transform-origin:top left;font-family:var(--project-body-font)}
 .patchPdfFrontTables{display:grid;gap:5mm;align-items:start;width:100%;transform-origin:top left}.patchPdfFrontDetails{display:flex;flex-direction:column;gap:4mm;min-width:0;transform-origin:top left}
 .patchPdfFront[data-control="true"]{display:block}.patchPdfFront>.patchPdfFrontTables,.patchPdfFront>.patchPdfFrontDetails,.patchPdfFront>.patchPdfSummaryNotes{position:absolute;top:0;left:0;transform-origin:top left}
-.patchPdfFront .patchPdfSummaryTable{width:100%!important}.patchPdfFront .patchPdfSupplementTable{table-layout:auto}.patchPdfFront .patchPdfSummaryTable th:nth-child(n+3),.patchPdfFront .patchPdfSummaryTable td:nth-child(n+3){width:1%;white-space:nowrap}.patchPdfCapacityPair{display:inline-flex;align-items:center;justify-content:center;gap:4px;white-space:nowrap}.patchPdfCapacityPair>.patchPdfCapacityValue{display:inline}.patchPdfCapacityPair>.patchPdfCapacityStatus{display:block;flex:none;margin:0}.patchPdfFront .patchPdfSupplementTable thead th{font-size:10pt;line-height:1.1;padding:1mm 1.5mm}.patchPdfFront .patchPdfFixtureTotal{white-space:nowrap}.patchPdfFrontTables>section{min-width:0}.patchPdfControl{display:grid;gap:4mm;min-width:0}.patchPdfControlTable th{font-size:10pt;overflow-wrap:anywhere}.patchPdfControlTable td{text-align:center;vertical-align:middle;overflow-wrap:anywhere}.patchPdfControlTable .patchPdfCompactControl th,.patchPdfControlTable .patchPdfCompactControl td{font-size:9pt;padding:1mm 1.5mm;line-height:1.15}
+.patchPdfFront .patchPdfSummaryTable{width:100%!important}.patchPdfFront .patchPdfSupplementTable{table-layout:auto}.patchPdfFront .patchPdfSummaryTable th:nth-child(n+3),.patchPdfFront .patchPdfSummaryTable td:nth-child(n+3){width:1%;white-space:nowrap}.patchPdfFront .patchPdfSupplementTable thead th{font-size:10pt;line-height:1.1;padding:1mm 1.5mm}.patchPdfFront .patchPdfFixtureTotal{white-space:nowrap}.patchPdfFrontTables>section{min-width:0}.patchPdfControl{display:grid;gap:4mm;min-width:0}.patchPdfControlTable th{font-size:10pt;overflow-wrap:anywhere}.patchPdfControlTable td{text-align:center;vertical-align:middle;overflow-wrap:anywhere}.patchPdfControlTable .patchPdfCompactControl th,.patchPdfControlTable .patchPdfCompactControl td{font-size:9pt;padding:1mm 1.5mm;line-height:1.15}
 .patchPdfFront .patchPdfSummaryNotes{margin:0;border:1.5px solid #9b9b9b;border-radius:20px;padding:8px 12px}.patchPdfFront .patchPdfSummaryNotesTitle{font-size:14px;border-bottom:1px solid #9b9b9b;padding-bottom:2mm;text-align:center}.patchPdfNotesBody{display:grid;column-gap:24px;row-gap:4px;font-size:10px;line-height:1.35}.patchPdfNotesBody .patchPdfSummaryNoteLine{min-height:1.35em;margin:0;white-space:pre;text-align:left}
 .patchPdfFrontDetails .patchPdfParameterTotal,.patchPdfFrontDetails .patchPdfFixtureTotal,.patchPdfFrontDetails .patchPdfUniverseTotal{border:1.5px solid #9b9b9b;border-radius:20px;text-align:center;padding:8px 12px;display:flex;align-items:center;justify-content:center;margin:0}
 .patchPdfFront[data-control="false"] .patchPdfSummaryTotals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6mm}.patchPdfFront .patchPdfSummaryNotes{width:100%}.patchPdfFront[data-control="false"] .patchPdfFrontTables th{font-size:10pt;padding:1mm 1.5mm;line-height:1.15}
@@ -887,6 +887,7 @@ button.homeStat:hover,button.homeStat:focus-visible{background:#fff;outline:3px 
 
 .loomPdfTable .loomBoxItRow td{color:#c00000;font-weight:900;border-top:2px solid #000}
 .pdfDocumentDefaultsRow{display:grid;grid-template-columns:minmax(150px,1fr) repeat(3,minmax(0,1fr));gap:12px;align-items:end;margin-top:12px}.pdfDocumentDefaultsRow select{width:100%;min-width:0}@media(max-width:650px){.pdfDocumentDefaultsRow{grid-template-columns:1fr}.pdfDocumentDefaultsRow strong{margin-top:8px}}
+.patchPdfPreviewPage.pdfFirstPage{padding-top:3mm}.patchPdfPreviewPage.pdfFirstPage .pdfUnifiedHeaderLeft,.patchPdfPreviewPage.pdfFirstPage .pdfUnifiedHeaderRight{margin-top:0}.patchPdfPreviewPage.pdfFirstPage .pdfUnifiedHeaderCenter{margin-top:0;padding-bottom:2mm}.patchPdfPreviewPage.pdfFirstPage .pdfUnifiedHeader{margin-bottom:3mm}
 </style>
 <style>.deviceConfigDeleteCol{width:34px!important;min-width:34px!important;padding:1px!important}.deviceConfigDeleteButton{width:32px;height:20px;border:0;border-radius:4px;background:transparent;color:#c00000;font:900 18px/1 Arial,sans-serif;cursor:pointer}.deviceConfigDeleteButton:hover,.deviceConfigDeleteButton:focus-visible{background:#fff0f0;outline:2px solid #c00000;outline-offset:-1px}
 </style>
@@ -1070,11 +1071,11 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 </style>
 <style id="dynamicPrintPageStyle">@page{size:A4 landscape;margin:5mm}
 </style>
-<link rel="stylesheet" href="js/app-sidebar.css?v=55.11">
-<script src="js/patch-pdf-front-page.js?v=55.11"></script>
-<script src="js/loom-pdf.js?v=55.11"></script>
-<script src="js/loom-colours.js?v=55.11"></script>
-<script src="js/app-sidebar.js?v=55.11"></script>
+<link rel="stylesheet" href="js/app-sidebar.css?v=55.12">
+<script src="js/patch-pdf-front-page.js?v=55.12"></script>
+<script src="js/loom-pdf.js?v=55.12"></script>
+<script src="js/loom-colours.js?v=55.12"></script>
+<script src="js/app-sidebar.js?v=55.12"></script>
 </head>
 <body>
 <header class="topHeader"><div class="top"><div id="projectHeaderLogoSlot" class="topLogoGroup"></div><div class="topTitle"><h1 id="appTitle">Untitled Project</h1></div><div class="topActions"><div id="tourLogoSlot" class="tourLogoSlot"></div><div class="projectErrorsControl"><button type="button" class="reportIssueBtn" id="projectErrorsButton" aria-haspopup="menu" aria-expanded="false" aria-controls="projectErrorsMenu" onclick="toggleProjectErrorsMenu()">Errors<span id="projectErrorsBadge" class="projectErrorsBadge" hidden></span></button><div id="projectErrorsMenu" class="projectErrorsMenu" role="menu" hidden></div></div></div></div>
@@ -1155,18 +1156,18 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 <div id="positionPdfModal" class="modal hidden"><div class="modalCard" style="width:min(1200px,100%);"><div class="modalHead"><h2>Position Summary Export</h2><button class="close" onclick="closePositionSummaryPreview()">×</button></div><div class="exportControls"><div class="ctl"><label>Paper Size</label><select id="positionPdfPaperSize"><option value="A4">A4</option><option value="A3">A3</option><option value="A2">A2</option><option value="A1">A1</option><option value="A0">A0</option></select></div><div class="ctl"><label>Orientation</label><select id="positionPdfOrientation"><option value="landscape">Landscape</option><option value="portrait">Portrait</option></select></div><div class="ctl" data-pdf-preview-dpi-control><label>Export DPI</label><select data-pdf-preview-dpi onchange="updatePdfPreviewDpi(this)"><option value="150">150 DPI</option><option value="300" selected>300 DPI</option><option value="450">450 DPI</option></select></div><div class="ctl"><label>Zoom</label><div class="zoomControls"><button class="btn" type="button" data-position-pdf-zoom="fit">Fit</button><button class="btn" type="button" data-position-pdf-zoom="0.5">50%</button><button class="btn" type="button" data-position-pdf-zoom="0.75">75%</button><button class="btn" type="button" data-position-pdf-zoom="1">100%</button><button class="btn" type="button" data-position-pdf-zoom="1.25">125%</button></div></div><div class="ctl"><label>Layout</label><select id="positionPdfLayout" onchange="updatePositionSummaryLayout(this.value)"><option value="rectangles">Rectangles</option><option value="boxes">Boxes</option></select></div><div class="ctl"><label>Columns</label><input id="positionPdfColumns" type="number" min="1" max="8" value="2" onchange="updatePositionSummaryGrid()"></div><div class="ctl"><label>Rows</label><input id="positionPdfRows" type="number" min="1" max="12" value="6" onchange="updatePositionSummaryGrid()"></div><div class="ctl"><button class="btn primary" type="button" onclick="downloadPositionSummary()">Export to PDF</button></div><div class="ctl" data-pdf-logo-preview-controls></div><div class="hint" id="positionPdfInfo"></div></div><div class="pdfPageStage"><div id="positionPdfPages"></div></div></div></div>
 <aside id="distroSettingsModal" class="frontEditorPane hidden"><div class="frontEditorHead"><h2>Add Distro</h2><button class="close" type="button" onclick="closeDistroSettings()">×</button></div><div class="frontEditorBody"><div id="distroCards"></div></div></aside>
 <aside id="singleDistroSettingsModal" class="frontEditorPane hidden"><div class="frontEditorHead"><h2 id="singleDistroSettingsTitle">Distro Settings</h2><button class="close" onclick="closeSingleDistroSettings()">×</button></div><div id="singleDistroSettingsBody" class="frontEditorBody"></div></aside>
-<script src="js/distro-catalogue.js?v=55.11"></script>
-<script src="js/cable-catalogue.js?v=55.11"></script>
-<script src="js/project-core.js?v=55.11"></script>
-<script src="js/archive.js?v=55.11"></script>
-<script src="js/ui-support.js?v=55.11" defer></script>
-<script src="js/patch-address-review.js?v=55.11" defer></script>
-<script src="js/patch-history.js?v=55.11"></script>
-<script src="js/pdf-filenames.js?v=55.11"></script>
-<script src="js/app-updates.js?v=55.11"></script>
+<script src="js/distro-catalogue.js?v=55.12"></script>
+<script src="js/cable-catalogue.js?v=55.12"></script>
+<script src="js/project-core.js?v=55.12"></script>
+<script src="js/archive.js?v=55.12"></script>
+<script src="js/ui-support.js?v=55.12" defer></script>
+<script src="js/patch-address-review.js?v=55.12" defer></script>
+<script src="js/patch-history.js?v=55.12"></script>
+<script src="js/pdf-filenames.js?v=55.12"></script>
+<script src="js/app-updates.js?v=55.12"></script>
 <script>
 'use strict';
-const VERSION='55.11';
+const VERSION='55.12';
 const AUTOSAVE_DELAY=700;
 const BACKGROUND_VALIDATION_DELAY=180;
 const DEFAULT_FONT="Cochin,'Times New Roman',Times,serif";
@@ -5134,10 +5135,10 @@ async function fixturePatchDomPdfBytes(){
         const box=patchPdfElementBox(pageRect,cell,scaleX,scaleY),style=getComputedStyle(cell),heading=cell.tagName==='TH';
         if(heading){pdfSetFill(doc,pdfCssColour(style.backgroundColor,'#8d8d8d'));pdfRect(doc,box.x,box.y,box.w,box.h,'f')}
         patchPdfDrawDomBorder(doc,box,heading?'#000000':'#9b9b9b',heading?1:.45,false);
-        const frontScale=patchPdfFrontTextScale(cell),capacity=cell.querySelector('.patchPdfCapacityValue');patchPdfDrawDomText(doc,capacity||cell,capacity?patchPdfElementBox(pageRect,capacity,scaleX,scaleY):box,{scaleY:scaleY*frontScale,pad:capacity?0:3*frontScale,bold:heading});
+        const frontScale=patchPdfFrontTextScale(cell);patchPdfDrawDomText(doc,cell,box,{scaleY:scaleY*frontScale,pad:3*frontScale,bold:heading});
       });
     });
-    page.querySelectorAll('.patchPdfCapacityStatus').forEach(icon=>{const box=patchPdfElementBox(pageRect,icon,scaleX,scaleY),enough=icon.dataset.capacity==='sufficient';pdfSetStroke(doc,enough?'#008a00':'#c00000');const segments=enough?[[2,8,6,12],[6,12,14,3]]:[[3,3,13,13],[13,3,3,13]];segments.forEach(([x1,y1,x2,y2])=>pdfLine(doc,box.x+x1*box.w/16,box.y+y1*box.h/16,box.x+x2*box.w/16,box.y+y2*box.h/16,2.5*box.w/16))});
+
     pdfDrawLogoDividers(doc,page,pageRect,scaleX,scaleY);
     for(const img of page.querySelectorAll('img')){
       const src=img.getAttribute('src');

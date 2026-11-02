@@ -10,17 +10,12 @@ function patchPdfControlData(){
   const npus=new Map();for(const item of data.npus){const ref=npuRefForItem(item),type=[ref?.manufacturer||item.manufacturer,ref?.name||item.name].filter(Boolean).join(' ')||'Unknown NPU';npus.set(type,(npus.get(type)||0)+1)}
   return {consoles,npus:[...npus].map(([type,quantity])=>({type,quantity})),parameters:homeParametersAvailable()};
 }
-function patchPdfCapacityMarkup(available,required=fixtureParametersRequired()){
-  if(typeof available!=='number'||!Number.isFinite(available)||!Number.isFinite(required))return '';
-  const enough=available>=required,label=enough?'Sufficient parameter capacity':'Insufficient parameter capacity';
-  return `<svg class="patchPdfCapacityStatus" data-capacity="${enough?'sufficient':'insufficient'}" role="img" aria-label="${label}" viewBox="0 0 16 16" width="14" height="14" style="color:${enough?'#008a00':'#c00000'}"><path d="${enough?'M2 8 L6 12 L14 3':'M3 3 L13 13 M13 3 L3 13'}" fill="none" stroke="currentColor" stroke-width="2.5"/></svg>`;
-}
 function patchPdfControlMarkup(data=patchPdfControlData()){
   const groups=new Map();for(const row of data.consoles){const key=JSON.stringify(row.protocols);if(!groups.has(key))groups.set(key,{protocols:row.protocols,rows:[]});groups.get(key).rows.push(row.cells)}
   if(!groups.size)groups.set('',{protocols:['Protocol 1','Protocol 2'],rows:[]});
   const tables=[...groups.values()].map((group,index)=>{
     const last=index===groups.size-1,headers=['Console Type','Console Name','Mode','Software Version',...group.protocols.map((name,i)=>name==='—'?'Protocol '+(i+1):name)];
-    return `<table class="patchPdfSupplementTable patchPdfControlTable"><thead><tr>${headers.map(value=>`<th>${escapeHtml(value)}</th>`).join('')}</tr></thead><tbody>${group.rows.map(row=>`<tr>${row.map((value,i)=>`<td${i===0?' data-console-type':''}>${escapeHtml(String(value))}</td>`).join('')}</tr>`).join('')||'<tr><td colspan="6">No consoles added.</td></tr>'}${last&&data.npus.length?`<tr class="patchPdfCompactControl"><th colspan="4">NPU Type</th><th colspan="2">Quantity</th></tr>${data.npus.map(row=>`<tr><td colspan="4">${escapeHtml(row.type)}</td><td colspan="2">${row.quantity}</td></tr>`).join('')}`:''}${last?`<tr class="patchPdfCompactControl"><th colspan="4">Parameters Available</th><td colspan="2"><span class="patchPdfCapacityPair"><span class="patchPdfCapacityValue">${escapeHtml(typeof data.parameters==='number'?data.parameters.toLocaleString():String(data.parameters))}</span> ${patchPdfCapacityMarkup(data.parameters)}</span></td></tr>`:''}</tbody></table>`;
+    return `<table class="patchPdfSupplementTable patchPdfControlTable"><thead><tr>${headers.map(value=>`<th>${escapeHtml(value)}</th>`).join('')}</tr></thead><tbody>${group.rows.map(row=>`<tr>${row.map((value,i)=>`<td${i===0?' data-console-type':''}>${escapeHtml(String(value))}</td>`).join('')}</tr>`).join('')||'<tr><td colspan="6">No consoles added.</td></tr>'}${last&&data.npus.length?`<tr class="patchPdfCompactControl"><th colspan="4">NPU Type</th><th colspan="2">Quantity</th></tr>${data.npus.map(row=>`<tr><td colspan="4">${escapeHtml(row.type)}</td><td colspan="2">${row.quantity}</td></tr>`).join('')}`:''}${last?`<tr class="patchPdfCompactControl"><th colspan="4">Parameters Available</th><td colspan="2">${escapeHtml(typeof data.parameters==='number'?data.parameters.toLocaleString():String(data.parameters))}</td></tr>`:''}</tbody></table>`;
   });return `<section class="patchPdfControl">${tables.join('')}</section>`;
 }
 function patchPdfNoteItems(pdf){return Array.isArray(pdf.summaryNoteItems)?pdf.summaryNoteItems.filter(value=>typeof value==='string'):String(pdf.summaryNotes||'').split(/\r?\n/)}
@@ -79,7 +74,8 @@ function fitPatchPdfFrontPage(front){
   const header=tables.querySelector('thead'),page=front.closest('.exportPage'),factor=page.getBoundingClientRect().width/Math.max(1,page.offsetWidth),top=control&&header?Math.max(0,(header.getBoundingClientRect().top-front.getBoundingClientRect().top)/Math.max(.0001,factor)):0;
   const tableHeight=tables.scrollHeight,detailHeight=details.scrollHeight,naturalHeight=control?Math.max(tableHeight,top+detailHeight):tableHeight+16+detailHeight,scale=Math.min(1,available/Math.max(1,naturalHeight));
   tables.style.transform=`scale(${scale})`;tables.dataset.frontScale=String(scale);
-  details.style.left=(control?(front.clientWidth-reserve)*scale:0)+'px';details.style.top=((control?top:tableHeight+16)*scale)+'px';details.style.transform=`scale(${scale})`;details.dataset.frontScale=String(scale);
+  const detailsLeft=control?(front.clientWidth-reserve-gap)*scale+gap:0;details.style.width=(Math.max(1,front.clientWidth-detailsLeft)/scale)+'px';fitPatchPdfFixtureTotal(details);
+  details.style.left=detailsLeft+'px';details.style.top=((control?top:tableHeight+16)*scale)+'px';details.style.transform=`scale(${scale})`;details.dataset.frontScale=String(scale);
 }
 function patchPdfFrontTextScale(el){const front=el.closest?.('.patchPdfFront');if(!front)return 1;const part=el.closest('.patchPdfFrontTables,.patchPdfFrontDetails,.patchPdfSummaryNotes');return (Number(front.dataset.frontScale)||1)*(Number(part?.dataset.frontScale)||1)}
 function patchPdfHasFrontPage(pdf){return pdf.showSummary!==false||pdf.showControl===true||pdf.showUniverseTotal!==false||(pdf.showSummaryNotes!==false&&patchPdfNoteItems(pdf).some(value=>value.trim()))}
