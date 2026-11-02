@@ -1,3 +1,10 @@
+## V55.18 — Remember Device Config sorting
+
+- Save each Location/table’s sort column and direction with the project and restore them after reload or project loading.
+- Keep table sorting independent across page switches, other tables and Control; older projects default to Name ascending.
+
+- Place Rack Layout view/display controls together at 0.85 scale with a divider; move panel-restore controls left and remove the header inventory summary.
+
 ## V55.17 — Shared PDF header spacing
 
 - Apply Fixture Patch first-page top spacing, logo margins, title spacing and divider gap to all PDF previews and exported pages.

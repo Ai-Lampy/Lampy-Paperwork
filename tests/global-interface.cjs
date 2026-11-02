@@ -71,7 +71,7 @@ const c=vm.createContext({});
  c.setRackPanelClosed('r','library',false);assert.equal(c.rackViewFaces.get('r'),'dual');
  c.setRackPanelClosed('r','settings',false);assert.equal(c.rackViewFaces.get('r'),'front');
  c.setRackView('r','dual');assert.equal(c.rackViewFor({id:'r'}),'front');assert(c.rackViewModesMarkup({id:'r'}).includes('Dual View'));
- c.rackInventorySummary=()=>'';c.rackViewModesMarkup=()=>'';c.rackDisplayModesMarkup=()=>'';c.rackPanelRestoreMarkup=()=>'';c.rackDeviceLibraryMarkup=()=>'<aside>library</aside>';c.rackSettingsCardMarkup=()=>'<aside>settings</aside>';c.escapeHtml=String;
+ c.rackViewModesMarkup=()=>'';c.rackDisplayModesMarkup=()=>'';c.rackPanelRestoreMarkup=()=>'';c.rackDeviceLibraryMarkup=()=>'<aside>library</aside>';c.rackSettingsCardMarkup=()=>'<aside>settings</aside>';c.escapeHtml=String;
  c.rackCardMarkup=(rack,face)=>'<section>'+ (face||'single')+'</section>';
  vm.runInContext(source('rackWorkspaceMarkup'),c);
  let markup=c.rackWorkspaceMarkup({id:'r',name:'Rack',units:12});assert(markup.includes('<section>front</section><section>rear</section>'));assert(markup.includes('library'));assert(markup.includes('settings'));
@@ -367,3 +367,12 @@ console.log('PASS: Home follows saved/default contact order, respects visibility
  for(const name of ['deviceConfigSortValue','controlTableSortValue'])assert(source(name).includes('controlDeviceSoftwareVersionText(item,device.source)'));
  console.log('PASS: NPU Master-derived versions, edits, custom/Mode 2 values, missing/ambiguous Masters and save/load without mutation.');
 }
+
+// V55.18 Rack header: restore controls left, compact paired modes right.
+assert(!html.includes('rackInventorySummary'));
+assert(source('rackWorkspaceMarkup').includes('<div class="rackWorkspaceHeaderRestore">${rackPanelRestoreMarkup(rack)}</div><div class="rackWorkspaceHeaderInfo">'));
+assert(source('rackWorkspaceMarkup').includes('${rackViewModesMarkup(rack)}${rackDisplayModesMarkup()}</div></div>'));
+assert.equal((source('rackWorkspaceMarkup').match(/rackPanelRestoreMarkup\(rack\)/g)||[]).length,1);
+assert(html.includes('.rackWorkspaceHeader .rackModeButtonRow{flex-wrap:nowrap;scale:.85;transform-origin:right center}'));
+assert(html.includes('.rackModeButtonRow>.rackViewModes{border-right:2px solid #9b9b9b;padding-right:10px;margin-right:4px}'));
+console.log('PASS: Rack header paired controls, divider, 0.85 scale, left restores and removed inventory summary.');
