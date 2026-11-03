@@ -5,8 +5,8 @@ const documentationMajor=html.match(/const VERSION='([^']+)'/)[1].split('.')[0];
 require('./release-documentation.cjs');
 require('./global-interface.cjs');
 const LampyCore=require('../js/project-core.js'),LampyArchive=require('../js/archive.js');
-assert(html.includes('<title>Lampy Paperwork V55.20</title>'));
-assert(html.includes("const VERSION='55.20';"));
+assert(html.includes('<title>Lampy Paperwork V55.22</title>'));
+assert(html.includes("const VERSION='55.22';"));
 const v472WidthLimits={colour:[30,40],socapex:[75,180],way:[20,30],fixId:[50,80],fixType:[60,190],position:[85,180],watts:[40,45],amps:[66,75]};
 const v475WidthCurrent={colour:30,socapex:112,way:26,fixId:59,fixType:117,position:115,watts:45,amps:72};
 const v472WidthSource=html.slice(html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS='),html.indexOf('let powerColumnWidthSettings=',html.indexOf('const POWER_COLUMN_WIDTH_DEFAULTS=')));
@@ -190,7 +190,18 @@ const newSupplyProject={powerSupplies:[]};supplyContext.ensureProjectInfo=()=>ne
 const supplyDraftProject={powerSupplies:[{id:'old',name:'Old',input:'32A 3ø',distros:[0,1]}]},supplyDraftContext=vm.createContext({app:{distros:[]},ensureProjectInfo:()=>supplyDraftProject,closePowerSupplyPane:()=>{},persist:()=>supplyDraftContext.persisted++,renderPowerSheetView:()=>supplyDraftContext.rendered++,distroRanges:()=>[],persisted:0,rendered:0});
 vm.runInContext("let powerSupplyDraft={id:'new',name:'New',input:'63A 3ø',distros:[1,2]};",supplyDraftContext);vm.runInContext(source('savePowerSupplyDraft'),supplyDraftContext);supplyDraftContext.savePowerSupplyDraft();assert.deepEqual(supplyDraftProject.powerSupplies.map(supply=>Array.from(supply.distros)),[[0],[1,2]]);assert.equal(supplyDraftContext.persisted,1);assert.equal(supplyDraftContext.rendered,1);
 assert(source('saveDeviceConfigPorts').includes("device.source==='network'&&index<2"));assert(source('updateDeviceConfigPortField').includes("if(key==='subnet')port.subnetGlobal=false"));assert(source('updateCanonicalNetworkAlias').includes("'console','npu','network'"));
-const subnetContext=vm.createContext({app:{projectInfo:{vlanSetup:{globalSubnet:'255.255.0.0'}}},persist:()=>subnetContext.persisted++,render:()=>subnetContext.rendered++,renderVlanSetupPane:()=>subnetContext.paneRendered++,persisted:0,rendered:0,paneRendered:0,networkDeviceSupportsTwoIps:item=>item.two===true,normaliseDeviceConfigPort:raw=>({category:raw.category||'network'})});for(const name of ['ipAddressOctets','normaliseIpAddressValue','globalSubnetForNewDevice','globalSubnetInheritanceEnabled','applyGlobalSubnetToDevices','applyGlobalSubnetToAllDevices'])vm.runInContext(source(name),subnetContext);const subnetProject={vlanSetup:{globalSubnet:'255.255.0.0',globalSubnetEnabled:false}},subnetData={consoles:[{deviceConfigPorts:[{id:'network',category:'network',subnet:'old'},{id:'dmx',category:'dmx',subnet:'keep'}]}],npus:[{}],networkDevices:[{two:true}]};subnetContext.ensureProjectInfo=()=>subnetProject;subnetContext.app.controlNetwork=subnetData;assert.equal(subnetContext.globalSubnetForNewDevice(),'255.255.0.0');assert.equal(subnetContext.globalSubnetInheritanceEnabled(),true);subnetContext.applyGlobalSubnetToAllDevices();assert.equal(subnetData.consoles[0].subnet1,'255.255.0.0');assert.equal(subnetData.consoles[0].subnet2,'255.255.0.0');assert.equal(subnetData.consoles[0].deviceConfigPorts[0].subnet,'255.255.0.0');assert.equal(subnetData.consoles[0].deviceConfigPorts[1].subnet,'keep');assert.equal(subnetData.npus[0].subnet,'255.255.0.0');assert.equal(subnetData.networkDevices[0].subnet1,'255.255.0.0');assert.equal(subnetData.networkDevices[0].subnet2,'255.255.0.0');assert.equal(subnetData.networkDevices[0].subnet1Global,true);assert.equal(subnetContext.persisted,1);
+const subnetContext=vm.createContext({app:{projectInfo:{vlanSetup:{globalSubnet:'255.255.0.0'}}},persist:()=>subnetContext.persisted++,render:()=>subnetContext.rendered++,renderVlanSetupPane:()=>subnetContext.paneRendered++,persisted:0,rendered:0,paneRendered:0,networkDeviceSupportsTwoIps:item=>item.two===true,normaliseDeviceConfigPort:raw=>({category:raw.category||'network'})});for(const name of ['networkDeviceAllowsIp','ipAddressOctets','normaliseIpAddressValue','globalSubnetForNewDevice','globalSubnetInheritanceEnabled','applyGlobalSubnetToDevices','applyGlobalSubnetToAllDevices'])vm.runInContext(source(name),subnetContext);const subnetProject={vlanSetup:{globalSubnet:'255.255.0.0',globalSubnetEnabled:false}},subnetData={consoles:[{deviceConfigPorts:[{id:'network',category:'network',subnet:'old'},{id:'dmx',category:'dmx',subnet:'keep'}]}],npus:[{}],networkDevices:[{two:true}]};subnetContext.ensureProjectInfo=()=>subnetProject;subnetContext.app.controlNetwork=subnetData;assert.equal(subnetContext.globalSubnetForNewDevice(),'255.255.0.0');assert.equal(subnetContext.globalSubnetInheritanceEnabled(),true);subnetContext.applyGlobalSubnetToAllDevices();assert.equal(subnetData.consoles[0].subnet1,'255.255.0.0');assert.equal(subnetData.consoles[0].subnet2,'255.255.0.0');assert.equal(subnetData.consoles[0].deviceConfigPorts[0].subnet,'255.255.0.0');assert.equal(subnetData.consoles[0].deviceConfigPorts[1].subnet,'keep');assert.equal(subnetData.npus[0].subnet,'255.255.0.0');assert.equal(subnetData.networkDevices[0].subnet1,'255.255.0.0');assert.equal(subnetData.networkDevices[0].subnet2,'255.255.0.0');assert.equal(subnetData.networkDevices[0].subnet1Global,true);assert.equal(subnetContext.persisted,1);
+// Unmanaged switches keep physical ports but have no assignable IP interfaces.
+const swisson=JSON.parse(fs.readFileSync(path.join(root,'json/rack_devices/swisson.json'),'utf8')).devices[0];
+assert.equal(swisson.supportsIpConfiguration,false);assert.equal(swisson.name,'8-Port Switch');assert.deepEqual(swisson.protocols,[]);
+const unmanaged={referenceId:'swisson-xes-8g',ip1:'',subnet1:'',deviceConfigPorts:[{category:'network',subnet:''}]};
+subnetData.networkDevices.push(unmanaged);subnetContext.applyGlobalSubnetToAllDevices();assert.equal(unmanaged.subnet1,'');assert.equal(unmanaged.deviceConfigPorts[0].subnet,'');
+for(const name of ['ipDeviceInterfaces','updateCanonicalDeviceField','updateDeviceConfigPortField'])vm.runInContext(source(name),subnetContext);
+assert.equal(subnetContext.ipDeviceInterfaces(unmanaged,'network').length,0);
+subnetContext.ipAddressSourceItem=()=>unmanaged;subnetContext.deviceConfigDeviceByKey=()=>({source:'network',reference:swisson});
+for(const key of ['ip1','ip2','subnet1','subnet2'])assert.equal(subnetContext.updateCanonicalDeviceField('network','test',key,'10.0.0.1'),false);
+for(const key of ['ip','subnet'])assert.equal(subnetContext.updateDeviceConfigPortField('network','test','port',key,'10.0.0.1'),false);
+assert.equal(unmanaged.ip1,'');assert.equal(unmanaged.subnet1,'');
 assert(!source('renderVlanSetupPane').includes('globalSubnetToggle'));assert(!source('commitIpSegmentedField').includes('applyGlobalSubnetToDevices'));assert(!html.includes('function toggleGlobalSubnet('));
 console.log('PASS: quota recovery, multi-tab guard, revisions, supply assignment and JSON-authoritative supply options');
 
@@ -225,8 +236,8 @@ function zip(name,data,compressed=false){const filename=Buffer.from(name),conten
  console.log('PASS: stored/deflated ZIP, CRC corruption, unsafe paths, extraction bounds and 10,000-fixture round trip');
 })().catch(error=>{console.error(error);process.exitCode=1});
 
-assert(html.includes('<title>Lampy Paperwork V55.20</title>'));
-assert(html.includes("const VERSION='55.20';"));
+assert(html.includes('<title>Lampy Paperwork V55.22</title>'));
+assert(html.includes("const VERSION='55.22';"));
 assert(!html.includes('function controlSubTabsMarkup('));
 assert(!html.includes('function setControlNetworkTab('));
 assert(source('renderConsolesTab').includes("controlUnifiedSectionMarkup('console')"));
@@ -239,8 +250,8 @@ assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/welcome_message.json'
 console.log('PASS: V49.2 Control Location text styling and release metadata.');
 
 const changelog=fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8');
-assert(changelog.startsWith('## V55.20 — Exclude rack labels from Position Summary'));
-assert(html.includes("const VERSION='55.20';"));
+assert(changelog.startsWith('## V55.22 — Replace rack devices'));
+assert(html.includes("const VERSION='55.22';"));
 assert(!html.includes('function projectYellowTextPresentation('));
 assert(!html.includes('function positionSummaryColourPresentation('));
 assert(!html.includes('function powerWhiteTextOutline('));
@@ -248,31 +259,31 @@ assert(html.includes("[data-front-label-colours]:not(.spareAuto)"));
 assert(html.includes("[data-rear-label-colours]:not(.spareAuto)"));
 console.log('PASS: V49.2 release metadata and unified Position rendering paths.');
 
-assert(html.includes('<title>Lampy Paperwork V55.20</title>'));
-assert(html.includes("const VERSION='55.20';"));
+assert(html.includes('<title>Lampy Paperwork V55.22</title>'));
+assert(html.includes("const VERSION='55.22';"));
 assert(html.includes('[data-colour-input]{-webkit-text-stroke:var(--colour-text-stroke-width,0) var(--colour-text-outline,transparent)!important'));
-assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V55.20 — Exclude rack labels from Position Summary'));
+assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V55.22 — Replace rack devices'));
 console.log('PASS: V49.3 editable colour-field outline release metadata.');
 
-assert(html.includes('<title>Lampy Paperwork V55.20</title>'));
-assert(html.includes("const VERSION='55.20';"));
+assert(html.includes('<title>Lampy Paperwork V55.22</title>'));
+assert(html.includes("const VERSION='55.22';"));
 assert(source('positionPdfItemMarkup').includes('data-position-summary-colours'));
 assert(source('preparePdfSocaColourLayers').includes('drawPdfPositionSummaryStripeCanvas'));
-assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V55.20 — Exclude rack labels from Position Summary'));
+assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V55.22 — Replace rack devices'));
 console.log('PASS: V49.4 Position Summary PDF colour release metadata.');
 
-assert(html.includes('<title>Lampy Paperwork V55.20</title>'));
-assert(html.includes("const VERSION='55.20';"));
+assert(html.includes('<title>Lampy Paperwork V55.22</title>'));
+assert(html.includes("const VERSION='55.22';"));
 assert(source('powerSheetRowMarkup').includes('powerSocaMultiColourBackground'));
 assert(source('fanOutRowMarkup').includes('powerSocaMultiColourBackground'));
 assert(source('preparePdfSocaColourLayers').includes('drawPdfSocaNameStripeCanvas'));
 assert(source('powerPdfDomPdfBytes').includes('drawPowerSocaStripeFill'));
-assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V55.20 — Exclude rack labels from Position Summary'));
+assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V55.22 — Replace rack devices'));
 console.log('PASS: V50 Socapex two-colour pattern release metadata.');
 
-assert(html.includes('<title>Lampy Paperwork V55.20</title>'));
-assert(html.includes("const VERSION='55.20';"));
-assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V55.20 — Exclude rack labels from Position Summary'));
+assert(html.includes('<title>Lampy Paperwork V55.22</title>'));
+assert(html.includes("const VERSION='55.22';"));
+assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').startsWith('## V55.22 — Replace rack devices'));
 assert(JSON.parse(fs.readFileSync(path.join(root,'info_txt/welcome_message.json'),'utf8')).title.includes('V'+documentationMajor));
 assert(fs.readFileSync(path.join(root,'tests/BROWSER-CHECKLIST.md'),'utf8').startsWith('# V'+documentationMajor+' browser release checks'));
 assert(source('networkSubTabsMarkup').includes('Port Configuration'));
@@ -293,8 +304,8 @@ for(const reader of ['mvrPatchRows','parseCsvRows','xlsxWorkbookSheets','xmlWork
 console.log('PASS: PDF patch import removed; CSV/Excel and MVR imports retained.');
 
 assert(html.includes('js/patch-address-review.js'));
-assert(html.includes("const VERSION='55.20';"));
-assert(changelog.startsWith('## V55.20 — Exclude rack labels from Position Summary'));
+assert(html.includes("const VERSION='55.22';"));
+assert(changelog.startsWith('## V55.22 — Replace rack devices'));
 assert(source('confirmPatchGroupEdit').includes('LampyPatchAddress.grouped'));
 assert(source('confirmPatchAddressReview').includes("recordFixturePatchUndo(draft.universeDestination?"));
 assert(source('confirmPatchAddressReview').includes('draft.snapshot!==patchAddressSnapshot()'));

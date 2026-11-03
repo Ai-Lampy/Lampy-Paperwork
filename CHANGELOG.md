@@ -1,3 +1,14 @@
+## V55.22 — Replace rack devices
+
+- Add Replace to Device Settings with a searchable Device Library picker and cancellation.
+- Keep rack position, face and selection; validate height, width, collisions and depth before replacing, and save once without jumping the page.
+- Preserve the removed device’s linked project equipment and reject stale selections or devices already placed elsewhere.
+
+## V55.21 — Unmanaged Swisson switch
+
+- Disable IP Address and Subnet assignment for the Swisson 8-Port Switch in device editors, tables and PDF output.
+- Exclude the unmanaged switch from global subnet assignment and IP validation while retaining its eight ports and rack placement.
+
 ## V55.20 — Exclude rack labels from Position Summary
 
 - Exclude generated rack-name/location labels, including existing saved entries, from Home Position Summary and its PDF output.

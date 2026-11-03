@@ -43,3 +43,22 @@ for(const widthFraction of [.5,1]){
 assert.equal(c.rackPortUniverseFontSize('12345',26,(text,size)=>text.length*size),4.8);assert.equal(c.rackPortUniverseFontSize('1',26,()=>5),12);assert.equal(c.rackPortUniverseFontSize('12345',1,()=>50),0);
 assert(html.includes('.rackSideDevice.half{background:rgba(255,255,255,.65);pointer-events:none}'));assert(html.includes('.rackSideDevice.half .rackSideDeviceLabel{pointer-events:auto;'));assert(source('rackSideCanvasMarkup').includes('draggable="true"'));assert(source('rackSettingsCardMarkup').includes('${!selected.sourceKey?'));
 console.log('PASS: custom detailed cards, full-height half-width Side devices, safe duplicate placement/save-once, 50/50 port colours and contained universe labels.');
+
+// Replacement keeps the slot/face, validates before creating linked equipment and saves once.
+{
+ const old={id:'old',sourceKey:'network:old',label:'Old',type:'Network Switch',heightU:2,widthFraction:.5,startU:2,rackSide:'right',mountFace:'rear',depthMm:200};
+ const rack={id:'replace-rack',units:6,depthMm:700,devices:[old]},sources={small:{key:'small',label:'Replacement',type:'Custom Device',uHeight:2,widthFraction:.5,depthMm:220},large:{key:'large',label:'Too tall',uHeight:6,widthFraction:1,depthMm:220},deep:{key:'deep',label:'Too deep',uHeight:1,widthFraction:1,depthMm:650},'library:new':{key:'library:new',label:'New Switch',type:'Network Switch',uHeight:1,widthFraction:1,depthMm:200}};
+ let saves=0,renders=0,created=0;const errors=[];
+ const r=vm.createContext({app:{controlNetwork:{racks:[rack],networkDevices:[{id:'old',ip1:'10.0.0.1'}]}},rackSourceForKey:key=>sources[key],rackDeviceDepth:d=>d.depthMm,rackId:()=> 'unused',alert:m=>errors.push(m),persist:()=>saves++,renderRackKeepingScroll:()=>renders++,$:()=>null,networkEquipmentFromRackLibrary:()=>{created++;return {id:'new'}},npuEquipmentFromRackLibrary:()=>null});
+ for(const name of ['normaliseRackU','rackPhysicalHeight','normaliseRackDevice','rackDeviceIsHalf','rackDevicesOverlapU','rackDevicesOverlapWidth','rackPairConflict','rackValidation','rackDeviceFits','rackUsedSourceKeys','closeRackReplacement','replaceRackDevice'])vm.runInContext(source(name),r);
+ const begin=()=>{r.rackReplacement={rackId:rack.id,deviceId:rack.devices[0].id,rack,snapshot:JSON.stringify(rack.devices[0])}};
+ begin();r.closeRackReplacement();assert.equal(r.replaceRackDevice('small'),false);assert.equal(saves,0);
+ begin();assert.equal(r.replaceRackDevice('large'),false);assert.equal(r.replaceRackDevice('deep'),false);assert.equal(rack.devices[0],old);assert.equal(created,0);assert.equal(saves,0);
+ rack.devices.push({...old,id:'neighbour',sourceKey:'',rackSide:'left'});assert.equal(r.replaceRackDevice('library:new'),false);assert.equal(created,0);rack.devices.pop();
+ assert.equal(r.replaceRackDevice('small'),true);assert.equal(saves,1);assert.equal(renders,1);assert.equal(rack.devices.length,1);for(const key of ['id','startU','rackSide','mountFace'])assert.equal(rack.devices[0][key],old[key]);assert.equal(rack.devices[0].heightU,2);assert.equal(rack.devices[0].widthFraction,.5);
+ begin();rack.devices[0].label='Changed';assert.equal(r.replaceRackDevice('small'),false);assert.equal(saves,1);
+ begin();assert.equal(r.replaceRackDevice('library:new'),true);assert.equal(created,1);assert.equal(saves,2);assert.equal(rack.devices[0].sourceKey,'network:new');assert.equal(r.app.controlNetwork.networkDevices[0].ip1,'10.0.0.1');
+ begin();r.app.controlNetwork.racks=[JSON.parse(JSON.stringify(rack))];assert.equal(r.replaceRackDevice('small'),false);assert.equal(saves,2);
+ assert(source('rackSettingsCardMarkup').includes('openRackReplacement'));assert(source('openRackReplacement').includes("event.key==='Escape'"));assert(source('openRackReplacement').includes('filterRackDeviceLibrary(this)'));
+ console.log('PASS: rack replacement cancellation, fit/overlap/depth, half-width rear placement, stale project, linked equipment preservation and save-once.');
+}
