@@ -4,7 +4,7 @@
   "devices": [
     {
       "id": "swisson-xes-8g",
-      "name": "XES-8G",
+      "name": "8-Port Switch",
       "type": "Network Switch",
       "imageUrl": "images/swisson/8-port_switch_front.png",
       "lineImageUrlFront": "images/swisson/8-port_switch_line_front.png",
@@ -37,12 +37,7 @@
         ],
         "poeIn": false
       },
-      "protocols": [
-        "Ethernet",
-        "Art-Net",
-        "sACN",
-        "Dante",
-        "DiffServ / DSCP QoS"
+      "protocols": false
       ]
     }
   ]
