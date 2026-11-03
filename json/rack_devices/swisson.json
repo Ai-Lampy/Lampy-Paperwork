@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 2,
+  "manufacturer": "Swisson",
+  "devices": [
+    {
+      "id": "swisson-xes-8g",
+      "name": "XES-8G",
+      "type": "Network Switch",
+      "imageUrl": "images/swisson/8-port_switch_front.png",
+      "lineImageUrlFront": "images/swisson/8-port_switch_line_front.png",
+      "lineImageUrlRear": "images/swisson/8-port_switch_line_rear.png",
+      "dimensionsMm": {
+        "width": 482.6,
+        "height": 44.5,
+        "depth": 136
+      },
+      "weightKg": 1.7,
+      "rack": {
+        "mountable": true,
+        "heightU": 1,
+        "widthFraction": 1
+      },
+      "ports": [
+        {
+          "connector": "1GbE EtherCON",
+          "direction": "network",
+          "facing": "front",
+          "quantity": 8
+        }
+      ],
+      "power": {
+        "connectors": [
+          "powerCON AC input (primary PSU)",
+          "powerCON AC thru (primary PSU)",
+          "powerCON AC input (backup PSU)",
+          "powerCON AC thru (backup PSU)"
+        ],
+        "poeIn": false
+      },
+      "protocols": [
+        "Ethernet",
+        "Art-Net",
+        "sACN",
+        "Dante",
+        "DiffServ / DSCP QoS"
+      ]
+    }
+  ]
+}

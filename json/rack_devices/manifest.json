@@ -20,6 +20,10 @@
     {
       "manufacturer": "Clear-Com",
       "file": "json/rack_devices/clear_com.json"
+    },
+    {
+      "manufacturer": "Swisson",
+      "file": "json/rack_devices/swisson.json"
     }
   ]
 }
