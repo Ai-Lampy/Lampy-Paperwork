@@ -1,3 +1,17 @@
+## V55.34 — Rack switch VLAN indicators
+
+- Colour network-switch sockets using their assigned VLAN and display the VLAN name below each socket in Detailed Rack Layout.
+- Cover front/rear sockets and single/paired half-width switch drawings. Fit labels within each device and between neighbouring ports.
+- Use per-port VLANs for managed switches and the switch-wide VLAN for unmanaged switches. Refresh open rack windows after port configuration saves.
+- Preserve DMX port presentation, saved connections and VLAN settings.
+
+## V55.33 — Approved Device Config borders
+
+- Tighten scaled Control/Network navigation button spacing. Keep the shared Network toolbar identical across tabs, with Port Config device selection in its own toolbar.
+- Apply the approved border settings to live Device Config tables: 2px location outlines and heading dividers, 20px corners, 2px vertical and 1px horizontal header borders.
+- Use 1px dashed #bababa vertical body borders, 1px solid #9b9b9b horizontal body borders and 2px #111111 parent-device separators. Keep the table’s own outer border off.
+- Scope these rules to Device Config, preserving other views.
+
 ## V55.32 — Unmanaged switch port mapping
 
 - Scale controlNetworkTabs buttons to 0.85.

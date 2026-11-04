@@ -92,3 +92,44 @@ console.log('PASS: custom detailed cards, full-height half-width Side devices, s
  assert(source('normaliseNetworkExpansionReference').includes("managed:typeof item.managed==='boolean'?item.managed:null"));
  console.log('PASS: nine switch catalogue managed flags, generic unmanaged support and legacy compatibility.');
 }
+
+// Rack switch overlays use canonical port identities, current VLAN colours and bounded labels.
+{
+ let enabled=true,ref,ports=[],refreshes=0;
+ const vlans={'1':{id:'1',name:'Lighting & Control',colour:'#ff8800'},'2':{id:'2',name:'Audio',colour:'#0033ff'}};
+ const r=vm.createContext({escapeHtml:esc,escapeAttr:esc,rackLinkedDeviceContext:()=>({kind:'network',ref}),rackDeviceNetworkPorts:()=>ports,ipVlanSetup:()=>({enabled}),ipVlanById:id=>vlans[id]||null,getComputedStyle:()=>({getPropertyValue:()=> 'Arial'}),document:{documentElement:{}},patchTextWidth:(text,font)=>text.length*parseFloat(font.split(' ')[1])*.6});
+ for(const name of ['normaliseRackU','normaliseRackNetworkPortLayout','normaliseRackNetworkPortFrames','rackPhysicalHeight','rackDeviceIsHalf','rackPortUniverseFontSize','rackSwitchPortLabelGeometry','rackSwitchPortOverlayMarkup','rackCompositeSwitchOverlays','rackHalfCompositeMarkup'])vm.runInContext(source(name),r);
+ let switches=0,sockets=0;
+ for(const file of ['luminex.json','pathway.json','swisson.json']){
+  for(const raw of JSON.parse(fs.readFileSync(path.join(__dirname,'../json/rack_devices',file),'utf8')).devices.filter(d=>d.type==='Network Switch')){
+   switches++;ref={networkPortLayout:r.normaliseRackNetworkPortLayout(raw.networkPortLayout),networkPortLayoutFrames:r.normaliseRackNetworkPortFrames(raw.networkPortLayoutFrames)};
+   assert.equal(ref.networkPortLayout.length,raw.networkPortLayout.length);
+   // Every Ethernet/fibre socket is covered once; serial-console and expansion sockets are not VLAN ports.
+   const expected=raw.ports.flatMap((group,i)=>group.direction==='network'?Array.from({length:group.quantity},(_,n)=>`network_${i}_${n}_${group.facing}`):[]);
+   assert.deepEqual([...ref.networkPortLayout.map(p=>p.portId)].sort(),expected.sort());
+   const device={heightU:raw.rack.heightU,widthFraction:raw.rack.widthFraction};
+   ports=ref.networkPortLayout.map((p,i)=>({id:p.portId,sub:String(i+1),vlan:raw.managed?(i%2?'2':'1'):'1'}));
+   const before=JSON.stringify(ports);
+   for(const face of ['front','rear']){
+    const layout=ref.networkPortLayout.filter(p=>p.face===face),output=r.rackSwitchPortOverlayMarkup(device,face),width=device.widthFraction===.5?397:798,height=device.heightU*80-4;
+    sockets+=layout.length;assert.equal((output.match(/rackSwitchPortOverlay"/g)||[]).length,layout.length);assert.equal((output.match(/rackSwitchPortVlan"/g)||[]).length,layout.length);
+    if(layout.length){assert(output.includes('--port-base:#ff8800'));assert(output.includes('Lighting &amp; Control'));}
+    for(const port of layout){const label=r.rackSwitchPortLabelGeometry(port,layout,width,height);assert(label.width>0);assert(label.height>0);assert(label.left>=0);assert(label.left*width/100+label.width<=width+.001);assert(label.top*height/100+label.height<=height+.001);assert(label.top*height/100>= (port.y+port.height/2)*height/100);}
+    if(device.widthFraction===.5)for(const variant of ['single','double']){
+     const item={imageFace:face,variant,devices:variant==='single'?[device]:[device,device],height:1,startU:1,image:'switch.png',primary:true};
+     const composite=r.rackHalfCompositeMarkup([item]);assert.equal((composite.match(/rackSwitchPortOverlay"/g)||[]).length,layout.length*item.devices.length);assert(composite.includes('rackSwitchPortFrame'));
+    }
+   }
+   assert.equal(JSON.stringify(ports),before); // Display does not mutate settings or connections.
+   enabled=false;assert.equal(r.rackSwitchPortOverlayMarkup(device,'front'),'');enabled=true;
+   ports=ports.map(p=>({...p,vlan:'missing'}));assert.equal(r.rackSwitchPortOverlayMarkup(device,'front'),'');
+  }
+ }
+ assert.equal(switches,9);assert.equal(sockets,122);
+ assert.equal(r.normaliseRackNetworkPortLayout([{portId:'x',face:'front',x:NaN,y:50,width:5,height:50}]).length,0);
+ ref={networkPortLayout:[]};assert.equal(r.rackSwitchPortOverlayMarkup({heightU:1},'front'),'');
+ assert(source('rackFaceDeviceMarkup').includes('${rackSwitchPortOverlayMarkup(device,imageFace)}'));
+ assert(source('normaliseNetworkExpansionReference').includes('networkPortLayout:normaliseRackNetworkPortLayout(item.networkPortLayout)'));
+ assert(source('commitManagedSwitchPortConfiguration').includes('persist();scheduleRackPopoutWindowsSync();return true'));
+ console.log('PASS: all switch sockets, front/rear and half-width composite VLAN colours/names, bounded labels, unknown/disabled VLANs and unchanged saved settings.');
+}
