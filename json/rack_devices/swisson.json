@@ -6,7 +6,7 @@
       "id": "swisson-xes-8g",
       "name": "8-Port Switch",
       "type": "Network Switch",
-      "supportsIpConfiguration": false,
+      "managed": false,
       "imageUrl": "images/swisson/8-port_switch_front.png",
       "lineImageUrlFront": "images/swisson/8-port_switch_line_front.png",
       "lineImageUrlRear": "images/swisson/8-port_switch_line_rear.png",

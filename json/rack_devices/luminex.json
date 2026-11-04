@@ -522,6 +522,7 @@
         "widthFraction": 1
       },
       "type": "Network Switch",
+      "managed": true,
       "weightKg": 2.5
     },
     {
@@ -590,6 +591,7 @@
         "widthFraction": 0.5
       },
       "type": "Network Switch",
+      "managed": true,
       "weightKg": 2.8
     },
     {
@@ -662,6 +664,7 @@
         "widthFraction": 1
       },
       "type": "Network Switch",
+      "managed": true,
       "weightKg": 2.5
     },
     {
@@ -720,6 +723,7 @@
         "widthFraction": 1
       },
       "type": "Network Switch",
+      "managed": true,
       "weightKg": 2.5
     },
     {
@@ -800,6 +804,7 @@
         "widthFraction": 1
       },
       "type": "Network Switch",
+      "managed": true,
       "weightKg": 4
     },
     {
@@ -880,6 +885,7 @@
         "widthFraction": 1
       },
       "type": "Network Switch",
+      "managed": true,
       "weightKg": 4
     },
     {
@@ -954,6 +960,7 @@
         "widthFraction": 0.5
       },
       "type": "Network Switch",
+      "managed": true,
       "weightKg": 3.4
     }
   ],

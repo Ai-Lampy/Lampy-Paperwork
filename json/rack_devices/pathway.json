@@ -61,6 +61,7 @@
         "widthFraction": 1
       },
       "type": "Network Switch",
+      "managed": true,
       "weightKg": 2.4
     },
     {
