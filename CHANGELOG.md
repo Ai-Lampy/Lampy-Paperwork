@@ -1,3 +1,8 @@
+## V55.30 — Available partner devices
+
+- Hide devices with no free network ports from managed-switch Connected Device lists, while retaining the current connection.
+- Refresh device choices after unsaved port changes and restore devices when a connection is released.
+
 ## V55.29 — Unmanaged switch VLAN assignment
 
 - Remove protocol controls and protocol display from unmanaged switches.

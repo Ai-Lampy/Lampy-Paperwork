@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="Lampy Paperwork — browser-based lighting paperwork, fixture patch, power, network, rack and MVR tools." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111'/%3E%3Cpath d='M21 9h22v8l-5 9v9h-4v20h-4V35h-4v-9l-5-9z' fill='%23fff'/%3E%3C/svg%3E" />
-<title>Lampy Paperwork V55.29</title>
+<title>Lampy Paperwork V55.30</title>
 <style>
 :root{--label-w:18mm;--label-h:34mm;--label-gap:0.5mm;--gap-y:2mm;--radius:3mm;--border:1mm;--border-col:#ffffff;--front-aux-w:18mm;--front-aux-h:34mm;--front-output-w:72mm;--front-output-h:34mm;--rear-soca-w:70mm;--rear-soca-h:50mm;--rear-aux-w:85mm;--rear-aux-h:30mm;--rear-aux-gap:5mm;--rear-output-w:90mm;--rear-output-h:60mm;--top-size:18pt;--bottom-size:14pt;--top-align:center;--bottom-align:center;--top-v-align:center;--bottom-v-align:center;--top-font:Cochin,'Times New Roman',Times,serif;--bottom-font:Cochin,'Times New Roman',Times,serif;--top-weight:700;--bottom-weight:700;--top-transform:none;--bottom-transform:none;--top-text-align:center;--bottom-text-align:center;--app-font:Arial,Helvetica,sans-serif;--project-header-font:Arial,Helvetica,sans-serif;--project-subheader-font:Arial,Helvetica,sans-serif;--project-body-font:Arial,Helvetica,sans-serif}
 *{box-sizing:border-box}body{margin:0;font-family:var(--project-body-font);background:#f6f7f9;color:#111}h1{margin:0;font-size:28px;font-family:var(--project-header-font)}h2{font-family:var(--project-header-font)}h3,h4{font-family:var(--project-subheader-font)}h2,h3{margin:0 0 12px}button,input,select,textarea{font-style:inherit;font-variant-caps:inherit;font-weight:inherit;font-width:inherit;font-size:inherit;line-height:inherit;font-family:inherit;font-size-adjust:inherit;font-kerning:inherit;font-variant-alternates:inherit;font-variant-ligatures:inherit;font-variant-numeric:inherit;font-variant-east-asian:inherit;font-variant-position:inherit;font-variant-emoji:inherit;font-feature-settings:inherit;font-optical-sizing:inherit;font-variation-settings:inherit}.reportIssueBtn{border:2px solid #111;background:#fff;color:#111;border-radius:60px;padding:8px 8px;font-weight:900;text-decoration:none;white-space:nowrap}.reportIssueBtn:hover{background:#111;color:#fff}.btn{border:2px solid #000;background:rgb(217, 217, 217);border-radius:7px;padding:10px 12px;cursor:pointer}.btn:hover{background:#f7f9fc}.btn.primary{background:#00a61d;color:#fff;border:2px solid #000;font-weight:700}.btn.danger{color:#b42318}.btn.add{font-weight:800;font-size:14px;line-height:1;padding:8px;background:#00a61d;color:#fff;border:2px solid #000}.gear{font-size:24px;border:1px solid #d9dee7;background:#fff;border-radius:999px;width:44px;height:44px;cursor:pointer}.gear:hover{background:#f7f9fc}.tourLogoSlot{display:flex;align-items:center;justify-content:center;width:165px;min-width:0;max-width:100%}.tourLogo{display:block;max-width:160px;max-height:54px;object-fit:contain}.tourLogoExport{position:absolute;top:5mm;right:5mm;z-index:3}.tourLogoUploadPreview{border:1px dashed #cfd6e1;border-radius:8px;background:#fff;min-height:130px;display:flex;align-items:center;justify-content:center;padding:14px}.tourLogoUploadPreview img{max-width:260px;max-height:120px;object-fit:contain}.logoActions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}.menuButton{position:fixed;right:18px;top:18px;z-index:18;border:1px solid #d9dee7;background:#111;color:#fff;border-radius:999px;width:46px;height:46px;font-size:24px;font-weight:900;cursor:pointer;box-shadow:0 10px 28px rgba(16,24,40,.18)}.menuButton:hover{background:#2a2a2a}.actionSidebar{position:fixed;right:18px;top:74px;width:min(260px,calc(100vw - 36px));z-index:17;border:1px solid #dfe3ea;border-radius:10px;background:#fff;box-shadow:0 18px 48px rgba(16,24,40,.22);padding:12px;transform:translateX(calc(100% + 28px));transition:transform .18s ease}.actionMenuOpen .actionSidebar{transform:translateX(0)}.actionSidebar h2{font-size:15px;margin:0 0 10px}.actionSidebar .btn{width:100%;margin:0 0 8px;text-align:left;font-weight:800}
@@ -1076,11 +1076,11 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 </style>
 <style id="dynamicPrintPageStyle">@page{size:A4 landscape;margin:5mm}
 </style>
-<link rel="stylesheet" href="js/app-sidebar.css?v=55.29">
-<script src="js/patch-pdf-front-page.js?v=55.29"></script>
-<script src="js/loom-pdf.js?v=55.29"></script>
-<script src="js/loom-colours.js?v=55.29"></script>
-<script src="js/app-sidebar.js?v=55.29"></script>
+<link rel="stylesheet" href="js/app-sidebar.css?v=55.30">
+<script src="js/patch-pdf-front-page.js?v=55.30"></script>
+<script src="js/loom-pdf.js?v=55.30"></script>
+<script src="js/loom-colours.js?v=55.30"></script>
+<script src="js/app-sidebar.js?v=55.30"></script>
 </head>
 <body>
 <header class="topHeader"><div class="top"><div id="projectHeaderLogoSlot" class="topLogoGroup"></div><div class="topTitle"><h1 id="appTitle">Untitled Project</h1></div><div class="topActions"><div id="tourLogoSlot" class="tourLogoSlot"></div><div class="projectErrorsControl"><button type="button" class="reportIssueBtn" id="projectErrorsButton" aria-haspopup="menu" aria-expanded="false" aria-controls="projectErrorsMenu" onclick="toggleProjectErrorsMenu()">Errors<span id="projectErrorsBadge" class="projectErrorsBadge" hidden></span></button><div id="projectErrorsMenu" class="projectErrorsMenu" role="menu" hidden></div></div></div></div>
@@ -1161,18 +1161,18 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 <div id="positionPdfModal" class="modal hidden"><div class="modalCard" style="width:min(1200px,100%);"><div class="modalHead"><h2>Position Summary Export</h2><button class="close" onclick="closePositionSummaryPreview()">×</button></div><div class="exportControls"><div class="ctl"><label>Paper Size</label><select id="positionPdfPaperSize"><option value="A4">A4</option><option value="A3">A3</option><option value="A2">A2</option><option value="A1">A1</option><option value="A0">A0</option></select></div><div class="ctl"><label>Orientation</label><select id="positionPdfOrientation"><option value="landscape">Landscape</option><option value="portrait">Portrait</option></select></div><div class="ctl" data-pdf-preview-dpi-control><label>Export DPI</label><select data-pdf-preview-dpi onchange="updatePdfPreviewDpi(this)"><option value="150">150 DPI</option><option value="300" selected>300 DPI</option><option value="450">450 DPI</option></select></div><div class="ctl"><label>Zoom</label><div class="zoomControls"><button class="btn" type="button" data-position-pdf-zoom="fit">Fit</button><button class="btn" type="button" data-position-pdf-zoom="0.5">50%</button><button class="btn" type="button" data-position-pdf-zoom="0.75">75%</button><button class="btn" type="button" data-position-pdf-zoom="1">100%</button><button class="btn" type="button" data-position-pdf-zoom="1.25">125%</button></div></div><div class="ctl"><label>Layout</label><select id="positionPdfLayout" onchange="updatePositionSummaryLayout(this.value)"><option value="rectangles">Rectangles</option><option value="boxes">Boxes</option></select></div><div class="ctl"><label>Columns</label><input id="positionPdfColumns" type="number" min="1" max="8" value="2" onchange="updatePositionSummaryGrid()"></div><div class="ctl"><label>Rows</label><input id="positionPdfRows" type="number" min="1" max="12" value="6" onchange="updatePositionSummaryGrid()"></div><div class="ctl"><button class="btn primary" type="button" onclick="downloadPositionSummary()">Export to PDF</button></div><div class="ctl" data-pdf-logo-preview-controls></div><div class="hint" id="positionPdfInfo"></div></div><div class="pdfPageStage"><div id="positionPdfPages"></div></div></div></div>
 <aside id="distroSettingsModal" class="frontEditorPane hidden"><div class="frontEditorHead"><h2>Add Distro</h2><button class="close" type="button" onclick="closeDistroSettings()">×</button></div><div class="frontEditorBody"><div id="distroCards"></div></div></aside>
 <aside id="singleDistroSettingsModal" class="frontEditorPane hidden"><div class="frontEditorHead"><h2 id="singleDistroSettingsTitle">Distro Settings</h2><button class="close" onclick="closeSingleDistroSettings()">×</button></div><div id="singleDistroSettingsBody" class="frontEditorBody"></div></aside>
-<script src="js/distro-catalogue.js?v=55.29"></script>
-<script src="js/cable-catalogue.js?v=55.29"></script>
-<script src="js/project-core.js?v=55.29"></script>
-<script src="js/archive.js?v=55.29"></script>
-<script src="js/ui-support.js?v=55.29" defer></script>
-<script src="js/patch-address-review.js?v=55.29" defer></script>
-<script src="js/patch-history.js?v=55.29"></script>
-<script src="js/pdf-filenames.js?v=55.29"></script>
-<script src="js/app-updates.js?v=55.29"></script>
+<script src="js/distro-catalogue.js?v=55.30"></script>
+<script src="js/cable-catalogue.js?v=55.30"></script>
+<script src="js/project-core.js?v=55.30"></script>
+<script src="js/archive.js?v=55.30"></script>
+<script src="js/ui-support.js?v=55.30" defer></script>
+<script src="js/patch-address-review.js?v=55.30" defer></script>
+<script src="js/patch-history.js?v=55.30"></script>
+<script src="js/pdf-filenames.js?v=55.30"></script>
+<script src="js/app-updates.js?v=55.30"></script>
 <script>
 'use strict';
-const VERSION='55.29';
+const VERSION='55.30';
 const AUTOSAVE_DELAY=700;
 const BACKGROUND_VALIDATION_DELAY=180;
 const DEFAULT_FONT="Cochin,'Times New Roman',Times,serif";
@@ -3414,9 +3414,9 @@ function setUnmanagedSwitchVlan(item,value){const vlan=normaliseVlan(value);item
 function managedSwitchReference(ref){return String(ref?.type||'').trim().toLowerCase()==='network switch'&&ref?.managed===true}
 function deviceHasPortConfiguration(ref){return managedSwitchReference(ref)||networkDmxPortDefinitions(ref).length>0}
 function switchPartnerDeviceKey(device){return JSON.stringify([device.source,device.id])}
-function switchPartnerPortOptions(deviceKey,selected='',devices=compiledDeviceConfigDevices(false),context={}){
+function availableSwitchPartnerPorts(deviceKey,devices,context={}){
   const device=devices.find(entry=>switchPartnerDeviceKey(entry)===deviceKey),all=(device?.ports||[]).filter(port=>port.category==='network'),drafts=context.drafts||[];
-  const ports=all.filter(port=>{
+  return all.filter(port=>{
     if(drafts.some(row=>row.id!==context.portId&&row.deviceKey===deviceKey&&row.portId===port.id))return false;
     const peer=port.partner;if(!peer)return true;
     const exists=devices.some(entry=>entry.source===peer.source&&entry.id===peer.deviceId&&(entry.ports||[]).some(p=>p.id===peer.portId));if(!exists)return true;
@@ -3425,8 +3425,15 @@ function switchPartnerPortOptions(deviceKey,selected='',devices=compiledDeviceCo
     const draft=drafts.find(row=>row.id===peer.portId);
     return !!draft&&(draft.deviceKey!==deviceKey||draft.portId!==port.id);
   });
+}
+function switchPartnerPortOptions(deviceKey,selected='',devices=compiledDeviceConfigDevices(false),context={}){
+  const device=devices.find(entry=>switchPartnerDeviceKey(entry)===deviceKey),all=(device?.ports||[]).filter(port=>port.category==='network'),ports=availableSwitchPartnerPorts(deviceKey,devices,context);
   if(!selected&&context.autoSelect!==false&&all.length===1&&ports.length===1)selected=ports[0].id;
   return '<option value="">Not connected</option>'+(!all.some(port=>port.id===selected)&&selected?`<option value="${escapeAttr(selected)}" selected>Unavailable saved port</option>`:'')+ports.map(port=>`<option value="${escapeAttr(port.id)}" ${port.id===selected?'selected':''}>${escapeHtml([port.sub,port.name,port.facing].filter(Boolean).join(' — '))}</option>`).join('');
+}
+function switchPartnerDeviceOptions(selected,devices,context={}){
+  const targets=devices.filter(device=>!(device.source==='network'&&device.id===context.switchId)&&availableSwitchPartnerPorts(switchPartnerDeviceKey(device),devices,context).length);
+  return '<option value="">Not connected</option>'+(!devices.some(device=>switchPartnerDeviceKey(device)===selected)&&selected?`<option value="${escapeAttr(selected)}" selected>Unavailable saved device</option>`:'')+targets.map(device=>`<option value="${escapeAttr(switchPartnerDeviceKey(device))}" ${switchPartnerDeviceKey(device)===selected?'selected':''}>${escapeHtml([device.name,device.type||device.item,device.location].filter(Boolean).join(' — '))}</option>`).join('');
 }
 function refreshSwitchPartnerPorts(control,changedDevice=false){
   const panel=control.closest('.managedSwitchPortConfiguration');if(!panel)return;
@@ -3436,12 +3443,12 @@ function refreshSwitchPartnerPorts(control,changedDevice=false){
   // Reserve any automatic single-port selection before rebuilding the other selectors.
   const ordered=changedDevice?[changed,...rows.filter(row=>row!==changed)]:rows;
   for(const row of ordered){const draft=drafts.find(entry=>entry.id===row.dataset.switchPort),field=row.querySelector('[data-switch-partner-port]');field.innerHTML=switchPartnerPortOptions(draft.deviceKey,draft.portId,devices,{switchId:panel.dataset.switchId,portId:draft.id,drafts,autoSelect:changedDevice&&row===changed});draft.portId=field.value}
+  for(const row of rows){const draft=drafts.find(entry=>entry.id===row.dataset.switchPort);row.querySelector('[data-switch-partner-device]').innerHTML=switchPartnerDeviceOptions(draft.deviceKey,devices,{switchId:panel.dataset.switchId,portId:draft.id,drafts})}
 }
 function updateSwitchPartnerDevice(select){refreshSwitchPartnerPorts(select,true)}
 function managedSwitchPortSettingsMarkup(item,ref){
   const devices=compiledDeviceConfigDevices(false),device=devices.find(entry=>entry.source==='network'&&entry.id===item.id);if(!device)return '<div class="blankState">Save this switch to the project before configuring its ports.</div>';
-  const targets=devices.filter(entry=>entry!==device&&(entry.ports||[]).some(port=>port.category==='network'));
-  return `<div class="managedSwitchPortConfiguration" data-switch-id="${escapeAttr(item.id)}" data-switch-snapshot="${escapeAttr(JSON.stringify(item.deviceConfigPorts||[]))}"><p>Assign each port a VLAN and the device port connected to it. Connections are recorded at both ends. Changes apply when you save.</p><table class="networkPortSettings"><thead><tr><th>Port</th><th>VLAN</th><th>Connected Device</th><th>Partner Port</th></tr></thead><tbody>${device.ports.filter(port=>port.category==='network').map(port=>{const partner=port.partner,key=partner?JSON.stringify([partner.source,partner.deviceId]):'',known=targets.some(target=>switchPartnerDeviceKey(target)===key),vlan=normaliseVlan(port.vlan);return `<tr data-switch-port="${escapeAttr(port.id)}"><td>${escapeHtml([port.sub,port.name,port.facing].filter(Boolean).join(' — '))}</td><td><select data-switch-vlan aria-label="VLAN for ${escapeAttr(port.sub)}" style="${escapeAttr(ipVlanCellStyle(vlan))}" onchange="updateRackVlanStyle(this)">${rackVlanOptionsMarkup(vlan)}</select></td><td><select data-switch-partner-device aria-label="Connected device for ${escapeAttr(port.sub)}" onchange="updateSwitchPartnerDevice(this)"><option value="">Not connected</option>${key&&!known?`<option value="${escapeAttr(key)}" selected>Unavailable saved device</option>`:''}${targets.map(target=>`<option value="${escapeAttr(switchPartnerDeviceKey(target))}" ${switchPartnerDeviceKey(target)===key?'selected':''}>${escapeHtml([target.name,target.type||target.item,target.location].filter(Boolean).join(' — '))}</option>`).join('')}</select></td><td><select data-switch-partner-port onchange="refreshSwitchPartnerPorts(this)" aria-label="Partner port for ${escapeAttr(port.sub)}">${switchPartnerPortOptions(key,partner?.portId||'',devices,{switchId:item.id,portId:port.id,autoSelect:false})}</select></td></tr>`}).join('')}</tbody></table></div>`;
+  return `<div class="managedSwitchPortConfiguration" data-switch-id="${escapeAttr(item.id)}" data-switch-snapshot="${escapeAttr(JSON.stringify(item.deviceConfigPorts||[]))}"><p>Assign each port a VLAN and the device port connected to it. Connections are recorded at both ends. Changes apply when you save.</p><table class="networkPortSettings"><thead><tr><th>Port</th><th>VLAN</th><th>Connected Device</th><th>Partner Port</th></tr></thead><tbody>${device.ports.filter(port=>port.category==='network').map(port=>{const partner=port.partner,key=partner?JSON.stringify([partner.source,partner.deviceId]):'',vlan=normaliseVlan(port.vlan);return `<tr data-switch-port="${escapeAttr(port.id)}"><td>${escapeHtml([port.sub,port.name,port.facing].filter(Boolean).join(' — '))}</td><td><select data-switch-vlan aria-label="VLAN for ${escapeAttr(port.sub)}" style="${escapeAttr(ipVlanCellStyle(vlan))}" onchange="updateRackVlanStyle(this)">${rackVlanOptionsMarkup(vlan)}</select></td><td><select data-switch-partner-device aria-label="Connected device for ${escapeAttr(port.sub)}" onchange="updateSwitchPartnerDevice(this)">${switchPartnerDeviceOptions(key,devices,{switchId:item.id,portId:port.id})}</select></td><td><select data-switch-partner-port onchange="refreshSwitchPartnerPorts(this)" aria-label="Partner port for ${escapeAttr(port.sub)}">${switchPartnerPortOptions(key,partner?.portId||'',devices,{switchId:item.id,portId:port.id,autoSelect:false})}</select></td></tr>`}).join('')}</tbody></table></div>`;
 }
 function planManagedSwitchPorts(devices,deviceId,proposals){
   const current=devices.find(device=>device.source==='network'&&device.id===deviceId),fail=error=>({error});if(!current||!managedSwitchReference(current.reference))return fail('The managed switch is no longer available.');

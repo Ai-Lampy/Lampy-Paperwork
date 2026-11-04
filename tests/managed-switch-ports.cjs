@@ -32,7 +32,7 @@ console.log('PASS: managed switch eligibility, per-port VLANs, reciprocal stable
 {
  const esc=v=>String(v??'').replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;');
  const r=vm.createContext({compiledDeviceConfigDevices:()=>linked,escapeHtml:esc,escapeAttr:esc,normaliseVlan:v=>String(v||'0'),ipVlanCellStyle:()=>'',rackVlanOptionsMarkup:v=>`<option value="${v}" selected>${v}</option>`});
- for(const name of ['switchPartnerDeviceKey','switchPartnerPortOptions','managedSwitchPortSettingsMarkup'])vm.runInContext(source(name),r);
+ for(const name of ['switchPartnerDeviceKey','availableSwitchPartnerPorts','switchPartnerDeviceOptions','switchPartnerPortOptions','managedSwitchPortSettingsMarkup'])vm.runInContext(source(name),r);
  const markup=r.managedSwitchPortSettingsMarkup({id:'s',deviceConfigPorts:[]},devices[0].reference);
  assert.equal((markup.match(/<tr data-switch-port=/g)||[]).length,2);assert.equal((markup.match(/select data-switch-vlan/g)||[]).length,2);assert.equal((markup.match(/select data-switch-partner-device/g)||[]).length,2);assert.equal((markup.match(/select data-switch-partner-port/g)||[]).length,2);assert(markup.includes('value="eth1" selected'));
  assert(source('selectDeviceConfigPortDevice').includes('if(!commitDeviceConfigPortConfiguration())return'));
@@ -41,7 +41,7 @@ console.log('PASS: managed switch eligibility, per-port VLANs, reciprocal stable
 {
  const esc=v=>String(v??'');
  const r=vm.createContext({escapeHtml:esc,escapeAttr:esc,compiledDeviceConfigDevices:()=>devices,rackReferenceHasNetworkPort:()=>true,networkDeviceProtocolOptions:()=>'<option>Art-Net</option>',rackDefaultProtocol:()=>'',rackDeviceVlanMarkup:()=>'<vlan>'});
- for(const name of ['unmanagedSwitchReference','setUnmanagedSwitchVlan','managedSwitchReference','switchPartnerDeviceKey','switchPartnerPortOptions','refreshSwitchPartnerPorts','updateSwitchPartnerDevice','rackDeviceProtocolVlanMarkup'])vm.runInContext(source(name),r);
+ for(const name of ['unmanagedSwitchReference','setUnmanagedSwitchVlan','managedSwitchReference','switchPartnerDeviceKey','availableSwitchPartnerPorts','switchPartnerDeviceOptions','switchPartnerPortOptions','refreshSwitchPartnerPorts','updateSwitchPartnerDevice','rackDeviceProtocolVlanMarkup'])vm.runInContext(source(name),r);
  const one=r.switchPartnerPortOptions(JSON.stringify(['network','unmanaged']));assert(one.includes('value="eth1" selected'));
  const multiple=r.switchPartnerPortOptions(JSON.stringify(['console','c']));assert(!multiple.includes(' selected'));
  assert(!r.switchPartnerPortOptions('').includes(' selected'));
@@ -96,7 +96,7 @@ console.log('PASS: managed switch eligibility, per-port VLANs, reciprocal stable
 {
  const target={source:'console',id:'target',ports:[{...port('a'),partner:{source:'network',deviceId:'s',portId:'1'}},port('b')]},other={source:'network',id:'other',ports:[port('x')]},list=[devices[0],target,other],key=JSON.stringify(['console','target']);
  const r=vm.createContext({escapeHtml:v=>String(v??''),escapeAttr:v=>String(v??''),compiledDeviceConfigDevices:()=>list});
- for(const name of ['switchPartnerDeviceKey','switchPartnerPortOptions','refreshSwitchPartnerPorts','updateSwitchPartnerDevice'])vm.runInContext(source(name),r);
+ for(const name of ['switchPartnerDeviceKey','availableSwitchPartnerPorts','switchPartnerDeviceOptions','switchPartnerPortOptions','refreshSwitchPartnerPorts','updateSwitchPartnerDevice'])vm.runInContext(source(name),r);
  assert(!r.switchPartnerPortOptions(key,'',list,{switchId:'s',portId:'2'}).includes('value="a"'));
  assert(r.switchPartnerPortOptions(key,'a',list,{switchId:'s',portId:'1'}).includes('value="a" selected'));
  target.ports[0].partner={source:'network',deviceId:'other',portId:'x'};
@@ -112,4 +112,21 @@ console.log('PASS: managed switch eligibility, per-port VLANs, reciprocal stable
  r.updateSwitchPartnerDevice(control);assert.equal(fields[0].value,'only');assert(!fields[1].innerHTML.includes('value="only"'));
  fields[0].value='';r.refreshSwitchPartnerPorts(control);assert(fields[1].innerHTML.includes('value="only"'));assert.equal(fields[1].value,'');
  console.log('PASS: occupied and draft-selected partner ports hidden, current link retained, released ports restored and single-port auto-selection reserved.');
+}
+
+// A full single-port device is hidden everywhere except its existing connection.
+{
+ const r=vm.createContext({escapeHtml:v=>String(v??''),escapeAttr:v=>String(v??'')});
+ for(const name of ['switchPartnerDeviceKey','availableSwitchPartnerPorts','switchPartnerDeviceOptions'])vm.runInContext(source(name),r);
+ const octo={source:'network',id:'octo',name:'SPARE Octo',ports:[{...port('eth'),partner:{source:'network',deviceId:'stage2',portId:'1'}}]},stage2={source:'network',id:'stage2',name:'Stage 2',ports:[port('1'),port('2')]},list=[octo,stage2],key=JSON.stringify(['network','octo']);
+ assert(!r.switchPartnerDeviceOptions('',list,{switchId:'stage1',portId:'1'}).includes('SPARE Octo'));
+ assert(r.switchPartnerDeviceOptions(key,list,{switchId:'stage2',portId:'1'}).includes('SPARE Octo'));
+ assert(!r.switchPartnerDeviceOptions('',list,{switchId:'stage2',portId:'2'}).includes('SPARE Octo'));
+ assert(r.switchPartnerDeviceOptions('',list,{switchId:'stage2',portId:'2',drafts:[{id:'1',deviceKey:'',portId:''}]}).includes('SPARE Octo'));
+ octo.ports[0].partner=null;
+ assert(r.switchPartnerDeviceOptions('',list,{switchId:'stage1',portId:'1'}).includes('SPARE Octo'));
+ assert(!r.switchPartnerDeviceOptions('',list,{switchId:'stage1',portId:'2',drafts:[{id:'1',deviceKey:key,portId:'eth'}]}).includes('SPARE Octo'));
+ octo.ports.push(port('eth2'));
+ assert(r.switchPartnerDeviceOptions('',list,{switchId:'stage1',portId:'2',drafts:[{id:'1',deviceKey:key,portId:'eth'}]}).includes('SPARE Octo'));
+ console.log('PASS: Connected Device excludes full devices, retains current links and free multi-port devices, and respects draft assignments/disconnections.');
 }
