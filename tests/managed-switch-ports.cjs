@@ -63,3 +63,15 @@ console.log('PASS: managed switch eligibility, per-port VLANs, reciprocal stable
  success=false;assert.equal(r.saveDeviceConfigPortConfiguration(),false);assert.equal(commits,2);assert.equal(r.activeNetworkSubTab,'portConfiguration');assert.equal(r.activeDeviceConfigPortId,'switch-1');assert.equal(renders,0);
  console.log('PASS: Port Configuration Save retains current page, device and DOM without duplicate commits.');
 }
+
+// Conflict messages name both endpoints and the existing connection, including draft duplicates.
+{
+ const named=JSON.parse(before);named[0].name='FOH Switch';named[0].type='GigaCore 10';named[0].ports[0].sub='Port 1';named[0].ports[1].sub='Port 2';named[1].name='Main Console';named[1].ports[0].sub='Network 1';
+ named.push({source:'network',id:'other',name:'Stage Switch',ports:[{...port('8'),sub:'Port 8'}]});named[1].ports[0].partner={source:'network',deviceId:'other',portId:'8'};
+ const original=JSON.stringify(named),error=c.planManagedSwitchPorts(named,'s',rows).error;
+ for(const text of ['FOH Switch','Port 1','Main Console / Network 1','Stage Switch / Port 8','already connected to','only one connection','No changes have been saved'])assert(error.includes(text),text);
+ assert.equal(JSON.stringify(named),original);named[1].ports[0].partner=null;
+ const duplicate=c.planManagedSwitchPorts(named,'s',[rows[0],{...rows[1],partner:rows[0].partner}]).error;
+ for(const text of ['Port 2','Port 1','Main Console / Network 1','already selected for','unsaved changes','Change one of these selections'])assert(duplicate.includes(text),text);
+ console.log('PASS: occupied-port errors identify attempted, selected and existing endpoints and distinguish unsaved duplicate selections.');
+}

@@ -1,3 +1,8 @@
+## V55.28 — Identify port connection conflicts
+
+- Name the attempted switch port, selected partner device/port and existing connection when a partner port is occupied.
+- Distinguish saved connections from duplicate selections in unsaved changes, explain the one-connection limit and confirm that failed saves apply nothing.
+
 ## V55.27 — Stay in Port Configuration after saving
 
 - Save Configuration keeps the user on the selected Network Port Configuration device without navigating back to Device Config or rebuilding the page.
