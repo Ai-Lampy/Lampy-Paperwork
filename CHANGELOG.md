@@ -1,3 +1,21 @@
+## V55.25 — Managed switch port configuration
+
+- Add managed switches to Port Configuration in Rack Device Settings and Network, retaining the DMX-node workflow.
+- Assign a VLAN and a connected project device/port to each switch port; save stable reciprocal connections with the project.
+- Validate occupied, duplicate, unavailable and same-switch partners before saving; Cancel leaves data unchanged and stale switch edits are rejected.
+- Keep management IP/subnet data separate from port configuration and save once per confirmed configuration.
+
+## V55.24 — Managed switch catalogue flags
+
+- Add explicit managed booleans to all nine network switches: Luminex and Pathway true, Swisson false.
+- Use the catalogue flag for IP/subnet controls and assignment, retaining compatibility with older catalogue entries.
+
+## V55.23 — Rack settings corrections
+
+- Scale Rack Settings action buttons to 0.85.
+- Hide IP Address and Subnet fields for the unmanaged Swisson switch in Rack Device Settings, and suppress legacy address text on its rack card.
+- Start every replacement Device Library category collapsed; search still opens matching categories.
+
 ## V55.22 — Replace rack devices
 
 - Add Replace to Device Settings with a searchable Device Library picker and cancellation.

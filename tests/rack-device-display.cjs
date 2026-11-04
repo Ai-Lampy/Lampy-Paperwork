@@ -62,3 +62,33 @@ console.log('PASS: custom detailed cards, full-height half-width Side devices, s
  assert(source('rackSettingsCardMarkup').includes('openRackReplacement'));assert(source('openRackReplacement').includes("event.key==='Escape'"));assert(source('openRackReplacement').includes('filterRackDeviceLibrary(this)'));
  console.log('PASS: rack replacement cancellation, fit/overlap/depth, half-width rear placement, stale project, linked equipment preservation and save-once.');
 }
+
+// Rack Settings uses the same unmanaged capability as Device Config.
+{
+ const r=vm.createContext({rackReferenceHasNetworkPort:()=>true,ipSegmentedInputMarkup:()=>'<input>',rackLinkedDeviceContext:()=>({kind:'network',item:{referenceId:'swisson-xes-8g',ip1:'10.0.0.1',subnet1:'255.0.0.0'}}),rackDeviceReference:()=>({id:'swisson-xes-8g'}),rackSourceForKey:()=>({}),rackReferenceIsNetworkBased:()=>true,ipVlanSetup:()=>({enabled:false}),escapeHtml:v=>String(v)});
+ for(const name of ['networkDeviceAllowsIp','rackDeviceNetworkAddressMarkup','rackSimpleDeviceMarkup'])vm.runInContext(source(name),r);
+ const context={kind:'network',item:{referenceId:'swisson-xes-8g'},ref:{id:'swisson-xes-8g',supportsIpConfiguration:false}};
+ assert.equal(r.rackDeviceNetworkAddressMarkup(context),'');
+ assert(r.rackDeviceNetworkAddressMarkup({kind:'network',item:{},ref:{}}).includes('IP Address'));
+ assert(r.rackDeviceNetworkAddressMarkup({kind:'npu',item:{},ref:{}}).includes('Subnet'));
+ const card=r.rackSimpleDeviceMarkup({sourceKey:'network:s'},{label:'8-Port Switch'});assert(!card.includes('10.0.0.1'));assert(!card.includes('255.0.0.0'));
+ assert(html.includes('.rackSettingsActions .btn{scale:.85}'));
+ assert(source('openRackReplacement').includes('<details data-rack-library-group><summary>'));
+ assert(!source('openRackReplacement').includes('data-rack-library-group open'));
+ console.log('PASS: unmanaged Rack Settings fields, legacy rack-card addresses, 0.85 action buttons and collapsed replacement categories.');
+}
+
+// Catalogue management flags are explicit booleans and drive address availability.
+{
+ const r=vm.createContext({});vm.runInContext(source('networkDeviceAllowsIp'),r);
+ let switches=0;
+ for(const file of ['luminex.json','pathway.json','swisson.json']){
+  const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../json/rack_devices',file),'utf8'));
+  for(const device of data.devices.filter(d=>d.type==='Network Switch')){
+   switches++;assert.equal(typeof device.managed,'boolean');assert.equal(device.managed,file!=='swisson.json');assert.equal(r.networkDeviceAllowsIp({},device),device.managed);
+  }
+ }
+ assert.equal(switches,9);assert.equal(r.networkDeviceAllowsIp({}, {id:'future-switch',managed:false}),false);assert.equal(r.networkDeviceAllowsIp({}, {managed:true}),true);assert.equal(r.networkDeviceAllowsIp({},{}),true);
+ assert(source('normaliseNetworkExpansionReference').includes("managed:typeof item.managed==='boolean'?item.managed:null"));
+ console.log('PASS: nine switch catalogue managed flags, generic unmanaged support and legacy compatibility.');
+}
