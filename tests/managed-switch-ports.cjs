@@ -37,3 +37,19 @@ console.log('PASS: managed switch eligibility, per-port VLANs, reciprocal stable
  assert.equal((markup.match(/<tr data-switch-port=/g)||[]).length,2);assert.equal((markup.match(/select data-switch-vlan/g)||[]).length,2);assert.equal((markup.match(/select data-switch-partner-device/g)||[]).length,2);assert.equal((markup.match(/select data-switch-partner-port/g)||[]).length,2);assert(markup.includes('value="eth1" selected'));
  assert(source('selectDeviceConfigPortDevice').includes('if(!commitDeviceConfigPortConfiguration())return'));
 }
+// One physical network port is selected automatically; multiple ports require a choice.
+{
+ const esc=v=>String(v??'');
+ const r=vm.createContext({escapeHtml:esc,escapeAttr:esc,compiledDeviceConfigDevices:()=>devices,rackReferenceHasNetworkPort:()=>true,networkDeviceProtocolOptions:()=>'<option>Art-Net</option>',rackDefaultProtocol:()=>'',rackDeviceVlanMarkup:()=>'<vlan>'});
+ for(const name of ['managedSwitchReference','switchPartnerDeviceKey','switchPartnerPortOptions','updateSwitchPartnerDevice','rackDeviceProtocolVlanMarkup'])vm.runInContext(source(name),r);
+ const one=r.switchPartnerPortOptions(JSON.stringify(['network','unmanaged']));assert(one.includes('value="eth1" selected'));
+ const multiple=r.switchPartnerPortOptions(JSON.stringify(['console','c']));assert(!multiple.includes(' selected'));
+ assert(!r.switchPartnerPortOptions('').includes(' selected'));
+ assert(r.switchPartnerPortOptions(JSON.stringify(['console','c']),'eth2').includes('value="eth2" selected'));
+ const field={innerHTML:''};r.updateSwitchPartnerDevice({value:JSON.stringify(['network','unmanaged']),closest:()=>({querySelector:()=>field})});assert(field.innerHTML.includes('value="eth1" selected'));
+ assert.equal(r.rackDeviceProtocolVlanMarkup({ref:{type:'Network Switch',managed:true}}),'');assert(r.rackDeviceProtocolVlanMarkup({ref:{type:'DMX Node'}}).includes('Protocol'));
+ assert(html.includes('#rackReplacementModal .rackDeviceLibraryCard{height:auto;min-height:0;overflow:visible;display:block}'));
+ assert(html.includes('#rackReplacementModal .modalCard{height:auto;min-height:0;max-height:90vh;overflow:auto}'));
+ assert(source('saveRackDeviceSettingsCard').includes("if(protocolField)updateCanonicalDeviceField"));assert(source('saveRackDeviceSettingsCard').includes("if(card.querySelector('[data-rack-device-setting=\"ip\"]')"));
+ console.log('PASS: auto-height replacement, managed settings without protocol/VLAN and single-port automatic selection.');
+}

@@ -1,3 +1,9 @@
+## V55.26 — Switch settings and replacement sizing
+
+- Let the replacement dialogue and its library grow and shrink with expanded categories, scrolling only at the viewport limit.
+- Hide managed-switch Protocol and overall VLAN settings; retain independently editable management IP/subnet and per-port VLAN configuration.
+- Automatically select the partner port when the connected device has exactly one network port.
+
 ## V55.25 — Managed switch port configuration
 
 - Add managed switches to Port Configuration in Rack Device Settings and Network, retaining the DMX-node workflow.
