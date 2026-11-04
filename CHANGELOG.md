@@ -1,3 +1,8 @@
+## V55.27 — Stay in Port Configuration after saving
+
+- Save Configuration keeps the user on the selected Network Port Configuration device without navigating back to Device Config or rebuilding the page.
+- Preserve scroll, device selection and existing save validation for managed switches and DMX nodes.
+
 ## V55.26 — Switch settings and replacement sizing
 
 - Let the replacement dialogue and its library grow and shrink with expanded categories, scrolling only at the viewport limit.

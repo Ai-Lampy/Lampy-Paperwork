@@ -53,3 +53,13 @@ console.log('PASS: managed switch eligibility, per-port VLANs, reciprocal stable
  assert(source('saveRackDeviceSettingsCard').includes("if(protocolField)updateCanonicalDeviceField"));assert(source('saveRackDeviceSettingsCard').includes("if(card.querySelector('[data-rack-device-setting=\"ip\"]')"));
  console.log('PASS: auto-height replacement, managed settings without protocol/VLAN and single-port automatic selection.');
 }
+
+// Saving keeps the current device, sub-tab and DOM/scroll intact, including rejected saves.
+{
+ let commits=0,renders=0,success=true;
+ const r=vm.createContext({activeNetworkSubTab:'portConfiguration',activeDeviceConfigPortId:'switch-1',commitDeviceConfigPortConfiguration:()=>{commits++;return success},render:()=>renders++});
+ vm.runInContext(source('saveDeviceConfigPortConfiguration'),r);
+ assert.equal(r.saveDeviceConfigPortConfiguration(),true);assert.equal(commits,1);assert.equal(r.activeNetworkSubTab,'portConfiguration');assert.equal(r.activeDeviceConfigPortId,'switch-1');assert.equal(renders,0);
+ success=false;assert.equal(r.saveDeviceConfigPortConfiguration(),false);assert.equal(commits,2);assert.equal(r.activeNetworkSubTab,'portConfiguration');assert.equal(r.activeDeviceConfigPortId,'switch-1');assert.equal(renders,0);
+ console.log('PASS: Port Configuration Save retains current page, device and DOM without duplicate commits.');
+}
