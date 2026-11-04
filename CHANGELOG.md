@@ -1,3 +1,8 @@
+## V55.35 — Rack labels and VLAN tooltips
+
+- Move Detailed Rack Layout device names beside the left rack rail, removing U size and U position from the labels. Reserve label space without changing device image proportions or rack slots.
+- Keep switch VLAN colours on the sockets, but show VLAN names through port hover tooltips instead of beneath the ports. Include front/rear and half-width composite drawings.
+
 ## V55.34 — Rack switch VLAN indicators
 
 - Colour network-switch sockets using their assigned VLAN and display the VLAN name below each socket in Detailed Rack Layout.

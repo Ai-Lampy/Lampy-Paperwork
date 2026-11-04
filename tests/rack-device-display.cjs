@@ -2,7 +2,7 @@
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
 const html=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8');
 function source(name){const start=html.indexOf('function '+name+'(');assert(start>=0,name);for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const code=html.slice(start,end+1);try{new Function('return ('+code+')');return code}catch{}}throw Error(name)}
-const esc=value=>String(value??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');let saves=0,renders=0,alerts=[],serial=0;
+const esc=value=>String(value??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');let saves=0,renders=0,alerts=[],serial=0;
 const c=vm.createContext({app:{controlNetwork:{racks:[],rackDisplayMode:'detailed'}},rackId:()=>`new-${++serial}`,rackSourceForKey:key=>key?{}:null,rackDeviceDepth:d=>d.depthMm,alert:msg=>alerts.push(msg),persist:()=>saves++,renderRackKeepingScroll:()=>renders++,escapeHtml:esc,escapeAttr:esc,escapeJsAttr:esc,activeRackSettingsRackId:'',activeRackSettingsDeviceId:''});
 for(const name of ['normaliseRackU','rackPhysicalHeight','normaliseRackDevice','rackDeviceIsHalf','rackDevicesOverlapU','rackDevicesOverlapWidth','rackPairConflict','rackValidation','rackDeviceFits','rackPlacementForSource','duplicateCustomRackDevice','rackPortColourStyle','rackPortUniverseFontSize','rackPortLabelGeometry','rackPortOverlayMarkup','rackFaceDeviceMarkup','rackSideCanvasMarkup','rackSpaceMarkup'])vm.runInContext(source(name),c);
 const original={id:'original',label:'Custom',type:'Shelf',heightU:2,widthFraction:.5,startU:1,rackSide:'left',mountFace:'front',depthMm:250,sourceKey:''},rack={id:'r',units:6,depthMm:700,devices:[original]};c.app.controlNetwork.racks=[rack];const before=JSON.stringify(original);
@@ -93,12 +93,12 @@ console.log('PASS: custom detailed cards, full-height half-width Side devices, s
  console.log('PASS: nine switch catalogue managed flags, generic unmanaged support and legacy compatibility.');
 }
 
-// Rack switch overlays use canonical port identities, current VLAN colours and bounded labels.
+// Rack switch overlays use canonical port identities, current VLAN colours and hover-only names.
 {
- let enabled=true,ref,ports=[],refreshes=0;
+ let enabled=true,ref,ports=[];
  const vlans={'1':{id:'1',name:'Lighting & Control',colour:'#ff8800'},'2':{id:'2',name:'Audio',colour:'#0033ff'}};
- const r=vm.createContext({escapeHtml:esc,escapeAttr:esc,rackLinkedDeviceContext:()=>({kind:'network',ref}),rackDeviceNetworkPorts:()=>ports,ipVlanSetup:()=>({enabled}),ipVlanById:id=>vlans[id]||null,getComputedStyle:()=>({getPropertyValue:()=> 'Arial'}),document:{documentElement:{}},patchTextWidth:(text,font)=>text.length*parseFloat(font.split(' ')[1])*.6});
- for(const name of ['normaliseRackU','normaliseRackNetworkPortLayout','normaliseRackNetworkPortFrames','rackPhysicalHeight','rackDeviceIsHalf','rackPortUniverseFontSize','rackSwitchPortLabelGeometry','rackSwitchPortOverlayMarkup','rackCompositeSwitchOverlays','rackHalfCompositeMarkup'])vm.runInContext(source(name),r);
+ const r=vm.createContext({escapeHtml:esc,escapeAttr:esc,escapeJsAttr:esc,rackLinkedDeviceContext:()=>({kind:'network',ref}),rackDeviceNetworkPorts:()=>ports,ipVlanSetup:()=>({enabled}),ipVlanById:id=>vlans[id]||null,getComputedStyle:()=>({getPropertyValue:()=> 'Arial'}),document:{documentElement:{}},patchTextWidth:(text,font)=>text.length*parseFloat(font.split(' ')[1])*.6});
+ for(const name of ['normaliseRackU','normaliseRackNetworkPortLayout','normaliseRackNetworkPortFrames','rackPhysicalHeight','rackDeviceIsHalf','rackPortUniverseFontSize','rackSwitchPortOverlayMarkup','rackCompositeSwitchOverlays','rackHalfCompositeMarkup'])vm.runInContext(source(name),r);
  let switches=0,sockets=0;
  for(const file of ['luminex.json','pathway.json','swisson.json']){
   for(const raw of JSON.parse(fs.readFileSync(path.join(__dirname,'../json/rack_devices',file),'utf8')).devices.filter(d=>d.type==='Network Switch')){
@@ -112,9 +112,8 @@ console.log('PASS: custom detailed cards, full-height half-width Side devices, s
    const before=JSON.stringify(ports);
    for(const face of ['front','rear']){
     const layout=ref.networkPortLayout.filter(p=>p.face===face),output=r.rackSwitchPortOverlayMarkup(device,face),width=device.widthFraction===.5?397:798,height=device.heightU*80-4;
-    sockets+=layout.length;assert.equal((output.match(/rackSwitchPortOverlay"/g)||[]).length,layout.length);assert.equal((output.match(/rackSwitchPortVlan"/g)||[]).length,layout.length);
-    if(layout.length){assert(output.includes('--port-base:#ff8800'));assert(output.includes('Lighting &amp; Control'));}
-    for(const port of layout){const label=r.rackSwitchPortLabelGeometry(port,layout,width,height);assert(label.width>0);assert(label.height>0);assert(label.left>=0);assert(label.left*width/100+label.width<=width+.001);assert(label.top*height/100+label.height<=height+.001);assert(label.top*height/100>= (port.y+port.height/2)*height/100);}
+    sockets+=layout.length;assert.equal((output.match(/rackSwitchPortOverlay"/g)||[]).length,layout.length);assert(!output.includes('rackSwitchPortVlan'));assert(!output.includes('<b'));
+    if(layout.length){assert(output.includes('--port-base:#ff8800'));assert(output.includes('Lighting &amp; Control'));assert(output.includes('title="Port '));assert(output.includes('tabindex="0"')); }
     if(device.widthFraction===.5)for(const variant of ['single','double']){
      const item={imageFace:face,variant,devices:variant==='single'?[device]:[device,device],height:1,startU:1,image:'switch.png',primary:true};
      const composite=r.rackHalfCompositeMarkup([item]);assert.equal((composite.match(/rackSwitchPortOverlay"/g)||[]).length,layout.length*item.devices.length);assert(composite.includes('rackSwitchPortFrame'));
@@ -131,5 +130,22 @@ console.log('PASS: custom detailed cards, full-height half-width Side devices, s
  assert(source('rackFaceDeviceMarkup').includes('${rackSwitchPortOverlayMarkup(device,imageFace)}'));
  assert(source('normaliseNetworkExpansionReference').includes('networkPortLayout:normaliseRackNetworkPortLayout(item.networkPortLayout)'));
  assert(source('commitManagedSwitchPortConfiguration').includes('persist();scheduleRackPopoutWindowsSync();return true'));
- console.log('PASS: all switch sockets, front/rear and half-width composite VLAN colours/names, bounded labels, unknown/disabled VLANs and unchanged saved settings.');
+ console.log('PASS: all switch sockets, front/rear and half-width composite VLAN colours and hover names, unknown/disabled VLANs and unchanged saved settings.');
+}
+
+// Device names live beside the left rail, not in the image button. Paired labels get separate slots.
+{
+ const r=vm.createContext({app:{controlNetwork:{rackDisplayMode:'detailed'}},escapeHtml:esc,escapeAttr:esc,escapeJsAttr:esc,rackSourceForKey:()=>({}),rackDeviceDisplay:d=>({label:d.label})});
+ vm.runInContext(source('rackDeviceNameLabelsMarkup'),r);
+ const devices=[{id:'left',label:'Switch <Left>',sourceKey:'network:l',startU:2,heightU:2,mountFace:'front'},{id:'right',label:'Switch Right',sourceKey:'network:r',startU:2,heightU:2,mountFace:'front'}];
+ const output=r.rackDeviceNameLabelsMarkup({id:'rack'},devices,'front');
+ assert(output.includes('Switch &lt;Left&gt;</button>'));assert(output.includes('Switch Right</button>'));
+ assert(output.includes('--label-offset:0px;--label-height:40px'));assert(output.includes('--label-offset:40px;--label-height:40px'));
+ assert(!output.includes('2U'));assert(!output.includes(' • '));assert(source('rackFaceDeviceMarkup').includes("content=mode==='simple'?rackSimpleDeviceMarkup(device,display):''"));
+ assert(html.includes('.rackDeviceNameLabel{border:0;'));assert(html.includes('left:-160px;width:152px;'));assert(html.includes('.rackFaceStage>.rackCanvas{margin:0 0 0 160px;zoom:1}'));
+ assert(source('applyRackCardAutoFit').includes("'.rackFaceStage,.rackCanvas,.rackSideCanvas'"));assert(source('syncRackPopoutWindow').includes("'.rackFaceStage,.rackCanvas'"));
+ assert(html.includes('.rackSwitchPortOverlay{box-sizing:border-box;pointer-events:auto;cursor:help}'));
+ assert(source('rackHalfCompositeMarkup').includes('rackCompositePortLayer'));assert(source('rackCompositeSwitchOverlays').includes("typeof openRackDeviceFromCanvas==='function'"));
+ r.app.controlNetwork.rackDisplayMode='simple';assert.equal(r.rackDeviceNameLabelsMarkup({id:'rack'},devices,'front'),'');
+ console.log('PASS: rail-side device names, paired label slots, unchanged image content, shared fit/popout zoom and hover-only VLAN names.');
 }
