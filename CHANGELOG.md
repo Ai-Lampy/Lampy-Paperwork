@@ -1,3 +1,16 @@
+## V55.32 — Unmanaged switch port mapping
+
+- Scale controlNetworkTabs buttons to 0.85.
+- Include unmanaged switches in Network and Rack Layout Port Configuration.
+- Map connected devices and specific ports with the same reciprocal links, availability filtering, Clear and Save behaviour as managed switches.
+- Preserve the unmanaged switch’s single VLAN; do not offer per-port VLAN, Protocol, IP or Subnet settings.
+
+## V55.31 — Clear device port configuration
+
+- Add Clear to each device’s Port Configuration, including the Rack Layout editor.
+- Clear switch partner connections without changing VLANs; clear DMX port Names, Universes and Positions without changing Direction or other settings.
+- Keep clearing in the unsaved form until the existing save workflow applies it. Preserve explicitly cleared DMX names when saving and reopening.
+
 ## V55.30 — Available partner devices
 
 - Hide devices with no free network ports from managed-switch Connected Device lists, while retaining the current connection.

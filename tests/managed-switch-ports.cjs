@@ -3,8 +3,8 @@ const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),asse
 const html=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8');
 function source(name){const start=html.indexOf('function '+name+'(');assert(start>=0,name);for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const code=html.slice(start,end+1);try{new Function('return ('+code+')');return code}catch{}}throw Error(name)}
 const c=vm.createContext({normaliseVlan:v=>String(v||'0'),networkDmxPortDefinitions:ref=>ref?.dmx?[{}]:[]});
-for(const name of ['unmanagedSwitchReference','setUnmanagedSwitchVlan','managedSwitchReference','deviceHasPortConfiguration','switchPartnerDeviceKey','normaliseDeviceConfigPort','normaliseDeviceConfigPorts','planManagedSwitchPorts','commitManagedSwitchPortConfiguration'])vm.runInContext(source(name),c);
-assert(c.deviceHasPortConfiguration({type:'Network Switch',managed:true}));assert(!c.deviceHasPortConfiguration({type:'Network Switch',managed:false}));assert(c.deviceHasPortConfiguration({dmx:true}));
+for(const name of ['unmanagedSwitchReference','setUnmanagedSwitchVlan','managedSwitchReference','switchPortConfigurationReference','deviceHasPortConfiguration','switchPartnerDeviceKey','normaliseDeviceConfigPort','normaliseDeviceConfigPorts','planManagedSwitchPorts','commitManagedSwitchPortConfiguration'])vm.runInContext(source(name),c);
+assert(c.deviceHasPortConfiguration({type:'Network Switch',managed:true}));assert(c.deviceHasPortConfiguration({type:'Network Switch',managed:false}));assert(c.deviceHasPortConfiguration({dmx:true}));
 const port=id=>({id,sub:id,category:'network',name:'',vlan:'0',partner:null});
 const devices=[{source:'network',id:'s',reference:{type:'Network Switch',managed:true},ports:[port('1'),port('2')]},{source:'console',id:'c',ports:[port('eth1'),port('eth2')]},{source:'network',id:'unmanaged',ports:[port('eth1')]}];
 const rows=[{id:'1',vlan:'3',partner:{source:'console',deviceId:'c',portId:'eth1'}},{id:'2',vlan:'4',partner:{source:'network',deviceId:'unmanaged',portId:'eth1'}}],before=JSON.stringify(devices);
@@ -32,7 +32,7 @@ console.log('PASS: managed switch eligibility, per-port VLANs, reciprocal stable
 {
  const esc=v=>String(v??'').replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;');
  const r=vm.createContext({compiledDeviceConfigDevices:()=>linked,escapeHtml:esc,escapeAttr:esc,normaliseVlan:v=>String(v||'0'),ipVlanCellStyle:()=>'',rackVlanOptionsMarkup:v=>`<option value="${v}" selected>${v}</option>`});
- for(const name of ['switchPartnerDeviceKey','availableSwitchPartnerPorts','switchPartnerDeviceOptions','switchPartnerPortOptions','managedSwitchPortSettingsMarkup'])vm.runInContext(source(name),r);
+ for(const name of ['managedSwitchReference','switchPartnerDeviceKey','availableSwitchPartnerPorts','switchPartnerDeviceOptions','switchPartnerPortOptions','managedSwitchPortSettingsMarkup'])vm.runInContext(source(name),r);
  const markup=r.managedSwitchPortSettingsMarkup({id:'s',deviceConfigPorts:[]},devices[0].reference);
  assert.equal((markup.match(/<tr data-switch-port=/g)||[]).length,2);assert.equal((markup.match(/select data-switch-vlan/g)||[]).length,2);assert.equal((markup.match(/select data-switch-partner-device/g)||[]).length,2);assert.equal((markup.match(/select data-switch-partner-port/g)||[]).length,2);assert(markup.includes('value="eth1" selected'));
  assert(source('selectDeviceConfigPortDevice').includes('if(!commitDeviceConfigPortConfiguration())return'));
@@ -41,7 +41,7 @@ console.log('PASS: managed switch eligibility, per-port VLANs, reciprocal stable
 {
  const esc=v=>String(v??'');
  const r=vm.createContext({escapeHtml:esc,escapeAttr:esc,compiledDeviceConfigDevices:()=>devices,rackReferenceHasNetworkPort:()=>true,networkDeviceProtocolOptions:()=>'<option>Art-Net</option>',rackDefaultProtocol:()=>'',rackDeviceVlanMarkup:()=>'<vlan>'});
- for(const name of ['unmanagedSwitchReference','setUnmanagedSwitchVlan','managedSwitchReference','switchPartnerDeviceKey','availableSwitchPartnerPorts','switchPartnerDeviceOptions','switchPartnerPortOptions','refreshSwitchPartnerPorts','updateSwitchPartnerDevice','rackDeviceProtocolVlanMarkup'])vm.runInContext(source(name),r);
+ for(const name of ['unmanagedSwitchReference','setUnmanagedSwitchVlan','managedSwitchReference','switchPortConfigurationReference','switchPartnerDeviceKey','availableSwitchPartnerPorts','switchPartnerDeviceOptions','switchPartnerPortOptions','refreshSwitchPartnerPorts','updateSwitchPartnerDevice','rackDeviceProtocolVlanMarkup'])vm.runInContext(source(name),r);
  const one=r.switchPartnerPortOptions(JSON.stringify(['network','unmanaged']));assert(one.includes('value="eth1" selected'));
  const multiple=r.switchPartnerPortOptions(JSON.stringify(['console','c']));assert(!multiple.includes(' selected'));
  assert(!r.switchPartnerPortOptions('').includes(' selected'));
@@ -80,7 +80,7 @@ console.log('PASS: managed switch eligibility, per-port VLANs, reciprocal stable
 {
  const ref={id:'unmanaged-test',type:'Network Switch',managed:false},item={id:'u',referenceId:ref.id,vlan1:'7',protocol:'sACN',deviceConfigPorts:[{...port('1'),vlan:'2',protocol:'Art-Net',partner:{source:'console',deviceId:'c',portId:'eth1'}},{...port('2'),vlan:'3'}]},device={source:'network',id:'u',reference:ref,interfaces:[]};
  const r=vm.createContext({normaliseVlan:v=>String(v||'0'),ipAddressSourceItem:()=>item,deviceConfigDeviceByKey:()=>device,networkDeviceReference:()=>ref,deviceConfigReference:()=>ref,normaliseNetworkPortSettings:()=>[],deviceConfigPortDefinitions:()=>[port('1'),port('2')].map(p=>({...p,protocols:[],directions:[]})),rackReferenceHasNetworkPort:()=>true,rackDeviceVlanMarkup:()=>'<vlan>',syncRackMountedNetworkLocations:()=>{},scheduleRackPopoutWindowsSync:()=>{}});
- for(const name of ['unmanagedSwitchReference','managedSwitchReference','setUnmanagedSwitchVlan','networkDeviceAllowsIp','networkDeviceDefaultProtocol','normaliseDeviceConfigPort','normaliseDeviceConfigPorts','deviceConfigPortsFor','updateDeviceConfigPortField','updateCanonicalDeviceField','rackDeviceProtocolVlanMarkup'])vm.runInContext(source(name),r);
+ for(const name of ['unmanagedSwitchReference','managedSwitchReference','switchPortConfigurationReference','setUnmanagedSwitchVlan','networkDeviceAllowsIp','networkDeviceDefaultProtocol','normaliseDeviceConfigPort','normaliseDeviceConfigPorts','deviceConfigPortsFor','updateDeviceConfigPortField','updateCanonicalDeviceField','rackDeviceProtocolVlanMarkup'])vm.runInContext(source(name),r);
  assert.equal(r.networkDeviceDefaultProtocol(ref,'Art-Net'),'');assert.equal(r.rackDeviceProtocolVlanMarkup({ref,item,kind:'network'}),'<vlan>');
  let ports=r.deviceConfigPortsFor(device);assert(ports.every(p=>p.vlan==='7'&&p.protocol===''&&p.ip===''&&p.subnet===''));
  assert.equal(r.updateCanonicalDeviceField('network','u','protocol','Art-Net'),false);
@@ -129,4 +129,40 @@ console.log('PASS: managed switch eligibility, per-port VLANs, reciprocal stable
  octo.ports.push(port('eth2'));
  assert(r.switchPartnerDeviceOptions('',list,{switchId:'stage1',portId:'2',drafts:[{id:'1',deviceKey:key,portId:'eth'}]}).includes('SPARE Octo'));
  console.log('PASS: Connected Device excludes full devices, retains current links and free multi-port devices, and respects draft assignments/disconnections.');
+}
+
+// Clear modifies only the current form; applying it uses the existing save workflow.
+{
+ let refreshes=0,styles=0,saves=0;
+ const r=vm.createContext({refreshSwitchPartnerPorts:()=>refreshes++,updateNetworkPortPositionStyle:()=>styles++,persist:()=>saves++});
+ vm.runInContext(source('clearDevicePortConfiguration'),r);
+ const fields=[{value:'device'},{value:'port'}],switchPanel={classList:{contains:()=>true},querySelectorAll:selector=>{assert.equal(selector,'[data-switch-partner-device], [data-switch-partner-port]');return fields}};
+ r.clearDevicePortConfiguration({closest:()=>switchPanel});assert(fields.every(field=>field.value===''));assert.equal(refreshes,1);assert.equal(saves,0);
+ const dmxFields=['name','universe','location'].map(key=>({value:'old',hasAttribute:attr=>attr==='data-network-port-'+key})),dmxPanel={classList:{contains:()=>false},querySelectorAll:selector=>{assert.equal(selector,'[data-network-port-name], [data-network-port-universe], [data-network-port-location]');return dmxFields}};
+ r.clearDevicePortConfiguration({closest:()=>dmxPanel});assert(dmxFields.every(field=>field.value===''));assert.equal(styles,1);assert.equal(saves,0);
+ assert(source('networkPortSettingsMarkup').includes('onclick="clearDevicePortConfiguration(this)"'));
+ assert(source('managedSwitchPortSettingsMarkup').includes('onclick="clearDevicePortConfiguration(this)"'));
+ // Both DMX save routes retain blank names, clear only the requested fields and save once.
+ for(const route of ['commitDeviceConfigPortConfiguration','saveRackPortConfiguration']){
+  let count=0;const item={id:'node',deviceConfigPorts:[{id:'dmx',category:'dmx',legacyDmxIndex:0,name:'Old',patch:'12',location:'Stage',direction:'input',vlan:'7',protocol:'sACN',notes:'Keep'},{id:'eth',category:'network',ip:'10.0.0.1',partner:{source:'network',deviceId:'s',portId:'1'}}]},settings=[{name:'',universe:'',location:'',direction:'input',vlan:'7',protocol:'sACN',notes:'Keep'}],ref={type:'DMX Node'};
+  const ctx=vm.createContext({normaliseVlan:v=>String(v||'0'),managedSwitchReference:()=>false,switchPortConfigurationReference:()=>false,deviceConfigPortConfigurationDevices:()=>[{id:'node',source:'network',reference:ref}],ipAddressSourceItem:()=>item,networkDmxPortDefinitions:()=>[{}],normaliseNetworkPortSettings:value=>value,readNetworkPortSettings:()=>settings,persist:()=>count++,rackPortConfigurationContext:()=>({network:item,ref}),$:()=>({}),render:()=>{},closeRackPortConfiguration:()=>{}});
+  for(const name of ['normaliseDeviceConfigPort','normaliseDeviceConfigPorts',route])vm.runInContext(source(name),ctx);
+  if(route==='saveRackPortConfiguration')ctx[route](false);else ctx[route]({},'node');
+  assert.equal(count,1);const port=item.deviceConfigPorts[0];for(const key of ['name','patch','location'])assert.equal(port[key],'');assert.equal(port.direction,'input');assert.equal(port.vlan,'7');assert.equal(port.notes,'Keep');assert.equal(item.deviceConfigPorts[1].partner.deviceId,'s');assert.equal(item.deviceConfigPorts[1].ip,'10.0.0.1');
+ }
+ console.log('PASS: device Clear is draft-only, switch VLANs and DMX directions remain untouched, and both DMX save routes preserve blank names with one save.');
+}
+
+// Unmanaged switches expose partner mapping, but never per-port VLAN or network settings.
+{
+ const ref={type:'Network Switch',managed:false},sw={source:'network',id:'u',name:'Unmanaged',reference:ref,ports:Array.from({length:8},(_,i)=>({...port(String(i+1)),vlan:'7'}))},peer={source:'network',id:'peer',name:'Node',ports:[port('eth')]},list=[sw,peer],proposals=sw.ports.map((p,i)=>({id:p.id,vlan:'99',partner:i===0?{source:'network',deviceId:'peer',portId:'eth'}:null}));
+ const plan=c.planManagedSwitchPorts(list,'u',proposals);assert(!plan.error);assert(plan.updates.find(d=>d.id==='u').ports.every(p=>p.vlan==='7'));assert.equal(plan.updates.find(d=>d.id==='peer').ports[0].partner.deviceId,'u');
+ const esc=v=>String(v??'').replaceAll('"','&quot;'),items=new Map([['u',{id:'u',vlan1:'7',ip1:'',subnet1:'',deviceConfigPorts:[]}],['peer',{id:'peer',deviceConfigPorts:[]}]]);let count=0;
+ const r=vm.createContext({compiledDeviceConfigDevices:()=>list,escapeHtml:esc,escapeAttr:esc,normaliseVlan:v=>String(v||'0'),ipVlanCellStyle:()=>'',rackVlanOptionsMarkup:()=>{throw Error('No per-port VLAN editor expected')},ipAddressSourceItem:(_,id)=>items.get(id),persist:()=>count++,alert:msg=>{throw Error(msg)}});
+ for(const name of ['unmanagedSwitchReference','managedSwitchReference','switchPortConfigurationReference','switchPartnerDeviceKey','availableSwitchPartnerPorts','switchPartnerDeviceOptions','switchPartnerPortOptions','managedSwitchPortSettingsMarkup','normaliseDeviceConfigPort','normaliseDeviceConfigPorts','planManagedSwitchPorts','commitManagedSwitchPortConfiguration'])vm.runInContext(source(name),r);
+ const markup=r.managedSwitchPortSettingsMarkup(items.get('u'),ref);assert.equal((markup.match(/<tr data-switch-port=/g)||[]).length,8);assert(!markup.includes('data-switch-vlan'));assert(!markup.includes('<th>VLAN</th>'));assert(markup.includes('clearDevicePortConfiguration(this)'));
+ const panel={dataset:{switchSnapshot:'[]'},querySelectorAll:()=>proposals.map(row=>({dataset:{switchPort:row.id},querySelector:selector=>selector==='[data-switch-vlan]'?null:{value:selector==='[data-switch-partner-device]'?(row.partner?JSON.stringify([row.partner.source,row.partner.deviceId]):''):(row.partner?.portId||'')}}))};
+ assert(r.commitManagedSwitchPortConfiguration({querySelector:()=>panel},items.get('u')));assert.equal(count,1);assert.equal(items.get('u').vlan1,'7');assert(items.get('u').deviceConfigPorts.every(p=>p.vlan==='7'));assert.equal(items.get('peer').deviceConfigPorts[0].partner.deviceId,'u');
+ for(const name of ['renderRackPortConfiguration','renderDeviceConfigPortConfigurationView','saveRackPortConfiguration','commitDeviceConfigPortConfiguration'])assert(source(name).includes('switchPortConfigurationReference('),name);
+ console.log('PASS: unmanaged eight-port editor, reciprocal save-once mapping, Clear availability, shared routing and unchanged whole-switch VLAN.');
 }
