@@ -1,3 +1,9 @@
+## V55.29 — Unmanaged switch VLAN assignment
+
+- Remove protocol controls and protocol display from unmanaged switches.
+- Assign one VLAN to the entire unmanaged switch and inherit it across all network ports, including Device Config and PDF rows.
+- Keep managed switch port VLAN assignments independent. Hide partner ports already used by another connection or unsaved selection, retaining the current connection when editing.
+
 ## V55.28 — Identify port connection conflicts
 
 - Name the attempted switch port, selected partner device/port and existing connection when a partner port is occupied.

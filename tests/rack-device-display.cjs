@@ -66,7 +66,7 @@ console.log('PASS: custom detailed cards, full-height half-width Side devices, s
 // Rack Settings uses the same unmanaged capability as Device Config.
 {
  const r=vm.createContext({rackReferenceHasNetworkPort:()=>true,ipSegmentedInputMarkup:()=>'<input>',rackLinkedDeviceContext:()=>({kind:'network',item:{referenceId:'swisson-xes-8g',ip1:'10.0.0.1',subnet1:'255.0.0.0'}}),rackDeviceReference:()=>({id:'swisson-xes-8g'}),rackSourceForKey:()=>({}),rackReferenceIsNetworkBased:()=>true,ipVlanSetup:()=>({enabled:false}),escapeHtml:v=>String(v)});
- for(const name of ['networkDeviceAllowsIp','rackDeviceNetworkAddressMarkup','rackSimpleDeviceMarkup'])vm.runInContext(source(name),r);
+ for(const name of ['unmanagedSwitchReference','setUnmanagedSwitchVlan','networkDeviceAllowsIp','rackDeviceNetworkAddressMarkup','rackSimpleDeviceMarkup'])vm.runInContext(source(name),r);
  const context={kind:'network',item:{referenceId:'swisson-xes-8g'},ref:{id:'swisson-xes-8g',supportsIpConfiguration:false}};
  assert.equal(r.rackDeviceNetworkAddressMarkup(context),'');
  assert(r.rackDeviceNetworkAddressMarkup({kind:'network',item:{},ref:{}}).includes('IP Address'));
