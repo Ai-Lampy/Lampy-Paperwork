@@ -62,7 +62,135 @@
       },
       "type": "Network Switch",
       "managed": true,
-      "weightKg": 2.4
+      "weightKg": 2.4,
+      "networkPortLayout": [
+        {
+          "portId": "network_0_0_front",
+          "face": "front",
+          "x": 41.722,
+          "y": 51.98,
+          "width": 4.257,
+          "height": 44.554,
+          "shape": "round"
+        },
+        {
+          "portId": "network_0_1_front",
+          "face": "front",
+          "x": 46.973,
+          "y": 51.98,
+          "width": 4.257,
+          "height": 44.554,
+          "shape": "round"
+        },
+        {
+          "portId": "network_0_2_front",
+          "face": "front",
+          "x": 52.223,
+          "y": 51.98,
+          "width": 4.257,
+          "height": 44.554,
+          "shape": "round"
+        },
+        {
+          "portId": "network_0_3_front",
+          "face": "front",
+          "x": 57.474,
+          "y": 51.98,
+          "width": 4.257,
+          "height": 44.554,
+          "shape": "round"
+        },
+        {
+          "portId": "network_0_4_front",
+          "face": "front",
+          "x": 62.725,
+          "y": 51.98,
+          "width": 4.257,
+          "height": 44.554,
+          "shape": "round"
+        },
+        {
+          "portId": "network_0_5_front",
+          "face": "front",
+          "x": 67.975,
+          "y": 51.98,
+          "width": 4.257,
+          "height": 44.554,
+          "shape": "round"
+        },
+        {
+          "portId": "network_0_6_front",
+          "face": "front",
+          "x": 73.226,
+          "y": 51.98,
+          "width": 4.257,
+          "height": 44.554,
+          "shape": "round"
+        },
+        {
+          "portId": "network_0_7_front",
+          "face": "front",
+          "x": 78.477,
+          "y": 51.98,
+          "width": 4.257,
+          "height": 44.554,
+          "shape": "round"
+        },
+        {
+          "portId": "network_0_8_front",
+          "face": "front",
+          "x": 83.728,
+          "y": 51.98,
+          "width": 4.257,
+          "height": 44.554,
+          "shape": "round"
+        },
+        {
+          "portId": "network_0_9_front",
+          "face": "front",
+          "x": 88.978,
+          "y": 51.98,
+          "width": 4.257,
+          "height": 44.554,
+          "shape": "round"
+        },
+        {
+          "portId": "network_1_0_rear",
+          "face": "rear",
+          "x": 8.935,
+          "y": 49.275,
+          "width": 4.543,
+          "height": 43.478,
+          "shape": "round"
+        },
+        {
+          "portId": "network_1_1_rear",
+          "face": "rear",
+          "x": 22.665,
+          "y": 49.275,
+          "width": 4.543,
+          "height": 43.478,
+          "shape": "round"
+        },
+        {
+          "portId": "network_2_0_rear",
+          "face": "rear",
+          "x": 34.326,
+          "y": 49.275,
+          "width": 4.543,
+          "height": 43.478,
+          "shape": "round"
+        },
+        {
+          "portId": "network_2_1_rear",
+          "face": "rear",
+          "x": 51.943,
+          "y": 49.275,
+          "width": 4.543,
+          "height": 43.478,
+          "shape": "round"
+        }
+      ]
     },
     {
       "dimensionsMm": {
@@ -75,14 +203,62 @@
       "lineImageUrlFront": "images/pathway/Pathway_Octo_Node_Line_front.png",
       "lineImageUrlRear": "images/pathway/Pathway_Octo_Node_Line_rear.png",
       "dmxPortLayout": [
-        { "port": "A", "face": "front", "xPercent": 42.8, "yPercent": 50.0, "sizePercent": 5.5 },
-        { "port": "B", "face": "front", "xPercent": 49.3, "yPercent": 50.0, "sizePercent": 5.5 },
-        { "port": "C", "face": "front", "xPercent": 55.8, "yPercent": 50.0, "sizePercent": 5.5 },
-        { "port": "D", "face": "front", "xPercent": 62.4, "yPercent": 50.0, "sizePercent": 5.5 },
-        { "port": "E", "face": "front", "xPercent": 68.8, "yPercent": 50.0, "sizePercent": 5.5 },
-        { "port": "F", "face": "front", "xPercent": 75.4, "yPercent": 50.0, "sizePercent": 5.5 },
-        { "port": "G", "face": "front", "xPercent": 81.9, "yPercent": 50.0, "sizePercent": 5.5 },
-        { "port": "H", "face": "front", "xPercent": 88.4, "yPercent": 50.0, "sizePercent": 5.5 }
+        {
+          "port": "A",
+          "face": "front",
+          "xPercent": 42.8,
+          "yPercent": 50.0,
+          "sizePercent": 5.5
+        },
+        {
+          "port": "B",
+          "face": "front",
+          "xPercent": 49.3,
+          "yPercent": 50.0,
+          "sizePercent": 5.5
+        },
+        {
+          "port": "C",
+          "face": "front",
+          "xPercent": 55.8,
+          "yPercent": 50.0,
+          "sizePercent": 5.5
+        },
+        {
+          "port": "D",
+          "face": "front",
+          "xPercent": 62.4,
+          "yPercent": 50.0,
+          "sizePercent": 5.5
+        },
+        {
+          "port": "E",
+          "face": "front",
+          "xPercent": 68.8,
+          "yPercent": 50.0,
+          "sizePercent": 5.5
+        },
+        {
+          "port": "F",
+          "face": "front",
+          "xPercent": 75.4,
+          "yPercent": 50.0,
+          "sizePercent": 5.5
+        },
+        {
+          "port": "G",
+          "face": "front",
+          "xPercent": 81.9,
+          "yPercent": 50.0,
+          "sizePercent": 5.5
+        },
+        {
+          "port": "H",
+          "face": "front",
+          "xPercent": 88.4,
+          "yPercent": 50.0,
+          "sizePercent": 5.5
+        }
       ],
       "mounting": {
         "accessory": "Optional truss-mount kit",

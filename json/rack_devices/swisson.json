@@ -38,7 +38,80 @@
         ],
         "poeIn": false
       },
-      "protocols": []
+      "networkPortLayout": [
+        {
+          "portId": "network_0_0_front",
+          "face": "front",
+          "x": 23.594,
+          "y": 53.202,
+          "width": 4.147,
+          "height": 44.335,
+          "shape": "round"
+        },
+        {
+          "portId": "network_0_1_front",
+          "face": "front",
+          "x": 29.401,
+          "y": 53.202,
+          "width": 4.147,
+          "height": 44.335,
+          "shape": "round"
+        },
+        {
+          "portId": "network_0_2_front",
+          "face": "front",
+          "x": 35.207,
+          "y": 53.202,
+          "width": 4.147,
+          "height": 44.335,
+          "shape": "round"
+        },
+        {
+          "portId": "network_0_3_front",
+          "face": "front",
+          "x": 41.014,
+          "y": 53.202,
+          "width": 4.147,
+          "height": 44.335,
+          "shape": "round"
+        },
+        {
+          "portId": "network_0_4_front",
+          "face": "front",
+          "x": 58.94,
+          "y": 53.202,
+          "width": 4.147,
+          "height": 44.335,
+          "shape": "round"
+        },
+        {
+          "portId": "network_0_5_front",
+          "face": "front",
+          "x": 64.747,
+          "y": 53.202,
+          "width": 4.147,
+          "height": 44.335,
+          "shape": "round"
+        },
+        {
+          "portId": "network_0_6_front",
+          "face": "front",
+          "x": 70.553,
+          "y": 53.202,
+          "width": 4.147,
+          "height": 44.335,
+          "shape": "round"
+        },
+        {
+          "portId": "network_0_7_front",
+          "face": "front",
+          "x": 76.359,
+          "y": 53.202,
+          "width": 4.147,
+          "height": 44.335,
+          "shape": "round"
+        }
+      ]
     }
   ]
 }
