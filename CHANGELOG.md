@@ -1,3 +1,8 @@
+## V55.36 — Source and folder cleanup
+
+- Remove retired walkthrough markup, styles and event hooks, plus unused helpers and the superseded Universe detail side-pane renderer. Keep the active Universe Detail page and Help unchanged.
+- Remove Finder metadata and a redundant image-folder placeholder. Preserve catalogues, saved-project compatibility assets, review data, workbooks and handovers.
+
 ## V55.35 — Rack labels and VLAN tooltips
 
 - Move Detailed Rack Layout device names beside the left rack rail, removing U size and U position from the labels. Reserve label space without changing device image proportions or rack slots.

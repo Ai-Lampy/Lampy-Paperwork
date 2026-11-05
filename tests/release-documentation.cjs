@@ -26,7 +26,7 @@ console.log('PASS: release documentation/fallback parity; stale docs, stale fall
 for(const phrase of ['Help above Menu','Home → Project Settings','Loom cards start collapsed','single-patch shortcut','JSON loading unavailable'])assert(actual.checklist.includes(phrase),`Missing V53 checklist case: ${phrase}`);
 assert(!actual.checklist.includes('1450 px page wrapper'));
 // Exercise the real load failures and normalisers without DOM/browser automation.
-const vm=require('node:vm'),context=vm.createContext({console:{warn(){}},WELCOME_MESSAGE_URL:'welcome',WALKTHROUGH_URL:'walkthrough',fetchJSONWithFallback:async()=>{throw Error('offline')}});
+const vm=require('node:vm'),context=vm.createContext({console:{warn(){}},WELCOME_MESSAGE_URL:'welcome',fetchJSONWithFallback:async()=>{throw Error('offline')}});
 for(const name of ['fallbackWelcomeMessage','normaliseWelcomeMessage','loadWelcomeMessage']){
  const start=actual.html.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);
  const end=actual.html.indexOf('\n',start);vm.runInContext(actual.html.slice(start,end),context);
@@ -35,16 +35,16 @@ const plain=value=>JSON.parse(JSON.stringify(value));
 assert.deepEqual(plain(context.normaliseWelcomeMessage({})),actual.welcome);
 Promise.all([context.loadWelcomeMessage()]).then(([welcome])=>{
  assert.deepEqual(plain(welcome),actual.welcome);
- console.log('PASS: actual offline welcome/walkthrough loaders and empty-data normalisers retain the complete current-release guidance.');
+ console.log('PASS: actual offline welcome loader and empty-data normalisers retain the complete current-release guidance.');
 }).catch(error=>{console.error(error);process.exitCode=1});
 
-// Welcome links and temporary walkthrough suspension must also work offline.
+// Welcome links and Help remain available after removing the retired walkthrough.
 assert(actual.welcome.paragraphs.includes('https://ailampy.com/paperwork/'));
 assert(JSON.stringify(actual.welcome).includes('info@ailampy.com'));
 assert(!JSON.stringify(actual.welcome).includes('github.io'));
-assert(actual.html.includes('const WALKTHROUGH_ENABLED=false;'));
-const welcomeContext=vm.createContext({WALKTHROUGH_ENABLED:false,LampySidebar:require('../js/app-sidebar.js'),escapeHtml:value=>String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;'),walkthroughSkipped(){throw Error('Disabled walkthrough must not access preferences')},$(){throw Error('Disabled walkthrough must not access DOM')}});
-for(const name of ['welcomeParagraphMarkup','welcomeHelpMarkup','maybeOpenWalkthroughAfterWelcome','openWalkthrough']){
+assert(!/walkthrough/i.test(actual.html),'Retired walkthrough markup, styles and handlers must remain absent');
+const welcomeContext=vm.createContext({LampySidebar:require('../js/app-sidebar.js'),escapeHtml:value=>String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')});
+for(const name of ['welcomeParagraphMarkup','welcomeHelpMarkup']){
  const start=actual.html.search(new RegExp('(?:async )?function '+name+'\\(')),end=actual.html.indexOf('\n',start);assert(start>=0,name);vm.runInContext(actual.html.slice(start,end),welcomeContext);
 }
 assert(welcomeContext.welcomeParagraphMarkup('https://ailampy.com/paperwork/').includes('href="https://ailampy.com/paperwork/"'));
@@ -53,9 +53,6 @@ assert(!welcomeContext.welcomeParagraphMarkup('<img src=x onerror=alert(1)>').in
 const callout=welcomeContext.welcomeHelpMarkup();assert(callout.includes('welcomeHelpArrow'));assert(callout.indexOf('welcomeHelpArrow')<callout.indexOf('welcomeOpenHelp'));assert(callout.includes('aria-hidden="true"'));assert(callout.includes('Open Help'));
 assert(actual.html.includes('animation:welcomeHelpFlash 1s ease-in-out 4'));
 assert(actual.html.includes('@media(prefers-reduced-motion:reduce){.welcomeHelpArrow{animation:none}}'));
-assert(actual.html.includes('[data-walkthrough-entry][hidden]{display:none!important}'));
-assert.equal([...actual.html.matchAll(/<button[^>]+onclick="openWalkthrough\([^>]+>/g)].filter(m=>!m[0].includes('hidden disabled')).length,0);
-Promise.all([welcomeContext.maybeOpenWalkthroughAfterWelcome(),welcomeContext.openWalkthrough(),welcomeContext.openWalkthrough({auto:true})]).then(()=>console.log('PASS: welcome site/email, escaped text, Help callout, bounded/reduced-motion arrow and disabled walkthrough launch paths.')).catch(error=>{console.error(error);process.exitCode=1});
 
 assert(actual.checklist.includes('Production Contacts'));assert(actual.checklist.includes('saved hidden columns'));assert(actual.checklist.includes('solid internal borders'));
 
