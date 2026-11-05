@@ -29,6 +29,29 @@ assert.deepEqual(plain(c.patchPdfSummaryRows(groups).map(r=>r.quantity)),[2,1,1,
 for(const width of [720,1050]){assert.deepEqual(plain(c.patchSummaryColumnWidths(width,[0,0,0,0])),[.15,.15,.05,.05].map(n=>width*n));assert.deepEqual(plain(c.patchSummaryColumnWidths(width,[9999,9999,9999,9999])),[.4,.35,.15,.1].map(n=>width*n))}
 const element=()=>({classList:{add(){}},style:{}});c.document={createElement:element};
 const markup=c.patchPdfSupplementElement('summary',c.patchPdfSummaryRows(groups),{widths:[200,160,60,50],final:true,universes:2}).innerHTML;
+
+// Summary order is independent of patch grouping and does not mutate source rows.
+const unsorted=[
+ {manufacturer:'Zeta',fixture:'Beam',mode:'Full',channels:32},
+ {manufacturer:'alpha',fixture:'Spot 10',mode:'Mode 1',channels:32},
+ {manufacturer:'alpha',fixture:'Spot 2',mode:'Mode 10',channels:32},
+ {manufacturer:'alpha',fixture:'Spot 2',mode:'Mode 2',channels:64},
+ {manufacturer:'alpha',fixture:'Spot 2',mode:'Mode 2',channels:16},
+ {manufacturer:'alpha',fixture:'Spot 2',mode:'Mode 2',channels:16}
+],summaryGroups=[{items:unsorted.slice(0,3)},{items:unsorted.slice(3)}],before=JSON.stringify(summaryGroups);
+const sorted=c.patchPdfSummaryRows(summaryGroups);
+assert.deepEqual(plain(sorted.map(r=>[r.manufacturer,r.fixture,r.mode,r.channels,r.quantity])),[
+ ['alpha','Spot 2','Mode 2',16,2],['alpha','Spot 2','Mode 2',64,1],
+ ['alpha','Spot 2','Mode 10',32,1],['alpha','Spot 10','Mode 1',32,1],['Zeta','Beam','Full',32,1]
+]);
+assert.equal(JSON.stringify(summaryGroups),before);
+assert.deepEqual(plain(c.patchPdfSummaryRows([{items:[...unsorted].reverse()}])),plain(sorted));
+assert.deepEqual(plain(c.patchPdfSummaryRows([])),[]);
+const sortedMarkup=c.patchPdfSupplementElement('summary',sorted).innerHTML;
+assert(sortedMarkup.indexOf('alpha Spot 2')<sortedMarkup.indexOf('alpha Spot 10'));
+assert(sortedMarkup.indexOf('alpha Spot 10')<sortedMarkup.indexOf('Zeta Beam'));
+console.log('PASS: alphabetical PDF fixture summary, natural number and mode ordering, preserved grouping/counts and unchanged source patch.');
+
 assert(markup.includes('A Spot'));assert(markup.includes('<th>Channels</th>'));assert(markup.includes('<th aria-label="Quantity" title="Quantity">Qty</th>'));assert(markup.includes('Patched Universes: 2'));assert(markup.includes('width:470px'));assert(!markup.includes('Parameters'));
 assert(!c.patchPdfSupplementElement('summary',[],{}).innerHTML.includes('Patched Universes'));
 assert(html.includes('.patchPdfSummaryTable{margin-inline:auto}'));

@@ -1,3 +1,7 @@
+## V55.37 — Alphabetical Patch PDF fixture summary
+
+- Sort the Patch PDF Fixture Summary alphabetically by its displayed manufacturer and fixture name, then mode and channel count. Use case-insensitive, natural numeric ordering without changing patch order or grouped quantities.
+
 ## V55.36 — Source and folder cleanup
 
 - Remove retired walkthrough markup, styles and event hooks, plus unused helpers and the superseded Universe detail side-pane renderer. Keep the active Universe Detail page and Help unchanged.
