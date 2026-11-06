@@ -59,7 +59,7 @@
       },
       "shortName": "SkyPanel-X",
       "image": "images/fixtures/arri/arri-skypanel-x.png",
-      "details": "json/fixture-details/1992897f9344926c4e3e0224361881946ddfac516f26c1e4eb52da9b6a78358b.json",
+      "details": "json/fixture-details/arri/arri-skypanel-x.json",
       "provenance": {
         "fileName": "ARRI@ARRI_SkyPanel-X@DMX_v.6_1_Feb_2024.gdtf",
         "sha256": "1992897f9344926c4e3e0224361881946ddfac516f26c1e4eb52da9b6a78358b",
@@ -124,7 +124,7 @@
       },
       "shortName": "L10C",
       "image": "images/fixtures/arri/l10-c.png",
-      "details": "json/fixture-details/d26ed49b94822d6e76720dffa46496cd5912f6fe661f4fdf1d08543ea05021ea.json",
+      "details": "json/fixture-details/arri/l10-c.json",
       "provenance": {
         "fileName": "ARRI@L10-C@DMX_v3.5_13_Jan_2021.gdtf",
         "sha256": "d26ed49b94822d6e76720dffa46496cd5912f6fe661f4fdf1d08543ea05021ea",
@@ -189,7 +189,7 @@
       },
       "shortName": "L5C",
       "image": "images/fixtures/arri/l5-c.png",
-      "details": "json/fixture-details/eaeabca6496e0ca84419aacfece95e1c9387e5ccfe82729c251759c835182929.json",
+      "details": "json/fixture-details/arri/l5-c.json",
       "provenance": {
         "fileName": "ARRI@L5-C@DMX_v3.5_13_Jan_2021.gdtf",
         "sha256": "eaeabca6496e0ca84419aacfece95e1c9387e5ccfe82729c251759c835182929",
@@ -424,7 +424,7 @@
       },
       "shortName": "L5C+",
       "image": "images/fixtures/arri/l5c-plus.png",
-      "details": "json/fixture-details/d8cf3ae7bc6cfaaaab5e019b7f6bfb8e67fe6383259aaba1d1f3abf43fa31088.json",
+      "details": "json/fixture-details/arri/l5c-plus.json",
       "provenance": {
         "fileName": "ARRI@L5C_Plus@DMX_v4.4.gdtf",
         "sha256": "d8cf3ae7bc6cfaaaab5e019b7f6bfb8e67fe6383259aaba1d1f3abf43fa31088",
@@ -489,7 +489,7 @@
       },
       "shortName": "L7C",
       "image": "images/fixtures/arri/l7c.png",
-      "details": "json/fixture-details/41837a4e19e87242d01cbde78afc86d460b7fac6c1bafa7efbb1a3909140ea6f.json",
+      "details": "json/fixture-details/arri/l7c.json",
       "provenance": {
         "fileName": "ARRI@L7C@DMX_v3.5_13_Jan_2021.gdtf",
         "sha256": "41837a4e19e87242d01cbde78afc86d460b7fac6c1bafa7efbb1a3909140ea6f",
@@ -724,7 +724,7 @@
       },
       "shortName": "L7C+",
       "image": "images/fixtures/arri/l7c-plus.png",
-      "details": "json/fixture-details/22c895622aa620b3972a3da2b59fc5cbf8425feffad91556a7c00c6ad01eb228.json",
+      "details": "json/fixture-details/arri/l7c-plus.json",
       "provenance": {
         "fileName": "ARRI@L7C_Plus@DMX_v4.4.gdtf",
         "sha256": "22c895622aa620b3972a3da2b59fc5cbf8425feffad91556a7c00c6ad01eb228",
@@ -1579,7 +1579,7 @@
       },
       "shortName": "Omnibar 2",
       "image": "images/fixtures/arri/omnibar-2.png",
-      "details": "json/fixture-details/73ad11700860601778fe3ee33d6d96091adaa25ecf8a8b1be6610d3d29e11d30.json",
+      "details": "json/fixture-details/arri/omnibar-2.json",
       "provenance": {
         "fileName": "ARRI@Omnibar_2@DMX_v1.0.gdtf",
         "sha256": "73ad11700860601778fe3ee33d6d96091adaa25ecf8a8b1be6610d3d29e11d30",
@@ -2434,7 +2434,7 @@
       },
       "shortName": "Omnibar 4",
       "image": "images/fixtures/arri/omnibar-4.png",
-      "details": "json/fixture-details/d63c80d3c07d32c07db48bd735a240f65ea2ccaae10d166867daa73743cb234d.json",
+      "details": "json/fixture-details/arri/omnibar-4.json",
       "provenance": {
         "fileName": "ARRI@Omnibar_4@DMX_v1.0.gdtf",
         "sha256": "d63c80d3c07d32c07db48bd735a240f65ea2ccaae10d166867daa73743cb234d",
@@ -2709,7 +2709,7 @@
       },
       "shortName": "Orbiter",
       "image": "images/fixtures/arri/orbiter.png",
-      "details": "json/fixture-details/7343a0685bfd28a7a5a1ad8fad7741309dd90a48970ac6298232f69ddac09e09.json",
+      "details": "json/fixture-details/arri/orbiter.json",
       "provenance": {
         "fileName": "ARRI@Orbiter@DMX_v4.5_29_Dec_Standard_and_ECC.gdtf",
         "sha256": "7343a0685bfd28a7a5a1ad8fad7741309dd90a48970ac6298232f69ddac09e09",
@@ -2894,7 +2894,7 @@
       },
       "shortName": "S60-Pro",
       "image": "images/fixtures/arri/s60-pro.png",
-      "details": "json/fixture-details/6c5f7b328bec7379e7b1ee1f98e5fde1d38a3175c6fe79963b9ac642880c8727.json",
+      "details": "json/fixture-details/arri/s60-pro.json",
       "provenance": {
         "fileName": "ARRI@S60_Pro@DMX_v4.4_S60-Pro.gdtf",
         "sha256": "6c5f7b328bec7379e7b1ee1f98e5fde1d38a3175c6fe79963b9ac642880c8727",
@@ -3129,7 +3129,7 @@
       },
       "shortName": "S120C",
       "image": "images/fixtures/arri/skypanel-s120c.png",
-      "details": "json/fixture-details/21506fa64b787e79cee3213318bb2217fe66eb1022b5c33ee748559a338694a2.json",
+      "details": "json/fixture-details/arri/skypanel-s120c.json",
       "provenance": {
         "fileName": "ARRI@SkyPanel_S120C@DMX_v4.4_13_Jan_2021.gdtf",
         "sha256": "21506fa64b787e79cee3213318bb2217fe66eb1022b5c33ee748559a338694a2",
@@ -3364,7 +3364,7 @@
       },
       "shortName": "S30C",
       "image": "images/fixtures/arri/skypanel-s30c.png",
-      "details": "json/fixture-details/6c101f438001dc95fae5ad5d6d92aebb9aea78a9080666071ede96e3ec4f66a6.json",
+      "details": "json/fixture-details/arri/skypanel-s30c.json",
       "provenance": {
         "fileName": "ARRI@SkyPanel_S30C@DMX_v4.4_13_Jan_2021.gdtf",
         "sha256": "6c101f438001dc95fae5ad5d6d92aebb9aea78a9080666071ede96e3ec4f66a6",
@@ -3389,7 +3389,7 @@
       },
       "shortName": "S30-RP",
       "image": "images/fixtures/arri/skypanel-s30rp.png",
-      "details": "json/fixture-details/6eedfa77c02a372bd952823a79cfad1b78ccdd9a34a650fcc0a9cea149861cf9.json",
+      "details": "json/fixture-details/arri/skypanel-s30rp.json",
       "provenance": {
         "fileName": "ARRI@SkyPanel_S30RP@DMX_v4.4_13_Jan_2021.gdtf",
         "sha256": "6eedfa77c02a372bd952823a79cfad1b78ccdd9a34a650fcc0a9cea149861cf9",
@@ -3624,7 +3624,7 @@
       },
       "shortName": "S360C",
       "image": "images/fixtures/arri/skypanel-s360c.png",
-      "details": "json/fixture-details/163773ae7b87b422de0b6ed650ca4ea9a2c77fa0ae1a758e53226f2bbbfb13e3.json",
+      "details": "json/fixture-details/arri/skypanel-s360c.json",
       "provenance": {
         "fileName": "ARRI@SkyPanel_S360C@DMX_v4.4_13_Jan_2021.gdtf",
         "sha256": "163773ae7b87b422de0b6ed650ca4ea9a2c77fa0ae1a758e53226f2bbbfb13e3",
@@ -3859,7 +3859,7 @@
       },
       "shortName": "S60C",
       "image": "images/fixtures/arri/skypanel-s60c.png",
-      "details": "json/fixture-details/62758fcd81be9ed5c325a019e85c3f3419191d2c8c8c95a32ae2bc4e4c833b2f.json",
+      "details": "json/fixture-details/arri/skypanel-s60c.json",
       "provenance": {
         "fileName": "ARRI@SkyPanel_S60C@DMX_v4.4_13_Jan_2021.gdtf",
         "sha256": "62758fcd81be9ed5c325a019e85c3f3419191d2c8c8c95a32ae2bc4e4c833b2f",
@@ -3884,7 +3884,7 @@
       },
       "shortName": "S60-RP",
       "image": "images/fixtures/arri/skypanel-s60rp.png",
-      "details": "json/fixture-details/b4874f798fa5616cf7a46fd165b2355dd1f84465b22aa2d723760dfb955d1bc5.json",
+      "details": "json/fixture-details/arri/skypanel-s60rp.json",
       "provenance": {
         "fileName": "ARRI@SkyPanel_S60RP@DMX_v4.4_13_Jan_2021.gdtf",
         "sha256": "b4874f798fa5616cf7a46fd165b2355dd1f84465b22aa2d723760dfb955d1bc5",

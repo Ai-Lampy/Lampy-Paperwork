@@ -7,7 +7,7 @@ def image_slug(value):
 def main():
     owners=collections.defaultdict(set)
     files=sorted((ROOT/'json/fixtures').glob('*.json'))
-    details=sorted((ROOT/'json/fixture-details').glob('*.json'))
+    details=sorted((ROOT/'json/fixture-details').rglob('*.json'))
     for p in files:
         d=json.loads(p.read_text())
         for f in d['fixtures']:

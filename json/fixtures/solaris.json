@@ -104,7 +104,7 @@
       },
       "shortName": "Flare Q+ Rayzr 100cm",
       "image": "images/fixtures/solaris/solaris-flare-q-plus-rayzr-100cm.png",
-      "details": "json/fixture-details/c1ffa1872f1bc2f13adb74e39ea60938675070363632ef0fcc3dfc8466f8693a.json",
+      "details": "json/fixture-details/solaris/solaris-flare-q-plus-rayzr-100cm.json",
       "provenance": {
         "fileName": "Solaris@Solaris_Flare_Q_plus_Rayzr_100cm@v1.0.34_-_MFR_Release.gdtf",
         "sha256": "c1ffa1872f1bc2f13adb74e39ea60938675070363632ef0fcc3dfc8466f8693a",
@@ -194,7 +194,7 @@
       },
       "shortName": "Flare Q+ Rayzr 50cm",
       "image": "images/fixtures/solaris/solaris-flare-q-plus-rayzr-50cm.png",
-      "details": "json/fixture-details/d8ab29f57c60f91f5531d1f41080b234fff369ae6195ba5f001be6e5ac57be3a.json",
+      "details": "json/fixture-details/solaris/solaris-flare-q-plus-rayzr-50cm.json",
       "provenance": {
         "fileName": "Solaris@Solaris_Flare_Q_plus_Rayzr_50cm@v1.0.32_-_MFR_Release.gdtf",
         "sha256": "d8ab29f57c60f91f5531d1f41080b234fff369ae6195ba5f001be6e5ac57be3a",
@@ -294,7 +294,7 @@
       },
       "shortName": "Flare XL 120",
       "image": "images/fixtures/solaris/solaris-flare-xl-120.png",
-      "details": "json/fixture-details/8a18b20440521b6726303f353b4f95eb0b37ad614c693a070cf975b4500bb306.json",
+      "details": "json/fixture-details/solaris/solaris-flare-xl-120.json",
       "provenance": {
         "fileName": "Solaris@Solaris_Flare_XL_120@v1.0.0_-_MFR_Release.gdtf",
         "sha256": "8a18b20440521b6726303f353b4f95eb0b37ad614c693a070cf975b4500bb306",
@@ -434,7 +434,7 @@
       },
       "shortName": "Flare XL 36",
       "image": "images/fixtures/solaris/solaris-flare-xl-36.png",
-      "details": "json/fixture-details/312a154bbf23ce54514c819e4c7b1d425938bfb5c47a84fd3eda022fb7efbabb.json",
+      "details": "json/fixture-details/solaris/solaris-flare-xl-36.json",
       "provenance": {
         "fileName": "Solaris@Solaris_Flare_XL_36@v1.0.0_-_MFR_Release.gdtf",
         "sha256": "312a154bbf23ce54514c819e4c7b1d425938bfb5c47a84fd3eda022fb7efbabb",
@@ -704,7 +704,7 @@
       },
       "shortName": "Flare XL 72",
       "image": "images/fixtures/solaris/solaris-flare-xl-72.png",
-      "details": "json/fixture-details/4f5665fb0ac4f9fd159aec6ecdbc1e1cb822f6ddffb4607c9407d71183ebb842.json",
+      "details": "json/fixture-details/solaris/solaris-flare-xl-72.json",
       "provenance": {
         "fileName": "Solaris@Solaris_Flare_XL_72@v1.0.0_-_MFR_Release.gdtf",
         "sha256": "4f5665fb0ac4f9fd159aec6ecdbc1e1cb822f6ddffb4607c9407d71183ebb842",
@@ -804,7 +804,7 @@
       },
       "shortName": "Flare XLR 1x16",
       "image": "images/fixtures/solaris/solaris-flare-xlr-1x16.png",
-      "details": "json/fixture-details/10aa99d1c713ea296eec057952875f49b8e450f95fd55436c370d1291be8fdd3.json",
+      "details": "json/fixture-details/solaris/solaris-flare-xlr-1x16.json",
       "provenance": {
         "fileName": "Solaris@Solaris_Flare_XLR_1x16@v1.0.0_-_MFR_Release.gdtf",
         "sha256": "10aa99d1c713ea296eec057952875f49b8e450f95fd55436c370d1291be8fdd3",
@@ -894,7 +894,7 @@
       },
       "shortName": "Flare XLR 1x8",
       "image": "images/fixtures/solaris/solaris-flare-xlr-1x8.png",
-      "details": "json/fixture-details/d2d1093b76f45b1548d711f042d4b253c55426d04176ca04a8b622e657b3c523.json",
+      "details": "json/fixture-details/solaris/solaris-flare-xlr-1x8.json",
       "provenance": {
         "fileName": "Solaris@Solaris_Flare_XLR_1x8@v1.0.0_-_MFR_Release.gdtf",
         "sha256": "d2d1093b76f45b1548d711f042d4b253c55426d04176ca04a8b622e657b3c523",
@@ -924,7 +924,7 @@
       },
       "shortName": "Mozart",
       "image": "images/fixtures/solaris/solaris-mozart.png",
-      "details": "json/fixture-details/8df742594cd28806a09688b669e480d4e1c61c9c69f117f2d613be0e5fb13d3d.json",
+      "details": "json/fixture-details/solaris/solaris-mozart.json",
       "provenance": {
         "fileName": "Solaris@Solaris_Mozart@v1.0.9_-_MFR_Release.gdtf",
         "sha256": "8df742594cd28806a09688b669e480d4e1c61c9c69f117f2d613be0e5fb13d3d",
@@ -969,7 +969,7 @@
       },
       "shortName": "Mozart FLR",
       "image": "images/fixtures/solaris/solaris-mozart-flr.png",
-      "details": "json/fixture-details/ec3a0772c2b78759a8feb8150dcbd911c86d4d931e1af376a821b660663f17e4.json",
+      "details": "json/fixture-details/solaris/solaris-mozart-flr.json",
       "provenance": {
         "fileName": "Solaris@Solaris_Mozart_FLR@v1.0.10_-_MFR_Release.gdtf",
         "sha256": "ec3a0772c2b78759a8feb8150dcbd911c86d4d931e1af376a821b660663f17e4",
@@ -999,7 +999,7 @@
       },
       "shortName": "Mozart LR",
       "image": "images/fixtures/solaris/solaris-mozart-lr.png",
-      "details": "json/fixture-details/b7d226026d291d537ed26447d1941fbc72141d474204ed5c73e15504c968758b.json",
+      "details": "json/fixture-details/solaris/solaris-mozart-lr.json",
       "provenance": {
         "fileName": "Solaris@Solaris_Mozart_LR@v1.0.8_-_MFR_Release.gdtf",
         "sha256": "b7d226026d291d537ed26447d1941fbc72141d474204ed5c73e15504c968758b",
@@ -1044,7 +1044,7 @@
       },
       "shortName": "Mozart LR FLR",
       "image": "images/fixtures/solaris/solaris-mozart-lr-flr.png",
-      "details": "json/fixture-details/dc57a134d5400b4363a9e25b5b935828a072dc69594fe3cf3593e687741131fd.json",
+      "details": "json/fixture-details/solaris/solaris-mozart-lr-flr.json",
       "provenance": {
         "fileName": "Solaris@Solaris_Mozart_LR_FLR@v1.0.10_-_MFR_Release.gdtf",
         "sha256": "dc57a134d5400b4363a9e25b5b935828a072dc69594fe3cf3593e687741131fd",
@@ -1074,7 +1074,7 @@
       },
       "shortName": "Mozart One",
       "image": "images/fixtures/solaris/solaris-mozart-one.png",
-      "details": "json/fixture-details/7c6639d07ee73851d416372a364a1635563eaa93469a9597d1079aca005591b0.json",
+      "details": "json/fixture-details/solaris/solaris-mozart-one.json",
       "provenance": {
         "fileName": "Solaris@Solaris_Mozart_One@v1.0.9_-_MFR_Release.gdtf",
         "sha256": "7c6639d07ee73851d416372a364a1635563eaa93469a9597d1079aca005591b0",
@@ -1119,7 +1119,7 @@
       },
       "shortName": "Mozart One FLR",
       "image": "images/fixtures/solaris/solaris-mozart-one-flr.png",
-      "details": "json/fixture-details/887f3cd82068324f72cf288434e27dc802b8b5e7f3e8f51e23565b4228a7f4b8.json",
+      "details": "json/fixture-details/solaris/solaris-mozart-one-flr.json",
       "provenance": {
         "fileName": "Solaris@Solaris_Mozart_One_FLR@v1.0.10_-_MFR_Release.gdtf",
         "sha256": "887f3cd82068324f72cf288434e27dc802b8b5e7f3e8f51e23565b4228a7f4b8",
@@ -1144,7 +1144,7 @@
       },
       "shortName": "Mozart UV",
       "image": "images/fixtures/solaris/solaris-mozart-uv.png",
-      "details": "json/fixture-details/8184505f1348cbc6abb05df6aa6ac4582f9a256e220a93a0dac5c8e539ded03a.json",
+      "details": "json/fixture-details/solaris/solaris-mozart-uv.json",
       "provenance": {
         "fileName": "Solaris@Solaris_Mozart_UV@v1.0.7_-_MFR_Release.gdtf",
         "sha256": "8184505f1348cbc6abb05df6aa6ac4582f9a256e220a93a0dac5c8e539ded03a",

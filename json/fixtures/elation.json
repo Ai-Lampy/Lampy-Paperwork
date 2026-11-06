@@ -29,7 +29,7 @@
       },
       "shortName": "Artiste Van Gogh",
       "image": "images/fixtures/elation/artiste-van-gogh.png",
-      "details": "json/fixture-details/ee3a73bc31fa4b3bb5d58145afe3ab7aa5dfcfd2b3602fe597033190317004f7.json",
+      "details": "json/fixture-details/elation/artiste-van-gogh.json",
       "provenance": {
         "fileName": "Elation@Artiste_Van_Gogh@25-26-07_Release.gdtf",
         "sha256": "ee3a73bc31fa4b3bb5d58145afe3ab7aa5dfcfd2b3602fe597033190317004f7",
@@ -59,7 +59,7 @@
       },
       "shortName": "ACL 360 Bar",
       "image": "images/fixtures/elation/acl-360-bar.png",
-      "details": "json/fixture-details/f545a9ea9b6a05f464a5f86c56f3ff5b423d2a805ae76050fac6ccc620d2a382.json",
+      "details": "json/fixture-details/elation/acl-360-bar.json",
       "provenance": {
         "fileName": "Elation@ACL_360_Bar@25-11-04_Release.gdtf",
         "sha256": "f545a9ea9b6a05f464a5f86c56f3ff5b423d2a805ae76050fac6ccc620d2a382",
@@ -89,7 +89,7 @@
       },
       "shortName": "ACL360i",
       "image": "images/fixtures/elation/acl-360i.png",
-      "details": "json/fixture-details/a4b13084863b0d6c24721730bf466b015a3a10733b16b44692607de9e5a0a9ff.json",
+      "details": "json/fixture-details/elation/acl-360i.json",
       "provenance": {
         "fileName": "Elation@ACL_360i@25-16-06_Release.gdtf",
         "sha256": "a4b13084863b0d6c24721730bf466b015a3a10733b16b44692607de9e5a0a9ff",
@@ -134,7 +134,7 @@
       },
       "shortName": "Artiste DaVinci",
       "image": "images/fixtures/elation/artiste-davinci--artiste-picasso.png",
-      "details": "json/fixture-details/2bfb99ecc5553f7b7f393f5fdea936b035f8ed9382a710b8803f4af83a333931.json",
+      "details": "json/fixture-details/elation/artiste-davinci.json",
       "provenance": {
         "fileName": "Elation@Artiste_DaVinci@25-07-04_Release.gdtf",
         "sha256": "2bfb99ecc5553f7b7f393f5fdea936b035f8ed9382a710b8803f4af83a333931",
@@ -169,7 +169,7 @@
       },
       "shortName": "Artiste Mondrian",
       "image": "images/fixtures/elation/artiste-mondrian.png",
-      "details": "json/fixture-details/f32e4230d84f6e8e23474da2b16cb0ffd74a91b0b646fb28db349b6bb90eef99.json",
+      "details": "json/fixture-details/elation/artiste-mondrian.json",
       "provenance": {
         "fileName": "Elation@Artiste_Mondrian@_25-13-08_Release.gdtf",
         "sha256": "f32e4230d84f6e8e23474da2b16cb0ffd74a91b0b646fb28db349b6bb90eef99",
@@ -194,7 +194,7 @@
       },
       "shortName": "Artiste Monet",
       "image": "images/fixtures/elation/artiste-monet.png",
-      "details": "json/fixture-details/cdd9541907d713928510518d75b55ee62bb8532de8545aba2fd876d1ad2bafae.json",
+      "details": "json/fixture-details/elation/artiste-monet.json",
       "provenance": {
         "fileName": "Elation@Artiste_Monet@25-13-08_Release.gdtf",
         "sha256": "cdd9541907d713928510518d75b55ee62bb8532de8545aba2fd876d1ad2bafae",
@@ -229,7 +229,7 @@
       },
       "shortName": "Artiste Picasso",
       "image": "images/fixtures/elation/artiste-davinci--artiste-picasso.png",
-      "details": "json/fixture-details/273c0b64b7026b3f091315c44534cf8fcc5291264c9e99b4587bcfc5e14dda47.json",
+      "details": "json/fixture-details/elation/artiste-picasso.json",
       "provenance": {
         "fileName": "Elation@Artiste_Picasso@25-09-05_Release.gdtf",
         "sha256": "273c0b64b7026b3f091315c44534cf8fcc5291264c9e99b4587bcfc5e14dda47",
@@ -259,7 +259,7 @@
       },
       "shortName": "CL 16",
       "image": "images/fixtures/elation/chorus-line-16.png",
-      "details": "json/fixture-details/1596d2064dcc2590fa26706d8eb63f60084efc146b5e4b7a0154fd4387516ff8.json",
+      "details": "json/fixture-details/elation/chorus-line-16.json",
       "provenance": {
         "fileName": "Elation@Chorus_Line_16@2023-13-06_First_Release.gdtf",
         "sha256": "1596d2064dcc2590fa26706d8eb63f60084efc146b5e4b7a0154fd4387516ff8",
@@ -289,7 +289,7 @@
       },
       "shortName": "CL 8",
       "image": "images/fixtures/elation/chorus-line-8.png",
-      "details": "json/fixture-details/f0df4cd2f667b3e5b6da55910d13c8e50989ea1226ca61703aad53fe931b527d.json",
+      "details": "json/fixture-details/elation/chorus-line-8.json",
       "provenance": {
         "fileName": "Elation@Chorus_Line_8@2023-13-06_First_Release.gdtf",
         "sha256": "f0df4cd2f667b3e5b6da55910d13c8e50989ea1226ca61703aad53fe931b527d",
@@ -329,7 +329,7 @@
       },
       "shortName": "CLR 5 Prof",
       "image": "images/fixtures/elation/colour-5-profile.png",
-      "details": "json/fixture-details/6e3e6336e9f9e0ceca1b6acf21c74c4ede9b99a126a644e4bbad00070663d193.json",
+      "details": "json/fixture-details/elation/colour-5-profile.json",
       "provenance": {
         "fileName": "Elation@COLOUR_5_Profile@24-25-03_First_Release.gdtf",
         "sha256": "6e3e6336e9f9e0ceca1b6acf21c74c4ede9b99a126a644e4bbad00070663d193",
@@ -414,7 +414,7 @@
       },
       "shortName": "CuePix16IP",
       "image": "images/fixtures/elation/cuepix-16ip.png",
-      "details": "json/fixture-details/54573c790c54fe1cf64094b31257bd5eac8e4ffd6b852e82f8175daea91b10c4.json",
+      "details": "json/fixture-details/elation/cuepix-16ip.json",
       "provenance": {
         "fileName": "Elation@CUEPIX_16IP@2024-13-03_First_Release.gdtf",
         "sha256": "54573c790c54fe1cf64094b31257bd5eac8e4ffd6b852e82f8175daea91b10c4",
@@ -474,7 +474,7 @@
       },
       "shortName": "CuePix16 IP-DTW",
       "image": "images/fixtures/elation/cuepix-16ip-dtw.png",
-      "details": "json/fixture-details/b9c468f9b7f2cc79fd26da9ee3088be0159906d0a8ad3cf0ecf9c8c0dabd1750.json",
+      "details": "json/fixture-details/elation/cuepix-16ip-dtw.json",
       "provenance": {
         "fileName": "Elation@CUEPIX_16IP_DTW@2024-12-03_First_Release.gdtf",
         "sha256": "b9c468f9b7f2cc79fd26da9ee3088be0159906d0a8ad3cf0ecf9c8c0dabd1750",
@@ -509,7 +509,7 @@
       },
       "shortName": "Blinder WW2",
       "image": "images/fixtures/elation/cuepix-blinder-ww2.png",
-      "details": "json/fixture-details/aa1ae6b96172291b631f51cb7b47f97224d1d43567e654be3e649ecba5c56267.json",
+      "details": "json/fixture-details/elation/cuepix-blinder-ww2.json",
       "provenance": {
         "fileName": "Elation@Cuepix_Blinder_WW2@2023-26-06_First_Release.gdtf",
         "sha256": "aa1ae6b96172291b631f51cb7b47f97224d1d43567e654be3e649ecba5c56267",
@@ -554,7 +554,7 @@
       },
       "shortName": "Blinder WW4",
       "image": "images/fixtures/elation/cuepix-blinder-ww4.png",
-      "details": "json/fixture-details/f90759c80d32153d0c6592bbdde517fdfa6660ad7f621eb82d2174e2f17720a2.json",
+      "details": "json/fixture-details/elation/cuepix-blinder-ww4.json",
       "provenance": {
         "fileName": "Elation@Cuepix_Blinder_WW4@2023-19-06_First_Release.gdtf",
         "sha256": "f90759c80d32153d0c6592bbdde517fdfa6660ad7f621eb82d2174e2f17720a2",
@@ -579,7 +579,7 @@
       },
       "shortName": "CW Prof HP",
       "image": "images/fixtures/elation/cw-profile-hp.png",
-      "details": "json/fixture-details/5e758f6f13d2bec0d048ca1abb41930c205a1270070dd751b474a642ae417333.json",
+      "details": "json/fixture-details/elation/cw-profile-hp.json",
       "provenance": {
         "fileName": "Elation@CW_Profile_HP@24-22-03_First_Release.gdtf",
         "sha256": "5e758f6f13d2bec0d048ca1abb41930c205a1270070dd751b474a642ae417333",
@@ -614,7 +614,7 @@
       },
       "shortName": "CW Prof HP IP",
       "image": "images/fixtures/elation/cw-profile-hp-ip.png",
-      "details": "json/fixture-details/890ba1046465adfdb2cba6265ac60e2bb366d4746616ce27d5447aa2d9f57103.json",
+      "details": "json/fixture-details/elation/cw-profile-hp-ip.json",
       "provenance": {
         "fileName": "Elation@CW_Profile_HP_IP@24-26-03_First_Release.gdtf",
         "sha256": "890ba1046465adfdb2cba6265ac60e2bb366d4746616ce27d5447aa2d9f57103",
@@ -659,7 +659,7 @@
       },
       "shortName": "Dartz360",
       "image": "images/fixtures/elation/dartz-360.png",
-      "details": "json/fixture-details/d95d31db1e402d3b78bd202004788f243fea6e50dd92ad9c22b2857640235fd2.json",
+      "details": "json/fixture-details/elation/dartz-360.json",
       "provenance": {
         "fileName": "Elation@DARTZ_360@2023-22-05_First_Release.gdtf",
         "sha256": "d95d31db1e402d3b78bd202004788f243fea6e50dd92ad9c22b2857640235fd2",
@@ -709,7 +709,7 @@
       },
       "shortName": "DTW 350 IP",
       "image": "images/fixtures/elation/dtw-350-ip-2-cell.png",
-      "details": "json/fixture-details/a42bcab457cbfba34fd13a2cd63838284987a0be39199e0f2b0feda9def524cf.json",
+      "details": "json/fixture-details/elation/dtw-350-ip-2-cell.json",
       "provenance": {
         "fileName": "Elation@DTW_BLINDER_350_IP@2025-14-02_Release.gdtf",
         "sha256": "a42bcab457cbfba34fd13a2cd63838284987a0be39199e0f2b0feda9def524cf",
@@ -789,7 +789,7 @@
       },
       "shortName": "DTW1000",
       "image": "images/fixtures/elation/dtw-bar-1000.png",
-      "details": "json/fixture-details/342628ec3f362bac72c8e166b7ead155328cb54ac6b4930d11c44d8ac3a18b21.json",
+      "details": "json/fixture-details/elation/dtw-bar-1000.json",
       "provenance": {
         "fileName": "Elation@DTW_BAR_1000@2024-27-02_First_Release.gdtf",
         "sha256": "342628ec3f362bac72c8e166b7ead155328cb54ac6b4930d11c44d8ac3a18b21",
@@ -844,7 +844,7 @@
       },
       "shortName": "Fuze Max Prof",
       "image": "images/fixtures/elation/fuze-max-profile--fuze-max-spot.png",
-      "details": "json/fixture-details/2a15c0b09d1101d24c0f84a5f7cc85e1ce64bf037bbd84729b9272b5a4847514.json",
+      "details": "json/fixture-details/elation/fuze-max-profile.json",
       "provenance": {
         "fileName": "Elation@Fuze_Max_Profile@26-13-05_Release.gdtf",
         "sha256": "2a15c0b09d1101d24c0f84a5f7cc85e1ce64bf037bbd84729b9272b5a4847514",
@@ -899,7 +899,7 @@
       },
       "shortName": "Fuze Max Spot",
       "image": "images/fixtures/elation/fuze-max-profile--fuze-max-spot.png",
-      "details": "json/fixture-details/1bf50b0177aa9c13177ca14bf2164b6bf52fb8e4e572da9a6562b366c20c1808.json",
+      "details": "json/fixture-details/elation/fuze-max-spot.json",
       "provenance": {
         "fileName": "Elation@Fuze_Max_Spot@2025-07-05_Release.gdtf",
         "sha256": "1bf50b0177aa9c13177ca14bf2164b6bf52fb8e4e572da9a6562b366c20c1808",
@@ -974,7 +974,7 @@
       },
       "shortName": "Fuze Z120-IP",
       "image": "images/fixtures/elation/fuze-par-z120-ip.png",
-      "details": "json/fixture-details/a142108506b8564bd01b2595ca8e26b340fb5fa281f743b21ed68783695066cf.json",
+      "details": "json/fixture-details/elation/fuze-par-z120-ip.json",
       "provenance": {
         "fileName": "Elation@FUZE_PAR_Z120_IP@24-18-06_First_Release.gdtf",
         "sha256": "a142108506b8564bd01b2595ca8e26b340fb5fa281f743b21ed68783695066cf",
@@ -1079,7 +1079,7 @@
       },
       "shortName": "Fuze Z175",
       "image": "images/fixtures/elation/fuze-par-z175.png",
-      "details": "json/fixture-details/2212a4e4540986bdd77758bfe38044b610c7f1b5d543c3f42000a7753253af32.json",
+      "details": "json/fixture-details/elation/fuze-par-z175.json",
       "provenance": {
         "fileName": "Elation@Fuze_Par_Z175@24-21-06_First_Release.gdtf",
         "sha256": "2212a4e4540986bdd77758bfe38044b610c7f1b5d543c3f42000a7753253af32",
@@ -1154,7 +1154,7 @@
       },
       "shortName": "Fuze Z60-IP",
       "image": "images/fixtures/elation/fuze-par-z60-ip.png",
-      "details": "json/fixture-details/ea8266c864d9322bf4b250cbf4d15938191de6059540567bf3cc9f5cc55da6b8.json",
+      "details": "json/fixture-details/elation/fuze-par-z60-ip.json",
       "provenance": {
         "fileName": "Elation@FUZE_PAR_Z60_IP@24-18-06_First_Release.gdtf",
         "sha256": "ea8266c864d9322bf4b250cbf4d15938191de6059540567bf3cc9f5cc55da6b8",
@@ -1209,7 +1209,7 @@
       },
       "shortName": "Fuze Pendant",
       "image": "images/fixtures/elation/fuze-pendant.png",
-      "details": "json/fixture-details/df31813de0d990b81ddb98661723042edb664f3af5a482b5b0c397941550b3ad.json",
+      "details": "json/fixture-details/elation/fuze-pendant.json",
       "provenance": {
         "fileName": "Elation@Fuze_Pendant@24-23-12_Release.gdtf",
         "sha256": "df31813de0d990b81ddb98661723042edb664f3af5a482b5b0c397941550b3ad",
@@ -1264,7 +1264,7 @@
       },
       "shortName": "Fuze Pendant Comp",
       "image": "images/fixtures/elation/fuze-pendant-compact.png",
-      "details": "json/fixture-details/d7f3ad7996c3af7b2d1a70981e30c134c07c4843ee6e5e19e372373011bf944c.json",
+      "details": "json/fixture-details/elation/fuze-pendant-compact.json",
       "provenance": {
         "fileName": "Elation@Fuze_Pendant_Compact@23-15-09_First_Release.gdtf",
         "sha256": "d7f3ad7996c3af7b2d1a70981e30c134c07c4843ee6e5e19e372373011bf944c",
@@ -1289,7 +1289,7 @@
       },
       "shortName": "Fuze PFX",
       "image": "images/fixtures/elation/fuze-pfx.png",
-      "details": "json/fixture-details/086fe1b34a22959640fac2c9c9d34361e64755f06cf0a6fbd4a925f991d87e23.json",
+      "details": "json/fixture-details/elation/fuze-pfx.json",
       "provenance": {
         "fileName": "Elation@Fuze_PFX@25-22-09_Release.gdtf",
         "sha256": "086fe1b34a22959640fac2c9c9d34361e64755f06cf0a6fbd4a925f991d87e23",
@@ -1344,7 +1344,7 @@
       },
       "shortName": "Fuze Prof",
       "image": "images/fixtures/elation/fuze-profile--fuze-profile-cw.png",
-      "details": "json/fixture-details/3cbd5a06a8989c4b61dcbc457618a539213a20c7fb94cfd04bdfd99e27818ff4.json",
+      "details": "json/fixture-details/elation/fuze-profile.json",
       "provenance": {
         "fileName": "Elation@Fuze_Profile@25-07-03_Release.gdtf",
         "sha256": "3cbd5a06a8989c4b61dcbc457618a539213a20c7fb94cfd04bdfd99e27818ff4",
@@ -1379,7 +1379,7 @@
       },
       "shortName": "Fuze Prof-CW",
       "image": "images/fixtures/elation/fuze-profile--fuze-profile-cw.png",
-      "details": "json/fixture-details/bef24e7baf5531b9b0c16dd106633e6137d1644a459fc218f6fa873d5669f779.json",
+      "details": "json/fixture-details/elation/fuze-profile-cw.json",
       "provenance": {
         "fileName": "Elation@Fuze_Profile_CW@First_Release_2024-11-12.gdtf",
         "sha256": "bef24e7baf5531b9b0c16dd106633e6137d1644a459fc218f6fa873d5669f779",
@@ -1404,7 +1404,7 @@
       },
       "shortName": "FuzeSFX",
       "image": "images/fixtures/elation/fuze-sfx.png",
-      "details": "json/fixture-details/e60748aaccfaecaf755fce8c1cfd784a864f65a590fd75cc1193b95b62f7291a.json",
+      "details": "json/fixture-details/elation/fuze-sfx.json",
       "provenance": {
         "fileName": "Elation@Fuze_SFX@Release_2024-11-11.gdtf",
         "sha256": "e60748aaccfaecaf755fce8c1cfd784a864f65a590fd75cc1193b95b62f7291a",
@@ -1479,7 +1479,7 @@
       },
       "shortName": "Fuze Teatro",
       "image": "images/fixtures/elation/fuze-teatro.png",
-      "details": "json/fixture-details/f400cf91014acd2d09ec04f3e84705b43c76f3715070c99b96d87b0404585d38.json",
+      "details": "json/fixture-details/elation/fuze-teatro.json",
       "provenance": {
         "fileName": "Elation@Fuze_Teatro@24-25-11_Release.gdtf",
         "sha256": "f400cf91014acd2d09ec04f3e84705b43c76f3715070c99b96d87b0404585d38",
@@ -1554,7 +1554,7 @@
       },
       "shortName": "Fuze Wash 500 Barndoor",
       "image": "images/fixtures/elation/fuze-wash-500-barndoor.png",
-      "details": "json/fixture-details/798e735104004fd281df76f4a3c63a29075d66b407552a6820f4ae60e3efb262.json",
+      "details": "json/fixture-details/elation/fuze-wash-500-barndoor.json",
       "provenance": {
         "fileName": "Elation@Fuze_Wash_500_Barndoor@26-01-04_Release.gdtf",
         "sha256": "798e735104004fd281df76f4a3c63a29075d66b407552a6820f4ae60e3efb262",
@@ -1579,7 +1579,7 @@
       },
       "shortName": "Fuze Wash 575",
       "image": "images/fixtures/elation/fuze-wash-575.png",
-      "details": "json/fixture-details/d4c1d5af50864453f8449d9eaffac2140e07088c946a2b787a22d924303281fa.json",
+      "details": "json/fixture-details/elation/fuze-wash-575.json",
       "provenance": {
         "fileName": "Elation@Fuze_Wash_575@First_Release_2024-11-12.gdtf",
         "sha256": "d4c1d5af50864453f8449d9eaffac2140e07088c946a2b787a22d924303281fa",
@@ -1634,7 +1634,7 @@
       },
       "shortName": "Fuze Wash FR",
       "image": "images/fixtures/elation/fuze-wash-fr.png",
-      "details": "json/fixture-details/26379677304f1857492c6d7600d9b74a02cee047b818c9629e567457dd3a10e4.json",
+      "details": "json/fixture-details/elation/fuze-wash-fr.json",
       "provenance": {
         "fileName": "Elation@Fuze_Wash_FR@2024-25-11_Release.gdtf",
         "sha256": "26379677304f1857492c6d7600d9b74a02cee047b818c9629e567457dd3a10e4",
@@ -1669,7 +1669,7 @@
       },
       "shortName": "Fuze Wash Z120",
       "image": "images/fixtures/elation/fuze-wash-z120.jpg",
-      "details": "json/fixture-details/80d6372dd137412adceca4542c4d4f696d93112205a97e138fe7d41c1c3bc67a.json",
+      "details": "json/fixture-details/elation/fuze-wash-z120.json",
       "provenance": {
         "fileName": "Elation@Fuze_Wash_Z120@2023-15-05_First_Release.gdtf",
         "sha256": "80d6372dd137412adceca4542c4d4f696d93112205a97e138fe7d41c1c3bc67a",
@@ -1724,7 +1724,7 @@
       },
       "shortName": "Fuze Wash Z350",
       "image": "images/fixtures/elation/fuze-wash-z350.png",
-      "details": "json/fixture-details/80ac31573bec2f983784724ba9b498c639d6662b14cd9e115eb9f424d70cdce6.json",
+      "details": "json/fixture-details/elation/fuze-wash-z350.json",
       "provenance": {
         "fileName": "Elation@Fuze_Wash_Z350@2023-15-05_First_Release.gdtf",
         "sha256": "80ac31573bec2f983784724ba9b498c639d6662b14cd9e115eb9f424d70cdce6",
@@ -1850,7 +1850,7 @@
       },
       "shortName": "KL BAT-12",
       "image": "images/fixtures/elation/kl-batten-12.png",
-      "details": "json/fixture-details/fbc076af57ac2eb18eddb1b893866b344b3c0f4d6c1609d07aab2f30d8e88f15.json",
+      "details": "json/fixture-details/elation/kl-batten-12.json",
       "provenance": {
         "fileName": "Elation@KL_Batten_12@26-13-05_Release.gdtf",
         "sha256": "fbc076af57ac2eb18eddb1b893866b344b3c0f4d6c1609d07aab2f30d8e88f15",
@@ -2006,7 +2006,7 @@
       },
       "shortName": "KL BAT-48",
       "image": "images/fixtures/elation/kl-batten-48.png",
-      "details": "json/fixture-details/3cb2afa7792e3ec2dec924362959a3d26d1e3b2cc17db750dc9ab57cb9cf4eb0.json",
+      "details": "json/fixture-details/elation/kl-batten-48.json",
       "provenance": {
         "fileName": "Elation@KL_Batten_48@26-14-05_Release.gdtf",
         "sha256": "3cb2afa7792e3ec2dec924362959a3d26d1e3b2cc17db750dc9ab57cb9cf4eb0",
@@ -2111,7 +2111,7 @@
       },
       "shortName": "KL Core-IP",
       "image": "images/fixtures/elation/kl-core-ip.png",
-      "details": "json/fixture-details/0143ebb6dbbe9b7115e2cadd491cf3d8d2a412d07bef7ec3406b7b8d7bf59c07.json",
+      "details": "json/fixture-details/elation/kl-core-ip.json",
       "provenance": {
         "fileName": "Elation@KL_Core_IP@25-25-03_First_Release.gdtf",
         "sha256": "0143ebb6dbbe9b7115e2cadd491cf3d8d2a412d07bef7ec3406b7b8d7bf59c07",
@@ -2151,7 +2151,7 @@
       },
       "shortName": "KL Fresnel 4",
       "image": "images/fixtures/elation/kl-fresnel-4.png",
-      "details": "json/fixture-details/740e6106534731f345deecd0a25fabeb2f4b8fa5caeb22901c1587e4fbaa6c30.json",
+      "details": "json/fixture-details/elation/kl-fresnel-4.json",
       "provenance": {
         "fileName": "Elation@KL_Fresnel_4@2023-28-08_First_Release.gdtf",
         "sha256": "740e6106534731f345deecd0a25fabeb2f4b8fa5caeb22901c1587e4fbaa6c30",
@@ -2191,7 +2191,7 @@
       },
       "shortName": "KL Fresnel 4 CW",
       "image": "images/fixtures/elation/kl-fresnel-4-cw.png",
-      "details": "json/fixture-details/e9d6e940d5bf4ab20eb82abd1d117e97082b48105e3b85f5577c09b43236cab2.json",
+      "details": "json/fixture-details/elation/kl-fresnel-4-cw.json",
       "provenance": {
         "fileName": "Elation@KL_Fresnel_4_CW@23-29-08_First_Release.gdtf",
         "sha256": "e9d6e940d5bf4ab20eb82abd1d117e97082b48105e3b85f5577c09b43236cab2",
@@ -2231,7 +2231,7 @@
       },
       "shortName": "KL Fresnel 6",
       "image": "images/fixtures/elation/kl-fresnel-6.png",
-      "details": "json/fixture-details/4e5fd42069f90a4061b42d0486261d45ae675ed6cb53735e49254ab6e8d2591f.json",
+      "details": "json/fixture-details/elation/kl-fresnel-6.json",
       "provenance": {
         "fileName": "Elation@KL_Fresnel_6@23-05-09_First_Release.gdtf",
         "sha256": "4e5fd42069f90a4061b42d0486261d45ae675ed6cb53735e49254ab6e8d2591f",
@@ -2271,7 +2271,7 @@
       },
       "shortName": "KL Fresnel 6 CW PO",
       "image": "images/fixtures/elation/kl-fresnel-6-cw-po.png",
-      "details": "json/fixture-details/26e0c555345833b46e2919ad0409b706fb8177ad97a77a11cdf4c995c1077155.json",
+      "details": "json/fixture-details/elation/kl-fresnel-6-cw-po.json",
       "provenance": {
         "fileName": "Elation@KL_Fresnel_6_CW_PO@23-05-09_First_Release.gdtf",
         "sha256": "26e0c555345833b46e2919ad0409b706fb8177ad97a77a11cdf4c995c1077155",
@@ -2311,7 +2311,7 @@
       },
       "shortName": "KL Fresnel 8",
       "image": "images/fixtures/elation/kl-fresnel-8.png",
-      "details": "json/fixture-details/afd99bdbe0a3b5a19c869a8770ccc8ce673ef9d612b3cc803a8bea5074be81b1.json",
+      "details": "json/fixture-details/elation/kl-fresnel-8.json",
       "provenance": {
         "fileName": "Elation@KL_Fresnel_8@23-05-09_First_Release.gdtf",
         "sha256": "afd99bdbe0a3b5a19c869a8770ccc8ce673ef9d612b3cc803a8bea5074be81b1",
@@ -2351,7 +2351,7 @@
       },
       "shortName": "KL Fresnel 8 CW",
       "image": "images/fixtures/elation/kl-fresnel-8-cw.png",
-      "details": "json/fixture-details/b6718bf5dbd4296928aec9ec9512ec6cd0b83a00dd030f4eb41ea1dde443aec3.json",
+      "details": "json/fixture-details/elation/kl-fresnel-8-cw.json",
       "provenance": {
         "fileName": "Elation@KL_Fresnel_8_CW@23-05-09_First_Release.gdtf",
         "sha256": "b6718bf5dbd4296928aec9ec9512ec6cd0b83a00dd030f4eb41ea1dde443aec3",
@@ -2401,7 +2401,7 @@
       },
       "shortName": "LIMELIGHT PAR S",
       "image": "images/fixtures/elation/limelight-par-s.png",
-      "details": "json/fixture-details/fb698a5e00f9017e6d9acaaddb4708f3becd13c248c400842cdf68cf2937fb33.json",
+      "details": "json/fixture-details/elation/limelight-par-s.json",
       "provenance": {
         "fileName": "Elation@LIMELIGHT_PAR_S@2024-07-10_Release.gdtf",
         "sha256": "fb698a5e00f9017e6d9acaaddb4708f3becd13c248c400842cdf68cf2937fb33",
@@ -2431,7 +2431,7 @@
       },
       "shortName": "Magma Prime Hazer",
       "image": "images/fixtures/elation/magma-prime-hazer.png",
-      "details": "json/fixture-details/f2ca0bf78d9f9db05d8fd985361ffa5a7c8dd335391bd2d47ffaaa269b61796f.json",
+      "details": "json/fixture-details/elation/magma-prime-hazer.json",
       "provenance": {
         "fileName": "Elation@Magma_Prime_Hazer@V1-00.gdtf",
         "sha256": "f2ca0bf78d9f9db05d8fd985361ffa5a7c8dd335391bd2d47ffaaa269b61796f",
@@ -2461,7 +2461,7 @@
       },
       "shortName": "Paladn",
       "image": "images/fixtures/elation/paladin.png",
-      "details": "json/fixture-details/fbdc0b02c3e9080aa703732972ae95ab28afedf15de0b42b7257c6d9431e2d3f.json",
+      "details": "json/fixture-details/elation/paladin.json",
       "provenance": {
         "fileName": "Elation@Paladin@2023-20-12_Release.gdtf",
         "sha256": "fbdc0b02c3e9080aa703732972ae95ab28afedf15de0b42b7257c6d9431e2d3f",
@@ -2531,7 +2531,7 @@
       },
       "shortName": "Pal Brick",
       "image": "images/fixtures/elation/paladin-brick.png",
-      "details": "json/fixture-details/ca5fe9a49cbf974827d86350402c2cb8c6846b80dc4b2185a43b17ab7266ba7c.json",
+      "details": "json/fixture-details/elation/paladin-brick.json",
       "provenance": {
         "fileName": "Elation@Paladin_Brick@23-21-09_First_Release.gdtf",
         "sha256": "ca5fe9a49cbf974827d86350402c2cb8c6846b80dc4b2185a43b17ab7266ba7c",
@@ -2601,7 +2601,7 @@
       },
       "shortName": "Pal Cube",
       "image": "images/fixtures/elation/paladin-cube.png",
-      "details": "json/fixture-details/f2e65a98ff949da60bcf3b9f08d609c468cdef67c60b87f517eaa1773b378026.json",
+      "details": "json/fixture-details/elation/paladin-cube.json",
       "provenance": {
         "fileName": "Elation@Paladin_Cube@23-02-10_First_Release.gdtf",
         "sha256": "f2e65a98ff949da60bcf3b9f08d609c468cdef67c60b87f517eaa1773b378026",
@@ -2671,7 +2671,7 @@
       },
       "shortName": "Pal Panel",
       "image": "images/fixtures/elation/paladin-panel.png",
-      "details": "json/fixture-details/450883babb6db418e494fdc1ece639a0ade6c6b5b4c62044b5f4eead1891928c.json",
+      "details": "json/fixture-details/elation/paladin-panel.json",
       "provenance": {
         "fileName": "Elation@Paladin_Panel@24-30-09_Release.gdtf",
         "sha256": "450883babb6db418e494fdc1ece639a0ade6c6b5b4c62044b5f4eead1891928c",
@@ -2706,7 +2706,7 @@
       },
       "shortName": "Para-LT",
       "image": "images/fixtures/elation/paragon-lt.png",
-      "details": "json/fixture-details/e7cd37c95ff745b9ea32129b3b3b6c98b5eada725cea7f25ef11ee19d2e5234c.json",
+      "details": "json/fixture-details/elation/paragon-lt.json",
       "provenance": {
         "fileName": "Elation@Paragon_LT@25-12-08_Release.gdtf",
         "sha256": "e7cd37c95ff745b9ea32129b3b3b6c98b5eada725cea7f25ef11ee19d2e5234c",
@@ -2741,7 +2741,7 @@
       },
       "shortName": "Para-S",
       "image": "images/fixtures/elation/paragon-s.png",
-      "details": "json/fixture-details/6612b8ead8caeff2483ec542b30a57513f5f259e5d97efec7e31cce366d52631.json",
+      "details": "json/fixture-details/elation/paragon-s.json",
       "provenance": {
         "fileName": "Elation@Paragon_S@25-07-07_Release.gdtf",
         "sha256": "6612b8ead8caeff2483ec542b30a57513f5f259e5d97efec7e31cce366d52631",
@@ -2791,7 +2791,7 @@
       },
       "shortName": "Pix Bar 120-IP",
       "image": "images/fixtures/elation/pixel-bar-120ip.png",
-      "details": "json/fixture-details/b7d8dc4326dcc5f71972c5b49a475b8c898036710ce7b7d05191c98049e5bbac.json",
+      "details": "json/fixture-details/elation/pixel-bar-120ip.json",
       "provenance": {
         "fileName": "Elation@Pixel_Bar_120IP@25-06-02_Release.gdtf",
         "sha256": "b7d8dc4326dcc5f71972c5b49a475b8c898036710ce7b7d05191c98049e5bbac",
@@ -2846,7 +2846,7 @@
       },
       "shortName": "Pix Bar 30-IP",
       "image": "images/fixtures/elation/pixel-bar-30ip.png",
-      "details": "json/fixture-details/a4288b232d756ae97efea065a78bd1ee181fea6f689adb9daed2518d2697a83b.json",
+      "details": "json/fixture-details/elation/pixel-bar-30ip.json",
       "provenance": {
         "fileName": "Elation@Pixel_Bar_30IP@25-11-02_First_Release.gdtf",
         "sha256": "a4288b232d756ae97efea065a78bd1ee181fea6f689adb9daed2518d2697a83b",
@@ -2876,7 +2876,7 @@
       },
       "shortName": "Beam 5R EXT",
       "image": "images/fixtures/elation/platinum-beam-5r-extreme.png",
-      "details": "json/fixture-details/f1f2791c59d0803db02e7761ca77a5d53441a0b4225bef42b2785b4d9e901b31.json",
+      "details": "json/fixture-details/elation/platinum-beam-5r-extreme.json",
       "provenance": {
         "fileName": "Elation@Platinum_Beam_5R_Extreme@24-22-07_Release.gdtf",
         "sha256": "f1f2791c59d0803db02e7761ca77a5d53441a0b4225bef42b2785b4d9e901b31",
@@ -2906,7 +2906,7 @@
       },
       "shortName": "FLX",
       "image": "images/fixtures/elation/platinum-flx.png",
-      "details": "json/fixture-details/eeca7500c0cce8005aec757b850f33468ba610c8e48fec3d584aec3be022cd34.json",
+      "details": "json/fixture-details/elation/platinum-flx.json",
       "provenance": {
         "fileName": "Elation@Platinum_FLX@24-11-06_Release.gdtf",
         "sha256": "eeca7500c0cce8005aec757b850f33468ba610c8e48fec3d584aec3be022cd34",
@@ -2941,7 +2941,7 @@
       },
       "shortName": "Atlas",
       "image": "images/fixtures/elation/proteus-atlas.png",
-      "details": "json/fixture-details/9e99bd7091720cc6b13c0b8684fcdad21c64e30f3d960d4f60607c42b75c165b.json",
+      "details": "json/fixture-details/elation/proteus-atlas.json",
       "provenance": {
         "fileName": "Elation@Proteus_Atlas@26-04-03_Release.gdtf",
         "sha256": "9e99bd7091720cc6b13c0b8684fcdad21c64e30f3d960d4f60607c42b75c165b",
@@ -2986,7 +2986,7 @@
       },
       "shortName": "Proteus Beam",
       "image": "images/fixtures/elation/proteus-beam.png",
-      "details": "json/fixture-details/4d97c6edca00948014b7808f61a98267b66edf9ce7c106c226010f95ed8c6159.json",
+      "details": "json/fixture-details/elation/proteus-beam.json",
       "provenance": {
         "fileName": "Elation@Proteus_Beam@2023-27-12_First_Release.gdtf",
         "sha256": "4d97c6edca00948014b7808f61a98267b66edf9ce7c106c226010f95ed8c6159",
@@ -3041,7 +3041,7 @@
       },
       "shortName": "Proteus Brutus",
       "image": "images/fixtures/elation/proteus-brutus.png",
-      "details": "json/fixture-details/bbac43ba72579d5dcf8b9573c67333691d51a961d30065a6087a0c7ac2488d11.json",
+      "details": "json/fixture-details/elation/proteus-brutus.json",
       "provenance": {
         "fileName": "Elation@Proteus_Brutus@2023-29-09_Release.gdtf",
         "sha256": "bbac43ba72579d5dcf8b9573c67333691d51a961d30065a6087a0c7ac2488d11",
@@ -3066,7 +3066,7 @@
       },
       "shortName": "Proteus Brutus FS",
       "image": "images/fixtures/elation/proteus-brutus-fs.png",
-      "details": "json/fixture-details/3fb7fe6c6510c706fd9fcfccb16cb11e51e42c32566efc8154e4493361b2c850.json",
+      "details": "json/fixture-details/elation/proteus-brutus-fs.json",
       "provenance": {
         "fileName": "Elation@Proteus_Brutus_FS@Release_25-13-03.gdtf",
         "sha256": "3fb7fe6c6510c706fd9fcfccb16cb11e51e42c32566efc8154e4493361b2c850",
@@ -3091,7 +3091,7 @@
       },
       "shortName": "Proteus Excalibur",
       "image": "images/fixtures/elation/proteus-excalibur.png",
-      "details": "json/fixture-details/d02e4365b044faecf0f94f4033bcad91c1ae5f53ac41738d1436c63a5626fc96.json",
+      "details": "json/fixture-details/elation/proteus-excalibur.json",
       "provenance": {
         "fileName": "Elation@Proteus_Excalibur@2023-17-10_Release.gdtf",
         "sha256": "d02e4365b044faecf0f94f4033bcad91c1ae5f53ac41738d1436c63a5626fc96",
@@ -3136,7 +3136,7 @@
       },
       "shortName": "Proteus Hybrid",
       "image": "images/fixtures/elation/proteus-hybrid.png",
-      "details": "json/fixture-details/2fa182121582d2d4db641ba26699dfb6dcae3fc1576b7a3bf34b7c0a47bd154c.json",
+      "details": "json/fixture-details/elation/proteus-hybrid.json",
       "provenance": {
         "fileName": "Elation@Proteus_Hybrid@2023-25-07_Release.gdtf",
         "sha256": "2fa182121582d2d4db641ba26699dfb6dcae3fc1576b7a3bf34b7c0a47bd154c",
@@ -3171,7 +3171,7 @@
       },
       "shortName": "Proteus Hybrid Max",
       "image": "images/fixtures/elation/proteus-hybrid-max.png",
-      "details": "json/fixture-details/ed681f63b749041c17e384651bb9a621dcf637cc13a57d1ef35e1034f67e418a.json",
+      "details": "json/fixture-details/elation/proteus-hybrid-max.json",
       "provenance": {
         "fileName": "Elation@Proteus_Hybrid_Max@25-20-06_Release.gdtf",
         "sha256": "ed681f63b749041c17e384651bb9a621dcf637cc13a57d1ef35e1034f67e418a",
@@ -3206,7 +3206,7 @@
       },
       "shortName": "Proteus Hybrid Max OPS",
       "image": "images/fixtures/elation/proteus-hybrid-max-ops.png",
-      "details": "json/fixture-details/e914d2ec8117abfa79eb670ec0ff8ddc7fb6149f816137c73d2519b733e129e7.json",
+      "details": "json/fixture-details/elation/proteus-hybrid-max-ops.json",
       "provenance": {
         "fileName": "Elation@Proteus_Hybrid_Max_OPS@25-20-06_First_Release.gdtf",
         "sha256": "e914d2ec8117abfa79eb670ec0ff8ddc7fb6149f816137c73d2519b733e129e7",
@@ -3241,7 +3241,7 @@
       },
       "shortName": "Proteus Lucius",
       "image": "images/fixtures/elation/proteus-lucius.png",
-      "details": "json/fixture-details/1162ce41db2210a555bf1407fb77cba6079e54b8ecbaf20f8cb7f5017a39d8fa.json",
+      "details": "json/fixture-details/elation/proteus-lucius.json",
       "provenance": {
         "fileName": "Elation@Proteus_Lucius@25-19-06_Release.gdtf",
         "sha256": "1162ce41db2210a555bf1407fb77cba6079e54b8ecbaf20f8cb7f5017a39d8fa",
@@ -3276,7 +3276,7 @@
       },
       "shortName": "Proteus Lucius OPS",
       "image": "images/fixtures/elation/proteus-lucius-ops.png",
-      "details": "json/fixture-details/1c5b805ce32cf5445787439899438063e539e19f04d513d8797ae325f5f60d22.json",
+      "details": "json/fixture-details/elation/proteus-lucius-ops.json",
       "provenance": {
         "fileName": "Elation@Proteus_Lucius_OPS@25-19-06_Release.gdtf",
         "sha256": "1c5b805ce32cf5445787439899438063e539e19f04d513d8797ae325f5f60d22",
@@ -3311,7 +3311,7 @@
       },
       "shortName": "Proteus Maximus",
       "image": "images/fixtures/elation/proteus-maximus.png",
-      "details": "json/fixture-details/8c1437400733c181f16cedc71658cc17d1a81016d71ab360cb31eb91640a9f18.json",
+      "details": "json/fixture-details/elation/proteus-maximus.json",
       "provenance": {
         "fileName": "Elation@Proteus_Maximus@2023-26-12_Release.gdtf",
         "sha256": "8c1437400733c181f16cedc71658cc17d1a81016d71ab360cb31eb91640a9f18",
@@ -3346,7 +3346,7 @@
       },
       "shortName": "Proteus Odeon",
       "image": "images/fixtures/elation/proteus-odeon.png",
-      "details": "json/fixture-details/3f9b2d0733dcbad071a1e6b7dad34eb6c29274a192abeb8f82b785b55c30fa41.json",
+      "details": "json/fixture-details/elation/proteus-odeon.json",
       "provenance": {
         "fileName": "Elation@Proteus_Odeon@2024-22-11_Release.gdtf",
         "sha256": "3f9b2d0733dcbad071a1e6b7dad34eb6c29274a192abeb8f82b785b55c30fa41",
@@ -3401,7 +3401,7 @@
       },
       "shortName": "Proteus Radius",
       "image": "images/fixtures/elation/proteus-radius.png",
-      "details": "json/fixture-details/6b64e917af7d8eba7ace1b1a2d4e75c4e4b32000d8f7a329447237ec3501ebe8.json",
+      "details": "json/fixture-details/elation/proteus-radius.json",
       "provenance": {
         "fileName": "Elation@Proteus_Radius@2024-15-02_First_Release.gdtf",
         "sha256": "6b64e917af7d8eba7ace1b1a2d4e75c4e4b32000d8f7a329447237ec3501ebe8",
@@ -3451,7 +3451,7 @@
       },
       "shortName": "Proteus Rayzor 760",
       "image": "images/fixtures/elation/proteus-rayzor-760.png",
-      "details": "json/fixture-details/48bd1faf755b60043c58079bfc8c49f08fc091bb6d6e07844a681ed249fb0c15.json",
+      "details": "json/fixture-details/elation/proteus-rayzor-760.json",
       "provenance": {
         "fileName": "Elation@Proteus_Rayzor_760@25-15-05_Release.gdtf",
         "sha256": "48bd1faf755b60043c58079bfc8c49f08fc091bb6d6e07844a681ed249fb0c15",
@@ -3501,7 +3501,7 @@
       },
       "shortName": "Proteus Rayzor 760 OPS",
       "image": "images/fixtures/elation/proteus-rayzor-760-ops.png",
-      "details": "json/fixture-details/8448cbb85da4f6183e46c7a51276fdc2542e15a83de49e74eb0768ba46870cfe.json",
+      "details": "json/fixture-details/elation/proteus-rayzor-760-ops.json",
       "provenance": {
         "fileName": "Elation@Proteus_Rayzor_760_OPS@25-15-05_Release.gdtf",
         "sha256": "8448cbb85da4f6183e46c7a51276fdc2542e15a83de49e74eb0768ba46870cfe",
@@ -3546,7 +3546,7 @@
       },
       "shortName": "Proteus Rayzor Blade L",
       "image": "images/fixtures/elation/proteus-rayzor-blade-l.png",
-      "details": "json/fixture-details/def493b27bab35c52e130ecc5c1f039a8f630007b306fe577f1fe7ab2f34c829.json",
+      "details": "json/fixture-details/elation/proteus-rayzor-blade-l.json",
       "provenance": {
         "fileName": "Elation@Proteus_Rayzor_Blade_L@25-04-03_Release.gdtf",
         "sha256": "def493b27bab35c52e130ecc5c1f039a8f630007b306fe577f1fe7ab2f34c829",
@@ -3581,7 +3581,7 @@
       },
       "shortName": "Proton 3K Color",
       "image": "images/fixtures/elation/proton-3k-color.png",
-      "details": "json/fixture-details/20082bbf20003a0d2dc51f893997ae5445aa569efa433589c4e4f10d67e97654.json",
+      "details": "json/fixture-details/elation/proton-3k-color.json",
       "provenance": {
         "fileName": "Elation@Proton_3K_Color@25-19-05_First_Release.gdtf",
         "sha256": "20082bbf20003a0d2dc51f893997ae5445aa569efa433589c4e4f10d67e97654",
@@ -3716,7 +3716,7 @@
       },
       "shortName": "PROTRON ECLYPSE",
       "image": "images/fixtures/elation/protron-eclypse.png",
-      "details": "json/fixture-details/8f52ce4e6172393306dfbd6a497565512e356e210348b12c11510899ad6cb3df.json",
+      "details": "json/fixture-details/elation/protron-eclypse.json",
       "provenance": {
         "fileName": "Elation@Protron_Eclypse@23-19-07_Release.gdtf",
         "sha256": "8f52ce4e6172393306dfbd6a497565512e356e210348b12c11510899ad6cb3df",
@@ -3776,7 +3776,7 @@
       },
       "shortName": "Pulse Bar L",
       "image": "images/fixtures/elation/pulse-bar-l.png",
-      "details": "json/fixture-details/77e20fb23442f151e54b74c05985444e6f6c0be62fd3630a622f5ea872dcfa09.json",
+      "details": "json/fixture-details/elation/pulse-bar-l.json",
       "provenance": {
         "fileName": "Elation@Pulse_Bar_L@26-21-07_Release.gdtf",
         "sha256": "77e20fb23442f151e54b74c05985444e6f6c0be62fd3630a622f5ea872dcfa09",
@@ -3836,7 +3836,7 @@
       },
       "shortName": "Pulse Bar S",
       "image": "images/fixtures/elation/pulse-bar-s.png",
-      "details": "json/fixture-details/709b4e73b4e546bb993d6cb870423f65ac7d1c7a09f082eaff99ce494184a0fa.json",
+      "details": "json/fixture-details/elation/pulse-bar-s.json",
       "provenance": {
         "fileName": "Elation@Pulse_Bar_S@26-23-07_Release.gdtf",
         "sha256": "709b4e73b4e546bb993d6cb870423f65ac7d1c7a09f082eaff99ce494184a0fa",
@@ -3896,7 +3896,7 @@
       },
       "shortName": "Pulse Panel",
       "image": "images/fixtures/elation/pulse-panel.png",
-      "details": "json/fixture-details/a6d36b9461e8a6e8896add1b9e8df71543d42975e698dc6b20485cf2a512acd0.json",
+      "details": "json/fixture-details/elation/pulse-panel.json",
       "provenance": {
         "fileName": "Elation@Pulse_Panel@25-17-02_Release.gdtf",
         "sha256": "a6d36b9461e8a6e8896add1b9e8df71543d42975e698dc6b20485cf2a512acd0",
@@ -3971,7 +3971,7 @@
       },
       "shortName": "Pulse Panel FX",
       "image": "images/fixtures/elation/pulse-panel-fx.png",
-      "details": "json/fixture-details/28109d1361ddc12da2ca74a37bff156b466061671be47f645e73f118cc6c7c0e.json",
+      "details": "json/fixture-details/elation/pulse-panel-fx.json",
       "provenance": {
         "fileName": "Elation@Pulse_Panel_FX@26-23-07_Release.gdtf",
         "sha256": "28109d1361ddc12da2ca74a37bff156b466061671be47f645e73f118cc6c7c0e",
@@ -4021,7 +4021,7 @@
       },
       "shortName": "Rayzor 760",
       "image": "images/fixtures/elation/rayzor-760.png",
-      "details": "json/fixture-details/d8313693f006d7d4bf09b7216b53d32cb8d110caabf4064ab9a3a308c580965b.json",
+      "details": "json/fixture-details/elation/rayzor-760.json",
       "provenance": {
         "fileName": "Elation@Rayzor_760@2023-15-08_Release.gdtf",
         "sha256": "d8313693f006d7d4bf09b7216b53d32cb8d110caabf4064ab9a3a308c580965b",
@@ -4046,7 +4046,7 @@
       },
       "shortName": "REBEL Prof",
       "image": "images/fixtures/elation/rebel-profile.png",
-      "details": "json/fixture-details/327df24a192ffe31403aabf1b4d5581f561a6751e8b9edcb35da601b5e0688e4.json",
+      "details": "json/fixture-details/elation/rebel-profile.json",
       "provenance": {
         "fileName": "Elation@REBEL_Profile@25-16-09_Release.gdtf",
         "sha256": "327df24a192ffe31403aabf1b4d5581f561a6751e8b9edcb35da601b5e0688e4",
@@ -4121,7 +4121,7 @@
       },
       "shortName": "REBEL Wash 12",
       "image": "images/fixtures/elation/rebel-wash-12.png",
-      "details": "json/fixture-details/d070687b242e22e54903be06057fe4b5fbcc27be96062fbd137373b9a7e91b27.json",
+      "details": "json/fixture-details/elation/rebel-wash-12.json",
       "provenance": {
         "fileName": "Elation@REBEL_Wash_12@26-24-07_Release.gdtf",
         "sha256": "d070687b242e22e54903be06057fe4b5fbcc27be96062fbd137373b9a7e91b27",
@@ -4196,7 +4196,7 @@
       },
       "shortName": "Batten-14",
       "image": "images/fixtures/elation/seven-batten-14.png",
-      "details": "json/fixture-details/f1ac7a4df95ceab7eeb938d810926147072e4ab4e13bd2d9f848b8160c7432e8.json",
+      "details": "json/fixture-details/elation/seven-batten-14.json",
       "provenance": {
         "fileName": "Elation@Seven_Batten_14@2024-16-02_First_Release.gdtf",
         "sha256": "f1ac7a4df95ceab7eeb938d810926147072e4ab4e13bd2d9f848b8160c7432e8",
@@ -4271,7 +4271,7 @@
       },
       "shortName": "Batten-42",
       "image": "images/fixtures/elation/seven-batten-42.png",
-      "details": "json/fixture-details/bf8380bb34dcc517eecba39ba73b95d92277867a072e1200dae90fe9fb570b35.json",
+      "details": "json/fixture-details/elation/seven-batten-42.json",
       "provenance": {
         "fileName": "Elation@Seven_Batten_42@2024-20-02_First_Release.gdtf",
         "sha256": "bf8380bb34dcc517eecba39ba73b95d92277867a072e1200dae90fe9fb570b35",
@@ -4346,7 +4346,7 @@
       },
       "shortName": "Batten-72",
       "image": "images/fixtures/elation/seven-batten-72.png",
-      "details": "json/fixture-details/b04788d2e63d8c8fa03b13f6b143485c46dff64351e9e2ba48b254af519598bd.json",
+      "details": "json/fixture-details/elation/seven-batten-72.json",
       "provenance": {
         "fileName": "Elation@Seven_Batten_72@2024-22-02_First_Release.gdtf",
         "sha256": "b04788d2e63d8c8fa03b13f6b143485c46dff64351e9e2ba48b254af519598bd",
@@ -4396,7 +4396,7 @@
       },
       "shortName": "Par 19-IP",
       "image": "images/fixtures/elation/seven-par-19ip.png",
-      "details": "json/fixture-details/1835988bbca25949187a1088ef12aa68e4b4eb7d2fdcd6fc9b14d26ab7ca7351.json",
+      "details": "json/fixture-details/elation/seven-par-19ip.json",
       "provenance": {
         "fileName": "Elation@SEVEN_PAR_19IP@2024-02-02_First_Release.gdtf",
         "sha256": "1835988bbca25949187a1088ef12aa68e4b4eb7d2fdcd6fc9b14d26ab7ca7351",
@@ -4446,7 +4446,7 @@
       },
       "shortName": "Par 7-IP",
       "image": "images/fixtures/elation/seven-par-7ip.png",
-      "details": "json/fixture-details/ba2c4593c24527ee43aca693e874b5c9bd6db53c629b76749036610d893d1eea.json",
+      "details": "json/fixture-details/elation/seven-par-7ip.json",
       "provenance": {
         "fileName": "Elation@SEVEN_PAR_7IP@2024-02-02_First_Release.gdtf",
         "sha256": "ba2c4593c24527ee43aca693e874b5c9bd6db53c629b76749036610d893d1eea",
@@ -4561,7 +4561,7 @@
       },
       "shortName": "6+ Bar-L",
       "image": "images/fixtures/elation/six-plus-bar-l.png",
-      "details": "json/fixture-details/b2337a89c6e34c5b85534a31144875bd237e5e4b0dc5f6503434eeb9d61dc917.json",
+      "details": "json/fixture-details/elation/six-plus-bar-l.json",
       "provenance": {
         "fileName": "Elation@SIX_plus_BAR_L@24-11-10_Release.gdtf",
         "sha256": "b2337a89c6e34c5b85534a31144875bd237e5e4b0dc5f6503434eeb9d61dc917",
@@ -4681,7 +4681,7 @@
       },
       "shortName": "6+ Bar-S",
       "image": "images/fixtures/elation/six-plus-bar-s.png",
-      "details": "json/fixture-details/fc69a0fd290f371eee6b25ea762f41401e3cd2a915105141c0502c761496a2ed.json",
+      "details": "json/fixture-details/elation/six-plus-bar-s.json",
       "provenance": {
         "fileName": "Elation@SIX_plus_BAR_S@24-24-07_Release.gdtf",
         "sha256": "fc69a0fd290f371eee6b25ea762f41401e3cd2a915105141c0502c761496a2ed",
@@ -4761,7 +4761,7 @@
       },
       "shortName": "6+ Par-L",
       "image": "images/fixtures/elation/six-plus-par-l.png",
-      "details": "json/fixture-details/091f93db0218244b0933bbadb3efc67f33be2927367ecf729bdbe1cc458c340e.json",
+      "details": "json/fixture-details/elation/six-plus-par-l.json",
       "provenance": {
         "fileName": "Elation@SIX_plus_PAR_L@25-14-03_Release.gdtf",
         "sha256": "091f93db0218244b0933bbadb3efc67f33be2927367ecf729bdbe1cc458c340e",
@@ -4841,7 +4841,7 @@
       },
       "shortName": "6+ Par-L-OPS",
       "image": "images/fixtures/elation/six-plus-par-l-ops.png",
-      "details": "json/fixture-details/715ba2e4fa66928f74434a0c3e88bd7f0b660c3d32ca691a12bfde890aa40c85.json",
+      "details": "json/fixture-details/elation/six-plus-par-l-ops.json",
       "provenance": {
         "fileName": "Elation@SIX_plus_PAR_L_OPS@25-14-03_First_Release.gdtf",
         "sha256": "715ba2e4fa66928f74434a0c3e88bd7f0b660c3d32ca691a12bfde890aa40c85",
@@ -4921,7 +4921,7 @@
       },
       "shortName": "6+ Par-S",
       "image": "images/fixtures/elation/six-plus-par-s--six-plus-par-s-ops.png",
-      "details": "json/fixture-details/f418d9cc5427e7e22424da2a4d34b3a423b62523c295620c7436570dbdc3b4bf.json",
+      "details": "json/fixture-details/elation/six-plus-par-s.json",
       "provenance": {
         "fileName": "Elation@SIX_plus_PAR_S@25-13-03_Release.gdtf",
         "sha256": "f418d9cc5427e7e22424da2a4d34b3a423b62523c295620c7436570dbdc3b4bf",
@@ -5001,7 +5001,7 @@
       },
       "shortName": "6+ Par-S-OPS",
       "image": "images/fixtures/elation/six-plus-par-s--six-plus-par-s-ops.png",
-      "details": "json/fixture-details/629ad03819a083fe730db66a73f70d5001f1e097ffe0f740203ef4a0a46921e5.json",
+      "details": "json/fixture-details/elation/six-plus-par-s-ops.json",
       "provenance": {
         "fileName": "Elation@SIX_plus_PAR_S_OPS@25-13-03_First_Release.gdtf",
         "sha256": "629ad03819a083fe730db66a73f70d5001f1e097ffe0f740203ef4a0a46921e5",
@@ -5056,7 +5056,7 @@
       },
       "shortName": "Bar 1000",
       "image": "images/fixtures/elation/sixbar-1000.png",
-      "details": "json/fixture-details/026e5415c92c5c1c6606a2f41f8e6df558ef1c07eba1011dba312daf8f1b599d.json",
+      "details": "json/fixture-details/elation/sixbar-1000.json",
       "provenance": {
         "fileName": "Elation@SIXBAR_1000@2024-25-01_First_Release.gdtf",
         "sha256": "026e5415c92c5c1c6606a2f41f8e6df558ef1c07eba1011dba312daf8f1b599d",
@@ -5111,7 +5111,7 @@
       },
       "shortName": "Bar 1000-IP",
       "image": "images/fixtures/elation/sixbar-1000-ip.png",
-      "details": "json/fixture-details/cc65de25c7ff2a445590e45cf4db57f9c09d26df3639b576d0839faa16360fa3.json",
+      "details": "json/fixture-details/elation/sixbar-1000-ip.json",
       "provenance": {
         "fileName": "Elation@SIXBAR_1000_IP@2024-25-01_First_Release.gdtf",
         "sha256": "cc65de25c7ff2a445590e45cf4db57f9c09d26df3639b576d0839faa16360fa3",
@@ -5166,7 +5166,7 @@
       },
       "shortName": "Bar 500",
       "image": "images/fixtures/elation/sixbar-500.png",
-      "details": "json/fixture-details/bc90b51381b37ec3836bd7ceb97e2a0c6909c0644c177570cf3ed78cbf63017f.json",
+      "details": "json/fixture-details/elation/sixbar-500.json",
       "provenance": {
         "fileName": "Elation@SIXBAR_500@2024-24-01_First_Release.gdtf",
         "sha256": "bc90b51381b37ec3836bd7ceb97e2a0c6909c0644c177570cf3ed78cbf63017f",
@@ -5201,7 +5201,7 @@
       },
       "shortName": "Sixpar100",
       "image": "images/fixtures/elation/sixpar-100.png",
-      "details": "json/fixture-details/22a33e7c2128145e4c5cc5d570527614d9a436d41b8f9dda7b851596bdb5091b.json",
+      "details": "json/fixture-details/elation/sixpar-100.json",
       "provenance": {
         "fileName": "Elation@SIXPAR_100@2023-22-11_First_Release.gdtf",
         "sha256": "22a33e7c2128145e4c5cc5d570527614d9a436d41b8f9dda7b851596bdb5091b",
@@ -5236,7 +5236,7 @@
       },
       "shortName": "Sixpar100-IP",
       "image": "images/fixtures/elation/sixpar-100-ip.png",
-      "details": "json/fixture-details/9c599b2757129f572c1fa478a6fdd65d348e5d86f138ce5a0e968c6afe917571.json",
+      "details": "json/fixture-details/elation/sixpar-100-ip.json",
       "provenance": {
         "fileName": "Elation@SIXPAR_100_IP@2023-22-11_First_Release.gdtf",
         "sha256": "9c599b2757129f572c1fa478a6fdd65d348e5d86f138ce5a0e968c6afe917571",
@@ -5271,7 +5271,7 @@
       },
       "shortName": "SIXPAR200",
       "image": "images/fixtures/elation/sixpar-200--sixpar-200-ip.png",
-      "details": "json/fixture-details/257a244c6a2d1709bcd8508acfae7c194de1828e6f0ad49ed573bd2d6abb36c6.json",
+      "details": "json/fixture-details/elation/sixpar-200.json",
       "provenance": {
         "fileName": "Elation@SIXPAR_200@23-27-11_First_Release.gdtf",
         "sha256": "257a244c6a2d1709bcd8508acfae7c194de1828e6f0ad49ed573bd2d6abb36c6",
@@ -5306,7 +5306,7 @@
       },
       "shortName": "SIXPAR200-IP",
       "image": "images/fixtures/elation/sixpar-200--sixpar-200-ip.png",
-      "details": "json/fixture-details/9175a74dc1796bcd81c91bfba84b1cef9db916fcb6370cc9e3f06334291d1e38.json",
+      "details": "json/fixture-details/elation/sixpar-200-ip.json",
       "provenance": {
         "fileName": "Elation@SIXPAR_200_IP@23-27-11_First_Release.gdtf",
         "sha256": "9175a74dc1796bcd81c91bfba84b1cef9db916fcb6370cc9e3f06334291d1e38",
@@ -5341,7 +5341,7 @@
       },
       "shortName": "SIXPAR300",
       "image": "images/fixtures/elation/sixpar-300--sixpar-300-ip.png",
-      "details": "json/fixture-details/7c19b6190440f8a224c8a88d595c9caf14b722f1620cc97a15d887a206b9ecdd.json",
+      "details": "json/fixture-details/elation/sixpar-300.json",
       "provenance": {
         "fileName": "Elation@SIXPAR_300@23-28-11_First_Release.gdtf",
         "sha256": "7c19b6190440f8a224c8a88d595c9caf14b722f1620cc97a15d887a206b9ecdd",
@@ -5376,7 +5376,7 @@
       },
       "shortName": "SIXPAR300-IP",
       "image": "images/fixtures/elation/sixpar-300--sixpar-300-ip.png",
-      "details": "json/fixture-details/c14741096126e4b35580c29a147f1192b5ce8c021a23c1b55f6ae99a1d0364bb.json",
+      "details": "json/fixture-details/elation/sixpar-300-ip.json",
       "provenance": {
         "fileName": "Elation@SIXPAR_300_IP@23-28-11_First_Release.gdtf",
         "sha256": "c14741096126e4b35580c29a147f1192b5ce8c021a23c1b55f6ae99a1d0364bb",
@@ -5411,7 +5411,7 @@
       },
       "shortName": "Smarty Hybrid",
       "image": "images/fixtures/elation/smarty-hybrid.png",
-      "details": "json/fixture-details/282d0382ffdd07c112daff89ecbd974b9b9941dfb907efed260046913eac13e9.json",
+      "details": "json/fixture-details/elation/smarty-hybrid.json",
       "provenance": {
         "fileName": "Elation@Smarty_Hybrid@2023-27-02_First_Release.gdtf",
         "sha256": "282d0382ffdd07c112daff89ecbd974b9b9941dfb907efed260046913eac13e9",
@@ -5436,7 +5436,7 @@
       },
       "shortName": "Smarty Max",
       "image": "images/fixtures/elation/smarty-max.png",
-      "details": "json/fixture-details/f7f76514044dde3436da1e1ef35d7fbc53b78f2b06ca97f92ff58f3541393476.json",
+      "details": "json/fixture-details/elation/smarty-max.json",
       "provenance": {
         "fileName": "Elation@Smarty_Max@V1-00.gdtf",
         "sha256": "f7f76514044dde3436da1e1ef35d7fbc53b78f2b06ca97f92ff58f3541393476",
@@ -5511,7 +5511,7 @@
       },
       "shortName": "SOL Blinder",
       "image": "images/fixtures/elation/sol-i-blinder.png",
-      "details": "json/fixture-details/c3ad14e96203ccbbdf63a95d80d41dc1722d3af15a0d821e157cec46a2ce3056.json",
+      "details": "json/fixture-details/elation/sol-i-blinder.json",
       "provenance": {
         "fileName": "Elation@SOL_I_Blinder@26-26-03_Release.gdtf",
         "sha256": "c3ad14e96203ccbbdf63a95d80d41dc1722d3af15a0d821e157cec46a2ce3056",
@@ -5536,7 +5536,7 @@
       },
       "shortName": "Therma Tour 800",
       "image": "images/fixtures/elation/therma-tour-800.png",
-      "details": "json/fixture-details/fdee22498ccf46e073fb408d0d6bd2dc10dbd8ea91578bd62e08b68b53015174.json",
+      "details": "json/fixture-details/elation/therma-tour-800.json",
       "provenance": {
         "fileName": "Elation@THERMA_TOUR_800@V2_-_Updated_DMX.gdtf",
         "sha256": "fdee22498ccf46e073fb408d0d6bd2dc10dbd8ea91578bd62e08b68b53015174",
@@ -5616,7 +5616,7 @@
       },
       "shortName": "VOLT+ Bar-S",
       "image": "images/fixtures/elation/volt-plus-bar-s.png",
-      "details": "json/fixture-details/dd67876ef5a415bc6980a34845643d210c91b11310fcb7b70a50aadc407baa15.json",
+      "details": "json/fixture-details/elation/volt-plus-bar-s.json",
       "provenance": {
         "fileName": "Elation@VOLT_plus_BAR_S@26-15-04_Release.gdtf",
         "sha256": "dd67876ef5a415bc6980a34845643d210c91b11310fcb7b70a50aadc407baa15",
@@ -5671,7 +5671,7 @@
       },
       "shortName": "VOLT+ Par-L",
       "image": "",
-      "details": "json/fixture-details/23ea0d40fd6192dae20ee7cf1a9540805c65f09ba03c18e61a01d52b07768122.json",
+      "details": "json/fixture-details/elation/volt-plus-par-l.json",
       "provenance": {
         "fileName": "Elation@VOLT_plus_PAR_L@26-24-04_Release.gdtf",
         "sha256": "23ea0d40fd6192dae20ee7cf1a9540805c65f09ba03c18e61a01d52b07768122",
@@ -5726,7 +5726,7 @@
       },
       "shortName": "VOLT+ Par-S",
       "image": "images/fixtures/elation/volt-plus-par-s.png",
-      "details": "json/fixture-details/8ae6be429d8032ebbdfcfa3262e225971660cfd56bff01bdd1c66fc3d1f355d5.json",
+      "details": "json/fixture-details/elation/volt-plus-par-s.json",
       "provenance": {
         "fileName": "Elation@VOLT_plus_PAR_S@26-24-04_Release.gdtf",
         "sha256": "8ae6be429d8032ebbdfcfa3262e225971660cfd56bff01bdd1c66fc3d1f355d5",
@@ -5751,7 +5751,7 @@
       },
       "shortName": "WW Prof-HP",
       "image": "images/fixtures/elation/ww-profile-hp.png",
-      "details": "json/fixture-details/b35c05a3730c09ef6898c62c01327f3f1c1486e55a6a90aa97cef51491c3df78.json",
+      "details": "json/fixture-details/elation/ww-profile-hp.json",
       "provenance": {
         "fileName": "Elation@WW_Profile_HP@24-22-03_First_Release.gdtf",
         "sha256": "b35c05a3730c09ef6898c62c01327f3f1c1486e55a6a90aa97cef51491c3df78",
@@ -5786,7 +5786,7 @@
       },
       "shortName": "WW Prof-HP-IP",
       "image": "images/fixtures/elation/ww-profile-hp-ip.png",
-      "details": "json/fixture-details/7bf964cf7bf93dea10f89daa4c84c4f6e1c8a0ee7c4e1ca6dce04758c542c6a6.json",
+      "details": "json/fixture-details/elation/ww-profile-hp-ip.json",
       "provenance": {
         "fileName": "Elation@WW_Profile_HP_IP@24-26-03_First_Release.gdtf",
         "sha256": "7bf964cf7bf93dea10f89daa4c84c4f6e1c8a0ee7c4e1ca6dce04758c542c6a6",

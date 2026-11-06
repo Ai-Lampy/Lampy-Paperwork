@@ -19,7 +19,7 @@
       },
       "shortName": "CaptainD",
       "image": "images/fixtures/smoke-factory/captain-d--fanfogger-ec26.png",
-      "details": "json/fixture-details/89f04b1e4c456f1d9e48513033bf79f8c4e60254a11d8c6adb5ab5e3722caaaa.json",
+      "details": "json/fixture-details/smoke-factory/captain-d.json",
       "provenance": {
         "fileName": "Smoke_Factory@Captain_D@2026-07-01.gdtf",
         "sha256": "89f04b1e4c456f1d9e48513033bf79f8c4e60254a11d8c6adb5ab5e3722caaaa",
@@ -39,7 +39,7 @@
       },
       "shortName": "FFog",
       "image": "images/fixtures/smoke-factory/fan-fogger--tour-hazer-ii.png",
-      "details": "json/fixture-details/bc9f06916f7982e565b706ced0eb76dfea104c555dd64a02b8aca378d0f62652.json",
+      "details": "json/fixture-details/smoke-factory/fan-fogger.json",
       "provenance": {
         "fileName": "Smoke_Factory@Fan_Fogger@1000.gdtf",
         "sha256": "bc9f06916f7982e565b706ced0eb76dfea104c555dd64a02b8aca378d0f62652",
@@ -59,7 +59,7 @@
       },
       "shortName": "FF26",
       "image": "images/fixtures/smoke-factory/captain-d--fanfogger-ec26.png",
-      "details": "json/fixture-details/3a1f0d6d233ec6096f14124c370879d5771b472edbbe87be411bcaaf6ba2f1b7.json",
+      "details": "json/fixture-details/smoke-factory/fanfogger-ec26.json",
       "provenance": {
         "fileName": "Smoke_Factory@FanFogger_EC26@2026-07-01.gdtf",
         "sha256": "3a1f0d6d233ec6096f14124c370879d5771b472edbbe87be411bcaaf6ba2f1b7",
@@ -79,7 +79,7 @@
       },
       "shortName": "THazerII",
       "image": "images/fixtures/smoke-factory/fan-fogger--tour-hazer-ii.png",
-      "details": "json/fixture-details/484d4dc48a2ac52fc9e3cdc402fda373256a1f764428d676d86fc38adb2c0b89.json",
+      "details": "json/fixture-details/smoke-factory/tour-hazer-ii.json",
       "provenance": {
         "fileName": "Smoke_Factory@Tour_Hazer_II@Release_1.0.gdtf",
         "sha256": "484d4dc48a2ac52fc9e3cdc402fda373256a1f764428d676d86fc38adb2c0b89",

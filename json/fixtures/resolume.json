@@ -19,7 +19,7 @@
       },
       "shortName": "Arena7",
       "image": "",
-      "details": "json/fixture-details/48786a9864a5b9d514d2752a946b2128ed345001bb0e6333548945a20e5b397f.json",
+      "details": "json/fixture-details/resolume/arena-7.json",
       "provenance": {
         "fileName": "Resolume@Arena_7@v1_3:_Updated_DMX_Defaults.gdtf",
         "sha256": "48786a9864a5b9d514d2752a946b2128ed345001bb0e6333548945a20e5b397f",
@@ -39,7 +39,7 @@
       },
       "shortName": "Arena 7",
       "image": "",
-      "details": "json/fixture-details/edba9baf5f33646a1f13e66fc6933ff656746966c72ff6fb167b2292d3451ca7.json",
+      "details": "json/fixture-details/resolume/arena-7-mini.json",
       "provenance": {
         "fileName": "Resolume@Arena_7_Mini@20260609.gdtf",
         "sha256": "edba9baf5f33646a1f13e66fc6933ff656746966c72ff6fb167b2292d3451ca7",

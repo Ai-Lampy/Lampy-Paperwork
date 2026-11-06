@@ -13,7 +13,7 @@
       "shortName": "2-Lite",
       "weight": 6.4,
       "image": "images/fixtures/generic/2-lite-mole.png",
-      "details": "json/fixture-details/cba9ea8cb34805a3422e33d5e0a595d214b469885029d66192934fc3ae27baf7.json",
+      "details": "json/fixture-details/generic/2-lite-mole.json",
       "provenance": {
         "fileName": "Generic@2-lite_Blinder@2-lite_Blinder.gdtf",
         "sha256": "cba9ea8cb34805a3422e33d5e0a595d214b469885029d66192934fc3ae27baf7",
@@ -52,7 +52,7 @@
       "shortName": "4-Lite",
       "weight": 6.4,
       "image": "images/fixtures/generic/4-lite-mole--8-lite-mole.png",
-      "details": "json/fixture-details/11c2966b83f79215752b6868cf6dc354105e70b19a7545d372eb39156296ef86.json",
+      "details": "json/fixture-details/generic/4-lite-mole.json",
       "provenance": {
         "fileName": "Generic@4-lite_Blinder@1.2.3._out_for_real_world_testing_-_added_an_new_image.gdtf",
         "sha256": "11c2966b83f79215752b6868cf6dc354105e70b19a7545d372eb39156296ef86",
@@ -77,7 +77,7 @@
       "shortName": "8-Lite",
       "weight": 6.4,
       "image": "images/fixtures/generic/4-lite-mole--8-lite-mole.png",
-      "details": "json/fixture-details/7d378b245b4943b1c4f5dff7abd76f8cd3de6e682f85d58e2780f8144f8711ba.json",
+      "details": "json/fixture-details/generic/8-lite-mole.json",
       "provenance": {
         "fileName": "Generic@8-lite_Blinder@V-0.1.1.gdtf",
         "sha256": "7d378b245b4943b1c4f5dff7abd76f8cd3de6e682f85d58e2780f8144f8711ba",
@@ -98,7 +98,7 @@
       },
       "shortName": "Dim",
       "image": "",
-      "details": "json/fixture-details/c7da31cf3a00953c4bf117e3980a2ffe3cbf9d72549c9d0b2007e8c59b59bcd0.json",
+      "details": "json/fixture-details/generic/dimmer.json",
       "provenance": {
         "fileName": "Generic@Dimmer@Generic.gdtf",
         "sha256": "c7da31cf3a00953c4bf117e3980a2ffe3cbf9d72549c9d0b2007e8c59b59bcd0",
@@ -118,7 +118,7 @@
       },
       "shortName": "Generic RGB",
       "image": "images/fixtures/generic/generic-rgb--rgbw.png",
-      "details": "json/fixture-details/2e868f21594b5de8cf75a9ccc3bfec55a3c3559fb183da6008384e48ce1d93a9.json",
+      "details": "json/fixture-details/generic/generic-rgb.json",
       "provenance": {
         "fileName": "Generic@Generic_RGB@V1_RGB.gdtf",
         "sha256": "2e868f21594b5de8cf75a9ccc3bfec55a3c3559fb183da6008384e48ce1d93a9",
@@ -152,7 +152,7 @@
       },
       "shortName": "Generic RGBW",
       "image": "images/fixtures/generic/generic-rgb--rgbw.png",
-      "details": "json/fixture-details/b5f8794a84f1054073e75e3131281bb4e37f43634cf44779ef8a428c578adc9f.json",
+      "details": "json/fixture-details/generic/rgbw.json",
       "provenance": {
         "fileName": "Generic@RGBW@V1_RGBW.gdtf",
         "sha256": "b5f8794a84f1054073e75e3131281bb4e37f43634cf44779ef8a428c578adc9f",

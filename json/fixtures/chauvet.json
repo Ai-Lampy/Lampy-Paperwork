@@ -59,7 +59,7 @@
       },
       "shortName": "Color Strike M",
       "image": "images/fixtures/chauvet/color-strike-m.png",
-      "details": "json/fixture-details/4b983081a57ec8da24d070f92fc15aa6493911e2005ffc041696bb8ed36f2846.json",
+      "details": "json/fixture-details/chauvet/color-strike-m.json",
       "provenance": {
         "fileName": "Chauvet_Professional@Color_Strike_M@Rev_1.1.3.gdtf",
         "sha256": "4b983081a57ec8da24d070f92fc15aa6493911e2005ffc041696bb8ed36f2846",
@@ -152,7 +152,7 @@
       },
       "shortName": "PXL Curve 12",
       "image": "images/fixtures/chauvet/colorado-pxl-curve-12.png",
-      "details": "json/fixture-details/caa1145530c6861ea0e432bd622974ff88500763e14f6cda6db1534886cadb17.json",
+      "details": "json/fixture-details/chauvet/colorado-pxl-curve-12.json",
       "provenance": {
         "fileName": "Chauvet_Professional@COLORado_PXL_Curve_12@Rev_1.1.4.gdtf",
         "sha256": "caa1145530c6861ea0e432bd622974ff88500763e14f6cda6db1534886cadb17",
@@ -192,7 +192,7 @@
       },
       "shortName": "PXL Curve 5",
       "image": "images/fixtures/chauvet/colorado-pxl-curve-5.png",
-      "details": "json/fixture-details/f2d85b5d2f4fa0a6132cb9cf848b668aea08ab320a6f01b8cb8242fdbab0a9e2.json",
+      "details": "json/fixture-details/chauvet/colorado-pxl-curve-5.json",
       "provenance": {
         "fileName": "Chauvet_Professional@COLORado_PXL_Curve_5@Rev_1.0.0.gdtf",
         "sha256": "f2d85b5d2f4fa0a6132cb9cf848b668aea08ab320a6f01b8cb8242fdbab0a9e2",
@@ -217,7 +217,7 @@
       },
       "shortName": "Storm 1 Beam",
       "image": "images/fixtures/chauvet/maverick-storm-1-beam.png",
-      "details": "json/fixture-details/a2098c434ec1e367173814b32ebc047d6005cec26f40c00efb633abd3c817be7.json",
+      "details": "json/fixture-details/chauvet/maverick-storm-1-beam.json",
       "provenance": {
         "fileName": "Chauvet_Professional@Maverick_Storm_1_Beam@Rev_1.0.9.gdtf",
         "sha256": "a2098c434ec1e367173814b32ebc047d6005cec26f40c00efb633abd3c817be7",
@@ -243,7 +243,7 @@
       },
       "shortName": "Storm 1 Flex",
       "image": "images/fixtures/chauvet/maverick-storm-1-flex.png",
-      "details": "json/fixture-details/20e20fca187e5ccb7898f3424b0c05a69cd0085c2336ab22bc776319f3c138e6.json",
+      "details": "json/fixture-details/chauvet/maverick-storm-1-flex.json",
       "provenance": {
         "fileName": "Chauvet_Professional@Maverick_Storm_1_Flex@Rev_1.0.1.gdtf",
         "sha256": "20e20fca187e5ccb7898f3424b0c05a69cd0085c2336ab22bc776319f3c138e6",
@@ -268,7 +268,7 @@
       },
       "shortName": "Storm 1 Hybrid",
       "image": "images/fixtures/chauvet/maverick-storm-1-hybrid.png",
-      "details": "json/fixture-details/7243378b5b20b368a3d513e05b9050f72ac53c521a1ea6371244fd1b59104f25.json",
+      "details": "json/fixture-details/chauvet/maverick-storm-1-hybrid.json",
       "provenance": {
         "fileName": "Chauvet_Professional@Maverick_Storm_1_Hybrid@Rev_1.0.9.gdtf",
         "sha256": "7243378b5b20b368a3d513e05b9050f72ac53c521a1ea6371244fd1b59104f25",
@@ -348,7 +348,7 @@
       },
       "shortName": "Storm 2 BW",
       "image": "images/fixtures/chauvet/maverick-storm-2-beamwash.png",
-      "details": "json/fixture-details/48e71681e999bd47f8259044b498b4233ed92ff50210159c70e24eeaae594991.json",
+      "details": "json/fixture-details/chauvet/maverick-storm-2-beamwash.json",
       "provenance": {
         "fileName": "Chauvet_Professional@Maverick_Storm_2_BeamWash@Rev_1.1.0.gdtf",
         "sha256": "48e71681e999bd47f8259044b498b4233ed92ff50210159c70e24eeaae594991",
@@ -373,7 +373,7 @@
       },
       "shortName": "Storm 2 Prof",
       "image": "images/fixtures/chauvet/maverick-storm-2-profile.png",
-      "details": "json/fixture-details/ce24c14a285ee994ea3a12b4440800305d86388280c0105f4cfd456d6db9364d.json",
+      "details": "json/fixture-details/chauvet/maverick-storm-2-profile.json",
       "provenance": {
         "fileName": "Chauvet_Professional@Maverick_Storm_2_Profile@P_T_PHYS_VALUES_INVERTED_-_MATCHES_MA3D.gdtf",
         "sha256": "ce24c14a285ee994ea3a12b4440800305d86388280c0105f4cfd456d6db9364d",
@@ -453,7 +453,7 @@
       },
       "shortName": "Storm 3 BW",
       "image": "images/fixtures/chauvet/maverick-storm-3-beamwash.png",
-      "details": "json/fixture-details/884c75e052781c7528add58b7e0707b0e91f6cc4696cbc290f8b9a10278874a8.json",
+      "details": "json/fixture-details/chauvet/maverick-storm-3-beamwash.json",
       "provenance": {
         "fileName": "Chauvet_Professional@Maverick_Storm_3_Beamwash@Rev_1.1.0.gdtf",
         "sha256": "884c75e052781c7528add58b7e0707b0e91f6cc4696cbc290f8b9a10278874a8",
@@ -478,7 +478,7 @@
       },
       "shortName": "Storm 3 Prof",
       "image": "images/fixtures/chauvet/maverick-storm-3-profile.png",
-      "details": "json/fixture-details/8b4757fbf9f54dd87d067145e1df02f0ce8e18d6278297d53c229e798b5ee727.json",
+      "details": "json/fixture-details/chauvet/maverick-storm-3-profile.json",
       "provenance": {
         "fileName": "Chauvet_Professional@Maverick_Storm_3_Profile@Rev_1.0.0.gdtf",
         "sha256": "8b4757fbf9f54dd87d067145e1df02f0ce8e18d6278297d53c229e798b5ee727",
@@ -503,7 +503,7 @@
       },
       "shortName": "Storm 4 Prof",
       "image": "images/fixtures/chauvet/maverick-storm-4-profile.png",
-      "details": "json/fixture-details/a4896352823850c7417b22c9f83087f975914c54d82e0fe936fcdee33b362169.json",
+      "details": "json/fixture-details/chauvet/maverick-storm-4-profile.json",
       "provenance": {
         "fileName": "Chauvet_Professional@Maverick_Storm_4_Profile@P_T_PHYSICAL_VALUES_INVERTED_-_MATCHES_MA3D.gdtf",
         "sha256": "a4896352823850c7417b22c9f83087f975914c54d82e0fe936fcdee33b362169",
@@ -528,7 +528,7 @@
       },
       "shortName": "Storm 4 SoloWash",
       "image": "images/fixtures/chauvet/maverick-storm-4-solowash.png",
-      "details": "json/fixture-details/29dc99eb874186ec8d9bfbc00c4ef2c4c9d95b4584c20fffd0f4c11db142848a.json",
+      "details": "json/fixture-details/chauvet/maverick-storm-4-solowash.json",
       "provenance": {
         "fileName": "Chauvet_Professional@Maverick_Storm_4_SoloWash@Rev_1.0.8.gdtf",
         "sha256": "29dc99eb874186ec8d9bfbc00c4ef2c4c9d95b4584c20fffd0f4c11db142848a",
@@ -578,7 +578,7 @@
       },
       "shortName": "Outcast 1 BW",
       "image": "images/fixtures/chauvet/rogue-outcast-1-beamwash.png",
-      "details": "json/fixture-details/90a6a884f2a1b6d76d80d382ae533583840358b3653cd30c3299d8af23c73259.json",
+      "details": "json/fixture-details/chauvet/rogue-outcast-1-beamwash.json",
       "provenance": {
         "fileName": "Chauvet_Professional@Rogue_Outcast_1_BeamWash@Rev_1.0.3.gdtf",
         "sha256": "90a6a884f2a1b6d76d80d382ae533583840358b3653cd30c3299d8af23c73259",
@@ -598,7 +598,7 @@
       },
       "shortName": "STRIKE Array 1",
       "image": "",
-      "details": "json/fixture-details/2a2917b7071bc7afdb0e644cb7d2ca973eaecb3bea401fd5f6525052e9e3c49e.json",
+      "details": "json/fixture-details/chauvet/strike-array-1.json",
       "provenance": {
         "fileName": "Chauvet_Professional@Strike_Array_1_26_channel@Revision_V1.gdtf",
         "sha256": "2a2917b7071bc7afdb0e644cb7d2ca973eaecb3bea401fd5f6525052e9e3c49e",
@@ -648,7 +648,7 @@
       },
       "shortName": "Strike Array 2",
       "image": "images/fixtures/chauvet/strike-array-2.png",
-      "details": "json/fixture-details/6a344c95971481a6b5f9346b2b530619d42caab8b21a220d39439153926123ba.json",
+      "details": "json/fixture-details/chauvet/strike-array-2.json",
       "provenance": {
         "fileName": "Chauvet_Professional@Strike_Array_2@Rev_1.0.4.gdtf",
         "sha256": "6a344c95971481a6b5f9346b2b530619d42caab8b21a220d39439153926123ba",
@@ -723,7 +723,7 @@
       },
       "shortName": "STRIKE Array 2C",
       "image": "images/fixtures/chauvet/strike-array-2c.png",
-      "details": "json/fixture-details/ac7875163cdd5536b5ad9c27a1abe4979ec18f42854d13a91b5a847f61d0d252.json",
+      "details": "json/fixture-details/chauvet/strike-array-2c.json",
       "provenance": {
         "fileName": "Chauvet_Professional@Strike_Array_2C@Rev_1.1.0.gdtf",
         "sha256": "ac7875163cdd5536b5ad9c27a1abe4979ec18f42854d13a91b5a847f61d0d252",
@@ -773,7 +773,7 @@
       },
       "shortName": "Strike Array 4",
       "image": "images/fixtures/chauvet/strike-array-4.png",
-      "details": "json/fixture-details/44311927a0e9194c8c79eb35f9b106fdb18add869b23e5c356387b85f22531a5.json",
+      "details": "json/fixture-details/chauvet/strike-array-4.json",
       "provenance": {
         "fileName": "Chauvet_Professional@STRIKE_Array_4@Fixed_Face.gdtf",
         "sha256": "44311927a0e9194c8c79eb35f9b106fdb18add869b23e5c356387b85f22531a5",
@@ -843,7 +843,7 @@
       },
       "shortName": "STRIKE Array 4C",
       "image": "images/fixtures/chauvet/strike-array-4c.png",
-      "details": "json/fixture-details/22eff557cb75b9751b1da552c4d012e67d455b20d89b1fa7bead179578d8ecb2.json",
+      "details": "json/fixture-details/chauvet/strike-array-4c.json",
       "provenance": {
         "fileName": "Chauvet_Professional@Strike_Array_4C@Rev_3.gdtf",
         "sha256": "22eff557cb75b9751b1da552c4d012e67d455b20d89b1fa7bead179578d8ecb2",
@@ -898,7 +898,7 @@
       },
       "shortName": "STRIKE Bolt 1C",
       "image": "images/fixtures/chauvet/strike-bolt-1c.png",
-      "details": "json/fixture-details/6c828f0a1e2cf472296ec55a869ae35c936d78e2eb6a925e52ca1e6ce9e88fef.json",
+      "details": "json/fixture-details/chauvet/strike-bolt-1c.json",
       "provenance": {
         "fileName": "Chauvet_Professional@Strike_Bolt_1C@NO_BEAM_v2.gdtf",
         "sha256": "6c828f0a1e2cf472296ec55a869ae35c936d78e2eb6a925e52ca1e6ce9e88fef",
@@ -943,7 +943,7 @@
       },
       "shortName": "STRIKE P38",
       "image": "images/fixtures/chauvet/strike-p38.png",
-      "details": "json/fixture-details/bf398b778829d2621fe08fd6f8d6855582b6b49795b8a628b2dfb3497c1032dd.json",
+      "details": "json/fixture-details/chauvet/strike-p38.json",
       "provenance": {
         "fileName": "Chauvet_Professional@Strike_P38@version_1.gdtf",
         "sha256": "bf398b778829d2621fe08fd6f8d6855582b6b49795b8a628b2dfb3497c1032dd",
@@ -998,7 +998,7 @@
       },
       "shortName": "STRIKE Saber 10",
       "image": "images/fixtures/chauvet/strike-saber-10.png",
-      "details": "json/fixture-details/04377485eddb0b3ed8fde276e2d07107d37492f83afaa4327b454546867f1be5.json",
+      "details": "json/fixture-details/chauvet/strike-saber-10.json",
       "provenance": {
         "fileName": "Chauvet_Professional@STRIKE_Saber_10@Beta_1.0.1.gdtf",
         "sha256": "04377485eddb0b3ed8fde276e2d07107d37492f83afaa4327b454546867f1be5",

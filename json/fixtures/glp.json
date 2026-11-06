@@ -14,7 +14,7 @@
       },
       "shortName": "FR1",
       "image": "images/fixtures/glp/impression-fr1.png",
-      "details": "json/fixture-details/da8fb7ca7ac85b0b3b63a7b015d7611665ea42eea8f3a6fe7fc96147cb76a925.json",
+      "details": "json/fixture-details/glp/impression-fr1.json",
       "provenance": {
         "fileName": "GLP@impression_FR1@20250326_FR1_byRG_prelimV2.gdtf",
         "sha256": "da8fb7ca7ac85b0b3b63a7b015d7611665ea42eea8f3a6fe7fc96147cb76a925",
@@ -53,7 +53,7 @@
       },
       "shortName": "FR10 Bar",
       "image": "images/fixtures/glp/impression-fr10-bar.png",
-      "details": "json/fixture-details/e277f6a79d01f6e8b2c8ff05a4fb0edb28bc6251874537e0ff0cd017cf083a4e.json",
+      "details": "json/fixture-details/glp/impression-fr10-bar.json",
       "provenance": {
         "fileName": "GLP@impression_FR10_Bar@20260726_FR10Bar_byGLP_rework31.gdtf",
         "sha256": "e277f6a79d01f6e8b2c8ff05a4fb0edb28bc6251874537e0ff0cd017cf083a4e",
@@ -107,7 +107,7 @@
       },
       "shortName": "S500 Profile",
       "image": "images/fixtures/glp/impression-s500-profile.png",
-      "details": "json/fixture-details/afc1b43fc2830933dc9d45778fe5537900ea83eeb9a3790519435af58469c99d.json",
+      "details": "json/fixture-details/glp/impression-s500-profile.json",
       "provenance": {
         "fileName": "GLP@impression_S500_Profil_HC@20250404_S500ProfilHC_byRG_prelimV1.gdtf",
         "sha256": "afc1b43fc2830933dc9d45778fe5537900ea83eeb9a3790519435af58469c99d",
@@ -127,7 +127,7 @@
       },
       "shortName": "S500 Wash",
       "image": "images/fixtures/glp/impression-s500-wash.png",
-      "details": "json/fixture-details/6169be4b7da346bb96dd8d0ade92a12ae0c3e85e8a92eea65967defd21c27642.json",
+      "details": "json/fixture-details/glp/impression-s500-wash.json",
       "provenance": {
         "fileName": "GLP@impression_S500_Wash_HC@20250710_S500WashHC_byRG_prelimV2.gdtf",
         "sha256": "6169be4b7da346bb96dd8d0ade92a12ae0c3e85e8a92eea65967defd21c27642",
@@ -177,7 +177,7 @@
       },
       "shortName": "X4 Bar 10",
       "image": "images/fixtures/glp/impression-x4-bar-10--impression-x4-bar-20.png",
-      "details": "json/fixture-details/3a80fc461b9b4fe075f2139813ce514e59e6c125b9ca2d83a1da6ce0007cdcef.json",
+      "details": "json/fixture-details/glp/impression-x4-bar-10.json",
       "provenance": {
         "fileName": "GLP@impression_X4_Bar_10@ledbar.gdtf",
         "sha256": "3a80fc461b9b4fe075f2139813ce514e59e6c125b9ca2d83a1da6ce0007cdcef",
@@ -227,7 +227,7 @@
       },
       "shortName": "X4 Bar 20",
       "image": "images/fixtures/glp/impression-x4-bar-10--impression-x4-bar-20.png",
-      "details": "json/fixture-details/a96a2d8364e7d4e1e28c33854e344fa2d12fad676d3003bdbf6519ac7bd23f61.json",
+      "details": "json/fixture-details/glp/impression-x4-bar-20.json",
       "provenance": {
         "fileName": "GLP@impression_X4_Bar_20@Added_Virtual_Dimmer_Relations.gdtf",
         "sha256": "a96a2d8364e7d4e1e28c33854e344fa2d12fad676d3003bdbf6519ac7bd23f61",
@@ -247,7 +247,7 @@
       },
       "shortName": "X4 S",
       "image": "images/fixtures/glp/impression-x4-s.png",
-      "details": "json/fixture-details/ca35ac03b0b624335755e407860f93a54380490962059622db5812952af72aae.json",
+      "details": "json/fixture-details/glp/impression-x4-s.json",
       "provenance": {
         "fileName": "GLP@impression_X4_S@V1.0.0.0_-_High_Resolution_(Extended)_-Mode_19_DMX_Channel.gdtf",
         "sha256": "ca35ac03b0b624335755e407860f93a54380490962059622db5812952af72aae",
@@ -312,7 +312,7 @@
       },
       "shortName": "X5",
       "image": "images/fixtures/glp/impression-x5.png",
-      "details": "json/fixture-details/b5eaf86a3eda9cbfc0c55c92f0521721fc6830d092ec653c5dc7586ad8adf862.json",
+      "details": "json/fixture-details/glp/impression-x5.json",
       "provenance": {
         "fileName": "GLP@impression_X5@20260708_X5_byGLP_prelim04.gdtf",
         "sha256": "b5eaf86a3eda9cbfc0c55c92f0521721fc6830d092ec653c5dc7586ad8adf862",
@@ -377,7 +377,7 @@
       },
       "shortName": "X5 Bar 1000",
       "image": "images/fixtures/glp/impression-x5-bar-1000.png",
-      "details": "json/fixture-details/f90b67592e125adc0eb454526c4930dc1631930c78558961608e6a218c12b916.json",
+      "details": "json/fixture-details/glp/impression-x5-bar-1000.json",
       "provenance": {
         "fileName": "GLP@impression_X5_Bar_1000@test.gdtf",
         "sha256": "f90b67592e125adc0eb454526c4930dc1631930c78558961608e6a218c12b916",
@@ -442,7 +442,7 @@
       },
       "shortName": "X5 Compact",
       "image": "images/fixtures/glp/impression-x5-compact.png",
-      "details": "json/fixture-details/8a06b2617406256b46ab4ad3d6b82def48e2ac002a08671392bcba7e3853f181.json",
+      "details": "json/fixture-details/glp/impression-x5-compact.json",
       "provenance": {
         "fileName": "GLP@impression_X5_Compact@20250326_X5Compact_byRG_prelimV2.gdtf",
         "sha256": "8a06b2617406256b46ab4ad3d6b82def48e2ac002a08671392bcba7e3853f181",
@@ -507,7 +507,7 @@
       },
       "shortName": "X5 IP",
       "image": "images/fixtures/glp/impression-x5-ip.png",
-      "details": "json/fixture-details/a27e8e69f17817a98dc8d18b7366dade11812188366b948ced1973a7b080eea5.json",
+      "details": "json/fixture-details/glp/impression-x5-ip.json",
       "provenance": {
         "fileName": "GLP@impression_X5_IP@20250325_X5IP_byRG_prelimV2.gdtf",
         "sha256": "a27e8e69f17817a98dc8d18b7366dade11812188366b948ced1973a7b080eea5",
@@ -572,7 +572,7 @@
       },
       "shortName": "X5 IP Bar 1000",
       "image": "images/fixtures/glp/impression-x5-ip-bar-1000.png",
-      "details": "json/fixture-details/74e36964ce83b951cdf5215453049b077bd4daa2ef1aabe8f189213ceb5cf5e1.json",
+      "details": "json/fixture-details/glp/impression-x5-ip-bar-1000.json",
       "provenance": {
         "fileName": "GLP@impression_X5_IP_Bar_1000@20250327_X5IPBar1000_byRG_prelimV6.gdtf",
         "sha256": "74e36964ce83b951cdf5215453049b077bd4daa2ef1aabe8f189213ceb5cf5e1",
@@ -715,7 +715,7 @@
       },
       "shortName": "JDC Burst 1",
       "image": "images/fixtures/glp/jdc-burst-1.png",
-      "details": "json/fixture-details/b556dfd9360c313635642a89148e77bf48864f1202d32fe8a2a0f02bafe75072.json",
+      "details": "json/fixture-details/glp/jdc-burst-1.json",
       "provenance": {
         "fileName": "GLP@JDC_Burst_1_New_DMX@20250807_JDCBurst1(NewDMX)_0-3-4-0_byRG_prelim01.gdtf",
         "sha256": "b556dfd9360c313635642a89148e77bf48864f1202d32fe8a2a0f02bafe75072",
@@ -765,7 +765,7 @@
       },
       "shortName": "JDC Line 1000",
       "image": "images/fixtures/glp/jdc-line-1000.png",
-      "details": "json/fixture-details/2bec0cba7a3486940684fe9cfde19dcb7170eb07b2c47c535c8bc5e3f0f4490b.json",
+      "details": "json/fixture-details/glp/jdc-line-1000.json",
       "provenance": {
         "fileName": "GLP@JDC_Line_1000@20250404_JDCLine1000_byRG_prelimV1.gdtf",
         "sha256": "2bec0cba7a3486940684fe9cfde19dcb7170eb07b2c47c535c8bc5e3f0f4490b",
@@ -815,7 +815,7 @@
       },
       "shortName": "JDC Line 500",
       "image": "images/fixtures/glp/jdc-line-500.png",
-      "details": "json/fixture-details/84e2113430441627c09e91b6d30c04393ef255e40f02c3344fb77a5a6fc76028.json",
+      "details": "json/fixture-details/glp/jdc-line-500.json",
       "provenance": {
         "fileName": "GLP@JDC_Line_500@GLP_JDC_Line_500.gdtf",
         "sha256": "84e2113430441627c09e91b6d30c04393ef255e40f02c3344fb77a5a6fc76028",
@@ -866,7 +866,7 @@
       },
       "shortName": "JDC-1",
       "image": "images/fixtures/glp/jdc1.png",
-      "details": "json/fixture-details/1eb94870324291be4cd6f66bfbf247ef68f1e66f0ed6c9b599dba98c691e158d.json",
+      "details": "json/fixture-details/glp/jdc1.json",
       "provenance": {
         "fileName": "GLP@JDC_1@JDC_1.gdtf",
         "sha256": "1eb94870324291be4cd6f66bfbf247ef68f1e66f0ed6c9b599dba98c691e158d",
@@ -906,7 +906,7 @@
       },
       "shortName": "JDC2 IP",
       "image": "images/fixtures/glp/jdc2-ip.png",
-      "details": "json/fixture-details/dd29a4794eca94200fad756ba60a0c59d1789c1f8bd65060c2d86fdf37ca9a58.json",
+      "details": "json/fixture-details/glp/jdc2-ip.json",
       "provenance": {
         "fileName": "GLP@JDC2_IP@JDC2_IP_(corrected_in_M4_mode_middle_beam_light_not_showing).gdtf",
         "sha256": "dd29a4794eca94200fad756ba60a0c59d1789c1f8bd65060c2d86fdf37ca9a58",
@@ -936,7 +936,7 @@
       },
       "shortName": "MAD MAXX",
       "image": "images/fixtures/glp/mad-maxx.png",
-      "details": "json/fixture-details/08ea1dbe6874dff75cfb2573653008955eebeda285f664301865bb2553209707.json",
+      "details": "json/fixture-details/glp/mad-maxx.json",
       "provenance": {
         "fileName": "GLP@MAD_MAXX_CW@20250820_MadMaxxCW_byRG_VRprelim.gdtf",
         "sha256": "08ea1dbe6874dff75cfb2573653008955eebeda285f664301865bb2553209707",
@@ -996,7 +996,7 @@
       },
       "shortName": "Nexus Circle",
       "image": "images/fixtures/glp/nexus-shapes-circle.png",
-      "details": "json/fixture-details/423bb7dfbbf8f2c3072f0a3fe42a6970be24070d53a1e16324da257bfb35e92e.json",
+      "details": "json/fixture-details/glp/nexus-shapes-circle.json",
       "provenance": {
         "fileName": "GLP@Nexus_Shapes_Circle@20260808_Circle_byGLP_sw6-0-50_02.gdtf",
         "sha256": "423bb7dfbbf8f2c3072f0a3fe42a6970be24070d53a1e16324da257bfb35e92e",
@@ -1056,7 +1056,7 @@
       },
       "shortName": "Nexus Line",
       "image": "images/fixtures/glp/nexus-shapes-line.png",
-      "details": "json/fixture-details/5a2096d21a96737be530b9067524ff95b08bdd29e0cb6d5c68a42e3586d2a76a.json",
+      "details": "json/fixture-details/glp/nexus-shapes-line.json",
       "provenance": {
         "fileName": "GLP@Nexus_Shapes_Line@20260808_Line_byGLP_sw6-0-50_01.gdtf",
         "sha256": "5a2096d21a96737be530b9067524ff95b08bdd29e0cb6d5c68a42e3586d2a76a",
@@ -1116,7 +1116,7 @@
       },
       "shortName": "Nexus Square",
       "image": "images/fixtures/glp/nexus-shapes-square.png",
-      "details": "json/fixture-details/a7b4a73df61ed9446fc7735aacb6c96ea7c7210c1db3d402189ab1987581b716.json",
+      "details": "json/fixture-details/glp/nexus-shapes-square.json",
       "provenance": {
         "fileName": "GLP@Nexus_Shapes_Square@20260808_Square_byGLP_sw6-0-50_02.gdtf",
         "sha256": "a7b4a73df61ed9446fc7735aacb6c96ea7c7210c1db3d402189ab1987581b716",
@@ -1156,7 +1156,7 @@
       },
       "shortName": "Nexus Uplight",
       "image": "images/fixtures/glp/nexus-uplight.png",
-      "details": "json/fixture-details/9225273ee993ca7bc5197684acf645b38a939f2c7b4304f9feaf5ff6ab801c9c.json",
+      "details": "json/fixture-details/glp/nexus-uplight.json",
       "provenance": {
         "fileName": "GLP@Nexus_Uplight@20251711_NexusUplight_byRG_sw5-5-0_prelim01.gdtf",
         "sha256": "9225273ee993ca7bc5197684acf645b38a939f2c7b4304f9feaf5ff6ab801c9c",
@@ -1211,7 +1211,7 @@
       },
       "shortName": "WildWash12",
       "image": "images/fixtures/glp/wild-wash-12.png",
-      "details": "json/fixture-details/282540a97e1f108298aa48de5ab903a77131e3977900ffe46d421dd88655851d.json",
+      "details": "json/fixture-details/glp/wild-wash-12.json",
       "provenance": {
         "fileName": "GLP@Wild_Wash_12@20260805_WildWash12_V-0-4-2_byGLP_03.gdtf",
         "sha256": "282540a97e1f108298aa48de5ab903a77131e3977900ffe46d421dd88655851d",
@@ -1266,7 +1266,7 @@
       },
       "shortName": "WildBar 16",
       "image": "images/fixtures/glp/wildbar-16.png",
-      "details": "json/fixture-details/fdbe0778250353069630e6a7721f96b751564cc5e6ca448a6f40ac3acbff831f.json",
+      "details": "json/fixture-details/glp/wildbar-16.json",
       "provenance": {
         "fileName": "GLP@Wild_Bar_16@20260402_WildBar16_byRG_M3_prelim02.gdtf",
         "sha256": "fdbe0778250353069630e6a7721f96b751564cc5e6ca448a6f40ac3acbff831f",

@@ -14,7 +14,7 @@
       },
       "shortName": "CS CYC",
       "image": "",
-      "details": "json/fixture-details/21d74850a712f0245cddc4db6d735380e1d9d3801138863ac97389f93eb8cedb.json",
+      "details": "json/fixture-details/etc/colorsource-cyc.json",
       "provenance": {
         "fileName": "ETC@Colorsource_CYC@2026.gdtf",
         "sha256": "21d74850a712f0245cddc4db6d735380e1d9d3801138863ac97389f93eb8cedb",
@@ -54,7 +54,7 @@
       },
       "shortName": "CS Fresnel V",
       "image": "images/fixtures/etc/colorsource-fresnel-v.png",
-      "details": "json/fixture-details/fe75d46113f160e49698dc5f3ba23e3fab215999357a0741192ff71afef1d04c.json",
+      "details": "json/fixture-details/etc/colorsource-fresnel-v.json",
       "provenance": {
         "fileName": "ETC@Colorsource_V_Fresnel@Ver_1.gdtf",
         "sha256": "fe75d46113f160e49698dc5f3ba23e3fab215999357a0741192ff71afef1d04c",
@@ -115,7 +115,7 @@
       },
       "shortName": "CS PAR DB",
       "image": "",
-      "details": "json/fixture-details/6db2bb8bff67fa36817e2584e5b54a66c9882e746b29231e80f4a7624795b41e.json",
+      "details": "json/fixture-details/etc/colorsource-par-deep-blue.json",
       "provenance": {
         "fileName": "ETC@ColorSource_Par@physical-change-direct.gdtf",
         "sha256": "6db2bb8bff67fa36817e2584e5b54a66c9882e746b29231e80f4a7624795b41e",
@@ -161,7 +161,7 @@
       },
       "shortName": "CS PAR V Zoom",
       "image": "",
-      "details": "json/fixture-details/ffeca3ee337723d7f74f2945b58fb8ff9f4d830c7031006a5fdc0cff1e01be23.json",
+      "details": "json/fixture-details/etc/colorsource-par-v-zoom.json",
       "provenance": {
         "fileName": "ETC@ColorSource_Par_V_Zoom@2026.gdtf",
         "sha256": "ffeca3ee337723d7f74f2945b58fb8ff9f4d830c7031006a5fdc0cff1e01be23",
@@ -181,7 +181,7 @@
       },
       "shortName": "CS Spot",
       "image": "",
-      "details": "json/fixture-details/af2afa46f7b6240da3c69f96fccc038ac67a7bc761109a890b53df413a3e10af.json",
+      "details": "json/fixture-details/etc/colorsource-spot.json",
       "provenance": {
         "fileName": "ETC@ColorSource_Spot@Colorsource_Spot.gdtf",
         "sha256": "af2afa46f7b6240da3c69f96fccc038ac67a7bc761109a890b53df413a3e10af",
@@ -242,7 +242,7 @@
       },
       "shortName": "CS Spot jr",
       "image": "images/fixtures/etc/colorsource-spot-jr.png",
-      "details": "json/fixture-details/d82f371e0d4068d941805a4faae983ed436c0dcbc585df2b187d77963b1d5569.json",
+      "details": "json/fixture-details/etc/colorsource-spot-jr.json",
       "provenance": {
         "fileName": "ETC@ColorSource_Spot_Jr@init.gdtf",
         "sha256": "d82f371e0d4068d941805a4faae983ed436c0dcbc585df2b187d77963b1d5569",
@@ -277,7 +277,7 @@
       },
       "shortName": "CS Spot V",
       "image": "images/fixtures/etc/colorsource-spot-v.png",
-      "details": "json/fixture-details/ae95f9e4939cdf41cb47d6cb43130c23b475c4f77bbb25c36865a12242db7bc8.json",
+      "details": "json/fixture-details/etc/colorsource-spot-v.json",
       "provenance": {
         "fileName": "ETC@Colorsource_Spot_V@Added_two_more_DMX_Modes_and_RDM_info.gdtf",
         "sha256": "ae95f9e4939cdf41cb47d6cb43130c23b475c4f77bbb25c36865a12242db7bc8",
@@ -337,7 +337,7 @@
       },
       "shortName": "D22 Studio HD",
       "image": "images/fixtures/etc/desire-d22-studio-hd--source-4wrd-color.svg",
-      "details": "json/fixture-details/8ef3819133ce34f2c0a514c4d761facdd3a20e3f1e32c467b7b6633a081833e0.json",
+      "details": "json/fixture-details/etc/desire-d22-studio-hd.json",
       "provenance": {
         "fileName": "ETC@Desire_D22_Studio_HD@rev1.gdtf",
         "sha256": "8ef3819133ce34f2c0a514c4d761facdd3a20e3f1e32c467b7b6633a081833e0",
@@ -567,7 +567,7 @@
       },
       "shortName": "D40 Studio HD",
       "image": "images/fixtures/etc/etc-desire-d40-studio-hd.png",
-      "details": "json/fixture-details/74dfb017a55ea3615f83e4ed449dd618d4e9b1026475148aa2aa83f0a26b28ff.json",
+      "details": "json/fixture-details/etc/etc-desire-d40-studio-hd.json",
       "provenance": {
         "fileName": "ETC@ETC_Desire_D40_Studio_HD@Add_Direct_Mode.gdtf",
         "sha256": "74dfb017a55ea3615f83e4ed449dd618d4e9b1026475148aa2aa83f0a26b28ff",
@@ -626,7 +626,7 @@
       },
       "shortName": "fos/4 Fresnel 10 DL HDR",
       "image": "images/fixtures/etc/fos-4-fresnel-10-in-daylight-hdr--fos-4-fresnel-10-in-lustr-x8.png",
-      "details": "json/fixture-details/cf1dbaf687be29086eaa83538ea78e7c8da8a46b27d273ba1fe103b822a74b83.json",
+      "details": "json/fixture-details/etc/fos-4-fresnel-10-in-daylight-hdr.json",
       "provenance": {
         "fileName": "ETC@Fos4_Fresnel_10_in_Daylight_HDR@New_fixture_type_based_on_Fos4_Fresnel_10_in_Daylight_HDR_from_ETC.gdtf",
         "sha256": "cf1dbaf687be29086eaa83538ea78e7c8da8a46b27d273ba1fe103b822a74b83",
@@ -671,7 +671,7 @@
       },
       "shortName": "fos/4 Fresnel 10 Lustr X8",
       "image": "images/fixtures/etc/fos-4-fresnel-10-in-daylight-hdr--fos-4-fresnel-10-in-lustr-x8.png",
-      "details": "json/fixture-details/9524e75e6850edd4ae79fc42243819a03c884c7e358c26ca71e5351ff0745f98.json",
+      "details": "json/fixture-details/etc/fos-4-fresnel-10-in-lustr-x8.json",
       "provenance": {
         "fileName": "ETC@Fos4_Fresnel_10_in_Lustr_X8@New_fixture_type_based_on_Fos4_Fresnel_10_in_Lustr_X8_from_ETC.gdtf",
         "sha256": "9524e75e6850edd4ae79fc42243819a03c884c7e358c26ca71e5351ff0745f98",
@@ -716,7 +716,7 @@
       },
       "shortName": "fos/4 Fresnel 5 DL HDR",
       "image": "images/fixtures/etc/fos-4-fresnel-5-daylight-hdr--fos-4-fresnel-5-lustr-x8.png",
-      "details": "json/fixture-details/7720a3a3c78369070735ed28d8733dc3b5b49f0c1b3b0fdb45ce503072162f88.json",
+      "details": "json/fixture-details/etc/fos-4-fresnel-5-daylight-hdr.json",
       "provenance": {
         "fileName": "ETC@Fos4_Fresnel_5_in_Daylight_HDR@v1.3.0.gdtf",
         "sha256": "7720a3a3c78369070735ed28d8733dc3b5b49f0c1b3b0fdb45ce503072162f88",
@@ -761,7 +761,7 @@
       },
       "shortName": "fos/4 Fresnel 5 Lustr X8",
       "image": "images/fixtures/etc/fos-4-fresnel-5-daylight-hdr--fos-4-fresnel-5-lustr-x8.png",
-      "details": "json/fixture-details/2c09522c2978ddb357e6229d8810bca0a7ef5306f52381a903fd9b24fdfc6db5.json",
+      "details": "json/fixture-details/etc/fos-4-fresnel-5-lustr-x8.json",
       "provenance": {
         "fileName": "ETC@Fos4_Fresnel_5_in_Lustr_X8@v1.3.0.gdtf",
         "sha256": "2c09522c2978ddb357e6229d8810bca0a7ef5306f52381a903fd9b24fdfc6db5",
@@ -806,7 +806,7 @@
       },
       "shortName": "fos/4 Fresnel 7 DL HDR",
       "image": "images/fixtures/etc/fos-4-fresnel-7-daylight-hdr--fos-4-fresnel-7-lustr-x8.png",
-      "details": "json/fixture-details/82161d2be41de152bf6802c626cb40a56910404b3a1e3c47cda0b66520d20e71.json",
+      "details": "json/fixture-details/etc/fos-4-fresnel-7-daylight-hdr.json",
       "provenance": {
         "fileName": "ETC@Fos4_Fresnel_7_in_Daylight_HDR@New_fixture_type_based_on_Fos4_Fresnel_7_in_Daylight_HDR_from_ETC.gdtf",
         "sha256": "82161d2be41de152bf6802c626cb40a56910404b3a1e3c47cda0b66520d20e71",
@@ -851,7 +851,7 @@
       },
       "shortName": "fos/4 Fresnel 7 Lustr X8",
       "image": "images/fixtures/etc/fos-4-fresnel-7-daylight-hdr--fos-4-fresnel-7-lustr-x8.png",
-      "details": "json/fixture-details/e3747309f7aa4f836a0c6135039242e4c15a58d7adeeb6f0743b0823300db9cd.json",
+      "details": "json/fixture-details/etc/fos-4-fresnel-7-lustr-x8.json",
       "provenance": {
         "fileName": "ETC@Fos4_Fresnel_7_in_Lustr_X8@New_fixture_type_based_on_Fos4_Fresnel_7_in_Lustr_X8_from_ETC.gdtf",
         "sha256": "e3747309f7aa4f836a0c6135039242e4c15a58d7adeeb6f0743b0823300db9cd",
@@ -896,7 +896,7 @@
       },
       "shortName": "fos/4 Panel 16x24 DL HDR",
       "image": "images/fixtures/etc/fos-4-panel-16x24-daylight-hdr--fos-4-panel-16x24-lustr-x8--fos-4-panel-24x24-daylight-hdr--fos-4-panel-24x24-lustr-x8.png",
-      "details": "json/fixture-details/fd14fcc3db6e4be56074566da303a07b40b2ad33ad92d82bd2feb4981ed73bf8.json",
+      "details": "json/fixture-details/etc/fos-4-panel-16x24-daylight-hdr.json",
       "provenance": {
         "fileName": "ETC@fos4_PD16@v1.3.0.gdtf",
         "sha256": "fd14fcc3db6e4be56074566da303a07b40b2ad33ad92d82bd2feb4981ed73bf8",
@@ -941,7 +941,7 @@
       },
       "shortName": "fos/4 Panel 16x24 Lustr X8",
       "image": "images/fixtures/etc/fos-4-panel-16x24-daylight-hdr--fos-4-panel-16x24-lustr-x8--fos-4-panel-24x24-daylight-hdr--fos-4-panel-24x24-lustr-x8.png",
-      "details": "json/fixture-details/cbad385f5b14e3e9ffd287df2e47a484bd3744c90f2dbbd6873859300b7381d6.json",
+      "details": "json/fixture-details/etc/fos-4-panel-16x24-lustr-x8.json",
       "provenance": {
         "fileName": "ETC@fos4_PL16@v1.3.0.gdtf",
         "sha256": "cbad385f5b14e3e9ffd287df2e47a484bd3744c90f2dbbd6873859300b7381d6",
@@ -986,7 +986,7 @@
       },
       "shortName": "fos/4 Panel 24x24 DL HDR",
       "image": "images/fixtures/etc/fos-4-panel-16x24-daylight-hdr--fos-4-panel-16x24-lustr-x8--fos-4-panel-24x24-daylight-hdr--fos-4-panel-24x24-lustr-x8.png",
-      "details": "json/fixture-details/4ab68b62fd67efd674578409cfebd0639be4449651ebb73a832786b14859e5cf.json",
+      "details": "json/fixture-details/etc/fos-4-panel-24x24-daylight-hdr.json",
       "provenance": {
         "fileName": "ETC@fos4_PD24@v1.3.0.gdtf",
         "sha256": "4ab68b62fd67efd674578409cfebd0639be4449651ebb73a832786b14859e5cf",
@@ -1031,7 +1031,7 @@
       },
       "shortName": "fos/4 Panel 24x24 Lustr X8",
       "image": "images/fixtures/etc/fos-4-panel-16x24-daylight-hdr--fos-4-panel-16x24-lustr-x8--fos-4-panel-24x24-daylight-hdr--fos-4-panel-24x24-lustr-x8.png",
-      "details": "json/fixture-details/6059042c9199c7bc8b498e31938686e581f470d6e2efbd18bc7de61d6500d5bb.json",
+      "details": "json/fixture-details/etc/fos-4-panel-24x24-lustr-x8.json",
       "provenance": {
         "fileName": "ETC@fos4_PL24@v1.3.0.gdtf",
         "sha256": "6059042c9199c7bc8b498e31938686e581f470d6e2efbd18bc7de61d6500d5bb",
@@ -1076,7 +1076,7 @@
       },
       "shortName": "fos/4 Panel 8x24 DL HDR",
       "image": "images/fixtures/etc/fos-4-panel-8x24-daylight-hdr--fos-4-panel-8x24-lustr-x8.png",
-      "details": "json/fixture-details/e973fb7b85393c0329b7aecfde9ee778a98f9728aeaa881be65bba24c7c01edb.json",
+      "details": "json/fixture-details/etc/fos-4-panel-8x24-daylight-hdr.json",
       "provenance": {
         "fileName": "ETC@fos4_PD8@v1.3.0.gdtf",
         "sha256": "e973fb7b85393c0329b7aecfde9ee778a98f9728aeaa881be65bba24c7c01edb",
@@ -1121,7 +1121,7 @@
       },
       "shortName": "fos/4 Panel 8x24 Lustr X8",
       "image": "images/fixtures/etc/fos-4-panel-8x24-daylight-hdr--fos-4-panel-8x24-lustr-x8.png",
-      "details": "json/fixture-details/57c6ea5cd92a362fd26dd49ca8a90deb84d1b3c1a68b0231ae54706730abc6b9.json",
+      "details": "json/fixture-details/etc/fos-4-panel-8x24-lustr-x8.json",
       "provenance": {
         "fileName": "ETC@fos4_PL8@v1.3.0.gdtf",
         "sha256": "57c6ea5cd92a362fd26dd49ca8a90deb84d1b3c1a68b0231ae54706730abc6b9",
@@ -1453,7 +1453,7 @@
       },
       "shortName": "Source 4WRD Color",
       "image": "images/fixtures/etc/desire-d22-studio-hd--source-4wrd-color.svg",
-      "details": "json/fixture-details/18c5900c2b0165c2a48e5e1b39d8cdb9694a1cdb2f5ce41b02f37ff952e5fb7b.json",
+      "details": "json/fixture-details/etc/source-4wrd-color.json",
       "provenance": {
         "fileName": "ETC@Source_4wrd_Color@Version_1.gdtf",
         "sha256": "18c5900c2b0165c2a48e5e1b39d8cdb9694a1cdb2f5ce41b02f37ff952e5fb7b",
@@ -1794,7 +1794,7 @@
       },
       "shortName": "S4 DL HDR 10Deg",
       "image": "images/fixtures/etc/source-four-led-series-3-daylight-hdr-shared.png",
-      "details": "json/fixture-details/3d22b2b1e64178d1d55d756e59f35d946a335c66a1e193fd7b2697409550cce9.json",
+      "details": "json/fixture-details/etc/source-four-led-series-3-daylight-hdr-10-degree.json",
       "provenance": {
         "fileName": "ETC@S4_Series_3_Daylight_HDR_10Deg@v1.3.0.gdtf",
         "sha256": "3d22b2b1e64178d1d55d756e59f35d946a335c66a1e193fd7b2697409550cce9",
@@ -1839,7 +1839,7 @@
       },
       "shortName": "S4 DL HDR 14Deg",
       "image": "images/fixtures/etc/source-four-led-series-3-daylight-hdr-shared.png",
-      "details": "json/fixture-details/2bf4c98308443cbe48d33a498dea3de829f576209cee9d9c740f01ad61d96607.json",
+      "details": "json/fixture-details/etc/source-four-led-series-3-daylight-hdr-14-degree.json",
       "provenance": {
         "fileName": "ETC@S4_Series_3_Daylight_HDR_14Deg@v1.3.0.gdtf",
         "sha256": "2bf4c98308443cbe48d33a498dea3de829f576209cee9d9c740f01ad61d96607",
@@ -1884,7 +1884,7 @@
       },
       "shortName": "S4 DL HDR 19Deg",
       "image": "images/fixtures/etc/source-four-led-series-3-daylight-hdr-shared.png",
-      "details": "json/fixture-details/4598405acd60b6878f5d7d9a18b6f766d8920b64be8cfc178fc0d8a23c8d6802.json",
+      "details": "json/fixture-details/etc/source-four-led-series-3-daylight-hdr-19-degree.json",
       "provenance": {
         "fileName": "ETC@S4_Series_3_Daylight_HDR_19Deg@v1.3.0.gdtf",
         "sha256": "4598405acd60b6878f5d7d9a18b6f766d8920b64be8cfc178fc0d8a23c8d6802",
@@ -1929,7 +1929,7 @@
       },
       "shortName": "S4 DL HDR 26Deg",
       "image": "images/fixtures/etc/source-four-led-series-3-daylight-hdr-shared.png",
-      "details": "json/fixture-details/c63395af9f4e706e66d23331c570d81c1364e25191d96252e0b5b7cd9b6670d7.json",
+      "details": "json/fixture-details/etc/source-four-led-series-3-daylight-hdr-26-degree.json",
       "provenance": {
         "fileName": "ETC@S4_Series_3_Daylight_HDR_26Deg@v1.3.0.gdtf",
         "sha256": "c63395af9f4e706e66d23331c570d81c1364e25191d96252e0b5b7cd9b6670d7",
@@ -1974,7 +1974,7 @@
       },
       "shortName": "S4 DL HDR 36Deg",
       "image": "images/fixtures/etc/source-four-led-series-3-daylight-hdr-shared.png",
-      "details": "json/fixture-details/2ddcd68c6d7fbcaf922373e2c2ee2188c07293d2feaac0196de08c48ad121607.json",
+      "details": "json/fixture-details/etc/source-four-led-series-3-daylight-hdr-36-degree.json",
       "provenance": {
         "fileName": "ETC@S4_Series_3_Daylight_HDR_36Deg@v1.3.0.gdtf",
         "sha256": "2ddcd68c6d7fbcaf922373e2c2ee2188c07293d2feaac0196de08c48ad121607",
@@ -2019,7 +2019,7 @@
       },
       "shortName": "S4 DL HDR 5Deg",
       "image": "images/fixtures/etc/source-four-led-series-3-daylight-hdr-shared.png",
-      "details": "json/fixture-details/9d8114edafe7153fc036793bd10a1b412298319d0541e731aeede8bf0257fefe.json",
+      "details": "json/fixture-details/etc/source-four-led-series-3-daylight-hdr-5-degree.json",
       "provenance": {
         "fileName": "ETC@S4_Series_3_Daylight_HDR_5Deg@v1.3.0.gdtf",
         "sha256": "9d8114edafe7153fc036793bd10a1b412298319d0541e731aeede8bf0257fefe",
@@ -2064,7 +2064,7 @@
       },
       "shortName": "S4 DL HDR 50Deg",
       "image": "images/fixtures/etc/source-four-led-series-3-daylight-hdr-shared.png",
-      "details": "json/fixture-details/ecbcb420ff29057e405cc96f35b9a3f6aca4a413268086368c43a995f8191476.json",
+      "details": "json/fixture-details/etc/source-four-led-series-3-daylight-hdr-50-degree.json",
       "provenance": {
         "fileName": "ETC@S4_Series_3_Daylight_HDR_50Deg@v1.3.0.gdtf",
         "sha256": "ecbcb420ff29057e405cc96f35b9a3f6aca4a413268086368c43a995f8191476",
@@ -2109,7 +2109,7 @@
       },
       "shortName": "S4 DL HDR 70Deg",
       "image": "images/fixtures/etc/source-four-led-series-3-daylight-hdr-shared.png",
-      "details": "json/fixture-details/8c94cb214f28d94657917816b144724be147fc70a8ed329b93c023079b8646b1.json",
+      "details": "json/fixture-details/etc/source-four-led-series-3-daylight-hdr-70-degree.json",
       "provenance": {
         "fileName": "ETC@S4_Series_3_Daylight_HDR_70Deg@v1.3.0.gdtf",
         "sha256": "8c94cb214f28d94657917816b144724be147fc70a8ed329b93c023079b8646b1",
@@ -2184,7 +2184,7 @@
       },
       "shortName": "S4 Lustr X8 10Deg",
       "image": "images/fixtures/etc/source-four-led-series-3-lustr-x8-shared.png",
-      "details": "json/fixture-details/242ee06992887b025013ce8319712a1cc0621e1eb81a309e1f3a71961c174341.json",
+      "details": "json/fixture-details/etc/source-four-led-series-3-lustr-x8-10-degree.json",
       "provenance": {
         "fileName": "ETC@S4_Series_3_Lustr_X8_10Deg@v1.3.0.gdtf",
         "sha256": "242ee06992887b025013ce8319712a1cc0621e1eb81a309e1f3a71961c174341",
@@ -2229,7 +2229,7 @@
       },
       "shortName": "S4 Lustr X8 14Deg",
       "image": "images/fixtures/etc/source-four-led-series-3-lustr-x8-shared.png",
-      "details": "json/fixture-details/28620c3892ef97424c3b1727cad00e4d747fb4ade212e5b1911d517a78ee64ec.json",
+      "details": "json/fixture-details/etc/source-four-led-series-3-lustr-x8-14-degree.json",
       "provenance": {
         "fileName": "ETC@S4_Series_3_Lustr_X8_14Deg@v1.3.0.gdtf",
         "sha256": "28620c3892ef97424c3b1727cad00e4d747fb4ade212e5b1911d517a78ee64ec",
@@ -2274,7 +2274,7 @@
       },
       "shortName": "S4 Lustr X8 19Deg",
       "image": "images/fixtures/etc/source-four-led-series-3-lustr-x8-shared.png",
-      "details": "json/fixture-details/58048cc68e28bf55c3ebd985417fe763f824db72f3b46407b0c461e1f1b6ed37.json",
+      "details": "json/fixture-details/etc/source-four-led-series-3-lustr-x8-19-degree.json",
       "provenance": {
         "fileName": "ETC@S4_Series_3_Lustr_X8_19Deg@v1.3.0.gdtf",
         "sha256": "58048cc68e28bf55c3ebd985417fe763f824db72f3b46407b0c461e1f1b6ed37",
@@ -2319,7 +2319,7 @@
       },
       "shortName": "S4 Lustr X8 26Deg",
       "image": "images/fixtures/etc/source-four-led-series-3-lustr-x8-shared.png",
-      "details": "json/fixture-details/3adf595ab70215965061612f78c97b956d6cb6bc7961c1055966383285b83871.json",
+      "details": "json/fixture-details/etc/source-four-led-series-3-lustr-x8-26-degree.json",
       "provenance": {
         "fileName": "ETC@S4_Series_3_Lustr_X8_26Deg@v1.3.0.gdtf",
         "sha256": "3adf595ab70215965061612f78c97b956d6cb6bc7961c1055966383285b83871",
@@ -2364,7 +2364,7 @@
       },
       "shortName": "S4 Lustr X8 36Deg",
       "image": "images/fixtures/etc/source-four-led-series-3-lustr-x8-shared.png",
-      "details": "json/fixture-details/98cfe56cb7049e344233301246100b812385d40bf74b03b046238c95a6351280.json",
+      "details": "json/fixture-details/etc/source-four-led-series-3-lustr-x8-36-degree.json",
       "provenance": {
         "fileName": "ETC@S4_Series_3_Lustr_X8_36Deg@v1.3.0.gdtf",
         "sha256": "98cfe56cb7049e344233301246100b812385d40bf74b03b046238c95a6351280",
@@ -2409,7 +2409,7 @@
       },
       "shortName": "S4 Lustr X8 5Deg",
       "image": "images/fixtures/etc/source-four-led-series-3-lustr-x8-shared.png",
-      "details": "json/fixture-details/b2e94cb3b4e28f8150d4bc7c672da51a2434e36af2608da784f0b9a27ec11756.json",
+      "details": "json/fixture-details/etc/source-four-led-series-3-lustr-x8-5-degree.json",
       "provenance": {
         "fileName": "ETC@S4_Series_3_Lustr_X8_5Deg@v1.3.0.gdtf",
         "sha256": "b2e94cb3b4e28f8150d4bc7c672da51a2434e36af2608da784f0b9a27ec11756",
@@ -2454,7 +2454,7 @@
       },
       "shortName": "S4 Lustr X8 50Deg",
       "image": "images/fixtures/etc/source-four-led-series-3-lustr-x8-shared.png",
-      "details": "json/fixture-details/4c6940e8f7d98c4be3826b0394953b551f5425e9293b6c9bb210af1d289b7313.json",
+      "details": "json/fixture-details/etc/source-four-led-series-3-lustr-x8-50-degree.json",
       "provenance": {
         "fileName": "ETC@S4_Series_3_Lustr_X8_50Deg@v1.3.0.gdtf",
         "sha256": "4c6940e8f7d98c4be3826b0394953b551f5425e9293b6c9bb210af1d289b7313",
@@ -2499,7 +2499,7 @@
       },
       "shortName": "S4 Lustr X8 70Deg",
       "image": "images/fixtures/etc/source-four-led-series-3-lustr-x8-shared.png",
-      "details": "json/fixture-details/33378d0afff50a656f459bf56a01575294bb8b5389d2bca3d8ed75271a0dbec2.json",
+      "details": "json/fixture-details/etc/source-four-led-series-3-lustr-x8-70-degree.json",
       "provenance": {
         "fileName": "ETC@S4_Series_3_Lustr_X8_70Deg@v1.3.0.gdtf",
         "sha256": "33378d0afff50a656f459bf56a01575294bb8b5389d2bca3d8ed75271a0dbec2",

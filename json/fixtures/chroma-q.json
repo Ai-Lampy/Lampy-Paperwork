@@ -1006,7 +1006,7 @@
       },
       "shortName": "CF II-12",
       "image": "images/fixtures/chroma-q/color-force-ii-12.png",
-      "details": "json/fixture-details/44b9ea32d0e496c269a300d1356f3f2378659f27df5a38a671d06b3c9b44a5cf.json",
+      "details": "json/fixture-details/chroma-q/color-force-ii-12.json",
       "provenance": {
         "fileName": "Chroma-Q@Color_Force_II_12@Release_1.gdtf",
         "sha256": "44b9ea32d0e496c269a300d1356f3f2378659f27df5a38a671d06b3c9b44a5cf",
@@ -1261,7 +1261,7 @@
       },
       "shortName": "CF II-12+",
       "image": "images/fixtures/chroma-q/color-force-ii-12-plus.png",
-      "details": "json/fixture-details/d3e7bbad120ec9069bf618dcc5d197150202ebb0a4f1cbbdf7e606592ce4e32e.json",
+      "details": "json/fixture-details/chroma-q/color-force-ii-12-plus.json",
       "provenance": {
         "fileName": "Chroma-Q@Color_Force_II_12_Plus@Release_1.gdtf",
         "sha256": "d3e7bbad120ec9069bf618dcc5d197150202ebb0a4f1cbbdf7e606592ce4e32e",
@@ -1761,7 +1761,7 @@
       },
       "shortName": "CF II-48",
       "image": "images/fixtures/chroma-q/color-force-ii-48.png",
-      "details": "json/fixture-details/c09df4305b8a8ba9e6d5e3dd8c2f46e0389d87f2587e5fde378598fad3b1d789.json",
+      "details": "json/fixture-details/chroma-q/color-force-ii-48.json",
       "provenance": {
         "fileName": "Chroma-Q@Color_Force_II_48@Release_1.gdtf",
         "sha256": "c09df4305b8a8ba9e6d5e3dd8c2f46e0389d87f2587e5fde378598fad3b1d789",
@@ -2261,7 +2261,7 @@
       },
       "shortName": "CF II-48+",
       "image": "images/fixtures/chroma-q/color-force-ii-48-plus.png",
-      "details": "json/fixture-details/f92a99b38ff009e577e376cec42d4fcd536d9a0b356b44a11e663330ab61e346.json",
+      "details": "json/fixture-details/chroma-q/color-force-ii-48-plus.json",
       "provenance": {
         "fileName": "Chroma-Q@Color_Force_II_48_Plus@Release_1.gdtf",
         "sha256": "f92a99b38ff009e577e376cec42d4fcd536d9a0b356b44a11e663330ab61e346",
@@ -3001,7 +3001,7 @@
       },
       "shortName": "CF II-72",
       "image": "images/fixtures/chroma-q/color-force-ii-72.png",
-      "details": "json/fixture-details/2b6b4737858ea6be76a8da1ffe86c5715b8e0aa5530888541a25593c70e18d46.json",
+      "details": "json/fixture-details/chroma-q/color-force-ii-72.json",
       "provenance": {
         "fileName": "Chroma-Q@Color_Force_II_72@Release_1.gdtf",
         "sha256": "2b6b4737858ea6be76a8da1ffe86c5715b8e0aa5530888541a25593c70e18d46",
@@ -3741,7 +3741,7 @@
       },
       "shortName": "CF II-72+",
       "image": "images/fixtures/chroma-q/color-force-ii-72-plus.png",
-      "details": "json/fixture-details/75ec5e441286444241111d4656953b9205cbfd971a0bc0236ec32cd396ec6507.json",
+      "details": "json/fixture-details/chroma-q/color-force-ii-72-plus.json",
       "provenance": {
         "fileName": "Chroma-Q@Color_Force_II_72_Plus@Release_1.gdtf",
         "sha256": "75ec5e441286444241111d4656953b9205cbfd971a0bc0236ec32cd396ec6507",

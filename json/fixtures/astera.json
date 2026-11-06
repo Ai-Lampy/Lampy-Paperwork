@@ -834,7 +834,7 @@
       },
       "shortName": "AX1",
       "image": "images/fixtures/astera/ax1-pixeltube.png",
-      "details": "json/fixture-details/fc79f72c987070eef597596a807b4c0c4fd93c2d693c8203190e785a218a3d68.json",
+      "details": "json/fixture-details/astera/ax1-pixeltube.json",
       "provenance": {
         "fileName": "Astera_LED_Technology@AX1_PixelTube@tested_by_Astera___V3.gdtf",
         "sha256": "fc79f72c987070eef597596a807b4c0c4fd93c2d693c8203190e785a218a3d68",
@@ -999,7 +999,7 @@
       },
       "shortName": "AX10",
       "image": "images/fixtures/astera/ax10-spotmax.webp",
-      "details": "json/fixture-details/d8c8dfcc2886c6a78da8b57f9296ef5de22804b1c574660c642b69f41ce19e01.json",
+      "details": "json/fixture-details/astera/ax10-spotmax.json",
       "provenance": {
         "fileName": "Astera_LED_Technology@Astera_AX10@AX10_with_the_model_of_an_AX5_(dimensions_adjusted).gdtf",
         "sha256": "d8c8dfcc2886c6a78da8b57f9296ef5de22804b1c574660c642b69f41ce19e01",
@@ -1839,7 +1839,7 @@
       },
       "shortName": "AX2-100",
       "image": "images/fixtures/astera/ax2-100-pixelbar.png",
-      "details": "json/fixture-details/658d06c8b151945cc24298f44df3486a2d773a9d9684ebe605e44ee82d5484aa.json",
+      "details": "json/fixture-details/astera/ax2-100-pixelbar.json",
       "provenance": {
         "fileName": "Astera_LED_Technology@AX2-100_PixelBar@Geometrie_rotated_by_90deg_for_Vectorworks.gdtf",
         "sha256": "658d06c8b151945cc24298f44df3486a2d773a9d9684ebe605e44ee82d5484aa",
@@ -2679,7 +2679,7 @@
       },
       "shortName": "AX2-50",
       "image": "images/fixtures/astera/ax2-50-pixelbar.png",
-      "details": "json/fixture-details/72dab4f450ad270f4b820aa6c218b35b6a4f750c4fecc5f87aad65ec0ba7ebca.json",
+      "details": "json/fixture-details/astera/ax2-50-pixelbar.json",
       "provenance": {
         "fileName": "Astera_LED_Technology@AX2-50_PixelBar@Geometrie_rotated_by_90deg_for_Vectorworks.gdtf",
         "sha256": "72dab4f450ad270f4b820aa6c218b35b6a4f750c4fecc5f87aad65ec0ba7ebca",
@@ -2844,7 +2844,7 @@
       },
       "shortName": "AX3",
       "image": "images/fixtures/astera/ax3-lightdrop.png",
-      "details": "json/fixture-details/5e279c9a432d46c1bffe6bb6fd719c3803535f64e6cc20399092ca4f9adc4f75.json",
+      "details": "json/fixture-details/astera/ax3-lightdrop.json",
       "provenance": {
         "fileName": "Astera_LED_Technology@AX3_LightDrop@tested_by_Astera___V3.gdtf",
         "sha256": "5e279c9a432d46c1bffe6bb6fd719c3803535f64e6cc20399092ca4f9adc4f75",
@@ -3009,7 +3009,7 @@
       },
       "shortName": "AX5",
       "image": "images/fixtures/astera/ax5-triplepar.png",
-      "details": "json/fixture-details/49045c913fa12d3c493c3227b581ca7effa15ca29aeb6b1fac38f2b377b84c9e.json",
+      "details": "json/fixture-details/astera/ax5-triplepar.json",
       "provenance": {
         "fileName": "Astera_LED_Technology@AX5_TriplePAR@VWX_2025_Fix.gdtf",
         "sha256": "49045c913fa12d3c493c3227b581ca7effa15ca29aeb6b1fac38f2b377b84c9e",
@@ -3174,7 +3174,7 @@
       },
       "shortName": "AX9",
       "image": "images/fixtures/astera/ax9-powerpar.png",
-      "details": "json/fixture-details/02b9b38c1b9804baca5f89b971fe6d5c2bd4116e9e6c66a8e9133d66e86b98c3.json",
+      "details": "json/fixture-details/astera/ax9-powerpar.json",
       "provenance": {
         "fileName": "Astera_LED_Technology@AX9_PowerPAR@VWX_2025_Fix.gdtf",
         "sha256": "02b9b38c1b9804baca5f89b971fe6d5c2bd4116e9e6c66a8e9133d66e86b98c3",
@@ -4014,7 +4014,7 @@
       },
       "shortName": "Helios",
       "image": "images/fixtures/astera/helios-tube.png",
-      "details": "json/fixture-details/417d34ef239b21ba677186696e606e8ca8696fb1ca3c17543657bc7358d4f375.json",
+      "details": "json/fixture-details/astera/helios-tube.json",
       "provenance": {
         "fileName": "Astera_LED_Technology@FP2_Helios_Tube@HVT_Edit_-_Changed_Orientation_(-90-0--90)_-_horizontal_-_display_left_V2.gdtf",
         "sha256": "417d34ef239b21ba677186696e606e8ca8696fb1ca3c17543657bc7358d4f375",
@@ -4854,7 +4854,7 @@
       },
       "shortName": "HydraPanel",
       "image": "images/fixtures/astera/hydrapanel.png",
-      "details": "json/fixture-details/e3b7e2fe1e0231ae857b94b5d6729a198b201d27ea99bdaaa918e3b3013c3ab5.json",
+      "details": "json/fixture-details/astera/hydrapanel.json",
       "provenance": {
         "fileName": "Astera_LED_Technology@FP6_HydraPanel@VWX_2025_Fix.gdtf",
         "sha256": "e3b7e2fe1e0231ae857b94b5d6729a198b201d27ea99bdaaa918e3b3013c3ab5",
@@ -5694,7 +5694,7 @@
       },
       "shortName": "Hyperion",
       "image": "images/fixtures/astera/hyperion-tube.png",
-      "details": "json/fixture-details/f12777840f0965573c7a2bfeccf0e4eea4241ef4d19fa8f7b29047b22bdab084.json",
+      "details": "json/fixture-details/astera/hyperion-tube.json",
       "provenance": {
         "fileName": "Astera_LED_Technology@FP3_Hyperion_Tube@HVT_Edit_-changed_orientation_(-90_0_-90)_-_horizontal_-_display_left.gdtf",
         "sha256": "f12777840f0965573c7a2bfeccf0e4eea4241ef4d19fa8f7b29047b22bdab084",
@@ -6009,7 +6009,7 @@
       },
       "shortName": "Leo Fresnel",
       "image": "images/fixtures/astera/leofresnel.png",
-      "details": "json/fixture-details/ddcffe30326c7206df1745444d2611a30cd62d710f5d874eb8ee96815dc1e156.json",
+      "details": "json/fixture-details/astera/leofresnel.json",
       "provenance": {
         "fileName": "Astera_LED_Technology@AF250_LeoFresnel@Howl_Jhona_Pendragon.gdtf",
         "sha256": "ddcffe30326c7206df1745444d2611a30cd62d710f5d874eb8ee96815dc1e156",
@@ -6174,7 +6174,7 @@
       },
       "shortName": "Luna Bulb",
       "image": "images/fixtures/astera/lunabulb.png",
-      "details": "json/fixture-details/2ba76de6b726b865a439a44ab34330df0229a4ebc8fb5cdf85b262e4e8cf5623.json",
+      "details": "json/fixture-details/astera/lunabulb.json",
       "provenance": {
         "fileName": "Astera_LED_Technology@FP7_LunaBulb@tested_by_Astera___V1.gdtf",
         "sha256": "2ba76de6b726b865a439a44ab34330df0229a4ebc8fb5cdf85b262e4e8cf5623",
@@ -6339,7 +6339,7 @@
       },
       "shortName": "NYX Bulb",
       "image": "images/fixtures/astera/nyx-bulb.png",
-      "details": "json/fixture-details/62fecac4d0377e975834990b29ce3b6cafc91f5c0d15344ecb6669f6852d72a8.json",
+      "details": "json/fixture-details/astera/nyx-bulb.json",
       "provenance": {
         "fileName": "Astera_LED_Technology@FP5_NYX_Bulb@tested_by_Astera___V3.gdtf",
         "sha256": "62fecac4d0377e975834990b29ce3b6cafc91f5c0d15344ecb6669f6852d72a8",
@@ -6504,7 +6504,7 @@
       },
       "shortName": "PixelBrick",
       "image": "images/fixtures/astera/pixelbrick.png",
-      "details": "json/fixture-details/798441113f765ea7ca0a6e2945e97a0d65be9bb9a42d3796bd24a28e345ec455.json",
+      "details": "json/fixture-details/astera/pixelbrick.json",
       "provenance": {
         "fileName": "Astera_LED_Technology@PB15_PixelBrick@tested_by_Astera___V3.gdtf",
         "sha256": "798441113f765ea7ca0a6e2945e97a0d65be9bb9a42d3796bd24a28e345ec455",
@@ -6819,7 +6819,7 @@
       },
       "shortName": "Pluto Fresnel",
       "image": "images/fixtures/astera/plutofresnel.png",
-      "details": "json/fixture-details/72eec694061c254fa393fa9a77729955eb87970849f62947bacaa5e85e1c7006.json",
+      "details": "json/fixture-details/astera/plutofresnel.json",
       "provenance": {
         "fileName": "Astera_LED_Technology@AF80_PlutoFresnel@tested_by_Astera___V3.gdtf",
         "sha256": "72eec694061c254fa393fa9a77729955eb87970849f62947bacaa5e85e1c7006",
@@ -7134,7 +7134,7 @@
       },
       "shortName": "QuikBeam",
       "image": "images/fixtures/astera/quikbeam.png",
-      "details": "json/fixture-details/df5f75630eaf3d6e1e35ead412c68238f270c6a5bfec18b3fc3097a97d16759d.json",
+      "details": "json/fixture-details/astera/quikbeam.json",
       "provenance": {
         "fileName": "Astera_LED_Technology@AST-QUKBM_QuikBeam@Tested_by_Astera_V1.gdtf",
         "sha256": "df5f75630eaf3d6e1e35ead412c68238f270c6a5bfec18b3fc3097a97d16759d",
@@ -7449,7 +7449,7 @@
       },
       "shortName": "QuikPunch",
       "image": "images/fixtures/astera/quikpunch.png",
-      "details": "json/fixture-details/e155aa87146a39970fa8e1931d505f940c7cb5a9c665092dfb552d923f40411a.json",
+      "details": "json/fixture-details/astera/quikpunch.json",
       "provenance": {
         "fileName": "Astera_LED_Technology@AST-QUKPN_QuikPunch@GMA2.gdtf",
         "sha256": "e155aa87146a39970fa8e1931d505f940c7cb5a9c665092dfb552d923f40411a",
@@ -7614,7 +7614,7 @@
       },
       "shortName": "QuikSpot",
       "image": "images/fixtures/astera/quikspot.png",
-      "details": "json/fixture-details/b710520954c48f3ab6e0aa5d1da965b7fd7a514a63905668b245c84b0d44f22f.json",
+      "details": "json/fixture-details/astera/quikspot.json",
       "provenance": {
         "fileName": "Astera_LED_Technology@AST-QUKSP_QuikSpot@Tested_by_Astera_V1.gdtf",
         "sha256": "b710520954c48f3ab6e0aa5d1da965b7fd7a514a63905668b245c84b0d44f22f",
@@ -7779,7 +7779,7 @@
       },
       "shortName": "SolaBulb",
       "image": "images/fixtures/astera/solabulb.png",
-      "details": "json/fixture-details/7fa737a81bac01b5c6a533e4603d64c079da5a84bafb6949f4c9c8cd40f8efe7.json",
+      "details": "json/fixture-details/astera/solabulb.json",
       "provenance": {
         "fileName": "Astera_LED_Technology@AST-BLBSL_SolaBulb@tested_by_Astera_V1.gdtf",
         "sha256": "7fa737a81bac01b5c6a533e4603d64c079da5a84bafb6949f4c9c8cd40f8efe7",
@@ -8619,7 +8619,7 @@
       },
       "shortName": "Titan Tube",
       "image": "images/fixtures/astera/titan-tube.png",
-      "details": "json/fixture-details/1296fd1a0dcd692cd2973b8d6686c2da62b811e074ff804e9fce42185886fe98.json",
+      "details": "json/fixture-details/astera/titan-tube.json",
       "provenance": {
         "fileName": "Astera_LED_Technology@FP1_Titan_Tube@HVT_Edit_-_Changed_Orientation_(-90_0_-90)_horizontal_display_left.gdtf",
         "sha256": "1296fd1a0dcd692cd2973b8d6686c2da62b811e074ff804e9fce42185886fe98",

@@ -7,8 +7,10 @@ def validate(sources=False):
     details = {}
     images = set()
     image_manifest=json.loads((ROOT/'json/fixture_image_manifest.json').read_text())['images']
-    for p in (ROOT/'json/fixture-details').glob('*.json'):
-        d=json.loads(p.read_text()); assert p.stem==d['provenance']['sha256'], p
+    for p in (ROOT/'json/fixture-details').rglob('*.json'):
+        d=json.loads(p.read_text()); assert re.fullmatch(r'[0-9a-f]{64}',d['provenance']['sha256']), p
+        assert re.fullmatch(r'json/fixture-details/[a-z0-9-]+/[a-z0-9-]+\.json',p.relative_to(ROOT).as_posix()), p
+        assert not re.fullmatch(r'[0-9a-f]{64}',p.stem), p
         assert isinstance(d['modes'],list) and d['name'], p
         for m in d['modes']:
             assert m['name']==m['definition']['attrs']['Name'], p
@@ -17,6 +19,7 @@ def validate(sources=False):
         images.update([d['image']] if d['image'] else [])
         details[p.relative_to(ROOT).as_posix()]=d
     count=0
+    referenced_details=set()
     for p in (ROOT/'json/fixtures').glob('*.json'):
         for f in json.loads(p.read_text())['fixtures']:
             count+=1;assert 'gdtf' not in f,p
@@ -24,6 +27,7 @@ def validate(sources=False):
                 images.add(f['image'])
                 assert {'manufacturer':json.loads(p.read_text())['manufacturer'],'fixture':f['fixture']} in image_manifest[f['image']]['fixtures'],(p,f['fixture'])
             if f['details']:
+                referenced_details.add(f['details'])
                 d=details[f['details']];assert f['provenance']['sha256']==d['provenance']['sha256'],p
                 for name,m in f['modes'].items():
                     if m.get('sourceMode'):
@@ -31,6 +35,7 @@ def validate(sources=False):
                         assert source['channels']==m.get('sourceChannels',m['channels']),(p,name)
                         assert source['parameters']==m['parameters'],(p,name)
             assert all(isinstance(m,dict) and m['channels']>=0 for m in f['modes'].values()),p
+    assert referenced_details==set(details),'Unreferenced stored fixture definitions'
     for name in images:
         p=ROOT/name;assert p.is_file(),name
         assert re.fullmatch(r'images/fixtures/[a-z0-9-]+/[a-z0-9-]+\.(png|jpg|jpeg|webp|svg)',name),name

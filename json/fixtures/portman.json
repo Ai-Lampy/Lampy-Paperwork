@@ -39,7 +39,7 @@
       },
       "shortName": "AMULET",
       "image": "images/fixtures/portman/amulet.png",
-      "details": "json/fixture-details/dedf98f58d17adb044a69661813e6b91db1272b607eb095b563dc2e8cd599148.json",
+      "details": "json/fixture-details/portman/amulet.json",
       "provenance": {
         "fileName": "Portman_Lights@AMULET@V1-01.gdtf",
         "sha256": "dedf98f58d17adb044a69661813e6b91db1272b607eb095b563dc2e8cd599148",
@@ -84,7 +84,7 @@
       },
       "shortName": "EVO ELEMENT",
       "image": "images/fixtures/portman/evo-element.png",
-      "details": "json/fixture-details/4d67a7100f3bb7fa055740c79b23da7d5d85f7702af3d83937812a1535638943.json",
+      "details": "json/fixture-details/portman/evo-element.json",
       "provenance": {
         "fileName": "Portman_Lights@EVO_ELEMENT@V102.gdtf",
         "sha256": "4d67a7100f3bb7fa055740c79b23da7d5d85f7702af3d83937812a1535638943",
@@ -129,7 +129,7 @@
       },
       "shortName": "MANTIS",
       "image": "images/fixtures/portman/mantis.png",
-      "details": "json/fixture-details/4bb7afe6b1115796940bb4f7449f5925a88378b2f8b14c8a8a9beeb5ae0f6b78.json",
+      "details": "json/fixture-details/portman/mantis.json",
       "provenance": {
         "fileName": "Portman_Lights@MANTIS@Mantis.gdtf",
         "sha256": "4bb7afe6b1115796940bb4f7449f5925a88378b2f8b14c8a8a9beeb5ae0f6b78",
@@ -184,7 +184,7 @@
       },
       "shortName": "OMNIRAY",
       "image": "",
-      "details": "json/fixture-details/9472ac4f78b3692c78d5f297e6b7d708872b280b2b15aebed232dadad10cd80f.json",
+      "details": "json/fixture-details/portman/omniray.json",
       "provenance": {
         "fileName": "Portman_Lights@OMNIRAY@V1-00.gdtf",
         "sha256": "9472ac4f78b3692c78d5f297e6b7d708872b280b2b15aebed232dadad10cd80f",
@@ -229,7 +229,7 @@
       },
       "shortName": "P1 EVO",
       "image": "images/fixtures/portman/p1-evo--p1-mini.png",
-      "details": "json/fixture-details/e199b791b52d4e09e0b1125ad32dd6694f058fc473e2dd399ce58b9093110e29.json",
+      "details": "json/fixture-details/portman/p1-evo.json",
       "provenance": {
         "fileName": "Portman_Lights@P1_EVO@V1_1.gdtf",
         "sha256": "e199b791b52d4e09e0b1125ad32dd6694f058fc473e2dd399ce58b9093110e29",
@@ -269,7 +269,7 @@
       },
       "shortName": "P1 Mini",
       "image": "images/fixtures/portman/p1-evo--p1-mini.png",
-      "details": "json/fixture-details/02a914f0f38b3308d179a1468e9d19df49215b2cbc939e24d4f21ea73114295f.json",
+      "details": "json/fixture-details/portman/p1-mini.json",
       "provenance": {
         "fileName": "Portman_Lights@P1_Mini@Untested.gdtf",
         "sha256": "02a914f0f38b3308d179a1468e9d19df49215b2cbc939e24d4f21ea73114295f",
@@ -289,7 +289,7 @@
       },
       "shortName": "P1 Retro Lamp",
       "image": "images/fixtures/portman/p1-retro-lamp.png",
-      "details": "json/fixture-details/7dd1df9255b71344ecebd5c412e0ee2ba074bc1ff227bbecd2b4b59d5de6e344.json",
+      "details": "json/fixture-details/portman/p1-retro-lamp.json",
       "provenance": {
         "fileName": "Portman_Lights@P1_Retro@Created_Fixture_-_Not_tested_in_real_life.gdtf",
         "sha256": "7dd1df9255b71344ecebd5c412e0ee2ba074bc1ff227bbecd2b4b59d5de6e344",
@@ -309,7 +309,7 @@
       },
       "shortName": "P2 EVO",
       "image": "images/fixtures/portman/p2-evo.png",
-      "details": "json/fixture-details/63470a09073d8c5a7be739697a67e60cb49326413e1cd2b781685a8690ff2e4d.json",
+      "details": "json/fixture-details/portman/p2-evo.json",
       "provenance": {
         "fileName": "Portman_Lights@P2_EVO@WithVirtualDimmer_V3.gdtf",
         "sha256": "63470a09073d8c5a7be739697a67e60cb49326413e1cd2b781685a8690ff2e4d",
@@ -329,7 +329,7 @@
       },
       "shortName": "P2 Hexaline",
       "image": "images/fixtures/portman/p2-hexaline.png",
-      "details": "json/fixture-details/43ee391819182609ea97d70028bb09fc6e7fedb31e98e868f9988c9963056c57.json",
+      "details": "json/fixture-details/portman/p2-hexaline.json",
       "provenance": {
         "fileName": "Portman_Lights@P2_Hexaline@V7_with_Mesh.gdtf",
         "sha256": "43ee391819182609ea97d70028bb09fc6e7fedb31e98e868f9988c9963056c57",
@@ -374,7 +374,7 @@
       },
       "shortName": "P3 EVO",
       "image": "images/fixtures/portman/p3-evo.png",
-      "details": "json/fixture-details/fb4bca55817a3ed5684ee99a0da587f87e2f514417df426c9a58e1e4eb558ea1.json",
+      "details": "json/fixture-details/portman/p3-evo.json",
       "provenance": {
         "fileName": "Portman_Lights@P3_EVO@0.92.gdtf",
         "sha256": "fb4bca55817a3ed5684ee99a0da587f87e2f514417df426c9a58e1e4eb558ea1",
@@ -394,7 +394,7 @@
       },
       "shortName": "P3 PIX3L",
       "image": "",
-      "details": "json/fixture-details/a48405c8982c9a531dfca8c60eed3914dbb973d900aca265c0dee15b0c2c88b1.json",
+      "details": "json/fixture-details/portman/p3-pix3l.json",
       "provenance": {
         "fileName": "Portman_Lights@P3_PIX3L@1.00.gdtf",
         "sha256": "a48405c8982c9a531dfca8c60eed3914dbb973d900aca265c0dee15b0c2c88b1",
@@ -439,7 +439,7 @@
       },
       "shortName": "S-TRIBE",
       "image": "images/fixtures/portman/s-tribe.png",
-      "details": "json/fixture-details/0a4b4959456a5c8cefdc985edf00b8b3c0fb2fe992f62199b8754e590f54d99a.json",
+      "details": "json/fixture-details/portman/s-tribe.json",
       "provenance": {
         "fileName": "Portman_Lights@S-Tribe@V.1.00.gdtf",
         "sha256": "0a4b4959456a5c8cefdc985edf00b8b3c0fb2fe992f62199b8754e590f54d99a",

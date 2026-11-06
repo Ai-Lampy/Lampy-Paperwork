@@ -19,7 +19,7 @@
       },
       "shortName": "1200C Strobe",
       "image": "images/fixtures/fine-art/1200c-strobe.png",
-      "details": "json/fixture-details/48fe9e317d526f5f03f5dfdcbc80c2cea9e73de20e2f20b34295a238aaf5dc5e.json",
+      "details": "json/fixture-details/fine-art/1200c-strobe.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_1200C_STROBE@MA3_library_fixed_-_Sept_22th_2025.gdtf",
         "sha256": "48fe9e317d526f5f03f5dfdcbc80c2cea9e73de20e2f20b34295a238aaf5dc5e",
@@ -49,7 +49,7 @@
       },
       "shortName": "FINE 1000ZLH PERF",
       "image": "images/fixtures/fine-art/fine-1000zlh-perf--fine-1000zlh-spot2--fine-120ls-beam-ip--fine-600-bsw-ii.png",
-      "details": "json/fixture-details/2c2e9380e3558de9287dda72d1dad9cc5b089b33d2abc23120a7680df47d4579.json",
+      "details": "json/fixture-details/fine-art/fine-1000zlh-perf.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_1000ZLH_PERF@FINE_1000ZLH__PERF.gdtf",
         "sha256": "2c2e9380e3558de9287dda72d1dad9cc5b089b33d2abc23120a7680df47d4579",
@@ -79,7 +79,7 @@
       },
       "shortName": "FINE 1000ZLH SPOT2",
       "image": "images/fixtures/fine-art/fine-1000zlh-perf--fine-1000zlh-spot2--fine-120ls-beam-ip--fine-600-bsw-ii.png",
-      "details": "json/fixture-details/54e162f44f40e791032dd6c8f7b71d1745ea52beff06f85915fddd7fcc0490de.json",
+      "details": "json/fixture-details/fine-art/fine-1000zlh-spot2.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_1000ZLH_SPOT2@FINE_1000ZLH__SPOT2.gdtf",
         "sha256": "54e162f44f40e791032dd6c8f7b71d1745ea52beff06f85915fddd7fcc0490de",
@@ -109,7 +109,7 @@
       },
       "shortName": "FINE 1200E/2 PERF",
       "image": "images/fixtures/fine-art/fine-1200e-2-perf.png",
-      "details": "json/fixture-details/4c8a1a52cda62aaac34a9590ea30c92b5467d85b7830ecf51df3beca6b5a9d46.json",
+      "details": "json/fixture-details/fine-art/fine-1200e-2-perf.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_1200E_2_PERF@FINE_1200E_2__PERF.gdtf",
         "sha256": "4c8a1a52cda62aaac34a9590ea30c92b5467d85b7830ecf51df3beca6b5a9d46",
@@ -139,7 +139,7 @@
       },
       "shortName": "FINE1200LHPERF",
       "image": "images/fixtures/fine-art/fine-1200l-perf--fine-1400l-bswf.png",
-      "details": "json/fixture-details/ba91092c02edb76595ffa8faac33bc3920524bce95287d410055b0865801c032.json",
+      "details": "json/fixture-details/fine-art/fine-1200l-perf.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_1200L_PERF@20251230.gdtf",
         "sha256": "ba91092c02edb76595ffa8faac33bc3920524bce95287d410055b0865801c032",
@@ -169,7 +169,7 @@
       },
       "shortName": "FINE 120LS BEAM IP",
       "image": "images/fixtures/fine-art/fine-1000zlh-perf--fine-1000zlh-spot2--fine-120ls-beam-ip--fine-600-bsw-ii.png",
-      "details": "json/fixture-details/657399c39bf0f445589ac88794baaac4e8052776427b0cb77c8fa57ec88a3bf6.json",
+      "details": "json/fixture-details/fine-art/fine-120ls-beam-ip.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_120LS_BEAM_IP@FINE_120LS_BEAM__IP.gdtf",
         "sha256": "657399c39bf0f445589ac88794baaac4e8052776427b0cb77c8fa57ec88a3bf6",
@@ -199,7 +199,7 @@
       },
       "shortName": "FINE 1400L BSWF",
       "image": "images/fixtures/fine-art/fine-1200l-perf--fine-1400l-bswf.png",
-      "details": "json/fixture-details/98f26016daeb3ddfeb69ff43e8ce5e229674d35524560c5352d84d0add3f0ef6.json",
+      "details": "json/fixture-details/fine-art/fine-1400l-bswf.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_1400L_BSWF@FINE_1400L__BSWF.gdtf",
         "sha256": "98f26016daeb3ddfeb69ff43e8ce5e229674d35524560c5352d84d0add3f0ef6",
@@ -229,7 +229,7 @@
       },
       "shortName": "FINE 1400LB BSWF IP",
       "image": "images/fixtures/fine-art/fine-1400lb-bswf-ip.png",
-      "details": "json/fixture-details/5160b2bc1cfbc68ed19c1e0b6d9ce02ff8670e58226e75cec564458c4bc1bcd3.json",
+      "details": "json/fixture-details/fine-art/fine-1400lb-bswf-ip.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_1400LB_BSWF_IP@FINE_1400LB_BSWF__IP.gdtf",
         "sha256": "5160b2bc1cfbc68ed19c1e0b6d9ce02ff8670e58226e75cec564458c4bc1bcd3",
@@ -259,7 +259,7 @@
       },
       "shortName": "FINE 1514 DG",
       "image": "images/fixtures/fine-art/fine-1514-dg.png",
-      "details": "json/fixture-details/bb54dbb15336f157039e405df25f6b7041736aac1ffbf382a70f029b4585912a.json",
+      "details": "json/fixture-details/fine-art/fine-1514-dg.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_1514_DG@FINE_1514__DG.gdtf",
         "sha256": "bb54dbb15336f157039e405df25f6b7041736aac1ffbf382a70f029b4585912a",
@@ -289,7 +289,7 @@
       },
       "shortName": "FINE 1519 WASH",
       "image": "images/fixtures/fine-art/fine-1519-wash.png",
-      "details": "json/fixture-details/1535b6c0bc6eb16684dc71bd04f2c9dea7245338ef2d0269fa3cfa775a4fdefa.json",
+      "details": "json/fixture-details/fine-art/fine-1519-wash.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_1519_WASH@FINE_1519__WASH.gdtf",
         "sha256": "1535b6c0bc6eb16684dc71bd04f2c9dea7245338ef2d0269fa3cfa775a4fdefa",
@@ -324,7 +324,7 @@
       },
       "shortName": "FINE 1537 PIXIE",
       "image": "images/fixtures/fine-art/fine-1537-pixie--fine-4037-pixie-plus.png",
-      "details": "json/fixture-details/61471e1771dd6f96880dce2e1f1f27fc43dad212365d47f044452e5aa88b081e.json",
+      "details": "json/fixture-details/fine-art/fine-1537-pixie.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_1537_PIXIE@FINE_1537__PIXIE.gdtf",
         "sha256": "61471e1771dd6f96880dce2e1f1f27fc43dad212365d47f044452e5aa88b081e",
@@ -354,7 +354,7 @@
       },
       "shortName": "FINE 1700 LH ISPOT",
       "image": "images/fixtures/fine-art/fine-1700-lh-ispot.png",
-      "details": "json/fixture-details/13fe7d875d57e00ec0da03db46df459e8c8772403333e002efbf9abe087c4328.json",
+      "details": "json/fixture-details/fine-art/fine-1700-lh-ispot.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_1700_LH_ISPOT@FINE_1700_LH__ISPOT.gdtf",
         "sha256": "13fe7d875d57e00ec0da03db46df459e8c8772403333e002efbf9abe087c4328",
@@ -389,7 +389,7 @@
       },
       "shortName": "FINE 1700LC ISPOT",
       "image": "images/fixtures/fine-art/fine-1700lc-ispot--fine-2000lh-ispot.png",
-      "details": "json/fixture-details/32d474ad8e48d9a0662ce4b0bfc23118609baba9cb964c1b09b2a3be1c824f2c.json",
+      "details": "json/fixture-details/fine-art/fine-1700lc-ispot.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_1700LC_ISPOT@FINE_1700LC__ISPOT.gdtf",
         "sha256": "32d474ad8e48d9a0662ce4b0bfc23118609baba9cb964c1b09b2a3be1c824f2c",
@@ -419,7 +419,7 @@
       },
       "shortName": "FINE 1700LH ISPOT IP",
       "image": "images/fixtures/fine-art/fine-1700lh-ispot-ip.png",
-      "details": "json/fixture-details/a82913d8688f74257ef7681601d7fb0e38760de6985e5c58947b479c3549569b.json",
+      "details": "json/fixture-details/fine-art/fine-1700lh-ispot-ip.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_1700LH_ISPOT_IP@FINE_1700LH_ISPOT__IP.gdtf",
         "sha256": "a82913d8688f74257ef7681601d7fb0e38760de6985e5c58947b479c3549569b",
@@ -449,7 +449,7 @@
       },
       "shortName": "FINE 2000LH iSPOT",
       "image": "images/fixtures/fine-art/fine-1700lc-ispot--fine-2000lh-ispot.png",
-      "details": "json/fixture-details/4417f5054de0d0f642aca73246eea1ac7d3c52abf400c7ffe30df18c3088db53.json",
+      "details": "json/fixture-details/fine-art/fine-2000lh-ispot.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_2000LH_ISPOT@FINE_2000LH__iSPOT.gdtf",
         "sha256": "4417f5054de0d0f642aca73246eea1ac7d3c52abf400c7ffe30df18c3088db53",
@@ -474,7 +474,7 @@
       },
       "shortName": "FINE 2500E WASH",
       "image": "images/fixtures/fine-art/fine-2500e-wash.png",
-      "details": "json/fixture-details/e297a4c97aeaad7e8294f6dcfa8ab9b41dbecf04f58c34a8d8ccfb0205b8bdfc.json",
+      "details": "json/fixture-details/fine-art/fine-2500e-wash.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_2500E_WASH@FINE_2500E_WASH.gdtf",
         "sha256": "e297a4c97aeaad7e8294f6dcfa8ab9b41dbecf04f58c34a8d8ccfb0205b8bdfc",
@@ -504,7 +504,7 @@
       },
       "shortName": "FINE 372 DG",
       "image": "images/fixtures/fine-art/fine-372-dg.png",
-      "details": "json/fixture-details/8fcffc8ca04828a414dfc1229f29f5e1e9640fbe8e589362ee68607155c8f475.json",
+      "details": "json/fixture-details/fine-art/fine-372-dg.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_372_DG@FINE_372__DG.gdtf",
         "sha256": "8fcffc8ca04828a414dfc1229f29f5e1e9640fbe8e589362ee68607155c8f475",
@@ -534,7 +534,7 @@
       },
       "shortName": "FINE 380 BEAM",
       "image": "images/fixtures/fine-art/fine-380-beam.png",
-      "details": "json/fixture-details/7242c6fbd0bff325030388b6e84aea5b5b60047ddc689f312204dfe9e7e92352.json",
+      "details": "json/fixture-details/fine-art/fine-380-beam.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_380_BEAM@FINE_380__BEAM.gdtf",
         "sha256": "7242c6fbd0bff325030388b6e84aea5b5b60047ddc689f312204dfe9e7e92352",
@@ -564,7 +564,7 @@
       },
       "shortName": "FINE 380 BSW",
       "image": "images/fixtures/fine-art/fine-380-bsw.png",
-      "details": "json/fixture-details/d35142958028145c153fde14b7e27b4572880ff537c65454db3898d0de4a5daf.json",
+      "details": "json/fixture-details/fine-art/fine-380-bsw.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_380_BSW@FINE_380__BSW.gdtf",
         "sha256": "d35142958028145c153fde14b7e27b4572880ff537c65454db3898d0de4a5daf",
@@ -599,7 +599,7 @@
       },
       "shortName": "FINE 400CL",
       "image": "images/fixtures/fine-art/fine-400cl.png",
-      "details": "json/fixture-details/1652a8c5ef011630dc5c7c5390a2d675ce1299b647591b40b7525efbc9d10791.json",
+      "details": "json/fixture-details/fine-art/fine-400cl.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_400CL@FINE_400CL.gdtf",
         "sha256": "1652a8c5ef011630dc5c7c5390a2d675ce1299b647591b40b7525efbc9d10791",
@@ -629,7 +629,7 @@
       },
       "shortName": "FINE 400D LEKO",
       "image": "images/fixtures/fine-art/fine-400d-leko.png",
-      "details": "json/fixture-details/d42de159d820a625dd7c1355d18562400f5ac8c9bf172e5a764a8bb2e9e49466.json",
+      "details": "json/fixture-details/fine-art/fine-400d-leko.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_400D_LEKO@FINE_400D__LEKO.gdtf",
         "sha256": "d42de159d820a625dd7c1355d18562400f5ac8c9bf172e5a764a8bb2e9e49466",
@@ -664,7 +664,7 @@
       },
       "shortName": "FINE 4012 PIXIE",
       "image": "images/fixtures/fine-art/fine-4012-pixie--fine-4019-wash-plus.png",
-      "details": "json/fixture-details/5a0e021c3df194c94777eaefdefa9904f6268999a808577b30a75cf8475434ad.json",
+      "details": "json/fixture-details/fine-art/fine-4012-pixie.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_4012_PIXIE@FINE_4012__PIXIE.gdtf",
         "sha256": "5a0e021c3df194c94777eaefdefa9904f6268999a808577b30a75cf8475434ad",
@@ -699,7 +699,7 @@
       },
       "shortName": "FINE 4019 WASH PLUS",
       "image": "images/fixtures/fine-art/fine-4012-pixie--fine-4019-wash-plus.png",
-      "details": "json/fixture-details/4e49d1dd07d6f9b9295fca85601234b760fe843c4c410c421959db0799b46917.json",
+      "details": "json/fixture-details/fine-art/fine-4019-wash-plus.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_4019_WASH_PLUS@FINE_4019_WASH__PLUS.gdtf",
         "sha256": "4e49d1dd07d6f9b9295fca85601234b760fe843c4c410c421959db0799b46917",
@@ -734,7 +734,7 @@
       },
       "shortName": "FINE 4037 PIXIE PLUS",
       "image": "images/fixtures/fine-art/fine-1537-pixie--fine-4037-pixie-plus.png",
-      "details": "json/fixture-details/af200f82c555dad6a5f304b1d95f7644beb183313fb11124ed336161a3d0efba.json",
+      "details": "json/fixture-details/fine-art/fine-4037-pixie-plus.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_4037_PIXIE_PLUS@FINE_4037_PIXIE__PLUS.gdtf",
         "sha256": "af200f82c555dad6a5f304b1d95f7644beb183313fb11124ed336161a3d0efba",
@@ -769,7 +769,7 @@
       },
       "shortName": "FINE 4037 PIXIE",
       "image": "images/fixtures/fine-art/fine-4037-wash--fine-4037-wash-plus.png",
-      "details": "json/fixture-details/dadc4cb0ed148abf12623eaf26f78bf7ec7fef0862a8a3085341f18b25887f1a.json",
+      "details": "json/fixture-details/fine-art/fine-4037-wash.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_4037_WASH@FINE_4037__WASH.gdtf",
         "sha256": "dadc4cb0ed148abf12623eaf26f78bf7ec7fef0862a8a3085341f18b25887f1a",
@@ -804,7 +804,7 @@
       },
       "shortName": "FINE 4037 PIXIE",
       "image": "images/fixtures/fine-art/fine-4037-wash--fine-4037-wash-plus.png",
-      "details": "json/fixture-details/724404b78a51a3eb00bd086e811a7e450141c77088701bcbd91964a6b7c98d81.json",
+      "details": "json/fixture-details/fine-art/fine-4037-wash-plus.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_4037_WASH_PLUS@FINE_4037_WASH__PLUS.gdtf",
         "sha256": "724404b78a51a3eb00bd086e811a7e450141c77088701bcbd91964a6b7c98d81",
@@ -824,7 +824,7 @@
       },
       "shortName": "FINE 407 WASH",
       "image": "images/fixtures/fine-art/fine-407-wash.png",
-      "details": "json/fixture-details/7c828f5845f58322c865659e919607e1180242ea3678b723439394cfdf2b19b7.json",
+      "details": "json/fixture-details/fine-art/fine-407-wash.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_407_WASH@Lampy_2026-10-27.gdtf",
         "sha256": "7c828f5845f58322c865659e919607e1180242ea3678b723439394cfdf2b19b7",
@@ -854,7 +854,7 @@
       },
       "shortName": "FINE 420L SPOT",
       "image": "images/fixtures/fine-art/fine-420l-spot.png",
-      "details": "json/fixture-details/1e674ed9f9a1c8638b6e3e676a112f07f46190f7eff039f2dd73e8dbc36a2290.json",
+      "details": "json/fixture-details/fine-art/fine-420l-spot.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_420L_SPOT@FINE_420L__SPOT.gdtf",
         "sha256": "1e674ed9f9a1c8638b6e3e676a112f07f46190f7eff039f2dd73e8dbc36a2290",
@@ -879,7 +879,7 @@
       },
       "shortName": "FINE 470 BSW",
       "image": "",
-      "details": "json/fixture-details/f9d7efe65e2d73bb373be6376913cfd522f366013234d2407ad2f7f7eb506c9e.json",
+      "details": "json/fixture-details/fine-art/fine-470-bsw.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_470_BSW@Release.gdtf",
         "sha256": "f9d7efe65e2d73bb373be6376913cfd522f366013234d2407ad2f7f7eb506c9e",
@@ -909,7 +909,7 @@
       },
       "shortName": "FINE 600 BSW II",
       "image": "images/fixtures/fine-art/fine-1000zlh-perf--fine-1000zlh-spot2--fine-120ls-beam-ip--fine-600-bsw-ii.png",
-      "details": "json/fixture-details/b5e1f7eca5ac370e6a5a8e3d2fed1d732c080a8de81a0e5d8b86d93f7a1b7d77.json",
+      "details": "json/fixture-details/fine-art/fine-600-bsw-ii.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_600_BSW_II@FINE_600__BSW_II.gdtf",
         "sha256": "b5e1f7eca5ac370e6a5a8e3d2fed1d732c080a8de81a0e5d8b86d93f7a1b7d77",
@@ -939,7 +939,7 @@
       },
       "shortName": "FINE 600LB BSW IP",
       "image": "images/fixtures/fine-art/fine-600lb-bsw-ip--fine-600lb-bswf-ip.png",
-      "details": "json/fixture-details/e23b9589d8dad3c1fcbbfac2dd53c656767f412d0c4bdd1b61c03e462b3466b3.json",
+      "details": "json/fixture-details/fine-art/fine-600lb-bsw-ip.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_600LB_BSW_IP@FINE_600LB_BSW__IP.gdtf",
         "sha256": "e23b9589d8dad3c1fcbbfac2dd53c656767f412d0c4bdd1b61c03e462b3466b3",
@@ -969,7 +969,7 @@
       },
       "shortName": "FINE 600LB BSWF IP",
       "image": "images/fixtures/fine-art/fine-600lb-bsw-ip--fine-600lb-bswf-ip.png",
-      "details": "json/fixture-details/a0c286a1b0d3a8ab77831e00310193babeafe94afde06ef598b2ab4535ea1b34.json",
+      "details": "json/fixture-details/fine-art/fine-600lb-bswf-ip.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_600LB_BSWF_IP@FINE_600LB_BSWF__IP.gdtf",
         "sha256": "a0c286a1b0d3a8ab77831e00310193babeafe94afde06ef598b2ab4535ea1b34",
@@ -1004,7 +1004,7 @@
       },
       "shortName": "FINE 960C STROBE IP",
       "image": "images/fixtures/fine-art/fine-960c-strobe-ip.png",
-      "details": "json/fixture-details/2f37b5d4df19023888f8e4571b582f95d498095fdef3dbb61fcf1be72b0e42b7.json",
+      "details": "json/fixture-details/fine-art/fine-960c-strobe-ip.json",
       "provenance": {
         "fileName": "Fine_Art@FINE_960C_STROBE_IP@FINE_960C_STROBE__IP.gdtf",
         "sha256": "2f37b5d4df19023888f8e4571b582f95d498095fdef3dbb61fcf1be72b0e42b7",

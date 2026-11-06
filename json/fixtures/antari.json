@@ -14,7 +14,7 @@
       },
       "shortName": "HZ-500 Hazer",
       "image": "images/fixtures/antari/hz-500-hazer.png",
-      "details": "json/fixture-details/2a8d32e6dc09492515f4523d7e0697c99401fd6dd3449b72d55fd8b508e54420.json",
+      "details": "json/fixture-details/antari/hz-500-hazer.json",
       "provenance": {
         "fileName": "Antari@HZ-500@rev1.gdtf",
         "sha256": "2a8d32e6dc09492515f4523d7e0697c99401fd6dd3449b72d55fd8b508e54420",

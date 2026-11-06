@@ -14,7 +14,7 @@
       },
       "shortName": "FLAMEBER",
       "image": "images/fixtures/er-productions/flameber.png",
-      "details": "json/fixture-details/6c58c54c07b903c267c3168c34d61982f59d0961d8ac5e1b2db61d3502e163dd.json",
+      "details": "json/fixture-details/er-productions/flameber.json",
       "provenance": {
         "fileName": "ER_Productions@FlamebER@v0001.gdtf",
         "sha256": "6c58c54c07b903c267c3168c34d61982f59d0961d8ac5e1b2db61d3502e163dd",
@@ -44,7 +44,7 @@
       },
       "shortName": "FLAMEBER-XL",
       "image": "",
-      "details": "json/fixture-details/d8aa24399d39c3c324c02f408b8441515414e977d628780439f0c4c946803c8c.json",
+      "details": "json/fixture-details/er-productions/flameber-xl.json",
       "provenance": {
         "fileName": "ER_Productions@FLAMEBER_XL@V0003.gdtf",
         "sha256": "d8aa24399d39c3c324c02f408b8441515414e977d628780439f0c4c946803c8c",
@@ -69,7 +69,7 @@
       },
       "shortName": "Laserblade2",
       "image": "images/fixtures/er-productions/laserblade2.png",
-      "details": "json/fixture-details/a3cae3f36837096c00826e71fe95497e1adc1e88e8e432f08556099b560eefa2.json",
+      "details": "json/fixture-details/er-productions/laserblade2.json",
       "provenance": {
         "fileName": "ER_Productions@Laserblade2@v2.0.gdtf",
         "sha256": "a3cae3f36837096c00826e71fe95497e1adc1e88e8e432f08556099b560eefa2",

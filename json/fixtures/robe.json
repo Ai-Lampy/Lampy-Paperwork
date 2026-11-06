@@ -39,7 +39,7 @@
       },
       "shortName": "100 LEDBeam",
       "image": "images/fixtures/robe/100-ledbeam.png",
-      "details": "json/fixture-details/0170f5c73cc68bd9929ba974e7ed6c2524a216e993b60152f25c8ac1df2bd8f6.json",
+      "details": "json/fixture-details/robe/100-ledbeam.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_100_LEDBeam@2024-02-09__3D_models_with_robe_color_revision.gdtf",
         "sha256": "0170f5c73cc68bd9929ba974e7ed6c2524a216e993b60152f25c8ac1df2bd8f6",
@@ -84,7 +84,7 @@
       },
       "shortName": "1200 LEDWash ",
       "image": "images/fixtures/robe/1200-ledwash.png",
-      "details": "json/fixture-details/516a9e4f80bbc08094623b7c870721901cebeb760e388caa953968fb6ab25f87.json",
+      "details": "json/fixture-details/robe/1200-ledwash.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_1200_LEDWash@2025-10-09__3D_models_update__Wiring_objects_revision.gdtf",
         "sha256": "516a9e4f80bbc08094623b7c870721901cebeb760e388caa953968fb6ab25f87",
@@ -124,7 +124,7 @@
       },
       "shortName": "300 LEDWash",
       "image": "images/fixtures/robe/300-ledwash--300x-ledwash.png",
-      "details": "json/fixture-details/b61e96f342b4a48a4e5cdad1161f414e569913e0199f4c9352d10c79d2e4991b.json",
+      "details": "json/fixture-details/robe/300-ledwash.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_300_LEDWash@2024-03-25__Zoom_range_fix.gdtf",
         "sha256": "b61e96f342b4a48a4e5cdad1161f414e569913e0199f4c9352d10c79d2e4991b",
@@ -164,7 +164,7 @@
       },
       "shortName": "300X LEDWash",
       "image": "images/fixtures/robe/300-ledwash--300x-ledwash.png",
-      "details": "json/fixture-details/4b82e30e11537d3b43d7542a46f3047125d4a89bbe3caa49f7ef0929b414aeb7.json",
+      "details": "json/fixture-details/robe/300x-ledwash.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_300X_LEDWash@2022-11-10__DMX_Input_adjustment.gdtf",
         "sha256": "4b82e30e11537d3b43d7542a46f3047125d4a89bbe3caa49f7ef0929b414aeb7",
@@ -209,7 +209,7 @@
       },
       "shortName": "600 LEDWash",
       "image": "images/fixtures/robe/600-ledwash--600x-ledwash.png",
-      "details": "json/fixture-details/1ef0ae1a2d865bfb34b86a9ecf143e1210a6308054cac149e9e1a8677fd32dfe.json",
+      "details": "json/fixture-details/robe/600-ledwash.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_600_LEDWash@2024-03-25__Zoom_range_fix.gdtf",
         "sha256": "1ef0ae1a2d865bfb34b86a9ecf143e1210a6308054cac149e9e1a8677fd32dfe",
@@ -249,7 +249,7 @@
       },
       "shortName": "600 LEDWash SW",
       "image": "images/fixtures/robe/600-ledwash-sw--800-ledwash-sw.png",
-      "details": "json/fixture-details/89cac2709e23ed0605f344235890596f0adf8809873dd22de0093c40c358ce9f.json",
+      "details": "json/fixture-details/robe/600-ledwash-sw.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_600_LEDWash_SW@2023-08-14__Share_initial_release.gdtf",
         "sha256": "89cac2709e23ed0605f344235890596f0adf8809873dd22de0093c40c358ce9f",
@@ -294,7 +294,7 @@
       },
       "shortName": "600X LEDWash",
       "image": "images/fixtures/robe/600-ledwash--600x-ledwash.png",
-      "details": "json/fixture-details/c06c29acda659f8e705cd8512b0c7def51a6be8e3c233810370ed346921965b3.json",
+      "details": "json/fixture-details/robe/600x-ledwash.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_600X_LEDWash@2024-02-09__3D_models_with_robe_colors_revision.gdtf",
         "sha256": "c06c29acda659f8e705cd8512b0c7def51a6be8e3c233810370ed346921965b3",
@@ -339,7 +339,7 @@
       },
       "shortName": "800 LEDWash SW",
       "image": "images/fixtures/robe/600-ledwash-sw--800-ledwash-sw.png",
-      "details": "json/fixture-details/8da1f25cb9899668d25339b28ed4fb602d8e28a82db3edc2e79be529c3eaf15a.json",
+      "details": "json/fixture-details/robe/800-ledwash-sw.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_800_LEDWash_SW@2023-08-14__Share_initial_release.gdtf",
         "sha256": "8da1f25cb9899668d25339b28ed4fb602d8e28a82db3edc2e79be529c3eaf15a",
@@ -384,7 +384,7 @@
       },
       "shortName": "800X LEDWash",
       "image": "images/fixtures/robe/800x-ledwash.png",
-      "details": "json/fixture-details/bb1efa3ed30b9ef4f1677c91c0d1a3a672295efe78fb6d3d1f7414d02d182680.json",
+      "details": "json/fixture-details/robe/800x-ledwash.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_800X_LEDWash@2024-03-25__3D_models_update__Wiring_revision.gdtf",
         "sha256": "bb1efa3ed30b9ef4f1677c91c0d1a3a672295efe78fb6d3d1f7414d02d182680",
@@ -429,7 +429,7 @@
       },
       "shortName": "Actor 6",
       "image": "images/fixtures/robe/actor-6.png",
-      "details": "json/fixture-details/afb2e7ab12b669a6279bf459e5c53c6daacdd4bc1fc040d343a5c537e34ef652.json",
+      "details": "json/fixture-details/robe/actor-6.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Actor_6@2025-03-10__Pixel_3D_model_revision.gdtf",
         "sha256": "afb2e7ab12b669a6279bf459e5c53c6daacdd4bc1fc040d343a5c537e34ef652",
@@ -459,7 +459,7 @@
       },
       "shortName": "Arianne12",
       "image": "images/fixtures/robe/arianne-12.png",
-      "details": "json/fixture-details/9bc7d0111cbab19d4a268e399673ef1b4c04c0d0d2424fbd57036d7a2a32f5dc.json",
+      "details": "json/fixture-details/robe/arianne-12.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Arianne_12@2026-09-02_Initial_release_to_share.gdtf",
         "sha256": "9bc7d0111cbab19d4a268e399673ef1b4c04c0d0d2424fbd57036d7a2a32f5dc",
@@ -489,7 +489,7 @@
       },
       "shortName": "Arianne2",
       "image": "images/fixtures/robe/arianne-2.png",
-      "details": "json/fixture-details/2c78a1fa710f786ceac4fcb1e7cc2bdfe9375e874b82505633871e56a84a9f60.json",
+      "details": "json/fixture-details/robe/arianne-2.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Arianne_2@2026-08-31_Pan_tilt_physical_data_added.gdtf",
         "sha256": "2c78a1fa710f786ceac4fcb1e7cc2bdfe9375e874b82505633871e56a84a9f60",
@@ -519,7 +519,7 @@
       },
       "shortName": "Arianne4",
       "image": "images/fixtures/robe/arianne-4.png",
-      "details": "json/fixture-details/8a22784216877f28152d3fb06d1ee46e846017557f9793b1a7b8b29d8d41e7c7.json",
+      "details": "json/fixture-details/robe/arianne-4.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Arianne_4@2026-09-02_Initial_release_to_share.gdtf",
         "sha256": "8a22784216877f28152d3fb06d1ee46e846017557f9793b1a7b8b29d8d41e7c7",
@@ -549,7 +549,7 @@
       },
       "shortName": "Arianne6",
       "image": "images/fixtures/robe/arianne-6.png",
-      "details": "json/fixture-details/33aeafb296b48f29fb12366dfd68b56cfc31c9721654b60c8b76346fca903398.json",
+      "details": "json/fixture-details/robe/arianne-6.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Arianne_6@2026-08-31_Pan_tilt_physical_data_added.gdtf",
         "sha256": "33aeafb296b48f29fb12366dfd68b56cfc31c9721654b60c8b76346fca903398",
@@ -574,7 +574,7 @@
       },
       "shortName": "BMFLBlade",
       "image": "images/fixtures/robe/bmfl-blade.png",
-      "details": "json/fixture-details/491be0c1ea6082158617648206763c40271461fa183d1917eaffa526dc8ad8bf.json",
+      "details": "json/fixture-details/robe/bmfl-blade.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_BMFL_Blade@2026-03-26_Color_macro_empty_wheel_slots_revision.gdtf",
         "sha256": "491be0c1ea6082158617648206763c40271461fa183d1917eaffa526dc8ad8bf",
@@ -599,7 +599,7 @@
       },
       "shortName": "BMFL FollowSpot",
       "image": "images/fixtures/robe/bmfl-followspot.png",
-      "details": "json/fixture-details/33bd43960ff8e8ef079b8757c5cf06f81c360ebc06ff5ec288b2c2615eb033f2.json",
+      "details": "json/fixture-details/robe/bmfl-followspot.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_BMFL_FollowSpot@2026-03-27_Color_macro_open_slot_revision.gdtf",
         "sha256": "33bd43960ff8e8ef079b8757c5cf06f81c360ebc06ff5ec288b2c2615eb033f2",
@@ -624,7 +624,7 @@
       },
       "shortName": "BMFL FollowSpot LT",
       "image": "images/fixtures/robe/bmfl-followspot-lt.png",
-      "details": "json/fixture-details/fcc5e8092551a738fec061da3bd3a93e70c8561099c248ccfe1d03fa72b1345b.json",
+      "details": "json/fixture-details/robe/bmfl-followspot-lt.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_BMFL_FollowSpot_LT@2026-03-27_Color_macro_open_slot_revision.gdtf",
         "sha256": "fcc5e8092551a738fec061da3bd3a93e70c8561099c248ccfe1d03fa72b1345b",
@@ -649,7 +649,7 @@
       },
       "shortName": "BMFL Spot",
       "image": "images/fixtures/robe/bmfl-spot.png",
-      "details": "json/fixture-details/badf9759a773b423dcf9464d6a67fe74d3177d9309de4f9ef6fcc11d94f8a2b0.json",
+      "details": "json/fixture-details/robe/bmfl-spot.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_BMFL_Spot@2026-03-27_Color_macro_open_slot_revision.gdtf",
         "sha256": "badf9759a773b423dcf9464d6a67fe74d3177d9309de4f9ef6fcc11d94f8a2b0",
@@ -674,7 +674,7 @@
       },
       "shortName": "BMFL Wash",
       "image": "images/fixtures/robe/bmfl-wash--bmfl-wash-xf.png",
-      "details": "json/fixture-details/890e49719658ca981bf44fd2dc0618d1b4fe562787cdd5b5433e697dd665a071.json",
+      "details": "json/fixture-details/robe/bmfl-wash.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_BMFL_Wash@2026-03-27_Color_macro_open_slot_revision.gdtf",
         "sha256": "890e49719658ca981bf44fd2dc0618d1b4fe562787cdd5b5433e697dd665a071",
@@ -699,7 +699,7 @@
       },
       "shortName": "BMFL Wash XF",
       "image": "images/fixtures/robe/bmfl-wash--bmfl-wash-xf.png",
-      "details": "json/fixture-details/60574e89f4fa1f3150631d642446d43b98e4e293b8dcdeff1b715f7a5a6d886a.json",
+      "details": "json/fixture-details/robe/bmfl-wash-xf.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_BMFL_Wash_XF@2026-03-27_Color_macro_open_slot_revision.gdtf",
         "sha256": "60574e89f4fa1f3150631d642446d43b98e4e293b8dcdeff1b715f7a5a6d886a",
@@ -724,7 +724,7 @@
       },
       "shortName": "BMFL WashBeam",
       "image": "images/fixtures/robe/bmfl-washbeam--bmfl-washbeam-ev.png",
-      "details": "json/fixture-details/f08b10286cdabba62d5e04ae94610f422b29e091016e7921fe50b7c7813cb8c5.json",
+      "details": "json/fixture-details/robe/bmfl-washbeam.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_BMFL_WashBeam@2026-03-27_Color_macro_open_slot_revision.gdtf",
         "sha256": "f08b10286cdabba62d5e04ae94610f422b29e091016e7921fe50b7c7813cb8c5",
@@ -749,7 +749,7 @@
       },
       "shortName": "BMFL WB EV",
       "image": "images/fixtures/robe/bmfl-washbeam--bmfl-washbeam-ev.png",
-      "details": "json/fixture-details/84fbe8a3d0a4408903bd2a50d2b4b2d4aa58944d721e4fa12ef786811ca6ac85.json",
+      "details": "json/fixture-details/robe/bmfl-washbeam-ev.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_BMFL_WashBeam_EV@2026-03-27_Color_macro_open_slot_revision.gdtf",
         "sha256": "84fbe8a3d0a4408903bd2a50d2b4b2d4aa58944d721e4fa12ef786811ca6ac85",
@@ -789,7 +789,7 @@
       },
       "shortName": "ColorStrobe",
       "image": "images/fixtures/robe/colorstrobe.png",
-      "details": "json/fixture-details/8c20ffa0acb6b9e65a87912bb1819252d5e167d7b08dae13f0a7e66f0fb772fd.json",
+      "details": "json/fixture-details/robe/colorstrobe.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_ColorStrobe@2023-07-19__DMX_defaults_update__3D_models_and__Geometry_revision.gdtf",
         "sha256": "8c20ffa0acb6b9e65a87912bb1819252d5e167d7b08dae13f0a7e66f0fb772fd",
@@ -834,7 +834,7 @@
       },
       "shortName": "ColorStrobe IP",
       "image": "images/fixtures/robe/colorstrobe-ip.png",
-      "details": "json/fixture-details/47a0e57e1394d09276a2f38265e14f01927a6ca184293f39ea2fb5c421a7340e.json",
+      "details": "json/fixture-details/robe/colorstrobe-ip.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_ColorStrobe_IP@2023-07-24__3D_models_revision__Geometry_revision__DMX_defaults_revision__Tilt_revision.gdtf",
         "sha256": "47a0e57e1394d09276a2f38265e14f01927a6ca184293f39ea2fb5c421a7340e",
@@ -854,7 +854,7 @@
       },
       "shortName": "CUETE",
       "image": "images/fixtures/robe/cuete.png",
-      "details": "json/fixture-details/efe4bd203d3f8caa9f4cc344c07e39e4473b48e7024955aacd333b42d076997c.json",
+      "details": "json/fixture-details/robe/cuete.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Cuete@2025-12-01__RDM_number_fix.gdtf",
         "sha256": "efe4bd203d3f8caa9f4cc344c07e39e4473b48e7024955aacd333b42d076997c",
@@ -903,7 +903,7 @@
       },
       "shortName": "CycBar15",
       "image": "images/fixtures/robe/cycbar-15--cycbar-15x--ibar-15.png",
-      "details": "json/fixture-details/1a4b06fc23d735a6633eb2db9db21872e3a2fbbde33d15637130e7dc18d2114e.json",
+      "details": "json/fixture-details/robe/cycbar-15.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_CycBar_15@2025-12-03__Reupload_to_share.gdtf",
         "sha256": "1a4b06fc23d735a6633eb2db9db21872e3a2fbbde33d15637130e7dc18d2114e",
@@ -952,7 +952,7 @@
       },
       "shortName": "CycBar15X",
       "image": "images/fixtures/robe/cycbar-15--cycbar-15x--ibar-15.png",
-      "details": "json/fixture-details/21a344306eee33310d760230425701907214e9966896acd7c6e4f5ba58c0c7a1.json",
+      "details": "json/fixture-details/robe/cycbar-15x.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_CycBar_15X@2025-12-03__Reupload_to_share.gdtf",
         "sha256": "21a344306eee33310d760230425701907214e9966896acd7c6e4f5ba58c0c7a1",
@@ -1002,7 +1002,7 @@
       },
       "shortName": "CycFX8",
       "image": "images/fixtures/robe/cycfx-8.png",
-      "details": "json/fixture-details/4705b1286b3f60e46e0a5855d6ceccb2a3f09758c903d17fdc6bcb5e1c7b290b.json",
+      "details": "json/fixture-details/robe/cycfx-8.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_CycFX_8@2025-04-28__Shutter_initial_function_fix_in_Mode_6.gdtf",
         "sha256": "4705b1286b3f60e46e0a5855d6ceccb2a3f09758c903d17fdc6bcb5e1c7b290b",
@@ -1047,7 +1047,7 @@
       },
       "shortName": "DL4S Profile",
       "image": "images/fixtures/robe/dl4s-profile.png",
-      "details": "json/fixture-details/70d0fdfab40ce06b68fa3d2a35094919fe8337d5db32f36f38ff14e88ac720cf.json",
+      "details": "json/fixture-details/robe/dl4s-profile.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_DL4S_Profile@2025-05-20__Tilt_physical_values_revision.gdtf",
         "sha256": "70d0fdfab40ce06b68fa3d2a35094919fe8337d5db32f36f38ff14e88ac720cf",
@@ -1092,7 +1092,7 @@
       },
       "shortName": "DL4X Spot",
       "image": "images/fixtures/robe/dl4x-spot--dlx-spot.png",
-      "details": "json/fixture-details/b77282e3f2f0b0145263a504ea6a28e1f1a8e4e4d212394e643c253dcc0ce284.json",
+      "details": "json/fixture-details/robe/dl4x-spot.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_DL4X_Spot@2025-05-20_Tilt_physical_values_revision.gdtf",
         "sha256": "b77282e3f2f0b0145263a504ea6a28e1f1a8e4e4d212394e643c253dcc0ce284",
@@ -1137,7 +1137,7 @@
       },
       "shortName": "DL7F Wash",
       "image": "images/fixtures/robe/dl7f-wash.png",
-      "details": "json/fixture-details/9304c14d6d30589c644197dab4613b604c6e6ec275a365942c42bacddc1e3e71.json",
+      "details": "json/fixture-details/robe/dl7f-wash.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_DL7F_Wash@2022-11-21__Major_update.gdtf",
         "sha256": "9304c14d6d30589c644197dab4613b604c6e6ec275a365942c42bacddc1e3e71",
@@ -1182,7 +1182,7 @@
       },
       "shortName": "DL7S Profile",
       "image": "images/fixtures/robe/dl7s-profile.png",
-      "details": "json/fixture-details/47b9bdff6d8e90f89e864fad148068cc6fc7a2580e465a4c6ad5cf3c00687832.json",
+      "details": "json/fixture-details/robe/dl7s-profile.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_DL7S_Profile@2025-02-12__Framing_shutter_rotation_fix__3D_models_revision.gdtf",
         "sha256": "47b9bdff6d8e90f89e864fad148068cc6fc7a2580e465a4c6ad5cf3c00687832",
@@ -1227,7 +1227,7 @@
       },
       "shortName": "DLX Spot",
       "image": "images/fixtures/robe/dl4x-spot--dlx-spot.png",
-      "details": "json/fixture-details/2eb48994dcc65d04009ce0c7af9f9d6b37adcf9d0aba901c4aee500f83d5aa8e.json",
+      "details": "json/fixture-details/robe/dlx-spot.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_DLX_Spot@2025-05-20__Tilt_physical_values_revision.gdtf",
         "sha256": "2eb48994dcc65d04009ce0c7af9f9d6b37adcf9d0aba901c4aee500f83d5aa8e",
@@ -1267,7 +1267,7 @@
       },
       "shortName": "ESPRITE",
       "image": "images/fixtures/robe/esprite.png",
-      "details": "json/fixture-details/8a49fd0b1807603122b4635acdcfc7436db99a966c9aced40ac3ec13dc2d7966.json",
+      "details": "json/fixture-details/robe/esprite.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Esprite@2025-11-07_Personality_RDM_number_revision.gdtf",
         "sha256": "8a49fd0b1807603122b4635acdcfc7436db99a966c9aced40ac3ec13dc2d7966",
@@ -1302,7 +1302,7 @@
       },
       "shortName": "ESPRITE Fresnel",
       "image": "images/fixtures/robe/esprite-fresnel.png",
-      "details": "json/fixture-details/e3e0ad312063a7a0bb70e82ce64d01b6fa15e6919c8a776bfcd97fb64c72ff2e.json",
+      "details": "json/fixture-details/robe/esprite-fresnel.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Esprite_Fresnel@2024-05-09__Beam_output_values_update.gdtf",
         "sha256": "e3e0ad312063a7a0bb70e82ce64d01b6fa15e6919c8a776bfcd97fb64c72ff2e",
@@ -1342,7 +1342,7 @@
       },
       "shortName": "EspriteFS",
       "image": "images/fixtures/robe/esprite-fs.png",
-      "details": "json/fixture-details/faa89643bedcdb93f4c507a48dbb60af68582f4d29cd1e69c93784e2a77f6af5.json",
+      "details": "json/fixture-details/robe/esprite-fs.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Esprite_FS@2025-11-10__Personality_RDM_number_revision.gdtf",
         "sha256": "faa89643bedcdb93f4c507a48dbb60af68582f4d29cd1e69c93784e2a77f6af5",
@@ -1377,7 +1377,7 @@
       },
       "shortName": "ESPRITE™ PC",
       "image": "images/fixtures/robe/esprite-pc.png",
-      "details": "json/fixture-details/7c731a3cc691ebae3f99604d793e584a643d9fa03a7b9f8634a096b5dad3e057.json",
+      "details": "json/fixture-details/robe/esprite-pc.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Esprite_PC@2024-05-09__Beam_output_values_update.gdtf",
         "sha256": "7c731a3cc691ebae3f99604d793e584a643d9fa03a7b9f8634a096b5dad3e057",
@@ -1407,7 +1407,7 @@
       },
       "shortName": "Footsie1 MC",
       "image": "images/fixtures/robe/footsie1-mc.png",
-      "details": "json/fixture-details/bffd5194e8df541fb3f7649ae35d5e4f7316cf2de77cd220630f10d197187a1d.json",
+      "details": "json/fixture-details/robe/footsie1-mc.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Footsie1_MC@2025-09-04__Initial_revision.gdtf",
         "sha256": "bffd5194e8df541fb3f7649ae35d5e4f7316cf2de77cd220630f10d197187a1d",
@@ -1437,7 +1437,7 @@
       },
       "shortName": "Footsie1 RGBW",
       "image": "images/fixtures/robe/footsie1-rgbw.png",
-      "details": "json/fixture-details/aaec36633dcd461f39b8855a8b1db8f446e161f8b98693acbe53f694c883bb33.json",
+      "details": "json/fixture-details/robe/footsie1-rgbw.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Footsie1_RGBW@2025-09-19__Control_channel_update.gdtf",
         "sha256": "aaec36633dcd461f39b8855a8b1db8f446e161f8b98693acbe53f694c883bb33",
@@ -1467,7 +1467,7 @@
       },
       "shortName": "Footsie1 S RGBW",
       "image": "images/fixtures/robe/footsie1-slim-rgbw--footsie1-slim-tw--footsie1-slim-ww.png",
-      "details": "json/fixture-details/fd4457429e0108ab721816f3956b244abc3726cb707ecff4c73310b46536976c.json",
+      "details": "json/fixture-details/robe/footsie1-slim-rgbw.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Footsie1_Slim_RGBW@2025-09-19__Control_channel_update.gdtf",
         "sha256": "fd4457429e0108ab721816f3956b244abc3726cb707ecff4c73310b46536976c",
@@ -1497,7 +1497,7 @@
       },
       "shortName": "Footsie1 S TW",
       "image": "images/fixtures/robe/footsie1-slim-rgbw--footsie1-slim-tw--footsie1-slim-ww.png",
-      "details": "json/fixture-details/7eb3450c6210e37830e74ef0bfacd08827ce87baf93154654b35c469f62e6f89.json",
+      "details": "json/fixture-details/robe/footsie1-slim-tw.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Footsie1_Slim_TW@2025-09-19__Control_channel_update.gdtf",
         "sha256": "7eb3450c6210e37830e74ef0bfacd08827ce87baf93154654b35c469f62e6f89",
@@ -1527,7 +1527,7 @@
       },
       "shortName": "Footsie1 S WW",
       "image": "images/fixtures/robe/footsie1-slim-rgbw--footsie1-slim-tw--footsie1-slim-ww.png",
-      "details": "json/fixture-details/4c1202421d9b12f356f9636061ed5361ee07e9d0400e26f572e6a7694a2c5749.json",
+      "details": "json/fixture-details/robe/footsie1-slim-ww.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Footsie1_Slim_WW@2025-09-19__Control_channel_update.gdtf",
         "sha256": "4c1202421d9b12f356f9636061ed5361ee07e9d0400e26f572e6a7694a2c5749",
@@ -1557,7 +1557,7 @@
       },
       "shortName": "Footsie1 TW",
       "image": "images/fixtures/robe/footsie1-tw.png",
-      "details": "json/fixture-details/12e8b9d4de33ba74152568c6b786cd23f2e3f385fe24dc2e9a7c5e5bc6337ee9.json",
+      "details": "json/fixture-details/robe/footsie1-tw.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Footsie1_TW@2025-09-19__Control_channel_update.gdtf",
         "sha256": "12e8b9d4de33ba74152568c6b786cd23f2e3f385fe24dc2e9a7c5e5bc6337ee9",
@@ -1587,7 +1587,7 @@
       },
       "shortName": "Footsie2 MC",
       "image": "images/fixtures/robe/footsie2-mc.png",
-      "details": "json/fixture-details/4ed6ccaf752ccadf26862192654e70f6069bfd3fd86c62e03e77d4f86e49a74e.json",
+      "details": "json/fixture-details/robe/footsie2-mc.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Footsie2_MC@2025-09-04__Initial_revision.gdtf",
         "sha256": "4ed6ccaf752ccadf26862192654e70f6069bfd3fd86c62e03e77d4f86e49a74e",
@@ -1617,7 +1617,7 @@
       },
       "shortName": "Footsie2 RGBW",
       "image": "images/fixtures/robe/footsie2-rgbw.png",
-      "details": "json/fixture-details/60090cd10669877c68809eea16e8690a098974f204632fc3e5839d832ff11b9f.json",
+      "details": "json/fixture-details/robe/footsie2-rgbw.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Footsie2_RGBW@2025-09-19__Control_channel_update.gdtf",
         "sha256": "60090cd10669877c68809eea16e8690a098974f204632fc3e5839d832ff11b9f",
@@ -1647,7 +1647,7 @@
       },
       "shortName": "Footsie2 S WW",
       "image": "images/fixtures/robe/footsie2-slim-ww.png",
-      "details": "json/fixture-details/7ef8041d74862376e759f1a72af4daa6fc4be0181b99560611404b40cb10cfd1.json",
+      "details": "json/fixture-details/robe/footsie2-slim-ww.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Footsie2_Slim_WW@2025-09-19__Control_channel_update.gdtf",
         "sha256": "7ef8041d74862376e759f1a72af4daa6fc4be0181b99560611404b40cb10cfd1",
@@ -1677,7 +1677,7 @@
       },
       "shortName": "Footsie2 TW Frost Shield",
       "image": "images/fixtures/robe/footsie2-tw-frost-shield--footsie2-ww-frost-shield.png",
-      "details": "json/fixture-details/5814ef7ac863554dad890a34ccff9c15c1515ff51f43dc1c6bca036717cf63eb.json",
+      "details": "json/fixture-details/robe/footsie2-tw-frost-shield.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Footsie2_TW_Frost_Shield@2025-09-19__Control_channel_update.gdtf",
         "sha256": "5814ef7ac863554dad890a34ccff9c15c1515ff51f43dc1c6bca036717cf63eb",
@@ -1707,7 +1707,7 @@
       },
       "shortName": "Footsie2 WW",
       "image": "images/fixtures/robe/footsie2-ww.png",
-      "details": "json/fixture-details/bdaedae42f9902958645e96c11890e2d01f733cdd4e9110ef4d8ca33d3899e92.json",
+      "details": "json/fixture-details/robe/footsie2-ww.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Footsie2_WW@2025-09-19__Control_channel_update.gdtf",
         "sha256": "bdaedae42f9902958645e96c11890e2d01f733cdd4e9110ef4d8ca33d3899e92",
@@ -1737,7 +1737,7 @@
       },
       "shortName": "Footsie2 WW Frost Shield",
       "image": "images/fixtures/robe/footsie2-tw-frost-shield--footsie2-ww-frost-shield.png",
-      "details": "json/fixture-details/fbe24acd6cfcc871cf2b91e8ff3b6918fa72114ddd397a70c8e4aa1c978d6fde.json",
+      "details": "json/fixture-details/robe/footsie2-ww-frost-shield.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Footsie2_WW_Frost_Shield@2025-09-19__Control_channel_update.gdtf",
         "sha256": "fbe24acd6cfcc871cf2b91e8ff3b6918fa72114ddd397a70c8e4aa1c978d6fde",
@@ -1762,7 +1762,7 @@
       },
       "shortName": "FORTE",
       "image": "images/fixtures/robe/forte--forte-hcf.png",
-      "details": "json/fixture-details/51c31cfc490d5b85094b18d3ab0329d4d1f973364422b1f6d7e5bd2a0dbc0b81.json",
+      "details": "json/fixture-details/robe/forte.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Forte@2025-11-07_Personality_RDM_number_revision.gdtf",
         "sha256": "51c31cfc490d5b85094b18d3ab0329d4d1f973364422b1f6d7e5bd2a0dbc0b81",
@@ -1782,7 +1782,7 @@
       },
       "shortName": "Forte Fresnel",
       "image": "images/fixtures/robe/forte-fresnel.png",
-      "details": "json/fixture-details/59a7f0b960a58f5f39d4a9f3149fe40458bbcbac5ee53d9bffd26d2e98caca3b.json",
+      "details": "json/fixture-details/robe/forte-fresnel.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Forte_Fresnel@2024-03-27__Photometric_data_added.gdtf",
         "sha256": "59a7f0b960a58f5f39d4a9f3149fe40458bbcbac5ee53d9bffd26d2e98caca3b",
@@ -1807,7 +1807,7 @@
       },
       "shortName": "FORTE FS",
       "image": "images/fixtures/robe/forte-fs.png",
-      "details": "json/fixture-details/8c830fb527c7e5e4b899645085bf3b01a14456602961071ad09d9cb50e76bfbc.json",
+      "details": "json/fixture-details/robe/forte-fs.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Forte_FS@2025-11-07_Personality_RDM_number_revision.gdtf",
         "sha256": "8c830fb527c7e5e4b899645085bf3b01a14456602961071ad09d9cb50e76bfbc",
@@ -1832,7 +1832,7 @@
       },
       "shortName": "FORTE HCF",
       "image": "images/fixtures/robe/forte--forte-hcf.png",
-      "details": "json/fixture-details/4b1765e63db4f20a29e7a0909e0a5c3c2ec88431dd9f747c558dc26dd4aa0b6f.json",
+      "details": "json/fixture-details/robe/forte-hcf.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Forte_HCF@2025-11-07__Personality_RDM_number_revision.gdtf",
         "sha256": "4b1765e63db4f20a29e7a0909e0a5c3c2ec88431dd9f747c558dc26dd4aa0b6f",
@@ -1852,7 +1852,7 @@
       },
       "shortName": "Forte PC",
       "image": "images/fixtures/robe/forte-pc.png",
-      "details": "json/fixture-details/e431ca786d6dc76eadf1fb16057c5293182ef46492e0cbd2d55564169ab4ffc8.json",
+      "details": "json/fixture-details/robe/forte-pc.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Forte_PC@2024-03-27__Photometric_data_added.gdtf",
         "sha256": "e431ca786d6dc76eadf1fb16057c5293182ef46492e0cbd2d55564169ab4ffc8",
@@ -1882,7 +1882,7 @@
       },
       "shortName": "GigaPointe",
       "image": "images/fixtures/robe/gigapointe.png",
-      "details": "json/fixture-details/a0a8e5d4c85c14c4c7592a7403d2f67b9d8caa7a8a0c1ece9864c6f6ba61445b.json",
+      "details": "json/fixture-details/robe/gigapointe.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_GigaPointe@mabu_reworked_Zoom_ModeMasterFIx.gdtf",
         "sha256": "a0a8e5d4c85c14c4c7592a7403d2f67b9d8caa7a8a0c1ece9864c6f6ba61445b",
@@ -1907,7 +1907,7 @@
       },
       "shortName": "HolyPATT",
       "image": "images/fixtures/robe/holypatt.png",
-      "details": "json/fixture-details/6ea6ad99e9e912669343c9182351a8927a8892d0e3dd8364054019d7fc335908.json",
+      "details": "json/fixture-details/robe/holypatt.json",
       "provenance": {
         "fileName": "Robe_Lighting@HolyPATT@2025-01-21__Photo_and_thumbnail_revision__bulb_temperature_revision.gdtf",
         "sha256": "6ea6ad99e9e912669343c9182351a8927a8892d0e3dd8364054019d7fc335908",
@@ -1956,7 +1956,7 @@
       },
       "shortName": "iBar15",
       "image": "images/fixtures/robe/cycbar-15--cycbar-15x--ibar-15.png",
-      "details": "json/fixture-details/2a81ffe72af6a7f60e66710f919315f8dbf9dce3378ad86d398ed8d821833c00.json",
+      "details": "json/fixture-details/robe/ibar-15.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_iBar_15@2025-12-03__Reupload_to_share.gdtf",
         "sha256": "2a81ffe72af6a7f60e66710f919315f8dbf9dce3378ad86d398ed8d821833c00",
@@ -1986,7 +1986,7 @@
       },
       "shortName": "iBeam 350",
       "image": "images/fixtures/robe/ibeam-350.png",
-      "details": "json/fixture-details/a59d20c687403fa8943faef999f3a48d9d2cd107d2d0239c5895126f87101bb6.json",
+      "details": "json/fixture-details/robe/ibeam-350.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_iBeam_350@2026-01-05_Control_channel_update.gdtf",
         "sha256": "a59d20c687403fa8943faef999f3a48d9d2cd107d2d0239c5895126f87101bb6",
@@ -2006,7 +2006,7 @@
       },
       "shortName": "iBolt",
       "image": "images/fixtures/robe/ibolt.png",
-      "details": "json/fixture-details/0bcfdc9c7257f0d70fd61e4d3e444406dbda22e5e9ef0a8ef3858fbaa8491270.json",
+      "details": "json/fixture-details/robe/ibolt.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_iBolt@2026-05-26_Safety_control_channel_fix.gdtf",
         "sha256": "0bcfdc9c7257f0d70fd61e4d3e444406dbda22e5e9ef0a8ef3858fbaa8491270",
@@ -2046,7 +2046,7 @@
       },
       "shortName": "iEsprite",
       "image": "images/fixtures/robe/iesprite.png",
-      "details": "json/fixture-details/583b71509897202bcdf65903e709dbb83e5c8e88e053af767e76e4ab48a6a4f7.json",
+      "details": "json/fixture-details/robe/iesprite.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_iEsprite@2026-07-13_Control_channel_revision.gdtf",
         "sha256": "583b71509897202bcdf65903e709dbb83e5c8e88e053af767e76e4ab48a6a4f7",
@@ -2066,7 +2066,7 @@
       },
       "shortName": "LTL FS",
       "image": "images/fixtures/robe/iesprite-ltl-fs.png",
-      "details": "json/fixture-details/f36a7b764fa0536ef03a8448d087495e12219568c8f84879767da7e0ca1a3ded.json",
+      "details": "json/fixture-details/robe/iesprite-ltl-fs.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_iEsprite_LTL_FS@2026-07-13_Control_channel_revision.gdtf",
         "sha256": "f36a7b764fa0536ef03a8448d087495e12219568c8f84879767da7e0ca1a3ded",
@@ -2086,7 +2086,7 @@
       },
       "shortName": "LTL WB",
       "image": "images/fixtures/robe/iesprite-ltl-wb.png",
-      "details": "json/fixture-details/5540b5d8bc979df888b6b0186153147e08d549e698be444160d9c77268b31fc4.json",
+      "details": "json/fixture-details/robe/iesprite-ltl-wb.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_iEsprite_LTL_WB@2026-07-13_Control_channel_revision.gdtf",
         "sha256": "5540b5d8bc979df888b6b0186153147e08d549e698be444160d9c77268b31fc4",
@@ -2111,7 +2111,7 @@
       },
       "shortName": "iFORTE",
       "image": "images/fixtures/robe/iforte.png",
-      "details": "json/fixture-details/6fa36d7a8b5f0c58257c4cc007148adf203c489ed8d291b226c8c5432cb5d050.json",
+      "details": "json/fixture-details/robe/iforte.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_iForte@2026-07-13_Control_channel_revision.gdtf",
         "sha256": "6fa36d7a8b5f0c58257c4cc007148adf203c489ed8d291b226c8c5432cb5d050",
@@ -2131,7 +2131,7 @@
       },
       "shortName": "iForte iFresnel",
       "image": "images/fixtures/robe/iforte-fresnel.png",
-      "details": "json/fixture-details/83bc9422e0cfc2237fd7c940f6850dd15b8f03efb125923f51c5639ae06c471e.json",
+      "details": "json/fixture-details/robe/iforte-fresnel.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_iForte_Fresnel@2025-12-17_Control_channel_update.gdtf",
         "sha256": "83bc9422e0cfc2237fd7c940f6850dd15b8f03efb125923f51c5639ae06c471e",
@@ -2156,7 +2156,7 @@
       },
       "shortName": "iFORTE FS",
       "image": "images/fixtures/robe/iforte-fs.png",
-      "details": "json/fixture-details/24e07c34a8e4477c3d49b0784941e76f12d6ef2b17beacb0e46a7f5fa23cfab9.json",
+      "details": "json/fixture-details/robe/iforte-fs.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_iForte_FS@2026-07-13_Control_channel_revision.gdtf",
         "sha256": "24e07c34a8e4477c3d49b0784941e76f12d6ef2b17beacb0e46a7f5fa23cfab9",
@@ -2176,7 +2176,7 @@
       },
       "shortName": "iFORTE LTX FS",
       "image": "images/fixtures/robe/iforte-ltx-fs.png",
-      "details": "json/fixture-details/61452e483ae583af1e470f1eac67934e9ff38a8db8c8d65b3bf0182c2b6c2617.json",
+      "details": "json/fixture-details/robe/iforte-ltx-fs.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_iForte_LTX_FS@2026-08-10_Open_wheel_slots_color_revision.gdtf",
         "sha256": "61452e483ae583af1e470f1eac67934e9ff38a8db8c8d65b3bf0182c2b6c2617",
@@ -2196,7 +2196,7 @@
       },
       "shortName": "iFORTE LTX WB",
       "image": "images/fixtures/robe/iforte-ltx-wb.png",
-      "details": "json/fixture-details/27adab01c7b0c3b1aa8a3fba420f09f4dfeeb5bdf11b4eea5e8b904db95c8d19.json",
+      "details": "json/fixture-details/robe/iforte-ltx-wb.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_iForte_LTX_WB@2026-07-13_Control_channel_revision.gdtf",
         "sha256": "27adab01c7b0c3b1aa8a3fba420f09f4dfeeb5bdf11b4eea5e8b904db95c8d19",
@@ -2221,7 +2221,7 @@
       },
       "shortName": "iPainte",
       "image": "images/fixtures/robe/ipainte.png",
-      "details": "json/fixture-details/e3ae146eabf550ebe966e251c7e383c892e81f50e8e78bb1bf742765751a126e.json",
+      "details": "json/fixture-details/robe/ipainte.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_iPainte@2026-07-13_Control_channel_revision.gdtf",
         "sha256": "e3ae146eabf550ebe966e251c7e383c892e81f50e8e78bb1bf742765751a126e",
@@ -2241,7 +2241,7 @@
       },
       "shortName": "LTM WB",
       "image": "images/fixtures/robe/ipainte-ltm-wb.png",
-      "details": "json/fixture-details/a69940dbb384857678625161c47c8895e6aceb8cb0a9d1f95861b9ceb7181572.json",
+      "details": "json/fixture-details/robe/ipainte-ltm-wb.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_iPAINTE_LTM_WB@2026-08-04_Prism_macro_no_wheel_slot_link_added.gdtf",
         "sha256": "a69940dbb384857678625161c47c8895e6aceb8cb0a9d1f95861b9ceb7181572",
@@ -2271,7 +2271,7 @@
       },
       "shortName": "iParFect150FWRGBA",
       "image": "images/fixtures/robe/iparfect-150-fw-rgba.png",
-      "details": "json/fixture-details/6080eef7eeb1655b62f60c1d56c55138f5197b94f53321c80ece2d3a6cebd0f3.json",
+      "details": "json/fixture-details/robe/iparfect-150-fw-rgba.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_iParFect_150_FW_RGBA@2022-11-23__Major_update.gdtf",
         "sha256": "6080eef7eeb1655b62f60c1d56c55138f5197b94f53321c80ece2d3a6cebd0f3",
@@ -2301,7 +2301,7 @@
       },
       "shortName": "iParFect150FWRGBW",
       "image": "images/fixtures/robe/iparfect-150-fw-rgbw.png",
-      "details": "json/fixture-details/20d357aecec6b6ced91991a2e4fcaf7e72ee80a1e00cda8c3f59cfce94b24b45.json",
+      "details": "json/fixture-details/robe/iparfect-150-fw-rgbw.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_iParFect_150_FW_RGBW@2022-11-23__Major_update.gdtf",
         "sha256": "20d357aecec6b6ced91991a2e4fcaf7e72ee80a1e00cda8c3f59cfce94b24b45",
@@ -2326,7 +2326,7 @@
       },
       "shortName": "iPointe",
       "image": "images/fixtures/robe/ipointe.png",
-      "details": "json/fixture-details/44144ec6f6d21eb6d74973a3c0407fb792a050df34b74fdc6b75d4a30163bcbd.json",
+      "details": "json/fixture-details/robe/ipointe.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_iPointe@2025-11-07__Personality_RDM_number_revision.gdtf",
         "sha256": "44144ec6f6d21eb6d74973a3c0407fb792a050df34b74fdc6b75d4a30163bcbd",
@@ -2351,7 +2351,7 @@
       },
       "shortName": "iPointe65",
       "image": "images/fixtures/robe/ipointe65.png",
-      "details": "json/fixture-details/aa49367024832fbf50b21cd8c385d995f22c8023e3b1edf0c4831e6428135fce.json",
+      "details": "json/fixture-details/robe/ipointe65.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_iPointe65@2023-11-08__Animation_wheel_macros_channel_fix.gdtf",
         "sha256": "aa49367024832fbf50b21cd8c385d995f22c8023e3b1edf0c4831e6428135fce",
@@ -2386,7 +2386,7 @@
       },
       "shortName": "iProMotion",
       "image": "images/fixtures/robe/ipromotion.png",
-      "details": "json/fixture-details/3f525adb48fd7c91f03138772972b0e58ac6e5237122735f5a09521ff02a8128.json",
+      "details": "json/fixture-details/robe/ipromotion.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_iProMotion@2025-11-18__Control_channel_revision.gdtf",
         "sha256": "3f525adb48fd7c91f03138772972b0e58ac6e5237122735f5a09521ff02a8128",
@@ -2451,7 +2451,7 @@
       },
       "shortName": "iSpiider",
       "image": "images/fixtures/robe/ispiider.png",
-      "details": "json/fixture-details/bfce13719c099071901a97fa375493559b8095811c8263bbcc362c7e9462b001.json",
+      "details": "json/fixture-details/robe/ispiider.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_iSpiider@2025-12-03_Reupload_to_share.gdtf",
         "sha256": "bfce13719c099071901a97fa375493559b8095811c8263bbcc362c7e9462b001",
@@ -2516,7 +2516,7 @@
       },
       "shortName": "iSpiiderX",
       "image": "images/fixtures/robe/ispiider-x.png",
-      "details": "json/fixture-details/f41fc1eb0f1dc6310598bb536f444056343fa5ea3d9f85693fb9ef039b28e950.json",
+      "details": "json/fixture-details/robe/ispiider-x.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_iSpiiderX@2025-12-03_Reupload_to_share.gdtf",
         "sha256": "f41fc1eb0f1dc6310598bb536f444056343fa5ea3d9f85693fb9ef039b28e950",
@@ -2571,7 +2571,7 @@
       },
       "shortName": "iT10",
       "image": "images/fixtures/robe/it10-profile.png",
-      "details": "json/fixture-details/bb5aad69578c5bfe111f017db750af253250cc7d05388d43adea4d69385b9cef.json",
+      "details": "json/fixture-details/robe/it10-profile.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_iT10_Profile@2026-09-02_Initial_release_to_share.gdtf",
         "sha256": "bb5aad69578c5bfe111f017db750af253250cc7d05388d43adea4d69385b9cef",
@@ -2626,7 +2626,7 @@
       },
       "shortName": "iT12 Fresnel",
       "image": "images/fixtures/robe/it12-fresnel.png",
-      "details": "json/fixture-details/c88d04877e2a52e977f984ce2fab622cd90241fa8a43a6300eb2c06ca7af3b16.json",
+      "details": "json/fixture-details/robe/it12-fresnel.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_iT12_Fresnel@2026-07-21_Color_control_channel_update.gdtf",
         "sha256": "c88d04877e2a52e977f984ce2fab622cd90241fa8a43a6300eb2c06ca7af3b16",
@@ -2681,7 +2681,7 @@
       },
       "shortName": "iT12 PC",
       "image": "images/fixtures/robe/it12-pc.png",
-      "details": "json/fixture-details/3c2a6abf9993cacfed680c806c13a11e16253fde18f4400e82aeaae33ad461b9.json",
+      "details": "json/fixture-details/robe/it12-pc.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_iT12_PC@2026-07-21_Color_control_channel_update.gdtf",
         "sha256": "3c2a6abf9993cacfed680c806c13a11e16253fde18f4400e82aeaae33ad461b9",
@@ -2736,7 +2736,7 @@
       },
       "shortName": "iT12 Profile",
       "image": "images/fixtures/robe/it12-profile.png",
-      "details": "json/fixture-details/f024967b3dff0b1ff8ad3405ad97d29a18326449b280677a3d6dd0cf5b3407f0.json",
+      "details": "json/fixture-details/robe/it12-profile.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_iT12_Profile@2026-07-21_Color_control_channel_update.gdtf",
         "sha256": "f024967b3dff0b1ff8ad3405ad97d29a18326449b280677a3d6dd0cf5b3407f0",
@@ -2781,7 +2781,7 @@
       },
       "shortName": "iTetra 2",
       "image": "images/fixtures/robe/itetra-2.png",
-      "details": "json/fixture-details/c8a1454715cff3cee66d4b57ec0221208bd77f97202aa8c1ad6c0654ed17dabb.json",
+      "details": "json/fixture-details/robe/itetra-2.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_iTetra2@2025-12-03__Reupload_to_share.gdtf",
         "sha256": "c8a1454715cff3cee66d4b57ec0221208bd77f97202aa8c1ad6c0654ed17dabb",
@@ -2806,7 +2806,7 @@
       },
       "shortName": "LEDBeam150FWRGBA",
       "image": "images/fixtures/robe/ledbeam-150-fw-rgba--ledbeam-150-fw-rgbw--ledbeam-150-rgba--ledbeam-150-rgbw.png",
-      "details": "json/fixture-details/e47d1bd20ef0c44694eb60a8512fb27e097a876ec1e12775fcf22140c6140bcb.json",
+      "details": "json/fixture-details/robe/ledbeam-150-fw-rgba.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_LEDBeam_150_FW_RGBA@2026-05-22_Control_channel_update.gdtf",
         "sha256": "e47d1bd20ef0c44694eb60a8512fb27e097a876ec1e12775fcf22140c6140bcb",
@@ -2831,7 +2831,7 @@
       },
       "shortName": "LEDBeam150FW",
       "image": "images/fixtures/robe/ledbeam-150-fw-rgba--ledbeam-150-fw-rgbw--ledbeam-150-rgba--ledbeam-150-rgbw.png",
-      "details": "json/fixture-details/21249ed1fdf3782975db561410c987249838bb529f3600ea2a8acedfc67ba420.json",
+      "details": "json/fixture-details/robe/ledbeam-150-fw-rgbw.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_LEDBeam_150_FW_RGBW@2026-05-22_Control_channel_update.gdtf",
         "sha256": "21249ed1fdf3782975db561410c987249838bb529f3600ea2a8acedfc67ba420",
@@ -2856,7 +2856,7 @@
       },
       "shortName": "LEDBeam150RGBA",
       "image": "images/fixtures/robe/ledbeam-150-fw-rgba--ledbeam-150-fw-rgbw--ledbeam-150-rgba--ledbeam-150-rgbw.png",
-      "details": "json/fixture-details/a215d9c474c6b5e034cd77f59c40d7ea92301f0d85d6589eb6468d754005b0ca.json",
+      "details": "json/fixture-details/robe/ledbeam-150-rgba.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_LEDBeam_150_RGBA@2026-05-22_Control_channel_update.gdtf",
         "sha256": "a215d9c474c6b5e034cd77f59c40d7ea92301f0d85d6589eb6468d754005b0ca",
@@ -2881,7 +2881,7 @@
       },
       "shortName": "LEDBeam150",
       "image": "images/fixtures/robe/ledbeam-150-fw-rgba--ledbeam-150-fw-rgbw--ledbeam-150-rgba--ledbeam-150-rgbw.png",
-      "details": "json/fixture-details/33e9aefd3b4e950825622f627dcb15a8fb5784640c71f268289c4df0329d6fb5.json",
+      "details": "json/fixture-details/robe/ledbeam-150-rgbw.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_LEDBeam_150_RGBW@2026-05-22_Control_channel_update.gdtf",
         "sha256": "33e9aefd3b4e950825622f627dcb15a8fb5784640c71f268289c4df0329d6fb5",
@@ -2911,7 +2911,7 @@
       },
       "shortName": "LB200",
       "image": "images/fixtures/robe/ledbeam-200.png",
-      "details": "json/fixture-details/d663da9cbca0763224995399f2ba79a2128c118c7f53879610f36f4508b99359.json",
+      "details": "json/fixture-details/robe/ledbeam-200.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_LEDBeam_200@2026-08-31_Pan_tilt_physical_data_added.gdtf",
         "sha256": "d663da9cbca0763224995399f2ba79a2128c118c7f53879610f36f4508b99359",
@@ -2941,7 +2941,7 @@
       },
       "shortName": "LEDBeam 350",
       "image": "images/fixtures/robe/ledbeam-350--ledbeam-350-fw--ledbeam-350-rgba.png",
-      "details": "json/fixture-details/c84f732801310113f6cc675b649f9551e1b55cc335f9c3db7a9bb13e8de83436.json",
+      "details": "json/fixture-details/robe/ledbeam-350.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_LEDBeam_350@2026-01-05_Control_channel_update.gdtf",
         "sha256": "c84f732801310113f6cc675b649f9551e1b55cc335f9c3db7a9bb13e8de83436",
@@ -2971,7 +2971,7 @@
       },
       "shortName": "LEDBeam 350 FW",
       "image": "images/fixtures/robe/ledbeam-350--ledbeam-350-fw--ledbeam-350-rgba.png",
-      "details": "json/fixture-details/a7a621dfad9d7bb82149e1f1723464024b3500c3b43ed172e7ee989b6a9fd307.json",
+      "details": "json/fixture-details/robe/ledbeam-350-fw.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_LEDBeam_350_FW@2026-01-05_Control_channel_update.gdtf",
         "sha256": "a7a621dfad9d7bb82149e1f1723464024b3500c3b43ed172e7ee989b6a9fd307",
@@ -3001,7 +3001,7 @@
       },
       "shortName": "LEDBeam 350 RGBA",
       "image": "images/fixtures/robe/ledbeam-350--ledbeam-350-fw--ledbeam-350-rgba.png",
-      "details": "json/fixture-details/e80fcf72dfac6d2c847b35d28f141cd5badaeae67d8165f038058c487863e45f.json",
+      "details": "json/fixture-details/robe/ledbeam-350-rgba.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_LEDBeam_350_RGBA@2026-03-23_Control_channel_update_revision.gdtf",
         "sha256": "e80fcf72dfac6d2c847b35d28f141cd5badaeae67d8165f038058c487863e45f",
@@ -3031,7 +3031,7 @@
       },
       "shortName": "LB400",
       "image": "images/fixtures/robe/ledbeam-400.png",
-      "details": "json/fixture-details/ecb4c1cec9059ae67e72b7bf9c88e3505f212f331adbd408e7b781ebb3516f1b.json",
+      "details": "json/fixture-details/robe/ledbeam-400.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_LEDBeam_400@2026-09-02_Initial_release_to_share.gdtf",
         "sha256": "ecb4c1cec9059ae67e72b7bf9c88e3505f212f331adbd408e7b781ebb3516f1b",
@@ -3056,7 +3056,7 @@
       },
       "shortName": "LEDForce 18",
       "image": "images/fixtures/robe/ledforce-18-rgbw.png",
-      "details": "json/fixture-details/2f01ffc1d13d2535576a019cfcc93ea609d47f9bd9a20336e265e4b161387e81.json",
+      "details": "json/fixture-details/robe/ledforce-18-rgbw.json",
       "provenance": {
         "fileName": "Robe_Lighting@LEDForce_18_RGBW@2022-11-04__Color_wheels_correction.gdtf",
         "sha256": "2f01ffc1d13d2535576a019cfcc93ea609d47f9bd9a20336e265e4b161387e81",
@@ -3081,7 +3081,7 @@
       },
       "shortName": "LEDForce 7",
       "image": "images/fixtures/robe/ledforce-7-rgbw.png",
-      "details": "json/fixture-details/ab01cca80fb56e21cac2e4deffcd30cf5f303c8e17331588c67fca9da2ef3e84.json",
+      "details": "json/fixture-details/robe/ledforce-7-rgbw.json",
       "provenance": {
         "fileName": "Robe_Lighting@LEDForce_7_RGBW@2023-03-10__Geometry_axis_revision__Wiring_object_revision.gdtf",
         "sha256": "ab01cca80fb56e21cac2e4deffcd30cf5f303c8e17331588c67fca9da2ef3e84",
@@ -3101,7 +3101,7 @@
       },
       "shortName": "LedPOINTE",
       "image": "images/fixtures/robe/ledpointe.png",
-      "details": "json/fixture-details/30d7cdfbddd7d05bd705e5ccf9cecdea36e9924069d3383c56de879641f7cc4e.json",
+      "details": "json/fixture-details/robe/ledpointe.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_LedPOINTE@2026-01-27__CTO_channel_fix.gdtf",
         "sha256": "30d7cdfbddd7d05bd705e5ccf9cecdea36e9924069d3383c56de879641f7cc4e",
@@ -3126,7 +3126,7 @@
       },
       "shortName": "MegaPointe",
       "image": "images/fixtures/robe/megapointe.png",
-      "details": "json/fixture-details/a2d3dde2d69d3cbbd9ae84d02f63875589f02dffe7133ec5c063937b3ed4962c.json",
+      "details": "json/fixture-details/robe/megapointe.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_MegaPointe@2026-04-13_Shutter_channel_sets_revision.gdtf",
         "sha256": "a2d3dde2d69d3cbbd9ae84d02f63875589f02dffe7133ec5c063937b3ed4962c",
@@ -3146,7 +3146,7 @@
       },
       "shortName": "MiniMe",
       "image": "images/fixtures/robe/minime.png",
-      "details": "json/fixture-details/75ab336e82eb34a85e90e049641927825b7c2cea219bffe09c7c7a92e9ad4d78.json",
+      "details": "json/fixture-details/robe/minime.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_MiniMe@2023-01-24__3D_models_simplification.gdtf",
         "sha256": "75ab336e82eb34a85e90e049641927825b7c2cea219bffe09c7c7a92e9ad4d78",
@@ -3176,7 +3176,7 @@
       },
       "shortName": "miniPointe",
       "image": "images/fixtures/robe/minipointe.png",
-      "details": "json/fixture-details/739dcabf53a8feed62d3145bab913d27a28cd22d6f7d2eab88bcd73f9fceb646.json",
+      "details": "json/fixture-details/robe/minipointe.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_MiniPointe@2024-04-23__Gobo_channels_revision.gdtf",
         "sha256": "739dcabf53a8feed62d3145bab913d27a28cd22d6f7d2eab88bcd73f9fceb646",
@@ -3206,7 +3206,7 @@
       },
       "shortName": "MMX WashBeam",
       "image": "images/fixtures/robe/mmx-washbeam.png",
-      "details": "json/fixture-details/6b2e10aa6236b9ddd7db0ade2d7cb83a19c8259f9f627ed6437773da66fe39ef.json",
+      "details": "json/fixture-details/robe/mmx-washbeam.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_MMX_WashBeam@2025-11-10__Personality_RDM_number_revision.gdtf",
         "sha256": "6b2e10aa6236b9ddd7db0ade2d7cb83a19c8259f9f627ed6437773da66fe39ef",
@@ -3231,7 +3231,7 @@
       },
       "shortName": "MolyPATT",
       "image": "images/fixtures/robe/molypatt.png",
-      "details": "json/fixture-details/c285b177d7a42d8d75251f38f45ece990d15c4285319bf13786abfab8156940b.json",
+      "details": "json/fixture-details/robe/molypatt.json",
       "provenance": {
         "fileName": "Robe_Lighting@MolyPATT@2025-01-21__Photo_and_thumbnail_revision_bulb_temperature_revision.gdtf",
         "sha256": "c285b177d7a42d8d75251f38f45ece990d15c4285319bf13786abfab8156940b",
@@ -3271,7 +3271,7 @@
       },
       "shortName": "MySVPTT",
       "image": "images/fixtures/robe/mysvopatt.png",
-      "details": "json/fixture-details/e3a14da60f8279b60bf9f5107cb9af66e2c7d9c83197a75ee602ecf7e3db3cd5.json",
+      "details": "json/fixture-details/robe/mysvopatt.json",
       "provenance": {
         "fileName": "Robe_Lighting@MySVOPATT@2026-09-02_Initial_release_to_share.gdtf",
         "sha256": "e3a14da60f8279b60bf9f5107cb9af66e2c7d9c83197a75ee602ecf7e3db3cd5",
@@ -3326,7 +3326,7 @@
       },
       "shortName": "onePATT",
       "image": "images/fixtures/robe/onepatt.png",
-      "details": "json/fixture-details/7d93d3eecf6853dada64ae56b1209637951fdf8dad72ac21d2c816358ec68c9a.json",
+      "details": "json/fixture-details/robe/onepatt.json",
       "provenance": {
         "fileName": "Robe_Lighting@OnePATT@2025-12-03__Reupload_to_share.gdtf",
         "sha256": "7d93d3eecf6853dada64ae56b1209637951fdf8dad72ac21d2c816358ec68c9a",
@@ -3351,7 +3351,7 @@
       },
       "shortName": "Painte",
       "image": "images/fixtures/robe/painte--painte-spot.png",
-      "details": "json/fixture-details/1613333e40fc35fb98a00c0d0b501d426fd47fde6284e08bca82bb69995ea2f5.json",
+      "details": "json/fixture-details/robe/painte.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Painte@2025-11-07__Personality_RDM_number_revision.gdtf",
         "sha256": "1613333e40fc35fb98a00c0d0b501d426fd47fde6284e08bca82bb69995ea2f5",
@@ -3376,7 +3376,7 @@
       },
       "shortName": "Painte Spot",
       "image": "images/fixtures/robe/painte--painte-spot.png",
-      "details": "json/fixture-details/6e1636f2fc20b463cf5b38d4d1848504b8975cff56967187a7ba6d540e8fc5a8.json",
+      "details": "json/fixture-details/robe/painte-spot.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Painte_Spot@2025-11-07__Personality_RDM_number_revision.gdtf",
         "sha256": "6e1636f2fc20b463cf5b38d4d1848504b8975cff56967187a7ba6d540e8fc5a8",
@@ -3406,7 +3406,7 @@
       },
       "shortName": "ParFect150FWRGBA",
       "image": "images/fixtures/robe/parfect-150-fw-rgba--parfect-150-rgba.png",
-      "details": "json/fixture-details/7a9e1839f9ec28571f4a65ee3672adbc8f7e5f9ab09de720c43da1e1efd6d0f6.json",
+      "details": "json/fixture-details/robe/parfect-150-fw-rgba.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_ParFect_150_FW_RGBA@2026-04-09_Mode_3_added.gdtf",
         "sha256": "7a9e1839f9ec28571f4a65ee3672adbc8f7e5f9ab09de720c43da1e1efd6d0f6",
@@ -3431,7 +3431,7 @@
       },
       "shortName": "ParFect150FWRGBW",
       "image": "images/fixtures/robe/parfect-150-fw-rgbw--parfect-150-rgbw.png",
-      "details": "json/fixture-details/aa2a578ac2509f82af9db759fc1afba772d680ad848921f062fc7fe8dff10bed.json",
+      "details": "json/fixture-details/robe/parfect-150-fw-rgbw.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_ParFect_150_FW_RGBW@2023-07-17__3D_models_revision__Wiring_objects_revision__Tilt_revision.gdtf",
         "sha256": "aa2a578ac2509f82af9db759fc1afba772d680ad848921f062fc7fe8dff10bed",
@@ -3461,7 +3461,7 @@
       },
       "shortName": "ParFect150RGBA",
       "image": "images/fixtures/robe/parfect-150-fw-rgba--parfect-150-rgba.png",
-      "details": "json/fixture-details/749445e655109950561fef4a6ca5922afa4883966951a0e1484245346c056ed8.json",
+      "details": "json/fixture-details/robe/parfect-150-rgba.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_ParFect_150_RGBA@2026-04-09_Mode_3_added.gdtf",
         "sha256": "749445e655109950561fef4a6ca5922afa4883966951a0e1484245346c056ed8",
@@ -3486,7 +3486,7 @@
       },
       "shortName": "ParFect150RGBW",
       "image": "images/fixtures/robe/parfect-150-fw-rgbw--parfect-150-rgbw.png",
-      "details": "json/fixture-details/b5a80828ee5c2bc073c08000b7907797a1d67ea5eb4fc94e7ec1240ed1eae483.json",
+      "details": "json/fixture-details/robe/parfect-150-rgbw.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_ParFect_150_RGBW@2023-07-14__Tilt_revision.gdtf",
         "sha256": "b5a80828ee5c2bc073c08000b7907797a1d67ea5eb4fc94e7ec1240ed1eae483",
@@ -3516,7 +3516,7 @@
       },
       "shortName": "PATT2013",
       "image": "images/fixtures/robe/patt-2013.png",
-      "details": "json/fixture-details/8cae8d3b9f1c43622eb6c44a1341b93c53bc72d093e7f3e38396426cd25dc76a.json",
+      "details": "json/fixture-details/robe/patt-2013.json",
       "provenance": {
         "fileName": "Robe_Lighting@PATT_2013@2023-03-10__Geometry_and_wiring_object_reivison.gdtf",
         "sha256": "8cae8d3b9f1c43622eb6c44a1341b93c53bc72d093e7f3e38396426cd25dc76a",
@@ -3566,7 +3566,7 @@
       },
       "shortName": "PATT2017",
       "image": "images/fixtures/robe/patt-2017.png",
-      "details": "json/fixture-details/8ae51dccfea3a71ac0b765476636340bcc498cd397e0ef3728bd9bdf3fa51a44.json",
+      "details": "json/fixture-details/robe/patt-2017.json",
       "provenance": {
         "fileName": "Robe_Lighting@PATT_2017@2025-12-03__Reupload_to_share.gdtf",
         "sha256": "8ae51dccfea3a71ac0b765476636340bcc498cd397e0ef3728bd9bdf3fa51a44",
@@ -3596,7 +3596,7 @@
       },
       "shortName": "picklePATT",
       "image": "",
-      "details": "json/fixture-details/ac60122aa56d3cf05711df648aa758f68ff4401128aa418cdad8eb259ba6ae11.json",
+      "details": "json/fixture-details/robe/picklepatt.json",
       "provenance": {
         "fileName": "Robe_Lighting@picklePATT@Lampy_2026-09-18.gdtf",
         "sha256": "ac60122aa56d3cf05711df648aa758f68ff4401128aa418cdad8eb259ba6ae11",
@@ -3646,7 +3646,7 @@
       },
       "shortName": "pixelPATT",
       "image": "images/fixtures/robe/pixelpatt.png",
-      "details": "json/fixture-details/64795511fbe34915113f78a03b75d929f848d87371923ed508e65421409576df.json",
+      "details": "json/fixture-details/robe/pixelpatt.json",
       "provenance": {
         "fileName": "Robe_Lighting@pixelPATT@2026-02-19__3D_model_update.gdtf",
         "sha256": "64795511fbe34915113f78a03b75d929f848d87371923ed508e65421409576df",
@@ -3676,7 +3676,7 @@
       },
       "shortName": "Pointe",
       "image": "images/fixtures/robe/pointe.png",
-      "details": "json/fixture-details/bbfcac78b64fbd4ad4e6131b9176fb82b6b9e501f76e88cfbb26206b2cebb9c2.json",
+      "details": "json/fixture-details/robe/pointe.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Pointe@2024-04-22__Gobos_revision.gdtf",
         "sha256": "bbfcac78b64fbd4ad4e6131b9176fb82b6b9e501f76e88cfbb26206b2cebb9c2",
@@ -3701,7 +3701,7 @@
       },
       "shortName": "ProMotion",
       "image": "images/fixtures/robe/promotion.png",
-      "details": "json/fixture-details/64836a7aab89c7539c67259a0a0d039d6d1f0b8963678d5c4fd4b369086762c8.json",
+      "details": "json/fixture-details/robe/promotion.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_ProMotion@2023-07-13__Quiet_control_channel_and_3D_models_revision.gdtf",
         "sha256": "64836a7aab89c7539c67259a0a0d039d6d1f0b8963678d5c4fd4b369086762c8",
@@ -3721,7 +3721,7 @@
       },
       "shortName": "MotionCamera",
       "image": "images/fixtures/robe/robospot-motioncamera.png",
-      "details": "json/fixture-details/21e70ee0795af227b315f06158e57aa86606985abdd0cd4cdbce6bdb63200ad2.json",
+      "details": "json/fixture-details/robe/robospot-motioncamera.json",
       "provenance": {
         "fileName": "Robe_Lighting@RoboSpot_MotionCamera@2024-06-14__3D_models_revision.gdtf",
         "sha256": "21e70ee0795af227b315f06158e57aa86606985abdd0cd4cdbce6bdb63200ad2",
@@ -3751,7 +3751,7 @@
       },
       "shortName": "Scan575XT",
       "image": "images/fixtures/robe/scan-575xt.png",
-      "details": "json/fixture-details/c67a2c3c5cd7933838b6a52e1cd572c8209e3c94e62ed3e6b7abcff114ad8dfa.json",
+      "details": "json/fixture-details/robe/scan-575xt.json",
       "provenance": {
         "fileName": "Robe_Lighting@Scan_575XT@2025-01-17__Initial_release.gdtf",
         "sha256": "c67a2c3c5cd7933838b6a52e1cd572c8209e3c94e62ed3e6b7abcff114ad8dfa",
@@ -3776,7 +3776,7 @@
       },
       "shortName": "SilverScan",
       "image": "images/fixtures/robe/silverscan.png",
-      "details": "json/fixture-details/dc5426c74f196e8d1455934126564718b68141971a7383140c71aadce060097a.json",
+      "details": "json/fixture-details/robe/silverscan.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_SilverScan@2026-05-29_Control_channel_fix.gdtf",
         "sha256": "dc5426c74f196e8d1455934126564718b68141971a7383140c71aadce060097a",
@@ -3841,7 +3841,7 @@
       },
       "shortName": "Spiider",
       "image": "images/fixtures/robe/spiider.png",
-      "details": "json/fixture-details/b4fc4af229ec80d124e02aac051ac76f8ea74bbc7cac3cbda1c5a9994743242f.json",
+      "details": "json/fixture-details/robe/spiider.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Spiider@2025-12-03__Reupload_to_share.gdtf",
         "sha256": "b4fc4af229ec80d124e02aac051ac76f8ea74bbc7cac3cbda1c5a9994743242f",
@@ -3866,7 +3866,7 @@
       },
       "shortName": "Spikie",
       "image": "images/fixtures/robe/spikie-2.png",
-      "details": "json/fixture-details/bce4350d072804f9426e4106b1739df8806dc43eb98b4fd9fc62b75cb5c0cd95.json",
+      "details": "json/fixture-details/robe/spikie-dbc001dadcca.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Spikie@2025-06-10__Pan_tilt_continuous_physical_data_revision.gdtf",
         "sha256": "bce4350d072804f9426e4106b1739df8806dc43eb98b4fd9fc62b75cb5c0cd95",
@@ -3891,7 +3891,7 @@
       },
       "shortName": "Spikie+",
       "image": "images/fixtures/robe/spikie.png",
-      "details": "json/fixture-details/a2af677e9d50346f7b97ab585a250e3fa627742805889360abe8644556c67971.json",
+      "details": "json/fixture-details/robe/spikie-add0c0ccb732.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_SpikiePlus@2025-06-10__Pan_tilt_continuous_physical_data_revision.gdtf",
         "sha256": "a2af677e9d50346f7b97ab585a250e3fa627742805889360abe8644556c67971",
@@ -3911,7 +3911,7 @@
       },
       "shortName": "Spote",
       "image": "images/fixtures/robe/spote.png",
-      "details": "json/fixture-details/e2e416c39a0bf128221cf33ea02814b4d87f7de572a8d63d27c6ee91a6bee5f8.json",
+      "details": "json/fixture-details/robe/spote.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Spote@2022-11-10__DMX_Input_adjustment.gdtf",
         "sha256": "e2e416c39a0bf128221cf33ea02814b4d87f7de572a8d63d27c6ee91a6bee5f8",
@@ -3931,7 +3931,7 @@
       },
       "shortName": "SuperSpikie",
       "image": "images/fixtures/robe/superspikie.png",
-      "details": "json/fixture-details/2024eeb06046346462f92fbaffc7ab43973c70049e94e32cbefa0fab49be0fd6.json",
+      "details": "json/fixture-details/robe/superspikie.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_SuperSpikie@2025-06-11__Pan_tilt_continuous_physical_data_revision.gdtf",
         "sha256": "2024eeb06046346462f92fbaffc7ab43973c70049e94e32cbefa0fab49be0fd6",
@@ -3966,7 +3966,7 @@
       },
       "shortName": "SVB1",
       "image": "images/fixtures/robe/svb1.png",
-      "details": "json/fixture-details/d1e4a2b6d83cca215d2e92b0e8440e445cf45a842825feb3e6a85f326184a1bd.json",
+      "details": "json/fixture-details/robe/svb1.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_SVB1@2026-04-27_CTO_channel_revision.gdtf",
         "sha256": "d1e4a2b6d83cca215d2e92b0e8440e445cf45a842825feb3e6a85f326184a1bd",
@@ -4006,7 +4006,7 @@
       },
       "shortName": "SVOPATT",
       "image": "images/fixtures/robe/svopatt.png",
-      "details": "json/fixture-details/9d5fea8211c55c4405146da91ab4da5c227f68660cc3d8572e59bf3b73e2732e.json",
+      "details": "json/fixture-details/robe/svopatt.json",
       "provenance": {
         "fileName": "Robe_Lighting@SVOPATT@2026-08-17_Zoom_range_revision.gdtf",
         "sha256": "9d5fea8211c55c4405146da91ab4da5c227f68660cc3d8572e59bf3b73e2732e",
@@ -4041,7 +4041,7 @@
       },
       "shortName": "SVPTT Classic",
       "image": "images/fixtures/robe/svopatt-classic.png",
-      "details": "json/fixture-details/e95dd54ac869be8ed637036cbd5f16ebc6fde8e0ac2261107773c17af6d70438.json",
+      "details": "json/fixture-details/robe/svopatt-classic.json",
       "provenance": {
         "fileName": "Robe_Lighting@SVOPATT_Classic@2026-08-13_Empty_wheel_slot_fixed.gdtf",
         "sha256": "e95dd54ac869be8ed637036cbd5f16ebc6fde8e0ac2261107773c17af6d70438",
@@ -4081,7 +4081,7 @@
       },
       "shortName": "T.5 Profile",
       "image": "images/fixtures/robe/t-5-profile.png",
-      "details": "json/fixture-details/884397f99b5d5ec0f6bcad6a3e94b772c0b180ed7bba4704110cb5ea3a2f6a5b.json",
+      "details": "json/fixture-details/robe/t-5-profile.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Tdot5_Profile@2026-07-13_Control_channel_revision.gdtf",
         "sha256": "884397f99b5d5ec0f6bcad6a3e94b772c0b180ed7bba4704110cb5ea3a2f6a5b",
@@ -4121,7 +4121,7 @@
       },
       "shortName": "T1 Fresnel",
       "image": "images/fixtures/robe/t1-fresnel.png",
-      "details": "json/fixture-details/77d36a420526ff670e4ecccc50c603d777aa6052860a3b6b87feebef91ef8ac8.json",
+      "details": "json/fixture-details/robe/t1-fresnel.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_T1_Fresnel@2026-07-20_Color_Control_channel_update.gdtf",
         "sha256": "77d36a420526ff670e4ecccc50c603d777aa6052860a3b6b87feebef91ef8ac8",
@@ -4161,7 +4161,7 @@
       },
       "shortName": "T1 PC",
       "image": "images/fixtures/robe/t1-pc.png",
-      "details": "json/fixture-details/c2eb428864132358d49518810ac641307b6f90154366133ea6f98dc7131acd1b.json",
+      "details": "json/fixture-details/robe/t1-pc.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_T1_PC@2026-07-20_Color_control_channel_update.gdtf",
         "sha256": "c2eb428864132358d49518810ac641307b6f90154366133ea6f98dc7131acd1b",
@@ -4201,7 +4201,7 @@
       },
       "shortName": "T1Profile",
       "image": "images/fixtures/robe/t1-profile.png",
-      "details": "json/fixture-details/84db0c8516f1bd1d1dae6e6a13cde743d27f01f19cdf4b253dc7e6604705ed97.json",
+      "details": "json/fixture-details/robe/t1-profile.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_T1_Profile@2026-07-20_Color_Control_channel_update_2.gdtf",
         "sha256": "84db0c8516f1bd1d1dae6e6a13cde743d27f01f19cdf4b253dc7e6604705ed97",
@@ -4241,7 +4241,7 @@
       },
       "shortName": "T1ProfileFS",
       "image": "images/fixtures/robe/t1-profile-fs.png",
-      "details": "json/fixture-details/5d28e36f7fbf1e146fdca0eae8e45529779aa3844a4cdc1a343611ec70937de4.json",
+      "details": "json/fixture-details/robe/t1-profile-fs.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_T1_Profile_FS@2026-07-20__Color_Control_channel_update.gdtf",
         "sha256": "5d28e36f7fbf1e146fdca0eae8e45529779aa3844a4cdc1a343611ec70937de4",
@@ -4296,7 +4296,7 @@
       },
       "shortName": "T10 Fresnel",
       "image": "images/fixtures/robe/t10-fresnel--t10-pc--t10-profile.png",
-      "details": "json/fixture-details/e44d7721c75b996e2d2d13b1048422434f3a7ed6cf3e2599608078479161ba94.json",
+      "details": "json/fixture-details/robe/t10-fresnel--t10-pc--t10-profile.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_T10_Profile@2026-07-20_Color_control_channel_update.gdtf",
         "sha256": "e44d7721c75b996e2d2d13b1048422434f3a7ed6cf3e2599608078479161ba94",
@@ -4351,7 +4351,7 @@
       },
       "shortName": "T10 PC",
       "image": "images/fixtures/robe/t10-fresnel--t10-pc--t10-profile.png",
-      "details": "json/fixture-details/e44d7721c75b996e2d2d13b1048422434f3a7ed6cf3e2599608078479161ba94.json",
+      "details": "json/fixture-details/robe/t10-fresnel--t10-pc--t10-profile.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_T10_Profile@2026-07-20_Color_control_channel_update.gdtf",
         "sha256": "e44d7721c75b996e2d2d13b1048422434f3a7ed6cf3e2599608078479161ba94",
@@ -4406,7 +4406,7 @@
       },
       "shortName": "T10Profile",
       "image": "images/fixtures/robe/t10-fresnel--t10-pc--t10-profile.png",
-      "details": "json/fixture-details/e44d7721c75b996e2d2d13b1048422434f3a7ed6cf3e2599608078479161ba94.json",
+      "details": "json/fixture-details/robe/t10-fresnel--t10-pc--t10-profile.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_T10_Profile@2026-07-20_Color_control_channel_update.gdtf",
         "sha256": "e44d7721c75b996e2d2d13b1048422434f3a7ed6cf3e2599608078479161ba94",
@@ -4461,7 +4461,7 @@
       },
       "shortName": "T11 Fresnel",
       "image": "images/fixtures/robe/t11-fresnel--t11-pc--t11-profile.png",
-      "details": "json/fixture-details/41dea030ca5a01923a72c19225e78fc0f6328e38f594da67dd5e3cdea2e702b6.json",
+      "details": "json/fixture-details/robe/t11-fresnel--t11-pc--t11-profile.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_T11_Profile@2026-07-20_Color_control_channel_update.gdtf",
         "sha256": "41dea030ca5a01923a72c19225e78fc0f6328e38f594da67dd5e3cdea2e702b6",
@@ -4516,7 +4516,7 @@
       },
       "shortName": "T11 PC",
       "image": "images/fixtures/robe/t11-fresnel--t11-pc--t11-profile.png",
-      "details": "json/fixture-details/41dea030ca5a01923a72c19225e78fc0f6328e38f594da67dd5e3cdea2e702b6.json",
+      "details": "json/fixture-details/robe/t11-fresnel--t11-pc--t11-profile.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_T11_Profile@2026-07-20_Color_control_channel_update.gdtf",
         "sha256": "41dea030ca5a01923a72c19225e78fc0f6328e38f594da67dd5e3cdea2e702b6",
@@ -4571,7 +4571,7 @@
       },
       "shortName": "T11Profile",
       "image": "images/fixtures/robe/t11-fresnel--t11-pc--t11-profile.png",
-      "details": "json/fixture-details/41dea030ca5a01923a72c19225e78fc0f6328e38f594da67dd5e3cdea2e702b6.json",
+      "details": "json/fixture-details/robe/t11-fresnel--t11-pc--t11-profile.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_T11_Profile@2026-07-20_Color_control_channel_update.gdtf",
         "sha256": "41dea030ca5a01923a72c19225e78fc0f6328e38f594da67dd5e3cdea2e702b6",
@@ -4616,7 +4616,7 @@
       },
       "shortName": "T15 Fresnel",
       "image": "images/fixtures/robe/t15-fresnel--t15-pc.png",
-      "details": "json/fixture-details/347c182a079caa88a1b6dc531c1da052a97bcf317e6bc56bb5eeef3328c14d86.json",
+      "details": "json/fixture-details/robe/t15-fresnel--t15-pc.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_T15_Fresnel@2026-09-03_RDM_update_Beam_type_fix.gdtf",
         "sha256": "347c182a079caa88a1b6dc531c1da052a97bcf317e6bc56bb5eeef3328c14d86",
@@ -4661,7 +4661,7 @@
       },
       "shortName": "T15 PC",
       "image": "images/fixtures/robe/t15-fresnel--t15-pc.png",
-      "details": "json/fixture-details/347c182a079caa88a1b6dc531c1da052a97bcf317e6bc56bb5eeef3328c14d86.json",
+      "details": "json/fixture-details/robe/t15-fresnel--t15-pc.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_T15_Fresnel@2026-09-03_RDM_update_Beam_type_fix.gdtf",
         "sha256": "347c182a079caa88a1b6dc531c1da052a97bcf317e6bc56bb5eeef3328c14d86",
@@ -4701,7 +4701,7 @@
       },
       "shortName": "T2Fresnel",
       "image": "images/fixtures/robe/t2-fresnel.png",
-      "details": "json/fixture-details/85eb2c48eb4d00913cb4bfa6dd6766cf3dc4863197d73444fbae30913a5ad3ee.json",
+      "details": "json/fixture-details/robe/t2-fresnel.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_T2_Fresnel@2026-07-21_Color_control_channel_update.gdtf",
         "sha256": "85eb2c48eb4d00913cb4bfa6dd6766cf3dc4863197d73444fbae30913a5ad3ee",
@@ -4741,7 +4741,7 @@
       },
       "shortName": "T2 PC",
       "image": "images/fixtures/robe/t2-pc.png",
-      "details": "json/fixture-details/ae2fc28b580ce7511c733a3c9027dbeed9152ad6058bc72d319654cb3c637a05.json",
+      "details": "json/fixture-details/robe/t2-pc.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_T2_PC@2026-07-21_Color_control_channel_update.gdtf",
         "sha256": "ae2fc28b580ce7511c733a3c9027dbeed9152ad6058bc72d319654cb3c637a05",
@@ -4781,7 +4781,7 @@
       },
       "shortName": "T2 Profile",
       "image": "images/fixtures/robe/t2-profile.png",
-      "details": "json/fixture-details/24712b0e0ed905bd8d43a4866edddbde5c9659e3724b59fd1a0211288fd04d63.json",
+      "details": "json/fixture-details/robe/t2-profile.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_T2_Profile@2026-07-21_Color_control_channel_revision.gdtf",
         "sha256": "24712b0e0ed905bd8d43a4866edddbde5c9659e3724b59fd1a0211288fd04d63",
@@ -4821,7 +4821,7 @@
       },
       "shortName": "T2ProfileFS",
       "image": "images/fixtures/robe/t2-profile-fs.png",
-      "details": "json/fixture-details/96a2e0fdab43b8cb0a381fd870990d038dd6287ee900c0b70b649f7a0d72096a.json",
+      "details": "json/fixture-details/robe/t2-profile-fs.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_T2_Profile_FS@2026-07-21_Color_control_channel_update.gdtf",
         "sha256": "96a2e0fdab43b8cb0a381fd870990d038dd6287ee900c0b70b649f7a0d72096a",
@@ -4861,7 +4861,7 @@
       },
       "shortName": "T3Fresnel",
       "image": "images/fixtures/robe/t3-fresnel.png",
-      "details": "json/fixture-details/7056bef4847ec5947386214b283157fca21ee276a053a4a359e437d7de9b309e.json",
+      "details": "json/fixture-details/robe/t3-fresnel.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_T3_Fresnel@2026-09-03_Beam_revision.gdtf",
         "sha256": "7056bef4847ec5947386214b283157fca21ee276a053a4a359e437d7de9b309e",
@@ -4901,7 +4901,7 @@
       },
       "shortName": "T3PC",
       "image": "images/fixtures/robe/t3-pc.png",
-      "details": "json/fixture-details/9d68fd3ce8d43a81312991d924b3e9fd0692b3398798920c2c5a04664fc70a4f.json",
+      "details": "json/fixture-details/robe/t3-pc.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_T3_PC@2026-09-03_Beam_type_revision.gdtf",
         "sha256": "9d68fd3ce8d43a81312991d924b3e9fd0692b3398798920c2c5a04664fc70a4f",
@@ -4946,7 +4946,7 @@
       },
       "shortName": "T3 Profile",
       "image": "images/fixtures/robe/t3-profile.png",
-      "details": "json/fixture-details/17618e3dad8cc8537cebbfd940d708333fdb7153a6d4069575bb4daecc25ed14.json",
+      "details": "json/fixture-details/robe/t3-profile.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_T3_Profile@2026-08-21_Prism_empty_wheel_slots_revision.gdtf",
         "sha256": "17618e3dad8cc8537cebbfd940d708333fdb7153a6d4069575bb4daecc25ed14",
@@ -4991,7 +4991,7 @@
       },
       "shortName": "T3FS",
       "image": "images/fixtures/robe/t3-profile-fs.png",
-      "details": "json/fixture-details/6f838716153c1f5775e7f4ef1f3078e586f50404a9c28e047d9040b5ec657783.json",
+      "details": "json/fixture-details/robe/t3-profile-fs.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_T3_Profile_FS@2026-08-21_Prism_empty_wheel_slots_revision.gdtf",
         "sha256": "6f838716153c1f5775e7f4ef1f3078e586f50404a9c28e047d9040b5ec657783",
@@ -5021,7 +5021,7 @@
       },
       "shortName": "T31 Cyc",
       "image": "images/fixtures/robe/t31-cyc.png",
-      "details": "json/fixture-details/415a66002d3857352e6664bf62a819b10d4fe21e767287534d9e4ea2b2a8ab98.json",
+      "details": "json/fixture-details/robe/t31-cyc.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_T31_CYC@2026-07-21_Color_control_channel_update.gdtf",
         "sha256": "415a66002d3857352e6664bf62a819b10d4fe21e767287534d9e4ea2b2a8ab98",
@@ -5051,7 +5051,7 @@
       },
       "shortName": "T31 CYC Slim",
       "image": "images/fixtures/robe/t31-cyc-slim.png",
-      "details": "json/fixture-details/c8ce783566f8ca4dd2bb5dc60d01466f3ed42981db96f0e7f3e1ba4512a285f6.json",
+      "details": "json/fixture-details/robe/t31-cyc-slim.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_T31_CYC_Slim@2026-07-21_Color_control_channel_update.gdtf",
         "sha256": "c8ce783566f8ca4dd2bb5dc60d01466f3ed42981db96f0e7f3e1ba4512a285f6",
@@ -5081,7 +5081,7 @@
       },
       "shortName": "T32 Cyc",
       "image": "images/fixtures/robe/t32-cyc.png",
-      "details": "json/fixture-details/5ef132926e2a78a90b3be2e972db07cdd5efbdcc1e8a1f87f9152a6e2b58bd24.json",
+      "details": "json/fixture-details/robe/t32-cyc.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_T32_CYC@2026-07-21_Color_control_channel_update.gdtf",
         "sha256": "5ef132926e2a78a90b3be2e972db07cdd5efbdcc1e8a1f87f9152a6e2b58bd24",
@@ -5111,7 +5111,7 @@
       },
       "shortName": "T32 CYC Slim",
       "image": "images/fixtures/robe/t32-cyc-slim.png",
-      "details": "json/fixture-details/08eb600b8a090d42b87b3355640c6887d34ecc2e67e8fe51987d9e948bb9e008.json",
+      "details": "json/fixture-details/robe/t32-cyc-slim.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_T32_CYC_Slim@2026-07-21_Color_control_channel_revision.gdtf",
         "sha256": "08eb600b8a090d42b87b3355640c6887d34ecc2e67e8fe51987d9e948bb9e008",
@@ -5156,7 +5156,7 @@
       },
       "shortName": "Tarrantula",
       "image": "images/fixtures/robe/tarrantula.png",
-      "details": "json/fixture-details/32ce3ab1dee253e3044e537208cdc92c8d38f8753d0e677a33d5c4f6b0b0c7af.json",
+      "details": "json/fixture-details/robe/tarrantula.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Tarrantula@2025-12-03__Reupload_to_share.gdtf",
         "sha256": "32ce3ab1dee253e3044e537208cdc92c8d38f8753d0e677a33d5c4f6b0b0c7af",
@@ -5201,7 +5201,7 @@
       },
       "shortName": "Tetra1",
       "image": "images/fixtures/robe/tetra1.png",
-      "details": "json/fixture-details/8813a42ea6115a093bc7e11b294fe60a52c5e8bc7dfb2f23a25f61af2b93dc3b.json",
+      "details": "json/fixture-details/robe/tetra1.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Tetra1@2025-12-03_Reupload_to_share.gdtf",
         "sha256": "8813a42ea6115a093bc7e11b294fe60a52c5e8bc7dfb2f23a25f61af2b93dc3b",
@@ -5246,7 +5246,7 @@
       },
       "shortName": "Tetra2",
       "image": "images/fixtures/robe/tetra2.png",
-      "details": "json/fixture-details/966e6074e52ee8549399e5c8d3f638cee899ae99cb53fa21d7a7f5d5b0020930.json",
+      "details": "json/fixture-details/robe/tetra2.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Tetra2@2025-12-03_Reupload_to_share.gdtf",
         "sha256": "966e6074e52ee8549399e5c8d3f638cee899ae99cb53fa21d7a7f5d5b0020930",
@@ -5291,7 +5291,7 @@
       },
       "shortName": "TetraX",
       "image": "images/fixtures/robe/tetrax.png",
-      "details": "json/fixture-details/c703840ee3900fab8ceae413f1ef4a91dae9bee2722bf449790f1494ac2ce9d1.json",
+      "details": "json/fixture-details/robe/tetrax.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_TetraX@2025-12-03_Reupload_to_share.gdtf",
         "sha256": "c703840ee3900fab8ceae413f1ef4a91dae9bee2722bf449790f1494ac2ce9d1",
@@ -5356,7 +5356,7 @@
       },
       "shortName": "TX1 PosiProfile",
       "image": "images/fixtures/robe/tx1-posiprofile.png",
-      "details": "json/fixture-details/7e0c3582ee267084bbfeb3fa0a30b3642286d1c3cf6d719f355df7c213dab789.json",
+      "details": "json/fixture-details/robe/tx1-posiprofile.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_TX1_PosiProfile@2026-07-21_Color_control_channel_update.gdtf",
         "sha256": "7e0c3582ee267084bbfeb3fa0a30b3642286d1c3cf6d719f355df7c213dab789",
@@ -5381,7 +5381,7 @@
       },
       "shortName": "Viva™",
       "image": "images/fixtures/robe/viva.png",
-      "details": "json/fixture-details/42272760243da29fe3c7f7be6d6eb91240a302ae39a3502f39170883292e5f66.json",
+      "details": "json/fixture-details/robe/viva.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Viva@2024-10-08__Initial_release_to_the_share.gdtf",
         "sha256": "42272760243da29fe3c7f7be6d6eb91240a302ae39a3502f39170883292e5f66",
@@ -5406,7 +5406,7 @@
       },
       "shortName": "Viva™ CMY",
       "image": "images/fixtures/robe/viva-cmy.png",
-      "details": "json/fixture-details/5d5d8d30574deb1b6eaf8f867287b2e6b42c881f097725760a0c8dbb0268513e.json",
+      "details": "json/fixture-details/robe/viva-cmy.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_Viva_CMY@2024-10-08__3D_models_revision.gdtf",
         "sha256": "5d5d8d30574deb1b6eaf8f867287b2e6b42c881f097725760a0c8dbb0268513e",
@@ -5446,7 +5446,7 @@
       },
       "shortName": "WTF",
       "image": "images/fixtures/robe/wtf.png",
-      "details": "json/fixture-details/ae8f6bfd4e8dd4be7cf01e4bedfada892c3fcd32970372fdc415eba7fe692e9f.json",
+      "details": "json/fixture-details/robe/wtf.json",
       "provenance": {
         "fileName": "Robe_Lighting@Robin_WTF@2026-07-13_Control_channel_revision.gdtf",
         "sha256": "ae8f6bfd4e8dd4be7cf01e4bedfada892c3fcd32970372fdc415eba7fe692e9f",

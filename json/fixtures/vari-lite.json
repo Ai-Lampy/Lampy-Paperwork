@@ -44,7 +44,7 @@
       },
       "shortName": "Aurora12",
       "image": "images/fixtures/vari-lite/aurora-strip-12.png",
-      "details": "json/fixture-details/26de92be6cc127927f27c21d1667d2ebdf5d4b88b4c0974bf9f7eea1984b25a7.json",
+      "details": "json/fixture-details/vari-lite/aurora-strip-12.json",
       "provenance": {
         "fileName": "Vari-Lite@Aurora_Strip_12@Modified_SOCC_Modes_by_GDTFservice.com,_powered_by_Crescit,_commissioned_by_Strand..gdtf",
         "sha256": "26de92be6cc127927f27c21d1667d2ebdf5d4b88b4c0974bf9f7eea1984b25a7",
@@ -84,7 +84,7 @@
       },
       "shortName": "CodaLEDCyc",
       "image": "images/fixtures/vari-lite/coda-cyc.png",
-      "details": "json/fixture-details/5e19449ae16c46d00474c2ee234433d1f3cf794e2f8701ec6a6c44d396dd3a68.json",
+      "details": "json/fixture-details/vari-lite/coda-cyc.json",
       "provenance": {
         "fileName": "Vari-Lite@Coda_Cyc@Update_upload_by_GDTFservice.com,_powered_by_Crescit,_commissioned_by_Strand..gdtf",
         "sha256": "5e19449ae16c46d00474c2ee234433d1f3cf794e2f8701ec6a6c44d396dd3a68",
@@ -109,7 +109,7 @@
       },
       "shortName": "VL1600Prof",
       "image": "images/fixtures/vari-lite/vl1600-profile.png",
-      "details": "json/fixture-details/c970b25ec1692ff60c360116a51a6e0fb5d80766005790c162b8b91432bec95f.json",
+      "details": "json/fixture-details/vari-lite/vl1600-profile.json",
       "provenance": {
         "fileName": "Vari-Lite@VL1600_Profile@Update_upload_by_GDTFservice.com,_powered_by_Crescit,_commissioned_by_Vari-Lite..gdtf",
         "sha256": "c970b25ec1692ff60c360116a51a6e0fb5d80766005790c162b8b91432bec95f",
@@ -134,7 +134,7 @@
       },
       "shortName": "VL2600Profile",
       "image": "images/fixtures/vari-lite/vl2600-profile.png",
-      "details": "json/fixture-details/8e2375c10169bcb20445451236f26d976ed76458d62808309b1d375e1f849952.json",
+      "details": "json/fixture-details/vari-lite/vl2600-profile.json",
       "provenance": {
         "fileName": "Vari-Lite@VL2600_Profile@Update_upload_by_GDTFservice.com,_powered_by_Crescit,_commissioned_by_Vari-Lite..gdtf",
         "sha256": "8e2375c10169bcb20445451236f26d976ed76458d62808309b1d375e1f849952",
@@ -159,7 +159,7 @@
       },
       "shortName": "VL2600Spot",
       "image": "images/fixtures/vari-lite/vl2600-spot.png",
-      "details": "json/fixture-details/7fc962f638065bc3947e8c55aed194e6e19feef7eaeab02bbc734fe19cfd1ca7.json",
+      "details": "json/fixture-details/vari-lite/vl2600-spot.json",
       "provenance": {
         "fileName": "Vari-Lite@VL2600_Spot@Update_upload_by_GDTFservice.com,_powered_by_Crescit,_commissioned_by_Vari-Lite..gdtf",
         "sha256": "7fc962f638065bc3947e8c55aed194e6e19feef7eaeab02bbc734fe19cfd1ca7",
@@ -184,7 +184,7 @@
       },
       "shortName": "VL2600Wash",
       "image": "images/fixtures/vari-lite/vl2600-wash.png",
-      "details": "json/fixture-details/8fdef4427f71721b920aba1ceaebcaddcb20766c2a497ea29ab5b2ed19f42add.json",
+      "details": "json/fixture-details/vari-lite/vl2600-wash.json",
       "provenance": {
         "fileName": "Vari-Lite@VL2600_Wash@Update_upload_by_GDTFservice.com,_powered_by_Crescit,_commissioned_by_Vari-Lite..gdtf",
         "sha256": "8fdef4427f71721b920aba1ceaebcaddcb20766c2a497ea29ab5b2ed19f42add",
@@ -209,7 +209,7 @@
       },
       "shortName": "VL3600ProfileIP",
       "image": "images/fixtures/vari-lite/vl3600-profile-ip.png",
-      "details": "json/fixture-details/15f4d74a5a212aa90003d277102835e00d1a197e5cfe7d3508037482c3d6fd41.json",
+      "details": "json/fixture-details/vari-lite/vl3600-profile-ip.json",
       "provenance": {
         "fileName": "Vari-Lite@VL3600_Profile_IP@Update_upload_by_GDTFservice.com,_powered_by_Crescit,_commissioned_by_Vari-Lite..gdtf",
         "sha256": "15f4d74a5a212aa90003d277102835e00d1a197e5cfe7d3508037482c3d6fd41",
@@ -254,7 +254,7 @@
       },
       "shortName": "VL5LED Wash",
       "image": "images/fixtures/vari-lite/vl5led-wash.png",
-      "details": "json/fixture-details/11792b28835471ac6396c069b8f13257a8b671b060aa3cdda0880dc12b830704.json",
+      "details": "json/fixture-details/vari-lite/vl5led-wash.json",
       "provenance": {
         "fileName": "Vari-Lite@VL5LED_Wash@Update_upload_by_GDTFservice.com,_powered_by_Crescit,_commissioned_by_Vari-Lite..gdtf",
         "sha256": "11792b28835471ac6396c069b8f13257a8b671b060aa3cdda0880dc12b830704",
@@ -274,7 +274,7 @@
       },
       "shortName": "VL6500Wash",
       "image": "images/fixtures/vari-lite/vl6500-wash.png",
-      "details": "json/fixture-details/d5035254821c45e414e009d8575b518c76027ef8ac2ee9f64db28d72e09a4bd3.json",
+      "details": "json/fixture-details/vari-lite/vl6500-wash.json",
       "provenance": {
         "fileName": "Vari-Lite@VL6500_Wash@Update_upload_by_GDTFservice.com,_powered_by_Crescit,_commissioned_by_Vari-Lite..gdtf",
         "sha256": "d5035254821c45e414e009d8575b518c76027ef8ac2ee9f64db28d72e09a4bd3",
@@ -304,7 +304,7 @@
       },
       "shortName": "VL800EventProfile",
       "image": "images/fixtures/vari-lite/vl800-eventprofile.png",
-      "details": "json/fixture-details/3f1449c360a29a79f326a8bbda0738b5a32770e70bae25b22ec374b4333b32ba.json",
+      "details": "json/fixture-details/vari-lite/vl800-eventprofile.json",
       "provenance": {
         "fileName": "Vari-Lite@VL800_EventProfile@Update_upload_by_GDTFservice.com,_powered_by_Crescit,_commissioned_by_Vari-Lite..gdtf",
         "sha256": "3f1449c360a29a79f326a8bbda0738b5a32770e70bae25b22ec374b4333b32ba",
@@ -339,7 +339,7 @@
       },
       "shortName": "VL800Eventwash",
       "image": "images/fixtures/vari-lite/vl800-eventwash.png",
-      "details": "json/fixture-details/9b653d7124a1d3689d6384b4d42c441d466f741ea37ec024cbc0b0f3bbe57c7b.json",
+      "details": "json/fixture-details/vari-lite/vl800-eventwash.json",
       "provenance": {
         "fileName": "Vari-Lite@VL800_Eventwash@Update_upload_by_GDTFservice.com,_powered_by_Crescit,_commissioned_by_Vari-Lite..gdtf",
         "sha256": "9b653d7124a1d3689d6384b4d42c441d466f741ea37ec024cbc0b0f3bbe57c7b",

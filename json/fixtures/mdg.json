@@ -13,7 +13,7 @@
       "shortName": "ATME",
       "weight": 16.8,
       "image": "images/fixtures/mdg/atme.png",
-      "details": "json/fixture-details/93c4f2c72d7b3ae95cc8cee20126d7d0ba798eb54109153e003f3b39c2901eaf.json",
+      "details": "json/fixture-details/mdg/atme.json",
       "provenance": {
         "fileName": "MDG@ATMe@Release_1.0.gdtf",
         "sha256": "93c4f2c72d7b3ae95cc8cee20126d7d0ba798eb54109153e003f3b39c2901eaf",
@@ -33,7 +33,7 @@
       "shortName": "The ONE",
       "weight": 33.5,
       "image": "images/fixtures/mdg/the-one.png",
-      "details": "json/fixture-details/82093802dd73c5f643a8bdcb8d8dd7668b435a2625de4b8238fb83d267ed0700.json",
+      "details": "json/fixture-details/mdg/the-one.json",
       "provenance": {
         "fileName": "MDG@theONE@Release_1.0.gdtf",
         "sha256": "82093802dd73c5f643a8bdcb8d8dd7668b435a2625de4b8238fb83d267ed0700",
@@ -59,7 +59,7 @@
       },
       "shortName": "theFAN",
       "image": "images/fixtures/mdg/thefan.png",
-      "details": "json/fixture-details/6f52a1e2cc82bf9c5e79ee2a6e8a7dc68fd10c320f6f5178b567e6fc4a0fa96e.json",
+      "details": "json/fixture-details/mdg/thefan.json",
       "provenance": {
         "fileName": "MDG@theFAN@Release_1.0.gdtf",
         "sha256": "6f52a1e2cc82bf9c5e79ee2a6e8a7dc68fd10c320f6f5178b567e6fc4a0fa96e",

@@ -56,5 +56,6 @@ try{
  fs.mkdirSync(path.join(root,'outputs/fixture-data'),{recursive:true});
  fs.writeFileSync(path.join(root,'outputs/fixture-data/extraction-audit.json'),JSON.stringify(audit,null,2)+'\n');
  execFileSync('python3',[path.join(__dirname,'fixture_image_names.py')],{cwd:root,stdio:'inherit'});
+ execFileSync('python3',[path.join(__dirname,'fixture_detail_names.py')],{cwd:root,stdio:'inherit'});
  console.log(JSON.stringify({archives:paths.length,fixtures:audit.fixtures.length,missing:audit.missing.length}));
 }finally{fs.rmSync(temp,{recursive:true,force:true})}

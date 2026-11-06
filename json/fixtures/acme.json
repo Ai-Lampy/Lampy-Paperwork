@@ -33,7 +33,7 @@
       },
       "shortName": "Aeco 15",
       "image": "images/fixtures/acme/aeco-15--mana-profile--supernova.png",
-      "details": "json/fixture-details/3d2ee2b5bbd614bbb05175d77712198d13de076ed0da3eab358b7e4c6adf2ef5.json",
+      "details": "json/fixture-details/acme/aeco-15.json",
       "provenance": {
         "fileName": "ACME@ACME_AECO_15@ACME_AECO__15.gdtf",
         "sha256": "3d2ee2b5bbd614bbb05175d77712198d13de076ed0da3eab358b7e4c6adf2ef5",
@@ -72,7 +72,7 @@
       },
       "shortName": "Aeco 30 IP",
       "image": "images/fixtures/acme/aeco-30-ip.png",
-      "details": "json/fixture-details/0d409822a8dee43c5e06429b47c12df4576c85e3a028b7a236c2cd16e7ebd2d2.json",
+      "details": "json/fixture-details/acme/aeco-30-ip.json",
       "provenance": {
         "fileName": "ACME@ACME_AECO_30_IP_(AECO_30_IP)@__ACME_AECO_30_IP__(AECO_30_IP).gdtf",
         "sha256": "0d409822a8dee43c5e06429b47c12df4576c85e3a028b7a236c2cd16e7ebd2d2",
@@ -105,7 +105,7 @@
       },
       "shortName": "Aeco 5",
       "image": "images/fixtures/acme/aeco-5.png",
-      "details": "json/fixture-details/a98c3b3202983e5f3322604b9fc1146d85efebbebb15f86bca6d644f1d3fdbda.json",
+      "details": "json/fixture-details/acme/aeco-5.json",
       "provenance": {
         "fileName": "ACME@ACME_AECO_5_(AECO_5)@ACME_AECO_5_(AECO_5).gdtf",
         "sha256": "a98c3b3202983e5f3322604b9fc1146d85efebbebb15f86bca6d644f1d3fdbda",
@@ -126,7 +126,7 @@
       },
       "shortName": "Autolux",
       "image": "images/fixtures/acme/autolux.png",
-      "details": "json/fixture-details/6f14b616b92b0931bc32f10cdd14e515fd2850e7e08ba6374516b113cd09163b.json",
+      "details": "json/fixture-details/acme/autolux.json",
       "provenance": {
         "fileName": "ACME@ACME_AUTOLUX_(AUTO_600)@_ACME_AUTOLUX_(AUTO_600).gdtf",
         "sha256": "6f14b616b92b0931bc32f10cdd14e515fd2850e7e08ba6374516b113cd09163b",
@@ -153,7 +153,7 @@
       },
       "shortName": "Blinder Line 10 IP",
       "image": "images/fixtures/acme/blinder-line-10-ip.png",
-      "details": "json/fixture-details/92ade70e42078871449dd6321001d5eebf4c5acdff6cfa67d3ec8a6ae1775c3d.json",
+      "details": "json/fixture-details/acme/blinder-line-10-ip.json",
       "provenance": {
         "fileName": "ACME@ACME_BLINDER_LINE_10_IP (BLB_10_IP)@ACME_BLINDER_LINE_10_IP (BLB_10_IP) .gdtf",
         "sha256": "92ade70e42078871449dd6321001d5eebf4c5acdff6cfa67d3ec8a6ae1775c3d",
@@ -180,7 +180,7 @@
       },
       "shortName": "Blinder Line 5 IP",
       "image": "images/fixtures/acme/blinder-line-5-ip.png",
-      "details": "json/fixture-details/b9053147b6831f14f5980fef52cbb785ec5d8478e33b4756064d5bd2b9ddb8f7.json",
+      "details": "json/fixture-details/acme/blinder-line-5-ip.json",
       "provenance": {
         "fileName": "ACME@ACME_BLINDER_LINE_5_IP_(BLB_5_IP)@ACME_BLINDER_LINE_5_IP_(BLB_5_IP).gdtf",
         "sha256": "b9053147b6831f14f5980fef52cbb785ec5d8478e33b4756064d5bd2b9ddb8f7",
@@ -219,7 +219,7 @@
       },
       "shortName": "Coolie 186",
       "image": "images/fixtures/acme/coolie-186.png",
-      "details": "json/fixture-details/ba16b9d1b5757d0bd3bd295e03b50c7c2534068f170bafecbc6f450ef6fb8c79.json",
+      "details": "json/fixture-details/acme/coolie-186.json",
       "provenance": {
         "fileName": "ACME@ACME_COOLIE_186_(BW_186)@ACME_COOLIE_186_(BW_186).gdtf",
         "sha256": "ba16b9d1b5757d0bd3bd295e03b50c7c2534068f170bafecbc6f450ef6fb8c79",
@@ -252,7 +252,7 @@
       },
       "shortName": "Cyclone",
       "image": "images/fixtures/acme/cyclone.png",
-      "details": "json/fixture-details/e1d20ebaed186ec094c9a7b2ffa97f2e5a392550cde9d580191547577e0b91d3.json",
+      "details": "json/fixture-details/acme/cyclone.json",
       "provenance": {
         "fileName": "ACME@ACME_CYCLONE_(CM_150_IP)@_ACME_CYCLONE_(CM_150_IP).gdtf",
         "sha256": "e1d20ebaed186ec094c9a7b2ffa97f2e5a392550cde9d580191547577e0b91d3",
@@ -282,7 +282,7 @@
       },
       "shortName": "Geist Bswf",
       "image": "images/fixtures/acme/geist-bswf.png",
-      "details": "json/fixture-details/240a4f46c17fc4175263d4506822c8e0d7aabf0acf84254ed7960056202de7a9.json",
+      "details": "json/fixture-details/acme/geist-bswf.json",
       "provenance": {
         "fileName": "ACME@ACME_GEIST_BSWF_(XA-500_BSWF)@_ACME_GEIST_BSWF__(XA-500_BSWF).gdtf",
         "sha256": "240a4f46c17fc4175263d4506822c8e0d7aabf0acf84254ed7960056202de7a9",
@@ -339,7 +339,7 @@
       },
       "shortName": "Gemini",
       "image": "images/fixtures/acme/gemini.png",
-      "details": "json/fixture-details/e9b10a388cde3c3c4d723886fb7e9623825c54e74ef09962e927fc38966e14f0.json",
+      "details": "json/fixture-details/acme/gemini.json",
       "provenance": {
         "fileName": "ACME@ACME_GEMINI@TA_7.25.gdtf",
         "sha256": "e9b10a388cde3c3c4d723886fb7e9623825c54e74ef09962e927fc38966e14f0",
@@ -378,7 +378,7 @@
       },
       "shortName": "Hue 6 IP",
       "image": "images/fixtures/acme/hue-6-ip.png",
-      "details": "json/fixture-details/71c0522faa37591959a498e09061d6832b4e1163fb1018e9eb56d38840fe68d2.json",
+      "details": "json/fixture-details/acme/hue-6-ip.json",
       "provenance": {
         "fileName": "ACME@HUE_6_IP_(HUE_6_IP)@HUE_6_IP_(HUE_6_IP).gdtf",
         "sha256": "71c0522faa37591959a498e09061d6832b4e1163fb1018e9eb56d38840fe68d2",
@@ -405,7 +405,7 @@
       },
       "shortName": "Hueline 16 IP",
       "image": "images/fixtures/acme/hueline-16-ip.png",
-      "details": "json/fixture-details/b15dcbba60f86d6e3ed75a543457ff7de060798a8795c892673302e5d41eb57a.json",
+      "details": "json/fixture-details/acme/hueline-16-ip.json",
       "provenance": {
         "fileName": "ACME@ACME_HUELINE_16_IP_(HL_16_IP)@ACME_HUELINE_16_IP__(HL_16_IP).gdtf",
         "sha256": "b15dcbba60f86d6e3ed75a543457ff7de060798a8795c892673302e5d41eb57a",
@@ -444,7 +444,7 @@
       },
       "shortName": "Hyperzone",
       "image": "images/fixtures/acme/hyperzone.png",
-      "details": "json/fixture-details/b2dcc7c46fd9c04bb75d7518b65791a2a93212744309fb98265bb830c75c94ff.json",
+      "details": "json/fixture-details/acme/hyperzone.json",
       "provenance": {
         "fileName": "ACME@ACME_HYPERZONE_(CM_7_IP)@ACME_HYPERZONE_(CM_7_IP).gdtf",
         "sha256": "b2dcc7c46fd9c04bb75d7518b65791a2a93212744309fb98265bb830c75c94ff",
@@ -495,7 +495,7 @@
       },
       "shortName": "Lightning X",
       "image": "images/fixtures/acme/lightning-x.png",
-      "details": "json/fixture-details/27e1496d6356f3293ff52a66e60ec5c4ddf05209bc40da5ec6bdd2eb3bdc04c9.json",
+      "details": "json/fixture-details/acme/lightning-x.json",
       "provenance": {
         "fileName": "ACME@ACME_LIGHTNING_X_(STROBE_7_IP)@_ACME_LIGHTNING_X__(STROBE_7_IP).gdtf",
         "sha256": "27e1496d6356f3293ff52a66e60ec5c4ddf05209bc40da5ec6bdd2eb3bdc04c9",
@@ -522,7 +522,7 @@
       },
       "shortName": "Lineforce 10 IP",
       "image": "images/fixtures/acme/lineforce-10-ip.png",
-      "details": "json/fixture-details/593276833fc703982296ba5dd225a733f85a038534fe5769498145fc8493bddb.json",
+      "details": "json/fixture-details/acme/lineforce-10-ip.json",
       "provenance": {
         "fileName": "ACME@ACME_LINEFORCE_10_IP_(CYC_10_IP)@LINEFORCE_10_IP__(CYC_10_IP).gdtf",
         "sha256": "593276833fc703982296ba5dd225a733f85a038534fe5769498145fc8493bddb",
@@ -561,7 +561,7 @@
       },
       "shortName": "Lineforce 5 IP",
       "image": "images/fixtures/acme/lineforce-5-ip.png",
-      "details": "json/fixture-details/13cd1f043a3b87518c4e5b240a354159ef54aed68a7d254ab5228f6777547b7a.json",
+      "details": "json/fixture-details/acme/lineforce-5-ip.json",
       "provenance": {
         "fileName": "ACME@ACME__LINEFORCE_5_IP_(CYC_5_IP)@ACME__LINEFORCE_5_IP_(CYC_5_IP)(2).gdtf",
         "sha256": "13cd1f043a3b87518c4e5b240a354159ef54aed68a7d254ab5228f6777547b7a",
@@ -606,7 +606,7 @@
       },
       "shortName": "Lyra",
       "image": "images/fixtures/acme/lyra.png",
-      "details": "json/fixture-details/851900f274a7e72c7f7313c31671a11f3d86f5ac2b5cf25f6857a06610f7b0ff.json",
+      "details": "json/fixture-details/acme/lyra.json",
       "provenance": {
         "fileName": "ACME@ACME_LYRA_(XA_1000_BSWF_IP)@ACME_LYRA_(XA_1000_BSWF_IP).gdtf",
         "sha256": "851900f274a7e72c7f7313c31671a11f3d86f5ac2b5cf25f6857a06610f7b0ff",
@@ -633,7 +633,7 @@
       },
       "shortName": "Lyra Bw",
       "image": "images/fixtures/acme/lyra-bw.png",
-      "details": "json/fixture-details/c9b4dc2c8b7d5580cb79dfdd9f248d2f1db374784ec638ff61a2dfc88bd3bf91.json",
+      "details": "json/fixture-details/acme/lyra-bw.json",
       "provenance": {
         "fileName": "ACME@ACME_LYRA_BW(XA_1000_BW_IP)@ACME_LYRA_BW(XA_1000_BW_IP).gdtf",
         "sha256": "c9b4dc2c8b7d5580cb79dfdd9f248d2f1db374784ec638ff61a2dfc88bd3bf91",
@@ -660,7 +660,7 @@
       },
       "shortName": "Mana Hybrid",
       "image": "images/fixtures/acme/mana-hybrid.png",
-      "details": "json/fixture-details/e198627f3780fffa68cb29e8ed1dcb3d0be9629ae3a749b4a1f8cdbfbe0c0b87.json",
+      "details": "json/fixture-details/acme/mana-hybrid.json",
       "provenance": {
         "fileName": "ACME@ACME_MANA_HYBRID_(XA_600_BSW_IP)@_ACME_MANA_HYBRID_(XA_600_BSW_IP).gdtf",
         "sha256": "e198627f3780fffa68cb29e8ed1dcb3d0be9629ae3a749b4a1f8cdbfbe0c0b87",
@@ -699,7 +699,7 @@
       },
       "shortName": "Mana Prof",
       "image": "images/fixtures/acme/aeco-15--mana-profile--supernova.png",
-      "details": "json/fixture-details/ae72d9bc642ee10421bb0bc1c3e3638b4778fbb49be040abae70637f39509246.json",
+      "details": "json/fixture-details/acme/mana-profile.json",
       "provenance": {
         "fileName": "ACME@ACME_MANA_PROFILE_(XA_600_BSWF_IP)@ACME_MANA_PROFILE_(XA_600_BSWF_IP).gdtf",
         "sha256": "ae72d9bc642ee10421bb0bc1c3e3638b4778fbb49be040abae70637f39509246",
@@ -744,7 +744,7 @@
       },
       "shortName": "Neozone",
       "image": "images/fixtures/acme/neozone.png",
-      "details": "json/fixture-details/846835e5b107f8aa2b1fb8b6df9340aa2d1702d0be208ab2435904a2a88d9892.json",
+      "details": "json/fixture-details/acme/neozone.json",
       "provenance": {
         "fileName": "ACME@ACME_NEOZONE_(CM_800Z)@ACME_NEOZONE__(CM_800Z).gdtf",
         "sha256": "846835e5b107f8aa2b1fb8b6df9340aa2d1702d0be208ab2435904a2a88d9892",
@@ -765,7 +765,7 @@
       },
       "shortName": "Nova Beam",
       "image": "images/fixtures/acme/nova-beam--sana-beam.png",
-      "details": "json/fixture-details/dadbffa42b5944512a149d4bf7eb990ea434b1e97f0097498254df2a31398d71.json",
+      "details": "json/fixture-details/acme/nova-beam.json",
       "provenance": {
         "fileName": "ACME@ACME_NOVA_BEAM@ACME_NOVA_BEAM.gdtf",
         "sha256": "dadbffa42b5944512a149d4bf7eb990ea434b1e97f0097498254df2a31398d71",
@@ -792,7 +792,7 @@
       },
       "shortName": "Oxygen",
       "image": "images/fixtures/acme/oxygen.png",
-      "details": "json/fixture-details/4215dcafd322809a06ee11ac53b4828cb5480a269938686e9a88fae85e3607af.json",
+      "details": "json/fixture-details/acme/oxygen.json",
       "provenance": {
         "fileName": "ACME@ACME_OXYGEN_(CM-400Z)17_37CH@_ACME_OXYGEN_(CM-400Z)17_37CH.gdtf",
         "sha256": "4215dcafd322809a06ee11ac53b4828cb5480a269938686e9a88fae85e3607af",
@@ -831,7 +831,7 @@
       },
       "shortName": "Pasodoble",
       "image": "images/fixtures/acme/pasodoble.png",
-      "details": "json/fixture-details/7c073ba7da2222c3915cc33e362c8a627eff002f50d19a3accea19a5898ef319.json",
+      "details": "json/fixture-details/acme/pasodoble.json",
       "provenance": {
         "fileName": "ACME@ACME_PASODOBLE_(PAR_12)@ACME_PASODOBLE_(PAR_12).gdtf",
         "sha256": "7c073ba7da2222c3915cc33e362c8a627eff002f50d19a3accea19a5898ef319",
@@ -926,7 +926,7 @@
       },
       "shortName": "Pixel Line IP",
       "image": "images/fixtures/acme/pixel-line-ip.png",
-      "details": "json/fixture-details/f2044bdd9a83784f159911e0d257ec2e4b1be617d1248ef6d5deaf59d52f22cf.json",
+      "details": "json/fixture-details/acme/pixel-line-ip.json",
       "provenance": {
         "fileName": "ACME@ACME_PIXEL_LINE_IP_(STROBE_3_IP)@ACME_PIXEL_LINE_IP_(STROBE_3_IP).gdtf",
         "sha256": "f2044bdd9a83784f159911e0d257ec2e4b1be617d1248ef6d5deaf59d52f22cf",
@@ -1013,7 +1013,7 @@
       },
       "shortName": "Pixel Line IP 500",
       "image": "images/fixtures/acme/pixel-line-ip-500.png",
-      "details": "json/fixture-details/ed68dfae30cbdde401bf0020bcaf0391a3bde042bc324402022a37526f908dcf.json",
+      "details": "json/fixture-details/acme/pixel-line-ip-500.json",
       "provenance": {
         "fileName": "ACME@ACME_PIXEL_LINE_IP_500_(STROBE_1_IP)@ACME_PIXEL_LINE_IP_500_(STROBE_1_IP).gdtf",
         "sha256": "ed68dfae30cbdde401bf0020bcaf0391a3bde042bc324402022a37526f908dcf",
@@ -1064,7 +1064,7 @@
       },
       "shortName": "Pulsar +S2",
       "image": "images/fixtures/acme/pulsar-plus-s2.png",
-      "details": "json/fixture-details/cec49878d044593d6cf274ee190276cd9d931426690291468edf52fb6d62a520.json",
+      "details": "json/fixture-details/acme/pulsar-plus-s2.json",
       "provenance": {
         "fileName": "ACME@PULSAR_PLUS_S2_(CM_S2_IP)@PULSAR_PLUS_S2_(CM_S2_IP).gdtf",
         "sha256": "cec49878d044593d6cf274ee190276cd9d931426690291468edf52fb6d62a520",
@@ -1103,7 +1103,7 @@
       },
       "shortName": "Pulsar S2",
       "image": "images/fixtures/acme/pulsar-s2.png",
-      "details": "json/fixture-details/25222de67f8e37acef85cdc74b5c3be44d0e12e8fe56da50180e1410a13a7024.json",
+      "details": "json/fixture-details/acme/pulsar-s2.json",
       "provenance": {
         "fileName": "ACME@ACME_PULSAR_S2_(CM_S2)@ACME_PULSAR_S2_(CM_S2).gdtf",
         "sha256": "25222de67f8e37acef85cdc74b5c3be44d0e12e8fe56da50180e1410a13a7024",
@@ -1142,7 +1142,7 @@
       },
       "shortName": "Sana Beam",
       "image": "images/fixtures/acme/nova-beam--sana-beam.png",
-      "details": "json/fixture-details/b62f7426ed9c2c5b4088ea125c4099cd74b4f766b8a67e0d49b34555da4e8948.json",
+      "details": "json/fixture-details/acme/sana-beam.json",
       "provenance": {
         "fileName": "ACME@ACME_SANA_BEAM_(XA_300_BEAM_IP)@_ACME_SANA_BEAM_(XA_300_BEAM_IP).gdtf",
         "sha256": "b62f7426ed9c2c5b4088ea125c4099cd74b4f766b8a67e0d49b34555da4e8948",
@@ -1181,7 +1181,7 @@
       },
       "shortName": "Sana Prof",
       "image": "images/fixtures/acme/sana-profile.png",
-      "details": "json/fixture-details/0ff8d758ee3901ca96a1bf1cb9650ac346ff440dac2c69f300f1b4e4bc82d650.json",
+      "details": "json/fixture-details/acme/sana-profile.json",
       "provenance": {
         "fileName": "ACME@ACME_SANA_PROFILE_(XA_300_BSWF_IP)@_ACME_SANA_PROFILE_(XA_300_BSWF_IP).gdtf",
         "sha256": "0ff8d758ee3901ca96a1bf1cb9650ac346ff440dac2c69f300f1b4e4bc82d650",
@@ -1226,7 +1226,7 @@
       },
       "shortName": "Sandane Frost",
       "image": "images/fixtures/acme/sandane-frost.png",
-      "details": "json/fixture-details/baac400b8970d2a755fe4f8bdbafe607304eca95d1a6f892274667915739a56b.json",
+      "details": "json/fixture-details/acme/sandane-frost.json",
       "provenance": {
         "fileName": "ACME@SANDANE_FROST_(PAR_54_IP_EF)@SANDANE_FROST_(PAR_54_IP_EF).gdtf",
         "sha256": "baac400b8970d2a755fe4f8bdbafe607304eca95d1a6f892274667915739a56b",
@@ -1253,7 +1253,7 @@
       },
       "shortName": "Solar Wind",
       "image": "images/fixtures/acme/solar-wind.png",
-      "details": "json/fixture-details/caf7bbe2882328bddff598a5cf719e5358d18554cee0e2dc932020973b8dcc91.json",
+      "details": "json/fixture-details/acme/solar-wind.json",
       "provenance": {
         "fileName": "ACME@ACME_SOLAR_WIND_(XA_500_BSW)@ACME_SOLAR_WIND__(XA_500_BSW).gdtf",
         "sha256": "caf7bbe2882328bddff598a5cf719e5358d18554cee0e2dc932020973b8dcc91",
@@ -1286,7 +1286,7 @@
       },
       "shortName": "Par 400 Zoom IP",
       "image": "images/fixtures/acme/stage-par-400-zoom-ip.png",
-      "details": "json/fixture-details/f3361dc3e1adaefb08c9f15d3df8f036e24f1dc902ea0bc68dda19d0df018556.json",
+      "details": "json/fixture-details/acme/stage-par-400-zoom-ip.json",
       "provenance": {
         "fileName": "ACME@ACME_STAGEPAR_400_ZOOM_IP_(MP-400Z_IP)@ACME_STAGEPAR_400_ZOOM_IP_(MP-400Z_IP).gdtf",
         "sha256": "f3361dc3e1adaefb08c9f15d3df8f036e24f1dc902ea0bc68dda19d0df018556",
@@ -1343,7 +1343,7 @@
       },
       "shortName": "Super Dotline",
       "image": "images/fixtures/acme/super-dotline.png",
-      "details": "json/fixture-details/cf8cc92f5340b29dd9d4bfd4aac56326b32ea2a9bc7949a5d1e0b2cd2108c219.json",
+      "details": "json/fixture-details/acme/super-dotline.json",
       "provenance": {
         "fileName": "ACME@ACME_SUPER_DOTLINE_(TB_1060_INT12)@ACME_SUPER_DOTLINE_(TB_1060_INT12).gdtf",
         "sha256": "cf8cc92f5340b29dd9d4bfd4aac56326b32ea2a9bc7949a5d1e0b2cd2108c219",
@@ -1382,7 +1382,7 @@
       },
       "shortName": "Supernova",
       "image": "images/fixtures/acme/aeco-15--mana-profile--supernova.png",
-      "details": "json/fixture-details/ba191939396f52bdc2ab0bc0ba4b16b122e48fb231f814ddf15ab207d8716172.json",
+      "details": "json/fixture-details/acme/supernova.json",
       "provenance": {
         "fileName": "ACME@ACME_SUPERNOVA_(XA_2000_BSWF_IP)@ACME_SUPERNOVA_(XA_2000_BSWF_IP).gdtf",
         "sha256": "ba191939396f52bdc2ab0bc0ba4b16b122e48fb231f814ddf15ab207d8716172",
@@ -1421,7 +1421,7 @@
       },
       "shortName": "Supernova LT",
       "image": "images/fixtures/acme/supernova-lt.png",
-      "details": "json/fixture-details/e536543591af6ccf769e93abe3eebb3d49c6f337a608a07e9827e94307965014.json",
+      "details": "json/fixture-details/acme/supernova-lt.json",
       "provenance": {
         "fileName": "ACME@ACME_SUPERNOVA_LT__(XA_2000_BSWF_IP_LT)__@ACME_SUPERNOVA_LT__(XA_2000_BSWF_IP_LT)__.gdtf",
         "sha256": "e536543591af6ccf769e93abe3eebb3d49c6f337a608a07e9827e94307965014",
@@ -1460,7 +1460,7 @@
       },
       "shortName": "Tango",
       "image": "images/fixtures/acme/tango.png",
-      "details": "json/fixture-details/b7c7bf58dc8920f44bbe871d17d43df4d4b611b505bc35359d47193c1b702297.json",
+      "details": "json/fixture-details/acme/tango.json",
       "provenance": {
         "fileName": "ACME@ACME_TANGO_(PAR_7)@_ACME_TANGO_(PAR_7).gdtf",
         "sha256": "b7c7bf58dc8920f44bbe871d17d43df4d4b611b505bc35359d47193c1b702297",
@@ -1493,7 +1493,7 @@
       },
       "shortName": "Theta",
       "image": "images/fixtures/acme/theta.png",
-      "details": "json/fixture-details/df73ac01ba44545ca0b85561fd9eddcf8bc8cdf4d7e70a4f019c37c95383e595.json",
+      "details": "json/fixture-details/acme/theta.json",
       "provenance": {
         "fileName": "ACME@ACME_THETA(CM_1000_ZF)@ACME_THETA(CM_1000_ZF).gdtf",
         "sha256": "df73ac01ba44545ca0b85561fd9eddcf8bc8cdf4d7e70a4f019c37c95383e595",
@@ -1538,7 +1538,7 @@
       },
       "shortName": "Tornado",
       "image": "images/fixtures/acme/tornado.png",
-      "details": "json/fixture-details/bef0e6b65b88b3ebc9c5adb90f8f8335d10fc625f42a6295b3ad93fdc97caa02.json",
+      "details": "json/fixture-details/acme/tornado.json",
       "provenance": {
         "fileName": "ACME@ACME_TORNADO@tornado.gdtf",
         "sha256": "bef0e6b65b88b3ebc9c5adb90f8f8335d10fc625f42a6295b3ad93fdc97caa02",
@@ -1565,7 +1565,7 @@
       },
       "shortName": "Tv Panel 3000",
       "image": "images/fixtures/acme/tv-light-panel-3000.png",
-      "details": "json/fixture-details/7b9f8e4909ccc8aebbe038501af4b2f5464483b4a6b4c59c595ef5550936d5b4.json",
+      "details": "json/fixture-details/acme/tv-light-panel-3000.json",
       "provenance": {
         "fileName": "ACME@ACME_TV_LIGHT_PANEL_3000_(LP_F3000)@ACME_TV_LIGHT_PANEL_3000_(LP_F3000).gdtf",
         "sha256": "7b9f8e4909ccc8aebbe038501af4b2f5464483b4a6b4c59c595ef5550936d5b4",
@@ -1585,7 +1585,7 @@
       },
       "shortName": "Willow 200",
       "image": "images/fixtures/acme/willow-200.png",
-      "details": "json/fixture-details/5ef0a337676bb83933f75c741cc2b91e765bd06e19a64db7146af912eb6daaa5.json",
+      "details": "json/fixture-details/acme/willow-200.json",
       "provenance": {
         "fileName": "ACME@_ACME_WILLOW_(BSW_200_IV)@BSW_200_IV.gdtf",
         "sha256": "5ef0a337676bb83933f75c741cc2b91e765bd06e19a64db7146af912eb6daaa5",
@@ -1606,7 +1606,7 @@
       },
       "shortName": "Willow 500",
       "image": "images/fixtures/acme/willow-500.png",
-      "details": "json/fixture-details/57909b60419b85a25e3e6fba550140a8705fd06fde0c92dc33fb2ce388e7998e.json",
+      "details": "json/fixture-details/acme/willow-500.json",
       "provenance": {
         "fileName": "ACME@ACME_WILLOW_(BSW_500_III)@ACME_WILLOW_(BSW_500_III).gdtf",
         "sha256": "57909b60419b85a25e3e6fba550140a8705fd06fde0c92dc33fb2ce388e7998e",

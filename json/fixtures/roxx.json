@@ -69,7 +69,7 @@
       },
       "shortName": "Show mini TW+",
       "image": "images/fixtures/roxx/b-show-mini-twplus.png",
-      "details": "json/fixture-details/fae8ecf0b07e79d51880e9fc128addae0fb489609f81f41b1b25522d04bb2d82.json",
+      "details": "json/fixture-details/roxx/b-show-mini-twplus.json",
       "provenance": {
         "fileName": "ROXX@B-Show_mini_TWPlus@TW_A_18092025.gdtf",
         "sha256": "fae8ecf0b07e79d51880e9fc128addae0fb489609f81f41b1b25522d04bb2d82",
@@ -169,7 +169,7 @@
       "watts": 600.0,
       "weight": 16.5,
       "image": "images/fixtures/roxx/cluster-b2-fc.png",
-      "details": "json/fixture-details/970489c84b1d78f70d360e60cd9b5d83eed33f6fe9c9a45cbe75b8782d063f90.json",
+      "details": "json/fixture-details/roxx/cluster-b2-fc.json",
       "provenance": {
         "fileName": "ROXX@CLUSTER_B2-FC@TW_B_08082023.gdtf",
         "sha256": "970489c84b1d78f70d360e60cd9b5d83eed33f6fe9c9a45cbe75b8782d063f90",
@@ -219,7 +219,7 @@
       },
       "shortName": "Cluster B2-W",
       "image": "images/fixtures/roxx/cluster-b2-w.png",
-      "details": "json/fixture-details/762724b5db190868a6a33c029ed9bd7d486659cfa9943595a52a196b8a270101.json",
+      "details": "json/fixture-details/roxx/cluster-b2-w.json",
       "provenance": {
         "fileName": "ROXX@CLUSTER_B2-W@TW_B_08082023.gdtf",
         "sha256": "762724b5db190868a6a33c029ed9bd7d486659cfa9943595a52a196b8a270101",
@@ -324,7 +324,7 @@
       },
       "shortName": "Cluster B4-FC",
       "image": "images/fixtures/roxx/cluster-b4-fc.png",
-      "details": "json/fixture-details/24850b8a944374aa33e20ecacbe26d0c926d982bf702d9ab0c423feb4c7788b3.json",
+      "details": "json/fixture-details/roxx/cluster-b4-fc.json",
       "provenance": {
         "fileName": "ROXX@CLUSTER_B4-FC@TW_A_07082023.gdtf",
         "sha256": "24850b8a944374aa33e20ecacbe26d0c926d982bf702d9ab0c423feb4c7788b3",
@@ -379,7 +379,7 @@
       },
       "shortName": "Cluster B4-W",
       "image": "images/fixtures/roxx/cluster-b4-w.png",
-      "details": "json/fixture-details/51b3c7887f9bbe004950eae1bb531d144ca4c6a2477fe30e3c378c77146b1152.json",
+      "details": "json/fixture-details/roxx/cluster-b4-w.json",
       "provenance": {
         "fileName": "ROXX@CLUSTER_B4-W@TW_B_08082023.gdtf",
         "sha256": "51b3c7887f9bbe004950eae1bb531d144ca4c6a2477fe30e3c378c77146b1152",
@@ -434,7 +434,7 @@
       },
       "shortName": "Cluster S1",
       "image": "images/fixtures/roxx/cluster-s1.png",
-      "details": "json/fixture-details/69a51e88e02e0e0e5cd89442618e390b83d2a72fbc72a71d2b31a77e3115db83.json",
+      "details": "json/fixture-details/roxx/cluster-s1.json",
       "provenance": {
         "fileName": "ROXX@Cluster_S1@New_fixture_type_based_on_Cluster_S1_from_Roxx.gdtf",
         "sha256": "69a51e88e02e0e0e5cd89442618e390b83d2a72fbc72a71d2b31a77e3115db83",
@@ -484,7 +484,7 @@
       },
       "shortName": "Cluster S2",
       "image": "images/fixtures/roxx/cluster-s2.png",
-      "details": "json/fixture-details/32b2944660f1e57241c4a898e8d92b56b40e476fcb2689f5596045575e772acd.json",
+      "details": "json/fixture-details/roxx/cluster-s2.json",
       "provenance": {
         "fileName": "ROXX@Cluster_S2@New_fixture_type_based_on_Cluster_S2_from_Roxx.gdtf",
         "sha256": "32b2944660f1e57241c4a898e8d92b56b40e476fcb2689f5596045575e772acd",
@@ -569,7 +569,7 @@
       },
       "shortName": "FLEX",
       "image": "images/fixtures/roxx/flex.png",
-      "details": "json/fixture-details/670f9f7700e60ad8ce1b3749455cec508049896ba953c9e1326675addbb81853.json",
+      "details": "json/fixture-details/roxx/flex.json",
       "provenance": {
         "fileName": "ROXX@FLEX@TW_24102024C.gdtf",
         "sha256": "670f9f7700e60ad8ce1b3749455cec508049896ba953c9e1326675addbb81853",
@@ -639,7 +639,7 @@
       },
       "shortName": "Icon F4",
       "image": "images/fixtures/roxx/icon-f4.png",
-      "details": "json/fixture-details/029d90cb903f4b9f1039a4b974579595a32e33e2a88b6f5c296ff6bdc602f878.json",
+      "details": "json/fixture-details/roxx/icon-f4.json",
       "provenance": {
         "fileName": "ROXX@Icon_F4@RX_A_28052026.gdtf",
         "sha256": "029d90cb903f4b9f1039a4b974579595a32e33e2a88b6f5c296ff6bdc602f878",
@@ -709,7 +709,7 @@
       },
       "shortName": "Icon F6",
       "image": "images/fixtures/roxx/icon-f6.png",
-      "details": "json/fixture-details/20f60b6fe32ce9c0b20b2101197a61483ddd9071713da92a6005b145d3111395.json",
+      "details": "json/fixture-details/roxx/icon-f6.json",
       "provenance": {
         "fileName": "ROXX@Icon_F6@RX_B_28052026.gdtf",
         "sha256": "20f60b6fe32ce9c0b20b2101197a61483ddd9071713da92a6005b145d3111395",
@@ -779,7 +779,7 @@
       },
       "shortName": "Icon F8",
       "image": "images/fixtures/roxx/icon-f8.png",
-      "details": "json/fixture-details/debb4daf0fe6c4a938db2ce9e043a3a2c9ef15d0754b78db84904154a331efd5.json",
+      "details": "json/fixture-details/roxx/icon-f8.json",
       "provenance": {
         "fileName": "ROXX@Icon_F8@RX_B_28052026.gdtf",
         "sha256": "debb4daf0fe6c4a938db2ce9e043a3a2c9ef15d0754b78db84904154a331efd5",
@@ -814,7 +814,7 @@
       },
       "shortName": "Key K36",
       "image": "images/fixtures/roxx/key-k36.png",
-      "details": "json/fixture-details/7aa441f82542e28d62734dc48306fbf87986b37952d3893fbb5a8cd6054e3c69.json",
+      "details": "json/fixture-details/roxx/key-k36.json",
       "provenance": {
         "fileName": "ROXX@Key_K36@RX_A_29062026.gdtf",
         "sha256": "7aa441f82542e28d62734dc48306fbf87986b37952d3893fbb5a8cd6054e3c69",
@@ -909,7 +909,7 @@
       },
       "shortName": "Neo",
       "image": "images/fixtures/roxx/neo.png",
-      "details": "json/fixture-details/879d26b202117f1902a5e19c2bf975d19813f48c26bedda293acc082fa502da2.json",
+      "details": "json/fixture-details/roxx/neo.json",
       "provenance": {
         "fileName": "ROXX@Neo@RX_A_15072024.gdtf",
         "sha256": "879d26b202117f1902a5e19c2bf975d19813f48c26bedda293acc082fa502da2",
@@ -984,7 +984,7 @@
       },
       "shortName": "Neo fx",
       "image": "images/fixtures/roxx/neo-fx.png",
-      "details": "json/fixture-details/cbf881e963fd32aeebe291dafa4ba189c065b0e7eb9e1bb994c6bc168305d9f8.json",
+      "details": "json/fixture-details/roxx/neo-fx.json",
       "provenance": {
         "fileName": "ROXX@Neo_fx@RX_C_27012025.gdtf",
         "sha256": "cbf881e963fd32aeebe291dafa4ba189c065b0e7eb9e1bb994c6bc168305d9f8",
@@ -1059,7 +1059,7 @@
       },
       "shortName": "Neo lite",
       "image": "images/fixtures/roxx/neo-lite.png",
-      "details": "json/fixture-details/8985574a5e7ec16ee9dd30d40cf3786f118f1cda012ef9a7b2e50433ca63d109.json",
+      "details": "json/fixture-details/roxx/neo-lite.json",
       "provenance": {
         "fileName": "ROXX@Neo_lite@TW_A_29092025.gdtf",
         "sha256": "8985574a5e7ec16ee9dd30d40cf3786f118f1cda012ef9a7b2e50433ca63d109",
@@ -1134,7 +1134,7 @@
       },
       "shortName": "Neo Mini",
       "image": "images/fixtures/roxx/neo-mini.png",
-      "details": "json/fixture-details/4cbf10c637812b2daf33d08c5d80125cab2ef3dd98e443161047c5e810294e05.json",
+      "details": "json/fixture-details/roxx/neo-mini.json",
       "provenance": {
         "fileName": "ROXX@Neo_Mini@RX_A_27062025.gdtf",
         "sha256": "4cbf10c637812b2daf33d08c5d80125cab2ef3dd98e443161047c5e810294e05",
@@ -1293,7 +1293,7 @@
       },
       "shortName": "SWMAX TW+ N",
       "image": "images/fixtures/roxx/show-maxx-twplus-narrow.png",
-      "details": "json/fixture-details/ab46591e0691dc23ad5628611357b866621ea45edd2e82a9554567426c09b441.json",
+      "details": "json/fixture-details/roxx/show-maxx-twplus-narrow.json",
       "provenance": {
         "fileName": "ROXX@Show_MAXX_TWplus_Narrow@TW_A_20112023.gdtf",
         "sha256": "ab46591e0691dc23ad5628611357b866621ea45edd2e82a9554567426c09b441",

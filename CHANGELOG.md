@@ -1,3 +1,8 @@
+## V56.1 — Organised fixture definitions
+
+- Organise stored fixture definitions into manufacturer folders with readable fixture names. Preserve shared definitions, source provenance and all definition contents.
+- Update catalogue references and maintenance validation for the organised folders.
+
 ## V56 — Stored fixture data and MVR attachments
 
 - Organise fixture images into manufacturer folders with readable names and lossless compression.

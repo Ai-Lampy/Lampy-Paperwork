@@ -29,7 +29,7 @@
       },
       "shortName": "Par-50",
       "image": "images/fixtures/magmatic/prisma-par-50.png",
-      "details": "json/fixture-details/32525d5d13933ba546057f92b48a1b943469dcbb27cf95dcef13710b4e172143.json",
+      "details": "json/fixture-details/magmatic/prisma-par-50.json",
       "provenance": {
         "fileName": "Magmatic@Prisma_Par_50@2024-03-09_First_Release.gdtf",
         "sha256": "32525d5d13933ba546057f92b48a1b943469dcbb27cf95dcef13710b4e172143",
@@ -59,7 +59,7 @@
       },
       "shortName": "Sidewinder",
       "image": "",
-      "details": "json/fixture-details/51d0b468683dac6895f3c0c09df9edf80623a8aa3a1077926a796693b39ef8b8.json",
+      "details": "json/fixture-details/magmatic/sidewinder.json",
       "provenance": {
         "fileName": "Magmatic@SIDEWINDER@25-27-06_First_Release.gdtf",
         "sha256": "51d0b468683dac6895f3c0c09df9edf80623a8aa3a1077926a796693b39ef8b8",

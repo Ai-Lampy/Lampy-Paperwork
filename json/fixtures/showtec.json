@@ -34,7 +34,7 @@
       },
       "shortName": "Goliath",
       "image": "images/fixtures/showtec/goliath.png",
-      "details": "json/fixture-details/fdac78514fd19cae1d649da69a10c5d58f1ca6cfc82e9c834cf198907bcdee33.json",
+      "details": "json/fixture-details/showtec/goliath.json",
       "provenance": {
         "fileName": "Showtec@Goliath@Initial_upload_by_GDTFservice.com_commissioned_by_Showtec.gdtf",
         "sha256": "fdac78514fd19cae1d649da69a10c5d58f1ca6cfc82e9c834cf198907bcdee33",
@@ -74,7 +74,7 @@
       },
       "shortName": "IP Pixelstrip 40",
       "image": "images/fixtures/showtec/ip-pixelstrip-40.png",
-      "details": "json/fixture-details/f71ce199857703c5a81cf2275e2c506f280d8cbc1ddca35e152697bc61369456.json",
+      "details": "json/fixture-details/showtec/ip-pixelstrip-40.json",
       "provenance": {
         "fileName": "Showtec@IP_Pixelstrip_40@Initial_upload_by_GDTFservice.com_commissioned_by_Showtec.gdtf",
         "sha256": "f71ce199857703c5a81cf2275e2c506f280d8cbc1ddca35e152697bc61369456",
@@ -114,7 +114,7 @@
       },
       "shortName": "IP Pixelstrip 80",
       "image": "images/fixtures/showtec/ip-pixelstrip-80.png",
-      "details": "json/fixture-details/396b37b567ce3145b2131d54060ffc6d88860065618ec92a79efb2ee8465ef3d.json",
+      "details": "json/fixture-details/showtec/ip-pixelstrip-80.json",
       "provenance": {
         "fileName": "Showtec@IP_Pixelstrip_80@Initial_upload_by_GDTFservice.com_commissioned_by_Showtec.gdtf",
         "sha256": "396b37b567ce3145b2131d54060ffc6d88860065618ec92a79efb2ee8465ef3d",
@@ -159,7 +159,7 @@
       },
       "shortName": "PhotonStrobe",
       "image": "images/fixtures/showtec/photon-strobe.png",
-      "details": "json/fixture-details/94e972cad185e3f5cca5b127cc72da55051bdad2c319c7f3190ae628a2e1d1d9.json",
+      "details": "json/fixture-details/showtec/photon-strobe.json",
       "provenance": {
         "fileName": "Showtec@Photon_Strobe@Initial_upload_by_GDTFservice.com_commissioned_by_Showtec.gdtf",
         "sha256": "94e972cad185e3f5cca5b127cc72da55051bdad2c319c7f3190ae628a2e1d1d9",
@@ -204,7 +204,7 @@
       },
       "shortName": "PhotonSunstrip",
       "image": "images/fixtures/showtec/photon-sunstrip.png",
-      "details": "json/fixture-details/801a2ad03943459728756d5baa20252f06f5ed2b9849e3b147c3bd2b472bed07.json",
+      "details": "json/fixture-details/showtec/photon-sunstrip.json",
       "provenance": {
         "fileName": "Showtec@Photon_Sunstrip@Initial_upload_by_GDTFservice.com_commissioned_by_Showtec.gdtf",
         "sha256": "801a2ad03943459728756d5baa20252f06f5ed2b9849e3b147c3bd2b472bed07",
@@ -249,7 +249,7 @@
       },
       "shortName": "SpectraStrobe",
       "image": "images/fixtures/showtec/spectra-strobe.png",
-      "details": "json/fixture-details/15f1d41f7d0eef13d46c1211b3d57e667b799a909e95ba77280ea0d193d8a431.json",
+      "details": "json/fixture-details/showtec/spectra-strobe.json",
       "provenance": {
         "fileName": "Showtec@Spectra_Strobe@Initial_upload_by_GDTFservice.com_commissioned_by_Showtec.gdtf",
         "sha256": "15f1d41f7d0eef13d46c1211b3d57e667b799a909e95ba77280ea0d193d8a431",
@@ -304,7 +304,7 @@
       },
       "shortName": "SpectraWash",
       "image": "images/fixtures/showtec/spectra-wash.png",
-      "details": "json/fixture-details/7d926ed4a7a4ae56c3cdc759096226f8b1ceccb377e40572e3df85129bdaef2b.json",
+      "details": "json/fixture-details/showtec/spectra-wash.json",
       "provenance": {
         "fileName": "Showtec@Spectra_Wash@Initial_upload_by_GDTFservice_powered_by_Q2Q_Technologies.gdtf",
         "sha256": "7d926ed4a7a4ae56c3cdc759096226f8b1ceccb377e40572e3df85129bdaef2b",

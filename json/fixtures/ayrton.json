@@ -44,7 +44,7 @@
       },
       "shortName": "Argo 6-FX",
       "image": "images/fixtures/ayrton/argo-6-fx.png",
-      "details": "json/fixture-details/adf07b429d8ec386667d59431a2a511504b881e58fc5868e91b1cef49e599e3f.json",
+      "details": "json/fixture-details/ayrton/argo-6-fx.json",
       "provenance": {
         "fileName": "Ayrton@Argo_6_FX@V1.7_Add_RDM_Personality.gdtf",
         "sha256": "adf07b429d8ec386667d59431a2a511504b881e58fc5868e91b1cef49e599e3f",
@@ -79,7 +79,7 @@
       },
       "shortName": "Argo 6-Wash",
       "image": "images/fixtures/ayrton/argo-6-wash.png",
-      "details": "json/fixture-details/ef794f80fab3321f8364bd0d9e230a00631fc964fc0a68b4d3849c7acbef183d.json",
+      "details": "json/fixture-details/ayrton/argo-6-wash.json",
       "provenance": {
         "fileName": "Ayrton@Argo_6_WASH@V1.7_Add_RDM_Personality.gdtf",
         "sha256": "ef794f80fab3321f8364bd0d9e230a00631fc964fc0a68b4d3849c7acbef183d",
@@ -109,7 +109,7 @@
       },
       "shortName": "Bora",
       "image": "images/fixtures/ayrton/bora.png",
-      "details": "json/fixture-details/f7ac7a98d1cdc26697910dbd57ace320236761013fa392aad6fb406eff6c3339.json",
+      "details": "json/fixture-details/ayrton/bora.json",
       "provenance": {
         "fileName": "Ayrton@Bora@V2.3_Add_RDM_Personality.gdtf",
         "sha256": "f7ac7a98d1cdc26697910dbd57ace320236761013fa392aad6fb406eff6c3339",
@@ -144,7 +144,7 @@
       },
       "shortName": "Cobra",
       "image": "images/fixtures/ayrton/cobra.png",
-      "details": "json/fixture-details/6c4b8f8ed436ee09fa856c9531139e503ee612af2f74a70cee93b5042bff5be0.json",
+      "details": "json/fixture-details/ayrton/cobra.json",
       "provenance": {
         "fileName": "Ayrton@Cobra@V1.7_Add_RDM_Personality.gdtf",
         "sha256": "6c4b8f8ed436ee09fa856c9531139e503ee612af2f74a70cee93b5042bff5be0",
@@ -179,7 +179,7 @@
       },
       "shortName": "Cobra 2",
       "image": "images/fixtures/ayrton/cobra-2.png",
-      "details": "json/fixture-details/76cdf6213504e91d69ef7aa15cc3ca5e47fc07a07f35161bcef2739adf90c392.json",
+      "details": "json/fixture-details/ayrton/cobra-2.json",
       "provenance": {
         "fileName": "Ayrton@Cobra_2@V1.3_Add_BZ_Control.gdtf",
         "sha256": "76cdf6213504e91d69ef7aa15cc3ca5e47fc07a07f35161bcef2739adf90c392",
@@ -209,7 +209,7 @@
       },
       "shortName": "Diablo Prof S",
       "image": "images/fixtures/ayrton/diablo-profile-s.png",
-      "details": "json/fixture-details/5de6196020ee8097d5fc307f362d2067760fc6d97668e7bf30627947760ed351.json",
+      "details": "json/fixture-details/ayrton/diablo-profile-s.json",
       "provenance": {
         "fileName": "Ayrton@Diablo@V2.6_Add_RDM_Personality.gdtf",
         "sha256": "5de6196020ee8097d5fc307f362d2067760fc6d97668e7bf30627947760ed351",
@@ -242,7 +242,7 @@
       },
       "shortName": "Domino LT",
       "image": "images/fixtures/ayrton/domino-lt.png",
-      "details": "json/fixture-details/06b1ff41815d7bfdd35e452967cff8fae021dc530f093b1f278cb1ffe33924df.json",
+      "details": "json/fixture-details/ayrton/domino-lt.json",
       "provenance": {
         "fileName": "Ayrton@Domino_LT@V1.8_Add_RDM_Personality.gdtf",
         "sha256": "06b1ff41815d7bfdd35e452967cff8fae021dc530f093b1f278cb1ffe33924df",
@@ -272,7 +272,7 @@
       },
       "shortName": "Domino Prof",
       "image": "images/fixtures/ayrton/domino-profile.png",
-      "details": "json/fixture-details/387737995bb31457ffa0a445a3bae67a3b701e480796175f5c3f5a25ae94beef.json",
+      "details": "json/fixture-details/ayrton/domino-profile.json",
       "provenance": {
         "fileName": "Ayrton@Domino_Profile@V2.6_Add_RDM_Personality.gdtf",
         "sha256": "387737995bb31457ffa0a445a3bae67a3b701e480796175f5c3f5a25ae94beef",
@@ -302,7 +302,7 @@
       },
       "shortName": "Domino Wash",
       "image": "images/fixtures/ayrton/domino-wash.png",
-      "details": "json/fixture-details/ffeed3595e555f408e62f7e6d6195e53416d4622b8553ed7dee7e259b8aad8c2.json",
+      "details": "json/fixture-details/ayrton/domino-wash.json",
       "provenance": {
         "fileName": "Ayrton@Domino_Wash@V1.4_Add_RDM_Personality.gdtf",
         "sha256": "ffeed3595e555f408e62f7e6d6195e53416d4622b8553ed7dee7e259b8aad8c2",
@@ -327,7 +327,7 @@
       },
       "shortName": "Eagle Strike",
       "image": "images/fixtures/ayrton/eagle-strike.png",
-      "details": "json/fixture-details/03269d3e8c1dbcca9954b5ef60fbc7b16af4cceb41dda6168309505fd31f4146.json",
+      "details": "json/fixture-details/ayrton/eagle-strike.json",
       "provenance": {
         "fileName": "Ayrton@EagleStrike@V1.3_Add_RDM_Personality.gdtf",
         "sha256": "03269d3e8c1dbcca9954b5ef60fbc7b16af4cceb41dda6168309505fd31f4146",
@@ -357,7 +357,7 @@
       },
       "shortName": "Eurus",
       "image": "images/fixtures/ayrton/eurus.png",
-      "details": "json/fixture-details/95a8de0448e05a4b965b3cae10617190533123aa45f870bf15787832c09d47a5.json",
+      "details": "json/fixture-details/ayrton/eurus.json",
       "provenance": {
         "fileName": "Ayrton@Eurus@V2.7_Add_RDM_Personality.gdtf",
         "sha256": "95a8de0448e05a4b965b3cae10617190533123aa45f870bf15787832c09d47a5",
@@ -387,7 +387,7 @@
       },
       "shortName": "Ghibli",
       "image": "images/fixtures/ayrton/ghibli.png",
-      "details": "json/fixture-details/5fe3dfdbb53b071a244f83d81c47fcaec657584057083b5691450c9cc9728683.json",
+      "details": "json/fixture-details/ayrton/ghibli.json",
       "provenance": {
         "fileName": "Ayrton@Ghibli@V2.4_Add_RDM_Personality.gdtf",
         "sha256": "5fe3dfdbb53b071a244f83d81c47fcaec657584057083b5691450c9cc9728683",
@@ -417,7 +417,7 @@
       },
       "shortName": "Huracan LT",
       "image": "images/fixtures/ayrton/huracan-lt.png",
-      "details": "json/fixture-details/ab78ccb226db44db7f6eed9ca70b3f8ede4da8653baaa2be511a4da469a6a040.json",
+      "details": "json/fixture-details/ayrton/huracan-lt.json",
       "provenance": {
         "fileName": "Ayrton@Huracan_LT@V1.5_Add_RDM_Personality.gdtf",
         "sha256": "ab78ccb226db44db7f6eed9ca70b3f8ede4da8653baaa2be511a4da469a6a040",
@@ -447,7 +447,7 @@
       },
       "shortName": "Huracan Prof",
       "image": "images/fixtures/ayrton/huracan-profile.png",
-      "details": "json/fixture-details/a8561f5f471a4d84571eb0d8be99b36c62eba1fe4da56c72823544be2b143c69.json",
+      "details": "json/fixture-details/ayrton/huracan-profile.json",
       "provenance": {
         "fileName": "Ayrton@Huracan_Profile@V2.6_Add_RDM_Personality.gdtf",
         "sha256": "a8561f5f471a4d84571eb0d8be99b36c62eba1fe4da56c72823544be2b143c69",
@@ -499,7 +499,7 @@
       },
       "shortName": "Khamsin",
       "image": "images/fixtures/ayrton/khamsin.png",
-      "details": "json/fixture-details/ac86be66ddb7709138bcb31aedf70db7dc85f6db2cb4c7f4da40b6ff1fa40d51.json",
+      "details": "json/fixture-details/ayrton/khamsin.json",
       "provenance": {
         "fileName": "Ayrton@Khamsin@V12.3_Add_RDM_Personality.gdtf",
         "sha256": "ac86be66ddb7709138bcb31aedf70db7dc85f6db2cb4c7f4da40b6ff1fa40d51",
@@ -519,7 +519,7 @@
       },
       "shortName": "Kyalami",
       "image": "images/fixtures/ayrton/kyalami.png",
-      "details": "json/fixture-details/ac15c07a1caa8cfafb80db71e0769de83047b83e411cb513ad90ffe13398d672.json",
+      "details": "json/fixture-details/ayrton/kyalami.json",
       "provenance": {
         "fileName": "Ayrton@Kyalami@V1.7_Add_RDM_Personality.gdtf",
         "sha256": "ac15c07a1caa8cfafb80db71e0769de83047b83e411cb513ad90ffe13398d672",
@@ -555,7 +555,7 @@
       },
       "shortName": "Magic Blade Neo",
       "image": "images/fixtures/ayrton/magic-blade-neo.png",
-      "details": "json/fixture-details/bbb2ecec2e9b9f189bbdc2a71e2081486e295e6161ea6fdcc3600e88a3f2d459.json",
+      "details": "json/fixture-details/ayrton/magic-blade-neo.json",
       "provenance": {
         "fileName": "Ayrton@MagicBlade_Neo@V1.1_Add_RDM_Personality.gdtf",
         "sha256": "bbb2ecec2e9b9f189bbdc2a71e2081486e295e6161ea6fdcc3600e88a3f2d459",
@@ -580,7 +580,7 @@
       },
       "shortName": "Magic Dot Neo",
       "image": "images/fixtures/ayrton/magic-dot-neo.png",
-      "details": "json/fixture-details/5be88fc0c2b71eac62a75357c448a572a20761aa25450b5d73d934517e014496.json",
+      "details": "json/fixture-details/ayrton/magic-dot-neo.json",
       "provenance": {
         "fileName": "Ayrton@MagicDot_Neo@V1.2_Add_RDM_Personality.gdtf",
         "sha256": "5be88fc0c2b71eac62a75357c448a572a20761aa25450b5d73d934517e014496",
@@ -600,7 +600,7 @@
       },
       "shortName": "Mamba",
       "image": "images/fixtures/ayrton/mamba.png",
-      "details": "json/fixture-details/25c02bb5594533c0f31fd9193150037b0cc40047941b18a6c5647a86ba13ca32.json",
+      "details": "json/fixture-details/ayrton/mamba.json",
       "provenance": {
         "fileName": "Ayrton@Mamba@V1.5_Add_RDM_Personality.gdtf",
         "sha256": "25c02bb5594533c0f31fd9193150037b0cc40047941b18a6c5647a86ba13ca32",
@@ -630,7 +630,7 @@
       },
       "shortName": "MiniPanel FX",
       "image": "images/fixtures/ayrton/minipanel-fx.png",
-      "details": "json/fixture-details/3769f1c900ee86eaf4f2ad891968a6a520bbd1a599ff41d9b44e62fb6113c85e.json",
+      "details": "json/fixture-details/ayrton/minipanel-fx.json",
       "provenance": {
         "fileName": "Ayrton@MiniPanel_FX@V2.5_Add_RDM_Personality.gdtf",
         "sha256": "3769f1c900ee86eaf4f2ad891968a6a520bbd1a599ff41d9b44e62fb6113c85e",
@@ -660,7 +660,7 @@
       },
       "shortName": "Mistral",
       "image": "images/fixtures/ayrton/mistral.png",
-      "details": "json/fixture-details/3ec8fb819d7d4d82a61578199c1cafce468e72a1ff1976c4a6fbbc0828ec70c6.json",
+      "details": "json/fixture-details/ayrton/mistral.json",
       "provenance": {
         "fileName": "Ayrton@Mistral@V2.3_Add_RDM_Personality.gdtf",
         "sha256": "3ec8fb819d7d4d82a61578199c1cafce468e72a1ff1976c4a6fbbc0828ec70c6",
@@ -680,7 +680,7 @@
       },
       "shortName": "Naja",
       "image": "images/fixtures/ayrton/naja.png",
-      "details": "json/fixture-details/67c2e3b8c8771014509ea83b3eb3babb715630b0d106d1b3af2040fe70bf232e.json",
+      "details": "json/fixture-details/ayrton/naja.json",
       "provenance": {
         "fileName": "Ayrton@Naja@V1.0_First_Release.gdtf",
         "sha256": "67c2e3b8c8771014509ea83b3eb3babb715630b0d106d1b3af2040fe70bf232e",
@@ -726,7 +726,7 @@
       },
       "shortName": "Nando 1202",
       "image": "images/fixtures/ayrton/nando-1202.png",
-      "details": "json/fixture-details/dbdb38a0904991e2dc65a7e0aeec608d16aac727119b755e751e1c4b290b073a.json",
+      "details": "json/fixture-details/ayrton/nando-1202.json",
       "provenance": {
         "fileName": "Ayrton@Nando_1202@V1.1_Add_RDM_Personality.gdtf",
         "sha256": "dbdb38a0904991e2dc65a7e0aeec608d16aac727119b755e751e1c4b290b073a",
@@ -772,7 +772,7 @@
       },
       "shortName": "Nando 502",
       "image": "images/fixtures/ayrton/nando-502.png",
-      "details": "json/fixture-details/52edeb0c3011647198924133d77a8b77b3df8b99eed46d3c3011a88e98cad081.json",
+      "details": "json/fixture-details/ayrton/nando-502.json",
       "provenance": {
         "fileName": "Ayrton@Nando_502@V2.3_Add_RDM_Personality.gdtf",
         "sha256": "52edeb0c3011647198924133d77a8b77b3df8b99eed46d3c3011a88e98cad081",
@@ -802,7 +802,7 @@
       },
       "shortName": "NandoBeam-S3",
       "image": "images/fixtures/ayrton/nandobeam-s3.png",
-      "details": "json/fixture-details/ccf7a9a4e3cf880b5bcce8d6d795f1ed1c5ac8033afe20862c34a612a551646c.json",
+      "details": "json/fixture-details/ayrton/nandobeam-s3.json",
       "provenance": {
         "fileName": "Ayrton@NandoBeam-S3@V1.52_New_SVG.gdtf",
         "sha256": "ccf7a9a4e3cf880b5bcce8d6d795f1ed1c5ac8033afe20862c34a612a551646c",
@@ -832,7 +832,7 @@
       },
       "shortName": "NandoBeam-S6",
       "image": "images/fixtures/ayrton/nandobeam-s6.png",
-      "details": "json/fixture-details/86421173c1da1aad8f27979456b948f0aeaff91a9d8fb19ec4b5f9f465469bce.json",
+      "details": "json/fixture-details/ayrton/nandobeam-s6.json",
       "provenance": {
         "fileName": "Ayrton@NandoBeam-S6@V1.72_New_SVG.gdtf",
         "sha256": "86421173c1da1aad8f27979456b948f0aeaff91a9d8fb19ec4b5f9f465469bce",
@@ -862,7 +862,7 @@
       },
       "shortName": "NandoBeam-S9",
       "image": "images/fixtures/ayrton/nandobeam-s9.png",
-      "details": "json/fixture-details/d069ba8f5947843b3211534f6f5851ccc9d093c19fe8724a46a85de3f301f7a0.json",
+      "details": "json/fixture-details/ayrton/nandobeam-s9.json",
       "provenance": {
         "fileName": "Ayrton@NandoBeam-S9@V1.72_New_SVG.gdtf",
         "sha256": "d069ba8f5947843b3211534f6f5851ccc9d093c19fe8724a46a85de3f301f7a0",
@@ -897,7 +897,7 @@
       },
       "shortName": "Perseo Prof",
       "image": "images/fixtures/ayrton/perseo-profile.png",
-      "details": "json/fixture-details/425939d71eeef474a167f1a519352203134138ce8399069faed4cc8966ba7eaf.json",
+      "details": "json/fixture-details/ayrton/perseo-profile.json",
       "provenance": {
         "fileName": "Ayrton@Perseo_Profile@V2.3_Add_RDM_Personality.gdtf",
         "sha256": "425939d71eeef474a167f1a519352203134138ce8399069faed4cc8966ba7eaf",
@@ -922,7 +922,7 @@
       },
       "shortName": "RawBeam 350",
       "image": "images/fixtures/ayrton/rawbeam-350.png",
-      "details": "json/fixture-details/c1b03df8fce197fc7e228e61125f6ef5947ae068262dc7416c895aa4f5b56285.json",
+      "details": "json/fixture-details/ayrton/rawbeam-350.json",
       "provenance": {
         "fileName": "Ayrton@RawBeam_350@V1.3_Add_RDM_Personality.gdtf",
         "sha256": "c1b03df8fce197fc7e228e61125f6ef5947ae068262dc7416c895aa4f5b56285",
@@ -950,7 +950,7 @@
       },
       "shortName": "Rivale Prof",
       "image": "images/fixtures/ayrton/rivale-profile.png",
-      "details": "json/fixture-details/6302c65c15770aca08f36a65b26a0a3de728cbdfe3828dd0b2ad47fefbfc4449.json",
+      "details": "json/fixture-details/ayrton/rivale-profile.json",
       "provenance": {
         "fileName": "Ayrton@Rivale_Profile@V1.7_Add_RDM_Personality.gdtf",
         "sha256": "6302c65c15770aca08f36a65b26a0a3de728cbdfe3828dd0b2ad47fefbfc4449",
@@ -975,7 +975,7 @@
       },
       "shortName": "Rivale Wash",
       "image": "images/fixtures/ayrton/rivale-wash.png",
-      "details": "json/fixture-details/f32e95da8bb8085536528620006ceb8cae097fb77cb5426e0f6f17d5ff887e50.json",
+      "details": "json/fixture-details/ayrton/rivale-wash.json",
       "provenance": {
         "fileName": "Ayrton@Rivale_Wash@V1.7_Add_RDM_Personality.gdtf",
         "sha256": "f32e95da8bb8085536528620006ceb8cae097fb77cb5426e0f6f17d5ff887e50",
@@ -1000,7 +1000,7 @@
       },
       "shortName": "Stradale Prof",
       "image": "images/fixtures/ayrton/stradale-profile.png",
-      "details": "json/fixture-details/f6ba959a501e1fad53bed0e7dac40adc134f95a138654349173d15b6a29040c9.json",
+      "details": "json/fixture-details/ayrton/stradale-profile.json",
       "provenance": {
         "fileName": "Ayrton@Stradale_Profile@V1.2_Add_RDM_Personality.gdtf",
         "sha256": "f6ba959a501e1fad53bed0e7dac40adc134f95a138654349173d15b6a29040c9",
@@ -1025,7 +1025,7 @@
       },
       "shortName": "Veloce Prof",
       "image": "images/fixtures/ayrton/veloce-profile.png",
-      "details": "json/fixture-details/53a79d21afe7820348e71ec18309d7e44dde610942f26d387592b241978d9e40.json",
+      "details": "json/fixture-details/ayrton/veloce-profile.json",
       "provenance": {
         "fileName": "Ayrton@Veloce_Profile@V1.5_Add_RDM_Personality.gdtf",
         "sha256": "53a79d21afe7820348e71ec18309d7e44dde610942f26d387592b241978d9e40",
@@ -1050,7 +1050,7 @@
       },
       "shortName": "Veloce Wash",
       "image": "images/fixtures/ayrton/veloce-wash.png",
-      "details": "json/fixture-details/af865a941b873b8b8211248abd5b49ab5bb9abd5c30db4aa2ba1cc205d9dd30b.json",
+      "details": "json/fixture-details/ayrton/veloce-wash.json",
       "provenance": {
         "fileName": "Ayrton@Veloce_Wash@V1.2_Add_RDM_Personality.gdtf",
         "sha256": "af865a941b873b8b8211248abd5b49ab5bb9abd5c30db4aa2ba1cc205d9dd30b",
@@ -1100,7 +1100,7 @@
       },
       "shortName": "Zonda 3 FX",
       "image": "images/fixtures/ayrton/zonda-3-fx.png",
-      "details": "json/fixture-details/7e744d00bc451edb3366864833b2e8d22585b4a1fb29197ee4d35ce198563554.json",
+      "details": "json/fixture-details/ayrton/zonda-3-fx.json",
       "provenance": {
         "fileName": "Ayrton@Zonda_3_FX@V1.7_Add_RDM_Personality.gdtf",
         "sha256": "7e744d00bc451edb3366864833b2e8d22585b4a1fb29197ee4d35ce198563554",
@@ -1135,7 +1135,7 @@
       },
       "shortName": "Zonda 3 Wash",
       "image": "images/fixtures/ayrton/zonda-3-wash.png",
-      "details": "json/fixture-details/374e39af9b3251f450c79b9c2915c330e5d67836ffffb7a0581bdfa604ac8b11.json",
+      "details": "json/fixture-details/ayrton/zonda-3-wash.json",
       "provenance": {
         "fileName": "Ayrton@Zonda_3_WASH@V1.7_Add_RDM_Personality.gdtf",
         "sha256": "374e39af9b3251f450c79b9c2915c330e5d67836ffffb7a0581bdfa604ac8b11",
@@ -1185,7 +1185,7 @@
       },
       "shortName": "Zonda 9 FX",
       "image": "images/fixtures/ayrton/zonda-9-fx.png",
-      "details": "json/fixture-details/9222222dcc4500c239bc0e0de40bedf57fb8d6d648496d3a4beb0a499743f4ee.json",
+      "details": "json/fixture-details/ayrton/zonda-9-fx.json",
       "provenance": {
         "fileName": "Ayrton@Zonda_9_FX@V1.7_Add_RDM_Personality.gdtf",
         "sha256": "9222222dcc4500c239bc0e0de40bedf57fb8d6d648496d3a4beb0a499743f4ee",
@@ -1220,7 +1220,7 @@
       },
       "shortName": "Zonda 9 Wash",
       "image": "images/fixtures/ayrton/zonda-9-wash.png",
-      "details": "json/fixture-details/ddd045855ed03afc8f8db659285ce614f61708273c2c0ea8a2e65af317e0f0b9.json",
+      "details": "json/fixture-details/ayrton/zonda-9-wash.json",
       "provenance": {
         "fileName": "Ayrton@Zonda_9_WASH@V1.7_Add_RDM_Personality.gdtf",
         "sha256": "ddd045855ed03afc8f8db659285ce614f61708273c2c0ea8a2e65af317e0f0b9",

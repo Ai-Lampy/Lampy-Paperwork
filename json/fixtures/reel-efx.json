@@ -14,7 +14,7 @@
       },
       "shortName": "DF-50",
       "image": "images/fixtures/reel-efx/df-50--df-50-dmx.png",
-      "details": "json/fixture-details/33c91bd0c520819a63dd1506ebeca8c232ec653388182b74aa0099326f8266c4.json",
+      "details": "json/fixture-details/reel-efx/df-50.json",
       "provenance": {
         "fileName": "Reel_EFX@DF-50@Non_DMX.gdtf",
         "sha256": "33c91bd0c520819a63dd1506ebeca8c232ec653388182b74aa0099326f8266c4",
@@ -34,7 +34,7 @@
       },
       "shortName": "DF-50",
       "image": "images/fixtures/reel-efx/df-50--df-50-dmx.png",
-      "details": "json/fixture-details/e9c461c8dab70aa210b60bf326eca23fe0e4fec334c4759f0a501c120ffdd872.json",
+      "details": "json/fixture-details/reel-efx/df-50-dmx.json",
       "provenance": {
         "fileName": "Reel_EFX@DF-50_DMX@Update_0_1.gdtf",
         "sha256": "e9c461c8dab70aa210b60bf326eca23fe0e4fec334c4759f0a501c120ffdd872",

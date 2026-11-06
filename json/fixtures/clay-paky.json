@@ -14,7 +14,7 @@
       },
       "shortName": "Arolla Aqua HP",
       "image": "images/fixtures/clay-paky/arolla-aqua-hp.png",
-      "details": "json/fixture-details/040006eb53f76ab5abbcf5a60c552c1f2b0a670f14f49632180d1492ff5c5527.json",
+      "details": "json/fixture-details/clay-paky/arolla-aqua-hp.json",
       "provenance": {
         "fileName": "Clay_Paky@Arolla_Aqua_HP@ClayPaky_FW_1_2.gdtf",
         "sha256": "040006eb53f76ab5abbcf5a60c552c1f2b0a670f14f49632180d1492ff5c5527",
@@ -39,7 +39,7 @@
       },
       "shortName": "Arolla Aqua M-LT",
       "image": "images/fixtures/clay-paky/arolla-aqua-m-lt.png",
-      "details": "json/fixture-details/1fd38cfaf336ee28c4e247d679018141fb8e8d8f81e6a00eed17f1ecbeb161bc.json",
+      "details": "json/fixture-details/clay-paky/arolla-aqua-m-lt.json",
       "provenance": {
         "fileName": "Clay_Paky@Arolla_Aqua_M-LT@ClayPaky_FW_1_2.gdtf",
         "sha256": "1fd38cfaf336ee28c4e247d679018141fb8e8d8f81e6a00eed17f1ecbeb161bc",
@@ -64,7 +64,7 @@
       },
       "shortName": "Arolla Aqua S-LT",
       "image": "images/fixtures/clay-paky/arolla-aqua-s-lt.png",
-      "details": "json/fixture-details/8b090a86255728d999ffa3ab427371ad31d983b2e58d03ead7e23e56e2a02929.json",
+      "details": "json/fixture-details/clay-paky/arolla-aqua-s-lt.json",
       "provenance": {
         "fileName": "Clay_Paky@Arolla_Aqua_S-LT@ClayPaky_FW_1_1.gdtf",
         "sha256": "8b090a86255728d999ffa3ab427371ad31d983b2e58d03ead7e23e56e2a02929",
@@ -84,7 +84,7 @@
       },
       "shortName": "Arolla Aqua Wash HC",
       "image": "images/fixtures/clay-paky/arolla-aqua-wash-hc.png",
-      "details": "json/fixture-details/cbed59d8c11643e4e8364bc998a6fa4c5bc1b0eb64253e6337f59de2f764fef9.json",
+      "details": "json/fixture-details/clay-paky/arolla-aqua-wash-hc.json",
       "provenance": {
         "fileName": "Clay_Paky@Arolla_Aqua_Wash_HC@CP_FW_1_8.gdtf",
         "sha256": "cbed59d8c11643e4e8364bc998a6fa4c5bc1b0eb64253e6337f59de2f764fef9",
@@ -109,7 +109,7 @@
       },
       "shortName": "Arolla Prof HP",
       "image": "images/fixtures/clay-paky/arolla-profile-hp--arolla-profile-mp.png",
-      "details": "json/fixture-details/543633e474bbc17d47ab4d7e6f62ac91d4ad3a40b6bea4a90393d393616b5f2b.json",
+      "details": "json/fixture-details/clay-paky/arolla-profile-hp.json",
       "provenance": {
         "fileName": "Clay_Paky@Arolla_Profile_HP@ClayPaky_Official_File_Fw_Ver_5_5.gdtf",
         "sha256": "543633e474bbc17d47ab4d7e6f62ac91d4ad3a40b6bea4a90393d393616b5f2b",
@@ -129,7 +129,7 @@
       },
       "shortName": "Arolla Prof MP",
       "image": "images/fixtures/clay-paky/arolla-profile-hp--arolla-profile-mp.png",
-      "details": "json/fixture-details/d8f0c3f1a61571916e4c585474864ecd1553cdeb7b7d4e744ff9c95bba1cacb2.json",
+      "details": "json/fixture-details/clay-paky/arolla-profile-mp.json",
       "provenance": {
         "fileName": "Clay_Paky@Arolla_Profile_MP@2026.gdtf",
         "sha256": "d8f0c3f1a61571916e4c585474864ecd1553cdeb7b7d4e744ff9c95bba1cacb2",
@@ -154,7 +154,7 @@
       },
       "shortName": "Arolla Spot MP",
       "image": "images/fixtures/clay-paky/arolla-spot-mp.png",
-      "details": "json/fixture-details/6f564ea0f131a24b382d0a9cc6470eb213298a11b8bf3f4af086fec48d3d78be.json",
+      "details": "json/fixture-details/clay-paky/arolla-spot-mp.json",
       "provenance": {
         "fileName": "Clay_Paky@Arolla_Spot_MP@ClayPaky_Official_File_Fw_Ver_5_5.gdtf",
         "sha256": "6f564ea0f131a24b382d0a9cc6470eb213298a11b8bf3f4af086fec48d3d78be",
@@ -189,7 +189,7 @@
       },
       "shortName": "B-Eye K20",
       "image": "images/fixtures/clay-paky/b-eye-k20.png",
-      "details": "json/fixture-details/ff6d3467a82ac27096f46be6412519a0bccc0aa7bdd09eddf50db0a3b2229e41.json",
+      "details": "json/fixture-details/clay-paky/b-eye-k20.json",
       "provenance": {
         "fileName": "Clay_Paky@Aleda_B-EYE_K20@ClayPaky_Official_File_Fw_Ver_2_26_002.gdtf",
         "sha256": "ff6d3467a82ac27096f46be6412519a0bccc0aa7bdd09eddf50db0a3b2229e41",
@@ -234,7 +234,7 @@
       },
       "shortName": "B-Eye K25",
       "image": "images/fixtures/clay-paky/b-eye-k25.png",
-      "details": "json/fixture-details/eb91ef3aaab455afbd807a6cc083ac11c191e59182951edd0c6e7dfb4970411f.json",
+      "details": "json/fixture-details/clay-paky/b-eye-k25.json",
       "provenance": {
         "fileName": "Clay_Paky@HY_B-EYE_K25@ClayPaky_Official_File_Fw_Ver_2_26_002.gdtf",
         "sha256": "eb91ef3aaab455afbd807a6cc083ac11c191e59182951edd0c6e7dfb4970411f",
@@ -269,7 +269,7 @@
       },
       "shortName": "HY B-Eye K15",
       "image": "images/fixtures/clay-paky/hy-b-eye-k15.png",
-      "details": "json/fixture-details/54b0dd5ce197fe391317b378e750fef1188502603e9cd8a5ae9f061550daed95.json",
+      "details": "json/fixture-details/clay-paky/hy-b-eye-k15.json",
       "provenance": {
         "fileName": "Clay_Paky@HY_B-EYE_K15@Claypaky_Official_File_Fw_V.2.26.002.gdtf",
         "sha256": "54b0dd5ce197fe391317b378e750fef1188502603e9cd8a5ae9f061550daed95",
@@ -338,7 +338,7 @@
       },
       "shortName": "Midi-B",
       "image": "images/fixtures/clay-paky/midi-b.png",
-      "details": "json/fixture-details/50d9619d65808a0385fbc38c1776cc57df75e6405c9980d8d25026c9a7f6ec36.json",
+      "details": "json/fixture-details/clay-paky/midi-b.json",
       "provenance": {
         "fileName": "Clay_Paky@Midi-B@ClayPaky_FW_5_3.gdtf",
         "sha256": "50d9619d65808a0385fbc38c1776cc57df75e6405c9980d8d25026c9a7f6ec36",
@@ -373,7 +373,7 @@
       },
       "shortName": "Mini-B",
       "image": "images/fixtures/clay-paky/mini-b.png",
-      "details": "json/fixture-details/15ca05a1091433a70e72412c0d3ca5684b70a4394e73ed246497661c3ff2df0a.json",
+      "details": "json/fixture-details/clay-paky/mini-b.json",
       "provenance": {
         "fileName": "Clay_Paky@Mini-B@Updated_Defaults.gdtf",
         "sha256": "15ca05a1091433a70e72412c0d3ca5684b70a4394e73ed246497661c3ff2df0a",
@@ -398,7 +398,7 @@
       },
       "shortName": "Scenius Unico",
       "image": "images/fixtures/clay-paky/scenius-unico.png",
-      "details": "json/fixture-details/7d785e84c4540aa3222dbf085d391173d2e1a267bc75d7fbfb4b70b8db325a60.json",
+      "details": "json/fixture-details/clay-paky/scenius-unico.json",
       "provenance": {
         "fileName": "Clay_Paky@Scenius_Unico@fixed_shaper_rot_and_grandmaster_-_still_needs_colorwheelfix.gdtf",
         "sha256": "7d785e84c4540aa3222dbf085d391173d2e1a267bc75d7fbfb4b70b8db325a60",
@@ -423,7 +423,7 @@
       },
       "shortName": "Sharpy",
       "image": "images/fixtures/clay-paky/sharpy.png",
-      "details": "json/fixture-details/af21741b90ab3002c9ae5c62b066c445433c8710d82814163447cf7a410f2571.json",
+      "details": "json/fixture-details/clay-paky/sharpy.json",
       "provenance": {
         "fileName": "Clay_Paky@Sharpy@ClayPaky_Official_File_Fw_Ver_2_25_006.gdtf",
         "sha256": "af21741b90ab3002c9ae5c62b066c445433c8710d82814163447cf7a410f2571",
@@ -443,7 +443,7 @@
       },
       "shortName": "Sharpy+",
       "image": "images/fixtures/clay-paky/sharpy-plus.png",
-      "details": "json/fixture-details/42cb6395599276aa2ef5049dd27b4a4d9b38042e25a5efdfd6834b32fc33ea1a.json",
+      "details": "json/fixture-details/clay-paky/sharpy-plus.json",
       "provenance": {
         "fileName": "Clay_Paky@Sharpy_Plus@ClayPaky_Official_File_Fw_Ver_2_5.gdtf",
         "sha256": "42cb6395599276aa2ef5049dd27b4a4d9b38042e25a5efdfd6834b32fc33ea1a",
@@ -468,7 +468,7 @@
       },
       "shortName": "Sharpy Wash",
       "image": "images/fixtures/clay-paky/sharpy-wash.png",
-      "details": "json/fixture-details/5c9ff65d21ed1e7ed367d9d9746d31b965363dff479f307b4556bcf3ed8807d8.json",
+      "details": "json/fixture-details/clay-paky/sharpy-wash.json",
       "provenance": {
         "fileName": "Clay_Paky@Sharpy_Wash_330@ClayPaky_FW_2_25_006.gdtf",
         "sha256": "5c9ff65d21ed1e7ed367d9d9746d31b965363dff479f307b4556bcf3ed8807d8",
@@ -488,7 +488,7 @@
       },
       "shortName": "Sharpy X Frame",
       "image": "images/fixtures/clay-paky/sharpy-x-frame.png",
-      "details": "json/fixture-details/610320f722e25fe90461ae65cf0810711f1aa45ae61b45ac73f768191ea73f2c.json",
+      "details": "json/fixture-details/clay-paky/sharpy-x-frame.json",
       "provenance": {
         "fileName": "Clay_Paky@Sharpy_X_Frame@ClayPaky_Official_File_Fw_Ver_6_6_-_Added_Filters.gdtf",
         "sha256": "610320f722e25fe90461ae65cf0810711f1aa45ae61b45ac73f768191ea73f2c",
@@ -508,7 +508,7 @@
       },
       "shortName": "Skylos",
       "image": "images/fixtures/clay-paky/skylos.png",
-      "details": "json/fixture-details/d73e0bf7fdfb6a50414680199ed346862d1b34b3e9e14a15ca626d4f0eb47791.json",
+      "details": "json/fixture-details/clay-paky/skylos.json",
       "provenance": {
         "fileName": "Clay_Paky@Skylos@ClayPaky_FW_3_2_894.gdtf",
         "sha256": "d73e0bf7fdfb6a50414680199ed346862d1b34b3e9e14a15ca626d4f0eb47791",
@@ -563,7 +563,7 @@
       },
       "shortName": "Tambora Glare",
       "image": "images/fixtures/clay-paky/tambora-glare.png",
-      "details": "json/fixture-details/867bf889b2e88f2bd03c67eab6d962bdc354167bafb7d9afb069fe1439c22e96.json",
+      "details": "json/fixture-details/clay-paky/tambora-glare.json",
       "provenance": {
         "fileName": "Clay_Paky@Tambora_Glare@Added_new_ch_modes.gdtf",
         "sha256": "867bf889b2e88f2bd03c67eab6d962bdc354167bafb7d9afb069fe1439c22e96",
@@ -583,7 +583,7 @@
       },
       "shortName": "Ultimo Hybrid",
       "image": "images/fixtures/clay-paky/ultimo-hybrid.png",
-      "details": "json/fixture-details/dc711ab202b6c438b9dbeb993dca4233bf6db2a7176c280a4549745f000356ec.json",
+      "details": "json/fixture-details/clay-paky/ultimo-hybrid.json",
       "provenance": {
         "fileName": "Clay_Paky@Ultimo_Hybrid@ClayPaky_FW_1_2_-_New_Geometries.gdtf",
         "sha256": "dc711ab202b6c438b9dbeb993dca4233bf6db2a7176c280a4549745f000356ec",
@@ -638,7 +638,7 @@
       },
       "shortName": "Volero Cube",
       "image": "images/fixtures/clay-paky/volero-cube.png",
-      "details": "json/fixture-details/c95c93e39009eb88cc4645b0b1e2d07c8a242620dc040da54ff3d3d37e37e26a.json",
+      "details": "json/fixture-details/clay-paky/volero-cube.json",
       "provenance": {
         "fileName": "Clay_Paky@Volero_Cube@ClayPaky_FW_CPU_1_1_006_DRV1_2_000_-_New_Geometries.gdtf",
         "sha256": "c95c93e39009eb88cc4645b0b1e2d07c8a242620dc040da54ff3d3d37e37e26a",
@@ -678,7 +678,7 @@
       },
       "shortName": "Volero Twins",
       "image": "images/fixtures/clay-paky/volero-twins.png",
-      "details": "json/fixture-details/37d920d3af8eec4be52260ae914261599060b589ff3320a03b179bfe0c09ca43.json",
+      "details": "json/fixture-details/clay-paky/volero-twins.json",
       "provenance": {
         "fileName": "Clay_Paky@Volero_Twins@ClayPaky_FW_CPU_1_1_006_DRV_1_0_005_-_New_Geometries.gdtf",
         "sha256": "37d920d3af8eec4be52260ae914261599060b589ff3320a03b179bfe0c09ca43",
@@ -718,7 +718,7 @@
       },
       "shortName": "Volero Wave",
       "image": "images/fixtures/clay-paky/volero-wave.png",
-      "details": "json/fixture-details/27dd9de2b1990a2160446da5dacb088043a8f359a5079c63abdde018ac7011c8.json",
+      "details": "json/fixture-details/clay-paky/volero-wave.json",
       "provenance": {
         "fileName": "Clay_Paky@Volero_Wave@ClayPaky_FW_2_0_008_1_0_010.gdtf",
         "sha256": "27dd9de2b1990a2160446da5dacb088043a8f359a5079c63abdde018ac7011c8",
@@ -738,7 +738,7 @@
       },
       "shortName": "Xtylos",
       "image": "images/fixtures/clay-paky/xtylos.png",
-      "details": "json/fixture-details/0dd4bf1dc7505718663d68b1cf0a34efde8c5d0caee423b8cc6fc1835b349917.json",
+      "details": "json/fixture-details/clay-paky/xtylos.json",
       "provenance": {
         "fileName": "Clay_Paky@XTYLOS@Power_in,_Defalt_Values_by_Gobo_1_and_Reset_changed.gdtf",
         "sha256": "0dd4bf1dc7505718663d68b1cf0a34efde8c5d0caee423b8cc6fc1835b349917",

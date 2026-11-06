@@ -15,7 +15,7 @@
       },
       "shortName": "AF1",
       "image": "images/fixtures/martin/af-1-fan.png",
-      "details": "json/fixture-details/b08c94b74e7bc6cbed60b2cc2d37ec039e9d5b486b289fb498f4e8233f58264b.json",
+      "details": "json/fixture-details/martin/af-1-fan.json",
       "provenance": {
         "fileName": "Martin_Professional@JEM_AF_1@JEM_AF1.gdtf",
         "sha256": "b08c94b74e7bc6cbed60b2cc2d37ec039e9d5b486b289fb498f4e8233f58264b",
@@ -35,7 +35,7 @@
       },
       "shortName": "AF2",
       "image": "images/fixtures/martin/af-2-fan.png",
-      "details": "json/fixture-details/304c0d19381da76fcc15af96779b6dab4317aee0403ce031c01b6ed3e6e2fe80.json",
+      "details": "json/fixture-details/martin/af-2-fan.json",
       "provenance": {
         "fileName": "Martin_Professional@AF_2_Fan@V_001.gdtf",
         "sha256": "304c0d19381da76fcc15af96779b6dab4317aee0403ce031c01b6ed3e6e2fe80",
@@ -60,7 +60,7 @@
       },
       "shortName": "Atomic",
       "image": "images/fixtures/martin/atomic-3000-dmx.png",
-      "details": "json/fixture-details/7e5b85e4467ca6679a1b0371d4f95e6895a745ad20641ddb4ab938b69c94fe9a.json",
+      "details": "json/fixture-details/martin/atomic-3000-dmx.json",
       "provenance": {
         "fileName": "Martin_Professional@Atomic_3000_DMX@Rev_1.0.gdtf",
         "sha256": "7e5b85e4467ca6679a1b0371d4f95e6895a745ad20641ddb4ab938b69c94fe9a",
@@ -90,7 +90,7 @@
       },
       "shortName": "Atomic LED",
       "image": "images/fixtures/martin/atomic-3000-led.png",
-      "details": "json/fixture-details/1fdee518d44f85ab87234327c183f35e7ca8252dba4ca70667d02057df606306.json",
+      "details": "json/fixture-details/martin/atomic-3000-led.json",
       "provenance": {
         "fileName": "Martin_Professional@Atomic_3000_LED@v003.gdtf",
         "sha256": "1fdee518d44f85ab87234327c183f35e7ca8252dba4ca70667d02057df606306",
@@ -120,7 +120,7 @@
       },
       "shortName": "ELPMan8F",
       "image": "images/fixtures/martin/elp-manet-8f.png",
-      "details": "json/fixture-details/6be2657798131431b15e3841087514e983b9d85a550e57140b825bbf4a4fa018.json",
+      "details": "json/fixture-details/martin/elp-manet-8f.json",
       "provenance": {
         "fileName": "Martin_Professional@ELP_Manet_8F@20251114.gdtf",
         "sha256": "6be2657798131431b15e3841087514e983b9d85a550e57140b825bbf4a4fa018",
@@ -145,7 +145,7 @@
       },
       "shortName": "ELPPAR",
       "image": "images/fixtures/martin/elp-par.png",
-      "details": "json/fixture-details/727fdcbed7ae879cb858999ea96a75fe58fe1e791bd510745360c17d0fcaa6c9.json",
+      "details": "json/fixture-details/martin/elp-par.json",
       "provenance": {
         "fileName": "Martin_Professional@ELP_PAR@20241107NoMeas.gdtf",
         "sha256": "727fdcbed7ae879cb858999ea96a75fe58fe1e791bd510745360c17d0fcaa6c9",
@@ -170,7 +170,7 @@
       },
       "shortName": "ELPPARIP",
       "image": "images/fixtures/martin/elp-par-ip.png",
-      "details": "json/fixture-details/5a86a8b54303b4ded0aa10e0924fab48d9080d2caa1b46e55be8710db9fef8c2.json",
+      "details": "json/fixture-details/martin/elp-par-ip.json",
       "provenance": {
         "fileName": "Martin_Professional@ELP_PAR_IP@20241107NoMeas.gdtf",
         "sha256": "5a86a8b54303b4ded0aa10e0924fab48d9080d2caa1b46e55be8710db9fef8c2",
@@ -190,7 +190,7 @@
       },
       "shortName": "ERA150Was",
       "image": "images/fixtures/martin/era-150-wash.png",
-      "details": "json/fixture-details/12d6ab7ab0ed3ef98b70a873e6ab03fa980bfb10c6d773766e4bfecb1ad12834.json",
+      "details": "json/fixture-details/martin/era-150-wash.json",
       "provenance": {
         "fileName": "Martin_Professional@ERA_150_Wash@20230226NoMeas.gdtf",
         "sha256": "12d6ab7ab0ed3ef98b70a873e6ab03fa980bfb10c6d773766e4bfecb1ad12834",
@@ -210,7 +210,7 @@
       },
       "shortName": "ERA300Pro",
       "image": "images/fixtures/martin/era-300-profile--mac-250.png",
-      "details": "json/fixture-details/9f18055bb8d3e55742dfd634955ab198e963ce3c0033cf211358ec165367adbe.json",
+      "details": "json/fixture-details/martin/era-300-profile.json",
       "provenance": {
         "fileName": "Martin_Professional@ERA_300_Profile@20230226.gdtf",
         "sha256": "9f18055bb8d3e55742dfd634955ab198e963ce3c0033cf211358ec165367adbe",
@@ -235,7 +235,7 @@
       },
       "shortName": "ERA400PerCLD",
       "image": "images/fixtures/martin/era-400-performance-cld.png",
-      "details": "json/fixture-details/75300cc17eb9968471d72c4da96e1e187d03e1b046d4632f146cc74f3f935f53.json",
+      "details": "json/fixture-details/martin/era-400-performance-cld.json",
       "provenance": {
         "fileName": "Martin_Professional@ERA_400_Performance_CLD@20230226.gdtf",
         "sha256": "75300cc17eb9968471d72c4da96e1e187d03e1b046d4632f146cc74f3f935f53",
@@ -260,7 +260,7 @@
       },
       "shortName": "ERA400PerWRM",
       "image": "images/fixtures/martin/era-400-performance-wrm.png",
-      "details": "json/fixture-details/63110b9c88d55e683b1159e09daefea8f21858b5ba78c53c505526deb9b80cb3.json",
+      "details": "json/fixture-details/martin/era-400-performance-wrm.json",
       "provenance": {
         "fileName": "Martin_Professional@ERA_400_Performance_WRM@20230226.gdtf",
         "sha256": "63110b9c88d55e683b1159e09daefea8f21858b5ba78c53c505526deb9b80cb3",
@@ -280,7 +280,7 @@
       },
       "shortName": "ERA600Per",
       "image": "images/fixtures/martin/era-600-performance.png",
-      "details": "json/fixture-details/c8cc6564fcab40e6910e66215effb5a678ab3a6b9432750cbbd650ebc44bc467.json",
+      "details": "json/fixture-details/martin/era-600-performance.json",
       "provenance": {
         "fileName": "Martin_Professional@ERA_600_Performance@20230226.gdtf",
         "sha256": "c8cc6564fcab40e6910e66215effb5a678ab3a6b9432750cbbd650ebc44bc467",
@@ -300,7 +300,7 @@
       },
       "shortName": "ERA600Pro",
       "image": "images/fixtures/martin/era-600-profile.png",
-      "details": "json/fixture-details/17fa966f0a6b4a1f105f96067e68595c33f5f2d54e2d9327238fe405926bd85e.json",
+      "details": "json/fixture-details/martin/era-600-profile.json",
       "provenance": {
         "fileName": "Martin_Professional@ERA_600_Profile@20230226.gdtf",
         "sha256": "17fa966f0a6b4a1f105f96067e68595c33f5f2d54e2d9327238fe405926bd85e",
@@ -325,7 +325,7 @@
       },
       "shortName": "ERA700PerIP",
       "image": "images/fixtures/martin/era-700-performance-ip.png",
-      "details": "json/fixture-details/be8a426c30ea7b37123c0b1fa94d9b46092c5f2365bd5a220ae0e26d73441a21.json",
+      "details": "json/fixture-details/martin/era-700-performance-ip.json",
       "provenance": {
         "fileName": "Martin_Professional@ERA_700_Performance_IP@20240208NoMeas.gdtf",
         "sha256": "be8a426c30ea7b37123c0b1fa94d9b46092c5f2365bd5a220ae0e26d73441a21",
@@ -345,7 +345,7 @@
       },
       "shortName": "ERA800Per",
       "image": "images/fixtures/martin/era-800-performance.png",
-      "details": "json/fixture-details/724e0b21c6093212cf278c650abe8c458b1091f3e26d2b64d2462fb81ecfaaf8.json",
+      "details": "json/fixture-details/martin/era-800-performance.json",
       "provenance": {
         "fileName": "Martin_Professional@ERA_800_Performance@20230226.gdtf",
         "sha256": "724e0b21c6093212cf278c650abe8c458b1091f3e26d2b64d2462fb81ecfaaf8",
@@ -365,7 +365,7 @@
       },
       "shortName": "ERA800Pro",
       "image": "images/fixtures/martin/era-800-profile.png",
-      "details": "json/fixture-details/e90d075f13a4a4c55fa1556c1a4d62786b32e37332a3feaf5d7e2fcedec42b85.json",
+      "details": "json/fixture-details/martin/era-800-profile.json",
       "provenance": {
         "fileName": "Martin_Professional@ERA_800_Profile@20230226.gdtf",
         "sha256": "e90d075f13a4a4c55fa1556c1a4d62786b32e37332a3feaf5d7e2fcedec42b85",
@@ -425,7 +425,7 @@
       },
       "shortName": "EXTDot1Pro",
       "image": "images/fixtures/martin/exterior-dot-1-pro.png",
-      "details": "json/fixture-details/01e637e706ac6f0a60ad1ce8857efe2b18d5ecdd9ce2d0583131cd19a9187e91.json",
+      "details": "json/fixture-details/martin/exterior-dot-1-pro.json",
       "provenance": {
         "fileName": "Martin_Professional@Exterior_Dot-1_Pro@20260621.gdtf",
         "sha256": "01e637e706ac6f0a60ad1ce8857efe2b18d5ecdd9ce2d0583131cd19a9187e91",
@@ -485,7 +485,7 @@
       },
       "shortName": "EXTDot4Pro",
       "image": "images/fixtures/martin/exterior-dot-4-pro.png",
-      "details": "json/fixture-details/ab1f7d1f8e30ddb50e99a4dcec28d8a1241e555ff114f414b33ffac9314d6205.json",
+      "details": "json/fixture-details/martin/exterior-dot-4-pro.json",
       "provenance": {
         "fileName": "Martin_Professional@Exterior_Dot-4_Pro@20260621.gdtf",
         "sha256": "ab1f7d1f8e30ddb50e99a4dcec28d8a1241e555ff114f414b33ffac9314d6205",
@@ -545,7 +545,7 @@
       },
       "shortName": "EXTDot9Pro",
       "image": "images/fixtures/martin/exterior-dot-9-pro.png",
-      "details": "json/fixture-details/6f1a740a3a45c47c95c90a7cb87d65408b44567e4e31c62c9576ea65452347b3.json",
+      "details": "json/fixture-details/martin/exterior-dot-9-pro.json",
       "provenance": {
         "fileName": "Martin_Professional@Exterior_Dot-9_Pro@20260621.gdtf",
         "sha256": "6f1a740a3a45c47c95c90a7cb87d65408b44567e4e31c62c9576ea65452347b3",
@@ -585,7 +585,7 @@
       },
       "shortName": "EXTDotHPPro",
       "image": "images/fixtures/martin/exterior-dot-hp-pro.png",
-      "details": "json/fixture-details/1efa8e81cda0c746c803104d6aadd5923a423376d440e2d1ea8dc6530ec37cba.json",
+      "details": "json/fixture-details/martin/exterior-dot-hp-pro.json",
       "provenance": {
         "fileName": "Martin_Professional@Exterior_Dot-HP_Pro@20260621.gdtf",
         "sha256": "1efa8e81cda0c746c803104d6aadd5923a423376d440e2d1ea8dc6530ec37cba",
@@ -615,7 +615,7 @@
       },
       "shortName": "EXTLinProCoCTC 1ft",
       "image": "images/fixtures/martin/exterior-linear-pro-cove-ctc-1ft.png",
-      "details": "json/fixture-details/c7b5b3e1a0734983b81d0bf4a2dd0291735d07ed459e8efb74a69e38ce5e0df5.json",
+      "details": "json/fixture-details/martin/exterior-linear-pro-cove-ctc-1ft.json",
       "provenance": {
         "fileName": "Martin_Professional@Exterior_Linear_Pro_Cove_CTC_1ft@20260823NoMeas.gdtf",
         "sha256": "c7b5b3e1a0734983b81d0bf4a2dd0291735d07ed459e8efb74a69e38ce5e0df5",
@@ -650,7 +650,7 @@
       },
       "shortName": "EXTLinProCoCTC 4ft",
       "image": "images/fixtures/martin/exterior-linear-pro-cove-ctc-4ft.png",
-      "details": "json/fixture-details/a4ee9d5bcf03bd8ed856b3a514f0dbfb9a0e9d3d90192fceb7f64324d2065b4c.json",
+      "details": "json/fixture-details/martin/exterior-linear-pro-cove-ctc-4ft.json",
       "provenance": {
         "fileName": "Martin_Professional@Exterior_Linear_Pro_Cove_CTC_4ft@20260823NoMeas.gdtf",
         "sha256": "a4ee9d5bcf03bd8ed856b3a514f0dbfb9a0e9d3d90192fceb7f64324d2065b4c",
@@ -695,7 +695,7 @@
       },
       "shortName": "EXTLinProCoQUAD 1ft",
       "image": "images/fixtures/martin/exterior-linear-pro-cove-quad-1ft.png",
-      "details": "json/fixture-details/1df0efb39a525871b93a5f0324fe3b3349d26b16e7096db32eda47f8dd79a9d2.json",
+      "details": "json/fixture-details/martin/exterior-linear-pro-cove-quad-1ft.json",
       "provenance": {
         "fileName": "Martin_Professional@Exterior_Linear_Pro_Cove_QUAD_1ft@20260823NoMeas.gdtf",
         "sha256": "1df0efb39a525871b93a5f0324fe3b3349d26b16e7096db32eda47f8dd79a9d2",
@@ -750,7 +750,7 @@
       },
       "shortName": "EXTLinProCoQUAD 4ft",
       "image": "images/fixtures/martin/exterior-linear-pro-cove-quad-4ft.png",
-      "details": "json/fixture-details/79f06932a77eab6b2a3b7164fc1fd901c80e0fb1a6a64e726186210386f807fa.json",
+      "details": "json/fixture-details/martin/exterior-linear-pro-cove-quad-4ft.json",
       "provenance": {
         "fileName": "Martin_Professional@Exterior_Linear_Pro_Cove_QUAD_4ft@20260823NoMeas.gdtf",
         "sha256": "79f06932a77eab6b2a3b7164fc1fd901c80e0fb1a6a64e726186210386f807fa",
@@ -795,7 +795,7 @@
       },
       "shortName": "EXTLinProDvQUAD 1ft",
       "image": "images/fixtures/martin/exterior-linear-pro-dv-quad-1ft.png",
-      "details": "json/fixture-details/43a3d8ea27d07031c30535879b0300085c541e3266cd362a4207f599b238b58d.json",
+      "details": "json/fixture-details/martin/exterior-linear-pro-dv-quad-1ft.json",
       "provenance": {
         "fileName": "Martin_Professional@Exterior_Linear_Pro_DV_QUAD_1ft@20260823NoMeas.gdtf",
         "sha256": "43a3d8ea27d07031c30535879b0300085c541e3266cd362a4207f599b238b58d",
@@ -850,7 +850,7 @@
       },
       "shortName": "EXTLinProDvQUAD 4ft",
       "image": "images/fixtures/martin/exterior-linear-pro-dv-quad-4ft.png",
-      "details": "json/fixture-details/7d6457edcce5d511416d9177a6af5ac6b000aa94a2dd24fb43e5eb2d03c0bcfe.json",
+      "details": "json/fixture-details/martin/exterior-linear-pro-dv-quad-4ft.json",
       "provenance": {
         "fileName": "Martin_Professional@Exterior_Linear_Pro_DV_QUAD_4ft@20260823NoMeas.gdtf",
         "sha256": "7d6457edcce5d511416d9177a6af5ac6b000aa94a2dd24fb43e5eb2d03c0bcfe",
@@ -880,7 +880,7 @@
       },
       "shortName": "EXTLinProGrCTC 1ft",
       "image": "images/fixtures/martin/exterior-linear-pro-graze-ctc-1ft.png",
-      "details": "json/fixture-details/432f4f75d18aba91e8c07133d919a2cdf1138ace89b7c361ac20484e2a9b0081.json",
+      "details": "json/fixture-details/martin/exterior-linear-pro-graze-ctc-1ft.json",
       "provenance": {
         "fileName": "Martin_Professional@Exterior_Linear_Pro_Graze_CTC_1ft@20260823NoMeas.gdtf",
         "sha256": "432f4f75d18aba91e8c07133d919a2cdf1138ace89b7c361ac20484e2a9b0081",
@@ -915,7 +915,7 @@
       },
       "shortName": "EXTLinProGrCTC 4ft",
       "image": "images/fixtures/martin/exterior-linear-pro-graze-ctc-4ft.png",
-      "details": "json/fixture-details/9125731f704be10ee9036d6f69b5f26aaf39a01402f72e4c7837c95f3610c552.json",
+      "details": "json/fixture-details/martin/exterior-linear-pro-graze-ctc-4ft.json",
       "provenance": {
         "fileName": "Martin_Professional@Exterior_Linear_Pro_Graze_CTC_4ft@20260823NoMeas.gdtf",
         "sha256": "9125731f704be10ee9036d6f69b5f26aaf39a01402f72e4c7837c95f3610c552",
@@ -960,7 +960,7 @@
       },
       "shortName": "EXTLinProGrQUAD 1ft",
       "image": "images/fixtures/martin/exterior-linear-pro-graze-quad-1ft.png",
-      "details": "json/fixture-details/f7a2c4289fae277a43ea3495690aee786a0a967f223db492776bf3a98d32afb5.json",
+      "details": "json/fixture-details/martin/exterior-linear-pro-graze-quad-1ft.json",
       "provenance": {
         "fileName": "Martin_Professional@Exterior_Linear_Pro_Graze_QUAD_1ft@20260823NoMeas.gdtf",
         "sha256": "f7a2c4289fae277a43ea3495690aee786a0a967f223db492776bf3a98d32afb5",
@@ -1015,7 +1015,7 @@
       },
       "shortName": "EXTLinProGrQUAD 4ft",
       "image": "images/fixtures/martin/exterior-linear-pro-graze-quad-4ft.png",
-      "details": "json/fixture-details/d435542b049b0a5ca9dac9dee021af8772509caf5590f71c839db49b89aacf02.json",
+      "details": "json/fixture-details/martin/exterior-linear-pro-graze-quad-4ft.json",
       "provenance": {
         "fileName": "Martin_Professional@Exterior_Linear_Pro_Graze_QUAD_4ft@20260823NoMeas.gdtf",
         "sha256": "d435542b049b0a5ca9dac9dee021af8772509caf5590f71c839db49b89aacf02",
@@ -1040,7 +1040,7 @@
       },
       "shortName": "EXTProProCom",
       "image": "images/fixtures/martin/exterior-projection-pro-compact.png",
-      "details": "json/fixture-details/de7775dc989823187ef9a37e7c0512b1c14f177491f3a394298f33f0b8b8ef3d.json",
+      "details": "json/fixture-details/martin/exterior-projection-pro-compact.json",
       "provenance": {
         "fileName": "Martin_Professional@Exterior_Projection_Pro_Compact@20260621.gdtf",
         "sha256": "de7775dc989823187ef9a37e7c0512b1c14f177491f3a394298f33f0b8b8ef3d",
@@ -1065,7 +1065,7 @@
       },
       "shortName": "EXTWasProLCTC",
       "image": "images/fixtures/martin/exterior-wash-pro-l-ctc.png",
-      "details": "json/fixture-details/ca85756c3f6d99fe4f9efdcf5b10e31024cd9d172b3840d49a7227b143323c7b.json",
+      "details": "json/fixture-details/martin/exterior-wash-pro-l-ctc.json",
       "provenance": {
         "fileName": "Martin_Professional@Exterior_Wash_Pro_L_CTC@20240418NoMeas.gdtf",
         "sha256": "ca85756c3f6d99fe4f9efdcf5b10e31024cd9d172b3840d49a7227b143323c7b",
@@ -1105,7 +1105,7 @@
       },
       "shortName": "EXTWasProLQUAD",
       "image": "images/fixtures/martin/exterior-wash-pro-l-quad.png",
-      "details": "json/fixture-details/22f000a9bcd928f64d5beb57bc645a80161c7e6713fa92c129712cd62aef9b87.json",
+      "details": "json/fixture-details/martin/exterior-wash-pro-l-quad.json",
       "provenance": {
         "fileName": "Martin_Professional@Exterior_Wash_Pro_L_QUAD@20250214NoMeas.gdtf",
         "sha256": "22f000a9bcd928f64d5beb57bc645a80161c7e6713fa92c129712cd62aef9b87",
@@ -1130,7 +1130,7 @@
       },
       "shortName": "EXTWasProMCTC",
       "image": "images/fixtures/martin/exterior-wash-pro-m-ctc.png",
-      "details": "json/fixture-details/c7075f2afa7b9e806a27e3a30b7c69212880c854168855f6a41e6507519dc03d.json",
+      "details": "json/fixture-details/martin/exterior-wash-pro-m-ctc.json",
       "provenance": {
         "fileName": "Martin_Professional@Exterior_Wash_Pro_M_CTC@20240418NoMeas.gdtf",
         "sha256": "c7075f2afa7b9e806a27e3a30b7c69212880c854168855f6a41e6507519dc03d",
@@ -1170,7 +1170,7 @@
       },
       "shortName": "EXTWasProMQUAD",
       "image": "images/fixtures/martin/exterior-wash-pro-m-quad.png",
-      "details": "json/fixture-details/569a3afe210e5aeb04751c1522ac0efd046f6bade161a73f68e3b6d9edc5abb1.json",
+      "details": "json/fixture-details/martin/exterior-wash-pro-m-quad.json",
       "provenance": {
         "fileName": "Martin_Professional@Exterior_Wash_Pro_M_QUAD@20250214NoMeas.gdtf",
         "sha256": "569a3afe210e5aeb04751c1522ac0efd046f6bade161a73f68e3b6d9edc5abb1",
@@ -1195,7 +1195,7 @@
       },
       "shortName": "EXTWasProSCTC",
       "image": "images/fixtures/martin/exterior-wash-pro-s-ctc.png",
-      "details": "json/fixture-details/ba42f3409b9072abcf1dd2030b197c8bec85ebef2d0d1329123482be1b65d0cb.json",
+      "details": "json/fixture-details/martin/exterior-wash-pro-s-ctc.json",
       "provenance": {
         "fileName": "Martin_Professional@Exterior_Wash_Pro_S_CTC@20240418NoMeas.gdtf",
         "sha256": "ba42f3409b9072abcf1dd2030b197c8bec85ebef2d0d1329123482be1b65d0cb",
@@ -1235,7 +1235,7 @@
       },
       "shortName": "EXTWasProSQUAD",
       "image": "images/fixtures/martin/exterior-wash-pro-s-quad.png",
-      "details": "json/fixture-details/ebd6f1cb41d0483867a39c2c045d57cfd3c41befc4985ea8e0c04f2fcabc91a4.json",
+      "details": "json/fixture-details/martin/exterior-wash-pro-s-quad.json",
       "provenance": {
         "fileName": "Martin_Professional@Exterior_Wash_Pro_S_QUAD@20250214NoMeas.gdtf",
         "sha256": "ebd6f1cb41d0483867a39c2c045d57cfd3c41befc4985ea8e0c04f2fcabc91a4",
@@ -1260,7 +1260,7 @@
       },
       "shortName": "EXTWasProXLCTC",
       "image": "images/fixtures/martin/exterior-wash-pro-xl-ctc.png",
-      "details": "json/fixture-details/7e1035322f4b7a6ce0b103d7d1b6aa75296fe917b8e974999ae16e395a36078f.json",
+      "details": "json/fixture-details/martin/exterior-wash-pro-xl-ctc.json",
       "provenance": {
         "fileName": "Martin_Professional@Exterior_Wash_Pro_XL_CTC@20240418NoMeas.gdtf",
         "sha256": "7e1035322f4b7a6ce0b103d7d1b6aa75296fe917b8e974999ae16e395a36078f",
@@ -1300,7 +1300,7 @@
       },
       "shortName": "EXTWasProXLQUAD",
       "image": "images/fixtures/martin/exterior-wash-pro-xl-quad.png",
-      "details": "json/fixture-details/a0942e7cbb558e6c13d1dcff588ebda2ddcaadf5f8600d07384764405bec9e5f.json",
+      "details": "json/fixture-details/martin/exterior-wash-pro-xl-quad.json",
       "provenance": {
         "fileName": "Martin_Professional@Exterior_Wash_Pro_XL_QUAD@20250214NoMeas.gdtf",
         "sha256": "a0942e7cbb558e6c13d1dcff588ebda2ddcaadf5f8600d07384764405bec9e5f",
@@ -1320,7 +1320,7 @@
       },
       "shortName": "JEM ZR45",
       "image": "images/fixtures/martin/jem-zr45.png",
-      "details": "json/fixture-details/5fff80fdf41378fe91be974ae030daf6dc3c3b9154a125d3301cc954bf405214.json",
+      "details": "json/fixture-details/martin/jem-zr45.json",
       "provenance": {
         "fileName": "Martin_Professional@JEM_ZR45@v1-1.gdtf",
         "sha256": "5fff80fdf41378fe91be974ae030daf6dc3c3b9154a125d3301cc954bf405214",
@@ -1340,7 +1340,7 @@
       },
       "shortName": "2k profile",
       "image": "",
-      "details": "json/fixture-details/0502a3565edbb59405e6d4b514311bdd18c07e024f10d2ad7bc1772ad13b81ce.json",
+      "details": "json/fixture-details/martin/mac-2000-profile-ii.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_2000_Profile_II@Roughly_working.gdtf",
         "sha256": "0502a3565edbb59405e6d4b514311bdd18c07e024f10d2ad7bc1772ad13b81ce",
@@ -1360,7 +1360,7 @@
       },
       "shortName": "Mac 250",
       "image": "images/fixtures/martin/era-300-profile--mac-250.png",
-      "details": "json/fixture-details/4da57fb72a04e824a57b0fd11a1650f1d7e44bf7fc701828f5ad15d086c14b78.json",
+      "details": "json/fixture-details/martin/mac-250.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_250@81523v2.gdtf",
         "sha256": "4da57fb72a04e824a57b0fd11a1650f1d7e44bf7fc701828f5ad15d086c14b78",
@@ -1385,7 +1385,7 @@
       },
       "shortName": "Mac700",
       "image": "images/fixtures/martin/mac-700-profile.png",
-      "details": "json/fixture-details/9e85f63aaadc9f8fe6fb017cd73b5d4991add3b83a12a1793b1ad23c0285e335.json",
+      "details": "json/fixture-details/martin/mac-700-profile.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_700_Profile@V1-0.gdtf",
         "sha256": "9e85f63aaadc9f8fe6fb017cd73b5d4991add3b83a12a1793b1ad23c0285e335",
@@ -1410,7 +1410,7 @@
       },
       "shortName": "MACAllPro",
       "image": "images/fixtures/martin/mac-allure-profile.png",
-      "details": "json/fixture-details/0a494b9f317680c7d3d974a91d2406350ab6bb34e8c1e8246217f649666aa34c.json",
+      "details": "json/fixture-details/martin/mac-allure-profile.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_Allure_Profile@20240515NoMeas.gdtf",
         "sha256": "0a494b9f317680c7d3d974a91d2406350ab6bb34e8c1e8246217f649666aa34c",
@@ -1435,7 +1435,7 @@
       },
       "shortName": "MACAllWas",
       "image": "images/fixtures/martin/mac-allure-wash-pc.png",
-      "details": "json/fixture-details/b1680c7e96affa238c8726c2aec803941cbd976f6ff5c25533261204e7e3e8d8.json",
+      "details": "json/fixture-details/martin/mac-allure-wash-pc.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_Allure_Wash_PC@20230316NoMeas.gdtf",
         "sha256": "b1680c7e96affa238c8726c2aec803941cbd976f6ff5c25533261204e7e3e8d8",
@@ -1460,7 +1460,7 @@
       },
       "shortName": "MACAur",
       "image": "images/fixtures/martin/mac-aura.png",
-      "details": "json/fixture-details/bfb11885b4b986a5131effb4e9c58d42aa987f236e2554341b24e7b1d9c1e804.json",
+      "details": "json/fixture-details/martin/mac-aura.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_Aura@20230201NoMeas.gdtf",
         "sha256": "bfb11885b4b986a5131effb4e9c58d42aa987f236e2554341b24e7b1d9c1e804",
@@ -1500,7 +1500,7 @@
       },
       "shortName": "MACAurPXL",
       "image": "images/fixtures/martin/mac-aura-pxl.png",
-      "details": "json/fixture-details/f741f1969e0f8bb3e0aad053fe4bd5c52f9aee6f26b189a864667cdb8d1ba8ae.json",
+      "details": "json/fixture-details/martin/mac-aura-pxl.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_Aura_PXL@20260823.gdtf",
         "sha256": "f741f1969e0f8bb3e0aad053fe4bd5c52f9aee6f26b189a864667cdb8d1ba8ae",
@@ -1545,7 +1545,7 @@
       },
       "shortName": "MACAurRav",
       "image": "images/fixtures/martin/mac-aura-raven-xip.png",
-      "details": "json/fixture-details/14ba509c6dcf48f2e4cd74c70c20736f39df877f9e9990fdd1495b145a7e9ae0.json",
+      "details": "json/fixture-details/martin/mac-aura-raven-xip.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_Aura_Raven_XIP@20260620.gdtf",
         "sha256": "14ba509c6dcf48f2e4cd74c70c20736f39df877f9e9990fdd1495b145a7e9ae0",
@@ -1570,7 +1570,7 @@
       },
       "shortName": "MACAurXB",
       "image": "images/fixtures/martin/mac-aura-xb.png",
-      "details": "json/fixture-details/800bed0b721db34b09e05027aeab6d6e5f7d2b3d5b7eb3cafbea542d75c72495.json",
+      "details": "json/fixture-details/martin/mac-aura-xb.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_Aura_XB@20230201NoMeas.gdtf",
         "sha256": "800bed0b721db34b09e05027aeab6d6e5f7d2b3d5b7eb3cafbea542d75c72495",
@@ -1610,7 +1610,7 @@
       },
       "shortName": "MACAurXIP",
       "image": "images/fixtures/martin/mac-aura-xip.png",
-      "details": "json/fixture-details/0177b7ccb44c986fdd1fdde9a6c4b2a6c2b737ce5076e02ec14260856e5224dd.json",
+      "details": "json/fixture-details/martin/mac-aura-xip.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_Aura_XIP@20260823.gdtf",
         "sha256": "0177b7ccb44c986fdd1fdde9a6c4b2a6c2b737ce5076e02ec14260856e5224dd",
@@ -1630,7 +1630,7 @@
       },
       "shortName": "MACAxiHyb",
       "image": "images/fixtures/martin/mac-axiom-hybrid.png",
-      "details": "json/fixture-details/f5db8b0f3dca62f83d4657f4c00aa5da7fc112e8822ac0261f1998ac230fa1b8.json",
+      "details": "json/fixture-details/martin/mac-axiom-hybrid.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_Axiom_Hybrid@20230517NoMeas.gdtf",
         "sha256": "f5db8b0f3dca62f83d4657f4c00aa5da7fc112e8822ac0261f1998ac230fa1b8",
@@ -1650,7 +1650,7 @@
       },
       "shortName": "MACEncPerCLD",
       "image": "images/fixtures/martin/mac-encore-performance-cld.png",
-      "details": "json/fixture-details/f5f30d85342c747ca8ae8b7a6f761737159189ea90c16e3e41ba2e9914cb49e8.json",
+      "details": "json/fixture-details/martin/mac-encore-performance-cld.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_Encore_Performance_CLD@20230316NoMeas.gdtf",
         "sha256": "f5f30d85342c747ca8ae8b7a6f761737159189ea90c16e3e41ba2e9914cb49e8",
@@ -1670,7 +1670,7 @@
       },
       "shortName": "MACEncPerWRM",
       "image": "images/fixtures/martin/mac-encore-performance-wrm.png",
-      "details": "json/fixture-details/4037227c2ed5c572dfc2e9e3b8ec7c7f648a996b63cde38a52531670798ae3d4.json",
+      "details": "json/fixture-details/martin/mac-encore-performance-wrm.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_Encore_Performance_WRM@20230316NoMeas.gdtf",
         "sha256": "4037227c2ed5c572dfc2e9e3b8ec7c7f648a996b63cde38a52531670798ae3d4",
@@ -1705,7 +1705,7 @@
       },
       "shortName": "MACEncTwo",
       "image": "images/fixtures/martin/mac-encore-two.png",
-      "details": "json/fixture-details/e70752714b308a8898e0bbc0c782d93ddca9f0b76de281862d92ba02d6a305ce.json",
+      "details": "json/fixture-details/martin/mac-encore-two.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_Encore_Two@20260503.gdtf",
         "sha256": "e70752714b308a8898e0bbc0c782d93ddca9f0b76de281862d92ba02d6a305ce",
@@ -1725,7 +1725,7 @@
       },
       "shortName": "MACEncWasCLD",
       "image": "images/fixtures/martin/mac-encore-wash-cld.png",
-      "details": "json/fixture-details/2c1f03e70b30df57dbeeb89434a9419d27dcfd15e426fe3a1190dff09b03523d.json",
+      "details": "json/fixture-details/martin/mac-encore-wash-cld.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_Encore_Wash_CLD@20230316NoMeas.gdtf",
         "sha256": "2c1f03e70b30df57dbeeb89434a9419d27dcfd15e426fe3a1190dff09b03523d",
@@ -1745,7 +1745,7 @@
       },
       "shortName": "MACEncWasWRM",
       "image": "images/fixtures/martin/mac-encore-wash-wrm.png",
-      "details": "json/fixture-details/d64bae0f069f0db12b2674a52a0b9e4b73c1b6c062ecc50422c4695abc174563.json",
+      "details": "json/fixture-details/martin/mac-encore-wash-wrm.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_Encore_Wash_WRM@20230316NoMeas.gdtf",
         "sha256": "d64bae0f069f0db12b2674a52a0b9e4b73c1b6c062ecc50422c4695abc174563",
@@ -1780,7 +1780,7 @@
       },
       "shortName": "MACOne",
       "image": "images/fixtures/martin/mac-one.png",
-      "details": "json/fixture-details/0e94a1afd5f5f622c4327cccba5b6bba21f3c858a2e7c64fb83e449116a79f4d.json",
+      "details": "json/fixture-details/martin/mac-one.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_One@20260228.gdtf",
         "sha256": "0e94a1afd5f5f622c4327cccba5b6bba21f3c858a2e7c64fb83e449116a79f4d",
@@ -1810,7 +1810,7 @@
       },
       "shortName": "MACOneBeam",
       "image": "images/fixtures/martin/mac-one-beam.png",
-      "details": "json/fixture-details/3210c0df5f7b7b71db8113da71c6769f400ebba9ca1f65d5b01fa5064684df34.json",
+      "details": "json/fixture-details/martin/mac-one-beam.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_One_Beam@20260710NoMeas.gdtf",
         "sha256": "3210c0df5f7b7b71db8113da71c6769f400ebba9ca1f65d5b01fa5064684df34",
@@ -1835,7 +1835,7 @@
       },
       "shortName": "MACQuaPro",
       "image": "images/fixtures/martin/mac-quantum-profile.png",
-      "details": "json/fixture-details/ced4e535db97e0a7616659592ae16dd8d4370c9292bde9caf726b88da1d75c13.json",
+      "details": "json/fixture-details/martin/mac-quantum-profile.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_Quantum_Profile@20230316NoMeas.gdtf",
         "sha256": "ced4e535db97e0a7616659592ae16dd8d4370c9292bde9caf726b88da1d75c13",
@@ -1860,7 +1860,7 @@
       },
       "shortName": "MACQuaWas",
       "image": "images/fixtures/martin/mac-quantum-wash.png",
-      "details": "json/fixture-details/89df89d3fe1d4cd0d32045a031a76fc44a9986b3016461d1c33977706f614289.json",
+      "details": "json/fixture-details/martin/mac-quantum-wash.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_Quantum_Wash@20230316NoMeas.gdtf",
         "sha256": "89df89d3fe1d4cd0d32045a031a76fc44a9986b3016461d1c33977706f614289",
@@ -1890,7 +1890,7 @@
       },
       "shortName": "MACUltPer",
       "image": "images/fixtures/martin/mac-ultra-performance.png",
-      "details": "json/fixture-details/b009a0c20bacad2595441caa0a2f4645ec8e4c9615a90eb720c62248e9e16432.json",
+      "details": "json/fixture-details/martin/mac-ultra-performance.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_Ultra_Performance@20260914.gdtf",
         "sha256": "b009a0c20bacad2595441caa0a2f4645ec8e4c9615a90eb720c62248e9e16432",
@@ -1915,7 +1915,7 @@
       },
       "shortName": "MACUltWas",
       "image": "images/fixtures/martin/mac-ultra-wash.png",
-      "details": "json/fixture-details/25707d4a9ed90f9c7089d22be957357f84bf3802a8c0d722848c1e635be3a49e.json",
+      "details": "json/fixture-details/martin/mac-ultra-wash.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_Ultra_Wash@20260914.gdtf",
         "sha256": "25707d4a9ed90f9c7089d22be957357f84bf3802a8c0d722848c1e635be3a49e",
@@ -1940,7 +1940,7 @@
       },
       "shortName": "MACVipAirFX",
       "image": "images/fixtures/martin/mac-viper-airfx.png",
-      "details": "json/fixture-details/bc592641b5de61269e7bcc4bd1ac95a6604cb558311bd1bdf6ea02f57bb01483.json",
+      "details": "json/fixture-details/martin/mac-viper-airfx.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_Viper_AirFX@20230516NoMeas.gdtf",
         "sha256": "bc592641b5de61269e7bcc4bd1ac95a6604cb558311bd1bdf6ea02f57bb01483",
@@ -1965,7 +1965,7 @@
       },
       "shortName": "MACVipPer",
       "image": "images/fixtures/martin/mac-viper-performance.png",
-      "details": "json/fixture-details/88ff9d016a743c8cbdcb0b86537803b73a48c90be8a7f4c2a1fc8e25e51756d0.json",
+      "details": "json/fixture-details/martin/mac-viper-performance.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_Viper_Performance@20230516NoMeas.gdtf",
         "sha256": "88ff9d016a743c8cbdcb0b86537803b73a48c90be8a7f4c2a1fc8e25e51756d0",
@@ -1990,7 +1990,7 @@
       },
       "shortName": "MACVipPro",
       "image": "images/fixtures/martin/mac-viper-profile.png",
-      "details": "json/fixture-details/8c9e3b6ddf96fe6a5dba8d7002b76d82a968ee7ec35a374766fafc87308ae63a.json",
+      "details": "json/fixture-details/martin/mac-viper-profile.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_Viper_Profile@20230516NoMeas.gdtf",
         "sha256": "8c9e3b6ddf96fe6a5dba8d7002b76d82a968ee7ec35a374766fafc87308ae63a",
@@ -2015,7 +2015,7 @@
       },
       "shortName": "MACVipWas",
       "image": "images/fixtures/martin/mac-viper-wash.png",
-      "details": "json/fixture-details/5c7e2ad2fe9c414b9438aaba305368df5d4f66534fb26667c355783dc7deb575.json",
+      "details": "json/fixture-details/martin/mac-viper-wash.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_Viper_Wash@20230516NoMeas.gdtf",
         "sha256": "5c7e2ad2fe9c414b9438aaba305368df5d4f66534fb26667c355783dc7deb575",
@@ -2040,7 +2040,7 @@
       },
       "shortName": "MACVipWasDX",
       "image": "images/fixtures/martin/mac-viper-wash-dx.png",
-      "details": "json/fixture-details/4c04653e7b992ece60626661393a51546dc78d8c6d3c9292fbf534bd78a30e94.json",
+      "details": "json/fixture-details/martin/mac-viper-wash-dx.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_Viper_Wash_DX@20230516NoMeas.gdtf",
         "sha256": "4c04653e7b992ece60626661393a51546dc78d8c6d3c9292fbf534bd78a30e94",
@@ -2075,7 +2075,7 @@
       },
       "shortName": "MACVipXIP",
       "image": "images/fixtures/martin/mac-viper-xip.png",
-      "details": "json/fixture-details/bbb9746d5d1772e91ad5fe670d84655108e7161d599257cd9d46a83da9315672.json",
+      "details": "json/fixture-details/martin/mac-viper-xip.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_Viper_XIP@20260504.gdtf",
         "sha256": "bbb9746d5d1772e91ad5fe670d84655108e7161d599257cd9d46a83da9315672",
@@ -2100,7 +2100,7 @@
       },
       "shortName": "Mac101",
       "image": "images/fixtures/martin/mac-101.png",
-      "details": "json/fixture-details/54506e1e9708bc35aae9d4dcda28c227af3bd7fdfe10ddff145c660394c09964.json",
+      "details": "json/fixture-details/martin/mac-101.json",
       "provenance": {
         "fileName": "Martin_Professional@MAC_101@V_101.gdtf",
         "sha256": "54506e1e9708bc35aae9d4dcda28c227af3bd7fdfe10ddff145c660394c09964",
@@ -2230,7 +2230,7 @@
       },
       "shortName": "VCG15 16x16",
       "image": "images/fixtures/martin/vc-grid-15-16x16.png",
-      "details": "json/fixture-details/03de91bc0b1b6982f55f2a09701b9331de3d0b053e5e00ec56a040528d77d494.json",
+      "details": "json/fixture-details/martin/vc-grid-15-16x16.json",
       "provenance": {
         "fileName": "Martin_Professional@VC-Grid_15_16x16@20210126.gdtf",
         "sha256": "03de91bc0b1b6982f55f2a09701b9331de3d0b053e5e00ec56a040528d77d494",
@@ -2340,7 +2340,7 @@
       },
       "shortName": "VCG25 8x8",
       "image": "images/fixtures/martin/vc-grid-25-8x8.png",
-      "details": "json/fixture-details/6c2c8553872744835bc1b24a1073259e292cff8d4c8a3c4ac825fcbad5586ef8.json",
+      "details": "json/fixture-details/martin/vc-grid-25-8x8.json",
       "provenance": {
         "fileName": "Martin_Professional@VC-Grid_25_8x8@20210125.gdtf",
         "sha256": "6c2c8553872744835bc1b24a1073259e292cff8d4c8a3c4ac825fcbad5586ef8",
@@ -2450,7 +2450,7 @@
       },
       "shortName": "VCG30 8x8",
       "image": "images/fixtures/martin/vc-grid-30-8x8.png",
-      "details": "json/fixture-details/7e923118290297c53e6b60d4f9db8e820e536b5d5ddded949e089612d4337f99.json",
+      "details": "json/fixture-details/martin/vc-grid-30-8x8.json",
       "provenance": {
         "fileName": "Martin_Professional@VC-Grid_30_8x8@20210123.gdtf",
         "sha256": "7e923118290297c53e6b60d4f9db8e820e536b5d5ddded949e089612d4337f99",
@@ -2540,7 +2540,7 @@
       },
       "shortName": "VCG60 4x4",
       "image": "images/fixtures/martin/vc-grid-60-4x4.png",
-      "details": "json/fixture-details/26a527c66b4d774707c84be55b7a0e9ed3e4b044dcefb58009688d199c46994e.json",
+      "details": "json/fixture-details/martin/vc-grid-60-4x4.json",
       "provenance": {
         "fileName": "Martin_Professional@VC-Grid_60_4x4@20210122.gdtf",
         "sha256": "26a527c66b4d774707c84be55b7a0e9ed3e4b044dcefb58009688d199c46994e",
@@ -2650,7 +2650,7 @@
       },
       "shortName": "VCG60 8x8",
       "image": "images/fixtures/martin/vc-grid-60-8x8.png",
-      "details": "json/fixture-details/24a010e07938fc20a6adf5efac4fd6f075ba91cc91b3e580ac81996ed70b8e7d.json",
+      "details": "json/fixture-details/martin/vc-grid-60-8x8.json",
       "provenance": {
         "fileName": "Martin_Professional@VC-Grid_60_8x8@20210122.gdtf",
         "sha256": "24a010e07938fc20a6adf5efac4fd6f075ba91cc91b3e580ac81996ed70b8e7d",
@@ -2740,7 +2740,7 @@
       },
       "shortName": "VCS15 16x1",
       "image": "images/fixtures/martin/vc-strip-15-16x1.png",
-      "details": "json/fixture-details/4fd4ce088b46788cd4d4f35849dcaeab42828ff04f06c69ec3f34de2129fa963.json",
+      "details": "json/fixture-details/martin/vc-strip-15-16x1.json",
       "provenance": {
         "fileName": "Martin_Professional@VC-Strip_15_16x1@20210126.gdtf",
         "sha256": "4fd4ce088b46788cd4d4f35849dcaeab42828ff04f06c69ec3f34de2129fa963",
@@ -2840,7 +2840,7 @@
       },
       "shortName": "VCS15 32x1",
       "image": "images/fixtures/martin/vc-strip-15-32x1.png",
-      "details": "json/fixture-details/b2bff36549c8a795dc8a8ec24ebeecd4c46164e2ad79e455793429b5da4c1b30.json",
+      "details": "json/fixture-details/martin/vc-strip-15-32x1.json",
       "provenance": {
         "fileName": "Martin_Professional@VC-Strip_15_32x1@20210126.gdtf",
         "sha256": "b2bff36549c8a795dc8a8ec24ebeecd4c46164e2ad79e455793429b5da4c1b30",
@@ -2930,7 +2930,7 @@
       },
       "shortName": "VCS25 16x1",
       "image": "images/fixtures/martin/vc-strip-25-16x1.png",
-      "details": "json/fixture-details/fae612c7c43075f0c31793c0629168afdbfe37f81cc21e568400bea5f0fcbd33.json",
+      "details": "json/fixture-details/martin/vc-strip-25-16x1.json",
       "provenance": {
         "fileName": "Martin_Professional@VC-Strip_25_16x1@20210125.gdtf",
         "sha256": "fae612c7c43075f0c31793c0629168afdbfe37f81cc21e568400bea5f0fcbd33",
@@ -3010,7 +3010,7 @@
       },
       "shortName": "VCS25 8x1",
       "image": "images/fixtures/martin/vc-strip-25-8x1.png",
-      "details": "json/fixture-details/1915c9c3d72adaf57c50e08c1c2809023ccb7bd8ea487a69df0b4f94ef4c023e.json",
+      "details": "json/fixture-details/martin/vc-strip-25-8x1.json",
       "provenance": {
         "fileName": "Martin_Professional@VC-Strip_25_8x1@20210125.gdtf",
         "sha256": "1915c9c3d72adaf57c50e08c1c2809023ccb7bd8ea487a69df0b4f94ef4c023e",
@@ -3100,7 +3100,7 @@
       },
       "shortName": "VCS30 16x1",
       "image": "images/fixtures/martin/vc-strip-30-16x1.png",
-      "details": "json/fixture-details/c8d072049d2beb65cfabd266c45cea7699995ba37a7091d9744a46f79996e128.json",
+      "details": "json/fixture-details/martin/vc-strip-30-16x1.json",
       "provenance": {
         "fileName": "Martin_Professional@VC-Strip_30_16x1@20210123.gdtf",
         "sha256": "c8d072049d2beb65cfabd266c45cea7699995ba37a7091d9744a46f79996e128",
@@ -3180,7 +3180,7 @@
       },
       "shortName": "VCS30 8x1",
       "image": "images/fixtures/martin/vc-strip-30-8x1.png",
-      "details": "json/fixture-details/155a6c8ca1a9efa6eae1905f0685d24133c9e3e9960ed512bae63327c0711a83.json",
+      "details": "json/fixture-details/martin/vc-strip-30-8x1.json",
       "provenance": {
         "fileName": "Martin_Professional@VC-Strip_30_8x1@20210123.gdtf",
         "sha256": "155a6c8ca1a9efa6eae1905f0685d24133c9e3e9960ed512bae63327c0711a83",
@@ -3250,7 +3250,7 @@
       },
       "shortName": "VCS60 4x1",
       "image": "images/fixtures/martin/vc-strip-60-4x1.png",
-      "details": "json/fixture-details/f98ff02690a6377874e0b9287722165aba8b4c8a15f35afb3e14d1e3b653b721.json",
+      "details": "json/fixture-details/martin/vc-strip-60-4x1.json",
       "provenance": {
         "fileName": "Martin_Professional@VC-Strip_60_4x1@20210122.gdtf",
         "sha256": "f98ff02690a6377874e0b9287722165aba8b4c8a15f35afb3e14d1e3b653b721",
@@ -3330,7 +3330,7 @@
       },
       "shortName": "VCS60 8x1",
       "image": "images/fixtures/martin/vc-strip-60-8x1.png",
-      "details": "json/fixture-details/14ff45b691cd8405c4bf3b9f1d54f998dc4f91a1803dbf2af1d7dcf568bf5613.json",
+      "details": "json/fixture-details/martin/vc-strip-60-8x1.json",
       "provenance": {
         "fileName": "Martin_Professional@VC-Strip_60_8x1@20210122.gdtf",
         "sha256": "14ff45b691cd8405c4bf3b9f1d54f998dc4f91a1803dbf2af1d7dcf568bf5613",
@@ -3375,7 +3375,7 @@
       },
       "shortName": "VDOAtoBLD",
       "image": "images/fixtures/martin/vdo-atomic-bold.png",
-      "details": "json/fixture-details/33761a60ef68b88ded875a727e294e0f65c1fa640b461c8eba70bcd1e0909200.json",
+      "details": "json/fixture-details/martin/vdo-atomic-bold.json",
       "provenance": {
         "fileName": "Martin_Professional@VDO_Atomic_Bold@20260620.gdtf",
         "sha256": "33761a60ef68b88ded875a727e294e0f65c1fa640b461c8eba70bcd1e0909200",
@@ -3415,7 +3415,7 @@
       },
       "shortName": "VDOAtoDOTCLD",
       "image": "images/fixtures/martin/vdo-atomic-dot-cld.png",
-      "details": "json/fixture-details/c4e5d91e7ceec660dd598954d0ccd5a96ac0e0d5052e6a5ae82f82dbdba517e5.json",
+      "details": "json/fixture-details/martin/vdo-atomic-dot-cld.json",
       "provenance": {
         "fileName": "Martin_Professional@VDO_Atomic_Dot_CLD@20260621.gdtf",
         "sha256": "c4e5d91e7ceec660dd598954d0ccd5a96ac0e0d5052e6a5ae82f82dbdba517e5",
@@ -3455,7 +3455,7 @@
       },
       "shortName": "VDOAtoDOTWRM",
       "image": "images/fixtures/martin/vdo-atomic-dot-wrm.png",
-      "details": "json/fixture-details/3e25ca4f900f4b4a3a7bcfcf9d66f0a6f2145976df8c90512b7ee6da05aba9f4.json",
+      "details": "json/fixture-details/martin/vdo-atomic-dot-wrm.json",
       "provenance": {
         "fileName": "Martin_Professional@VDO_Atomic_Dot_WRM@20260621.gdtf",
         "sha256": "3e25ca4f900f4b4a3a7bcfcf9d66f0a6f2145976df8c90512b7ee6da05aba9f4",
@@ -3505,7 +3505,7 @@
       },
       "shortName": "VDODot",
       "image": "images/fixtures/martin/vdo-dotron.png",
-      "details": "json/fixture-details/961e3ccd4db4cbce7df69e11020f4a7e345c154e1e6b62259708cd0ddc039c9d.json",
+      "details": "json/fixture-details/martin/vdo-dotron.json",
       "provenance": {
         "fileName": "Martin_Professional@VDO_Dotron@20210407.gdtf",
         "sha256": "961e3ccd4db4cbce7df69e11020f4a7e345c154e1e6b62259708cd0ddc039c9d",
@@ -3635,7 +3635,7 @@
       },
       "shortName": "VDOFat20 1000",
       "image": "images/fixtures/martin/vdo-fatron-20-1000-mm.png",
-      "details": "json/fixture-details/eebad42d9d760973b61072b5dd331ed55517d5ba3df701d7e956013b89b7820a.json",
+      "details": "json/fixture-details/martin/vdo-fatron-20-1000-mm.json",
       "provenance": {
         "fileName": "Martin_Professional@VDO_Fatron_20_1000mm@20210127.gdtf",
         "sha256": "eebad42d9d760973b61072b5dd331ed55517d5ba3df701d7e956013b89b7820a",
@@ -3755,7 +3755,7 @@
       },
       "shortName": "VDOFat20 320",
       "image": "images/fixtures/martin/vdo-fatron-20-320-mm.png",
-      "details": "json/fixture-details/a4951549a047f7a7a1271dcc5cb7e77b5c8e847042c883bb0a92ad8e3438ebf0.json",
+      "details": "json/fixture-details/martin/vdo-fatron-20-320-mm.json",
       "provenance": {
         "fileName": "Martin_Professional@VDO_Fatron_20_320mm@20201222.gdtf",
         "sha256": "a4951549a047f7a7a1271dcc5cb7e77b5c8e847042c883bb0a92ad8e3438ebf0",
@@ -3895,7 +3895,7 @@
       },
       "shortName": "VDOSce10 1000",
       "image": "images/fixtures/martin/vdo-sceptron-10-1000-mm.png",
-      "details": "json/fixture-details/7bfe96fd8766c0267577d13a5e0d91fbbaed3b36ff139cd46c081cdf438f63b3.json",
+      "details": "json/fixture-details/martin/vdo-sceptron-10-1000-mm.json",
       "provenance": {
         "fileName": "Martin_Professional@VDO_Sceptron_10_1000mm@20201223.gdtf",
         "sha256": "7bfe96fd8766c0267577d13a5e0d91fbbaed3b36ff139cd46c081cdf438f63b3",
@@ -4005,7 +4005,7 @@
       },
       "shortName": "VDOSce10 320",
       "image": "images/fixtures/martin/vdo-sceptron-10-320-mm.png",
-      "details": "json/fixture-details/0a2a0655c38847054347e82dfa983601301c0fa3888198e477912925ee52a6b1.json",
+      "details": "json/fixture-details/martin/vdo-sceptron-10-320-mm.json",
       "provenance": {
         "fileName": "Martin_Professional@VDO_Sceptron_10_320mm@20201223.gdtf",
         "sha256": "0a2a0655c38847054347e82dfa983601301c0fa3888198e477912925ee52a6b1",
@@ -4115,7 +4115,7 @@
       },
       "shortName": "VDOSce20 1000",
       "image": "images/fixtures/martin/vdo-sceptron-20-1000-mm.png",
-      "details": "json/fixture-details/9a98328d5ad6e8ecf50e442bc66fb4639c17e94c4863e38b5ea9b7082583ce07.json",
+      "details": "json/fixture-details/martin/vdo-sceptron-20-1000-mm.json",
       "provenance": {
         "fileName": "Martin_Professional@VDO_Sceptron_20_1000mm@20201223.gdtf",
         "sha256": "9a98328d5ad6e8ecf50e442bc66fb4639c17e94c4863e38b5ea9b7082583ce07",
@@ -4215,7 +4215,7 @@
       },
       "shortName": "VDOSce20 320",
       "image": "images/fixtures/martin/vdo-sceptron-20-320-mm.png",
-      "details": "json/fixture-details/ddd948ba1d697ee18e61e16fe482ae18713a4e6b555efb4c438bc5fdb43b3f64.json",
+      "details": "json/fixture-details/martin/vdo-sceptron-20-320-mm.json",
       "provenance": {
         "fileName": "Martin_Professional@VDO_Sceptron_20_320mm@20201223.gdtf",
         "sha256": "ddd948ba1d697ee18e61e16fe482ae18713a4e6b555efb4c438bc5fdb43b3f64",
@@ -4295,7 +4295,7 @@
       },
       "shortName": "VDOSce40 1000",
       "image": "images/fixtures/martin/vdo-sceptron-40-1000-mm.png",
-      "details": "json/fixture-details/3bff06d5a3ee349b5fe6b7130d504df9ab395063c02cf1979f4746f77ed1aa28.json",
+      "details": "json/fixture-details/martin/vdo-sceptron-40-1000-mm.json",
       "provenance": {
         "fileName": "Martin_Professional@VDO_Sceptron_40_1000mm@20201223.gdtf",
         "sha256": "3bff06d5a3ee349b5fe6b7130d504df9ab395063c02cf1979f4746f77ed1aa28",
@@ -4385,7 +4385,7 @@
       },
       "shortName": "VDOSce40 320",
       "image": "images/fixtures/martin/vdo-sceptron-40-320-mm.png",
-      "details": "json/fixture-details/b254f83defddb6239b952715259a215e0ddade7370346857894f9920ea03d98b.json",
+      "details": "json/fixture-details/martin/vdo-sceptron-40-320-mm.json",
       "provenance": {
         "fileName": "Martin_Professional@VDO_Sceptron_40_320mm@20201223.gdtf",
         "sha256": "b254f83defddb6239b952715259a215e0ddade7370346857894f9920ea03d98b",
@@ -4460,7 +4460,7 @@
       },
       "shortName": "VDOSceXB 1000",
       "image": "images/fixtures/martin/vdo-sceptron-xb-1000-mm.png",
-      "details": "json/fixture-details/7996680a166c7863629a832c19d3a3891abb0d8b987e52515f890b33ce4cfbd3.json",
+      "details": "json/fixture-details/martin/vdo-sceptron-xb-1000-mm.json",
       "provenance": {
         "fileName": "Martin_Professional@VDO_Sceptron_XB_1000mm@20260621.gdtf",
         "sha256": "7996680a166c7863629a832c19d3a3891abb0d8b987e52515f890b33ce4cfbd3",
@@ -4535,7 +4535,7 @@
       },
       "shortName": "VDOSceXB 320",
       "image": "images/fixtures/martin/vdo-sceptron-xb-320-mm.png",
-      "details": "json/fixture-details/1e422483389ee2c0832274a2108ee2501d9c4967f0e17a43ed7e11b8173da096.json",
+      "details": "json/fixture-details/martin/vdo-sceptron-xb-320-mm.json",
       "provenance": {
         "fileName": "Martin_Professional@VDO_Sceptron_XB_320mm@20260621.gdtf",
         "sha256": "1e422483389ee2c0832274a2108ee2501d9c4967f0e17a43ed7e11b8173da096",

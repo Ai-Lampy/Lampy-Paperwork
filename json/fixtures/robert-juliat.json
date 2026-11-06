@@ -39,7 +39,7 @@
       },
       "shortName": "654SX 4C",
       "image": "images/fixtures/robert-juliat/654sx-4c.png",
-      "details": "json/fixture-details/21a52a6bee09942ec6bb8ff8dc3ebb7f58210ce0910ba35d5fc150766d08456e.json",
+      "details": "json/fixture-details/robert-juliat/654sx-4c.json",
       "provenance": {
         "fileName": "Robert_Juliat@654SX_4C@1.00.gdtf",
         "sha256": "21a52a6bee09942ec6bb8ff8dc3ebb7f58210ce0910ba35d5fc150766d08456e",
@@ -64,7 +64,7 @@
       },
       "shortName": "671SX CW",
       "image": "images/fixtures/robert-juliat/671sx-cw--671sx-vw.png",
-      "details": "json/fixture-details/444c2ee3a02eb272cb61c288c6725ae4aa8da7f89acc27b4995ee27ffe84329b.json",
+      "details": "json/fixture-details/robert-juliat/671sx-cw.json",
       "provenance": {
         "fileName": "Robert_Juliat@671SX_CW@1_01.gdtf",
         "sha256": "444c2ee3a02eb272cb61c288c6725ae4aa8da7f89acc27b4995ee27ffe84329b",
@@ -99,7 +99,7 @@
       },
       "shortName": "671SX VW",
       "image": "images/fixtures/robert-juliat/671sx-cw--671sx-vw.png",
-      "details": "json/fixture-details/e1a1e7e937b30d10b7e72a953af2174aec0272c0d8b48fb738addf5b1d4810b5.json",
+      "details": "json/fixture-details/robert-juliat/671sx-vw.json",
       "provenance": {
         "fileName": "Robert_Juliat@671SX_VW@1_01.gdtf",
         "sha256": "e1a1e7e937b30d10b7e72a953af2174aec0272c0d8b48fb738addf5b1d4810b5",
@@ -124,7 +124,7 @@
       },
       "shortName": "673SX CW",
       "image": "images/fixtures/robert-juliat/673sx-cw--673sx-vw.png",
-      "details": "json/fixture-details/9f582e346b8e5036dd4e9e360ef117ed492abc6fc52551e8fd5e234f33e06243.json",
+      "details": "json/fixture-details/robert-juliat/673sx-cw.json",
       "provenance": {
         "fileName": "Robert_Juliat@673SX_CW@1_01.gdtf",
         "sha256": "9f582e346b8e5036dd4e9e360ef117ed492abc6fc52551e8fd5e234f33e06243",
@@ -159,7 +159,7 @@
       },
       "shortName": "673SX VW",
       "image": "images/fixtures/robert-juliat/673sx-cw--673sx-vw.png",
-      "details": "json/fixture-details/fd055cad23518cd842eee1af7e6e112799d98dd1cf4afa578709776ef188deb6.json",
+      "details": "json/fixture-details/robert-juliat/673sx-vw.json",
       "provenance": {
         "fileName": "Robert_Juliat@673SX_VW@1_01.gdtf",
         "sha256": "fd055cad23518cd842eee1af7e6e112799d98dd1cf4afa578709776ef188deb6",
@@ -184,7 +184,7 @@
       },
       "shortName": "674SX CW",
       "image": "images/fixtures/robert-juliat/674sx-cw--674sx-vw.png",
-      "details": "json/fixture-details/d0579de950c06118191fd7692a157e062729ad6e17ee3d7ef43dd7429b4e31ff.json",
+      "details": "json/fixture-details/robert-juliat/674sx-cw.json",
       "provenance": {
         "fileName": "Robert_Juliat@674SX_CW@1_01.gdtf",
         "sha256": "d0579de950c06118191fd7692a157e062729ad6e17ee3d7ef43dd7429b4e31ff",
@@ -219,7 +219,7 @@
       },
       "shortName": "674SX VW",
       "image": "images/fixtures/robert-juliat/674sx-cw--674sx-vw.png",
-      "details": "json/fixture-details/fa1e142f0f47e630fb3011298e971f34af68124417cedea562e756cc54076813.json",
+      "details": "json/fixture-details/robert-juliat/674sx-vw.json",
       "provenance": {
         "fileName": "Robert_Juliat@674SX_VW@1_02.gdtf",
         "sha256": "fa1e142f0f47e630fb3011298e971f34af68124417cedea562e756cc54076813",
@@ -308,7 +308,7 @@
       },
       "shortName": "Dalis 860",
       "image": "images/fixtures/robert-juliat/dalis-860.png",
-      "details": "json/fixture-details/2576535b40f6046ba6926a5692ff19086c8868f60f5c5bae1eaa20d8b8be8779.json",
+      "details": "json/fixture-details/robert-juliat/dalis-860.json",
       "provenance": {
         "fileName": "Robert_Juliat@Dalis_860@1.00.gdtf",
         "sha256": "2576535b40f6046ba6926a5692ff19086c8868f60f5c5bae1eaa20d8b8be8779",

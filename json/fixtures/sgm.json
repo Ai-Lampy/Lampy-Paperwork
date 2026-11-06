@@ -79,7 +79,7 @@
       },
       "shortName": "P-6",
       "image": "images/fixtures/sgm/p-6.png",
-      "details": "json/fixture-details/d2812e1f9399d67a79ab5c25ee5ddeef920fe1b6bf55b93ace1cf206753f6183.json",
+      "details": "json/fixture-details/sgm/p-6.json",
       "provenance": {
         "fileName": "SGM_Light@P-6@Rev_C.gdtf",
         "sha256": "d2812e1f9399d67a79ab5c25ee5ddeef920fe1b6bf55b93ace1cf206753f6183",
@@ -134,7 +134,7 @@
       },
       "shortName": "Q-8",
       "image": "images/fixtures/sgm/q-8.png",
-      "details": "json/fixture-details/5a92629eaf15b5aa0439c44b0da7d46cb7d0653cf0d81036199865a4a5665e77.json",
+      "details": "json/fixture-details/sgm/q-8.json",
       "provenance": {
         "fileName": "SGM_Light@Q-8@Rev_D.gdtf",
         "sha256": "5a92629eaf15b5aa0439c44b0da7d46cb7d0653cf0d81036199865a4a5665e77",
