@@ -1,3 +1,7 @@
+## V56.3 — Centred Device Config PDF review
+
+- Centre scaled Device Config preview pages within their wrappers and fit Review content to the available width without horizontal scrolling.
+
 ## V56.2 — Faster loading and Device Config group ordering
 
 - Show fixture metadata and images before full channel data finishes loading. Reuse loaded definitions and build channel tables only when a mode is expanded.
