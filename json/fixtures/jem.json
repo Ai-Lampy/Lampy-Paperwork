@@ -6,22 +6,14 @@
       "watts": 1890,
       "weight": 28,
       "modes": {
-        "1 Chan": 1
-      },
-      "gdtf": {
-        "status": "pending-download",
-        "folder": "fixtures/jem",
-        "suggestedFileName": "Jem__ZR44_Smoke.gdtf",
-        "file": "",
-        "modes": {
-          "1 Chan": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
-          }
+        "1 Chan": {
+          "channels": 1,
+          "parameters": null
         }
       },
-      "shortName": "ZR44"
+      "shortName": "ZR44",
+      "image": "",
+      "details": ""
     }
   ]
 }

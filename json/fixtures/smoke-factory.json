@@ -6,99 +6,85 @@
       "watts": 1300,
       "weight": 9.7,
       "modes": {
-        "Control external Fan": 2,
-        "Internal Fan": 1
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/smoke_factory",
-        "suggestedFileName": "Smoke_Factory__Captain_D.gdtf",
-        "file": "fixtures/smoke_factory/Smoke_Factory@Captain_D@2026-07-01.gdtf",
-        "modes": {
-          "Control external Fan": {
-            "channels": 2,
-            "gdtfMode": "Control external Fan",
-            "status": "matched",
-            "parameters": 2
-          },
-          "Internal Fan": {
-            "channels": 1,
-            "gdtfMode": "Internal Fan",
-            "status": "matched",
-            "parameters": 1
-          }
+        "Control external Fan": {
+          "channels": 2,
+          "parameters": 2,
+          "sourceMode": "Control external Fan"
+        },
+        "Internal Fan": {
+          "channels": 1,
+          "parameters": 1,
+          "sourceMode": "Internal Fan"
         }
       },
-      "shortName": "CaptainD"
+      "shortName": "CaptainD",
+      "image": "images/fixtures/smoke-factory/captain-d--fanfogger-ec26.png",
+      "details": "json/fixture-details/89f04b1e4c456f1d9e48513033bf79f8c4e60254a11d8c6adb5ab5e3722caaaa.json",
+      "provenance": {
+        "fileName": "Smoke_Factory@Captain_D@2026-07-01.gdtf",
+        "sha256": "89f04b1e4c456f1d9e48513033bf79f8c4e60254a11d8c6adb5ab5e3722caaaa",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Fan Fogger",
       "watts": 3660,
       "weight": 75,
       "modes": {
-        "Default": 2
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/smoke_factory",
-        "suggestedFileName": "Smoke_Factory__Fan_Fogger.gdtf",
-        "file": "fixtures/smoke_factory/Smoke_Factory@Fan_Fogger@1000.gdtf",
-        "modes": {
-          "Default": {
-            "channels": 2,
-            "gdtfMode": "Default",
-            "status": "matched",
-            "parameters": 2
-          }
+        "Default": {
+          "channels": 2,
+          "parameters": 2,
+          "sourceMode": "Default"
         }
       },
-      "shortName": "FFog"
+      "shortName": "FFog",
+      "image": "images/fixtures/smoke-factory/fan-fogger--tour-hazer-ii.png",
+      "details": "json/fixture-details/bc9f06916f7982e565b706ced0eb76dfea104c555dd64a02b8aca378d0f62652.json",
+      "provenance": {
+        "fileName": "Smoke_Factory@Fan_Fogger@1000.gdtf",
+        "sha256": "bc9f06916f7982e565b706ced0eb76dfea104c555dd64a02b8aca378d0f62652",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FanFogger EC26",
       "watts": 3050,
       "weight": 75,
       "modes": {
-        "Control external Fan": 2
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/smoke_factory",
-        "suggestedFileName": "Smoke_Factory__FanFogger_EC26.gdtf",
-        "file": "fixtures/smoke_factory/Smoke_Factory@FanFogger_EC26@2026-07-01.gdtf",
-        "modes": {
-          "Control external Fan": {
-            "channels": 2,
-            "gdtfMode": "Control external Fan",
-            "status": "matched",
-            "parameters": 2
-          }
+        "Control external Fan": {
+          "channels": 2,
+          "parameters": 2,
+          "sourceMode": "Control external Fan"
         }
       },
-      "shortName": "FF26"
+      "shortName": "FF26",
+      "image": "images/fixtures/smoke-factory/captain-d--fanfogger-ec26.png",
+      "details": "json/fixture-details/3a1f0d6d233ec6096f14124c370879d5771b472edbbe87be411bcaaf6ba2f1b7.json",
+      "provenance": {
+        "fileName": "Smoke_Factory@FanFogger_EC26@2026-07-01.gdtf",
+        "sha256": "3a1f0d6d233ec6096f14124c370879d5771b472edbbe87be411bcaaf6ba2f1b7",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Tour Hazer II",
       "watts": null,
       "weight": 16.5,
       "modes": {
-        "Default": 2
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/smoke_factory",
-        "suggestedFileName": "Smoke_Factory__Tour_Hazer_II.gdtf",
-        "file": "fixtures/smoke_factory/Smoke_Factory@Tour_Hazer_II@Release_1.0.gdtf",
-        "modes": {
-          "Default": {
-            "channels": 2,
-            "gdtfMode": "Default",
-            "status": "matched",
-            "parameters": 2
-          }
+        "Default": {
+          "channels": 2,
+          "parameters": 2,
+          "sourceMode": "Default"
         }
       },
-      "shortName": "THazerII"
+      "shortName": "THazerII",
+      "image": "images/fixtures/smoke-factory/fan-fogger--tour-hazer-ii.png",
+      "details": "json/fixture-details/484d4dc48a2ac52fc9e3cdc402fda373256a1f764428d676d86fc38adb2c0b89.json",
+      "provenance": {
+        "fileName": "Smoke_Factory@Tour_Hazer_II@Release_1.0.gdtf",
+        "sha256": "484d4dc48a2ac52fc9e3cdc402fda373256a1f764428d676d86fc38adb2c0b89",
+        "extractedAt": "2026-11-05"
+      }
     }
   ]
 }

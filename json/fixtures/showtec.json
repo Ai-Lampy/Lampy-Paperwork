@@ -6,399 +6,310 @@
       "watts": 452.0,
       "weight": 12.5,
       "modes": {
-        "4Ch RGBW Mode": 4,
-        "5Ch RAW Mode": 5,
-        "13Ch Basic Mode": 13,
-        "19Ch Extended Mode": 19,
-        "793Ch Extended Mode": 793
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/showtec",
-        "suggestedFileName": "Showtec__Goliath.gdtf",
-        "file": "fixtures/showtec/Showtec@Goliath@Initial_upload_by_GDTFservice.com_commissioned_by_Showtec.gdtf",
-        "modes": {
-          "4Ch RGBW Mode": {
-            "channels": 4,
-            "gdtfMode": "4Ch RGBW Mode",
-            "status": "matched",
-            "parameters": 6
-          },
-          "5Ch RAW Mode": {
-            "channels": 5,
-            "gdtfMode": "5Ch RAW Mode",
-            "status": "matched",
-            "parameters": 7
-          },
-          "13Ch Basic Mode": {
-            "channels": 13,
-            "gdtfMode": "13Ch Basic Mode",
-            "status": "matched",
-            "parameters": 16
-          },
-          "19Ch Extended Mode": {
-            "channels": 19,
-            "gdtfMode": "19Ch Extended Mode",
-            "status": "matched",
-            "parameters": 22
-          },
-          "793Ch Extended Mode": {
-            "channels": 793,
-            "gdtfMode": "793Ch Extended Mode",
-            "status": "matched",
-            "parameters": 1058
-          }
+        "4Ch RGBW Mode": {
+          "channels": 4,
+          "parameters": 6,
+          "sourceMode": "4Ch RGBW Mode"
+        },
+        "5Ch RAW Mode": {
+          "channels": 5,
+          "parameters": 7,
+          "sourceMode": "5Ch RAW Mode"
+        },
+        "13Ch Basic Mode": {
+          "channels": 13,
+          "parameters": 16,
+          "sourceMode": "13Ch Basic Mode"
+        },
+        "19Ch Extended Mode": {
+          "channels": 19,
+          "parameters": 22,
+          "sourceMode": "19Ch Extended Mode"
+        },
+        "793Ch Extended Mode": {
+          "channels": 793,
+          "parameters": 1058,
+          "sourceMode": "793Ch Extended Mode"
         }
       },
-      "shortName": "Goliath"
+      "shortName": "Goliath",
+      "image": "images/fixtures/showtec/goliath.png",
+      "details": "json/fixture-details/fdac78514fd19cae1d649da69a10c5d58f1ca6cfc82e9c834cf198907bcdee33.json",
+      "provenance": {
+        "fileName": "Showtec@Goliath@Initial_upload_by_GDTFservice.com_commissioned_by_Showtec.gdtf",
+        "sha256": "fdac78514fd19cae1d649da69a10c5d58f1ca6cfc82e9c834cf198907bcdee33",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "IP Pixelstrip 40",
       "watts": 640.0,
       "weight": 1.6,
       "modes": {
-        "8Ch Mode": 8,
-        "12Ch Mode": 12,
-        "10x RGB mode": 30,
-        "20x RGB mode": 60,
-        "40x RGB mode": 120
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/showtec",
-        "suggestedFileName": "Showtec__IP_Pixelstrip_40.gdtf",
-        "file": "fixtures/showtec/Showtec@IP_Pixelstrip_40@Initial_upload_by_GDTFservice.com_commissioned_by_Showtec.gdtf",
-        "modes": {
-          "8Ch Mode": {
-            "channels": 8,
-            "gdtfMode": "8Ch Mode",
-            "status": "matched",
-            "parameters": 8
-          },
-          "12Ch Mode": {
-            "channels": 12,
-            "gdtfMode": "12Ch Mode",
-            "status": "matched",
-            "parameters": 12
-          },
-          "10x RGB mode": {
-            "channels": 30,
-            "gdtfMode": "10x RGB mode",
-            "status": "matched",
-            "parameters": 40
-          },
-          "20x RGB mode": {
-            "channels": 60,
-            "gdtfMode": "20x RGB mode",
-            "status": "matched",
-            "parameters": 80
-          },
-          "40x RGB mode": {
-            "channels": 120,
-            "gdtfMode": "40x RGB mode",
-            "status": "matched",
-            "parameters": 160
-          }
+        "8Ch Mode": {
+          "channels": 8,
+          "parameters": 8,
+          "sourceMode": "8Ch Mode"
+        },
+        "12Ch Mode": {
+          "channels": 12,
+          "parameters": 12,
+          "sourceMode": "12Ch Mode"
+        },
+        "10x RGB mode": {
+          "channels": 30,
+          "parameters": 40,
+          "sourceMode": "10x RGB mode"
+        },
+        "20x RGB mode": {
+          "channels": 60,
+          "parameters": 80,
+          "sourceMode": "20x RGB mode"
+        },
+        "40x RGB mode": {
+          "channels": 120,
+          "parameters": 160,
+          "sourceMode": "40x RGB mode"
         }
       },
-      "shortName": "IP Pixelstrip 40"
+      "shortName": "IP Pixelstrip 40",
+      "image": "images/fixtures/showtec/ip-pixelstrip-40.png",
+      "details": "json/fixture-details/f71ce199857703c5a81cf2275e2c506f280d8cbc1ddca35e152697bc61369456.json",
+      "provenance": {
+        "fileName": "Showtec@IP_Pixelstrip_40@Initial_upload_by_GDTFservice.com_commissioned_by_Showtec.gdtf",
+        "sha256": "f71ce199857703c5a81cf2275e2c506f280d8cbc1ddca35e152697bc61369456",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "IP Pixelstrip 80",
       "watts": 1240.0,
       "weight": 2.4,
       "modes": {
-        "8Ch Mode": 8,
-        "12Ch Mode": 12,
-        "10x RGB mode": 30,
-        "20x RGB mode": 60,
-        "40x RGB mode": 120
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/showtec",
-        "suggestedFileName": "Showtec__IP_Pixelstrip_80.gdtf",
-        "file": "fixtures/showtec/Showtec@IP_Pixelstrip_80@Initial_upload_by_GDTFservice.com_commissioned_by_Showtec.gdtf",
-        "modes": {
-          "8Ch Mode": {
-            "channels": 8,
-            "gdtfMode": "8Ch Mode",
-            "status": "matched",
-            "parameters": 8
-          },
-          "12Ch Mode": {
-            "channels": 12,
-            "gdtfMode": "12Ch Mode",
-            "status": "matched",
-            "parameters": 12
-          },
-          "10x RGB mode": {
-            "channels": 30,
-            "gdtfMode": "10x RGB mode",
-            "status": "matched",
-            "parameters": 40
-          },
-          "20x RGB mode": {
-            "channels": 60,
-            "gdtfMode": "20x RGB mode",
-            "status": "matched",
-            "parameters": 80
-          },
-          "40x RGB mode": {
-            "channels": 120,
-            "gdtfMode": "40x RGB mode",
-            "status": "matched",
-            "parameters": 160
-          }
+        "8Ch Mode": {
+          "channels": 8,
+          "parameters": 8,
+          "sourceMode": "8Ch Mode"
+        },
+        "12Ch Mode": {
+          "channels": 12,
+          "parameters": 12,
+          "sourceMode": "12Ch Mode"
+        },
+        "10x RGB mode": {
+          "channels": 30,
+          "parameters": 40,
+          "sourceMode": "10x RGB mode"
+        },
+        "20x RGB mode": {
+          "channels": 60,
+          "parameters": 80,
+          "sourceMode": "20x RGB mode"
+        },
+        "40x RGB mode": {
+          "channels": 120,
+          "parameters": 160,
+          "sourceMode": "40x RGB mode"
         }
       },
-      "shortName": "IP Pixelstrip 80"
+      "shortName": "IP Pixelstrip 80",
+      "image": "images/fixtures/showtec/ip-pixelstrip-80.png",
+      "details": "json/fixture-details/396b37b567ce3145b2131d54060ffc6d88860065618ec92a79efb2ee8465ef3d.json",
+      "provenance": {
+        "fileName": "Showtec@IP_Pixelstrip_80@Initial_upload_by_GDTFservice.com_commissioned_by_Showtec.gdtf",
+        "sha256": "396b37b567ce3145b2131d54060ffc6d88860065618ec92a79efb2ee8465ef3d",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Photon Strobe",
       "watts": 96.0,
       "weight": 10.0,
       "modes": {
-        "4Ch Mode": 4,
-        "13Ch Mode": 13,
-        "34Ch Mode": 34,
-        "73Ch Mode": 73,
-        "145Ch Mode": 145,
-        "158Ch Mode": 158
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/showtec",
-        "suggestedFileName": "Showtec__Photon_Strobe.gdtf",
-        "file": "fixtures/showtec/Showtec@Photon_Strobe@Initial_upload_by_GDTFservice.com_commissioned_by_Showtec.gdtf",
-        "modes": {
-          "4Ch Mode": {
-            "channels": 4,
-            "gdtfMode": "4Ch Mode",
-            "status": "matched",
-            "parameters": 4
-          },
-          "13Ch Mode": {
-            "channels": 13,
-            "gdtfMode": "13Ch Mode",
-            "status": "matched",
-            "parameters": 13
-          },
-          "34Ch Mode": {
-            "channels": 34,
-            "gdtfMode": "34Ch Mode",
-            "status": "matched",
-            "parameters": 50
-          },
-          "73Ch Mode": {
-            "channels": 73,
-            "gdtfMode": "73Ch Mode",
-            "status": "matched",
-            "parameters": 89
-          },
-          "145Ch Mode": {
-            "channels": 145,
-            "gdtfMode": "145Ch Mode",
-            "status": "matched",
-            "parameters": 193
-          },
-          "158Ch Mode": {
-            "channels": 158,
-            "gdtfMode": "158Ch Mode",
-            "status": "matched",
-            "parameters": 206
-          }
+        "4Ch Mode": {
+          "channels": 4,
+          "parameters": 4,
+          "sourceMode": "4Ch Mode"
+        },
+        "13Ch Mode": {
+          "channels": 13,
+          "parameters": 13,
+          "sourceMode": "13Ch Mode"
+        },
+        "34Ch Mode": {
+          "channels": 34,
+          "parameters": 50,
+          "sourceMode": "34Ch Mode"
+        },
+        "73Ch Mode": {
+          "channels": 73,
+          "parameters": 89,
+          "sourceMode": "73Ch Mode"
+        },
+        "145Ch Mode": {
+          "channels": 145,
+          "parameters": 193,
+          "sourceMode": "145Ch Mode"
+        },
+        "158Ch Mode": {
+          "channels": 158,
+          "parameters": 206,
+          "sourceMode": "158Ch Mode"
         }
       },
-      "shortName": "PhotonStrobe"
+      "shortName": "PhotonStrobe",
+      "image": "images/fixtures/showtec/photon-strobe.png",
+      "details": "json/fixture-details/94e972cad185e3f5cca5b127cc72da55051bdad2c319c7f3190ae628a2e1d1d9.json",
+      "provenance": {
+        "fileName": "Showtec@Photon_Strobe@Initial_upload_by_GDTFservice.com_commissioned_by_Showtec.gdtf",
+        "sha256": "94e972cad185e3f5cca5b127cc72da55051bdad2c319c7f3190ae628a2e1d1d9",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Photon Sunstrip",
       "watts": 200.0,
       "weight": 10.0,
       "modes": {
-        "1Ch Mode": 1,
-        "2Ch Mode": 2,
-        "5Ch Mode": 5,
-        "10Ch Mode": 10,
-        "14Ch Mode": 14,
-        "36Ch Mode": 36
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/showtec",
-        "suggestedFileName": "Showtec__Photon_Sunstrip.gdtf",
-        "file": "fixtures/showtec/Showtec@Photon_Sunstrip@Initial_upload_by_GDTFservice.com_commissioned_by_Showtec.gdtf",
-        "modes": {
-          "1Ch Mode": {
-            "channels": 1,
-            "gdtfMode": "1Ch Mode",
-            "status": "matched",
-            "parameters": 1
-          },
-          "2Ch Mode": {
-            "channels": 2,
-            "gdtfMode": "2Ch Mode",
-            "status": "matched",
-            "parameters": 2
-          },
-          "5Ch Mode": {
-            "channels": 5,
-            "gdtfMode": "5Ch Mode",
-            "status": "matched",
-            "parameters": 5
-          },
-          "10Ch Mode": {
-            "channels": 10,
-            "gdtfMode": "10Ch Mode",
-            "status": "matched",
-            "parameters": 10
-          },
-          "14Ch Mode": {
-            "channels": 14,
-            "gdtfMode": "14Ch Mode",
-            "status": "matched",
-            "parameters": 14
-          },
-          "36Ch Mode": {
-            "channels": 36,
-            "gdtfMode": "36Ch Mode",
-            "status": "matched",
-            "parameters": 46
-          }
+        "1Ch Mode": {
+          "channels": 1,
+          "parameters": 1,
+          "sourceMode": "1Ch Mode"
+        },
+        "2Ch Mode": {
+          "channels": 2,
+          "parameters": 2,
+          "sourceMode": "2Ch Mode"
+        },
+        "5Ch Mode": {
+          "channels": 5,
+          "parameters": 5,
+          "sourceMode": "5Ch Mode"
+        },
+        "10Ch Mode": {
+          "channels": 10,
+          "parameters": 10,
+          "sourceMode": "10Ch Mode"
+        },
+        "14Ch Mode": {
+          "channels": 14,
+          "parameters": 14,
+          "sourceMode": "14Ch Mode"
+        },
+        "36Ch Mode": {
+          "channels": 36,
+          "parameters": 46,
+          "sourceMode": "36Ch Mode"
         }
       },
-      "shortName": "PhotonSunstrip"
+      "shortName": "PhotonSunstrip",
+      "image": "images/fixtures/showtec/photon-sunstrip.png",
+      "details": "json/fixture-details/801a2ad03943459728756d5baa20252f06f5ed2b9849e3b147c3bd2b472bed07.json",
+      "provenance": {
+        "fileName": "Showtec@Photon_Sunstrip@Initial_upload_by_GDTFservice.com_commissioned_by_Showtec.gdtf",
+        "sha256": "801a2ad03943459728756d5baa20252f06f5ed2b9849e3b147c3bd2b472bed07",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Spectra Strobe",
       "watts": 24.0,
       "weight": 9.5,
       "modes": {
-        "3Ch Mode": 3,
-        "9Ch Mode": 9,
-        "21Ch Mode": 21,
-        "35Ch Mode": 35,
-        "49Ch Mode": 49,
-        "91Ch Mode": 91
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/showtec",
-        "suggestedFileName": "Showtec__Spectra_Strobe.gdtf",
-        "file": "fixtures/showtec/Showtec@Spectra_Strobe@Initial_upload_by_GDTFservice.com_commissioned_by_Showtec.gdtf",
-        "modes": {
-          "3Ch Mode": {
-            "channels": 3,
-            "gdtfMode": "3Ch Mode",
-            "status": "matched",
-            "parameters": 3
-          },
-          "9Ch Mode": {
-            "channels": 9,
-            "gdtfMode": "9Ch Mode",
-            "status": "matched",
-            "parameters": 10
-          },
-          "21Ch Mode": {
-            "channels": 21,
-            "gdtfMode": "21Ch Mode",
-            "status": "matched",
-            "parameters": 27
-          },
-          "35Ch Mode": {
-            "channels": 35,
-            "gdtfMode": "35Ch Mode",
-            "status": "matched",
-            "parameters": 47
-          },
-          "49Ch Mode": {
-            "channels": 49,
-            "gdtfMode": "49Ch Mode",
-            "status": "matched",
-            "parameters": 67
-          },
-          "91Ch Mode": {
-            "channels": 91,
-            "gdtfMode": "91Ch Mode",
-            "status": "matched",
-            "parameters": 127
-          }
+        "3Ch Mode": {
+          "channels": 3,
+          "parameters": 3,
+          "sourceMode": "3Ch Mode"
+        },
+        "9Ch Mode": {
+          "channels": 9,
+          "parameters": 10,
+          "sourceMode": "9Ch Mode"
+        },
+        "21Ch Mode": {
+          "channels": 21,
+          "parameters": 27,
+          "sourceMode": "21Ch Mode"
+        },
+        "35Ch Mode": {
+          "channels": 35,
+          "parameters": 47,
+          "sourceMode": "35Ch Mode"
+        },
+        "49Ch Mode": {
+          "channels": 49,
+          "parameters": 67,
+          "sourceMode": "49Ch Mode"
+        },
+        "91Ch Mode": {
+          "channels": 91,
+          "parameters": 127,
+          "sourceMode": "91Ch Mode"
         }
       },
-      "shortName": "SpectraStrobe"
+      "shortName": "SpectraStrobe",
+      "image": "images/fixtures/showtec/spectra-strobe.png",
+      "details": "json/fixture-details/15f1d41f7d0eef13d46c1211b3d57e667b799a909e95ba77280ea0d193d8a431.json",
+      "provenance": {
+        "fileName": "Showtec@Spectra_Strobe@Initial_upload_by_GDTFservice.com_commissioned_by_Showtec.gdtf",
+        "sha256": "15f1d41f7d0eef13d46c1211b3d57e667b799a909e95ba77280ea0d193d8a431",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Spectra Wash",
       "watts": 320.0,
       "weight": 9.8,
       "modes": {
-        "3Ch Mode": 3,
-        "4Ch Mode": 4,
-        "6Ch Mode": 6,
-        "11Ch Mode": 11,
-        "23Ch Mode": 23,
-        "32Ch Mode": 32,
-        "64Ch Mode": 64,
-        "71Ch Mode": 71
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/showtec",
-        "suggestedFileName": "Showtec__Spectra_Wash.gdtf",
-        "file": "fixtures/showtec/Showtec@Spectra_Wash@Initial_upload_by_GDTFservice_powered_by_Q2Q_Technologies.gdtf",
-        "modes": {
-          "3Ch Mode": {
-            "channels": 3,
-            "gdtfMode": "3Ch Mode",
-            "status": "matched",
-            "parameters": 3
-          },
-          "4Ch Mode": {
-            "channels": 4,
-            "gdtfMode": "4Ch Mode",
-            "status": "matched",
-            "parameters": 5
-          },
-          "6Ch Mode": {
-            "channels": 6,
-            "gdtfMode": "6Ch Mode",
-            "status": "matched",
-            "parameters": 6
-          },
-          "11Ch Mode": {
-            "channels": 11,
-            "gdtfMode": "11Ch Mode",
-            "status": "matched",
-            "parameters": 11
-          },
-          "23Ch Mode": {
-            "channels": 23,
-            "gdtfMode": "23Ch Mode",
-            "status": "matched",
-            "parameters": 23
-          },
-          "32Ch Mode": {
-            "channels": 32,
-            "gdtfMode": "32Ch Mode",
-            "status": "matched",
-            "parameters": 40
-          },
-          "64Ch Mode": {
-            "channels": 64,
-            "gdtfMode": "64Ch Mode",
-            "status": "matched",
-            "parameters": 80
-          },
-          "71Ch Mode": {
-            "channels": 71,
-            "gdtfMode": "71Ch Mode",
-            "status": "matched",
-            "parameters": 87
-          }
+        "3Ch Mode": {
+          "channels": 3,
+          "parameters": 3,
+          "sourceMode": "3Ch Mode"
+        },
+        "4Ch Mode": {
+          "channels": 4,
+          "parameters": 5,
+          "sourceMode": "4Ch Mode"
+        },
+        "6Ch Mode": {
+          "channels": 6,
+          "parameters": 6,
+          "sourceMode": "6Ch Mode"
+        },
+        "11Ch Mode": {
+          "channels": 11,
+          "parameters": 11,
+          "sourceMode": "11Ch Mode"
+        },
+        "23Ch Mode": {
+          "channels": 23,
+          "parameters": 23,
+          "sourceMode": "23Ch Mode"
+        },
+        "32Ch Mode": {
+          "channels": 32,
+          "parameters": 40,
+          "sourceMode": "32Ch Mode"
+        },
+        "64Ch Mode": {
+          "channels": 64,
+          "parameters": 80,
+          "sourceMode": "64Ch Mode"
+        },
+        "71Ch Mode": {
+          "channels": 71,
+          "parameters": 87,
+          "sourceMode": "71Ch Mode"
         }
       },
-      "shortName": "SpectraWash"
+      "shortName": "SpectraWash",
+      "image": "images/fixtures/showtec/spectra-wash.png",
+      "details": "json/fixture-details/7d926ed4a7a4ae56c3cdc759096226f8b1ceccb377e40572e3df85129bdaef2b.json",
+      "provenance": {
+        "fileName": "Showtec@Spectra_Wash@Initial_upload_by_GDTFservice_powered_by_Q2Q_Technologies.gdtf",
+        "sha256": "7d926ed4a7a4ae56c3cdc759096226f8b1ceccb377e40572e3df85129bdaef2b",
+        "extractedAt": "2026-11-05"
+      }
     }
   ]
 }

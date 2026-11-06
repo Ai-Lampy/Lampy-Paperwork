@@ -6,81 +6,65 @@
       "watts": 83,
       "weight": 3.2,
       "modes": {
-        "6CH  ": 6,
-        "3CH": 3,
-        "2CH": 2,
-        "1CH": 1
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/magmatic",
-        "suggestedFileName": "Magmatic__Prisma_Par_50.gdtf",
-        "file": "fixtures/magmatic/Magmatic@Prisma_Par_50@2024-03-09_First_Release.gdtf",
-        "modes": {
-          "6CH  ": {
-            "channels": 6,
-            "gdtfMode": "6CH  ",
-            "status": "matched",
-            "parameters": 5
-          },
-          "3CH": {
-            "channels": 3,
-            "gdtfMode": "3CH",
-            "status": "matched",
-            "parameters": 2
-          },
-          "2CH": {
-            "channels": 2,
-            "gdtfMode": "2CH",
-            "status": "matched",
-            "parameters": 1
-          },
-          "1CH": {
-            "channels": 1,
-            "gdtfMode": "1CH",
-            "status": "matched",
-            "parameters": 1
-          }
+        "6CH  ": {
+          "channels": 6,
+          "parameters": 5,
+          "sourceMode": "6CH  "
+        },
+        "3CH": {
+          "channels": 3,
+          "parameters": 2,
+          "sourceMode": "3CH"
+        },
+        "2CH": {
+          "channels": 2,
+          "parameters": 1,
+          "sourceMode": "2CH"
+        },
+        "1CH": {
+          "channels": 1,
+          "parameters": 1,
+          "sourceMode": "1CH"
         }
       },
-      "shortName": "Par-50"
+      "shortName": "Par-50",
+      "image": "images/fixtures/magmatic/prisma-par-50.png",
+      "details": "json/fixture-details/32525d5d13933ba546057f92b48a1b943469dcbb27cf95dcef13710b4e172143.json",
+      "provenance": {
+        "fileName": "Magmatic@Prisma_Par_50@2024-03-09_First_Release.gdtf",
+        "sha256": "32525d5d13933ba546057f92b48a1b943469dcbb27cf95dcef13710b4e172143",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Sidewinder",
       "watts": 1560,
       "weight": 13.4,
       "modes": {
-        "1-CH": 1,
-        "4-CH": 4,
-        "7-CH": 7
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/magmatic",
-        "suggestedFileName": "Magmatic__Sidewinder.gdtf",
-        "file": "fixtures/magmatic/Magmatic@SIDEWINDER@25-27-06_First_Release.gdtf",
-        "modes": {
-          "1-CH": {
-            "channels": 1,
-            "gdtfMode": "1-CH",
-            "status": "matched",
-            "parameters": 1
-          },
-          "4-CH": {
-            "channels": 4,
-            "gdtfMode": "4-CH",
-            "status": "matched",
-            "parameters": 4
-          },
-          "7-CH": {
-            "channels": 7,
-            "gdtfMode": "7-CH",
-            "status": "matched",
-            "parameters": 7
-          }
+        "1-CH": {
+          "channels": 1,
+          "parameters": 1,
+          "sourceMode": "1-CH"
+        },
+        "4-CH": {
+          "channels": 4,
+          "parameters": 4,
+          "sourceMode": "4-CH"
+        },
+        "7-CH": {
+          "channels": 7,
+          "parameters": 7,
+          "sourceMode": "7-CH"
         }
       },
-      "shortName": "Sidewinder"
+      "shortName": "Sidewinder",
+      "image": "",
+      "details": "json/fixture-details/51d0b468683dac6895f3c0c09df9edf80623a8aa3a1077926a796693b39ef8b8.json",
+      "provenance": {
+        "fileName": "Magmatic@SIDEWINDER@25-27-06_First_Release.gdtf",
+        "sha256": "51d0b468683dac6895f3c0c09df9edf80623a8aa3a1077926a796693b39ef8b8",
+        "extractedAt": "2026-11-05"
+      }
     }
   ]
 }

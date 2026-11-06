@@ -6,46 +6,40 @@
       "watts": null,
       "weight": null,
       "modes": {
-        "2 Channel": 2
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/look_solutions",
-        "suggestedFileName": "Look_Solutions__Look_Solutions_Unique_2_1.gdtf",
-        "file": "fixtures/look_solutions/Look_Solutions@Look_Solutions_Unique_2_1@Adjusted_-_Added_Channel_Sets.gdtf",
-        "modes": {
-          "2 Channel": {
-            "channels": 2,
-            "gdtfMode": "2 Channel",
-            "status": "matched",
-            "parameters": 2
-          }
+        "2 Channel": {
+          "channels": 2,
+          "parameters": 2,
+          "sourceMode": "2 Channel"
         }
       },
-      "shortName": "Unique 2.1"
+      "shortName": "Unique 2.1",
+      "image": "images/fixtures/look-solutions/look-solutions-unique-2-1.png",
+      "details": "json/fixture-details/a6788d49c2a8b63f392da470406abfa24cc33d5a795b5ddc8911266f0bc75273.json",
+      "provenance": {
+        "fileName": "Look_Solutions@Look_Solutions_Unique_2_1@Adjusted_-_Added_Channel_Sets.gdtf",
+        "sha256": "a6788d49c2a8b63f392da470406abfa24cc33d5a795b5ddc8911266f0bc75273",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Viper",
       "watts": null,
       "weight": 20.0,
       "modes": {
-        "Standard": 1
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/look_solutions",
-        "suggestedFileName": "Look_Solutions__Viper.gdtf",
-        "file": "fixtures/look_solutions/Look_Solutions@Viper@New_PNG.gdtf",
-        "modes": {
-          "Standard": {
-            "channels": 1,
-            "gdtfMode": "Standard",
-            "status": "matched",
-            "parameters": 1
-          }
+        "Standard": {
+          "channels": 1,
+          "parameters": 1,
+          "sourceMode": "Standard"
         }
       },
-      "shortName": "Viper"
+      "shortName": "Viper",
+      "image": "images/fixtures/look-solutions/viper.png",
+      "details": "json/fixture-details/ef5ed6adba7c2341dc46c228fb6a958b24146a679c5d609be89293220bbb8b9c.json",
+      "provenance": {
+        "fileName": "Look_Solutions@Viper@New_PNG.gdtf",
+        "sha256": "ef5ed6adba7c2341dc46c228fb6a958b24146a679c5d609be89293220bbb8b9c",
+        "extractedAt": "2026-11-05"
+      }
     }
   ]
 }

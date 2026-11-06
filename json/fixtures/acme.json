@@ -8,54 +8,37 @@
       "modes": {
         "Mode 1 38 DMX": {
           "channels": 38,
-          "displayName": "38 CH"
+          "displayName": "38 CH",
+          "parameters": 32,
+          "sourceMode": "Mode 1 38 DMX"
         },
         "Mode 2 29 DMX": {
           "channels": 29,
-          "displayName": "29 CH"
+          "displayName": "29 CH",
+          "parameters": 23,
+          "sourceMode": "Mode 2 29 DMX"
         },
         "Mode 3 31 DMX": {
           "channels": 31,
-          "displayName": "31 CH"
+          "displayName": "31 CH",
+          "parameters": 26,
+          "sourceMode": "Mode 3 31 DMX"
         },
         "Mode 4 22 DMX": {
           "channels": 22,
-          "displayName": "22 CH"
+          "displayName": "22 CH",
+          "parameters": 17,
+          "sourceMode": "Mode 4 22 DMX"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Aeco_15.gdtf",
-        "file": "fixtures/acme/ACME@ACME_AECO_15@ACME_AECO__15.gdtf",
-        "modes": {
-          "Mode 1 38 DMX": {
-            "channels": 38,
-            "gdtfMode": "Mode 1 38 DMX",
-            "status": "matched",
-            "parameters": 32
-          },
-          "Mode 2 29 DMX": {
-            "channels": 29,
-            "gdtfMode": "Mode 2 29 DMX",
-            "status": "matched",
-            "parameters": 23
-          },
-          "Mode 3 31 DMX": {
-            "channels": 31,
-            "gdtfMode": "Mode 3 31 DMX",
-            "status": "matched",
-            "parameters": 26
-          },
-          "Mode 4 22 DMX": {
-            "channels": 22,
-            "gdtfMode": "Mode 4 22 DMX",
-            "status": "matched",
-            "parameters": 17
-          }
-        }
-      },
-      "shortName": "Aeco 15"
+      "shortName": "Aeco 15",
+      "image": "images/fixtures/acme/aeco-15--mana-profile--supernova.png",
+      "details": "json/fixture-details/3d2ee2b5bbd614bbb05175d77712198d13de076ed0da3eab358b7e4c6adf2ef5.json",
+      "provenance": {
+        "fileName": "ACME@ACME_AECO_15@ACME_AECO__15.gdtf",
+        "sha256": "3d2ee2b5bbd614bbb05175d77712198d13de076ed0da3eab358b7e4c6adf2ef5",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Aeco 30 Ip",
@@ -64,54 +47,37 @@
       "modes": {
         "Mode 1 43CH": {
           "channels": 43,
-          "displayName": "43CH"
+          "displayName": "43CH",
+          "parameters": 36,
+          "sourceMode": "Mode 1 43CH"
         },
         "Mode 2 34CH": {
           "channels": 34,
-          "displayName": "34CH"
+          "displayName": "34CH",
+          "parameters": 27,
+          "sourceMode": "Mode 2 34CH"
         },
         "Mode 3 32CH": {
           "channels": 32,
-          "displayName": "32CH"
+          "displayName": "32CH",
+          "parameters": 27,
+          "sourceMode": "Mode 3 32CH"
         },
         "Mode 4 23CH": {
           "channels": 23,
-          "displayName": "23CH"
+          "displayName": "23CH",
+          "parameters": 18,
+          "sourceMode": "Mode 4 23CH"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Aeco_30_Ip.gdtf",
-        "file": "fixtures/acme/ACME@ACME_AECO_30_IP_(AECO_30_IP)@__ACME_AECO_30_IP__(AECO_30_IP).gdtf",
-        "modes": {
-          "Mode 1 43CH": {
-            "channels": 43,
-            "gdtfMode": "Mode 1 43CH",
-            "status": "matched",
-            "parameters": 36
-          },
-          "Mode 2 34CH": {
-            "channels": 34,
-            "gdtfMode": "Mode 2 34CH",
-            "status": "matched",
-            "parameters": 27
-          },
-          "Mode 3 32CH": {
-            "channels": 32,
-            "gdtfMode": "Mode 3 32CH",
-            "status": "matched",
-            "parameters": 27
-          },
-          "Mode 4 23CH": {
-            "channels": 23,
-            "gdtfMode": "Mode 4 23CH",
-            "status": "matched",
-            "parameters": 18
-          }
-        }
-      },
-      "shortName": "Aeco 30 IP"
+      "shortName": "Aeco 30 IP",
+      "image": "images/fixtures/acme/aeco-30-ip.png",
+      "details": "json/fixture-details/0d409822a8dee43c5e06429b47c12df4576c85e3a028b7a236c2cd16e7ebd2d2.json",
+      "provenance": {
+        "fileName": "ACME@ACME_AECO_30_IP_(AECO_30_IP)@__ACME_AECO_30_IP__(AECO_30_IP).gdtf",
+        "sha256": "0d409822a8dee43c5e06429b47c12df4576c85e3a028b7a236c2cd16e7ebd2d2",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Aeco 5",
@@ -120,44 +86,31 @@
       "modes": {
         "Mode 1  33 DMX": {
           "channels": 33,
-          "displayName": "33 CH"
+          "displayName": "33 CH",
+          "parameters": 30,
+          "sourceMode": "Mode 1  33 DMX"
         },
         "Mode 2  24 DMX": {
           "channels": 24,
-          "displayName": "24 CH"
+          "displayName": "24 CH",
+          "parameters": 21,
+          "sourceMode": "Mode 2  24 DMX"
         },
         "Mode 2  28 DMX": {
           "channels": 28,
-          "displayName": "28 CH"
+          "displayName": "28 CH",
+          "parameters": 25,
+          "sourceMode": "Mode 2  28 DMX"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Aeco_5.gdtf",
-        "file": "fixtures/acme/ACME@ACME_AECO_5_(AECO_5)@ACME_AECO_5_(AECO_5).gdtf",
-        "modes": {
-          "Mode 1  33 DMX": {
-            "channels": 33,
-            "gdtfMode": "Mode 1  33 DMX",
-            "status": "matched",
-            "parameters": 30
-          },
-          "Mode 2  24 DMX": {
-            "channels": 24,
-            "gdtfMode": "Mode 2  24 DMX",
-            "status": "matched",
-            "parameters": 21
-          },
-          "Mode 2  28 DMX": {
-            "channels": 28,
-            "gdtfMode": "Mode 2  28 DMX",
-            "status": "matched",
-            "parameters": 25
-          }
-        }
-      },
-      "shortName": "Aeco 5"
+      "shortName": "Aeco 5",
+      "image": "images/fixtures/acme/aeco-5.png",
+      "details": "json/fixture-details/a98c3b3202983e5f3322604b9fc1146d85efebbebb15f86bca6d644f1d3fdbda.json",
+      "provenance": {
+        "fileName": "ACME@ACME_AECO_5_(AECO_5)@ACME_AECO_5_(AECO_5).gdtf",
+        "sha256": "a98c3b3202983e5f3322604b9fc1146d85efebbebb15f86bca6d644f1d3fdbda",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Autolux",
@@ -166,24 +119,19 @@
       "modes": {
         "Mode 24 DMX": {
           "channels": 24,
-          "displayName": "4 CH"
+          "displayName": "4 CH",
+          "parameters": 19,
+          "sourceMode": "Mode 24 DMX"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Autolux.gdtf",
-        "file": "fixtures/acme/ACME@ACME_AUTOLUX_(AUTO_600)@_ACME_AUTOLUX_(AUTO_600).gdtf",
-        "modes": {
-          "Mode 24 DMX": {
-            "channels": 24,
-            "gdtfMode": "Mode 24 DMX",
-            "status": "matched",
-            "parameters": 19
-          }
-        }
-      },
-      "shortName": "Autolux"
+      "shortName": "Autolux",
+      "image": "images/fixtures/acme/autolux.png",
+      "details": "json/fixture-details/6f14b616b92b0931bc32f10cdd14e515fd2850e7e08ba6374516b113cd09163b.json",
+      "provenance": {
+        "fileName": "ACME@ACME_AUTOLUX_(AUTO_600)@_ACME_AUTOLUX_(AUTO_600).gdtf",
+        "sha256": "6f14b616b92b0931bc32f10cdd14e515fd2850e7e08ba6374516b113cd09163b",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Blinder Line 10 Ip",
@@ -192,34 +140,25 @@
       "modes": {
         "Mode 2 55 DMX": {
           "channels": 55,
-          "displayName": "55 CH"
+          "displayName": "55 CH",
+          "parameters": 64,
+          "sourceMode": "Mode 2 55 DMX"
         },
         "Mode1 14 DMX": {
           "channels": 14,
-          "displayName": "14 CH"
+          "displayName": "14 CH",
+          "parameters": 13,
+          "sourceMode": "Mode1 14 DMX"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Blinder_Line_10_Ip.gdtf",
-        "file": "fixtures/acme/ACME@ACME_BLINDER_LINE_10_IP (BLB_10_IP)@ACME_BLINDER_LINE_10_IP (BLB_10_IP) .gdtf",
-        "modes": {
-          "Mode 2 55 DMX": {
-            "channels": 55,
-            "gdtfMode": "Mode 2 55 DMX",
-            "status": "matched",
-            "parameters": 64
-          },
-          "Mode1 14 DMX": {
-            "channels": 14,
-            "gdtfMode": "Mode1 14 DMX",
-            "status": "matched",
-            "parameters": 13
-          }
-        }
-      },
-      "shortName": "Blinder Line 10 IP"
+      "shortName": "Blinder Line 10 IP",
+      "image": "images/fixtures/acme/blinder-line-10-ip.png",
+      "details": "json/fixture-details/92ade70e42078871449dd6321001d5eebf4c5acdff6cfa67d3ec8a6ae1775c3d.json",
+      "provenance": {
+        "fileName": "ACME@ACME_BLINDER_LINE_10_IP (BLB_10_IP)@ACME_BLINDER_LINE_10_IP (BLB_10_IP) .gdtf",
+        "sha256": "92ade70e42078871449dd6321001d5eebf4c5acdff6cfa67d3ec8a6ae1775c3d",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Blinder Line 5 Ip",
@@ -228,34 +167,25 @@
       "modes": {
         "Mode 2 30DMX": {
           "channels": 30,
-          "displayName": "30CH"
+          "displayName": "30CH",
+          "parameters": 34,
+          "sourceMode": "Mode 2 30DMX"
         },
         "Mode 1 14DMX": {
           "channels": 14,
-          "displayName": "14CH"
+          "displayName": "14CH",
+          "parameters": 13,
+          "sourceMode": "Mode 1 14DMX"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Blinder_Line_5_Ip.gdtf",
-        "file": "fixtures/acme/ACME@ACME_BLINDER_LINE_5_IP_(BLB_5_IP)@ACME_BLINDER_LINE_5_IP_(BLB_5_IP).gdtf",
-        "modes": {
-          "Mode 2 30DMX": {
-            "channels": 30,
-            "gdtfMode": "Mode 2 30DMX",
-            "status": "matched",
-            "parameters": 34
-          },
-          "Mode 1 14DMX": {
-            "channels": 14,
-            "gdtfMode": "Mode 1 14DMX",
-            "status": "matched",
-            "parameters": 13
-          }
-        }
-      },
-      "shortName": "Blinder Line 5 IP"
+      "shortName": "Blinder Line 5 IP",
+      "image": "images/fixtures/acme/blinder-line-5-ip.png",
+      "details": "json/fixture-details/b9053147b6831f14f5980fef52cbb785ec5d8478e33b4756064d5bd2b9ddb8f7.json",
+      "provenance": {
+        "fileName": "ACME@ACME_BLINDER_LINE_5_IP_(BLB_5_IP)@ACME_BLINDER_LINE_5_IP_(BLB_5_IP).gdtf",
+        "sha256": "b9053147b6831f14f5980fef52cbb785ec5d8478e33b4756064d5bd2b9ddb8f7",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Coolie 186",
@@ -264,54 +194,37 @@
       "modes": {
         "Mode 1 10 DMX": {
           "channels": 10,
-          "displayName": "10 CH"
+          "displayName": "10 CH",
+          "parameters": 9,
+          "sourceMode": "Mode 1 10 DMX"
         },
         "Mode 2 8 DMX": {
           "channels": 8,
-          "displayName": "8 CH"
+          "displayName": "8 CH",
+          "parameters": 7,
+          "sourceMode": "Mode 2 8 DMX"
         },
         "Mode 3 5 DMX": {
           "channels": 5,
-          "displayName": "5 CH"
+          "displayName": "5 CH",
+          "parameters": 6,
+          "sourceMode": "Mode 3 5 DMX"
         },
         "Mode 4 4 DMX": {
           "channels": 4,
-          "displayName": "4 CH"
+          "displayName": "4 CH",
+          "parameters": 5,
+          "sourceMode": "Mode 4 4 DMX"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Coolie_186.gdtf",
-        "file": "fixtures/acme/ACME@ACME_COOLIE_186_(BW_186)@ACME_COOLIE_186_(BW_186).gdtf",
-        "modes": {
-          "Mode 1 10 DMX": {
-            "channels": 10,
-            "gdtfMode": "Mode 1 10 DMX",
-            "status": "matched",
-            "parameters": 9
-          },
-          "Mode 2 8 DMX": {
-            "channels": 8,
-            "gdtfMode": "Mode 2 8 DMX",
-            "status": "matched",
-            "parameters": 7
-          },
-          "Mode 3 5 DMX": {
-            "channels": 5,
-            "gdtfMode": "Mode 3 5 DMX",
-            "status": "matched",
-            "parameters": 6
-          },
-          "Mode 4 4 DMX": {
-            "channels": 4,
-            "gdtfMode": "Mode 4 4 DMX",
-            "status": "matched",
-            "parameters": 5
-          }
-        }
-      },
-      "shortName": "Coolie 186"
+      "shortName": "Coolie 186",
+      "image": "images/fixtures/acme/coolie-186.png",
+      "details": "json/fixture-details/ba16b9d1b5757d0bd3bd295e03b50c7c2534068f170bafecbc6f450ef6fb8c79.json",
+      "provenance": {
+        "fileName": "ACME@ACME_COOLIE_186_(BW_186)@ACME_COOLIE_186_(BW_186).gdtf",
+        "sha256": "ba16b9d1b5757d0bd3bd295e03b50c7c2534068f170bafecbc6f450ef6fb8c79",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Cyclone",
@@ -320,81 +233,61 @@
       "modes": {
         "Mode 1 27CH": {
           "channels": 27,
-          "displayName": "27CH"
+          "displayName": "27CH",
+          "parameters": 24,
+          "sourceMode": "Mode 1 27CH"
         },
         "Mode 2 50CH": {
           "channels": 50,
-          "displayName": "50CH"
+          "displayName": "50CH",
+          "parameters": 55,
+          "sourceMode": "Mode 2 50CH"
         },
         "Mode 3 58CH": {
           "channels": 58,
-          "displayName": "58CH"
+          "displayName": "58CH",
+          "parameters": 55,
+          "sourceMode": "Mode 3 58CH"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Cyclone.gdtf",
-        "file": "fixtures/acme/ACME@ACME_CYCLONE_(CM_150_IP)@_ACME_CYCLONE_(CM_150_IP).gdtf",
-        "modes": {
-          "Mode 1 27CH": {
-            "channels": 27,
-            "gdtfMode": "Mode 1 27CH",
-            "status": "matched",
-            "parameters": 24
-          },
-          "Mode 2 50CH": {
-            "channels": 50,
-            "gdtfMode": "Mode 2 50CH",
-            "status": "matched",
-            "parameters": 55
-          },
-          "Mode 3 58CH": {
-            "channels": 58,
-            "gdtfMode": "Mode 3 58CH",
-            "status": "matched",
-            "parameters": 55
-          }
-        }
-      },
-      "shortName": "Cyclone"
+      "shortName": "Cyclone",
+      "image": "images/fixtures/acme/cyclone.png",
+      "details": "json/fixture-details/e1d20ebaed186ec094c9a7b2ffa97f2e5a392550cde9d580191547577e0b91d3.json",
+      "provenance": {
+        "fileName": "ACME@ACME_CYCLONE_(CM_150_IP)@_ACME_CYCLONE_(CM_150_IP).gdtf",
+        "sha256": "e1d20ebaed186ec094c9a7b2ffa97f2e5a392550cde9d580191547577e0b91d3",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Geist Bswf",
       "watts": 670,
       "weight": 24.5,
       "modes": {
-        "34 DMX": 34,
-        "25 DMX": 25,
-        "29 DMX": 29
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Geist_Bswf.gdtf",
-        "file": "fixtures/acme/ACME@ACME_GEIST_BSWF_(XA-500_BSWF)@_ACME_GEIST_BSWF__(XA-500_BSWF).gdtf",
-        "modes": {
-          "34 DMX": {
-            "channels": 34,
-            "gdtfMode": "34 DMX",
-            "status": "matched",
-            "parameters": 31
-          },
-          "25 DMX": {
-            "channels": 25,
-            "gdtfMode": "25 DMX",
-            "status": "matched",
-            "parameters": 22
-          },
-          "29 DMX": {
-            "channels": 29,
-            "gdtfMode": "29 DMX",
-            "status": "matched",
-            "parameters": 26
-          }
+        "34 DMX": {
+          "channels": 34,
+          "parameters": 31,
+          "sourceMode": "34 DMX"
+        },
+        "25 DMX": {
+          "channels": 25,
+          "parameters": 22,
+          "sourceMode": "25 DMX"
+        },
+        "29 DMX": {
+          "channels": 29,
+          "parameters": 26,
+          "sourceMode": "29 DMX"
         }
       },
-      "shortName": "Geist Bswf"
+      "shortName": "Geist Bswf",
+      "image": "images/fixtures/acme/geist-bswf.png",
+      "details": "json/fixture-details/240a4f46c17fc4175263d4506822c8e0d7aabf0acf84254ed7960056202de7a9.json",
+      "provenance": {
+        "fileName": "ACME@ACME_GEIST_BSWF_(XA-500_BSWF)@_ACME_GEIST_BSWF__(XA-500_BSWF).gdtf",
+        "sha256": "240a4f46c17fc4175263d4506822c8e0d7aabf0acf84254ed7960056202de7a9",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Gemini",
@@ -403,84 +296,55 @@
       "modes": {
         "Mode 1 58 DMX": {
           "channels": 58,
-          "displayName": "58 CH"
+          "displayName": "58 CH",
+          "parameters": 54,
+          "sourceMode": "Mode 1 58 DMX"
         },
         "Mode 2 25 DMX": {
           "channels": 25,
-          "displayName": "25 CH"
+          "displayName": "25 CH",
+          "parameters": 21,
+          "sourceMode": "Mode 2 25 DMX"
         },
         "Mode 3 23 DMX": {
           "channels": 23,
-          "displayName": "23 CH"
+          "displayName": "23 CH",
+          "parameters": 19,
+          "sourceMode": "Mode 3 23 DMX"
         },
         "Mode 4 35+ DMX": {
           "channels": 35,
-          "displayName": "35+ CH"
+          "displayName": "35+ CH",
+          "parameters": 31,
+          "sourceMode": "Mode 4 35+ DMX"
         },
         "Mode 5 27 DMX": {
           "channels": 27,
-          "displayName": "27 CH"
+          "displayName": "27 CH",
+          "parameters": 23,
+          "sourceMode": "Mode 5 27 DMX"
         },
         "Mode 6 70 DMX": {
           "channels": 70,
-          "displayName": "70 CH"
+          "displayName": "70 CH",
+          "parameters": 63,
+          "sourceMode": "Mode 6 70 DMX"
         },
         "Mode 7 55 DMX": {
           "channels": 55,
-          "displayName": "55 CH"
+          "displayName": "55 CH",
+          "parameters": 56,
+          "sourceMode": "Mode 7 55 DMX"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Gemini.gdtf",
-        "file": "fixtures/acme/ACME@ACME_GEMINI@TA_7.25.gdtf",
-        "modes": {
-          "Mode 1 58 DMX": {
-            "channels": 58,
-            "gdtfMode": "Mode 1 58 DMX",
-            "status": "matched",
-            "parameters": 54
-          },
-          "Mode 2 25 DMX": {
-            "channels": 25,
-            "gdtfMode": "Mode 2 25 DMX",
-            "status": "matched",
-            "parameters": 21
-          },
-          "Mode 3 23 DMX": {
-            "channels": 23,
-            "gdtfMode": "Mode 3 23 DMX",
-            "status": "matched",
-            "parameters": 19
-          },
-          "Mode 4 35+ DMX": {
-            "channels": 35,
-            "gdtfMode": "Mode 4 35+ DMX",
-            "status": "matched",
-            "parameters": 31
-          },
-          "Mode 5 27 DMX": {
-            "channels": 27,
-            "gdtfMode": "Mode 5 27 DMX",
-            "status": "matched",
-            "parameters": 23
-          },
-          "Mode 6 70 DMX": {
-            "channels": 70,
-            "gdtfMode": "Mode 6 70 DMX",
-            "status": "matched",
-            "parameters": 63
-          },
-          "Mode 7 55 DMX": {
-            "channels": 55,
-            "gdtfMode": "Mode 7 55 DMX",
-            "status": "matched",
-            "parameters": 56
-          }
-        }
-      },
-      "shortName": "Gemini"
+      "shortName": "Gemini",
+      "image": "images/fixtures/acme/gemini.png",
+      "details": "json/fixture-details/e9b10a388cde3c3c4d723886fb7e9623825c54e74ef09962e927fc38966e14f0.json",
+      "provenance": {
+        "fileName": "ACME@ACME_GEMINI@TA_7.25.gdtf",
+        "sha256": "e9b10a388cde3c3c4d723886fb7e9623825c54e74ef09962e927fc38966e14f0",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Hue 6 Ip",
@@ -489,54 +353,37 @@
       "modes": {
         "Mode 1 50CH": {
           "channels": 50,
-          "displayName": "50CH"
+          "displayName": "50CH",
+          "parameters": 39,
+          "sourceMode": "Mode 1 50CH"
         },
         "Mode 2 45CH": {
           "channels": 45,
-          "displayName": "45CH"
+          "displayName": "45CH",
+          "parameters": 39,
+          "sourceMode": "Mode 2 45CH"
         },
         "Mode 3 46CH": {
           "channels": 46,
-          "displayName": "46CH"
+          "displayName": "46CH",
+          "parameters": 37,
+          "sourceMode": "Mode 3 46CH"
         },
         "Mode 4 43CH": {
           "channels": 43,
-          "displayName": "43CH"
+          "displayName": "43CH",
+          "parameters": 37,
+          "sourceMode": "Mode 4 43CH"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Hue_6_Ip.gdtf",
-        "file": "fixtures/acme/ACME@HUE_6_IP_(HUE_6_IP)@HUE_6_IP_(HUE_6_IP).gdtf",
-        "modes": {
-          "Mode 1 50CH": {
-            "channels": 50,
-            "gdtfMode": "Mode 1 50CH",
-            "status": "matched",
-            "parameters": 39
-          },
-          "Mode 2 45CH": {
-            "channels": 45,
-            "gdtfMode": "Mode 2 45CH",
-            "status": "matched",
-            "parameters": 39
-          },
-          "Mode 3 46CH": {
-            "channels": 46,
-            "gdtfMode": "Mode 3 46CH",
-            "status": "matched",
-            "parameters": 37
-          },
-          "Mode 4 43CH": {
-            "channels": 43,
-            "gdtfMode": "Mode 4 43CH",
-            "status": "matched",
-            "parameters": 37
-          }
-        }
-      },
-      "shortName": "Hue 6 IP"
+      "shortName": "Hue 6 IP",
+      "image": "images/fixtures/acme/hue-6-ip.png",
+      "details": "json/fixture-details/71c0522faa37591959a498e09061d6832b4e1163fb1018e9eb56d38840fe68d2.json",
+      "provenance": {
+        "fileName": "ACME@HUE_6_IP_(HUE_6_IP)@HUE_6_IP_(HUE_6_IP).gdtf",
+        "sha256": "71c0522faa37591959a498e09061d6832b4e1163fb1018e9eb56d38840fe68d2",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Hueline 16 Ip",
@@ -545,34 +392,25 @@
       "modes": {
         "Mode 1 16CH": {
           "channels": 16,
-          "displayName": "16CH"
+          "displayName": "16CH",
+          "parameters": 15,
+          "sourceMode": "Mode 1 16CH"
         },
         "Mode 2 133CH": {
           "channels": 133,
-          "displayName": "133CH"
+          "displayName": "133CH",
+          "parameters": 148,
+          "sourceMode": "Mode 2 133CH"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Hueline_16_Ip.gdtf",
-        "file": "fixtures/acme/ACME@ACME_HUELINE_16_IP_(HL_16_IP)@ACME_HUELINE_16_IP__(HL_16_IP).gdtf",
-        "modes": {
-          "Mode 1 16CH": {
-            "channels": 16,
-            "gdtfMode": "Mode 1 16CH",
-            "status": "matched",
-            "parameters": 15
-          },
-          "Mode 2 133CH": {
-            "channels": 133,
-            "gdtfMode": "Mode 2 133CH",
-            "status": "matched",
-            "parameters": 148
-          }
-        }
-      },
-      "shortName": "Hueline 16 IP"
+      "shortName": "Hueline 16 IP",
+      "image": "images/fixtures/acme/hueline-16-ip.png",
+      "details": "json/fixture-details/b15dcbba60f86d6e3ed75a543457ff7de060798a8795c892673302e5d41eb57a.json",
+      "provenance": {
+        "fileName": "ACME@ACME_HUELINE_16_IP_(HL_16_IP)@ACME_HUELINE_16_IP__(HL_16_IP).gdtf",
+        "sha256": "b15dcbba60f86d6e3ed75a543457ff7de060798a8795c892673302e5d41eb57a",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Hyperzone",
@@ -581,54 +419,37 @@
       "modes": {
         "Mode 1 19 CH": {
           "channels": 19,
-          "displayName": "19 CH"
+          "displayName": "19 CH",
+          "parameters": 15,
+          "sourceMode": "Mode 1 19 CH"
         },
         "Mode 2 41CH": {
           "channels": 41,
-          "displayName": "41CH"
+          "displayName": "41CH",
+          "parameters": 44,
+          "sourceMode": "Mode 2 41CH"
         },
         "Mode 3 20CH": {
           "channels": 20,
-          "displayName": "20CH"
+          "displayName": "20CH",
+          "parameters": 16,
+          "sourceMode": "Mode 3 20CH"
         },
         "Mode 4 42CH": {
           "channels": 42,
-          "displayName": "42CH"
+          "displayName": "42CH",
+          "parameters": 45,
+          "sourceMode": "Mode 4 42CH"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Hyperzone.gdtf",
-        "file": "fixtures/acme/ACME@ACME_HYPERZONE_(CM_7_IP)@ACME_HYPERZONE_(CM_7_IP).gdtf",
-        "modes": {
-          "Mode 1 19 CH": {
-            "channels": 19,
-            "gdtfMode": "Mode 1 19 CH",
-            "status": "matched",
-            "parameters": 15
-          },
-          "Mode 2 41CH": {
-            "channels": 41,
-            "gdtfMode": "Mode 2 41CH",
-            "status": "matched",
-            "parameters": 44
-          },
-          "Mode 3 20CH": {
-            "channels": 20,
-            "gdtfMode": "Mode 3 20CH",
-            "status": "matched",
-            "parameters": 16
-          },
-          "Mode 4 42CH": {
-            "channels": 42,
-            "gdtfMode": "Mode 4 42CH",
-            "status": "matched",
-            "parameters": 45
-          }
-        }
-      },
-      "shortName": "Hyperzone"
+      "shortName": "Hyperzone",
+      "image": "images/fixtures/acme/hyperzone.png",
+      "details": "json/fixture-details/b2dcc7c46fd9c04bb75d7518b65791a2a93212744309fb98265bb830c75c94ff.json",
+      "provenance": {
+        "fileName": "ACME@ACME_HYPERZONE_(CM_7_IP)@ACME_HYPERZONE_(CM_7_IP).gdtf",
+        "sha256": "b2dcc7c46fd9c04bb75d7518b65791a2a93212744309fb98265bb830c75c94ff",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Lightning X",
@@ -637,74 +458,49 @@
       "modes": {
         "Mode 1 31CH": {
           "channels": 31,
-          "displayName": "31CH"
+          "displayName": "31CH",
+          "parameters": 25,
+          "sourceMode": "Mode 1 31CH"
         },
         "Mode 2 230CH": {
           "channels": 230,
-          "displayName": "230CH"
+          "displayName": "230CH",
+          "parameters": 324,
+          "sourceMode": "Mode 2 230CH"
         },
         "Mode 3 43CH": {
           "channels": 43,
-          "displayName": "43CH"
+          "displayName": "43CH",
+          "parameters": 37,
+          "sourceMode": "Mode 3 43CH"
         },
         "Mode 4 100CH": {
           "channels": 100,
-          "displayName": "100CH"
+          "displayName": "100CH",
+          "parameters": 134,
+          "sourceMode": "Mode 4 100CH"
         },
         "Mode 5 20+80CH": {
           "channels": 20,
-          "displayName": "20+80CH"
+          "displayName": "20+80CH",
+          "parameters": 13,
+          "sourceMode": "Mode 5 20+80CH"
         },
         "Mode 6 20+210CH": {
           "channels": 20,
-          "displayName": "20+210CH"
+          "displayName": "20+210CH",
+          "parameters": 14,
+          "sourceMode": "Mode 6 20+210CH"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Lightning_X.gdtf",
-        "file": "fixtures/acme/ACME@ACME_LIGHTNING_X_(STROBE_7_IP)@_ACME_LIGHTNING_X__(STROBE_7_IP).gdtf",
-        "modes": {
-          "Mode 1 31CH": {
-            "channels": 31,
-            "gdtfMode": "Mode 1 31CH",
-            "status": "matched",
-            "parameters": 25
-          },
-          "Mode 2 230CH": {
-            "channels": 230,
-            "gdtfMode": "Mode 2 230CH",
-            "status": "matched",
-            "parameters": 324
-          },
-          "Mode 3 43CH": {
-            "channels": 43,
-            "gdtfMode": "Mode 3 43CH",
-            "status": "matched",
-            "parameters": 37
-          },
-          "Mode 4 100CH": {
-            "channels": 100,
-            "gdtfMode": "Mode 4 100CH",
-            "status": "matched",
-            "parameters": 134
-          },
-          "Mode 5 20+80CH": {
-            "channels": 20,
-            "gdtfMode": "Mode 5 20+80CH",
-            "status": "matched",
-            "parameters": 13
-          },
-          "Mode 6 20+210CH": {
-            "channels": 20,
-            "gdtfMode": "Mode 6 20+210CH",
-            "status": "matched",
-            "parameters": 14
-          }
-        }
-      },
-      "shortName": "Lightning X"
+      "shortName": "Lightning X",
+      "image": "images/fixtures/acme/lightning-x.png",
+      "details": "json/fixture-details/27e1496d6356f3293ff52a66e60ec5c4ddf05209bc40da5ec6bdd2eb3bdc04c9.json",
+      "provenance": {
+        "fileName": "ACME@ACME_LIGHTNING_X_(STROBE_7_IP)@_ACME_LIGHTNING_X__(STROBE_7_IP).gdtf",
+        "sha256": "27e1496d6356f3293ff52a66e60ec5c4ddf05209bc40da5ec6bdd2eb3bdc04c9",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Lineforce 10 Ip",
@@ -713,34 +509,25 @@
       "modes": {
         "Mode 1 79 DMX": {
           "channels": 79,
-          "displayName": "79 CH"
+          "displayName": "79 CH",
+          "parameters": 88,
+          "sourceMode": "Mode 1 79 DMX"
         },
         "Mode 2 16 DMX": {
           "channels": 16,
-          "displayName": "16 CH"
+          "displayName": "16 CH",
+          "parameters": 15,
+          "sourceMode": "Mode 2 16 DMX"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Lineforce_10_Ip.gdtf",
-        "file": "fixtures/acme/ACME@ACME_LINEFORCE_10_IP_(CYC_10_IP)@LINEFORCE_10_IP__(CYC_10_IP).gdtf",
-        "modes": {
-          "Mode 1 79 DMX": {
-            "channels": 79,
-            "gdtfMode": "Mode 1 79 DMX",
-            "status": "matched",
-            "parameters": 88
-          },
-          "Mode 2 16 DMX": {
-            "channels": 16,
-            "gdtfMode": "Mode 2 16 DMX",
-            "status": "matched",
-            "parameters": 15
-          }
-        }
-      },
-      "shortName": "Lineforce 10 IP"
+      "shortName": "Lineforce 10 IP",
+      "image": "images/fixtures/acme/lineforce-10-ip.png",
+      "details": "json/fixture-details/593276833fc703982296ba5dd225a733f85a038534fe5769498145fc8493bddb.json",
+      "provenance": {
+        "fileName": "ACME@ACME_LINEFORCE_10_IP_(CYC_10_IP)@LINEFORCE_10_IP__(CYC_10_IP).gdtf",
+        "sha256": "593276833fc703982296ba5dd225a733f85a038534fe5769498145fc8493bddb",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Lineforce 5 Ip",
@@ -749,54 +536,37 @@
       "modes": {
         "Mode 1 16CH": {
           "channels": 16,
-          "displayName": "16CH"
+          "displayName": "16CH",
+          "parameters": 15,
+          "sourceMode": "Mode 1 16CH"
         },
         "Mode 2 44CH": {
           "channels": 44,
-          "displayName": "44CH"
+          "displayName": "44CH",
+          "parameters": 48,
+          "sourceMode": "Mode 2 44CH"
         },
         "Mode 3 19CH": {
           "channels": 19,
-          "displayName": "19CH"
+          "displayName": "19CH",
+          "parameters": 18,
+          "sourceMode": "Mode 3 19CH"
         },
         "Mode 4 10CH": {
           "channels": 10,
-          "displayName": "10CH"
+          "displayName": "10CH",
+          "parameters": 9,
+          "sourceMode": "Mode 4 10CH"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Lineforce_5_Ip.gdtf",
-        "file": "fixtures/acme/ACME@ACME__LINEFORCE_5_IP_(CYC_5_IP)@ACME__LINEFORCE_5_IP_(CYC_5_IP)(2).gdtf",
-        "modes": {
-          "Mode 1 16CH": {
-            "channels": 16,
-            "gdtfMode": "Mode 1 16CH",
-            "status": "matched",
-            "parameters": 15
-          },
-          "Mode 2 44CH": {
-            "channels": 44,
-            "gdtfMode": "Mode 2 44CH",
-            "status": "matched",
-            "parameters": 48
-          },
-          "Mode 3 19CH": {
-            "channels": 19,
-            "gdtfMode": "Mode 3 19CH",
-            "status": "matched",
-            "parameters": 18
-          },
-          "Mode 4 10CH": {
-            "channels": 10,
-            "gdtfMode": "Mode 4 10CH",
-            "status": "matched",
-            "parameters": 9
-          }
-        }
-      },
-      "shortName": "Lineforce 5 IP"
+      "shortName": "Lineforce 5 IP",
+      "image": "images/fixtures/acme/lineforce-5-ip.png",
+      "details": "json/fixture-details/13cd1f043a3b87518c4e5b240a354159ef54aed68a7d254ab5228f6777547b7a.json",
+      "provenance": {
+        "fileName": "ACME@ACME__LINEFORCE_5_IP_(CYC_5_IP)@ACME__LINEFORCE_5_IP_(CYC_5_IP)(2).gdtf",
+        "sha256": "13cd1f043a3b87518c4e5b240a354159ef54aed68a7d254ab5228f6777547b7a",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Lyra",
@@ -805,64 +575,43 @@
       "modes": {
         "Mode 1  39 DMX": {
           "channels": 39,
-          "displayName": "39 CH"
+          "displayName": "39 CH",
+          "parameters": 34,
+          "sourceMode": "Mode 1  39 DMX"
         },
         "Mode 2  30 DMX": {
           "channels": 30,
-          "displayName": "30 CH"
+          "displayName": "30 CH",
+          "parameters": 25,
+          "sourceMode": "Mode 2  30 DMX"
         },
         "Mode 3  31 DMX": {
           "channels": 31,
-          "displayName": "31 CH"
+          "displayName": "31 CH",
+          "parameters": 26,
+          "sourceMode": "Mode 3  31 DMX"
         },
         "Mode 4  22 DMX": {
           "channels": 22,
-          "displayName": "22 CH"
+          "displayName": "22 CH",
+          "parameters": 17,
+          "sourceMode": "Mode 4  22 DMX"
         },
         "Mode 5  40 DMX": {
           "channels": 40,
-          "displayName": "40 CH"
+          "displayName": "40 CH",
+          "parameters": 34,
+          "sourceMode": "Mode 5  40 DMX"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Lyra.gdtf",
-        "file": "fixtures/acme/ACME@ACME_LYRA_(XA_1000_BSWF_IP)@ACME_LYRA_(XA_1000_BSWF_IP).gdtf",
-        "modes": {
-          "Mode 1  39 DMX": {
-            "channels": 39,
-            "gdtfMode": "Mode 1  39 DMX",
-            "status": "matched",
-            "parameters": 34
-          },
-          "Mode 2  30 DMX": {
-            "channels": 30,
-            "gdtfMode": "Mode 2  30 DMX",
-            "status": "matched",
-            "parameters": 25
-          },
-          "Mode 3  31 DMX": {
-            "channels": 31,
-            "gdtfMode": "Mode 3  31 DMX",
-            "status": "matched",
-            "parameters": 26
-          },
-          "Mode 4  22 DMX": {
-            "channels": 22,
-            "gdtfMode": "Mode 4  22 DMX",
-            "status": "matched",
-            "parameters": 17
-          },
-          "Mode 5  40 DMX": {
-            "channels": 40,
-            "gdtfMode": "Mode 5  40 DMX",
-            "status": "matched",
-            "parameters": 34
-          }
-        }
-      },
-      "shortName": "Lyra"
+      "shortName": "Lyra",
+      "image": "images/fixtures/acme/lyra.png",
+      "details": "json/fixture-details/851900f274a7e72c7f7313c31671a11f3d86f5ac2b5cf25f6857a06610f7b0ff.json",
+      "provenance": {
+        "fileName": "ACME@ACME_LYRA_(XA_1000_BSWF_IP)@ACME_LYRA_(XA_1000_BSWF_IP).gdtf",
+        "sha256": "851900f274a7e72c7f7313c31671a11f3d86f5ac2b5cf25f6857a06610f7b0ff",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Lyra Bw",
@@ -871,34 +620,25 @@
       "modes": {
         "Mode 2 30 DMX": {
           "channels": 30,
-          "displayName": "30 CH"
+          "displayName": "30 CH",
+          "parameters": 26,
+          "sourceMode": "Mode 2 30 DMX"
         },
         "Mode 1 18DMX": {
           "channels": 18,
-          "displayName": "18CH"
+          "displayName": "18CH",
+          "parameters": 15,
+          "sourceMode": "Mode 1 18DMX"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Lyra_Bw.gdtf",
-        "file": "fixtures/acme/ACME@ACME_LYRA_BW(XA_1000_BW_IP)@ACME_LYRA_BW(XA_1000_BW_IP).gdtf",
-        "modes": {
-          "Mode 2 30 DMX": {
-            "channels": 30,
-            "gdtfMode": "Mode 2 30 DMX",
-            "status": "matched",
-            "parameters": 26
-          },
-          "Mode 1 18DMX": {
-            "channels": 18,
-            "gdtfMode": "Mode 1 18DMX",
-            "status": "matched",
-            "parameters": 15
-          }
-        }
-      },
-      "shortName": "Lyra Bw"
+      "shortName": "Lyra Bw",
+      "image": "images/fixtures/acme/lyra-bw.png",
+      "details": "json/fixture-details/c9b4dc2c8b7d5580cb79dfdd9f248d2f1db374784ec638ff61a2dfc88bd3bf91.json",
+      "provenance": {
+        "fileName": "ACME@ACME_LYRA_BW(XA_1000_BW_IP)@ACME_LYRA_BW(XA_1000_BW_IP).gdtf",
+        "sha256": "c9b4dc2c8b7d5580cb79dfdd9f248d2f1db374784ec638ff61a2dfc88bd3bf91",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Mana Hybrid",
@@ -907,34 +647,25 @@
       "modes": {
         "Mode 1  30 DMX": {
           "channels": 30,
-          "displayName": "30 CH"
+          "displayName": "30 CH",
+          "parameters": 24,
+          "sourceMode": "Mode 1  30 DMX"
         },
         "Mode 2 24 DMX": {
           "channels": 24,
-          "displayName": "24 CH"
+          "displayName": "24 CH",
+          "parameters": 24,
+          "sourceMode": "Mode 2 24 DMX"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Mana_Hybrid.gdtf",
-        "file": "fixtures/acme/ACME@ACME_MANA_HYBRID_(XA_600_BSW_IP)@_ACME_MANA_HYBRID_(XA_600_BSW_IP).gdtf",
-        "modes": {
-          "Mode 1  30 DMX": {
-            "channels": 30,
-            "gdtfMode": "Mode 1  30 DMX",
-            "status": "matched",
-            "parameters": 24
-          },
-          "Mode 2 24 DMX": {
-            "channels": 24,
-            "gdtfMode": "Mode 2 24 DMX",
-            "status": "matched",
-            "parameters": 24
-          }
-        }
-      },
-      "shortName": "Mana Hybrid"
+      "shortName": "Mana Hybrid",
+      "image": "images/fixtures/acme/mana-hybrid.png",
+      "details": "json/fixture-details/e198627f3780fffa68cb29e8ed1dcb3d0be9629ae3a749b4a1f8cdbfbe0c0b87.json",
+      "provenance": {
+        "fileName": "ACME@ACME_MANA_HYBRID_(XA_600_BSW_IP)@_ACME_MANA_HYBRID_(XA_600_BSW_IP).gdtf",
+        "sha256": "e198627f3780fffa68cb29e8ed1dcb3d0be9629ae3a749b4a1f8cdbfbe0c0b87",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Mana Profile",
@@ -943,54 +674,37 @@
       "modes": {
         "Standard  40 DMX": {
           "channels": 40,
-          "displayName": "Standard"
+          "displayName": "Standard",
+          "parameters": 34,
+          "sourceMode": "Standard  40 DMX"
         },
         "Spot  31 DMX ": {
           "channels": 31,
-          "displayName": "Spot"
+          "displayName": "Spot",
+          "parameters": 25,
+          "sourceMode": "Spot  31 DMX "
         },
         "Framing  31 DMX": {
           "channels": 31,
-          "displayName": "Framing"
+          "displayName": "Framing",
+          "parameters": 26,
+          "sourceMode": "Framing  31 DMX"
         },
         "Wash 22 DMX ": {
           "channels": 22,
-          "displayName": "Wash"
+          "displayName": "Wash",
+          "parameters": 17,
+          "sourceMode": "Wash 22 DMX "
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Mana_Profile.gdtf",
-        "file": "fixtures/acme/ACME@ACME_MANA_PROFILE_(XA_600_BSWF_IP)@ACME_MANA_PROFILE_(XA_600_BSWF_IP).gdtf",
-        "modes": {
-          "Standard  40 DMX": {
-            "channels": 40,
-            "gdtfMode": "Standard  40 DMX",
-            "status": "matched",
-            "parameters": 34
-          },
-          "Spot  31 DMX ": {
-            "channels": 31,
-            "gdtfMode": "Spot  31 DMX ",
-            "status": "matched",
-            "parameters": 25
-          },
-          "Framing  31 DMX": {
-            "channels": 31,
-            "gdtfMode": "Framing  31 DMX",
-            "status": "matched",
-            "parameters": 26
-          },
-          "Wash 22 DMX ": {
-            "channels": 22,
-            "gdtfMode": "Wash 22 DMX ",
-            "status": "matched",
-            "parameters": 17
-          }
-        }
-      },
-      "shortName": "Mana Prof"
+      "shortName": "Mana Prof",
+      "image": "images/fixtures/acme/aeco-15--mana-profile--supernova.png",
+      "details": "json/fixture-details/ae72d9bc642ee10421bb0bc1c3e3638b4778fbb49be040abae70637f39509246.json",
+      "provenance": {
+        "fileName": "ACME@ACME_MANA_PROFILE_(XA_600_BSWF_IP)@ACME_MANA_PROFILE_(XA_600_BSWF_IP).gdtf",
+        "sha256": "ae72d9bc642ee10421bb0bc1c3e3638b4778fbb49be040abae70637f39509246",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Neozone",
@@ -999,64 +713,43 @@
       "modes": {
         "Mode 1 17DMX": {
           "channels": 17,
-          "displayName": "17CH"
+          "displayName": "17CH",
+          "parameters": 14,
+          "sourceMode": "Mode 1 17DMX"
         },
         "Mode 2 21DMX": {
           "channels": 21,
-          "displayName": "21CH"
+          "displayName": "21CH",
+          "parameters": 21,
+          "sourceMode": "Mode 2 21DMX"
         },
         "Mode 3 86DMX": {
           "channels": 86,
-          "displayName": "86CH"
+          "displayName": "86CH",
+          "parameters": 102,
+          "sourceMode": "Mode 3 86DMX"
         },
         "Mode 4 10+DMX": {
           "channels": 10,
-          "displayName": "10+CH"
+          "displayName": "10+CH",
+          "parameters": 7,
+          "sourceMode": "Mode 4 10+DMX"
         },
         "Mode 5 10Art-Net": {
           "channels": 76,
-          "displayName": "10Art-Net"
+          "displayName": "10Art-Net",
+          "parameters": 95,
+          "sourceMode": "Mode 5 10Art-Net"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Neozone.gdtf",
-        "file": "fixtures/acme/ACME@ACME_NEOZONE_(CM_800Z)@ACME_NEOZONE__(CM_800Z).gdtf",
-        "modes": {
-          "Mode 1 17DMX": {
-            "channels": 17,
-            "gdtfMode": "Mode 1 17DMX",
-            "status": "matched",
-            "parameters": 14
-          },
-          "Mode 2 21DMX": {
-            "channels": 21,
-            "gdtfMode": "Mode 2 21DMX",
-            "status": "matched",
-            "parameters": 21
-          },
-          "Mode 3 86DMX": {
-            "channels": 86,
-            "gdtfMode": "Mode 3 86DMX",
-            "status": "matched",
-            "parameters": 102
-          },
-          "Mode 4 10+DMX": {
-            "channels": 10,
-            "gdtfMode": "Mode 4 10+DMX",
-            "status": "matched",
-            "parameters": 7
-          },
-          "Mode 5 10Art-Net": {
-            "channels": 76,
-            "gdtfMode": "Mode 5 10Art-Net",
-            "status": "matched",
-            "parameters": 95
-          }
-        }
-      },
-      "shortName": "Neozone"
+      "shortName": "Neozone",
+      "image": "images/fixtures/acme/neozone.png",
+      "details": "json/fixture-details/846835e5b107f8aa2b1fb8b6df9340aa2d1702d0be208ab2435904a2a88d9892.json",
+      "provenance": {
+        "fileName": "ACME@ACME_NEOZONE_(CM_800Z)@ACME_NEOZONE__(CM_800Z).gdtf",
+        "sha256": "846835e5b107f8aa2b1fb8b6df9340aa2d1702d0be208ab2435904a2a88d9892",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Nova Beam",
@@ -1065,24 +758,19 @@
       "modes": {
         "Mode 1 18CH": {
           "channels": 18,
-          "displayName": "18CH"
+          "displayName": "18CH",
+          "parameters": 14,
+          "sourceMode": "Mode 1 18CH"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Nova_Beam.gdtf",
-        "file": "fixtures/acme/ACME@ACME_NOVA_BEAM@ACME_NOVA_BEAM.gdtf",
-        "modes": {
-          "Mode 1 18CH": {
-            "channels": 18,
-            "gdtfMode": "Mode 1 18CH",
-            "status": "matched",
-            "parameters": 14
-          }
-        }
-      },
-      "shortName": "Nova Beam"
+      "shortName": "Nova Beam",
+      "image": "images/fixtures/acme/nova-beam--sana-beam.png",
+      "details": "json/fixture-details/dadbffa42b5944512a149d4bf7eb990ea434b1e97f0097498254df2a31398d71.json",
+      "provenance": {
+        "fileName": "ACME@ACME_NOVA_BEAM@ACME_NOVA_BEAM.gdtf",
+        "sha256": "dadbffa42b5944512a149d4bf7eb990ea434b1e97f0097498254df2a31398d71",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Oxygen",
@@ -1091,34 +779,25 @@
       "modes": {
         "Mode 1 37 DMX": {
           "channels": 37,
-          "displayName": "37 CH"
+          "displayName": "37 CH",
+          "parameters": 34,
+          "sourceMode": "Mode 1 37 DMX"
         },
         "Mode 2 17 DMX": {
           "channels": 17,
-          "displayName": "17 CH"
+          "displayName": "17 CH",
+          "parameters": 14,
+          "sourceMode": "Mode 2 17 DMX"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Oxygen.gdtf",
-        "file": "fixtures/acme/ACME@ACME_OXYGEN_(CM-400Z)17_37CH@_ACME_OXYGEN_(CM-400Z)17_37CH.gdtf",
-        "modes": {
-          "Mode 1 37 DMX": {
-            "channels": 37,
-            "gdtfMode": "Mode 1 37 DMX",
-            "status": "matched",
-            "parameters": 34
-          },
-          "Mode 2 17 DMX": {
-            "channels": 17,
-            "gdtfMode": "Mode 2 17 DMX",
-            "status": "matched",
-            "parameters": 14
-          }
-        }
-      },
-      "shortName": "Oxygen"
+      "shortName": "Oxygen",
+      "image": "images/fixtures/acme/oxygen.png",
+      "details": "json/fixture-details/4215dcafd322809a06ee11ac53b4828cb5480a269938686e9a88fae85e3607af.json",
+      "provenance": {
+        "fileName": "ACME@ACME_OXYGEN_(CM-400Z)17_37CH@_ACME_OXYGEN_(CM-400Z)17_37CH.gdtf",
+        "sha256": "4215dcafd322809a06ee11ac53b4828cb5480a269938686e9a88fae85e3607af",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Pasodoble",
@@ -1127,54 +806,37 @@
       "modes": {
         "Mode1 10DMX": {
           "channels": 10,
-          "displayName": "10CH"
+          "displayName": "10CH",
+          "parameters": 9,
+          "sourceMode": "Mode1 10DMX"
         },
         "Mode2 8DMX": {
           "channels": 8,
-          "displayName": "8CH"
+          "displayName": "8CH",
+          "parameters": 7,
+          "sourceMode": "Mode2 8DMX"
         },
         "Mode3 5DMX": {
           "channels": 5,
-          "displayName": "5CH"
+          "displayName": "5CH",
+          "parameters": 6,
+          "sourceMode": "Mode3 5DMX"
         },
         "Mode4 4DMX": {
           "channels": 4,
-          "displayName": "4CH"
+          "displayName": "4CH",
+          "parameters": 5,
+          "sourceMode": "Mode4 4DMX"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Pasodoble.gdtf",
-        "file": "fixtures/acme/ACME@ACME_PASODOBLE_(PAR_12)@ACME_PASODOBLE_(PAR_12).gdtf",
-        "modes": {
-          "Mode1 10DMX": {
-            "channels": 10,
-            "gdtfMode": "Mode1 10DMX",
-            "status": "matched",
-            "parameters": 9
-          },
-          "Mode2 8DMX": {
-            "channels": 8,
-            "gdtfMode": "Mode2 8DMX",
-            "status": "matched",
-            "parameters": 7
-          },
-          "Mode3 5DMX": {
-            "channels": 5,
-            "gdtfMode": "Mode3 5DMX",
-            "status": "matched",
-            "parameters": 6
-          },
-          "Mode4 4DMX": {
-            "channels": 4,
-            "gdtfMode": "Mode4 4DMX",
-            "status": "matched",
-            "parameters": 5
-          }
-        }
-      },
-      "shortName": "Pasodoble"
+      "shortName": "Pasodoble",
+      "image": "images/fixtures/acme/pasodoble.png",
+      "details": "json/fixture-details/7c073ba7da2222c3915cc33e362c8a627eff002f50d19a3accea19a5898ef319.json",
+      "provenance": {
+        "fileName": "ACME@ACME_PASODOBLE_(PAR_12)@ACME_PASODOBLE_(PAR_12).gdtf",
+        "sha256": "7c073ba7da2222c3915cc33e362c8a627eff002f50d19a3accea19a5898ef319",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Pixel Line Ip",
@@ -1183,144 +845,93 @@
       "modes": {
         "Mode 1 7DMX": {
           "channels": 7,
-          "displayName": "7CH"
+          "displayName": "7CH",
+          "parameters": 6,
+          "sourceMode": "Mode 1 7DMX"
         },
         "Mode 2 15DMX": {
           "channels": 15,
-          "displayName": "15CH"
+          "displayName": "15CH",
+          "parameters": 14,
+          "sourceMode": "Mode 2 15DMX"
         },
         "Mode 3 21DMX": {
           "channels": 21,
-          "displayName": "21CH"
+          "displayName": "21CH",
+          "parameters": 20,
+          "sourceMode": "Mode 3 21DMX"
         },
         "Mode 4 39DMX": {
           "channels": 39,
-          "displayName": "39CH"
+          "displayName": "39CH",
+          "parameters": 49,
+          "sourceMode": "Mode 4 39DMX"
         },
         "Mode 5 112DMX": {
           "channels": 112,
-          "displayName": "112CH"
+          "displayName": "112CH",
+          "parameters": 160,
+          "sourceMode": "Mode 5 112DMX"
         },
         "Mode 6 17DMX": {
           "channels": 17,
-          "displayName": "17CH"
+          "displayName": "17CH",
+          "parameters": 25,
+          "sourceMode": "Mode 6 17DMX"
         },
         "Mode 7 33DMX": {
           "channels": 33,
-          "displayName": "33CH"
+          "displayName": "33CH",
+          "parameters": 49,
+          "sourceMode": "Mode 7 33DMX"
         },
         "Mode 8 65DMX": {
           "channels": 65,
-          "displayName": "65CH"
+          "displayName": "65CH",
+          "parameters": 97,
+          "sourceMode": "Mode 8 65DMX"
         },
         "Mode 9 68DMX": {
           "channels": 68,
-          "displayName": "68CH"
+          "displayName": "68CH",
+          "parameters": 100,
+          "sourceMode": "Mode 9 68DMX"
         },
         "Mode 10 117DMX": {
           "channels": 117,
-          "displayName": "117CH"
+          "displayName": "117CH",
+          "parameters": 165,
+          "sourceMode": "Mode 10 117DMX"
         },
-        "Mode 11": 70,
+        "Mode 11": {
+          "channels": 70,
+          "parameters": 102,
+          "sourceMode": "Mode11 70DMX"
+        },
         "Mode 12 70N DMX": {
           "channels": 70,
-          "displayName": "70N CH"
+          "displayName": "70N CH",
+          "parameters": 101,
+          "sourceMode": "Mode 12 70N DMX"
         },
         "Mode 13 119DMX": {
           "channels": 119,
-          "displayName": "119CH"
+          "displayName": "119CH",
+          "parameters": 166,
+          "sourceMode": "Mode 13 119DMX"
         }
       },
       "modeAliases": {
         "Mode11 70DMX": "Mode 11"
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Pixel_Line_Ip.gdtf",
-        "file": "fixtures/acme/ACME@ACME_PIXEL_LINE_IP_(STROBE_3_IP)@ACME_PIXEL_LINE_IP_(STROBE_3_IP).gdtf",
-        "modes": {
-          "Mode 1 7DMX": {
-            "channels": 7,
-            "gdtfMode": "Mode 1 7DMX",
-            "status": "matched",
-            "parameters": 6
-          },
-          "Mode 2 15DMX": {
-            "channels": 15,
-            "gdtfMode": "Mode 2 15DMX",
-            "status": "matched",
-            "parameters": 14
-          },
-          "Mode 3 21DMX": {
-            "channels": 21,
-            "gdtfMode": "Mode 3 21DMX",
-            "status": "matched",
-            "parameters": 20
-          },
-          "Mode 4 39DMX": {
-            "channels": 39,
-            "gdtfMode": "Mode 4 39DMX",
-            "status": "matched",
-            "parameters": 49
-          },
-          "Mode 5 112DMX": {
-            "channels": 112,
-            "gdtfMode": "Mode 5 112DMX",
-            "status": "matched",
-            "parameters": 160
-          },
-          "Mode 6 17DMX": {
-            "channels": 17,
-            "gdtfMode": "Mode 6 17DMX",
-            "status": "matched",
-            "parameters": 25
-          },
-          "Mode 7 33DMX": {
-            "channels": 33,
-            "gdtfMode": "Mode 7 33DMX",
-            "status": "matched",
-            "parameters": 49
-          },
-          "Mode 8 65DMX": {
-            "channels": 65,
-            "gdtfMode": "Mode 8 65DMX",
-            "status": "matched",
-            "parameters": 97
-          },
-          "Mode 9 68DMX": {
-            "channels": 68,
-            "gdtfMode": "Mode 9 68DMX",
-            "status": "matched",
-            "parameters": 100
-          },
-          "Mode 10 117DMX": {
-            "channels": 117,
-            "gdtfMode": "Mode 10 117DMX",
-            "status": "matched",
-            "parameters": 165
-          },
-          "Mode 11": {
-            "channels": 70,
-            "gdtfMode": "Mode11 70DMX",
-            "status": "matched",
-            "parameters": 102
-          },
-          "Mode 12 70N DMX": {
-            "channels": 70,
-            "gdtfMode": "Mode 12 70N DMX",
-            "status": "matched",
-            "parameters": 101
-          },
-          "Mode 13 119DMX": {
-            "channels": 119,
-            "gdtfMode": "Mode 13 119DMX",
-            "status": "matched",
-            "parameters": 166
-          }
-        }
-      },
-      "shortName": "Pixel Line IP"
+      "shortName": "Pixel Line IP",
+      "image": "images/fixtures/acme/pixel-line-ip.png",
+      "details": "json/fixture-details/f2044bdd9a83784f159911e0d257ec2e4b1be617d1248ef6d5deaf59d52f22cf.json",
+      "provenance": {
+        "fileName": "ACME@ACME_PIXEL_LINE_IP_(STROBE_3_IP)@ACME_PIXEL_LINE_IP_(STROBE_3_IP).gdtf",
+        "sha256": "f2044bdd9a83784f159911e0d257ec2e4b1be617d1248ef6d5deaf59d52f22cf",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Pixel Line Ip 500",
@@ -1329,134 +940,85 @@
       "modes": {
         "Mode 1 8CH": {
           "channels": 8,
-          "displayName": "8CH"
+          "displayName": "8CH",
+          "parameters": 9,
+          "sourceMode": "Mode 1 8CH"
         },
         "Mode 2 16CH": {
           "channels": 16,
-          "displayName": "16CH"
+          "displayName": "16CH",
+          "parameters": 17,
+          "sourceMode": "Mode 2 16CH"
         },
         "Mode 3 22CH": {
           "channels": 22,
-          "displayName": "22CH"
+          "displayName": "22CH",
+          "parameters": 20,
+          "sourceMode": "Mode 3 22CH"
         },
         "Mode 4 26CH": {
           "channels": 26,
-          "displayName": "26CH"
+          "displayName": "26CH",
+          "parameters": 30,
+          "sourceMode": "Mode 4 26CH"
         },
         "Mode 5 56CH": {
           "channels": 56,
-          "displayName": "56CH"
+          "displayName": "56CH",
+          "parameters": 80,
+          "sourceMode": "Mode 5 56CH"
         },
         "Mode 6 10CH": {
           "channels": 10,
-          "displayName": "10CH"
+          "displayName": "10CH",
+          "parameters": 14,
+          "sourceMode": "Mode 6 10CH"
         },
         "Mode 7 18CH": {
           "channels": 18,
-          "displayName": "18CH"
+          "displayName": "18CH",
+          "parameters": 26,
+          "sourceMode": "Mode 7 18CH"
         },
         "Mode 8 34CH": {
           "channels": 34,
-          "displayName": "34CH"
+          "displayName": "34CH",
+          "parameters": 50,
+          "sourceMode": "Mode 8 34CH"
         },
         "Mode 9 37CH": {
           "channels": 37,
-          "displayName": "37CH"
+          "displayName": "37CH",
+          "parameters": 53,
+          "sourceMode": "Mode 9 37CH"
         },
         "Mode 10 62CH": {
           "channels": 62,
-          "displayName": "62CH"
+          "displayName": "62CH",
+          "parameters": 86,
+          "sourceMode": "Mode 10 62CH"
         },
         "Mode 11 39CH": {
           "channels": 39,
-          "displayName": "39CH"
+          "displayName": "39CH",
+          "parameters": 55,
+          "sourceMode": "Mode 11 39CH"
         },
         "Mode 12 68CH": {
           "channels": 68,
-          "displayName": "68CH"
+          "displayName": "68CH",
+          "parameters": 84,
+          "sourceMode": "Mode 12 68CH"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Pixel_Line_Ip_500.gdtf",
-        "file": "fixtures/acme/ACME@ACME_PIXEL_LINE_IP_500_(STROBE_1_IP)@ACME_PIXEL_LINE_IP_500_(STROBE_1_IP).gdtf",
-        "modes": {
-          "Mode 1 8CH": {
-            "channels": 8,
-            "gdtfMode": "Mode 1 8CH",
-            "status": "matched",
-            "parameters": 9
-          },
-          "Mode 2 16CH": {
-            "channels": 16,
-            "gdtfMode": "Mode 2 16CH",
-            "status": "matched",
-            "parameters": 17
-          },
-          "Mode 3 22CH": {
-            "channels": 22,
-            "gdtfMode": "Mode 3 22CH",
-            "status": "matched",
-            "parameters": 20
-          },
-          "Mode 4 26CH": {
-            "channels": 26,
-            "gdtfMode": "Mode 4 26CH",
-            "status": "matched",
-            "parameters": 30
-          },
-          "Mode 5 56CH": {
-            "channels": 56,
-            "gdtfMode": "Mode 5 56CH",
-            "status": "matched",
-            "parameters": 80
-          },
-          "Mode 6 10CH": {
-            "channels": 10,
-            "gdtfMode": "Mode 6 10CH",
-            "status": "matched",
-            "parameters": 14
-          },
-          "Mode 7 18CH": {
-            "channels": 18,
-            "gdtfMode": "Mode 7 18CH",
-            "status": "matched",
-            "parameters": 26
-          },
-          "Mode 8 34CH": {
-            "channels": 34,
-            "gdtfMode": "Mode 8 34CH",
-            "status": "matched",
-            "parameters": 50
-          },
-          "Mode 9 37CH": {
-            "channels": 37,
-            "gdtfMode": "Mode 9 37CH",
-            "status": "matched",
-            "parameters": 53
-          },
-          "Mode 10 62CH": {
-            "channels": 62,
-            "gdtfMode": "Mode 10 62CH",
-            "status": "matched",
-            "parameters": 86
-          },
-          "Mode 11 39CH": {
-            "channels": 39,
-            "gdtfMode": "Mode 11 39CH",
-            "status": "matched",
-            "parameters": 55
-          },
-          "Mode 12 68CH": {
-            "channels": 68,
-            "gdtfMode": "Mode 12 68CH",
-            "status": "matched",
-            "parameters": 84
-          }
-        }
-      },
-      "shortName": "Pixel Line IP 500"
+      "shortName": "Pixel Line IP 500",
+      "image": "images/fixtures/acme/pixel-line-ip-500.png",
+      "details": "json/fixture-details/ed68dfae30cbdde401bf0020bcaf0391a3bde042bc324402022a37526f908dcf.json",
+      "provenance": {
+        "fileName": "ACME@ACME_PIXEL_LINE_IP_500_(STROBE_1_IP)@ACME_PIXEL_LINE_IP_500_(STROBE_1_IP).gdtf",
+        "sha256": "ed68dfae30cbdde401bf0020bcaf0391a3bde042bc324402022a37526f908dcf",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Pulsar Plus S2",
@@ -1465,74 +1027,49 @@
       "modes": {
         "Mode 1 43CH ": {
           "channels": 43,
-          "displayName": "43CH"
+          "displayName": "43CH",
+          "parameters": 37,
+          "sourceMode": "Mode 1 43CH "
         },
         "Mode 2 195CH": {
           "channels": 195,
-          "displayName": "195CH"
+          "displayName": "195CH",
+          "parameters": 236,
+          "sourceMode": "Mode 2 195CH"
         },
         "Mode 3 153CH": {
           "channels": 153,
-          "displayName": "153CH"
+          "displayName": "153CH",
+          "parameters": 178,
+          "sourceMode": "Mode 3 153CH"
         },
         "Mode 4 27CH": {
           "channels": 27,
-          "displayName": "27CH"
+          "displayName": "27CH",
+          "parameters": 20,
+          "sourceMode": "Mode 4 27CH"
         },
         "Mode 5 168CH": {
           "channels": 168,
-          "displayName": "168CH"
+          "displayName": "168CH",
+          "parameters": 216,
+          "sourceMode": "Mode 5 168CH"
         },
         "Mode 6 163CH": {
           "channels": 163,
-          "displayName": "163CH"
+          "displayName": "163CH",
+          "parameters": 216,
+          "sourceMode": "Mode 6 163CH"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Pulsar_Plus_S2.gdtf",
-        "file": "fixtures/acme/ACME@PULSAR_PLUS_S2_(CM_S2_IP)@PULSAR_PLUS_S2_(CM_S2_IP).gdtf",
-        "modes": {
-          "Mode 1 43CH ": {
-            "channels": 43,
-            "gdtfMode": "Mode 1 43CH ",
-            "status": "matched",
-            "parameters": 37
-          },
-          "Mode 2 195CH": {
-            "channels": 195,
-            "gdtfMode": "Mode 2 195CH",
-            "status": "matched",
-            "parameters": 236
-          },
-          "Mode 3 153CH": {
-            "channels": 153,
-            "gdtfMode": "Mode 3 153CH",
-            "status": "matched",
-            "parameters": 178
-          },
-          "Mode 4 27CH": {
-            "channels": 27,
-            "gdtfMode": "Mode 4 27CH",
-            "status": "matched",
-            "parameters": 20
-          },
-          "Mode 5 168CH": {
-            "channels": 168,
-            "gdtfMode": "Mode 5 168CH",
-            "status": "matched",
-            "parameters": 216
-          },
-          "Mode 6 163CH": {
-            "channels": 163,
-            "gdtfMode": "Mode 6 163CH",
-            "status": "matched",
-            "parameters": 216
-          }
-        }
-      },
-      "shortName": "Pulsar +S2"
+      "shortName": "Pulsar +S2",
+      "image": "images/fixtures/acme/pulsar-plus-s2.png",
+      "details": "json/fixture-details/cec49878d044593d6cf274ee190276cd9d931426690291468edf52fb6d62a520.json",
+      "provenance": {
+        "fileName": "ACME@PULSAR_PLUS_S2_(CM_S2_IP)@PULSAR_PLUS_S2_(CM_S2_IP).gdtf",
+        "sha256": "cec49878d044593d6cf274ee190276cd9d931426690291468edf52fb6d62a520",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Pulsar S2",
@@ -1541,54 +1078,37 @@
       "modes": {
         "Mode 1 24DMX": {
           "channels": 24,
-          "displayName": "24CH"
+          "displayName": "24CH",
+          "parameters": 25,
+          "sourceMode": "Mode 1 24DMX"
         },
         "Mode 2 39DMX": {
           "channels": 39,
-          "displayName": "39CH"
+          "displayName": "39CH",
+          "parameters": 33,
+          "sourceMode": "Mode 2 39DMX"
         },
         "Mode 3 97DMX": {
           "channels": 97,
-          "displayName": "97CH"
+          "displayName": "97CH",
+          "parameters": 91,
+          "sourceMode": "Mode 3 97DMX"
         },
         "Mode 4 21+DMX": {
           "channels": 21,
-          "displayName": "21+CH"
+          "displayName": "21+CH",
+          "parameters": 15,
+          "sourceMode": "Mode 4 21+DMX"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Pulsar_S2.gdtf",
-        "file": "fixtures/acme/ACME@ACME_PULSAR_S2_(CM_S2)@ACME_PULSAR_S2_(CM_S2).gdtf",
-        "modes": {
-          "Mode 1 24DMX": {
-            "channels": 24,
-            "gdtfMode": "Mode 1 24DMX",
-            "status": "matched",
-            "parameters": 25
-          },
-          "Mode 2 39DMX": {
-            "channels": 39,
-            "gdtfMode": "Mode 2 39DMX",
-            "status": "matched",
-            "parameters": 33
-          },
-          "Mode 3 97DMX": {
-            "channels": 97,
-            "gdtfMode": "Mode 3 97DMX",
-            "status": "matched",
-            "parameters": 91
-          },
-          "Mode 4 21+DMX": {
-            "channels": 21,
-            "gdtfMode": "Mode 4 21+DMX",
-            "status": "matched",
-            "parameters": 15
-          }
-        }
-      },
-      "shortName": "Pulsar S2"
+      "shortName": "Pulsar S2",
+      "image": "images/fixtures/acme/pulsar-s2.png",
+      "details": "json/fixture-details/25222de67f8e37acef85cdc74b5c3be44d0e12e8fe56da50180e1410a13a7024.json",
+      "provenance": {
+        "fileName": "ACME@ACME_PULSAR_S2_(CM_S2)@ACME_PULSAR_S2_(CM_S2).gdtf",
+        "sha256": "25222de67f8e37acef85cdc74b5c3be44d0e12e8fe56da50180e1410a13a7024",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Sana Beam",
@@ -1597,54 +1117,37 @@
       "modes": {
         "Mode 1 29CH": {
           "channels": 29,
-          "displayName": "29CH"
+          "displayName": "29CH",
+          "parameters": 21,
+          "sourceMode": "Mode 1 29CH"
         },
         "Mode 2 27CH ": {
           "channels": 27,
-          "displayName": "27CH"
+          "displayName": "27CH",
+          "parameters": 21,
+          "sourceMode": "Mode 2 27CH "
         },
         "Mode 3 16CH ": {
           "channels": 16,
-          "displayName": "16CH"
+          "displayName": "16CH",
+          "parameters": 14,
+          "sourceMode": "Mode 3 16CH "
         },
         "Mode 4 27CH ": {
           "channels": 27,
-          "displayName": "27CH"
+          "displayName": "27CH",
+          "parameters": 20,
+          "sourceMode": "Mode 4 27CH "
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Sana_Beam.gdtf",
-        "file": "fixtures/acme/ACME@ACME_SANA_BEAM_(XA_300_BEAM_IP)@_ACME_SANA_BEAM_(XA_300_BEAM_IP).gdtf",
-        "modes": {
-          "Mode 1 29CH": {
-            "channels": 29,
-            "gdtfMode": "Mode 1 29CH",
-            "status": "matched",
-            "parameters": 21
-          },
-          "Mode 2 27CH ": {
-            "channels": 27,
-            "gdtfMode": "Mode 2 27CH ",
-            "status": "matched",
-            "parameters": 21
-          },
-          "Mode 3 16CH ": {
-            "channels": 16,
-            "gdtfMode": "Mode 3 16CH ",
-            "status": "matched",
-            "parameters": 14
-          },
-          "Mode 4 27CH ": {
-            "channels": 27,
-            "gdtfMode": "Mode 4 27CH ",
-            "status": "matched",
-            "parameters": 20
-          }
-        }
-      },
-      "shortName": "Sana Beam"
+      "shortName": "Sana Beam",
+      "image": "images/fixtures/acme/nova-beam--sana-beam.png",
+      "details": "json/fixture-details/b62f7426ed9c2c5b4088ea125c4099cd74b4f766b8a67e0d49b34555da4e8948.json",
+      "provenance": {
+        "fileName": "ACME@ACME_SANA_BEAM_(XA_300_BEAM_IP)@_ACME_SANA_BEAM_(XA_300_BEAM_IP).gdtf",
+        "sha256": "b62f7426ed9c2c5b4088ea125c4099cd74b4f766b8a67e0d49b34555da4e8948",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Sana Profile",
@@ -1653,54 +1156,37 @@
       "modes": {
         "Mode 1 45CH (Framing)": {
           "channels": 45,
-          "displayName": "45CH (Framing)"
+          "displayName": "45CH (Framing)",
+          "parameters": 36,
+          "sourceMode": "Mode 1 45CH (Framing)"
         },
         "Mode 2 36CH (F-Wash)": {
           "channels": 36,
-          "displayName": "36CH (F-Wash)"
+          "displayName": "36CH (F-Wash)",
+          "parameters": 28,
+          "sourceMode": "Mode 2 36CH (F-Wash)"
         },
         "Mode 3 27CH (Wash)": {
           "channels": 27,
-          "displayName": "27CH (Wash)"
+          "displayName": "27CH (Wash)",
+          "parameters": 19,
+          "sourceMode": "Mode 3 27CH (Wash)"
         },
         "Mode 4 36CH (Spot)": {
           "channels": 36,
-          "displayName": "36CH (Spot)"
+          "displayName": "36CH (Spot)",
+          "parameters": 27,
+          "sourceMode": "Mode 4 36CH (Spot)"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Sana_Profile.gdtf",
-        "file": "fixtures/acme/ACME@ACME_SANA_PROFILE_(XA_300_BSWF_IP)@_ACME_SANA_PROFILE_(XA_300_BSWF_IP).gdtf",
-        "modes": {
-          "Mode 1 45CH (Framing)": {
-            "channels": 45,
-            "gdtfMode": "Mode 1 45CH (Framing)",
-            "status": "matched",
-            "parameters": 36
-          },
-          "Mode 2 36CH (F-Wash)": {
-            "channels": 36,
-            "gdtfMode": "Mode 2 36CH (F-Wash)",
-            "status": "matched",
-            "parameters": 28
-          },
-          "Mode 3 27CH (Wash)": {
-            "channels": 27,
-            "gdtfMode": "Mode 3 27CH (Wash)",
-            "status": "matched",
-            "parameters": 19
-          },
-          "Mode 4 36CH (Spot)": {
-            "channels": 36,
-            "gdtfMode": "Mode 4 36CH (Spot)",
-            "status": "matched",
-            "parameters": 27
-          }
-        }
-      },
-      "shortName": "Sana Prof"
+      "shortName": "Sana Prof",
+      "image": "images/fixtures/acme/sana-profile.png",
+      "details": "json/fixture-details/0ff8d758ee3901ca96a1bf1cb9650ac346ff440dac2c69f300f1b4e4bc82d650.json",
+      "provenance": {
+        "fileName": "ACME@ACME_SANA_PROFILE_(XA_300_BSWF_IP)@_ACME_SANA_PROFILE_(XA_300_BSWF_IP).gdtf",
+        "sha256": "0ff8d758ee3901ca96a1bf1cb9650ac346ff440dac2c69f300f1b4e4bc82d650",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Sandane Frost",
@@ -1709,64 +1195,43 @@
       "modes": {
         "Mode 1 11 DMX": {
           "channels": 11,
-          "displayName": "11 CH"
+          "displayName": "11 CH",
+          "parameters": 10,
+          "sourceMode": "Mode 1 11 DMX"
         },
         "Mode 2 9 DMX": {
           "channels": 9,
-          "displayName": "9 CH"
+          "displayName": "9 CH",
+          "parameters": 8,
+          "sourceMode": "Mode 2 9 DMX"
         },
         "Mode 3 8 DMX": {
           "channels": 8,
-          "displayName": "8 CH"
+          "displayName": "8 CH",
+          "parameters": 8,
+          "sourceMode": "Mode 3 8 DMX"
         },
         "Mode 4 7 DMX": {
           "channels": 7,
-          "displayName": "7 CH"
+          "displayName": "7 CH",
+          "parameters": 8,
+          "sourceMode": "Mode 4 7 DMX"
         },
         "Mode 5 6 DMX": {
           "channels": 6,
-          "displayName": "6 CH"
+          "displayName": "6 CH",
+          "parameters": 7,
+          "sourceMode": "Mode 5 6 DMX"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Sandane_Frost.gdtf",
-        "file": "fixtures/acme/ACME@SANDANE_FROST_(PAR_54_IP_EF)@SANDANE_FROST_(PAR_54_IP_EF).gdtf",
-        "modes": {
-          "Mode 1 11 DMX": {
-            "channels": 11,
-            "gdtfMode": "Mode 1 11 DMX",
-            "status": "matched",
-            "parameters": 10
-          },
-          "Mode 2 9 DMX": {
-            "channels": 9,
-            "gdtfMode": "Mode 2 9 DMX",
-            "status": "matched",
-            "parameters": 8
-          },
-          "Mode 3 8 DMX": {
-            "channels": 8,
-            "gdtfMode": "Mode 3 8 DMX",
-            "status": "matched",
-            "parameters": 8
-          },
-          "Mode 4 7 DMX": {
-            "channels": 7,
-            "gdtfMode": "Mode 4 7 DMX",
-            "status": "matched",
-            "parameters": 8
-          },
-          "Mode 5 6 DMX": {
-            "channels": 6,
-            "gdtfMode": "Mode 5 6 DMX",
-            "status": "matched",
-            "parameters": 7
-          }
-        }
-      },
-      "shortName": "Sandane Frost"
+      "shortName": "Sandane Frost",
+      "image": "images/fixtures/acme/sandane-frost.png",
+      "details": "json/fixture-details/baac400b8970d2a755fe4f8bdbafe607304eca95d1a6f892274667915739a56b.json",
+      "provenance": {
+        "fileName": "ACME@SANDANE_FROST_(PAR_54_IP_EF)@SANDANE_FROST_(PAR_54_IP_EF).gdtf",
+        "sha256": "baac400b8970d2a755fe4f8bdbafe607304eca95d1a6f892274667915739a56b",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Solar Wind",
@@ -1775,34 +1240,25 @@
       "modes": {
         "Mode 1 30 DMX": {
           "channels": 30,
-          "displayName": "30 CH"
+          "displayName": "30 CH",
+          "parameters": 24,
+          "sourceMode": "Mode 1 30 DMX"
         },
         "Mode 2 24 DMX": {
           "channels": 24,
-          "displayName": "24 CH"
+          "displayName": "24 CH",
+          "parameters": 24,
+          "sourceMode": "Mode 2 24 DMX"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Solar_Wind.gdtf",
-        "file": "fixtures/acme/ACME@ACME_SOLAR_WIND_(XA_500_BSW)@ACME_SOLAR_WIND__(XA_500_BSW).gdtf",
-        "modes": {
-          "Mode 1 30 DMX": {
-            "channels": 30,
-            "gdtfMode": "Mode 1 30 DMX",
-            "status": "matched",
-            "parameters": 24
-          },
-          "Mode 2 24 DMX": {
-            "channels": 24,
-            "gdtfMode": "Mode 2 24 DMX",
-            "status": "matched",
-            "parameters": 24
-          }
-        }
-      },
-      "shortName": "Solar Wind"
+      "shortName": "Solar Wind",
+      "image": "images/fixtures/acme/solar-wind.png",
+      "details": "json/fixture-details/caf7bbe2882328bddff598a5cf719e5358d18554cee0e2dc932020973b8dcc91.json",
+      "provenance": {
+        "fileName": "ACME@ACME_SOLAR_WIND_(XA_500_BSW)@ACME_SOLAR_WIND__(XA_500_BSW).gdtf",
+        "sha256": "caf7bbe2882328bddff598a5cf719e5358d18554cee0e2dc932020973b8dcc91",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Stage Par 400 Zoom Ip",
@@ -1811,44 +1267,31 @@
       "modes": {
         "Mode 1 9 DMX": {
           "channels": 9,
-          "displayName": "9 CH"
+          "displayName": "9 CH",
+          "parameters": 8,
+          "sourceMode": "Mode 1 9 DMX"
         },
         "Mode 2 7 DMX": {
           "channels": 7,
-          "displayName": "7 CH"
+          "displayName": "7 CH",
+          "parameters": 7,
+          "sourceMode": "Mode 2 7 DMX"
         },
         "Mode 3 5 DMX": {
           "channels": 5,
-          "displayName": "5 CH"
+          "displayName": "5 CH",
+          "parameters": 6,
+          "sourceMode": "Mode 3 5 DMX"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Stage_Par_400_Zoom_Ip.gdtf",
-        "file": "fixtures/acme/ACME@ACME_STAGEPAR_400_ZOOM_IP_(MP-400Z_IP)@ACME_STAGEPAR_400_ZOOM_IP_(MP-400Z_IP).gdtf",
-        "modes": {
-          "Mode 1 9 DMX": {
-            "channels": 9,
-            "gdtfMode": "Mode 1 9 DMX",
-            "status": "matched",
-            "parameters": 8
-          },
-          "Mode 2 7 DMX": {
-            "channels": 7,
-            "gdtfMode": "Mode 2 7 DMX",
-            "status": "matched",
-            "parameters": 7
-          },
-          "Mode 3 5 DMX": {
-            "channels": 5,
-            "gdtfMode": "Mode 3 5 DMX",
-            "status": "matched",
-            "parameters": 6
-          }
-        }
-      },
-      "shortName": "Par 400 Zoom IP"
+      "shortName": "Par 400 Zoom IP",
+      "image": "images/fixtures/acme/stage-par-400-zoom-ip.png",
+      "details": "json/fixture-details/f3361dc3e1adaefb08c9f15d3df8f036e24f1dc902ea0bc68dda19d0df018556.json",
+      "provenance": {
+        "fileName": "ACME@ACME_STAGEPAR_400_ZOOM_IP_(MP-400Z_IP)@ACME_STAGEPAR_400_ZOOM_IP_(MP-400Z_IP).gdtf",
+        "sha256": "f3361dc3e1adaefb08c9f15d3df8f036e24f1dc902ea0bc68dda19d0df018556",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Super Dotline",
@@ -1857,84 +1300,55 @@
       "modes": {
         "Mode 1 168 DMX": {
           "channels": 168,
-          "displayName": "168 CH"
+          "displayName": "168 CH",
+          "parameters": 225,
+          "sourceMode": "Mode 1 168 DMX"
         },
         "Mode 2 108 DMX": {
           "channels": 108,
-          "displayName": "108 CH"
+          "displayName": "108 CH",
+          "parameters": 141,
+          "sourceMode": "Mode 2 108 DMX"
         },
         "Mode 3 99 DMX": {
           "channels": 99,
-          "displayName": "99 CH"
+          "displayName": "99 CH",
+          "parameters": 133,
+          "sourceMode": "Mode 3 99 DMX"
         },
         "Mode 4 27 DMX": {
           "channels": 27,
-          "displayName": "27 CH"
+          "displayName": "27 CH",
+          "parameters": 29,
+          "sourceMode": "Mode 4 27 DMX"
         },
         "Mode 5 17 DMX": {
           "channels": 17,
-          "displayName": "17 CH"
+          "displayName": "17 CH",
+          "parameters": 19,
+          "sourceMode": "Mode 5 17 DMX"
         },
         "Mode 6 8+DMX": {
           "channels": 8,
-          "displayName": "8+CH"
+          "displayName": "8+CH",
+          "parameters": 7,
+          "sourceMode": "Mode 6 8+DMX"
         },
         "Mode 7 21DMX": {
           "channels": 21,
-          "displayName": "21CH"
+          "displayName": "21CH",
+          "parameters": 24,
+          "sourceMode": "Mode 7 21DMX"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Super_Dotline.gdtf",
-        "file": "fixtures/acme/ACME@ACME_SUPER_DOTLINE_(TB_1060_INT12)@ACME_SUPER_DOTLINE_(TB_1060_INT12).gdtf",
-        "modes": {
-          "Mode 1 168 DMX": {
-            "channels": 168,
-            "gdtfMode": "Mode 1 168 DMX",
-            "status": "matched",
-            "parameters": 225
-          },
-          "Mode 2 108 DMX": {
-            "channels": 108,
-            "gdtfMode": "Mode 2 108 DMX",
-            "status": "matched",
-            "parameters": 141
-          },
-          "Mode 3 99 DMX": {
-            "channels": 99,
-            "gdtfMode": "Mode 3 99 DMX",
-            "status": "matched",
-            "parameters": 133
-          },
-          "Mode 4 27 DMX": {
-            "channels": 27,
-            "gdtfMode": "Mode 4 27 DMX",
-            "status": "matched",
-            "parameters": 29
-          },
-          "Mode 5 17 DMX": {
-            "channels": 17,
-            "gdtfMode": "Mode 5 17 DMX",
-            "status": "matched",
-            "parameters": 19
-          },
-          "Mode 6 8+DMX": {
-            "channels": 8,
-            "gdtfMode": "Mode 6 8+DMX",
-            "status": "matched",
-            "parameters": 7
-          },
-          "Mode 7 21DMX": {
-            "channels": 21,
-            "gdtfMode": "Mode 7 21DMX",
-            "status": "matched",
-            "parameters": 24
-          }
-        }
-      },
-      "shortName": "Super Dotline"
+      "shortName": "Super Dotline",
+      "image": "images/fixtures/acme/super-dotline.png",
+      "details": "json/fixture-details/cf8cc92f5340b29dd9d4bfd4aac56326b32ea2a9bc7949a5d1e0b2cd2108c219.json",
+      "provenance": {
+        "fileName": "ACME@ACME_SUPER_DOTLINE_(TB_1060_INT12)@ACME_SUPER_DOTLINE_(TB_1060_INT12).gdtf",
+        "sha256": "cf8cc92f5340b29dd9d4bfd4aac56326b32ea2a9bc7949a5d1e0b2cd2108c219",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Supernova",
@@ -1943,54 +1357,37 @@
       "modes": {
         "Mode 1 43 DMX": {
           "channels": 43,
-          "displayName": "43 CH"
+          "displayName": "43 CH",
+          "parameters": 36,
+          "sourceMode": "Mode 1 43 DMX"
         },
         "Mode 2 34 DMX": {
           "channels": 34,
-          "displayName": "34 CH"
+          "displayName": "34 CH",
+          "parameters": 27,
+          "sourceMode": "Mode 2 34 DMX"
         },
         "Mode 3 32 DMX": {
           "channels": 32,
-          "displayName": "32 CH"
+          "displayName": "32 CH",
+          "parameters": 27,
+          "sourceMode": "Mode 3 32 DMX"
         },
         "Mode 4 23 DMX": {
           "channels": 23,
-          "displayName": "23 CH"
+          "displayName": "23 CH",
+          "parameters": 18,
+          "sourceMode": "Mode 4 23 DMX"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Supernova.gdtf",
-        "file": "fixtures/acme/ACME@ACME_SUPERNOVA_(XA_2000_BSWF_IP)@ACME_SUPERNOVA_(XA_2000_BSWF_IP).gdtf",
-        "modes": {
-          "Mode 1 43 DMX": {
-            "channels": 43,
-            "gdtfMode": "Mode 1 43 DMX",
-            "status": "matched",
-            "parameters": 36
-          },
-          "Mode 2 34 DMX": {
-            "channels": 34,
-            "gdtfMode": "Mode 2 34 DMX",
-            "status": "matched",
-            "parameters": 27
-          },
-          "Mode 3 32 DMX": {
-            "channels": 32,
-            "gdtfMode": "Mode 3 32 DMX",
-            "status": "matched",
-            "parameters": 27
-          },
-          "Mode 4 23 DMX": {
-            "channels": 23,
-            "gdtfMode": "Mode 4 23 DMX",
-            "status": "matched",
-            "parameters": 18
-          }
-        }
-      },
-      "shortName": "Supernova"
+      "shortName": "Supernova",
+      "image": "images/fixtures/acme/aeco-15--mana-profile--supernova.png",
+      "details": "json/fixture-details/ba191939396f52bdc2ab0bc0ba4b16b122e48fb231f814ddf15ab207d8716172.json",
+      "provenance": {
+        "fileName": "ACME@ACME_SUPERNOVA_(XA_2000_BSWF_IP)@ACME_SUPERNOVA_(XA_2000_BSWF_IP).gdtf",
+        "sha256": "ba191939396f52bdc2ab0bc0ba4b16b122e48fb231f814ddf15ab207d8716172",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Supernova Lt",
@@ -1999,54 +1396,37 @@
       "modes": {
         "Mode 1 44 DMX(Framing)": {
           "channels": 44,
-          "displayName": "44 CH(Framing)"
+          "displayName": "44 CH(Framing)",
+          "parameters": 37,
+          "sourceMode": "Mode 1 44 DMX(Framing)"
         },
         "Mode 2 32DMX(F-Wash)": {
           "channels": 32,
-          "displayName": "32CH(F-Wash)"
+          "displayName": "32CH(F-Wash)",
+          "parameters": 27,
+          "sourceMode": "Mode 2 32DMX(F-Wash)"
         },
         "Mode 3 35DMX(Spot)": {
           "channels": 35,
-          "displayName": "35CH(Spot)"
+          "displayName": "35CH(Spot)",
+          "parameters": 28,
+          "sourceMode": "Mode 3 35DMX(Spot)"
         },
         "Mode 4 23DMX(Wash)": {
           "channels": 23,
-          "displayName": "23CH(Wash)"
+          "displayName": "23CH(Wash)",
+          "parameters": 18,
+          "sourceMode": "Mode 4 23DMX(Wash)"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Supernova_Lt.gdtf",
-        "file": "fixtures/acme/ACME@ACME_SUPERNOVA_LT__(XA_2000_BSWF_IP_LT)__@ACME_SUPERNOVA_LT__(XA_2000_BSWF_IP_LT)__.gdtf",
-        "modes": {
-          "Mode 1 44 DMX(Framing)": {
-            "channels": 44,
-            "gdtfMode": "Mode 1 44 DMX(Framing)",
-            "status": "matched",
-            "parameters": 37
-          },
-          "Mode 2 32DMX(F-Wash)": {
-            "channels": 32,
-            "gdtfMode": "Mode 2 32DMX(F-Wash)",
-            "status": "matched",
-            "parameters": 27
-          },
-          "Mode 3 35DMX(Spot)": {
-            "channels": 35,
-            "gdtfMode": "Mode 3 35DMX(Spot)",
-            "status": "matched",
-            "parameters": 28
-          },
-          "Mode 4 23DMX(Wash)": {
-            "channels": 23,
-            "gdtfMode": "Mode 4 23DMX(Wash)",
-            "status": "matched",
-            "parameters": 18
-          }
-        }
-      },
-      "shortName": "Supernova LT"
+      "shortName": "Supernova LT",
+      "image": "images/fixtures/acme/supernova-lt.png",
+      "details": "json/fixture-details/e536543591af6ccf769e93abe3eebb3d49c6f337a608a07e9827e94307965014.json",
+      "provenance": {
+        "fileName": "ACME@ACME_SUPERNOVA_LT__(XA_2000_BSWF_IP_LT)__@ACME_SUPERNOVA_LT__(XA_2000_BSWF_IP_LT)__.gdtf",
+        "sha256": "e536543591af6ccf769e93abe3eebb3d49c6f337a608a07e9827e94307965014",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Tango",
@@ -2055,54 +1435,37 @@
       "modes": {
         "Mode1 10DMX": {
           "channels": 10,
-          "displayName": "10CH"
+          "displayName": "10CH",
+          "parameters": 9,
+          "sourceMode": "Mode1 10DMX"
         },
         "Mode2 8DMX": {
           "channels": 8,
-          "displayName": "8CH"
+          "displayName": "8CH",
+          "parameters": 7,
+          "sourceMode": "Mode2 8DMX"
         },
         "Mode3 5DMX": {
           "channels": 5,
-          "displayName": "5CH"
+          "displayName": "5CH",
+          "parameters": 6,
+          "sourceMode": "Mode3 5DMX"
         },
         "Mode4 4DMX": {
           "channels": 4,
-          "displayName": "4CH"
+          "displayName": "4CH",
+          "parameters": 5,
+          "sourceMode": "Mode4 4DMX"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Tango.gdtf",
-        "file": "fixtures/acme/ACME@ACME_TANGO_(PAR_7)@_ACME_TANGO_(PAR_7).gdtf",
-        "modes": {
-          "Mode1 10DMX": {
-            "channels": 10,
-            "gdtfMode": "Mode1 10DMX",
-            "status": "matched",
-            "parameters": 9
-          },
-          "Mode2 8DMX": {
-            "channels": 8,
-            "gdtfMode": "Mode2 8DMX",
-            "status": "matched",
-            "parameters": 7
-          },
-          "Mode3 5DMX": {
-            "channels": 5,
-            "gdtfMode": "Mode3 5DMX",
-            "status": "matched",
-            "parameters": 6
-          },
-          "Mode4 4DMX": {
-            "channels": 4,
-            "gdtfMode": "Mode4 4DMX",
-            "status": "matched",
-            "parameters": 5
-          }
-        }
-      },
-      "shortName": "Tango"
+      "shortName": "Tango",
+      "image": "images/fixtures/acme/tango.png",
+      "details": "json/fixture-details/b7c7bf58dc8920f44bbe871d17d43df4d4b611b505bc35359d47193c1b702297.json",
+      "provenance": {
+        "fileName": "ACME@ACME_TANGO_(PAR_7)@_ACME_TANGO_(PAR_7).gdtf",
+        "sha256": "b7c7bf58dc8920f44bbe871d17d43df4d4b611b505bc35359d47193c1b702297",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Theta",
@@ -2111,44 +1474,31 @@
       "modes": {
         "Mode 1 27 DMX": {
           "channels": 27,
-          "displayName": "27 CH"
+          "displayName": "27 CH",
+          "parameters": 25,
+          "sourceMode": "Mode 1 27 DMX"
         },
         "Mode 2 139 DMX": {
           "channels": 139,
-          "displayName": "139 CH"
+          "displayName": "139 CH",
+          "parameters": 166,
+          "sourceMode": "Mode 2 139 DMX"
         },
         "Mode 3 19DMX+": {
           "channels": 19,
-          "displayName": "19CH+"
+          "displayName": "19CH+",
+          "parameters": 16,
+          "sourceMode": "Mode 3 19DMX+"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Theta.gdtf",
-        "file": "fixtures/acme/ACME@ACME_THETA(CM_1000_ZF)@ACME_THETA(CM_1000_ZF).gdtf",
-        "modes": {
-          "Mode 1 27 DMX": {
-            "channels": 27,
-            "gdtfMode": "Mode 1 27 DMX",
-            "status": "matched",
-            "parameters": 25
-          },
-          "Mode 2 139 DMX": {
-            "channels": 139,
-            "gdtfMode": "Mode 2 139 DMX",
-            "status": "matched",
-            "parameters": 166
-          },
-          "Mode 3 19DMX+": {
-            "channels": 19,
-            "gdtfMode": "Mode 3 19DMX+",
-            "status": "matched",
-            "parameters": 16
-          }
-        }
-      },
-      "shortName": "Theta"
+      "shortName": "Theta",
+      "image": "images/fixtures/acme/theta.png",
+      "details": "json/fixture-details/df73ac01ba44545ca0b85561fd9eddcf8bc8cdf4d7e70a4f019c37c95383e595.json",
+      "provenance": {
+        "fileName": "ACME@ACME_THETA(CM_1000_ZF)@ACME_THETA(CM_1000_ZF).gdtf",
+        "sha256": "df73ac01ba44545ca0b85561fd9eddcf8bc8cdf4d7e70a4f019c37c95383e595",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Tornado",
@@ -2157,64 +1507,43 @@
       "modes": {
         "Mode 1 41DMX 1": {
           "channels": 41,
-          "displayName": "41CH 1"
+          "displayName": "41CH 1",
+          "parameters": 30,
+          "sourceMode": "Mode 1 41DMX 1"
         },
         "Mode 2 71 DMX": {
           "channels": 71,
-          "displayName": "71 CH"
+          "displayName": "71 CH",
+          "parameters": 70,
+          "sourceMode": "Mode 2 71 DMX"
         },
         "Mode 3 75 DMX": {
           "channels": 75,
-          "displayName": "75 CH"
+          "displayName": "75 CH",
+          "parameters": 74,
+          "sourceMode": "Mode 3 75 DMX"
         },
         "Mode 4 85 MDX": {
           "channels": 85,
-          "displayName": "85 MDX"
+          "displayName": "85 MDX",
+          "parameters": 74,
+          "sourceMode": "Mode 4 85 MDX"
         },
         "Mode 5 170DMX": {
           "channels": 170,
-          "displayName": "170CH"
+          "displayName": "170CH",
+          "parameters": 205,
+          "sourceMode": "Mode 5 170DMX"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Tornado.gdtf",
-        "file": "fixtures/acme/ACME@ACME_TORNADO@tornado.gdtf",
-        "modes": {
-          "Mode 1 41DMX 1": {
-            "channels": 41,
-            "gdtfMode": "Mode 1 41DMX 1",
-            "status": "matched",
-            "parameters": 30
-          },
-          "Mode 2 71 DMX": {
-            "channels": 71,
-            "gdtfMode": "Mode 2 71 DMX",
-            "status": "matched",
-            "parameters": 70
-          },
-          "Mode 3 75 DMX": {
-            "channels": 75,
-            "gdtfMode": "Mode 3 75 DMX",
-            "status": "matched",
-            "parameters": 74
-          },
-          "Mode 4 85 MDX": {
-            "channels": 85,
-            "gdtfMode": "Mode 4 85 MDX",
-            "status": "matched",
-            "parameters": 74
-          },
-          "Mode 5 170DMX": {
-            "channels": 170,
-            "gdtfMode": "Mode 5 170DMX",
-            "status": "matched",
-            "parameters": 205
-          }
-        }
-      },
-      "shortName": "Tornado"
+      "shortName": "Tornado",
+      "image": "images/fixtures/acme/tornado.png",
+      "details": "json/fixture-details/bef0e6b65b88b3ebc9c5adb90f8f8335d10fc625f42a6295b3ad93fdc97caa02.json",
+      "provenance": {
+        "fileName": "ACME@ACME_TORNADO@tornado.gdtf",
+        "sha256": "bef0e6b65b88b3ebc9c5adb90f8f8335d10fc625f42a6295b3ad93fdc97caa02",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Tv Light Panel 3000",
@@ -2223,57 +1552,45 @@
       "modes": {
         "Mode 1 28CH": {
           "channels": 28,
-          "displayName": "28CH"
+          "displayName": "28CH",
+          "parameters": 33,
+          "sourceMode": "Mode 1 28CH"
         },
         "Mode 2 10CH": {
           "channels": 10,
-          "displayName": "10CH"
+          "displayName": "10CH",
+          "parameters": 9,
+          "sourceMode": "Mode 2 10CH"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Tv_Light_Panel_3000.gdtf",
-        "file": "fixtures/acme/ACME@ACME_TV_LIGHT_PANEL_3000_(LP_F3000)@ACME_TV_LIGHT_PANEL_3000_(LP_F3000).gdtf",
-        "modes": {
-          "Mode 1 28CH": {
-            "channels": 28,
-            "gdtfMode": "Mode 1 28CH",
-            "status": "matched",
-            "parameters": 33
-          },
-          "Mode 2 10CH": {
-            "channels": 10,
-            "gdtfMode": "Mode 2 10CH",
-            "status": "matched",
-            "parameters": 9
-          }
-        }
-      },
-      "shortName": "Tv Panel 3000"
+      "shortName": "Tv Panel 3000",
+      "image": "images/fixtures/acme/tv-light-panel-3000.png",
+      "details": "json/fixture-details/7b9f8e4909ccc8aebbe038501af4b2f5464483b4a6b4c59c595ef5550936d5b4.json",
+      "provenance": {
+        "fileName": "ACME@ACME_TV_LIGHT_PANEL_3000_(LP_F3000)@ACME_TV_LIGHT_PANEL_3000_(LP_F3000).gdtf",
+        "sha256": "7b9f8e4909ccc8aebbe038501af4b2f5464483b4a6b4c59c595ef5550936d5b4",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Willow 200",
       "watts": 220,
       "weight": 9,
       "modes": {
-        "17 Channel (IV)": 17
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Willow_200.gdtf",
-        "file": "fixtures/acme/ACME@_ACME_WILLOW_(BSW_200_IV)@BSW_200_IV.gdtf",
-        "modes": {
-          "17 Channel (IV)": {
-            "channels": 17,
-            "gdtfMode": "17 Channel (IV)",
-            "status": "matched",
-            "parameters": 13
-          }
+        "17 Channel (IV)": {
+          "channels": 17,
+          "parameters": 13,
+          "sourceMode": "17 Channel (IV)"
         }
       },
-      "shortName": "Willow 200"
+      "shortName": "Willow 200",
+      "image": "images/fixtures/acme/willow-200.png",
+      "details": "json/fixture-details/5ef0a337676bb83933f75c741cc2b91e765bd06e19a64db7146af912eb6daaa5.json",
+      "provenance": {
+        "fileName": "ACME@_ACME_WILLOW_(BSW_200_IV)@BSW_200_IV.gdtf",
+        "sha256": "5ef0a337676bb83933f75c741cc2b91e765bd06e19a64db7146af912eb6daaa5",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Willow 500",
@@ -2282,24 +1599,19 @@
       "modes": {
         "18 DMX": {
           "channels": 18,
-          "displayName": "18 Channel"
+          "displayName": "18 Channel",
+          "parameters": 14,
+          "sourceMode": "18 DMX"
         }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/acme",
-        "suggestedFileName": "ACME__Willow_500.gdtf",
-        "file": "fixtures/acme/ACME@ACME_WILLOW_(BSW_500_III)@ACME_WILLOW_(BSW_500_III).gdtf",
-        "modes": {
-          "18 DMX": {
-            "channels": 18,
-            "gdtfMode": "18 DMX",
-            "status": "matched",
-            "parameters": 14
-          }
-        }
-      },
-      "shortName": "Willow 500"
+      "shortName": "Willow 500",
+      "image": "images/fixtures/acme/willow-500.png",
+      "details": "json/fixture-details/57909b60419b85a25e3e6fba550140a8705fd06fde0c92dc33fb2ce388e7998e.json",
+      "provenance": {
+        "fileName": "ACME@ACME_WILLOW_(BSW_500_III)@ACME_WILLOW_(BSW_500_III).gdtf",
+        "sha256": "57909b60419b85a25e3e6fba550140a8705fd06fde0c92dc33fb2ce388e7998e",
+        "extractedAt": "2026-11-05"
+      }
     }
   ]
 }

@@ -6,926 +6,744 @@
       "watts": 1900,
       "weight": 56.9,
       "modes": {
-        "Standard": 43
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/clay-paky",
-        "suggestedFileName": "Clay_Paky__Arolla_Aqua_HP.gdtf",
-        "file": "fixtures/clay-paky/Clay_Paky@Arolla_Aqua_HP@ClayPaky_FW_1_2.gdtf",
-        "modes": {
-          "Standard": {
-            "channels": 43,
-            "gdtfMode": "Standard",
-            "status": "matched",
-            "parameters": 36
-          }
+        "Standard": {
+          "channels": 43,
+          "parameters": 36,
+          "sourceMode": "Standard"
         }
       },
-      "shortName": "Arolla Aqua HP"
+      "shortName": "Arolla Aqua HP",
+      "image": "images/fixtures/clay-paky/arolla-aqua-hp.png",
+      "details": "json/fixture-details/040006eb53f76ab5abbcf5a60c552c1f2b0a670f14f49632180d1492ff5c5527.json",
+      "provenance": {
+        "fileName": "Clay_Paky@Arolla_Aqua_HP@ClayPaky_FW_1_2.gdtf",
+        "sha256": "040006eb53f76ab5abbcf5a60c552c1f2b0a670f14f49632180d1492ff5c5527",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Arolla Aqua M-LT",
       "watts": 900,
       "weight": 30.0,
       "modes": {
-        "Standard": 54,
-        "Basic": 44
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/clay-paky",
-        "suggestedFileName": "Clay_Paky__Arolla_Aqua_M_LT.gdtf",
-        "file": "fixtures/clay-paky/Clay_Paky@Arolla_Aqua_M-LT@ClayPaky_FW_1_2.gdtf",
-        "modes": {
-          "Standard": {
-            "channels": 54,
-            "gdtfMode": "Standard",
-            "status": "matched",
-            "parameters": 43
-          },
-          "Basic": {
-            "channels": 44,
-            "gdtfMode": "Basic",
-            "status": "matched",
-            "parameters": 38
-          }
+        "Standard": {
+          "channels": 54,
+          "parameters": 43,
+          "sourceMode": "Standard"
+        },
+        "Basic": {
+          "channels": 44,
+          "parameters": 38,
+          "sourceMode": "Basic"
         }
       },
-      "shortName": "Arolla Aqua M-LT"
+      "shortName": "Arolla Aqua M-LT",
+      "image": "images/fixtures/clay-paky/arolla-aqua-m-lt.png",
+      "details": "json/fixture-details/1fd38cfaf336ee28c4e247d679018141fb8e8d8f81e6a00eed17f1ecbeb161bc.json",
+      "provenance": {
+        "fileName": "Clay_Paky@Arolla_Aqua_M-LT@ClayPaky_FW_1_2.gdtf",
+        "sha256": "1fd38cfaf336ee28c4e247d679018141fb8e8d8f81e6a00eed17f1ecbeb161bc",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Arolla Aqua S-LT",
       "watts": 600,
       "weight": 26.0,
       "modes": {
-        "Standard": 54,
-        "Basic": 44
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/clay-paky",
-        "suggestedFileName": "Clay_Paky__Arolla_Aqua_S_LT.gdtf",
-        "file": "fixtures/clay-paky/Clay_Paky@Arolla_Aqua_S-LT@ClayPaky_FW_1_1.gdtf",
-        "modes": {
-          "Standard": {
-            "channels": 54,
-            "gdtfMode": "Standard",
-            "status": "matched",
-            "parameters": 43
-          },
-          "Basic": {
-            "channels": 44,
-            "gdtfMode": "Basic",
-            "status": "matched",
-            "parameters": 38
-          }
+        "Standard": {
+          "channels": 54,
+          "parameters": 43,
+          "sourceMode": "Standard"
+        },
+        "Basic": {
+          "channels": 44,
+          "parameters": 38,
+          "sourceMode": "Basic"
         }
       },
-      "shortName": "Arolla Aqua S-LT"
+      "shortName": "Arolla Aqua S-LT",
+      "image": "images/fixtures/clay-paky/arolla-aqua-s-lt.png",
+      "details": "json/fixture-details/8b090a86255728d999ffa3ab427371ad31d983b2e58d03ead7e23e56e2a02929.json",
+      "provenance": {
+        "fileName": "Clay_Paky@Arolla_Aqua_S-LT@ClayPaky_FW_1_1.gdtf",
+        "sha256": "8b090a86255728d999ffa3ab427371ad31d983b2e58d03ead7e23e56e2a02929",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Arolla Aqua Wash HC",
       "watts": 1580,
       "weight": 38.0,
       "modes": {
-        "Standard": 30
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/clay-paky",
-        "suggestedFileName": "Clay_Paky__Arolla_Aqua_Wash_HC.gdtf",
-        "file": "fixtures/clay-paky/Clay_Paky@Arolla_Aqua_Wash_HC@CP_FW_1_8.gdtf",
-        "modes": {
-          "Standard": {
-            "channels": 30,
-            "gdtfMode": "Standard",
-            "status": "matched",
-            "parameters": 25
-          }
+        "Standard": {
+          "channels": 30,
+          "parameters": 25,
+          "sourceMode": "Standard"
         }
       },
-      "shortName": "Arolla Aqua Wash HC"
+      "shortName": "Arolla Aqua Wash HC",
+      "image": "images/fixtures/clay-paky/arolla-aqua-wash-hc.png",
+      "details": "json/fixture-details/cbed59d8c11643e4e8364bc998a6fa4c5bc1b0eb64253e6337f59de2f764fef9.json",
+      "provenance": {
+        "fileName": "Clay_Paky@Arolla_Aqua_Wash_HC@CP_FW_1_8.gdtf",
+        "sha256": "cbed59d8c11643e4e8364bc998a6fa4c5bc1b0eb64253e6337f59de2f764fef9",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Arolla Profile HP",
       "watts": 1650,
       "weight": 44.7,
       "modes": {
-        "Standard": 39,
-        "Extended": 41
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/clay-paky",
-        "suggestedFileName": "Clay_Paky__Arolla_Profile_HP.gdtf",
-        "file": "fixtures/clay-paky/Clay_Paky@Arolla_Profile_HP@ClayPaky_Official_File_Fw_Ver_5_5.gdtf",
-        "modes": {
-          "Standard": {
-            "channels": 39,
-            "gdtfMode": "Standard",
-            "status": "matched",
-            "parameters": 35
-          },
-          "Extended": {
-            "channels": 41,
-            "gdtfMode": "Extended",
-            "status": "matched",
-            "parameters": 35
-          }
+        "Standard": {
+          "channels": 39,
+          "parameters": 35,
+          "sourceMode": "Standard"
+        },
+        "Extended": {
+          "channels": 41,
+          "parameters": 35,
+          "sourceMode": "Extended"
         }
       },
-      "shortName": "Arolla Prof HP"
+      "shortName": "Arolla Prof HP",
+      "image": "images/fixtures/clay-paky/arolla-profile-hp--arolla-profile-mp.png",
+      "details": "json/fixture-details/543633e474bbc17d47ab4d7e6f62ac91d4ad3a40b6bea4a90393d393616b5f2b.json",
+      "provenance": {
+        "fileName": "Clay_Paky@Arolla_Profile_HP@ClayPaky_Official_File_Fw_Ver_5_5.gdtf",
+        "sha256": "543633e474bbc17d47ab4d7e6f62ac91d4ad3a40b6bea4a90393d393616b5f2b",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Arolla Profile MP",
       "watts": 740,
       "weight": 25.0,
       "modes": {
-        "Standard ": 37
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/clay-paky",
-        "suggestedFileName": "Clay_Paky__Arolla_Profile_MP.gdtf",
-        "file": "fixtures/clay-paky/Clay_Paky@Arolla_Profile_MP@2026.gdtf",
-        "modes": {
-          "Standard ": {
-            "channels": 37,
-            "gdtfMode": "Standard ",
-            "status": "matched",
-            "parameters": 33
-          }
+        "Standard ": {
+          "channels": 37,
+          "parameters": 33,
+          "sourceMode": "Standard "
         }
       },
-      "shortName": "Arolla Prof MP"
+      "shortName": "Arolla Prof MP",
+      "image": "images/fixtures/clay-paky/arolla-profile-hp--arolla-profile-mp.png",
+      "details": "json/fixture-details/d8f0c3f1a61571916e4c585474864ecd1553cdeb7b7d4e744ff9c95bba1cacb2.json",
+      "provenance": {
+        "fileName": "Clay_Paky@Arolla_Profile_MP@2026.gdtf",
+        "sha256": "d8f0c3f1a61571916e4c585474864ecd1553cdeb7b7d4e744ff9c95bba1cacb2",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Arolla Spot MP",
       "watts": 740,
       "weight": 24.0,
       "modes": {
-        "Standard ": 29,
-        "Extended": 31
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/clay-paky",
-        "suggestedFileName": "Clay_Paky__Arolla_Spot_MP.gdtf",
-        "file": "fixtures/clay-paky/Clay_Paky@Arolla_Spot_MP@ClayPaky_Official_File_Fw_Ver_5_5.gdtf",
-        "modes": {
-          "Standard ": {
-            "channels": 29,
-            "gdtfMode": "Standard ",
-            "status": "matched",
-            "parameters": 24
-          },
-          "Extended": {
-            "channels": 31,
-            "gdtfMode": "Extended",
-            "status": "matched",
-            "parameters": 24
-          }
+        "Standard ": {
+          "channels": 29,
+          "parameters": 24,
+          "sourceMode": "Standard "
+        },
+        "Extended": {
+          "channels": 31,
+          "parameters": 24,
+          "sourceMode": "Extended"
         }
       },
-      "shortName": "Arolla Spot MP"
+      "shortName": "Arolla Spot MP",
+      "image": "images/fixtures/clay-paky/arolla-spot-mp.png",
+      "details": "json/fixture-details/6f564ea0f131a24b382d0a9cc6470eb213298a11b8bf3f4af086fec48d3d78be.json",
+      "provenance": {
+        "fileName": "Clay_Paky@Arolla_Spot_MP@ClayPaky_Official_File_Fw_Ver_5_5.gdtf",
+        "sha256": "6f564ea0f131a24b382d0a9cc6470eb213298a11b8bf3f4af086fec48d3d78be",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "B-Eye K20",
       "watts": 794,
       "weight": 27.5,
       "modes": {
-        "Shapes": 35,
-        "Standard": 21,
-        "Pixels RGB": 111,
-        "Pixels RGBW": 148
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/clay-paky",
-        "suggestedFileName": "Clay_Paky__B_Eye_K20.gdtf",
-        "file": "fixtures/clay-paky/Clay_Paky@Aleda_B-EYE_K20@ClayPaky_Official_File_Fw_Ver_2_26_002.gdtf",
-        "modes": {
-          "Shapes": {
-            "channels": 35,
-            "gdtfMode": "Shapes",
-            "status": "matched",
-            "parameters": 28
-          },
-          "Standard": {
-            "channels": 21,
-            "gdtfMode": "Standard",
-            "status": "matched",
-            "parameters": 14
-          },
-          "Pixels RGB": {
-            "channels": 111,
-            "gdtfMode": "Pixels RGB",
-            "status": "matched",
-            "parameters": 111
-          },
-          "Pixels RGBW": {
-            "channels": 148,
-            "gdtfMode": "Pixels RGBW",
-            "status": "matched",
-            "parameters": 148
-          }
+        "Shapes": {
+          "channels": 35,
+          "parameters": 28,
+          "sourceMode": "Shapes"
+        },
+        "Standard": {
+          "channels": 21,
+          "parameters": 14,
+          "sourceMode": "Standard"
+        },
+        "Pixels RGB": {
+          "channels": 111,
+          "parameters": 111,
+          "sourceMode": "Pixels RGB"
+        },
+        "Pixels RGBW": {
+          "channels": 148,
+          "parameters": 148,
+          "sourceMode": "Pixels RGBW"
         }
       },
-      "shortName": "B-Eye K20"
+      "shortName": "B-Eye K20",
+      "image": "images/fixtures/clay-paky/b-eye-k20.png",
+      "details": "json/fixture-details/ff6d3467a82ac27096f46be6412519a0bccc0aa7bdd09eddf50db0a3b2229e41.json",
+      "provenance": {
+        "fileName": "Clay_Paky@Aleda_B-EYE_K20@ClayPaky_Official_File_Fw_Ver_2_26_002.gdtf",
+        "sha256": "ff6d3467a82ac27096f46be6412519a0bccc0aa7bdd09eddf50db0a3b2229e41",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "B-Eye K25",
       "watts": 288,
       "weight": 27.5,
       "modes": {
-        "Shapes + Frequency": 36,
-        "Shapes": 35,
-        "Standard + Frequency": 22,
-        "Standard": 21,
-        "Pixels RGB": 111,
-        "Pixels RGBW": 148
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/clay-paky",
-        "suggestedFileName": "Clay_Paky__B_Eye_K25.gdtf",
-        "file": "fixtures/clay-paky/Clay_Paky@HY_B-EYE_K25@ClayPaky_Official_File_Fw_Ver_2_26_002.gdtf",
-        "modes": {
-          "Shapes + Frequency": {
-            "channels": 36,
-            "gdtfMode": "Shapes + Frequency",
-            "status": "matched",
-            "parameters": 29
-          },
-          "Shapes": {
-            "channels": 35,
-            "gdtfMode": "Shapes",
-            "status": "matched",
-            "parameters": 28
-          },
-          "Standard + Frequency": {
-            "channels": 22,
-            "gdtfMode": "Standard + Frequency",
-            "status": "matched",
-            "parameters": 15
-          },
-          "Standard": {
-            "channels": 21,
-            "gdtfMode": "Standard",
-            "status": "matched",
-            "parameters": 14
-          },
-          "Pixels RGB": {
-            "channels": 111,
-            "gdtfMode": "Pixels RGB",
-            "status": "matched",
-            "parameters": 111
-          },
-          "Pixels RGBW": {
-            "channels": 148,
-            "gdtfMode": "Pixels RGBW",
-            "status": "matched",
-            "parameters": 148
-          }
+        "Shapes + Frequency": {
+          "channels": 36,
+          "parameters": 29,
+          "sourceMode": "Shapes + Frequency"
+        },
+        "Shapes": {
+          "channels": 35,
+          "parameters": 28,
+          "sourceMode": "Shapes"
+        },
+        "Standard + Frequency": {
+          "channels": 22,
+          "parameters": 15,
+          "sourceMode": "Standard + Frequency"
+        },
+        "Standard": {
+          "channels": 21,
+          "parameters": 14,
+          "sourceMode": "Standard"
+        },
+        "Pixels RGB": {
+          "channels": 111,
+          "parameters": 111,
+          "sourceMode": "Pixels RGB"
+        },
+        "Pixels RGBW": {
+          "channels": 148,
+          "parameters": 148,
+          "sourceMode": "Pixels RGBW"
         }
       },
-      "shortName": "B-Eye K25"
+      "shortName": "B-Eye K25",
+      "image": "images/fixtures/clay-paky/b-eye-k25.png",
+      "details": "json/fixture-details/eb91ef3aaab455afbd807a6cc083ac11c191e59182951edd0c6e7dfb4970411f.json",
+      "provenance": {
+        "fileName": "Clay_Paky@HY_B-EYE_K25@ClayPaky_Official_File_Fw_Ver_2_26_002.gdtf",
+        "sha256": "eb91ef3aaab455afbd807a6cc083ac11c191e59182951edd0c6e7dfb4970411f",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "HY B-Eye K15",
       "watts": 700,
       "weight": 20.7,
       "modes": {
-        "Shapes + Frequency": 36,
-        "Shapes": 35,
-        "Standard + Frequency": 22,
-        "Standard": 21
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/clay-paky",
-        "suggestedFileName": "Clay_Paky__HY_B_Eye_K15.gdtf",
-        "file": "fixtures/clay-paky/Clay_Paky@HY_B-EYE_K15@Claypaky_Official_File_Fw_V.2.26.002.gdtf",
-        "modes": {
-          "Shapes + Frequency": {
-            "channels": 36,
-            "gdtfMode": "Shapes + Frequency",
-            "status": "matched",
-            "parameters": 29
-          },
-          "Shapes": {
-            "channels": 35,
-            "gdtfMode": "Shapes",
-            "status": "matched",
-            "parameters": 28
-          },
-          "Standard + Frequency": {
-            "channels": 22,
-            "gdtfMode": "Standard + Frequency",
-            "status": "matched",
-            "parameters": 15
-          },
-          "Standard": {
-            "channels": 21,
-            "gdtfMode": "Standard",
-            "status": "matched",
-            "parameters": 14
-          }
+        "Shapes + Frequency": {
+          "channels": 36,
+          "parameters": 29,
+          "sourceMode": "Shapes + Frequency"
+        },
+        "Shapes": {
+          "channels": 35,
+          "parameters": 28,
+          "sourceMode": "Shapes"
+        },
+        "Standard + Frequency": {
+          "channels": 22,
+          "parameters": 15,
+          "sourceMode": "Standard + Frequency"
+        },
+        "Standard": {
+          "channels": 21,
+          "parameters": 14,
+          "sourceMode": "Standard"
         }
       },
-      "shortName": "HY B-Eye K15"
+      "shortName": "HY B-Eye K15",
+      "image": "images/fixtures/clay-paky/hy-b-eye-k15.png",
+      "details": "json/fixture-details/54b0dd5ce197fe391317b378e750fef1188502603e9cd8a5ae9f061550daed95.json",
+      "provenance": {
+        "fileName": "Clay_Paky@HY_B-EYE_K15@Claypaky_Official_File_Fw_V.2.26.002.gdtf",
+        "sha256": "54b0dd5ce197fe391317b378e750fef1188502603e9cd8a5ae9f061550daed95",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "HY B-Eye K15 Aqua",
       "watts": 680,
       "weight": 27.8,
       "modes": {
-        "106 DMX": 37,
-        "Shape Freq": 36,
-        "Shape": 35,
-        "Standard Freq": 22,
-        "Standard": 21,
-        "Pixel RGBW": 76
-      },
-      "gdtf": {
-        "status": "pending-download",
-        "folder": "fixtures/clay-paky",
-        "suggestedFileName": "Clay_Paky__HY_B_Eye_K15_Aqua.gdtf",
-        "file": "",
-        "modes": {
-          "106 DMX": {
-            "channels": 37,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Shape Freq": {
-            "channels": 36,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Shape": {
-            "channels": 35,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Standard Freq": {
-            "channels": 22,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Standard": {
-            "channels": 21,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "Pixel RGBW": {
-            "channels": 76,
-            "gdtfMode": "",
-            "status": "pending-match"
-          }
+        "106 DMX": {
+          "channels": 37,
+          "parameters": null
+        },
+        "Shape Freq": {
+          "channels": 36,
+          "parameters": null
+        },
+        "Shape": {
+          "channels": 35,
+          "parameters": null
+        },
+        "Standard Freq": {
+          "channels": 22,
+          "parameters": null
+        },
+        "Standard": {
+          "channels": 21,
+          "parameters": null
+        },
+        "Pixel RGBW": {
+          "channels": 76,
+          "parameters": null
         }
       },
-      "shortName": "HY B-Eye K15 Aqua"
+      "shortName": "HY B-Eye K15 Aqua",
+      "image": "",
+      "details": ""
     },
     {
       "fixture": "Midi-B",
       "watts": 830,
       "weight": 19.0,
       "modes": {
-        "Extended RGBW 16bit": 37,
-        "Extended RGBW": 25,
-        "Basic RGBW 16bit": 21,
-        "Basic RGBW": 17
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/clay-paky",
-        "suggestedFileName": "Clay_Paky__Midi_B.gdtf",
-        "file": "fixtures/clay-paky/Clay_Paky@Midi-B@ClayPaky_FW_5_3.gdtf",
-        "modes": {
-          "Extended RGBW 16bit": {
-            "channels": 37,
-            "gdtfMode": "Extended RGBW 16bit",
-            "status": "matched",
-            "parameters": 25
-          },
-          "Extended RGBW": {
-            "channels": 25,
-            "gdtfMode": "Extended RGBW",
-            "status": "matched",
-            "parameters": 25
-          },
-          "Basic RGBW 16bit": {
-            "channels": 21,
-            "gdtfMode": "Basic RGBW 16bit",
-            "status": "matched",
-            "parameters": 14
-          },
-          "Basic RGBW": {
-            "channels": 17,
-            "gdtfMode": "Basic RGBW",
-            "status": "matched",
-            "parameters": 14
-          }
+        "Extended RGBW 16bit": {
+          "channels": 37,
+          "parameters": 25,
+          "sourceMode": "Extended RGBW 16bit"
+        },
+        "Extended RGBW": {
+          "channels": 25,
+          "parameters": 25,
+          "sourceMode": "Extended RGBW"
+        },
+        "Basic RGBW 16bit": {
+          "channels": 21,
+          "parameters": 14,
+          "sourceMode": "Basic RGBW 16bit"
+        },
+        "Basic RGBW": {
+          "channels": 17,
+          "parameters": 14,
+          "sourceMode": "Basic RGBW"
         }
       },
-      "shortName": "Midi-B"
+      "shortName": "Midi-B",
+      "image": "images/fixtures/clay-paky/midi-b.png",
+      "details": "json/fixture-details/50d9619d65808a0385fbc38c1776cc57df75e6405c9980d8d25026c9a7f6ec36.json",
+      "provenance": {
+        "fileName": "Clay_Paky@Midi-B@ClayPaky_FW_5_3.gdtf",
+        "sha256": "50d9619d65808a0385fbc38c1776cc57df75e6405c9980d8d25026c9a7f6ec36",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Mini-B",
       "watts": 375,
       "weight": 6.5,
       "modes": {
-        "Basic RGBW ": 17,
-        "Basic RGBW 16bit ": 21,
-        "Extended RGBW": 21,
-        "Extended RGBW16bit": 29
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/clay-paky",
-        "suggestedFileName": "Clay_Paky__Mini_B.gdtf",
-        "file": "fixtures/clay-paky/Clay_Paky@Mini-B@Updated_Defaults.gdtf",
-        "modes": {
-          "Basic RGBW ": {
-            "channels": 17,
-            "gdtfMode": "Basic RGBW ",
-            "status": "matched",
-            "parameters": 14
-          },
-          "Basic RGBW 16bit ": {
-            "channels": 21,
-            "gdtfMode": "Basic RGBW 16bit ",
-            "status": "matched",
-            "parameters": 14
-          },
-          "Extended RGBW": {
-            "channels": 21,
-            "gdtfMode": "Extended RGBW",
-            "status": "matched",
-            "parameters": 20
-          },
-          "Extended RGBW16bit": {
-            "channels": 29,
-            "gdtfMode": "Extended RGBW16bit",
-            "status": "matched",
-            "parameters": 20
-          }
+        "Basic RGBW ": {
+          "channels": 17,
+          "parameters": 14,
+          "sourceMode": "Basic RGBW "
+        },
+        "Basic RGBW 16bit ": {
+          "channels": 21,
+          "parameters": 14,
+          "sourceMode": "Basic RGBW 16bit "
+        },
+        "Extended RGBW": {
+          "channels": 21,
+          "parameters": 20,
+          "sourceMode": "Extended RGBW"
+        },
+        "Extended RGBW16bit": {
+          "channels": 29,
+          "parameters": 20,
+          "sourceMode": "Extended RGBW16bit"
         }
       },
-      "shortName": "Mini-B"
+      "shortName": "Mini-B",
+      "image": "images/fixtures/clay-paky/mini-b.png",
+      "details": "json/fixture-details/15ca05a1091433a70e72412c0d3ca5684b70a4394e73ed246497661c3ff2df0a.json",
+      "provenance": {
+        "fileName": "Clay_Paky@Mini-B@Updated_Defaults.gdtf",
+        "sha256": "15ca05a1091433a70e72412c0d3ca5684b70a4394e73ed246497661c3ff2df0a",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Scenius Unico",
       "watts": 1400,
       "weight": 45.599998,
       "modes": {
-        "Vector": 44,
-        "Standard": 40
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/clay-paky",
-        "suggestedFileName": "Clay_Paky__Scenius_Unico.gdtf",
-        "file": "fixtures/clay-paky/Clay_Paky@Scenius_Unico@fixed_shaper_rot_and_grandmaster_-_still_needs_colorwheelfix.gdtf",
-        "modes": {
-          "Vector": {
-            "channels": 44,
-            "gdtfMode": "Vector",
-            "status": "matched",
-            "parameters": 39
-          },
-          "Standard": {
-            "channels": 40,
-            "gdtfMode": "Standard",
-            "status": "matched",
-            "parameters": 35
-          }
+        "Vector": {
+          "channels": 44,
+          "parameters": 39,
+          "sourceMode": "Vector"
+        },
+        "Standard": {
+          "channels": 40,
+          "parameters": 35,
+          "sourceMode": "Standard"
         }
       },
-      "shortName": "Scenius Unico"
+      "shortName": "Scenius Unico",
+      "image": "images/fixtures/clay-paky/scenius-unico.png",
+      "details": "json/fixture-details/7d785e84c4540aa3222dbf085d391173d2e1a267bc75d7fbfb4b70b8db325a60.json",
+      "provenance": {
+        "fileName": "Clay_Paky@Scenius_Unico@fixed_shaper_rot_and_grandmaster_-_still_needs_colorwheelfix.gdtf",
+        "sha256": "7d785e84c4540aa3222dbf085d391173d2e1a267bc75d7fbfb4b70b8db325a60",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Sharpy",
       "watts": 280,
       "weight": 19,
       "modes": {
-        "Standard": 16,
-        "Vector": 20
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/clay-paky",
-        "suggestedFileName": "Clay_Paky__Sharpy.gdtf",
-        "file": "fixtures/clay-paky/Clay_Paky@Sharpy@ClayPaky_Official_File_Fw_Ver_2_25_006.gdtf",
-        "modes": {
-          "Standard": {
-            "channels": 16,
-            "gdtfMode": "Standard",
-            "status": "matched",
-            "parameters": 14
-          },
-          "Vector": {
-            "channels": 20,
-            "gdtfMode": "Vector",
-            "status": "matched",
-            "parameters": 18
-          }
+        "Standard": {
+          "channels": 16,
+          "parameters": 14,
+          "sourceMode": "Standard"
+        },
+        "Vector": {
+          "channels": 20,
+          "parameters": 18,
+          "sourceMode": "Vector"
         }
       },
-      "shortName": "Sharpy"
+      "shortName": "Sharpy",
+      "image": "images/fixtures/clay-paky/sharpy.png",
+      "details": "json/fixture-details/af21741b90ab3002c9ae5c62b066c445433c8710d82814163447cf7a410f2571.json",
+      "provenance": {
+        "fileName": "Clay_Paky@Sharpy@ClayPaky_Official_File_Fw_Ver_2_25_006.gdtf",
+        "sha256": "af21741b90ab3002c9ae5c62b066c445433c8710d82814163447cf7a410f2571",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Sharpy Plus",
       "watts": 540,
       "weight": 23,
       "modes": {
-        "Standard ": 31
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/clay-paky",
-        "suggestedFileName": "Clay_Paky__Sharpy_Plus.gdtf",
-        "file": "fixtures/clay-paky/Clay_Paky@Sharpy_Plus@ClayPaky_Official_File_Fw_Ver_2_5.gdtf",
-        "modes": {
-          "Standard ": {
-            "channels": 31,
-            "gdtfMode": "Standard ",
-            "status": "matched",
-            "parameters": 26
-          }
+        "Standard ": {
+          "channels": 31,
+          "parameters": 26,
+          "sourceMode": "Standard "
         }
       },
-      "shortName": "Sharpy+"
+      "shortName": "Sharpy+",
+      "image": "images/fixtures/clay-paky/sharpy-plus.png",
+      "details": "json/fixture-details/42cb6395599276aa2ef5049dd27b4a4d9b38042e25a5efdfd6834b32fc33ea1a.json",
+      "provenance": {
+        "fileName": "Clay_Paky@Sharpy_Plus@ClayPaky_Official_File_Fw_Ver_2_5.gdtf",
+        "sha256": "42cb6395599276aa2ef5049dd27b4a4d9b38042e25a5efdfd6834b32fc33ea1a",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Sharpy Wash",
       "watts": 280,
       "weight": 19.0,
       "modes": {
-        "Standard": 19,
-        "Vector": 22
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/clay-paky",
-        "suggestedFileName": "Clay_Paky__Sharpy_Wash.gdtf",
-        "file": "fixtures/clay-paky/Clay_Paky@Sharpy_Wash_330@ClayPaky_FW_2_25_006.gdtf",
-        "modes": {
-          "Standard": {
-            "channels": 19,
-            "gdtfMode": "Standard",
-            "status": "matched",
-            "parameters": 16
-          },
-          "Vector": {
-            "channels": 22,
-            "gdtfMode": "Vector",
-            "status": "matched",
-            "parameters": 19
-          }
+        "Standard": {
+          "channels": 19,
+          "parameters": 16,
+          "sourceMode": "Standard"
+        },
+        "Vector": {
+          "channels": 22,
+          "parameters": 19,
+          "sourceMode": "Vector"
         }
       },
-      "shortName": "Sharpy Wash"
+      "shortName": "Sharpy Wash",
+      "image": "images/fixtures/clay-paky/sharpy-wash.png",
+      "details": "json/fixture-details/5c9ff65d21ed1e7ed367d9d9746d31b965363dff479f307b4556bcf3ed8807d8.json",
+      "provenance": {
+        "fileName": "Clay_Paky@Sharpy_Wash_330@ClayPaky_FW_2_25_006.gdtf",
+        "sha256": "5c9ff65d21ed1e7ed367d9d9746d31b965363dff479f307b4556bcf3ed8807d8",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Sharpy X Frame",
       "watts": 750,
       "weight": 28,
       "modes": {
-        "Standard": 43
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/clay-paky",
-        "suggestedFileName": "Clay_Paky__Sharpy_X_Frame.gdtf",
-        "file": "fixtures/clay-paky/Clay_Paky@Sharpy_X_Frame@ClayPaky_Official_File_Fw_Ver_6_6_-_Added_Filters.gdtf",
-        "modes": {
-          "Standard": {
-            "channels": 43,
-            "gdtfMode": "Standard",
-            "status": "matched",
-            "parameters": 38
-          }
+        "Standard": {
+          "channels": 43,
+          "parameters": 38,
+          "sourceMode": "Standard"
         }
       },
-      "shortName": "Sharpy X Frame"
+      "shortName": "Sharpy X Frame",
+      "image": "images/fixtures/clay-paky/sharpy-x-frame.png",
+      "details": "json/fixture-details/610320f722e25fe90461ae65cf0810711f1aa45ae61b45ac73f768191ea73f2c.json",
+      "provenance": {
+        "fileName": "Clay_Paky@Sharpy_X_Frame@ClayPaky_Official_File_Fw_Ver_6_6_-_Added_Filters.gdtf",
+        "sha256": "610320f722e25fe90461ae65cf0810711f1aa45ae61b45ac73f768191ea73f2c",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Skylos",
       "watts": 900,
       "weight": 59.0,
       "modes": {
-        "Standard ": 20
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/clay-paky",
-        "suggestedFileName": "Clay_Paky__Skylos.gdtf",
-        "file": "fixtures/clay-paky/Clay_Paky@Skylos@ClayPaky_FW_3_2_894.gdtf",
-        "modes": {
-          "Standard ": {
-            "channels": 20,
-            "gdtfMode": "Standard ",
-            "status": "matched",
-            "parameters": 17
-          }
+        "Standard ": {
+          "channels": 20,
+          "parameters": 17,
+          "sourceMode": "Standard "
         }
       },
-      "shortName": "Skylos"
+      "shortName": "Skylos",
+      "image": "images/fixtures/clay-paky/skylos.png",
+      "details": "json/fixture-details/d73e0bf7fdfb6a50414680199ed346862d1b34b3e9e14a15ca626d4f0eb47791.json",
+      "provenance": {
+        "fileName": "Clay_Paky@Skylos@ClayPaky_FW_3_2_894.gdtf",
+        "sha256": "d73e0bf7fdfb6a50414680199ed346862d1b34b3e9e14a15ca626d4f0eb47791",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Tambora Glare",
       "watts": 480,
       "weight": 14.0,
       "modes": {
-        "Advanced": 52,
-        "Standard": 41,
-        "Basic": 19,
-        "Pixels RGBA": 40,
-        "Single Cell 100ch": 100,
-        "Double Cell 50ch": 50,
-        "Basic+RGBA+DoubleCell": 109,
-        "Basic+RGBA+SingleCell": 159
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/clay-paky",
-        "suggestedFileName": "Clay_Paky__Tambora_Glare.gdtf",
-        "file": "fixtures/clay-paky/Clay_Paky@Tambora_Glare@Added_new_ch_modes.gdtf",
-        "modes": {
-          "Advanced": {
-            "channels": 52,
-            "gdtfMode": "Advanced",
-            "status": "matched",
-            "parameters": 50
-          },
-          "Standard": {
-            "channels": 41,
-            "gdtfMode": "Standard",
-            "status": "matched",
-            "parameters": 36
-          },
-          "Basic": {
-            "channels": 19,
-            "gdtfMode": "Basic",
-            "status": "matched",
-            "parameters": 18
-          },
-          "Pixels RGBA": {
-            "channels": 40,
-            "gdtfMode": "Pixels RGBA",
-            "status": "matched",
-            "parameters": 50
-          },
-          "Single Cell 100ch": {
-            "channels": 100,
-            "gdtfMode": "Single Cell 100ch",
-            "status": "matched",
-            "parameters": 200
-          },
-          "Double Cell 50ch": {
-            "channels": 50,
-            "gdtfMode": "Double Cell 50ch",
-            "status": "matched",
-            "parameters": 100
-          },
-          "Basic+RGBA+DoubleCell": {
-            "channels": 109,
-            "gdtfMode": "Basic+RGBA+DoubleCell",
-            "status": "matched",
-            "parameters": 168
-          },
-          "Basic+RGBA+SingleCell": {
-            "channels": 159,
-            "gdtfMode": "Basic+RGBA+SingleCell",
-            "status": "matched",
-            "parameters": 268
-          }
+        "Advanced": {
+          "channels": 52,
+          "parameters": 50,
+          "sourceMode": "Advanced"
+        },
+        "Standard": {
+          "channels": 41,
+          "parameters": 36,
+          "sourceMode": "Standard"
+        },
+        "Basic": {
+          "channels": 19,
+          "parameters": 18,
+          "sourceMode": "Basic"
+        },
+        "Pixels RGBA": {
+          "channels": 40,
+          "parameters": 50,
+          "sourceMode": "Pixels RGBA"
+        },
+        "Single Cell 100ch": {
+          "channels": 100,
+          "parameters": 200,
+          "sourceMode": "Single Cell 100ch"
+        },
+        "Double Cell 50ch": {
+          "channels": 50,
+          "parameters": 100,
+          "sourceMode": "Double Cell 50ch"
+        },
+        "Basic+RGBA+DoubleCell": {
+          "channels": 109,
+          "parameters": 168,
+          "sourceMode": "Basic+RGBA+DoubleCell"
+        },
+        "Basic+RGBA+SingleCell": {
+          "channels": 159,
+          "parameters": 268,
+          "sourceMode": "Basic+RGBA+SingleCell"
         }
       },
-      "shortName": "Tambora Glare"
+      "shortName": "Tambora Glare",
+      "image": "images/fixtures/clay-paky/tambora-glare.png",
+      "details": "json/fixture-details/867bf889b2e88f2bd03c67eab6d962bdc354167bafb7d9afb069fe1439c22e96.json",
+      "provenance": {
+        "fileName": "Clay_Paky@Tambora_Glare@Added_new_ch_modes.gdtf",
+        "sha256": "867bf889b2e88f2bd03c67eab6d962bdc354167bafb7d9afb069fe1439c22e96",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Ultimo Hybrid",
       "watts": 850,
       "weight": 41.9,
       "modes": {
-        "Standard": 43
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/clay-paky",
-        "suggestedFileName": "Clay_Paky__Ultimo_Hybrid.gdtf",
-        "file": "fixtures/clay-paky/Clay_Paky@Ultimo_Hybrid@ClayPaky_FW_1_2_-_New_Geometries.gdtf",
-        "modes": {
-          "Standard": {
-            "channels": 43,
-            "gdtfMode": "Standard",
-            "status": "matched",
-            "parameters": 38
-          }
+        "Standard": {
+          "channels": 43,
+          "parameters": 38,
+          "sourceMode": "Standard"
         }
       },
-      "shortName": "Ultimo Hybrid"
+      "shortName": "Ultimo Hybrid",
+      "image": "images/fixtures/clay-paky/ultimo-hybrid.png",
+      "details": "json/fixture-details/dc711ab202b6c438b9dbeb993dca4233bf6db2a7176c280a4549745f000356ec.json",
+      "provenance": {
+        "fileName": "Clay_Paky@Ultimo_Hybrid@ClayPaky_FW_1_2_-_New_Geometries.gdtf",
+        "sha256": "dc711ab202b6c438b9dbeb993dca4233bf6db2a7176c280a4549745f000356ec",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Volero Cube",
       "watts": 500,
       "weight": 15.4,
       "modes": {
-        "Standard OLD": 22,
-        "Shape OLD": 41,
-        "Advanced OLD": 45,
-        "Basic": 25,
-        "Standard": 43,
-        "Advanced": 50,
-        "RGBW": 16,
-        "Strobe": 8
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/clay-paky",
-        "suggestedFileName": "Clay_Paky__Volero_Cube.gdtf",
-        "file": "fixtures/clay-paky/Clay_Paky@Volero_Cube@ClayPaky_FW_CPU_1_1_006_DRV1_2_000_-_New_Geometries.gdtf",
-        "modes": {
-          "Standard OLD": {
-            "channels": 22,
-            "gdtfMode": "Standard OLD",
-            "status": "matched",
-            "parameters": 19
-          },
-          "Shape OLD": {
-            "channels": 41,
-            "gdtfMode": "Shape OLD",
-            "status": "matched",
-            "parameters": 34
-          },
-          "Advanced OLD": {
-            "channels": 45,
-            "gdtfMode": "Advanced OLD",
-            "status": "matched",
-            "parameters": 42
-          },
-          "Basic": {
-            "channels": 25,
-            "gdtfMode": "Basic",
-            "status": "matched",
-            "parameters": 22
-          },
-          "Standard": {
-            "channels": 43,
-            "gdtfMode": "Standard",
-            "status": "matched",
-            "parameters": 36
-          },
-          "Advanced": {
-            "channels": 50,
-            "gdtfMode": "Advanced",
-            "status": "matched",
-            "parameters": 46
-          },
-          "RGBW": {
-            "channels": 16,
-            "gdtfMode": "RGBW",
-            "status": "matched",
-            "parameters": 20
-          },
-          "Strobe": {
-            "channels": 8,
-            "gdtfMode": "Strobe",
-            "status": "matched",
-            "parameters": 16
-          }
+        "Standard OLD": {
+          "channels": 22,
+          "parameters": 19,
+          "sourceMode": "Standard OLD"
+        },
+        "Shape OLD": {
+          "channels": 41,
+          "parameters": 34,
+          "sourceMode": "Shape OLD"
+        },
+        "Advanced OLD": {
+          "channels": 45,
+          "parameters": 42,
+          "sourceMode": "Advanced OLD"
+        },
+        "Basic": {
+          "channels": 25,
+          "parameters": 22,
+          "sourceMode": "Basic"
+        },
+        "Standard": {
+          "channels": 43,
+          "parameters": 36,
+          "sourceMode": "Standard"
+        },
+        "Advanced": {
+          "channels": 50,
+          "parameters": 46,
+          "sourceMode": "Advanced"
+        },
+        "RGBW": {
+          "channels": 16,
+          "parameters": 20,
+          "sourceMode": "RGBW"
+        },
+        "Strobe": {
+          "channels": 8,
+          "parameters": 16,
+          "sourceMode": "Strobe"
         }
       },
-      "shortName": "Volero Cube"
+      "shortName": "Volero Cube",
+      "image": "images/fixtures/clay-paky/volero-cube.png",
+      "details": "json/fixture-details/c95c93e39009eb88cc4645b0b1e2d07c8a242620dc040da54ff3d3d37e37e26a.json",
+      "provenance": {
+        "fileName": "Clay_Paky@Volero_Cube@ClayPaky_FW_CPU_1_1_006_DRV1_2_000_-_New_Geometries.gdtf",
+        "sha256": "c95c93e39009eb88cc4645b0b1e2d07c8a242620dc040da54ff3d3d37e37e26a",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Volero Twins",
       "watts": 700,
       "weight": 22.6,
       "modes": {
-        "Basic": 25,
-        "Standard": 43,
-        "Advanced": 50,
-        "RGBW": 32,
-        "Strobe": 20
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/clay-paky",
-        "suggestedFileName": "Clay_Paky__Volero_Twins.gdtf",
-        "file": "fixtures/clay-paky/Clay_Paky@Volero_Twins@ClayPaky_FW_CPU_1_1_006_DRV_1_0_005_-_New_Geometries.gdtf",
-        "modes": {
-          "Basic": {
-            "channels": 25,
-            "gdtfMode": "Basic",
-            "status": "matched",
-            "parameters": 22
-          },
-          "Standard": {
-            "channels": 43,
-            "gdtfMode": "Standard",
-            "status": "matched",
-            "parameters": 36
-          },
-          "Advanced": {
-            "channels": 50,
-            "gdtfMode": "Advanced",
-            "status": "matched",
-            "parameters": 46
-          },
-          "RGBW": {
-            "channels": 32,
-            "gdtfMode": "RGBW",
-            "status": "matched",
-            "parameters": 40
-          },
-          "Strobe": {
-            "channels": 20,
-            "gdtfMode": "Strobe",
-            "status": "matched",
-            "parameters": 40
-          }
+        "Basic": {
+          "channels": 25,
+          "parameters": 22,
+          "sourceMode": "Basic"
+        },
+        "Standard": {
+          "channels": 43,
+          "parameters": 36,
+          "sourceMode": "Standard"
+        },
+        "Advanced": {
+          "channels": 50,
+          "parameters": 46,
+          "sourceMode": "Advanced"
+        },
+        "RGBW": {
+          "channels": 32,
+          "parameters": 40,
+          "sourceMode": "RGBW"
+        },
+        "Strobe": {
+          "channels": 20,
+          "parameters": 40,
+          "sourceMode": "Strobe"
         }
       },
-      "shortName": "Volero Twins"
+      "shortName": "Volero Twins",
+      "image": "images/fixtures/clay-paky/volero-twins.png",
+      "details": "json/fixture-details/37d920d3af8eec4be52260ae914261599060b589ff3320a03b179bfe0c09ca43.json",
+      "provenance": {
+        "fileName": "Clay_Paky@Volero_Twins@ClayPaky_FW_CPU_1_1_006_DRV_1_0_005_-_New_Geometries.gdtf",
+        "sha256": "37d920d3af8eec4be52260ae914261599060b589ff3320a03b179bfe0c09ca43",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Volero Wave",
       "watts": 400,
       "weight": 20.8,
       "modes": {
-        "Advanced": 37,
-        "Standard": 20,
-        "Shape": 38,
-        "RGB": 24,
-        "RGBW": 32
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/clay-paky",
-        "suggestedFileName": "Clay_Paky__Volero_Wave.gdtf",
-        "file": "fixtures/clay-paky/Clay_Paky@Volero_Wave@ClayPaky_FW_2_0_008_1_0_010.gdtf",
-        "modes": {
-          "Advanced": {
-            "channels": 37,
-            "gdtfMode": "Advanced",
-            "status": "matched",
-            "parameters": 36
-          },
-          "Standard": {
-            "channels": 20,
-            "gdtfMode": "Standard",
-            "status": "matched",
-            "parameters": 19
-          },
-          "Shape": {
-            "channels": 38,
-            "gdtfMode": "Shape",
-            "status": "matched",
-            "parameters": 33
-          },
-          "RGB": {
-            "channels": 24,
-            "gdtfMode": "RGB",
-            "status": "matched",
-            "parameters": 32
-          },
-          "RGBW": {
-            "channels": 32,
-            "gdtfMode": "RGBW",
-            "status": "matched",
-            "parameters": 40
-          }
+        "Advanced": {
+          "channels": 37,
+          "parameters": 36,
+          "sourceMode": "Advanced"
+        },
+        "Standard": {
+          "channels": 20,
+          "parameters": 19,
+          "sourceMode": "Standard"
+        },
+        "Shape": {
+          "channels": 38,
+          "parameters": 33,
+          "sourceMode": "Shape"
+        },
+        "RGB": {
+          "channels": 24,
+          "parameters": 32,
+          "sourceMode": "RGB"
+        },
+        "RGBW": {
+          "channels": 32,
+          "parameters": 40,
+          "sourceMode": "RGBW"
         }
       },
-      "shortName": "Volero Wave"
+      "shortName": "Volero Wave",
+      "image": "images/fixtures/clay-paky/volero-wave.png",
+      "details": "json/fixture-details/27dd9de2b1990a2160446da5dacb088043a8f359a5079c63abdde018ac7011c8.json",
+      "provenance": {
+        "fileName": "Clay_Paky@Volero_Wave@ClayPaky_FW_2_0_008_1_0_010.gdtf",
+        "sha256": "27dd9de2b1990a2160446da5dacb088043a8f359a5079c63abdde018ac7011c8",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Xtylos",
       "watts": 1380,
       "weight": 24,
       "modes": {
-        "Default": 31
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/clay-paky",
-        "suggestedFileName": "Clay_Paky__Xtylos.gdtf",
-        "file": "fixtures/clay-paky/Clay_Paky@XTYLOS@Power_in,_Defalt_Values_by_Gobo_1_and_Reset_changed.gdtf",
-        "modes": {
-          "Default": {
-            "channels": 31,
-            "gdtfMode": "Default",
-            "status": "matched",
-            "parameters": 23
-          }
+        "Default": {
+          "channels": 31,
+          "parameters": 23,
+          "sourceMode": "Default"
         }
       },
-      "shortName": "Xtylos"
+      "shortName": "Xtylos",
+      "image": "images/fixtures/clay-paky/xtylos.png",
+      "details": "json/fixture-details/0dd4bf1dc7505718663d68b1cf0a34efde8c5d0caee423b8cc6fc1835b349917.json",
+      "provenance": {
+        "fileName": "Clay_Paky@XTYLOS@Power_in,_Defalt_Values_by_Gobo_1_and_Reset_changed.gdtf",
+        "sha256": "0dd4bf1dc7505718663d68b1cf0a34efde8c5d0caee423b8cc6fc1835b349917",
+        "extractedAt": "2026-11-05"
+      }
     }
   ]
 }

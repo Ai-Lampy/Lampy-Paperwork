@@ -6,46 +6,40 @@
       "watts": 437,
       "weight": 16,
       "modes": {
-        "Non-DMX": 0
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/reel_efx",
-        "suggestedFileName": "Reel_EFX__DF-50.gdtf",
-        "file": "fixtures/reel_efx/Reel_EFX@DF-50@Non_DMX.gdtf",
-        "modes": {
-          "Non-DMX": {
-            "channels": 0,
-            "gdtfMode": "Non-DMX",
-            "status": "matched",
-            "parameters": 0
-          }
+        "Non-DMX": {
+          "channels": 0,
+          "parameters": 0,
+          "sourceMode": "Non-DMX"
         }
       },
-      "shortName": "DF-50"
+      "shortName": "DF-50",
+      "image": "images/fixtures/reel-efx/df-50--df-50-dmx.png",
+      "details": "json/fixture-details/33c91bd0c520819a63dd1506ebeca8c232ec653388182b74aa0099326f8266c4.json",
+      "provenance": {
+        "fileName": "Reel_EFX@DF-50@Non_DMX.gdtf",
+        "sha256": "33c91bd0c520819a63dd1506ebeca8c232ec653388182b74aa0099326f8266c4",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "DF-50 DMX",
       "watts": 437,
       "weight": 16,
       "modes": {
-        "1 Channel": 1
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/reel_efx",
-        "suggestedFileName": "Reel_EFX__DF-50_DMX.gdtf",
-        "file": "fixtures/reel_efx/Reel_EFX@DF-50_DMX@Update_0_1.gdtf",
-        "modes": {
-          "1 Channel": {
-            "channels": 1,
-            "gdtfMode": "1 Channel",
-            "status": "matched",
-            "parameters": 1
-          }
+        "1 Channel": {
+          "channels": 1,
+          "parameters": 1,
+          "sourceMode": "1 Channel"
         }
       },
-      "shortName": "DF-50"
+      "shortName": "DF-50",
+      "image": "images/fixtures/reel-efx/df-50--df-50-dmx.png",
+      "details": "json/fixture-details/e9c461c8dab70aa210b60bf326eca23fe0e4fec334c4759f0a501c120ffdd872.json",
+      "provenance": {
+        "fileName": "Reel_EFX@DF-50_DMX@Update_0_1.gdtf",
+        "sha256": "e9c461c8dab70aa210b60bf326eca23fe0e4fec334c4759f0a501c120ffdd872",
+        "extractedAt": "2026-11-05"
+      }
     }
   ]
 }

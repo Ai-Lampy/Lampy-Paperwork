@@ -1,3 +1,11 @@
+## V56 — Stored fixture data and MVR attachments
+
+- Organise fixture images into manufacturer folders with readable names and lossless compression.
+- Store fixture modes, channel details, images and source provenance independently of GDTF archives. Preserve catalogue names, channel counts, watts and weight.
+- Export MVR without library GDTFs; retain and re-export matching attachments imported with an MVR.
+- Preserve fixture identity and mode information in MVR user data for Lampy round trips.
+- Preserve Universe 1 when importing MVR absolute addresses, including universe boundary addresses.
+
 ## V55.37 — Alphabetical Patch PDF fixture summary
 
 - Sort the Patch PDF Fixture Summary alphabetically by its displayed manufacturer and fixture name, then mode and channel count. Use case-insensitive, natural numeric ordering without changing patch order or grouped quantities.

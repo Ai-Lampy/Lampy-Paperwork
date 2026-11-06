@@ -6,1872 +6,1383 @@
       "watts": 200.0,
       "weight": 4.9,
       "modes": {
-        "9CH RGB": 9,
-        "14CH RGB": 14,
-        "3CH CCT": 3,
-        "3CH RGB": 3,
-        "6CH RGB 16Bit": 6,
-        "11CH RGB": 11,
-        "6CH Direct RAW": 6,
-        "12CH Direct RAW 16bit": 12,
-        "13CH Direct RAW": 13,
-        "20CH Direct RAW 16bit": 20,
-        "3CH HSI Medium": 3,
-        "10CH HSI Medium": 10
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/roxx",
-        "suggestedFileName": "Roxx__B_Show_mini_TWPlus.gdtf",
-        "file": "fixtures/roxx/ROXX@B-Show_mini_TWPlus@TW_A_18092025.gdtf",
-        "modes": {
-          "9CH RGB": {
-            "channels": 9,
-            "gdtfMode": "9CH RGB",
-            "status": "matched",
-            "parameters": 9
-          },
-          "14CH RGB": {
-            "channels": 14,
-            "gdtfMode": "14CH RGB",
-            "status": "matched",
-            "parameters": 10
-          },
-          "3CH CCT": {
-            "channels": 3,
-            "gdtfMode": "3CH CCT",
-            "status": "matched",
-            "parameters": 3
-          },
-          "3CH RGB": {
-            "channels": 3,
-            "gdtfMode": "3CH RGB",
-            "status": "matched",
-            "parameters": 3
-          },
-          "6CH RGB 16Bit": {
-            "channels": 6,
-            "gdtfMode": "6CH RGB 16Bit",
-            "status": "matched",
-            "parameters": 3
-          },
-          "11CH RGB": {
-            "channels": 11,
-            "gdtfMode": "11CH RGB",
-            "status": "matched",
-            "parameters": 11
-          },
-          "6CH Direct RAW": {
-            "channels": 6,
-            "gdtfMode": "6CH Direct RAW",
-            "status": "matched",
-            "parameters": 6
-          },
-          "12CH Direct RAW 16bit": {
-            "channels": 12,
-            "gdtfMode": "12CH Direct RAW 16bit",
-            "status": "matched",
-            "parameters": 6
-          },
-          "13CH Direct RAW": {
-            "channels": 13,
-            "gdtfMode": "13CH Direct RAW",
-            "status": "matched",
-            "parameters": 13
-          },
-          "20CH Direct RAW 16bit": {
-            "channels": 20,
-            "gdtfMode": "20CH Direct RAW 16bit",
-            "status": "matched",
-            "parameters": 13
-          },
-          "3CH HSI Medium": {
-            "channels": 3,
-            "gdtfMode": "3CH HSI Medium",
-            "status": "matched",
-            "parameters": 3
-          },
-          "10CH HSI Medium": {
-            "channels": 10,
-            "gdtfMode": "10CH HSI Medium",
-            "status": "matched",
-            "parameters": 9
-          }
+        "9CH RGB": {
+          "channels": 9,
+          "parameters": 9,
+          "sourceMode": "9CH RGB"
+        },
+        "14CH RGB": {
+          "channels": 14,
+          "parameters": 10,
+          "sourceMode": "14CH RGB"
+        },
+        "3CH CCT": {
+          "channels": 3,
+          "parameters": 3,
+          "sourceMode": "3CH CCT"
+        },
+        "3CH RGB": {
+          "channels": 3,
+          "parameters": 3,
+          "sourceMode": "3CH RGB"
+        },
+        "6CH RGB 16Bit": {
+          "channels": 6,
+          "parameters": 3,
+          "sourceMode": "6CH RGB 16Bit"
+        },
+        "11CH RGB": {
+          "channels": 11,
+          "parameters": 11,
+          "sourceMode": "11CH RGB"
+        },
+        "6CH Direct RAW": {
+          "channels": 6,
+          "parameters": 6,
+          "sourceMode": "6CH Direct RAW"
+        },
+        "12CH Direct RAW 16bit": {
+          "channels": 12,
+          "parameters": 6,
+          "sourceMode": "12CH Direct RAW 16bit"
+        },
+        "13CH Direct RAW": {
+          "channels": 13,
+          "parameters": 13,
+          "sourceMode": "13CH Direct RAW"
+        },
+        "20CH Direct RAW 16bit": {
+          "channels": 20,
+          "parameters": 13,
+          "sourceMode": "20CH Direct RAW 16bit"
+        },
+        "3CH HSI Medium": {
+          "channels": 3,
+          "parameters": 3,
+          "sourceMode": "3CH HSI Medium"
+        },
+        "10CH HSI Medium": {
+          "channels": 10,
+          "parameters": 9,
+          "sourceMode": "10CH HSI Medium"
         }
       },
-      "shortName": "Show mini TW+"
+      "shortName": "Show mini TW+",
+      "image": "images/fixtures/roxx/b-show-mini-twplus.png",
+      "details": "json/fixture-details/fae8ecf0b07e79d51880e9fc128addae0fb489609f81f41b1b25522d04bb2d82.json",
+      "provenance": {
+        "fileName": "ROXX@B-Show_mini_TWPlus@TW_A_18092025.gdtf",
+        "sha256": "fae8ecf0b07e79d51880e9fc128addae0fb489609f81f41b1b25522d04bb2d82",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Cluster B2 FC",
       "modes": {
-        "1CH DWE": 1,
-        "2CH DWE": 2,
-        "4CH DWE": 4,
-        "9CH DWE+ ": 9,
-        "6CH Strobe": 6,
-        "6CH RGB": 6,
-        "10CH Basic RGB": 10,
-        "14CH Basic RGB": 14,
-        "13CH Standard RGB": 13,
-        "22CH Standard RGB": 22,
-        "24CH Extended RGB": 24,
-        "33CH Extended RGB": 33,
-        "10CH Direct": 10,
-        "12CH Direct": 12,
-        "17CH Direct": 17,
-        "28CH Direct": 28,
-        "41CH Direct": 41
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/roxx",
-        "suggestedFileName": "Roxx__Cluster_B2_FC.gdtf",
-        "file": "fixtures/roxx/ROXX@CLUSTER_B2-FC@TW_B_08082023.gdtf",
-        "modes": {
-          "1CH DWE": {
-            "channels": 1,
-            "gdtfMode": "1CH DWE",
-            "status": "matched",
-            "parameters": 1
-          },
-          "2CH DWE": {
-            "channels": 2,
-            "gdtfMode": "2CH DWE",
-            "status": "matched",
-            "parameters": 2
-          },
-          "4CH DWE": {
-            "channels": 4,
-            "gdtfMode": "4CH DWE",
-            "status": "matched",
-            "parameters": 4
-          },
-          "9CH DWE+ ": {
-            "channels": 9,
-            "gdtfMode": "9CH DWE+ ",
-            "status": "matched",
-            "parameters": 9
-          },
-          "6CH Strobe": {
-            "channels": 6,
-            "gdtfMode": "6CH Strobe",
-            "status": "matched",
-            "parameters": 6
-          },
-          "6CH RGB": {
-            "channels": 6,
-            "gdtfMode": "6CH RGB",
-            "status": "matched",
-            "parameters": 6
-          },
-          "10CH Basic RGB": {
-            "channels": 10,
-            "gdtfMode": "10CH Basic RGB",
-            "status": "matched",
-            "parameters": 10
-          },
-          "14CH Basic RGB": {
-            "channels": 14,
-            "gdtfMode": "14CH Basic RGB",
-            "status": "matched",
-            "parameters": 10
-          },
-          "13CH Standard RGB": {
-            "channels": 13,
-            "gdtfMode": "13CH Standard RGB",
-            "status": "matched",
-            "parameters": 13
-          },
-          "22CH Standard RGB": {
-            "channels": 22,
-            "gdtfMode": "22CH Standard RGB",
-            "status": "matched",
-            "parameters": 13
-          },
-          "24CH Extended RGB": {
-            "channels": 24,
-            "gdtfMode": "24CH Extended RGB",
-            "status": "matched",
-            "parameters": 24
-          },
-          "33CH Extended RGB": {
-            "channels": 33,
-            "gdtfMode": "33CH Extended RGB",
-            "status": "matched",
-            "parameters": 24
-          },
-          "10CH Direct": {
-            "channels": 10,
-            "gdtfMode": "10CH Direct",
-            "status": "matched",
-            "parameters": 10
-          },
-          "12CH Direct": {
-            "channels": 12,
-            "gdtfMode": "12CH Direct",
-            "status": "matched",
-            "parameters": 12
-          },
-          "17CH Direct": {
-            "channels": 17,
-            "gdtfMode": "17CH Direct",
-            "status": "matched",
-            "parameters": 17
-          },
-          "28CH Direct": {
-            "channels": 28,
-            "gdtfMode": "28CH Direct",
-            "status": "matched",
-            "parameters": 28
-          },
-          "41CH Direct": {
-            "channels": 41,
-            "gdtfMode": "41CH Direct",
-            "status": "matched",
-            "parameters": 28
-          }
+        "1CH DWE": {
+          "channels": 1,
+          "parameters": 1,
+          "sourceMode": "1CH DWE"
+        },
+        "2CH DWE": {
+          "channels": 2,
+          "parameters": 2,
+          "sourceMode": "2CH DWE"
+        },
+        "4CH DWE": {
+          "channels": 4,
+          "parameters": 4,
+          "sourceMode": "4CH DWE"
+        },
+        "9CH DWE+ ": {
+          "channels": 9,
+          "parameters": 9,
+          "sourceMode": "9CH DWE+ "
+        },
+        "6CH Strobe": {
+          "channels": 6,
+          "parameters": 6,
+          "sourceMode": "6CH Strobe"
+        },
+        "6CH RGB": {
+          "channels": 6,
+          "parameters": 6,
+          "sourceMode": "6CH RGB"
+        },
+        "10CH Basic RGB": {
+          "channels": 10,
+          "parameters": 10,
+          "sourceMode": "10CH Basic RGB"
+        },
+        "14CH Basic RGB": {
+          "channels": 14,
+          "parameters": 10,
+          "sourceMode": "14CH Basic RGB"
+        },
+        "13CH Standard RGB": {
+          "channels": 13,
+          "parameters": 13,
+          "sourceMode": "13CH Standard RGB"
+        },
+        "22CH Standard RGB": {
+          "channels": 22,
+          "parameters": 13,
+          "sourceMode": "22CH Standard RGB"
+        },
+        "24CH Extended RGB": {
+          "channels": 24,
+          "parameters": 24,
+          "sourceMode": "24CH Extended RGB"
+        },
+        "33CH Extended RGB": {
+          "channels": 33,
+          "parameters": 24,
+          "sourceMode": "33CH Extended RGB"
+        },
+        "10CH Direct": {
+          "channels": 10,
+          "parameters": 10,
+          "sourceMode": "10CH Direct"
+        },
+        "12CH Direct": {
+          "channels": 12,
+          "parameters": 12,
+          "sourceMode": "12CH Direct"
+        },
+        "17CH Direct": {
+          "channels": 17,
+          "parameters": 17,
+          "sourceMode": "17CH Direct"
+        },
+        "28CH Direct": {
+          "channels": 28,
+          "parameters": 28,
+          "sourceMode": "28CH Direct"
+        },
+        "41CH Direct": {
+          "channels": 41,
+          "parameters": 28,
+          "sourceMode": "41CH Direct"
         }
       },
       "shortName": "Cluster B2 FC",
       "watts": 600.0,
-      "weight": 16.5
+      "weight": 16.5,
+      "image": "images/fixtures/roxx/cluster-b2-fc.png",
+      "details": "json/fixture-details/970489c84b1d78f70d360e60cd9b5d83eed33f6fe9c9a45cbe75b8782d063f90.json",
+      "provenance": {
+        "fileName": "ROXX@CLUSTER_B2-FC@TW_B_08082023.gdtf",
+        "sha256": "970489c84b1d78f70d360e60cd9b5d83eed33f6fe9c9a45cbe75b8782d063f90",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "CLUSTER B2-W",
       "watts": 520.0,
       "weight": 10.5,
       "modes": {
-        "1CH DWE": 1,
-        "2CH DWE": 2,
-        "4CH DWE": 4,
-        "5CH Strobe": 5,
-        "7CH Standard": 7,
-        "10CH Extended": 10,
-        "13CH Extended": 13
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/roxx",
-        "suggestedFileName": "Roxx__CLUSTER_B2_W.gdtf",
-        "file": "fixtures/roxx/ROXX@CLUSTER_B2-W@TW_B_08082023.gdtf",
-        "modes": {
-          "1CH DWE": {
-            "channels": 1,
-            "gdtfMode": "1CH DWE",
-            "status": "matched",
-            "parameters": 1
-          },
-          "2CH DWE": {
-            "channels": 2,
-            "gdtfMode": "2CH DWE",
-            "status": "matched",
-            "parameters": 2
-          },
-          "4CH DWE": {
-            "channels": 4,
-            "gdtfMode": "4CH DWE",
-            "status": "matched",
-            "parameters": 4
-          },
-          "5CH Strobe": {
-            "channels": 5,
-            "gdtfMode": "5CH Strobe",
-            "status": "matched",
-            "parameters": 5
-          },
-          "7CH Standard": {
-            "channels": 7,
-            "gdtfMode": "7CH Standard",
-            "status": "matched",
-            "parameters": 7
-          },
-          "10CH Extended": {
-            "channels": 10,
-            "gdtfMode": "10CH Extended",
-            "status": "matched",
-            "parameters": 10
-          },
-          "13CH Extended": {
-            "channels": 13,
-            "gdtfMode": "13CH Extended",
-            "status": "matched",
-            "parameters": 10
-          }
+        "1CH DWE": {
+          "channels": 1,
+          "parameters": 1,
+          "sourceMode": "1CH DWE"
+        },
+        "2CH DWE": {
+          "channels": 2,
+          "parameters": 2,
+          "sourceMode": "2CH DWE"
+        },
+        "4CH DWE": {
+          "channels": 4,
+          "parameters": 4,
+          "sourceMode": "4CH DWE"
+        },
+        "5CH Strobe": {
+          "channels": 5,
+          "parameters": 5,
+          "sourceMode": "5CH Strobe"
+        },
+        "7CH Standard": {
+          "channels": 7,
+          "parameters": 7,
+          "sourceMode": "7CH Standard"
+        },
+        "10CH Extended": {
+          "channels": 10,
+          "parameters": 10,
+          "sourceMode": "10CH Extended"
+        },
+        "13CH Extended": {
+          "channels": 13,
+          "parameters": 10,
+          "sourceMode": "13CH Extended"
         }
       },
-      "shortName": "Cluster B2-W"
+      "shortName": "Cluster B2-W",
+      "image": "images/fixtures/roxx/cluster-b2-w.png",
+      "details": "json/fixture-details/762724b5db190868a6a33c029ed9bd7d486659cfa9943595a52a196b8a270101.json",
+      "provenance": {
+        "fileName": "ROXX@CLUSTER_B2-W@TW_B_08082023.gdtf",
+        "sha256": "762724b5db190868a6a33c029ed9bd7d486659cfa9943595a52a196b8a270101",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "CLUSTER B4-FC",
       "watts": 1200.0,
       "weight": 16.5,
       "modes": {
-        "1CH DWE": 1,
-        "2CH DWE": 2,
-        "4-1CH DWE": 4,
-        "4-2CH DWE": 4,
-        "9CH DWE+ ": 9,
-        "8CH Strobe": 8,
-        "12CH RGB": 12,
-        "10CH Basic RGB": 10,
-        "14CH Basic RGB": 14,
-        "21CH Standard RGB": 21,
-        "38CH Standard RGB": 38,
-        "40CH Extended RGB": 40,
-        "57CH Extended RGB": 57,
-        "20CH Direct": 20,
-        "12CH Direct": 12,
-        "29CH Direct": 29,
-        "48CH Direct": 48,
-        "73CH Direct": 73
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/roxx",
-        "suggestedFileName": "Roxx__CLUSTER_B4_FC.gdtf",
-        "file": "fixtures/roxx/ROXX@CLUSTER_B4-FC@TW_A_07082023.gdtf",
-        "modes": {
-          "1CH DWE": {
-            "channels": 1,
-            "gdtfMode": "1CH DWE",
-            "status": "matched",
-            "parameters": 1
-          },
-          "2CH DWE": {
-            "channels": 2,
-            "gdtfMode": "2CH DWE",
-            "status": "matched",
-            "parameters": 4
-          },
-          "4-1CH DWE": {
-            "channels": 4,
-            "gdtfMode": "4-1CH DWE",
-            "status": "matched",
-            "parameters": 4
-          },
-          "4-2CH DWE": {
-            "channels": 4,
-            "gdtfMode": "4-2CH DWE",
-            "status": "matched",
-            "parameters": 4
-          },
-          "9CH DWE+ ": {
-            "channels": 9,
-            "gdtfMode": "9CH DWE+ ",
-            "status": "matched",
-            "parameters": 9
-          },
-          "8CH Strobe": {
-            "channels": 8,
-            "gdtfMode": "8CH Strobe",
-            "status": "matched",
-            "parameters": 8
-          },
-          "12CH RGB": {
-            "channels": 12,
-            "gdtfMode": "12CH RGB",
-            "status": "matched",
-            "parameters": 12
-          },
-          "10CH Basic RGB": {
-            "channels": 10,
-            "gdtfMode": "10CH Basic RGB",
-            "status": "matched",
-            "parameters": 10
-          },
-          "14CH Basic RGB": {
-            "channels": 14,
-            "gdtfMode": "14CH Basic RGB",
-            "status": "matched",
-            "parameters": 10
-          },
-          "21CH Standard RGB": {
-            "channels": 21,
-            "gdtfMode": "21CH Standard RGB",
-            "status": "matched",
-            "parameters": 21
-          },
-          "38CH Standard RGB": {
-            "channels": 38,
-            "gdtfMode": "38CH Standard RGB",
-            "status": "matched",
-            "parameters": 21
-          },
-          "40CH Extended RGB": {
-            "channels": 40,
-            "gdtfMode": "40CH Extended RGB",
-            "status": "matched",
-            "parameters": 40
-          },
-          "57CH Extended RGB": {
-            "channels": 57,
-            "gdtfMode": "57CH Extended RGB",
-            "status": "matched",
-            "parameters": 40
-          },
-          "20CH Direct": {
-            "channels": 20,
-            "gdtfMode": "20CH Direct",
-            "status": "matched",
-            "parameters": 20
-          },
-          "12CH Direct": {
-            "channels": 12,
-            "gdtfMode": "12CH Direct",
-            "status": "matched",
-            "parameters": 12
-          },
-          "29CH Direct": {
-            "channels": 29,
-            "gdtfMode": "29CH Direct",
-            "status": "matched",
-            "parameters": 29
-          },
-          "48CH Direct": {
-            "channels": 48,
-            "gdtfMode": "48CH Direct",
-            "status": "matched",
-            "parameters": 48
-          },
-          "73CH Direct": {
-            "channels": 73,
-            "gdtfMode": "73CH Direct",
-            "status": "matched",
-            "parameters": 48
-          }
+        "1CH DWE": {
+          "channels": 1,
+          "parameters": 1,
+          "sourceMode": "1CH DWE"
+        },
+        "2CH DWE": {
+          "channels": 2,
+          "parameters": 4,
+          "sourceMode": "2CH DWE"
+        },
+        "4-1CH DWE": {
+          "channels": 4,
+          "parameters": 4,
+          "sourceMode": "4-1CH DWE"
+        },
+        "4-2CH DWE": {
+          "channels": 4,
+          "parameters": 4,
+          "sourceMode": "4-2CH DWE"
+        },
+        "9CH DWE+ ": {
+          "channels": 9,
+          "parameters": 9,
+          "sourceMode": "9CH DWE+ "
+        },
+        "8CH Strobe": {
+          "channels": 8,
+          "parameters": 8,
+          "sourceMode": "8CH Strobe"
+        },
+        "12CH RGB": {
+          "channels": 12,
+          "parameters": 12,
+          "sourceMode": "12CH RGB"
+        },
+        "10CH Basic RGB": {
+          "channels": 10,
+          "parameters": 10,
+          "sourceMode": "10CH Basic RGB"
+        },
+        "14CH Basic RGB": {
+          "channels": 14,
+          "parameters": 10,
+          "sourceMode": "14CH Basic RGB"
+        },
+        "21CH Standard RGB": {
+          "channels": 21,
+          "parameters": 21,
+          "sourceMode": "21CH Standard RGB"
+        },
+        "38CH Standard RGB": {
+          "channels": 38,
+          "parameters": 21,
+          "sourceMode": "38CH Standard RGB"
+        },
+        "40CH Extended RGB": {
+          "channels": 40,
+          "parameters": 40,
+          "sourceMode": "40CH Extended RGB"
+        },
+        "57CH Extended RGB": {
+          "channels": 57,
+          "parameters": 40,
+          "sourceMode": "57CH Extended RGB"
+        },
+        "20CH Direct": {
+          "channels": 20,
+          "parameters": 20,
+          "sourceMode": "20CH Direct"
+        },
+        "12CH Direct": {
+          "channels": 12,
+          "parameters": 12,
+          "sourceMode": "12CH Direct"
+        },
+        "29CH Direct": {
+          "channels": 29,
+          "parameters": 29,
+          "sourceMode": "29CH Direct"
+        },
+        "48CH Direct": {
+          "channels": 48,
+          "parameters": 48,
+          "sourceMode": "48CH Direct"
+        },
+        "73CH Direct": {
+          "channels": 73,
+          "parameters": 48,
+          "sourceMode": "73CH Direct"
         }
       },
-      "shortName": "Cluster B4-FC"
+      "shortName": "Cluster B4-FC",
+      "image": "images/fixtures/roxx/cluster-b4-fc.png",
+      "details": "json/fixture-details/24850b8a944374aa33e20ecacbe26d0c926d982bf702d9ab0c423feb4c7788b3.json",
+      "provenance": {
+        "fileName": "ROXX@CLUSTER_B4-FC@TW_A_07082023.gdtf",
+        "sha256": "24850b8a944374aa33e20ecacbe26d0c926d982bf702d9ab0c423feb4c7788b3",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "CLUSTER B4-W",
       "watts": 1040.0,
       "weight": 16.5,
       "modes": {
-        "1CH DWE": 1,
-        "2CH DWE": 2,
-        "4-1CH DWE": 4,
-        "4-2CH DWE": 4,
-        "7CH Strobe": 7,
-        "9CH Standard": 9,
-        "12CH Extended": 12,
-        "17CH Extended": 17
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/roxx",
-        "suggestedFileName": "Roxx__CLUSTER_B4_W.gdtf",
-        "file": "fixtures/roxx/ROXX@CLUSTER_B4-W@TW_B_08082023.gdtf",
-        "modes": {
-          "1CH DWE": {
-            "channels": 1,
-            "gdtfMode": "1CH DWE",
-            "status": "matched",
-            "parameters": 1
-          },
-          "2CH DWE": {
-            "channels": 2,
-            "gdtfMode": "2CH DWE",
-            "status": "matched",
-            "parameters": 4
-          },
-          "4-1CH DWE": {
-            "channels": 4,
-            "gdtfMode": "4-1CH DWE",
-            "status": "matched",
-            "parameters": 4
-          },
-          "4-2CH DWE": {
-            "channels": 4,
-            "gdtfMode": "4-2CH DWE",
-            "status": "matched",
-            "parameters": 4
-          },
-          "7CH Strobe": {
-            "channels": 7,
-            "gdtfMode": "7CH Strobe",
-            "status": "matched",
-            "parameters": 7
-          },
-          "9CH Standard": {
-            "channels": 9,
-            "gdtfMode": "9CH Standard",
-            "status": "matched",
-            "parameters": 9
-          },
-          "12CH Extended": {
-            "channels": 12,
-            "gdtfMode": "12CH Extended",
-            "status": "matched",
-            "parameters": 12
-          },
-          "17CH Extended": {
-            "channels": 17,
-            "gdtfMode": "17CH Extended",
-            "status": "matched",
-            "parameters": 12
-          }
+        "1CH DWE": {
+          "channels": 1,
+          "parameters": 1,
+          "sourceMode": "1CH DWE"
+        },
+        "2CH DWE": {
+          "channels": 2,
+          "parameters": 4,
+          "sourceMode": "2CH DWE"
+        },
+        "4-1CH DWE": {
+          "channels": 4,
+          "parameters": 4,
+          "sourceMode": "4-1CH DWE"
+        },
+        "4-2CH DWE": {
+          "channels": 4,
+          "parameters": 4,
+          "sourceMode": "4-2CH DWE"
+        },
+        "7CH Strobe": {
+          "channels": 7,
+          "parameters": 7,
+          "sourceMode": "7CH Strobe"
+        },
+        "9CH Standard": {
+          "channels": 9,
+          "parameters": 9,
+          "sourceMode": "9CH Standard"
+        },
+        "12CH Extended": {
+          "channels": 12,
+          "parameters": 12,
+          "sourceMode": "12CH Extended"
+        },
+        "17CH Extended": {
+          "channels": 17,
+          "parameters": 12,
+          "sourceMode": "17CH Extended"
         }
       },
-      "shortName": "Cluster B4-W"
+      "shortName": "Cluster B4-W",
+      "image": "images/fixtures/roxx/cluster-b4-w.png",
+      "details": "json/fixture-details/51b3c7887f9bbe004950eae1bb531d144ca4c6a2477fe30e3c378c77146b1152.json",
+      "provenance": {
+        "fileName": "ROXX@CLUSTER_B4-W@TW_B_08082023.gdtf",
+        "sha256": "51b3c7887f9bbe004950eae1bb531d144ca4c6a2477fe30e3c378c77146b1152",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Cluster S1",
       "watts": null,
       "weight": 12.8,
       "modes": {
-        "Full Access Extended Mode ": 297,
-        "Full Access Mode": 166,
-        "Pure Mode 16 Bit": 269,
-        "Pure Mode 8 Bit": 138,
-        "Pure Mode 8 Bit S2 Merge": 50,
-        "Standard Mode": 44,
-        "Easy Mode": 27,
-        "Simple Mode": 12
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/roxx",
-        "suggestedFileName": "Roxx__Cluster_S1.gdtf",
-        "file": "fixtures/roxx/ROXX@Cluster_S1@New_fixture_type_based_on_Cluster_S1_from_Roxx.gdtf",
-        "modes": {
-          "Full Access Extended Mode ": {
-            "channels": 297,
-            "gdtfMode": "Full Access Extended Mode ",
-            "status": "matched",
-            "parameters": 192
-          },
-          "Full Access Mode": {
-            "channels": 166,
-            "gdtfMode": "Full Access Mode",
-            "status": "matched",
-            "parameters": 192
-          },
-          "Pure Mode 16 Bit": {
-            "channels": 269,
-            "gdtfMode": "Pure Mode 16 Bit",
-            "status": "matched",
-            "parameters": 164
-          },
-          "Pure Mode 8 Bit": {
-            "channels": 138,
-            "gdtfMode": "Pure Mode 8 Bit",
-            "status": "matched",
-            "parameters": 164
-          },
-          "Pure Mode 8 Bit S2 Merge": {
-            "channels": 50,
-            "gdtfMode": "Pure Mode 8 Bit S2 Merge",
-            "status": "matched",
-            "parameters": 56
-          },
-          "Standard Mode": {
-            "channels": 44,
-            "gdtfMode": "Standard Mode",
-            "status": "matched",
-            "parameters": 44
-          },
-          "Easy Mode": {
-            "channels": 27,
-            "gdtfMode": "Easy Mode",
-            "status": "matched",
-            "parameters": 27
-          },
-          "Simple Mode": {
-            "channels": 12,
-            "gdtfMode": "Simple Mode",
-            "status": "matched",
-            "parameters": 12
-          }
+        "Full Access Extended Mode ": {
+          "channels": 297,
+          "parameters": 192,
+          "sourceMode": "Full Access Extended Mode "
+        },
+        "Full Access Mode": {
+          "channels": 166,
+          "parameters": 192,
+          "sourceMode": "Full Access Mode"
+        },
+        "Pure Mode 16 Bit": {
+          "channels": 269,
+          "parameters": 164,
+          "sourceMode": "Pure Mode 16 Bit"
+        },
+        "Pure Mode 8 Bit": {
+          "channels": 138,
+          "parameters": 164,
+          "sourceMode": "Pure Mode 8 Bit"
+        },
+        "Pure Mode 8 Bit S2 Merge": {
+          "channels": 50,
+          "parameters": 56,
+          "sourceMode": "Pure Mode 8 Bit S2 Merge"
+        },
+        "Standard Mode": {
+          "channels": 44,
+          "parameters": 44,
+          "sourceMode": "Standard Mode"
+        },
+        "Easy Mode": {
+          "channels": 27,
+          "parameters": 27,
+          "sourceMode": "Easy Mode"
+        },
+        "Simple Mode": {
+          "channels": 12,
+          "parameters": 12,
+          "sourceMode": "Simple Mode"
         }
       },
-      "shortName": "Cluster S1"
+      "shortName": "Cluster S1",
+      "image": "images/fixtures/roxx/cluster-s1.png",
+      "details": "json/fixture-details/69a51e88e02e0e0e5cd89442618e390b83d2a72fbc72a71d2b31a77e3115db83.json",
+      "provenance": {
+        "fileName": "ROXX@Cluster_S1@New_fixture_type_based_on_Cluster_S1_from_Roxx.gdtf",
+        "sha256": "69a51e88e02e0e0e5cd89442618e390b83d2a72fbc72a71d2b31a77e3115db83",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Cluster S2",
       "watts": null,
       "weight": 12.6,
       "modes": {
-        "Full Access Extended Mode ": 275,
-        "Full Access Mode": 178,
-        "Pure Mode 16 Bit": 209,
-        "Pure Mode 8 Bit": 112,
-        "Standard Mode": 71,
-        "Easy Mode": 39,
-        "Simple Mode": 15
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/roxx",
-        "suggestedFileName": "Roxx__Cluster_S2.gdtf",
-        "file": "fixtures/roxx/ROXX@Cluster_S2@New_fixture_type_based_on_Cluster_S2_from_Roxx.gdtf",
-        "modes": {
-          "Full Access Extended Mode ": {
-            "channels": 275,
-            "gdtfMode": "Full Access Extended Mode ",
-            "status": "matched",
-            "parameters": 190
-          },
-          "Full Access Mode": {
-            "channels": 178,
-            "gdtfMode": "Full Access Mode",
-            "status": "matched",
-            "parameters": 190
-          },
-          "Pure Mode 16 Bit": {
-            "channels": 209,
-            "gdtfMode": "Pure Mode 16 Bit",
-            "status": "matched",
-            "parameters": 124
-          },
-          "Pure Mode 8 Bit": {
-            "channels": 112,
-            "gdtfMode": "Pure Mode 8 Bit",
-            "status": "matched",
-            "parameters": 124
-          },
-          "Standard Mode": {
-            "channels": 71,
-            "gdtfMode": "Standard Mode",
-            "status": "matched",
-            "parameters": 71
-          },
-          "Easy Mode": {
-            "channels": 39,
-            "gdtfMode": "Easy Mode",
-            "status": "matched",
-            "parameters": 39
-          },
-          "Simple Mode": {
-            "channels": 15,
-            "gdtfMode": "Simple Mode",
-            "status": "matched",
-            "parameters": 15
-          }
+        "Full Access Extended Mode ": {
+          "channels": 275,
+          "parameters": 190,
+          "sourceMode": "Full Access Extended Mode "
+        },
+        "Full Access Mode": {
+          "channels": 178,
+          "parameters": 190,
+          "sourceMode": "Full Access Mode"
+        },
+        "Pure Mode 16 Bit": {
+          "channels": 209,
+          "parameters": 124,
+          "sourceMode": "Pure Mode 16 Bit"
+        },
+        "Pure Mode 8 Bit": {
+          "channels": 112,
+          "parameters": 124,
+          "sourceMode": "Pure Mode 8 Bit"
+        },
+        "Standard Mode": {
+          "channels": 71,
+          "parameters": 71,
+          "sourceMode": "Standard Mode"
+        },
+        "Easy Mode": {
+          "channels": 39,
+          "parameters": 39,
+          "sourceMode": "Easy Mode"
+        },
+        "Simple Mode": {
+          "channels": 15,
+          "parameters": 15,
+          "sourceMode": "Simple Mode"
         }
       },
-      "shortName": "Cluster S2"
+      "shortName": "Cluster S2",
+      "image": "images/fixtures/roxx/cluster-s2.png",
+      "details": "json/fixture-details/32b2944660f1e57241c4a898e8d92b56b40e476fcb2689f5596045575e772acd.json",
+      "provenance": {
+        "fileName": "ROXX@Cluster_S2@New_fixture_type_based_on_Cluster_S2_from_Roxx.gdtf",
+        "sha256": "32b2944660f1e57241c4a898e8d92b56b40e476fcb2689f5596045575e772acd",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FLEX",
       "watts": null,
       "weight": 2.49,
       "modes": {
-        "3CH CCT": 3,
-        "8CH Color Macro": 8,
-        "6CH RGB": 6,
-        "9CH RGB": 9,
-        "10CH RGB": 10,
-        "19CH RGB": 19,
-        "21CH RGB": 21,
-        "28CH Pattern": 28,
-        "80CH Pixel": 80,
-        "7CH DIRECT": 7,
-        "11CH DIRECT": 11,
-        "20CH DIRECT": 20,
-        "23CH DIRECT": 23,
-        "29CH PATTERN": 29
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/roxx",
-        "suggestedFileName": "Roxx__FLEX.gdtf",
-        "file": "fixtures/roxx/ROXX@FLEX@TW_24102024C.gdtf",
-        "modes": {
-          "3CH CCT": {
-            "channels": 3,
-            "gdtfMode": "3CH CCT",
-            "status": "matched",
-            "parameters": 3
-          },
-          "8CH Color Macro": {
-            "channels": 8,
-            "gdtfMode": "8CH Color Macro",
-            "status": "matched",
-            "parameters": 8
-          },
-          "6CH RGB": {
-            "channels": 6,
-            "gdtfMode": "6CH RGB",
-            "status": "matched",
-            "parameters": 6
-          },
-          "9CH RGB": {
-            "channels": 9,
-            "gdtfMode": "9CH RGB",
-            "status": "matched",
-            "parameters": 6
-          },
-          "10CH RGB": {
-            "channels": 10,
-            "gdtfMode": "10CH RGB",
-            "status": "matched",
-            "parameters": 10
-          },
-          "19CH RGB": {
-            "channels": 19,
-            "gdtfMode": "19CH RGB",
-            "status": "matched",
-            "parameters": 19
-          },
-          "21CH RGB": {
-            "channels": 21,
-            "gdtfMode": "21CH RGB",
-            "status": "matched",
-            "parameters": 17
-          },
-          "28CH Pattern": {
-            "channels": 28,
-            "gdtfMode": "28CH Pattern",
-            "status": "matched",
-            "parameters": 28
-          },
-          "80CH Pixel": {
-            "channels": 80,
-            "gdtfMode": "80CH Pixel",
-            "status": "matched",
-            "parameters": 104
-          },
-          "7CH DIRECT": {
-            "channels": 7,
-            "gdtfMode": "7CH DIRECT",
-            "status": "matched",
-            "parameters": 7
-          },
-          "11CH DIRECT": {
-            "channels": 11,
-            "gdtfMode": "11CH DIRECT",
-            "status": "matched",
-            "parameters": 7
-          },
-          "20CH DIRECT": {
-            "channels": 20,
-            "gdtfMode": "20CH DIRECT",
-            "status": "matched",
-            "parameters": 20
-          },
-          "23CH DIRECT": {
-            "channels": 23,
-            "gdtfMode": "23CH DIRECT",
-            "status": "matched",
-            "parameters": 18
-          },
-          "29CH PATTERN": {
-            "channels": 29,
-            "gdtfMode": "29CH PATTERN",
-            "status": "matched",
-            "parameters": 29
-          }
+        "3CH CCT": {
+          "channels": 3,
+          "parameters": 3,
+          "sourceMode": "3CH CCT"
+        },
+        "8CH Color Macro": {
+          "channels": 8,
+          "parameters": 8,
+          "sourceMode": "8CH Color Macro"
+        },
+        "6CH RGB": {
+          "channels": 6,
+          "parameters": 6,
+          "sourceMode": "6CH RGB"
+        },
+        "9CH RGB": {
+          "channels": 9,
+          "parameters": 6,
+          "sourceMode": "9CH RGB"
+        },
+        "10CH RGB": {
+          "channels": 10,
+          "parameters": 10,
+          "sourceMode": "10CH RGB"
+        },
+        "19CH RGB": {
+          "channels": 19,
+          "parameters": 19,
+          "sourceMode": "19CH RGB"
+        },
+        "21CH RGB": {
+          "channels": 21,
+          "parameters": 17,
+          "sourceMode": "21CH RGB"
+        },
+        "28CH Pattern": {
+          "channels": 28,
+          "parameters": 28,
+          "sourceMode": "28CH Pattern"
+        },
+        "80CH Pixel": {
+          "channels": 80,
+          "parameters": 104,
+          "sourceMode": "80CH Pixel"
+        },
+        "7CH DIRECT": {
+          "channels": 7,
+          "parameters": 7,
+          "sourceMode": "7CH DIRECT"
+        },
+        "11CH DIRECT": {
+          "channels": 11,
+          "parameters": 7,
+          "sourceMode": "11CH DIRECT"
+        },
+        "20CH DIRECT": {
+          "channels": 20,
+          "parameters": 20,
+          "sourceMode": "20CH DIRECT"
+        },
+        "23CH DIRECT": {
+          "channels": 23,
+          "parameters": 18,
+          "sourceMode": "23CH DIRECT"
+        },
+        "29CH PATTERN": {
+          "channels": 29,
+          "parameters": 29,
+          "sourceMode": "29CH PATTERN"
         }
       },
-      "shortName": "FLEX"
+      "shortName": "FLEX",
+      "image": "images/fixtures/roxx/flex.png",
+      "details": "json/fixture-details/670f9f7700e60ad8ce1b3749455cec508049896ba953c9e1326675addbb81853.json",
+      "provenance": {
+        "fileName": "ROXX@FLEX@TW_24102024C.gdtf",
+        "sha256": "670f9f7700e60ad8ce1b3749455cec508049896ba953c9e1326675addbb81853",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Icon F4",
       "watts": 200.0,
       "weight": 3.9,
       "modes": {
-        "1CH Direct Mode": 1,
-        "4CH CCT Mode": 4,
-        "7CH CCT Mode": 7,
-        "6CH RGB Mode": 6,
-        "10CH RGB Mode": 10,
-        "18CH RGB Mode": 18,
-        "12CH Direct Mode": 12,
-        "14CH Direct Mode": 14,
-        "21CH Direct Mode": 21,
-        "6CH HSI Mode": 6,
-        "12CH HSI Mode": 12
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/roxx",
-        "suggestedFileName": "Roxx__Icon_F4.gdtf",
-        "file": "fixtures/roxx/ROXX@Icon_F4@RX_A_28052026.gdtf",
-        "modes": {
-          "1CH Direct Mode": {
-            "channels": 1,
-            "gdtfMode": "1CH Direct Mode",
-            "status": "matched",
-            "parameters": 1
-          },
-          "4CH CCT Mode": {
-            "channels": 4,
-            "gdtfMode": "4CH CCT Mode",
-            "status": "matched",
-            "parameters": 3
-          },
-          "7CH CCT Mode": {
-            "channels": 7,
-            "gdtfMode": "7CH CCT Mode",
-            "status": "matched",
-            "parameters": 6
-          },
-          "6CH RGB Mode": {
-            "channels": 6,
-            "gdtfMode": "6CH RGB Mode",
-            "status": "matched",
-            "parameters": 4
-          },
-          "10CH RGB Mode": {
-            "channels": 10,
-            "gdtfMode": "10CH RGB Mode",
-            "status": "matched",
-            "parameters": 10
-          },
-          "18CH RGB Mode": {
-            "channels": 18,
-            "gdtfMode": "18CH RGB Mode",
-            "status": "matched",
-            "parameters": 14
-          },
-          "12CH Direct Mode": {
-            "channels": 12,
-            "gdtfMode": "12CH Direct Mode",
-            "status": "matched",
-            "parameters": 7
-          },
-          "14CH Direct Mode": {
-            "channels": 14,
-            "gdtfMode": "14CH Direct Mode",
-            "status": "matched",
-            "parameters": 14
-          },
-          "21CH Direct Mode": {
-            "channels": 21,
-            "gdtfMode": "21CH Direct Mode",
-            "status": "matched",
-            "parameters": 14
-          },
-          "6CH HSI Mode": {
-            "channels": 6,
-            "gdtfMode": "6CH HSI Mode",
-            "status": "matched",
-            "parameters": 3
-          },
-          "12CH HSI Mode": {
-            "channels": 12,
-            "gdtfMode": "12CH HSI Mode",
-            "status": "matched",
-            "parameters": 9
-          }
+        "1CH Direct Mode": {
+          "channels": 1,
+          "parameters": 1,
+          "sourceMode": "1CH Direct Mode"
+        },
+        "4CH CCT Mode": {
+          "channels": 4,
+          "parameters": 3,
+          "sourceMode": "4CH CCT Mode"
+        },
+        "7CH CCT Mode": {
+          "channels": 7,
+          "parameters": 6,
+          "sourceMode": "7CH CCT Mode"
+        },
+        "6CH RGB Mode": {
+          "channels": 6,
+          "parameters": 4,
+          "sourceMode": "6CH RGB Mode"
+        },
+        "10CH RGB Mode": {
+          "channels": 10,
+          "parameters": 10,
+          "sourceMode": "10CH RGB Mode"
+        },
+        "18CH RGB Mode": {
+          "channels": 18,
+          "parameters": 14,
+          "sourceMode": "18CH RGB Mode"
+        },
+        "12CH Direct Mode": {
+          "channels": 12,
+          "parameters": 7,
+          "sourceMode": "12CH Direct Mode"
+        },
+        "14CH Direct Mode": {
+          "channels": 14,
+          "parameters": 14,
+          "sourceMode": "14CH Direct Mode"
+        },
+        "21CH Direct Mode": {
+          "channels": 21,
+          "parameters": 14,
+          "sourceMode": "21CH Direct Mode"
+        },
+        "6CH HSI Mode": {
+          "channels": 6,
+          "parameters": 3,
+          "sourceMode": "6CH HSI Mode"
+        },
+        "12CH HSI Mode": {
+          "channels": 12,
+          "parameters": 9,
+          "sourceMode": "12CH HSI Mode"
         }
       },
-      "shortName": "Icon F4"
+      "shortName": "Icon F4",
+      "image": "images/fixtures/roxx/icon-f4.png",
+      "details": "json/fixture-details/029d90cb903f4b9f1039a4b974579595a32e33e2a88b6f5c296ff6bdc602f878.json",
+      "provenance": {
+        "fileName": "ROXX@Icon_F4@RX_A_28052026.gdtf",
+        "sha256": "029d90cb903f4b9f1039a4b974579595a32e33e2a88b6f5c296ff6bdc602f878",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Icon F6",
       "watts": 400.0,
       "weight": 9.0,
       "modes": {
-        "1CH Direct Mode": 1,
-        "4CH CCT Mode": 4,
-        "7CH CCT Mode": 7,
-        "6CH RGB Mode": 6,
-        "10CH RGB Mode": 10,
-        "18CH RGB Mode": 18,
-        "12CH Direct Mode": 12,
-        "14CH Direct Mode": 14,
-        "21CH Direct Mode": 21,
-        "6CH HSI Mode": 6,
-        "12CH HSI Mode": 12
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/roxx",
-        "suggestedFileName": "Roxx__Icon_F6.gdtf",
-        "file": "fixtures/roxx/ROXX@Icon_F6@RX_B_28052026.gdtf",
-        "modes": {
-          "1CH Direct Mode": {
-            "channels": 1,
-            "gdtfMode": "1CH Direct Mode",
-            "status": "matched",
-            "parameters": 1
-          },
-          "4CH CCT Mode": {
-            "channels": 4,
-            "gdtfMode": "4CH CCT Mode",
-            "status": "matched",
-            "parameters": 3
-          },
-          "7CH CCT Mode": {
-            "channels": 7,
-            "gdtfMode": "7CH CCT Mode",
-            "status": "matched",
-            "parameters": 6
-          },
-          "6CH RGB Mode": {
-            "channels": 6,
-            "gdtfMode": "6CH RGB Mode",
-            "status": "matched",
-            "parameters": 4
-          },
-          "10CH RGB Mode": {
-            "channels": 10,
-            "gdtfMode": "10CH RGB Mode",
-            "status": "matched",
-            "parameters": 10
-          },
-          "18CH RGB Mode": {
-            "channels": 18,
-            "gdtfMode": "18CH RGB Mode",
-            "status": "matched",
-            "parameters": 14
-          },
-          "12CH Direct Mode": {
-            "channels": 12,
-            "gdtfMode": "12CH Direct Mode",
-            "status": "matched",
-            "parameters": 7
-          },
-          "14CH Direct Mode": {
-            "channels": 14,
-            "gdtfMode": "14CH Direct Mode",
-            "status": "matched",
-            "parameters": 14
-          },
-          "21CH Direct Mode": {
-            "channels": 21,
-            "gdtfMode": "21CH Direct Mode",
-            "status": "matched",
-            "parameters": 14
-          },
-          "6CH HSI Mode": {
-            "channels": 6,
-            "gdtfMode": "6CH HSI Mode",
-            "status": "matched",
-            "parameters": 3
-          },
-          "12CH HSI Mode": {
-            "channels": 12,
-            "gdtfMode": "12CH HSI Mode",
-            "status": "matched",
-            "parameters": 9
-          }
+        "1CH Direct Mode": {
+          "channels": 1,
+          "parameters": 1,
+          "sourceMode": "1CH Direct Mode"
+        },
+        "4CH CCT Mode": {
+          "channels": 4,
+          "parameters": 3,
+          "sourceMode": "4CH CCT Mode"
+        },
+        "7CH CCT Mode": {
+          "channels": 7,
+          "parameters": 6,
+          "sourceMode": "7CH CCT Mode"
+        },
+        "6CH RGB Mode": {
+          "channels": 6,
+          "parameters": 4,
+          "sourceMode": "6CH RGB Mode"
+        },
+        "10CH RGB Mode": {
+          "channels": 10,
+          "parameters": 10,
+          "sourceMode": "10CH RGB Mode"
+        },
+        "18CH RGB Mode": {
+          "channels": 18,
+          "parameters": 14,
+          "sourceMode": "18CH RGB Mode"
+        },
+        "12CH Direct Mode": {
+          "channels": 12,
+          "parameters": 7,
+          "sourceMode": "12CH Direct Mode"
+        },
+        "14CH Direct Mode": {
+          "channels": 14,
+          "parameters": 14,
+          "sourceMode": "14CH Direct Mode"
+        },
+        "21CH Direct Mode": {
+          "channels": 21,
+          "parameters": 14,
+          "sourceMode": "21CH Direct Mode"
+        },
+        "6CH HSI Mode": {
+          "channels": 6,
+          "parameters": 3,
+          "sourceMode": "6CH HSI Mode"
+        },
+        "12CH HSI Mode": {
+          "channels": 12,
+          "parameters": 9,
+          "sourceMode": "12CH HSI Mode"
         }
       },
-      "shortName": "Icon F6"
+      "shortName": "Icon F6",
+      "image": "images/fixtures/roxx/icon-f6.png",
+      "details": "json/fixture-details/20f60b6fe32ce9c0b20b2101197a61483ddd9071713da92a6005b145d3111395.json",
+      "provenance": {
+        "fileName": "ROXX@Icon_F6@RX_B_28052026.gdtf",
+        "sha256": "20f60b6fe32ce9c0b20b2101197a61483ddd9071713da92a6005b145d3111395",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Icon F8",
       "watts": 800.0,
       "weight": 13.0,
       "modes": {
-        "1CH Direct Mode": 1,
-        "4CH CCT Mode": 4,
-        "7CH CCT Mode": 7,
-        "6CH RGB Mode": 6,
-        "10CH RGB Mode": 10,
-        "18CH RGB Mode": 18,
-        "12CH Direct Mode": 12,
-        "14CH Direct Mode": 14,
-        "21CH Direct Mode": 21,
-        "6CH HSI Mode": 6,
-        "12CH HSI Mode": 12
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/roxx",
-        "suggestedFileName": "Roxx__Icon_F8.gdtf",
-        "file": "fixtures/roxx/ROXX@Icon_F8@RX_B_28052026.gdtf",
-        "modes": {
-          "1CH Direct Mode": {
-            "channels": 1,
-            "gdtfMode": "1CH Direct Mode",
-            "status": "matched",
-            "parameters": 1
-          },
-          "4CH CCT Mode": {
-            "channels": 4,
-            "gdtfMode": "4CH CCT Mode",
-            "status": "matched",
-            "parameters": 3
-          },
-          "7CH CCT Mode": {
-            "channels": 7,
-            "gdtfMode": "7CH CCT Mode",
-            "status": "matched",
-            "parameters": 6
-          },
-          "6CH RGB Mode": {
-            "channels": 6,
-            "gdtfMode": "6CH RGB Mode",
-            "status": "matched",
-            "parameters": 4
-          },
-          "10CH RGB Mode": {
-            "channels": 10,
-            "gdtfMode": "10CH RGB Mode",
-            "status": "matched",
-            "parameters": 10
-          },
-          "18CH RGB Mode": {
-            "channels": 18,
-            "gdtfMode": "18CH RGB Mode",
-            "status": "matched",
-            "parameters": 14
-          },
-          "12CH Direct Mode": {
-            "channels": 12,
-            "gdtfMode": "12CH Direct Mode",
-            "status": "matched",
-            "parameters": 7
-          },
-          "14CH Direct Mode": {
-            "channels": 14,
-            "gdtfMode": "14CH Direct Mode",
-            "status": "matched",
-            "parameters": 14
-          },
-          "21CH Direct Mode": {
-            "channels": 21,
-            "gdtfMode": "21CH Direct Mode",
-            "status": "matched",
-            "parameters": 14
-          },
-          "6CH HSI Mode": {
-            "channels": 6,
-            "gdtfMode": "6CH HSI Mode",
-            "status": "matched",
-            "parameters": 3
-          },
-          "12CH HSI Mode": {
-            "channels": 12,
-            "gdtfMode": "12CH HSI Mode",
-            "status": "matched",
-            "parameters": 9
-          }
+        "1CH Direct Mode": {
+          "channels": 1,
+          "parameters": 1,
+          "sourceMode": "1CH Direct Mode"
+        },
+        "4CH CCT Mode": {
+          "channels": 4,
+          "parameters": 3,
+          "sourceMode": "4CH CCT Mode"
+        },
+        "7CH CCT Mode": {
+          "channels": 7,
+          "parameters": 6,
+          "sourceMode": "7CH CCT Mode"
+        },
+        "6CH RGB Mode": {
+          "channels": 6,
+          "parameters": 4,
+          "sourceMode": "6CH RGB Mode"
+        },
+        "10CH RGB Mode": {
+          "channels": 10,
+          "parameters": 10,
+          "sourceMode": "10CH RGB Mode"
+        },
+        "18CH RGB Mode": {
+          "channels": 18,
+          "parameters": 14,
+          "sourceMode": "18CH RGB Mode"
+        },
+        "12CH Direct Mode": {
+          "channels": 12,
+          "parameters": 7,
+          "sourceMode": "12CH Direct Mode"
+        },
+        "14CH Direct Mode": {
+          "channels": 14,
+          "parameters": 14,
+          "sourceMode": "14CH Direct Mode"
+        },
+        "21CH Direct Mode": {
+          "channels": 21,
+          "parameters": 14,
+          "sourceMode": "21CH Direct Mode"
+        },
+        "6CH HSI Mode": {
+          "channels": 6,
+          "parameters": 3,
+          "sourceMode": "6CH HSI Mode"
+        },
+        "12CH HSI Mode": {
+          "channels": 12,
+          "parameters": 9,
+          "sourceMode": "12CH HSI Mode"
         }
       },
-      "shortName": "Icon F8"
+      "shortName": "Icon F8",
+      "image": "images/fixtures/roxx/icon-f8.png",
+      "details": "json/fixture-details/debb4daf0fe6c4a938db2ce9e043a3a2c9ef15d0754b78db84904154a331efd5.json",
+      "provenance": {
+        "fileName": "ROXX@Icon_F8@RX_B_28052026.gdtf",
+        "sha256": "debb4daf0fe6c4a938db2ce9e043a3a2c9ef15d0754b78db84904154a331efd5",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Key K36",
       "watts": 275.0,
       "weight": 7.84,
       "modes": {
-        "1CH": 1,
-        "2CH": 2,
-        "3CH": 3,
-        "4CH": 4
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/roxx",
-        "suggestedFileName": "Roxx__Key_K36.gdtf",
-        "file": "fixtures/roxx/ROXX@Key_K36@RX_A_29062026.gdtf",
-        "modes": {
-          "1CH": {
-            "channels": 1,
-            "gdtfMode": "1CH",
-            "status": "matched",
-            "parameters": 1
-          },
-          "2CH": {
-            "channels": 2,
-            "gdtfMode": "2CH",
-            "status": "matched",
-            "parameters": 2
-          },
-          "3CH": {
-            "channels": 3,
-            "gdtfMode": "3CH",
-            "status": "matched",
-            "parameters": 2
-          },
-          "4CH": {
-            "channels": 4,
-            "gdtfMode": "4CH",
-            "status": "matched",
-            "parameters": 3
-          }
+        "1CH": {
+          "channels": 1,
+          "parameters": 1,
+          "sourceMode": "1CH"
+        },
+        "2CH": {
+          "channels": 2,
+          "parameters": 2,
+          "sourceMode": "2CH"
+        },
+        "3CH": {
+          "channels": 3,
+          "parameters": 2,
+          "sourceMode": "3CH"
+        },
+        "4CH": {
+          "channels": 4,
+          "parameters": 3,
+          "sourceMode": "4CH"
         }
       },
-      "shortName": "Key K36"
+      "shortName": "Key K36",
+      "image": "images/fixtures/roxx/key-k36.png",
+      "details": "json/fixture-details/7aa441f82542e28d62734dc48306fbf87986b37952d3893fbb5a8cd6054e3c69.json",
+      "provenance": {
+        "fileName": "ROXX@Key_K36@RX_A_29062026.gdtf",
+        "sha256": "7aa441f82542e28d62734dc48306fbf87986b37952d3893fbb5a8cd6054e3c69",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Neo",
       "watts": null,
       "weight": 5.6,
       "modes": {
-        "CCT Mode (3 CH)": 3,
-        "RGB Mode (3 CH)": 3,
-        "RGB Mode (6 CH)": 6,
-        "RGB Mode (8 CH)": 8,
-        "RGB Mode (19 CH)": 19,
-        "RGB Mode (23 CH)": 23,
-        "Direct Mode (4 CH)": 4,
-        "Direct Mode (8 CH)": 8,
-        "Direct Mode (9 CH)": 9,
-        "Direct Mode (21 CH)": 21,
-        "Direct Mode (26 CH)": 26,
-        "HSI Mode (17 CH)": 17,
-        "Pure Mode (16 CH)": 16,
-        "Pure Mode (29 CH)": 29,
-        "Full Access Mode (28 CH)": 28,
-        "Full Access (44 CH)": 44
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/roxx",
-        "suggestedFileName": "Roxx__Neo.gdtf",
-        "file": "fixtures/roxx/ROXX@Neo@RX_A_15072024.gdtf",
-        "modes": {
-          "CCT Mode (3 CH)": {
-            "channels": 3,
-            "gdtfMode": "CCT Mode (3 CH)",
-            "status": "matched",
-            "parameters": 3
-          },
-          "RGB Mode (3 CH)": {
-            "channels": 3,
-            "gdtfMode": "RGB Mode (3 CH)",
-            "status": "matched",
-            "parameters": 4
-          },
-          "RGB Mode (6 CH)": {
-            "channels": 6,
-            "gdtfMode": "RGB Mode (6 CH)",
-            "status": "matched",
-            "parameters": 4
-          },
-          "RGB Mode (8 CH)": {
-            "channels": 8,
-            "gdtfMode": "RGB Mode (8 CH)",
-            "status": "matched",
-            "parameters": 8
-          },
-          "RGB Mode (19 CH)": {
-            "channels": 19,
-            "gdtfMode": "RGB Mode (19 CH)",
-            "status": "matched",
-            "parameters": 19
-          },
-          "RGB Mode (23 CH)": {
-            "channels": 23,
-            "gdtfMode": "RGB Mode (23 CH)",
-            "status": "matched",
-            "parameters": 19
-          },
-          "Direct Mode (4 CH)": {
-            "channels": 4,
-            "gdtfMode": "Direct Mode (4 CH)",
-            "status": "matched",
-            "parameters": 5
-          },
-          "Direct Mode (8 CH)": {
-            "channels": 8,
-            "gdtfMode": "Direct Mode (8 CH)",
-            "status": "matched",
-            "parameters": 5
-          },
-          "Direct Mode (9 CH)": {
-            "channels": 9,
-            "gdtfMode": "Direct Mode (9 CH)",
-            "status": "matched",
-            "parameters": 9
-          },
-          "Direct Mode (21 CH)": {
-            "channels": 21,
-            "gdtfMode": "Direct Mode (21 CH)",
-            "status": "matched",
-            "parameters": 21
-          },
-          "Direct Mode (26 CH)": {
-            "channels": 26,
-            "gdtfMode": "Direct Mode (26 CH)",
-            "status": "matched",
-            "parameters": 21
-          },
-          "HSI Mode (17 CH)": {
-            "channels": 17,
-            "gdtfMode": "HSI Mode (17 CH)",
-            "status": "matched",
-            "parameters": 16
-          },
-          "Pure Mode (16 CH)": {
-            "channels": 16,
-            "gdtfMode": "Pure Mode (16 CH)",
-            "status": "matched",
-            "parameters": 20
-          },
-          "Pure Mode (29 CH)": {
-            "channels": 29,
-            "gdtfMode": "Pure Mode (29 CH)",
-            "status": "matched",
-            "parameters": 20
-          },
-          "Full Access Mode (28 CH)": {
-            "channels": 28,
-            "gdtfMode": "Full Access Mode (28 CH)",
-            "status": "matched",
-            "parameters": 32
-          },
-          "Full Access (44 CH)": {
-            "channels": 44,
-            "gdtfMode": "Full Access (44 CH)",
-            "status": "matched",
-            "parameters": 32
-          }
+        "CCT Mode (3 CH)": {
+          "channels": 3,
+          "parameters": 3,
+          "sourceMode": "CCT Mode (3 CH)"
+        },
+        "RGB Mode (3 CH)": {
+          "channels": 3,
+          "parameters": 4,
+          "sourceMode": "RGB Mode (3 CH)"
+        },
+        "RGB Mode (6 CH)": {
+          "channels": 6,
+          "parameters": 4,
+          "sourceMode": "RGB Mode (6 CH)"
+        },
+        "RGB Mode (8 CH)": {
+          "channels": 8,
+          "parameters": 8,
+          "sourceMode": "RGB Mode (8 CH)"
+        },
+        "RGB Mode (19 CH)": {
+          "channels": 19,
+          "parameters": 19,
+          "sourceMode": "RGB Mode (19 CH)"
+        },
+        "RGB Mode (23 CH)": {
+          "channels": 23,
+          "parameters": 19,
+          "sourceMode": "RGB Mode (23 CH)"
+        },
+        "Direct Mode (4 CH)": {
+          "channels": 4,
+          "parameters": 5,
+          "sourceMode": "Direct Mode (4 CH)"
+        },
+        "Direct Mode (8 CH)": {
+          "channels": 8,
+          "parameters": 5,
+          "sourceMode": "Direct Mode (8 CH)"
+        },
+        "Direct Mode (9 CH)": {
+          "channels": 9,
+          "parameters": 9,
+          "sourceMode": "Direct Mode (9 CH)"
+        },
+        "Direct Mode (21 CH)": {
+          "channels": 21,
+          "parameters": 21,
+          "sourceMode": "Direct Mode (21 CH)"
+        },
+        "Direct Mode (26 CH)": {
+          "channels": 26,
+          "parameters": 21,
+          "sourceMode": "Direct Mode (26 CH)"
+        },
+        "HSI Mode (17 CH)": {
+          "channels": 17,
+          "parameters": 16,
+          "sourceMode": "HSI Mode (17 CH)"
+        },
+        "Pure Mode (16 CH)": {
+          "channels": 16,
+          "parameters": 20,
+          "sourceMode": "Pure Mode (16 CH)"
+        },
+        "Pure Mode (29 CH)": {
+          "channels": 29,
+          "parameters": 20,
+          "sourceMode": "Pure Mode (29 CH)"
+        },
+        "Full Access Mode (28 CH)": {
+          "channels": 28,
+          "parameters": 32,
+          "sourceMode": "Full Access Mode (28 CH)"
+        },
+        "Full Access (44 CH)": {
+          "channels": 44,
+          "parameters": 32,
+          "sourceMode": "Full Access (44 CH)"
         }
       },
-      "shortName": "Neo"
+      "shortName": "Neo",
+      "image": "images/fixtures/roxx/neo.png",
+      "details": "json/fixture-details/879d26b202117f1902a5e19c2bf975d19813f48c26bedda293acc082fa502da2.json",
+      "provenance": {
+        "fileName": "ROXX@Neo@RX_A_15072024.gdtf",
+        "sha256": "879d26b202117f1902a5e19c2bf975d19813f48c26bedda293acc082fa502da2",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Neo fx",
       "watts": 960.0,
       "weight": 24.15,
       "modes": {
-        "15CH RGB Mode": 15,
-        "19CH RGB Mode": 19,
-        "26CH RGB Mode ": 26,
-        "30CH RGB Mode": 30,
-        "28CH Full Direct Mode": 28,
-        "33CH Full Direct Mode": 33,
-        "81CH Pure Mode": 81,
-        "154CH Pure Mode": 154,
-        "9CH Dual Mode": 9,
-        "10CH Dual Mode": 10,
-        "95CH Full Access Mode": 95,
-        "168CH Full Access Mode": 168
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/roxx",
-        "suggestedFileName": "Roxx__Neo_fx.gdtf",
-        "file": "fixtures/roxx/ROXX@Neo_fx@RX_C_27012025.gdtf",
-        "modes": {
-          "15CH RGB Mode": {
-            "channels": 15,
-            "gdtfMode": "15CH RGB Mode",
-            "status": "matched",
-            "parameters": 14
-          },
-          "19CH RGB Mode": {
-            "channels": 19,
-            "gdtfMode": "19CH RGB Mode",
-            "status": "matched",
-            "parameters": 14
-          },
-          "26CH RGB Mode ": {
-            "channels": 26,
-            "gdtfMode": "26CH RGB Mode ",
-            "status": "matched",
-            "parameters": 25
-          },
-          "30CH RGB Mode": {
-            "channels": 30,
-            "gdtfMode": "30CH RGB Mode",
-            "status": "matched",
-            "parameters": 25
-          },
-          "28CH Full Direct Mode": {
-            "channels": 28,
-            "gdtfMode": "28CH Full Direct Mode",
-            "status": "matched",
-            "parameters": 27
-          },
-          "33CH Full Direct Mode": {
-            "channels": 33,
-            "gdtfMode": "33CH Full Direct Mode",
-            "status": "matched",
-            "parameters": 27
-          },
-          "81CH Pure Mode": {
-            "channels": 81,
-            "gdtfMode": "81CH Pure Mode",
-            "status": "matched",
-            "parameters": 104
-          },
-          "154CH Pure Mode": {
-            "channels": 154,
-            "gdtfMode": "154CH Pure Mode",
-            "status": "matched",
-            "parameters": 104
-          },
-          "9CH Dual Mode": {
-            "channels": 9,
-            "gdtfMode": "9CH Dual Mode",
-            "status": "matched",
-            "parameters": 8
-          },
-          "10CH Dual Mode": {
-            "channels": 10,
-            "gdtfMode": "10CH Dual Mode",
-            "status": "matched",
-            "parameters": 8
-          },
-          "95CH Full Access Mode": {
-            "channels": 95,
-            "gdtfMode": "95CH Full Access Mode",
-            "status": "matched",
-            "parameters": 118
-          },
-          "168CH Full Access Mode": {
-            "channels": 168,
-            "gdtfMode": "168CH Full Access Mode",
-            "status": "matched",
-            "parameters": 118
-          }
+        "15CH RGB Mode": {
+          "channels": 15,
+          "parameters": 14,
+          "sourceMode": "15CH RGB Mode"
+        },
+        "19CH RGB Mode": {
+          "channels": 19,
+          "parameters": 14,
+          "sourceMode": "19CH RGB Mode"
+        },
+        "26CH RGB Mode ": {
+          "channels": 26,
+          "parameters": 25,
+          "sourceMode": "26CH RGB Mode "
+        },
+        "30CH RGB Mode": {
+          "channels": 30,
+          "parameters": 25,
+          "sourceMode": "30CH RGB Mode"
+        },
+        "28CH Full Direct Mode": {
+          "channels": 28,
+          "parameters": 27,
+          "sourceMode": "28CH Full Direct Mode"
+        },
+        "33CH Full Direct Mode": {
+          "channels": 33,
+          "parameters": 27,
+          "sourceMode": "33CH Full Direct Mode"
+        },
+        "81CH Pure Mode": {
+          "channels": 81,
+          "parameters": 104,
+          "sourceMode": "81CH Pure Mode"
+        },
+        "154CH Pure Mode": {
+          "channels": 154,
+          "parameters": 104,
+          "sourceMode": "154CH Pure Mode"
+        },
+        "9CH Dual Mode": {
+          "channels": 9,
+          "parameters": 8,
+          "sourceMode": "9CH Dual Mode"
+        },
+        "10CH Dual Mode": {
+          "channels": 10,
+          "parameters": 8,
+          "sourceMode": "10CH Dual Mode"
+        },
+        "95CH Full Access Mode": {
+          "channels": 95,
+          "parameters": 118,
+          "sourceMode": "95CH Full Access Mode"
+        },
+        "168CH Full Access Mode": {
+          "channels": 168,
+          "parameters": 118,
+          "sourceMode": "168CH Full Access Mode"
         }
       },
-      "shortName": "Neo fx"
+      "shortName": "Neo fx",
+      "image": "images/fixtures/roxx/neo-fx.png",
+      "details": "json/fixture-details/cbf881e963fd32aeebe291dafa4ba189c065b0e7eb9e1bb994c6bc168305d9f8.json",
+      "provenance": {
+        "fileName": "ROXX@Neo_fx@RX_C_27012025.gdtf",
+        "sha256": "cbf881e963fd32aeebe291dafa4ba189c065b0e7eb9e1bb994c6bc168305d9f8",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Neo lite",
       "watts": 215.0,
       "weight": 7.6,
       "modes": {
-        "CCT Mode (3 CH)": 3,
-        "RGB Mode (3 CH)": 3,
-        "RGB Mode (6 CH)": 6,
-        "RGB Mode (8 CH)": 8,
-        "RGB Mode (11 CH)": 11,
-        "RGB Mode (15 CH)": 15,
-        "Direct Mode (4 CH)": 4,
-        "Direct Mode (8 CH)": 8,
-        "Direct Mode (9 CH)": 9,
-        "Direct Mode (12 CH)": 12,
-        "Direct Mode (17 CH)": 17,
-        "HSI Mode (10 CH)": 10
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/roxx",
-        "suggestedFileName": "Roxx__Neo_lite.gdtf",
-        "file": "fixtures/roxx/ROXX@Neo_lite@TW_A_29092025.gdtf",
-        "modes": {
-          "CCT Mode (3 CH)": {
-            "channels": 3,
-            "gdtfMode": "CCT Mode (3 CH)",
-            "status": "matched",
-            "parameters": 3
-          },
-          "RGB Mode (3 CH)": {
-            "channels": 3,
-            "gdtfMode": "RGB Mode (3 CH)",
-            "status": "matched",
-            "parameters": 4
-          },
-          "RGB Mode (6 CH)": {
-            "channels": 6,
-            "gdtfMode": "RGB Mode (6 CH)",
-            "status": "matched",
-            "parameters": 4
-          },
-          "RGB Mode (8 CH)": {
-            "channels": 8,
-            "gdtfMode": "RGB Mode (8 CH)",
-            "status": "matched",
-            "parameters": 8
-          },
-          "RGB Mode (11 CH)": {
-            "channels": 11,
-            "gdtfMode": "RGB Mode (11 CH)",
-            "status": "matched",
-            "parameters": 11
-          },
-          "RGB Mode (15 CH)": {
-            "channels": 15,
-            "gdtfMode": "RGB Mode (15 CH)",
-            "status": "matched",
-            "parameters": 11
-          },
-          "Direct Mode (4 CH)": {
-            "channels": 4,
-            "gdtfMode": "Direct Mode (4 CH)",
-            "status": "matched",
-            "parameters": 5
-          },
-          "Direct Mode (8 CH)": {
-            "channels": 8,
-            "gdtfMode": "Direct Mode (8 CH)",
-            "status": "matched",
-            "parameters": 5
-          },
-          "Direct Mode (9 CH)": {
-            "channels": 9,
-            "gdtfMode": "Direct Mode (9 CH)",
-            "status": "matched",
-            "parameters": 9
-          },
-          "Direct Mode (12 CH)": {
-            "channels": 12,
-            "gdtfMode": "Direct Mode (12 CH)",
-            "status": "matched",
-            "parameters": 12
-          },
-          "Direct Mode (17 CH)": {
-            "channels": 17,
-            "gdtfMode": "Direct Mode (17 CH)",
-            "status": "matched",
-            "parameters": 12
-          },
-          "HSI Mode (10 CH)": {
-            "channels": 10,
-            "gdtfMode": "HSI Mode (10 CH)",
-            "status": "matched",
-            "parameters": 9
-          }
+        "CCT Mode (3 CH)": {
+          "channels": 3,
+          "parameters": 3,
+          "sourceMode": "CCT Mode (3 CH)"
+        },
+        "RGB Mode (3 CH)": {
+          "channels": 3,
+          "parameters": 4,
+          "sourceMode": "RGB Mode (3 CH)"
+        },
+        "RGB Mode (6 CH)": {
+          "channels": 6,
+          "parameters": 4,
+          "sourceMode": "RGB Mode (6 CH)"
+        },
+        "RGB Mode (8 CH)": {
+          "channels": 8,
+          "parameters": 8,
+          "sourceMode": "RGB Mode (8 CH)"
+        },
+        "RGB Mode (11 CH)": {
+          "channels": 11,
+          "parameters": 11,
+          "sourceMode": "RGB Mode (11 CH)"
+        },
+        "RGB Mode (15 CH)": {
+          "channels": 15,
+          "parameters": 11,
+          "sourceMode": "RGB Mode (15 CH)"
+        },
+        "Direct Mode (4 CH)": {
+          "channels": 4,
+          "parameters": 5,
+          "sourceMode": "Direct Mode (4 CH)"
+        },
+        "Direct Mode (8 CH)": {
+          "channels": 8,
+          "parameters": 5,
+          "sourceMode": "Direct Mode (8 CH)"
+        },
+        "Direct Mode (9 CH)": {
+          "channels": 9,
+          "parameters": 9,
+          "sourceMode": "Direct Mode (9 CH)"
+        },
+        "Direct Mode (12 CH)": {
+          "channels": 12,
+          "parameters": 12,
+          "sourceMode": "Direct Mode (12 CH)"
+        },
+        "Direct Mode (17 CH)": {
+          "channels": 17,
+          "parameters": 12,
+          "sourceMode": "Direct Mode (17 CH)"
+        },
+        "HSI Mode (10 CH)": {
+          "channels": 10,
+          "parameters": 9,
+          "sourceMode": "HSI Mode (10 CH)"
         }
       },
-      "shortName": "Neo lite"
+      "shortName": "Neo lite",
+      "image": "images/fixtures/roxx/neo-lite.png",
+      "details": "json/fixture-details/8985574a5e7ec16ee9dd30d40cf3786f118f1cda012ef9a7b2e50433ca63d109.json",
+      "provenance": {
+        "fileName": "ROXX@Neo_lite@TW_A_29092025.gdtf",
+        "sha256": "8985574a5e7ec16ee9dd30d40cf3786f118f1cda012ef9a7b2e50433ca63d109",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Neo Mini",
       "watts": 600.0,
       "weight": 7.7,
       "modes": {
-        "CCT Mode (3 CH)": 3,
-        "RGB Mode (3 CH)": 3,
-        "RGB Mode (6 CH)": 6,
-        "RGB Mode (8 CH)": 8,
-        "RGB Mode (11 CH)": 11,
-        "RGB Mode (15 CH)": 15,
-        "Direct Mode (4 CH)": 4,
-        "Direct Mode (8 CH)": 8,
-        "Direct Mode (9 CH)": 9,
-        "Direct Mode (12 CH)": 12,
-        "Direct Mode (17 CH)": 17,
-        "HSI Mode (10 CH)": 10
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/roxx",
-        "suggestedFileName": "Roxx__Neo_Mini.gdtf",
-        "file": "fixtures/roxx/ROXX@Neo_Mini@RX_A_27062025.gdtf",
-        "modes": {
-          "CCT Mode (3 CH)": {
-            "channels": 3,
-            "gdtfMode": "CCT Mode (3 CH)",
-            "status": "matched",
-            "parameters": 3
-          },
-          "RGB Mode (3 CH)": {
-            "channels": 3,
-            "gdtfMode": "RGB Mode (3 CH)",
-            "status": "matched",
-            "parameters": 4
-          },
-          "RGB Mode (6 CH)": {
-            "channels": 6,
-            "gdtfMode": "RGB Mode (6 CH)",
-            "status": "matched",
-            "parameters": 4
-          },
-          "RGB Mode (8 CH)": {
-            "channels": 8,
-            "gdtfMode": "RGB Mode (8 CH)",
-            "status": "matched",
-            "parameters": 8
-          },
-          "RGB Mode (11 CH)": {
-            "channels": 11,
-            "gdtfMode": "RGB Mode (11 CH)",
-            "status": "matched",
-            "parameters": 11
-          },
-          "RGB Mode (15 CH)": {
-            "channels": 15,
-            "gdtfMode": "RGB Mode (15 CH)",
-            "status": "matched",
-            "parameters": 11
-          },
-          "Direct Mode (4 CH)": {
-            "channels": 4,
-            "gdtfMode": "Direct Mode (4 CH)",
-            "status": "matched",
-            "parameters": 5
-          },
-          "Direct Mode (8 CH)": {
-            "channels": 8,
-            "gdtfMode": "Direct Mode (8 CH)",
-            "status": "matched",
-            "parameters": 5
-          },
-          "Direct Mode (9 CH)": {
-            "channels": 9,
-            "gdtfMode": "Direct Mode (9 CH)",
-            "status": "matched",
-            "parameters": 9
-          },
-          "Direct Mode (12 CH)": {
-            "channels": 12,
-            "gdtfMode": "Direct Mode (12 CH)",
-            "status": "matched",
-            "parameters": 12
-          },
-          "Direct Mode (17 CH)": {
-            "channels": 17,
-            "gdtfMode": "Direct Mode (17 CH)",
-            "status": "matched",
-            "parameters": 12
-          },
-          "HSI Mode (10 CH)": {
-            "channels": 10,
-            "gdtfMode": "HSI Mode (10 CH)",
-            "status": "matched",
-            "parameters": 9
-          }
+        "CCT Mode (3 CH)": {
+          "channels": 3,
+          "parameters": 3,
+          "sourceMode": "CCT Mode (3 CH)"
+        },
+        "RGB Mode (3 CH)": {
+          "channels": 3,
+          "parameters": 4,
+          "sourceMode": "RGB Mode (3 CH)"
+        },
+        "RGB Mode (6 CH)": {
+          "channels": 6,
+          "parameters": 4,
+          "sourceMode": "RGB Mode (6 CH)"
+        },
+        "RGB Mode (8 CH)": {
+          "channels": 8,
+          "parameters": 8,
+          "sourceMode": "RGB Mode (8 CH)"
+        },
+        "RGB Mode (11 CH)": {
+          "channels": 11,
+          "parameters": 11,
+          "sourceMode": "RGB Mode (11 CH)"
+        },
+        "RGB Mode (15 CH)": {
+          "channels": 15,
+          "parameters": 11,
+          "sourceMode": "RGB Mode (15 CH)"
+        },
+        "Direct Mode (4 CH)": {
+          "channels": 4,
+          "parameters": 5,
+          "sourceMode": "Direct Mode (4 CH)"
+        },
+        "Direct Mode (8 CH)": {
+          "channels": 8,
+          "parameters": 5,
+          "sourceMode": "Direct Mode (8 CH)"
+        },
+        "Direct Mode (9 CH)": {
+          "channels": 9,
+          "parameters": 9,
+          "sourceMode": "Direct Mode (9 CH)"
+        },
+        "Direct Mode (12 CH)": {
+          "channels": 12,
+          "parameters": 12,
+          "sourceMode": "Direct Mode (12 CH)"
+        },
+        "Direct Mode (17 CH)": {
+          "channels": 17,
+          "parameters": 12,
+          "sourceMode": "Direct Mode (17 CH)"
+        },
+        "HSI Mode (10 CH)": {
+          "channels": 10,
+          "parameters": 9,
+          "sourceMode": "HSI Mode (10 CH)"
         }
       },
-      "shortName": "Neo Mini"
+      "shortName": "Neo Mini",
+      "image": "images/fixtures/roxx/neo-mini.png",
+      "details": "json/fixture-details/4cbf10c637812b2daf33d08c5d80125cab2ef3dd98e443161047c5e810294e05.json",
+      "provenance": {
+        "fileName": "ROXX@Neo_Mini@RX_A_27062025.gdtf",
+        "sha256": "4cbf10c637812b2daf33d08c5d80125cab2ef3dd98e443161047c5e810294e05",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Show Daylight",
       "watts": 200.0,
       "weight": 5.7,
       "modes": {
-        "1CH Mode 8bit": 1,
-        "2CH Mode 16bit": 2,
-        "3CH Strobe Mode 8bit": 3,
-        "4CH Mode 16bit": 4
-      },
-      "gdtf": {
-        "status": "pending-download",
-        "folder": "fixtures/roxx",
-        "suggestedFileName": "Roxx__Show_Daylight.gdtf",
-        "file": "",
-        "modes": {
-          "1CH Mode 8bit": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "2CH Mode 16bit": {
-            "channels": 2,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "3CH Strobe Mode 8bit": {
-            "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "4CH Mode 16bit": {
-            "channels": 4,
-            "gdtfMode": "",
-            "status": "pending-match"
-          }
+        "1CH Mode 8bit": {
+          "channels": 1,
+          "parameters": null
+        },
+        "2CH Mode 16bit": {
+          "channels": 2,
+          "parameters": null
+        },
+        "3CH Strobe Mode 8bit": {
+          "channels": 3,
+          "parameters": null
+        },
+        "4CH Mode 16bit": {
+          "channels": 4,
+          "parameters": null
         }
       },
-      "shortName": "Show DL"
+      "shortName": "Show DL",
+      "image": "",
+      "details": ""
     },
     {
       "fixture": "Show FC",
       "watts": 230.0,
       "weight": 5.7,
       "modes": {
-        "3CH CCT": 3,
-        "3CH RGB": 3,
-        "6CH RGB": 6,
-        "9CH RGB": 9,
-        "11CH RGB": 11,
-        "14CH RGB": 14,
-        "4CH Direct": 4,
-        "8CH Direct": 8,
-        "11CH Direct": 11,
-        "16CH Direct": 16,
-        "3CH HSI": 3,
-        "10CH HSI": 10
-      },
-      "gdtf": {
-        "status": "pending-download",
-        "folder": "fixtures/roxx",
-        "suggestedFileName": "Roxx__Show_FC.gdtf",
-        "file": "",
-        "modes": {
-          "3CH CCT": {
-            "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "3CH RGB": {
-            "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "6CH RGB": {
-            "channels": 6,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "9CH RGB": {
-            "channels": 9,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "11CH RGB": {
-            "channels": 11,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "14CH RGB": {
-            "channels": 14,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "4CH Direct": {
-            "channels": 4,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "8CH Direct": {
-            "channels": 8,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "11CH Direct": {
-            "channels": 11,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "16CH Direct": {
-            "channels": 16,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "3CH HSI": {
-            "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "10CH HSI": {
-            "channels": 10,
-            "gdtfMode": "",
-            "status": "pending-match"
-          }
+        "3CH CCT": {
+          "channels": 3,
+          "parameters": null
+        },
+        "3CH RGB": {
+          "channels": 3,
+          "parameters": null
+        },
+        "6CH RGB": {
+          "channels": 6,
+          "parameters": null
+        },
+        "9CH RGB": {
+          "channels": 9,
+          "parameters": null
+        },
+        "11CH RGB": {
+          "channels": 11,
+          "parameters": null
+        },
+        "14CH RGB": {
+          "channels": 14,
+          "parameters": null
+        },
+        "4CH Direct": {
+          "channels": 4,
+          "parameters": null
+        },
+        "8CH Direct": {
+          "channels": 8,
+          "parameters": null
+        },
+        "11CH Direct": {
+          "channels": 11,
+          "parameters": null
+        },
+        "16CH Direct": {
+          "channels": 16,
+          "parameters": null
+        },
+        "3CH HSI": {
+          "channels": 3,
+          "parameters": null
+        },
+        "10CH HSI": {
+          "channels": 10,
+          "parameters": null
         }
       },
-      "shortName": "Show FC"
+      "shortName": "Show FC",
+      "image": "",
+      "details": ""
     },
     {
       "fixture": "Show MAXX TWplus Narrow",
       "watts": 800.0,
       "weight": 13.5,
       "modes": {
-        "9CH RGB Narrow": 9,
-        "14CH RGB Narrow": 14,
-        "3CH CCT Narrow": 3,
-        "3CH RGB Narrow": 3,
-        "6CH RGB 16Bit Narrow": 6,
-        "11CH RGB Narrow": 11,
-        "6CH Direct RAW Narrow": 6,
-        "12CH Direct RAW Narrow": 12,
-        "13CH Direct RAW Narrow": 13,
-        "20CH Direct RAW Narrow": 20,
-        "3CH HSI Narrow": 3,
-        "10CH HSI Narrow": 10
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/roxx",
-        "suggestedFileName": "Roxx__Show_MAXX_TWplus_Narrow.gdtf",
-        "file": "fixtures/roxx/ROXX@Show_MAXX_TWplus_Narrow@TW_A_20112023.gdtf",
-        "modes": {
-          "9CH RGB Narrow": {
-            "channels": 9,
-            "gdtfMode": "9CH RGB Narrow",
-            "status": "matched",
-            "parameters": 9
-          },
-          "14CH RGB Narrow": {
-            "channels": 14,
-            "gdtfMode": "14CH RGB Narrow",
-            "status": "matched",
-            "parameters": 10
-          },
-          "3CH CCT Narrow": {
-            "channels": 3,
-            "gdtfMode": "3CH CCT Narrow",
-            "status": "matched",
-            "parameters": 3
-          },
-          "3CH RGB Narrow": {
-            "channels": 3,
-            "gdtfMode": "3CH RGB Narrow",
-            "status": "matched",
-            "parameters": 3
-          },
-          "6CH RGB 16Bit Narrow": {
-            "channels": 6,
-            "gdtfMode": "6CH RGB 16Bit Narrow",
-            "status": "matched",
-            "parameters": 3
-          },
-          "11CH RGB Narrow": {
-            "channels": 11,
-            "gdtfMode": "11CH RGB Narrow",
-            "status": "matched",
-            "parameters": 11
-          },
-          "6CH Direct RAW Narrow": {
-            "channels": 6,
-            "gdtfMode": "6CH Direct RAW Narrow",
-            "status": "matched",
-            "parameters": 6
-          },
-          "12CH Direct RAW Narrow": {
-            "channels": 12,
-            "gdtfMode": "12CH Direct RAW Narrow",
-            "status": "matched",
-            "parameters": 6
-          },
-          "13CH Direct RAW Narrow": {
-            "channels": 13,
-            "gdtfMode": "13CH Direct RAW Narrow",
-            "status": "matched",
-            "parameters": 13
-          },
-          "20CH Direct RAW Narrow": {
-            "channels": 20,
-            "gdtfMode": "20CH Direct RAW Narrow",
-            "status": "matched",
-            "parameters": 13
-          },
-          "3CH HSI Narrow": {
-            "channels": 3,
-            "gdtfMode": "3CH HSI Narrow",
-            "status": "matched",
-            "parameters": 3
-          },
-          "10CH HSI Narrow": {
-            "channels": 10,
-            "gdtfMode": "10CH HSI Narrow",
-            "status": "matched",
-            "parameters": 9
-          }
+        "9CH RGB Narrow": {
+          "channels": 9,
+          "parameters": 9,
+          "sourceMode": "9CH RGB Narrow"
+        },
+        "14CH RGB Narrow": {
+          "channels": 14,
+          "parameters": 10,
+          "sourceMode": "14CH RGB Narrow"
+        },
+        "3CH CCT Narrow": {
+          "channels": 3,
+          "parameters": 3,
+          "sourceMode": "3CH CCT Narrow"
+        },
+        "3CH RGB Narrow": {
+          "channels": 3,
+          "parameters": 3,
+          "sourceMode": "3CH RGB Narrow"
+        },
+        "6CH RGB 16Bit Narrow": {
+          "channels": 6,
+          "parameters": 3,
+          "sourceMode": "6CH RGB 16Bit Narrow"
+        },
+        "11CH RGB Narrow": {
+          "channels": 11,
+          "parameters": 11,
+          "sourceMode": "11CH RGB Narrow"
+        },
+        "6CH Direct RAW Narrow": {
+          "channels": 6,
+          "parameters": 6,
+          "sourceMode": "6CH Direct RAW Narrow"
+        },
+        "12CH Direct RAW Narrow": {
+          "channels": 12,
+          "parameters": 6,
+          "sourceMode": "12CH Direct RAW Narrow"
+        },
+        "13CH Direct RAW Narrow": {
+          "channels": 13,
+          "parameters": 13,
+          "sourceMode": "13CH Direct RAW Narrow"
+        },
+        "20CH Direct RAW Narrow": {
+          "channels": 20,
+          "parameters": 13,
+          "sourceMode": "20CH Direct RAW Narrow"
+        },
+        "3CH HSI Narrow": {
+          "channels": 3,
+          "parameters": 3,
+          "sourceMode": "3CH HSI Narrow"
+        },
+        "10CH HSI Narrow": {
+          "channels": 10,
+          "parameters": 9,
+          "sourceMode": "10CH HSI Narrow"
         }
       },
-      "shortName": "SWMAX TW+ N"
+      "shortName": "SWMAX TW+ N",
+      "image": "images/fixtures/roxx/show-maxx-twplus-narrow.png",
+      "details": "json/fixture-details/ab46591e0691dc23ad5628611357b866621ea45edd2e82a9554567426c09b441.json",
+      "provenance": {
+        "fileName": "ROXX@Show_MAXX_TWplus_Narrow@TW_A_20112023.gdtf",
+        "sha256": "ab46591e0691dc23ad5628611357b866621ea45edd2e82a9554567426c09b441",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Show Tungsten",
       "watts": 200.0,
       "weight": 5.7,
       "modes": {
-        "1CH Mode 8bit": 1,
-        "2CH Mode 16bit": 2,
-        "3CH Strobe Mode 8bit": 3,
-        "4CH Mode 16bit": 4
-      },
-      "gdtf": {
-        "status": "pending-download",
-        "folder": "fixtures/roxx",
-        "suggestedFileName": "Roxx__Show_Tungsten.gdtf",
-        "file": "",
-        "modes": {
-          "1CH Mode 8bit": {
-            "channels": 1,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "2CH Mode 16bit": {
-            "channels": 2,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "3CH Strobe Mode 8bit": {
-            "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "4CH Mode 16bit": {
-            "channels": 4,
-            "gdtfMode": "",
-            "status": "pending-match"
-          }
+        "1CH Mode 8bit": {
+          "channels": 1,
+          "parameters": null
+        },
+        "2CH Mode 16bit": {
+          "channels": 2,
+          "parameters": null
+        },
+        "3CH Strobe Mode 8bit": {
+          "channels": 3,
+          "parameters": null
+        },
+        "4CH Mode 16bit": {
+          "channels": 4,
+          "parameters": null
         }
       },
-      "shortName": "Show Tungsten"
+      "shortName": "Show Tungsten",
+      "image": "",
+      "details": ""
     },
     {
       "fixture": "Show TWPlus",
       "watts": 230.0,
       "weight": 5.7,
       "modes": {
-        "3CH CCT": 3,
-        "3CH RGB": 3,
-        "6CH RGB": 6,
-        "9CH RGB": 9,
-        "11CH RGB": 11,
-        "14CH RGB": 14,
-        "6CH Direct": 6,
-        "12CH Direct": 12,
-        "13CH Direct": 13,
-        "20CH Direct": 20,
-        "3CH HSI": 3,
-        "10CH HSI": 10
-      },
-      "gdtf": {
-        "status": "pending-download",
-        "folder": "fixtures/roxx",
-        "suggestedFileName": "Roxx__Show_TWPlus.gdtf",
-        "file": "",
-        "modes": {
-          "3CH CCT": {
-            "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "3CH RGB": {
-            "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "6CH RGB": {
-            "channels": 6,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "9CH RGB": {
-            "channels": 9,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "11CH RGB": {
-            "channels": 11,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "14CH RGB": {
-            "channels": 14,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "6CH Direct": {
-            "channels": 6,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "12CH Direct": {
-            "channels": 12,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "13CH Direct": {
-            "channels": 13,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "20CH Direct": {
-            "channels": 20,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "3CH HSI": {
-            "channels": 3,
-            "gdtfMode": "",
-            "status": "pending-match"
-          },
-          "10CH HSI": {
-            "channels": 10,
-            "gdtfMode": "",
-            "status": "pending-match"
-          }
+        "3CH CCT": {
+          "channels": 3,
+          "parameters": null
+        },
+        "3CH RGB": {
+          "channels": 3,
+          "parameters": null
+        },
+        "6CH RGB": {
+          "channels": 6,
+          "parameters": null
+        },
+        "9CH RGB": {
+          "channels": 9,
+          "parameters": null
+        },
+        "11CH RGB": {
+          "channels": 11,
+          "parameters": null
+        },
+        "14CH RGB": {
+          "channels": 14,
+          "parameters": null
+        },
+        "6CH Direct": {
+          "channels": 6,
+          "parameters": null
+        },
+        "12CH Direct": {
+          "channels": 12,
+          "parameters": null
+        },
+        "13CH Direct": {
+          "channels": 13,
+          "parameters": null
+        },
+        "20CH Direct": {
+          "channels": 20,
+          "parameters": null
+        },
+        "3CH HSI": {
+          "channels": 3,
+          "parameters": null
+        },
+        "10CH HSI": {
+          "channels": 10,
+          "parameters": null
         }
       },
-      "shortName": "Show TW+"
+      "shortName": "Show TW+",
+      "image": "",
+      "details": ""
     }
   ]
 }

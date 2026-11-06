@@ -1,4 +1,4 @@
-# V55 browser release checks
+# V56 browser release checks
 
 **Use this checklist only when the user explicitly requests browser testing.** Interface changes, implementation requests and releases do not authorise browser testing. Static validation remains the default.
 
@@ -6,6 +6,7 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 
 | Check | Chrome/Chromium | Firefox | Safari |
 | --- | --- | --- | --- |
+| V56 fixture images, mode/channel information, no wheel display, GDTF-free MVR export and imported attachment round trip | Required | Required | Required |
 | V55 PDF settings order, first-header/preview collapse and independent remaining-header and footer font/size/style/colour | Required | Required | Required |
 | V55 three-part filenames, custom characters, global/per-document structures, preview saved choices and all seven PDF download names | Required | Required | Required |
 | V55 Tour Logo stacks scaled to 1.7 stay centred and clear of document content in settings, preview and export | Required | Required | Required |

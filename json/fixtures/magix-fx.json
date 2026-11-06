@@ -6,196 +6,165 @@
       "watts": 850,
       "weight": 19.0,
       "modes": {
-        "Safety Version": 2,
-        "Dimmer Version": 1
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/magix_fx",
-        "suggestedFileName": "MagicFX__Swirlfan_II.gdtf",
-        "file": "fixtures/magix_fx/MagicFX@Swirlfan_II@2026-01-21.gdtf",
-        "modes": {
-          "Safety Version": {
-            "channels": 2,
-            "gdtfMode": "Safety Version",
-            "status": "matched",
-            "parameters": 2
-          },
-          "Dimmer Version": {
-            "channels": 1,
-            "gdtfMode": "Dimmer Version",
-            "status": "matched",
-            "parameters": 1
-          }
+        "Safety Version": {
+          "channels": 2,
+          "parameters": 2,
+          "sourceMode": "Safety Version"
+        },
+        "Dimmer Version": {
+          "channels": 1,
+          "parameters": 1,
+          "sourceMode": "Dimmer Version"
         }
       },
-      "shortName": "Swirlfan II"
+      "shortName": "Swirlfan II",
+      "image": "images/fixtures/magicfx/swirlfan-ii.png",
+      "details": "json/fixture-details/0367fc89ca3a8833a4143f7e2f64ea1d2b03f9f27943331ba7c5fc7d3030010d.json",
+      "provenance": {
+        "fileName": "MagicFX@Swirlfan_II@2026-01-21.gdtf",
+        "sha256": "0367fc89ca3a8833a4143f7e2f64ea1d2b03f9f27943331ba7c5fc7d3030010d",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "ECO2JET",
       "watts": null,
       "weight": 31.7,
       "modes": {
-        "Standard": 2,
-        "Extended": 3,
-        "ECO2JET Safety": 1,
-        "ECO2JET Standard Standalone": 1,
-        "ECO2JET Extended Standalone": 2
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/magix_fx",
-        "suggestedFileName": "MagicFX__ECO2JET.gdtf",
-        "file": "fixtures/magix_fx/MagicFX@Eco2Jet@Dim=Output.gdtf",
-        "modes": {
-          "Standard": {
-            "channels": 2,
-            "gdtfMode": "Standard",
-            "status": "matched",
-            "parameters": 2
-          },
-          "Extended": {
-            "channels": 3,
-            "gdtfMode": "Extended",
-            "status": "matched",
-            "parameters": 3
-          },
-          "ECO2JET Safety": {
-            "channels": 1,
-            "gdtfMode": "ECO2JET Safety",
-            "status": "matched",
-            "parameters": 1
-          },
-          "ECO2JET Standard Standalone": {
-            "channels": 1,
-            "gdtfMode": "ECO2JET Standard Standalone",
-            "status": "matched",
-            "parameters": 1
-          },
-          "ECO2JET Extended Standalone": {
-            "channels": 2,
-            "gdtfMode": "ECO2JET Extended Standalone",
-            "status": "matched",
-            "parameters": 2
-          }
+        "Standard": {
+          "channels": 2,
+          "parameters": 2,
+          "sourceMode": "Standard"
+        },
+        "Extended": {
+          "channels": 3,
+          "parameters": 3,
+          "sourceMode": "Extended"
+        },
+        "ECO2JET Safety": {
+          "channels": 1,
+          "parameters": 1,
+          "sourceMode": "ECO2JET Safety"
+        },
+        "ECO2JET Standard Standalone": {
+          "channels": 1,
+          "parameters": 1,
+          "sourceMode": "ECO2JET Standard Standalone"
+        },
+        "ECO2JET Extended Standalone": {
+          "channels": 2,
+          "parameters": 2,
+          "sourceMode": "ECO2JET Extended Standalone"
         }
       },
-      "shortName": "ECO2JET"
+      "shortName": "ECO2JET",
+      "image": "images/fixtures/magicfx/eco2jet.png",
+      "details": "json/fixture-details/43df3c815ec979e19bd488760a3f2583de20ff94bd8938869c267946fdd4920b.json",
+      "provenance": {
+        "fileName": "MagicFX@Eco2Jet@Dim=Output.gdtf",
+        "sha256": "43df3c815ec979e19bd488760a3f2583de20ff94bd8938869c267946fdd4920b",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Powershot II",
       "watts": null,
       "weight": 1.7,
       "modes": {
-        "Standard": 1
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/magix_fx",
-        "suggestedFileName": "MagicFX__Powershot_II.gdtf",
-        "file": "fixtures/magix_fx/MagicFX@Powershot_II@initial.gdtf",
-        "modes": {
-          "Standard": {
-            "channels": 1,
-            "gdtfMode": "Standard",
-            "status": "matched",
-            "parameters": 1
-          }
+        "Standard": {
+          "channels": 1,
+          "parameters": 1,
+          "sourceMode": "Standard"
         }
       },
-      "shortName": "Powershot II"
+      "shortName": "Powershot II",
+      "image": "images/fixtures/magicfx/powershot-ii.png",
+      "details": "json/fixture-details/f86a9c5d147cf7da4a67aa824679afa61227c54702a80556f1cd219c2ce94abe.json",
+      "provenance": {
+        "fileName": "MagicFX@Powershot_II@initial.gdtf",
+        "sha256": "f86a9c5d147cf7da4a67aa824679afa61227c54702a80556f1cd219c2ce94abe",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Smokebubble Blaster",
       "watts": null,
       "weight": null,
       "modes": {
-        "5Ch": 4
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/magix_fx",
-        "suggestedFileName": "MagicFX__Smokebubble_Blaster.gdtf",
-        "file": "fixtures/magix_fx/MagicFX@Smokebubble_Blaster@1.0.0.0.gdtf",
-        "modes": {
-          "5Ch": {
-            "channels": 4,
-            "gdtfMode": "5Ch",
-            "status": "matched",
-            "parameters": 5
-          }
+        "5Ch": {
+          "channels": 4,
+          "parameters": 5,
+          "sourceMode": "5Ch"
         }
       },
-      "shortName": "Bubble Blaster"
+      "shortName": "Bubble Blaster",
+      "image": "",
+      "details": "json/fixture-details/3e760292ca58eb1022e8d0aeeb208a1660a103860aab1e1b35389a2be449b6f1.json",
+      "provenance": {
+        "fileName": "MagicFX@Smokebubble_Blaster@1.0.0.0.gdtf",
+        "sha256": "3e760292ca58eb1022e8d0aeeb208a1660a103860aab1e1b35389a2be449b6f1",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "SMOKEJET",
       "watts": 1000.0,
       "weight": 11.1,
       "modes": {
-        "9 Chan": 9
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/magix_fx",
-        "suggestedFileName": "MagicFX__SMOKEJET.gdtf",
-        "file": "fixtures/magix_fx/MagicFX@SMOKEJET@1_2_Out_for_real_world_testing_-_changed_Manufacture_Name.gdtf",
-        "modes": {
-          "9 Chan": {
-            "channels": 9,
-            "gdtfMode": "9 Chan",
-            "status": "matched",
-            "parameters": 9
-          }
+        "9 Chan": {
+          "channels": 9,
+          "parameters": 9,
+          "sourceMode": "9 Chan"
         }
       },
-      "shortName": "SMOKEJET"
+      "shortName": "SMOKEJET",
+      "image": "",
+      "details": "json/fixture-details/c742a052986492768e181c26db65d02976f038c354eac4ca17955d49cefcc649.json",
+      "provenance": {
+        "fileName": "MagicFX@SMOKEJET@1_2_Out_for_real_world_testing_-_changed_Manufacture_Name.gdtf",
+        "sha256": "c742a052986492768e181c26db65d02976f038c354eac4ca17955d49cefcc649",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Stadiumblaster",
       "watts": null,
       "weight": 79.0,
       "modes": {
-        "Mode": 2
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/magix_fx",
-        "suggestedFileName": "MagicFX__Stadiumblaster.gdtf",
-        "file": "fixtures/magix_fx/MagicFX@StadiumBlaster@Init.gdtf",
-        "modes": {
-          "Mode": {
-            "channels": 2,
-            "gdtfMode": "Mode",
-            "status": "matched",
-            "parameters": 2
-          }
+        "Mode": {
+          "channels": 2,
+          "parameters": 2,
+          "sourceMode": "Mode"
         }
       },
-      "shortName": "Stadiumblaster"
+      "shortName": "Stadiumblaster",
+      "image": "",
+      "details": "json/fixture-details/40b5bfd2ba876c22b4b7136e5bdc40581c1f1ce8e19760035e249471ed9c74a1.json",
+      "provenance": {
+        "fileName": "MagicFX@StadiumBlaster@Init.gdtf",
+        "sha256": "40b5bfd2ba876c22b4b7136e5bdc40581c1f1ce8e19760035e249471ed9c74a1",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FX-BLOWER via FX-SWITCHPACK II",
       "watts": 1560,
       "weight": 16.29,
       "modes": {
-        "FX-Switchpack II - Safety + Output": 2
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/magix_fx",
-        "suggestedFileName": "MagicFX__FX-BLOWER_via_FX-SWITCHPACK_II.gdtf",
-        "file": "fixtures/magix_fx/MagicFX@FX-BLOWER_via_FX-SWITCHPACK_II@Lampy_1.0.gdtf",
-        "modes": {
-          "FX-Switchpack II - Safety + Output": {
-            "channels": 2,
-            "gdtfMode": "FX-Switchpack II - Safety + Output",
-            "status": "matched",
-            "parameters": 2
-          }
+        "FX-Switchpack II - Safety + Output": {
+          "channels": 2,
+          "parameters": 2,
+          "sourceMode": "FX-Switchpack II - Safety + Output"
         }
       },
-      "shortName": "FX-BLOWER"
+      "shortName": "FX-BLOWER",
+      "image": "",
+      "details": "json/fixture-details/e444a82c62be44440e0afd10e72ec59f5ac2ecd2028ec6cbdf5e98f434a32488.json",
+      "provenance": {
+        "fileName": "MagicFX@FX-BLOWER_via_FX-SWITCHPACK_II@Lampy_1.0.gdtf",
+        "sha256": "e444a82c62be44440e0afd10e72ec59f5ac2ecd2028ec6cbdf5e98f434a32488",
+        "extractedAt": "2026-11-05"
+      }
     }
   ]
 }

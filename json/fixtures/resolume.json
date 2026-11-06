@@ -6,53 +6,45 @@
       "watts": null,
       "weight": null,
       "modes": {
-        "Composition": 31,
-        "Layer": 43
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/resolume",
-        "suggestedFileName": "Resolume__Arena_7.gdtf",
-        "file": "fixtures/resolume/Resolume@Arena_7@v1_3:_Updated_DMX_Defaults.gdtf",
-        "modes": {
-          "Composition": {
-            "channels": 31,
-            "gdtfMode": "Composition",
-            "status": "matched",
-            "parameters": 16
-          },
-          "Layer": {
-            "channels": 43,
-            "gdtfMode": "Layer",
-            "status": "matched",
-            "parameters": 22
-          }
+        "Composition": {
+          "channels": 31,
+          "parameters": 16,
+          "sourceMode": "Composition"
+        },
+        "Layer": {
+          "channels": 43,
+          "parameters": 22,
+          "sourceMode": "Layer"
         }
       },
-      "shortName": "Arena7"
+      "shortName": "Arena7",
+      "image": "",
+      "details": "json/fixture-details/48786a9864a5b9d514d2752a946b2128ed345001bb0e6333548945a20e5b397f.json",
+      "provenance": {
+        "fileName": "Resolume@Arena_7@v1_3:_Updated_DMX_Defaults.gdtf",
+        "sha256": "48786a9864a5b9d514d2752a946b2128ed345001bb0e6333548945a20e5b397f",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Arena 7 Mini",
       "watts": null,
       "weight": null,
       "modes": {
-        "Normal": 26
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/resolume",
-        "suggestedFileName": "Resolume__Arena_7_Mini.gdtf",
-        "file": "fixtures/resolume/Resolume@Arena_7_Mini@20260609.gdtf",
-        "modes": {
-          "Normal": {
-            "channels": 26,
-            "gdtfMode": "Normal",
-            "status": "matched",
-            "parameters": 26
-          }
+        "Normal": {
+          "channels": 26,
+          "parameters": 26,
+          "sourceMode": "Normal"
         }
       },
-      "shortName": "Arena 7"
+      "shortName": "Arena 7",
+      "image": "",
+      "details": "json/fixture-details/edba9baf5f33646a1f13e66fc6933ff656746966c72ff6fb167b2292d3451ca7.json",
+      "provenance": {
+        "fileName": "Resolume@Arena_7_Mini@20260609.gdtf",
+        "sha256": "edba9baf5f33646a1f13e66fc6933ff656746966c72ff6fb167b2292d3451ca7",
+        "extractedAt": "2026-11-05"
+      }
     }
   ]
 }

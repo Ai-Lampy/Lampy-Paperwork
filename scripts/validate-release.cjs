@@ -38,3 +38,5 @@ for(const file of walk(path.join(root,'info_txt')).filter(f=>f.endsWith('.json')
 assert(!/on(?:click|change|input)="[^"\n]*escapeAttr\(/.test(html),'HTML encoding used inside JavaScript handler');
 console.log(`PASS: V${version}, script syntax, ${count} JSON references and local asset paths`);
 if(unavailableCatalogues)console.log(`INFO: ${unavailableCatalogues} optional vendor cable catalogues are not supplied; the app will show unavailable status.`);
+
+require('child_process').execFileSync('python3',[path.join(__dirname,'validate-fixture-data.py')],{stdio:'inherit'});

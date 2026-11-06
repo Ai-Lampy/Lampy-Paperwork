@@ -7,7 +7,7 @@ Live app: [https://ai-lampy.github.io/Lampy-Paperwork/](https://ai-lampy.github.
 ## What You Can Do
 
 - Build and import fixture patches from CSV, Excel, XLSM and MVR files.
-- Match fixtures to the library and available GDTF files.
+- Match fixtures to the stored fixture library.
 - Produce fixture patch, position summary, power, Fan Out and distro-label PDF paperwork.
 - Create distros, supplies, Socapex assignments, phase totals and Fan Outs.
 - Manage consoles, NPUs, network devices, IP addresses, VLANs and device ports.
@@ -53,7 +53,9 @@ Reference data is stored in `/json/` and loaded directly by the browser.
 - Power-supply choices: `json/power_supply.json`
 - VLAN colour choices: `json/vlan_colour_options.json`
 - Welcome and walk-through text: `info_txt/`
-- Matched GDTF files: `gdtf/fixtures/`
+- Stored fixture definitions: `json/fixture-details/`
+- Standalone fixture images: `images/fixtures/<manufacturer>/<fixture>.<extension>`
+- Image identities and checksums: `json/fixture_image_manifest.json`
 
 ## Publishing Updates
 

@@ -6,90 +6,75 @@
       "watts": null,
       "weight": 21.0,
       "modes": {
-        "Standard": 5
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/er_productions",
-        "suggestedFileName": "ER_Productions__FLAMEBER.gdtf",
-        "file": "fixtures/er_productions/ER_Productions@FlamebER@v0001.gdtf",
-        "modes": {
-          "Standard": {
-            "channels": 5,
-            "gdtfMode": "Standard",
-            "status": "matched",
-            "parameters": 5
-          }
+        "Standard": {
+          "channels": 5,
+          "parameters": 5,
+          "sourceMode": "Standard"
         }
       },
-      "shortName": "FLAMEBER"
+      "shortName": "FLAMEBER",
+      "image": "images/fixtures/er-productions/flameber.png",
+      "details": "json/fixture-details/6c58c54c07b903c267c3168c34d61982f59d0961d8ac5e1b2db61d3502e163dd.json",
+      "provenance": {
+        "fileName": "ER_Productions@FlamebER@v0001.gdtf",
+        "sha256": "6c58c54c07b903c267c3168c34d61982f59d0961d8ac5e1b2db61d3502e163dd",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FLAMEBER XL",
       "watts": null,
       "weight": 35.0,
       "modes": {
-        "Standard": 9,
-        "Turbo": 10,
-        "Basic": 3
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/er_productions",
-        "suggestedFileName": "ER_Productions__FLAMEBER_XL.gdtf",
-        "file": "fixtures/er_productions/ER_Productions@FLAMEBER_XL@V0003.gdtf",
-        "modes": {
-          "Standard": {
-            "channels": 9,
-            "gdtfMode": "Standard",
-            "status": "matched",
-            "parameters": 9
-          },
-          "Turbo": {
-            "channels": 10,
-            "gdtfMode": "Turbo",
-            "status": "matched",
-            "parameters": 10
-          },
-          "Basic": {
-            "channels": 3,
-            "gdtfMode": "Basic",
-            "status": "matched",
-            "parameters": 3
-          }
+        "Standard": {
+          "channels": 9,
+          "parameters": 9,
+          "sourceMode": "Standard"
+        },
+        "Turbo": {
+          "channels": 10,
+          "parameters": 10,
+          "sourceMode": "Turbo"
+        },
+        "Basic": {
+          "channels": 3,
+          "parameters": 3,
+          "sourceMode": "Basic"
         }
       },
-      "shortName": "FLAMEBER-XL"
+      "shortName": "FLAMEBER-XL",
+      "image": "",
+      "details": "json/fixture-details/d8aa24399d39c3c324c02f408b8441515414e977d628780439f0c4c946803c8c.json",
+      "provenance": {
+        "fileName": "ER_Productions@FLAMEBER_XL@V0003.gdtf",
+        "sha256": "d8aa24399d39c3c324c02f408b8441515414e977d628780439f0c4c946803c8c",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "Laserblade2",
       "watts": 600.0,
       "weight": 30.0,
       "modes": {
-        "Standard": 76,
-        "Advanced": 122
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/er_productions",
-        "suggestedFileName": "ER_Productions__Laserblade2.gdtf",
-        "file": "fixtures/er_productions/ER_Productions@Laserblade2@v2.0.gdtf",
-        "modes": {
-          "Standard": {
-            "channels": 76,
-            "gdtfMode": "Standard",
-            "status": "matched",
-            "parameters": 67
-          },
-          "Advanced": {
-            "channels": 122,
-            "gdtfMode": "Advanced",
-            "status": "matched",
-            "parameters": 113
-          }
+        "Standard": {
+          "channels": 76,
+          "parameters": 67,
+          "sourceMode": "Standard"
+        },
+        "Advanced": {
+          "channels": 122,
+          "parameters": 113,
+          "sourceMode": "Advanced"
         }
       },
-      "shortName": "Laserblade2"
+      "shortName": "Laserblade2",
+      "image": "images/fixtures/er-productions/laserblade2.png",
+      "details": "json/fixture-details/a3cae3f36837096c00826e71fe95497e1adc1e88e8e432f08556099b560eefa2.json",
+      "provenance": {
+        "fileName": "ER_Productions@Laserblade2@v2.0.gdtf",
+        "sha256": "a3cae3f36837096c00826e71fe95497e1adc1e88e8e432f08556099b560eefa2",
+        "extractedAt": "2026-11-05"
+      }
     }
   ]
 }

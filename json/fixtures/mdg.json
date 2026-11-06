@@ -4,76 +4,67 @@
     {
       "fixture": "ATME",
       "modes": {
-        "Mode 0": 3
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/mdg",
-        "suggestedFileName": "MDG__ATME.gdtf",
-        "file": "fixtures/mdg/MDG@ATMe@Release_1.0.gdtf",
-        "modes": {
-          "Mode 0": {
-            "channels": 3,
-            "gdtfMode": "Mode 0",
-            "status": "matched",
-            "parameters": 3
-          }
+        "Mode 0": {
+          "channels": 3,
+          "parameters": 3,
+          "sourceMode": "Mode 0"
         }
       },
       "shortName": "ATME",
-      "weight": 16.8
+      "weight": 16.8,
+      "image": "images/fixtures/mdg/atme.png",
+      "details": "json/fixture-details/93c4f2c72d7b3ae95cc8cee20126d7d0ba798eb54109153e003f3b39c2901eaf.json",
+      "provenance": {
+        "fileName": "MDG@ATMe@Release_1.0.gdtf",
+        "sha256": "93c4f2c72d7b3ae95cc8cee20126d7d0ba798eb54109153e003f3b39c2901eaf",
+        "extractedAt": "2026-11-05"
+      },
+      "watts": null
     },
     {
       "fixture": "The ONE",
       "modes": {
-        "Mode 0": 5
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/mdg",
-        "suggestedFileName": "MDG__The_ONE.gdtf",
-        "file": "fixtures/mdg/MDG@theONE@Release_1.0.gdtf",
-        "modes": {
-          "Mode 0": {
-            "channels": 5,
-            "gdtfMode": "Mode 0",
-            "status": "matched",
-            "parameters": 5
-          }
+        "Mode 0": {
+          "channels": 5,
+          "parameters": 5,
+          "sourceMode": "Mode 0"
         }
       },
       "shortName": "The ONE",
-      "weight": 33.5
+      "weight": 33.5,
+      "image": "images/fixtures/mdg/the-one.png",
+      "details": "json/fixture-details/82093802dd73c5f643a8bdcb8d8dd7668b435a2625de4b8238fb83d267ed0700.json",
+      "provenance": {
+        "fileName": "MDG@theONE@Release_1.0.gdtf",
+        "sha256": "82093802dd73c5f643a8bdcb8d8dd7668b435a2625de4b8238fb83d267ed0700",
+        "extractedAt": "2026-11-05"
+      },
+      "watts": null
     },
     {
       "fixture": "theFAN",
       "watts": null,
       "weight": 6.8,
       "modes": {
-        "Mode 1 Channel": 1,
-        "Mode 2 Channel": 2
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/mdg",
-        "suggestedFileName": "MDG__theFAN.gdtf",
-        "file": "fixtures/mdg/MDG@theFAN@Release_1.0.gdtf",
-        "modes": {
-          "Mode 1 Channel": {
-            "channels": 1,
-            "gdtfMode": "Mode 1 Channel",
-            "status": "matched",
-            "parameters": 1
-          },
-          "Mode 2 Channel": {
-            "channels": 2,
-            "gdtfMode": "Mode 2 Channel",
-            "status": "matched",
-            "parameters": 2
-          }
+        "Mode 1 Channel": {
+          "channels": 1,
+          "parameters": 1,
+          "sourceMode": "Mode 1 Channel"
+        },
+        "Mode 2 Channel": {
+          "channels": 2,
+          "parameters": 2,
+          "sourceMode": "Mode 2 Channel"
         }
       },
-      "shortName": "theFAN"
+      "shortName": "theFAN",
+      "image": "images/fixtures/mdg/thefan.png",
+      "details": "json/fixture-details/6f52a1e2cc82bf9c5e79ee2a6e8a7dc68fd10c320f6f5178b567e6fc4a0fa96e.json",
+      "provenance": {
+        "fileName": "MDG@theFAN@Release_1.0.gdtf",
+        "sha256": "6f52a1e2cc82bf9c5e79ee2a6e8a7dc68fd10c320f6f5178b567e6fc4a0fa96e",
+        "extractedAt": "2026-11-05"
+      }
     }
   ]
 }

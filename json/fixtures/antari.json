@@ -6,23 +6,20 @@
       "watts": 0,
       "weight": 31.5,
       "modes": {
-        "1 Channel": 1
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/antari",
-        "suggestedFileName": "Antari__HZ_500_Hazer.gdtf",
-        "file": "fixtures/antari/Antari@HZ-500@rev1.gdtf",
-        "modes": {
-          "1 Channel": {
-            "channels": 1,
-            "gdtfMode": "1 Channel",
-            "status": "matched",
-            "parameters": 1
-          }
+        "1 Channel": {
+          "channels": 1,
+          "parameters": 1,
+          "sourceMode": "1 Channel"
         }
       },
-      "shortName": "HZ-500 Hazer"
+      "shortName": "HZ-500 Hazer",
+      "image": "images/fixtures/antari/hz-500-hazer.png",
+      "details": "json/fixture-details/2a8d32e6dc09492515f4523d7e0697c99401fd6dd3449b72d55fd8b508e54420.json",
+      "provenance": {
+        "fileName": "Antari@HZ-500@rev1.gdtf",
+        "sha256": "2a8d32e6dc09492515f4523d7e0697c99401fd6dd3449b72d55fd8b508e54420",
+        "extractedAt": "2026-11-05"
+      }
     }
   ]
 }

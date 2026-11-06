@@ -38,6 +38,7 @@ json.dump(out,sys.stdout)
  return JSON.parse(execFileSync('python3',['-c',python],{input:JSON.stringify(files),maxBuffer:200*1024*1024}).toString());
 }
 function sync(write=false){
+ if(fs.existsSync(path.join(root,'json/fixture-details'))){execFileSync('python3',[path.join(__dirname,'validate-fixture-data.py')],{stdio:'inherit'});return {total:0,changed:[]}}
  const documents=fs.readdirSync(path.join(root,'json/fixtures')).filter(n=>n.endsWith('.json')).map(n=>{const file=path.join(root,'json/fixtures',n),text=fs.readFileSync(file,'utf8');return {file,text,data:JSON.parse(text)}});
  const fixtures=d=>Array.isArray(d)?d:d.fixtures||[];
  const files=[...new Set(documents.flatMap(d=>fixtures(d.data).filter(f=>f.gdtf?.file).map(f=>path.join(root,'gdtf',f.gdtf.file))))];

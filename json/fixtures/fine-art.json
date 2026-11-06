@@ -6,1249 +6,1010 @@
       "watts": 1250,
       "weight": 11,
       "modes": {
-        "Standard 23ch": 23,
-        "PixTen48": 48
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "suggestedFileName": "Fine_Art__1200C_Strobe.gdtf",
-        "file": "fixtures/fine-art/Fine_Art@FINE_1200C_STROBE@MA3_library_fixed_-_Sept_22th_2025.gdtf",
-        "modes": {
-          "Standard 23ch": {
-            "channels": 23,
-            "gdtfMode": "Standard 23ch",
-            "status": "matched",
-            "parameters": 21
-          },
-          "PixTen48": {
-            "channels": 48,
-            "gdtfMode": "PixTen48",
-            "status": "matched",
-            "parameters": 56
-          }
+        "Standard 23ch": {
+          "channels": 23,
+          "parameters": 21,
+          "sourceMode": "Standard 23ch"
+        },
+        "PixTen48": {
+          "channels": 48,
+          "parameters": 56,
+          "sourceMode": "PixTen48"
         }
       },
-      "shortName": "1200C Strobe"
+      "shortName": "1200C Strobe",
+      "image": "images/fixtures/fine-art/1200c-strobe.png",
+      "details": "json/fixture-details/48fe9e317d526f5f03f5dfdcbc80c2cea9e73de20e2f20b34295a238aaf5dc5e.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_1200C_STROBE@MA3_library_fixed_-_Sept_22th_2025.gdtf",
+        "sha256": "48fe9e317d526f5f03f5dfdcbc80c2cea9e73de20e2f20b34295a238aaf5dc5e",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 1000ZLH PERF",
       "watts": 1330.0,
       "weight": 40.400002,
       "modes": {
-        "STND": 32,
-        "16BT": 35,
-        "EXTN": 42
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_1000ZLH_PERF@FINE_1000ZLH__PERF.gdtf",
-        "modes": {
-          "STND": {
-            "channels": 32,
-            "gdtfMode": "STND",
-            "status": "matched",
-            "parameters": 29
-          },
-          "16BT": {
-            "channels": 35,
-            "gdtfMode": "16BT",
-            "status": "matched",
-            "parameters": 29
-          },
-          "EXTN": {
-            "channels": 42,
-            "gdtfMode": "EXTN",
-            "status": "matched",
-            "parameters": 29
-          }
+        "STND": {
+          "channels": 32,
+          "parameters": 29,
+          "sourceMode": "STND"
         },
-        "suggestedFileName": "Fine_Art__FINE_1000ZLH_PERF.gdtf"
+        "16BT": {
+          "channels": 35,
+          "parameters": 29,
+          "sourceMode": "16BT"
+        },
+        "EXTN": {
+          "channels": 42,
+          "parameters": 29,
+          "sourceMode": "EXTN"
+        }
       },
-      "shortName": "FINE 1000ZLH PERF"
+      "shortName": "FINE 1000ZLH PERF",
+      "image": "images/fixtures/fine-art/fine-1000zlh-perf--fine-1000zlh-spot2--fine-120ls-beam-ip--fine-600-bsw-ii.png",
+      "details": "json/fixture-details/2c2e9380e3558de9287dda72d1dad9cc5b089b33d2abc23120a7680df47d4579.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_1000ZLH_PERF@FINE_1000ZLH__PERF.gdtf",
+        "sha256": "2c2e9380e3558de9287dda72d1dad9cc5b089b33d2abc23120a7680df47d4579",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 1000ZLH SPOT2",
       "watts": 1330.0,
       "weight": 40.400002,
       "modes": {
-        "STND": 26,
-        "16Bit": 29,
-        "EXTN": 34
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_1000ZLH_SPOT2@FINE_1000ZLH__SPOT2.gdtf",
-        "modes": {
-          "STND": {
-            "channels": 26,
-            "gdtfMode": "STND",
-            "status": "matched",
-            "parameters": 22
-          },
-          "16Bit": {
-            "channels": 29,
-            "gdtfMode": "16Bit",
-            "status": "matched",
-            "parameters": 22
-          },
-          "EXTN": {
-            "channels": 34,
-            "gdtfMode": "EXTN",
-            "status": "matched",
-            "parameters": 22
-          }
+        "STND": {
+          "channels": 26,
+          "parameters": 22,
+          "sourceMode": "STND"
         },
-        "suggestedFileName": "Fine_Art__FINE_1000ZLH_SPOT2.gdtf"
+        "16Bit": {
+          "channels": 29,
+          "parameters": 22,
+          "sourceMode": "16Bit"
+        },
+        "EXTN": {
+          "channels": 34,
+          "parameters": 22,
+          "sourceMode": "EXTN"
+        }
       },
-      "shortName": "FINE 1000ZLH SPOT2"
+      "shortName": "FINE 1000ZLH SPOT2",
+      "image": "images/fixtures/fine-art/fine-1000zlh-perf--fine-1000zlh-spot2--fine-120ls-beam-ip--fine-600-bsw-ii.png",
+      "details": "json/fixture-details/54e162f44f40e791032dd6c8f7b71d1745ea52beff06f85915fddd7fcc0490de.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_1000ZLH_SPOT2@FINE_1000ZLH__SPOT2.gdtf",
+        "sha256": "54e162f44f40e791032dd6c8f7b71d1745ea52beff06f85915fddd7fcc0490de",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 1200E_2 PERF",
       "watts": 1450.0,
       "weight": null,
       "modes": {
-        "EXTN 54": 54,
-        "16 bit": 35,
-        "Stand32": 32
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_1200E_2_PERF@FINE_1200E_2__PERF.gdtf",
-        "modes": {
-          "EXTN 54": {
-            "channels": 54,
-            "gdtfMode": "EXTN 54",
-            "status": "matched",
-            "parameters": 32
-          },
-          "16 bit": {
-            "channels": 35,
-            "gdtfMode": "16 bit",
-            "status": "matched",
-            "parameters": 32
-          },
-          "Stand32": {
-            "channels": 32,
-            "gdtfMode": "Stand32",
-            "status": "matched",
-            "parameters": 32
-          }
+        "EXTN 54": {
+          "channels": 54,
+          "parameters": 32,
+          "sourceMode": "EXTN 54"
         },
-        "suggestedFileName": "Fine_Art__FINE_1200E_2_PERF.gdtf"
+        "16 bit": {
+          "channels": 35,
+          "parameters": 32,
+          "sourceMode": "16 bit"
+        },
+        "Stand32": {
+          "channels": 32,
+          "parameters": 32,
+          "sourceMode": "Stand32"
+        }
       },
-      "shortName": "FINE 1200E/2 PERF"
+      "shortName": "FINE 1200E/2 PERF",
+      "image": "images/fixtures/fine-art/fine-1200e-2-perf.png",
+      "details": "json/fixture-details/4c8a1a52cda62aaac34a9590ea30c92b5467d85b7830ecf51df3beca6b5a9d46.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_1200E_2_PERF@FINE_1200E_2__PERF.gdtf",
+        "sha256": "4c8a1a52cda62aaac34a9590ea30c92b5467d85b7830ecf51df3beca6b5a9d46",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 1200L PERF",
       "watts": 1550.0,
       "weight": null,
       "modes": {
-        "16BT": 35,
-        "STND": 32,
-        "EXTN": 42
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_1200L_PERF@20251230.gdtf",
-        "modes": {
-          "16BT": {
-            "channels": 35,
-            "gdtfMode": "16BT",
-            "status": "matched",
-            "parameters": 29
-          },
-          "STND": {
-            "channels": 32,
-            "gdtfMode": "STND",
-            "status": "matched",
-            "parameters": 29
-          },
-          "EXTN": {
-            "channels": 42,
-            "gdtfMode": "EXTN",
-            "status": "matched",
-            "parameters": 29
-          }
+        "16BT": {
+          "channels": 35,
+          "parameters": 29,
+          "sourceMode": "16BT"
         },
-        "suggestedFileName": "Fine_Art__FINE_1200L_PERF.gdtf"
+        "STND": {
+          "channels": 32,
+          "parameters": 29,
+          "sourceMode": "STND"
+        },
+        "EXTN": {
+          "channels": 42,
+          "parameters": 29,
+          "sourceMode": "EXTN"
+        }
       },
-      "shortName": "FINE1200LHPERF"
+      "shortName": "FINE1200LHPERF",
+      "image": "images/fixtures/fine-art/fine-1200l-perf--fine-1400l-bswf.png",
+      "details": "json/fixture-details/ba91092c02edb76595ffa8faac33bc3920524bce95287d410055b0865801c032.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_1200L_PERF@20251230.gdtf",
+        "sha256": "ba91092c02edb76595ffa8faac33bc3920524bce95287d410055b0865801c032",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 120LS BEAM IP",
       "watts": 1000.0,
       "weight": 40.400002,
       "modes": {
-        "EXTN": 21,
-        "16BT": 17,
-        "stnd": 15
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_120LS_BEAM_IP@FINE_120LS_BEAM__IP.gdtf",
-        "modes": {
-          "EXTN": {
-            "channels": 21,
-            "gdtfMode": "EXTN",
-            "status": "matched",
-            "parameters": 17
-          },
-          "16BT": {
-            "channels": 17,
-            "gdtfMode": "16BT",
-            "status": "matched",
-            "parameters": 13
-          },
-          "stnd": {
-            "channels": 15,
-            "gdtfMode": "stnd",
-            "status": "matched",
-            "parameters": 12
-          }
+        "EXTN": {
+          "channels": 21,
+          "parameters": 17,
+          "sourceMode": "EXTN"
         },
-        "suggestedFileName": "Fine_Art__FINE_120LS_BEAM_IP.gdtf"
+        "16BT": {
+          "channels": 17,
+          "parameters": 13,
+          "sourceMode": "16BT"
+        },
+        "stnd": {
+          "channels": 15,
+          "parameters": 12,
+          "sourceMode": "stnd"
+        }
       },
-      "shortName": "FINE 120LS BEAM IP"
+      "shortName": "FINE 120LS BEAM IP",
+      "image": "images/fixtures/fine-art/fine-1000zlh-perf--fine-1000zlh-spot2--fine-120ls-beam-ip--fine-600-bsw-ii.png",
+      "details": "json/fixture-details/657399c39bf0f445589ac88794baaac4e8052776427b0cb77c8fa57ec88a3bf6.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_120LS_BEAM_IP@FINE_120LS_BEAM__IP.gdtf",
+        "sha256": "657399c39bf0f445589ac88794baaac4e8052776427b0cb77c8fa57ec88a3bf6",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 1400L BSWF",
       "watts": 1750.0,
       "weight": null,
       "modes": {
-        "STND": 32,
-        "16BT": 35,
-        "EXTN": 42
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_1400L_BSWF@FINE_1400L__BSWF.gdtf",
-        "modes": {
-          "STND": {
-            "channels": 32,
-            "gdtfMode": "STND",
-            "status": "matched",
-            "parameters": 29
-          },
-          "16BT": {
-            "channels": 35,
-            "gdtfMode": "16BT",
-            "status": "matched",
-            "parameters": 29
-          },
-          "EXTN": {
-            "channels": 42,
-            "gdtfMode": "EXTN",
-            "status": "matched",
-            "parameters": 29
-          }
+        "STND": {
+          "channels": 32,
+          "parameters": 29,
+          "sourceMode": "STND"
         },
-        "suggestedFileName": "Fine_Art__FINE_1400L_BSWF.gdtf"
+        "16BT": {
+          "channels": 35,
+          "parameters": 29,
+          "sourceMode": "16BT"
+        },
+        "EXTN": {
+          "channels": 42,
+          "parameters": 29,
+          "sourceMode": "EXTN"
+        }
       },
-      "shortName": "FINE 1400L BSWF"
+      "shortName": "FINE 1400L BSWF",
+      "image": "images/fixtures/fine-art/fine-1200l-perf--fine-1400l-bswf.png",
+      "details": "json/fixture-details/98f26016daeb3ddfeb69ff43e8ce5e229674d35524560c5352d84d0add3f0ef6.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_1400L_BSWF@FINE_1400L__BSWF.gdtf",
+        "sha256": "98f26016daeb3ddfeb69ff43e8ce5e229674d35524560c5352d84d0add3f0ef6",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 1400LB BSWF IP",
       "watts": 900.0,
       "weight": 40.400002,
       "modes": {
-        "EXTN": 44,
-        "16 Bit 40": 40,
-        "Stand 32": 32
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_1400LB_BSWF_IP@FINE_1400LB_BSWF__IP.gdtf",
-        "modes": {
-          "EXTN": {
-            "channels": 44,
-            "gdtfMode": "EXTN",
-            "status": "matched",
-            "parameters": 38
-          },
-          "16 Bit 40": {
-            "channels": 40,
-            "gdtfMode": "16 Bit 40",
-            "status": "matched",
-            "parameters": 34
-          },
-          "Stand 32": {
-            "channels": 32,
-            "gdtfMode": "Stand 32",
-            "status": "matched",
-            "parameters": 29
-          }
+        "EXTN": {
+          "channels": 44,
+          "parameters": 38,
+          "sourceMode": "EXTN"
         },
-        "suggestedFileName": "Fine_Art__FINE_1400LB_BSWF_IP.gdtf"
+        "16 Bit 40": {
+          "channels": 40,
+          "parameters": 34,
+          "sourceMode": "16 Bit 40"
+        },
+        "Stand 32": {
+          "channels": 32,
+          "parameters": 29,
+          "sourceMode": "Stand 32"
+        }
       },
-      "shortName": "FINE 1400LB BSWF IP"
+      "shortName": "FINE 1400LB BSWF IP",
+      "image": "images/fixtures/fine-art/fine-1400lb-bswf-ip.png",
+      "details": "json/fixture-details/5160b2bc1cfbc68ed19c1e0b6d9ce02ff8670e58226e75cec564458c4bc1bcd3.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_1400LB_BSWF_IP@FINE_1400LB_BSWF__IP.gdtf",
+        "sha256": "5160b2bc1cfbc68ed19c1e0b6d9ce02ff8670e58226e75cec564458c4bc1bcd3",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 1514 DG",
       "watts": 190.0,
       "weight": 9.0,
       "modes": {
-        "11CH": 11,
-        "6CH ": 6,
-        "5CH": 5
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_1514_DG@FINE_1514__DG.gdtf",
-        "modes": {
-          "11CH": {
-            "channels": 11,
-            "gdtfMode": "11CH",
-            "status": "matched",
-            "parameters": 11
-          },
-          "6CH ": {
-            "channels": 6,
-            "gdtfMode": "6CH ",
-            "status": "matched",
-            "parameters": 6
-          },
-          "5CH": {
-            "channels": 5,
-            "gdtfMode": "5CH",
-            "status": "matched",
-            "parameters": 5
-          }
+        "11CH": {
+          "channels": 11,
+          "parameters": 11,
+          "sourceMode": "11CH"
         },
-        "suggestedFileName": "Fine_Art__FINE_1514_DG.gdtf"
+        "6CH ": {
+          "channels": 6,
+          "parameters": 6,
+          "sourceMode": "6CH "
+        },
+        "5CH": {
+          "channels": 5,
+          "parameters": 5,
+          "sourceMode": "5CH"
+        }
       },
-      "shortName": "FINE 1514 DG"
+      "shortName": "FINE 1514 DG",
+      "image": "images/fixtures/fine-art/fine-1514-dg.png",
+      "details": "json/fixture-details/bb54dbb15336f157039e405df25f6b7041736aac1ffbf382a70f029b4585912a.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_1514_DG@FINE_1514__DG.gdtf",
+        "sha256": "bb54dbb15336f157039e405df25f6b7041736aac1ffbf382a70f029b4585912a",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 1519 WASH",
       "watts": null,
       "weight": null,
       "modes": {
-        "STND-16CH": 16,
-        "HSI-11CH": 11,
-        "EXTN-24CH": 24
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_1519_WASH@FINE_1519__WASH.gdtf",
-        "modes": {
-          "STND-16CH": {
-            "channels": 16,
-            "gdtfMode": "STND-16CH",
-            "status": "matched",
-            "parameters": 14
-          },
-          "HSI-11CH": {
-            "channels": 11,
-            "gdtfMode": "HSI-11CH",
-            "status": "matched",
-            "parameters": 9
-          },
-          "EXTN-24CH": {
-            "channels": 24,
-            "gdtfMode": "EXTN-24CH",
-            "status": "matched",
-            "parameters": 25
-          }
+        "STND-16CH": {
+          "channels": 16,
+          "parameters": 14,
+          "sourceMode": "STND-16CH"
         },
-        "suggestedFileName": "Fine_Art__FINE_1519_WASH.gdtf"
+        "HSI-11CH": {
+          "channels": 11,
+          "parameters": 9,
+          "sourceMode": "HSI-11CH"
+        },
+        "EXTN-24CH": {
+          "channels": 24,
+          "parameters": 25,
+          "sourceMode": "EXTN-24CH"
+        }
       },
-      "shortName": "FINE 1519 WASH"
+      "shortName": "FINE 1519 WASH",
+      "image": "images/fixtures/fine-art/fine-1519-wash.png",
+      "details": "json/fixture-details/1535b6c0bc6eb16684dc71bd04f2c9dea7245338ef2d0269fa3cfa775a4fdefa.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_1519_WASH@FINE_1519__WASH.gdtf",
+        "sha256": "1535b6c0bc6eb16684dc71bd04f2c9dea7245338ef2d0269fa3cfa775a4fdefa",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 1537 PIXIE",
       "watts": null,
       "weight": null,
       "modes": {
-        "STND": 21,
-        "Shape": 35,
-        "RGB": 132,
-        "RGBW": 169
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_1537_PIXIE@FINE_1537__PIXIE.gdtf",
-        "modes": {
-          "STND": {
-            "channels": 21,
-            "gdtfMode": "STND",
-            "status": "matched",
-            "parameters": 14
-          },
-          "Shape": {
-            "channels": 35,
-            "gdtfMode": "Shape",
-            "status": "matched",
-            "parameters": 28
-          },
-          "RGB": {
-            "channels": 132,
-            "gdtfMode": "RGB",
-            "status": "matched",
-            "parameters": 125
-          },
-          "RGBW": {
-            "channels": 169,
-            "gdtfMode": "RGBW",
-            "status": "matched",
-            "parameters": 162
-          }
+        "STND": {
+          "channels": 21,
+          "parameters": 14,
+          "sourceMode": "STND"
         },
-        "suggestedFileName": "Fine_Art__FINE_1537_PIXIE.gdtf"
+        "Shape": {
+          "channels": 35,
+          "parameters": 28,
+          "sourceMode": "Shape"
+        },
+        "RGB": {
+          "channels": 132,
+          "parameters": 125,
+          "sourceMode": "RGB"
+        },
+        "RGBW": {
+          "channels": 169,
+          "parameters": 162,
+          "sourceMode": "RGBW"
+        }
       },
-      "shortName": "FINE 1537 PIXIE"
+      "shortName": "FINE 1537 PIXIE",
+      "image": "images/fixtures/fine-art/fine-1537-pixie--fine-4037-pixie-plus.png",
+      "details": "json/fixture-details/61471e1771dd6f96880dce2e1f1f27fc43dad212365d47f044452e5aa88b081e.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_1537_PIXIE@FINE_1537__PIXIE.gdtf",
+        "sha256": "61471e1771dd6f96880dce2e1f1f27fc43dad212365d47f044452e5aa88b081e",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 1700 LH ISPOT",
       "watts": 1600.0,
       "weight": 34.0,
       "modes": {
-        "STND": 34,
-        "16BT": 41,
-        "EXTN": 45
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_1700_LH_ISPOT@FINE_1700_LH__ISPOT.gdtf",
-        "modes": {
-          "STND": {
-            "channels": 34,
-            "gdtfMode": "STND",
-            "status": "matched",
-            "parameters": 31
-          },
-          "16BT": {
-            "channels": 41,
-            "gdtfMode": "16BT",
-            "status": "matched",
-            "parameters": 35
-          },
-          "EXTN": {
-            "channels": 45,
-            "gdtfMode": "EXTN",
-            "status": "matched",
-            "parameters": 39
-          }
+        "STND": {
+          "channels": 34,
+          "parameters": 31,
+          "sourceMode": "STND"
         },
-        "suggestedFileName": "Fine_Art__FINE_1700_LH_ISPOT.gdtf"
+        "16BT": {
+          "channels": 41,
+          "parameters": 35,
+          "sourceMode": "16BT"
+        },
+        "EXTN": {
+          "channels": 45,
+          "parameters": 39,
+          "sourceMode": "EXTN"
+        }
       },
-      "shortName": "FINE 1700 LH ISPOT"
+      "shortName": "FINE 1700 LH ISPOT",
+      "image": "images/fixtures/fine-art/fine-1700-lh-ispot.png",
+      "details": "json/fixture-details/13fe7d875d57e00ec0da03db46df459e8c8772403333e002efbf9abe087c4328.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_1700_LH_ISPOT@FINE_1700_LH__ISPOT.gdtf",
+        "sha256": "13fe7d875d57e00ec0da03db46df459e8c8772403333e002efbf9abe087c4328",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 1700LC ISPOT",
       "watts": 1211.0,
       "weight": 34.0,
       "modes": {
-        "STND": 39,
-        "16BT": 48,
-        "EXTN": 52,
-        "PERF": 48
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_1700LC_ISPOT@FINE_1700LC__ISPOT.gdtf",
-        "modes": {
-          "STND": {
-            "channels": 39,
-            "gdtfMode": "STND",
-            "status": "matched",
-            "parameters": 36
-          },
-          "16BT": {
-            "channels": 48,
-            "gdtfMode": "16BT",
-            "status": "matched",
-            "parameters": 38
-          },
-          "EXTN": {
-            "channels": 52,
-            "gdtfMode": "EXTN",
-            "status": "matched",
-            "parameters": 40
-          },
-          "PERF": {
-            "channels": 48,
-            "gdtfMode": "PERF",
-            "status": "matched",
-            "parameters": 39
-          }
+        "STND": {
+          "channels": 39,
+          "parameters": 36,
+          "sourceMode": "STND"
         },
-        "suggestedFileName": "Fine_Art__FINE_1700LC_ISPOT.gdtf"
+        "16BT": {
+          "channels": 48,
+          "parameters": 38,
+          "sourceMode": "16BT"
+        },
+        "EXTN": {
+          "channels": 52,
+          "parameters": 40,
+          "sourceMode": "EXTN"
+        },
+        "PERF": {
+          "channels": 48,
+          "parameters": 39,
+          "sourceMode": "PERF"
+        }
       },
-      "shortName": "FINE 1700LC ISPOT"
+      "shortName": "FINE 1700LC ISPOT",
+      "image": "images/fixtures/fine-art/fine-1700lc-ispot--fine-2000lh-ispot.png",
+      "details": "json/fixture-details/32d474ad8e48d9a0662ce4b0bfc23118609baba9cb964c1b09b2a3be1c824f2c.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_1700LC_ISPOT@FINE_1700LC__ISPOT.gdtf",
+        "sha256": "32d474ad8e48d9a0662ce4b0bfc23118609baba9cb964c1b09b2a3be1c824f2c",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 1700LH ISPOT IP",
       "watts": 900.0,
       "weight": 40.400002,
       "modes": {
-        "EXTN 46": 46,
-        "16 Bit 42": 42,
-        "Stand  34": 34
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_1700LH_ISPOT_IP@FINE_1700LH_ISPOT__IP.gdtf",
-        "modes": {
-          "EXTN 46": {
-            "channels": 46,
-            "gdtfMode": "EXTN 46",
-            "status": "matched",
-            "parameters": 38
-          },
-          "16 Bit 42": {
-            "channels": 42,
-            "gdtfMode": "16 Bit 42",
-            "status": "matched",
-            "parameters": 34
-          },
-          "Stand  34": {
-            "channels": 34,
-            "gdtfMode": "Stand  34",
-            "status": "matched",
-            "parameters": 31
-          }
+        "EXTN 46": {
+          "channels": 46,
+          "parameters": 38,
+          "sourceMode": "EXTN 46"
         },
-        "suggestedFileName": "Fine_Art__FINE_1700LH_ISPOT_IP.gdtf"
+        "16 Bit 42": {
+          "channels": 42,
+          "parameters": 34,
+          "sourceMode": "16 Bit 42"
+        },
+        "Stand  34": {
+          "channels": 34,
+          "parameters": 31,
+          "sourceMode": "Stand  34"
+        }
       },
-      "shortName": "FINE 1700LH ISPOT IP"
+      "shortName": "FINE 1700LH ISPOT IP",
+      "image": "images/fixtures/fine-art/fine-1700lh-ispot-ip.png",
+      "details": "json/fixture-details/a82913d8688f74257ef7681601d7fb0e38760de6985e5c58947b479c3549569b.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_1700LH_ISPOT_IP@FINE_1700LH_ISPOT__IP.gdtf",
+        "sha256": "a82913d8688f74257ef7681601d7fb0e38760de6985e5c58947b479c3549569b",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 2000LH iSPOT",
       "watts": 1386.0,
       "weight": 42.0,
       "modes": {
-        "STND": 32,
-        "16BT": 40,
-        "EXTN": 44
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_2000LH_ISPOT@FINE_2000LH__iSPOT.gdtf",
-        "modes": {
-          "STND": {
-            "channels": 32,
-            "gdtfMode": "STND",
-            "status": "matched",
-            "parameters": 29
-          },
-          "16BT": {
-            "channels": 40,
-            "gdtfMode": "16BT",
-            "status": "matched",
-            "parameters": 34
-          },
-          "EXTN": {
-            "channels": 44,
-            "gdtfMode": "EXTN",
-            "status": "matched",
-            "parameters": 38
-          }
+        "STND": {
+          "channels": 32,
+          "parameters": 29,
+          "sourceMode": "STND"
         },
-        "suggestedFileName": "Fine_Art__FINE_2000LH_iSPOT.gdtf"
+        "16BT": {
+          "channels": 40,
+          "parameters": 34,
+          "sourceMode": "16BT"
+        },
+        "EXTN": {
+          "channels": 44,
+          "parameters": 38,
+          "sourceMode": "EXTN"
+        }
       },
-      "shortName": "FINE 2000LH iSPOT"
+      "shortName": "FINE 2000LH iSPOT",
+      "image": "images/fixtures/fine-art/fine-1700lc-ispot--fine-2000lh-ispot.png",
+      "details": "json/fixture-details/4417f5054de0d0f642aca73246eea1ac7d3c52abf400c7ffe30df18c3088db53.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_2000LH_ISPOT@FINE_2000LH__iSPOT.gdtf",
+        "sha256": "4417f5054de0d0f642aca73246eea1ac7d3c52abf400c7ffe30df18c3088db53",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 2500E WASH",
       "watts": 1890.0,
       "weight": 40.4,
       "modes": {
-        "STND": 21,
-        "16BT": 25
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_2500E_WASH@FINE_2500E_WASH.gdtf",
-        "modes": {
-          "STND": {
-            "channels": 21,
-            "gdtfMode": "STND",
-            "status": "matched",
-            "parameters": 19
-          },
-          "16BT": {
-            "channels": 25,
-            "gdtfMode": "16BT",
-            "status": "matched",
-            "parameters": 19
-          }
+        "STND": {
+          "channels": 21,
+          "parameters": 19,
+          "sourceMode": "STND"
         },
-        "suggestedFileName": "Fine_Art__FINE_2500E_WASH.gdtf"
+        "16BT": {
+          "channels": 25,
+          "parameters": 19,
+          "sourceMode": "16BT"
+        }
       },
-      "shortName": "FINE 2500E WASH"
+      "shortName": "FINE 2500E WASH",
+      "image": "images/fixtures/fine-art/fine-2500e-wash.png",
+      "details": "json/fixture-details/e297a4c97aeaad7e8294f6dcfa8ab9b41dbecf04f58c34a8d8ccfb0205b8bdfc.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_2500E_WASH@FINE_2500E_WASH.gdtf",
+        "sha256": "e297a4c97aeaad7e8294f6dcfa8ab9b41dbecf04f58c34a8d8ccfb0205b8bdfc",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 372 DG",
       "watts": null,
       "weight": null,
       "modes": {
-        "9CH": 9,
-        "6CH": 9,
-        "5CH": 5
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_372_DG@FINE_372__DG.gdtf",
-        "modes": {
-          "9CH": {
-            "channels": 9,
-            "gdtfMode": "9CH",
-            "status": "matched",
-            "parameters": 9
-          },
-          "6CH": {
-            "channels": 9,
-            "gdtfMode": "6CH",
-            "status": "matched",
-            "parameters": 6
-          },
-          "5CH": {
-            "channels": 5,
-            "gdtfMode": "5CH",
-            "status": "matched",
-            "parameters": 5
-          }
+        "9CH": {
+          "channels": 9,
+          "parameters": 9,
+          "sourceMode": "9CH"
         },
-        "suggestedFileName": "Fine_Art__FINE_372_DG.gdtf"
+        "6CH": {
+          "channels": 9,
+          "parameters": 6,
+          "sourceMode": "6CH"
+        },
+        "5CH": {
+          "channels": 5,
+          "parameters": 5,
+          "sourceMode": "5CH"
+        }
       },
-      "shortName": "FINE 372 DG"
+      "shortName": "FINE 372 DG",
+      "image": "images/fixtures/fine-art/fine-372-dg.png",
+      "details": "json/fixture-details/8fcffc8ca04828a414dfc1229f29f5e1e9640fbe8e589362ee68607155c8f475.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_372_DG@FINE_372__DG.gdtf",
+        "sha256": "8fcffc8ca04828a414dfc1229f29f5e1e9640fbe8e589362ee68607155c8f475",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 380 BEAM",
       "watts": 560.0,
       "weight": 25.5,
       "modes": {
-        "EXTN 23": 23,
-        "16BIT 1": 21,
-        "STND": 17
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_380_BEAM@FINE_380__BEAM.gdtf",
-        "modes": {
-          "EXTN 23": {
-            "channels": 23,
-            "gdtfMode": "EXTN 23",
-            "status": "matched",
-            "parameters": 18
-          },
-          "16BIT 1": {
-            "channels": 21,
-            "gdtfMode": "16BIT 1",
-            "status": "matched",
-            "parameters": 18
-          },
-          "STND": {
-            "channels": 17,
-            "gdtfMode": "STND",
-            "status": "matched",
-            "parameters": 14
-          }
+        "EXTN 23": {
+          "channels": 23,
+          "parameters": 18,
+          "sourceMode": "EXTN 23"
         },
-        "suggestedFileName": "Fine_Art__FINE_380_BEAM.gdtf"
+        "16BIT 1": {
+          "channels": 21,
+          "parameters": 18,
+          "sourceMode": "16BIT 1"
+        },
+        "STND": {
+          "channels": 17,
+          "parameters": 14,
+          "sourceMode": "STND"
+        }
       },
-      "shortName": "FINE 380 BEAM"
+      "shortName": "FINE 380 BEAM",
+      "image": "images/fixtures/fine-art/fine-380-beam.png",
+      "details": "json/fixture-details/7242c6fbd0bff325030388b6e84aea5b5b60047ddc689f312204dfe9e7e92352.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_380_BEAM@FINE_380__BEAM.gdtf",
+        "sha256": "7242c6fbd0bff325030388b6e84aea5b5b60047ddc689f312204dfe9e7e92352",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 380 BSW",
       "watts": 560.0,
       "weight": null,
       "modes": {
-        "STND": 20,
-        "16BT ": 24,
-        "EXTN": 27
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_380_BSW@FINE_380__BSW.gdtf",
-        "modes": {
-          "STND": {
-            "channels": 20,
-            "gdtfMode": "STND",
-            "status": "matched",
-            "parameters": 17
-          },
-          "16BT ": {
-            "channels": 24,
-            "gdtfMode": "16BT ",
-            "status": "matched",
-            "parameters": 21
-          },
-          "EXTN": {
-            "channels": 27,
-            "gdtfMode": "EXTN",
-            "status": "matched",
-            "parameters": 21
-          }
+        "STND": {
+          "channels": 20,
+          "parameters": 17,
+          "sourceMode": "STND"
         },
-        "suggestedFileName": "Fine_Art__FINE_380_BSW.gdtf"
+        "16BT ": {
+          "channels": 24,
+          "parameters": 21,
+          "sourceMode": "16BT "
+        },
+        "EXTN": {
+          "channels": 27,
+          "parameters": 21,
+          "sourceMode": "EXTN"
+        }
       },
-      "shortName": "FINE 380 BSW"
+      "shortName": "FINE 380 BSW",
+      "image": "images/fixtures/fine-art/fine-380-bsw.png",
+      "details": "json/fixture-details/d35142958028145c153fde14b7e27b4572880ff537c65454db3898d0de4a5daf.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_380_BSW@FINE_380__BSW.gdtf",
+        "sha256": "d35142958028145c153fde14b7e27b4572880ff537c65454db3898d0de4a5daf",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 400CL",
       "watts": null,
       "weight": 18.0,
       "modes": {
-        "7CH": 7,
-        "DIRS": 17,
-        "RGB": 4,
-        "STD0": 5
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_400CL@FINE_400CL.gdtf",
-        "modes": {
-          "7CH": {
-            "channels": 7,
-            "gdtfMode": "7CH",
-            "status": "matched",
-            "parameters": 6
-          },
-          "DIRS": {
-            "channels": 17,
-            "gdtfMode": "DIRS",
-            "status": "matched",
-            "parameters": 18
-          },
-          "RGB": {
-            "channels": 4,
-            "gdtfMode": "RGB",
-            "status": "matched",
-            "parameters": 4
-          },
-          "STD0": {
-            "channels": 5,
-            "gdtfMode": "STD0",
-            "status": "matched",
-            "parameters": 5
-          }
+        "7CH": {
+          "channels": 7,
+          "parameters": 6,
+          "sourceMode": "7CH"
         },
-        "suggestedFileName": "Fine_Art__FINE_400CL.gdtf"
+        "DIRS": {
+          "channels": 17,
+          "parameters": 18,
+          "sourceMode": "DIRS"
+        },
+        "RGB": {
+          "channels": 4,
+          "parameters": 4,
+          "sourceMode": "RGB"
+        },
+        "STD0": {
+          "channels": 5,
+          "parameters": 5,
+          "sourceMode": "STD0"
+        }
       },
-      "shortName": "FINE 400CL"
+      "shortName": "FINE 400CL",
+      "image": "images/fixtures/fine-art/fine-400cl.png",
+      "details": "json/fixture-details/1652a8c5ef011630dc5c7c5390a2d675ce1299b647591b40b7525efbc9d10791.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_400CL@FINE_400CL.gdtf",
+        "sha256": "1652a8c5ef011630dc5c7c5390a2d675ce1299b647591b40b7525efbc9d10791",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 400D LEKO",
       "watts": 280.0,
       "weight": 10.0,
       "modes": {
-        "Mode 3  10CH": 10,
-        "Mode1 6ch": 6,
-        "Mode2 7ch": 7
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_400D_LEKO@FINE_400D__LEKO.gdtf",
-        "modes": {
-          "Mode 3  10CH": {
-            "channels": 10,
-            "gdtfMode": "Mode 3  10CH",
-            "status": "matched",
-            "parameters": 10
-          },
-          "Mode1 6ch": {
-            "channels": 6,
-            "gdtfMode": "Mode1 6ch",
-            "status": "matched",
-            "parameters": 5
-          },
-          "Mode2 7ch": {
-            "channels": 7,
-            "gdtfMode": "Mode2 7ch",
-            "status": "matched",
-            "parameters": 6
-          }
+        "Mode 3  10CH": {
+          "channels": 10,
+          "parameters": 10,
+          "sourceMode": "Mode 3  10CH"
         },
-        "suggestedFileName": "Fine_Art__FINE_400D_LEKO.gdtf"
+        "Mode1 6ch": {
+          "channels": 6,
+          "parameters": 5,
+          "sourceMode": "Mode1 6ch"
+        },
+        "Mode2 7ch": {
+          "channels": 7,
+          "parameters": 6,
+          "sourceMode": "Mode2 7ch"
+        }
       },
-      "shortName": "FINE 400D LEKO"
+      "shortName": "FINE 400D LEKO",
+      "image": "images/fixtures/fine-art/fine-400d-leko.png",
+      "details": "json/fixture-details/d42de159d820a625dd7c1355d18562400f5ac8c9bf172e5a764a8bb2e9e49466.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_400D_LEKO@FINE_400D__LEKO.gdtf",
+        "sha256": "d42de159d820a625dd7c1355d18562400f5ac8c9bf172e5a764a8bb2e9e49466",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 4012 PIXIE",
       "watts": null,
       "weight": null,
       "modes": {
-        "STND": 21,
-        "Shape": 35,
-        "RBG": 57,
-        "RGBW": 69
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_4012_PIXIE@FINE_4012__PIXIE.gdtf",
-        "modes": {
-          "STND": {
-            "channels": 21,
-            "gdtfMode": "STND",
-            "status": "matched",
-            "parameters": 14
-          },
-          "Shape": {
-            "channels": 35,
-            "gdtfMode": "Shape",
-            "status": "matched",
-            "parameters": 28
-          },
-          "RBG": {
-            "channels": 57,
-            "gdtfMode": "RBG",
-            "status": "matched",
-            "parameters": 50
-          },
-          "RGBW": {
-            "channels": 69,
-            "gdtfMode": "RGBW",
-            "status": "matched",
-            "parameters": 62
-          }
+        "STND": {
+          "channels": 21,
+          "parameters": 14,
+          "sourceMode": "STND"
         },
-        "suggestedFileName": "Fine_Art__FINE_4012_PIXIE.gdtf"
+        "Shape": {
+          "channels": 35,
+          "parameters": 28,
+          "sourceMode": "Shape"
+        },
+        "RBG": {
+          "channels": 57,
+          "parameters": 50,
+          "sourceMode": "RBG"
+        },
+        "RGBW": {
+          "channels": 69,
+          "parameters": 62,
+          "sourceMode": "RGBW"
+        }
       },
-      "shortName": "FINE 4012 PIXIE"
+      "shortName": "FINE 4012 PIXIE",
+      "image": "images/fixtures/fine-art/fine-4012-pixie--fine-4019-wash-plus.png",
+      "details": "json/fixture-details/5a0e021c3df194c94777eaefdefa9904f6268999a808577b30a75cf8475434ad.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_4012_PIXIE@FINE_4012__PIXIE.gdtf",
+        "sha256": "5a0e021c3df194c94777eaefdefa9904f6268999a808577b30a75cf8475434ad",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 4019 WASH PLUS",
       "watts": null,
       "weight": null,
       "modes": {
-        "STND": 21,
-        "Shape": 35,
-        "RBG": 33,
-        "RGBW": 37
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_4019_WASH_PLUS@FINE_4019_WASH__PLUS.gdtf",
-        "modes": {
-          "STND": {
-            "channels": 21,
-            "gdtfMode": "STND",
-            "status": "matched",
-            "parameters": 14
-          },
-          "Shape": {
-            "channels": 35,
-            "gdtfMode": "Shape",
-            "status": "matched",
-            "parameters": 28
-          },
-          "RBG": {
-            "channels": 33,
-            "gdtfMode": "RBG",
-            "status": "matched",
-            "parameters": 26
-          },
-          "RGBW": {
-            "channels": 37,
-            "gdtfMode": "RGBW",
-            "status": "matched",
-            "parameters": 30
-          }
+        "STND": {
+          "channels": 21,
+          "parameters": 14,
+          "sourceMode": "STND"
         },
-        "suggestedFileName": "Fine_Art__FINE_4019_WASH_PLUS.gdtf"
+        "Shape": {
+          "channels": 35,
+          "parameters": 28,
+          "sourceMode": "Shape"
+        },
+        "RBG": {
+          "channels": 33,
+          "parameters": 26,
+          "sourceMode": "RBG"
+        },
+        "RGBW": {
+          "channels": 37,
+          "parameters": 30,
+          "sourceMode": "RGBW"
+        }
       },
-      "shortName": "FINE 4019 WASH PLUS"
+      "shortName": "FINE 4019 WASH PLUS",
+      "image": "images/fixtures/fine-art/fine-4012-pixie--fine-4019-wash-plus.png",
+      "details": "json/fixture-details/4e49d1dd07d6f9b9295fca85601234b760fe843c4c410c421959db0799b46917.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_4019_WASH_PLUS@FINE_4019_WASH__PLUS.gdtf",
+        "sha256": "4e49d1dd07d6f9b9295fca85601234b760fe843c4c410c421959db0799b46917",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 4037 PIXIE PLUS",
       "watts": null,
       "weight": null,
       "modes": {
-        "STND": 21,
-        "Shape": 35,
-        "RGB": 132,
-        "RGBW": 169
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_4037_PIXIE_PLUS@FINE_4037_PIXIE__PLUS.gdtf",
-        "modes": {
-          "STND": {
-            "channels": 21,
-            "gdtfMode": "STND",
-            "status": "matched",
-            "parameters": 14
-          },
-          "Shape": {
-            "channels": 35,
-            "gdtfMode": "Shape",
-            "status": "matched",
-            "parameters": 28
-          },
-          "RGB": {
-            "channels": 132,
-            "gdtfMode": "RGB",
-            "status": "matched",
-            "parameters": 125
-          },
-          "RGBW": {
-            "channels": 169,
-            "gdtfMode": "RGBW",
-            "status": "matched",
-            "parameters": 162
-          }
+        "STND": {
+          "channels": 21,
+          "parameters": 14,
+          "sourceMode": "STND"
         },
-        "suggestedFileName": "Fine_Art__FINE_4037_PIXIE_PLUS.gdtf"
+        "Shape": {
+          "channels": 35,
+          "parameters": 28,
+          "sourceMode": "Shape"
+        },
+        "RGB": {
+          "channels": 132,
+          "parameters": 125,
+          "sourceMode": "RGB"
+        },
+        "RGBW": {
+          "channels": 169,
+          "parameters": 162,
+          "sourceMode": "RGBW"
+        }
       },
-      "shortName": "FINE 4037 PIXIE PLUS"
+      "shortName": "FINE 4037 PIXIE PLUS",
+      "image": "images/fixtures/fine-art/fine-1537-pixie--fine-4037-pixie-plus.png",
+      "details": "json/fixture-details/af200f82c555dad6a5f304b1d95f7644beb183313fb11124ed336161a3d0efba.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_4037_PIXIE_PLUS@FINE_4037_PIXIE__PLUS.gdtf",
+        "sha256": "af200f82c555dad6a5f304b1d95f7644beb183313fb11124ed336161a3d0efba",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 4037 WASH",
       "watts": null,
       "weight": null,
       "modes": {
-        "STND": 21,
-        "Shape": 35,
-        "RGB": 132,
-        "RGBW": 169
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_4037_WASH@FINE_4037__WASH.gdtf",
-        "modes": {
-          "STND": {
-            "channels": 21,
-            "gdtfMode": "STND",
-            "status": "matched",
-            "parameters": 14
-          },
-          "Shape": {
-            "channels": 35,
-            "gdtfMode": "Shape",
-            "status": "matched",
-            "parameters": 28
-          },
-          "RGB": {
-            "channels": 132,
-            "gdtfMode": "RGB",
-            "status": "matched",
-            "parameters": 125
-          },
-          "RGBW": {
-            "channels": 169,
-            "gdtfMode": "RGBW",
-            "status": "matched",
-            "parameters": 162
-          }
+        "STND": {
+          "channels": 21,
+          "parameters": 14,
+          "sourceMode": "STND"
         },
-        "suggestedFileName": "Fine_Art__FINE_4037_WASH.gdtf"
+        "Shape": {
+          "channels": 35,
+          "parameters": 28,
+          "sourceMode": "Shape"
+        },
+        "RGB": {
+          "channels": 132,
+          "parameters": 125,
+          "sourceMode": "RGB"
+        },
+        "RGBW": {
+          "channels": 169,
+          "parameters": 162,
+          "sourceMode": "RGBW"
+        }
       },
-      "shortName": "FINE 4037 PIXIE"
+      "shortName": "FINE 4037 PIXIE",
+      "image": "images/fixtures/fine-art/fine-4037-wash--fine-4037-wash-plus.png",
+      "details": "json/fixture-details/dadc4cb0ed148abf12623eaf26f78bf7ec7fef0862a8a3085341f18b25887f1a.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_4037_WASH@FINE_4037__WASH.gdtf",
+        "sha256": "dadc4cb0ed148abf12623eaf26f78bf7ec7fef0862a8a3085341f18b25887f1a",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 4037 WASH PLUS",
       "watts": null,
       "weight": null,
       "modes": {
-        "STND": 21,
-        "Shape": 35,
-        "RGB": 132,
-        "RGBW": 169
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_4037_WASH_PLUS@FINE_4037_WASH__PLUS.gdtf",
-        "modes": {
-          "STND": {
-            "channels": 21,
-            "gdtfMode": "STND",
-            "status": "matched",
-            "parameters": 14
-          },
-          "Shape": {
-            "channels": 35,
-            "gdtfMode": "Shape",
-            "status": "matched",
-            "parameters": 28
-          },
-          "RGB": {
-            "channels": 132,
-            "gdtfMode": "RGB",
-            "status": "matched",
-            "parameters": 125
-          },
-          "RGBW": {
-            "channels": 169,
-            "gdtfMode": "RGBW",
-            "status": "matched",
-            "parameters": 162
-          }
+        "STND": {
+          "channels": 21,
+          "parameters": 14,
+          "sourceMode": "STND"
         },
-        "suggestedFileName": "Fine_Art__FINE_4037_WASH_PLUS.gdtf"
+        "Shape": {
+          "channels": 35,
+          "parameters": 28,
+          "sourceMode": "Shape"
+        },
+        "RGB": {
+          "channels": 132,
+          "parameters": 125,
+          "sourceMode": "RGB"
+        },
+        "RGBW": {
+          "channels": 169,
+          "parameters": 162,
+          "sourceMode": "RGBW"
+        }
       },
-      "shortName": "FINE 4037 PIXIE"
+      "shortName": "FINE 4037 PIXIE",
+      "image": "images/fixtures/fine-art/fine-4037-wash--fine-4037-wash-plus.png",
+      "details": "json/fixture-details/724404b78a51a3eb00bd086e811a7e450141c77088701bcbd91964a6b7c98d81.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_4037_WASH_PLUS@FINE_4037_WASH__PLUS.gdtf",
+        "sha256": "724404b78a51a3eb00bd086e811a7e450141c77088701bcbd91964a6b7c98d81",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 407 WASH",
       "watts": 330,
       "weight": 6.8,
       "modes": {
-        "STND": 20
+        "STND": {
+          "channels": 20,
+          "parameters": 13,
+          "sourceMode": "STND"
+        }
       },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_407_WASH@Lampy_2026-10-27.gdtf",
-        "modes": {
-          "STND": {
-            "channels": 20,
-            "gdtfMode": "STND",
-            "status": "matched",
-            "parameters": 13
-          }
-        },
-        "suggestedFileName": "Fine_Art__FINE_407_WASH.gdtf"
-      },
-      "shortName": "FINE 407 WASH"
+      "shortName": "FINE 407 WASH",
+      "image": "images/fixtures/fine-art/fine-407-wash.png",
+      "details": "json/fixture-details/7c828f5845f58322c865659e919607e1180242ea3678b723439394cfdf2b19b7.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_407_WASH@Lampy_2026-10-27.gdtf",
+        "sha256": "7c828f5845f58322c865659e919607e1180242ea3678b723439394cfdf2b19b7",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 420L SPOT",
       "watts": 1330.0,
       "weight": 40.400002,
       "modes": {
-        "EXTN-31CH": 31,
-        "16BIT-25CH": 25,
-        "Stand-22CH": 22
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_420L_SPOT@FINE_420L__SPOT.gdtf",
-        "modes": {
-          "EXTN-31CH": {
-            "channels": 31,
-            "gdtfMode": "EXTN-31CH",
-            "status": "matched",
-            "parameters": 19
-          },
-          "16BIT-25CH": {
-            "channels": 25,
-            "gdtfMode": "16BIT-25CH",
-            "status": "matched",
-            "parameters": 19
-          },
-          "Stand-22CH": {
-            "channels": 22,
-            "gdtfMode": "Stand-22CH",
-            "status": "matched",
-            "parameters": 19
-          }
+        "EXTN-31CH": {
+          "channels": 31,
+          "parameters": 19,
+          "sourceMode": "EXTN-31CH"
         },
-        "suggestedFileName": "Fine_Art__FINE_420L_SPOT.gdtf"
+        "16BIT-25CH": {
+          "channels": 25,
+          "parameters": 19,
+          "sourceMode": "16BIT-25CH"
+        },
+        "Stand-22CH": {
+          "channels": 22,
+          "parameters": 19,
+          "sourceMode": "Stand-22CH"
+        }
       },
-      "shortName": "FINE 420L SPOT"
+      "shortName": "FINE 420L SPOT",
+      "image": "images/fixtures/fine-art/fine-420l-spot.png",
+      "details": "json/fixture-details/1e674ed9f9a1c8638b6e3e676a112f07f46190f7eff039f2dd73e8dbc36a2290.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_420L_SPOT@FINE_420L__SPOT.gdtf",
+        "sha256": "1e674ed9f9a1c8638b6e3e676a112f07f46190f7eff039f2dd73e8dbc36a2290",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 470 BSW",
       "watts": 730.0,
       "weight": 40.4,
       "modes": {
-        "STND": 30,
-        "16 BT": 34
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_470_BSW@Release.gdtf",
-        "modes": {
-          "STND": {
-            "channels": 30,
-            "gdtfMode": "STND",
-            "status": "matched",
-            "parameters": 25
-          },
-          "16 BT": {
-            "channels": 34,
-            "gdtfMode": "16 BT",
-            "status": "matched",
-            "parameters": 29
-          }
+        "STND": {
+          "channels": 30,
+          "parameters": 25,
+          "sourceMode": "STND"
         },
-        "suggestedFileName": "Fine_Art__FINE_470_BSW.gdtf"
+        "16 BT": {
+          "channels": 34,
+          "parameters": 29,
+          "sourceMode": "16 BT"
+        }
       },
-      "shortName": "FINE 470 BSW"
+      "shortName": "FINE 470 BSW",
+      "image": "",
+      "details": "json/fixture-details/f9d7efe65e2d73bb373be6376913cfd522f366013234d2407ad2f7f7eb506c9e.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_470_BSW@Release.gdtf",
+        "sha256": "f9d7efe65e2d73bb373be6376913cfd522f366013234d2407ad2f7f7eb506c9e",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 600 BSW II",
       "watts": 1000.0,
       "weight": 40.400002,
       "modes": {
-        "EXTN": 32,
-        "16BT ": 28,
-        "STND": 24
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_600_BSW_II@FINE_600__BSW_II.gdtf",
-        "modes": {
-          "EXTN": {
-            "channels": 32,
-            "gdtfMode": "EXTN",
-            "status": "matched",
-            "parameters": 26
-          },
-          "16BT ": {
-            "channels": 28,
-            "gdtfMode": "16BT ",
-            "status": "matched",
-            "parameters": 22
-          },
-          "STND": {
-            "channels": 24,
-            "gdtfMode": "STND",
-            "status": "matched",
-            "parameters": 21
-          }
+        "EXTN": {
+          "channels": 32,
+          "parameters": 26,
+          "sourceMode": "EXTN"
         },
-        "suggestedFileName": "Fine_Art__FINE_600_BSW_II.gdtf"
+        "16BT ": {
+          "channels": 28,
+          "parameters": 22,
+          "sourceMode": "16BT "
+        },
+        "STND": {
+          "channels": 24,
+          "parameters": 21,
+          "sourceMode": "STND"
+        }
       },
-      "shortName": "FINE 600 BSW II"
+      "shortName": "FINE 600 BSW II",
+      "image": "images/fixtures/fine-art/fine-1000zlh-perf--fine-1000zlh-spot2--fine-120ls-beam-ip--fine-600-bsw-ii.png",
+      "details": "json/fixture-details/b5e1f7eca5ac370e6a5a8e3d2fed1d732c080a8de81a0e5d8b86d93f7a1b7d77.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_600_BSW_II@FINE_600__BSW_II.gdtf",
+        "sha256": "b5e1f7eca5ac370e6a5a8e3d2fed1d732c080a8de81a0e5d8b86d93f7a1b7d77",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 600LB BSW IP",
       "watts": 900.0,
       "weight": 40.400002,
       "modes": {
-        "EXTN 34CH": 34,
-        "16 BIT 30CH": 30,
-        "STAND 23CH": 23
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_600LB_BSW_IP@FINE_600LB_BSW__IP.gdtf",
-        "modes": {
-          "EXTN 34CH": {
-            "channels": 34,
-            "gdtfMode": "EXTN 34CH",
-            "status": "matched",
-            "parameters": 28
-          },
-          "16 BIT 30CH": {
-            "channels": 30,
-            "gdtfMode": "16 BIT 30CH",
-            "status": "matched",
-            "parameters": 24
-          },
-          "STAND 23CH": {
-            "channels": 23,
-            "gdtfMode": "STAND 23CH",
-            "status": "matched",
-            "parameters": 20
-          }
+        "EXTN 34CH": {
+          "channels": 34,
+          "parameters": 28,
+          "sourceMode": "EXTN 34CH"
         },
-        "suggestedFileName": "Fine_Art__FINE_600LB_BSW_IP.gdtf"
+        "16 BIT 30CH": {
+          "channels": 30,
+          "parameters": 24,
+          "sourceMode": "16 BIT 30CH"
+        },
+        "STAND 23CH": {
+          "channels": 23,
+          "parameters": 20,
+          "sourceMode": "STAND 23CH"
+        }
       },
-      "shortName": "FINE 600LB BSW IP"
+      "shortName": "FINE 600LB BSW IP",
+      "image": "images/fixtures/fine-art/fine-600lb-bsw-ip--fine-600lb-bswf-ip.png",
+      "details": "json/fixture-details/e23b9589d8dad3c1fcbbfac2dd53c656767f412d0c4bdd1b61c03e462b3466b3.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_600LB_BSW_IP@FINE_600LB_BSW__IP.gdtf",
+        "sha256": "e23b9589d8dad3c1fcbbfac2dd53c656767f412d0c4bdd1b61c03e462b3466b3",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 600LB BSWF IP",
       "watts": 900.0,
       "weight": 40.400002,
       "modes": {
-        "EXTN": 45,
-        "16bit 41ch": 41,
-        "STAND 23CH": 33
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_600LB_BSWF_IP@FINE_600LB_BSWF__IP.gdtf",
-        "modes": {
-          "EXTN": {
-            "channels": 45,
-            "gdtfMode": "EXTN",
-            "status": "matched",
-            "parameters": 39
-          },
-          "16bit 41ch": {
-            "channels": 41,
-            "gdtfMode": "16bit 41ch",
-            "status": "matched",
-            "parameters": 35
-          },
-          "STAND 23CH": {
-            "channels": 33,
-            "gdtfMode": "STAND 23CH",
-            "status": "matched",
-            "parameters": 30
-          }
+        "EXTN": {
+          "channels": 45,
+          "parameters": 39,
+          "sourceMode": "EXTN"
         },
-        "suggestedFileName": "Fine_Art__FINE_600LB_BSWF_IP.gdtf"
+        "16bit 41ch": {
+          "channels": 41,
+          "parameters": 35,
+          "sourceMode": "16bit 41ch"
+        },
+        "STAND 23CH": {
+          "channels": 33,
+          "parameters": 30,
+          "sourceMode": "STAND 23CH"
+        }
       },
-      "shortName": "FINE 600LB BSWF IP"
+      "shortName": "FINE 600LB BSWF IP",
+      "image": "images/fixtures/fine-art/fine-600lb-bsw-ip--fine-600lb-bswf-ip.png",
+      "details": "json/fixture-details/a0c286a1b0d3a8ab77831e00310193babeafe94afde06ef598b2ab4535ea1b34.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_600LB_BSWF_IP@FINE_600LB_BSWF__IP.gdtf",
+        "sha256": "a0c286a1b0d3a8ab77831e00310193babeafe94afde06ef598b2ab4535ea1b34",
+        "extractedAt": "2026-11-05"
+      }
     },
     {
       "fixture": "FINE 960C STROBE IP",
       "watts": null,
       "weight": null,
       "modes": {
-        "Stand-16": 16,
-        "Pixels-65": 9,
-        "Strobe-11": 11,
-        "Pixels- 66": 65
-      },
-      "gdtf": {
-        "status": "matched",
-        "folder": "fixtures/fine-art",
-        "file": "fixtures/fine-art/Fine_Art@FINE_960C_STROBE_IP@FINE_960C_STROBE__IP.gdtf",
-        "modes": {
-          "Stand-16": {
-            "channels": 16,
-            "gdtfMode": "Stand-16",
-            "status": "matched",
-            "parameters": 15
-          },
-          "Pixels-65": {
-            "channels": 9,
-            "gdtfMode": "Pixels-65",
-            "status": "matched",
-            "parameters": 8
-          },
-          "Strobe-11": {
-            "channels": 11,
-            "gdtfMode": "Strobe-11",
-            "status": "matched",
-            "parameters": 10
-          },
-          "Pixels- 66": {
-            "channels": 65,
-            "gdtfMode": "Pixels- 66",
-            "status": "matched",
-            "parameters": 64
-          }
+        "Stand-16": {
+          "channels": 16,
+          "parameters": 15,
+          "sourceMode": "Stand-16"
         },
-        "suggestedFileName": "Fine_Art__FINE_960C_STROBE_IP.gdtf"
+        "Pixels-65": {
+          "channels": 9,
+          "parameters": 8,
+          "sourceMode": "Pixels-65"
+        },
+        "Strobe-11": {
+          "channels": 11,
+          "parameters": 10,
+          "sourceMode": "Strobe-11"
+        },
+        "Pixels- 66": {
+          "channels": 65,
+          "parameters": 64,
+          "sourceMode": "Pixels- 66"
+        }
       },
-      "shortName": "FINE 960C STROBE IP"
+      "shortName": "FINE 960C STROBE IP",
+      "image": "images/fixtures/fine-art/fine-960c-strobe-ip.png",
+      "details": "json/fixture-details/2f37b5d4df19023888f8e4571b582f95d498095fdef3dbb61fcf1be72b0e42b7.json",
+      "provenance": {
+        "fileName": "Fine_Art@FINE_960C_STROBE_IP@FINE_960C_STROBE__IP.gdtf",
+        "sha256": "2f37b5d4df19023888f8e4571b582f95d498095fdef3dbb61fcf1be72b0e42b7",
+        "extractedAt": "2026-11-05"
+      }
     }
   ]
 }

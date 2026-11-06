@@ -1,8 +1,8 @@
 {
-  "title": "Welcome to Lampy Paperwork V55",
+  "title": "Welcome to Lampy Paperwork V56",
   "paragraphs": [
     "Create and manage your show paperwork in one browser workspace: Fixture Patch, Power, Control, Network, Rack Layout, Looms and Labels.",
-    "V55 adds PDF Page Settings and PDF File Names under Project Settings → Exports. Choose three filename parts for all documents or create document-specific structures. Every PDF preview shows the filename and lets you save a different structure for that document. First-page settings and their preview collapse together; footer typography is independent.",
+    "V56 uses stored fixture data and fixture images. Library GDTFs are no longer embedded in MVR exports; matching GDTFs imported with an MVR can be retained for export. Fixture Information shows the fixture image and mode/channel information.",
     "New: page-specific Help. Look for the circled question mark above Menu at the bottom of the sidebar. Press it on any page for guidance about that page.",
     "The walk-through is temporarily disabled. Use Help whenever you need guidance.",
     "Open Lampy Paperwork at:",
