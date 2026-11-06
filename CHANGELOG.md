@@ -1,3 +1,10 @@
+## V56.2 — Faster loading and Device Config group ordering
+
+- Show fixture metadata and images before full channel data finishes loading. Reuse loaded definitions and build channel tables only when a mode is expanded.
+- Avoid repeating project validation during saved-project import while retaining validation before replacement.
+
+- Add up/down controls to Device Config group headings. Save the group order with the project and use it in Device Config PDFs and the IP sheet; retain hidden groups when filters are active.
+
 ## V56.1 — Organised fixture definitions
 
 - Organise stored fixture definitions into manufacturer folders with readable fixture names. Preserve shared definitions, source provenance and all definition contents.
