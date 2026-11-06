@@ -4,7 +4,7 @@
   "devices": [
     {
       "id": "swisson-xes-8g",
-      "name": "8-Port Switch",
+      "name": "Swisson 8-Port Switch",
       "type": "Network Switch",
       "managed": false,
       "imageUrl": "images/swisson/8-port_switch_front.png",
