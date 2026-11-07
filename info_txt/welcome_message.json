@@ -1,7 +1,8 @@
 {
-  "title": "Welcome to Lampy Paperwork V56",
+  "title": "Welcome to Lampy Paperwork V57",
   "paragraphs": [
-    "Create and manage your show paperwork in one browser workspace: Fixture Patch, Power, Control, Network, Rack Layout, Looms and Labels.",
+    "Create and manage your show paperwork in one browser workspace: Fixture Patch, Power, Control, Network, Rack Layout, Looms, Truck Pack and Labels.",
+    "V57 adds Truck Pack: import case and truss inventory, choose preset or custom trailers, and arrange loads using independent 2D and 3D views. Packs, case details and truck details are saved with your project.",
     "V56 uses stored fixture data and fixture images. Library GDTFs are no longer embedded in MVR exports; matching GDTFs imported with an MVR can be retained for export. Fixture Information shows the fixture image and mode/channel information.",
     "New: page-specific Help. Look for the circled question mark above Menu at the bottom of the sidebar. Press it on any page for guidance about that page.",
     "The walk-through is temporarily disabled. Use Help whenever you need guidance.",

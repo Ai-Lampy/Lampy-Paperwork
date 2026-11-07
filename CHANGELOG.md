@@ -1,3 +1,9 @@
+## V57 — Truck Pack
+
+- Add case and truss inventory with CSV/Excel import and project-unit conversion.
+- Plan multiple preset or custom trucks with independent 2D/3D views, staging, case details, orientation and supported stacking.
+- Save Truck Pack inventory, truck details, placements and view settings with the project.
+
 ## V56.3 — Centred Device Config PDF review
 
 - Centre scaled Device Config preview pages within their wrappers and fit Review content to the available width without horizontal scrolling.
