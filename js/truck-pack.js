@@ -38,12 +38,12 @@
   function normaliseCase(raw){
     if(!raw||typeof raw!=='object')throw Error('Invalid case.');
     const name=text(raw.name);if(!name)throw Error('Enter a case name.');
-    const result={id:identity(raw.id,'case'),name,type:text(raw.type)||'Case',width:number(raw.width,'Width'),length:number(raw.length,'Length'),height:number(raw.height,'Height'),heightIncludesWheels:raw.heightIncludesWheels!==false,casterHeight:raw.casterHeight==null?null:number(raw.casterHeight,'Castor height',true),weight:raw.weight==null?null:number(raw.weight,'Weight',true),department:text(raw.department),colour:colour(raw.colour,raw.colour===''?'':'#7799bb'),colour2:colour(raw.colour2,''),colour3:colour(raw.colour3,'')};
+    const result={id:identity(raw.id,'case'),name,type:text(raw.type)||'Case',width:number(raw.width,'Width'),length:number(raw.length,'Length'),height:number(raw.height,'Height'),heightIncludesWheels:raw.heightIncludesWheels!==false,casterHeight:raw.casterHeight==null?null:number(raw.casterHeight,'Castor height',true),weight:raw.weight==null?null:number(raw.weight,'Weight',true),department:text(raw.department)};
     if(result.type.toLowerCase()!=='truss'&&!result.heightIncludesWheels&&!(result.casterHeight>0))throw Error(name+': enter castor height when Height excludes wheels.');
     if(result.heightIncludesWheels&&result.casterHeight>=result.height)throw Error(name+': castor height must be less than total height.');
     return result;
   }
-  function normaliseItem(raw){return {id:identity(raw.id,'placed case'),caseId:identity(raw.caseId,'inventory case'),name:text(raw.name),department:text(raw.department),colour:colour(raw.colour,raw.colour===''?'':'#7799bb'),colour2:colour(raw.colour2,''),colour3:colour(raw.colour3,''),rideOnWheels:raw.rideOnWheels!==false,lifter:raw.rideOnWheels===false&&raw.lifter===true,rotation:Number(raw.rotation)===90?90:0,packed:raw.packed===true,x:number(raw.x??0,'X',true),y:number(raw.y??0,'Y',true),z:number(raw.z??0,'Z',true)}}
+  function normaliseItem(raw){return {id:identity(raw.id,'placed case'),caseId:identity(raw.caseId,'inventory case'),name:text(raw.name),department:text(raw.department),colour:colour(raw.colour,''),colour2:colour(raw.colour2,''),colour3:colour(raw.colour3,''),rideOnWheels:raw.rideOnWheels!==false,lifter:raw.rideOnWheels===false&&raw.lifter===true,rotation:Number(raw.rotation)===90?90:0,packed:raw.packed===true,x:number(raw.x??0,'X',true),y:number(raw.y??0,'Y',true),z:number(raw.z??0,'Z',true)}}
   function normaliseTruck(raw){
     if(!raw||typeof raw!=='object')throw Error('Invalid truck.');
     const result={id:identity(raw.id,'truck'),preset:text(raw.preset)||'custom',company:text(raw.company),name:text(raw.name)||'Truck',registration:text(raw.registration),driver:text(raw.driver),email:text(raw.email),phone:text(raw.phone),width:number(raw.width,'Trailer width'),length:number(raw.length,'Trailer length'),height:number(raw.height,'Trailer height'),payload:raw.payload==null?null:number(raw.payload,'Payload'),items:[]};
@@ -88,7 +88,16 @@
   function totals(state,truck){let packed=0,staged=0,unknown=0;for(const item of truck.items){const weight=definition(state,item).weight;if(weight==null){unknown++;continue}if(item.packed)packed+=weight;else staged+=weight}return {packed,staged,unknown,overPayload:truck.payload!=null&&packed>truck.payload}}
   function addItems(state,truckId,caseId,quantity){
     const truck=state.trucks.find(t=>t.id===truckId),base=state.cases.find(c=>c.id===caseId),count=Number(quantity);if(!truck||!base)throw Error('Select a truck and an inventory case.');if(!Number.isInteger(count)||count<1||truck.items.length+count>MAX_ITEMS)throw Error('Enter a whole quantity within the '+MAX_ITEMS+' cases per truck limit.');
-    const added=Array.from({length:count},()=>({id:id('load'),caseId:base.id,name:'',department:base.department,colour:base.colour,colour2:base.colour2,colour3:base.colour3,rideOnWheels:true,lifter:false,rotation:0,packed:false,x:0,y:0,z:0}));truck.items.push(...added);return added;
+    const added=Array.from({length:count},()=>({id:id('load'),caseId:base.id,name:'',department:base.department,colour:'',colour2:'',colour3:'',rideOnWheels:true,lifter:false,rotation:0,packed:false,x:0,y:0,z:0}));truck.items.push(...added);return added;
+  }
+  function removeInventoryCases(state,caseIds){
+    const ids=new Set(caseIds),before=state.cases.length;let removed=0,waiting=0;
+    state.cases=state.cases.filter(c=>!ids.has(c.id));
+    for(const truck of state.trucks){
+      const count=truck.items.length;truck.items=truck.items.filter(item=>!ids.has(item.caseId));removed+=count-truck.items.length;
+      let changed=true;while(changed){changed=false;for(const item of truck.items){if(!item.packed||item.z<=EPS)continue;const b=box(state,item);if(!truck.items.some(other=>other!==item&&other.packed&&supported(b,box(state,other)))){item.packed=false;waiting++;changed=true}}}
+    }
+    return {inventory:before-state.cases.length,removed,waiting};
   }
   function parseImportLength(value,dimensionUnit='',allowZero=false){
     if(!['','mm','cm','m','ft','in'].includes(dimensionUnit))throw Error('Choose a valid dimension unit.');
@@ -110,15 +119,15 @@
     if(!['','mm','cm','m','ft','in'].includes(dimensionUnit))throw Error('Choose a valid dimension unit.');
     const dimension=(value,label,allowZero=false)=>{try{return parseImportLength(value,dimensionUnit,allowZero)}catch(error){throw Error(label+': '+error.message)}};
     const result=[],errors=[];
-    rows.forEach((row,index)=>{if(!row.some(v=>text(v)))return;try{const get=key=>row[mapping[key]]??'',flag=text(get('heightIncludesWheels')).toLowerCase();if(flag&&!['yes','no','true','false','1','0','y','n'].includes(flag))throw Error('Height Inc Wheels? must be Yes or No.');result.push(normaliseCase({id:id('case'),name:get('name'),type:get('type')||'Case',width:dimension(get('width'),'Width'),length:dimension(get('length'),'Length'),height:dimension(get('height'),'Height'),heightIncludesWheels:!['no','false','0','n'].includes(flag),casterHeight:text(get('casterHeight'))?dimension(get('casterHeight'),'Castor Height',true):null,weight:parseWeight(get('weight'),weightUnit,true),department:get('department'),colour:get('colour'),colour2:get('colour2'),colour3:get('colour3')}))}catch(error){errors.push('Row '+(index+2)+': '+error.message)}});
+    rows.forEach((row,index)=>{if(!row.some(v=>text(v)))return;try{const get=key=>row[mapping[key]]??'',flag=text(get('heightIncludesWheels')).toLowerCase();if(flag&&!['yes','no','true','false','1','0','y','n'].includes(flag))throw Error('Height Inc Wheels? must be Yes or No.');result.push(normaliseCase({id:id('case'),name:get('name'),type:get('type')||'Case',width:dimension(get('width'),'Width'),length:dimension(get('length'),'Length'),height:dimension(get('height'),'Height'),heightIncludesWheels:!['no','false','0','n'].includes(flag),casterHeight:text(get('casterHeight'))?dimension(get('casterHeight'),'Castor Height',true):null,weight:parseWeight(get('weight'),weightUnit,true),department:get('department')}))}catch(error){errors.push('Row '+(index+2)+': '+error.message)}});
     if(errors.length)throw Error(errors.slice(0,20).join('\n')+(errors.length>20?'\n… '+(errors.length-20)+' more errors.':''));
     if(!result.length)throw Error('No case rows were found.');if(result.length>MAX_CASES)throw Error('Too many inventory cases.');return result;
   }
-  function suggestMapping(headers){const aliases={name:['name','case name'],type:['type'],width:['w','width'],length:['l','length','depth'],height:['h','height'],heightIncludesWheels:['height inc wheels','height includes wheels','height incl wheels'],casterHeight:['castor height','caster height','wheel height'],weight:['weight','weight kg','weight lbs','weight lb'],department:['department'],colour:['colour','color','colour 1','color 1','col 1'],colour2:['colour 2','color 2','col 2'],colour3:['colour 3','color 3','col 3']};return Object.fromEntries(Object.entries(aliases).map(([key,names])=>[key,headers.findIndex(v=>names.includes(text(v).toLowerCase().replace(/[?()]/g,'').replace(/\s+/g,' ').trim()))]))}
+  function suggestMapping(headers){const aliases={name:['name','case name'],type:['type'],width:['w','width'],length:['l','length','depth'],height:['h','height'],heightIncludesWheels:['height inc wheels','height includes wheels','height incl wheels'],casterHeight:['castor height','caster height','wheel height'],weight:['weight','weight kg','weight lbs','weight lb'],department:['department']};return Object.fromEntries(Object.entries(aliases).map(([key,names])=>[key,headers.findIndex(v=>names.includes(text(v).toLowerCase().replace(/[?()]/g,'').replace(/\s+/g,' ').trim()))]))}
   function project(point,camera){const yaw=camera.yaw*Math.PI/180,pitch=camera.pitch*Math.PI/180,c=Math.cos(yaw),s=Math.sin(yaw),cp=Math.cos(pitch),sp=Math.sin(pitch);return {x:point.x*c+point.y*s,y:point.x*s*sp-point.y*c*sp-point.z*cp,depth:point.x*s*cp-point.y*c*cp+point.z*sp}}
   function unprojectDelta(dx,dy,camera,plane='xy'){
     const axes={xy:[{x:1,y:0,z:0},{x:0,y:1,z:0}],xz:[{x:1,y:0,z:0},{x:0,y:0,z:1}],yz:[{x:0,y:1,z:0},{x:0,y:0,z:1}]}[plane],a=project(axes[0],camera),b=project(axes[1],camera),det=a.x*b.y-a.y*b.x;if(Math.abs(det)<1e-6)return null;const u=(dx*b.y-dy*b.x)/det,v=(a.x*dy-a.y*dx)/det;return {x:axes[0].x*u+axes[1].x*v,y:axes[0].y*u+axes[1].y*v,z:axes[0].z*u+axes[1].z*v};
   }
-  const api={EPS,MAX_CASES,MAX_ITEMS,source,presets,perspectives,cameras,id,parseLength,parseWeight,formatLength,formatWeight,normaliseCase,normaliseItem,normaliseTruck,normalise,empty,view,definition,dimensions,box,overlaps,supported,truckError,placement,totals,addItems,parseImportLength,importDimensionIssues,importRows,suggestMapping,project,unprojectDelta};
+  const api={EPS,MAX_CASES,MAX_ITEMS,source,presets,perspectives,cameras,id,parseLength,parseWeight,formatLength,formatWeight,normaliseCase,normaliseItem,normaliseTruck,normalise,empty,view,definition,dimensions,box,overlaps,supported,truckError,placement,totals,addItems,removeInventoryCases,parseImportLength,importDimensionIssues,importRows,suggestMapping,project,unprojectDelta};
   root.LampyTruckPack=api;if(typeof module!=='undefined')module.exports=api;
 })(globalThis);

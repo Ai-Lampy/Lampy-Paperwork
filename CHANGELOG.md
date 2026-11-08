@@ -1,3 +1,11 @@
+## V57.6 — Truck Pack selection and inventory
+
+- Keep identification colours on truck instances only, and rename Windows to Views.
+- Add drag-box and Shift-click selection with shared colour and department edits that preserve untouched mixed values.
+- Match the details pane height to the view grid, move Save Details to the top, and collapse position controls by default.
+- Highlight cube faces on hover and keyboard focus; clicking or activating a face selects its view.
+- Add Delete all inventory; inventory deletion also removes all corresponding truck instances and moves unsupported remaining cases to Waiting.
+
 ## V57.5 — Cases table width
 
 - Fit the Cases table to the available width, removing oversized input minimums and tightening the three colour columns and cell padding.

@@ -2,6 +2,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const T=require('../js/truck-pack.js'),root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),ui=fs.readFileSync(path.join(root,'js/truck-pack-view.js'),'utf8');
 function fn(text,name){const start=text.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=text.indexOf('}',start);end>=0;end=text.indexOf('}',end+1)){const value=text.slice(start,end+1);try{new Function('return ('+value+')');return value}catch{}}throw Error(name)}
+function testContext(values){if(values.host&&!values.host.querySelector)values.host.querySelector=()=>null;const context=vm.createContext({root:{},selectedGroup:[],inspectorObserver:null,...values});for(const name of ['selectionIds','selectionRect','casesInSelection','syncInspectorHeight','observeInspector'])vm.runInContext(fn(ui,name),context);return context}
 const close=(a,b)=>assert(Math.abs(a-b)<.01,`${a} != ${b}`);
 for(const [input,expected] of [['1 m',1000],['12.5 cm',125],['600 mm',600],[`5' 6"`,1676.4],['12"',304.8],[`1' 2 1/2"`,368.3],['½ m',null],['1/2"',12.7]])if(expected===null)assert.throws(()=>T.parseLength(input));else close(T.parseLength(input),expected);
 for(const invalid of ['600','-1 m','NaN mm','1/0"','0 mm','10 yards','2 m garbage'])assert.throws(()=>T.parseLength(invalid));
@@ -45,15 +46,15 @@ const [fractional]=T.importRows([['Case','24 1/2','24','12.75',0]],dimensionMapp
 const [noCastor]=T.importRows([['Case',24,24,6]],dimensionMapping,'kg','in');assert.equal(noCastor.casterHeight,null);assert.equal(noCastor.weight,null);
 for(const mode of T.perspectives.filter(k=>k!=='orbit')){const camera=T.view({mode,yaw:T.cameras[mode][0],pitch:T.cameras[mode][1]}),plane=['left','right'].includes(mode)?'yz':['front','back'].includes(mode)?'xz':'xy',delta=plane==='xy'?{x:150,y:-240,z:0}:plane==='xz'?{x:150,y:0,z:240}:{x:0,y:150,z:240},screen=T.project(delta,camera),back=T.unprojectDelta(screen.x,screen.y,camera,plane);for(const key of ['x','y','z'])close(back[key],delta[key]);}
 // Run the actual SVG renderer with saved data, independent camera windows and staging.
-const c=vm.createContext({T,drag:null,selected:upper.id,state:()=>model,truck:()=>truck,esc:v=>String(v).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;'),Math});
+const c=testContext({T,drag:null,selected:upper.id,state:()=>model,truck:()=>truck,esc:v=>String(v).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;'),Math});
 vm.runInContext(ui.split('\n').find(line=>line.includes('const faces=')),c);
 for(const name of ['corners','staging','scene','renderSceneData','partMesh','cubeMarkup'])vm.runInContext(fn(ui,name),c);
 for(const mode of T.perspectives.filter(v=>v!=='orbit')){model.views[0]=T.view({mode,yaw:T.cameras[mode][0],pitch:T.cameras[mode][1]});const result=c.scene(0);assert(result.markup.includes('base'));assert(result.markup.includes('small'));assert(!/NaN|Infinity/.test(result.markup),mode);for(const match of result.markup.matchAll(/matrix\(([-.\d]+) ([-.\d]+) ([-.\d]+) ([-.\d]+) /g)){const [a,b,c,d]=match.slice(1).map(Number);assert(a>=0&&a*d-b*c>0,'3D labels read left-to-right without mirroring');}assert(result.markup.includes('data-tp-item'));assert(result.markup.includes('REAR / LOAD'));if(mode!=='plan'){assert(result.markup.includes('#303844'),'3D shows castors');assert(c.cubeMarkup(model.views[0]).includes('data-tp-cube-face="top"'));}}
 const staged=T.addItems(model,'truck','small',2);assert.equal(c.staging(truck).size,2);assert(c.scene(0).markup.includes('WAITING'));assert.deepEqual(model.views.slice(1),T.empty().views.slice(1),'changing one camera leaves other windows alone');
 // Metadata can be saved while a case is still waiting; packing is a separate action.
-const formValues={name:'Edited waiting case',department:'Lighting',colour:'#123456',rideOnWheels:'no',lifter:'yes',rotation:'90',x:'0 mm',y:'0 mm',z:'0 mm'},edit=vm.createContext({T,FormData:class{get(k){return formValues[k]}},selected:staged[0].id,state:()=>model,callbacks:{colourHex:v=>v},transaction:change=>change(model)});vm.runInContext(fn(ui,'readCaseColours'),edit);vm.runInContext(fn(ui,'applyItem'),edit);edit.applyItem({},false);assert.equal(staged[0].packed,false);assert.equal(truck.items.find(i=>i.id===staged[0].id).name,'Edited waiting case');
+const formValues={name:'Edited waiting case',department:'Lighting',colour:'#123456',rideOnWheels:'no',lifter:'yes',rotation:'90',x:'0 mm',y:'0 mm',z:'0 mm'},edit=testContext({T,FormData:class{get(k){return formValues[k]}},selected:staged[0].id,state:()=>model,callbacks:{colourHex:v=>v},transaction:change=>change(model)});vm.runInContext(fn(ui,'readCaseColours'),edit);vm.runInContext(fn(ui,'applyItem'),edit);edit.applyItem({},false);assert.equal(staged[0].packed,false);assert.equal(truck.items.find(i=>i.id===staged[0].id).name,'Edited waiting case');
 // Import routing invokes the existing parsers without changing fixture-patch import state.
-const reader=vm.createContext({readBoundedFileText:async f=>f.text,readBoundedFileBuffer:async f=>f.buffer,xlsxWorkbookSheets:async buffer=>[{name:'Equipment',rows:buffer}],xmlWorksheetRows:()=>rows});vm.runInContext(fn(html,'parseCsvRows'),reader);vm.runInContext(fn(html,'readTruckPackInventory'),reader);
+const reader=testContext({readBoundedFileText:async f=>f.text,readBoundedFileBuffer:async f=>f.buffer,xlsxWorkbookSheets:async buffer=>[{name:'Equipment',rows:buffer}],xmlWorksheetRows:()=>rows});vm.runInContext(fn(html,'parseCsvRows'),reader);vm.runInContext(fn(html,'readTruckPackInventory'),reader);
 (async()=>{const csv=await reader.readTruckPackInventory({name:'inventory.csv',text:'Name,W,L,H\n"Box, A",600 mm,1 m,800 mm'});assert.equal(csv[0].rows[1][0],'Box, A');const workbook=await reader.readTruckPackInventory({name:'inventory.xlsx',buffer:rows});assert.equal(workbook[0].name,'Equipment');const tsv=await reader.readTruckPackInventory({name:'inventory.tsv',text:'Name\tW\nBox\t600 mm'});assert.equal(tsv[0].rows[1][1],'600 mm');await assert.rejects(reader.readTruckPackInventory({name:'bad.exe',text:''}),/Use CSV/);console.log('PASS: Truck Pack units, fleet presets, imports, atomic validation, staging, end rotation, stacking/support, bounds, payloads, persistence, all camera projections and 2D/3D SVG rendering.');})().catch(e=>{console.error(e);process.exitCode=1});
 assert(fn(html,'appPayload').includes('truckPack:app.truckPack'));assert(fn(html,'loadProjectPayload').includes('truckPack:normaliseTruckPack(candidate.truckPack)'));assert(fn(html,'clearProjectState').includes('app.truckPack=normaliseTruckPack(null)'));assert(fn(html,'render').includes('renderTruckPackView()'));
 
@@ -61,7 +62,7 @@ assert(fn(html,'appPayload').includes('truckPack:app.truckPack'));assert(fn(html
 {
  model.views[0]=T.view({mode:'plan',yaw:0,pitch:90});
  const svg={dataset:{tpScene:'0'},getBoundingClientRect:()=>({left:0,top:0,width:900,height:600})},host={querySelector:()=>svg,setPointerCapture(){},releasePointerCapture(){}};
- const d=vm.createContext({T,host,tab:'pack',drag:null,callbacks:{},selected:'',state:()=>model,truck:()=>truck,sceneMaps:[c.scene(0)],renderInspector(){},renderScenes(){},notify(){},save(){},render(){},transaction:change=>{const next=JSON.parse(JSON.stringify(model));change(next);model=T.normalise(next);truck=model.trucks[0]}});
+ const d=testContext({T,host,tab:'pack',drag:null,callbacks:{},selected:'',state:()=>model,truck:()=>truck,sceneMaps:[c.scene(0)],renderInspector(){},renderScenes(){},notify(){},save(){},render(){},transaction:change=>{const next=JSON.parse(JSON.stringify(model));change(next);model=T.normalise(next);truck=model.trucks[0]}});
  for(const name of ['svgPoint','pointerDown','pointerMove','pointerUp','cancelDrag'])vm.runInContext(fn(ui,name),d);
  const itemId=staged[1].id,target={dataset:{tpItem:itemId},closest:selector=>selector==='[data-tp-item]'?target:selector==='[data-tp-scene]'?svg:null};
  function down(){d.sceneMaps=[c.scene(0)];d.pointerDown({button:0,pointerId:1,target,clientX:400,clientY:300,preventDefault(){}})}
@@ -77,7 +78,7 @@ assert(fn(html,'appPayload').includes('truckPack:app.truckPack'));assert(fn(html
 
 // Run the actual project loader, including normalization before any app mutation.
 {
- const p=vm.createContext({LampyCore:require('../js/project-core.js'),LampyTruckPack:T,app:{collapsed:{}},document:{},fixturePatchViewOptions:{},persisted:0});
+ const p=testContext({LampyCore:require('../js/project-core.js'),LampyTruckPack:T,app:{collapsed:{}},document:{},fixturePatchViewOptions:{},persisted:0});
  for(const name of ['normaliseLabel','normaliseSocaMeta','normaliseDistro','normaliseLooms','normaliseProjectInfo','normalisePatchFixture','normalisePatchSheets','normaliseGdtfFiles','normaliseGdtfMatches','normaliseControlNetwork','normalisePatchViewOptions'])p[name]=value=>value;
  for(const name of ['resetFixturePatchUndo','closeConsoleRemoval','resetProjectErrors','clearDeviceConfigSelection','closeAllRackPopouts','applyFixtureOverridesToProjectRows','ensureSocaData','syncPositionsFromPatch','resetRevisionTracking'])p[name]=()=>{};
  for(const name of ['repositoryGdtfBytes','unlockedPatchGroups','deviceConfigExpandedDevices','controlExpandedDevices','controlOpenLocations','controlKnownLocations','deviceConfigTableSorts','rackViewZooms','rackViewFaces','rackClosedPanels','rackPopoutDualViews','collapsedLoomCards','knownLoomCardStates'])p[name]=new Set();
@@ -91,12 +92,12 @@ assert(fn(html,'appPayload').includes('truckPack:app.truckPack'));assert(fn(html
 
 // Render actual inventory and multi-view controls, and submit both creation forms.
 {
- const moduleContext=vm.createContext({LampyTruckPack:T});vm.runInContext(ui,moduleContext);
+ const moduleContext=testContext({LampyTruckPack:T});vm.runInContext(ui,moduleContext);
  const viewLabels=moduleContext.LampyTruckPackView.labels;
  assert.deepEqual(Object.values(viewLabels).slice(0,8),['2D Top / Plan','3D Top','3D Left','3D Right','3D Back','3D Front','3D Left Isometric','3D Right Isometric']);
  let fresh=T.empty(),submit,formValues={},lastMarkup='',saves=0;
  const modal={querySelector:()=>({value:'',textContent:'',onchange:null}),querySelectorAll:()=>[]};
- const c=vm.createContext({T,labels:viewLabels,esc:v=>String(v??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;'),state:()=>fresh,unit:()=>({measurement:'metric',weight:'kg'}),length:v=>T.formatLength(v),weight:v=>T.formatWeight(v),callbacks:{colourControl:()=>'<input name="colour">',colourHex:v=>v},FormData:class{get(k){return formValues[k]??''}},showDialog:(title,markup,callback)=>{submit=callback;lastMarkup=markup;return modal},replace:next=>{fresh=T.normalise(next);saves++},closeDialog(){},render(){},selected:'',tab:'pack'});
+ const c=testContext({T,labels:viewLabels,esc:v=>String(v??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;'),state:()=>fresh,unit:()=>({measurement:'metric',weight:'kg'}),length:v=>T.formatLength(v),weight:v=>T.formatWeight(v),callbacks:{colourControl:()=>'<input name="colour">',colourHex:v=>v},FormData:class{get(k){return formValues[k]??''}},showDialog:(title,markup,callback)=>{submit=callback;lastMarkup=markup;return modal},replace:next=>{fresh=T.normalise(next);saves++},closeDialog(){},render(){},selected:'',tab:'pack'});
  for(const name of ['button','input','field']){
   // These helpers are concise arrow declarations in the live module.
   const line=ui.split('\n').find(line=>line.trim().startsWith('const '+name+'='));vm.runInContext(line,c);
@@ -120,7 +121,7 @@ assert(fn(html,'appPayload').includes('truckPack:app.truckPack'));assert(fn(html
  const nodes={'[data-tp-import-corrections]':corrections,'[data-tp-dimension-unit]':units,'.tpDialogError':error,'[data-tp-file]':file,'[type="submit"]':saveButton,'[data-tp-import-content]':body};
  const modal={querySelector:selector=>{assert(nodes[selector],selector);return nodes[selector]}};
  const inputSheets=[{name:'Cases',rows:[dimensionHeaders,['Case Unique 2.1 Eighth',24,24,6,'','yes',28]]},{name:'More cases',rows:[dimensionHeaders,['Case Motor Distro Quarter',24,24,12.75,'','yes',39]]}];
- const context=vm.createContext({T,importRequest:0,dialog:null,esc:v=>String(v??''),unit:()=>({weight:'kg'}),state:()=>current,callbacks:{readInventory:async()=>inputSheets},showDialog:(title,html,onSubmit)=>{markup=html;submit=onSubmit;context.dialog=modal;return modal},replace:next=>{current=T.normalise(next);saves++},closeDialog:()=>closed++,render(){},tab:'pack',message:''});
+ const context=testContext({T,importRequest:0,dialog:null,esc:v=>String(v??''),unit:()=>({weight:'kg'}),state:()=>current,callbacks:{readInventory:async()=>inputSheets},showDialog:(title,html,onSubmit)=>{markup=html;submit=onSubmit;context.dialog=modal;return modal},replace:next=>{current=T.normalise(next);saves++},closeDialog:()=>closed++,render(){},tab:'pack',message:''});
  vm.runInContext(ui.split('\n').find(line=>line.trim().startsWith('const field=')),context);
  vm.runInContext(fn(ui,'importDialog'),context);context.importDialog();
  assert(markup.includes('Dimension units'));for(const unit of ['mm','cm','m','ft','in'])assert(markup.includes('value="'+unit+'"'));
@@ -142,10 +143,10 @@ assert(fn(html,'appPayload').includes('truckPack:app.truckPack'));assert(fn(html
 
 // Sidebar routes use current trucks, select the requested pack, and track Cases.
 {
- const viewContext=vm.createContext({LampyTruckPack:T});vm.runInContext(ui,viewContext);
+ const viewContext=testContext({LampyTruckPack:T});vm.runInContext(ui,viewContext);
  const view=viewContext.LampyTruckPackView;
  let saves=0;
- const nav=vm.createContext({app:{truckPack:T.empty()},activeSheetTab:'home',distroRanges:()=>[],LampyTruckPackView:view,normaliseTruckPack:T.normalise,persist:()=>saves++});
+ const nav=testContext({app:{truckPack:T.empty()},activeSheetTab:'home',distroRanges:()=>[],LampyTruckPackView:view,normaliseTruckPack:T.normalise,persist:()=>saves++});
  nav.setSheetTab=tab=>{nav.activeSheetTab=tab};
  for(const name of ['sheetSubMenuRoutes','openTruckPackTab'])vm.runInContext(fn(html,name),nav);
  const routes=()=>nav.sheetSubMenuRoutes('truckPack');
@@ -168,7 +169,7 @@ assert(fn(html,'appPayload').includes('truckPack:app.truckPack'));assert(fn(html
 {
  let data=T.empty(),updates=0;
  const host={innerHTML:'',contains:()=>true};
- const context=vm.createContext({T,host,callbacks:{setState:next=>data=next,save(){},navigationChanged:()=>updates++},state:()=>data,truck:()=>data.trucks.find(t=>t.id===data.activeTruckId),tab:'pack',selected:'',message:'',drag:null,dialog:null,sceneMaps:[],importRequest:0,button:()=>'',esc:String,cancelDrag(){},inventoryMarkup:()=>'<table></table>',packMarkup:()=>'<div></div>',renderInspector(){},renderScenes(){},pointerDown(){},pointerMove(){},pointerUp(){},change(){},notify(){}});
+ const context=testContext({T,host,callbacks:{setState:next=>data=next,save(){},navigationChanged:()=>updates++},state:()=>data,truck:()=>data.trucks.find(t=>t.id===data.activeTruckId),tab:'pack',selected:'',message:'',drag:null,dialog:null,sceneMaps:[],importRequest:0,button:()=>'',esc:String,cancelDrag(){},inventoryMarkup:()=>'<table></table>',packMarkup:()=>'<div></div>',renderInspector(){},renderScenes(){},pointerDown(){},pointerMove(){},pointerUp(){},change(){},notify(){}});
  for(const name of ['save','replace','transaction','closeDialog','setTab','click','render'])vm.runInContext(fn(ui,name),context);
  context.render();assert.equal(updates,1);
  const target={dataset:{tpAction:'cases'}};context.click({target:{closest:()=>target}});assert.equal(context.tab,'cases');assert.equal(updates,2);
@@ -183,14 +184,14 @@ console.log('PASS: Truck Pack navigation routes, active sub-tabs, truck selectio
  const data=T.empty();data.cases=[base('three',{colour:'#ff0000',colour2:'#00ff00',colour3:'#0000ff'})];
  data.trucks=[T.normaliseTruck({...T.presets[0],id:'colours',items:[]})];data.activeTruckId='colours';
  const [item]=T.addItems(data,'colours','three',1);
- for(const key of ['colour','colour2','colour3'])assert.equal(item[key],data.cases[0][key]);
+ for(const key of ['colour','colour2','colour3']){assert.equal(item[key],'');assert(!(key in data.cases[0]))}Object.assign(item,{colour:'#ff0000',colour2:'#00ff00',colour3:'#0000ff'});
  assert.deepEqual(T.normalise(JSON.parse(JSON.stringify(data))),data);
- assert.equal(T.normaliseCase({...data.cases[0],colour:'',colour2:'',colour3:''}).colour,'');
+ assert(!('colour' in T.normaliseCase({...data.cases[0],colour:'#ffffff'})));
  const old=T.normaliseItem({id:'legacy',caseId:'three',colour:'#112233'});assert.equal(old.colour,'#112233');assert.equal(old.colour2,'');assert.equal(old.colour3,'');
  const headers=['Name','Width','Length','Height','Col 1','Col 2','Col 3'];
  const [imported]=T.importRows([['Colours',600,800,500,'#ff0000','#00ff00','#0000ff']],T.suggestMapping(headers),'kg','mm');
- assert.equal(imported.colour2,'#00ff00');assert.equal(imported.colour3,'#0000ff');
- const render=vm.createContext({T,drag:null,selected:'',state:()=>data,truck:()=>data.trucks[0],esc:String,Math});
+ assert(!('colour2' in imported));assert(!('colour3' in imported));assert(!('colour' in T.suggestMapping(headers)));
+ const render=testContext({T,drag:null,selected:'',state:()=>data,truck:()=>data.trucks[0],esc:String,Math});
  vm.runInContext(ui.split('\n').find(line=>line.includes('const faces=')),render);
  for(const name of ['corners','staging','scene','renderSceneData','partMesh','cubeMarkup'])vm.runInContext(fn(ui,name),render);
  for(const mode of ['plan','leftIso']){data.views[0]=T.view({mode});const result=render.scene(0);for(const colour of ['#ff0000','#00ff00','#0000ff'])assert(result.markup.includes('fill="'+colour+'"'));assert(result.markup.includes('fill="url(#tp-colours-0-'+item.id+')"'));}
@@ -200,7 +201,7 @@ console.log('PASS: Truck Pack navigation routes, active sub-tabs, truck selectio
 {
  let data=T.empty(),saves=0,draws=0;data.cases=[base('item')];data.trucks=[T.normaliseTruck({...T.presets[0],id:'tools',items:[]})];data.activeTruckId='tools';T.addItems(data,'tools','item',1);
  const svg={dataset:{tpScene:'0'},getBoundingClientRect:()=>({left:0,top:0,width:900,height:600})},host={contains:()=>true,querySelector:()=>svg,setPointerCapture(){},releasePointerCapture(){}};
- const context=vm.createContext({T,host,tab:'pack',drag:null,callbacks:{},selected:'',state:()=>data,truck:()=>data.trucks[0],sceneMaps:[],renderInspector(){},renderScenes(){},notify(){},save:()=>saves++,render:()=>draws++,select:id=>context.selected=id});
+ const context=testContext({T,host,tab:'pack',drag:null,callbacks:{},selected:'',state:()=>data,truck:()=>data.trucks[0],sceneMaps:[],renderInspector(){},renderScenes(){},notify(){},save:()=>saves++,render:()=>draws++,select:id=>context.selected=id});
  for(const name of ['svgPoint','click','pointerDown','pointerMove','pointerUp','cancelDrag','setView'])vm.runInContext(fn(ui,name),context);
  const action=(name,extra={})=>context.click({target:{closest:()=>({dataset:{tpAction:name,...extra}})}});
  const event=(x,y)=>({button:0,pointerId:2,clientX:x,clientY:y,preventDefault(){},target:{closest:selector=>selector==='[data-tp-scene]'?svg:null}});
@@ -213,7 +214,7 @@ console.log('PASS: Truck Pack navigation routes, active sub-tabs, truck selectio
  action('tool',{view:'0',tool:'rotate'});assert.equal(data.views[0].tool,'rotate');assert.equal(data.views[0].mode,'leftIso');
  const yaw=data.views[0].yaw;context.pointerDown(event(100,100));context.pointerMove(event(140,120));context.pointerUp(event(140,120));assert.equal(data.views[0].mode,'orbit');close(data.views[0].yaw,yaw+26);
  assert.equal(JSON.stringify(data.trucks[0].items),itemSnapshot);assert.equal(JSON.stringify(data.views.slice(1)),otherViews);
- action('tool',{view:'0',tool:'select'});assert.equal(data.views[0].tool,'select');context.selected='selected';context.pointerDown(event(0,0));assert.equal(context.selected,'');
+ action('tool',{view:'0',tool:'select'});assert.equal(data.views[0].tool,'select');context.selected='selected';context.pointerDown(event(0,0));context.pointerUp(event(0,0));assert.equal(context.selected,'');
  data.views[0].zoom=2;action('fit',{view:'0'});assert.equal(data.views[0].zoom,1);assert.equal(data.views[0].panX,0);assert.equal(data.views[0].panY,0);
  context.setView(0,'plan');action('tool',{view:'0',tool:'rotate'});context.setView(0,'plan');assert.equal(data.views[0].tool,'select');
  data.trucks.push(T.normaliseTruck({...T.presets[0],id:'other',items:[]}));context.selected='old';action('truck',{truckId:'other'});assert.equal(data.activeTruckId,'other');assert.equal(context.selected,'');assert(saves>0&&draws>0);
@@ -222,7 +223,7 @@ console.log('PASS: Truck Pack navigation routes, active sub-tabs, truck selectio
 {
  const data=T.empty();data.cases=[base('detail')];data.trucks=[T.normaliseTruck({...T.presets[0],id:'details',items:[]})];data.activeTruckId='details';const [item]=T.addItems(data,'details','detail',1);
  let hasSelection=false;const children={form:{},'[name="rideOnWheels"]':{},'[data-tp-lifter]':{}},pane={hidden:false,innerHTML:'',closest:()=>({classList:{toggle:(name,value)=>hasSelection=value}}),querySelector:selector=>children[selector]};
- const context=vm.createContext({T,host:{querySelector:()=>pane},state:()=>data,truck:()=>data.trucks[0],selected:'',callbacks:{colourControl:(attrs,value)=>'<input '+attrs+' value="'+value+'">'},esc:String,length:T.formatLength,weight:T.formatWeight,renderScenes(){}});
+ const context=testContext({T,host:{querySelector:()=>pane},state:()=>data,truck:()=>data.trucks[0],selected:'',callbacks:{colourControl:(attrs,value)=>'<input '+attrs+' value="'+value+'">'},esc:String,length:T.formatLength,weight:T.formatWeight,renderScenes(){}});
  for(const name of ['field','input','button'])vm.runInContext(ui.split('\n').find(line=>line.trim().startsWith('const '+name+'=')),context);
  for(const name of ['caseColourFields','renderInspector','select','outsidePointer'])vm.runInContext(fn(ui,name),context);
  context.renderInspector();assert(pane.hidden);assert(!hasSelection);assert.equal(pane.innerHTML,'');
@@ -236,7 +237,7 @@ console.log('PASS: Truck Pack navigation routes, active sub-tabs, truck selectio
  data.cases=[base('a'),base('b')];data.trucks=[T.normaliseTruck({...T.presets[0],id:'add',items:[]})];data.activeTruckId='add';
  const search={},submitButton={},rows=[{dataset:{caseSearch:'a case'},hidden:false},{dataset:{caseSearch:'b case'},hidden:false}];
  const modal={querySelector:selector=>selector==='[type="submit"]'?submitButton:search,querySelectorAll:()=>rows};
- const context=vm.createContext({T,state:()=>data,truck:()=>data.trucks[0],esc:String,length:T.formatLength,FormData:class{get(key){return values[key]}},showDialog:(title,html,handler)=>{submit=handler;markup=html;return modal},replace:next=>{data=T.normalise(next);saved++},closeDialog:()=>closed++,render(){},selected:'old',message:''});
+ const context=testContext({T,state:()=>data,truck:()=>data.trucks[0],esc:String,length:T.formatLength,FormData:class{get(key){return values[key]}},showDialog:(title,html,handler)=>{submit=handler;markup=html;return modal},replace:next=>{data=T.normalise(next);saved++},closeDialog:()=>closed++,render(){},selected:'old',message:''});
  for(const name of ['input'])vm.runInContext(ui.split('\n').find(line=>line.trim().startsWith('const '+name+'=')),context);
  vm.runInContext(fn(ui,'addCaseDialog'),context);context.addCaseDialog();assert(markup.includes('data-tp-case-search'));assert.equal(submitButton.textContent,'Add cases');
  search.oninput({target:{value:'b'}});assert(rows[0].hidden);assert(!rows[1].hidden);
@@ -248,18 +249,18 @@ console.log('PASS: Truck Pack navigation routes, active sub-tabs, truck selectio
  const css=fs.readFileSync(path.join(root,'js/truck-pack.css'),'utf8');assert(css.includes('.tpToolbar button,.tpActions button{zoom:0.85}'));assert(css.includes('.tpActions{gap:4px;align-items:center}'));assert(css.includes('.tpInspector[hidden]{display:none}'));
  assert(!fn(ui,'packMarkup').includes('data-tp-inventory'));assert(!fn(ui,'packMarkup').includes('data-tp-quantity'));assert(!fn(ui,'packMarkup').includes('data-tp-truck'));
  assert(fn(ui,'render').includes('data-truck-id'));assert(fn(ui,'render').includes("button('add-case','Add case')"));
- const context=vm.createContext({});vm.runInContext(ui.split('\n').find(line=>line.trim().startsWith('const button=')),context);vm.runInContext(fn(ui,'sceneTools'),context);
+ const context=testContext({});vm.runInContext(ui.split('\n').find(line=>line.trim().startsWith('const button=')),context);vm.runInContext(fn(ui,'sceneTools'),context);
  for(const mode of ['select','pan','rotate']){const markup=context.sceneTools(2,{tool:mode});assert(markup.includes('data-tool="'+mode+'" data-view="2"'));assert.equal((markup.match(/aria-pressed="true"/g)||[]).length,1);assert.equal((markup.match(/<svg/g)||[]).length,3);}
 }
 console.log('PASS: Truck Pack pan/select/rotate, conditional details, outside deselection, three colours and atomic Add case menu.');
 
 // Cube labels lie in their assigned face planes rather than facing the screen.
 {
- const context=vm.createContext({T});vm.runInContext(ui.split('\n').find(line=>line.includes('const faces=')),context);
+ const context=testContext({T});vm.runInContext(ui.split('\n').find(line=>line.includes('const faces=')),context);
  for(const name of ['corners','cubeMarkup'])vm.runInContext(fn(ui,name),context);
  for(const mode of ['leftIso','rightIso','front','back','left','right','top','orbit']){
   const markup=context.cubeMarkup(T.view({mode}));assert(!/NaN|Infinity/.test(markup));
-  for(const match of markup.matchAll(/<g data-tp-cube-face="([^"]+)"><polygon points="([^"]+)"[^>]*\/><text transform="matrix\(([^)]+)\)"[^>]*>([^<]+)<\/text>/g)){
+  for(const match of markup.matchAll(/<g data-tp-cube-face="([^"]+)"[^>]*><polygon points="([^"]+)"[^>]*\/><text transform="matrix\(([^)]+)\)"[^>]*>([^<]+)<\/text>/g)){
    assert.equal(match[4],match[1].toUpperCase());const pts=match[2].split(' ').map(p=>p.split(',').map(Number)),[a,b,c,d,e,f]=match[3].split(' ').map(Number);
    assert(a>=-1e-10&&a*d-b*c>0,'labels stay readable without mirroring');
    close(e+50*a+50*c,pts.reduce((n,p)=>n+p[0],0)/4);close(f+50*b+50*d,pts.reduce((n,p)=>n+p[1],0)/4);
@@ -283,7 +284,7 @@ console.log('PASS: Truck Pack pan/select/rotate, conditional details, outside de
  const corrections={innerHTML:'',querySelector:selector=>statuses[selector]||(statuses[selector]={textContent:''}),querySelectorAll:()=>{inputs.length=0;for(const m of corrections.innerHTML.matchAll(/data-tp-correction-row="(\d+)" data-tp-correction-field="([^"]+)" value="([^"]*)"/g))inputs.push({dataset:{tpCorrectionRow:m[1],tpCorrectionField:m[2]},value:m[3]});return inputs}};
  const body={innerHTML:'',querySelector:()=>sheet,querySelectorAll:()=>[]};
  const nodes={'[data-tp-dimension-unit]':units,'[data-tp-file]':file,'.tpDialogError':error,'[type="submit"]':saveButton,'[data-tp-import-content]':body,'[data-tp-import-corrections]':corrections},modal={querySelector:selector=>nodes[selector]};
- const context=vm.createContext({T,importRequest:0,dialog:null,esc:v=>String(v??'').replaceAll('"','&quot;'),unit:()=>({weight:'kg'}),state:()=>data,callbacks:{readInventory:async()=>[{name:'cases.csv',rows:copy}]},showDialog:(title,markup,handler)=>{submit=handler;context.dialog=modal;return modal},replace:next=>{data=T.normalise(next);saves++},closeDialog(){},render(){},tab:'pack',message:''});
+ const context=testContext({T,importRequest:0,dialog:null,esc:v=>String(v??'').replaceAll('"','&quot;'),unit:()=>({weight:'kg'}),state:()=>data,callbacks:{readInventory:async()=>[{name:'cases.csv',rows:copy}]},showDialog:(title,markup,handler)=>{submit=handler;context.dialog=modal;return modal},replace:next=>{data=T.normalise(next);saves++},closeDialog(){},render(){},tab:'pack',message:''});
  vm.runInContext(ui.split('\n').find(line=>line.trim().startsWith('const field=')),context);vm.runInContext(fn(ui,'importDialog'),context);context.importDialog();
  await file.onchange({target:{files:[{name:'cases.csv'}]}});assert.equal(inputs.length,2);assert.equal(saveButton.disabled,false);assert.equal(error.textContent,'');
  assert.throws(()=>submit(),/Row 88: Height/);assert.equal(saves,0);
@@ -298,8 +299,68 @@ console.log('PASS: Truck Pack pan/select/rotate, conditional details, outside de
 // Render the active Pack toolbar, with all window choices inside the action group.
 {
  const data=T.empty();data.trucks=[T.normaliseTruck({...T.presets[0],id:'toolbar',name:'Tour Truck',items:[]})];data.activeTruckId='toolbar';
- const host={innerHTML:''},context=vm.createContext({host,tab:'pack',selected:'',message:'',state:()=>data,truck:()=>data.trucks[0],callbacks:{},cancelDrag(){},packMarkup:()=>'<div>Pack content</div>',click(){},change(){},pointerDown(){},pointerMove(){},pointerUp(){},renderInspector(){},renderScenes(){},esc:String});
+ const host={innerHTML:''},context=testContext({host,tab:'pack',selected:'',message:'',state:()=>data,truck:()=>data.trucks[0],callbacks:{},cancelDrag(){},packMarkup:()=>'<div>Pack content</div>',click(){},change(){},pointerDown(){},pointerMove(){},pointerUp(){},renderInspector(){},renderScenes(){},esc:String});
  for(const name of ['button','field'])vm.runInContext(ui.split('\n').find(line=>line.trim().startsWith('const '+name+'=')),context);
  vm.runInContext(fn(ui,'render'),context);
  for(const layout of [1,2,4]){data.layout=layout;context.render();const actions=host.innerHTML.slice(host.innerHTML.indexOf('<div class="tpActions">'),host.innerHTML.indexOf('<div class="tpMessage'));assert(actions.includes('data-tp-layout'));assert(actions.includes('value="'+layout+'" selected'));assert(actions.includes('data-tp-action="add-case"'));assert(host.innerHTML.includes('data-truck-id="toolbar"'));}
 }
+
+// Catalogue deletion removes every instance across trucks, preserving trucks and supported loads.
+{
+ const data=T.empty();data.cases=[base('support',{width:1200,length:1200,height:500}),base('upper',{width:400,length:400,height:400}),base('other')];
+ data.trucks=[T.normaliseTruck({...T.presets[0],id:'first',items:[]}),T.normaliseTruck({...T.presets[0],id:'second',items:[]})];data.activeTruckId='first';
+ const [bottom]=T.addItems(data,'first','support',1),[top]=T.addItems(data,'first','upper',1);Object.assign(bottom,{packed:true});Object.assign(top,{packed:true,rideOnWheels:false,lifter:true,x:100,y:100,z:500,colour:'#abcdef'});
+ T.addItems(data,'second','support',2);T.addItems(data,'second','other',1);assert.equal(T.truckError(data,data.trucks[0]),'');
+ const result=T.removeInventoryCases(data,['support']);assert.deepEqual(result,{inventory:1,removed:3,waiting:1});assert.equal(data.trucks.length,2);assert.equal(top.packed,false);assert.equal(top.colour,'#abcdef');assert.equal(data.trucks[1].items.length,1);assert.doesNotThrow(()=>T.normalise(data));
+ const all=T.removeInventoryCases(data,data.cases.map(c=>c.id));assert.equal(all.inventory,2);assert.equal(all.removed,2);assert.equal(data.cases.length,0);assert(data.trucks.every(t=>t.items.length===0));assert.equal(data.activeTruckId,'first');
+}
+// Marquee handles all directions, multi-view highlights, Shift additions and cancellation.
+{
+ const data=T.empty();data.cases=[base('box',{width:400,length:400,height:400})];data.trucks=[T.normaliseTruck({...T.presets[0],id:'select',items:[]})];data.activeTruckId='select';
+ const items=T.addItems(data,'select','box',3),boxes=items.map((item,i)=>({id:item.id,left:20+i*100,right:70+i*100,top:20,bottom:70}));
+ const svg={dataset:{tpScene:'0'},getBoundingClientRect:()=>({left:0,top:0,width:900,height:600})},host={querySelector:()=>svg,setPointerCapture(){},releasePointerCapture(){}};
+ let inspections=0;const ctx=testContext({T,host,tab:'pack',drag:null,callbacks:{},selected:items[2].id,state:()=>data,truck:()=>data.trucks[0],sceneMaps:[{hitBoxes:boxes}],renderInspector:()=>inspections++,renderScenes(){},save(){},render(){},notify(){}});
+ for(const name of ['svgPoint','pointerDown','pointerMove','pointerUp','cancelDrag'])vm.runInContext(fn(ui,name),ctx);
+ const event=(x,y,shiftKey=false)=>({button:0,pointerId:8,clientX:x,clientY:y,shiftKey,preventDefault(){},target:{closest:selector=>selector==='[data-tp-scene]'?svg:null}});
+ const original=JSON.stringify(data);
+ ctx.pointerDown(event(180,90));ctx.pointerMove(event(10,10));assert.equal(ctx.drag.type,'marquee');assert.deepEqual(Array.from(ctx.drag.ids),items.slice(0,2).map(i=>i.id));assert.equal(inspections,0,'do not resize the scene mid selection');ctx.pointerUp(event(10,10));assert.equal(ctx.selectionIds().length,2);assert.equal(inspections,1);assert.equal(JSON.stringify(data),original);
+ ctx.pointerDown(event(210,10,true));ctx.pointerMove(event(280,80,true));ctx.pointerUp(event(280,80,true));assert.equal(ctx.selectionIds().length,3);
+ ctx.pointerDown(event(500,500));ctx.pointerMove(event(600,550));ctx.cancelDrag();assert.equal(ctx.selectionIds().length,3,'Escape or pointer cancellation keeps the prior selection');
+ ctx.pointerDown(event(500,500));ctx.pointerUp(event(500,500));assert.equal(ctx.selectionIds().length,0);
+ const target={dataset:{tpItem:items[1].id},closest:selector=>selector==='[data-tp-item]'?target:selector==='[data-tp-scene]'?svg:null};ctx.pointerDown({...event(120,40,true),target});assert.equal(ctx.selectionIds()[0],items[1].id);ctx.pointerDown({...event(120,40,true),target});assert.equal(ctx.selectionIds().length,0);
+ const renderer=testContext({T,drag:null,selected:items[0].id,selectedGroup:items.slice(0,2).map(i=>i.id),state:()=>data,truck:()=>data.trucks[0],esc:String,Math});vm.runInContext(ui.split('\n').find(line=>line.includes('const faces=')),renderer);
+ for(const name of ['corners','staging','scene','renderSceneData','partMesh','cubeMarkup'])vm.runInContext(fn(ui,name),renderer);
+ const scene=renderer.scene(0);assert.equal(scene.hitBoxes.length,3);assert.equal((scene.markup.match(/stroke="#0060d2"/g)||[]).length,2);
+ renderer.drag={type:'marquee',index:0,start:{x:20,y:30},current:{x:120,y:230},ids:[items[2].id]};assert(renderer.scene(0).markup.includes('class="tpSelectionBox" x="20" y="30" width="100" height="200"'));assert.equal((renderer.scene(0).markup.match(/stroke="#0060d2"/g)||[]).length,1);
+}
+// Shared edits change only touched fields on selected truck instances, never inventory or other trucks.
+{
+ let data=T.empty();data.cases=[base('shared')];data.trucks=[T.normaliseTruck({...T.presets[0],id:'main',items:[]}),T.normaliseTruck({...T.presets[0],id:'other',items:[]})];data.activeTruckId='main';
+ const items=T.addItems(data,'main','shared',3);T.addItems(data,'other','shared',1);items.forEach((item,i)=>Object.assign(item,{department:'Department '+i,colour:i?'#00ff00':'#ff0000',colour2:'#0000ff'}));
+ const inventory=JSON.stringify(data.cases),other=JSON.stringify(data.trucks[1]);let changes=[],saves=0,message='';
+ const ctx=testContext({T,selected:items[0].id,selectedGroup:items.slice(0,2).map(i=>i.id),state:()=>data,callbacks:{colourHex:v=>/^#[0-9a-f]{6}$/.test(v)?v:''},notify:msg=>message=msg,transaction:change=>{const next=JSON.parse(JSON.stringify(data));change(next);data=T.normalise(next);saves++}});
+ vm.runInContext(fn(ui,'applySelectedDetails'),ctx);const form={querySelectorAll:()=>changes};ctx.applySelectedDetails(form);assert.equal(saves,0);
+ changes=[{name:'department',value:'Lighting'}];ctx.applySelectedDetails(form);assert.equal(saves,1);assert(data.trucks[0].items.slice(0,2).every(item=>item.department==='Lighting'));assert.equal(data.trucks[0].items[0].colour,'#ff0000');assert.equal(data.trucks[0].items[1].colour,'#00ff00');assert.equal(data.trucks[0].items[2].department,'Department 2');
+ changes=[{name:'colour',value:'invalid'}];ctx.applySelectedDetails(form);assert.equal(saves,1);assert(message.includes('valid colour'));
+ changes=[{name:'colour',value:'#abcdef'},{name:'colour2',value:''}];ctx.applySelectedDetails(form);assert.equal(saves,2);assert(data.trucks[0].items.slice(0,2).every(item=>item.colour==='#abcdef'&&item.colour2===''));assert.equal(JSON.stringify(data.cases),inventory);assert.equal(JSON.stringify(data.trucks[1]),other);
+}
+// Details controls, collapse defaults and measured height follow the view grid, including resize.
+{
+ const data=T.empty();data.cases=[base('pane')];data.trucks=[T.normaliseTruck({...T.presets[0],id:'pane-truck',items:[]})];data.activeTruckId='pane-truck';const [item]=T.addItems(data,'pane-truck','pane',1);
+ let height=640,callback,disconnects=0;const form={},pane={style:{},innerHTML:'',closest:()=>({classList:{toggle(){}}}),querySelector:()=>form},grid={getBoundingClientRect:()=>({height})};
+ const ctx=testContext({T,host:{querySelector:selector=>selector==='.tpViewGrid'?grid:pane},root:{ResizeObserver:class{constructor(fn){callback=fn}observe(el){assert.equal(el,grid)}disconnect(){disconnects++}}},state:()=>data,truck:()=>data.trucks[0],selected:item.id,callbacks:{colourControl:attrs=>'<input '+attrs+'>'},esc:String,length:T.formatLength,weight:T.formatWeight});
+ for(const name of ['field','input','button'])vm.runInContext(ui.split('\n').find(line=>line.trim().startsWith('const '+name+'=')),ctx);
+ for(const name of ['caseColourFields','renderGroupInspector','renderInspector'])vm.runInContext(fn(ui,name),ctx);
+ ctx.renderInspector();assert.equal(pane.style.height,'640px');assert(pane.innerHTML.indexOf('Save Details')<pane.innerHTML.indexOf('name="name"'));assert(pane.innerHTML.includes('<details class="tpPositionDetails"><summary>Position from rear-left floor</summary>'));assert(!pane.innerHTML.includes('tpPositionDetails" open'));
+ ctx.observeInspector();height=920;callback();assert.equal(pane.style.height,'920px');ctx.observeInspector();assert.equal(disconnects,1);
+ const two=T.addItems(data,'pane-truck','pane',1)[0];two.colour='#123456';ctx.selectedGroup=[item.id,two.id];ctx.renderInspector();assert(pane.innerHTML.includes('2 Cases Selected'));assert(pane.innerHTML.indexOf('Save Details')<pane.innerHTML.indexOf('name="department"'));const input={name:'colour',dataset:{}};form.oninput({target:input});assert.equal(input.dataset.tpChanged,'true');
+ const css=fs.readFileSync(path.join(root,'js/truck-pack.css'),'utf8');assert(css.includes('.tpCube [data-tp-cube-face]:hover polygon'));assert(css.includes('.tpInspectorHead{position:sticky'));
+}
+// Inventory UI excludes colours; delete and delete-all are confirmed and cascade atomically.
+{
+ assert(!fn(ui,'inventoryMarkup').includes('colourControl'));assert(!fn(ui,'caseDialog').includes('caseColourFields'));assert(!('colour' in T.suggestMapping(['Name','Colour'])));assert(fn(ui,'render').includes("field('Views'"));assert(fn(ui,'render').includes("button('delete-all-cases','Delete all'"));
+ let data=T.empty(),accepted=false,confirmText='',saves=0;data.cases=[base('delete')];data.trucks=[T.normaliseTruck({...T.presets[0],id:'keep',items:[]})];data.activeTruckId='keep';T.addItems(data,'keep','delete',2);
+ const ctx=testContext({T,state:()=>data,confirm:message=>{confirmText=message;return accepted},transaction:change=>{const next=JSON.parse(JSON.stringify(data));change(next);data=T.normalise(next);saves++;return true},notify(){}});vm.runInContext(fn(ui,'deleteInventory'),ctx);
+ ctx.deleteInventory(true);assert.equal(saves,0);assert(confirmText.includes('every truck'));accepted=true;ctx.deleteInventory(true);assert.equal(saves,1);assert.equal(data.cases.length,0);assert.equal(data.trucks[0].items.length,0);assert.equal(data.trucks[0].id,'keep');
+}
+console.log('PASS: catalogue/instance separation, marquee selection, shared edits, matched inspector height, top Save, collapsed position and cascading inventory deletion.');
