@@ -167,21 +167,48 @@
     if(fixed)return renderSceneData(active,all,v,fixed.point,fixed.scale,waiting,index);
     return renderSceneData(active,all,v,point,scale,waiting,index);
   }
+  function caseTextWidth(text){
+    if(!caseTextWidth.cache)caseTextWidth.cache=new Map();
+    if(caseTextWidth.cache.has(text))return caseTextWidth.cache.get(text);
+    if(caseTextWidth.context===undefined)caseTextWidth.context=root.document?.createElement('canvas').getContext('2d')||null;
+    const context=caseTextWidth.context;if(context)context.font='600 16px Arial';
+    const width=context?context.measureText(text).width/16:Array.from(text).reduce((sum,char)=>sum+(/[ilI.,' ]/.test(char)?.3:/[MW@]/.test(char)?.95:.65),0);
+    if(caseTextWidth.cache.size>=2048)caseTextWidth.cache.clear();caseTextWidth.cache.set(text,width);return width;
+  }
+  function fitCaseLabel(text,width,height){
+    const words=String(text).trim().split(/\s+/).filter(Boolean),padding=Math.min(4,width*.06,height*.06),available=width-2*padding,space=caseTextWidth(' ');
+    const wrap=size=>{const lines=[];let line='',used=0;for(const word of words){
+      const parts=[];let part='';for(const char of word){if(part&&caseTextWidth(part+char)*size>available){parts.push(part);part=''}part+=char}if(part)parts.push(part);
+      for(const part of parts){const next=caseTextWidth(part)*size,gap=line?space*size:0;if(line&&used+gap+next>available){lines.push(line);line='';used=0}if(line){line+=' ';used+=space*size}line+=part;used+=next}
+    }if(line)lines.push(line);return lines};
+    let low=0,high=Math.min(18,(height-2*padding)/1.25,available/Math.max(.01,...words.flatMap(word=>Array.from(word,caseTextWidth))));
+    for(let i=0;i<14;i++){const size=(low+high)/2,lines=wrap(size);if(lines.length*size*1.25<=height-2*padding)low=size;else high=size}
+    const size=low,lines=wrap(size);return {size,lines,padding,width:available,lineHeight:size*1.25};
+  }
+  function caseLabelMarkup(name,q){
+    const origin={x:q[0].x,y:q[0].y};let u={x:q[1].x-q[0].x,y:q[1].y-q[0].y},v={x:q[3].x-q[0].x,y:q[3].y-q[0].y};
+    if(Math.abs(v.x)/Math.hypot(v.x,v.y)>Math.abs(u.x)/Math.hypot(u.x,u.y))[u,v]=[v,u];
+    if(u.x<0){origin.x+=u.x;origin.y+=u.y;u={x:-u.x,y:-u.y}}
+    let det=u.x*v.y-u.y*v.x;if(det<0){origin.x+=v.x;origin.y+=v.y;v={x:-v.x,y:-v.y};det=-det}
+    const width=Math.hypot(u.x,u.y),height=Math.hypot(v.x,v.y);if(det<.1||!width||!height)return '';
+    const fit=fitCaseLabel(name,width,height),start=(height-fit.lines.length*fit.lineHeight)/2+fit.size;
+    return `<g transform="matrix(${u.x/width} ${u.y/width} ${v.x/height} ${v.y/height} ${origin.x} ${origin.y})" pointer-events="none"><svg class="tpCaseLabel" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" overflow="hidden"><text text-anchor="middle" font-family="Arial" font-weight="600" font-size="${fit.size}" fill="#111" stroke="#fff" stroke-width="${Math.min(.5,fit.size*.04)}" paint-order="stroke">${fit.lines.map((line,i)=>`<tspan x="${width/2}" y="${start+i*fit.lineHeight}" textLength="${Math.min(fit.width,caseTextWidth(line)*fit.size)}" lengthAdjust="spacingAndGlyphs">${esc(line)}</tspan>`).join('')}</text></svg></g>`;
+  }
   function renderSceneData(active,all,v,point,scale,waiting,index){
     const tc=corners({x:0,y:0,z:0,width:active.width,length:active.length,height:active.height}).map(point),points=ps=>ps.map(p=>p.x.toFixed(2)+','+p.y.toFixed(2)).join(' '),outline=edges.map(([a,b])=>`M${tc[a].x},${tc[a].y}L${tc[b].x},${tc[b].y}`).join(' ');
     let markup=`<polygon points="${points(tc.slice(0,4))}" fill="#edf0f3" stroke="#526274" stroke-width="2"/><path d="${outline}" stroke="#7f8a99" stroke-width="1.5" fill="none" opacity=".7" pointer-events="none"/>`;
     const rear=point({x:active.width/2,y:0,z:0}),front=point({x:active.width/2,y:active.length,z:0});markup+=`<text x="${rear.x}" y="${rear.y+22}" class="tpSceneCaption">REAR / LOAD</text><text x="${front.x}" y="${front.y-12}" class="tpSceneCaption">FRONT</text>`;
     if(waiting.size){const p=point({x:active.width+600,y:active.length,z:0});markup+=`<text x="${p.x}" y="${p.y-24}" class="tpSceneCaption">WAITING</text>`}
     const surfaces=[];
-    for(const {item,position} of all){const base=T.definition(state(),item),d=T.dimensions(state(),item),b={...d,...position},selectedCase=(drag?.type==='marquee'?drag.ids:selectionIds()).includes(item.id),invalid=drag?.id===item.id&&drag.error,colours=[item.colour,item.colour2,item.colour3].filter(Boolean),fillId='tp-colours-'+index+'-'+item.id,colour=invalid?'#ed7b7b':colours.length>1?'url(#'+fillId+')':colours[0]||'#7799bb';
+    for(const {item,position} of all){const base=T.definition(state(),item),d=T.dimensions(state(),item),b={...d,...position},selectedCase=(drag?.type==='marquee'?drag.ids:selectionIds()).includes(item.id),invalid=drag?.id===item.id&&drag.error,colours=[item.colour,item.colour2,item.colour3].filter(Boolean),fillId='tp-colours-'+index+'-'+item.id,colour=invalid?'#ed7b7b':colours.length>1?'url(#'+fillId+')':colours[0]||'#ffffff';
       if(colours.length>1)markup+=`<defs><pattern id="${fillId}" patternUnits="userSpaceOnUse" width="${colours.length*10}" height="${colours.length*10}" patternTransform="rotate(45)">${colours.map((c,i)=>`<rect x="${i*10}" width="10" height="${colours.length*10}" fill="${c}"/>`).join('')}</pattern></defs>`;
-      if(v.mode==='plan'){const q=corners(b).slice(4).map(point),centre={x:q.reduce((n,p)=>n+p.x,0)/4,y:q.reduce((n,p)=>n+p.y,0)/4},width=Math.max(1,Math.hypot(q[1].x-q[0].x,q[1].y-q[0].y));surfaces.push({depth:b.z,markup:`<g data-tp-item="${item.id}" tabindex="0" role="button" aria-label="${esc(base.name)}" class="tpCase"><title>${esc(base.name)} — ${item.packed?'Packed':'Waiting'}</title><polygon points="${points(q)}" fill="${colour}" stroke="${selectedCase?'#0060d2':'#23384a'}" stroke-width="${selectedCase?4:1.5}"/><text x="${centre.x}" y="${centre.y}" dominant-baseline="middle" text-anchor="middle" font-size="${Math.max(6,Math.min(14,width/Math.max(1,base.name.length)*1.5))}" fill="#111" stroke="#fff" stroke-width=".4" paint-order="stroke">${esc(base.name)}</text></g>`});continue}
+      if(v.mode==='plan'){const q=corners(b).slice(4).map(point);surfaces.push({depth:b.z,markup:`<g data-tp-item="${item.id}" tabindex="0" role="button" aria-label="${esc(base.name)}" class="tpCase"><title>${esc(base.name)} — ${item.packed?'Packed':'Waiting'}</title><polygon points="${points(q)}" fill="${colour}" stroke="${selectedCase?'#0060d2':'#23384a'}" stroke-width="${selectedCase?4:1.5}"/>${caseLabelMarkup(base.name,q)}</g>`});continue}
       // Castors rotate with the case when it is stood on end.
       const localPoint=p=>{let x=p.x,y=p.y,z=p.z;if(!item.rideOnWheels){y=p.z;z=base.length-p.y}if(item.rotation===90)[x,y]=[y,base.width-x];return {x:position.x+x,y:position.y+y,z:position.z+z}};
       const boxes=[{x:0,y:0,z:d.caster,width:base.width,length:base.length,height:d.bodyHeight,body:true}];
       if(!d.truss&&d.caster>0){const w=Math.min(65,base.width*.15),l=Math.min(90,base.length*.15);for(const x of [base.width*.08,base.width*.92-w])for(const y of [base.length*.08,base.length*.92-l]){const radius=Math.min(l*.5,d.caster*.4);boxes.push({x,y,z:0,width:w,length:l,height:d.caster,body:false,wheel:true});boxes.push({x:x+w*.3,y:y+l*.3,z:radius*2,width:w*.4,length:l*.4,height:d.caster-radius*2,body:false})}}
       for(const part of boxes){const mesh=partMesh(part),ps=mesh.vertices.map(localPoint).map(point);for(let f=0;f<mesh.faces.length;f++){const q=mesh.faces[f].map(i=>ps[i]),area=q.reduce((n,p,i)=>n+p.x*q[(i+1)%q.length].y-q[(i+1)%q.length].x*p.y,0);if(Math.abs(area)<.1)continue;const depth=q.reduce((n,p)=>n+p.depth,0)/q.length,faceColour=part.body?colour:'#303844',stroke=selectedCase&&part.body?'#0060d2':'#263646';let content=`<polygon points="${points(q)}" fill="${faceColour}" fill-opacity="${d.truss?.35:1}" stroke="${stroke}" stroke-width="${selectedCase&&part.body?2.8:1}"/>`;
-        if(part.body){const a=q[0],b=q[1],c=q[3],origin={x:a.x,y:a.y};let ux={x:(b.x-a.x)/100,y:(b.y-a.y)/100},vy={x:(c.x-a.x)/100,y:(c.y-a.y)/100};if(Math.abs(vy.x)/Math.hypot(vy.x,vy.y)>Math.abs(ux.x)/Math.hypot(ux.x,ux.y))[ux,vy]=[vy,ux];if(ux.x<0){origin.x+=ux.x*100;origin.y+=ux.y*100;ux={x:-ux.x,y:-ux.y}}let det=ux.x*vy.y-ux.y*vy.x;if(det<0){origin.x+=vy.x*100;origin.y+=vy.y*100;vy={x:-vy.x,y:-vy.y};det=-det}if(det>.001){content+=`<text transform="matrix(${ux.x} ${ux.y} ${vy.x} ${vy.y} ${origin.x} ${origin.y})" x="50" y="50" text-anchor="middle" dominant-baseline="middle" textLength="85" lengthAdjust="spacingAndGlyphs" font-size="16" fill="#111" stroke="#fff" stroke-width=".6" paint-order="stroke">${esc(base.name)}</text>`}if(d.truss)content+=`<path d="M${q[0].x},${q[0].y}L${q[2].x},${q[2].y}M${q[1].x},${q[1].y}L${q[3].x},${q[3].y}" stroke="#3f4f5f" stroke-width="2"/>`}
+        if(part.body){content+=caseLabelMarkup(base.name,q);if(d.truss)content+=`<path d="M${q[0].x},${q[0].y}L${q[2].x},${q[2].y}M${q[1].x},${q[1].y}L${q[3].x},${q[3].y}" stroke="#3f4f5f" stroke-width="2"/>`}
         surfaces.push({depth,markup:`<g data-tp-item="${item.id}" class="tpCase" tabindex="0" role="button" aria-label="${esc(base.name)}"><title>${esc(base.name)}</title>${content}</g>`});
       }}
     }

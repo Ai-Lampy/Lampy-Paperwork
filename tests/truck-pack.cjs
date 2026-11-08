@@ -2,7 +2,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const T=require('../js/truck-pack.js'),root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),ui=fs.readFileSync(path.join(root,'js/truck-pack-view.js'),'utf8');
 function fn(text,name){const start=text.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=text.indexOf('}',start);end>=0;end=text.indexOf('}',end+1)){const value=text.slice(start,end+1);try{new Function('return ('+value+')');return value}catch{}}throw Error(name)}
-function testContext(values){if(values.host&&!values.host.querySelector)values.host.querySelector=()=>null;const context=vm.createContext({root:{},selectedGroup:[],inspectorObserver:null,...values});for(const name of ['selectionIds','selectionRect','casesInSelection','syncInspectorHeight','observeInspector'])vm.runInContext(fn(ui,name),context);return context}
+function testContext(values){if(values.host&&!values.host.querySelector)values.host.querySelector=()=>null;const context=vm.createContext({root:{},selectedGroup:[],inspectorObserver:null,...values});for(const name of ['caseTextWidth','fitCaseLabel','caseLabelMarkup','selectionIds','selectionRect','casesInSelection','syncInspectorHeight','observeInspector'])vm.runInContext(fn(ui,name),context);return context}
 const close=(a,b)=>assert(Math.abs(a-b)<.01,`${a} != ${b}`);
 for(const [input,expected] of [['1 m',1000],['12.5 cm',125],['600 mm',600],[`5' 6"`,1676.4],['12"',304.8],[`1' 2 1/2"`,368.3],['½ m',null],['1/2"',12.7]])if(expected===null)assert.throws(()=>T.parseLength(input));else close(T.parseLength(input),expected);
 for(const invalid of ['600','-1 m','NaN mm','1/0"','0 mm','10 yards','2 m garbage'])assert.throws(()=>T.parseLength(invalid));
@@ -364,3 +364,34 @@ console.log('PASS: Truck Pack pan/select/rotate, conditional details, outside de
  ctx.deleteInventory(true);assert.equal(saves,0);assert(confirmText.includes('every truck'));accepted=true;ctx.deleteInventory(true);assert.equal(saves,1);assert.equal(data.cases.length,0);assert.equal(data.trucks[0].items.length,0);assert.equal(data.trucks[0].id,'keep');
 }
 console.log('PASS: catalogue/instance separation, marquee selection, shared edits, matched inspector height, top Save, collapsed position and cascading inventory deletion.');
+
+// Blank colours stay neutral; fitted multiline labels remain inside every projected face.
+{
+ const ctx=testContext({esc:v=>String(v).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')});
+ const names=['Case Motor Distro Quarter','WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW','A < B & C','輸送ケース 照明'];
+ for(const name of names)for(const [width,height] of [[120,80],[40,180],[240,15],[3,2]]){
+  const fit=ctx.fitCaseLabel(name,width,height);assert(fit.size>0&&fit.size<=18);assert(fit.lines.length*fit.lineHeight<=height-2*fit.padding+1e-6);
+  assert.equal(fit.lines.join('').replace(/\s/g,''),name.replace(/\s/g,''),'keep all name characters');
+  for(const line of fit.lines)assert(ctx.caseTextWidth(line)*fit.size<=fit.width+1e-6,'every line fits the available width');
+ }
+ const fitted=ctx.fitCaseLabel(names[0],120,80);assert(fitted.lines.length>1,'use multiple lines instead of squeezing a whole name onto one line');
+ assert(ctx.fitCaseLabel(names[0],30,20).size<fitted.size,'small footprints reduce font size');
+ for(const q of [[{x:0,y:0},{x:120,y:0},{x:120,y:80},{x:0,y:80}],[{x:200,y:50},{x:80,y:20},{x:60,y:100},{x:180,y:130}]]){
+  const markup=ctx.caseLabelMarkup(names[2],q);assert(markup.includes('overflow="hidden"'));assert(markup.includes('pointer-events="none"'));assert(markup.includes('&lt;'));assert(markup.includes('&amp;'));assert(!/NaN|Infinity/.test(markup));
+ }
+ assert.equal(ctx.caseLabelMarkup('Edge on',[{x:0,y:0},{x:100,y:0},{x:150,y:0},{x:50,y:0}]),'');
+ let measures=0;const measured=testContext({root:{document:{createElement:()=>({getContext:()=>({font:'',measureText:text=>{measures++;return {width:text.length*8}}})})}}});
+ assert.equal(measured.caseTextWidth('Measured'),4);assert.equal(measured.caseTextWidth('Measured'),4);assert.equal(measures,1,'cache actual font metrics');
+ const data=T.empty();data.cases=[base('uncoloured',{name:names[0]})];data.trucks=[T.normaliseTruck({...T.presets[0],id:'appearance',items:[]})];data.activeTruckId='appearance';const [item]=T.addItems(data,'appearance','uncoloured',1);
+ const renderer=testContext({T,drag:null,selected:'',state:()=>data,truck:()=>data.trucks[0],esc:String,Math});vm.runInContext(ui.split('\n').find(line=>line.includes('const faces=')),renderer);
+ for(const name of ['corners','staging','scene','renderSceneData','partMesh'])vm.runInContext(fn(ui,name),renderer);
+ for(const mode of T.perspectives){data.views[0]=T.view({mode});for(const packed of [false,true]){
+  item.packed=packed;item.colour='';item.colour2='';item.colour3='';const plain=renderer.scene(0).markup;
+  assert(plain.includes('fill="#ffffff"'),mode);assert(!plain.includes('#7799bb'));assert(plain.includes('class="tpCaseLabel"'));assert(plain.includes('<tspan'));assert(!/NaN|Infinity/.test(plain));
+  item.colour2='#ff0000';assert(renderer.scene(0).markup.includes('fill="#ff0000"'),'assigned colours still show even with a blank first field');
+  item.colour3='#00ff00';assert(renderer.scene(0).markup.includes('fill="url(#tp-colours-0-'+item.id+')"'),'multiple assigned colours retain stripes');
+  item.colour2='';item.colour3='';assert(renderer.scene(0).markup.includes('fill="#ffffff"'),'clearing all colours restores neutral appearance');
+ }}
+ assert.equal(T.normalise(JSON.parse(JSON.stringify(data))).trucks[0].items[0].colour,'','neutral display never assigns a stored colour');
+ console.log('PASS: neutral uncoloured cases, retained colour stripes, measured multiline labels, small/long-name fitting, escaped text and clipped face-plane rendering.');
+}

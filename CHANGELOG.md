@@ -1,3 +1,8 @@
+## V57.7 — Truck Pack case appearance
+
+- Show cases without assigned colours as plain white, retaining outlines and selection feedback.
+- Wrap case labels across multiple lines and fit their text size within each case face in plan and 3D views.
+
 ## V57.6 — Truck Pack selection and inventory
 
 - Keep identification colours on truck instances only, and rename Windows to Views.
