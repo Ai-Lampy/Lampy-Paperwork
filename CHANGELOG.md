@@ -1,3 +1,7 @@
+## V57.5 — Cases table width
+
+- Fit the Cases table to the available width, removing oversized input minimums and tightening the three colour columns and cell padding.
+
 ## V57.4 — Truck Pack toolbar, cube and import corrections
 
 - Scale all toolbar buttons to 85% with compact layout spacing, and move the window selector beside the action buttons.
