@@ -1,3 +1,10 @@
+## V57.3 — Truck Pack workspace controls
+
+- Add per-view Select, Pan and Rotate tools, with saved pan offsets and Fit reset.
+- Show case details only for the selected case and clear selection when clicking elsewhere.
+- Add three case identification colours to inventory, imports and individual truck cases, shown in 2D and 3D.
+- Move truck selection into toolbar buttons, replace inline inventory/quantity controls with a searchable Add case menu, and scale action buttons to 0.85.
+
 ## V57.2 — Truck Pack navigation sub-tabs
 
 - Show saved trucks and Cases in the Truck Pack sidebar menu and icon hover flyout, with direct navigation and current selection.
