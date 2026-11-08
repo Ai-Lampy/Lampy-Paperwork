@@ -229,3 +229,9 @@ realLinked.toggleLoomCard('feed');assert.equal(realMarkup.length,3);assert(realM
 const restoredLinked=linkedRenderContext();assert(restoredLinked.loomDisplayGroups().flatMap(group=>[group.parent,...group.extensions]).every(loom=>!restoredLinked.loomCardMarkup(loom).includes('loomCardCollapsed')));
 realLinked.toggleLoomCard('feed');assert(realMarkup.every(markup=>markup.includes('loomCardCollapsed')));
 console.log('PASS: real feeder traversal, nested Extension card markup and reload restoration.');
+
+assert.equal(sidebar.flyoutMode('truckPack',false),'group');
+assert.equal(sidebar.flyoutMode('truckPack',true),'group');
+assert.equal(sidebar.subPageIcon('truckPack','Cases'),'list');
+assert.equal(sidebar.subPageIcon('truckPack','Truck 2'),'truckPack');
+console.log('PASS: Truck Pack icon exposes its trucks and Cases even while active.');

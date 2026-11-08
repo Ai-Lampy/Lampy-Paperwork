@@ -1,3 +1,12 @@
+## V57.2 — Truck Pack navigation sub-tabs
+
+- Show saved trucks and Cases in the Truck Pack sidebar menu and icon hover flyout, with direct navigation and current selection.
+- Refresh the menu when trucks are added, renamed or deleted, or the selected truck or sub-tab changes.
+
+## V57.1 — Case import dimension units
+
+- Add a dimension-unit selector for case imports with plain numeric dimensions, including castor height. Preserve units already included in individual values.
+
 ## V57 — Truck Pack
 
 - Add case and truss inventory with CSV/Excel import and project-unit conversion.

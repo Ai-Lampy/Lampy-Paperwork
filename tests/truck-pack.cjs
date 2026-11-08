@@ -29,6 +29,20 @@ assert.equal(T.normaliseCase({...withoutWheels,type:'Truss',casterHeight:null}).
 assert.throws(()=>T.normaliseCase({...withoutWheels,type:'Truss Case',casterHeight:null}),/castor height/,'a truss transport case must still include its castor height');
 const rows=[['Box','Case','50 cm','1 m','800 mm','yes','22 lb'],['Beam','Truss','300 mm','2 m','300 mm','yes','10 kg']],headers=['Name','Type','W','L','H','Height Inc Wheels?','Weight'];
 const imported=T.importRows(rows,T.suggestMapping(headers));assert.equal(imported.length,2);close(imported[0].weight,9.97903214);assert.equal(imported[0].width,500);assert.throws(()=>T.importRows([...rows,['Broken','Case','500','1 m','1 m','yes','1 kg']],T.suggestMapping(headers)),/Row 4/);
+// Plain imported numbers use the selected units; explicit units retain precedence.
+const dimensionHeaders=['Name','Width','Length','Height','Castor Height','Height Inc Wheels?','Weight'];
+const dimensionMapping=T.suggestMapping(dimensionHeaders);
+for(const [unit,factor] of [['mm',1],['cm',10],['m',1000],['ft',304.8],['in',25.4]]){
+ const [record]=T.importRows([['Case',24,'24',12.75,2,'no',28]],dimensionMapping,'lb',unit);
+ close(record.width,24*factor);close(record.length,24*factor);close(record.height,12.75*factor);close(record.casterHeight,2*factor);close(record.weight,12.70058636);
+ const [mixed]=T.importRows([['Mixed','600 mm',24,'1 m','2 cm','yes','10 kg']],dimensionMapping,'lb',unit);
+ close(mixed.width,600);close(mixed.length,24*factor);close(mixed.height,1000);close(mixed.casterHeight,20);close(mixed.weight,10);
+}
+assert.throws(()=>T.importRows([['Case',24,24,6]],dimensionMapping),/Select Dimension units/);
+assert.throws(()=>T.importRows([['Case',24,24,6]],dimensionMapping,'kg','yards'),/valid dimension unit/);
+for(const bad of ['',0,-2,'bad','2 yards','1/0'])assert.throws(()=>T.importRows([['Case',bad,24,6]],dimensionMapping,'kg','in'),/Row 2/);
+const [fractional]=T.importRows([['Case','24 1/2','24','12.75',0]],dimensionMapping,'kg','in');close(fractional.width,622.3);assert.equal(fractional.casterHeight,0);
+const [noCastor]=T.importRows([['Case',24,24,6]],dimensionMapping,'kg','in');assert.equal(noCastor.casterHeight,null);assert.equal(noCastor.weight,null);
 for(const mode of T.perspectives.filter(k=>k!=='orbit')){const camera=T.view({mode,yaw:T.cameras[mode][0],pitch:T.cameras[mode][1]}),plane=['left','right'].includes(mode)?'yz':['front','back'].includes(mode)?'xz':'xy',delta=plane==='xy'?{x:150,y:-240,z:0}:plane==='xz'?{x:150,y:0,z:240}:{x:0,y:150,z:240},screen=T.project(delta,camera),back=T.unprojectDelta(screen.x,screen.y,camera,plane);for(const key of ['x','y','z'])close(back[key],delta[key]);}
 // Run the actual SVG renderer with saved data, independent camera windows and staging.
 const c=vm.createContext({T,drag:null,selected:upper.id,state:()=>model,truck:()=>truck,esc:v=>String(v).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;'),Math});
@@ -94,3 +108,71 @@ assert(fn(html,'appPayload').includes('truckPack:app.truckPack'));assert(fn(html
  for(const layout of [1,2,4]){fresh.layout=layout;const markup=c.packMarkup(fresh,fresh.trucks[0]);assert.equal((markup.match(/class="tpViewport"/g)||[]).length,layout);for(let i=0;i<layout;i++)assert(markup.includes('data-tp-perspective="'+i+'"'));}
  const inventory=c.inventoryMarkup();for(const title of ['Name','Type','W','L','H','Height Inc Wheels?','Weight (kg)'])assert(inventory.includes('>'+title+'</th>'));assert(inventory.includes('type="checkbox"'));assert(inventory.includes('700 mm'));
 }
+
+// Exercise the import dialog: recover from missing units without editing the file,
+// preserve the selection across worksheets, and reject invalid imports atomically.
+(async()=>{
+ let current=T.empty(),submit,markup='',saves=0,closed=0;
+ current.cases=[base('existing')];
+ const units={value:''},error={textContent:''},file={},saveButton={},sheet={};
+ const body={innerHTML:'',querySelector:()=>sheet,querySelectorAll:()=>[]};
+ const nodes={'[data-tp-dimension-unit]':units,'.tpDialogError':error,'[data-tp-file]':file,'[type="submit"]':saveButton,'[data-tp-import-content]':body};
+ const modal={querySelector:selector=>{assert(nodes[selector],selector);return nodes[selector]}};
+ const inputSheets=[{name:'Cases',rows:[dimensionHeaders,['Case Unique 2.1 Eighth',24,24,6,'','yes',28]]},{name:'More cases',rows:[dimensionHeaders,['Case Motor Distro Quarter',24,24,12.75,'','yes',39]]}];
+ const context=vm.createContext({T,importRequest:0,dialog:null,esc:v=>String(v??''),unit:()=>({weight:'kg'}),state:()=>current,callbacks:{readInventory:async()=>inputSheets},showDialog:(title,html,onSubmit)=>{markup=html;submit=onSubmit;context.dialog=modal;return modal},replace:next=>{current=T.normalise(next);saves++},closeDialog:()=>closed++,render(){},tab:'pack',message:''});
+ vm.runInContext(ui.split('\n').find(line=>line.trim().startsWith('const field=')),context);
+ vm.runInContext(fn(ui,'importDialog'),context);context.importDialog();
+ assert(markup.includes('Dimension units'));for(const unit of ['mm','cm','m','ft','in'])assert(markup.includes('value="'+unit+'"'));
+ await file.onchange({target:{files:[{name:'cases.csv'}]}});
+ assert.equal(saveButton.disabled,false);
+ const before=JSON.stringify(current);
+ try{submit();assert.fail('Missing units must reject the import')}catch(e){assert.match(e.message,/Select Dimension units/);error.textContent=e.message}
+ assert.equal(saves,0);assert.equal(closed,0);assert.equal(JSON.stringify(current),before);
+ units.value='in';units.onchange();assert.equal(error.textContent,'');
+ sheet.onchange({target:{value:'1'}});assert.equal(units.value,'in');
+ sheet.onchange({target:{value:'0'}});submit();
+ assert.equal(saves,1);assert.equal(closed,1);assert.equal(current.cases.length,2);
+ close(current.cases[1].width,609.6);close(current.cases[1].height,152.4);assert.equal(current.cases[1].weight,28);
+ assert.equal(current.cases[0].id,'existing');
+ inputSheets[0].rows.push(['Invalid',0,24,6]);
+ const saved=JSON.stringify(current);assert.throws(()=>submit(),/Row 3/);assert.equal(saves,1);assert.equal(JSON.stringify(current),saved);
+ console.log('PASS: Import dialog unit selection, worksheet retention, error recovery and atomic saves.');
+})().catch(e=>{console.error(e);process.exitCode=1});
+
+// Sidebar routes use current trucks, select the requested pack, and track Cases.
+{
+ const viewContext=vm.createContext({LampyTruckPack:T});vm.runInContext(ui,viewContext);
+ const view=viewContext.LampyTruckPackView;
+ let saves=0;
+ const nav=vm.createContext({app:{truckPack:T.empty()},activeSheetTab:'home',distroRanges:()=>[],LampyTruckPackView:view,normaliseTruckPack:T.normalise,persist:()=>saves++});
+ nav.setSheetTab=tab=>{nav.activeSheetTab=tab};
+ for(const name of ['sheetSubMenuRoutes','openTruckPackTab'])vm.runInContext(fn(html,name),nav);
+ const routes=()=>nav.sheetSubMenuRoutes('truckPack');
+ assert.deepEqual(Array.from(routes(),r=>r.label),['Cases']);
+ routes()[0].run();assert.equal(view.getTab(),'cases');assert.equal(nav.activeSheetTab,'truckPack');assert(routes()[0].active);
+ nav.app.truckPack.trucks=[T.normaliseTruck({...T.presets[0],id:'one',name:'Truck A',items:[]}),T.normaliseTruck({...T.presets[1],id:'two',name:'Truck B',items:[]})];
+ nav.app.truckPack.activeTruckId='one';nav.activeSheetTab='home';
+ assert.deepEqual(Array.from(routes(),r=>r.label),['Truck A','Truck B','Cases']);assert(routes().every(r=>!r.active));
+ routes()[1].run();assert.equal(nav.activeSheetTab,'truckPack');assert.equal(view.getTab(),'pack');assert.equal(nav.app.truckPack.activeTruckId,'two');assert.equal(saves,1);
+ assert.deepEqual(Array.from(routes(),r=>r.active),[false,true,false]);
+ routes()[2].run();assert.equal(view.getTab(),'cases');assert.equal(nav.app.truckPack.activeTruckId,'two');assert.equal(saves,1);assert(routes()[2].active);
+ routes()[1].run();assert.equal(view.getTab(),'pack');assert.equal(saves,1);
+ nav.app.truckPack.trucks[1].name='Renamed & <Truck>';assert.equal(routes()[1].label,'Renamed & <Truck>');
+ const removedRoute=routes()[1];nav.app.truckPack.trucks.pop();nav.app.truckPack.activeTruckId='one';removedRoute.run();assert.equal(nav.app.truckPack.activeTruckId,'one');assert.equal(saves,1);
+ assert.deepEqual(Array.from(routes(),r=>r.label),['Truck A','Cases']);
+ nav.app.truckPack=null;assert.deepEqual(Array.from(routes(),r=>r.label),['Cases']);routes()[0].run();assert.equal(nav.app.truckPack.trucks.length,0);
+ view.reset();assert.equal(view.getTab(),'pack');
+}
+// Actual view redraws notify the shared navigation after tab and truck changes.
+{
+ let data=T.empty(),updates=0;
+ const host={innerHTML:'',contains:()=>true};
+ const context=vm.createContext({T,host,callbacks:{setState:next=>data=next,save(){},navigationChanged:()=>updates++},state:()=>data,truck:()=>data.trucks.find(t=>t.id===data.activeTruckId),tab:'pack',selected:'',message:'',drag:null,dialog:null,sceneMaps:[],importRequest:0,button:()=>'',esc:String,cancelDrag(){},inventoryMarkup:()=>'<table></table>',packMarkup:()=>'<div></div>',renderInspector(){},renderScenes(){},pointerDown(){},pointerMove(){},pointerUp(){},change(){},notify(){}});
+ for(const name of ['save','replace','transaction','closeDialog','setTab','click','render'])vm.runInContext(fn(ui,name),context);
+ context.render();assert.equal(updates,1);
+ const target={dataset:{tpAction:'cases'}};context.click({target:{closest:()=>target}});assert.equal(context.tab,'cases');assert.equal(updates,2);
+ context.transaction(next=>{next.trucks.push(T.normaliseTruck({...T.presets[0],id:'new',name:'Added truck',items:[]}))});assert.equal(updates,3);
+ context.transaction(next=>{next.trucks[0].name='Updated truck'});assert.equal(updates,4);
+ context.transaction(next=>{next.trucks=[]});assert.equal(updates,5);
+}
+console.log('PASS: Truck Pack navigation routes, active sub-tabs, truck selection and live menu refresh.');

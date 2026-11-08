@@ -90,9 +90,15 @@
     const truck=state.trucks.find(t=>t.id===truckId),base=state.cases.find(c=>c.id===caseId),count=Number(quantity);if(!truck||!base)throw Error('Select a truck and an inventory case.');if(!Number.isInteger(count)||count<1||truck.items.length+count>MAX_ITEMS)throw Error('Enter a whole quantity within the '+MAX_ITEMS+' cases per truck limit.');
     const added=Array.from({length:count},()=>({id:id('load'),caseId:base.id,name:'',department:base.department,colour:base.colour,rideOnWheels:true,lifter:false,rotation:0,packed:false,x:0,y:0,z:0}));truck.items.push(...added);return added;
   }
-  function importRows(rows,mapping,weightUnit='kg'){
+  function importRows(rows,mapping,weightUnit='kg',dimensionUnit=''){
+    if(!['','mm','cm','m','ft','in'].includes(dimensionUnit))throw Error('Choose a valid dimension unit.');
+    const dimension=(value,allowZero=false)=>{
+      const raw=text(value),bare=/^\d+(?:\.\d+)?$|^\d+(?:\s+\d+)?\/\d+$/.test(raw);
+      if(bare&&!dimensionUnit)throw Error('Select Dimension units for numbers without units, or include units in each dimension value.');
+      return parseLength(bare?raw+' '+dimensionUnit:raw,allowZero);
+    };
     const result=[],errors=[];
-    rows.forEach((row,index)=>{if(!row.some(v=>text(v)))return;try{const get=key=>row[mapping[key]]??'',flag=text(get('heightIncludesWheels')).toLowerCase();if(flag&&!['yes','no','true','false','1','0','y','n'].includes(flag))throw Error('Height Inc Wheels? must be Yes or No.');result.push(normaliseCase({id:id('case'),name:get('name'),type:get('type')||'Case',width:parseLength(get('width')),length:parseLength(get('length')),height:parseLength(get('height')),heightIncludesWheels:!['no','false','0','n'].includes(flag),casterHeight:text(get('casterHeight'))?parseLength(get('casterHeight'),true):null,weight:parseWeight(get('weight'),weightUnit,true),department:get('department'),colour:get('colour')}))}catch(error){errors.push('Row '+(index+2)+': '+error.message)}});
+    rows.forEach((row,index)=>{if(!row.some(v=>text(v)))return;try{const get=key=>row[mapping[key]]??'',flag=text(get('heightIncludesWheels')).toLowerCase();if(flag&&!['yes','no','true','false','1','0','y','n'].includes(flag))throw Error('Height Inc Wheels? must be Yes or No.');result.push(normaliseCase({id:id('case'),name:get('name'),type:get('type')||'Case',width:dimension(get('width')),length:dimension(get('length')),height:dimension(get('height')),heightIncludesWheels:!['no','false','0','n'].includes(flag),casterHeight:text(get('casterHeight'))?dimension(get('casterHeight'),true):null,weight:parseWeight(get('weight'),weightUnit,true),department:get('department'),colour:get('colour')}))}catch(error){errors.push('Row '+(index+2)+': '+error.message)}});
     if(errors.length)throw Error(errors.slice(0,20).join('\n')+(errors.length>20?'\n… '+(errors.length-20)+' more errors.':''));
     if(!result.length)throw Error('No case rows were found.');if(result.length>MAX_CASES)throw Error('Too many inventory cases.');return result;
   }

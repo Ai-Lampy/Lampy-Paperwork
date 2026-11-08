@@ -35,7 +35,7 @@
   };
   function iconMarkup(name){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="'+(iconPaths[name]||iconPaths.menu)+'"/></svg>'}
   function subPageIcon(parent,label){
-    const names={'General':'general','Project Info':'projectInfo','Production Contacts':'contacts','Lighting Vendor':'vendor','Logos':'logos','Exports':'exports','Project Settings':'settings','Patch':'fixturePatch','Universe Detail':'universe','Device Config':'network','Port Configuration':'ports','Power Calcs':'powerSheet','Fan Outs':'fan','Phase Totals':'totals','Looms':'looms','Cable List':'list','Front RCBO Labels':'distroLabels','Rear Labels':'rear','Table View':'fixturePatch'};
+    const names={'General':'general','Project Info':'projectInfo','Production Contacts':'contacts','Lighting Vendor':'vendor','Logos':'logos','Exports':'exports','Project Settings':'settings','Patch':'fixturePatch','Universe Detail':'universe','Device Config':'network','Port Configuration':'ports','Power Calcs':'powerSheet','Fan Outs':'fan','Phase Totals':'totals','Looms':'looms','Cable List':'list','Front RCBO Labels':'distroLabels','Rear Labels':'rear','Table View':'fixturePatch','Cases':'list'};
     return parent==='rackLayout'?'rackLayout':parent==='fixturePatch'&&label!=='Universe Detail'?'fixturePatch':names[label]||parent;
   }
   function decorateSubPage(button,parent,doc){
@@ -46,7 +46,7 @@
   }
   function resetExpandedPages(expanded,activePage){expanded.clear();if(activePage)expanded.add(activePage)}
   function subPagesVisible(compact,active,expanded){return compact?active:expanded}
-  function flyoutMode(mainPage,active){return mainPage==='home'&&active?'none':mainPage&&!active?'group':'name'}
+  function flyoutMode(mainPage,active){return mainPage==='truckPack'?'group':mainPage==='home'&&active?'none':mainPage&&!active?'group':'name'}
   function flyoutPosition(anchor,viewport,width,height){return {left:Math.max(8,Math.min(anchor.right+8,viewport.width-width-8)),top:Math.max(8,Math.min(anchor.top,viewport.height-height-8))}}
   let controller;
   function init({changed=()=>{}}={}){
