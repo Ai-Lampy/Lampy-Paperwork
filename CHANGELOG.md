@@ -1,3 +1,10 @@
+## V57.9 — Truck Pack snap grid
+
+- Add a saved Snap to grid toggle for each truck and a four-column floor grid, using square cells based on the trailer width.
+- Snap case placement from the front of the trailer while retaining real case dimensions, rotation, collision and support checks.
+- With snapping enabled, add cases left to right from the front toward the rear; cases without space remain in Waiting.
+- Keep existing placements unchanged when toggling the grid or editing case metadata.
+
 ## V57.8 — Shared Truck Pack colour rules
 
 - Use the shared colour presentation for case labels: white text with a black outline on colours, and black text without an outline on white or uncoloured cases.

@@ -46,7 +46,7 @@
   function normaliseItem(raw){return {id:identity(raw.id,'placed case'),caseId:identity(raw.caseId,'inventory case'),name:text(raw.name),department:text(raw.department),colour:colour(raw.colour,''),colour2:colour(raw.colour2,''),colour3:colour(raw.colour3,''),rideOnWheels:raw.rideOnWheels!==false,lifter:raw.rideOnWheels===false&&raw.lifter===true,rotation:Number(raw.rotation)===90?90:0,packed:raw.packed===true,x:number(raw.x??0,'X',true),y:number(raw.y??0,'Y',true),z:number(raw.z??0,'Z',true)}}
   function normaliseTruck(raw){
     if(!raw||typeof raw!=='object')throw Error('Invalid truck.');
-    const result={id:identity(raw.id,'truck'),preset:text(raw.preset)||'custom',company:text(raw.company),name:text(raw.name)||'Truck',registration:text(raw.registration),driver:text(raw.driver),email:text(raw.email),phone:text(raw.phone),width:number(raw.width,'Trailer width'),length:number(raw.length,'Trailer length'),height:number(raw.height,'Trailer height'),payload:raw.payload==null?null:number(raw.payload,'Payload'),items:[]};
+    const result={id:identity(raw.id,'truck'),preset:text(raw.preset)||'custom',company:text(raw.company),name:text(raw.name)||'Truck',registration:text(raw.registration),driver:text(raw.driver),email:text(raw.email),phone:text(raw.phone),width:number(raw.width,'Trailer width'),length:number(raw.length,'Trailer length'),height:number(raw.height,'Trailer height'),payload:raw.payload==null?null:number(raw.payload,'Payload'),snapToGrid:raw.snapToGrid===true,items:[]};
     if(!Array.isArray(raw.items)||raw.items.length>MAX_ITEMS)throw Error('A truck supports up to '+MAX_ITEMS+' case instances.');
     result.items=raw.items.map(normaliseItem);return result;
   }
@@ -78,9 +78,26 @@
     }
     return '';
   }
+  function snapPosition(state,truck,item,position){
+    const d=dimensions(state,item),step=truck.width/4,front=truck.length-d.length;
+    if(d.width>truck.width+EPS||front<0)return {...position};
+    const col=Math.max(0,Math.min(Math.floor((truck.width-d.width+EPS)/step),Math.round(position.x/step))),row=Math.max(0,Math.min(Math.floor(front/step),Math.round((front-position.y)/step)));
+    return {...position,x:Number((col*step).toFixed(6)),y:Number((front-row*step).toFixed(6))};
+  }
+  function firstGridPosition(state,truck,item){
+    const d=dimensions(state,item),step=truck.width/4,front=truck.length-d.length;
+    if(d.width>truck.width+EPS||front<0||d.height>truck.height+EPS)return null;
+    const occupied=truck.items.filter(other=>other.id!==item.id&&other.packed).map(other=>box(state,other)),rows=[...new Set([0,...occupied.map(b=>Math.max(0,Math.ceil((truck.length-b.y-EPS)/step)))])].sort((a,b)=>a-b);
+    // Only the front and rows immediately behind occupied cases can be the first free row.
+    for(const row of rows){const y=Number((front-row*step).toFixed(6));if(y<0)break;for(let col=0;col<4;col++){
+      const x=Number((col*step).toFixed(6));if(x+d.width>truck.width+EPS)break;
+      if(!occupied.some(b=>overlaps({...d,x,y,z:0},b)))return {x,y,z:0};
+    }}return null;
+  }
   function placement(state,truck,item,position,autoStack=true){
     const candidate={...item,...position,packed:true},others=truck.items.filter(i=>i.id!==item.id),trial={...truck,items:[...others,candidate]};
-    candidate.x=Math.round(candidate.x);candidate.y=Math.round(candidate.y);candidate.z=Math.round(candidate.z||0);
+    if(truck.snapToGrid)Object.assign(candidate,snapPosition(state,truck,candidate,candidate));
+    const precision=truck.snapToGrid?6:0;candidate.x=Number(candidate.x.toFixed(precision));candidate.y=Number(candidate.y.toFixed(precision));candidate.z=Number((candidate.z||0).toFixed(precision));
     let error=truckError(state,trial);if(!error)return {item:candidate,error:''};
     if(autoStack&&candidate.lifter&&!candidate.rideOnWheels){const heights=[...new Set(others.filter(i=>i.packed).map(i=>i.z+dimensions(state,i).height))].sort((a,b)=>a-b);for(const z of heights){candidate.z=z;error=truckError(state,trial);if(!error)return {item:{...candidate},error:''}}}
     return {item:null,error};
@@ -88,7 +105,8 @@
   function totals(state,truck){let packed=0,staged=0,unknown=0;for(const item of truck.items){const weight=definition(state,item).weight;if(weight==null){unknown++;continue}if(item.packed)packed+=weight;else staged+=weight}return {packed,staged,unknown,overPayload:truck.payload!=null&&packed>truck.payload}}
   function addItems(state,truckId,caseId,quantity){
     const truck=state.trucks.find(t=>t.id===truckId),base=state.cases.find(c=>c.id===caseId),count=Number(quantity);if(!truck||!base)throw Error('Select a truck and an inventory case.');if(!Number.isInteger(count)||count<1||truck.items.length+count>MAX_ITEMS)throw Error('Enter a whole quantity within the '+MAX_ITEMS+' cases per truck limit.');
-    const added=Array.from({length:count},()=>({id:id('load'),caseId:base.id,name:'',department:base.department,colour:'',colour2:'',colour3:'',rideOnWheels:true,lifter:false,rotation:0,packed:false,x:0,y:0,z:0}));truck.items.push(...added);return added;
+    const added=Array.from({length:count},()=>({id:id('load'),caseId:base.id,name:'',department:base.department,colour:'',colour2:'',colour3:'',rideOnWheels:true,lifter:false,rotation:0,packed:false,x:0,y:0,z:0}));
+    for(const item of added){if(truck.snapToGrid){const position=firstGridPosition(state,truck,item);if(position)Object.assign(item,position,{packed:true})}truck.items.push(item)}return added;
   }
   function removeInventoryCases(state,caseIds){
     const ids=new Set(caseIds),before=state.cases.length;let removed=0,waiting=0;
@@ -128,6 +146,6 @@
   function unprojectDelta(dx,dy,camera,plane='xy'){
     const axes={xy:[{x:1,y:0,z:0},{x:0,y:1,z:0}],xz:[{x:1,y:0,z:0},{x:0,y:0,z:1}],yz:[{x:0,y:1,z:0},{x:0,y:0,z:1}]}[plane],a=project(axes[0],camera),b=project(axes[1],camera),det=a.x*b.y-a.y*b.x;if(Math.abs(det)<1e-6)return null;const u=(dx*b.y-dy*b.x)/det,v=(a.x*dy-a.y*dx)/det;return {x:axes[0].x*u+axes[1].x*v,y:axes[0].y*u+axes[1].y*v,z:axes[0].z*u+axes[1].z*v};
   }
-  const api={EPS,MAX_CASES,MAX_ITEMS,source,presets,perspectives,cameras,id,parseLength,parseWeight,formatLength,formatWeight,normaliseCase,normaliseItem,normaliseTruck,normalise,empty,view,definition,dimensions,box,overlaps,supported,truckError,placement,totals,addItems,removeInventoryCases,parseImportLength,importDimensionIssues,importRows,suggestMapping,project,unprojectDelta};
+  const api={EPS,MAX_CASES,MAX_ITEMS,source,presets,perspectives,cameras,id,parseLength,parseWeight,formatLength,formatWeight,normaliseCase,normaliseItem,normaliseTruck,normalise,empty,view,definition,dimensions,box,overlaps,supported,truckError,snapPosition,firstGridPosition,placement,totals,addItems,removeInventoryCases,parseImportLength,importDimensionIssues,importRows,suggestMapping,project,unprojectDelta};
   root.LampyTruckPack=api;if(typeof module!=='undefined')module.exports=api;
 })(globalThis);

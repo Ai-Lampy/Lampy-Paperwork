@@ -3,7 +3,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const T=require('../js/truck-pack.js'),root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),ui=fs.readFileSync(path.join(root,'js/truck-pack-view.js'),'utf8');
 function fn(text,name){const start=text.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=text.indexOf('}',start);end>=0;end=text.indexOf('}',end+1)){const value=text.slice(start,end+1);try{new Function('return ('+value+')');return value}catch{}}throw Error(name)}
 const sharedColourContext=vm.createContext({colourTextToHex:value=>String(value||'').trim().toLowerCase(),normaliseHex:value=>String(value||'').toLowerCase()});vm.runInContext(fn(html,'colourSetPresentation'),sharedColourContext);
-function testContext(values){if(values.host&&!values.host.querySelector)values.host.querySelector=()=>null;const context=vm.createContext({root:{},callbacks:{colourPresentation:values=>sharedColourContext.colourSetPresentation(values),stripeWidth:()=>4*96/25.4},selectedGroup:[],inspectorObserver:null,...values});for(const name of ['caseColourMarkup','caseTextWidth','fitCaseLabel','caseLabelMarkup','selectionIds','selectionRect','casesInSelection','syncInspectorHeight','observeInspector'])vm.runInContext(fn(ui,name),context);return context}
+function testContext(values){if(values.host&&!values.host.querySelector)values.host.querySelector=()=>null;const context=vm.createContext({root:{},callbacks:{colourPresentation:values=>sharedColourContext.colourSetPresentation(values),stripeWidth:()=>4*96/25.4},selectedGroup:[],inspectorObserver:null,...values});for(const name of ['gridMarkup','caseColourMarkup','caseTextWidth','fitCaseLabel','caseLabelMarkup','selectionIds','selectionRect','casesInSelection','syncInspectorHeight','observeInspector'])vm.runInContext(fn(ui,name),context);return context}
 const close=(a,b)=>assert(Math.abs(a-b)<.01,`${a} != ${b}`);
 for(const [input,expected] of [['1 m',1000],['12.5 cm',125],['600 mm',600],[`5' 6"`,1676.4],['12"',304.8],[`1' 2 1/2"`,368.3],['½ m',null],['1/2"',12.7]])if(expected===null)assert.throws(()=>T.parseLength(input));else close(T.parseLength(input),expected);
 for(const invalid of ['600','-1 m','NaN mm','1/0"','0 mm','10 yards','2 m garbage'])assert.throws(()=>T.parseLength(invalid));
@@ -413,4 +413,66 @@ console.log('PASS: catalogue/instance separation, marquee selection, shared edit
   assert.equal(JSON.stringify(item),before,'rendering does not change assigned colours');
  }
  console.log('PASS: shared text contrast/outline, duplicate colour removal, configured stripe widths and outlined white bands in plan and 3D.');
+}
+
+// Four-column grid anchors case fronts to the trailer front and keeps real dimensions.
+{
+ const data=T.empty();data.cases=[base('grid',{width:610,length:610,height:500}),base('wide',{width:1220,length:1220,height:500}),base('oversize',{width:2500,length:610,height:500})];data.trucks=[T.normaliseTruck({...T.presets[0],id:'grid',snapToGrid:true,items:[]})];data.activeTruckId='grid';const truck=data.trucks[0];
+ const items=T.addItems(data,'grid','grid',41);assert.equal(items.filter(i=>i.packed).length,40);assert(!items[40].packed);
+ assert.deepEqual(items.slice(0,5).map(i=>[i.x,i.y,i.z]),[[0,5490,0],[610,5490,0],[1220,5490,0],[1830,5490,0],[0,4880,0]]);assert.equal(items[39].y,0);assert.equal(T.truckError(data,truck),'');
+ assert.deepEqual(T.normalise(JSON.parse(JSON.stringify(data))),data,'snap setting and packed coordinates persist');
+ const prior=JSON.stringify(truck.items);truck.snapToGrid=false;T.normalise(data);assert.equal(JSON.stringify(truck.items),prior);assert(!T.addItems(data,'grid','grid',1)[0].packed,'off preserves Waiting workflow');
+ truck.items=[];truck.snapToGrid=true;const wide=T.addItems(data,'grid','wide',3);assert.deepEqual(wide.map(i=>[i.x,i.y]),[[0,4880],[1220,4880],[0,3660]]);assert.equal(T.truckError(data,truck),'');assert(!T.addItems(data,'grid','oversize',1)[0].packed);
+ const waiting=T.normaliseItem({id:'snap',caseId:'grid'});assert.deepEqual(T.snapPosition(data,truck,waiting,{x:650,y:5400,z:23.5}),{x:610,y:5490,z:23.5});
+ assert.deepEqual(T.snapPosition(data,truck,waiting,{x:9999,y:-100,z:0}),{x:1830,y:0,z:0});
+ assert(T.placement(data,truck,waiting,{x:0,y:5490,z:0}).error.includes('overlap'),'snapping never forces overlapping placements');
+ truck.items=[];truck.width=2450;truck.length=5000;const fractional=T.addItems(data,'grid','grid',2);close(fractional[1].x,612.5);assert.equal(T.truckError(data,truck),'');
+ const moved=T.placement(data,truck,fractional[1],{x:620,y:4300,z:0});assert.equal(moved.error,'');close(moved.item.x,612.5);close(moved.item.y,4390);
+ const rotated={...waiting,rotation:90,caseId:'wide'};const pos=T.snapPosition(data,truck,rotated,{x:2000,y:4999,z:0});assert(pos.x+T.dimensions(data,rotated).width<=truck.width);close(pos.y+T.dimensions(data,rotated).length,truck.length);
+ const old={...truck};delete old.snapToGrid;assert.equal(T.normaliseTruck(old).snapToGrid,false);
+ // Compare the efficient first-free-row search with exhaustive grid positions for mixed loads.
+ truck.width=2440;truck.length=6100;truck.items=[];data.cases.push(base('mixed',{width:1000,length:800,height:500}));
+ for(let n=0;n<24;n++){
+  const candidate=T.normaliseItem({id:'trial_'+n,caseId:['grid','mixed','wide'][n%3]}),d=T.dimensions(data,candidate);let expected=null;
+  for(let row=0;row*610<=truck.length-d.length&&!expected;row++)for(let col=0;col<4;col++){
+   const point={x:col*610,y:truck.length-d.length-row*610,z:0};if(point.x+d.width>truck.width)break;
+   if(!truck.items.some(other=>other.packed&&T.overlaps({...d,...point},T.box(data,other)))){expected=point;break}
+  }
+  assert.deepEqual(T.firstGridPosition(data,truck,candidate),expected);if(expected)Object.assign(candidate,expected,{packed:true});truck.items.push(candidate);
+ }
+ assert.equal(T.truckError(data,truck),'');
+}
+// Toolbar toggling and metadata saves never repack existing cases.
+{
+ let data=T.empty(),saves=0;data.cases=[base('toggle',{width:400,length:400,height:400})];data.trucks=[T.normaliseTruck({...T.presets[0],id:'toggle',items:[]}),T.normaliseTruck({...T.presets[0],id:'untouched',items:[]})];data.activeTruckId='toggle';const [item]=T.addItems(data,'toggle','toggle',1);Object.assign(item,{packed:true,x:123.25,y:321.5,z:0});const before=JSON.stringify(item);
+ const ctx=testContext({T,host:{contains:()=>true},state:()=>data,transaction:change=>{const next=JSON.parse(JSON.stringify(data));change(next);data=T.normalise(next);saves++}});vm.runInContext(fn(ui,'click'),ctx);
+ ctx.click({target:{closest:()=>({dataset:{tpAction:'snap-grid'}})}});assert(data.trucks[0].snapToGrid);assert(!data.trucks[1].snapToGrid);assert.equal(JSON.stringify(data.trucks[0].items[0]),before);assert.equal(saves,1);
+ const fields={name:'Updated',department:'Lighting',colour:'#123456',colour2:'',colour3:'',rideOnWheels:'yes',lifter:'no',rotation:'0',x:'123.25 mm',y:'321.5 mm',z:'0 mm'};
+ ctx.selected=item.id;ctx.FormData=class{get(key){return fields[key]}};ctx.callbacks={colourHex:v=>v};for(const name of ['readCaseColours','applyItem'])vm.runInContext(fn(ui,name),ctx);ctx.applyItem({},false);assert.equal(data.trucks[0].items[0].x,123.25);assert.equal(data.trucks[0].items[0].y,321.5);assert.equal(data.trucks[0].items[0].colour,'#123456');
+ assert(fn(ui,'truckDialog').includes('snapToGrid:existing?.snapToGrid===true'),'truck details preserve the setting');
+ assert(fn(ui,'render').includes("button('snap-grid','Snap to grid'"));
+}
+// Actual Add cases form automatically packs valid quantities and keeps overflow waiting.
+{
+ let data=T.empty(),submit,markup='',saved=0,values={quantity_auto:5};data.cases=[base('auto',{width:610,length:610,height:400})];data.trucks=[T.normaliseTruck({...T.presets[0],id:'auto',length:610,snapToGrid:true,items:[]})];data.activeTruckId='auto';
+ const ctx=testContext({T,state:()=>data,truck:()=>data.trucks[0],esc:String,length:T.formatLength,FormData:class{get(key){return values[key]}},showDialog:(title,html,handler)=>{submit=handler;markup=html;return {querySelector:()=>({}),querySelectorAll:()=>[]}},replace:next=>{data=T.normalise(next);saved++},closeDialog(){},render(){},selected:'',message:''});vm.runInContext(ui.split('\n').find(line=>line.trim().startsWith('const input=')),ctx);vm.runInContext(fn(ui,'addCaseDialog'),ctx);ctx.addCaseDialog();assert(markup.includes('fill from the front'));submit({});assert.equal(saved,1);assert.equal(data.trucks[0].items.filter(i=>i.packed).length,4);assert.equal(ctx.message,'4 cases packed from the front; 1 added to Waiting.');
+ const renderer=testContext({T,drag:null,selected:'',state:()=>data,truck:()=>data.trucks[0],esc:String,Math});vm.runInContext(ui.split('\n').find(line=>line.includes('const faces=')),renderer);for(const name of ['corners','staging','scene','renderSceneData','partMesh'])vm.runInContext(fn(ui,name),renderer);
+ for(const mode of T.perspectives){data.views[0]=T.view({mode});const scene=renderer.scene(0);assert(scene.markup.includes('class="tpSnapGrid" data-grid-columns="4"'));assert(scene.markup.includes('pointer-events="none"'));assert(!/NaN|Infinity/.test(scene.markup));}
+ data.trucks[0].snapToGrid=false;assert(!renderer.scene(0).markup.includes('tpSnapGrid'));
+ const path=renderer.gridMarkup({width:2440,length:6100},p=>p);assert(path.includes('M610,0L610,6100'));assert(path.includes('M0,5490L2440,5490'),'row lines start at the front');
+}
+// Drag previews and committed drops share snapped coordinates; collision leaves data unchanged.
+{
+ let data=T.empty();data.cases=[base('drag',{width:610,length:610,height:400})];data.trucks=[T.normaliseTruck({...T.presets[0],id:'drag',items:[]})];data.activeTruckId='drag';const [item]=T.addItems(data,'drag','drag',1);data.trucks[0].snapToGrid=true;
+ const host={querySelector:()=>({getBoundingClientRect:()=>({left:0,top:0,width:900,height:600})}),releasePointerCapture(){}},ctx=testContext({T,host,state:()=>data,truck:()=>data.trucks[0],drag:{type:'case',id:item.id,item:{...item},index:0,origin:{x:0,y:0,z:0},start:{x:0,y:0},projection:{scale:1,camera:T.view({mode:'plan'})},plane:'xy'},notify(){},renderScenes(){},transaction:change=>{const next=JSON.parse(JSON.stringify(data));change(next);data=T.normalise(next)}});
+ for(const name of ['svgPoint','pointerMove','pointerUp'])vm.runInContext(fn(ui,name),ctx);ctx.pointerMove({clientX:650,clientY:-5400});assert.equal(ctx.drag.error,'');assert.equal(ctx.drag.preview.x,610);assert.equal(ctx.drag.preview.y,5490);ctx.pointerUp({pointerId:1});assert.equal(data.trucks[0].items[0].x,610);assert.equal(data.trucks[0].items[0].y,5490);assert(data.trucks[0].items[0].packed);
+ const occupied=T.addItems(data,'drag','drag',1)[0],before=JSON.stringify(data);ctx.drag={type:'case',id:item.id,item:{...data.trucks[0].items[0]},index:0,origin:{x:610,y:5490,z:0},start:{x:0,y:0},projection:{scale:1,camera:T.view({mode:'plan'})},plane:'xy'};ctx.pointerMove({clientX:-600,clientY:0});assert(ctx.drag.error.includes('overlap'));assert.equal(ctx.drag.preview.x,occupied.x);ctx.pointerUp({pointerId:1});assert.equal(JSON.stringify(data),before);
+}
+console.log('PASS: four-column front-first grid packing, overflow Waiting, mixed/rotated footprints, fractional lanes, saved toggles, unchanged metadata positions and snapped drag collision rejection.');
+
+// Snapping respects non-square rotations and the existing supported-lifter rules.
+{
+ const data=T.empty();data.cases=[base('support',{width:610,length:610,height:400}),base('lift',{width:300,length:300,height:300}),base('rectangle',{width:300,length:800,height:400})];data.trucks=[T.normaliseTruck({...T.presets[0],id:'stack-grid',snapToGrid:true,items:[]})];data.activeTruckId='stack-grid';const truck=data.trucks[0],[support]=T.addItems(data,truck.id,'support',1);
+ const lift=T.normaliseItem({id:'lifted',caseId:'lift',rideOnWheels:false,lifter:true});truck.items.push(lift);const placed=T.placement(data,truck,lift,{x:10,y:truck.length-300,z:0});assert.equal(placed.error,'');assert.equal(placed.item.z,400);Object.assign(lift,placed.item);assert.equal(T.truckError(data,truck),'');assert(T.placement(data,truck,support,{x:650,y:support.y,z:0}).error.includes('supported'));
+ const rotated=T.normaliseItem({id:'rotated',caseId:'rectangle',rotation:90});const position=T.snapPosition(data,truck,rotated,{x:2000,y:6000,z:0});assert.equal(position.x,1220);assert.equal(position.y,5800);assert.deepEqual([T.dimensions(data,rotated).width,T.dimensions(data,rotated).length],[800,300]);assert.equal(T.placement(data,truck,rotated,position).error,'');
 }

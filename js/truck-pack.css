@@ -40,3 +40,4 @@
 .tpSelectionBox{fill:#0060d2;fill-opacity:.12;stroke:#0060d2;stroke-width:1.5;stroke-dasharray:6 3}
 .tpCube [data-tp-cube-face]{cursor:pointer;outline:none}
 .tpCube [data-tp-cube-face]:hover polygon,.tpCube [data-tp-cube-face]:focus-visible polygon{fill:#80baff;stroke:#0060d2;stroke-width:2}
+.tpToolbar [data-tp-action="snap-grid"][aria-pressed="true"]{background:#0060d2;color:#fff;border-color:#111}
