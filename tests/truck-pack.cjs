@@ -114,9 +114,10 @@ assert(fn(html,'appPayload').includes('truckPack:app.truckPack'));assert(fn(html
 (async()=>{
  let current=T.empty(),submit,markup='',saves=0,closed=0;
  current.cases=[base('existing')];
+ const corrections={innerHTML:'',querySelectorAll:()=>[]};
  const units={value:''},error={textContent:''},file={},saveButton={},sheet={};
  const body={innerHTML:'',querySelector:()=>sheet,querySelectorAll:()=>[]};
- const nodes={'[data-tp-dimension-unit]':units,'.tpDialogError':error,'[data-tp-file]':file,'[type="submit"]':saveButton,'[data-tp-import-content]':body};
+ const nodes={'[data-tp-import-corrections]':corrections,'[data-tp-dimension-unit]':units,'.tpDialogError':error,'[data-tp-file]':file,'[type="submit"]':saveButton,'[data-tp-import-content]':body};
  const modal={querySelector:selector=>{assert(nodes[selector],selector);return nodes[selector]}};
  const inputSheets=[{name:'Cases',rows:[dimensionHeaders,['Case Unique 2.1 Eighth',24,24,6,'','yes',28]]},{name:'More cases',rows:[dimensionHeaders,['Case Motor Distro Quarter',24,24,12.75,'','yes',39]]}];
  const context=vm.createContext({T,importRequest:0,dialog:null,esc:v=>String(v??''),unit:()=>({weight:'kg'}),state:()=>current,callbacks:{readInventory:async()=>inputSheets},showDialog:(title,html,onSubmit)=>{markup=html;submit=onSubmit;context.dialog=modal;return modal},replace:next=>{current=T.normalise(next);saves++},closeDialog:()=>closed++,render(){},tab:'pack',message:''});
@@ -244,10 +245,61 @@ console.log('PASS: Truck Pack navigation routes, active sub-tabs, truck selectio
  values={quantity_a:2,quantity_b:3};submit({});assert.equal(data.trucks[0].items.length,5);assert(data.trucks[0].items.every(item=>!item.packed));assert.equal(saved,1);assert.equal(closed,1);assert.equal(context.selected,'');
 }
 {
- const css=fs.readFileSync(path.join(root,'js/truck-pack.css'),'utf8');assert(css.includes('.tpActions button{scale:0.85}'));assert(css.includes('.tpInspector[hidden]{display:none}'));
+ const css=fs.readFileSync(path.join(root,'js/truck-pack.css'),'utf8');assert(css.includes('.tpToolbar button,.tpActions button{zoom:0.85}'));assert(css.includes('.tpActions{gap:4px;align-items:center}'));assert(css.includes('.tpInspector[hidden]{display:none}'));
  assert(!fn(ui,'packMarkup').includes('data-tp-inventory'));assert(!fn(ui,'packMarkup').includes('data-tp-quantity'));assert(!fn(ui,'packMarkup').includes('data-tp-truck'));
  assert(fn(ui,'render').includes('data-truck-id'));assert(fn(ui,'render').includes("button('add-case','Add case')"));
  const context=vm.createContext({});vm.runInContext(ui.split('\n').find(line=>line.trim().startsWith('const button=')),context);vm.runInContext(fn(ui,'sceneTools'),context);
  for(const mode of ['select','pan','rotate']){const markup=context.sceneTools(2,{tool:mode});assert(markup.includes('data-tool="'+mode+'" data-view="2"'));assert.equal((markup.match(/aria-pressed="true"/g)||[]).length,1);assert.equal((markup.match(/<svg/g)||[]).length,3);}
 }
 console.log('PASS: Truck Pack pan/select/rotate, conditional details, outside deselection, three colours and atomic Add case menu.');
+
+// Cube labels lie in their assigned face planes rather than facing the screen.
+{
+ const context=vm.createContext({T});vm.runInContext(ui.split('\n').find(line=>line.includes('const faces=')),context);
+ for(const name of ['corners','cubeMarkup'])vm.runInContext(fn(ui,name),context);
+ for(const mode of ['leftIso','rightIso','front','back','left','right','top','orbit']){
+  const markup=context.cubeMarkup(T.view({mode}));assert(!/NaN|Infinity/.test(markup));
+  for(const match of markup.matchAll(/<g data-tp-cube-face="([^"]+)"><polygon points="([^"]+)"[^>]*\/><text transform="matrix\(([^)]+)\)"[^>]*>([^<]+)<\/text>/g)){
+   assert.equal(match[4],match[1].toUpperCase());const pts=match[2].split(' ').map(p=>p.split(',').map(Number)),[a,b,c,d,e,f]=match[3].split(' ').map(Number);
+   assert(a>=-1e-10&&a*d-b*c>0,'labels stay readable without mirroring');
+   close(e+50*a+50*c,pts.reduce((n,p)=>n+p[0],0)/4);close(f+50*b+50*d,pts.reduce((n,p)=>n+p[1],0)/4);
+   // Text basis vectors follow the polygon edges.
+   close(a*(pts[1][1]-pts[0][1])-b*(pts[1][0]-pts[0][0]),0);close(c*(pts[3][1]-pts[0][1])-d*(pts[3][0]-pts[0][0]),0);
+  }
+ }
+ const markup=context.cubeMarkup(T.view({mode:'leftIso'}));assert(markup.includes('textLength="70"'));assert(markup.includes('transform="matrix('));
+ assert(!fn(ui,'packMarkup').includes('data-tp-layout'));assert(fn(ui,'render').includes('data-tp-layout'));assert(!ui.includes('class="tpPackControls"'));
+}
+// The supplied CSV has text "various" in two heights, not missing unit selections.
+(async()=>{
+ const header=['Name','Description','Manufacturer','Length','Width','Height','Weight','Category','Flip'];
+ const original=[header,...Array.from({length:139},(_,i)=>['Case '+i,'','Christie','24','24','6','28','Lighting','TRUE'])];
+ original[87]=['Dolly Truss Half','','Christie','41','48','various','69.09','Lighting','TRUE'];original[88]=['Dolly Truss','','Christie','41','96','various','125','Lighting','TRUE'];
+ const mapping=T.suggestMapping(header),issues=T.importDimensionIssues(original.slice(1),mapping,'ft');
+ assert.deepEqual(issues.map(i=>[i.row,i.field,i.value,i.unitRequired]),[[88,'height','various',false],[89,'height','various',false]]);
+ assert.throws(()=>T.importRows(original.slice(1),mapping,'kg','ft'),/Row 88: Height: "various"/);
+ const copy=JSON.parse(JSON.stringify(original));let submit,data=T.empty(),saves=0;
+ const units={value:'ft'},file={},error={textContent:''},saveButton={},sheet={},statuses={},inputs=[];
+ const corrections={innerHTML:'',querySelector:selector=>statuses[selector]||(statuses[selector]={textContent:''}),querySelectorAll:()=>{inputs.length=0;for(const m of corrections.innerHTML.matchAll(/data-tp-correction-row="(\d+)" data-tp-correction-field="([^"]+)" value="([^"]*)"/g))inputs.push({dataset:{tpCorrectionRow:m[1],tpCorrectionField:m[2]},value:m[3]});return inputs}};
+ const body={innerHTML:'',querySelector:()=>sheet,querySelectorAll:()=>[]};
+ const nodes={'[data-tp-dimension-unit]':units,'[data-tp-file]':file,'.tpDialogError':error,'[type="submit"]':saveButton,'[data-tp-import-content]':body,'[data-tp-import-corrections]':corrections},modal={querySelector:selector=>nodes[selector]};
+ const context=vm.createContext({T,importRequest:0,dialog:null,esc:v=>String(v??'').replaceAll('"','&quot;'),unit:()=>({weight:'kg'}),state:()=>data,callbacks:{readInventory:async()=>[{name:'cases.csv',rows:copy}]},showDialog:(title,markup,handler)=>{submit=handler;context.dialog=modal;return modal},replace:next=>{data=T.normalise(next);saves++},closeDialog(){},render(){},tab:'pack',message:''});
+ vm.runInContext(ui.split('\n').find(line=>line.trim().startsWith('const field=')),context);vm.runInContext(fn(ui,'importDialog'),context);context.importDialog();
+ await file.onchange({target:{files:[{name:'cases.csv'}]}});assert.equal(inputs.length,2);assert.equal(saveButton.disabled,false);assert.equal(error.textContent,'');
+ assert.throws(()=>submit(),/Row 88: Height/);assert.equal(saves,0);
+ // Explicit test measurements demonstrate correction; they are not assumed library data.
+ inputs[0].value='2';inputs[0].oninput();assert(statuses['#tpCorrection_88_height'].textContent.includes('Ready'));
+ assert.throws(()=>submit(),/Row 89: Height/);assert.equal(saves,0);
+ inputs[1].value='36 in';inputs[1].oninput();submit();assert.equal(saves,1);assert.equal(data.cases.length,139);close(data.cases[86].height,609.6);close(data.cases[87].height,914.4);
+ assert.equal(original[87][5],'various');assert.equal(original[88][5],'various');
+ console.log('PASS: exact invalid-height diagnostics and editable import corrections with selected feet, preserving the source.');
+})().catch(error=>{console.error(error);process.exitCode=1});
+
+// Render the active Pack toolbar, with all window choices inside the action group.
+{
+ const data=T.empty();data.trucks=[T.normaliseTruck({...T.presets[0],id:'toolbar',name:'Tour Truck',items:[]})];data.activeTruckId='toolbar';
+ const host={innerHTML:''},context=vm.createContext({host,tab:'pack',selected:'',message:'',state:()=>data,truck:()=>data.trucks[0],callbacks:{},cancelDrag(){},packMarkup:()=>'<div>Pack content</div>',click(){},change(){},pointerDown(){},pointerMove(){},pointerUp(){},renderInspector(){},renderScenes(){},esc:String});
+ for(const name of ['button','field'])vm.runInContext(ui.split('\n').find(line=>line.trim().startsWith('const '+name+'=')),context);
+ vm.runInContext(fn(ui,'render'),context);
+ for(const layout of [1,2,4]){data.layout=layout;context.render();const actions=host.innerHTML.slice(host.innerHTML.indexOf('<div class="tpActions">'),host.innerHTML.indexOf('<div class="tpMessage'));assert(actions.includes('data-tp-layout'));assert(actions.includes('value="'+layout+'" selected'));assert(actions.includes('data-tp-action="add-case"'));assert(host.innerHTML.includes('data-truck-id="toolbar"'));}
+}

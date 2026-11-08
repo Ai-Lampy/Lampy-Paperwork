@@ -90,15 +90,27 @@
     const truck=state.trucks.find(t=>t.id===truckId),base=state.cases.find(c=>c.id===caseId),count=Number(quantity);if(!truck||!base)throw Error('Select a truck and an inventory case.');if(!Number.isInteger(count)||count<1||truck.items.length+count>MAX_ITEMS)throw Error('Enter a whole quantity within the '+MAX_ITEMS+' cases per truck limit.');
     const added=Array.from({length:count},()=>({id:id('load'),caseId:base.id,name:'',department:base.department,colour:base.colour,colour2:base.colour2,colour3:base.colour3,rideOnWheels:true,lifter:false,rotation:0,packed:false,x:0,y:0,z:0}));truck.items.push(...added);return added;
   }
+  function parseImportLength(value,dimensionUnit='',allowZero=false){
+    if(!['','mm','cm','m','ft','in'].includes(dimensionUnit))throw Error('Choose a valid dimension unit.');
+    const raw=text(value),bare=/^\d+(?:\.\d+)?$|^\d+(?:\s+\d+)?\/\d+$/.test(raw);
+    if(!raw)throw Error('A numeric measurement is required.');
+    if(bare&&!dimensionUnit)throw Object.assign(Error('Select Dimension units for numbers without units, or include units in each dimension value.'),{unitRequired:true});
+    try{return parseLength(bare?raw+' '+dimensionUnit:raw,allowZero)}catch{
+      throw Error('"'+raw+'" is not a valid measurement. Enter a '+(allowZero?'non-negative':'positive')+' number'+(dimensionUnit?' in '+dimensionUnit:' with units')+'.');
+    }
+  }
+  function importDimensionIssues(rows,mapping,dimensionUnit=''){
+    const issues=[];
+    rows.forEach((row,index)=>{if(!row.some(v=>text(v)))return;for(const [field,label] of [['width','Width'],['length','Length'],['height','Height'],['casterHeight','Castor Height']]){
+      if(!(mapping[field]>=0))continue;const value=row[mapping[field]]??'';if(field==='casterHeight'&&!text(value))continue;
+      try{parseImportLength(value,dimensionUnit,field==='casterHeight')}catch(error){issues.push({row:index+2,field,label,value:text(value),message:error.message,unitRequired:error.unitRequired===true})}
+    }});return issues;
+  }
   function importRows(rows,mapping,weightUnit='kg',dimensionUnit=''){
     if(!['','mm','cm','m','ft','in'].includes(dimensionUnit))throw Error('Choose a valid dimension unit.');
-    const dimension=(value,allowZero=false)=>{
-      const raw=text(value),bare=/^\d+(?:\.\d+)?$|^\d+(?:\s+\d+)?\/\d+$/.test(raw);
-      if(bare&&!dimensionUnit)throw Error('Select Dimension units for numbers without units, or include units in each dimension value.');
-      return parseLength(bare?raw+' '+dimensionUnit:raw,allowZero);
-    };
+    const dimension=(value,label,allowZero=false)=>{try{return parseImportLength(value,dimensionUnit,allowZero)}catch(error){throw Error(label+': '+error.message)}};
     const result=[],errors=[];
-    rows.forEach((row,index)=>{if(!row.some(v=>text(v)))return;try{const get=key=>row[mapping[key]]??'',flag=text(get('heightIncludesWheels')).toLowerCase();if(flag&&!['yes','no','true','false','1','0','y','n'].includes(flag))throw Error('Height Inc Wheels? must be Yes or No.');result.push(normaliseCase({id:id('case'),name:get('name'),type:get('type')||'Case',width:dimension(get('width')),length:dimension(get('length')),height:dimension(get('height')),heightIncludesWheels:!['no','false','0','n'].includes(flag),casterHeight:text(get('casterHeight'))?dimension(get('casterHeight'),true):null,weight:parseWeight(get('weight'),weightUnit,true),department:get('department'),colour:get('colour'),colour2:get('colour2'),colour3:get('colour3')}))}catch(error){errors.push('Row '+(index+2)+': '+error.message)}});
+    rows.forEach((row,index)=>{if(!row.some(v=>text(v)))return;try{const get=key=>row[mapping[key]]??'',flag=text(get('heightIncludesWheels')).toLowerCase();if(flag&&!['yes','no','true','false','1','0','y','n'].includes(flag))throw Error('Height Inc Wheels? must be Yes or No.');result.push(normaliseCase({id:id('case'),name:get('name'),type:get('type')||'Case',width:dimension(get('width'),'Width'),length:dimension(get('length'),'Length'),height:dimension(get('height'),'Height'),heightIncludesWheels:!['no','false','0','n'].includes(flag),casterHeight:text(get('casterHeight'))?dimension(get('casterHeight'),'Castor Height',true):null,weight:parseWeight(get('weight'),weightUnit,true),department:get('department'),colour:get('colour'),colour2:get('colour2'),colour3:get('colour3')}))}catch(error){errors.push('Row '+(index+2)+': '+error.message)}});
     if(errors.length)throw Error(errors.slice(0,20).join('\n')+(errors.length>20?'\n… '+(errors.length-20)+' more errors.':''));
     if(!result.length)throw Error('No case rows were found.');if(result.length>MAX_CASES)throw Error('Too many inventory cases.');return result;
   }
@@ -107,6 +119,6 @@
   function unprojectDelta(dx,dy,camera,plane='xy'){
     const axes={xy:[{x:1,y:0,z:0},{x:0,y:1,z:0}],xz:[{x:1,y:0,z:0},{x:0,y:0,z:1}],yz:[{x:0,y:1,z:0},{x:0,y:0,z:1}]}[plane],a=project(axes[0],camera),b=project(axes[1],camera),det=a.x*b.y-a.y*b.x;if(Math.abs(det)<1e-6)return null;const u=(dx*b.y-dy*b.x)/det,v=(a.x*dy-a.y*dx)/det;return {x:axes[0].x*u+axes[1].x*v,y:axes[0].y*u+axes[1].y*v,z:axes[0].z*u+axes[1].z*v};
   }
-  const api={EPS,MAX_CASES,MAX_ITEMS,source,presets,perspectives,cameras,id,parseLength,parseWeight,formatLength,formatWeight,normaliseCase,normaliseItem,normaliseTruck,normalise,empty,view,definition,dimensions,box,overlaps,supported,truckError,placement,totals,addItems,importRows,suggestMapping,project,unprojectDelta};
+  const api={EPS,MAX_CASES,MAX_ITEMS,source,presets,perspectives,cameras,id,parseLength,parseWeight,formatLength,formatWeight,normaliseCase,normaliseItem,normaliseTruck,normalise,empty,view,definition,dimensions,box,overlaps,supported,truckError,placement,totals,addItems,parseImportLength,importDimensionIssues,importRows,suggestMapping,project,unprojectDelta};
   root.LampyTruckPack=api;if(typeof module!=='undefined')module.exports=api;
 })(globalThis);

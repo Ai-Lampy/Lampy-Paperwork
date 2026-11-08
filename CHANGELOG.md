@@ -1,3 +1,9 @@
+## V57.4 — Truck Pack toolbar, cube and import corrections
+
+- Scale all toolbar buttons to 85% with compact layout spacing, and move the window selector beside the action buttons.
+- Align rotation-cube labels with their projected faces.
+- Identify invalid imported dimensions by field and value, and allow corrections in the import window without changing the source file.
+
 ## V57.3 — Truck Pack workspace controls
 
 - Add per-view Select, Pan and Rotate tools, with saved pan offsets and Fit reset.
