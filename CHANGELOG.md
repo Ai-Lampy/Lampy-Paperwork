@@ -1,3 +1,9 @@
+## V57.8 — Shared Truck Pack colour rules
+
+- Use the shared colour presentation for case labels: white text with a black outline on colours, and black text without an outline on white or uncoloured cases.
+- Deduplicate assigned colours, use the configured diagonal stripe width and outline white bands in multicolour fills.
+- Retain fitted multiline labels in plan and 3D views.
+
 ## V57.7 — Truck Pack case appearance
 
 - Show cases without assigned colours as plain white, retaining outlines and selection feedback.

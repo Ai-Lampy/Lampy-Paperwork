@@ -2,7 +2,8 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const T=require('../js/truck-pack.js'),root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),ui=fs.readFileSync(path.join(root,'js/truck-pack-view.js'),'utf8');
 function fn(text,name){const start=text.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=text.indexOf('}',start);end>=0;end=text.indexOf('}',end+1)){const value=text.slice(start,end+1);try{new Function('return ('+value+')');return value}catch{}}throw Error(name)}
-function testContext(values){if(values.host&&!values.host.querySelector)values.host.querySelector=()=>null;const context=vm.createContext({root:{},selectedGroup:[],inspectorObserver:null,...values});for(const name of ['caseTextWidth','fitCaseLabel','caseLabelMarkup','selectionIds','selectionRect','casesInSelection','syncInspectorHeight','observeInspector'])vm.runInContext(fn(ui,name),context);return context}
+const sharedColourContext=vm.createContext({colourTextToHex:value=>String(value||'').trim().toLowerCase(),normaliseHex:value=>String(value||'').toLowerCase()});vm.runInContext(fn(html,'colourSetPresentation'),sharedColourContext);
+function testContext(values){if(values.host&&!values.host.querySelector)values.host.querySelector=()=>null;const context=vm.createContext({root:{},callbacks:{colourPresentation:values=>sharedColourContext.colourSetPresentation(values),stripeWidth:()=>4*96/25.4},selectedGroup:[],inspectorObserver:null,...values});for(const name of ['caseColourMarkup','caseTextWidth','fitCaseLabel','caseLabelMarkup','selectionIds','selectionRect','casesInSelection','syncInspectorHeight','observeInspector'])vm.runInContext(fn(ui,name),context);return context}
 const close=(a,b)=>assert(Math.abs(a-b)<.01,`${a} != ${b}`);
 for(const [input,expected] of [['1 m',1000],['12.5 cm',125],['600 mm',600],[`5' 6"`,1676.4],['12"',304.8],[`1' 2 1/2"`,368.3],['½ m',null],['1/2"',12.7]])if(expected===null)assert.throws(()=>T.parseLength(input));else close(T.parseLength(input),expected);
 for(const invalid of ['600','-1 m','NaN mm','1/0"','0 mm','10 yards','2 m garbage'])assert.throws(()=>T.parseLength(invalid));
@@ -394,4 +395,22 @@ console.log('PASS: catalogue/instance separation, marquee selection, shared edit
  }}
  assert.equal(T.normalise(JSON.parse(JSON.stringify(data))).trucks[0].items[0].colour,'','neutral display never assigns a stored colour');
  console.log('PASS: neutral uncoloured cases, retained colour stripes, measured multiline labels, small/long-name fitting, escaped text and clipped face-plane rendering.');
+}
+
+// Truck Pack delegates text rules to the app and matches shared stripe geometry.
+{
+ let options,stripe='4';const data=T.empty();data.cases=[base('rules',{name:'Shared colour case label'})];data.trucks=[T.normaliseTruck({...T.presets[0],id:'rules',items:[]})];data.activeTruckId='rules';const [item]=T.addItems(data,'rules','rules',1);
+ const appContext=testContext({app:{truckPack:data},document:{createElement:()=>({})},$:id=>id==='stripe'?{value:stripe}:{appendChild(){}},LampyTruckPackView:{mount:(view,callbacks)=>options=callbacks},persist(){},updateSheetTabs(){},projectMeasurementUnit:()=> 'metric',projectWeightUnit:()=> 'kg',colourSetPresentation:sharedColourContext.colourSetPresentation,colourInputControl(){},colourTextToHex:v=>v,styleAllColourInputs(){},readTruckPackInventory(){}});
+ vm.runInContext(fn(html,'renderTruckPackView'),appContext);appContext.renderTruckPackView();assert.equal(options.colourPresentation,sharedColourContext.colourSetPresentation,'use the actual shared rule, not a Truck Pack copy');
+ close(options.stripeWidth(),4*96/25.4);stripe='6';close(options.stripeWidth(),6*96/25.4);stripe='0.1';close(options.stripeWidth(),.5*96/25.4);stripe='4';
+ const ctx=testContext({T,callbacks:options,drag:null,selected:'',state:()=>data,truck:()=>data.trucks[0],esc:String,Math});vm.runInContext(ui.split('\n').find(line=>line.includes('const faces=')),ctx);
+ for(const name of ['corners','staging','scene','renderSceneData','partMesh'])vm.runInContext(fn(ui,name),ctx);
+ const combinations=[[],['#ffffff'],['#FFFFFF','#ffffff'],['#000000'],['#ffff00'],['#ff0000','#FF0000'],['','#00ff00'],['#ff0000','#ffffff'],['#ffffff','#0060d2','#ffff00']];
+ for(const colours of combinations){Object.assign(item,{colour:colours[0]||'',colour2:colours[1]||'',colour3:colours[2]||''});const before=JSON.stringify(item),shared=options.colourPresentation(colours),appearance=ctx.caseColourMarkup(item,0);
+  assert.deepEqual(Array.from(appearance.colours),Array.from(shared.colours));assert.equal(appearance.text,shared.text);assert.equal(appearance.outline,shared.outline);
+  const multi=shared.colours.length>1;assert.equal(appearance.defs.includes('<pattern'),multi);if(multi){assert(appearance.defs.includes('patternTransform="rotate(45)"'));assert(appearance.defs.includes('width="'+shared.colours.length*options.stripeWidth()+'"'));assert.equal((appearance.defs.match(new RegExp('width="'+(.3*96/25.4)+'"','g'))||[]).length,shared.colours.includes('#ffffff')?2:0,'outline only white bands on both edges');}
+  for(const mode of ['plan','leftIso','right']){data.views[0]=T.view({mode});const markup=ctx.scene(0).markup,labels=[...markup.matchAll(/<text text-anchor="middle" font-family="Arial"[^>]+>/g)];assert(labels.length);for(const [label] of labels){assert(label.includes('fill="'+shared.text+'"'));assert(label.includes('stroke="'+shared.outline+'"'));assert(label.includes('paint-order="stroke fill"'));assert.equal(label.includes('stroke-width="0"'),shared.outline==='transparent');}assert(markup.includes('overflow="hidden"'));assert(!/NaN|Infinity/.test(markup));}
+  assert.equal(JSON.stringify(item),before,'rendering does not change assigned colours');
+ }
+ console.log('PASS: shared text contrast/outline, duplicate colour removal, configured stripe widths and outlined white bands in plan and 3D.');
 }
