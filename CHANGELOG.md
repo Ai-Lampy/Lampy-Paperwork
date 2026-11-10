@@ -1,3 +1,9 @@
+## V57.11 — Patched fixture picker
+
+- Resolve saved display names and mode aliases to the fixture library's internal mode key before advancing from the Patched tab.
+- Match the selected channel count so identically named modes cannot silently switch footprints.
+- Explain how to select a replacement in the Library tab when a saved mode cannot be matched.
+
 ## V57.10 — Truck Pack lifter controls
 
 - Always show Lifter in Case Details and allow shared Yes/No edits for multiple selected cases, preserving untouched mixed values.
