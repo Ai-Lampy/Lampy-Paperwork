@@ -1,3 +1,9 @@
+## V57.14 — Padlock edit review
+
+- Keep unlocked Fixture Patch edits in a draft, including address entry, merged universe/address cells, paste and drag-fill.
+- Show one combined review when the padlock is pressed to finish editing; confirm saves and locks the group, while Cancel keeps the draft open.
+- Flush the current cell before review, retain address validation and save the confirmed edit session as one undo operation.
+
 ## V57.13 — Stable Project Settings navigation
 
 - Keep Project Settings child pages out of the compact sidebar so entering settings does not expand or rearrange the rail.

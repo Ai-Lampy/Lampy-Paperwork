@@ -2,7 +2,7 @@
 const assert=require('assert/strict'),fs=require('fs'),path=require('path'),vm=require('vm');
 const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),plain=value=>JSON.parse(JSON.stringify(value));
 function source(name){const start=html.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=html.indexOf('}',start);end>=0;end=html.indexOf('}',end+1)){const code=html.slice(start,end+1);try{new Function('return ('+code+')');return code}catch{}}throw Error(name)}
-function add(c,...names){names.forEach(name=>vm.runInContext(source(name),c))}
+function add(c,...names){['patchPadlockRows','patchPadlockSession','stagePatchPadlockProposals','stagePatchPadlockFields',...names].forEach(name=>vm.runInContext(source(name),c))}
 const c=vm.createContext({console,escapeHtml:s=>String(s??'').replaceAll('&','&amp;').replaceAll('<','&lt;'),escapeAttr:s=>String(s??''),fixturePatchViewOptions:{columns:{universe:false,address:true},universeAddress:{enabled:false,separator:'',visible:true}},PATCH_COLUMNS:[{key:'fixId',field:'fixId'},{key:'universe',field:'universe'},{key:'address',field:'address'},{key:'mode',field:'mode'}]});
 add(c,'validPatchSeparator','normalisePatchUniverseAddress','patchUniverseAddressText','parsePatchUniverseAddress','patchColumnDefinitions','patchColumnVisible','patchVisibleColumns','patchColumnValue','fixturePatchXlsxValue','patchPdfExportColumns','patchPdfHiddenColumns','patchPdfSummaryRows','patchPdfPatchedUniverses','patchSummaryColumnWidths','patchPdfSupplementElement','patchSummaryPageOverflow');
 assert.deepEqual(plain(c.normalisePatchUniverseAddress()),{enabled:false,separator:' . ',visible:true});

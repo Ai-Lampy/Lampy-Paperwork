@@ -21,9 +21,9 @@ assert.equal(api.confirmed(original,[{...original[1],address:'1'}])[0].address,'
 const overrides=api.downstream(original,[{id:'edited',value:'200'},{id:'last',value:'400'}]);assert.equal(overrides.find(r=>r.id==='edited').address,'200');assert.equal(overrides.find(r=>r.id==='last').address,'400');
 function context(){
  const nodes=new Map(),events={saves:0,renders:0,reviews:0,syncs:0,alerts:[]};
- const c=vm.createContext({LampyPatchHistory:require('../js/patch-history.js'),patchUndoPending:null,patchUndoEpoch:0,patchUndoBatchDepth:0,repositoryGdtfBytes:new Map(),refreshPatchOops(){},confirm:()=>true,duplicateAddressRows:new Set(),duplicatePatchRows:new Set(),universeSelectedIds:new Set(),clearFixturePickerThumbnails(){},refreshOpenPdfPreview(){},LampyPatchAddress:api,console,app:{fixturePatch:plain(original),patchSheets:[],projectInfo:{positions:[],fixtureOverrides:{}},gdtfFiles:{},gdtfMatches:{},controlNetwork:{}},patchAddressReview:null,patchGroupEditPositionFilter:'*',selectedPatchGroupEditIds:new Set(['edited','later','last']),fixturePatchUndoHistory:[],activePatchSheetId:'master',selectedPatchRows:new Set(),selectedPatchCells:new Set(),activePatchCellChange:null,confirmedDuplicateAddressKeys:new Set(),showPatchUndoList:false,patchGroupUnlocked:()=>true,positionKey:v=>String(v||'').trim().toLowerCase(),normalisePatchSheets:v=>v,render:()=>events.renders++,persist:()=>{c.commitFixturePatchUndo();events.saves++},refreshHomeIfActive(){},syncPositionsFromPatch(){events.syncs++},closePatchGroupEditModal(){},alert:m=>events.alerts.push(m),renderPatchAddressReview:()=>events.reviews++,document:{querySelectorAll:()=>[],querySelector:()=>({innerHTML:''})},$:id=>{if(!nodes.has(id))nodes.set(id,{value:'',textContent:'',classList:{add(){},remove(){}},focus(){}});return nodes.get(id)}});
+ const c=vm.createContext({LampyPatchHistory:require('../js/patch-history.js'),patchUndoPending:null,patchUndoEpoch:0,patchUndoBatchDepth:0,repositoryGdtfBytes:new Map(),refreshPatchOops(){},confirm:()=>true,duplicateAddressRows:new Set(),duplicatePatchRows:new Set(),universeSelectedIds:new Set(),clearFixturePickerThumbnails(){},refreshOpenPdfPreview(){},LampyPatchAddress:api,console,app:{fixturePatch:plain(original),patchSheets:[],projectInfo:{positions:[],fixtureOverrides:{}},gdtfFiles:{},gdtfMatches:{},controlNetwork:{}},fixturePatchKeyboardNavigating:false,patchPadlockSessions:new Map(),unlockedPatchGroups:new Set(),patchAddressReview:null,patchGroupEditPositionFilter:'*',selectedPatchGroupEditIds:new Set(['edited','later','last']),fixturePatchUndoHistory:[],activePatchSheetId:'master',selectedPatchRows:new Set(),selectedPatchCells:new Set(),activePatchCellChange:null,confirmedDuplicateAddressKeys:new Set(),showPatchUndoList:false,patchGroupUnlocked:()=>true,positionKey:v=>String(v||'').trim().toLowerCase(),normalisePatchSheets:v=>v,render:()=>events.renders++,persist:()=>{c.commitFixturePatchUndo();events.saves++},refreshHomeIfActive(){},syncPositionsFromPatch(){events.syncs++},closePatchGroupEditModal(){},alert:m=>events.alerts.push(m),renderPatchAddressReview:()=>events.reviews++,document:{querySelectorAll:()=>[],querySelector:()=>({innerHTML:''})},$:id=>{if(!nodes.has(id))nodes.set(id,{value:'',textContent:'',classList:{add(){},remove(){}},focus(){}});return nodes.get(id)}});
  c.patchFixtureRows=()=>c.app.fixturePatch;c.patchGroupEditRows=()=>c.app.fixturePatch.filter(r=>['edited','later','last'].includes(r.id));c.ensureProjectInfo=()=>c.app.projectInfo;
- for(const name of ['captureFixturePatchUndo','restoreFixturePatchUndo','commitFixturePatchUndo','clonePatchState','patchAddressSnapshot','openPatchAddressReview','closePatchAddressReview','confirmPatchAddressReview','reviewPatchAddressEdits','updatePatchRowField','recordFixturePatchUndo','undoFixturePatchChange','patchGroupVisibleEditRows','selectedPatchGroupRows','setPatchGroupEditPositionFilter','renderPatchGroupEditSelectionState','toggleAllPatchGroupEditUnits','confirmPatchGroupEdit'])vm.runInContext(source(name),c);
+ for(const name of ['patchPadlockRows','patchPadlockSession','refreshPatchPadlockInputs','stagePatchPadlockProposals','stagePatchPadlockFields','finishPatchPadlockSession','reviewPatchPadlockSession','togglePatchGroupLock','patchGroupKey','cancelPatchFieldUndo','captureFixturePatchUndo','restoreFixturePatchUndo','commitFixturePatchUndo','clonePatchState','patchAddressSnapshot','openPatchAddressReview','closePatchAddressReview','confirmPatchAddressReview','reviewPatchAddressEdits','updatePatchRowField','recordFixturePatchUndo','undoFixturePatchChange','patchGroupVisibleEditRows','selectedPatchGroupRows','setPatchGroupEditPositionFilter','renderPatchGroupEditSelectionState','toggleAllPatchGroupEditUnits','confirmPatchGroupEdit'])vm.runInContext(source(name),c);
  c.patchGroupEditUnitMarkup=r=>r.id;c.applyPatchField=(r,f,v)=>{if(f==='mode'){r.mode=v;r.channels=30}else r[f]=v};c.incrementMaybe=(v,i)=>String(Number(v)+i);c.colourTextToHex=v=>v;
  return {c,nodes,events};
 }
@@ -88,5 +88,76 @@ assert.match(html,/#patchGroupEditModal>\.modalCard\{max-height:95vh/);
 assert.match(source('attachFixturePatchFillHandle'),/if\(field==='address'\).*reviewPatchAddressEdits\(edits,\[\],true\);return/s);
 assert.match(html,/if\(e.key==='Escape'&&patchAddressReview\)/);
 assert.match(html,/if\(id==='patchAddressReviewModal'\)\{closePatchAddressReview\(\);return\}/);
-assert.match(html,/const VERSION='57\.13'/);
+assert.match(html,/const VERSION='57\.14'/);
 console.log('PASS: V50.3 position filtering, footprint sequences, downstream scope, staged edits/paste/keyboard, conflicts, cancellation, stale review and undo.');
+
+// Padlock edits are a session draft. Only closing the padlock opens the review.
+function unlock(c,id='edited'){
+ c.activePatchSheet=()=>null;vm.runInContext(source('patchGroupUnlocked'),c);
+ const key=c.patchGroupKey(c.patchPadlockRows().find(row=>row.id===id));c.togglePatchGroupLock(encodeURIComponent(key));return key;
+}
+{
+ const {c,events}=context(),before=JSON.stringify(c.app),key=unlock(c),input={dataset:{patchId:'edited',patchField:'address'},value:'200'};
+ c.updatePatchRowField(input,true);input.value='300';c.updatePatchRowField(input,true);
+ c.updatePatchRowField({dataset:{patchId:'edited',patchField:'notes'},value:'Draft note'},true);
+ c.updatePatchRowField({dataset:{patchId:'edited',patchField:'location'},value:'Rear'},true);
+ assert.equal(events.reviews,0);assert.equal(events.saves,0);assert.equal(JSON.stringify(c.app),before);
+ assert.equal(c.patchPadlockRows().find(r=>r.id==='edited').notes,'Draft note');
+ const drafts=plain(c.patchPadlockRows());c.togglePatchGroupLock(encodeURIComponent(key));
+ assert.equal(events.reviews,1);assert.equal(events.saves,0);assert(c.patchAddressReview.padlockSession);
+ assert.equal(c.patchAddressReview.proposals.find(r=>r.id==='edited').location,'Rear');
+ c.closePatchAddressReview();assert(c.patchGroupUnlocked(c.patchPadlockRows().find(r=>r.id==='edited')));assert.deepEqual(plain(c.patchPadlockRows()),drafts);assert.equal(JSON.stringify(c.app),before);
+ c.togglePatchGroupLock(encodeURIComponent(key));c.patchAddressReview.proposals.find(r=>r.id==='last').address='520';c.confirmPatchAddressReview();
+ assert.equal(events.saves,1);assert.equal(events.syncs,1);assert.equal(c.patchPadlockSessions.size,0);assert.equal(c.fixturePatchUndoHistory.length,1);
+ assert.equal(c.app.fixturePatch.find(r=>r.id==='edited').notes,'Draft note');assert.equal(c.app.fixturePatch.find(r=>r.id==='last').address,'');
+ assert(!c.patchGroupUnlocked(c.app.fixturePatch.find(r=>r.id==='edited')));
+ c.undoFixturePatchChange(0);assert.equal(JSON.stringify(c.app),before);
+}
+// No-op locking, mode regrouping, fresh project state and independent unlocked groups.
+{
+ const {c,events}=context(),key=unlock(c);c.togglePatchGroupLock(encodeURIComponent(key));assert.equal(events.reviews,0);assert.equal(events.saves,0);
+ unlock(c);c.reconcilePatchModeAddress=()=>{};
+ c.updatePatchRowField({dataset:{patchId:'edited',patchField:'mode'},value:'New'},true);
+ const edited=c.patchPadlockRows().find(r=>r.id==='edited'),newKey=c.patchGroupKey(edited);assert.notEqual(newKey,key);assert(c.patchGroupUnlocked(edited));
+ c.togglePatchGroupLock(encodeURIComponent(newKey));assert.equal(events.reviews,1);c.confirmPatchAddressReview();assert.equal(c.app.fixturePatch.find(r=>r.id==='edited').mode,'New');assert.equal(c.patchPadlockSessions.size,0);
+ unlock(c);vm.runInContext(source('resetFixturePatchUndo'),c);c.resetFixturePatchUndo();assert.equal(c.patchPadlockSessions.size,0);
+}
+// Paste, keyboard navigation and drag-fill use the same draft rather than interrupting edits.
+{
+ const {c,events}=context(),key=unlock(c),handlers={},windowHandlers={},controls=['edited','other'].map((id,index)=>({dataset:{patchId:id,patchField:'address',patchGridRow:String(index),patchGridCol:'0'},disabled:false,tagName:'INPUT',value:c.patchPadlockRows().find(r=>r.id===id).address}));
+ const table={querySelectorAll:()=>[],addEventListener:(name,fn)=>handlers[name]=fn},cells=controls.map(control=>({dataset:{},classList:{add(){},remove(){}},querySelector:()=>control,closest:()=>table}));
+ controls.forEach((control,i)=>control.closest=()=>cells[i]);c.fixturePatchEditableCells=()=>cells;c.fixturePatchControlAcceptsValue=()=>true;c.document.querySelectorAll=()=>controls;
+ c.focusFixturePatchCell=()=>events.focus=(events.focus||0)+1;
+ for(const name of ['patchCellPasteEdits','attachFixturePatchTableEvents','attachFixturePatchFillHandle'])vm.runInContext(source(name),c);
+ c.attachFixturePatchTableEvents(table);handlers.paste({target:controls[0],preventDefault(){},clipboardData:{getData:()=> '210\n240'}});
+ assert.equal(events.reviews,0);assert.equal(events.saves,0);assert.equal(controls[1].value,'240');
+ controls[0].value='300';handlers.keydown({key:'Tab',target:controls[0],preventDefault(){}});assert.equal(events.focus,1);assert.equal(events.reviews,0);
+ c.document.body={classList:{add(){},remove(){}}};c.document.elementFromPoint=()=>({closest:()=>cells[1]});c.window={addEventListener:(name,fn)=>windowHandlers[name]=fn,removeEventListener(){}};
+ const handle={parentElement:cells[0],setPointerCapture(){},addEventListener:(name,fn)=>handlers[name]=fn};c.attachFixturePatchFillHandle(handle);handlers.pointerdown({preventDefault(){},stopPropagation(){},pointerId:1});windowHandlers.pointermove({clientX:0,clientY:0});windowHandlers.pointerup();
+ assert.equal(events.reviews,0);assert.equal(events.saves,0);assert.equal(controls[1].value,controls[0].value);
+ // A padlock click also flushes the focused field before any blur callback runs.
+ controls[0].value='350';c.togglePatchGroupLock(encodeURIComponent(key));assert.equal(events.reviews,1);assert(c.patchAddressReview.proposals.some(r=>r.address==='350'));
+}
+// Merged universe/address edits, including a universe-only edit, are staged together.
+{
+ const {c,events}=context(),key=unlock(c),fields=['universe','address'].map(field=>({dataset:{patchId:'edited',patchField:field,patchMerged:'1'},value:field==='universe'?'4':'200'})),cell={querySelectorAll:()=>fields};
+ fields.forEach(input=>input.closest=()=>cell);c.document.querySelectorAll=()=>fields;
+ vm.runInContext(source('commitPatchMergedCell'),c);c.commitPatchMergedCell(cell);assert.equal(events.reviews,0);assert.equal(fields[0].value,'4');assert.equal(c.app.fixturePatch[1].universe,'1');
+ fields[0].value='5';c.commitPatchMergedCell(cell);assert.equal(events.reviews,0);assert.equal(c.patchPadlockRows()[1].universe,'5');
+ fields[0].value='6';c.togglePatchGroupLock(encodeURIComponent(key));assert.equal(events.reviews,1);assert.equal(c.patchAddressReview.proposals.find(r=>r.id==='edited').universe,'6');assert.equal(events.saves,0);
+ c.app.fixturePatch[0].notes='Independent edit';c.confirmPatchAddressReview();assert.equal(events.saves,0);assert.equal(c.patchPadlockSessions.size,1);assert.match(events.alerts.at(-1),/changed/);
+}
+console.log('PASS: padlock draft cells, merged values, paste/fill, keyboard, finish-time flush, one review, cancel, stale review, mode regrouping, save and undo.');
+
+// Reverting/escaping a field leaves no review, and separate groups retain their own drafts.
+{
+ const {c,events}=context(),key=unlock(c),input={dataset:{patchId:'edited',patchField:'notes'},value:'Typing'};
+ c.updatePatchRowField(input,false);assert.equal(c.patchPadlockRows()[1].notes,'Typing');c.cancelPatchFieldUndo(input);assert.equal(c.patchPadlockRows()[1].notes??'','');
+ c.togglePatchGroupLock(encodeURIComponent(key));assert.equal(events.reviews,0);assert.equal(events.saves,0);
+ unlock(c);const secondKey=unlock(c,'last');
+ c.updatePatchRowField({dataset:{patchId:'edited',patchField:'notes'},value:'First'},true);
+ c.updatePatchRowField({dataset:{patchId:'last',patchField:'notes'},value:'Second'},true);
+ c.togglePatchGroupLock(encodeURIComponent(key));c.confirmPatchAddressReview();
+ assert.equal(c.app.fixturePatch[1].notes,'First');assert.equal(c.app.fixturePatch[3].notes,undefined);assert.equal(c.patchPadlockRows()[3].notes,'Second');assert.equal(c.patchPadlockSessions.size,1);
+ c.togglePatchGroupLock(encodeURIComponent(secondKey));c.confirmPatchAddressReview();assert.equal(c.app.fixturePatch[3].notes,'Second');assert.equal(c.patchPadlockSessions.size,0);
+}
