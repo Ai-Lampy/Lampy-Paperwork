@@ -1,3 +1,8 @@
+## V57.16 — Power export phase totals
+
+- Show only the current distro’s phase-total card beside its Power Calcs, instead of repeating its entire supply overview.
+- Show the combined supply and distro overview once at the end of the export, including projects with a single supply.
+
 ## V57.15 — Deployment retry
 
 - Reissue V57.14 with synchronised release markers for a fresh manual GitHub Pages deployment attempt.

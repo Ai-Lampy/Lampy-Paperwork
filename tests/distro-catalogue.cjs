@@ -78,7 +78,20 @@ const before=copy(cxt.app);cxt.distroDraft=cxt.createDistroDraft();const hiddenS
 cxt.distroCatalogueError='Invalid catalogue';assert.equal(cxt.createDistroDraft(),null);assert(cxt.distroSettingsMarkup(a,false).includes('role="alert"'));cxt.distroCatalogueError='';
 cxt.app.distros=all=[a,b,c,e];info.powerSupplies[0].distros=[0];cxt.commitDistroFeed(b,'supply:supply',null);assert.equal(b.feed,null);assert(info.powerSupplies[0].distros.includes(1));b.feed={distroId:a.id,outletId:D.outlets(a)[0].id,adaptor:false};cxt.commitDistroFeed(b,'output:'+a.id+':'+b.feed.outletId,b.feed);assert(!info.powerSupplies[0].distros.includes(1));
 cxt.distroRanges=()=>all.map((d,idx)=>({d,idx}));cxt.powerDistroOwnPhaseTotals=r=>own(r.d);assert.deepEqual(copy(cxt.powerSupplyTotals(info.powerSupplies[0],cxt.distroRanges())),{p1:10,p2:4,p3:8});
-const live=cxt.powerPhaseTotalsOverviewMarkup(cxt.distroRanges()),pdf=cxt.powerPdfDistroSummaryMarkup(cxt.distroRanges()[2],cxt.distroRanges());for(const text of ['A','B','C','E','A - 63/3ø','data-power-phase-links="2"']){assert(live.includes(text));assert(pdf.includes(text))}assert(live.includes('data-open-supply'));assert(!pdf.includes('data-open-supply'));assert.equal((pdf.match(/powerPhaseConnectorGraphic/g)||[]).length,3);
+const live=cxt.powerPhaseTotalsOverviewMarkup(cxt.distroRanges());
+// A distro page shows one card for its own feed load, including downstream loads, never its supply tree.
+for(const range of cxt.distroRanges()){
+ const pdf=cxt.powerPdfDistroSummaryMarkup(range,cxt.distroRanges());
+ assert.equal(pdf,'<section class="powerPdfDistroSummary">'+cxt.phaseTotalsMarkup(range.d.name,cxt.powerSheetPhaseTotals(range))+'</section>');
+ assert.equal((pdf.match(/class="powerPhaseSummary"/g)||[]).length,1);
+ assert(!pdf.includes('powerPhaseConnectorGraphic'));assert(!pdf.includes('data-open-supply'));assert(!pdf.includes('<strong>Supply</strong>'));
+}
+const childPdf=cxt.powerPdfDistroSummaryMarkup(cxt.distroRanges()[1],cxt.distroRanges());
+assert(childPdf.includes('5.00 A'));assert(!childPdf.includes('10.00 A'));
+cxt.document={createElement:()=>({})};
+const pdf=cxt.preparePowerPdfTotals(cxt.distroRanges()).innerHTML;
+for(const text of ['A','B','C','E','A - 63/3ø','data-power-phase-links="2"']){assert(live.includes(text));assert(pdf.includes(text))}
+assert(live.includes('data-open-supply'));assert(!pdf.includes('data-open-supply'));assert.equal((pdf.match(/powerPhaseConnectorGraphic/g)||[]).length,3);
 cxt.document={createElement:()=>({})};assert.equal(cxt.preparePowerPdfTotals(cxt.distroRanges()).innerHTML,cxt.powerFeedOverview(cxt.distroRanges(),false));
 info.powerSupplies=[];assert(cxt.powerPhaseTotalsOverviewMarkup(cxt.distroRanges()).includes('Unassigned Distros'));
 let snapshot=copy(a);cxt.confirm=()=>false;assert.equal(cxt.distroChangeType(a,catalogue.distroType[4].value),false);assert.deepEqual(copy(a),snapshot);
@@ -207,9 +220,51 @@ vm.runInContext(source('powerAuxSheetMarkup'),auxContext);const auxMarkup=auxCon
 for(const heading of ['Aux Outlets - 16A CEE Form','Aux Outlets - True 1','Aux Outlets - Connector unspecified'])assert(auxMarkup.includes(heading));
 assert.equal((auxMarkup.match(/powerAuxGroupBlock/g)||[]).length,3);assert(source('preparePowerPdfView').includes("if(!block.querySelector('.powerAuxSheet'))block.remove()"));
 assert(source('powerPdfDomPdfBytes').includes(".powerAuxGroupBlock>h3,.powerOutputSection>h3"));
-add('powerPdfNeedsTotalsPage');for(const count of [0,1,2]){info.powerSupplies=Array.from({length:count},()=>({}));assert.equal(cxt.powerPdfNeedsTotalsPage(),count!==1)}
-assert(source('renderPowerPdfPreview').includes('sources.length&&powerPdfNeedsTotalsPage()'));assert(source('renderPowerPdfPreview').includes('finishPowerPdfPreview(pages,info,d)'));
-console.log('PASS: V51.8 three-outlet batches, inline adaptor guidance, quiet draft types, connector headings and single-Supply PDF totals.');
+// Execute export composition: one local card per distro and one final supply overview, for every supply count.
+{
+ let ranges=[],supplies=[],records=[],finished=0,fanOutCalls=0;
+ const pages={set innerHTML(value){assert.equal(value,'');records=[]}};
+ const pdfContext=vm.createContext({
+  powerPdfMode:'power',powerPdfShowUnusedSocas:false,
+  $:id=>id==='powerPdfPages'?pages:{},syncPowerPdfUnusedSocaControl:()=>{},
+  distroRanges:()=>ranges,powerPdfPaperDimensions:()=>({}),
+  ensureProjectInfo:()=>({powerSupplies:supplies}),
+  powerPdfSourceViews:()=>ranges.map(range=>({range,view:{cloneNode:()=>({})}})),
+  powerPdfActiveSocaIndexes:range=>range.active,
+  powerHasActiveAuxRows:range=>range.aux,outputGroupCount:d=>d.outputs||0,
+  preparePowerPdfView:(view,range,group,count,showTotals,rowMode='soca')=>{
+   assert.equal(showTotals,false);return {kind:rowMode,id:range.d.id,group:Array.from(group)};
+  },
+  appendPowerPdfPreviewPage:(host,d,view,options)=>{
+   const record={kind:options.totals?'totals':view.kind,view,options};records.push(record);return record;
+  },
+  appendPowerPdfDistroSummary:(host,d,page,range)=>{records.push({kind:'distro',id:range.d.id});return page},
+  appendEmptyPowerPdfPage:()=>records.push({kind:'empty'}),
+  document:{createElement:()=>({})},powerFeedOverview:input=>JSON.stringify(input.map(range=>range.d.id)),
+  powerPdfHeaderMarkup:()=>({}),finishPowerPdfPreview:()=>finished++,renderFanOutPdfPreview:()=>fanOutCalls++
+ });
+ // Also load the old predicate when present so this regression demonstrates the former single-supply omission.
+ if(html.includes('function powerPdfNeedsTotalsPage('))vm.runInContext(source('powerPdfNeedsTotalsPage'),pdfContext);
+ for(const name of ['preparePowerPdfTotals','renderPowerPdfPreview'])vm.runInContext(source(name),pdfContext);
+ for(const supplyCount of [0,1,2])for(const showUnused of [false,true]){
+  supplies=Array.from({length:supplyCount},()=>({}));pdfContext.powerPdfShowUnusedSocas=showUnused;
+  ranges=[{idx:0,d:{id:'A',outputs:1},count:9,active:[0,1,2,3,4,8],aux:true},{idx:1,d:{id:'B'},count:2,active:[],aux:true},{idx:2,d:{id:'C'},count:0,active:[],aux:false}];
+  pdfContext.renderPowerPdfPreview();
+  assert.equal(records.filter(record=>record.kind==='totals').length,1,'Exactly one supply overview');
+  assert.equal(records.at(-1).kind,'totals','Supply overview follows every distro and extras page');
+  assert.equal(records.at(-1).view.innerHTML,'["A","B","C"]');
+  assert.equal(records.at(-1).options.extraClass,'powerPdfTotalsPage');assert.equal(records.at(-1).options.fullHeader,true);
+  assert.deepEqual(records.filter(record=>record.kind==='distro').map(record=>record.id),['A','B','C']);
+  assert.equal(records.filter(record=>record.kind==='extras').length,2);
+  const aRows=records.filter(record=>record.kind==='soca'&&record.view.id==='A');
+  assert.equal(aRows.length,showUnused?3:2);assert.equal(aRows[0].options.fullHeader,true);assert(aRows.slice(1).every(record=>!record.options.fullHeader));
+  assert.deepEqual(aRows.flatMap(record=>record.view.group),showUnused?[0,1,2,3,4,5,6,7,8]:[0,1,2,3,4,8]);
+ }
+ ranges=[];pdfContext.renderPowerPdfPreview();assert.deepEqual(records.map(record=>record.kind),['empty']);
+ const before=records;pdfContext.powerPdfMode='fanOut';pdfContext.renderPowerPdfPreview();assert.equal(fanOutCalls,1);assert.equal(records,before);assert.equal(finished,7);
+}
+console.log('PASS: distro-only phase cards and one final supply overview for zero, one or multiple supplies, paginated Socapex, extras and empty exports.');
+console.log('PASS: V51.8 three-outlet batches, inline adaptor guidance, quiet draft types, connector headings and final Supply PDF totals.');
 // Catalogue load failures clear old choices and keep creation disabled.
 add('normaliseDistroOptions','loadDistroOptions');cxt.distroDraft=null;cxt.activeSingleDistro=null;cxt.DISTRO_OPTIONS_URL='json/distro_options.json';cxt.$=()=>({textContent:''});cxt.console={warn:()=>{}};cxt.fetchJSONWithFallback=async()=>{throw Error('Unreadable catalogue')};
 (async()=>{await cxt.loadDistroOptions();assert.match(cxt.distroCatalogueError,/Unreadable catalogue/);assert.equal(cxt.distroOptions.distroType.length,0);assert.equal(cxt.createDistroDraft(),null);cxt.fetchJSONWithFallback=async()=>raw;await cxt.loadDistroOptions();assert.equal(cxt.distroCatalogueError,'');assert.equal(cxt.createDistroDraft().count,12);console.log('PASS: V51.4 output deletion, draft cancellation, stale feeds, load validation and measured scaled connectors.');})().catch(error=>{console.error(error);process.exitCode=1});
