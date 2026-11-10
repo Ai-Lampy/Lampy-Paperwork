@@ -1,3 +1,10 @@
+## V57.10 — Truck Pack lifter controls
+
+- Always show Lifter in Case Details and allow shared Yes/No edits for multiple selected cases, preserving untouched mixed values.
+- Keep the lifter setting independent of Ride on Wheels, including save/load and supported stacking.
+- Allow lifters to stack on their wheels while retaining collision, trailer bounds and full-support checks.
+- Keep case positions unchanged when changing only lifter status.
+
 ## V57.9 — Truck Pack snap grid
 
 - Add a saved Snap to grid toggle for each truck and a four-column floor grid, using square cells based on the trailer width.

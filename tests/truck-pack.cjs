@@ -476,3 +476,41 @@ console.log('PASS: four-column front-first grid packing, overflow Waiting, mixed
  const lift=T.normaliseItem({id:'lifted',caseId:'lift',rideOnWheels:false,lifter:true});truck.items.push(lift);const placed=T.placement(data,truck,lift,{x:10,y:truck.length-300,z:0});assert.equal(placed.error,'');assert.equal(placed.item.z,400);Object.assign(lift,placed.item);assert.equal(T.truckError(data,truck),'');assert(T.placement(data,truck,support,{x:650,y:support.y,z:0}).error.includes('supported'));
  const rotated=T.normaliseItem({id:'rotated',caseId:'rectangle',rotation:90});const position=T.snapPosition(data,truck,rotated,{x:2000,y:6000,z:0});assert.equal(position.x,1220);assert.equal(position.y,5800);assert.deepEqual([T.dimensions(data,rotated).width,T.dimensions(data,rotated).length],[800,300]);assert.equal(T.placement(data,truck,rotated,position).error,'');
 }
+
+// Lifter is independent of wheels in saved data, placement and single-case edits.
+{
+ for(const snapToGrid of [false,true]){
+  const data=T.empty();data.cases=[base('bottom',{width:1220,length:1220,height:500}),base('wheeled',{width:610,length:610,height:400})];data.trucks=[T.normaliseTruck({...T.presets[0],id:'lifter-wheels',snapToGrid,items:[]})];data.activeTruckId='lifter-wheels';const truck=data.trucks[0];
+  const lower=T.normaliseItem({id:'lower',caseId:'bottom',packed:true,x:0,y:snapToGrid?truck.length-1220:0,z:0}),upper=T.normaliseItem({id:'upper',caseId:'wheeled',rideOnWheels:true,lifter:true});truck.items.push(lower,upper);
+  assert(upper.lifter&&upper.rideOnWheels);const originalDimensions=T.dimensions(data,upper),position={x:0,y:snapToGrid?truck.length-610:0,z:0},placed=T.placement(data,truck,upper,position);
+  assert.equal(placed.error,'');assert.equal(placed.item.z,500);Object.assign(upper,placed.item);assert.deepEqual(T.dimensions(data,upper),originalDimensions,'wheeled lifters retain their actual orientation and castor height');assert.equal(T.truckError(data,truck),'');assert.deepEqual(T.normalise(JSON.parse(JSON.stringify(data))),data);
+  assert(T.placement(data,truck,{...upper,lifter:false},{x:upper.x,y:upper.y,z:upper.z},false).error.includes('lifter'));
+  assert(T.placement(data,truck,upper,{x:1830,y:upper.y,z:500},false).error.includes('supported'));
+  assert(T.placement(data,truck,upper,{x:0,y:upper.y,z:250},false).error.includes('overlap'));
+  assert(T.placement(data,truck,upper,{x:0,y:upper.y,z:truck.height},false).error.includes('outside'));
+  assert(T.placement(data,truck,lower,{x:1220,y:lower.y,z:0},false).error.includes('supported'),'cannot move the support out from under a wheeled lifter');
+ }
+ let data=T.empty();data.cases=[base('single')];data.trucks=[T.normaliseTruck({...T.presets[0],id:'single',snapToGrid:true,items:[]})];data.activeTruckId='single';const item=T.normaliseItem({id:'one',caseId:'single',packed:true,x:123,y:321,rideOnWheels:true});data.trucks[0].items.push(item);
+ const fields={name:'single',department:'',colour:'',colour2:'',colour3:'',rideOnWheels:'yes',lifter:'yes',rotation:'0',x:'123 mm',y:'321 mm',z:'0 mm'},ctx=testContext({T,selected:item.id,state:()=>data,callbacks:{colourHex:v=>v},FormData:class{get(key){return fields[key]}},transaction:change=>{const next=JSON.parse(JSON.stringify(data));change(next);data=T.normalise(next)}});
+ for(const name of ['readCaseColours','applyItem'])vm.runInContext(fn(ui,name),ctx);ctx.applyItem({},false);assert(data.trucks[0].items[0].lifter);assert(data.trucks[0].items[0].rideOnWheels);assert.equal(data.trucks[0].items[0].x,123);assert.equal(data.trucks[0].items[0].y,321);
+ fields.lifter='no';ctx.applyItem({},false);assert(!data.trucks[0].items[0].lifter);assert.equal(data.trucks[0].items[0].x,123);
+}
+// Actual single/multi inspectors expose Lifter; changed-only bulk edits are atomic.
+{
+ let data=T.empty(),saves=0,message='',changes=[];data.cases=[base('multi',{width:400,length:600,height:400})];data.trucks=[T.normaliseTruck({...T.presets[0],id:'multi',items:[]})];data.activeTruckId='multi';const items=T.addItems(data,'multi','multi',3);items[1].rideOnWheels=false;items[1].lifter=true;
+ const form={querySelectorAll:()=>changes},pane={style:{},innerHTML:'',closest:()=>({classList:{toggle(){}}}),querySelector:()=>form};
+ const ctx=testContext({T,host:{querySelector:selector=>selector==='.tpInspector'?pane:null},state:()=>data,truck:()=>data.trucks[0],selected:items[0].id,selectedGroup:[],callbacks:{colourControl:attrs=>'<input '+attrs+'>',colourHex:v=>v},esc:String,length:T.formatLength,weight:T.formatWeight,notify:text=>message=text,transaction:change=>{try{const next=JSON.parse(JSON.stringify(data));change(next);data=T.normalise(next);saves++;return true}catch(error){message=error.message;return false}}});
+ for(const name of ['field','input','button'])vm.runInContext(ui.split('\n').find(line=>line.trim().startsWith('const '+name+'=')),ctx);
+ for(const name of ['caseColourFields','renderInspector','renderGroupInspector','applySelectedDetails'])vm.runInContext(fn(ui,name),ctx);
+ ctx.renderInspector();assert(pane.innerHTML.includes('<div data-tp-lifter>'));assert(pane.innerHTML.includes('name="lifter"'));assert(!pane.innerHTML.includes('data-tp-lifter hidden'));
+ ctx.selectedGroup=items.slice(0,2).map(i=>i.id);ctx.renderInspector();assert(pane.innerHTML.includes('name="lifter"'));assert(pane.innerHTML.includes('Mixed — leave unchanged'));
+ changes=[];form.onsubmit({preventDefault(){}});assert.equal(saves,0);assert.equal(data.trucks[0].items[0].lifter,false);assert.equal(data.trucks[0].items[1].lifter,true);
+ const input={name:'lifter',value:'yes',dataset:{}};form.onchange({target:input});assert.equal(input.dataset.tpChanged,'true');changes=[input];form.onsubmit({preventDefault(){}});assert.equal(saves,1);assert(data.trucks[0].items.slice(0,2).every(i=>i.lifter));assert(!data.trucks[0].items[2].lifter);assert(data.trucks[0].items[0].rideOnWheels);assert(!data.trucks[0].items[1].rideOnWheels);
+ changes=[{name:'lifter',value:''}];ctx.applySelectedDetails(form);assert.equal(saves,1,'mixed leave-unchanged does not turn lifters off');
+ changes=[{name:'lifter',value:'no'}];ctx.applySelectedDetails(form);assert.equal(saves,2);assert(data.trucks[0].items.every(i=>!i.lifter));
+ // A rejected shared edit must not partially change any selected case or other fields.
+ data.cases.push(base('support-multi',{width:1220,length:1220,height:500}));const support=T.normaliseItem({id:'support-multi',caseId:'support-multi',packed:true});data.trucks[0].items.push(support);Object.assign(data.trucks[0].items[0],{packed:true,lifter:true,rideOnWheels:true,x:0,y:0,z:500});data=T.normalise(data);const before=JSON.stringify(data);
+ changes=[{name:'lifter',value:'no'},{name:'department',value:'Do not partially save'}];ctx.applySelectedDetails(form);assert.equal(saves,2);assert(message.includes('lifter'));assert.equal(JSON.stringify(data),before);
+ changes=[{name:'lifter',value:'invalid'}];ctx.applySelectedDetails(form);assert.equal(saves,2);assert(message.includes('Yes or No'));
+}
+console.log('PASS: always-visible single/bulk lifter controls, untouched mixed values, atomic bulk rejection, independent wheel/lifter persistence and supported wheeled stacking with grid on/off.');

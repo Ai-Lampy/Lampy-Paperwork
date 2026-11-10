@@ -43,7 +43,7 @@
     if(result.heightIncludesWheels&&result.casterHeight>=result.height)throw Error(name+': castor height must be less than total height.');
     return result;
   }
-  function normaliseItem(raw){return {id:identity(raw.id,'placed case'),caseId:identity(raw.caseId,'inventory case'),name:text(raw.name),department:text(raw.department),colour:colour(raw.colour,''),colour2:colour(raw.colour2,''),colour3:colour(raw.colour3,''),rideOnWheels:raw.rideOnWheels!==false,lifter:raw.rideOnWheels===false&&raw.lifter===true,rotation:Number(raw.rotation)===90?90:0,packed:raw.packed===true,x:number(raw.x??0,'X',true),y:number(raw.y??0,'Y',true),z:number(raw.z??0,'Z',true)}}
+  function normaliseItem(raw){return {id:identity(raw.id,'placed case'),caseId:identity(raw.caseId,'inventory case'),name:text(raw.name),department:text(raw.department),colour:colour(raw.colour,''),colour2:colour(raw.colour2,''),colour3:colour(raw.colour3,''),rideOnWheels:raw.rideOnWheels!==false,lifter:raw.lifter===true,rotation:Number(raw.rotation)===90?90:0,packed:raw.packed===true,x:number(raw.x??0,'X',true),y:number(raw.y??0,'Y',true),z:number(raw.z??0,'Z',true)}}
   function normaliseTruck(raw){
     if(!raw||typeof raw!=='object')throw Error('Invalid truck.');
     const result={id:identity(raw.id,'truck'),preset:text(raw.preset)||'custom',company:text(raw.company),name:text(raw.name)||'Truck',registration:text(raw.registration),driver:text(raw.driver),email:text(raw.email),phone:text(raw.phone),width:number(raw.width,'Trailer width'),length:number(raw.length,'Trailer length'),height:number(raw.height,'Trailer height'),payload:raw.payload==null?null:number(raw.payload,'Payload'),snapToGrid:raw.snapToGrid===true,items:[]};
@@ -74,7 +74,7 @@
       boxes.push({item,b});
     }
     for(let i=0;i<boxes.length;i++){const {item,b}=boxes[i];for(let j=i+1;j<boxes.length;j++)if(overlaps(b,boxes[j].b))return 'Cases cannot overlap.';
-      if(b.z>EPS&&(!item.lifter||item.rideOnWheels||!boxes.some(other=>other.item!==item&&supported(b,other.b))))return 'A raised case must be a lifter, off its wheels, fully supported by another case.';
+      if(b.z>EPS&&(!item.lifter||!boxes.some(other=>other.item!==item&&supported(b,other.b))))return 'A raised case must be a lifter and fully supported by another case.';
     }
     return '';
   }
@@ -99,7 +99,7 @@
     if(truck.snapToGrid)Object.assign(candidate,snapPosition(state,truck,candidate,candidate));
     const precision=truck.snapToGrid?6:0;candidate.x=Number(candidate.x.toFixed(precision));candidate.y=Number(candidate.y.toFixed(precision));candidate.z=Number((candidate.z||0).toFixed(precision));
     let error=truckError(state,trial);if(!error)return {item:candidate,error:''};
-    if(autoStack&&candidate.lifter&&!candidate.rideOnWheels){const heights=[...new Set(others.filter(i=>i.packed).map(i=>i.z+dimensions(state,i).height))].sort((a,b)=>a-b);for(const z of heights){candidate.z=z;error=truckError(state,trial);if(!error)return {item:{...candidate},error:''}}}
+    if(autoStack&&candidate.lifter){const heights=[...new Set(others.filter(i=>i.packed).map(i=>i.z+dimensions(state,i).height))].sort((a,b)=>a-b);for(const z of heights){candidate.z=z;error=truckError(state,trial);if(!error)return {item:{...candidate},error:''}}}
     return {item:null,error};
   }
   function totals(state,truck){let packed=0,staged=0,unknown=0;for(const item of truck.items){const weight=definition(state,item).weight;if(weight==null){unknown++;continue}if(item.packed)packed+=weight;else staged+=weight}return {packed,staged,unknown,overPayload:truck.payload!=null&&packed>truck.payload}}
