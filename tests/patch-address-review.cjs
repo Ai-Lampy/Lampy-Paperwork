@@ -88,7 +88,7 @@ assert.match(html,/#patchGroupEditModal>\.modalCard\{max-height:95vh/);
 assert.match(source('attachFixturePatchFillHandle'),/if\(field==='address'\).*reviewPatchAddressEdits\(edits,\[\],true\);return/s);
 assert.match(html,/if\(e.key==='Escape'&&patchAddressReview\)/);
 assert.match(html,/if\(id==='patchAddressReviewModal'\)\{closePatchAddressReview\(\);return\}/);
-assert.match(html,/const VERSION='57\.14'/);
+assert.match(html,/const VERSION='57\.15'/);
 console.log('PASS: V50.3 position filtering, footprint sequences, downstream scope, staged edits/paste/keyboard, conflicts, cancellation, stale review and undo.');
 
 // Padlock edits are a session draft. Only closing the padlock opens the review.

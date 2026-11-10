@@ -1,3 +1,8 @@
+## V57.15 — Deployment retry
+
+- Reissue V57.14 with synchronised release markers for a fresh manual GitHub Pages deployment attempt.
+- Keep application behaviour unchanged.
+
 ## V57.14 — Padlock edit review
 
 - Keep unlocked Fixture Patch edits in a draft, including address entry, merged universe/address cells, paste and drag-fill.
