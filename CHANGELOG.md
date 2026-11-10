@@ -1,3 +1,9 @@
+## V57.13 — Stable Project Settings navigation
+
+- Keep Project Settings child pages out of the compact sidebar so entering settings does not expand or rearrange the rail.
+- Open those child pages from the settings icon hover/focus menu, and preserve manual disclosure choices in expanded navigation.
+- Restore the compact sidebar spacing from before V57.12.
+
 ## V57.12 — Compact sidebar sizing
 
 - Keep compact navigation icons within their buttons when Project Settings makes the sidebar scroll.

@@ -46,7 +46,11 @@
   }
   function resetExpandedPages(expanded,activePage){expanded.clear();if(activePage)expanded.add(activePage)}
   function subPagesVisible(compact,active,expanded){return compact?active:expanded}
-  function flyoutMode(mainPage,active){return mainPage==='truckPack'?'group':mainPage==='home'&&active?'none':mainPage&&!active?'group':'name'}
+  function flyoutMode(mainPage,active,settingsRoot=false){return settingsRoot||mainPage==='truckPack'?'group':mainPage==='home'&&active?'none':mainPage&&!active?'group':'name'}
+  function flyoutChildren(button){
+    const settings=button.closest('.projectSettingsNavGroup');
+    return settings?settings.querySelectorAll('.projectSettingsNavChildren button'):button.parentElement.querySelectorAll('.sheetSubMenu button:not(.appNavigationDuplicate):not(.appNavigationDisclosure)');
+  }
   function flyoutPosition(anchor,viewport,width,height){return {left:Math.max(8,Math.min(anchor.right+8,viewport.width-width-8)),top:Math.max(8,Math.min(anchor.top,viewport.height-height-8))}}
   let controller;
   function init({changed=()=>{}}={}){
@@ -71,10 +75,10 @@
     function hideFlyout(restore=false){cancelLeave();const source=flyoutSource;flyoutSource=null;flyout.hidden=true;flyout.replaceChildren();if(source){source.removeAttribute('aria-expanded');source.removeAttribute('aria-controls')}if(restore&&source){suppressFocus=true;source.focus();suppressFocus=false}}
     function scheduleLeave(){cancelLeave();leaveTimer=root.setTimeout(()=>{if(!flyout.contains(doc.activeElement)&&doc.activeElement!==flyoutSource)hideFlyout()},200)}
     function showFlyout(button){
-      if(!collapsed||media.matches||suppressFocus)return;cancelLeave();if(flyoutSource===button)return;hideFlyout();const mode=flyoutMode(button.dataset.sheetTab,button.classList.contains('active'));if(mode==='none')return;flyoutSource=button;
+      if(!collapsed||media.matches||suppressFocus)return;cancelLeave();if(flyoutSource===button)return;hideFlyout();const settingsRoot=!!button.closest('.projectSettingsNavGroup')&&!button.closest('.projectSettingsNavChildren'),mode=flyoutMode(button.dataset.sheetTab,button.classList.contains('active'),settingsRoot);if(mode==='none')return;flyoutSource=button;
       const label=button.dataset.navLabel||button.textContent.trim();flyout.setAttribute('aria-label',label+' navigation');
       function addAction(original,heading=false){const item=doc.createElement('button');item.type='button';item.textContent=heading?label:original.textContent;item.className=heading?'appNavigationFlyoutTitle':'';if(!heading)decorateSubPage(item,button.dataset.sheetTab,doc);item.addEventListener('click',()=>{hideFlyout();original.click();doc.getElementById('sheet')?.focus({preventScroll:true})});flyout.append(item)}
-      if(button.dataset.sheetTab!=='home')addAction(button,true);if(mode==='group')button.parentElement.querySelectorAll('.sheetSubMenu button:not(.appNavigationDuplicate):not(.appNavigationDisclosure)').forEach(item=>addAction(item));
+      if(button.dataset.sheetTab!=='home')addAction(button,true);if(mode==='group')flyoutChildren(button).forEach(item=>addAction(item));
       button.setAttribute('aria-controls',flyout.id);button.setAttribute('aria-expanded','true');flyout.hidden=false;
       const bounds=button.getBoundingClientRect(),position=flyoutPosition({right:aside.getBoundingClientRect().right,top:bounds.top},{width:doc.documentElement.clientWidth,height:root.innerHeight},flyout.offsetWidth,flyout.offsetHeight);
       flyout.style.left=position.left+'px';flyout.style.top=position.top+'px';
@@ -107,5 +111,5 @@
     actions?.addEventListener('click',event=>{if(media.matches&&event.target.closest('button,a[href]')){open=false;paint()}});
     media.addEventListener('change',()=>{open=false;paint()});controller={refresh};paint();return controller;
   }
-  const api={init,refresh:()=>controller?.refresh(),readPreference,writePreference,layoutState,flyoutPosition,subPageIcon,decorateSubPage,subPagesVisible,iconMarkup,resetExpandedPages,flyoutMode};if(typeof module==='object'&&module.exports)module.exports=api;else root.LampySidebar=api;
+  const api={init,refresh:()=>controller?.refresh(),readPreference,writePreference,layoutState,flyoutPosition,subPageIcon,decorateSubPage,subPagesVisible,iconMarkup,resetExpandedPages,flyoutMode,flyoutChildren};if(typeof module==='object'&&module.exports)module.exports=api;else root.LampySidebar=api;
 })(typeof window==='undefined'?globalThis:window);

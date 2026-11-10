@@ -34,20 +34,6 @@ assert.equal(declarations('.appNavigation .sheetTabMenuHost').flex,'0 0 auto');
 assert.equal(declarations('.appNavigationDisclosure')['grid-row'],'1');
 assert.equal(declarations('.appNavigation .sheetSubMenu,.appNavigation .sheetTabMenuHost.menuDismissed .sheetSubMenu')['grid-row'],'2');
 assert.equal(declarations('.appNavigationHead').display,'flex');
-// Project Settings adds enough rows to show a scrollbar. Even a classic
-// scrollbar must leave room for the main and nested icons inside the 60px rail.
-const compactRail=declarations('.appNavigationCompact .appNavigation');
-const compactButton=declarations('.appNavigationCompact .appNavigation .sheetTab');
-const mainIconWidth=parseFloat(declarations('.appNavigation svg').width);
-const subIconWidth=parseFloat(declarations('.appNavigationCompact .appNavigation .sheetSubMenu svg').width);
-const buttonPadding=compactButton.padding.split(' ').map(parseFloat);
-for(const scrollbarWidth of [0,6,12,16]){
- const railContent=sidebar.layoutState(true,false,false).width-parseFloat(compactRail['padding-left'])-parseFloat(compactRail['padding-right'])-2-scrollbarWidth;
- const activeGroupContent=railContent-2;
- assert(activeGroupContent-2*(buttonPadding[1]??buttonPadding[0])>=mainIconWidth,'Main icon fits beside scrollbar');
- assert(activeGroupContent-8>=subIconWidth,'Nested settings icon fits beside scrollbar');
-}
-assert.equal(content['scrollbar-gutter'],'stable');
 assert(source.includes('stroke="currentColor"'));assert(source.includes('focusable="false"'));
 assert(!source.includes("icon.textContent=icons"));
 assert(css.includes('@media(prefers-reduced-motion:reduce)'));
@@ -65,7 +51,7 @@ console.log('PASS: full-width expanded, compact and mobile workspace without wra
 assert.deepEqual(sidebar.flyoutPosition({right:60,top:80},{width:1500,height:900},240,200),{left:68,top:80});
 assert.deepEqual(sidebar.flyoutPosition({right:256,top:850},{width:800,height:900},240,200),{left:264,top:692});
 assert.deepEqual(sidebar.flyoutPosition({right:700,top:0},{width:800,height:900},240,884),{left:552,top:8});
-assert(source.includes("querySelectorAll('.sheetSubMenu button:not(.appNavigationDuplicate):not(.appNavigationDisclosure)').forEach(item=>addAction(item))"));
+assert(source.includes("flyoutChildren(button).forEach(item=>addAction(item))"));
 assert(source.includes("hideFlyout();original.click()"));
 assert(source.includes("flyout.addEventListener('pointerenter',cancelLeave)"));
 assert(source.includes("event.key==='ArrowRight'"));assert(source.includes('hideFlyout(true)'));
@@ -174,7 +160,7 @@ assert.equal(sidebar.flyoutMode('powerSheet',false),'group');
 assert.equal(sidebar.flyoutMode(undefined,true),'name');
 assert.equal(sidebar.flyoutMode(undefined,false),'name');
 assert(source.includes("if(button.dataset.sheetTab!=='home')addAction(button,true)"));
-assert(source.includes("if(mode==='group')button.parentElement"));
+assert(source.includes("if(mode==='group')flyoutChildren(button)"));
 assert(css.includes('button[aria-current="page"]{background:#0060ff'));
 assert(css.includes('.appNavigationCompact .appNavigation .sheetSubMenu button.appNavigationDuplicate{display:none}'));
 assert(html.includes("if(route.active)item.setAttribute('aria-current','page')"));
@@ -199,7 +185,7 @@ for(const origin of ['home','fixturePatch','powerSheet','deviceConfig','looms','
   if(origin!=='projectSettings')assert.equal(context.sheetSubMenuRoutes('home').filter(route=>route.active).length,0);
   const before=settingsRenders;context.sheetSubMenuRoutes('home')[index].run();
   assert.equal(context.activeSheetTab,'projectSettings');assert.equal(context.activeProjectTab,key);
-  assert.equal(settingsRenders,before+1);assert.equal(context.projectSettingsNavExpanded,true);
+  assert.equal(settingsRenders,before+1);assert.equal(context.projectSettingsNavExpanded,false);
   assert.deepEqual(Array.from(context.sheetSubMenuRoutes('home').filter(route=>route.active),route=>route.label),[context.projectSettingsTabLabel(key)]);
  }
 }
@@ -249,3 +235,19 @@ assert.equal(sidebar.flyoutMode('truckPack',true),'group');
 assert.equal(sidebar.subPageIcon('truckPack','Cases'),'list');
 assert.equal(sidebar.subPageIcon('truckPack','Truck 2'),'truckPack');
 console.log('PASS: Truck Pack icon exposes its trucks and Cases even while active.');
+
+// Entering Settings keeps the compact rail unchanged; its child routes live in a flyout.
+assert.equal(declarations('.appNavigationCompact .projectSettingsNavChildren,.appNavigationCompact .projectSettingsNavChildren[hidden]').display,'none');
+assert(!css.includes('data-settings-active'));
+for(const active of [false,true])assert.equal(sidebar.flyoutMode(undefined,active,true),'group');
+const settingsChildren=['Project Info','Production Contacts','Lighting Vendor','Logos','Exports'].map(label=>({textContent:label}));
+const settingsButton={closest:selector=>selector==='.projectSettingsNavGroup'?{querySelectorAll:selector=>{assert.equal(selector,'.projectSettingsNavChildren button');return settingsChildren}}:null};
+assert.deepEqual(sidebar.flyoutChildren(settingsButton),settingsChildren);
+const ordinaryChildren=[{textContent:'Cases'}],ordinaryButton={closest:()=>null,parentElement:{querySelectorAll:selector=>{assert.equal(selector,'.sheetSubMenu button:not(.appNavigationDuplicate):not(.appNavigationDisclosure)');return ordinaryChildren}}};
+assert.deepEqual(sidebar.flyoutChildren(ordinaryButton),ordinaryChildren);
+for(const expanded of [false,true]){
+ context.projectSettingsNavExpanded=expanded;context.activeSheetTab='home';
+ context.sheetSubMenuRoutes('home')[0].run();
+ assert.equal(context.projectSettingsNavExpanded,expanded,'Opening Settings preserves manual disclosure state');
+}
+console.log('PASS: Settings preserves sidebar disclosure state and exposes compact child destinations through its hover/focus flyout.');
