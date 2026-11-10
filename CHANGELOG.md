@@ -1,3 +1,8 @@
+## V57.12 — Compact sidebar sizing
+
+- Keep compact navigation icons within their buttons when Project Settings makes the sidebar scroll.
+- Reserve scrollbar space to prevent navigation widths shifting between pages, while retaining vertical scrolling.
+
 ## V57.11 — Patched fixture picker
 
 - Resolve saved display names and mode aliases to the fixture library's internal mode key before advancing from the Patched tab.

@@ -34,6 +34,20 @@ assert.equal(declarations('.appNavigation .sheetTabMenuHost').flex,'0 0 auto');
 assert.equal(declarations('.appNavigationDisclosure')['grid-row'],'1');
 assert.equal(declarations('.appNavigation .sheetSubMenu,.appNavigation .sheetTabMenuHost.menuDismissed .sheetSubMenu')['grid-row'],'2');
 assert.equal(declarations('.appNavigationHead').display,'flex');
+// Project Settings adds enough rows to show a scrollbar. Even a classic
+// scrollbar must leave room for the main and nested icons inside the 60px rail.
+const compactRail=declarations('.appNavigationCompact .appNavigation');
+const compactButton=declarations('.appNavigationCompact .appNavigation .sheetTab');
+const mainIconWidth=parseFloat(declarations('.appNavigation svg').width);
+const subIconWidth=parseFloat(declarations('.appNavigationCompact .appNavigation .sheetSubMenu svg').width);
+const buttonPadding=compactButton.padding.split(' ').map(parseFloat);
+for(const scrollbarWidth of [0,6,12,16]){
+ const railContent=sidebar.layoutState(true,false,false).width-parseFloat(compactRail['padding-left'])-parseFloat(compactRail['padding-right'])-2-scrollbarWidth;
+ const activeGroupContent=railContent-2;
+ assert(activeGroupContent-2*(buttonPadding[1]??buttonPadding[0])>=mainIconWidth,'Main icon fits beside scrollbar');
+ assert(activeGroupContent-8>=subIconWidth,'Nested settings icon fits beside scrollbar');
+}
+assert.equal(content['scrollbar-gutter'],'stable');
 assert(source.includes('stroke="currentColor"'));assert(source.includes('focusable="false"'));
 assert(!source.includes("icon.textContent=icons"));
 assert(css.includes('@media(prefers-reduced-motion:reduce)'));
