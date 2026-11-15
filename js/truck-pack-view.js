@@ -41,10 +41,14 @@
     const rows=state().cases.map(c=>`<tr data-tp-case="${c.id}"><td>${input('name',c.name)}</td><td>${input('type',c.type,'text','list="tpCaseTypes"')}</td>${['width','length','height'].map(k=>`<td>${input(k,length(c[k]))}</td>`).join('')}<td><input name="heightIncludesWheels" type="checkbox" aria-label="Height includes wheels for ${esc(c.name)}" ${c.heightIncludesWheels?'checked':''}></td><td>${input('weight',weight(c.weight),'text',`placeholder="${unit().weight}"`)}</td><td>${input('casterHeight',c.casterHeight==null?'':length(c.casterHeight),'text','placeholder="Required if excluded"')}</td><td>${button('delete-case','Delete',`data-case-id="${c.id}" aria-label="Delete ${esc(c.name)}"`)}</td></tr>`).join('');
     return `<p class="hint">Enter dimensions with mm, cm, m, ' or &quot;. Values display in your project units. Castor height is required if H excludes wheels. Truss uses its full outside dimensions.</p><datalist id="tpCaseTypes"><option value="Case"><option value="Truss"><option value="Pallet"></datalist><div class="tpInventoryScroll"><table class="tpInventory"><thead><tr>${['Name','Type','W','L','H','Height Inc Wheels?','Weight ('+unit().weight+')','Castor H',''].map(h=>`<th scope="col">${h}</th>`).join('')}</tr></thead><tbody>${rows||'<tr><td colspan="9">No cases yet. Add a case or import your inventory.</td></tr>'}</tbody></table></div>`;
   }
+  function sceneCamera(index){return state().views[index===4?0:index]}
+  function viewportMarkup(v,index,title='',truckName=''){
+    return `<section class="tpViewport" data-tp-viewport="${index}"><div class="tpViewToolbar"><label>${title||'View '+(index+1)}${index===4?'':`<select data-tp-perspective="${index}">${Object.entries(labels).map(([key,label])=>`<option value="${key}" ${v.mode===key?'selected':''}>${label}</option>`).join('')}</select>`}</label><div>${button('zoom-out','−',`data-view="${index}" aria-label="Zoom out ${title||'view '+(index+1)}"`)}${button('fit','Fit',`data-view="${index}"`)}${button('zoom-in','+',`data-view="${index}" aria-label="Zoom in ${title||'view '+(index+1)}"`)}</div></div><div class="tpSceneWrap" data-tool="${v.tool||'select'}">${sceneTools(index,v)}<svg class="tpScene" data-tp-scene="${index}" viewBox="0 0 900 600" role="img" aria-label="${title?title+' — ':''}${labels[v.mode]} of ${esc(truckName)}"></svg><div class="tpCube" data-tp-cube="${index}"></div></div></section>`;
+  }
   function packMarkup(data,active){
     if(!active)return '<div class="blankState">Add a truck to start a pack. Create or import your case inventory in Cases.</div>';
-    const totals=T.totals(data,active),packed=active.items.filter(i=>i.packed).length;
-    return `<div class="tpLoadSummary"><strong>${esc(active.name)}</strong><span>${esc(length(active.length))} L × ${esc(length(active.width))} W × ${esc(length(active.height))} H</span><span>${packed} packed / ${active.items.length-packed} waiting</span><span class="${totals.overPayload?'tpWarning':''}">Packed: ${esc(weight(totals.packed))} / ${active.payload==null?'payload unknown':esc(weight(active.payload))}${totals.overPayload?' — OVER PAYLOAD':''}</span>${totals.unknown?`<span class="tpWarning">${totals.unknown} case weight${totals.unknown===1?'':'s'} unknown</span>`:''}</div><div class="tpWorkspace${data.layout===1?' tpSingleView':''}"><div class="tpViewGrid tpLayout${data.layout}">${data.views.slice(0,data.layout).map((v,i)=>`<section class="tpViewport" data-tp-viewport="${i}"><div class="tpViewToolbar"><label>View ${i+1}<select data-tp-perspective="${i}">${Object.entries(labels).map(([key,label])=>`<option value="${key}" ${v.mode===key?'selected':''}>${label}</option>`).join('')}</select></label><div>${button('zoom-out','−',`data-view="${i}" aria-label="Zoom out view ${i+1}"`)}${button('fit','Fit',`data-view="${i}"`)}${button('zoom-in','+',`data-view="${i}" aria-label="Zoom in view ${i+1}"`)}</div></div><div class="tpSceneWrap" data-tool="${v.tool||'select'}">${sceneTools(i,v)}<svg class="tpScene" data-tp-scene="${i}" viewBox="0 0 900 600" role="img" aria-label="${labels[v.mode]} of ${esc(active.name)}"></svg><div class="tpCube" data-tp-cube="${i}"></div></div></section>`).join('')}</div><aside class="tpInspector" aria-label="Case details" hidden></aside></div><p class="hint">Use the cursor to select and drag cases, the hand to pan, and Rotate to orbit in 3D. Drag across empty space to select multiple cases. Shift-click adds or removes a case. Drag any selected case to move the group. Click empty space to clear selection. Lifters can sit on the floor or stack on supporting cases, on or off their wheels.${active.snapToGrid?` Grid cells are ${esc(length(active.width/4))} square, four across. Cases align from the front; existing placements stay unchanged until moved.`:''}</p>`;
+    const totals=T.totals(data,active),packed=active.items.filter(i=>i.packed).length,layered=data.layout===1&&data.views[0].mode==='plan',views=layered?viewportMarkup(data.views[0],0,'Bottom row',active.name)+viewportMarkup(data.views[0],4,'Top row — Lifters',active.name):data.views.slice(0,data.layout).map((v,i)=>viewportMarkup(v,i,'',active.name)).join('');
+    return `<div class="tpLoadSummary"><strong>${esc(active.name)}</strong><span>${esc(length(active.length))} L × ${esc(length(active.width))} W × ${esc(length(active.height))} H</span><span>${packed} packed / ${active.items.length-packed} waiting</span><span class="${totals.overPayload?'tpWarning':''}">Packed: ${esc(weight(totals.packed))} / ${active.payload==null?'payload unknown':esc(weight(active.payload))}${totals.overPayload?' — OVER PAYLOAD':''}</span>${totals.unknown?`<span class="tpWarning">${totals.unknown} case weight${totals.unknown===1?'':'s'} unknown</span>`:''}</div><div class="tpWorkspace${data.layout===1?' tpSingleView':''}"><div class="tpViewGrid tpLayout${data.layout}">${views}</div><aside class="tpInspector" aria-label="Case details" hidden></aside></div><p class="hint">Use the cursor to select and drag cases, the hand to pan, and Rotate to orbit in 3D. Drag across empty space to select multiple cases. Shift-click adds or removes a case. Drag any selected case to move the group. Click empty space to clear selection. Lifters can sit on the floor or stack on supporting cases, on or off their wheels.${active.snapToGrid?` Grid cells are ${esc(length(active.width/4))} square, four across. Cases align from the front; existing placements stay unchanged until moved.`:''}</p>`;
   }
   function renderInspector(){
     const pane=host?.querySelector('.tpInspector'),active=truck();if(!pane||!active)return;const items=active.items.filter(i=>selectionIds().includes(i.id)),item=items[0];
@@ -92,13 +96,13 @@
     if(action==='add-case'){addCaseDialog();return}
     if(action==='snap-grid'){transaction(next=>{const t=next.trucks.find(t=>t.id===next.activeTruckId);t.snapToGrid=!t.snapToGrid});return}
     if(action==='truck'){if(!state().trucks.some(t=>t.id===target.dataset.truckId))return;state().activeTruckId=target.dataset.truckId;selected='';selectedGroup=[];save();render();return}
-    if(action==='tool'){const index=Number(target.dataset.view),v=state().views[index],tool=target.dataset.tool;if(!v||!['select','pan','rotate'].includes(tool))return;cancelDrag();selected='';selectedGroup=[];if(tool==='rotate'&&v.mode==='plan')Object.assign(v,T.view({...v,mode:'leftIso',yaw:T.cameras.leftIso[0],pitch:T.cameras.leftIso[1]}));v.tool=tool;save();render();return}
+    if(action==='tool'){const index=Number(target.dataset.view),v=sceneCamera(index),tool=target.dataset.tool;if(!v||!['select','pan','rotate'].includes(tool))return;cancelDrag();selected='';selectedGroup=[];if(tool==='rotate'&&v.mode==='plan')Object.assign(v,T.view({...v,mode:'leftIso',yaw:T.cameras.leftIso[0],pitch:T.cameras.leftIso[1]}));v.tool=tool;save();render();return}
     if(action==='unpack'||action==='remove-item'){const ids=new Set(selectionIds());transaction(next=>{const t=next.trucks.find(t=>t.id===next.activeTruckId);if(action==='remove-item')t.items=t.items.filter(i=>!ids.has(i.id));else for(const item of t.items)if(ids.has(item.id))Object.assign(item,{packed:false,x:0,y:0,z:0})});return}
-    if(['fit','zoom-in','zoom-out'].includes(action)){const v=state().views[Number(target.dataset.view)];if(action==='fit'){v.panX=0;v.panY=0}v.zoom=action==='fit'?1:Math.max(.25,Math.min(8,v.zoom*(action==='zoom-in'?1.25:.8)));save();renderScenes()}
+    if(['fit','zoom-in','zoom-out'].includes(action)){const v=sceneCamera(Number(target.dataset.view));if(action==='fit'){v.panX=0;v.panY=0}v.zoom=action==='fit'?1:Math.max(.25,Math.min(8,v.zoom*(action==='zoom-in'?1.25:.8)));save();renderScenes()}
   }
   function change(event){
     const el=event.target;
-    if(el.matches('[data-tp-layout]')){state().layout=Number(el.value);save();render();return}
+    if(el.matches('[data-tp-layout]')){state().layout=Number(el.value);if(state().layout===1)state().views[0]=T.view({...state().views[0],mode:'plan',yaw:T.cameras.plan[0],pitch:T.cameras.plan[1],tool:'select'});save();render();return}
     if(el.matches('[data-tp-perspective]')){setView(Number(el.dataset.tpPerspective),el.value);return}
     if(el.matches('[data-tp-select]')){select(el.value);return}
     const row=el.closest('[data-tp-case]');if(!row)return;
@@ -107,7 +111,7 @@
     if(!ok){if(el.type==='checkbox')el.checked=prior[key];else el.value=['width','length','height','casterHeight'].includes(key)?length(prior[key]):key==='weight'?weight(prior[key]):prior[key];return}
     const updated=state().cases.find(c=>c.id===prior.id);if(['width','length','height','casterHeight'].includes(key))el.value=length(updated[key]);if(key==='weight')el.value=weight(updated[key]);notify('Case saved.');
   }
-  function setView(index,mode){const old=state().views[index];state().views[index]=T.view({...old,mode,yaw:T.cameras[mode]?.[0]??old.yaw,pitch:T.cameras[mode]?.[1]??old.pitch},index);save();render()}
+  function setView(index,mode){index=index===4?0:index;const old=sceneCamera(index);state().views[index]=T.view({...old,mode,yaw:T.cameras[mode]?.[0]??old.yaw,pitch:T.cameras[mode]?.[1]??old.pitch},index);save();render()}
   function closeDialog(){importRequest++;dialog?.remove();dialog=null}
   function showDialog(title,markup,onSubmit){
     closeDialog();dialog=document.createElement('div');dialog.className='modal tpDialog';dialog.innerHTML=`<div class="modalCard" role="dialog" aria-modal="true" aria-label="${esc(title)}"><div class="modalHead"><h2>${esc(title)}</h2><button class="close" type="button" aria-label="Close">×</button></div><form>${markup}<div class="tpDialogError" role="alert"></div><div class="tpActions"><button class="btn" type="button" data-tp-cancel>Cancel</button><button class="btn primary" type="submit">Save</button></div></form></div>`;
@@ -156,21 +160,43 @@
   }
   function corners(b){return [[0,0,0],[1,0,0],[1,1,0],[0,1,0],[0,0,1],[1,0,1],[1,1,1],[0,1,1]].map(([x,y,z])=>({x:b.x+x*b.width,y:b.y+y*b.length,z:b.z+z*b.height}))}
   const faces=[[0,3,2,1],[0,1,5,4],[1,2,6,5],[2,3,7,6],[3,0,4,7],[4,5,6,7]],edges=[[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]];
-  function staging(active){let y=0,rowWidth=0,x=active.width+600;const map=new Map();for(const item of active.items.filter(i=>!i.packed)){const d=T.dimensions(state(),item);if(y+d.length>active.length&&y>0){x+=rowWidth+200;y=0;rowWidth=0}map.set(item.id,{x,y,z:0});y+=d.length+150;rowWidth=Math.max(rowWidth,d.width)}return map}
+  function staging(active){
+    const data=state(),key=JSON.stringify([active,active.items.map(item=>T.dimensions(data,item))]);
+    if(staging.cache?.key===key)return staging.cache.map;
+    const trial={...active,items:active.items.filter(item=>item.packed).map(item=>({...item}))},map=new Map(),parked=[];
+    for(const item of active.items.filter(item=>!item.packed)){
+      const d=T.dimensions(data,item);let target=T.firstGridPosition(data,trial,item);
+      if(!target&&item.lifter){
+        const supports=[...trial.items].sort((a,b)=>(b.y+T.dimensions(data,b).length)-(a.y+T.dimensions(data,a).length)||a.x-b.x);
+        for(const support of supports){const size=T.dimensions(data,support),position={x:support.x,y:support.y+size.length-d.length,z:support.z+size.height},result=T.placement(data,trial,item,position,false);if(!result.error){target=result.item;break}}
+      }
+      if(target)trial.items.push({...item,...target,packed:true});
+      // Keep the queue outside the truck, at its predicted loading row. Reserve
+      // each predicted space for the next case without changing saved placements.
+      const position={x:active.width+150,y:target?.y??0,z:0};
+      for(const other of parked)if(position.y<other.y+other.length&&position.y+d.length>other.y&&position.x<other.x+other.width+150)position.x=other.x+other.width+150;
+      parked.push({...position,...d});map.set(item.id,position);
+    }
+    staging.cache={key,map};return map;
+  }
   function sceneViewport(index){
     const rect=host?.querySelector(`[data-tp-scene="${index}"]`)?.getBoundingClientRect?.();
     return rect?.width>0&&rect?.height>0?{width:rect.width,height:rect.height}:{width:900,height:600};
   }
   function scene(index){
-    const active=truck(),v=state().views[index],waiting=staging(active),all=active.items.map(item=>({item,position:item.packed?item:waiting.get(item.id)}));
+    const active=truck(),v=sceneCamera(index),waiting=staging(active),all=active.items.map(item=>({item,position:item.packed?item:waiting.get(item.id)}));
     if(drag?.type==='case'){const previews=new Map((drag.previewItems||(drag.preview?[{...drag.preview,id:drag.id}]:[])).map(item=>[item.id,item]));for(const entry of all){const preview=previews.get(entry.item.id);if(preview){entry.position=preview;entry.item={...entry.item,...preview,packed:!drag.unpacked}}}}
+    const layered=state().layout===1&&v.mode==='plan',visible=layered?all.filter(({item,position})=>{
+      if(drag?.type==='case'&&drag.index===index&&(drag.id===item.id||drag.items?.some(i=>i.id===item.id)))return true;
+      const raised=item.packed&&position.z>T.EPS;return index===4?raised:!raised;
+    }):all;
     const viewport=sceneViewport(index),trailer={x:0,y:0,z:0,width:active.width,length:active.length,height:active.height},projected=corners(trailer).map(p=>T.project(p,v));
     let minX=Math.min(...projected.map(p=>p.x)),maxX=Math.max(...projected.map(p=>p.x)),minY=Math.min(...projected.map(p=>p.y)),maxY=Math.max(...projected.map(p=>p.y));
     const marginX=Math.min(30,viewport.width*.08),marginY=Math.min(70,viewport.height*.15),fit=Math.min((viewport.width-2*marginX)/Math.max(1,maxX-minX),(viewport.height-2*marginY)/Math.max(1,maxY-minY)),scale=fit*v.zoom,offsetX=viewport.width/2-(minX+maxX)/2*scale+(v.panX||0),offsetY=viewport.height/2-(minY+maxY)/2*scale+(v.panY||0),point=p=>{const q=T.project(p,v);return {...q,x:q.x*scale+offsetX,y:q.y*scale+offsetY}};
     // Hold the projection during dragging so the scene does not move under the pointer.
     const fixed=drag?.type==='case'&&drag.index===index?drag.projection:null;
-    if(fixed)return {...renderSceneData(active,all,v,fixed.point,fixed.scale,waiting,index),viewport:fixed.viewport||viewport};
-    return {...renderSceneData(active,all,v,point,scale,waiting,index),viewport};
+    if(fixed)return {...renderSceneData(active,visible,v,fixed.point,fixed.scale,waiting,index),viewport:fixed.viewport||viewport};
+    return {...renderSceneData(active,visible,v,point,scale,waiting,index),viewport};
   }
   function caseTextWidth(text){
     if(!caseTextWidth.cache)caseTextWidth.cache=new Map();
@@ -222,7 +248,7 @@
     let markup=`<polygon points="${points(tc.slice(0,4))}" fill="#edf0f3" stroke="#526274" stroke-width="2"/><path d="${outline}" stroke="#7f8a99" stroke-width="1.5" fill="none" opacity=".7" pointer-events="none"/>`;
     if(active.snapToGrid)markup+=gridMarkup(active,point);
     const rear=point({x:active.width/2,y:0,z:0}),front=point({x:active.width/2,y:active.length,z:0});markup+=`<text x="${rear.x}" y="${rear.y+22}" class="tpSceneCaption">REAR / LOAD</text><text x="${front.x}" y="${front.y-12}" class="tpSceneCaption">FRONT</text>`;
-    if(waiting.size){const p=point({x:active.width+600,y:active.length,z:0});markup+=`<text x="${p.x}" y="${p.y-24}" class="tpSceneCaption">WAITING</text>`}
+    if(all.some(entry=>!entry.item.packed)){const p=point({x:active.width+150,y:active.length,z:0});markup+=`<text x="${p.x}" y="${p.y-24}" class="tpSceneCaption">WAITING</text>`}
     const surfaces=[];
     for(const {item,position} of all){const base=T.definition(state(),item),d=T.dimensions(state(),item),b={...d,...position},selectedCase=(drag?.type==='marquee'?drag.ids:selectionIds()).includes(item.id),invalid=drag?.error&&(drag.id===item.id||drag.items?.some(i=>i.id===item.id));
       // Castors and face artwork rotate with the case when it is stood on end.
@@ -267,22 +293,22 @@
       return `<g data-tp-cube-face="${names[i]||'top'}" role="button" tabindex="0" aria-label="${names[i]||'top'} view"><polygon points="${ps.map(p=>p.x+','+p.y).join(' ')}" fill="${i===5?'#dbeafe':'#e5e9ef'}" stroke="#43536a"/>${label}</g>`;
     }).join('')}</svg><span>Drag to rotate</span>`;
   }
-  function renderScenes(){if(!host||tab!=='pack'||!truck())return;sceneMaps=[];host.querySelectorAll('[data-tp-scene]').forEach(svg=>{const index=Number(svg.dataset.tpScene),data=scene(index);sceneMaps[index]=data;svg.setAttribute('viewBox',`0 0 ${data.viewport.width} ${data.viewport.height}`);svg.innerHTML=data.markup;const cube=svg.closest('.tpViewport').querySelector('.tpCube'),v=state().views[index];cube.hidden=v.mode==='plan';cube.innerHTML=cubeMarkup(v)})}
+  function renderScenes(){if(!host||tab!=='pack'||!truck())return;sceneMaps=[];host.querySelectorAll('[data-tp-scene]').forEach(svg=>{const index=Number(svg.dataset.tpScene),data=scene(index);sceneMaps[index]=data;svg.setAttribute('viewBox',`0 0 ${data.viewport.width} ${data.viewport.height}`);svg.innerHTML=data.markup;const cube=svg.closest('.tpViewport').querySelector('.tpCube'),v=sceneCamera(index);cube.hidden=v.mode==='plan';cube.innerHTML=cubeMarkup(v)})}
   function selectionRect(a,b){return {left:Math.min(a.x,b.x),right:Math.max(a.x,b.x),top:Math.min(a.y,b.y),bottom:Math.max(a.y,b.y)}}
   function casesInSelection(boxes,rect){return boxes.filter(box=>box.left<=rect.right&&box.right>=rect.left&&box.top<=rect.bottom&&box.bottom>=rect.top).map(box=>box.id)}
   function svgPoint(event,svg){const rect=svg.getBoundingClientRect(),box=svg.viewBox?.baseVal,width=box?.width||900,height=box?.height||600,ratio=Math.min(rect.width/width,rect.height/height),left=rect.left+(rect.width-width*ratio)/2,top=rect.top+(rect.height-height*ratio)/2;return {x:(event.clientX-left)/ratio,y:(event.clientY-top)/ratio}}
   function pointerDown(event){
     if(event.button!==0||tab!=='pack')return;const cube=event.target.closest('[data-tp-cube]'),svg=event.target.closest('[data-tp-scene]');
-    if(cube){const index=Number(cube.dataset.tpCube),v=state().views[index];drag={type:'orbit',pointerId:event.pointerId,index,model:state(),original:{...v},startX:event.clientX,startY:event.clientY,yaw:v.yaw,pitch:v.pitch,face:event.target.closest('[data-tp-cube-face]')?.dataset.tpCubeFace,moved:false};host.setPointerCapture(event.pointerId);event.preventDefault();return}
-    if(!svg)return;const index=Number(svg.dataset.tpScene),v=state().views[index],tool=v.tool||'select';
+    if(cube){const index=Number(cube.dataset.tpCube),v=sceneCamera(index);drag={type:'orbit',pointerId:event.pointerId,index,model:state(),original:{...v},startX:event.clientX,startY:event.clientY,yaw:v.yaw,pitch:v.pitch,face:event.target.closest('[data-tp-cube-face]')?.dataset.tpCubeFace,moved:false};host.setPointerCapture(event.pointerId);event.preventDefault();return}
+    if(!svg)return;const index=Number(svg.dataset.tpScene),v=sceneCamera(index),tool=v.tool||'select';
     if(tool==='pan'||tool==='rotate'){selected='';selectedGroup=[];renderInspector();renderScenes();drag={type:tool==='pan'?'pan':'orbit',index,model:state(),original:{...v},start:svgPoint(event,svg),startX:event.clientX,startY:event.clientY,yaw:v.yaw,pitch:v.pitch,pointerId:event.pointerId,moved:false};host.setPointerCapture(event.pointerId);event.preventDefault();return}
-    const target=event.target.closest('[data-tp-item]');if(!target){const start=svgPoint(event,svg);drag={type:'marquee',index,start,current:start,ids:[],base:event.shiftKey?selectionIds():[],boxes:sceneMaps[index]?.hitBoxes||[],pointerId:event.pointerId,moved:false};host.setPointerCapture(event.pointerId);event.preventDefault();return}const item=truck().items.find(i=>i.id===target.dataset.tpItem);if(!item)return;if(event.shiftKey){const ids=new Set(selectionIds());ids.has(item.id)?ids.delete(item.id):ids.add(item.id);selectedGroup=[...ids];selected=selectedGroup[0]||'';renderInspector();renderScenes();event.preventDefault();return}if(!selectionIds().includes(item.id))selectedGroup=[item.id];selected=item.id;renderInspector();renderScenes();const projection=sceneMaps[index],origin=item.packed?{x:item.x,y:item.y,z:item.z}:projection.waiting.get(item.id),mode=state().views[index].mode,camera=state().views[index],edgeOn=mode==='orbit'&&Math.abs(Math.sin(camera.pitch*Math.PI/180))<.15,plane=['left','right'].includes(mode)?'yz':['front','back'].includes(mode)?'xz':edgeOn?(Math.abs(Math.sin(camera.yaw*Math.PI/180))>Math.abs(Math.cos(camera.yaw*Math.PI/180))?'yz':'xz'):'xy';drag={type:'case',pointerId:event.pointerId,index,id:item.id,item:{...item},start:svgPoint(event,svg),origin:{...origin,...(!item.packed&&plane==='yz'?{x:0}:{}),...(!item.packed&&plane==='xz'?{y:0}:{})},projection,plane,preview:null,error:'',moved:false};if(selectionIds().length>1){const offset={x:drag.origin.x-origin.x,y:drag.origin.y-origin.y,z:0};drag.items=truck().items.filter(i=>selectionIds().includes(i.id)).map(i=>{const p=i.packed?i:projection.waiting.get(i.id);return {...i,x:p.x+offset.x,y:p.y+offset.y,z:p.z}})}host.setPointerCapture(event.pointerId);event.preventDefault();renderScenes();
+    const target=event.target.closest('[data-tp-item]');if(!target){const start=svgPoint(event,svg);drag={type:'marquee',index,start,current:start,ids:[],base:event.shiftKey?selectionIds():[],boxes:sceneMaps[index]?.hitBoxes||[],pointerId:event.pointerId,moved:false};host.setPointerCapture(event.pointerId);event.preventDefault();return}const item=truck().items.find(i=>i.id===target.dataset.tpItem);if(!item)return;if(event.shiftKey){const ids=new Set(selectionIds());ids.has(item.id)?ids.delete(item.id):ids.add(item.id);selectedGroup=[...ids];selected=selectedGroup[0]||'';renderInspector();renderScenes();event.preventDefault();return}if(!selectionIds().includes(item.id))selectedGroup=[item.id];selected=item.id;renderInspector();renderScenes();const projection=sceneMaps[index],origin=item.packed?{x:item.x,y:item.y,z:item.z}:projection.waiting.get(item.id),mode=sceneCamera(index).mode,camera=sceneCamera(index),edgeOn=mode==='orbit'&&Math.abs(Math.sin(camera.pitch*Math.PI/180))<.15,plane=['left','right'].includes(mode)?'yz':['front','back'].includes(mode)?'xz':edgeOn?(Math.abs(Math.sin(camera.yaw*Math.PI/180))>Math.abs(Math.cos(camera.yaw*Math.PI/180))?'yz':'xz'):'xy';drag={type:'case',pointerId:event.pointerId,index,id:item.id,item:{...item},start:svgPoint(event,svg),origin:{...origin,...(!item.packed&&plane==='yz'?{x:0}:{}),...(!item.packed&&plane==='xz'?{y:0}:{})},projection,plane,preview:null,error:'',moved:false};if(selectionIds().length>1){const offset={x:drag.origin.x-origin.x,y:drag.origin.y-origin.y,z:0};drag.items=truck().items.filter(i=>selectionIds().includes(i.id)).map(i=>{const p=i.packed?i:projection.waiting.get(i.id);return {...i,x:p.x+offset.x,y:p.y+offset.y,z:p.z}})}host.setPointerCapture(event.pointerId);event.preventDefault();renderScenes();
   }
   function pointerMove(event){
     if(!drag)return;
     if(drag.type==='marquee'){drag.current=svgPoint(event,host.querySelector(`[data-tp-scene="${drag.index}"]`));if(Math.abs(drag.current.x-drag.start.x)+Math.abs(drag.current.y-drag.start.y)>3)drag.moved=true;drag.ids=[...new Set([...drag.base,...casesInSelection(drag.boxes,selectionRect(drag.start,drag.current))])];renderScenes();return}
-    if(drag.type==='pan'){const svg=host.querySelector(`[data-tp-scene="${drag.index}"]`),p=svgPoint(event,svg),v=state().views[drag.index];v.panX=Math.max(-100000,Math.min(100000,(drag.original.panX||0)+p.x-drag.start.x));v.panY=Math.max(-100000,Math.min(100000,(drag.original.panY||0)+p.y-drag.start.y));drag.moved=true;renderScenes();return}
-    if(drag.type==='orbit'){const dx=event.clientX-drag.startX,dy=event.clientY-drag.startY;if(Math.abs(dx)+Math.abs(dy)>3)drag.moved=true;const v=state().views[drag.index];v.mode='orbit';v.yaw=drag.yaw+dx*.65;v.pitch=Math.max(-60,Math.min(89,drag.pitch-dy*.65));renderScenes();return}
+    if(drag.type==='pan'){const svg=host.querySelector(`[data-tp-scene="${drag.index}"]`),p=svgPoint(event,svg),v=sceneCamera(drag.index);v.panX=Math.max(-100000,Math.min(100000,(drag.original.panX||0)+p.x-drag.start.x));v.panY=Math.max(-100000,Math.min(100000,(drag.original.panY||0)+p.y-drag.start.y));drag.moved=true;renderScenes();return}
+    if(drag.type==='orbit'){const dx=event.clientX-drag.startX,dy=event.clientY-drag.startY;if(Math.abs(dx)+Math.abs(dy)>3)drag.moved=true;const v=sceneCamera(drag.index);v.mode='orbit';v.yaw=drag.yaw+dx*.65;v.pitch=Math.max(-60,Math.min(89,drag.pitch-dy*.65));renderScenes();return}
     const svg=host.querySelector(`[data-tp-scene="${drag.index}"]`),p=svgPoint(event,svg),dx=(p.x-drag.start.x)/drag.projection.scale,dy=(p.y-drag.start.y)/drag.projection.scale,delta=T.unprojectDelta(dx,dy,drag.projection.camera,drag.plane);if(!delta)return;if(Math.abs(dx)+Math.abs(dy)>5)drag.moved=true;
     const proposed={x:drag.origin.x+delta.x,y:drag.origin.y+delta.y,z:Math.max(0,drag.origin.z+delta.z)},active=truck();
     if(drag.items){
@@ -305,6 +331,6 @@
     if(current.previewItems){const moved=new Map(current.previewItems.map(item=>[item.id,item]));transaction(next=>{const t=next.trucks.find(t=>t.id===next.activeTruckId);t.items=t.items.map(item=>!moved.has(item.id)?item:current.unpacked?{...item,packed:false,x:0,y:0,z:0}:{...item,...moved.get(item.id),packed:true})});return}
     if(current.preview)transaction(next=>{const t=next.trucks.find(t=>t.id===next.activeTruckId),i=t.items.findIndex(i=>i.id===current.id);t.items[i]=current.unpacked?{...t.items[i],packed:false,x:0,y:0,z:0}:{...t.items[i],...current.preview,packed:true}});
   }
-  function cancelDrag(){if(['orbit','pan'].includes(drag?.type)&&callbacks&&drag.model===state())state().views[drag.index]={...drag.original};if(drag?.pointerId!==undefined){try{host?.releasePointerCapture(drag.pointerId)}catch{}}drag=null}
+  function cancelDrag(){if(['orbit','pan'].includes(drag?.type)&&callbacks&&drag.model===state())state().views[drag.index===4?0:drag.index]={...drag.original};if(drag?.pointerId!==undefined){try{host?.releasePointerCapture(drag.pointerId)}catch{}}drag=null}
   root.LampyTruckPackView={mount,destroy,reset,setTab,getTab:()=>tab,labels};
 })(globalThis);

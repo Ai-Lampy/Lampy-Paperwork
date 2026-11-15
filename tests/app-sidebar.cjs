@@ -191,7 +191,7 @@ for(const origin of ['home','fixturePatch','powerSheet','deviceConfig','looms','
 }
 console.log('PASS: every Home submenu opens and renders its Settings destination from other pages, with one active route.');
 context.activeSheetTab='fixturePatch';let routes=context.sheetSubMenuRoutes('fixturePatch');assert(routes[0].active);assert(routes[0].compactDuplicate);
-context.app.patchSheets=[{id:'a',name:'Show A'},{id:'b',name:'Show B'}];context.activePatchSheetId='b';routes=context.sheetSubMenuRoutes('fixturePatch');assert(!routes[0].compactDuplicate);assert.deepEqual(Array.from(routes.filter(r=>r.active),r=>r.label),['Show B']);assert.equal(routes.at(-1).label,'Universe Detail');
+context.app.patchSheets=[{id:'a',name:'Show A'},{id:'b',name:'Show B'}];context.activePatchSheetId='b';routes=context.sheetSubMenuRoutes('fixturePatch');assert(!routes[0].compactDuplicate);assert.deepEqual(Array.from(routes.filter(r=>r.active),r=>r.label),['Show B']);assert.equal(routes.at(-2).label,'Universe Detail');assert.equal(routes.at(-1).label,'Position Summary');
 for(const [page,group,key,value,label] of [['powerSheet','powerSheet','activePowerSubTab','fanOuts','Fan Outs'],['deviceConfig','network','activeNetworkSubTab','portConfiguration','Port Configuration'],['looms','looms','activeLoomSubTab','cableList','Cable List'],['distroLabels','distroLabels','activeDistroLabelTab','rear','Rear Labels'],['controlNetwork','rackLayout','activeControlNetworkTab','racks','Rack']]){context.activeSheetTab=page;context[key]=value;assert.deepEqual(Array.from(context.sheetSubMenuRoutes(group).filter(r=>r.active),r=>r.label),[label]);assert(context.applicationPageHelp().length>50)}
 const data=new Map(),localStorage={getItem:key=>data.get(key),setItem:(key,value)=>data.set(key,value)};
 function loomContext(){const c=vm.createContext({localStorage,collapsedLoomCards:new Set(),knownLoomCardStates:new Set(),loomById:id=>({id}),loomDescendantIds:()=>new Set(['child']),render(){}});for(const name of ['initialiseLoomCardState','saveLoomCardState','toggleLoomCard'])vm.runInContext(appFunction(name),c);return c}
@@ -251,3 +251,17 @@ for(const expanded of [false,true]){
  assert.equal(context.projectSettingsNavExpanded,expanded,'Opening Settings preserves manual disclosure state');
 }
 console.log('PASS: Settings preserves sidebar disclosure state and exposes compact child destinations through its hover/focus flyout.');
+
+// Both menus open the same Position Summary page with the clicked parent active.
+{
+ let renders=0,syncs=0;const nav=vm.createContext({app:{patchSheets:[]},activeSheetTab:'looms',activePatchSheetId:'master',activeProjectTab:'general',activeControlNetworkTab:'control',activeDistroLabelTab:'labels',positionsReturnState:{tab:'home'},distroRanges:()=>[],normalisePatchSheets:v=>v,projectSettingsTabLabel:key=>key,syncPositionsFromPatch:()=>syncs++,closeSheetSubMenus(){},render:()=>renders++});
+ for(const name of ['sheetSubMenuRoutes','openPositionMenu','closePositionMenu'])vm.runInContext(appFunction(name),nav);
+ for(const parent of ['home','fixturePatch']){
+  nav.activeSheetTab='looms';const route=nav.sheetSubMenuRoutes(parent).find(r=>r.label==='Position Summary');assert(route);assert(!route.active);assert(!route.compactDuplicate);route.run();assert.equal(nav.activeSheetTab,'positions');assert.equal(nav.positionsReturnState.tab,parent);assert.equal(nav.sheetSubMenuRoutes(parent).filter(r=>r.active).length,1);assert(nav.sheetSubMenuRoutes(parent).find(r=>r.label==='Position Summary').active);
+  const other=parent==='home'?'fixturePatch':'home';assert(!nav.sheetSubMenuRoutes(other).find(r=>r.label==='Position Summary').active);nav.closePositionMenu();assert.equal(nav.activeSheetTab,parent);
+ }
+ nav.sheetSubMenuRoutes('home').at(-1).run();nav.sheetSubMenuRoutes('fixturePatch').at(-1).run();assert.equal(nav.positionsReturnState.tab,'fixturePatch');nav.closePositionMenu();assert.equal(nav.activeSheetTab,'fixturePatch');
+ nav.activeSheetTab='home';nav.openPositionMenu();assert.equal(nav.positionsReturnState.tab,'home');nav.closePositionMenu();assert.equal(nav.activeSheetTab,'home');assert(renders>0&&syncs>0);
+ for(const parent of ['home','fixturePatch'])assert.equal(sidebar.subPageIcon(parent,'Position Summary'),'list');
+}
+console.log('PASS: Position Summary under Home and Fixture Patch, correct parent highlighting and return navigation, and compact-menu icons.');

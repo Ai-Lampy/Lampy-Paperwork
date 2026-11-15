@@ -1,3 +1,16 @@
+## V57.22 — Truck Pack floor and lifter plans
+
+- Align Waiting cases beside their next available loading rows without changing saved placements.
+- Show paired 2D Top/Plan viewers: floor cases on the left and cases actually stacked above the floor on the right.
+- Share plan pan, zoom and Fit controls; keep selection and dragging limited to visible layers.
+- Restore Case Details to the far-right column in the plan layout.
+
+## V57.21 — Position Summary navigation
+
+- Add Position Summary to both Home and Fixture Patch navigation menus.
+- Keep the Home entry outside the collapsible Project Settings group.
+- Highlight and return to the menu used to open Position Summary.
+
 ## V57.20 — Stable Truck Pack viewer and Fit
 
 - Keep status and inspector layout space stable during case selection and dragging to prevent page movement.
