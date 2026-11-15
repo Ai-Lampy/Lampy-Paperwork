@@ -3,7 +3,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const T=require('../js/truck-pack.js'),root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),ui=fs.readFileSync(path.join(root,'js/truck-pack-view.js'),'utf8');
 function fn(text,name){const start=text.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=text.indexOf('}',start);end>=0;end=text.indexOf('}',end+1)){const value=text.slice(start,end+1);try{new Function('return ('+value+')');return value}catch{}}throw Error(name)}
 const sharedColourContext=vm.createContext({colourTextToHex:value=>String(value||'').trim().toLowerCase(),normaliseHex:value=>String(value||'').toLowerCase()});vm.runInContext(fn(html,'colourSetPresentation'),sharedColourContext);
-function testContext(values){if(values.host&&!values.host.querySelector)values.host.querySelector=()=>null;const context=vm.createContext({root:{},callbacks:{colourPresentation:values=>sharedColourContext.colourSetPresentation(values),stripeWidth:()=>4*96/25.4},selectedGroup:[],inspectorObserver:null,...values});for(const name of ['gridMarkup','caseFaceFrame','caseColourMarkup','caseTextWidth','fitCaseLabel','caseLabelMarkup','selectionIds','selectionRect','casesInSelection','syncInspectorHeight','observeInspector'])vm.runInContext(fn(ui,name),context);return context}
+function testContext(values){if(values.host&&!values.host.querySelector)values.host.querySelector=()=>null;const context=vm.createContext({root:{},host:null,renderScenes(){},callbacks:{colourPresentation:values=>sharedColourContext.colourSetPresentation(values),stripeWidth:()=>4*96/25.4},selectedGroup:[],inspectorObserver:null,...values});for(const name of ['sceneViewport','gridMarkup','caseFaceFrame','caseColourMarkup','caseTextWidth','fitCaseLabel','caseLabelMarkup','selectionIds','selectionRect','casesInSelection','syncInspectorHeight','observeInspector'])vm.runInContext(fn(ui,name),context);return context}
 const close=(a,b)=>assert(Math.abs(a-b)<.01,`${a} != ${b}`);
 for(const [input,expected] of [['1 m',1000],['12.5 cm',125],['600 mm',600],[`5' 6"`,1676.4],['12"',304.8],[`1' 2 1/2"`,368.3],['½ m',null],['1/2"',12.7]])if(expected===null)assert.throws(()=>T.parseLength(input));else close(T.parseLength(input),expected);
 for(const invalid of ['600','-1 m','NaN mm','1/0"','0 mm','10 yards','2 m garbage'])assert.throws(()=>T.parseLength(invalid));
@@ -95,7 +95,7 @@ assert(fn(html,'appPayload').includes('truckPack:app.truckPack'));assert(fn(html
 {
  const moduleContext=testContext({LampyTruckPack:T});vm.runInContext(ui,moduleContext);
  const viewLabels=moduleContext.LampyTruckPackView.labels;
- assert.deepEqual(Object.values(viewLabels).slice(0,8),['2D Top / Plan','3D Top','3D Left','3D Right','3D Back','3D Front','3D Left Isometric','3D Right Isometric']);
+ assert.deepEqual(Object.values(viewLabels).slice(0,8),['2D Top/Plan','3D Top','3D Left','3D Right','3D Back','3D Front','3D Left Isometric','3D Right Isometric']);
  let fresh=T.empty(),submit,formValues={},lastMarkup='',saves=0;
  const modal={querySelector:()=>({value:'',textContent:'',onchange:null}),querySelectorAll:()=>[]};
  const c=testContext({T,labels:viewLabels,esc:v=>String(v??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;'),state:()=>fresh,unit:()=>({measurement:'metric',weight:'kg'}),length:v=>T.formatLength(v),weight:v=>T.formatWeight(v),callbacks:{colourControl:()=>'<input name="colour">',colourHex:v=>v},FormData:class{get(k){return formValues[k]??''}},showDialog:(title,markup,callback)=>{submit=callback;lastMarkup=markup;return modal},replace:next=>{fresh=T.normalise(next);saves++},closeDialog(){},render(){},selected:'',tab:'pack'});
@@ -249,7 +249,7 @@ console.log('PASS: Truck Pack navigation routes, active sub-tabs, truck selectio
  values={quantity_a:2,quantity_b:3};submit({});assert.equal(data.trucks[0].items.length,5);assert(data.trucks[0].items.every(item=>!item.packed));assert.equal(saved,1);assert.equal(closed,1);assert.equal(context.selected,'');
 }
 {
- const css=fs.readFileSync(path.join(root,'js/truck-pack.css'),'utf8');assert(css.includes('.tpToolbar button,.tpActions button{zoom:0.85}'));assert(css.includes('.tpActions{gap:4px;align-items:center}'));assert(css.includes('.tpInspector[hidden]{display:none}'));
+ const css=fs.readFileSync(path.join(root,'js/truck-pack.css'),'utf8');assert(css.includes('.tpToolbar button,.tpActions button{zoom:0.85}'));assert(css.includes('.tpActions{gap:4px;align-items:center}'));assert(css.includes('.tpInspector[hidden]{display:block;visibility:hidden;pointer-events:none}'));
  assert(!fn(ui,'packMarkup').includes('data-tp-inventory'));assert(!fn(ui,'packMarkup').includes('data-tp-quantity'));assert(!fn(ui,'packMarkup').includes('data-tp-truck'));
  assert(fn(ui,'render').includes('data-truck-id'));assert(fn(ui,'render').includes("button('add-case','Add case')"));
  const context=testContext({});vm.runInContext(ui.split('\n').find(line=>line.trim().startsWith('const button=')),context);vm.runInContext(fn(ui,'sceneTools'),context);
@@ -305,7 +305,7 @@ console.log('PASS: Truck Pack pan/select/rotate, conditional details, outside de
  const host={innerHTML:''},context=testContext({host,tab:'pack',selected:'',message:'',state:()=>data,truck:()=>data.trucks[0],callbacks:{},cancelDrag(){},packMarkup:()=>'<div>Pack content</div>',click(){},change(){},pointerDown(){},pointerMove(){},pointerUp(){},renderInspector(){},renderScenes(){},esc:String});
  for(const name of ['button','field'])vm.runInContext(ui.split('\n').find(line=>line.trim().startsWith('const '+name+'=')),context);
  vm.runInContext(fn(ui,'render'),context);
- for(const layout of [1,2,4]){data.layout=layout;context.render();const actions=host.innerHTML.slice(host.innerHTML.indexOf('<div class="tpActions">'),host.innerHTML.indexOf('<div class="tpMessage'));assert(actions.includes('data-tp-layout'));assert(actions.includes('value="'+layout+'" selected'));assert(actions.includes('data-tp-action="add-case"'));assert(host.innerHTML.includes('data-truck-id="toolbar"'));}
+ for(const layout of [1,2,4]){data.layout=layout;context.render();const actions=host.innerHTML.slice(host.innerHTML.indexOf('<div class="tpActions">'),host.innerHTML.indexOf('<div class="tpMessage'));assert(actions.includes('data-tp-layout'));assert(actions.includes('>2D Top/Plan</option>'));assert(!actions.includes('>Single</option>'));assert(actions.includes('value="'+layout+'" selected'));assert(actions.includes('data-tp-action="add-case"'));assert(host.innerHTML.includes('data-truck-id="toolbar"'));}
 }
 
 // Catalogue deletion removes every instance across trucks, preserving trucks and supported loads.
@@ -604,3 +604,31 @@ console.log('PASS: always-visible single/bulk lifter controls, untouched mixed v
  assert(fs.readFileSync(path.join(root,'js/truck-pack.css'),'utf8').includes('.tpSceneWrap{position:relative;min-width:0;height:clamp(700px,58vh,800px);overflow:hidden}'));
 }
 console.log('PASS: rigid group moves, shared wheels/Waiting/removal, atomic collision and support checks, floor lifters, persistent single-view inspector and taller viewer.');
+
+// Fit fills each real viewport, ignoring off-truck inventory and preserving pointer alignment.
+{
+ const data=T.empty();data.cases=[base('fit-case')];data.trucks=[T.normaliseTruck({...T.presets.find(p=>p.id==='mega-box'),id:'fit-truck',items:[]})];data.activeTruckId='fit-truck';const truck=data.trucks[0];
+ const rectangles=[{left:25,top:120,width:350,height:700},{left:390,top:120,width:600,height:450}],svgs=rectangles.map((rect,index)=>({dataset:{tpScene:String(index)},viewBox:{baseVal:{width:900,height:600}},getBoundingClientRect:()=>rect,setAttribute(name,value){assert.equal(name,'viewBox');const [, ,width,height]=value.split(' ').map(Number);this.viewBox.baseVal={width,height}},closest:()=>({querySelector:()=>({hidden:false,innerHTML:''})}),innerHTML:''}));
+ const host={querySelector:selector=>svgs[Number(selector.match(/"(\d+)"/)?.[1]||0)],querySelectorAll:()=>svgs,contains:()=>true};let saves=0;
+ const ctx=testContext({T,host,tab:'pack',drag:null,selected:'',state:()=>data,truck:()=>truck,sceneMaps:[],esc:String,save:()=>saves++});vm.runInContext(ui.split('\n').find(line=>line.includes('const faces=')),ctx);for(const name of ['corners','staging','scene','renderSceneData','partMesh','cubeMarkup','renderScenes','svgPoint','click'])vm.runInContext(fn(ui,name),ctx);
+ data.views[0]=T.view({mode:'plan',zoom:.25,panX:200,panY:-400});data.views[1]=T.view({mode:'leftIso'});
+ const action=(name,index=0)=>ctx.click({target:{closest:()=>({dataset:{tpAction:name,view:String(index)}})}});
+ action('fit');assert.equal(saves,1);assert.equal(data.views[0].zoom,1);assert.equal(data.views[0].panX,0);assert.equal(data.views[0].panY,0);assert.equal(data.views[1].mode,'leftIso');assert.deepEqual(svgs[0].viewBox.baseVal,{width:350,height:700});
+ const fit=ctx.sceneMaps[0],rear=fit.point({x:0,y:0,z:0}),front=fit.point({x:0,y:truck.length,z:0});assert(Math.abs(front.y-rear.y)>=550,'the long truck fills the tall viewport instead of a small landscape strip');const initialScale=fit.scale;
+ T.addItems(data,truck.id,'fit-case',80);ctx.renderScenes();assert.equal(ctx.sceneMaps[0].scale,initialScale,'Waiting cases cannot shrink the fitted truck');
+ for(const mode of T.perspectives.filter(mode=>mode!=='orbit')){data.views[0]=T.view({mode});ctx.renderScenes();const rendered=ctx.sceneMaps[0];for(const p of ctx.corners({x:0,y:0,z:0,width:truck.width,length:truck.length,height:truck.height}).map(rendered.point)){assert(p.x>=0&&p.x<=350);assert(p.y>=0&&p.y<=700)}
+  const world={x:truck.width*.35,y:truck.length*.6,z:0},screen=rendered.point(world),pointer=ctx.svgPoint({clientX:rectangles[0].left+screen.x,clientY:rectangles[0].top+screen.y},svgs[0]);close(pointer.x,screen.x);close(pointer.y,screen.y);
+ }
+ data.views[0]=T.view({mode:'plan'});action('fit');const beforeZoom=ctx.sceneMaps[0].scale;action('zoom-in');assert(ctx.sceneMaps[0].scale>beforeZoom);action('fit');close(ctx.sceneMaps[0].scale,beforeZoom);
+ rectangles[0].width=300;rectangles[0].height=520;ctx.renderScenes();assert.deepEqual(svgs[0].viewBox.baseVal,{width:300,height:520});assert.equal(ctx.sceneMaps[0].viewport.width,300);
+ // Pointer conversion also handles a resized viewport before its next redraw.
+ rectangles[0].width=600;rectangles[0].height=1040;const point=ctx.svgPoint({clientX:25+200,clientY:120+400},svgs[0]);close(point.x,100);close(point.y,200);
+}
+// Selection/status updates keep their layout boxes rather than shifting the page.
+{
+ const css=fs.readFileSync(path.join(root,'js/truck-pack.css'),'utf8'),rule=selector=>css.split('}').map(block=>block.split('{')).find(parts=>parts[0].trim()===selector)?.[1];
+ assert(rule('.tpMessage').includes('height:52px'));assert(rule('.tpMessage').includes('overflow:auto'));assert.equal(rule('.tpMessage:empty'),'visibility:hidden');assert(rule('.tpWorkspace').includes('grid-template-columns:minmax(0,1fr) 290px'));assert(!css.includes('.tpWorkspace.hasSelection{'));
+ assert.equal(rule('.tpInspector[hidden]'),'display:block;visibility:hidden;pointer-events:none');assert(rule('.truckPackView').includes('overflow-anchor:none'));
+ assert(rule('.tpLayout1 .tpViewport').includes('width:350px'));assert(!/(?:^|;)width:/.test(rule('.tpViewport')),'multiple-view widths remain flexible');assert(rule('.tpWorkspace.tpSingleView').includes('minmax(0,350px) 290px'));
+}
+console.log('PASS: real-viewport truck fitting, no Waiting-driven shrinking, zoom reset, resize/pointer alignment, 350px single view and stable selection/status layout boxes.');

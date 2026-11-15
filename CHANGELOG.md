@@ -1,3 +1,10 @@
+## V57.20 — Stable Truck Pack viewer and Fit
+
+- Keep status and inspector layout space stable during case selection and dragging to prevent page movement.
+- Limit the single-view viewport to 350px wide and rename its Views option to 2D Top/Plan.
+- Fit the truck to the actual viewport dimensions rather than a fixed landscape canvas or off-truck Waiting cases.
+- Keep pointer coordinates aligned with the resized view and update the fit when the viewport changes size.
+
 ## V57.19 — Truck Pack group controls
 
 - Drag any selected case to move the whole selection, preserving relative positions and validating the complete move before saving.
