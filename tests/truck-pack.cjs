@@ -3,7 +3,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const T=require('../js/truck-pack.js'),root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),ui=fs.readFileSync(path.join(root,'js/truck-pack-view.js'),'utf8');
 function fn(text,name){const start=text.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=text.indexOf('}',start);end>=0;end=text.indexOf('}',end+1)){const value=text.slice(start,end+1);try{new Function('return ('+value+')');return value}catch{}}throw Error(name)}
 const sharedColourContext=vm.createContext({colourTextToHex:value=>String(value||'').trim().toLowerCase(),normaliseHex:value=>String(value||'').toLowerCase()});vm.runInContext(fn(html,'colourSetPresentation'),sharedColourContext);
-function testContext(values){if(values.host&&!values.host.querySelector)values.host.querySelector=()=>null;const context=vm.createContext({root:{},callbacks:{colourPresentation:values=>sharedColourContext.colourSetPresentation(values),stripeWidth:()=>4*96/25.4},selectedGroup:[],inspectorObserver:null,...values});for(const name of ['gridMarkup','caseColourMarkup','caseTextWidth','fitCaseLabel','caseLabelMarkup','selectionIds','selectionRect','casesInSelection','syncInspectorHeight','observeInspector'])vm.runInContext(fn(ui,name),context);return context}
+function testContext(values){if(values.host&&!values.host.querySelector)values.host.querySelector=()=>null;const context=vm.createContext({root:{},callbacks:{colourPresentation:values=>sharedColourContext.colourSetPresentation(values),stripeWidth:()=>4*96/25.4},selectedGroup:[],inspectorObserver:null,...values});for(const name of ['gridMarkup','caseFaceFrame','caseColourMarkup','caseTextWidth','fitCaseLabel','caseLabelMarkup','selectionIds','selectionRect','casesInSelection','syncInspectorHeight','observeInspector'])vm.runInContext(fn(ui,name),context);return context}
 const close=(a,b)=>assert(Math.abs(a-b)<.01,`${a} != ${b}`);
 for(const [input,expected] of [['1 m',1000],['12.5 cm',125],['600 mm',600],[`5' 6"`,1676.4],['12"',304.8],[`1' 2 1/2"`,368.3],['½ m',null],['1/2"',12.7]])if(expected===null)assert.throws(()=>T.parseLength(input));else close(T.parseLength(input),expected);
 for(const invalid of ['600','-1 m','NaN mm','1/0"','0 mm','10 yards','2 m garbage'])assert.throws(()=>T.parseLength(invalid));
@@ -50,7 +50,7 @@ for(const mode of T.perspectives.filter(k=>k!=='orbit')){const camera=T.view({mo
 const c=testContext({T,drag:null,selected:upper.id,state:()=>model,truck:()=>truck,esc:v=>String(v).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;'),Math});
 vm.runInContext(ui.split('\n').find(line=>line.includes('const faces=')),c);
 for(const name of ['corners','staging','scene','renderSceneData','partMesh','cubeMarkup'])vm.runInContext(fn(ui,name),c);
-for(const mode of T.perspectives.filter(v=>v!=='orbit')){model.views[0]=T.view({mode,yaw:T.cameras[mode][0],pitch:T.cameras[mode][1]});const result=c.scene(0);assert(result.markup.includes('base'));assert(result.markup.includes('small'));assert(!/NaN|Infinity/.test(result.markup),mode);for(const match of result.markup.matchAll(/matrix\(([-.\d]+) ([-.\d]+) ([-.\d]+) ([-.\d]+) /g)){const [a,b,c,d]=match.slice(1).map(Number);assert(a>=0&&a*d-b*c>0,'3D labels read left-to-right without mirroring');}assert(result.markup.includes('data-tp-item'));assert(result.markup.includes('REAR / LOAD'));if(mode!=='plan'){assert(result.markup.includes('#303844'),'3D shows castors');assert(c.cubeMarkup(model.views[0]).includes('data-tp-cube-face="top"'));}}
+for(const mode of T.perspectives.filter(v=>v!=='orbit')){model.views[0]=T.view({mode,yaw:T.cameras[mode][0],pitch:T.cameras[mode][1]});const result=c.scene(0);assert(result.markup.includes('base'));assert(result.markup.includes('small'));assert(!/NaN|Infinity/.test(result.markup),mode);for(const match of result.markup.matchAll(/matrix\(([-.\d]+) ([-.\d]+) ([-.\d]+) ([-.\d]+) /g)){const [a,b,c,d]=match.slice(1).map(Number);assert(Math.abs(a*d-b*c)>0,'case artwork retains an invertible face projection');}assert(result.markup.includes('data-tp-item'));assert(result.markup.includes('REAR / LOAD'));if(mode!=='plan'){assert(result.markup.includes('#303844'),'3D shows castors');assert(c.cubeMarkup(model.views[0]).includes('data-tp-cube-face="top"'));}}
 const staged=T.addItems(model,'truck','small',2);assert.equal(c.staging(truck).size,2);assert(c.scene(0).markup.includes('WAITING'));assert.deepEqual(model.views.slice(1),T.empty().views.slice(1),'changing one camera leaves other windows alone');
 // Metadata can be saved while a case is still waiting; packing is a separate action.
 const formValues={name:'Edited waiting case',department:'Lighting',colour:'#123456',rideOnWheels:'no',lifter:'yes',rotation:'90',x:'0 mm',y:'0 mm',z:'0 mm'},edit=testContext({T,FormData:class{get(k){return formValues[k]}},selected:staged[0].id,state:()=>model,callbacks:{colourHex:v=>v},transaction:change=>change(model)});vm.runInContext(fn(ui,'readCaseColours'),edit);vm.runInContext(fn(ui,'applyItem'),edit);edit.applyItem({},false);assert.equal(staged[0].packed,false);assert.equal(truck.items.find(i=>i.id===staged[0].id).name,'Edited waiting case');
@@ -195,7 +195,7 @@ console.log('PASS: Truck Pack navigation routes, active sub-tabs, truck selectio
  const render=testContext({T,drag:null,selected:'',state:()=>data,truck:()=>data.trucks[0],esc:String,Math});
  vm.runInContext(ui.split('\n').find(line=>line.includes('const faces=')),render);
  for(const name of ['corners','staging','scene','renderSceneData','partMesh','cubeMarkup'])vm.runInContext(fn(ui,name),render);
- for(const mode of ['plan','leftIso']){data.views[0]=T.view({mode});const result=render.scene(0);for(const colour of ['#ff0000','#00ff00','#0000ff'])assert(result.markup.includes('fill="'+colour+'"'));assert(result.markup.includes('fill="url(#tp-colours-0-'+item.id+')"'));}
+ for(const mode of ['plan','leftIso']){data.views[0]=T.view({mode});const result=render.scene(0);for(const colour of ['#ff0000','#00ff00','#0000ff'])assert(result.markup.includes('fill="'+colour+'"'));assert(result.markup.includes('fill="url(#tp-colours-0-'+item.id+'-'));}
  const before=render.scene(0).point({x:0,y:0,z:0});data.views[0].panX=82;data.views[0].panY=-36;const after=render.scene(0).point({x:0,y:0,z:0});close(after.x-before.x,82);close(after.y-before.y,-36);
 }
 // Scene tools change only their viewport; pan/orbit never move case geometry.
@@ -378,9 +378,9 @@ console.log('PASS: catalogue/instance separation, marquee selection, shared edit
  const fitted=ctx.fitCaseLabel(names[0],120,80);assert(fitted.lines.length>1,'use multiple lines instead of squeezing a whole name onto one line');
  assert(ctx.fitCaseLabel(names[0],30,20).size<fitted.size,'small footprints reduce font size');
  for(const q of [[{x:0,y:0},{x:120,y:0},{x:120,y:80},{x:0,y:80}],[{x:200,y:50},{x:80,y:20},{x:60,y:100},{x:180,y:130}]]){
-  const markup=ctx.caseLabelMarkup(names[2],q);assert(markup.includes('overflow="hidden"'));assert(markup.includes('pointer-events="none"'));assert(markup.includes('&lt;'));assert(markup.includes('&amp;'));assert(!/NaN|Infinity/.test(markup));
+  const local=[{x:0,y:0,z:0},{x:1200,y:0,z:0},{x:1200,y:800,z:0},{x:0,y:800,z:0}],markup=ctx.caseLabelMarkup(names[2],ctx.caseFaceFrame(q,local));assert(markup.includes('overflow="hidden"'));assert(markup.includes('pointer-events="none"'));assert(markup.includes('&lt;'));assert(markup.includes('&amp;'));assert(!/NaN|Infinity/.test(markup));
  }
- assert.equal(ctx.caseLabelMarkup('Edge on',[{x:0,y:0},{x:100,y:0},{x:150,y:0},{x:50,y:0}]),'');
+ assert.equal(ctx.caseLabelMarkup('Edge on',ctx.caseFaceFrame([{x:0,y:0},{x:100,y:0},{x:150,y:0},{x:50,y:0}],[{x:0,y:0,z:0},{x:1000,y:0,z:0},{x:1000,y:500,z:0},{x:0,y:500,z:0}])),'');
  let measures=0;const measured=testContext({root:{document:{createElement:()=>({getContext:()=>({font:'',measureText:text=>{measures++;return {width:text.length*8}}})})}}});
  assert.equal(measured.caseTextWidth('Measured'),4);assert.equal(measured.caseTextWidth('Measured'),4);assert.equal(measures,1,'cache actual font metrics');
  const data=T.empty();data.cases=[base('uncoloured',{name:names[0]})];data.trucks=[T.normaliseTruck({...T.presets[0],id:'appearance',items:[]})];data.activeTruckId='appearance';const [item]=T.addItems(data,'appearance','uncoloured',1);
@@ -390,7 +390,7 @@ console.log('PASS: catalogue/instance separation, marquee selection, shared edit
   item.packed=packed;item.colour='';item.colour2='';item.colour3='';const plain=renderer.scene(0).markup;
   assert(plain.includes('fill="#ffffff"'),mode);assert(!plain.includes('#7799bb'));assert(plain.includes('class="tpCaseLabel"'));assert(plain.includes('<tspan'));assert(!/NaN|Infinity/.test(plain));
   item.colour2='#ff0000';assert(renderer.scene(0).markup.includes('fill="#ff0000"'),'assigned colours still show even with a blank first field');
-  item.colour3='#00ff00';assert(renderer.scene(0).markup.includes('fill="url(#tp-colours-0-'+item.id+')"'),'multiple assigned colours retain stripes');
+  item.colour3='#00ff00';assert(renderer.scene(0).markup.includes('fill="url(#tp-colours-0-'+item.id+'-'),'multiple assigned colours retain stripes');
   item.colour2='';item.colour3='';assert(renderer.scene(0).markup.includes('fill="#ffffff"'),'clearing all colours restores neutral appearance');
  }}
  assert.equal(T.normalise(JSON.parse(JSON.stringify(data))).trucks[0].items[0].colour,'','neutral display never assigns a stored colour');
@@ -406,13 +406,50 @@ console.log('PASS: catalogue/instance separation, marquee selection, shared edit
  const ctx=testContext({T,callbacks:options,drag:null,selected:'',state:()=>data,truck:()=>data.trucks[0],esc:String,Math});vm.runInContext(ui.split('\n').find(line=>line.includes('const faces=')),ctx);
  for(const name of ['corners','staging','scene','renderSceneData','partMesh'])vm.runInContext(fn(ui,name),ctx);
  const combinations=[[],['#ffffff'],['#FFFFFF','#ffffff'],['#000000'],['#ffff00'],['#ff0000','#FF0000'],['','#00ff00'],['#ff0000','#ffffff'],['#ffffff','#0060d2','#ffff00']];
- for(const colours of combinations){Object.assign(item,{colour:colours[0]||'',colour2:colours[1]||'',colour3:colours[2]||''});const before=JSON.stringify(item),shared=options.colourPresentation(colours),appearance=ctx.caseColourMarkup(item,0);
+ for(const colours of combinations){Object.assign(item,{colour:colours[0]||'',colour2:colours[1]||'',colour3:colours[2]||''});const before=JSON.stringify(item),shared=options.colourPresentation(colours),appearance=ctx.caseColourMarkup(item,0,5,{transform:'matrix(1 0 0 1 20 30)'});
   assert.deepEqual(Array.from(appearance.colours),Array.from(shared.colours));assert.equal(appearance.text,shared.text);assert.equal(appearance.outline,shared.outline);
-  const multi=shared.colours.length>1;assert.equal(appearance.defs.includes('<pattern'),multi);if(multi){assert(appearance.defs.includes('patternTransform="rotate(45)"'));assert(appearance.defs.includes('width="'+shared.colours.length*options.stripeWidth()+'"'));assert.equal((appearance.defs.match(new RegExp('width="'+(.3*96/25.4)+'"','g'))||[]).length,shared.colours.includes('#ffffff')?2:0,'outline only white bands on both edges');}
+  const multi=shared.colours.length>1;assert.equal(appearance.defs.includes('<pattern'),multi);if(multi){assert(appearance.defs.includes('patternTransform="matrix(1 0 0 1 20 30) rotate(45)"'));assert(appearance.defs.includes('width="'+shared.colours.length*options.stripeWidth()+'"'));assert.equal((appearance.defs.match(new RegExp('width="'+(.3*96/25.4)+'"','g'))||[]).length,shared.colours.includes('#ffffff')?2:0,'outline only white bands on both edges');}
   for(const mode of ['plan','leftIso','right']){data.views[0]=T.view({mode});const markup=ctx.scene(0).markup,labels=[...markup.matchAll(/<text text-anchor="middle" font-family="Arial"[^>]+>/g)];assert(labels.length);for(const [label] of labels){assert(label.includes('fill="'+shared.text+'"'));assert(label.includes('stroke="'+shared.outline+'"'));assert(label.includes('paint-order="stroke fill"'));assert.equal(label.includes('stroke-width="0"'),shared.outline==='transparent');}assert(markup.includes('overflow="hidden"'));assert(!/NaN|Infinity/.test(markup));}
   assert.equal(JSON.stringify(item),before,'rendering does not change assigned colours');
  }
  console.log('PASS: shared text contrast/outline, duplicate colour removal, configured stripe widths and outlined white bands in plan and 3D.');
+}
+
+// Face artwork has fixed physical coordinates, independent of the camera.
+{
+ const data=T.empty();data.cases=[base('anchored',{name:'Christie Lites Very Long Case Name 123',width:800,length:1200,height:650})];data.trucks=[T.normaliseTruck({...T.presets[0],id:'anchored',items:[]})];data.activeTruckId='anchored';
+ const items=T.addItems(data,'anchored','anchored',2);Object.assign(items[0],{packed:true,x:300,y:600,z:0});for(const item of items)Object.assign(item,{colour:'#ff0000',colour2:'#ffffff',colour3:'#0060d2'});
+ const ctx=testContext({T,drag:null,selected:'',state:()=>data,truck:()=>data.trucks[0],esc:String,Math});vm.runInContext(ui.split('\n').find(line=>line.includes('const faces=')),ctx);
+ for(const name of ['corners','staging','scene','renderSceneData','partMesh'])vm.runInContext(fn(ui,name),ctx);
+ const colour=ctx.caseColourMarkup,label=ctx.caseLabelMarkup;let records=[];
+ ctx.caseColourMarkup=(item,index,face,frame)=>{const appearance=colour(item,index,face,frame);records.push({item,index,face,frame,appearance});return appearance};
+ ctx.caseLabelMarkup=(name,frame,appearance)=>{const result=label(name,frame,appearance);records.at(-1).label=result;return result};
+ const matrix=frame=>frame.transform.slice(7,-1).split(' ').map(Number),mapped=(m,x,y)=>({x:m[0]*x+m[2]*y+m[4],y:m[1]*x+m[3]*y+m[5]}),samePoint=(a,b)=>{close(a.x,b.x);close(a.y,b.y)};
+ const layouts=new Map(),cameras=[{mode:'plan'},{mode:'leftIso'},{mode:'leftIso',panX:137,panY:-92},{mode:'leftIso',zoom:2},{mode:'leftIso',yaw:43,pitch:18},{mode:'leftIso',yaw:137,pitch:73},{mode:'leftIso',yaw:224,pitch:-24},{mode:'leftIso',yaw:315,pitch:30},{mode:'top'},{mode:'front'},{mode:'right'}];
+ for(const rideOnWheels of [true,false])for(const rotation of [0,90])for(const camera of cameras){
+  for(const item of items)Object.assign(item,{rideOnWheels,rotation});data.views[0]=T.view(camera);const before=JSON.stringify(data);records=[];const rendered=ctx.scene(0);
+  assert(records.length);assert(!/NaN|Infinity/.test(rendered.markup));assert.equal(JSON.stringify(data),before,'camera rendering does not mutate project data');
+  const ids=[...rendered.markup.matchAll(/<pattern id="([^"]+)"/g)].map(m=>m[1]);assert.equal(new Set(ids).size,ids.length,'each case face has its own pattern');
+  for(const record of records){
+   const {item,face,frame,appearance}=record,d=T.dimensions(data,item),position=item.packed?item:rendered.waiting.get(item.id),m=matrix(frame);
+   assert(m.every(Number.isFinite));assert(appearance.defs.includes('patternTransform="'+frame.transform+' rotate(45)"'),'colour pattern uses the same face transform as the label');assert(record.label.includes('transform="'+frame.transform+'"'));
+   // Independent body vertices and rigid case transform. UV corners must remain
+   // attached to these exact physical corners after pan, zoom, orbit and rotation.
+   const body=[[0,0,d.caster],[800,0,d.caster],[800,1200,d.caster],[0,1200,d.caster],[0,0,d.total],[800,0,d.total],[800,1200,d.total],[0,1200,d.total]],faces=[[0,3,2,1],[0,1,5,4],[1,2,6,5],[2,3,7,6],[3,0,4,7],[4,5,6,7]];
+   const world=body.map(([x,y,z])=>{if(!rideOnWheels)[y,z]=[z,1200-y];if(rotation===90)[x,y]=[y,800-x];return {x:position.x+x,y:position.y+y,z:position.z+z}}),q=faces[face].map(i=>world[i]);
+   for(const [x,y,i] of [[0,0,3],[frame.width,0,2],[frame.width,frame.height,1],[0,frame.height,0]])samePoint(mapped(m,x,y),rendered.point(q[i]));
+   // A particular point inside a stripe stays at the same position on the face.
+   const u=(17-23)/Math.sqrt(2),v=(17+23)/Math.sqrt(2),surface={};for(const axis of ['x','y','z'])surface[axis]=q[3][axis]+u/frame.width*(q[2][axis]-q[3][axis])+v/frame.height*(q[0][axis]-q[3][axis]);samePoint(mapped(m,u,v),rendered.point(surface));
+   const key=item.id+'-'+face,layout=record.label.slice(record.label.indexOf('<svg'));if(layouts.has(key))assert.equal(layout,layouts.get(key),'font size, wrapping, text position and clipping stay fixed on the face');else layouts.set(key,layout);
+  }
+ }
+ // Viewports must never share SVG pattern IDs.
+ data.views[0]=T.view({mode:'leftIso'});data.views[1]=T.view({mode:'rightIso'});const combined=ctx.scene(0).markup+ctx.scene(1).markup,ids=[...combined.matchAll(/<pattern id="([^"]+)"/g)].map(m=>m[1]);assert.equal(new Set(ids).size,ids.length);
+ // Subpixel or edge-on faces omit artwork without producing an invalid pattern.
+ ctx.caseColourMarkup=colour;ctx.caseLabelMarkup=label;
+ Object.assign(data.cases[0],{width:1,length:1,height:1,casterHeight:0});for(const item of items)Object.assign(item,{rideOnWheels:true,rotation:0});
+ for(const pitch of [0,90]){data.views[0]=T.view({mode:'plan',pitch,zoom:.25});assert(!/NaN|Infinity/.test(ctx.scene(0).markup));}
+ console.log('PASS: colours and multiline text stay fixed to physical case faces during pan, zoom, full orbit, plan view and case rotation, including waiting cases and multiple viewports.');
 }
 
 // Four-column grid anchors case fronts to the trailer front and keeps real dimensions.

@@ -1,3 +1,9 @@
+## V57.17 — Fixed Truck Pack case artwork
+
+- Anchor case colour patterns to each physical face so they move with the case during pan, zoom and rotation.
+- Keep case text size, wrapping, orientation and position fixed on each face instead of refitting it as the camera moves.
+- Apply the same face mapping in plan and 3D views, including rotated cases, cases stood on end and Waiting cases.
+
 ## V57.16 — Power export phase totals
 
 - Show only the current distro’s phase-total card beside its Power Calcs, instead of repeating its entire supply overview.
