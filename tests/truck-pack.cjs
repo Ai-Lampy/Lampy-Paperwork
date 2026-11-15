@@ -220,17 +220,19 @@ console.log('PASS: Truck Pack navigation routes, active sub-tabs, truck selectio
  context.setView(0,'plan');action('tool',{view:'0',tool:'rotate'});context.setView(0,'plan');assert.equal(data.views[0].tool,'select');
  data.trucks.push(T.normaliseTruck({...T.presets[0],id:'other',items:[]}));context.selected='old';action('truck',{truckId:'other'});assert.equal(data.activeTruckId,'other');assert.equal(context.selected,'');assert(saves>0&&draws>0);
 }
-// Details exist only while selected, and outside clicks preserve editing controls.
+// Single view keeps an empty inspector; multiple views hide it without a selection.
 {
  const data=T.empty();data.cases=[base('detail')];data.trucks=[T.normaliseTruck({...T.presets[0],id:'details',items:[]})];data.activeTruckId='details';const [item]=T.addItems(data,'details','detail',1);
  let hasSelection=false;const children={form:{},'[name="rideOnWheels"]':{},'[data-tp-lifter]':{}},pane={hidden:false,innerHTML:'',closest:()=>({classList:{toggle:(name,value)=>hasSelection=value}}),querySelector:selector=>children[selector]};
  const context=testContext({T,host:{querySelector:()=>pane},state:()=>data,truck:()=>data.trucks[0],selected:'',callbacks:{colourControl:(attrs,value)=>'<input '+attrs+' value="'+value+'">'},esc:String,length:T.formatLength,weight:T.formatWeight,renderScenes(){}});
  for(const name of ['field','input','button'])vm.runInContext(ui.split('\n').find(line=>line.trim().startsWith('const '+name+'=')),context);
  for(const name of ['caseColourFields','renderInspector','select','outsidePointer'])vm.runInContext(fn(ui,name),context);
- context.renderInspector();assert(pane.hidden);assert(!hasSelection);assert.equal(pane.innerHTML,'');
+ context.renderInspector();assert(!pane.hidden);assert(hasSelection);assert(pane.innerHTML.includes('data-tp-select'));assert(!pane.innerHTML.includes('data-tp-item-form'));
+ data.layout=2;context.renderInspector();assert(pane.hidden);assert(!hasSelection);assert.equal(pane.innerHTML,'');
  context.select(item.id);assert(!pane.hidden);assert(hasSelection);for(const key of ['colour','colour2','colour3'])assert(pane.innerHTML.includes('name="'+key+'"'));
  context.outsidePointer({target:{closest:()=>pane}});assert.equal(context.selected,item.id);
  context.outsidePointer({target:{closest:()=>null}});assert.equal(context.selected,'');assert(pane.hidden);assert(!hasSelection);
+ data.layout=4;context.renderInspector();assert(pane.hidden);data.layout=1;context.renderInspector();assert(!pane.hidden);assert(hasSelection);context.select(item.id);context.outsidePointer({target:{closest:()=>null}});assert(!pane.hidden);assert.equal(context.selected,'');assert(pane.innerHTML.includes('Select cases to view'));
 }
 // Add case menu filters inventory and commits selected quantities atomically.
 {
@@ -369,14 +371,17 @@ console.log('PASS: catalogue/instance separation, marquee selection, shared edit
 // Blank colours stay neutral; fitted multiline labels remain inside every projected face.
 {
  const ctx=testContext({esc:v=>String(v).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')});
- const names=['Case Motor Distro Quarter','WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW','A < B & C','輸送ケース 照明'];
+ const names=['Case Motor Distro Quarter','WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW','A < B & C','輸送ケース 照明','Supercalifragilisticexpialidocious Case','Motor-Distro_Quarter123 Flight Case'];
  for(const name of names)for(const [width,height] of [[120,80],[40,180],[240,15],[3,2]]){
   const fit=ctx.fitCaseLabel(name,width,height);assert(fit.size>0&&fit.size<=18);assert(fit.lines.length*fit.lineHeight<=height-2*fit.padding+1e-6);
   assert.equal(fit.lines.join('').replace(/\s/g,''),name.replace(/\s/g,''),'keep all name characters');
+  assert.deepEqual(Array.from(fit.lines).flatMap(line=>line.split(/\s+/)),name.trim().split(/\s+/),'wrap only between complete words');
   for(const line of fit.lines)assert(ctx.caseTextWidth(line)*fit.size<=fit.width+1e-6,'every line fits the available width');
  }
  const fitted=ctx.fitCaseLabel(names[0],120,80);assert(fitted.lines.length>1,'use multiple lines instead of squeezing a whole name onto one line');
  assert(ctx.fitCaseLabel(names[0],30,20).size<fitted.size,'small footprints reduce font size');
+ const unbroken=ctx.fitCaseLabel(names[1],40,180);assert.equal(unbroken.lines.length,1,'a long word stays on one line even when there is room for more lines');assert(unbroken.size<18,'reduce the font to fit a long word');
+ const wordLabel=ctx.caseLabelMarkup(names[1],{width:40,height:180,transform:'matrix(1 0 0 1 0 0)'});assert.equal((wordLabel.match(/<tspan /g)||[]).length,1);assert(wordLabel.includes('>'+names[1]+'</tspan>'),'the rendered label retains the whole word');
  for(const q of [[{x:0,y:0},{x:120,y:0},{x:120,y:80},{x:0,y:80}],[{x:200,y:50},{x:80,y:20},{x:60,y:100},{x:180,y:130}]]){
   const local=[{x:0,y:0,z:0},{x:1200,y:0,z:0},{x:1200,y:800,z:0},{x:0,y:800,z:0}],markup=ctx.caseLabelMarkup(names[2],ctx.caseFaceFrame(q,local));assert(markup.includes('overflow="hidden"'));assert(markup.includes('pointer-events="none"'));assert(markup.includes('&lt;'));assert(markup.includes('&amp;'));assert(!/NaN|Infinity/.test(markup));
  }
@@ -551,3 +556,51 @@ console.log('PASS: four-column front-first grid packing, overflow Waiting, mixed
  changes=[{name:'lifter',value:'invalid'}];ctx.applySelectedDetails(form);assert.equal(saves,2);assert(message.includes('Yes or No'));
 }
 console.log('PASS: always-visible single/bulk lifter controls, untouched mixed values, atomic bulk rejection, independent wheel/lifter persistence and supported wheeled stacking with grid on/off.');
+
+// Group placement preserves offsets and validates the complete truck atomically.
+{
+ const data=T.empty();data.cases=[base('group',{width:400,length:600,height:400})];data.trucks=[T.normaliseTruck({...T.presets[0],id:'group',items:[]})];data.activeTruckId='group';const truck=data.trucks[0],items=T.addItems(data,'group','group',3);
+ Object.assign(items[0],{packed:true,x:100,y:100});Object.assign(items[1],{packed:true,x:700,y:100});Object.assign(items[2],{packed:true,x:1700,y:1000});
+ const before=JSON.stringify(data),group=items.slice(0,2);
+ for(const snapToGrid of [false,true]){truck.snapToGrid=snapToGrid;const result=T.groupPlacement(data,truck,group,items[1].id,{x:900,y:900,z:0});assert.equal(result.error,'');assert.equal(result.items[1].x-result.items[0].x,600);assert.equal(result.items[1].y-result.items[0].y,0);assert.equal(T.truckError(data,{...truck,items:[...result.items,items[2]]}),'');}
+ truck.snapToGrid=false;assert.equal(JSON.stringify(data),before,'placement previews do not mutate saved data');
+ assert(T.groupPlacement(data,truck,group,items[0].id,{x:2000,y:100,z:0}).error.includes('outside'));assert(T.groupPlacement(data,truck,group,items[0].id,{x:1100,y:1000,z:0}).error.includes('overlap'));
+ // Move a supported stack together; moving only the supporting case is rejected.
+ Object.assign(items[1],{x:100,y:100,z:400,lifter:true});const stacked=T.groupPlacement(data,truck,group,items[1].id,{x:700,y:100,z:400});assert.equal(stacked.error,'');assert.equal(stacked.items[1].z-stacked.items[0].z,400);assert(T.placement(data,truck,items[0],{x:700,y:100,z:0}).error.includes('supported'));
+ for(const snapToGrid of [false,true]){truck.snapToGrid=snapToGrid;const floor=T.placement(data,truck,items[1],{x:800,y:2000,z:400});assert.equal(floor.error,'');assert.equal(floor.item.z,0,'a lifter dragged away from a stack returns to the floor');const direct=T.placement(data,truck,items[1],{x:800,y:2000,z:0},false);assert.equal(direct.error,'');assert.equal(direct.item.z,0);}
+ truck.snapToGrid=false;Object.assign(items[0],{lifter:true,z:400});Object.assign(items[1],{x:700,z:400});const floor=T.groupPlacement(data,truck,group,items[0].id,{x:200,y:2000,z:400});assert.equal(floor.error,'');assert(floor.items.every(item=>item.z===0),'a group of lifters can return to the floor');
+}
+// Real pointer handlers drag an existing selection, preview every case and save once.
+{
+ let data=T.empty(),saves=0,message='';data.cases=[base('drag-group',{width:400,length:400,height:400})];data.trucks=[T.normaliseTruck({...T.presets[0],id:'drag-group',items:[]})];data.activeTruckId='drag-group';const items=T.addItems(data,'drag-group','drag-group',3);Object.assign(items[0],{packed:true});Object.assign(items[1],{packed:true,x:600});Object.assign(items[2],{packed:true,x:1600,y:1000});const ids=items.slice(0,2).map(i=>i.id);
+ const svg={dataset:{tpScene:'0'},getBoundingClientRect:()=>({left:0,top:0,width:900,height:600})},host={querySelector:()=>svg,setPointerCapture(){},releasePointerCapture(){},contains:()=>true};
+ const projection={scale:1,camera:T.view({mode:'plan'}),point:p=>T.project(p,T.view({mode:'plan'})),waiting:new Map()};
+ const ctx=testContext({T,host,tab:'pack',drag:null,selected:ids[0],selectedGroup:ids,state:()=>data,truck:()=>data.trucks[0],sceneMaps:[projection],renderInspector(){},renderScenes(){},notify:text=>message=text,esc:String,transaction:change=>{try{const next=JSON.parse(JSON.stringify(data));change(next);data=T.normalise(next);saves++;return true}catch(error){message=error.message;return false}}});
+ for(const name of ['svgPoint','pointerDown','pointerMove','pointerUp','cancelDrag','click','corners','staging','scene','renderSceneData','partMesh'])vm.runInContext(fn(ui,name),ctx);vm.runInContext(ui.split('\n').find(line=>line.includes('const faces=')),ctx);
+ const event=(x,y,id=ids[1])=>({button:0,pointerId:19,clientX:x,clientY:y,preventDefault(){},target:{closest:selector=>selector==='[data-tp-scene]'?svg:selector==='[data-tp-item]'?{dataset:{tpItem:id}}:null}});
+ const original=JSON.stringify(data);ctx.pointerDown(event(0,0));assert.equal(ctx.selectionIds().length,2);assert.equal(ctx.drag.items.length,2);ctx.pointerMove(event(100,-200));assert.equal(ctx.drag.error,'');assert.equal(ctx.drag.previewItems.length,2);assert.deepEqual(Array.from(ctx.drag.previewItems,i=>[i.x,i.y]),[[100,200],[700,200]]);assert.equal(JSON.stringify(data),original);
+ const preview=ctx.scene(0);assert.equal(preview.hitBoxes.find(b=>b.id===ids[0]).left,100);assert.equal(preview.hitBoxes.find(b=>b.id===ids[1]).left,700);ctx.pointerUp(event(100,-200));assert.equal(saves,1);assert.equal(ctx.selectionIds().length,2);assert.equal(data.trucks[0].items[0].x,100);assert.equal(data.trucks[0].items[1].x,700);
+ const saved=JSON.stringify(data);ctx.pointerDown(event(0,0));ctx.pointerMove(event(2000,0));assert(ctx.drag.error);ctx.pointerUp(event(2000,0));assert.equal(JSON.stringify(data),saved);assert.equal(saves,1);
+ ctx.pointerDown(event(0,0));ctx.pointerMove(event(100,0));ctx.cancelDrag();assert.equal(JSON.stringify(data),saved);assert.equal(ctx.selectionIds().length,2);
+ ctx.pointerDown(event(0,0));ctx.pointerUp(event(0,0));assert.equal(saves,1,'click without moving preserves selection and does not save');
+ // Shared actions affect only the selected truck instances.
+ const action=name=>ctx.click({target:{closest:()=>({dataset:{tpAction:name}})}});action('unpack');assert.equal(saves,2);assert(data.trucks[0].items.slice(0,2).every(i=>!i.packed));assert(data.trucks[0].items[2].packed);assert.equal(data.cases.length,1);
+ projection.waiting=new Map([[ids[0],{x:3000,y:0,z:0}],[ids[1],{x:3000,y:550,z:0}]]);ctx.pointerDown(event(0,0));ctx.pointerMove(event(-2900,-100));assert.equal(ctx.drag.error,'');ctx.pointerUp(event(-2900,-100));assert(data.trucks[0].items.slice(0,2).every(i=>i.packed));assert.equal(data.trucks[0].items[1].y-data.trucks[0].items[0].y,550,'waiting cases retain their displayed spacing when packed together');
+ ctx.pointerDown(event(0,0));ctx.pointerMove(event(4000,0));assert(ctx.drag.unpacked);ctx.pointerUp(event(4000,0));assert(data.trucks[0].items.slice(0,2).every(i=>!i.packed));
+ action('remove-item');assert.equal(data.trucks[0].items.length,1);assert.equal(data.trucks[0].items[0].id,items[2].id);assert.equal(data.cases.length,1);
+}
+// Shared wheel controls and actions are visible, changed-only and atomic.
+{
+ let data=T.empty(),saves=0,message='',changes=[];data.cases=[base('wheels-group',{width:400,length:400,height:800})];data.trucks=[T.normaliseTruck({...T.presets[0],id:'wheels-group',items:[]})];data.activeTruckId='wheels-group';const items=T.addItems(data,'wheels-group','wheels-group',3);items[1].rideOnWheels=false;
+ const ids=items.slice(0,2).map(i=>i.id),form={querySelectorAll:()=>changes},pane={innerHTML:'',querySelector:()=>form},ctx=testContext({T,selected:ids[0],selectedGroup:ids,state:()=>data,truck:()=>data.trucks[0],host:{contains:()=>true},esc:String,callbacks:{colourControl:attrs=>'<input '+attrs+'>'},notify:text=>message=text,transaction:change=>{try{const next=JSON.parse(JSON.stringify(data));change(next);data=T.normalise(next);saves++;return true}catch(error){message=error.message;return false}}});
+ for(const name of ['field','input','button'])vm.runInContext(ui.split('\n').find(line=>line.trim().startsWith('const '+name+'=')),ctx);for(const name of ['caseColourFields','renderGroupInspector','applySelectedDetails','click'])vm.runInContext(fn(ui,name),ctx);
+ ctx.renderGroupInspector(pane,items.slice(0,2));assert(pane.innerHTML.includes('name="rideOnWheels"'));assert(pane.innerHTML.includes('Mixed — leave unchanged'));assert(pane.innerHTML.includes('data-tp-action="remove-item"'));
+ changes=[{name:'rideOnWheels',value:''}];ctx.applySelectedDetails(form);assert.equal(saves,0);changes=[{name:'rideOnWheels',value:'yes',dataset:{}}];form.onchange({target:changes[0]});assert.equal(changes[0].dataset.tpChanged,'true');form.onsubmit({preventDefault(){}});assert.equal(saves,1);assert(data.trucks[0].items.every(i=>i.rideOnWheels));
+ changes=[{name:'rideOnWheels',value:'invalid'}];ctx.applySelectedDetails(form);assert.equal(saves,1);assert(message.includes('Ride on Wheels'));
+ Object.assign(data.trucks[0].items[0],{packed:true});Object.assign(data.trucks[0].items[1],{packed:true,y:500});ctx.renderGroupInspector(pane,data.trucks[0].items.slice(0,2));assert(pane.innerHTML.includes('data-tp-action="unpack"'));
+ const before=JSON.stringify(data);changes=[{name:'rideOnWheels',value:'no'},{name:'department',value:'Do not save'}];ctx.applySelectedDetails(form);assert(message.includes('overlap'));assert.equal(saves,1);assert.equal(JSON.stringify(data),before);
+ // Removing or unpacking a support cannot leave an unselected case floating.
+ Object.assign(data.trucks[0].items[2],{packed:true,lifter:true,z:800});const supported=JSON.stringify(data);for(const action of ['unpack','remove-item']){ctx.click({target:{closest:()=>({dataset:{tpAction:action}})}});assert(message.includes('supported'));assert.equal(JSON.stringify(data),supported);}
+ assert(fs.readFileSync(path.join(root,'js/truck-pack.css'),'utf8').includes('.tpSceneWrap{position:relative;min-width:0;height:clamp(700px,58vh,800px);overflow:hidden}'));
+}
+console.log('PASS: rigid group moves, shared wheels/Waiting/removal, atomic collision and support checks, floor lifters, persistent single-view inspector and taller viewer.');

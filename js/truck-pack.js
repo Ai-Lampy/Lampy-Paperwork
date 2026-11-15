@@ -99,8 +99,21 @@
     if(truck.snapToGrid)Object.assign(candidate,snapPosition(state,truck,candidate,candidate));
     const precision=truck.snapToGrid?6:0;candidate.x=Number(candidate.x.toFixed(precision));candidate.y=Number(candidate.y.toFixed(precision));candidate.z=Number((candidate.z||0).toFixed(precision));
     let error=truckError(state,trial);if(!error)return {item:candidate,error:''};
-    if(autoStack&&candidate.lifter){const heights=[...new Set(others.filter(i=>i.packed).map(i=>i.z+dimensions(state,i).height))].sort((a,b)=>a-b);for(const z of heights){candidate.z=z;error=truckError(state,trial);if(!error)return {item:{...candidate},error:''}}}
+    if(autoStack&&candidate.lifter){const heights=[...new Set([0,...others.filter(i=>i.packed).map(i=>i.z+dimensions(state,i).height)])].sort((a,b)=>a-b);for(const z of heights){candidate.z=z;error=truckError(state,trial);if(!error)return {item:{...candidate},error:''}}}
     return {item:null,error};
+  }
+  function groupPlacement(state,truck,items,anchorId,position,autoStack=true){
+    const anchor=items.find(item=>item.id===anchorId),ids=new Set(items.map(item=>item.id)),others=truck.items.filter(item=>!ids.has(item.id));
+    if(!anchor||ids.size!==items.length)return {items:null,error:'Select cases to move.'};
+    // Snap the grabbed case once, then apply one translation to the whole group.
+    const target=truck.snapToGrid?snapPosition(state,truck,anchor,position):position,precision=truck.snapToGrid?6:0,round=n=>Number(n.toFixed(precision)),dx=round(target.x-anchor.x),dy=round(target.y-anchor.y),floor=-Math.min(...items.map(item=>item.z));
+    const candidates=items.map(item=>({...item,x:item.x+dx,y:item.y+dy,packed:true})),trial={...truck,items:[...others,...candidates]},tryHeight=dz=>{candidates.forEach((item,i)=>item.z=items[i].z+dz);return truckError(state,trial)};
+    let error=tryHeight(Math.max(floor,round(target.z-anchor.z)));if(!error)return {items:candidates,error:''};
+    if(autoStack){
+      const heights=new Set([floor]);for(const item of items.filter(item=>item.lifter))for(const other of others.filter(item=>item.packed))heights.add(other.z+dimensions(state,other).height-item.z);
+      for(const dz of [...heights].filter(z=>z>=floor).sort((a,b)=>a-b)){const nextError=tryHeight(dz);if(!nextError)return {items:candidates,error:''}}
+    }
+    return {items:null,error};
   }
   function totals(state,truck){let packed=0,staged=0,unknown=0;for(const item of truck.items){const weight=definition(state,item).weight;if(weight==null){unknown++;continue}if(item.packed)packed+=weight;else staged+=weight}return {packed,staged,unknown,overPayload:truck.payload!=null&&packed>truck.payload}}
   function addItems(state,truckId,caseId,quantity){
@@ -146,6 +159,6 @@
   function unprojectDelta(dx,dy,camera,plane='xy'){
     const axes={xy:[{x:1,y:0,z:0},{x:0,y:1,z:0}],xz:[{x:1,y:0,z:0},{x:0,y:0,z:1}],yz:[{x:0,y:1,z:0},{x:0,y:0,z:1}]}[plane],a=project(axes[0],camera),b=project(axes[1],camera),det=a.x*b.y-a.y*b.x;if(Math.abs(det)<1e-6)return null;const u=(dx*b.y-dy*b.x)/det,v=(a.x*dy-a.y*dx)/det;return {x:axes[0].x*u+axes[1].x*v,y:axes[0].y*u+axes[1].y*v,z:axes[0].z*u+axes[1].z*v};
   }
-  const api={EPS,MAX_CASES,MAX_ITEMS,source,presets,perspectives,cameras,id,parseLength,parseWeight,formatLength,formatWeight,normaliseCase,normaliseItem,normaliseTruck,normalise,empty,view,definition,dimensions,box,overlaps,supported,truckError,snapPosition,firstGridPosition,placement,totals,addItems,removeInventoryCases,parseImportLength,importDimensionIssues,importRows,suggestMapping,project,unprojectDelta};
+  const api={EPS,MAX_CASES,MAX_ITEMS,source,presets,perspectives,cameras,id,parseLength,parseWeight,formatLength,formatWeight,normaliseCase,normaliseItem,normaliseTruck,normalise,empty,view,definition,dimensions,box,overlaps,supported,truckError,snapPosition,firstGridPosition,placement,groupPlacement,totals,addItems,removeInventoryCases,parseImportLength,importDimensionIssues,importRows,suggestMapping,project,unprojectDelta};
   root.LampyTruckPack=api;if(typeof module!=='undefined')module.exports=api;
 })(globalThis);

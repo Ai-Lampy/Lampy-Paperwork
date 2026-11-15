@@ -1,3 +1,15 @@
+## V57.19 — Truck Pack group controls
+
+- Drag any selected case to move the whole selection, preserving relative positions and validating the complete move before saving.
+- Add shared Ride on Wheels, Move to Waiting and Remove controls for selected truck cases.
+- Allow lifters dragged off a stack to return to the floor, including group moves.
+- Increase the main viewer height to clamp(700px, 58vh, 800px) and keep Case Details visible without a selection in single view.
+
+## V57.18 — Whole-word case labels
+
+- Wrap case labels only between whole words, reducing the font size until the longest word and all lines fit inside the case face.
+- Keep label layout fixed during pan, zoom and rotation.
+
 ## V57.17 — Fixed Truck Pack case artwork
 
 - Anchor case colour patterns to each physical face so they move with the case during pan, zoom and rotation.
