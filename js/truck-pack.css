@@ -43,3 +43,13 @@
 .tpToolbar [data-tp-action="snap-grid"][aria-pressed="true"]{background:#0060d2;color:#fff;border-color:#111}
 
 .tpLayout1 .tpViewToolbar{min-height:88px;box-sizing:border-box}
+
+/* Measurements stay legible in screen space while their geometry follows the load. */
+.tpMeasureOverlay{fill:#17466c;stroke:none;font:600 10px Arial,sans-serif}
+.tpMeasureOverlay path{fill:none;stroke:#17466c;stroke-width:1;vector-effect:non-scaling-stroke}
+.tpMeasureOverlay text{stroke:#fff;stroke-width:3px;paint-order:stroke fill;stroke-linejoin:round}
+.tpMeasurements{grid-column:1/-1;font-size:12px;border-top:1px solid #b9b9b9;padding-top:8px}
+.tpMeasurements dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin:8px 0}
+.tpMeasurements dl div{display:flex;justify-content:space-between;gap:6px}.tpMeasurements dd{margin:0}
+.tpEditActions{grid-column:1/-1}
+.tpToolbar [data-tp-action="measurements"][aria-pressed="true"]{background:#0060d2;color:#fff}

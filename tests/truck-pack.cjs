@@ -3,7 +3,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const T=require('../js/truck-pack.js'),root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),ui=fs.readFileSync(path.join(root,'js/truck-pack-view.js'),'utf8');
 function fn(text,name){const start=text.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=text.indexOf('}',start);end>=0;end=text.indexOf('}',end+1)){const value=text.slice(start,end+1);try{new Function('return ('+value+')');return value}catch{}}throw Error(name)}
 const sharedColourContext=vm.createContext({colourTextToHex:value=>String(value||'').trim().toLowerCase(),normaliseHex:value=>String(value||'').toLowerCase()});vm.runInContext(fn(html,'colourSetPresentation'),sharedColourContext);
-function testContext(values){if(values.host&&!values.host.querySelector)values.host.querySelector=()=>null;const context=vm.createContext({root:{},host:null,renderScenes(){},callbacks:{colourPresentation:values=>sharedColourContext.colourSetPresentation(values),stripeWidth:()=>4*96/25.4},selectedGroup:[],inspectorObserver:null,...values});for(const name of ['sceneCamera','viewportMarkup','sceneViewport','gridMarkup','caseFaceFrame','caseColourMarkup','caseTextWidth','fitCaseLabel','caseLabelMarkup','selectionIds','selectionRect','casesInSelection','syncInspectorHeight','observeInspector'])vm.runInContext(fn(ui,name),context);return context}
+function testContext(values){if(values.host&&!values.host.querySelector)values.host.querySelector=()=>null;const context=vm.createContext({root:{},host:null,renderScenes(){},callbacks:{colourPresentation:values=>sharedColourContext.colourSetPresentation(values),stripeWidth:()=>4*96/25.4},selectedGroup:[],inspectorObserver:null,undoStack:[],redoStack:[],showMeasurements:true,length:T.formatLength,state:()=>({layout:2,trucks:[]}),truck:()=>values.state?.().trucks.find(t=>t.id===values.state().activeTruckId),...values});for(const name of ['syncHistoryButtons','orientationControl','syncOrientationForm','editActions','measurementDetails','measurementMarkup','sceneCamera','viewportMarkup','sceneViewport','gridMarkup','caseFaceFrame','caseColourMarkup','caseTextWidth','fitCaseLabel','caseLabelMarkup','selectionIds','selectionRect','casesInSelection','syncInspectorHeight','observeInspector'])vm.runInContext(fn(ui,name),context);return context}
 const close=(a,b)=>assert(Math.abs(a-b)<.01,`${a} != ${b}`);
 for(const [input,expected] of [['1 m',1000],['12.5 cm',125],['600 mm',600],[`5' 6"`,1676.4],['12"',304.8],[`1' 2 1/2"`,368.3],['½ m',null],['1/2"',12.7]])if(expected===null)assert.throws(()=>T.parseLength(input));else close(T.parseLength(input),expected);
 for(const invalid of ['600','-1 m','NaN mm','1/0"','0 mm','10 yards','2 m garbage'])assert.throws(()=>T.parseLength(invalid));
@@ -108,7 +108,7 @@ assert(fn(html,'appPayload').includes('truckPack:app.truckPack'));assert(fn(html
  c.caseDialog();assert(lastMarkup.includes('Castor Height'));formValues={name:'Tour Case',type:'Case',width:'600 mm',length:'1 m',height:'700 mm',heightIncludesWheels:'no',casterHeight:'100 mm',weight:'22 lb',department:'Lighting',colour:'#aabbcc'};submit({});assert.equal(fresh.cases.length,1);assert.equal(fresh.cases[0].height,700);assert.equal(fresh.cases[0].casterHeight,100);close(fresh.cases[0].weight,9.97903214);
  c.truckDialog(null);for(const title of ['Trucking Company','Trailer Name/Number','Trailer Reg','Driver Name','Driver E-mail','Driver Phone'])assert(lastMarkup.includes(title));
  formValues={preset:'custom',width:'2.4 m',length:'8 m',height:'2.8 m',payload:'8000 kg',company:'Tour Trucks',name:'Trailer 3',registration:'ABC 123',driver:'Alex',email:'alex@example.com',phone:'+45 12345678'};submit({});assert.equal(fresh.trucks.length,1);assert.equal(fresh.trucks[0].driver,'Alex');assert.equal(fresh.trucks[0].length,8000);assert.equal(saves,2);
- for(const layout of [1,2,4]){fresh.layout=layout;const markup=c.packMarkup(fresh,fresh.trucks[0]);assert.equal((markup.match(/class="tpViewport"/g)||[]).length,layout===1?2:layout);for(let i=0;i<layout;i++)assert(markup.includes('data-tp-perspective="'+i+'"'));}
+ for(const layout of [1,2,4]){fresh.layout=layout;const markup=c.packMarkup(fresh,fresh.trucks[0]);assert.equal((markup.match(/class="tpViewport"/g)||[]).length,layout===1?2:layout);if(layout===1){assert(!markup.includes('data-tp-perspective'));assert(!markup.includes('data-tool="rotate"'))}else for(let i=0;i<layout;i++)assert(markup.includes('data-tp-perspective="'+i+'"'));}
  const inventory=c.inventoryMarkup();for(const title of ['Name','Type','W','L','H','Height Inc Wheels?','Weight (kg)'])assert(inventory.includes('>'+title+'</th>'));assert(inventory.includes('type="checkbox"'));assert(inventory.includes('700 mm'));
 }
 
@@ -201,7 +201,7 @@ console.log('PASS: Truck Pack navigation routes, active sub-tabs, truck selectio
 }
 // Scene tools change only their viewport; pan/orbit never move case geometry.
 {
- let data=T.empty(),saves=0,draws=0;data.cases=[base('item')];data.trucks=[T.normaliseTruck({...T.presets[0],id:'tools',items:[]})];data.activeTruckId='tools';T.addItems(data,'tools','item',1);
+ let data=T.empty(),saves=0,draws=0;data.layout=2;data.cases=[base('item')];data.trucks=[T.normaliseTruck({...T.presets[0],id:'tools',items:[]})];data.activeTruckId='tools';T.addItems(data,'tools','item',1);
  const svg={dataset:{tpScene:'0'},getBoundingClientRect:()=>({left:0,top:0,width:900,height:600})},host={contains:()=>true,querySelector:()=>svg,setPointerCapture(){},releasePointerCapture(){}};
  const context=testContext({T,host,tab:'pack',drag:null,callbacks:{},selected:'',state:()=>data,truck:()=>data.trucks[0],sceneMaps:[],renderInspector(){},renderScenes(){},notify(){},save:()=>saves++,render:()=>draws++,select:id=>context.selected=id});
  for(const name of ['svgPoint','click','pointerDown','pointerMove','pointerUp','cancelDrag','setView'])vm.runInContext(fn(ui,name),context);
@@ -670,3 +670,69 @@ console.log('PASS: real-viewport truck fitting, no Waiting-driven shrinking, zoo
  const css=fs.readFileSync(path.join(root,'js/truck-pack.css'),'utf8');assert(css.includes('.tpWorkspace.tpSingleView{grid-template-columns:minmax(0,1fr) 290px}'));assert(css.includes('.tpLayout1{grid-template-columns:repeat(2,minmax(0,350px))'));
 }
 console.log('PASS: predictive Waiting alignment/cache, independent floor/raised plan layers, correct layer hit testing, shared cameras, upper-view dragging and right-side details.');
+
+// Every orientation/quarter turn uses the same physical transform for rendering and bounds.
+{
+ const data=T.empty();data.cases=[base('orient',{width:400,length:700,height:500,casterHeight:80})];data.trucks=[T.normaliseTruck({id:'orientation',width:2400,length:6000,height:2400,items:[]})];data.activeTruckId='orientation';
+ const expected={wheels:[400,700,500],tipped:[400,500,700],side:[500,700,400],wheelsUp:[400,700,500]};
+ const ctx=testContext({T,drag:null,selected:'',state:()=>data,truck:()=>data.trucks[0],esc:String});vm.runInContext(ui.split('\n').find(line=>line.includes('const faces=')),ctx);for(const name of ['corners','staging','scene','renderSceneData','partMesh'])vm.runInContext(fn(ui,name),ctx);
+ for(const mode of Object.keys(expected))for(const rotation of [0,90,180,270]){
+  const item=T.orientItem(T.normaliseItem({id:'oriented',caseId:'orient',rotation,packed:true}),mode);data.trucks[0].items=[item];const d=T.dimensions(data,item),dims=expected[mode];assert.deepEqual([d.width,d.length,d.height],rotation%180?[dims[1],dims[0],dims[2]]:dims);
+  const corners=Array.from(ctx.corners({x:0,y:0,z:0,width:400,length:700,height:500}),p=>T.casePoint(data,item,p));for(const [axis,size] of [['x',d.width],['y',d.length],['z',d.height]]){close(Math.min(...corners.map(p=>p[axis])),0);close(Math.max(...corners.map(p=>p[axis])),size)}
+  const wheel=T.casePoint(data,item,{x:0,y:0,z:0});if(mode==='wheels')close(wheel.z,0);if(mode==='wheelsUp')close(wheel.z,500);
+  assert.deepEqual(T.normalise(JSON.parse(JSON.stringify(data))),data);
+  for(const camera of ['plan','leftIso','right','top']){data.layout=2;data.views[0]=T.view({mode:camera,yaw:T.cameras[camera][0],pitch:T.cameras[camera][1]});const scene=ctx.scene(0);assert(!/NaN|Infinity/.test(scene.markup));assert(scene.markup.includes('tpCaseLabel'),mode+' '+rotation+' '+camera);assert(scene.markup.includes('oriented'))}
+ }
+ assert.equal(T.orientation(T.normaliseItem({id:'legacy',caseId:'orient',rideOnWheels:false})),'tipped');
+ assert.throws(()=>T.orientItem({},'unknown'),/orientation/);
+}
+// Rotate and duplicate rigid rows, preserve metadata, and reject invalid edits atomically.
+{
+ const data=T.empty();data.cases=[base('row',{width:400,length:600,height:500})];data.trucks=[T.normaliseTruck({id:'a',width:2400,length:6000,height:2500,items:[]}),T.normaliseTruck({id:'b',width:2400,length:6000,height:2500,items:[]})];data.activeTruckId='a';const truck=data.trucks[0],items=T.addItems(data,'a','row',2);Object.assign(items[0],{packed:true,x:300,y:4000,colour:'#123456'});Object.assign(items[1],{packed:true,x:700,y:4000});const ids=items.map(i=>i.id),original=JSON.stringify(truck.items);
+ for(let n=0;n<4;n++){T.rotateItems(data,truck,ids);assert.equal(T.truckError(data,truck),'')}assert.equal(JSON.stringify(truck.items),original);
+ const duplicate=T.duplicateItems(data,truck,ids);assert(duplicate.packed);assert.deepEqual(truck.items.slice(2).map(i=>i.y),[3400,3400]);assert.equal(truck.items[2].colour,'#123456');assert.equal(new Set(truck.items.map(i=>i.id)).size,4);
+ const blocked=T.duplicateItems(data,truck,ids);assert(!blocked.packed);assert(truck.items.slice(4).every(i=>!i.packed));
+ const snapshot=JSON.stringify(data);Object.assign(truck.items[0],{x:2100,y:4000});const invalid=JSON.stringify(truck);assert.throws(()=>T.rotateItems(data,truck,[ids[0]]));assert.equal(JSON.stringify(truck),invalid);Object.assign(data,JSON.parse(snapshot));
+ T.transferItems(data,'a','b',duplicate.ids);assert.equal(data.activeTruckId,'b');assert(data.trucks[1].items.every(i=>!i.packed));assert.equal(data.trucks[1].items[0].colour,'#123456');assert.equal(data.trucks[1].items[0].id,duplicate.ids[0]);assert(!data.trucks[0].items.some(i=>duplicate.ids.includes(i.id)));
+ const support=data.trucks[0].items[0],raised=T.normaliseItem({...support,id:'raised',z:500,lifter:true});data.trucks[0].items.push(raised);const before=JSON.stringify(data);assert.throws(()=>T.transferItems(data,'a','b',[support.id]),/supported/);assert.equal(JSON.stringify(data),before);
+}
+// Clearances account for neighbouring boxes, height, group bounds and empty trailers.
+{
+ const data=T.empty();data.cases=[base('measure',{width:400,length:600,height:500})];const truck=T.normaliseTruck({id:'measure',width:2400,length:6000,height:2500,items:[]});data.trucks=[truck];data.activeTruckId=truck.id;assert.equal(T.measurements(data,truck).remaining,6000);
+ const items=T.addItems(data,truck.id,'measure',3);Object.assign(items[0],{packed:true,x:600,y:3000});Object.assign(items[1],{packed:true,x:1200,y:3000});Object.assign(items[2],{packed:true,x:600,y:4000});const m=T.measurements(data,truck,[items[0].id]);assert.deepEqual([m.left,m.right,m.rear,m.front,m.above,m.remaining],[600,200,3000,400,2000,3000]);
+ const group=T.measurements(data,truck,items.slice(0,2).map(i=>i.id));assert.equal(group.right,800);assert.equal(group.bounds.width,1000);assert.equal(group.front,400);
+ const saved=JSON.stringify(data),ctx=testContext({T,state:()=>data,truck:()=>truck,selected:items[0].id,esc:String});const markup=ctx.measurementMarkup(truck,items.map(item=>({item,position:item})),p=>({x:p.x/10,y:p.y/10}),{mode:'plan'});assert(markup.includes('200 mm'));assert(markup.includes('6 m'));assert(markup.includes('pointer-events="none"'));assert.equal(JSON.stringify(data),saved);
+}
+// Real commit/undo/redo functions preserve cameras, discard redo after new edits, and reset on project load.
+{
+ let data=T.empty(),saves=0;data.cases=[base('history')];data.trucks=[T.normaliseTruck({id:'history',width:2400,length:6000,height:2500,items:[]})];data.activeTruckId='history';
+ const ctx=testContext({T,drag:null,dialog:null,selected:'',state:()=>data,callbacks:{setState:next=>data=next,save:()=>saves++},render(){},notify(){},cancelDrag(){},closeDialog(){}});for(const name of ['save','replace','transaction','restoreHistory','editingKey','reset'])vm.runInContext(fn(ui,name),ctx);
+ ctx.transaction(next=>T.addItems(next,'history','history',1));assert.equal(ctx.undoStack.length,1);data.views[0].panX=42;ctx.restoreHistory();assert.equal(data.trucks[0].items.length,0);assert.equal(data.views[0].panX,42);ctx.restoreHistory(true);assert.equal(data.trucks[0].items.length,1);
+ const before=JSON.stringify(data);assert(!ctx.transaction(next=>{next.trucks[0].items[0].x=-1}));assert.equal(JSON.stringify(data),before);assert.equal(ctx.undoStack.length,1);
+ ctx.restoreHistory();ctx.transaction(next=>{next.trucks[0].name='Renamed'});assert.equal(ctx.redoStack.length,0);
+ let prevented=0;const event={key:'z',metaKey:true,preventDefault:()=>prevented++,target:{closest:()=>null}};assert(ctx.editingKey(event));assert.equal(data.trucks[0].name,'Truck');assert.equal(prevented,1);event.target.closest=()=>({});assert(!ctx.editingKey(event));assert.equal(prevented,1);ctx.reset();assert.equal(ctx.undoStack.length,0);assert.equal(ctx.redoStack.length,0);assert(saves>=5);
+}
+// Bulk orientation fields sync with the legacy wheel control; plan viewers cannot become 3D.
+{
+ const mixedCtx=testContext({field:(label,control)=>control});const mixedMarkup=mixedCtx.orientationControl('side',true);assert.equal((mixedMarkup.match(/selected/g)||[]).length,1);assert(mixedMarkup.includes('value="" selected'));
+ const fields={orientation:{name:'orientation',value:'side',dataset:{}},rideOnWheels:{name:'rideOnWheels',value:'yes',dataset:{}}},form={querySelector:selector=>fields[selector.includes('rideOnWheels')?'rideOnWheels':'orientation']},ctx=testContext({T});ctx.syncOrientationForm({target:fields.orientation},form);assert.equal(fields.rideOnWheels.value,'no');fields.rideOnWheels.value='yes';ctx.syncOrientationForm({target:fields.rideOnWheels},form);assert.equal(fields.orientation.value,'wheels');
+ const data=T.empty();ctx.state=()=>data;ctx.save=()=>{};ctx.render=()=>{};vm.runInContext(fn(ui,'setView'),ctx);ctx.setView(0,'leftIso');assert.equal(data.views[0].mode,'plan');ctx.setView(4,'orbit');assert.equal(data.views[0].mode,'plan');data.layout=2;ctx.setView(0,'leftIso');assert.equal(data.views[0].mode,'leftIso');
+}
+console.log('PASS: four orientations/quarter turns and SVG geometry, row duplicate/rotation/transfer, clearances, atomic history and fixed-plan controls.');
+// Execute the editor actions and orientation save paths, not just their data helpers.
+{
+ let data=T.empty(),submit,dialogMarkup='',saves=0,error='';data.cases=[base('actions',{width:400,length:800,height:500})];data.trucks=['one','two'].map(id=>T.normaliseTruck({id,name:id,width:2400,length:6000,height:2500,items:[]}));data.activeTruckId='one';const items=T.addItems(data,'one','actions',2);Object.assign(items[0],{packed:true,x:0,y:4000});Object.assign(items[1],{packed:true,x:400,y:4000});
+ const ctx=testContext({T,state:()=>data,truck:()=>data.trucks.find(t=>t.id===data.activeTruckId),selected:items[0].id,selectedGroup:items.map(i=>i.id),drag:null,dialog:null,esc:String,callbacks:{setState:next=>data=next,save:()=>saves++},render(){},notify:s=>error=s,closeDialog(){},FormData:class{get(){return 'two'}},showDialog:(title,markup,callback)=>{dialogMarkup=markup;submit=callback}});
+ for(const name of ['field','button'])vm.runInContext(ui.split('\n').find(line=>line.trim().startsWith('const '+name+'=')),ctx);for(const name of ['save','replace','transaction','editSelection','applySelectedDetails'])vm.runInContext(fn(ui,name),ctx);
+ // Expanding both packed footprints would overlap: reject every change together.
+ let changes=[{name:'orientation',value:'side'},{name:'department',value:'Changed'}],form={querySelectorAll:()=>changes},before=JSON.stringify(data);ctx.applySelectedDetails(form);assert.equal(JSON.stringify(data),before);assert(error.includes('overlap'));assert.equal(saves,0);
+ changes=[{name:'orientation',value:'wheelsUp'}];ctx.applySelectedDetails(form);assert(data.trucks[0].items.every(i=>T.orientation(i)==='wheelsUp'));assert.equal(saves,1);
+ ctx.editSelection('duplicate-row');assert.equal(data.trucks[0].items.length,4);assert.equal(ctx.selectedGroup.length,2);assert(data.trucks[0].items.slice(2).every(i=>T.orientation(i)==='wheelsUp'));assert.equal(saves,2);
+ ctx.editSelection('rotate-selection');assert(data.trucks[0].items.slice(2).every(i=>i.rotation===90));assert.equal(saves,3);
+ ctx.editSelection('move-truck');assert(dialogMarkup.includes('value="two"'));assert(!dialogMarkup.includes('value="one"'));submit({});assert.equal(data.activeTruckId,'two');assert(data.trucks[1].items.every(i=>!i.packed&&i.rotation===90&&T.orientation(i)==='wheelsUp'));assert.equal(saves,4);assert.equal(ctx.undoStack.length,4);
+ // Returning a mixed field to Leave unchanged must clear the linked field's edit too.
+ const peer={value:'no',dataset:{tpChanged:'true'}};ctx.syncOrientationForm({target:{name:'orientation',value:''}},{querySelector:()=>peer});assert.equal(peer.value,'');assert(!peer.dataset.tpChanged);
+ // Front elevation uses a width ruler rather than overlapping length ticks.
+ const active=data.trucks[1],camera=T.view({mode:'back',yaw:0,pitch:0}),point=p=>{const q=T.project(p,camera);return {x:q.x/10,y:q.y/10}};const ruler=ctx.measurementMarkup(active,[],point,camera);assert(ruler.includes('2.4 m'));assert(!ruler.includes('6 m'));
+}
+console.log('PASS: real editing controls, atomic bulk orientation saves, mixed-field reset and elevation ruler.');

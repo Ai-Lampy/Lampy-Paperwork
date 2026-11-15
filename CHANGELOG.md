@@ -1,3 +1,10 @@
+## V57.23 — Truck Pack orientations, measurements and editing
+
+- Add on-wheels, tipped, side and wheels-up case orientations with matching dimensions, castors and face artwork; support all four quarter-turn rotations and shared orientation edits.
+- Add a metric trailer ruler, free loading length from the rear and selected-case clearances to neighbours and trailer boundaries, with a Measurements toggle.
+- Add session undo/redo, duplicate selected rows, rotate selections and move selected cases to another truck's Waiting area. Preserve collision, boundary and stacking validation.
+- Keep both 2D Top/Plan viewers fixed to plan view; perspective selection and 3D orbit remain available in the two- and four-view layouts.
+
 ## V57.22 — Truck Pack floor and lifter plans
 
 - Align Waiting cases beside their next available loading rows without changing saved placements.
