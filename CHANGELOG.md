@@ -1,3 +1,18 @@
+## V57.26 — Grouped Truck Pack views and project titles
+
+- Combine Left and Right perspectives into 3D Sides, with Left above Right in one viewer. Split 3D Top into grouped bottom-row and raised-case trailers with shared pan and zoom.
+- Enable rotation from Top and Sides, keep the trailer centre and orbit scale fixed, and render visible case faces as solid surfaces.
+- Show outside internal-height rulers on side and end views. Use the project dimension units for every trailer ruler and include ruler labels in Fit calculations.
+- Keep Front and Rear captions visible outside the trailer and aligned with its orientation. Remove the Cases dimension-entry hint.
+- Display the current Project Name in the browser tab, updating it when opening or renaming a project; retain the application title for unnamed projects.
+
+## V57.25 — Truck Pack 3D views and fitting
+
+- Reuse the Device Config table delete-button styling for Cases inventory rows.
+- Separate Undo/Redo from zoom controls with additional spacing and a divider.
+- Default 3D View to 3D Top and 3D Left when entering the layout; remove 2D Top/Plan from its perspective selectors and convert legacy plan cameras to 3D perspectives on opening.
+- Fit 3D viewers to the projected trailer, captions and outside ruler using their actual viewport size, replacing excessive fixed margins. Keep Fit independent per viewer and exclude Waiting cases from its bounds.
+
 ## V57.24 — Truck Pack viewer and inventory controls
 
 - Place trailer ruler baselines, ticks and labels outside the projected trailer, with fitting space for the ruler.

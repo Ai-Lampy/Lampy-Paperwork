@@ -10,8 +10,8 @@
     {id:'30-ft-urban',name:'30 FT Urban with Ramp',width:2490,length:9140,height:2790,payload:null,note:'Stagetruck does not publish a payload for this trailer. Enter the confirmed payload.'},
     {id:'mega-box',name:'Mega Box with Ramp',width:2450,length:13450,height:2900,payload:21000}
   ];
-  const perspectives=['plan','top','left','right','back','front','leftIso','rightIso','orbit'];
-  const cameras={plan:[0,90],top:[0,90],left:[-90,0],right:[90,0],back:[0,0],front:[180,0],leftIso:[-35,30],rightIso:[35,30]};
+  const perspectives=['plan','top','sides','left','right','back','front','leftIso','rightIso','orbit'];
+  const cameras={plan:[0,90],top:[0,90],sides:[-90,0],left:[-90,0],right:[90,0],back:[0,0],front:[180,0],leftIso:[-35,30],rightIso:[35,30]};
   let sequence=0;
   function id(prefix='tp'){return prefix+'_'+(root.crypto?.randomUUID?.()||Date.now().toString(36)+'_'+(++sequence).toString(36))}
   function text(value,max=300){return String(value??'').trim().slice(0,max)}
@@ -50,7 +50,7 @@
     if(!Array.isArray(raw.items)||raw.items.length>MAX_ITEMS)throw Error('A truck supports up to '+MAX_ITEMS+' case instances.');
     result.items=raw.items.map(normaliseItem);return result;
   }
-  function view(raw={},index=0){const fallback=['plan','leftIso','back','rightIso'][index%4],mode=perspectives.includes(raw.mode)?raw.mode:fallback,pair=cameras[mode]||cameras.leftIso;return {mode,yaw:Number.isFinite(raw.yaw)?raw.yaw:pair[0],pitch:Math.max(-80,Math.min(90,Number.isFinite(raw.pitch)?raw.pitch:pair[1])),zoom:Math.max(.25,Math.min(8,Number(raw.zoom)||1)),panX:Number.isFinite(raw.panX)?Math.max(-100000,Math.min(100000,raw.panX)):0,panY:Number.isFinite(raw.panY)?Math.max(-100000,Math.min(100000,raw.panY)):0,tool:['select','pan','rotate'].includes(raw.tool)&&!(mode==='plan'&&raw.tool==='rotate')?raw.tool:'select'}}
+  function view(raw={},index=0){const fallback=['plan','leftIso','back','rightIso'][index%4],mode=perspectives.includes(raw.mode)?raw.mode:fallback,pair=cameras[mode]||cameras.leftIso;return {mode,...(Number.isFinite(raw.orbitScale)&&raw.orbitScale>0?{orbitScale:Math.min(1000,raw.orbitScale)}:{}),yaw:Number.isFinite(raw.yaw)?raw.yaw:pair[0],pitch:Math.max(-80,Math.min(90,Number.isFinite(raw.pitch)?raw.pitch:pair[1])),zoom:Math.max(.25,Math.min(8,Number(raw.zoom)||1)),panX:Number.isFinite(raw.panX)?Math.max(-100000,Math.min(100000,raw.panX)):0,panY:Number.isFinite(raw.panY)?Math.max(-100000,Math.min(100000,raw.panY)):0,tool:['select','pan','rotate'].includes(raw.tool)&&!(mode==='plan'&&raw.tool==='rotate')?raw.tool:'select'}}
   function empty(){return {cases:[],trucks:[],activeTruckId:'',layout:1,views:Array.from({length:4},(_,i)=>view({},i))}}
   function unique(rows,label){const seen=new Set();for(const row of rows){if(seen.has(row.id))throw Error('Duplicate '+label+' identifier.');seen.add(row.id)}}
   function normalise(raw){

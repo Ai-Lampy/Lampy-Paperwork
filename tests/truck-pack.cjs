@@ -3,7 +3,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const T=require('../js/truck-pack.js'),root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),ui=fs.readFileSync(path.join(root,'js/truck-pack-view.js'),'utf8');
 function fn(text,name){const start=text.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=text.indexOf('}',start);end>=0;end=text.indexOf('}',end+1)){const value=text.slice(start,end+1);try{new Function('return ('+value+')');return value}catch{}}throw Error(name)}
 const sharedColourContext=vm.createContext({colourTextToHex:value=>String(value||'').trim().toLowerCase(),normaliseHex:value=>String(value||'').toLowerCase()});vm.runInContext(fn(html,'colourSetPresentation'),sharedColourContext);
-function testContext(values){if(values.host&&!values.host.querySelector)values.host.querySelector=()=>null;const context=vm.createContext({root:{},host:null,renderScenes(){},callbacks:{colourPresentation:values=>sharedColourContext.colourSetPresentation(values),stripeWidth:()=>4*96/25.4},selectedGroup:[],inspectorObserver:null,undoStack:[],redoStack:[],showMeasurements:true,inventoryQuery:'',manualDimensionUnit:'',length:T.formatLength,state:()=>({layout:2,trucks:[]}),truck:()=>values.state?.().trucks.find(t=>t.id===values.state().activeTruckId),...values});for(const name of ['historyButtons','inventoryMatches','filterInventory','trailerRuler','syncHistoryButtons','orientationControl','syncOrientationForm','editActions','measurementDetails','measurementMarkup','sceneCamera','viewportMarkup','sceneViewport','gridMarkup','caseFaceFrame','caseColourMarkup','caseTextWidth','fitCaseLabel','caseLabelMarkup','selectionIds','selectionRect','casesInSelection','syncInspectorHeight','observeInspector'])vm.runInContext(fn(ui,name),context);return context}
+function testContext(values){if(values.host&&!values.host.querySelector)values.host.querySelector=()=>null;const context=vm.createContext({root:{},host:null,renderScenes(){},callbacks:{colourPresentation:values=>sharedColourContext.colourSetPresentation(values),stripeWidth:()=>4*96/25.4},selectedGroup:[],inspectorObserver:null,undoStack:[],redoStack:[],showMeasurements:true,inventoryQuery:'',manualDimensionUnit:'',length:T.formatLength,unit:()=>({measurement:'metric',weight:'kg'}),state:()=>({layout:2,trucks:[]}),truck:()=>values.state?.().trucks.find(t=>t.id===values.state().activeTruckId),...values});for(const name of ['corners','prepareOrbit','groupedScene','trailerRulers','trailerCaptions','trailerCaptionMarkup','fit3DBounds','fit3DView','historyButtons','inventoryMatches','filterInventory','trailerRuler','syncHistoryButtons','orientationControl','syncOrientationForm','editActions','measurementDetails','measurementMarkup','sceneCamera','viewportMarkup','sceneViewport','gridMarkup','caseFaceFrame','caseColourMarkup','caseTextWidth','fitCaseLabel','caseLabelMarkup','selectionIds','selectionRect','casesInSelection','syncInspectorHeight','observeInspector'])vm.runInContext(fn(ui,name),context);return context}
 const close=(a,b)=>assert(Math.abs(a-b)<.01,`${a} != ${b}`);
 for(const [input,expected] of [['1 m',1000],['12.5 cm',125],['600 mm',600],[`5' 6"`,1676.4],['12"',304.8],[`1' 2 1/2"`,368.3],['½ m',null],['1/2"',12.7]])if(expected===null)assert.throws(()=>T.parseLength(input));else close(T.parseLength(input),expected);
 for(const invalid of ['600','-1 m','NaN mm','1/0"','0 mm','10 yards','2 m garbage'])assert.throws(()=>T.parseLength(invalid));
@@ -45,7 +45,7 @@ assert.throws(()=>T.importRows([['Case',24,24,6]],dimensionMapping,'kg','yards')
 for(const bad of ['',0,-2,'bad','2 yards','1/0'])assert.throws(()=>T.importRows([['Case',bad,24,6]],dimensionMapping,'kg','in'),/Row 2/);
 const [fractional]=T.importRows([['Case','24 1/2','24','12.75',0]],dimensionMapping,'kg','in');close(fractional.width,622.3);assert.equal(fractional.casterHeight,0);
 const [noCastor]=T.importRows([['Case',24,24,6]],dimensionMapping,'kg','in');assert.equal(noCastor.casterHeight,null);assert.equal(noCastor.weight,null);
-for(const mode of T.perspectives.filter(k=>k!=='orbit')){const camera=T.view({mode,yaw:T.cameras[mode][0],pitch:T.cameras[mode][1]}),plane=['left','right'].includes(mode)?'yz':['front','back'].includes(mode)?'xz':'xy',delta=plane==='xy'?{x:150,y:-240,z:0}:plane==='xz'?{x:150,y:0,z:240}:{x:0,y:150,z:240},screen=T.project(delta,camera),back=T.unprojectDelta(screen.x,screen.y,camera,plane);for(const key of ['x','y','z'])close(back[key],delta[key]);}
+for(const mode of T.perspectives.filter(k=>k!=='orbit')){const camera=T.view({mode,yaw:T.cameras[mode][0],pitch:T.cameras[mode][1]}),plane=['left','right','sides'].includes(mode)?'yz':['front','back'].includes(mode)?'xz':'xy',delta=plane==='xy'?{x:150,y:-240,z:0}:plane==='xz'?{x:150,y:0,z:240}:{x:0,y:150,z:240},screen=T.project(delta,camera),back=T.unprojectDelta(screen.x,screen.y,camera,plane);for(const key of ['x','y','z'])close(back[key],delta[key]);}
 // Run the actual SVG renderer with saved data, independent camera windows and staging.
 model.layout=2;
 const c=testContext({T,drag:null,selected:upper.id,state:()=>model,truck:()=>truck,esc:v=>String(v).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;'),Math});
@@ -74,29 +74,29 @@ assert(fn(html,'appPayload').includes('truckPack:app.truckPack'));assert(fn(html
  const original={...model.views[0]};d.drag={type:'orbit',model,index:0,original};model.views[0]={mode:'orbit',yaw:54,pitch:22,zoom:1};d.cancelDrag();assert.deepEqual(JSON.parse(JSON.stringify(model.views[0])),original,'cube cancellation restores the complete camera');
  vm.runInContext(fn(ui,'setView'),d);
  const cube={dataset:{tpCube:'0'}},cubeTarget={closest:selector=>selector==='[data-tp-cube]'?cube:selector==='[data-tp-cube-face]'?{dataset:{tpCubeFace:'front'}}:null};
- d.pointerDown({button:0,pointerId:2,target:cubeTarget,clientX:100,clientY:100,preventDefault(){}});d.pointerMove({clientX:140,clientY:130});assert.equal(model.views[0].mode,'orbit');close(model.views[0].yaw,26);close(model.views[0].pitch,70.5);d.pointerUp({pointerId:2});
+ d.pointerDown({button:0,pointerId:2,target:cubeTarget,clientX:100,clientY:100,preventDefault(){}});d.pointerMove({clientX:140,clientY:130});assert.equal(model.views[0].mode,'orbit');close(model.views[0].yaw,-9);close(model.views[0].pitch,40.5);d.pointerUp({pointerId:2});
  d.pointerDown({button:0,pointerId:2,target:cubeTarget,clientX:100,clientY:100,preventDefault(){}});d.pointerUp({pointerId:2});assert.equal(model.views[0].mode,'front');assert.equal(model.views[0].yaw,180);assert.equal(model.views[0].pitch,0);
 }
 
 // Run the actual project loader, including normalization before any app mutation.
 {
- const p=testContext({LampyCore:require('../js/project-core.js'),LampyTruckPack:T,app:{collapsed:{}},document:{},fixturePatchViewOptions:{},persisted:0});
+ const p=testContext({LampyCore:require('../js/project-core.js'),LampyTruckPack:T,app:{collapsed:{}},document:{},VERSION:'test',fixturePatchViewOptions:{},persisted:0});
  for(const name of ['normaliseLabel','normaliseSocaMeta','normaliseDistro','normaliseLooms','normaliseProjectInfo','normalisePatchFixture','normalisePatchSheets','normaliseGdtfFiles','normaliseGdtfMatches','normaliseControlNetwork','normalisePatchViewOptions'])p[name]=value=>value;
  for(const name of ['resetFixturePatchUndo','closeConsoleRemoval','resetProjectErrors','clearDeviceConfigSelection','closeAllRackPopouts','applyFixtureOverridesToProjectRows','ensureSocaData','syncPositionsFromPatch','resetRevisionTracking'])p[name]=()=>{};
  for(const name of ['repositoryGdtfBytes','unlockedPatchGroups','deviceConfigExpandedDevices','controlExpandedDevices','controlOpenLocations','controlKnownLocations','deviceConfigTableSorts','rackViewZooms','rackViewFaces','rackClosedPanels','rackPopoutDualViews','collapsedLoomCards','knownLoomCardStates'])p[name]=new Set();
  p.persist=()=>p.persisted++;
- for(const name of ['normaliseTruckPack','loadProjectPayload'])vm.runInContext(fn(html,name),p);
- const payload={app:{labels:[],distros:[],fixturePatch:[],looms:[],patchSheets:[],projectInfo:{projectSettings:{}},controlNetwork:{},gdtfFiles:{},gdtfMatches:{},truckPack:JSON.parse(JSON.stringify(model))}};
- p.loadProjectPayload(payload);assert.deepEqual(JSON.parse(JSON.stringify(p.app.truckPack)),T.normalise(model));assert.equal(p.persisted,1);
+ for(const name of ['updateProjectTabTitle','normaliseTruckPack','loadProjectPayload'])vm.runInContext(fn(html,name),p);
+ const payload={app:{labels:[],distros:[],fixturePatch:[],looms:[],patchSheets:[],projectInfo:{file:{projectName:'Imported tour'},projectSettings:{}},controlNetwork:{},gdtfFiles:{},gdtfMatches:{},truckPack:JSON.parse(JSON.stringify(model))}};
+ p.loadProjectPayload(payload);assert.equal(p.document.title,'Imported tour');assert.deepEqual(JSON.parse(JSON.stringify(p.app.truckPack)),T.normalise(model));assert.equal(p.persisted,1);
  const validApp=p.app.truckPack,malformed=JSON.parse(JSON.stringify(payload));malformed.app.truckPack.trucks[0].items[0].x=-100;assert.throws(()=>p.loadProjectPayload(malformed));assert.equal(p.app.truckPack,validApp,'invalid packs cannot partially replace the project');assert.equal(p.persisted,1);
- delete payload.app.truckPack;p.loadProjectPayload(payload);assert.deepEqual(JSON.parse(JSON.stringify(p.app.truckPack)),T.empty(),'older projects load with an empty Truck Pack');
+ delete payload.app.truckPack;p.loadProjectPayload(payload);assert.equal(p.document.title,'Imported tour');assert.deepEqual(JSON.parse(JSON.stringify(p.app.truckPack)),T.empty(),'older projects load with an empty Truck Pack');
 }
 
 // Render actual inventory and multi-view controls, and submit both creation forms.
 {
  const moduleContext=testContext({LampyTruckPack:T});vm.runInContext(ui,moduleContext);
  const viewLabels=moduleContext.LampyTruckPackView.labels;
- assert.deepEqual(Object.values(viewLabels).slice(0,8),['2D Top/Plan','3D Top','3D Left','3D Right','3D Back','3D Front','3D Left Isometric','3D Right Isometric']);
+ assert.deepEqual(Object.values(viewLabels).slice(0,8),['2D Top/Plan','3D Top','3D Sides','3D Back','3D Front','3D Left Isometric','3D Right Isometric','3D Free Rotation']);
  let fresh=T.empty(),submit,formValues={},lastMarkup='',saves=0;
  const modal={querySelector:()=>({value:'',textContent:'',onchange:null}),querySelectorAll:()=>[]};
  const c=testContext({T,labels:viewLabels,esc:v=>String(v??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;'),state:()=>fresh,unit:()=>({measurement:'metric',weight:'kg'}),length:v=>T.formatLength(v),weight:v=>T.formatWeight(v),callbacks:{colourControl:()=>'<input name="colour">',colourHex:v=>v},FormData:class{get(k){return formValues[k]??''}},showDialog:(title,markup,callback)=>{submit=callback;lastMarkup=markup;return modal},replace:next=>{fresh=T.normalise(next);saves++},closeDialog(){},render(){},selected:'',tab:'pack'});
@@ -196,7 +196,7 @@ console.log('PASS: Truck Pack navigation routes, active sub-tabs, truck selectio
  const render=testContext({T,drag:null,selected:'',state:()=>data,truck:()=>data.trucks[0],esc:String,Math});
  vm.runInContext(ui.split('\n').find(line=>line.includes('const faces=')),render);
  for(const name of ['corners','staging','scene','renderSceneData','partMesh','cubeMarkup'])vm.runInContext(fn(ui,name),render);
- for(const mode of ['plan','leftIso']){data.views[0]=T.view({mode});const result=render.scene(0);for(const colour of ['#ff0000','#00ff00','#0000ff'])assert(result.markup.includes('fill="'+colour+'"'));assert(result.markup.includes('fill="url(#tp-colours-0-'+item.id+'-'));}
+ for(const mode of ['plan','leftIso']){data.views[0]=T.view({mode});const result=render.scene(0);for(const colour of ['#ff0000','#00ff00','#0000ff'])assert(result.markup.includes('fill="'+colour+'"'));assert(result.markup.includes('fill="url(#tp-colours-'+(['top','sides'].includes(mode)?'0p0':'0')+'-'+item.id+'-'));}
  const before=render.scene(0).point({x:0,y:0,z:0});data.views[0].panX=82;data.views[0].panY=-36;const after=render.scene(0).point({x:0,y:0,z:0});close(after.x-before.x,82);close(after.y-before.y,-36);
 }
 // Scene tools change only their viewport; pan/orbit never move case geometry.
@@ -213,12 +213,12 @@ console.log('PASS: Truck Pack navigation routes, active sub-tabs, truck selectio
  assert.equal(JSON.stringify(data.trucks[0].items),itemSnapshot);assert.equal(JSON.stringify(data.views.slice(1)),otherViews);
  const saved=JSON.stringify(data.views[0]);context.pointerDown(event(100,100));context.pointerMove(event(250,220));context.cancelDrag();assert.equal(JSON.stringify(data.views[0]),saved);
  assert.equal(T.normalise(JSON.parse(JSON.stringify(data))).views[0].panX,80);
- action('tool',{view:'0',tool:'rotate'});assert.equal(data.views[0].tool,'rotate');assert.equal(data.views[0].mode,'leftIso');
+ action('tool',{view:'0',tool:'rotate'});assert.equal(data.views[0].tool,'rotate');assert.equal(data.views[0].mode,'orbit');
  const yaw=data.views[0].yaw;context.pointerDown(event(100,100));context.pointerMove(event(140,120));context.pointerUp(event(140,120));assert.equal(data.views[0].mode,'orbit');close(data.views[0].yaw,yaw+26);
  assert.equal(JSON.stringify(data.trucks[0].items),itemSnapshot);assert.equal(JSON.stringify(data.views.slice(1)),otherViews);
  action('tool',{view:'0',tool:'select'});assert.equal(data.views[0].tool,'select');context.selected='selected';context.pointerDown(event(0,0));context.pointerUp(event(0,0));assert.equal(context.selected,'');
  data.views[0].zoom=2;action('fit',{view:'0'});assert.equal(data.views[0].zoom,1);assert.equal(data.views[0].panX,0);assert.equal(data.views[0].panY,0);
- context.setView(0,'plan');action('tool',{view:'0',tool:'rotate'});context.setView(0,'plan');assert.equal(data.views[0].tool,'select');
+ context.setView(0,'plan');action('tool',{view:'0',tool:'rotate'});context.setView(0,'plan');assert.equal(data.views[0].mode,'top');assert.equal(data.views[0].tool,'rotate');
  data.trucks.push(T.normaliseTruck({...T.presets[0],id:'other',items:[]}));context.selected='old';action('truck',{truckId:'other'});assert.equal(data.activeTruckId,'other');assert.equal(context.selected,'');assert(saves>0&&draws>0);
 }
 // Single view keeps an empty inspector; multiple views hide it without a selection.
@@ -396,7 +396,7 @@ console.log('PASS: catalogue/instance separation, marquee selection, shared edit
   item.packed=packed;item.colour='';item.colour2='';item.colour3='';const plain=renderer.scene(0).markup;
   assert(plain.includes('fill="#ffffff"'),mode);assert(!plain.includes('#7799bb'));assert(plain.includes('class="tpCaseLabel"'));assert(plain.includes('<tspan'));assert(!/NaN|Infinity/.test(plain));
   item.colour2='#ff0000';assert(renderer.scene(0).markup.includes('fill="#ff0000"'),'assigned colours still show even with a blank first field');
-  item.colour3='#00ff00';assert(renderer.scene(0).markup.includes('fill="url(#tp-colours-0-'+item.id+'-'),'multiple assigned colours retain stripes');
+  item.colour3='#00ff00';assert(renderer.scene(0).markup.includes('fill="url(#tp-colours-'+(['top','sides'].includes(mode)?'0p0':'0')+'-'+item.id+'-'),'multiple assigned colours retain stripes');
   item.colour2='';item.colour3='';assert(renderer.scene(0).markup.includes('fill="#ffffff"'),'clearing all colours restores neutral appearance');
  }}
  assert.equal(T.normalise(JSON.parse(JSON.stringify(data))).trucks[0].items[0].colour,'','neutral display never assigns a stored colour');
@@ -659,9 +659,9 @@ console.log('PASS: real-viewport truck fitting, no Waiting-driven shrinking, zoo
  const before=JSON.stringify(data),bottom=ctx.scene(0),top=ctx.scene(4),ids=scene=>Array.from(scene.hitBoxes,b=>b.id);assert.deepEqual(ids(bottom),[items[0].id,items[2].id,items[4].id]);assert.deepEqual(ids(top),[items[1].id,items[3].id]);assert(!top.markup.includes('data-tp-item="'+items[2].id+'"'),'floor lifters stay in the bottom viewer');assert(!bottom.markup.includes('data-tp-item="'+items[1].id+'"'));assert.equal(JSON.stringify(data),before);
  const region={left:-1e6,top:-1e6,right:1e6,bottom:1e6};assert.deepEqual(Array.from(ctx.casesInSelection(top.hitBoxes,region)),[items[1].id,items[3].id],'marquee cannot select hidden lower cases');
  const markup=ctx.packMarkup(data,data.trucks[0]);assert.equal((markup.match(/class="tpViewport"/g)||[]).length,2);assert(markup.indexOf('data-tp-scene="0"')<markup.indexOf('data-tp-scene="4"'));assert(markup.includes('Bottom row'));assert(markup.includes('Top row — Lifters'));assert(markup.indexOf('<aside class="tpInspector"')>markup.indexOf('data-tp-scene="4"'));
- const otherCameras=JSON.stringify(data.views.slice(1)),action=name=>ctx.click({target:{closest:()=>({dataset:{tpAction:name,view:'4'}})}});action('zoom-in');assert.equal(data.views[0].zoom,1.25);assert.equal(ctx.scene(0).scale,ctx.scene(4).scale);action('fit');assert.equal(data.views[0].zoom,1);assert.equal(JSON.stringify(data.views.slice(1)),otherCameras);assert.equal(data.views.length,4);
+ const otherCameras=JSON.stringify(data.views.slice(1)),action=name=>ctx.click({target:{closest:()=>({dataset:{tpAction:name,view:'4'}})}});action('zoom-in');assert.equal(data.views[0].zoom,1.25);assert.equal(ctx.scene(0).scale,ctx.scene(4).scale);action('fit');assert.equal(data.views[0].zoom,1);assert.equal(JSON.stringify(data.views.slice(1)),otherCameras);assert.equal(data.views.length,4);assert(ui.includes("cube.hidden=v.mode==='plan'"),'navigation cube remains available in grouped 3D views');
  // Panning and cancelling from the upper viewer operate on the shared camera.
- data.views[0].tool='pan';const event=(x,y,id)=>({button:0,pointerId:32,clientX:x,clientY:y,preventDefault(){},target:{closest:selector=>selector==='[data-tp-scene]'?svgs.get(4):selector==='[data-tp-item]'&&id?{dataset:{tpItem:id}}:null}});ctx.pointerDown(event(50,50));ctx.pointerMove(event(80,90));assert.equal(data.views[0].panX,30);assert.equal(data.views[0].panY,40);ctx.cancelDrag();assert.equal(data.views[0].panX,0);assert.equal(data.views.length,4);
+ data.views[0].tool='pan';const event=(x,y,id)=>({button:0,pointerId:32,clientX:x,clientY:y,preventDefault(){},target:{closest:selector=>selector==='[data-tp-scene]'?svgs.get(4):selector==='[data-tp-item]'&&id?{dataset:{tpItem:id}}:null}});ctx.pointerDown(event(50,50));ctx.pointerMove(event(80,90));assert.equal(data.views[0].panX,30);assert.equal(data.views[0].panY,40);ctx.cancelDrag();assert.equal(data.views[0].panX,0);assert.equal(data.views.length,4);assert(ui.includes("cube.hidden=v.mode==='plan'"),'navigation cube remains available in grouped 3D views');
  // Drag the highest lifter off the stack. It remains visible in the source
  // preview, then belongs only to the lower viewer after landing on the floor.
  data.views[0].tool='select';ctx.sceneMaps[4]=ctx.scene(4);const scale=ctx.sceneMaps[4].scale;ctx.pointerDown(event(20,20,items[3].id));assert.equal(ctx.drag.index,4);ctx.pointerMove(event(20+1220*scale,20,items[3].id));assert.equal(ctx.drag.error,'');assert.equal(ctx.drag.preview.z,0);assert(ids(ctx.scene(4)).includes(items[3].id));ctx.pointerUp(event(20+1220*scale,20,items[3].id));assert(ids(ctx.scene(0)).includes(items[3].id));assert(!ids(ctx.scene(4)).includes(items[3].id));
@@ -701,7 +701,7 @@ console.log('PASS: predictive Waiting alignment/cache, independent floor/raised 
  const data=T.empty();data.cases=[base('measure',{width:400,length:600,height:500})];const truck=T.normaliseTruck({id:'measure',width:2400,length:6000,height:2500,items:[]});data.trucks=[truck];data.activeTruckId=truck.id;assert.equal(T.measurements(data,truck).remaining,6000);
  const items=T.addItems(data,truck.id,'measure',3);Object.assign(items[0],{packed:true,x:600,y:3000});Object.assign(items[1],{packed:true,x:1200,y:3000});Object.assign(items[2],{packed:true,x:600,y:4000});const m=T.measurements(data,truck,[items[0].id]);assert.deepEqual([m.left,m.right,m.rear,m.front,m.above,m.remaining],[600,200,3000,400,2000,3000]);
  const group=T.measurements(data,truck,items.slice(0,2).map(i=>i.id));assert.equal(group.right,800);assert.equal(group.bounds.width,1000);assert.equal(group.front,400);
- const saved=JSON.stringify(data),ctx=testContext({T,state:()=>data,truck:()=>truck,selected:items[0].id,esc:String});const markup=ctx.measurementMarkup(truck,items.map(item=>({item,position:item})),p=>({x:p.x/10,y:p.y/10}),{mode:'plan'});assert(markup.includes('200 mm'));assert(markup.includes('6 m'));assert(markup.includes('pointer-events="none"'));assert.equal(JSON.stringify(data),saved);
+ const saved=JSON.stringify(data),ctx=testContext({T,state:()=>data,truck:()=>truck,selected:items[0].id,esc:String});const markup=ctx.measurementMarkup(truck,items.map(item=>({item,position:item})),p=>({x:p.x/10,y:p.y/10}),{mode:'plan'});assert(markup.includes('200 mm'));assert(markup.includes('6000 mm'));assert(markup.includes('pointer-events="none"'));assert.equal(JSON.stringify(data),saved);
 }
 // Real commit/undo/redo functions preserve cameras, discard redo after new edits, and reset on project load.
 {
@@ -733,7 +733,7 @@ console.log('PASS: four orientations/quarter turns and SVG geometry, row duplica
  // Returning a mixed field to Leave unchanged must clear the linked field's edit too.
  const peer={value:'no',dataset:{tpChanged:'true'}};ctx.syncOrientationForm({target:{name:'orientation',value:''}},{querySelector:()=>peer});assert.equal(peer.value,'');assert(!peer.dataset.tpChanged);
  // Front elevation uses a width ruler rather than overlapping length ticks.
- const active=data.trucks[1],camera=T.view({mode:'back',yaw:0,pitch:0}),point=p=>{const q=T.project(p,camera);return {x:q.x/10,y:q.y/10}};const ruler=ctx.measurementMarkup(active,[],point,camera);assert(ruler.includes('2.4 m'));assert(!ruler.includes('6 m'));
+ const active=data.trucks[1],camera=T.view({mode:'back',yaw:0,pitch:0}),point=p=>{const q=T.project(p,camera);return {x:q.x/10,y:q.y/10}};const ruler=ctx.measurementMarkup(active,[],point,camera);assert(ruler.includes('2400 mm'));assert(!ruler.includes('6000 mm'));
 }
 console.log('PASS: real editing controls, atomic bulk orientation saves, mixed-field reset and elevation ruler.');
 
@@ -743,7 +743,7 @@ console.log('PASS: real editing controls, atomic bulk orientation saves, mixed-f
  const ctx=testContext({T,state:()=>data,truck:()=>active,host:{querySelector:()=>({getBoundingClientRect:()=>({width:350,height:700})})},drag:null,selected:'',esc:String});vm.runInContext(ui.split('\n').find(line=>line.includes('const faces=')),ctx);for(const name of ['corners','staging','scene','renderSceneData','partMesh'])vm.runInContext(fn(ui,name),ctx);
  const cameras=T.perspectives.filter(p=>p!=='orbit').map(mode=>T.view({mode,yaw:T.cameras[mode][0],pitch:T.cameras[mode][1]}));for(const yaw of [-175,-110,-50,5,80,140])cameras.push(T.view({mode:'orbit',yaw,pitch:32}));
  for(const camera of cameras){data.views[0]=camera;const scene=ctx.scene(0),r=ctx.trailerRuler(active,scene.point);assert(r,camera.mode);const vertices=Array.from(ctx.corners({x:0,y:0,z:0,width:active.width,length:active.length,height:active.height}),scene.point);for(const p of vertices)assert(r.nx*(p.x-r.a.x)+r.ny*(p.y-r.a.y)<=.02,'trailer is inward of ruler edge');
-  const markup=ctx.measurementMarkup(active,[],scene.point,camera),tape=markup.match(/<g data-tp-ruler="[xy]">([\s\S]*?)<\/g>/)[1];
+  const markup=ctx.measurementMarkup(active,[],scene.point,camera),tape=markup.match(/<g data-tp-ruler="[xy]"[^>]*>([\s\S]*?)<\/g>/)[1];
   for(const match of tape.matchAll(/(?:M|L)([-.\d]+),([-.\d]+)/g)){const x=Number(match[1]),y=Number(match[2]);assert(r.nx*(x-r.a.x)+r.ny*(y-r.a.y)>=13.9,'ticks and baseline are outside');assert(x>=0&&x<=350&&y>=0&&y<=700,'ruler fits viewport')}
   for(const match of tape.matchAll(/<text x="([-.\d]+)" y="([-.\d]+)"/g)){const x=Number(match[1]),y=Number(match[2]);assert(r.nx*(x-r.a.x)+r.ny*(y-r.a.y)>22,'labels are outside');assert(x>=0&&x<=350&&y>=0&&y<=700)}
  }
@@ -777,3 +777,67 @@ console.log('PASS: real editing controls, atomic bulk orientation saves, mixed-f
  assert(ui.includes("n===2?'3D View'"));assert(ui.includes('.tpInspector,.tpViewToolbar,.tpDialog'),'viewer controls do not clear selection and shift under the pointer');
 }
 console.log('PASS: external silhouette rulers, compact icon history, full-width unselected layouts, manual dimension units and live case search.');
+
+// 3D View opens Top/Sides, excludes Plan, and preserves independent camera choices.
+{
+ const data=T.empty(),ctx=testContext({T,state:()=>data,save(){},render(){},labels:{plan:'2D Top/Plan',top:'3D Top',sides:'3D Sides',front:'3D Front'},esc:String});
+ for(const name of ['button'])vm.runInContext(ui.split('\n').find(line=>line.trim().startsWith('const '+name+'=')),ctx);for(const name of ['sceneTools','change','setView'])vm.runInContext(fn(ui,name),ctx);
+ const layout=value=>ctx.change({target:{value:String(value),matches:selector=>selector==='[data-tp-layout]'}});
+ data.views[0].panX=100;data.views[1].zoom=2;layout(2);assert.deepEqual(data.views.slice(0,2).map(v=>v.mode),['top','sides']);assert(data.views.slice(0,2).every(v=>v.zoom===1&&v.panX===0&&v.panY===0));
+ for(let index=0;index<2;index++){const markup=ctx.viewportMarkup(data.views[index],index);assert(!markup.includes('value="plan"'));assert(markup.includes('value="top"'));assert(markup.includes('value="sides"'))}
+ ctx.setView(0,'front');assert.equal(data.views[0].mode,'front');assert.equal(data.views[1].mode,'sides');layout(2);assert.equal(data.views[0].mode,'front','same layout does not reset customised cameras');ctx.setView(1,'plan');assert.equal(data.views[1].mode,'top');
+ layout(1);assert.equal(data.views[0].mode,'plan');layout(4);assert(ctx.viewportMarkup(data.views[0],0).includes('value="plan"'));layout(2);assert.deepEqual(data.views.slice(0,2).map(v=>v.mode),['top','sides']);
+}
+// Actual projected trailer, captions and outside ruler fit tightly after pan/zoom/resize.
+{
+ const data=T.empty();data.layout=2;data.cases=[base('fit-waiting')];data.trucks=[T.normaliseTruck({...T.presets.find(p=>p.id==='mega-box'),id:'fit-3d',items:[]})];data.activeTruckId='fit-3d';const active=data.trucks[0];let viewport={width:350,height:700};
+ const ctx=testContext({T,state:()=>data,truck:()=>active,host:{querySelector:()=>({getBoundingClientRect:()=>viewport}),contains:()=>true},drag:null,selected:'',esc:String,save(){},renderScenes(){}});vm.runInContext(ui.split('\n').find(line=>line.includes('const faces=')),ctx);for(const name of ['corners','staging','scene','renderSceneData','partMesh','click'])vm.runInContext(fn(ui,name),ctx);
+ for(const size of [{width:350,height:700},{width:680,height:700},{width:470,height:280}])for(const mode of ['left','right','front','back','leftIso','rightIso'])for(const measurements of [true,false]){
+  viewport=size;ctx.showMeasurements=measurements;data.views[0]=T.view({mode,yaw:T.cameras[mode][0],pitch:T.cameras[mode][1]});const scene=ctx.scene(0),b=ctx.fit3DBounds(active,scene.point,data.views[0]);
+  assert(b.left>=11.9&&b.right<=size.width-11.9,mode+' horizontal fit');assert(b.top>=53.9&&b.bottom<=size.height-27.9,mode+' vertical fit');
+  const fill=Math.max((b.right-b.left)/(size.width-24),(b.bottom-b.top)/(size.height-82));assert(fill>.995,mode+' should use available fit area');
+  if(measurements&&size.width===350&&mode==='left'){const oldScale=(350-144)/active.length;assert(scene.scale>oldScale,'side Fit still improves on old margins while including the height ruler')}
+ }
+ viewport={width:680,height:700};ctx.showMeasurements=true;data.views[0]=T.view({mode:'left',yaw:-90,pitch:0,zoom:4,panX:600,panY:-250});const second=JSON.stringify(data.views[1]);ctx.click({target:{closest:()=>({dataset:{tpAction:'fit',view:'0'}})}});assert.equal(data.views[0].zoom,1);assert.equal(data.views[0].panX,0);assert.equal(data.views[0].panY,0);assert.equal(JSON.stringify(data.views[1]),second);
+ const original=ctx.scene(0);T.addItems(data,active.id,'fit-waiting',50);close(ctx.scene(0).scale,original.scale);assert.deepEqual(ctx.scene(0).point({x:0,y:0,z:0}),original.point({x:0,y:0,z:0}));
+}
+// The Cases table reuses Device Config's actual button styling, without a competing btn style.
+{
+ const data=T.empty();data.cases=[base('same-delete')];const ctx=testContext({T,state:()=>data,esc:String,unit:()=>({weight:'kg'}),weight:T.formatWeight});for(const name of ['input','button'])vm.runInContext(ui.split('\n').find(line=>line.trim().startsWith('const '+name+'=')),ctx);vm.runInContext(fn(ui,'inventoryMarkup'),ctx);
+ const button=ctx.inventoryMarkup().match(/<button[^>]*data-tp-action="delete-case"[^>]*>❌<\/button>/)[0];assert(button.includes('class="deviceConfigDeleteButton"'));assert(!button.includes('class="btn'));assert(button.includes('aria-label="Delete same-delete"'));
+ const css=fs.readFileSync(path.join(root,'js/truck-pack.css'),'utf8');assert(!css.includes('.tpInventory [data-tp-action="delete-case"]'));assert(css.includes('.tpViewControls .tpHistoryActions{margin-right:10px;padding-right:8px;border-right:1px solid #b9b9b9}'));
+}
+console.log('PASS: Top/Sides 3D defaults, restricted perspectives, tight 3D fitting, independent Fit and shared delete styling.');
+
+// Grouped 3D scenes share camera controls while retaining separate layer/side projections.
+{
+ const data=T.empty();data.layout=2;data.cases=[base('grouped',{width:600,length:800,height:500,casterHeight:0})];data.trucks=[T.normaliseTruck({...T.presets[0],id:'grouped',items:[]})];data.activeTruckId='grouped';const active=data.trucks[0],[floor,raised,floorLifter,waiting]=T.addItems(data,active.id,'grouped',4);
+ Object.assign(floor,{packed:true,x:100,y:100,z:0,colour:'#ff0000',colour2:'#00ff00'});Object.assign(raised,{packed:true,x:100,y:100,z:500,lifter:true});Object.assign(floorLifter,{packed:true,x:1000,y:100,z:0,lifter:true});
+ let viewport={width:680,height:700},saves=0;const svg={dataset:{tpScene:'0'},viewBox:{baseVal:viewport},getBoundingClientRect:()=>({left:0,top:0,...viewport})},host={querySelector:()=>svg,contains:()=>true,setPointerCapture(){},releasePointerCapture(){}};
+ const ctx=testContext({T,state:()=>data,truck:()=>active,host,tab:'pack',drag:null,selected:'',esc:String,save(){saves++},render(){},renderInspector(){},notify(){}});vm.runInContext(ui.split('\n').find(line=>line.includes('const faces=')),ctx);for(const name of ['staging','scene','renderSceneData','partMesh','click','setView','pointerDown','pointerMove','pointerUp','cancelDrag','svgPoint'])vm.runInContext(fn(ui,name),ctx);
+ const itemIds=p=>new Set(p.hitBoxes.map(b=>b.id));
+ data.views[0]=T.view({mode:'top'});let result=ctx.scene(0);assert.equal(result.panels.length,2);assert.deepEqual([...itemIds(result.panels[0])].sort(),[floor.id,floorLifter.id,waiting.id].sort());assert.deepEqual([...itemIds(result.panels[1])],[raised.id]);assert(result.panels[0].markup.includes('data-tp-item="'+waiting.id+'"'));assert(!result.panels[1].markup.includes('data-tp-item="'+waiting.id+'"'));
+ for(const p of result.panels){const b=ctx.fit3DBounds(active,p.point,p.camera),r=p.rect;assert(b.left>=r.x+11.9&&b.right<=r.x+r.width-11.9);assert(b.top>=r.y+53.9&&b.bottom<=r.y+r.height-27.9)}
+ const before=result.panels.map(p=>p.point({x:0,y:0,z:0}));data.views[0].panX=25;data.views[0].panY=-40;result=ctx.scene(0);for(let i=0;i<2;i++){const p=result.panels[i].point({x:0,y:0,z:0});close(p.x-before[i].x,25);close(p.y-before[i].y,-40)}const scale=result.scale;data.views[0].zoom=2;result=ctx.scene(0);result.panels.forEach(p=>close(p.scale,scale*2));
+ data.views[0]=T.view({mode:'sides'});result=ctx.scene(0);assert.equal(result.panels[0].camera.mode,'left');assert.equal(result.panels[1].camera.mode,'right');assert(result.panels[0].rect.y<result.panels[1].rect.y);close(result.panels[0].scale,result.panels[1].scale);
+ for(const p of result.panels){assert(p.markup.includes('data-tp-ruler="z" data-internal-size="'+active.height+'"'));const r=ctx.trailerRulers(active,p.point,p.camera).find(r=>r.axis==='z');assert(r);close(r.size,active.height);for(const corner of ctx.corners({x:0,y:0,z:0,width:active.width,length:active.length,height:active.height}).map(p.point))assert(r.nx*(corner.x-r.a.x)+r.ny*(corner.y-r.a.y)<=.02)}
+ const patternIds=[...result.markup.matchAll(/<pattern id="([^"]+)"/g)].map(m=>m[1]);assert(patternIds.length);assert.equal(new Set(patternIds).size,patternIds.length);
+ // Dragging in the lower Right panel uses its inverse projection, not the Left camera.
+ ctx.sceneMaps=[result];const target={dataset:{tpItem:floor.id},closest:selector=>selector==='[data-tp-item]'?target:selector==='[data-tp-panel]'?{dataset:{tpPanel:'1'}}:selector==='[data-tp-scene]'?svg:null};
+ ctx.pointerDown({button:0,pointerId:3,target,clientX:350,clientY:500,preventDefault(){}});assert.equal(ctx.drag.panel,1);assert.equal(ctx.drag.projection.camera.mode,'right');assert.equal(ctx.drag.plane,'yz');const delta=T.project({x:0,y:300,z:0},ctx.drag.projection.camera);ctx.pointerMove({clientX:350+delta.x*ctx.drag.projection.scale,clientY:500+delta.y*ctx.drag.projection.scale});close(ctx.drag.preview.y,400);ctx.cancelDrag();
+ ctx.drag={type:'marquee',index:0,start:{x:20,y:80},current:{x:400,y:600},ids:[]};assert(ctx.scene(0).markup.includes('class="tpSelectionBox"'));ctx.drag=null;
+ // Rotate from Top and Sides; the world-space truck centre and scale stay fixed.
+ for(const mode of ['top','sides']){
+  data.views[0]=T.view({mode,panX:100,panY:200});ctx.click({target:{closest:()=>({dataset:{tpAction:'tool',view:'0',tool:'rotate'}})}});const camera=data.views[0];assert.equal(camera.mode,'orbit');assert(camera.pitch<89);assert.equal(camera.panX,0);assert.equal(camera.panY,0);const scale=ctx.scene(0).scale;
+  for(const yaw of [-160,-70,0,70,150])for(const pitch of [-40,5,40,80]){camera.yaw=yaw;camera.pitch=pitch;const scene=ctx.scene(0),center=scene.point({x:active.width/2,y:active.length/2,z:active.height/2});close(center.x,viewport.width/2);close(center.y,viewport.height/2);close(scene.scale,scale);assert(!scene.markup.includes('fill-opacity="0'));assert(!scene.markup.includes('fill-opacity=".'));assert(scene.markup.includes('data-tp-item="'+floor.id+'"'));assert(scene.markup.lastIndexOf('tpTrailerCaptions')>scene.markup.lastIndexOf('class="tpCase"'))}
+  ctx.prepareOrbit(camera,viewport);close(ctx.scene(0).scale,scale);
+  ctx.click({target:{closest:()=>({dataset:{tpAction:'fit',view:'0'}})}});const fitted=ctx.scene(0),b=ctx.fit3DBounds(active,fitted.point,camera);assert(b.left>=11.9&&b.right<=viewport.width-11.9&&b.top>=53.9&&b.bottom<=viewport.height-27.9);
+ }
+ assert.equal(T.normalise(JSON.parse(JSON.stringify(data))).views[0].orbitScale,data.views[0].orbitScale);assert.equal(data.views.length,4);assert(ui.includes("cube.hidden=v.mode==='plan'"),'navigation cube remains available in grouped 3D views');
+ // Units follow the project's dimension setting in all views, including height rulers.
+ for(const measurement of ['metric','imperial']){ctx.unit=()=>({measurement});ctx.length=n=>T.formatLength(n,measurement);for(const mode of ['top','sides','front','back']){data.views[0]=T.view({mode});const rendered=ctx.scene(0),panels=rendered.panels||[rendered];for(const panel of panels){const rulers=ctx.trailerRulers(active,panel.point,panel.camera);for(const r of rulers)assert(panel.markup.includes(T.formatLength(r.size,measurement)));assert(!/<text[^>]*>[^<]*\d m<\/text>/.test(panel.markup))}}}
+ // End captions stay outside the silhouette; end-on views identify the hidden far end.
+ for(const mode of ['top','left','right','front','back','leftIso','rightIso']){const camera=T.view({mode}),point=p=>T.project(p,camera),captions=ctx.trailerCaptions(active,point);assert(captions.some(p=>p.text.startsWith('FRONT')));assert(captions.some(p=>p.text.startsWith('REAR')));if(['front','back'].includes(mode))assert(captions.some(p=>p.text.includes('far end')));else{const front=point({x:0,y:active.length,z:0}),rear=point({x:0,y:0,z:0}),a=captions.find(p=>p.text==='FRONT'),b=captions.find(p=>p.text==='REAR / LOAD');assert((a.x-b.x)*(front.x-rear.x)+(a.y-b.y)*(front.y-rear.y)>0)}}
+ assert(!ui.includes('Enter dimensions with mm, cm, m,'));
+}
+console.log('PASS: grouped 3D layers/sides, shared transforms, right-panel dragging, centred stable orbit, solid cases, internal project-unit rulers and visible end captions.');
