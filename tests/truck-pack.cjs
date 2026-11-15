@@ -3,7 +3,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const T=require('../js/truck-pack.js'),root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),ui=fs.readFileSync(path.join(root,'js/truck-pack-view.js'),'utf8');
 function fn(text,name){const start=text.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=text.indexOf('}',start);end>=0;end=text.indexOf('}',end+1)){const value=text.slice(start,end+1);try{new Function('return ('+value+')');return value}catch{}}throw Error(name)}
 const sharedColourContext=vm.createContext({colourTextToHex:value=>String(value||'').trim().toLowerCase(),normaliseHex:value=>String(value||'').toLowerCase()});vm.runInContext(fn(html,'colourSetPresentation'),sharedColourContext);
-function testContext(values){if(values.host&&!values.host.querySelector)values.host.querySelector=()=>null;const context=vm.createContext({root:{},host:null,renderScenes(){},callbacks:{colourPresentation:values=>sharedColourContext.colourSetPresentation(values),stripeWidth:()=>4*96/25.4},selectedGroup:[],inspectorObserver:null,undoStack:[],redoStack:[],showMeasurements:true,length:T.formatLength,state:()=>({layout:2,trucks:[]}),truck:()=>values.state?.().trucks.find(t=>t.id===values.state().activeTruckId),...values});for(const name of ['syncHistoryButtons','orientationControl','syncOrientationForm','editActions','measurementDetails','measurementMarkup','sceneCamera','viewportMarkup','sceneViewport','gridMarkup','caseFaceFrame','caseColourMarkup','caseTextWidth','fitCaseLabel','caseLabelMarkup','selectionIds','selectionRect','casesInSelection','syncInspectorHeight','observeInspector'])vm.runInContext(fn(ui,name),context);return context}
+function testContext(values){if(values.host&&!values.host.querySelector)values.host.querySelector=()=>null;const context=vm.createContext({root:{},host:null,renderScenes(){},callbacks:{colourPresentation:values=>sharedColourContext.colourSetPresentation(values),stripeWidth:()=>4*96/25.4},selectedGroup:[],inspectorObserver:null,undoStack:[],redoStack:[],showMeasurements:true,inventoryQuery:'',manualDimensionUnit:'',length:T.formatLength,state:()=>({layout:2,trucks:[]}),truck:()=>values.state?.().trucks.find(t=>t.id===values.state().activeTruckId),...values});for(const name of ['historyButtons','inventoryMatches','filterInventory','trailerRuler','syncHistoryButtons','orientationControl','syncOrientationForm','editActions','measurementDetails','measurementMarkup','sceneCamera','viewportMarkup','sceneViewport','gridMarkup','caseFaceFrame','caseColourMarkup','caseTextWidth','fitCaseLabel','caseLabelMarkup','selectionIds','selectionRect','casesInSelection','syncInspectorHeight','observeInspector'])vm.runInContext(fn(ui,name),context);return context}
 const close=(a,b)=>assert(Math.abs(a-b)<.01,`${a} != ${b}`);
 for(const [input,expected] of [['1 m',1000],['12.5 cm',125],['600 mm',600],[`5' 6"`,1676.4],['12"',304.8],[`1' 2 1/2"`,368.3],['½ m',null],['1/2"',12.7]])if(expected===null)assert.throws(()=>T.parseLength(input));else close(T.parseLength(input),expected);
 for(const invalid of ['600','-1 m','NaN mm','1/0"','0 mm','10 yards','2 m garbage'])assert.throws(()=>T.parseLength(invalid));
@@ -250,7 +250,7 @@ console.log('PASS: Truck Pack navigation routes, active sub-tabs, truck selectio
  values={quantity_a:2,quantity_b:3};submit({});assert.equal(data.trucks[0].items.length,5);assert(data.trucks[0].items.every(item=>!item.packed));assert.equal(saved,1);assert.equal(closed,1);assert.equal(context.selected,'');
 }
 {
- const css=fs.readFileSync(path.join(root,'js/truck-pack.css'),'utf8');assert(css.includes('.tpToolbar button,.tpActions button{zoom:0.85}'));assert(css.includes('.tpActions{gap:4px;align-items:center}'));assert(css.includes('.tpInspector[hidden]{display:block;visibility:hidden;pointer-events:none}'));
+ const css=fs.readFileSync(path.join(root,'js/truck-pack.css'),'utf8');assert(css.includes('.tpToolbar button,.tpActions button{zoom:0.85}'));assert(css.includes('.tpActions{gap:4px;align-items:center}'));assert(css.includes('.tpInspector[hidden]{display:none}'));
  assert(!fn(ui,'packMarkup').includes('data-tp-inventory'));assert(!fn(ui,'packMarkup').includes('data-tp-quantity'));assert(!fn(ui,'packMarkup').includes('data-tp-truck'));
  assert(fn(ui,'render').includes('data-truck-id'));assert(fn(ui,'render').includes("button('add-case','Add case')"));
  const context=testContext({});vm.runInContext(ui.split('\n').find(line=>line.trim().startsWith('const button=')),context);vm.runInContext(fn(ui,'sceneTools'),context);
@@ -628,8 +628,8 @@ console.log('PASS: rigid group moves, shared wheels/Waiting/removal, atomic coll
 // Selection/status updates keep their layout boxes rather than shifting the page.
 {
  const css=fs.readFileSync(path.join(root,'js/truck-pack.css'),'utf8'),rule=selector=>css.split('}').map(block=>block.split('{')).find(parts=>parts[0].trim()===selector)?.[1];
- assert(rule('.tpMessage').includes('height:52px'));assert(rule('.tpMessage').includes('overflow:auto'));assert.equal(rule('.tpMessage:empty'),'visibility:hidden');assert(rule('.tpWorkspace').includes('grid-template-columns:minmax(0,1fr) 290px'));assert(!css.includes('.tpWorkspace.hasSelection{'));
- assert.equal(rule('.tpInspector[hidden]'),'display:block;visibility:hidden;pointer-events:none');assert(rule('.truckPackView').includes('overflow-anchor:none'));
+ assert(rule('.tpMessage').includes('position:fixed'));assert(!/(?:^|;)height:/.test(rule('.tpMessage')));assert(rule('.tpMessage').includes('overflow:auto'));assert.equal(rule('.tpMessage:empty'),'display:none');assert(rule('.tpWorkspace').includes('grid-template-columns:minmax(0,1fr)'));assert(css.includes('.tpWorkspace.hasSelection{grid-template-columns:minmax(0,1fr) 290px}'));
+ assert.equal(rule('.tpInspector[hidden]'),'display:none');assert(rule('.truckPackView').includes('overflow-anchor:none'));
  assert(rule('.tpLayout1 .tpViewport').includes('width:350px'));assert(!/(?:^|;)width:/.test(rule('.tpViewport')),'multiple-view widths remain flexible');assert(rule('.tpWorkspace.tpSingleView').includes('minmax(0,1fr) 290px'));
 }
 console.log('PASS: real-viewport truck fitting, no Waiting-driven shrinking, zoom reset, resize/pointer alignment, 350px single view and stable selection/status layout boxes.');
@@ -736,3 +736,44 @@ console.log('PASS: four orientations/quarter turns and SVG geometry, row duplica
  const active=data.trucks[1],camera=T.view({mode:'back',yaw:0,pitch:0}),point=p=>{const q=T.project(p,camera);return {x:q.x/10,y:q.y/10}};const ruler=ctx.measurementMarkup(active,[],point,camera);assert(ruler.includes('2.4 m'));assert(!ruler.includes('6 m'));
 }
 console.log('PASS: real editing controls, atomic bulk orientation saves, mixed-field reset and elevation ruler.');
+
+// Ruler baselines, ticks and labels sit outside the projected trailer in every view.
+{
+ const data=T.empty();data.trucks=[T.normaliseTruck({...T.presets.find(p=>p.id==='mega-box'),id:'external-tape',items:[]})];data.activeTruckId='external-tape';const active=data.trucks[0];
+ const ctx=testContext({T,state:()=>data,truck:()=>active,host:{querySelector:()=>({getBoundingClientRect:()=>({width:350,height:700})})},drag:null,selected:'',esc:String});vm.runInContext(ui.split('\n').find(line=>line.includes('const faces=')),ctx);for(const name of ['corners','staging','scene','renderSceneData','partMesh'])vm.runInContext(fn(ui,name),ctx);
+ const cameras=T.perspectives.filter(p=>p!=='orbit').map(mode=>T.view({mode,yaw:T.cameras[mode][0],pitch:T.cameras[mode][1]}));for(const yaw of [-175,-110,-50,5,80,140])cameras.push(T.view({mode:'orbit',yaw,pitch:32}));
+ for(const camera of cameras){data.views[0]=camera;const scene=ctx.scene(0),r=ctx.trailerRuler(active,scene.point);assert(r,camera.mode);const vertices=Array.from(ctx.corners({x:0,y:0,z:0,width:active.width,length:active.length,height:active.height}),scene.point);for(const p of vertices)assert(r.nx*(p.x-r.a.x)+r.ny*(p.y-r.a.y)<=.02,'trailer is inward of ruler edge');
+  const markup=ctx.measurementMarkup(active,[],scene.point,camera),tape=markup.match(/<g data-tp-ruler="[xy]">([\s\S]*?)<\/g>/)[1];
+  for(const match of tape.matchAll(/(?:M|L)([-.\d]+),([-.\d]+)/g)){const x=Number(match[1]),y=Number(match[2]);assert(r.nx*(x-r.a.x)+r.ny*(y-r.a.y)>=13.9,'ticks and baseline are outside');assert(x>=0&&x<=350&&y>=0&&y<=700,'ruler fits viewport')}
+  for(const match of tape.matchAll(/<text x="([-.\d]+)" y="([-.\d]+)"/g)){const x=Number(match[1]),y=Number(match[2]);assert(r.nx*(x-r.a.x)+r.ny*(y-r.a.y)>22,'labels are outside');assert(x>=0&&x<=350&&y>=0&&y<=700)}
+ }
+ data.views[0]=T.view({mode:'plan',yaw:0,pitch:90});const scene=ctx.scene(0),r=ctx.trailerRuler(active,scene.point);assert.equal(r.axis,'y');assert(r.nx<0,'plan ruler goes to the left outside the trailer');
+}
+// Manual entry accepts one chosen unit for every dimension, including castors.
+{
+ let data=T.empty(),markup,submit,values={},saves=0;const ctx=testContext({T,esc:String,state:()=>data,unit:()=>({measurement:'metric',weight:'kg'}),FormData:class{get(key){return values[key]??''}},showDialog:(title,html,handler)=>{markup=html;submit=handler},replace:next=>{data=T.normalise(next);saves++},closeDialog(){},render(){}});
+ for(const name of ['field','input'])vm.runInContext(ui.split('\n').find(line=>line.trim().startsWith('const '+name+'=')),ctx);vm.runInContext(fn(ui,'caseDialog'),ctx);
+ ctx.caseDialog();assert(markup.includes('name="dimensionUnit"'));assert(markup.includes('value="mm" selected'));
+ values={name:'Metric case',type:'Case',dimensionUnit:'cm',width:'60',length:'100',height:'80',heightIncludesWheels:'no',casterHeight:'10',weight:'20'};submit({});assert.equal(saves,1);assert.deepEqual(['width','length','height','casterHeight'].map(k=>data.cases[0][k]),[600,1000,800,100]);ctx.caseDialog();assert(markup.includes('value="cm" selected'));
+ values={...values,name:'Mixed units',width:'600 mm',length:'1 m',height:'75',casterHeight:'0.1 m'};submit({});assert.deepEqual(['width','length','height','casterHeight'].map(k=>data.cases[1][k]),[600,1000,750,100]);
+ values={...values,name:'Imperial',dimensionUnit:'ft',width:'2',length:'3',height:'2',casterHeight:'0.25'};submit({});close(data.cases[2].width,609.6);close(data.cases[2].casterHeight,76.2);
+ const before=JSON.stringify(data);values.width='bad';assert.throws(()=>submit({}),/valid measurement/);assert.equal(JSON.stringify(data),before);assert.equal(saves,3);
+ ctx.manualDimensionUnit='';ctx.unit=()=>({measurement:'imperial',weight:'kg'});ctx.caseDialog();assert(markup.includes('value="in" selected'));
+}
+// Search filters existing rows without rebuilding the input or changing inventory.
+{
+ const data=T.empty();data.cases=[base('alpha',{name:'Alpha Flightcase',department:'Lighting'}),base('beta',{name:'Beta Dolly',type:'Pallet',department:'Audio'})];const rows=data.cases.map(c=>({dataset:{tpCase:c.id},hidden:false})),empty={hidden:true},host={querySelectorAll:()=>rows,querySelector:()=>empty};
+ const ctx=testContext({T,state:()=>data,host,esc:v=>String(v).replaceAll('"','&quot;'),unit:()=>({weight:'kg'}),weight:T.formatWeight});for(const name of ['input','button'])vm.runInContext(ui.split('\n').find(line=>line.trim().startsWith('const '+name+'=')),ctx);vm.runInContext(fn(ui,'inventoryMarkup'),ctx);
+ const original=JSON.stringify(data),markup=ctx.inventoryMarkup();assert(markup.includes('data-tp-inventory-search'));assert(markup.includes('aria-label="Delete Alpha Flightcase"'));assert(markup.includes('>❌</button>'));
+ for(const [query,expected] of [['ALPHA',[false,true]],[' audio ',[true,false]],['Pallet',[true,false]],['nothing',[true,true]],['',[false,false]]]){ctx.inventoryQuery=query;ctx.filterInventory();assert.deepEqual(rows.map(r=>r.hidden),expected);assert.equal(empty.hidden,!expected.every(Boolean))}
+ assert.equal(JSON.stringify(data),original);ctx.inventoryQuery='"test';assert(ctx.inventoryMarkup().includes('value="&quot;test"'));
+}
+// History appears as accessible icons in each compact viewer toolbar and stays synchronised.
+{
+ const data=T.empty(),ctx=testContext({T,state:()=>data,labels:{plan:'2D Top/Plan',leftIso:'3D Left Isometric'},esc:String});for(const name of ['button'])vm.runInContext(ui.split('\n').find(line=>line.trim().startsWith('const '+name+'=')),ctx);vm.runInContext(fn(ui,'sceneTools'),ctx);
+ const toolbar=ctx.viewportMarkup(data.views[0],0,'Bottom row').split('<div class="tpSceneWrap"')[0];for(const label of ['Undo','Redo']){assert(toolbar.includes('aria-label="'+label+'"'));assert(!toolbar.includes('>'+label+'</button>'))}assert.equal((toolbar.match(/<svg /g)||[]).length,2);assert(toolbar.includes('tpViewControls'));
+ const undo=[{},{}],redo=[{},{}];ctx.host={querySelectorAll:selector=>selector.includes('undo')?undo:redo};ctx.syncHistoryButtons();assert(undo.every(b=>b.disabled)&&redo.every(b=>b.disabled));ctx.undoStack.push('{}');ctx.syncHistoryButtons();assert(undo.every(b=>!b.disabled)&&redo.every(b=>b.disabled));
+ const css=fs.readFileSync(path.join(root,'js/truck-pack.css'),'utf8');assert(!css.includes('min-height:88px'));assert(css.includes('.tpViewToolbar{display:flex'));assert(css.includes('min-height:38px'));assert(css.includes('.tpWorkspace.hasSelection{grid-template-columns:minmax(0,1fr) 290px}'));assert(css.includes('.tpInspector[hidden]{display:none}'));assert(css.includes('.tpInventory th:nth-child(9){width:34px}'));
+ assert(ui.includes("n===2?'3D View'"));assert(ui.includes('.tpInspector,.tpViewToolbar,.tpDialog'),'viewer controls do not clear selection and shift under the pointer');
+}
+console.log('PASS: external silhouette rulers, compact icon history, full-width unselected layouts, manual dimension units and live case search.');

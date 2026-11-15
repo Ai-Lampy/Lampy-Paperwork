@@ -1,3 +1,11 @@
+## V57.24 — Truck Pack viewer and inventory controls
+
+- Place trailer ruler baselines, ticks and labels outside the projected trailer, with fitting space for the ruler.
+- Move Undo/Redo to compact icon controls in the viewer toolbars; keep all copies in sync. Show status messages only when non-empty, as an overlay that reserves no space and does not shift the page.
+- Rename the two-view layout to 3D View and let viewers fill the available width when Case Details is hidden. Preserve the paired plan and four-view layouts.
+- Add a dimension-unit selector to manual case entry, including castor height; remember the selected unit for subsequent entries in the session and preserve explicitly supplied units.
+- Add live Cases inventory search and replace row Delete buttons with accessible ❌ buttons in a narrow column.
+
 ## V57.23 — Truck Pack orientations, measurements and editing
 
 - Add on-wheels, tipped, side and wheels-up case orientations with matching dimensions, castors and face artwork; support all four quarter-turn rotations and shared orientation edits.
