@@ -1,3 +1,12 @@
+## V57.28 — Case inventory fill and viewer controls
+
+- Scale the vertical scene tools to 0.8 and remove the single-case and shared Case Details save buttons. Keep automatic field-exit and Enter updates.
+- Add drag-down fill handles to every editable Cases table column. Copy the source value into visible rows in the same column, highlight the range, auto-scroll at the table edge and commit the complete fill as one undoable change. Validate inventory and packed cases before writing; cancellation and invalid fills leave saved data unchanged.
+- Remove decorative diagonal lines from Truss case images while retaining their solid faces, labels and assigned colours.
+- Add Reassign W/L/H for swapping existing dimension columns across the entire inventory, with a before/after preview, Undo and validation of all affected truck placements.
+- Point wheels toward the trailer rear when choosing Tipped / On End, including single and shared automatic edits; preserve subsequent explicit rotation.
+- Add a subtle divider between Left and Right side views, simplify trailer captions to Front and Rear, and use fixed ruler ticks at 2500 mm or 8 ft according to project units. Keep actual internal dimensions marked at the ruler endpoints.
+
 ## V57.27 — Case editing and independent side views
 
 - Apply single-case and shared edits automatically when leaving an edited field or pressing Enter; Enter clears focus after a successful update. Preserve inspector scroll, the expanded Position section and the newly focused field. Reject invalid edits without changing the saved pack.

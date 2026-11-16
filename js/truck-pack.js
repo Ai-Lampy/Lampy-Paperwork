@@ -43,6 +43,10 @@
     if(result.heightIncludesWheels&&result.casterHeight>=result.height)throw Error(name+': castor height must be less than total height.');
     return result;
   }
+  function reassignDimensions(state,mapping){
+    const keys=['width','length','height'],sources=keys.map(key=>mapping?.[key]);if(sources.some(key=>!keys.includes(key))||new Set(sources).size!==3)throw Error('Assign Width, Length and Height once each.');
+    return normalise({...state,cases:state.cases.map(c=>({...c,...Object.fromEntries(keys.map(key=>[key,c[mapping[key]]]))}))});
+  }
   function normaliseItem(raw){return {id:identity(raw.id,'placed case'),caseId:identity(raw.caseId,'inventory case'),name:text(raw.name),department:text(raw.department),colour:colour(raw.colour,''),colour2:colour(raw.colour2,''),colour3:colour(raw.colour3,''),rideOnWheels:!['side','wheelsUp'].includes(raw.orientation)&&raw.rideOnWheels!==false,lifter:raw.lifter===true,...(raw.orientation==='side'||raw.orientation==='wheelsUp'?{orientation:raw.orientation}:{}),rotation:[0,90,180,270].includes(Number(raw.rotation))?Number(raw.rotation):0,packed:raw.packed===true,x:number(raw.x??0,'X',true),y:number(raw.y??0,'Y',true),z:number(raw.z??0,'Z',true)}}
   function normaliseTruck(raw){
     if(!raw||typeof raw!=='object')throw Error('Invalid truck.');
@@ -64,9 +68,9 @@
   }
   function definition(state,item){const base=state.cases.find(c=>c.id===item.caseId);if(!base)throw Error('A placed case has no inventory record.');return {...base,name:item.name||base.name,department:item.department||base.department,colour:item.colour,colour2:item.colour2,colour3:item.colour3}}
   function orientation(item){return ['side','wheelsUp'].includes(item.orientation)?item.orientation:item.rideOnWheels===false?'tipped':'wheels'}
-  function orientItem(item,value){
+  function orientItem(item,value,previous=orientation(item)){
     if(!['wheels','tipped','side','wheelsUp'].includes(value))throw Error('Choose a valid case orientation.');
-    if(value==='side'&&orientation(item)!=='side')item.rotation=270;
+    if(value==='side'&&previous!=='side')item.rotation=270;if(value==='tipped'&&previous!=='tipped')item.rotation=0;
     delete item.orientation;if(['side','wheelsUp'].includes(value))item.orientation=value;item.rideOnWheels=value==='wheels';return item;
   }
   function dimensions(state,item){const base=definition(state,item),truss=base.type.toLowerCase()==='truss',caster=truss?0:base.casterHeight??Math.min(100,base.height*.1),total=base.height+(base.heightIncludesWheels||truss?0:caster),mode=orientation(item);let width=mode==='side'?total:base.width,length=mode==='tipped'?total:base.length,height=mode==='side'?base.width:mode==='tipped'?base.length:total;if(item.rotation%180===90)[width,length]=[length,width];return {width,length,height,total,caster,bodyHeight:total-caster,truss}}
@@ -206,6 +210,6 @@
   function unprojectDelta(dx,dy,camera,plane='xy'){
     const axes={xy:[{x:1,y:0,z:0},{x:0,y:1,z:0}],xz:[{x:1,y:0,z:0},{x:0,y:0,z:1}],yz:[{x:0,y:1,z:0},{x:0,y:0,z:1}]}[plane],a=project(axes[0],camera),b=project(axes[1],camera),det=a.x*b.y-a.y*b.x;if(Math.abs(det)<1e-6)return null;const u=(dx*b.y-dy*b.x)/det,v=(a.x*dy-a.y*dx)/det;return {x:axes[0].x*u+axes[1].x*v,y:axes[0].y*u+axes[1].y*v,z:axes[0].z*u+axes[1].z*v};
   }
-  const api={EPS,MAX_CASES,MAX_ITEMS,source,presets,perspectives,cameras,id,parseLength,parseWeight,formatLength,formatWeight,normaliseCase,normaliseItem,normaliseTruck,normalise,empty,view,definition,orientation,orientItem,dimensions,casePoint,selectionBounds,rotateItems,duplicateItems,transferItems,measurements,box,overlaps,supported,truckError,snapPosition,firstGridPosition,placement,groupPlacement,totals,addItems,removeInventoryCases,parseImportLength,importDimensionIssues,importRows,suggestMapping,project,unprojectDelta};
+  const api={EPS,MAX_CASES,MAX_ITEMS,source,presets,perspectives,cameras,id,parseLength,parseWeight,formatLength,formatWeight,normaliseCase,reassignDimensions,normaliseItem,normaliseTruck,normalise,empty,view,definition,orientation,orientItem,dimensions,casePoint,selectionBounds,rotateItems,duplicateItems,transferItems,measurements,box,overlaps,supported,truckError,snapPosition,firstGridPosition,placement,groupPlacement,totals,addItems,removeInventoryCases,parseImportLength,importDimensionIssues,importRows,suggestMapping,project,unprojectDelta};
   root.LampyTruckPack=api;if(typeof module!=='undefined')module.exports=api;
 })(globalThis);
