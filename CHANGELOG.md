@@ -1,3 +1,11 @@
+## V57.27 — Case editing and independent side views
+
+- Apply single-case and shared edits automatically when leaving an edited field or pressing Enter; Enter clears focus after a successful update. Preserve inspector scroll, the expanded Position section and the newly focused field. Reject invalid edits without changing the saved pack.
+- Remove Duplicate row, Rotation, Selection clearances and Cases on this truck from Case Details. Keep Rotate 90° and hide Orientation while Ride on Wheels is Yes.
+- Point wheels toward the trailer rear when choosing On-Side, while preserving subsequent manual rotation. Add smaller On-Side and Wheels-Up notes below case names.
+- Default 3D View to Sides on the left and paired Top trailers on the right. Give Left and Right side views independent saved cameras, pan/rotate tools and navigation cubes; retain linked Top panning.
+- Arrange scene tools vertically and bound grouped panning to the available viewing areas. Keep the full trailer visible at Fit; zoom remains available for close inspection.
+
 ## V57.26 — Grouped Truck Pack views and project titles
 
 - Combine Left and Right perspectives into 3D Sides, with Left above Right in one viewer. Split 3D Top into grouped bottom-row and raised-case trailers with shared pan and zoom.
