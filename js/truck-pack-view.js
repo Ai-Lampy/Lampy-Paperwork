@@ -362,6 +362,12 @@
     if(!width||!height||Math.abs(u.x*v.y-u.y*v.x)<.05)return null;
     return {width,height,transform:`matrix(${u.x/width} ${u.y/width} ${v.x/height} ${v.y/height} ${origin.x} ${origin.y})`};
   }
+  function caseFaceShade(vertices){
+    // Fixed world-space lighting gives adjacent faces distinct tones. It does not
+    // alter the stored colours or move the face's pattern/text with the camera.
+    const a=vertices[0],b=vertices[1],c=vertices[2],u={x:b.x-a.x,y:b.y-a.y,z:b.z-a.z},v={x:c.x-a.x,y:c.y-a.y,z:c.z-a.z},n={x:u.y*v.z-u.z*v.y,y:u.z*v.x-u.x*v.z,z:u.x*v.y-u.y*v.x},size=Math.hypot(n.x,n.y,n.z);
+    return size?Math.max(0,Math.min(.36,.18-(.06*n.x+.10*n.y+.18*n.z)/size)):0;
+  }
   function caseColourMarkup(item,index,face,frame){
     const presentation=callbacks.colourPresentation([item.colour,item.colour2,item.colour3]),colours=presentation.colours,fillId='tp-colours-'+index+'-'+item.id+'-'+face;
     const band=callbacks.stripeWidth(),edge=.3*96/25.4,patterned=colours.length>1&&frame;
@@ -397,11 +403,15 @@
       }
       const boxes=[body];
       if(!d.truss&&d.caster>0){const w=Math.min(65,base.width*.15),l=Math.min(90,base.length*.15);for(const x of [base.width*.08,base.width*.92-w])for(const y of [base.length*.08,base.length*.92-l]){const radius=Math.min(l*.5,d.caster*.4);boxes.push({x,y,z:0,width:w,length:l,height:d.caster,body:false,wheel:true});boxes.push({x:x+w*.3,y:y+l*.3,z:radius*2,width:w*.4,length:l*.4,height:d.caster-radius*2,body:false})}}
-      for(const part of boxes){const mesh=partMesh(part),ps=mesh.vertices.map(localPoint).map(point);for(let f=0;f<mesh.faces.length;f++){const q=mesh.faces[f].map(i=>ps[i]),area=q.reduce((n,p,i)=>n+p.x*q[(i+1)%q.length].y-q[(i+1)%q.length].x*p.y,0);if(area>=-.1)continue;
+      for(const part of boxes){const mesh=partMesh(part),world=mesh.vertices.map(localPoint),ps=world.map(point);for(let f=0;f<mesh.faces.length;f++){const q=mesh.faces[f].map(i=>ps[i]),area=q.reduce((n,p,i)=>n+p.x*q[(i+1)%q.length].y-q[(i+1)%q.length].x*p.y,0);if(area>=-.1)continue;
         const frame=part.body?caseFaceFrame(q,mesh.faces[f].map(i=>mesh.vertices[i])):null,appearance=part.body?caseColourMarkup(item,index,f,frame):null,depth=q.reduce((n,p)=>n+p.depth,0)/q.length,faceColour=part.body?(invalid?'#ed7b7b':appearance.fill):'#303844',stroke=selectedCase&&part.body?'#0060d2':'#263646';
         if(appearance)markup+=appearance.defs;
         let content=`<polygon points="${points(q)}" fill="#ffffff" stroke="none"/><polygon points="${points(q)}" fill="${faceColour}" fill-opacity="1" stroke="${stroke}" stroke-width="${selectedCase&&part.body?2.8:1}"/>`;
-        if(part.body){content+=caseLabelMarkup(base.name,frame,appearance,({side:'On-Side',wheelsUp:'Wheels-Up'})[T.orientation(item)]||'');}
+        if(part.body){
+          const shade=caseFaceShade(mesh.faces[f].map(i=>world[i]));
+          content+=`<polygon class="tpCaseShade" points="${points(q)}" fill="#000000" opacity="${shade.toFixed(3)}" pointer-events="none"/><polygon points="${points(q)}" fill="none" stroke="${stroke}" stroke-width="${selectedCase?2.8:1}" pointer-events="none"/>`;
+          content+=caseLabelMarkup(base.name,frame,appearance,({side:'On-Side',wheelsUp:'Wheels-Up'})[T.orientation(item)]||'');
+        }
         surfaces.push({depth,markup:`<g data-tp-item="${item.id}" class="tpCase" tabindex="0" role="button" aria-label="${esc(base.name)}"><title>${esc(base.name)}</title>${content}</g>`});
       }}
     }

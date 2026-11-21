@@ -1,3 +1,8 @@
+## V57.29 — Solid Truck Pack case rendering
+
+- Add fixed face lighting to the full case geometry so adjacent faces show depth during free 3D rotation. Preserve opaque surfaces, assigned colour patterns, face-mounted labels and neutral unassigned cases; leave 2D plan rendering unchanged.
+- Check visible outward faces through 480 camera and case-orientation combinations, including quarter turns, tipped, on-side and wheels-up cases, plus near/far drawing order and lighting stability during pan and zoom.
+
 ## V57.28 — Case inventory fill and viewer controls
 
 - Scale the vertical scene tools to 0.8 and remove the single-case and shared Case Details save buttons. Keep automatic field-exit and Enter updates.
