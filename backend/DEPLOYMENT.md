@@ -4,14 +4,14 @@ The app source is on `pilot/v59-accounts`. Public V58.4 must remain available th
 
 ## Current gates
 
-- Cloudflare Access and R2 both report that they are not enabled.
-- Creating the Zero Trust organisation `ai-lampy.cloudflareaccess.com` was rejected by automatic approval review as a persistent account-security change. Specific approval is pending; do not bypass it.
+- The user approved Cloudflare setup. The Zero Trust organisation `ai-lampy.cloudflareaccess.com` was created and read back successfully on 22 November 2026. Its email one-time PIN identity provider is configured. No Access application or owner Allow policy has been created yet.
+- R2 still reports that dashboard activation is required. The user must complete its subscription checkout.
 - Confirm the owner's login email. The connected Cloudflare account email must not automatically become the approved app identity.
 - The available GitHub connector can upload source but cannot dispatch a workflow. No non-interactive local GitHub credential was available. Start the manual run through an authenticated GitHub session when available.
 
-## Prepare Cloudflare after approval
+## Complete the approved Cloudflare setup
 
-1. Enable Access/Zero Trust in the existing AI-Lampy Cloudflare account. Use the approved team domain. Enable R2 through its dashboard. Do not change nameservers, the main website or other products.
+1. Retain the existing Zero Trust organisation `ai-lampy.cloudflareaccess.com` and email one-time PIN provider. Enable R2 through its dashboard. Do not change nameservers, the main website or other products.
 2. Create a private R2 bucket, for example `lampy-paperwork-pilot-projects`. Keep public access and custom public bucket domains disabled. Bind it to the Worker as `PROJECTS`.
 3. Create a self-hosted Access application for `ailampy.com/paperwork/account-api/*`, with an Allow policy for only the confirmed owner email. Use the chosen identity provider or email one-time PIN. Do not add bypass or Everyone policies. Record the application audience and exact issuer.
 4. Upload `accounts-worker.mjs` as an ES module Worker, with compatibility date `2026-07-30`. This matches the tested runtime. Disable its public `workers.dev` address unless specifically needed for an authenticated test.
