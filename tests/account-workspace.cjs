@@ -1,0 +1,43 @@
+'use strict';
+const assert=require('node:assert/strict'),{indexedDB}=require('fake-indexeddb');
+const Store=require('../js/account-project-store.js'),Workspace=require('../js/account-workspace.js'),Transfer=require('../js/project-transfer.js');
+(async()=>{
+ const name='workspace-test-'+crypto.randomUUID(),store=await Store.open({indexedDB,name});
+ let editor=Transfer.empty(),guestSaves=0,location=null,events=[];
+ const bridge={capture:()=>({...structuredClone(editor),savedAt:new Date().toISOString()}),load:value=>{editor=structuredClone(value)},saveGuest:()=>{guestSaves++;return true},leave:()=>{editor=Transfer.empty()}};
+ const workspace=Workspace.create({store,bridge,changed:state=>events.push(state),setLocation:value=>{location=value}});
+ try{
+  const a=await workspace.createProject({name:'A'});assert.equal(guestSaves,1);assert.equal(location.id,a.id);assert.equal(workspace.hasUnsaved(),false);
+  editor.app.projectInfo.file.projectName='A edited';workspace.markDirty();assert.equal(workspace.hasUnsaved(),true);await workspace.flush();assert.equal(workspace.hasUnsaved(),false);assert.equal((await store.read('device','project',a.id)).name,'A edited');
+  const revision=(await store.read('device','project',a.id)).revision;await workspace.flush();assert.equal((await store.read('device','project',a.id)).revision,revision,'unchanged captures with new savedAt do not create revisions');
+  const b=await workspace.createProject({name:'B'});await workspace.open('device',a.id);assert.equal(editor.app.projectInfo.file.projectName,'A edited');assert.equal(location.id,a.id);
+  editor.app.projectInfo.file.jobType='Tour';editor.app.projectInfo.projectSettings={pdf:{paper:'A3'},units:{measurement:'metric'}};
+  const template=await workspace.saveTemplate({name:'Tour',areas:['settings','pdf']});assert.equal(template.payload.project.app.projectInfo.file.jobType,'Tour');
+  const c=await workspace.createProject({name:'From template',template:template.payload});assert.equal(editor.app.projectInfo.projectSettings.pdf.paper,'A3');assert.equal(c.payload.templateHistory[0].revision,1);
+  const originalProject=JSON.stringify((await store.read('device','project',c.id)).payload);
+  await workspace.open('device',a.id);
+  editor.app.projectInfo.projectSettings.pdf.paper='A4';
+  const updated=await workspace.saveTemplate({name:'Tour',areas:['settings','pdf'],existing:template});assert.equal(updated.payload.revision,2);
+  assert.equal(JSON.stringify((await store.read('device','project',c.id)).payload),originalProject,'updating a template leaves an existing project byte-for-byte unchanged');
+  const fresh=await workspace.createProject({name:'Next project',template:updated.payload});assert.equal(editor.app.projectInfo.projectSettings.pdf.paper,'A4');
+  assert(originalProject.includes('A3'));assert.equal(fresh.payload.templateHistory[0].revision,2);
+  await workspace.open('device',c.id);const templateReview=Transfer.review(bridge.capture(),updated.payload.project,{settings:'replace',pdf:'replace'});
+  assert.equal(editor.app.projectInfo.projectSettings.pdf.paper,'A3','reviewing does not apply new template settings');
+  await workspace.applyReview(templateReview,{template:updated.payload});assert.equal(editor.app.projectInfo.projectSettings.pdf.paper,'A4');assert.equal(workspace.metadata().templateHistory.at(-1).revision,2);
+  assert((await store.recoveries('device','project',c.id)).some(x=>x.payload.app.projectInfo.projectSettings.pdf.paper==='A3'),'explicit template application retains the old settings for recovery');
+  await workspace.open('device',fresh.id);
+  const defaultRecord=await workspace.saveTemplate({name:'ignored',areas:['settings'],isDefault:true});assert.equal(defaultRecord.id,'personal-default');
+  await assert.rejects(workspace.saveTemplate({areas:['settings'],isDefault:true}),/template changed/);assert.equal((await store.list('device','template')).filter(x=>x.id==='personal-default').length,1);
+  const source=Transfer.empty();source.app.projectInfo.logo={name:'Logo',dataUrl:'data:image/png;base64,AAAA'};
+  const preview=Transfer.review(bridge.capture(),source,{logos:'replace'});await new Promise(resolve=>setTimeout(resolve,5));await workspace.applyReview(preview);assert.equal(editor.app.projectInfo.logo.name,'Logo');assert((await store.recoveries('device','project',fresh.id)).some(x=>x.reason==='before-replacement'));
+  const stale=Transfer.review(bridge.capture(),source,{logos:'replace'});editor.app.projectInfo.file.projectName='New name';await assert.rejects(workspace.applyReview(stale),/changed after/);
+  await workspace.flush();const current=await store.read('device','project',fresh.id);
+  await store.save({owner:'device',id:fresh.id,expectedRevision:current.revision,payload:{...current.payload,otherTab:true}});
+  editor.app.projectInfo.file.projectName='Competing editor';workspace.markDirty();await assert.rejects(workspace.flush(),/Another tab/);assert(workspace.state().conflict);assert(workspace.hasUnsaved());
+  await assert.rejects(workspace.open('device',b.id),/conflict/,'switching cannot discard competing edits');
+  const fork=await workspace.forkEdits('Recovered');assert.notEqual(fork.id,fresh.id);assert.equal(fork.payload.app.projectInfo.file.projectName,'Competing editor');assert.equal(workspace.state().conflict,null);
+  await workspace.leave();assert.equal(workspace.state().active,null);assert.equal(location,null);
+  assert(events.some(x=>x.pending>0));assert(events.every(x=>!x.active||!Object.hasOwn(x.active,'payload')),'status notifications must not copy large project payloads');
+  console.log('PASS: editor save/switch sequencing, unchanged-save suppression, default identity, template versions, reviewed import checkpoints, stale review rejection, local conflicts and recovery forks.');
+ }finally{store.close();indexedDB.deleteDatabase(name)}
+})().catch(error=>{console.error(error);process.exitCode=1});

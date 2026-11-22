@@ -3,3 +3,10 @@
 
 _site/
 __pycache__/
+
+# Verified release backups contain local-only files and must never be published.
+backups/
+AGENTS.md
+ARCHITECTURE_TRANSITION_HANDOVER.txt
+node_modules/
+.pnpm-store/
