@@ -968,7 +968,7 @@ console.log('PASS: editable-cell drag fill, visible-row filtering, typed values,
   for(const ruler of panel.markup.matchAll(/<g data-tp-ruler="([xyz])" data-internal-size="([^"]+)">([\s\S]*?)<\/g>/g)){const size=Number(ruler[2]),ticks=Array.from(ruler[3].matchAll(/data-tp-tick="([^"]+)"/g),m=>Number(m[1])),step=measurement==='imperial'?2438.4:2500,expected=[0];for(let i=1;i*step<size-T.EPS;i++)expected.push(i*step);expected.push(size);assert.equal(ticks.length,expected.length);ticks.forEach((tick,i)=>close(tick,expected[i]));assert(ruler[3].includes(T.formatLength(size,measurement)))}
  }}
  assert(fs.readFileSync(path.join(root,'js/truck-pack.css'),'utf8').includes('.tpSideDivider{stroke:#b9b9b9;stroke-width:1;opacity:.6;'));
- assert.equal(html.match(/const VERSION='([^']+)'/)[1],'57.30');
+ assert.equal(html.match(/const VERSION='([^']+)'/)[1],'57.31');
 }
 console.log('PASS: all-inventory W/L/H swaps, preview/Undo, atomic invalid-pack rejection, rear-facing tipped wheels, fixed ruler intervals, Front/Rear labels and side divider.');
 
@@ -1026,3 +1026,22 @@ console.log('PASS: solid cuboid faces across 480 orbit/orientation combinations,
  assert(samples>1000);assert(oldErrors>0,'the test reproduces the former average-depth failure');assert(splitFaces>0,'overlapping face spans exercise geometric splitting');
  console.log(`PASS: ${samples} depth-buffer samples across both side viewers; no missing/overpainted faces (${oldErrors} failures reproduced with the previous order).`);
 }
+
+// V57.31: loading, the rotate tool and cube drags cannot put a camera under the floor.
+{
+ const saved={mode:'orbit',orbitScale:7.485189680071589e-5,yaw:88.44726562500001,pitch:-16.807617187500007,zoom:1.9531250000000013,panX:0,panY:0,tool:'rotate'},view=T.view(saved);
+ assert.equal(view.pitch,5);for(const key of ['yaw','zoom','orbitScale','panX','panY','tool'])assert.equal(view[key],saved[key],'correct only the unsafe camera angle');
+ for(const mode of T.perspectives){assert(T.view({mode,pitch:-30}).pitch>=0);assert(T.view({mode,pitch:120}).pitch<=90)}
+ for(const mode of ['left','right','front','back','sides'])assert.equal(T.view({mode}).pitch,0,'keep true elevation presets');assert.equal(T.view({mode:'top'}).pitch,90);
+ const data=T.empty();data.cases=[base('floor-check')];data.trucks=[T.normaliseTruck({...T.presets[0],id:'floor-check',items:[]})];data.activeTruckId='floor-check';data.layout=2;const [item]=T.addItems(data,data.activeTruckId,'floor-check',1);Object.assign(item,{packed:true,x:100,y:100});data.views[0]=saved;data.views[1]=T.view({mode:'sides'});data.views[1].sideViews=[{...saved},{...saved,pitch:-60}];const before=JSON.stringify([data.cases,data.trucks]),loaded=T.normalise(data);assert.equal(JSON.stringify([loaded.cases,loaded.trucks]),before,'camera correction preserves cases and placements');assert.equal(loaded.views[0].pitch,5);loaded.views[1].sideViews.forEach(side=>assert.equal(side.pitch,5));assert.deepEqual(T.normalise(loaded),loaded,'the corrected camera saves and reopens consistently');
+ const ctx=testContext({T,state:()=>loaded,truck:()=>loaded.trucks[0],drag:null});vm.runInContext(fn(ui,'pointerMove'),ctx);
+ for(const panel of [null,0,1]){
+  const index=panel===null?0:1,camera=panel===null?loaded.views[0]:loaded.views[1].sideViews[panel],other=panel===null?null:JSON.stringify(loaded.views[1].sideViews[1-panel]);camera.pitch=30;camera.yaw=0;
+  for(const zoom of [.25,1,2,8]){
+   camera.zoom=zoom;ctx.drag={type:'orbit',index,panel,startX:100,startY:100,yaw:0,pitch:30};ctx.pointerMove({clientX:2000,clientY:10000});assert.equal(camera.pitch,5);assert.equal(camera.zoom,zoom);assert(camera.yaw>360,'horizontal rotation stays unrestricted');ctx.pointerMove({clientX:-1000,clientY:-10000});assert.equal(camera.pitch,89);assert.equal(camera.zoom,zoom);
+  }
+  if(other!==null)assert.equal(JSON.stringify(loaded.views[1].sideViews[1-panel]),other,'rotating one side leaves the other camera alone');
+ }
+ for(const mode of ['top','left','right','front','back','orbit']){const camera=T.view({mode});camera.pitch=-30;ctx.prepareOrbit(camera,{width:900,height:700});assert(camera.pitch>=5&&camera.pitch<=89,'entering free rotation always starts above the floor')}
+}
+console.log('PASS: above-floor saved cameras, independent side views, tool/cube rotation bounds at every zoom, unrestricted horizontal orbit and unchanged case data.');

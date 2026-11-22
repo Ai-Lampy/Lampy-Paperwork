@@ -1,3 +1,11 @@
+## V57.31 — Above-floor Truck Pack rotation
+
+- Keep free rotation between 5° and 89° above the trailer floor, including the rotate tool, navigation cube and independent side viewers. Preserve unrestricted horizontal rotation, zoom and pan.
+- Correct saved below-floor camera angles when opening a project without changing inventory, case dimensions or placements. Retain true side/front/rear elevations and top/plan presets.
+- Add camera-loading and pointer-drag regressions at minimum, normal and maximum zoom, including independent side cameras and save/reopen checks.
+
+- Compact the Position Summary toolbar with centred controls, zero action gap and the requested individual control scales; retain the live position count and current sort selection.
+
 ## V57.30 — Correct Truck Pack face visibility
 
 - Replace average face-depth sorting with world-space partitioning and back-to-front drawing. Split overlapping face spans where required so distant case faces cannot cover nearer surfaces during free rotation, including independent side viewers.
