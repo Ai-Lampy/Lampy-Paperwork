@@ -1,3 +1,8 @@
+## V57.37 — Toolbar layout and Truck Pack wheel zoom
+
+- Remove obsolete negative tab margins, give tabs real gaps and prevent page-toolbar buttons from shrinking below their contents. Keep Home, Position Summary and Universe Detail toolbar rows within their page width. Preserve button colours and states.
+- Add scroll-wheel zoom over Truck Pack scenes using the existing zoom limits and camera settings. Leave page scrolling outside the scene and browser zoom shortcuts available.
+
 ## V57.36 — Preserve toolbar button styling
 
 - Keep shared page-toolbar button dimensions while restoring each button’s original colours, font weight, border shape, hover, selected and disabled styling. Remove the shared state overrides introduced in V57.35.

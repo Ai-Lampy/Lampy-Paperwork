@@ -968,7 +968,7 @@ console.log('PASS: editable-cell drag fill, visible-row filtering, typed values,
   for(const ruler of panel.markup.matchAll(/<g data-tp-ruler="([xyz])" data-internal-size="([^"]+)">([\s\S]*?)<\/g>/g)){const size=Number(ruler[2]),ticks=Array.from(ruler[3].matchAll(/data-tp-tick="([^"]+)"/g),m=>Number(m[1])),step=measurement==='imperial'?2438.4:2500,expected=[0];for(let i=1;i*step<size-T.EPS;i++)expected.push(i*step);expected.push(size);assert.equal(ticks.length,expected.length);ticks.forEach((tick,i)=>close(tick,expected[i]));assert(ruler[3].includes(T.formatLength(size,measurement)))}
  }}
  assert(fs.readFileSync(path.join(root,'js/truck-pack.css'),'utf8').includes('.tpSideDivider{stroke:#b9b9b9;stroke-width:1;opacity:.6;'));
- assert.equal(html.match(/const VERSION='([^']+)'/)[1],'57.36');
+ assert.equal(html.match(/const VERSION='([^']+)'/)[1],'57.37');
 }
 console.log('PASS: all-inventory W/L/H swaps, preview/Undo, atomic invalid-pack rejection, rear-facing tipped wheels, fixed ruler intervals, Front/Rear labels and side divider.');
 
@@ -1045,3 +1045,20 @@ console.log('PASS: solid cuboid faces across 480 orbit/orientation combinations,
  for(const mode of ['top','left','right','front','back','orbit']){const camera=T.view({mode});camera.pitch=-30;ctx.prepareOrbit(camera,{width:900,height:700});assert(camera.pitch>=5&&camera.pitch<=89,'entering free rotation always starts above the floor')}
 }
 console.log('PASS: above-floor saved cameras, independent side views, tool/cube rotation bounds at every zoom, unrestricted horizontal orbit and unchanged case data.');
+
+// Wheel zoom follows the existing camera limits and leaves case data and other viewers alone.
+{
+ const data=T.empty();data.trucks=[T.normaliseTruck({...T.presets[0],id:'wheel-truck',items:[]})];data.activeTruckId='wheel-truck';let saves=0,draws=0,prevented=0,index=0;
+ const svg={dataset:{get tpScene(){return String(index)}}},wrap={clientHeight:700,querySelector:()=>svg},host={contains:el=>el===wrap},target={closest:()=>wrap};
+ const ctx=testContext({T,host,tab:'pack',drag:null,state:()=>data,save:()=>saves++,renderScenes:()=>draws++});vm.runInContext(fn(ui,'wheel'),ctx);
+ const fire=(extra={})=>ctx.wheel({target,deltaY:-100,deltaX:0,deltaMode:0,preventDefault:()=>prevented++,...extra});
+ const original=JSON.stringify([data.cases,data.trucks]),other=JSON.stringify(data.views[1]),camera={...data.views[0]};
+ fire();close(data.views[0].zoom,1.25);fire({deltaY:100});close(data.views[0].zoom,1);fire({deltaY:-1,deltaMode:1});close(data.views[0].zoom,Math.pow(1.25,.16));
+ data.views[0].zoom=1;fire({deltaY:-1,deltaMode:2});close(data.views[0].zoom,1.25);
+ for(const extra of [{target:{closest:()=>null}},{ctrlKey:true},{metaKey:true},{deltaY:0},{deltaY:NaN},{deltaX:200}]){const before=data.views[0].zoom,count=saves;fire(extra);assert.equal(data.views[0].zoom,before);assert.equal(saves,count)}
+ ctx.drag={type:'case'};const before=data.views[0].zoom;fire();assert.equal(data.views[0].zoom,before);ctx.drag=null;
+ data.views[0].zoom=8;const count=saves;fire();assert.equal(data.views[0].zoom,8);assert.equal(saves,count);data.views[0].zoom=.25;fire({deltaY:100});assert.equal(data.views[0].zoom,.25);
+ index=4;data.views[0].zoom=1;fire();close(data.views[0].zoom,1.25,'upper plan viewer uses the shared plan camera');assert.equal(JSON.stringify(data.views[1]),other);
+ for(const key of ['pitch','yaw','panX','panY','mode'])assert.equal(data.views[0][key],camera[key]);assert.equal(JSON.stringify([data.cases,data.trucks]),original);assert.equal(saves,draws);assert(prevented>saves,'wheel scrolling stays contained even at zoom limits');
+}
+console.log('PASS: wheel zoom direction, pixel/line/page deltas, camera bounds, viewer isolation, shared plan camera and unchanged cases.');
