@@ -269,18 +269,54 @@ const deletion=vm.createContext({ensureProjectInfo:()=>deletionProject,confirm:(
 const beforeDeletion=JSON.stringify(deletionProject);deletion.removeCustomProductionField('production_a');assert.equal(JSON.stringify(deletionProject),beforeDeletion);assert.equal(deletionSaves,0);
 allowDelete=true;deletion.removeCustomProductionField('production_a');assert.equal(deletionSaves,1);assert.equal(deletionProject.production.production_b,'Bob');assert.equal(deletionProject.productionVisible.production_b,false);assert.equal(deletionProject.productionContacts.production_b[0].id,'phone_b');assert.deepEqual(deletionProject.productionOrder,['production_b']);assert(!('production_a' in deletionProject.production));deletion.removeCustomProductionField('production_a');assert.equal(deletionSaves,1);
 assert(source('renderProductionInfo').includes('custom&&!String(label).trim()'));
-assert(source('renderSheetTabMenus').includes("toggle.className='appNavigationDisclosure projectSettingsDisclosure'"));
-assert(source('renderSheetTabMenus').includes("toggle.setAttribute('aria-expanded',String(projectSettingsNavExpanded))"));
+assert(!source('renderSheetTabMenus').includes('projectSettingsDisclosure'));
+assert(!source('renderSheetTabMenus').includes('projectSettingsNavExpanded'));
 assert(html.includes('.pdfUnifiedHeader{align-items:center}'));
-console.log('PASS: V54.2 contact deletion/cancellation, completed titles, centred logos and settings disclosure.');
-// Build and operate the actual nested settings disclosure without a browser.
+console.log('PASS: V54.2 contact deletion/cancellation, completed titles, centred logos and flat settings navigation.');
+// Render the two ordinary Home destinations without a nested Settings group.
 function navNode(){return {children:[],dataset:{},attrs:{},classList:{contains:()=>true,add(){}},setAttribute(k,v){this.attrs[k]=v},removeAttribute(k){delete this.attrs[k]},addEventListener(){},querySelector(){return null},appendChild(node){if(node.parentElement){const siblings=node.parentElement.children;siblings.splice(siblings.indexOf(node),1)}this.children.push(node);node.parentElement=this;return node},append(...nodes){nodes.forEach(node=>this.appendChild(node))},get firstElementChild(){return this.children[0]},get nextSibling(){const siblings=this.parentElement?.children||[];return siblings[siblings.indexOf(this)+1]}}}
 const navHost=navNode(),navButton=navNode();navButton.dataset.sheetTab='home';navHost.appendChild(navButton);
-const navContext=vm.createContext({document:{querySelectorAll:()=>[navButton],createElement:navNode},activeSheetTab:'home',projectSettingsNavExpanded:true,closeSheetSubMenus(){},sheetSubMenuRoutes:()=>['Project Settings','Project Info','Production Contacts','Lighting Vendor','Logos','Exports'].map((label,i)=>({label,active:i===0,run(){}})).concat({label:'Position Summary',standalone:true,run(){}})});
+const navContext=vm.createContext({document:{querySelectorAll:()=>[navButton],createElement:navNode},activeSheetTab:'home',closeSheetSubMenus(){},sheetSubMenuRoutes:()=>['Project Settings'].map((label,i)=>({label,active:i===0,run(){}})).concat({label:'Position Summary',standalone:true,run(){}})});
 vm.runInContext(source('renderSheetTabMenus'),navContext);navContext.renderSheetTabMenus();
-const navMenu=navHost.children[1],navGroup=navMenu.children[0],navToggle=navGroup.children[1],navChildren=navGroup.children[2];
-assert.equal(navMenu.children.length,2);assert.equal(navMenu.children[1].textContent,'Position Summary');assert.equal(navMenu.children[1].parentElement,navMenu);assert.equal(navGroup.children[0].textContent,'Project Settings');assert.equal(navChildren.children.length,5);assert.equal(navToggle.attrs['aria-expanded'],'true');assert.equal(navChildren.hidden,false);navToggle.onclick();assert.equal(navChildren.hidden,true);assert.equal(navMenu.children[1].hidden,undefined,'Position Summary stays outside the collapsed Settings children');assert.equal(navToggle.attrs['aria-expanded'],'false');navToggle.onclick();assert.equal(navChildren.hidden,false);
+const navMenu=navHost.children[1];
+assert.equal(navMenu.children.length,2);
+assert.deepEqual(navMenu.children.map(node=>node.textContent),['Project Settings','Position Summary']);
+assert(navMenu.children.every(node=>node.parentElement===navMenu&&node.children.length===0));
+assert.equal(navMenu.children[0].attrs['aria-current'],'page');
+// Owner controls move together without changing their saved identities or handlers.
+{
+ let saves=0,previews=0;
+ const project={file:{projectName:'Test',projectOwner:'Alex',email:'alex@example.test',phoneNumber:'123',includeOwnerDetailsInPdfFooters:true},projectSettings:{typography:{bodyFont:'Arial'},units:{weight:'kg',measurement:'metric'},power:{voltage:230}}};
+ const controls=['projectOwner','email','phoneNumber','includeOwnerDetailsInPdfFooters'].map(key=>({dataset:{projectFile:key},type:key==='includeOwnerDetailsInPdfFooters'?'checkbox':'text',value:project.file[key],checked:project.file[key],listeners:{},addEventListener(event,handler){this.listeners[event]=handler}}));
+ const general={innerHTML:'',querySelectorAll:()=>[]},file={innerHTML:'',querySelectorAll:()=>controls};
+ const ui=vm.createContext({shouldPreserveLiveViewScroll:()=>false,ensureProjectInfo:()=>project,$:id=>id==='projectFileTab'?file:id==='projectGeneralTab'?general:null,escapeHtml:String,escapeAttr:String,projectJobControls:()=>'',projectCustomFieldsMarkup:()=>'',projectSettingsFontOptions:()=>'',styleFontSelects(){},persist:()=>saves++,refreshHomeIfActive(){},renderProjectSettingsPdfPreview(){},refreshOpenPdfPreview:()=>previews++});
+ for(const name of ['renderFileInfo','renderGeneralSettings','updateProjectFileField'])vm.runInContext(source(name),ui);
+ ui.renderFileInfo();ui.renderGeneralSettings();
+ assert(!general.innerHTML.includes('data-project-file='));
+ for(const control of controls)assert.equal(file.innerHTML.split('data-project-file="'+control.dataset.projectFile+'"').length-1,1);
+ assert(file.innerHTML.includes('value="Alex"'));assert(file.innerHTML.includes('type="checkbox" checked'));
+ for(const control of controls){if(control.type==='checkbox'){control.checked=false;control.listeners.change()}else{control.value='Updated '+control.dataset.projectFile;control.listeners.input()}}
+ assert.equal(saves,4);assert.equal(previews,4);assert.equal(project.file.projectOwner,'Updated projectOwner');assert.equal(project.file.email,'Updated email');assert.equal(project.file.phoneNumber,'Updated phoneNumber');assert.equal(project.file.includeOwnerDetailsInPdfFooters,false);
+ ui.renderFileInfo();assert(file.innerHTML.includes('value="Updated projectOwner"'));assert(!file.innerHTML.includes('type="checkbox" checked'));
+ console.log('PASS: Project Info renders Owner/contact/footer controls once and preserves save and preview updates.');
+}
 // Home personnel consume the same saved order as Production Contacts.
+{
+ let saves=0,refreshes=0;
+ let project={file:{version:'2',versionDate:'2026-11-20'},revisions:[{version:'1',date:'2026-11-19',notes:[{id:'old',text:'Historical note'}],log:[]},{version:'2',date:'2026-11-20',notes:[{id:'current',text:'Keep current note'}],log:[{id:'log',text:'Keep current log'}]}]};
+ const history=JSON.stringify(project.revisions[0]),notes=JSON.stringify(project.revisions[1].notes),log=JSON.stringify(project.revisions[1].log),host={innerHTML:''};
+ const ui=vm.createContext({ensureProjectInfo:()=>project,todayISO:()=> '2026-11-22',$:id=>id==='projectRevisionsTab'?host:null,escapeHtml:String,formatDisplayDate:String,revisionSelectionActionsMarkup:()=>'',revisionNotesGroupedMarkup:notes=>notes.map(note=>note.text).join(';'),persist:()=>saves++,refreshHomeIfActive:()=>refreshes++,renderProjectSettingsPdfPreview(){},refreshOpenPdfPreview(){}});
+ for(const name of ['updateProjectFileField','ensureWorkingRevision','renderRevisions'])vm.runInContext(source(name),ui);
+ const edit=value=>ui.updateProjectFileField({dataset:{projectFile:'version'},type:'text',value});
+ for(const value of ['3','3.','3.5']){edit(value);assert.equal(project.file.version,value);assert.equal(project.revisions.at(-1).version,value);assert(host.innerHTML.includes('Version '+value+' •'));assert.equal(project.revisions.length,2)}
+ assert.equal(JSON.stringify(project.revisions[0]),history);assert.equal(JSON.stringify(project.revisions[1].notes),notes);assert.equal(JSON.stringify(project.revisions[1].log),log);assert.equal(project.revisions[1].date,'2026-11-20');
+ assert.equal(saves,3);assert.equal(refreshes,3);
+ project=JSON.parse(JSON.stringify(project));ui.renderRevisions();assert(host.innerHTML.includes('Version 3.5 •'));
+ edit('');assert.equal(project.file.version,'');assert.equal(project.revisions.at(-1).version,'');assert.equal(project.revisions.length,2);
+ project={file:{version:'',versionDate:''},revisions:[]};edit('');assert.equal(project.revisions.length,0);
+ edit('A');assert.equal(project.revisions.length,1);assert.equal(project.revisions[0].version,'A');assert.equal(project.revisions[0].date,'2026-11-22');edit('A.1');assert.equal(project.revisions.length,1);assert.equal(project.revisions[0].version,'A.1');
+ console.log('PASS: Project Info version edits rename the working revision, preserve history/notes/log/date, round-trip and create only one initial revision.');
+}
 const homeProject={production:{tourManager:'Alice',lightingDesigner:'Bob',production_stage:'Chris',lightingVendor:'Vendor'},productionVisible:{tourManager:true,lightingDesigner:true,production_stage:true,lightingVendor:true},productionContacts:{production_stage:[{id:'child',type:'email',value:'chris@example.test',visible:true}]},customProductionFields:[{id:'production_stage',name:'Stage Manager'}],productionOrder:['production_stage','lightingDesigner','tourManager']};
 const homeOrder=vm.createContext({ensureProjectInfo:()=>homeProject,productionFieldDefs:[['tourManager','Tour Manager'],['lightingDesigner','Lighting Designer'],['lightingVendor','Lighting Vendor']],escapeHtml:String});
 for(const name of ['allProductionFieldDefs','orderedProductionFields','productionContactHeroMarkup','productionHeroItem','productionHeroLine','productionHeroMarkup'])vm.runInContext(source(name),homeOrder);

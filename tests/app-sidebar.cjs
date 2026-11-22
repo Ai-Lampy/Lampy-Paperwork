@@ -170,7 +170,7 @@ assert(source.indexOf('footer.append(helpButton)')<source.indexOf('footer.append
 assert(source.includes("root.openAppInfo('help')"));
 assert(!html.slice(html.indexOf('<aside class="actionSidebar"'),html.indexOf('</header>')).includes('>Project Settings</button>'));
 assert(html.includes('.projectErrorsControl{position:relative;padding-left:6px}'));
-const context=vm.createContext({projectSettingsNavExpanded:true,activeProjectTab:'general',activeSheetTab:'home',activePatchSheetId:'master',activePowerSubTab:'calcs',activeNetworkSubTab:'deviceConfig',activeControlNetworkTab:'consoles',activeRackTabId:'r1',activeLoomSubTab:'looms',activeDistroLabelTab:'labels',activeUniverseDetail:1,app:{patchSheets:[],controlNetwork:{racks:[{id:'r1',name:'Rack'}]}},distroRanges:()=>[],powerPhaseTotalsAvailable:()=>true,normalisePatchSheets:v=>v,setSheetTab:tab=>context.activeSheetTab=tab,openProjectSettings:()=>context.activeSheetTab='projectSettings'});
+const context=vm.createContext({activeProjectTab:'general',activeSheetTab:'home',activePatchSheetId:'master',activePowerSubTab:'calcs',activeNetworkSubTab:'deviceConfig',activeControlNetworkTab:'consoles',activeRackTabId:'r1',activeLoomSubTab:'looms',activeDistroLabelTab:'labels',activeUniverseDetail:1,app:{patchSheets:[],controlNetwork:{racks:[{id:'r1',name:'Rack'}]}},distroRanges:()=>[],powerPhaseTotalsAvailable:()=>true,normalisePatchSheets:v=>v,setSheetTab:tab=>context.activeSheetTab=tab,openProjectSettings:()=>context.activeSheetTab='projectSettings'});
 for(const name of ['projectSettingsTabLabel','sheetSubMenuRoutes','applicationPageHelp'])vm.runInContext(appFunction(name),context);
 context.sheetSubMenuRoutes('home')[0].run();assert.equal(context.activeSheetTab,'projectSettings');assert.equal(context.sheetSubMenuRoutes('home')[0].active,true);assert.equal(context.sheetSubMenuRoutes('home')[0].label,'Project Settings');
 // Use the real navigation entry point: switching an internal Settings tab alone
@@ -180,16 +180,25 @@ context.ensureProjectInfo=()=>({});context.render=()=>settingsRenders++;
 vm.runInContext(appFunction('openProjectSettings'),context);
 vm.runInContext(appFunction('switchProjectTab'),context);
 for(const origin of ['home','fixturePatch','powerSheet','deviceConfig','looms','projectSettings']){
- for(const [index,key] of ['general','file','production','vendor','logo','exports'].entries()){
-  context.activeSheetTab=origin;context.activeProjectTab='general';context.projectSettingsNavExpanded=false;
+ for(const previous of ['general','file','production','vendor','logo','exports']){
+  context.activeSheetTab=origin;context.activeProjectTab=previous;
+  assert.deepEqual(Array.from(context.sheetSubMenuRoutes('home'),route=>route.label),['Project Settings','Position Summary']);
   if(origin!=='projectSettings')assert.equal(context.sheetSubMenuRoutes('home').filter(route=>route.active).length,0);
-  const before=settingsRenders;context.sheetSubMenuRoutes('home')[index].run();
-  assert.equal(context.activeSheetTab,'projectSettings');assert.equal(context.activeProjectTab,key);
-  assert.equal(settingsRenders,before+1);assert.equal(context.projectSettingsNavExpanded,false);
-  assert.deepEqual(Array.from(context.sheetSubMenuRoutes('home').filter(route=>route.active),route=>route.label),[context.projectSettingsTabLabel(key)]);
+  const before=settingsRenders;context.sheetSubMenuRoutes('home')[0].run();
+  assert.equal(context.activeSheetTab,'projectSettings');assert.equal(context.activeProjectTab,'file');
+  assert.equal(settingsRenders,before+1);
+  assert.deepEqual(Array.from(context.sheetSubMenuRoutes('home').filter(route=>route.active),route=>route.label),['Project Settings']);
  }
 }
-console.log('PASS: every Home submenu opens and renders its Settings destination from other pages, with one active route.');
+let tabRenders=0,tabUpdates=0;context.renderProjectSettingsView=()=>tabRenders++;context.updateSheetTabs=()=>tabUpdates++;
+for(const key of ['general','file','production','vendor','logo','exports']){
+ context.openProjectSettings(key);assert.equal(context.activeProjectTab,key);
+ context.switchProjectTab(key);assert.equal(context.activeProjectTab,key);
+}
+assert.equal(tabRenders,6);assert.equal(tabUpdates,6);
+context.openProjectSettings('unknown');assert.equal(context.activeProjectTab,'file');
+context.switchProjectTab('unknown');assert.equal(context.activeProjectTab,'file');
+console.log('PASS: Settings always enters Project Info from the sidebar, retains explicit page routes and switches all six toolbar destinations.');
 context.activeSheetTab='fixturePatch';let routes=context.sheetSubMenuRoutes('fixturePatch');assert(routes[0].active);assert(routes[0].compactDuplicate);
 context.app.patchSheets=[{id:'a',name:'Show A'},{id:'b',name:'Show B'}];context.activePatchSheetId='b';routes=context.sheetSubMenuRoutes('fixturePatch');assert(!routes[0].compactDuplicate);assert.deepEqual(Array.from(routes.filter(r=>r.active),r=>r.label),['Show B']);assert.equal(routes.at(-2).label,'Universe Detail');assert.equal(routes.at(-1).label,'Position Summary');
 for(const [page,group,key,value,label] of [['powerSheet','powerSheet','activePowerSubTab','fanOuts','Fan Outs'],['deviceConfig','network','activeNetworkSubTab','portConfiguration','Port Configuration'],['looms','looms','activeLoomSubTab','cableList','Cable List'],['distroLabels','distroLabels','activeDistroLabelTab','rear','Rear Labels'],['controlNetwork','rackLayout','activeControlNetworkTab','racks','Rack']]){context.activeSheetTab=page;context[key]=value;assert.deepEqual(Array.from(context.sheetSubMenuRoutes(group).filter(r=>r.active),r=>r.label),[label]);assert(context.applicationPageHelp().length>50)}
@@ -236,21 +245,15 @@ assert.equal(sidebar.subPageIcon('truckPack','Cases'),'list');
 assert.equal(sidebar.subPageIcon('truckPack','Truck 2'),'truckPack');
 console.log('PASS: Truck Pack icon exposes its trucks and Cases even while active.');
 
-// Entering Settings keeps the compact rail unchanged; its child routes live in a flyout.
-assert.equal(declarations('.appNavigationCompact .projectSettingsNavChildren,.appNavigationCompact .projectSettingsNavChildren[hidden]').display,'none');
-assert(!css.includes('data-settings-active'));
-for(const active of [false,true])assert.equal(sidebar.flyoutMode(undefined,active,true),'group');
-const settingsChildren=['Project Info','Production Contacts','Lighting Vendor','Logos','Exports'].map(label=>({textContent:label}));
-const settingsButton={closest:selector=>selector==='.projectSettingsNavGroup'?{querySelectorAll:selector=>{assert.equal(selector,'.projectSettingsNavChildren button');return settingsChildren}}:null};
-assert.deepEqual(sidebar.flyoutChildren(settingsButton),settingsChildren);
-const ordinaryChildren=[{textContent:'Cases'}],ordinaryButton={closest:()=>null,parentElement:{querySelectorAll:selector=>{assert.equal(selector,'.sheetSubMenu button:not(.appNavigationDuplicate):not(.appNavigationDisclosure)');return ordinaryChildren}}};
-assert.deepEqual(sidebar.flyoutChildren(ordinaryButton),ordinaryChildren);
-for(const expanded of [false,true]){
- context.projectSettingsNavExpanded=expanded;context.activeSheetTab='home';
- context.sheetSubMenuRoutes('home')[0].run();
- assert.equal(context.projectSettingsNavExpanded,expanded,'Opening Settings preserves manual disclosure state');
+// Settings has a single sidebar destination; its pages now live in the toolbar.
+for(const obsolete of ['projectSettingsNavGroup','projectSettingsNavChildren','projectSettingsDisclosure','projectSettingsNavExpanded']){
+ assert(!html.includes(obsolete));assert(!css.includes(obsolete));assert(!source.includes(obsolete));
 }
-console.log('PASS: Settings preserves sidebar disclosure state and exposes compact child destinations through its hover/focus flyout.');
+assert(!css.includes('data-settings-active'));
+for(const active of [false,true])assert.equal(sidebar.flyoutMode(undefined,active),'name');
+const ordinaryChildren=[{textContent:'Project Settings'},{textContent:'Position Summary'}],ordinaryButton={parentElement:{querySelectorAll:selector=>{assert.equal(selector,'.sheetSubMenu button:not(.appNavigationDuplicate):not(.appNavigationDisclosure)');return ordinaryChildren}}};
+assert.deepEqual(sidebar.flyoutChildren(ordinaryButton),ordinaryChildren);
+console.log('PASS: Settings has no nested sidebar expansion and ordinary Home flyouts keep both destinations.');
 
 // Both menus open the same Position Summary page with the clicked parent active.
 {

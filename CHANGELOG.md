@@ -1,3 +1,11 @@
+## V58 — Project Settings navigation
+
+- Open Project Settings on Project Info, including when reopening from the sidebar.
+- Switch settings pages using an icon-and-name toolbar; remove the nested settings sidebar expansion.
+- Move Project Owner, contact details and the PDF-footer option to Project Info without changing saved data.
+- Link Version edits in Project Info to the current revision shown in Revision Summary, preserving earlier revisions and existing notes.
+- Show the header Errors button only while active errors exist; keep Errors available in the sidebar Menu.
+
 ## V57.37 — Toolbar layout and Truck Pack wheel zoom
 
 - Remove obsolete negative tab margins, give tabs real gaps and prevent page-toolbar buttons from shrinking below their contents. Keep Home, Position Summary and Universe Detail toolbar rows within their page width. Preserve button colours and states.

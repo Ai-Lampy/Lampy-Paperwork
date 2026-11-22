@@ -43,17 +43,17 @@ console.log('PASS: save-only transient status, separate recovery errors, 15-minu
 // Error attention is acknowledged by activation, not by background refresh.
 {
  let active=[],attention=false,refreshes=0;
- const button={classList:{toggle(name,on){attention=on},remove(){attention=false}},setAttribute(){}},menu={hidden:true,querySelector:()=>({focus(){}})};
- const c=vm.createContext({$:id=>id==='projectErrorsButton'?button:menu,activeProjectErrorList:()=>active,closeProjectErrorsMenu:()=>{menu.hidden=true},refreshProjectErrors(){refreshes++;c.updateProjectErrorAttention(active)}});
+ const button={classList:{toggle(name,on){attention=on},remove(){attention=false}},setAttribute(){}},control={hidden:true},menu={hidden:true,querySelector:()=>({focus(){}})};
+ const c=vm.createContext({$:id=>id==='projectErrorsButton'?button:id==='projectErrorsControl'?control:menu,activeProjectErrorList:()=>active,closeProjectErrorsMenu:()=>{menu.hidden=true},refreshProjectErrors(){refreshes++;c.updateProjectErrorAttention(active)}});
  vm.runInContext('let acknowledgedProjectErrors=new Set()',c);
  for(const name of ['projectErrorAttentionKey','updateProjectErrorAttention','acknowledgeProjectErrors','toggleProjectErrorsMenu'])vm.runInContext(source(name),c);
- c.updateProjectErrorAttention(active);assert.equal(attention,false);
- active=[{id:'a',description:'Overlap'}];c.updateProjectErrorAttention(active);assert.equal(attention,true);
+ c.updateProjectErrorAttention(active);assert.equal(attention,false);assert.equal(control.hidden,true);
+ active=[{id:'a',description:'Overlap'}];c.updateProjectErrorAttention(active);assert.equal(attention,true);assert.equal(control.hidden,false);
  c.toggleProjectErrorsMenu();assert.equal(attention,false);assert.equal(menu.hidden,false);assert.equal(refreshes,1);
  c.updateProjectErrorAttention(active);assert.equal(attention,false,'refresh must not restart acknowledged errors');
  active.push({id:'b',description:'Overflow'});c.updateProjectErrorAttention(active);assert.equal(attention,true);
  c.toggleProjectErrorsMenu();assert.equal(attention,false);assert.equal(menu.hidden,true);
- active=[];c.updateProjectErrorAttention(active);assert.equal(attention,false);
+ active=[];c.updateProjectErrorAttention(active);assert.equal(attention,false);assert.equal(control.hidden,true);assert.equal(menu.hidden,true);c.toggleProjectErrorsMenu();assert.equal(menu.hidden,true);
  active=[{id:'a',description:'Overlap'}];c.updateProjectErrorAttention(active);assert.equal(attention,true,'recurring error alerts again');
  c.acknowledgeProjectErrors();active[0].description='Changed overlap';c.updateProjectErrorAttention(active);assert.equal(attention,true);
  assert(source('resetProjectErrors').includes('acknowledgedProjectErrors.clear();updateProjectErrorAttention([])'));
@@ -63,5 +63,23 @@ console.log('PASS: save-only transient status, separate recovery errors, 15-minu
  assert(css.includes('#projectHeaderLogoSlot .topVendorLogo{border-right:2px solid #9b9b9b;padding:0 12px}'));
  assert(source('updateProjectHeaderLogos').includes("vendorLogoImgMarkup('projectHeaderLogo topVendorLogo'"));
  assert(html.includes('#tourLogoSlot{width:165px;max-width:100%;height:54px;min-height:0;overflow:hidden;border-right:2px solid #9b9b9b;padding-right:6px}'));
- console.log('PASS: header dividers, error pulse, click acknowledgement, recurrence, clear/reset and reduced-motion handling.');
+ console.log('PASS: header dividers, active-only Errors visibility, error pulse, acknowledgement, recurrence, clear/reset and reduced-motion handling.');
+}
+
+// Background validation drives visibility from active errors, excluding ignored errors.
+{
+ let detected=[],saves=0;
+ const project={ignoredProjectErrors:[]},control={hidden:true},badge={hidden:true},menu={hidden:true},button={attrs:{},classList:{toggle(){},remove(){}},setAttribute(key,value){this.attrs[key]=value}};
+ const ui=vm.createContext({projectValidationTimer:null,projectValidationFrame:null,projectErrors:new Map(),projectErrorSequence:0,selectedProjectErrorIds:new Set(),activeProjectErrorsTab:'active',activeSheetTab:'home',acknowledgedProjectErrors:new Set(),collectProjectErrors:()=>detected,ensureProjectInfo:()=>project,persist:()=>saves++,updateProjectErrorsMenu(){},$:id=>({projectErrorsControl:control,projectErrorsBadge:badge,projectErrorsMenu:menu,projectErrorsButton:button})[id]});
+ for(const name of ['reconcileProjectErrors','ignoredProjectErrorIds','orderedProjectErrors','activeProjectErrorList','ignoredProjectErrorList','visibleProjectErrorList','projectErrorAttentionKey','updateProjectErrorAttention','closeProjectErrorsMenu','refreshProjectErrors'])vm.runInContext(source(name),ui);
+ ui.refreshProjectErrors();assert.equal(control.hidden,true);
+ detected=[{id:'a',description:'Overlap'},{id:'b',description:'Missing mode'}];ui.refreshProjectErrors();assert.equal(control.hidden,false);assert.equal(badge.textContent,'2');
+ project.ignoredProjectErrors=['a'];ui.refreshProjectErrors();assert.equal(control.hidden,false);assert.equal(badge.textContent,'1');
+ menu.hidden=false;project.ignoredProjectErrors=['a','b'];ui.refreshProjectErrors();assert.equal(control.hidden,true);assert.equal(menu.hidden,true);assert.equal(button.attrs['aria-expanded'],'false');
+ project.ignoredProjectErrors=['a'];ui.refreshProjectErrors();assert.equal(control.hidden,false);
+ detected=[];ui.refreshProjectErrors();assert.equal(control.hidden,true);assert.equal(badge.hidden,true);assert.equal(saves,1);
+ assert(html.includes('class="projectErrorsControl" id="projectErrorsControl" hidden'));
+ assert(html.includes('.projectErrorsControl[hidden]'));
+ assert(source('appSitemapGroups').includes("{label:'Errors',run:()=>openProjectErrorsPage()}"));
+ console.log('PASS: empty, new, partly ignored, all ignored, restored and resolved errors update the header; Menu retains Errors.');
 }

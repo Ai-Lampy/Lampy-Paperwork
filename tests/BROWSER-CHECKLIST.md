@@ -1,4 +1,4 @@
-# V57 browser release checks
+# V58 browser release checks
 
 **Use this checklist only when the user explicitly requests browser testing.** Interface changes, implementation requests and releases do not authorise browser testing. Static validation remains the default.
 
@@ -6,6 +6,7 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 
 | Check | Chrome/Chromium | Firefox | Safari |
 | --- | --- | --- | --- |
+| V58 Project Settings: always open on Project Info; all six icon-and-name toolbar buttons switch pages and highlight the current page; no nested sidebar expansion; Project Owner/contact/footer settings save and reload; Version edits update Revision Summary without changing older revisions | Required | Required | Required |
 | V57 Truck Pack: case add/edit/import, metric/imperial conversion, trailer presets/custom details, 1/2/4 views, all camera presets/cube, drag and cancel, castors/end rotation/lifter stacking, collision/bounds rejection, save/reload and reset | Required | Required | Required |
 | V56 fixture images, mode/channel information, no wheel display, GDTF-free MVR export and imported attachment round trip | Required | Required | Required |
 | V55 PDF settings order, first-header/preview collapse and independent remaining-header and footer font/size/style/colour | Required | Required | Required |
@@ -18,7 +19,7 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 | Help above Menu describes each current page/sub-page; close, Escape, backdrop, focus return and mobile drawer behaviour | Required | Required | Required |
 | Loom cards start collapsed; opened cards survive navigation and reload; collapsing parent closes extensions; denied storage does not break controls | Required | Required | Required |
 | Welcome renders from JSON and with JSON loading unavailable; content matches in both cases; retired walkthrough is absent | Required | Required | Required |
-| Errors control retains 6px left padding, count and acknowledgement behaviour | Required | Required | Required |
+| Errors control appears only for active errors, closes when errors are cleared or ignored, and remains accessible through the sidebar Menu; preserve count and acknowledgement behaviour | Required | Required | Required |
 | Mobile drawer: open/close, Escape, outside click, focus containment and return; sidebar-only scrolling | Required | Required | Required |
 | Expanded/compact sidebar content fitting and unchanged print/PDF geometry | Required | Required | Required |
 | Fixture Patch sidebar destinations, Home universe routes, populated Menu and empty Import action | Required | Required | Required |
@@ -34,7 +35,7 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 | Control Location cells mirror matching Position Summary colours and Power Position styling; card position names use the Project Font | Required | Required | Required |
 | Print, PDF preview and exported documents retain their document geometry without live responsive transforms | Required | Required | Required |
 | Project Settings page navigation, linked Project/Production fields and mandatory Tour Logo PDF output | Required | Required | Required |
-| Project Font, units, custom voltage and Project Owner settings save/load and refresh the app without changing application-control fonts | Required | Required | Required |
+| Project Font, units, custom voltage and Project Info owner settings save/load and refresh the app without changing application-control fonts | Required | Required | Required |
 | Export defaults initialise each preview; preview changes remain session-only | Required | Required | Required |
 | Page Title styling, linked line 2, footer presets/custom templates, remaining-header inheritance and reserved footer areas render correctly | Required | Required | Required |
 | Vendor and 2nd Logo visibility/export controls persist and update the live first-page header preview | Required | Required | Required |
@@ -90,7 +91,7 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 ## V54 global interface checks
 
 - Home: compact Edit Home control, no Project Info button, title centred between unequal-width logos.
-- Project Settings: all six sections available in sidebar; all Job Types offer the three new subtypes.
+- Project Settings: all six sections available in the settings toolbar; all Job Types offer the three new subtypes.
 - Production Contacts: add Job Title and Name inline, rename, edit, reorder by drag or Up/Down, toggle visibility and reload; linked values and contact IDs remain intact.
 - Vendor fields: no add-contact buttons; existing contacts and uploads still work.
 - Header previews: current logo settings, full-width unscaled first-page preview below its settings, no first-page footer, later-page footer retained.
