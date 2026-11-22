@@ -14,7 +14,7 @@ body.hasAppNavigation>.appShell>.wrap>.previewPanel{padding:0;border-radius:0;bo
 .appNavigation .appNavigationContent{display:block;width:100%;max-width:100%;min-width:0;min-height:0;margin:0;padding:0 0 8px;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;flex:1 1 0;scrollbar-width:thin;scrollbar-color:#f5f5f5 transparent}
 .appNavigation .sheetTabs{display:flex;flex-direction:column;flex-wrap:nowrap;align-items:stretch;justify-content:flex-start;gap:4px;width:100%;height:max-content;align-content:start;padding:0;margin:0;border:0;background:none}
 .appNavigation .sheetTabMenuHost{display:grid;grid-template-columns:minmax(0,1fr) 32px;align-items:center;align-content:start;position:relative;flex:0 0 auto;width:100%;height:max-content;min-height:0;grid-template-rows:44px max-content;grid-auto-rows:max-content;align-self:start;gap:0;border-radius:7px}
-.appNavigation .sheetTab{display:flex;align-items:center;gap:12px;min-width:0;width:100%;min-height:44px;text-align:left;border:0;border-radius:7px;background:transparent;color:#ffffff;padding:10px 12px;font:14px/20px var(--app-font);white-space:nowrap;transition:background-color 140ms ease,color 140ms ease}
+.appNavigation .sheetTab{display:flex;align-items:center;gap:12px;min-width:0;width:100%;min-height:44px;text-align:left;border:0;border-radius:7px;background:transparent;color:#ffffff;padding:10px 12px;font:700 14px/20px Cochin,'Times New Roman',Times,serif;white-space:nowrap;transition:background-color 140ms ease,color 140ms ease}
 .appNavigation .sheetTabMenuHost:has(>.sheetTab:hover){background:#858585}
 .appNavigation .sheetTab.active{background:#0060ff;color:#fff}
 .appNavigation .sheetTabMenuHost:has(>.sheetTab.active){background:linear-gradient(#0060ff 44px,transparent 44px)}
@@ -24,7 +24,7 @@ body.hasAppNavigation>.appShell>.wrap>.previewPanel{padding:0;border-radius:0;bo
 .appNavigationDisclosure:hover{background:#0000000c}
 .appNavigation .sheetSubMenu,.appNavigation .sheetTabMenuHost.menuDismissed .sheetSubMenu{position:static;display:grid!important;grid-column:1 / -1;grid-row:2;height:max-content;min-height:0;align-self:start;align-content:start;grid-template-rows:none;grid-auto-rows:max-content;gap:2px;width:100%;min-width:0;max-width:100%;max-height:none;overflow:visible;padding:6px 4px 6px 32px;border:0;box-shadow:none;background:#9b9b9b}
 .appNavigation .sheetSubMenu[hidden],.appNavigation .sheetTabMenuHost.menuDismissed .sheetSubMenu[hidden]{display:none!important}
-.appNavigation .sheetSubMenu button{height:auto;align-self:start;width:100%;min-width:0;min-height:34px;text-align:left;font:500 13px/18px var(--app-font);color:#ffffff;background:transparent;padding:8px 12px;border:0;border-radius:0 5px 5px 0;white-space:normal;transition:background-color 140ms ease,color 140ms ease}
+.appNavigation .sheetSubMenu button{height:auto;align-self:start;width:100%;min-width:0;min-height:34px;text-align:left;font:700 13px/18px Cochin,'Times New Roman',Times,serif;color:#ffffff;background:transparent;padding:8px 12px;border:0;border-radius:0 5px 5px 0;white-space:normal;transition:background-color 140ms ease,color 140ms ease}
 .appNavigation .sheetSubMenu button:hover{background:#e4e7ec;color:#111}
 .appNavigation button:focus-visible,.appNavigationMobileToggle:focus-visible{outline:2px solid #0060ff;outline-offset:2px}
 .appNavigation .sheetTab.active:focus-visible{outline-color:#111}
@@ -39,8 +39,8 @@ body.hasAppNavigation>.appShell>.wrap>.previewPanel{padding:0;border-radius:0;bo
 
 .appNavigationFlyout{position:fixed;z-index:80;width:240px;max-width:calc(100vw - 16px);max-height:calc(100dvh - 16px);overflow-y:auto;overscroll-behavior:contain;padding:6px;background:#fff;border:1px solid #d0d5dd;border-radius:9px;box-shadow:0 8px 24px #10182824;font-family:var(--app-font)}
 .appNavigationFlyout[hidden]{display:none}
-.appNavigationFlyout button{display:block;width:100%;border:0;border-radius:5px;padding:9px 12px;text-align:left;background:transparent;color:#344054;font:500 14px/20px var(--app-font);cursor:pointer;overflow-wrap:anywhere}
-.appNavigationFlyout button.appNavigationFlyoutTitle{font-weight:800;color:#111}
+.appNavigationFlyout button{display:block;width:100%;border:0;border-radius:5px;padding:9px 12px;text-align:left;background:transparent;color:#344054;font:700 14px/20px Cochin,'Times New Roman',Times,serif;cursor:pointer;overflow-wrap:anywhere}
+.appNavigationFlyout button.appNavigationFlyoutTitle{font-weight:700;color:#111}
 .appNavigationFlyout button:hover{background:#eef2f6}.appNavigationFlyout button:focus-visible{outline:2px solid #0060ff;outline-offset:-2px;background:#eef2f6}
 @media print{.appNavigationFlyout{display:none!important}}
 
@@ -56,7 +56,7 @@ body.hasAppNavigation>.appShell>.wrap>.previewPanel{padding:0;border-radius:0;bo
 }
 
 .appNavigationFooter{position:relative;flex:0 0 auto;margin-top:auto;padding-top:8px;border-top:1px solid #0003}
-.appNavigationFooter>:is(.menuButton,.appNavigationHelp){position:static;display:flex;align-items:center;gap:12px;width:100%;height:44px;margin:0;padding:10px 12px;border:0;border-radius:7px;background:transparent;box-shadow:none;color:#f2f2f2;font:600 14px/20px var(--app-font)}
+.appNavigationFooter>:is(.menuButton,.appNavigationHelp){position:static;display:flex;align-items:center;gap:12px;width:100%;height:44px;margin:0;padding:10px 12px;border:0;border-radius:7px;background:transparent;box-shadow:none;color:#f2f2f2;font:700 14px/20px Cochin,'Times New Roman',Times,serif}
 .appNavigationFooter>:is(.menuButton,.appNavigationHelp):hover{background:#858585}
 .appNavigationFooter>.actionSidebar{position:absolute;inset:auto auto calc(100% + 8px) 0;width:min(260px,calc(100vw - 32px));max-height:calc(100dvh - 100px);overflow:auto;overscroll-behavior:contain;transform:none;transition:none}
 .appNavigationCompact .appNavigationFooter>:is(.menuButton,.appNavigationHelp){justify-content:center;padding:10px 8px}

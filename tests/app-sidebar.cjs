@@ -77,7 +77,7 @@ assert(css.includes('.projectSettingsView,.tableView){background:#fff}'));
 
 assert.equal(declarations('body.hasAppNavigation')['--navigation-width'],'200px');
 assert.equal(declarations('.appNavigationDisclosure').color,'#000000');
-assert.equal(declarations('.appNavigation .sheetTab').font,'14px/20px var(--app-font)');
+assert.equal(declarations('.appNavigation .sheetTab').font,"700 14px/20px Cochin,'Times New Roman',Times,serif");
 assert.equal(content['scrollbar-color'],'#f5f5f5 transparent');
 assert.equal(declarations('.appNavigation .sheetSubMenu,.appNavigation .sheetTabMenuHost.menuDismissed .sheetSubMenu').background,'#9b9b9b');
 assert.equal(declarations('.appNavigation .sheetSubMenu button').color,'#ffffff');

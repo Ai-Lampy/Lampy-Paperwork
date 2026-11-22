@@ -1,3 +1,12 @@
+## V58.2 — Sidebar navigation typography
+
+- Match sidebar page names, sub-pages, compact hover menus, Help and Menu text to Cochin Bold. Preserve existing text sizes, colours, icons and navigation behaviour.
+
+## V58.1 — Page toolbar typography and spacing
+
+- Use Cochin Bold for all page-toolbar buttons, keeping their existing font size, scaling, colours and actions.
+- Add an 8 px gap between the Position Summary toolbar controls.
+
 ## V58 — Project Settings navigation
 
 - Open Project Settings on Project Info, including when reopening from the sidebar.
