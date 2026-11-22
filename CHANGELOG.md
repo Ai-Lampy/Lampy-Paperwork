@@ -1,3 +1,13 @@
+## V58.4 — Compact toolbar stats
+
+- Name the Position Summary Home Hero Stat style compact and reuse it for Fixture Patch and Control toolbar stats.
+- Automatically apply compact dimensions and typography to Home Hero Stats inside page toolbars, while keeping the main Home dashboard stats unchanged.
+
+## V58.3 — Restore application navigation fonts
+
+- Restore the previous Arial application font and original weights on page-toolbar buttons and sidebar navigation.
+- Keep existing button sizes, colours, actions and the 8 px Position Summary gap.
+
 ## V58.2 — Sidebar navigation typography
 
 - Match sidebar page names, sub-pages, compact hover menus, Help and Menu text to Cochin Bold. Preserve existing text sizes, colours, icons and navigation behaviour.
