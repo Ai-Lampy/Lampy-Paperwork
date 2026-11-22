@@ -1,3 +1,8 @@
+## V57.36 — Preserve toolbar button styling
+
+- Keep shared page-toolbar button dimensions while restoring each button’s original colours, font weight, border shape, hover, selected and disabled styling. Remove the shared state overrides introduced in V57.35.
+- Leave button actions and compact viewer controls unchanged.
+
 ## V57.35 — Consistent page toolbar buttons
 
 - Use the approved Truck Pack button dimensions and styling across page toolbars: 40px before 85% zoom, automatic text widths, regular 16px Arial, grey buttons and blue selected states. Remove compounded toolbar scaling and fixed action widths.
