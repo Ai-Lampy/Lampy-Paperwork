@@ -3,7 +3,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const T=require('../js/truck-pack.js'),root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),ui=fs.readFileSync(path.join(root,'js/truck-pack-view.js'),'utf8');
 function fn(text,name){const start=text.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);for(let end=text.indexOf('}',start);end>=0;end=text.indexOf('}',end+1)){const value=text.slice(start,end+1);try{new Function('return ('+value+')');return value}catch{}}throw Error(name)}
 const sharedColourContext=vm.createContext({colourTextToHex:value=>String(value||'').trim().toLowerCase(),normaliseHex:value=>String(value||'').toLowerCase()});vm.runInContext(fn(html,'colourSetPresentation'),sharedColourContext);
-function testContext(values){if(values.host&&!values.host.querySelector)values.host.querySelector=()=>null;const context=vm.createContext({root:{},host:null,notify(){},renderInspector(){},renderScenes(){},callbacks:{colourPresentation:values=>sharedColourContext.colourSetPresentation(values),stripeWidth:()=>4*96/25.4},selectedGroup:[],inspectorObserver:null,undoStack:[],redoStack:[],showMeasurements:true,inventoryQuery:'',manualDimensionUnit:'',length:T.formatLength,unit:()=>({measurement:'metric',weight:'kg'}),state:()=>({layout:2,trucks:[]}),truck:()=>values.state?.().trucks.find(t=>t.id===values.state().activeTruckId),...values});for(const name of ['inventoryCell','inventoryFieldValue','refreshInventoryCell','startInventoryFill','updateInventoryFill','inventoryFillScroll','finishInventoryFill','caseMetrics','commitPendingDetails','bindDetailsForm','loadSummaryMarkup','detailsTransaction','boundedPan','panelViewport','corners','prepareOrbit','groupedScene','trailerRulers','trailerCaptions','trailerCaptionMarkup','fit3DBounds','fit3DView','historyButtons','inventoryMatches','filterInventory','trailerRuler','syncHistoryButtons','orientationControl','syncOrientationForm','editActions','measurementMarkup','sceneCamera','viewportMarkup','sceneViewport','gridMarkup','caseFaceFrame','caseFaceShade','caseColourMarkup','caseTextWidth','fitCaseLabel','caseLabelMarkup','selectionIds','selectionRect','casesInSelection','syncInspectorHeight','observeInspector'])vm.runInContext(fn(ui,name),context);return context}
+function testContext(values){if(values.host&&!values.host.querySelector)values.host.querySelector=()=>null;const context=vm.createContext({root:{},host:null,notify(){},renderInspector(){},renderScenes(){},callbacks:{colourPresentation:values=>sharedColourContext.colourSetPresentation(values),stripeWidth:()=>4*96/25.4},selectedGroup:[],inspectorObserver:null,undoStack:[],redoStack:[],showMeasurements:true,inventoryQuery:'',manualDimensionUnit:'',length:T.formatLength,unit:()=>({measurement:'metric',weight:'kg'}),state:()=>({layout:2,trucks:[]}),truck:()=>values.state?.().trucks.find(t=>t.id===values.state().activeTruckId),...values});for(const name of ['inventoryCell','inventoryFieldValue','refreshInventoryCell','startInventoryFill','updateInventoryFill','inventoryFillScroll','finishInventoryFill','caseMetrics','commitPendingDetails','bindDetailsForm','loadSummaryMarkup','detailsTransaction','boundedPan','panelViewport','corners','prepareOrbit','groupedScene','trailerRulers','trailerCaptions','trailerCaptionMarkup','fit3DBounds','fit3DView','historyButtons','inventoryMatches','filterInventory','trailerRuler','syncHistoryButtons','orientationControl','syncOrientationForm','editActions','measurementMarkup','sceneCamera','viewportMarkup','sceneViewport','gridMarkup','caseFaceFrame','caseFaceShade','orderCaseSurfaces','caseColourMarkup','caseTextWidth','fitCaseLabel','caseLabelMarkup','selectionIds','selectionRect','casesInSelection','syncInspectorHeight','observeInspector'])vm.runInContext(fn(ui,name),context);return context}
 const close=(a,b)=>assert(Math.abs(a-b)<.01,`${a} != ${b}`);
 for(const [input,expected] of [['1 m',1000],['12.5 cm',125],['600 mm',600],[`5' 6"`,1676.4],['12"',304.8],[`1' 2 1/2"`,368.3],['½ m',null],['1/2"',12.7]])if(expected===null)assert.throws(()=>T.parseLength(input));else close(T.parseLength(input),expected);
 for(const invalid of ['600','-1 m','NaN mm','1/0"','0 mm','10 yards','2 m garbage'])assert.throws(()=>T.parseLength(invalid));
@@ -968,7 +968,7 @@ console.log('PASS: editable-cell drag fill, visible-row filtering, typed values,
   for(const ruler of panel.markup.matchAll(/<g data-tp-ruler="([xyz])" data-internal-size="([^"]+)">([\s\S]*?)<\/g>/g)){const size=Number(ruler[2]),ticks=Array.from(ruler[3].matchAll(/data-tp-tick="([^"]+)"/g),m=>Number(m[1])),step=measurement==='imperial'?2438.4:2500,expected=[0];for(let i=1;i*step<size-T.EPS;i++)expected.push(i*step);expected.push(size);assert.equal(ticks.length,expected.length);ticks.forEach((tick,i)=>close(tick,expected[i]));assert(ruler[3].includes(T.formatLength(size,measurement)))}
  }}
  assert(fs.readFileSync(path.join(root,'js/truck-pack.css'),'utf8').includes('.tpSideDivider{stroke:#b9b9b9;stroke-width:1;opacity:.6;'));
- assert.equal(html.match(/const VERSION='([^']+)'/)[1],'57.29');
+ assert.equal(html.match(/const VERSION='([^']+)'/)[1],'57.30');
 }
 console.log('PASS: all-inventory W/L/H swaps, preview/Undo, atomic invalid-pack rejection, rear-facing tipped wheels, fixed ruler intervals, Front/Rear labels and side divider.');
 
@@ -996,3 +996,33 @@ console.log('PASS: all-inventory W/L/H swaps, preview/Undo, atomic invalid-pack 
  const [far]=T.addItems(data,active.id,'volume',1);Object.assign(far,{packed:true,x:item.x,y:item.y+1500,z:0});data.views[0]=T.view({mode:'orbit',yaw:0,pitch:0});markup=ctx.scene(0).markup;assert(markup.indexOf(`data-tp-item="${far.id}"`)<markup.indexOf(`data-tp-item="${item.id}"`));
 }
 console.log('PASS: solid cuboid faces across 480 orbit/orientation combinations, fixed face lighting, neutral/striped colours, unchanged plans and near/far occlusion.');
+
+// V57.30: compare the final face order against a depth buffer, not just face counts.
+{
+ const data=T.empty();data.layout=2;data.trucks=[T.normaliseTruck({...T.presets[4],id:'occlusion',items:[]})];data.activeTruckId='occlusion';const active=data.trucks[0];
+ for(let row=0;row<3;row++)for(let col=0;col<4;col++){
+  const mode=['wheels','tipped','side','wheelsUp'][(row+col)%4],id=`occlusion_${row}_${col}`,record=base(id,{width:mode==='side'?700:450+col*40,length:mode==='tipped'?700:650+row*400+col*130,height:mode==='side'?500:550+row*80,casterHeight:60,type:col===0&&row===0?'Truss':'Case'});data.cases.push(record);
+  for(let level=0;level<2;level++){const [item]=T.addItems(data,active.id,id,1);T.orientItem(item,mode);item.rotation=0;const size=T.dimensions(data,item);Object.assign(item,{packed:true,x:col*610,y:row*2600+4500,z:level*size.height,lifter:!!level,colour:level?'#ffffff':'#ff0000',colour2:col%2?'#ffff00':''})}
+ }
+ assert.equal(T.truckError(data,active),'','the regression load is a valid supported pack');
+ const ctx=testContext({T,state:()=>data,truck:()=>active,drag:null,selected:'',esc:String,showMeasurements:false});vm.runInContext(ui.split('\n').find(line=>line.includes('const faces=')),ctx);for(const name of ['staging','scene','renderSceneData','partMesh'])vm.runInContext(fn(ui,name),ctx);
+ const originalOrder=ctx.orderCaseSurfaces,captures=[];ctx.orderCaseSurfaces=(faces,camera)=>{const ordered=originalOrder(faces,camera);captures.push({faces,ordered});return ordered};
+ const projected=(face,point)=>{const q=face.vertices.map(point);return {q,left:Math.min(...q.map(p=>p.x)),right:Math.max(...q.map(p=>p.x)),top:Math.min(...q.map(p=>p.y)),bottom:Math.max(...q.map(p=>p.y))}};
+ function depthAt(face,x,y){if(x<=face.left||x>=face.right||y<=face.top||y>=face.bottom)return null;const q=face.q;for(let i=1;i<q.length-1;i++){const [a,b,c]=[q[0],q[i],q[i+1]],det=(b.y-c.y)*(a.x-c.x)+(c.x-b.x)*(a.y-c.y);if(Math.abs(det)<1e-9)continue;const u=((b.y-c.y)*(x-c.x)+(c.x-b.x)*(y-c.y))/det,v=((c.y-a.y)*(x-c.x)+(a.x-c.x)*(y-c.y))/det,w=1-u-v;if(u>=-1e-8&&v>=-1e-8&&w>=-1e-8)return u*a.depth+v*b.depth+w*c.depth}return null}
+ let samples=0,oldErrors=0,splitFaces=0;
+ for(const yaw of [-145,-100,-55,-10,35,80,125,170])for(const pitch of [-30,30]){
+  captures.length=0;data.views[0]=T.view({mode:'sides',sideViews:[{mode:'orbit',yaw,pitch},{mode:'orbit',yaw:yaw+180,pitch:-pitch}]});const scene=ctx.scene(0);assert.equal(captures.length,2);
+  const ids=Array.from(scene.markup.matchAll(/<clipPath id="([^"]+)"/g),m=>m[1]);assert.equal(new Set(ids).size,ids.length,'split-face clips are unique across both panels');
+  scene.panels.forEach((panel,panelIndex)=>{
+   const {faces,ordered}=captures[panelIndex],expected=faces.map(f=>projected(f,panel.point)),drawn=ordered.map(f=>projected(f,panel.point)),old=[...faces].sort((a,b)=>a.depth-b.depth).map(f=>projected(f,panel.point));splitFaces+=ordered.filter(f=>f.clipped).length;
+   assert.deepEqual(Array.from(panel.markup.matchAll(/<g data-tp-item="([^"]+)"/g),m=>m[1]),Array.from(ordered,f=>f.markup.match(/data-tp-item="([^"]+)"/)[1]),'the SVG uses the tested surface order');
+   const r=panel.rect;for(let y=r.y+1.37;y<r.y+r.height;y+=5)for(let x=r.x+1.73;x<r.x+r.width;x+=5){
+    let nearest=-Infinity,painted=null,previous=null;for(const face of expected){const d=depthAt(face,x,y);if(d!==null)nearest=Math.max(nearest,d)}if(nearest===-Infinity)continue;
+    for(const face of drawn){const d=depthAt(face,x,y);if(d!==null)painted=d}for(const face of old){const d=depthAt(face,x,y);if(d!==null)previous=d}
+    samples++;assert(painted!==null,'face splitting leaves no holes');assert(Math.abs(painted-nearest)<.02,`nearer surface stays visible at ${yaw}/${pitch}, panel ${panelIndex}`);if(previous<nearest-.02)oldErrors++;
+   }
+  });
+ }
+ assert(samples>1000);assert(oldErrors>0,'the test reproduces the former average-depth failure');assert(splitFaces>0,'overlapping face spans exercise geometric splitting');
+ console.log(`PASS: ${samples} depth-buffer samples across both side viewers; no missing/overpainted faces (${oldErrors} failures reproduced with the previous order).`);
+}

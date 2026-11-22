@@ -1,3 +1,9 @@
+## V57.30 — Correct Truck Pack face visibility
+
+- Replace average face-depth sorting with world-space partitioning and back-to-front drawing. Split overlapping face spans where required so distant case faces cannot cover nearer surfaces during free rotation, including independent side viewers.
+- Clip split pieces from the original face artwork, preserving colours, patterns, labels, selection outlines and case interaction. Retain existing camera movement and 2D plan behaviour.
+- Add independent depth-buffer comparisons for a valid mixed-size, stacked load with wheels and all case orientations. Verify both side viewers above and below the floor, and reproduce the old ordering failure in the same regression.
+
 ## V57.29 — Solid Truck Pack case rendering
 
 - Add fixed face lighting to the full case geometry so adjacent faces show depth during free 3D rotation. Preserve opaque surfaces, assigned colour patterns, face-mounted labels and neutral unassigned cases; leave 2D plan rendering unchanged.

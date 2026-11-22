@@ -386,6 +386,25 @@
     for(let row=1;row<rows;row+=stride){const y=active.length-row*step;line(0,y,active.width,y)}
     return `<path class="tpSnapGrid" data-grid-columns="4" d="${segments.join(' ')}" fill="none" stroke="#6a8caf" stroke-width="1" stroke-dasharray="5 4" vector-effect="non-scaling-stroke" pointer-events="none"/>`;
   }
+  function orderCaseSurfaces(surfaces,camera){
+    // A face's centre depth cannot order long faces against short neighbouring
+    // cases. Partition in world space and paint the far half before the near half.
+    // Split faces keep their original artwork; the caller clips it to each piece.
+    const epsilon=.000001,ordered=[],dot=(a,b)=>a.x*b.x+a.y*b.y+a.z*b.z;
+    const plane=face=>{const [a,b,c]=face.vertices,u={x:b.x-a.x,y:b.y-a.y,z:b.z-a.z},v={x:c.x-a.x,y:c.y-a.y,z:c.z-a.z},n={x:u.y*v.z-u.z*v.y,y:u.z*v.x-u.x*v.z,z:u.x*v.y-u.y*v.x},size=Math.hypot(n.x,n.y,n.z);if(size<epsilon)return null;for(const key of ['x','y','z'])n[key]/=size;return {n,d:dot(n,a)}};
+    const classify=(face,p)=>{let front=false,back=false;for(const v of face.vertices){const d=dot(p.n,v)-p.d;if(d>epsilon)front=true;if(d< -epsilon)back=true}return front?(back?2:1):(back?-1:0)};
+    const split=(face,p)=>{const front=[],back=[],vs=face.vertices;for(let i=0;i<vs.length;i++){const a=vs[i],b=vs[(i+1)%vs.length],da=dot(p.n,a)-p.d,db=dot(p.n,b)-p.d;if(da>=-epsilon)front.push(a);if(da<=epsilon)back.push(a);if(da>epsilon&&db< -epsilon||da< -epsilon&&db>epsilon){const t=da/(da-db),v={x:a.x+(b.x-a.x)*t,y:a.y+(b.y-a.y)*t,z:a.z+(b.z-a.z)*t};front.push(v);back.push(v)}}return [front,back].map(vertices=>({...face,vertices,clipped:true}))};
+    const visit=list=>{
+      if(list.length<2){ordered.push(...list);return}
+      let chosen=null,best=Infinity;
+      // Sample spread-out planes to avoid a deep tree for long rows of cases.
+      const count=Math.min(9,list.length);for(let i=0;i<count;i++){const p=plane(list[Math.floor(i*(list.length-1)/Math.max(1,count-1))]);if(!p)continue;let front=0,back=0,cuts=0;for(const face of list){const side=classify(face,p);if(side===1)front++;else if(side===-1)back++;else if(side===2)cuts++}const cost=cuts*3+Math.abs(front-back);if(cost<best){best=cost;chosen=p}}
+      if(!chosen){ordered.push(...list);return}
+      const front=[],back=[],coplanar=[];for(const face of list){const side=classify(face,chosen);if(side===2){const [a,b]=split(face,chosen);front.push(a);back.push(b)}else (side===1?front:side===-1?back:coplanar).push(face)}
+      const near=T.project(chosen.n,camera).depth>=0;visit(near?back:front);ordered.push(...coplanar);visit(near?front:back);
+    };
+    visit(surfaces);return ordered;
+  }
   function renderSceneData(active,all,v,point,scale,waiting,index){
     const tc=corners({x:0,y:0,z:0,width:active.width,length:active.length,height:active.height}).map(point),points=ps=>ps.map(p=>p.x.toFixed(2)+','+p.y.toFixed(2)).join(' '),outline=edges.map(([a,b])=>`M${tc[a].x},${tc[a].y}L${tc[b].x},${tc[b].y}`).join(' ');
     let markup=`<polygon points="${points(tc.slice(0,4))}" fill="#edf0f3" stroke="#526274" stroke-width="2"/><path d="${outline}" stroke="#7f8a99" stroke-width="1.5" fill="none" opacity=".7" pointer-events="none"/>`;
@@ -412,10 +431,11 @@
           content+=`<polygon class="tpCaseShade" points="${points(q)}" fill="#000000" opacity="${shade.toFixed(3)}" pointer-events="none"/><polygon points="${points(q)}" fill="none" stroke="${stroke}" stroke-width="${selectedCase?2.8:1}" pointer-events="none"/>`;
           content+=caseLabelMarkup(base.name,frame,appearance,({side:'On-Side',wheelsUp:'Wheels-Up'})[T.orientation(item)]||'');
         }
-        surfaces.push({depth,markup:`<g data-tp-item="${item.id}" class="tpCase" tabindex="0" role="button" aria-label="${esc(base.name)}"><title>${esc(base.name)}</title>${content}</g>`});
+        surfaces.push({depth,vertices:mesh.faces[f].map(i=>world[i]),markup:`<g data-tp-item="${item.id}" class="tpCase" tabindex="0" role="button" aria-label="${esc(base.name)}"><title>${esc(base.name)}</title>${content}</g>`});
       }}
     }
-    markup+=surfaces.sort((a,b)=>a.depth-b.depth).map(f=>f.markup).join('');
+    const ordered=v.mode==='plan'?surfaces.sort((a,b)=>a.depth-b.depth):orderCaseSurfaces(surfaces,v);
+    markup+=ordered.map((face,i)=>{if(!face.clipped)return face.markup;const id='tp-face-'+index+'-'+i;return `<defs><clipPath id="${id}" clipPathUnits="userSpaceOnUse"><polygon points="${points(face.vertices.map(point))}"/></clipPath></defs><g clip-path="url(#${id})">${face.markup}</g>`}).join('');
     if(showMeasurements)markup+=measurementMarkup(active,all,point,v);markup+=trailerCaptionMarkup(active,point);
     const hitBoxes=all.map(({item,position})=>{const ps=corners({...T.dimensions(state(),item),...position}).map(point);return {id:item.id,left:Math.min(...ps.map(p=>p.x)),right:Math.max(...ps.map(p=>p.x)),top:Math.min(...ps.map(p=>p.y)),bottom:Math.max(...ps.map(p=>p.y))}});
     if(drag?.type==='marquee'&&drag.index===index&&drag.current){const r=selectionRect(drag.start,drag.current);markup+=`<rect class="tpSelectionBox" x="${r.left}" y="${r.top}" width="${r.right-r.left}" height="${r.bottom-r.top}" pointer-events="none"/>`}
