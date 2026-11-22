@@ -1,3 +1,8 @@
+## V57.33 — Consistent page toolbar sizing
+
+- Match Power Calcs, Fan Outs, Looms, Cable List and all Labels toolbars to Device Config with 10px by 12px padding, the same minimum single-row height and compact action buttons. Remove the extra inset around the Looms/Cable List tabs.
+- Keep controls able to wrap on narrow screens and scope the sizing to live page toolbars so exported PDF headers retain their existing layout.
+
 ## V57.32 — Position toolbar sizing
 
 - Match the Position Summary toolbar to Device Config with the same outer padding, border radius and control-row height. Place Sort By beside its selector and use compact button padding while preserving the requested control scales and zero action gap.
