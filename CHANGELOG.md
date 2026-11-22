@@ -1,3 +1,9 @@
+## V57.32 — Position toolbar sizing
+
+- Match the Position Summary toolbar to Device Config with the same outer padding, border radius and control-row height. Place Sort By beside its selector and use compact button padding while preserving the requested control scales and zero action gap.
+
+- Give Position Summary a dedicated location-pin icon under Home and Fixture Patch, including compact navigation. Display its live position count in a compact card using the Home stat colours, border and typography.
+
 ## V57.31 — Above-floor Truck Pack rotation
 
 - Keep free rotation between 5° and 89° above the trailer floor, including the rotate tool, navigation cube and independent side viewers. Preserve unrestricted horizontal rotation, zoom and pan.

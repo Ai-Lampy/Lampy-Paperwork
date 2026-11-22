@@ -262,6 +262,6 @@ console.log('PASS: Settings preserves sidebar disclosure state and exposes compa
  }
  nav.sheetSubMenuRoutes('home').at(-1).run();nav.sheetSubMenuRoutes('fixturePatch').at(-1).run();assert.equal(nav.positionsReturnState.tab,'fixturePatch');nav.closePositionMenu();assert.equal(nav.activeSheetTab,'fixturePatch');
  nav.activeSheetTab='home';nav.openPositionMenu();assert.equal(nav.positionsReturnState.tab,'home');nav.closePositionMenu();assert.equal(nav.activeSheetTab,'home');assert(renders>0&&syncs>0);
- for(const parent of ['home','fixturePatch'])assert.equal(sidebar.subPageIcon(parent,'Position Summary'),'list');
+ for(const parent of ['home','fixturePatch'])assert.equal(sidebar.subPageIcon(parent,'Position Summary'),'positions');
 }
 console.log('PASS: Position Summary under Home and Fixture Patch, correct parent highlighting and return navigation, and compact-menu icons.');

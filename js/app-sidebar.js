@@ -14,6 +14,7 @@
     exports:'M5 14v7h14v-7M12 3v12M7 8l5-5 5 5',
     home:'M3 10 12 3l9 7M5 9v12h5v-7h4v7h5V9',
     fixturePatch:'M4 4h16v16H4zM4 9h16M9 4v16M14 9v11M4 14h16',
+    positions:'M12 22s8-8 8-13a8 8 0 0 0-16 0c0 5 8 13 8 13zM12 6a3 3 0 1 0 0 6 3 3 0 0 0 0-6',
     powerSheet:'m13 2-9 12h7l-1 8 10-13h-7z',
     controlNetwork:'M4 5h16M4 12h16M4 19h16M8 3v4M16 10v4M9 17v4',
     network:'M9 3h6v5H9zM3 16h6v5H3zM15 16h6v5h-6zM12 8v4M6 16v-4h12v4',
@@ -35,7 +36,7 @@
   };
   function iconMarkup(name){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="'+(iconPaths[name]||iconPaths.menu)+'"/></svg>'}
   function subPageIcon(parent,label){
-    const names={'General':'general','Project Info':'projectInfo','Production Contacts':'contacts','Lighting Vendor':'vendor','Logos':'logos','Exports':'exports','Project Settings':'settings','Patch':'fixturePatch','Universe Detail':'universe','Position Summary':'list','Device Config':'network','Port Configuration':'ports','Power Calcs':'powerSheet','Fan Outs':'fan','Phase Totals':'totals','Looms':'looms','Cable List':'list','Front RCBO Labels':'distroLabels','Rear Labels':'rear','Table View':'fixturePatch','Cases':'list'};
+    const names={'General':'general','Project Info':'projectInfo','Production Contacts':'contacts','Lighting Vendor':'vendor','Logos':'logos','Exports':'exports','Project Settings':'settings','Patch':'fixturePatch','Universe Detail':'universe','Position Summary':'positions','Device Config':'network','Port Configuration':'ports','Power Calcs':'powerSheet','Fan Outs':'fan','Phase Totals':'totals','Looms':'looms','Cable List':'list','Front RCBO Labels':'distroLabels','Rear Labels':'rear','Table View':'fixturePatch','Cases':'list'};
     return parent==='rackLayout'?'rackLayout':parent==='fixturePatch'&&!['Universe Detail','Position Summary'].includes(label)?'fixturePatch':names[label]||parent;
   }
   function decorateSubPage(button,parent,doc){
