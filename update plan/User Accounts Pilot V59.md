@@ -118,7 +118,7 @@ Validation completed during development:
 Not complete:
 
 - Live Access/R2 setup, real owner sign-in, live backend deployment and end-to-end online verification.
-- GitHub source upload and manual pilot deployment; remote source still reports V58.4. The remote backup branch exists.
+- Manual pilot deployment and live verification. Source was uploaded to `pilot/v59-accounts` at `52c548a719c178fdd6e535dc7f6a97a832a27f57`; all 36 blobs were verified against local bytes. Main remains the preserved V58.4 commit. No pilot workflow run has started. Deployment steps and recovery are recorded in `backend/DEPLOYMENT.md`.
 - Final release/browser checks, deployed public/pilot checks, rollback exercise and the final native macOS implementation plan.
 
 External setup was rechecked: Access and R2 still return explicit service-not-enabled errors. Automatic approval review rejected creating the Cloudflare Zero Trust organisation at `ai-lampy.cloudflareaccess.com`, citing persistent account-security changes requiring specific approval. Approval has been requested. R2 requires dashboard activation; the owner email question remains pending. Do not bypass the rejection or publish an unauthenticated backend. `js/account-config.json` remains disabled until verified setup is complete.
@@ -133,3 +133,7 @@ Development dependencies are `fake-indexeddb` and Miniflare. They are excluded f
 
 - Miniflare R2 testing: https://developers.cloudflare.com/workers/testing/miniflare/storage/r2/
 - WebKit offline emulation limitation: https://github.com/microsoft/playwright/issues/42775
+
+## Upload state
+
+V59 source is uploaded to the isolated testing branch. The public main branch and live site remain V58.4. The GitHub connector has no workflow-dispatch action; no non-interactive GitHub terminal credential was available, and the browser automation query did not complete. No claim of publication or live account availability is made.
