@@ -1,3 +1,12 @@
+## V57.35 — Consistent page toolbar buttons
+
+- Use the approved Truck Pack button dimensions and styling across page toolbars: 40px before 85% zoom, automatic text widths, regular 16px Arial, grey buttons and blue selected states. Remove compounded toolbar scaling and fixed action widths.
+- Keep compact viewer zoom, undo/redo and scene controls unchanged. Scope the shared styling to live page toolbars.
+
+## V57.34 — Phase Totals without toolbar
+
+- Remove the empty toolbar from Phase Totals while keeping the Power Calcs and Fan Outs controls.
+
 ## V57.33 — Consistent page toolbar sizing
 
 - Match Power Calcs, Fan Outs, Looms, Cable List and all Labels toolbars to Device Config with 10px by 12px padding, the same minimum single-row height and compact action buttons. Remove the extra inset around the Looms/Cable List tabs.
