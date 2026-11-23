@@ -1,12 +1,12 @@
 # V59 private account backend and pilot deployment
 
-The app source is on `pilot/v59-accounts`. Public V58.4 must remain available throughout this pilot. Online accounts remain disabled in `js/account-config.json` until the following setup and live checks pass. Local runtime/browser tests are not proof of live authentication.
+The app source is on `pilot/v59-accounts`. Public V58.4 must remain available throughout this pilot. Online accounts are enabled in the pilot configuration after successful real owner sign-in and authenticated R2 listing. Full deployed project/template round trips remain a release acceptance gate. Local runtime/browser tests alone are not proof of live authentication.
 
 ## Current gates
 
 - R2 is enabled. The private `lampy-paperwork-pilot-projects` bucket and `lampy-paperwork-v59-accounts` Worker are deployed. Public bucket access, Worker preview URLs and workers.dev access are disabled.
 - The owner email was explicitly confirmed on 23 November 2026 and is configured in both the Access Allow policy and Worker. Deployment identifiers and the confirmed identity are recorded locally in `backups/V59-cloudflare-deployment.json`.
-- The Access application protects `paperwork-api.ailampy.com` using the existing email one-time PIN provider. The edge redirects anonymous API requests to Access, but its login page currently reports application-not-found. Real owner sign-in remains unverified; online activation stays disabled.
+- The Access application protects `paperwork-api.ailampy.com` using the existing email one-time PIN provider. The initial application-not-found error cleared after propagation. Real owner sign-in returned a verified session, and the authenticated project listing reached R2 successfully. Anonymous requests redirect to Access. CORS permits the exact app origin and omits permission headers for untrusted origins.
 - GitHub browser sign-in works. The first pilot run was rejected before executing steps because the github-pages environment permits only main. Approval to add the exact pilot branch is pending.
 
 ## Complete the approved Cloudflare setup
@@ -29,7 +29,7 @@ The app source is on `pilot/v59-accounts`. Public V58.4 must remain available th
 
 6. Use the Worker custom domain `paperwork-api.ailampy.com`. The main website's DNS records are DNS-only in this account, so the original same-host API route did not intercept its requests. That unused route was removed. The dedicated API hostname avoids changing the main website's DNS, hosting or Paperwork proxy.
 7. Validate anonymous rejection, other-email rejection, owner sign-in, session expiry, private bucket access and actual project/template round trips. The GitHub Pages origin is not a production API origin by default. Use the AI-Lampy URL for account tests.
-8. Change `js/account-config.json` to `enabled: true` only after successful live checks. Its API URL is `https://paperwork-api.ailampy.com/paperwork/account-api/`. Keep the fallback in `js/account-manager.js` consistent. Never add credentials, JWTs or private project content to source.
+8. `js/account-config.json` is now `enabled: true` for the isolated testing pilot. Its API URL is `https://paperwork-api.ailampy.com/paperwork/account-api/`. Keep the fallback in `js/account-manager.js` consistent. Never add credentials, JWTs or private project content to source.
 
 ## Publish the isolated pilot
 
