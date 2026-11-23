@@ -21,7 +21,11 @@ def copy_runtime(source_root, destination):
             shutil.copy2(source, target)
 
 def offline_manifest(destination, app_dir, shared_root):
-    assets = [app_dir / 'index.html']
+    # HTML responses can gain Cloudflare challenge scripts in transit. Serve the
+    # offline shell as plain text so its exact build hash remains verifiable.
+    shell = app_dir / 'offline-shell.txt'
+    shutil.copy2(app_dir / 'index.html', shell)
+    assets = [shell]
     assets += [p for folder in ('js', 'info_txt') for p in (app_dir / folder).rglob('*') if p.is_file()]
     # Catalogue summaries support offline editing. Large detailed fixture definitions
     # and images are cached when used, rather than downloading hundreds of MB at setup.

@@ -4,7 +4,7 @@
   "packageManager": "pnpm@11.25.0",
   "description": "Development checks only. Runtime remains a static browser application.",
   "scripts": {
-    "test:accounts": "node tests/account-project-store.cjs && node tests/account-workspace.cjs && node tests/project-transfer.cjs && node tests/accounts-api.mjs",
+    "test:accounts": "node tests/account-project-store.cjs && node tests/account-workspace.cjs && node tests/project-transfer.cjs && node tests/accounts-api.mjs && node tests/offline-shell.cjs",
     "test": "node tests/display-regressions.cjs && node tests/release-regressions.cjs && node scripts/validate-release.cjs",
     "test:accounts:runtime": "node tests/accounts-runtime.mjs"
   },

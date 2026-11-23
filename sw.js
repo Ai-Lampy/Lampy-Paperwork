@@ -2,7 +2,7 @@
 'use strict';
 const PREFIX='lampy-paperwork-offline:'+new URL(self.registration.scope).pathname+':';
 const MANIFEST_URL=new URL('offline-manifest.json',self.registration.scope).href;
-const VERSION='59',CACHE=PREFIX+VERSION;
+const VERSION='59',CACHE=PREFIX+VERSION+':shell-2';
 async function hash(bytes){return Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),v=>v.toString(16).padStart(2,'0')).join('')}
 async function manifest(){const cache=await caches.open(CACHE),response=await cache.match(MANIFEST_URL);return response?response.json():null}
 async function network(request){try{return await fetch(request)}catch{return new Response('This asset is not available offline.',{status:503,headers:{'Content-Type':'text/plain'}})}}
@@ -24,7 +24,7 @@ self.addEventListener('fetch',event=>{
   const data=await manifest();if(!data)return network(request);
   const scope=new URL(self.registration.scope),shared=new URL(data.sharedBase,scope),cache=await caches.open(CACHE);
   const navigation=request.mode==='navigate'&&url.pathname.startsWith(scope.pathname);
-  if(navigation){try{return await fetch(request)}catch{const cached=await cache.match(new URL('index.html',scope));if(cached)return cached;return new Response('The offline app is not available yet.',{status:503,headers:{'Content-Type':'text/plain'}})}}
+  if(navigation){try{return await fetch(request)}catch{const cached=await cache.match(new URL('offline-shell.txt',scope));if(cached)return new Response(await cached.arrayBuffer(),{headers:{'Content-Type':'text/html; charset=utf-8'}});return new Response('The offline app is not available yet.',{status:503,headers:{'Content-Type':'text/plain'}})}}
   const version=url.searchParams.get('v');if(version&&version!==VERSION)return network(request);
   const clean=new URL(url);clean.search='';clean.hash='';
   const listed=data.assets.some(entry=>new URL(entry.url,scope).href===clean.href);
