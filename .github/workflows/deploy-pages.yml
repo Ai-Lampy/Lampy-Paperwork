@@ -9,7 +9,7 @@ on:
         required: true
         type: string
       confirm_deploy:
-        description: Publish the V60 pilot while retaining the public V58.4 app
+        description: Publish V60 as the public Lampy Paperwork app
         required: true
         default: false
         type: boolean
@@ -34,13 +34,6 @@ jobs:
     steps:
       - name: Checkout selected branch
         uses: actions/checkout@v6
-
-      - name: Checkout preserved public V58.4
-        uses: actions/checkout@v6
-        with:
-          ref: f2dd74472095b0c0aae3c44815e5b42524a2f546
-          path: _public-baseline
-          persist-credentials: false
 
       - name: Verify release version
         shell: bash
@@ -76,7 +69,7 @@ jobs:
           node scripts/validate-release.cjs
 
       - name: Build and verify deployment artifact
-        run: python3 scripts/build_site.py "${{ runner.temp }}/lampy-pages" --baseline _public-baseline
+        run: python3 scripts/build_site.py "${{ runner.temp }}/lampy-pages"
 
       - name: Upload static site
         uses: actions/upload-pages-artifact@v4

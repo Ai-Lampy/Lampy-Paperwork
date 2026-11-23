@@ -10,3 +10,20 @@ AGENTS.md
 ARCHITECTURE_TRANSITION_HANDOVER.txt
 node_modules/
 .pnpm-store/
+
+# Local supporting documents and maintenance tools; excluded from GitHub source.
+/backend/DEPLOYMENT.md
+/update plan/
+/outputs/
+/scripts/compress-fixture-images.cjs
+/scripts/extract-fixture-archive.py
+/scripts/extract-fixture-data.cjs
+/scripts/fixture_detail_names.py
+/scripts/fixture_image_names.py
+/scripts/schemas/gdtf-1.2-upstream.xsd
+/scripts/sync-fixture-short-names.mjs
+/scripts/validate-gdtf.py
+/tests/gdtf-validator.py
+/tests/account-browser.html
+/tests/accounts-browser.cjs
+/tests/accounts-offline-browser.cjs

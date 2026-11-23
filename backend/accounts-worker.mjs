@@ -1,4 +1,4 @@
-/* Private V59 API. Project bytes are streamed in bounded, immutable chunks.
+/* Private account API. Project bytes are streamed in bounded, immutable chunks.
  * Access identity and conditional manifest writes protect every online save.
  * No website sessions, browser-supplied owner IDs or public storage buckets.
  */
@@ -19,7 +19,7 @@ async function readJSON(request,limit=32768){try{return JSON.parse(new TextDecod
 async function sha256(bytes){return Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),v=>v.toString(16).padStart(2,'0')).join('')}
 function base64url(value){if(!/^[A-Za-z0-9_-]+$/.test(value))deny(401,'Invalid sign-in token.');try{return Uint8Array.from(atob(value.replace(/-/g,'+').replace(/_/g,'/')),c=>c.charCodeAt(0))}catch{deny(401,'Invalid sign-in token.')}}
 async function identity(request,env,fetcher){
- if(!/^https:\/\/[a-z0-9-]+\.cloudflareaccess\.com$/.test(env.ACCESS_ISSUER||'')||!env.ACCESS_AUDIENCE||!env.ALLOWED_EMAIL)deny(503,'The account pilot is not configured.');
+ if(!/^https:\/\/[a-z0-9-]+\.cloudflareaccess\.com$/.test(env.ACCESS_ISSUER||'')||!env.ACCESS_AUDIENCE||!env.ALLOWED_EMAIL)deny(503,'Online accounts are not configured.');
  const jwt=request.headers.get('Cf-Access-Jwt-Assertion')||'';
  if(jwt.length>16384)deny(401,'Invalid sign-in token.');const parts=jwt.split('.');if(parts.length!==3)deny(401,'Sign in to your account.');
  let header,claims;try{header=JSON.parse(new TextDecoder().decode(base64url(parts[0])));claims=JSON.parse(new TextDecoder().decode(base64url(parts[1])))}catch{deny(401,'Invalid sign-in token.')}
@@ -32,7 +32,7 @@ async function identity(request,env,fetcher){
  if(!jwk)deny(401,'Sign in again.');
  let verified=false;try{const publicKey=await crypto.subtle.importKey('jwk',jwk,{name:'RSASSA-PKCS1-v1_5',hash:'SHA-256'},false,['verify']);verified=await crypto.subtle.verify('RSASSA-PKCS1-v1_5',publicKey,base64url(parts[2]),encoder.encode(parts[0]+'.'+parts[1]))}catch{deny(401,'Invalid sign-in token.')}
  if(!verified)deny(401,'Invalid sign-in signature.');
- if(typeof claims.email!=='string'||claims.email.toLowerCase()!==env.ALLOWED_EMAIL.toLowerCase())deny(403,'This pilot is restricted to its owner.');
+ if(typeof claims.email!=='string'||claims.email.toLowerCase()!==env.ALLOWED_EMAIL.toLowerCase())deny(403,'Online account access is restricted to the approved owner.');
  return {id:await sha256(encoder.encode(claims.iss+'\n'+claims.sub)),email:claims.email};
 }
 function validateManifest(data){
@@ -71,7 +71,7 @@ export function createHandler({fetcher=globalThis.fetch}={}){return async functi
   const path=url.pathname.slice(prefix.length+1).split('/');
   if(path.length===1&&path[0]==='session'&&request.method==='GET')return json({user,limits:{chunkBytes:CHUNK_BYTES,maxBytes:MAX_BYTES}},200,cors);
   if(path.length===1&&path[0]==='login'&&request.method==='GET'){
-   const destination=new URL(env.APP_URL);if(!allowed.includes(destination.origin))deny(503,'Invalid pilot destination.');
+   const destination=new URL(env.APP_URL);if(!allowed.includes(destination.origin))deny(503,'Invalid account destination.');
    return new Response(null,{status:303,headers:{Location:destination.href,'Cache-Control':'no-store'}});
   }
   if(!env.PROJECTS)deny(503,'Online project storage is not configured.');

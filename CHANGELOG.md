@@ -3,7 +3,7 @@
 - Add Account below Menu in the sidebar. Open a normal account page with Projects, Defaults & Templates and Account Details.
 - Add email sign-in and verified-email sign-up with name, company, phone, job role, county, country and referral source. Keep private profiles separate from gig paperwork.
 - Protect profile saves against competing edits and retain entries after failures. Preserve exact storage versions when CDN compression changes HTTP ETags.
-- Keep public V58.4 available while the account pilot is tested. Sharing gig paperwork remains a future addition.
+- Publish the full V60 app at the public address without a separate testing deployment. Account sign-in remains restricted to the approved owner; device-only use remains available. Sharing gig paperwork remains a future addition.
 
 ## V59 — Private account pilot
 

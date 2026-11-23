@@ -14,11 +14,11 @@ const keys=await crypto.subtle.generateKey({name:'RSASSA-PKCS1-v1_5',modulusLeng
 const jwk={...await crypto.subtle.exportKey('jwk',keys.publicKey),kid:'runtime-test',alg:'RS256'};
 async function token(overrides={}){
  const encode=value=>Buffer.from(JSON.stringify(value)).toString('base64url');
- const unsigned=encode({alg:'RS256',kid:jwk.kid})+'.'+encode({iss:issuer,aud:['pilot'],sub:'owner',email:'owner@example.test',exp:Math.floor(Date.now()/1000)+3600,...overrides});
+ const unsigned=encode({alg:'RS256',kid:jwk.kid})+'.'+encode({iss:issuer,aud:['accounts'],sub:'owner',email:'owner@example.test',exp:Math.floor(Date.now()/1000)+3600,...overrides});
  return unsigned+'.'+Buffer.from(await crypto.subtle.sign('RSASSA-PKCS1-v1_5',keys.privateKey,new TextEncoder().encode(unsigned))).toString('base64url');
 }
 const jwt=await token();
-const mf=new Miniflare({rootPath:directory,modules:true,scriptPath:fileURLToPath(new URL('../backend/accounts-worker.mjs',import.meta.url)),compatibilityDate:'2026-07-30',cf:false,r2Buckets:['PROJECTS'],bindings:{ACCESS_ISSUER:issuer,ACCESS_AUDIENCE:'pilot',ALLOWED_EMAIL:'owner@example.test',ALLOWED_ORIGINS:origin+',http://127.0.0.1:8790',API_PREFIX:prefix,APP_URL:origin+'/paperwork/pilot/'},outboundService:request=>{
+const mf=new Miniflare({rootPath:directory,modules:true,scriptPath:fileURLToPath(new URL('../backend/accounts-worker.mjs',import.meta.url)),compatibilityDate:'2026-07-30',cf:false,r2Buckets:['PROJECTS'],bindings:{ACCESS_ISSUER:issuer,ACCESS_AUDIENCE:'accounts',ALLOWED_EMAIL:'owner@example.test',ALLOWED_ORIGINS:origin+',http://127.0.0.1:8790',API_PREFIX:prefix,APP_URL:origin+'/paperwork/'},outboundService:request=>{
  assert.equal(request.url,issuer+'/cdn-cgi/access/certs','Worker must only request its configured signing keys');return Response.json({keys:[jwk]});
 }});
 try{

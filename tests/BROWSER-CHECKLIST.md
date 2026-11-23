@@ -6,7 +6,7 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 
 | Check | Chrome/Chromium | Firefox | Safari |
 | --- | --- | --- | --- |
-| V59 accounts: separate projects/tabs, complete local saves, template defaults and updates, reviewed Add/Replace and Cancel, local/online conflicts, recovery, expired sign-in, offline reopening, unchanged public V58.4 and guest storage | Required | Required | Required |
+| V60 accounts: separate projects/tabs, complete local saves, template defaults and updates, reviewed Add/Replace and Cancel, local/online conflicts, recovery, expired sign-in, offline reopening at the public address and preserved guest storage | Required | Required | Required |
 | V58 Project Settings: always open on Project Info; all six icon-and-name toolbar buttons switch pages and highlight the current page; no nested sidebar expansion; Project Owner/contact/footer settings save and reload; Version edits update Revision Summary without changing older revisions | Required | Required | Required |
 | V57 Truck Pack: case add/edit/import, metric/imperial conversion, trailer presets/custom details, 1/2/4 views, all camera presets/cube, drag and cancel, castors/end rotation/lifter stacking, collision/bounds rejection, save/reload and reset | Required | Required | Required |
 | V56 fixture images, mode/channel information, no wheel display, GDTF-free MVR export and imported attachment round trip | Required | Required | Required |

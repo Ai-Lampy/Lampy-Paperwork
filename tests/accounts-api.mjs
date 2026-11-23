@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {createHandler} from '../backend/accounts-worker.mjs';
 const CHUNK_BYTES=1024*1024;
-const enc=new TextEncoder(),issuer='https://lampy-test.cloudflareaccess.com',audience='test-pilot-audience',origin='https://ailampy.com',prefix='/paperwork/account-api';
+const enc=new TextEncoder(),issuer='https://lampy-test.cloudflareaccess.com',audience='test-account-audience',origin='https://ailampy.com',prefix='/paperwork/account-api';
 const keys=await crypto.subtle.generateKey({name:'RSASSA-PKCS1-v1_5',modulusLength:2048,publicExponent:new Uint8Array([1,0,1]),hash:'SHA-256'},true,['sign','verify']);
 const jwk={...await crypto.subtle.exportKey('jwk',keys.publicKey),kid:'test-key',alg:'RS256'};
 const b64=value=>Buffer.from(value).toString('base64url');
@@ -25,7 +25,7 @@ class MemoryR2{
  async get(key){const record=this.items.get(key);return record?{...record,body:new Blob([record.bytes]).stream(),json:async()=>JSON.parse(new TextDecoder().decode(record.bytes))}:null}
  async list({prefix}){return {objects:[...this.items.values()].filter(x=>x.key.startsWith(prefix)),truncated:false}}
 }
-const bucket=new MemoryR2(),env={ACCESS_ISSUER:issuer,ACCESS_AUDIENCE:audience,ALLOWED_EMAIL:'owner@example.test',ALLOWED_ORIGINS:origin,API_PREFIX:prefix,APP_URL:origin+'/paperwork/pilot/',PROJECTS:bucket};
+const bucket=new MemoryR2(),env={ACCESS_ISSUER:issuer,ACCESS_AUDIENCE:audience,ALLOWED_EMAIL:'owner@example.test',ALLOWED_ORIGINS:origin,API_PREFIX:prefix,APP_URL:origin+'/paperwork/',PROJECTS:bucket};
 const handler=createHandler({fetcher:async url=>{assert.equal(url,issuer+'/cdn-cgi/access/certs');return Response.json({keys:[jwk]})}}),jwt=await token();
 async function call(path,{method='GET',body,headers={},auth=jwt}={}){
  return handler(new Request(origin+prefix+'/'+path,{method,headers:{Origin:origin,...(auth?{'Cf-Access-Jwt-Assertion':auth}:{}),...(method==='PUT'?{'X-Lampy-Request':'1','Content-Type':'application/json'}:{}),...headers},body:body===undefined?undefined:typeof body==='string'||body instanceof Uint8Array?body:JSON.stringify(body)}),env);
@@ -49,7 +49,7 @@ assert.equal((await call('session',{headers:{Origin:'https://attacker.invalid'}}
 const session=await (await call('session')).json();assert.equal(session.user.email,'owner@example.test');assert.equal(session.user.id.length,64);
 assert.equal((await call('login')).headers.get('Location'),env.APP_URL);
 // Profiles are independent of project payloads and derive identity only from Access.
-const signup={schema:1,writeId:crypto.randomUUID(),name:'Pilot Tester',company:'Example Production',phone:'+44 0000',jobRole:'Lighting technician',county:'Test County',country:'United Kingdom',referral:'Colleague'};
+const signup={schema:1,writeId:crypto.randomUUID(),name:'Account Tester',company:'Example Production',phone:'+44 0000',jobRole:'Lighting technician',county:'Test County',country:'United Kingdom',referral:'Colleague'};
 assert.equal((await (await call('profile')).json()).profile,null);
 assert.equal((await call('profile',{auth:null})).status,401);
 assert.equal((await call('profile',{method:'PUT',body:signup})).status,428);

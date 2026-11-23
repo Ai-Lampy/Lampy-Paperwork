@@ -1,4 +1,4 @@
-/* Private pilot UI. Text nodes keep imported names and messages out of HTML. */
+/* Account portal UI. Text nodes keep imported names and messages out of HTML. */
 (function(root){
  'use strict';
  let store,workspace,bridge,api,user=null,libraryOwner='device',onlineItems=[],dialog,body,message,status,onlineError='',bootError='',offlineState='Offline app setup has not completed.',config={enabled:false,apiURL:'https://paperwork-api.ailampy.com/paperwork/account-api/'};
@@ -45,7 +45,7 @@
   card.append(el('p','YOUR PAPERWORK, IN ONE PLACE','accountEyebrow'),el('h3','Ready for your next gig?'),el('p','Sign in to open your projects, save reusable templates and manage your account.'));
   const signIn=el('a','Sign in with email','btn primary');signIn.href=api.loginURL;
   const signup=el('a','Create your account','btn');signup.href=api.loginURL;
-  card.append(toolbar(signIn,signup),el('p','New here? Verify your email, then complete your sign-up details.','accountNote'),el('p','Private V60 pilot — access is limited to the approved pilot account.','accountNote'));
+  card.append(toolbar(signIn,signup),el('p','New here? Verify your email, then complete your sign-up details.','accountNote'),el('p','Online account access is currently limited to the approved account. You can continue using the app on this device.','accountNote'));
   body.append(card);if(error)showError(error);
   body.append(action('Open projects saved on this device',()=>{libraryOwner='device';return manager()}));
  }
@@ -96,7 +96,7 @@
  function scheduleSync(record){if(!record||record.owner==='device'||!config.enabled||record.conflict)return;const key=record.owner+':'+record.kind+':'+record.id;clearTimeout(syncTimers.get(key));syncTimers.set(key,setTimeout(()=>{syncTimers.delete(key);syncRecord(record).catch(error=>{onlineError=error.message;updateStatus()})},2000))}
  async function syncPending(owner){if(!owner||owner==='device'||!config.enabled||navigator.onLine===false)return;for(const kind of ['project','template'])for(const record of await store.list(owner,kind,{includeDeleted:true}))if(record.dirty&&!record.conflict)scheduleSync(record)}
  async function syncRecord(record){if(!config.enabled||record.owner==='device'||navigator.onLine===false)return;const key=record.owner+':'+record.kind+':'+record.id;if(inFlight.has(key)){scheduleSync(record);return}inFlight.add(key);try{const result=await coordinator(record.owner).syncOne(record.kind,record.id);onlineError='';if(result?.dirty&&!result.conflict)scheduleSync(result);return result}finally{inFlight.delete(key);updateStatus()}}
- async function authenticate(){if(!config.enabled)throw Error('The online pilot is awaiting authentication and storage setup. Device projects remain available.');const session=await api.session();if(user?.id!==session.user.id){profileData=null;profileEtag=null}user=session.user;libraryOwner=user.id;onlineError='';await syncPending(user.id);return user}
+ async function authenticate(){if(!config.enabled)throw Error('Online accounts are awaiting authentication and storage setup. Device projects remain available.');const session=await api.session();if(user?.id!==session.user.id){profileData=null;profileEtag=null}user=session.user;libraryOwner=user.id;onlineError='';await syncPending(user.id);return user}
  async function refreshOnline(kind){onlineItems=[];if(!config.enabled||libraryOwner==='device')return;if(navigator.onLine===false){onlineError='Offline — showing saved copies on this device.';return}try{await authenticate();onlineItems=await api.list(kind)}catch(error){onlineError=error.message}}
  async function ensureRecord(kind,id){let record=await store.read(libraryOwner,kind,id);if(!record){if(libraryOwner==='device')throw Error('Project not found on this device.');const result=await coordinator(libraryOwner).pull(kind,id);if(!result.ok)throw Error('Review the local and online versions first.');record=result.record}return record}
  async function openRecord(record){
@@ -110,7 +110,7 @@
   await refreshOnline(kind);if(generation!==viewGeneration)return;if(user&&libraryOwner!=='device'&&!profileData){const result=await api.profile();profileData=result.profile;profileEtag=result.etag;if(!profileData)return accountDetails(true,result)}const local=await store.list(libraryOwner,kind,{includeDeleted:true});if(generation!==viewGeneration)return;
   note(libraryOwner==='device'?'Projects saved on this device. Sign in to save copies online.':user?.id===libraryOwner?'Signed in as '+user.email:'Saved account copies on this device. Sign in to sync.');
   const offlineNote=el('p',offlineState,'accountNote');offlineNote.id='accountOfflineState';body.append(offlineNote);
-  if(!config.enabled)note('Private online pilot: account setup is not enabled yet.');else if(onlineError)note(onlineError);
+  if(!config.enabled)note('Online account setup is not enabled yet.');else if(onlineError)note(onlineError);
   const navigation=toolbar(action('On this device',()=>{libraryOwner='device';onlineItems=[];return manager(kind)}));
   if(config.enabled)navigation.append(action(user?'My account projects':'Connect account',()=>portalEntry()));body.append(navigation);
   if(bootError){showError(bootError);body.append(action('Continue with local project',()=>{bootError='';const url=new URL(location.href);url.searchParams.delete('account');url.searchParams.delete('project');location.replace(url.href)}))}

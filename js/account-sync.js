@@ -44,7 +44,7 @@
    const bytes=new TextEncoder().encode(JSON.stringify(record.payload));if(bytes.length>MAX_BYTES)throw new AccountError('This project exceeds the 64 MiB online project limit. The complete local copy is retained.',413);
    let baseEtag=lease.baseEtag;
    if(baseEtag?.startsWith('W/')){
-    // Recover leases saved by the first pilot without discarding local edits.
+    // Recover older leases without discarding local edits.
     // Never replace a stale condition with the latest version unconditionally.
     const remote=await manifest(record.kind,record.id);
     if(remote.etag!==baseEtag.slice(2)&&remote.writeId!==lease.writeId)throw new AccountError('The online project changed. Review both versions before continuing.',412);
