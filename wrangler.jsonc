@@ -1,0 +1,31 @@
+{
+  "name": "lampy-paperwork-v59-accounts",
+  "account_id": "1c2c8d449b4c98fd53e5a474c213787d",
+  "main": "backend/accounts-worker.mjs",
+  "compatibility_date": "2026-07-30",
+  "workers_dev": false,
+  "preview_urls": false,
+  "no_bundle": true,
+  "find_additional_modules": false,
+  "routes": [
+    {
+      "pattern": "paperwork-api.ailampy.com",
+      "custom_domain": true
+    }
+  ],
+  "vars": {
+    "ACCESS_AUDIENCE": "2df8bbd97a7da82394d59cf14b2eedf312db0fd6fe375576927f3591965a4119",
+    "ACCESS_ISSUER": "https://ai-lampy.cloudflareaccess.com",
+    "ALLOWED_EMAIL": "mitch@mandrewslighting.com",
+    "ALLOWED_ORIGINS": "https://ailampy.com",
+    "API_PREFIX": "/paperwork/account-api",
+    "APP_URL": "https://ailampy.com/paperwork/"
+  },
+  "r2_buckets": [
+    {
+      "binding": "PROJECTS",
+      "bucket_name": "lampy-paperwork-pilot-projects",
+      "remote": false
+    }
+  ]
+}
