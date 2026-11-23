@@ -1,7 +1,8 @@
 {
-  "title": "Welcome to Lampy Paperwork V58",
+  "title": "Welcome to Lampy Paperwork V59",
   "paragraphs": [
     "Create and manage your show paperwork in one browser workspace: Fixture Patch, Power, Control, Network, Rack Layout, Looms, Truck Pack and Labels.",
+    "V59 introduces the private account pilot: separate saved projects, offline project copies, reviewed imports, and personal defaults and templates. Existing projects only receive template changes when you review and apply them. Online account access is restricted during testing.",
     "V58 opens Project Settings on Project Info, with an icon-and-name toolbar for switching settings pages. Project Owner details are now together on Project Info.",
     "V57 adds Truck Pack: import case and truss inventory, choose preset or custom trailers, and arrange loads using independent 2D and 3D views. Packs, case details and truck details are saved with your project.",
     "V56 uses stored fixture data and fixture images. Library GDTFs are no longer embedded in MVR exports; matching GDTFs imported with an MVR can be retained for export. Fixture Information shows the fixture image and mode/channel information.",

@@ -9,7 +9,7 @@ on:
         required: true
         type: string
       confirm_deploy:
-        description: Deploy the current selected branch to the live GitHub Pages site
+        description: Publish the V59 pilot while retaining the public V58.4 app
         required: true
         default: false
         type: boolean
@@ -34,6 +34,13 @@ jobs:
     steps:
       - name: Checkout selected branch
         uses: actions/checkout@v6
+
+      - name: Checkout preserved public V58.4
+        uses: actions/checkout@v6
+        with:
+          ref: f2dd74472095b0c0aae3c44815e5b42524a2f546
+          path: _public-baseline
+          persist-credentials: false
 
       - name: Verify release version
         shell: bash
@@ -61,12 +68,15 @@ jobs:
 
       - name: Check release
         run: |
+          npx --yes pnpm@11.25.0 install --frozen-lockfile --ignore-scripts
+          npx --yes pnpm@11.25.0 run test:accounts
+          npx --yes pnpm@11.25.0 run test:accounts:runtime
           node tests/display-regressions.cjs
           node tests/release-regressions.cjs
           node scripts/validate-release.cjs
 
       - name: Build and verify deployment artifact
-        run: python3 scripts/build_site.py "${{ runner.temp }}/lampy-pages"
+        run: python3 scripts/build_site.py "${{ runner.temp }}/lampy-pages" --baseline _public-baseline
 
       - name: Upload static site
         uses: actions/upload-pages-artifact@v4

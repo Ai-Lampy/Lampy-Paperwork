@@ -1,3 +1,10 @@
+## V59 — Private account pilot
+
+- Add separate saved project workspaces with complete local snapshots, guarded concurrent editing and recovery copies.
+- Add a private online sync API with authenticated ownership, conditional updates and verified uploads.
+- Add reviewed cross-project imports and personal defaults/named templates. Template changes affect new projects only unless explicitly reviewed and applied to an existing project.
+- Keep the public V58.4 release available during the isolated V59 pilot. Online activation and deployment verification remain release gates.
+
 ## V58.4 — Compact toolbar stats
 
 - Name the Position Summary Home Hero Stat style compact and reuse it for Fixture Patch and Control toolbar stats.
