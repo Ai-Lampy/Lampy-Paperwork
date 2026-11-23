@@ -4,16 +4,16 @@ The app source is on `pilot/v59-accounts`. Public V58.4 must remain available th
 
 ## Current gates
 
-- The user approved Cloudflare setup. The Zero Trust organisation `ai-lampy.cloudflareaccess.com` was created and read back successfully on 22 November 2026. Its email one-time PIN identity provider is configured. No Access application or owner Allow policy has been created yet.
-- R2 still reports that dashboard activation is required. The user must complete its subscription checkout.
-- Confirm the owner's login email. The connected Cloudflare account email must not automatically become the approved app identity.
-- The available GitHub connector can upload source but cannot dispatch a workflow. No non-interactive local GitHub credential was available. Start the manual run through an authenticated GitHub session when available.
+- R2 is enabled. The private `lampy-paperwork-pilot-projects` bucket and `lampy-paperwork-v59-accounts` Worker are deployed. Public bucket access, Worker preview URLs and workers.dev access are disabled.
+- The owner email was explicitly confirmed on 23 November 2026 and is configured in both the Access Allow policy and Worker. Deployment identifiers and the confirmed identity are recorded locally in `backups/V59-cloudflare-deployment.json`.
+- The Access application protects `paperwork-api.ailampy.com` using the existing email one-time PIN provider. The edge redirects anonymous API requests to Access, but its login page currently reports application-not-found. Real owner sign-in remains unverified; online activation stays disabled.
+- GitHub browser sign-in works. The first pilot run was rejected before executing steps because the github-pages environment permits only main. Approval to add the exact pilot branch is pending.
 
 ## Complete the approved Cloudflare setup
 
-1. Retain the existing Zero Trust organisation `ai-lampy.cloudflareaccess.com` and email one-time PIN provider. Enable R2 through its dashboard. Do not change nameservers, the main website or other products.
-2. Create a private R2 bucket, for example `lampy-paperwork-pilot-projects`. Keep public access and custom public bucket domains disabled. Bind it to the Worker as `PROJECTS`.
-3. Create a self-hosted Access application for `ailampy.com/paperwork/account-api/*`, with an Allow policy for only the confirmed owner email. Use the chosen identity provider or email one-time PIN. Do not add bypass or Everyone policies. Record the application audience and exact issuer.
+1. Retain the existing Zero Trust organisation `ai-lampy.cloudflareaccess.com` and email one-time PIN provider. Complete verification of Access sign-in. Do not change nameservers, the main website or other products.
+2. Keep `lampy-paperwork-pilot-projects` private, with public access and custom public bucket domains disabled. It is bound to the Worker as `PROJECTS`.
+3. Retain the self-hosted Access application for `paperwork-api.ailampy.com`, with an Allow policy for only the confirmed owner email. Do not add bypass or Everyone policies. CORS permits credentialed requests only from `https://ailampy.com`, methods GET/PUT/OPTIONS, and headers Content-Type/If-Match/If-None-Match/X-Lampy-Request.
 4. Upload `accounts-worker.mjs` as an ES module Worker, with compatibility date `2026-07-30`. This matches the tested runtime. Disable its public `workers.dev` address unless specifically needed for an authenticated test.
 5. Set these Worker bindings. They are configuration, not browser-provided identity:
 
@@ -27,9 +27,9 @@ The app source is on `pilot/v59-accounts`. Public V58.4 must remain available th
 | `API_PREFIX` | `/paperwork/account-api` |
 | `APP_URL` | `https://ailampy.com/paperwork/pilot/` |
 
-6. Add only the Worker route `ailampy.com/paperwork/account-api/*`. This must intercept API requests before the existing website's read-only Paperwork proxy. Do not replace the wider `/paperwork/` route.
+6. Use the Worker custom domain `paperwork-api.ailampy.com`. The main website's DNS records are DNS-only in this account, so the original same-host API route did not intercept its requests. That unused route was removed. The dedicated API hostname avoids changing the main website's DNS, hosting or Paperwork proxy.
 7. Validate anonymous rejection, other-email rejection, owner sign-in, session expiry, private bucket access and actual project/template round trips. The GitHub Pages origin is not a production API origin by default. Use the AI-Lampy URL for account tests.
-8. Change `js/account-config.json` to `enabled: true` only after successful live checks. Keep its API URL `https://ailampy.com/paperwork/account-api/`. Never add credentials, JWTs or private project content to source.
+8. Change `js/account-config.json` to `enabled: true` only after successful live checks. Its API URL is `https://paperwork-api.ailampy.com/paperwork/account-api/`. Keep the fallback in `js/account-manager.js` consistent. Never add credentials, JWTs or private project content to source.
 
 ## Publish the isolated pilot
 

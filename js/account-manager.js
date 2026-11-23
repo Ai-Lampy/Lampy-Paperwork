@@ -1,7 +1,7 @@
 /* Private pilot UI. Text nodes keep imported names and messages out of HTML. */
 (function(root){
  'use strict';
- let store,workspace,bridge,api,user=null,libraryOwner='device',onlineItems=[],dialog,body,message,status,onlineError='',bootError='',offlineState='Offline app setup has not completed.',config={enabled:false,apiURL:'https://ailampy.com/paperwork/account-api/'};
+ let store,workspace,bridge,api,user=null,libraryOwner='device',onlineItems=[],dialog,body,message,status,onlineError='',bootError='',offlineState='Offline app setup has not completed.',config={enabled:false,apiURL:'https://paperwork-api.ailampy.com/paperwork/account-api/'};
  const inFlight=new Set(),syncTimers=new Map();let viewGeneration=0;
  const el=(tag,text='',className='')=>{const node=document.createElement(tag);if(text)node.textContent=text;if(className)node.className=className;return node};
  function action(label,run,className='btn'){const button=el('button',label,className);button.type='button';button.addEventListener('click',async()=>{button.disabled=true;try{await run()}catch(error){showError(error.message||String(error))}finally{button.disabled=false}});return button}
