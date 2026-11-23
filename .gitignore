@@ -10,6 +10,11 @@ AGENTS.md
 ARCHITECTURE_TRANSITION_HANDOVER.txt
 node_modules/
 .pnpm-store/
+.wrangler/
+.dev.vars
+.dev.vars.*
+.env
+.env.*
 
 # Local supporting documents and maintenance tools; excluded from GitHub source.
 /backend/DEPLOYMENT.md
