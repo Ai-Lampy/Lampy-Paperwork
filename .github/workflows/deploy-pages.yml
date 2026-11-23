@@ -9,7 +9,7 @@ on:
         required: true
         type: string
       confirm_deploy:
-        description: Publish the V59 pilot while retaining the public V58.4 app
+        description: Publish the V60 pilot while retaining the public V58.4 app
         required: true
         default: false
         type: boolean
