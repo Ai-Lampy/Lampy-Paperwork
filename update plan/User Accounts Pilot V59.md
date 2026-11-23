@@ -76,7 +76,7 @@ Current infrastructure evidence (23 November 2026): Access configuration and R2 
 ## Acceptance evidence
 
 - [x] Local V58.4 backup verified against every source file.
-- [x] GitHub currently reports V58.4; its baseline is preserved on a backup branch.
+- [x] The immutable V58.4 baseline is preserved on a backup branch; the deployment keeps it at the public root.
 - [x] Immutable remote baseline and live response verification recorded.
 - [ ] Account allows the owner and rejects anonymous/other identities.
 - [ ] Two different projects survive concurrent tabs, reload and offline edits.
@@ -90,7 +90,7 @@ Current infrastructure evidence (23 November 2026): Access configuration and R2 
 - [ ] Runtime artifact is below 900 MB and excludes development/private files.
 - [ ] Complete native macOS plan delivered.
 
-## Implementation evidence — 22 November 2026, work in progress
+## Implementation evidence — 22–23 November 2026, testing pilot
 
 Implemented locally:
 
@@ -115,13 +115,18 @@ Validation completed during development:
 - WebKit browser-to-Worker/R2 checks passed: online project saves, simultaneous project/template sync, conflicting template Keep both, unchanged existing project after template resolution, fresh-browser-profile downloads and retained local edits after authentication expiry. The local test harness supplies signed test identity; this does not prove live Cloudflare Access sign-in.
 - Final isolated build: 694,210,565 bytes, below 900 MB, no GDTF archives. Built-artifact WebKit UI and offline tests passed, with the public V58.4 entry point and asset catalogue preserved. Final browser-to-Worker/R2 checks also passed.
 
-Not complete:
+Live deployment evidence — 23 November 2026:
 
-- Live Access/R2 setup, real owner sign-in, live backend deployment and end-to-end online verification.
-- Manual pilot deployment and live verification. Source was uploaded to `pilot/v59-accounts` at `52c548a719c178fdd6e535dc7f6a97a832a27f57`; all 36 blobs were verified against local bytes. Main remains the preserved V58.4 commit. No pilot workflow run has started. Deployment steps and recovery are recorded in `backend/DEPLOYMENT.md`.
-- Final release/browser checks, deployed public/pilot checks, rollback exercise and the final native macOS implementation plan.
+- Private R2 bucket, Worker custom domain and owner-only Access are deployed. Real owner sign-in, anonymous redirect and authenticated R2 listing passed.
+- The user approved the exact `pilot/v59-accounts` environment rule. Run `45097503196` succeeded, publishing V59 under `/pilot/` while the public page continued displaying V58.4 and its existing project.
+- Live browser checks created a blank test project, verified Saved online, reloaded it, saved a named test template online and created a second project from that template. No real project was copied into cloud storage.
+- Cloudflare injects changing challenge scripts into the live HTML response. This caused the offline shell hash to fail despite the other 84 manifest assets matching. The build now emits a verified plain-text shell; the worker serves its bytes as HTML only for offline navigation. Security settings and hash validation remain intact. Both app suites, release validation, the new shell regression and a fresh external build passed (695,820,254 bytes).
+- Follow-up deployment run `45098158322` publishes the offline fix from `8782b0aa210376efdcaf89bf89b7b9b0efd859de`. Attempt 1 hit an immediate GitHub artifact-lookup failure after upload. Attempt 2 succeeded without another source change. All 85 live manifest hashes match; the browser reports App available offline. Public V58.4 and pilot V59 versions match on both origins. Live disconnected-network testing could not run because the browser network-testing control failed.
 
-The user explicitly approved Cloudflare setup. On 22 November 2026 the Zero Trust organisation `ai-lampy.cloudflareaccess.com` was created and read back successfully, and an email one-time PIN identity provider was configured. This resolves the earlier approval block. On 23 November, R2 activation and the corrected owner identity were confirmed. The private bucket, Worker, dedicated API hostname and owner-only Access policy are configured. GitHub browser dispatch works, but run 45091122151 was rejected by the github-pages branch allowlist before any steps executed. Real owner sign-in and authenticated R2 listing subsequently passed after Access propagation. The isolated pilot configuration is enabled for online testing. The exact pilot-branch deployment permission and full deployed round trips remain outstanding. The backend continues to require verified owner authentication.
+Remaining acceptance work:
+
+- Native Safari verification, fresh-device live downloads, live offline/reconnect and expiry/conflict/recovery scenarios beyond the local runtime/browser evidence.
+- Live rollback exercise and final native macOS implementation plan. Do not describe the testing pilot as the completed stable account release.
 
 Development dependencies are `fake-indexeddb` and Miniflare. They are excluded from Pages assets. Browser checks are explicitly invoked and are not silently added to the unattended regression scripts.
 
@@ -136,4 +141,4 @@ Development dependencies are `fake-indexeddb` and Miniflare. They are excluded f
 
 ## Upload state
 
-V59 source is uploaded to the isolated testing branch. The public main branch and live site remain V58.4. The GitHub connector has no workflow-dispatch action; no non-interactive GitHub terminal credential was available, and the browser automation query did not complete. No claim of publication or live account availability is made.
+The pilot source is on `pilot/v59-accounts`. Main was independently updated to the V59 source tree before the permitted pilot run; it was not reset. The manual deployment workflow preserves public V58.4 using the immutable baseline checkout. Deployment records and validation limits are retained locally under `backups/`. No credentials or real project data are included in source.

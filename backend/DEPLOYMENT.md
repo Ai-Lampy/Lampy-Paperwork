@@ -7,9 +7,9 @@ The app source is on `pilot/v59-accounts`. Public V58.4 must remain available th
 - R2 is enabled. The private `lampy-paperwork-pilot-projects` bucket and `lampy-paperwork-v59-accounts` Worker are deployed. Public bucket access, Worker preview URLs and workers.dev access are disabled.
 - The owner email was explicitly confirmed on 23 November 2026 and is configured in both the Access Allow policy and Worker. Deployment identifiers and the confirmed identity are recorded locally in `backups/V59-cloudflare-deployment.json`.
 - The Access application protects `paperwork-api.ailampy.com` using the existing email one-time PIN provider. The initial application-not-found error cleared after propagation. Real owner sign-in returned a verified session, and the authenticated project listing reached R2 successfully. Anonymous requests redirect to Access. CORS permits the exact app origin and omits permission headers for untrusted origins.
-- GitHub browser sign-in works. The first pilot run was rejected before executing steps because the github-pages environment permits only main. Approval to add the exact pilot branch is pending.
+- GitHub browser sign-in works. The first pilot run was rejected before executing steps because the github-pages environment permitted only main. The user approved the exact `pilot/v59-accounts` rule on 23 November; main and that branch are now allowed. Run `45097503196` successfully published the pilot while retaining public V58.4.
 
-## Complete the approved Cloudflare setup
+## Deployed Cloudflare configuration
 
 1. Retain the existing Zero Trust organisation `ai-lampy.cloudflareaccess.com` and email one-time PIN provider. Complete verification of Access sign-in. Do not change nameservers, the main website or other products.
 2. Keep `lampy-paperwork-pilot-projects` private, with public access and custom public bucket domains disabled. It is bound to the Worker as `PROJECTS`.
@@ -30,6 +30,10 @@ The app source is on `pilot/v59-accounts`. Public V58.4 must remain available th
 6. Use the Worker custom domain `paperwork-api.ailampy.com`. The main website's DNS records are DNS-only in this account, so the original same-host API route did not intercept its requests. That unused route was removed. The dedicated API hostname avoids changing the main website's DNS, hosting or Paperwork proxy.
 7. Validate anonymous rejection, other-email rejection, owner sign-in, session expiry, private bucket access and actual project/template round trips. The GitHub Pages origin is not a production API origin by default. Use the AI-Lampy URL for account tests.
 8. `js/account-config.json` is now `enabled: true` for the isolated testing pilot. Its API URL is `https://paperwork-api.ailampy.com/paperwork/account-api/`. Keep the fallback in `js/account-manager.js` consistent. Never add credentials, JWTs or private project content to source.
+
+## Verified testing deployment
+
+Run `45098158322`, attempt 2, deployed commit `8782b0aa210376efdcaf89bf89b7b9b0efd859de` successfully. Attempt 1 passed checks/build/upload but the immediate Pages artifact lookup returned zero artifacts; retry succeeded without another code change. All 85 live manifest assets match their hashes. Both live origins report public V58.4 and pilot V59. The pilot browser reports App available offline. Owner account connection, online project save/reopen, separate project tabs, named template saving and project creation from that template passed. Two clearly named test projects and one template remain for review. Native Safari and a live disconnected-network session remain unverified.
 
 ## Publish the isolated pilot
 
@@ -55,12 +59,14 @@ After deployment, verify:
 
 Until these live checks pass, call the upload a testing pilot, not a stable online account release.
 
+The live website injects Cloudflare challenge scripts into HTML responses. The build therefore emits `offline-shell.txt` containing the exact HTML bytes and hashes that plain-text asset. The service worker verifies it before caching and supplies a `text/html` response only for offline navigation. It does not strip security scripts from live HTML, relax integrity checks or change website security settings. `tests/offline-shell.cjs` verifies offline HTML delivery, tamper rejection and API exclusion.
+
 ## Recovery and rollback
 
 - Verified local V58.4 archive and its SHA256 manifest are under `backups/`; they remain local-only.
 - Remote branch `backup/v58.4-before-v59` preserves the original public source and workflow.
-- To restore the original Pages artifact, manually run the preserved baseline workflow from `backup/v58.4-before-v59` with release `58.4`. Verify the public release and assets afterwards. This removes the pilot from the published artifact without deleting account storage.
-- Disable the Access application or remove only the pilot API route if backend access must be stopped. Do not delete the R2 bucket, recovery manifests or local IndexedDB data as part of rollback.
+- To restore the original Pages artifact, manually run the preserved baseline workflow from `backup/v58.4-before-v59` with release `58.4`, after explicitly authorizing that backup branch in the environment if necessary. Verify the public release and assets afterwards. This removes the pilot from the published artifact without deleting account storage.
+- Keep Access enabled. Remove only the pilot Worker custom-domain binding if backend access must be stopped. Do not delete the R2 bucket, recovery manifests or local IndexedDB data as part of rollback.
 - Download unsynced device projects before clearing browser data. Backend rollback cannot recover data that never reached R2.
 - An installed offline pilot can remain cached after server rollback. Instruct the tester to retain/download their projects first; then unregister the pilot's worker and clear only its app-shell cache. Do not clear shared site data or the project IndexedDB database.
 
