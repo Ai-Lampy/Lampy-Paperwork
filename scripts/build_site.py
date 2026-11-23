@@ -80,6 +80,6 @@ def build(destination, baseline=None):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('destination')
-    parser.add_argument('--baseline', help='Verified V58.4 source; preserve it publicly and publish V59 under /pilot/')
+    parser.add_argument('--baseline', help='Verified V58.4 source; preserve it publicly and publish the account pilot under /pilot/')
     args = parser.parse_args()
     build(args.destination, args.baseline)
