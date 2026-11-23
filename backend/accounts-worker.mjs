@@ -49,6 +49,16 @@ function precondition(request){
  deny(428,'A project version condition is required.');
 }
 function objectSummary(object){const m=object.customMetadata||{};return {id:object.key.split('/').at(-1),name:decodeURIComponent(m.name||''),etag:object.httpEtag,updatedAt:m.updatedAt,deleted:m.deleted==='true',bytes:Number(m.bytes||0),writeId:m.writeId}}
+function validateProfile(data){
+ if(!data||data.schema!==1||!WRITE_ID.test(data.writeId||''))deny(400,'Invalid account details.');
+ const profile={schema:1,writeId:data.writeId};
+ for(const [key,limit] of Object.entries({name:120,company:160,phone:50,jobRole:120,county:120,country:120,referral:500})){
+  if(typeof data[key]!=='string'||data[key].length>limit||/[\u0000-\u001f\u007f]/.test(data[key]))deny(400,'Invalid '+key+' field.');
+  profile[key]=data[key].trim();
+ }
+ if(!profile.name)deny(400,'Enter your name.');
+ return profile;
+}
 export function createHandler({fetcher=globalThis.fetch}={}){return async function handle(request,env){
  let cors={};try{
   const url=new URL(request.url),origin=request.headers.get('Origin'),allowed=(env.ALLOWED_ORIGINS||'').split(',').map(x=>x.trim()).filter(Boolean);
@@ -65,6 +75,28 @@ export function createHandler({fetcher=globalThis.fetch}={}){return async functi
    return new Response(null,{status:303,headers:{Location:destination.href,'Cache-Control':'no-store'}});
   }
   if(!env.PROJECTS)deny(503,'Online project storage is not configured.');
+  if(path.length===1&&path[0]==='profile'){
+   const key=`owners/${user.id}/account/profile`,bucket=env.PROJECTS;
+   if(request.method==='GET'){
+    const object=await bucket.get(key);
+    return json({profile:object?await object.json():null,etag:object?.httpEtag||null,email:user.email},200,cors);
+   }
+   if(request.method==='PUT'){
+    if(!origin||request.headers.get('X-Lampy-Request')!=='1')deny(403,'Missing request protection.');
+    if(!request.headers.get('Content-Type')?.startsWith('application/json'))deny(415,'Use JSON account details.');
+    const condition=precondition(request),data=validateProfile(await readJSON(request,8192));
+    const existing=await bucket.get(key),previous=existing?await existing.json():null;
+    if(previous?.writeId===data.writeId){
+     if(JSON.stringify(validateProfile(previous))!==JSON.stringify(data))deny(409,'An account update identity cannot be reused for different details.');
+     return json({profile:previous,etag:existing.httpEtag,email:user.email},200,cors);
+    }
+    const now=new Date().toISOString(),profile={...data,createdAt:previous?.createdAt||now,updatedAt:now};
+    const saved=await bucket.put(key,JSON.stringify(profile),{onlyIf:condition,httpMetadata:{contentType:'application/json'}});
+    if(!saved)deny(412,'Your account details changed in another window. Your entries are retained; reload the saved details before trying again.');
+    return json({profile,etag:saved.httpEtag,email:user.email},200,cors);
+   }
+   deny(405,'Method is not supported.');
+  }
   const kind=path[0]==='projects'?'project':path[0]==='templates'?'template':null;
   if(!kind)deny(404,'Not found.');
   const bucket=env.PROJECTS,base=`owners/${user.id}/${kind}/`,currentPrefix=base+'current/';
@@ -77,7 +109,10 @@ export function createHandler({fetcher=globalThis.fetch}={}){return async functi
   const currentKey=currentPrefix+id;
   if(path.length===2&&request.method==='GET'){
    const object=await bucket.get(currentKey);if(!object)deny(404,'Project not found.');
-   return new Response(object.body,{headers:{...cors,'Content-Type':'application/json','Cache-Control':'no-store','X-Content-Type-Options':'nosniff','ETag':object.httpEtag}});
+   // The CDN may weaken HTTP ETags during compression. Keep the exact R2
+   // version inside the bounded manifest so clients retain a strong condition.
+   const manifest=await object.json();
+   return json({...manifest,storageEtag:object.httpEtag},200,{...cors,ETag:object.httpEtag});
   }
   if(path.length===5&&path[2]==='chunks'){
    const writeId=path[3],index=Number(path[4]);if(!WRITE_ID.test(writeId)||!/^\d+$/.test(path[4])||index<0||index>=MAX_CHUNKS)deny(400,'Invalid upload identity.');

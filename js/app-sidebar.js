@@ -32,6 +32,7 @@
     help:'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20M9 8a3 3 0 1 1 4 3c-1 .5-1 1-1 3M12 17h.01',
     collapse:'M4 4h16v16H4zM9 4v16m7-11-3 3 3 3',
     menu:'M4 6h16M4 12h16M4 18h16',
+    account:'M12 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8M4 22v-3a8 8 0 0 1 16 0v3',
     chevron:'m6 9 6 6 6-6'
   };
   function iconMarkup(name){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="'+(iconPaths[name]||iconPaths.menu)+'"/></svg>'}
@@ -64,7 +65,10 @@
     const helpButton=doc.createElement('button');helpButton.type='button';helpButton.className='appNavigationHelp';helpButton.setAttribute('aria-label','Help for this page');helpButton.setAttribute('aria-haspopup','dialog');helpButton.setAttribute('aria-controls','appInfoDialog');helpButton.title='Help';helpButton.innerHTML=iconMarkup('help')+'<span class="appNavigationLabel">Help</span>';helpButton.addEventListener('click',()=>{close();root.openAppInfo('help')});footer.append(helpButton);
     const menuButton=doc.querySelector('.menuButton'),actions=doc.getElementById('actionSidebar');
     if(menuButton){menuButton.removeAttribute('style');menuButton.setAttribute('aria-label','Menu');menuButton.title='Menu';menuButton.innerHTML=iconMarkup('menu')+'<span class="appNavigationLabel">Menu</span>';footer.append(menuButton)}
+    const accountButton=doc.createElement('button');accountButton.type='button';accountButton.className='appNavigationAccount';accountButton.setAttribute('aria-label','Account');accountButton.title='Account';accountButton.innerHTML=iconMarkup('account')+'<span class="appNavigationLabel">Account</span>';
+    accountButton.addEventListener('click',()=>{close();root.closeActionMenu();root.LampyAccounts?.showAccount().catch(root.LampyAccounts.error)});footer.append(accountButton);
     if(actions)footer.append(actions);aside.append(footer);
+    aside.addEventListener('click',event=>{if(event.target.closest('[data-sheet-tab],.sheetSubMenu button')&&root.LampyAccounts?.leavePortal?.()===false){event.preventDefault();event.stopImmediatePropagation()}},true);
     const backdrop=doc.createElement('div');backdrop.className='appNavigationBackdrop';backdrop.hidden=true;aside.before(backdrop);
     let storage;try{storage=root.localStorage}catch{}
     const media=root.matchMedia('(max-width: 767px)'),expanded=new Set();let collapsed=readPreference(storage),open=false,previousFocus=null,lastActivePage=null,wasExpanded=false;
@@ -93,10 +97,10 @@
     function paint(){hideFlyout();const state=layoutState(collapsed,media.matches,open);if(state.expanded&&!wasExpanded)resetExpandedPages(expanded,aside.querySelector('[data-sheet-tab].active')?.dataset.sheetTab);wasExpanded=state.expanded;doc.body.classList.add('hasAppNavigation');doc.body.classList.toggle('appNavigationCompact',collapsed&&!media.matches);doc.body.classList.toggle('appNavigationOpen',media.matches&&open);aside.inert=state.hidden;aside.setAttribute('aria-hidden',String(state.hidden));backdrop.hidden=!(media.matches&&open);toggle.setAttribute('aria-expanded',String(state.expanded));toggle.setAttribute('aria-label',media.matches?'Close navigation':collapsed?'Expand navigation':'Collapse navigation');trigger.setAttribute('aria-expanded',String(open));refresh();changed()}
     function close(){if(!open)return;if(doc.body.classList.contains('actionMenuOpen'))menuButton?.click();open=false;paint();previousFocus?.focus?.()}
     aside.addEventListener('click',event=>{const page=event.target.closest('[data-sheet-tab]');if(page)resetExpandedPages(expanded,page.dataset.sheetTab)},true);
-    function refresh(){hideFlyout();const activePage=aside.querySelector('[data-sheet-tab].active')?.dataset.sheetTab;if(activePage!==lastActivePage){resetExpandedPages(expanded,activePage);lastActivePage=activePage}aside.querySelectorAll('[data-sheet-tab]').forEach(button=>{
+    function refresh(){hideFlyout();accountButton.disabled=!root.LampyAccounts?.enabled;const inAccount=doc.body.classList.contains('accountPortalOpen');if(inAccount)accountButton.setAttribute('aria-current','page');else accountButton.removeAttribute('aria-current');const activePage=aside.querySelector('[data-sheet-tab].active')?.dataset.sheetTab;if(activePage!==lastActivePage){resetExpandedPages(expanded,activePage);lastActivePage=activePage}aside.querySelectorAll('[data-sheet-tab]').forEach(button=>{
       const key=button.dataset.sheetTab,label=button.dataset.navLabel||button.textContent.trim();button.dataset.navLabel=label;button.setAttribute('aria-label',label);button.removeAttribute('title');
       if(!button.querySelector('.appNavigationIcon')){button.textContent='';const icon=doc.createElement('span');icon.className='appNavigationIcon';icon.setAttribute('aria-hidden','true');icon.innerHTML=iconMarkup(key);const text=doc.createElement('span');text.className='appNavigationLabel';text.textContent=label;button.append(icon,text)}
-      if(button.classList.contains('active'))button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');
+      if(button.classList.contains('active')&&!inAccount)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');
       const host=button.parentElement,menu=host.querySelector('.sheetSubMenu');host.onmouseenter=host.onmouseleave=host.onfocusin=null;
       button.removeAttribute('aria-haspopup');button.removeAttribute('aria-controls');
       let disclosure=host.querySelector(':scope > .appNavigationDisclosure');

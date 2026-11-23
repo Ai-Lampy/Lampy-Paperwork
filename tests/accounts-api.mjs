@@ -48,6 +48,28 @@ assert.equal((await call('session',{auth:jwt.slice(0,-8)+'12345678'})).status,40
 assert.equal((await call('session',{headers:{Origin:'https://attacker.invalid'}})).status,403);
 const session=await (await call('session')).json();assert.equal(session.user.email,'owner@example.test');assert.equal(session.user.id.length,64);
 assert.equal((await call('login')).headers.get('Location'),env.APP_URL);
+// Profiles are independent of project payloads and derive identity only from Access.
+const signup={schema:1,writeId:crypto.randomUUID(),name:'Pilot Tester',company:'Example Production',phone:'+44 0000',jobRole:'Lighting technician',county:'Test County',country:'United Kingdom',referral:'Colleague'};
+assert.equal((await (await call('profile')).json()).profile,null);
+assert.equal((await call('profile',{auth:null})).status,401);
+assert.equal((await call('profile',{method:'PUT',body:signup})).status,428);
+assert.equal((await call('profile',{method:'PUT',body:signup,headers:{'If-None-Match':'*','X-Lampy-Request':''}})).status,403);
+assert.equal((await call('profile',{method:'PUT',body:{...signup,name:''},headers:{'If-None-Match':'*'}})).status,400);
+assert.equal((await call('profile',{method:'PUT',body:{...signup,referral:'x'.repeat(501)},headers:{'If-None-Match':'*'}})).status,400);
+const profileCreate=await call('profile',{method:'PUT',body:{...signup,email:'forged@example.test',owner:'forged',role:'admin'},headers:{'If-None-Match':'*'}});
+assert.equal(profileCreate.status,200);const createdProfile=await profileCreate.json();
+assert.equal(createdProfile.email,'owner@example.test');assert.equal(createdProfile.profile.email,undefined);assert.equal(createdProfile.profile.role,undefined);
+assert.equal(createdProfile.profile.jobRole,signup.jobRole);assert.equal(createdProfile.profile.referral,signup.referral);
+assert.equal((await (await call('profile',{auth:await token({sub:'different-subject'})})).json()).profile,null);
+const profileRetry=await call('profile',{method:'PUT',body:signup,headers:{'If-None-Match':'*'}});
+assert.equal(profileRetry.status,200);assert.equal((await profileRetry.json()).etag,createdProfile.etag);
+assert.equal((await call('profile',{method:'PUT',body:{...signup,name:'Reused identity'},headers:{'If-Match':createdProfile.etag}})).status,409);
+const changedProfile={...signup,writeId:crypto.randomUUID(),jobRole:'Production manager'};
+const profileUpdate=await call('profile',{method:'PUT',body:changedProfile,headers:{'If-Match':createdProfile.etag}});assert.equal(profileUpdate.status,200);
+const latestProfile=await profileUpdate.json();assert.equal(latestProfile.profile.createdAt,createdProfile.profile.createdAt);
+assert.equal((await call('profile',{method:'PUT',body:{...signup,writeId:crypto.randomUUID()},headers:{'If-Match':createdProfile.etag}})).status,412);
+assert.deepEqual((await (await call('profile')).json()).profile,latestProfile.profile);
+assert.equal((await (await call('projects')).json()).items.length,0,'profiles never appear in project listings');
 const text=JSON.stringify({app:{labels:[],distros:[],fixturePatch:[],projectInfo:{file:{projectName:'Tour'}}}});
 const first=await upload('project-a',text);assert.equal(first.response.status,200);const firstResult=await first.response.json();
 const listing=await (await call('projects')).json();assert.equal(listing.items.length,1);assert.equal(listing.items[0].name,'Tour');

@@ -15,7 +15,7 @@ const base=process.env.LAMPY_TEST_URL||'http://127.0.0.1:8766/pilot/';
  await startServer();
  const browser=await (process.env.LAMPY_BROWSER==='chrome'?playwright.chromium.launch({headless:true,channel:'chrome'}):playwright.webkit.launch({headless:true})),context=await browser.newContext(),page=await context.newPage(),errors=[];
  page.on('pageerror',error=>errors.push(error.message));
- async function welcome(){await page.getByRole('button',{name:'Continue',exact:true}).click();await page.waitForFunction(()=>LampyAccounts.enabled)}
+ async function welcome(){await page.waitForFunction(()=>LampyAccounts.enabled&&!document.querySelector('.accountBootScreen'));if(await page.locator('#accountManager').isVisible())await page.getByRole('button',{name:'Continue on this device',exact:true}).click();await page.getByRole('button',{name:'Continue',exact:true}).click()}
  async function manager(){await page.locator('.menuButton').click();await page.getByRole('button',{name:'Projects & Account',exact:true}).click()}
  try{
   await page.goto(base);await welcome();await manager();

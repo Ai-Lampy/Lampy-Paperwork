@@ -26,15 +26,31 @@ try{
  assert.equal((await request('session')).status,401);
  assert.equal((await request('session',{headers:{'Cf-Access-Jwt-Assertion':await token({email:'someone@example.test'})}})).status,403);
  assert.equal((await request('session',{headers:{'Cf-Access-Jwt-Assertion':await token({exp:1})}})).status,401);
- const api=Sync.client({baseURL:origin+prefix+'/',validate:(kind,payload)=>kind==='project'?Core.validateProject(payload):Transfer.validateTemplate(payload),fetcher:(url,options)=>mf.dispatchFetch(url.href,{...options,headers:{...options.headers,Origin:origin,'Cf-Access-Jwt-Assertion':jwt}})});
+ const api=Sync.client({baseURL:origin+prefix+'/',validate:(kind,payload)=>kind==='project'?Core.validateProject(payload):Transfer.validateTemplate(payload),fetcher:async(url,options)=>{
+  const response=await mf.dispatchFetch(url.href,{...options,headers:{...options.headers,Origin:origin,'Cf-Access-Jwt-Assertion':jwt}});
+  // The production CDN can weaken response ETags while compressing JSON.
+  if((options.method||'GET')==='GET'&&response.headers.has('ETag')){const headers=new Headers(response.headers);headers.set('ETag','W/'+headers.get('ETag'));return new Response(response.body,{status:response.status,headers})}
+  return response;
+ }});
  const {user}=await api.session();assert.match(user.id,/^[a-f0-9]{64}$/);
+ const signup={schema:1,writeId:crypto.randomUUID(),name:'Runtime Tester',company:'',phone:'',jobRole:'Lighting',county:'County',country:'Country',referral:'Friend'};
+ assert.equal((await api.profile()).profile,null);
+ const profile=await api.saveProfile(signup,null);assert.match(profile.etag,/^"[a-f0-9]{32}"$/);
+ assert.equal((await api.saveProfile(signup,null)).etag,profile.etag,'profile retry after lost response is idempotent');
+ const changedProfile=await api.saveProfile({...signup,writeId:crypto.randomUUID(),jobRole:'Crew chief'},profile.etag);
+ await assert.rejects(api.saveProfile({...signup,writeId:crypto.randomUUID()},profile.etag),error=>error.status===412);
+ assert.equal((await api.profile()).profile.jobRole,'Crew chief');assert.equal(changedProfile.email,user.email);
  const payload=Transfer.empty();payload.app.projectInfo.file.projectName='Runtime project';payload.app.gdtfFiles={imported:{base64:'A'.repeat(1024*1024+256)}};
  const record={id:'runtime-project',kind:'project',name:'Runtime project',deleted:false,payload};
  const firstLease={writeId:crypto.randomUUID(),baseEtag:null};
  const first=await api.upload(record,firstLease);assert.match(first.etag,/^"[a-f0-9]{32}"$/);
+ assert.equal((await api.manifest('project',record.id)).etag,first.etag,'storage version must survive a CDN-weakened response header');
  assert.deepEqual((await api.download('project',record.id)).payload,payload,'real R2 preserves a multi-chunk project');
  assert.equal((await api.upload(record,firstLease)).etag,first.etag,'lost-response retry confirms the same commit');
- const second=await api.upload({...record,name:'Updated runtime project'},{writeId:crypto.randomUUID(),baseEtag:first.etag});
+ const weakLease={writeId:crypto.randomUUID(),baseEtag:'W/'+first.etag};
+ const second=await api.upload({...record,name:'Updated runtime project'},weakLease);
+ assert.equal((await api.upload({...record,name:'Updated runtime project'},weakLease)).etag,second.etag,'old weak leases still retry an already committed write safely');
+ await assert.rejects(api.upload({...record,name:'Stale weak edit'},{writeId:crypto.randomUUID(),baseEtag:'W/'+first.etag}),error=>error.status===412);
  await assert.rejects(api.upload({...record,name:'Stale edit'},{writeId:crypto.randomUUID(),baseEtag:first.etag}),error=>error.status===412);
  assert.equal((await api.manifest('project',record.id)).etag,second.etag);
  const bucket=await mf.getR2Bucket('PROJECTS');assert((await bucket.list({prefix:'owners/'+user.id+'/project/history/'+record.id+'/'})).objects.length>0,'R2 retains revision manifests');
@@ -45,5 +61,6 @@ try{
  assert.deepEqual((await api.download('template',template.id)).payload,template);
  assert.equal((await request('projects/'+record.id,{headers:{'Cf-Access-Jwt-Assertion':await token({sub:'different-subject'})}})).status,404);
  console.log('PASS: actual Workers runtime and R2 binding: signed identity, rejection, owner isolation, multi-chunk integrity, idempotent commits, conditional-write conflicts, revision history, listing, deletion and templates.');
+ if(process.env.LAMPY_PORTAL_PREVIEW==='1')await (await import('./helpers/account-portal-server.mjs')).serve({mf,jwt:await token({sub:'portal-preview'})});
  if(process.env.LAMPY_BROWSER_CHECK==='1')await (await import('./helpers/accounts-online-browser.mjs')).run({mf,jwt,api,user});
 }finally{await mf.dispose();await rm(directory,{recursive:true,force:true})}

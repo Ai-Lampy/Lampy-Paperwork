@@ -1,4 +1,4 @@
-# V59 browser release checks
+# V60 browser release checks
 
 **Use this checklist only when the user explicitly requests browser testing.** Interface changes, implementation requests and releases do not authorise browser testing. Static validation remains the default.
 
@@ -101,3 +101,12 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 - Patch widths: Type/Mode and wrapped text receive spare width; fixed columns and PDF width limits remain unchanged.
 - Universe Detail: statistic replaces heading toolbar; hover/focus highlights full footprints; Move Selected and Move All remain available.
 - Power/Fan Outs: no page-tab strip; name mode follows Power in live and PDF views; solid internal borders.
+
+## V60 account page
+
+- Account appears below Menu in expanded and compact sidebar navigation. It opens a main page, not a dialog or overlay. Other sidebar pages remain usable.
+- Verify signed-out sign-in, verified-email sign-up and required Name validation. Check Job Role, County, Country and referral fields.
+- Save profile details, reload, and verify persistence. Referral appears at sign-up only. Verified email is read-only.
+- Open Account Details in two tabs. Save one, then attempt a stale save in the other; retain its entered text and show a conflict.
+- Create/open a project through the portal, return using Account, and reopen the same project without changing its data.
+- Check the account page at desktop and narrow widths, including keyboard focus and no horizontal overflow.

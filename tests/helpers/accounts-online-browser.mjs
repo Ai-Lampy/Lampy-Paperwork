@@ -24,10 +24,10 @@ export async function run({mf,jwt,api,user}){
  const {webkit}=require(process.env.LAMPY_PLAYWRIGHT_PATH||'playwright'),browser=await webkit.launch({headless:true}),context=await browser.newContext({viewport:{width:1440,height:1000}}),page=await context.newPage(),errors=[];
  context.on('page',p=>p.on('pageerror',e=>errors.push(e.message)));page.on('pageerror',e=>errors.push(e.message));
  const manager=async p=>{await p.locator('.menuButton').click();await p.getByRole('button',{name:'Projects & Account',exact:true}).click()};
- const welcome=async p=>{await p.getByRole('button',{name:'Continue',exact:true}).click();await p.waitForFunction(()=>LampyAccounts.enabled)};
+ const welcome=async p=>{await p.getByRole('button',{name:'Continue on this device',exact:true}).click();await p.getByRole('button',{name:'Continue',exact:true}).click();await p.waitForFunction(()=>LampyAccounts.enabled)};
  const until=async(fn,label)=>{for(let i=0;i<80;i++){if(await fn())return;await new Promise(r=>setTimeout(r,100))}throw Error('Timed out: '+label)};
  try{
-  await page.goto(origin);await welcome(page);await manager(page);await page.getByRole('button',{name:'Connect account',exact:true}).click();await page.getByText('Signed in as owner@example.test',{exact:true}).waitFor();
+  await page.goto(origin);await welcome(page);await manager(page);await page.getByRole('button',{name:/^(Connect account|My account projects)$/}).click();await page.getByText('Signed in as owner@example.test',{exact:true}).waitFor();
   await page.getByRole('button',{name:'New project',exact:true}).click();await page.getByLabel('Project name',{exact:true}).fill('Online browser project');await page.getByRole('button',{name:'Create project',exact:true}).click();await page.waitForFunction(()=>LampyAccounts.active?.owner!=='device'&&!!LampyAccounts.active);
   const id=await page.evaluate(()=>LampyAccounts.active.id);await page.waitForFunction(()=>document.getElementById('accountSaveStatus').textContent.includes('Saved online'));
   assert.equal((await api.download('project',id)).payload.app.projectInfo.file.projectName,'Online browser project');
@@ -38,7 +38,7 @@ export async function run({mf,jwt,api,user}){
   const template=(await api.list('template')).find(t=>t.name==='Browser Tour'),remote=await api.download('template',template.id);
   const remotePayload=structuredClone(remote.payload);remotePayload.project.app.projectInfo.file.projectOwner='Owner on another device';remotePayload.revision++;
   await api.upload({kind:'template',id:template.id,name:'Browser Tour',deleted:false,payload:remotePayload},{writeId:crypto.randomUUID(),baseEtag:remote.manifest.etag});
-  await page.getByRole('button',{name:'Close',exact:true}).click();await page.locator('button[aria-label="Project Settings"]').click();await page.locator('[data-project-file="projectOwner"]').fill('Local template owner');await page.locator('[data-project-file="projectOwner"]').press('Tab');
+  await page.getByRole('button',{name:'Back to project',exact:true}).click();await page.locator('button[aria-label="Project Settings"]').click();await page.locator('[data-project-file="projectOwner"]').fill('Local template owner');await page.locator('[data-project-file="projectOwner"]').press('Tab');
   await manager(page);await page.getByRole('button',{name:'Defaults & Templates',exact:true}).click();await page.locator('.accountRecord').filter({hasText:'Browser Tour'}).getByRole('button',{name:'Update from current project',exact:true}).click();await page.getByRole('button',{name:'Review template',exact:true}).click();await page.getByRole('button',{name:'Save template',exact:true}).click();
   await page.waitForFunction(async()=>{const s=await LampyProjectStore.open();try{return (await s.list(LampyAccounts.active.owner,'template')).some(t=>t.name==='Browser Tour'&&t.conflict)}finally{s.close()}});
   await page.getByRole('button',{name:'Defaults & Templates',exact:true}).click();await page.locator('.accountRecord').filter({hasText:'Browser Tour'}).getByRole('button',{name:'Review conflict',exact:true}).click();await page.getByRole('button',{name:'Keep both',exact:true}).click();
@@ -47,9 +47,9 @@ export async function run({mf,jwt,api,user}){
   const recovered=await page.evaluate(async()=>{const s=await LampyProjectStore.open();try{return (await s.list(LampyAccounts.active.owner,'template')).filter(t=>t.name.startsWith('Browser Tour')).map(t=>({name:t.name,owner:t.payload.project.app.projectInfo.file.projectOwner,conflict:t.conflict}))}finally{s.close()}});
   assert(recovered.some(t=>t.name==='Browser Tour'&&t.owner==='Owner on another device'&&!t.conflict));assert(recovered.some(t=>t.name.endsWith('local copy')&&t.owner==='Local template owner'));
   const secondContext=await browser.newContext(),second=await secondContext.newPage();try{
-   await second.goto(origin);await welcome(second);await manager(second);await second.getByRole('button',{name:'Connect account',exact:true}).click();await second.locator('.accountRecord').filter({hasText:'Online browser project'}).getByRole('button',{name:'Open',exact:true}).click();await second.waitForFunction(()=>!!LampyAccounts.active);assert.equal(await second.title(),'Online browser project');assert.equal(await second.evaluate(()=>LampyAccounts.active.owner),user.id);
+   await second.goto(origin);await welcome(second);await manager(second);await second.getByRole('button',{name:/^(Connect account|My account projects)$/}).click();await second.locator('.accountRecord').filter({hasText:'Online browser project'}).getByRole('button',{name:'Open',exact:true}).click();await second.waitForFunction(()=>!!LampyAccounts.active);assert.equal(await second.title(),'Online browser project');assert.equal(await second.evaluate(()=>LampyAccounts.active.owner),user.id);
   }finally{await secondContext.close()}
-  await page.getByRole('button',{name:'Close',exact:true}).click();signedIn=false;
+  await page.getByRole('button',{name:'Back to project',exact:true}).click();signedIn=false;
   await page.locator('button[aria-label="Project Settings"]').click();await page.locator('[data-project-file="projectOwner"]').fill('Retained after expiry');await page.locator('[data-project-file="projectOwner"]').press('Tab');await page.waitForFunction(()=>!LampyAccounts.hasUnsaved());
   await until(async()=> (await page.locator('#accountSaveStatus').innerText()).includes('Waiting to sync'),'expired authentication status');
   assert.equal(await page.evaluate(async()=>{const s=await LampyProjectStore.open();try{return (await s.read(LampyAccounts.active.owner,'project',LampyAccounts.active.id)).payload.app.projectInfo.file.projectOwner}finally{s.close()}}),'Retained after expiry');

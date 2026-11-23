@@ -24,8 +24,8 @@
   function path(kind,id){if(!/^[-a-zA-Z0-9_]{1,100}$/.test(id))throw Error('Invalid project identity');return collection(kind)+'/'+id}
   async function session(){const r=await request('session');if(!r.headers.get('Content-Type')?.includes('application/json'))throw new AccountError('Sign in to your account.',401);const data=await r.json();if(!/^[a-f0-9]{64}$/.test(data.user?.id))throw new AccountError('The account service returned an invalid identity.');return data}
   async function list(kind){const items=[];let cursor=null;const seen=new Set();do{const r=await request(collection(kind)+(cursor?'?cursor='+encodeURIComponent(cursor):'')),data=await r.json();if(!Array.isArray(data.items))throw new AccountError('Invalid project listing.');items.push(...data.items);cursor=data.cursor;if(cursor){if(seen.has(cursor)||items.length>10000)throw new AccountError('Project listing could not be completed.');seen.add(cursor)}}while(cursor);return items}
-  async function manifest(kind,id){const response=await request(path(kind,id)),data=await response.json(),etag=response.headers.get('ETag');
-   if(!etag||data.id!==id||data.kind!==kind||data.schema!==1||!Array.isArray(data.chunks)||!data.chunks.length||data.chunks.length>64||!/^[-a-f0-9]{36}$/i.test(data.writeId)||!Number.isInteger(data.bytes)||data.bytes<1||data.bytes>MAX_BYTES||typeof data.name!=='string'||data.name.length>200||typeof data.deleted!=='boolean')throw new AccountError('Invalid online project manifest.');
+  async function manifest(kind,id){const response=await request(path(kind,id)),data=await response.json(),etag=data.storageEtag||response.headers.get('ETag');
+   if(!/^"[a-f0-9]{32}"$/.test(etag||'')||data.id!==id||data.kind!==kind||data.schema!==1||!Array.isArray(data.chunks)||!data.chunks.length||data.chunks.length>64||!/^[-a-f0-9]{36}$/i.test(data.writeId)||!Number.isInteger(data.bytes)||data.bytes<1||data.bytes>MAX_BYTES||typeof data.name!=='string'||data.name.length>200||typeof data.deleted!=='boolean')throw new AccountError('Invalid online project manifest.');
    let size=0;for(const chunk of data.chunks){if(!/^[a-f0-9]{64}$/.test(chunk.sha256)||!Number.isInteger(chunk.bytes)||chunk.bytes<1||chunk.bytes>CHUNK_BYTES)throw new AccountError('Invalid online project chunk.');size+=chunk.bytes}if(size!==data.bytes)throw new AccountError('Invalid online project size.');
    return {...data,etag};
   }
@@ -42,16 +42,26 @@
   async function upload(record,lease){
    validate(record.kind,record.payload);
    const bytes=new TextEncoder().encode(JSON.stringify(record.payload));if(bytes.length>MAX_BYTES)throw new AccountError('This project exceeds the 64 MiB online project limit. The complete local copy is retained.',413);
+   let baseEtag=lease.baseEtag;
+   if(baseEtag?.startsWith('W/')){
+    // Recover leases saved by the first pilot without discarding local edits.
+    // Never replace a stale condition with the latest version unconditionally.
+    const remote=await manifest(record.kind,record.id);
+    if(remote.etag!==baseEtag.slice(2)&&remote.writeId!==lease.writeId)throw new AccountError('The online project changed. Review both versions before continuing.',412);
+    baseEtag=remote.etag;
+   }
    const chunks=[],route=path(record.kind,record.id);
    for(let offset=0;offset<bytes.length;offset+=CHUNK_BYTES){
     const chunk=bytes.slice(offset,offset+CHUNK_BYTES),sha256=await digest(chunk),r=await request(route+'/chunks/'+lease.writeId+'/'+chunks.length,{method:'PUT',headers:{'Content-Type':'application/octet-stream'},body:chunk}),result=await r.json();
     if(result.sha256!==sha256||result.bytes!==chunk.length)throw new AccountError('The upload could not be verified. The online project has not changed.');chunks.push({sha256,bytes:chunk.length});
    }
    const body={schema:1,writeId:lease.writeId,name:record.name,deleted:record.deleted,chunks,bytes:bytes.length};
-   const response=await request(route,{method:'PUT',headers:{'Content-Type':'application/json',...(lease.baseEtag?{'If-Match':lease.baseEtag}:{'If-None-Match':'*'})},body:JSON.stringify(body)}),result=await response.json();
+   const response=await request(route,{method:'PUT',headers:{'Content-Type':'application/json',...(baseEtag?{'If-Match':baseEtag}:{'If-None-Match':'*'})},body:JSON.stringify(body)}),result=await response.json();
    if(!result.etag||result.writeId!==lease.writeId)throw new AccountError('The server did not confirm the saved project.');return result;
   }
-  return {session,list,manifest,download,upload,loginURL:new URL('login',base).href};
+  async function profile(){return (await request('profile')).json()}
+  async function saveProfile(data,etag){return (await request('profile',{method:'PUT',headers:{'Content-Type':'application/json',...(etag?{'If-Match':etag}:{'If-None-Match':'*'})},body:JSON.stringify(data)})).json()}
+  return {session,list,manifest,download,upload,profile,saveProfile,loginURL:new URL('login',base).href,logoutURL:new URL('/cdn-cgi/access/logout',base).href};
  }
  function coordinator({store,api,owner,onChange=()=>{}}){
   async function checkIdentity(){const data=await api.session();if(data.user.id!==owner)throw new AccountError('This device project belongs to a different signed-in account.',403);return data.user}

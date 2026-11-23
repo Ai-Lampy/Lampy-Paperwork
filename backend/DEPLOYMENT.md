@@ -1,6 +1,14 @@
-# V59 private account backend and pilot deployment
+# V60 account portal — backend and pilot deployment
 
 The app source is on `pilot/v59-accounts`. Public V58.4 must remain available throughout this pilot. Online accounts are enabled in the pilot configuration after successful real owner sign-in and authenticated R2 listing. Full deployed project/template round trips remain a release acceptance gate. Local runtime/browser tests alone are not proof of live authentication.
+
+## V60 manual release
+
+The user will upload and deploy V60. The V60 source is prepared locally; it has not been uploaded or deployed. The existing V59 project-sync fix was deployed in run `45104606105` before that instruction, and its retained pending edit synced successfully.
+
+Before publishing the V60 frontend, update the existing `lampy-paperwork-v59-accounts` Worker with `backend/accounts-worker.mjs` using its ES module entry point. Preserve its bindings, Access policy, custom domain and compatibility date. This adds the private `/profile` GET/PUT endpoint. GitHub Pages does not deploy Worker code; simply uploading the backend file to GitHub is insufficient. Keep the existing Worker name and R2 bucket to retain all projects.
+
+The sign-up form stores name, company, phone number, job role, county, country and referral under `owners/<verified-id>/account/profile`. Email comes from Access. Conditional writes reject competing edits; retries of the same write ID confirm prior commits. Profiles never appear in project lists or exports. The pilot remains owner-only. No public registration or gig-sharing permissions are enabled.
 
 ## Current gates
 
@@ -31,7 +39,7 @@ The app source is on `pilot/v59-accounts`. Public V58.4 must remain available th
 7. Validate anonymous rejection, other-email rejection, owner sign-in, session expiry, private bucket access and actual project/template round trips. The GitHub Pages origin is not a production API origin by default. Use the AI-Lampy URL for account tests.
 8. `js/account-config.json` is now `enabled: true` for the isolated testing pilot. Its API URL is `https://paperwork-api.ailampy.com/paperwork/account-api/`. Keep the fallback in `js/account-manager.js` consistent. Never add credentials, JWTs or private project content to source.
 
-## Verified testing deployment
+## Verified V59 testing deployment
 
 Run `45098158322`, attempt 2, deployed commit `8782b0aa210376efdcaf89bf89b7b9b0efd859de` successfully. Attempt 1 passed checks/build/upload but the immediate Pages artifact lookup returned zero artifacts; retry succeeded without another code change. All 85 live manifest assets match their hashes. Both live origins report public V58.4 and pilot V59. The pilot browser reports App available offline. Owner account connection, online project save/reopen, separate project tabs, named template saving and project creation from that template passed. Two clearly named test projects and one template remain for review. Native Safari and a live disconnected-network session remain unverified.
 
@@ -40,17 +48,17 @@ Run `45098158322`, attempt 2, deployed commit `8782b0aa210376efdcaf89bf89b7b9b0e
 In GitHub Actions, open **Deploy Lampy Paperwork** and choose **Run workflow**:
 
 - Branch: `pilot/v59-accounts`.
-- Release version: `59`.
+- Release version: `60`.
 - Confirmation: enabled.
 
-The branch workflow checks out public baseline commit `f2dd74472095b0c0aae3c44815e5b42524a2f546`, runs both app suites, account tests, the real Workers/R2 test and release validation, then builds an isolated artifact. The root remains V58.4. V59 is placed under `/pilot/` and shares unchanged fixture/image assets. The build rejects changed shared assets and artifacts above 900 MB. It excludes backend code, tests, dependencies, workbooks and backups from Pages assets.
+The branch workflow checks out public baseline commit `f2dd74472095b0c0aae3c44815e5b42524a2f546`, runs both app suites, account tests, the real Workers/R2 test and release validation, then builds an isolated artifact. The root remains V58.4. V60 is placed under `/pilot/` and shares unchanged fixture/image assets. The build rejects changed shared assets and artifacts above 900 MB. It excludes backend code, tests, dependencies, workbooks and backups from Pages assets.
 
 Do not add a push deployment trigger. Do not upload a generated `_site/` directory.
 
 After deployment, verify:
 
 - `https://ailampy.com/paperwork/js/app-version.json` remains V58.4.
-- `https://ailampy.com/paperwork/pilot/js/app-version.json` reports V59.
+- `https://ailampy.com/paperwork/pilot/js/app-version.json` reports V60.
 - The same root/pilot versions appear on the GitHub Pages origin.
 - Pilot scripts, styles, shared JSON/images, release polling and offline manifest resolve correctly through the website proxy.
 - The pilot service worker scope ends in `/paperwork/pilot/` and does not control the public app.
@@ -84,6 +92,6 @@ node scripts/validate-release.cjs
 python3 scripts/build_site.py /new/external/temporary/site --baseline /verified/V58.4/source
 ```
 
-Browser checks require explicit authorization. `tests/accounts-browser.cjs` covers the app UI. `tests/accounts-offline-browser.cjs` accepts `LAMPY_TEST_SITE` to start/stop its own temporary origin, avoiding WebKit's offline-emulation defect. Setting `LAMPY_BROWSER_CHECK=1` when running `tests/accounts-runtime.mjs` additionally exercises the UI against the local Worker/R2 runtime using signed test identity. It never enables authentication bypass in production code. Native Safari and real Access login remain separate verification requirements.
+Browser checks require explicit authorization. `tests/accounts-browser.cjs` covers the app UI. `tests/accounts-offline-browser.cjs` accepts `LAMPY_TEST_SITE` to start/stop its own temporary origin, avoiding WebKit's offline-emulation defect. Setting `LAMPY_BROWSER_CHECK=1` when running `tests/accounts-runtime.mjs` additionally exercises the UI against the local Worker/R2 runtime using signed test identity. It never enables authentication bypass in production code. Native Safari and real Access login remain separate verification requirements. For an interactive local portal check with synthetic identity only, run `LAMPY_PORTAL_PREVIEW=1 node tests/accounts-runtime.mjs` and open `http://127.0.0.1:8790`. Stop it with Ctrl-C; its temporary R2 data is removed.
 
 References: [Access JWT validation](https://developers.cloudflare.com/cloudflare-one/access-controls/applications/http-apps/authorization-cookie/validating-json/), [R2 consistency](https://developers.cloudflare.com/r2/reference/consistency/), [Miniflare R2 testing](https://developers.cloudflare.com/workers/testing/miniflare/storage/r2/).

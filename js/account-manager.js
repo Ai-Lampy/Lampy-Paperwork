@@ -2,7 +2,8 @@
 (function(root){
  'use strict';
  let store,workspace,bridge,api,user=null,libraryOwner='device',onlineItems=[],dialog,body,message,status,onlineError='',bootError='',offlineState='Offline app setup has not completed.',config={enabled:false,apiURL:'https://paperwork-api.ailampy.com/paperwork/account-api/'};
- const inFlight=new Set(),syncTimers=new Map();let viewGeneration=0;
+ const inFlight=new Set(),syncTimers=new Map();let viewGeneration=0,profileData=null,profileEtag=null,profileDirty=false;
+ const portalRequested=()=>new URLSearchParams(location.search).get('portal');
  const el=(tag,text='',className='')=>{const node=document.createElement(tag);if(text)node.textContent=text;if(className)node.className=className;return node};
  function action(label,run,className='btn'){const button=el('button',label,className);button.type='button';button.addEventListener('click',async()=>{button.disabled=true;try{await run()}catch(error){showError(error.message||String(error))}finally{button.disabled=false}});return button}
  function showError(text){if(message){message.textContent=text;message.hidden=!text}if(status&&text)status.title=text}
@@ -12,11 +13,71 @@
  function toolbar(...buttons){const node=el('div','','accountToolbar');node.append(...buttons);return node}
  function select(options,value){const node=el('select');for(const [id,label] of options){const o=el('option',label);o.value=id;node.append(o)}node.value=value;return node}
  function show(title){
-  viewGeneration++;
-  if(!dialog){dialog=el('dialog','','accountManager');dialog.id='accountManager';dialog.addEventListener('cancel',event=>{if(bootError)event.preventDefault()});document.body.append(dialog)}
-  const header=el('div','','accountManagerHeader'),heading=el('h2',title);heading.id='accountManagerHeading';dialog.setAttribute('aria-labelledby',heading.id);
-  header.append(heading,action('Close',()=>{if(bootError)throw Error('Choose a project or continue with the local project first.');dialog.close()}));
-  message=el('p','','accountError');message.setAttribute('role','alert');message.hidden=true;body=el('div','','accountManagerBody');dialog.replaceChildren(header,message,body);if(!dialog.open)dialog.showModal();
+  if(profileDirty&&!confirm('Leave without saving your account details?'))throw Error('Your unsaved account details are still here.');
+  profileDirty=false;viewGeneration++;
+  document.body.classList.add('accountPortalOpen');
+  const route=title==='Sign in'?'signin':title==='Complete your sign-up'?'signup':title==='Account Details'?'details':title==='Defaults & Templates'?'templates':'projects';
+  const url=new URL(location.href);url.searchParams.set('portal',route);history.replaceState(null,'',url);
+  document.title=title+' · Lampy Paperwork';
+  if(!dialog){dialog=el('main','','accountManager');dialog.id='accountManager';dialog.hidden=true;document.querySelector('.appShell').before(dialog)}
+  const header=el('div','','accountManagerHeader'),heading=el('h1',title);heading.id='accountManagerHeading';dialog.setAttribute('aria-labelledby',heading.id);
+  const brand=el('div','','accountBrand');brand.append(el('strong','Lampy Paperwork'),el('span','Account portal · V60'));
+  const controls=toolbar();
+  controls.append(action(current().active?'Back to project':'Continue on this device',()=>{if(bootError)throw Error('Choose a project or continue with the local project first.');if(profileDirty&&!confirm('Leave without saving your account details?'))return;profileDirty=false;hidePortal()}));
+  if(user)controls.append(action('Sign out',async()=>{if(profileDirty&&!confirm('Leave without saving your account details?'))return;await workspace.flush();profileDirty=false;for(const timer of syncTimers.values())clearTimeout(timer);syncTimers.clear();user=null;location.assign(api.logoutURL)}));
+  header.append(brand,controls);
+  const navigation=el('nav','','accountPortalNav');navigation.setAttribute('aria-label','Account portal');
+  for(const [label,run,active] of [['Projects',()=>manager('project'),route==='projects'],['Defaults & Templates',()=>manager('template'),route==='templates'],['Account Details',()=>accountDetails(),route==='details']]){
+   if(!user&&label==='Account Details')continue;
+   const button=action(label,run);if(active)button.setAttribute('aria-current','page');navigation.append(button);
+  }
+  if(!user){const signIn=action('Sign in',()=>signInPage());if(route==='signin')signIn.setAttribute('aria-current','page');navigation.append(signIn)}
+
+  message=el('p','','accountError');message.setAttribute('role','alert');message.hidden=true;body=el('div','','accountManagerBody');body.append(heading);dialog.replaceChildren(header,navigation,message,body);dialog.hidden=false;heading.tabIndex=-1;heading.focus({preventScroll:true});root.LampySidebar?.refresh();
+ }
+ function hidePortal(){
+  if(profileDirty&&!confirm('Leave without saving your account details?'))return false;
+  profileDirty=false;if(dialog)dialog.hidden=true;document.body.classList.remove('accountPortalOpen');
+  const url=new URL(location.href);url.searchParams.delete('portal');history.replaceState(null,'',url);bridge?.render();root.LampySidebar?.refresh();return true;
+ }
+ function signInPage(error=''){
+  show('Sign in');const card=el('section','','accountWelcome');
+  card.append(el('p','YOUR PAPERWORK, IN ONE PLACE','accountEyebrow'),el('h3','Ready for your next gig?'),el('p','Sign in to open your projects, save reusable templates and manage your account.'));
+  const signIn=el('a','Sign in with email','btn primary');signIn.href=api.loginURL;
+  const signup=el('a','Create your account','btn');signup.href=api.loginURL;
+  card.append(toolbar(signIn,signup),el('p','New here? Verify your email, then complete your sign-up details.','accountNote'),el('p','Private V60 pilot — access is limited to the approved pilot account.','accountNote'));
+  body.append(card);if(error)showError(error);
+  body.append(action('Open projects saved on this device',()=>{libraryOwner='device';return manager()}));
+ }
+ async function portalEntry(){
+  if(profileDirty&&!confirm('Leave without saving your account details?'))return;profileDirty=false;
+  try{await authenticate();const result=await api.profile();profileData=result.profile;profileEtag=result.etag;
+   if(!profileData)return accountDetails(true,result);
+   if(portalRequested()==='details')return accountDetails(false,result);
+   return manager(portalRequested()==='templates'?'template':'project');
+  }catch(error){user=null;signInPage(navigator.onLine===false?'You are offline. Your saved device projects are still available.':'')}
+ }
+ async function accountDetails(signup=false,loaded=null){
+  if(!user){await authenticate()}
+  const result=loaded||await api.profile();signup=!result.profile;
+  show(signup?'Complete your sign-up':'Account Details');profileData=result.profile;profileEtag=result.etag;
+  note(signup?'Your email is verified. Tell us a little about yourself to finish creating your Lampy account.':'Manage your profile. These details are separate from the contacts and owner details in your projects.');
+  const form=el('form','','accountProfileForm'),grid=el('div','','accountProfileGrid'),fields={};
+  const definitions=[['name','Name','name',120],['company','Company (optional)','organization',160],['phone','Phone number (optional)','tel',50],['jobRole','Job Role (optional)','organization-title',120],['county','County (optional)','address-level1',120],['country','Country (optional)','country-name',120]];
+  if(signup)definitions.push(['referral','Where did you hear about Lampy Paperwork? (optional)','off',500]);
+  const email=input(user.email);email.type='email';email.readOnly=true;grid.append(field('Verified email address',email));
+  for(const [key,label,autocomplete,maxLength] of definitions){const node=input(profileData?.[key]||'');node.name=key;node.autocomplete=autocomplete;node.maxLength=maxLength;node.required=key==='name';if(key==='phone')node.type='tel';fields[key]=node;node.addEventListener('input',()=>{profileDirty=true});grid.append(field(label,node))}
+  form.append(grid);const save=el('button',signup?'Complete sign-up':'Save account details','btn primary');save.type='submit';
+  form.append(toolbar(save,action('Reload saved details',async()=>accountDetails())));body.append(form);
+  note('Your profile is private. Signing out leaves saved project copies on this device; only use a device you trust.');
+  let attempt=null;
+  form.addEventListener('submit',async event=>{event.preventDefault();if(!form.reportValidity())return;save.disabled=true;showError('');
+   try{const data={schema:1,...Object.fromEntries(['name','company','phone','jobRole','county','country','referral'].map(key=>[key,fields[key]?fields[key].value.trim():profileData?.[key]||'']))};
+    const signature=JSON.stringify(data);if(!attempt||attempt.signature!==signature)attempt={signature,writeId:crypto.randomUUID()};
+    const saved=await api.saveProfile({...data,writeId:attempt.writeId},profileEtag);profileData=saved.profile;profileEtag=saved.etag;profileDirty=false;
+    if(signup)await manager();else{const notice=el('p','Account details saved.','accountSuccess');notice.setAttribute('role','status');form.querySelector('.accountSuccess')?.remove();form.append(notice)}
+   }catch(error){showError(error.message)}finally{save.disabled=false}
+  });
  }
  function projectName(payload,fallback='Untitled Project'){return payload.app?.projectInfo?.file?.projectName||fallback}
  function current(){return workspace?.state()||{active:null,applying:false,pending:0,dirty:false,error:null,conflict:null}}
@@ -27,7 +88,7 @@
   const online=state.conflict||state.active.conflict?'Conflict — review required':state.active.owner==='device'?'Device project':state.active.dirty?(onlineError?'Waiting to sync':'Not yet synced'):'Saved online';
   status.textContent=state.active.name+' · '+local+' · '+online;status.dataset.error=String(!!state.error||!!state.conflict||!!state.active.conflict);status.title=state.error||onlineError||'Open Projects & Account';
  }
- function locationFor(record){const url=new URL(location.href);url.searchParams.delete('_lampy_update');url.searchParams.set('account',record.owner);url.searchParams.set('project',record.id);return url.href}
+ function locationFor(record){const url=new URL(location.href);url.searchParams.delete('_lampy_update');url.searchParams.delete('portal');url.searchParams.set('account',record.owner);url.searchParams.set('project',record.id);return url.href}
  function setLocation(record){const url=new URL(location.href);if(record){url.searchParams.set('account',record.owner);url.searchParams.set('project',record.id);libraryOwner=record.owner}else{url.searchParams.delete('account');url.searchParams.delete('project')}history.replaceState(null,'',url)}
  function recordStatus(record){return record.deleted?'Deleted — recoverable':record.remoteOnly?'Online — download to open':record.conflict?'Conflict — review required':record.owner==='device'?'On this device':record.dirty?'On this device — awaiting sync':'Saved online'}
  function updateRecordRow(record){if(!record?.id)return;const key=JSON.stringify([record.owner,record.kind,record.id]),row=[...(dialog?.querySelectorAll('.accountRecord')||[])].find(node=>node.dataset.recordKey===key);if(!row)return;row.querySelector('small').textContent=recordStatus(record);row.querySelector('strong').textContent=record.name;row.querySelector('[data-conflict-review]')?.remove();if(record.conflict){const button=action('Review conflict',()=>showConflict(record));button.dataset.conflictReview='true';row.querySelector('.accountToolbar').prepend(button)}}
@@ -35,26 +96,26 @@
  function scheduleSync(record){if(!record||record.owner==='device'||!config.enabled||record.conflict)return;const key=record.owner+':'+record.kind+':'+record.id;clearTimeout(syncTimers.get(key));syncTimers.set(key,setTimeout(()=>{syncTimers.delete(key);syncRecord(record).catch(error=>{onlineError=error.message;updateStatus()})},2000))}
  async function syncPending(owner){if(!owner||owner==='device'||!config.enabled||navigator.onLine===false)return;for(const kind of ['project','template'])for(const record of await store.list(owner,kind,{includeDeleted:true}))if(record.dirty&&!record.conflict)scheduleSync(record)}
  async function syncRecord(record){if(!config.enabled||record.owner==='device'||navigator.onLine===false)return;const key=record.owner+':'+record.kind+':'+record.id;if(inFlight.has(key)){scheduleSync(record);return}inFlight.add(key);try{const result=await coordinator(record.owner).syncOne(record.kind,record.id);onlineError='';if(result?.dirty&&!result.conflict)scheduleSync(result);return result}finally{inFlight.delete(key);updateStatus()}}
- async function authenticate(){if(!config.enabled)throw Error('The online pilot is awaiting authentication and storage setup. Device projects remain available.');const session=await api.session();user=session.user;libraryOwner=user.id;onlineError='';await syncPending(user.id);return user}
+ async function authenticate(){if(!config.enabled)throw Error('The online pilot is awaiting authentication and storage setup. Device projects remain available.');const session=await api.session();if(user?.id!==session.user.id){profileData=null;profileEtag=null}user=session.user;libraryOwner=user.id;onlineError='';await syncPending(user.id);return user}
  async function refreshOnline(kind){onlineItems=[];if(!config.enabled||libraryOwner==='device')return;if(navigator.onLine===false){onlineError='Offline — showing saved copies on this device.';return}try{await authenticate();onlineItems=await api.list(kind)}catch(error){onlineError=error.message}}
  async function ensureRecord(kind,id){let record=await store.read(libraryOwner,kind,id);if(!record){if(libraryOwner==='device')throw Error('Project not found on this device.');const result=await coordinator(libraryOwner).pull(kind,id);if(!result.ok)throw Error('Review the local and online versions first.');record=result.record}return record}
  async function openRecord(record){
   if(record.owner!=='device'&&config.enabled){try{const result=await coordinator(record.owner).pull('project',record.id);if(!result.ok)return showConflict(record);record=result.record}catch(error){onlineError=error.message}}
-  await workspace.open(record.owner,record.id);bootError='';dialog?.close();bridge.render();scheduleSync(record);
+  await workspace.open(record.owner,record.id);bootError='';hidePortal();bridge.render();scheduleSync(record);
  }
  async function download(record){await bridge.download(record.payload,record.name)}
  async function manager(kind='project'){
   if(!store)throw Error('Local project storage is unavailable.');
   show(kind==='project'?'Projects & Account':'Defaults & Templates');const generation=viewGeneration;
-  await refreshOnline(kind);if(generation!==viewGeneration)return;const local=await store.list(libraryOwner,kind,{includeDeleted:true});if(generation!==viewGeneration)return;
+  await refreshOnline(kind);if(generation!==viewGeneration)return;if(user&&libraryOwner!=='device'&&!profileData){const result=await api.profile();profileData=result.profile;profileEtag=result.etag;if(!profileData)return accountDetails(true,result)}const local=await store.list(libraryOwner,kind,{includeDeleted:true});if(generation!==viewGeneration)return;
   note(libraryOwner==='device'?'Projects saved on this device. Sign in to save copies online.':user?.id===libraryOwner?'Signed in as '+user.email:'Saved account copies on this device. Sign in to sync.');
   const offlineNote=el('p',offlineState,'accountNote');offlineNote.id='accountOfflineState';body.append(offlineNote);
   if(!config.enabled)note('Private online pilot: account setup is not enabled yet.');else if(onlineError)note(onlineError);
-  const navigation=toolbar(action('Projects',()=>manager('project')),action('Defaults & Templates',()=>manager('template')),action('On this device',()=>{libraryOwner='device';onlineItems=[];return manager(kind)}));
-  if(config.enabled){navigation.append(action('Connect account',async()=>{await authenticate();await refreshOnline(kind);await manager(kind)}));const signIn=el('a','Sign in','btn');signIn.href=api.loginURL;navigation.append(signIn)}body.append(navigation);
+  const navigation=toolbar(action('On this device',()=>{libraryOwner='device';onlineItems=[];return manager(kind)}));
+  if(config.enabled)navigation.append(action(user?'My account projects':'Connect account',()=>portalEntry()));body.append(navigation);
   if(bootError){showError(bootError);body.append(action('Continue with local project',()=>{bootError='';const url=new URL(location.href);url.searchParams.delete('account');url.searchParams.delete('project');location.replace(url.href)}))}
   body.append(kind==='project'?toolbar(action('New project',()=>newProjectForm()),action('Save a copy of current project',async()=>{const name=projectName(bridge.capture());await workspace.createProject({owner:libraryOwner,name,payload:bridge.capture()});await manager()}),action('Import selected data',()=>transferForm())):toolbar(action('Save current as template',()=>templateForm()),action('Apply a template to current project',()=>transferForm('template'))));
-  if(current().active&&kind==='project')body.append(toolbar(action('Return to local project',async()=>{await workspace.leave();dialog.close();bridge.render()}),action('Save now',async()=>{const record=await workspace.flush();await syncRecord(record);await manager()}),action('Recoveries',()=>recoveryForm(current().active))));
+  if(current().active&&kind==='project')body.append(toolbar(action('Return to local project',async()=>{await workspace.leave();hidePortal();bridge.render()}),action('Save now',async()=>{const record=await workspace.flush();await syncRecord(record);await manager()}),action('Recoveries',()=>recoveryForm(current().active))));
   if(current().conflict){showError(current().error);body.append(toolbar(action('Keep my edits as a new project',async()=>{await workspace.forkEdits();await manager()}),action('Use other tab’s saved project',async()=>{if(confirm('Use the other tab’s version? Your conflicting edits remain in Recoveries.')){await workspace.useStored();await manager()}})))}
   const records=new Map(local.map(r=>[r.id,r]));for(const remote of onlineItems)if(!records.has(remote.id))records.set(remote.id,{...remote,kind,owner:libraryOwner,remoteOnly:true});
   const list=el('div','','accountList');body.append(list);
@@ -83,7 +144,7 @@
   body.append(field('Project name',name),field('Starting template',options));note('This makes a separate project. Future template changes will not alter it.');
   const contents=el('div','','accountReview');body.append(contents);
   const render=()=>{const t=templates.find(t=>t.id===options.value);contents.replaceChildren(el('p',t?'Includes: '+t.payload.areas.map(a=>root.LampyProjectTransfer.AREAS[a]).join(', '):'No starting equipment or saved settings.'))};options.addEventListener('change',render);render();
-  body.append(toolbar(action('Create project',async()=>{if(!name.value.trim())throw Error('Enter a project name.');const template=templates.find(t=>t.id===options.value)?.payload,record=await workspace.createProject({owner:libraryOwner,name:name.value,template});dialog.close();bridge.render();scheduleSync(record)},'btn primary'),action('Cancel',()=>manager())));
+  body.append(toolbar(action('Create project',async()=>{if(!name.value.trim())throw Error('Enter a project name.');const template=templates.find(t=>t.id===options.value)?.payload,record=await workspace.createProject({owner:libraryOwner,name:name.value,template});hidePortal();bridge.render();scheduleSync(record)},'btn primary'),action('Cancel',()=>manager())));
  }
  function areaPicker(allowed=Object.keys(root.LampyProjectTransfer.AREAS),selected=[]){
   const fields=new Map(),list=el('div','','accountAreas');for(const area of allowed){const check=el('input');check.type='checkbox';check.checked=selected.includes(area);list.append(field(root.LampyProjectTransfer.AREAS[area],check));fields.set(area,check)}return {list,selected:()=>[...fields].filter(([,n])=>n.checked).map(([a])=>a)};
@@ -120,11 +181,11 @@
    for(const row of preview.areas){const details=el('details','','accountReviewDetails');details.append(el('summary',row.label+' — inspect changes'));if(!row.changes.length)details.append(el('p','No stored values change.'));for(const change of row.changes){const item=el('section');item.append(el('strong',change.path),el('pre','Current:\n'+change.before+'\n\nAfter applying:\n'+change.after));details.append(item)}body.append(details)}
    const issues=el('ul','','accountReviewIssues');for(const issue of preview.issues)issues.append(el('li',(issue.blocking?'Resolve first: ':'Review: ')+issue.message,issue.blocking?'accountBlocking':''));body.append(issues);
    if(!preview.issues.length)note('No duplicate or linked-data conflicts detected.');
-   const apply=action('Apply reviewed changes',async()=>{await workspace.applyReview(preview,{template});dialog.close();bridge.render();scheduleSync(current().active)},'btn primary');apply.disabled=!preview.canApply;
+   const apply=action('Apply reviewed changes',async()=>{await workspace.applyReview(preview,{template});hidePortal();bridge.render();scheduleSync(current().active)},'btn primary');apply.disabled=!preview.canApply;
    body.append(toolbar(apply,action('Back',()=>transferForm(kind,sourceRecord.id)),action('Cancel',()=>manager())));
   }
  }
- async function recoveryForm(record){show('Recovery copies — '+record.name);note('Recovering creates a separate project and keeps the original copy.');const recoveries=await store.recoveries(record.owner,record.kind,record.id);for(const recovery of recoveries){const row=el('section','','accountRecord');row.append(el('span',new Date(recovery.savedAt).toLocaleString()+' · '+recovery.reason),action('Open as new project',async()=>{await workspace.createProject({owner:record.owner,name:record.name+' — recovered',payload:recovery.payload});dialog.close();bridge.render()}),action('Download',()=>bridge.download(recovery.payload,record.name+' — recovered')));body.append(row)}if(!recoveries.length)note('No recovery copies are needed yet.')}
+ async function recoveryForm(record){show('Recovery copies — '+record.name);note('Recovering creates a separate project and keeps the original copy.');const recoveries=await store.recoveries(record.owner,record.kind,record.id);for(const recovery of recoveries){const row=el('section','','accountRecord');row.append(el('span',new Date(recovery.savedAt).toLocaleString()+' · '+recovery.reason),action('Open as new project',async()=>{await workspace.createProject({owner:record.owner,name:record.name+' — recovered',payload:recovery.payload});hidePortal();bridge.render()}),action('Download',()=>bridge.download(recovery.payload,record.name+' — recovered')));body.append(row)}if(!recoveries.length)note('No recovery copies are needed yet.')}
  async function showConflict(record){
   const kind=record.kind,isActive=()=>kind==='project'&&current().active?.id===record.id&&current().active.owner===record.owner;
   if(isActive())await workspace.flush();record=await store.read(record.owner,kind,record.id);
@@ -159,6 +220,8 @@
   document.addEventListener('visibilitychange',()=>{if(document.hidden&&current().active)workspace.flush().catch(error=>{onlineError=error.message;updateStatus()})});
   const url=new URL(location.href),owner=url.searchParams.get('account'),id=url.searchParams.get('project');
   if(owner&&id){libraryOwner=owner;try{await workspace.open(owner,id,{skipFlush:true});bridge.render();scheduleSync(current().active)}catch(error){bootError=error.message;await manager()}}
+  if(config.enabled&&(!owner||!id||portalRequested())){if(portalRequested()==='signin')signInPage();else await portalEntry()}
+  window.addEventListener('beforeunload',event=>{if(profileDirty){event.preventDefault();event.returnValue=''}});root.LampySidebar?.refresh();
  }
  function setOfflineState(text){offlineState=text;const node=document.getElementById('accountOfflineState');if(node)node.textContent=text}
  async function prepareOffline(){
@@ -170,6 +233,6 @@
   const ready=()=>setOfflineState('App available offline. Detailed fixture data and images are available after you have opened them.');
   if(registration.active)ready();else {const worker=registration.installing||registration.waiting;if(worker)worker.addEventListener('statechange',()=>{if(worker.state==='activated')ready();else if(worker.state==='redundant')setOfflineState('Offline app setup did not finish. Reconnect and reopen the app to retry.')})}
  }
- const opening=new URLSearchParams(location.search).has('project')?el('div','Opening saved project…','accountBootScreen'):null;if(opening)document.body.append(opening);
- root.LampyAccounts={setup:async value=>{try{await setup(value)}finally{opening?.remove()}},show:()=>manager(),newProject:()=>newProjectForm(),importFile:async payload=>{const record=await workspace.createProject({owner:current().active?.owner||libraryOwner,name:projectName(payload),payload});bridge.render();scheduleSync(record)},get active(){return current().active},get applying(){return current().applying},get enabled(){return !!workspace},markDirty:()=>workspace?.markDirty(),queue:payload=>workspace?.queue(payload),flush:()=>workspace?.flush(),hasUnsaved:()=>workspace?.hasUnsaved()||false,replace:payload=>workspace.replace(payload),metadata:()=>workspace?.metadata()||{},saveError:error=>workspace?.saveError(error),error:error=>{onlineError=error.message||String(error);updateStatus();if(dialog?.open)showError(onlineError)}};
+ const opening=el('div','Opening Lampy Paperwork…','accountBootScreen');if(opening)document.body.append(opening);
+ root.LampyAccounts={setup:async value=>{try{await setup(value)}finally{opening?.remove()}},showAccount:()=>portalEntry(),leavePortal:()=>!document.body.classList.contains('accountPortalOpen')||hidePortal(),show:()=>manager(),newProject:()=>newProjectForm(),importFile:async payload=>{const record=await workspace.createProject({owner:current().active?.owner||libraryOwner,name:projectName(payload),payload});bridge.render();scheduleSync(record)},get portalOpen(){return document.body.classList.contains('accountPortalOpen')},get active(){return current().active},get applying(){return current().applying},get enabled(){return !!workspace},markDirty:()=>workspace?.markDirty(),queue:payload=>workspace?.queue(payload),flush:()=>workspace?.flush(),hasUnsaved:()=>workspace?.hasUnsaved()||false,replace:payload=>workspace.replace(payload),metadata:()=>workspace?.metadata()||{},saveError:error=>workspace?.saveError(error),error:error=>{onlineError=error.message||String(error);updateStatus();if(dialog&&!dialog.hidden)showError(onlineError)}};
 })(globalThis);

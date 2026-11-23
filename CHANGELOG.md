@@ -1,3 +1,10 @@
+## V60 — Account portal
+
+- Add Account below Menu in the sidebar. Open a normal account page with Projects, Defaults & Templates and Account Details.
+- Add email sign-in and verified-email sign-up with name, company, phone, job role, county, country and referral source. Keep private profiles separate from gig paperwork.
+- Protect profile saves against competing edits and retain entries after failures. Preserve exact storage versions when CDN compression changes HTTP ETags.
+- Keep public V58.4 available while the account pilot is tested. Sharing gig paperwork remains a future addition.
+
 ## V59 — Private account pilot
 
 - Add separate saved project workspaces with complete local snapshots, guarded concurrent editing and recovery copies.
