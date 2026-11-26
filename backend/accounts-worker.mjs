@@ -64,6 +64,15 @@ export function createHandler({fetcher=globalThis.fetch}={}){return async functi
   const url=new URL(request.url),origin=request.headers.get('Origin'),allowed=(env.ALLOWED_ORIGINS||'').split(',').map(x=>x.trim()).filter(Boolean);
   if(origin&&!allowed.includes(origin))deny(403,'Origin is not allowed.');
   if(origin)cors={'Access-Control-Allow-Origin':origin,'Access-Control-Allow-Credentials':'true','Access-Control-Expose-Headers':'ETag','Vary':'Origin'};
+  // Public logout callback only: no identity, storage access or caller-supplied
+  // redirect. Access must leave only this exact callback path public.
+  if(url.pathname==='/signed-out'){
+   if(request.method!=='GET')deny(405,'Method or route is not supported.');
+   const destination=new URL(env.APP_URL);
+   if(destination.protocol!=='https:'||destination.username||destination.password||!allowed.includes(destination.origin))deny(503,'Invalid account destination.');
+   destination.search='';destination.hash='';destination.searchParams.set('portal','signin');
+   return new Response(null,{status:303,headers:{Location:destination.href,'Cache-Control':'no-store','Referrer-Policy':'no-referrer'}});
+  }
   if(request.method==='OPTIONS')return new Response(null,{status:204,headers:{...cors,'Access-Control-Allow-Methods':'GET, PUT, OPTIONS','Access-Control-Allow-Headers':'Content-Type, If-Match, If-None-Match, X-Lampy-Request','Access-Control-Max-Age':'600'}});
   const user=await identity(request,env,fetcher);
   const prefix=env.API_PREFIX||'/paperwork/account-api';
