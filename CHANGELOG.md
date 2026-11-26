@@ -1,3 +1,9 @@
+## V60.5 — Readable Fixture Patch pagination
+
+- Start every fixture group on a new PDF page.
+- Continue large groups across additional pages with repeated headings and column headers, preserving full width and the same text scale throughout the group.
+- Remove height-based group shrinking so adding rows cannot reduce the entire table’s font size.
+
 ## V60.4 — Welcome message cache refresh
 
 - Version the welcome-message request so an older active service worker cannot return previous release announcements after the page updates.

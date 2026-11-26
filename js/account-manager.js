@@ -21,7 +21,7 @@
   document.title=title+' · Lampy Paperwork';
   if(!dialog){dialog=el('main','','accountManager');dialog.id='accountManager';dialog.hidden=true;document.querySelector('.appShell').before(dialog)}
   const header=el('div','','accountManagerHeader'),heading=el('h1',title);heading.id='accountManagerHeading';dialog.setAttribute('aria-labelledby',heading.id);
-  const brand=el('div','','accountBrand');brand.append(el('strong','Lampy Paperwork'),el('span','Account portal · V60.4'));
+  const brand=el('div','','accountBrand');brand.append(el('strong','Lampy Paperwork'),el('span','Account portal · V60.5'));
   const controls=toolbar();
   controls.append(action(current().active?'Back to project':'Continue on this device',()=>{if(bootError)throw Error('Choose a project or continue with the local project first.');if(profileDirty&&!confirm('Leave without saving your account details?'))return;profileDirty=false;hidePortal()}));
   if(user)controls.append(action('Sign out',async()=>{if(profileDirty&&!confirm('Leave without saving your account details?'))return;await workspace.flush();profileDirty=false;for(const timer of syncTimers.values())clearTimeout(timer);syncTimers.clear();await api.signOut();user=null;libraryOwner='device';onlineItems=[];const url=new URL(location.href);url.search='?portal=signin';url.hash='';history.replaceState(null,'',url);signInPage()}));

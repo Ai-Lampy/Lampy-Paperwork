@@ -2,7 +2,7 @@
 'use strict';
 const PREFIX='lampy-paperwork-offline:'+new URL(self.registration.scope).pathname+':';
 const MANIFEST_URL=new URL('offline-manifest.json',self.registration.scope).href;
-const VERSION='60.4',CACHE=PREFIX+VERSION+':shell-1';
+const VERSION='60.5',CACHE=PREFIX+VERSION+':shell-1';
 async function hash(bytes){return Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),v=>v.toString(16).padStart(2,'0')).join('')}
 async function manifest(){const cache=await caches.open(CACHE),response=await cache.match(MANIFEST_URL);return response?response.json():null}
 async function network(request){try{return await fetch(request)}catch{return new Response('This asset is not available offline.',{status:503,headers:{'Content-Type':'text/plain'}})}}
