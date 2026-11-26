@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="Lampy Paperwork — browser-based lighting paperwork, fixture patch, power, network, rack and MVR tools." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111'/%3E%3Cpath d='M21 9h22v8l-5 9v9h-4v20h-4V35h-4v-9l-5-9z' fill='%23fff'/%3E%3C/svg%3E" />
-<title>Lampy Paperwork V60.1</title>
+<title>Lampy Paperwork V60.2</title>
 <style>
 :root{--label-w:18mm;--label-h:34mm;--label-gap:0.5mm;--gap-y:2mm;--radius:3mm;--border:1mm;--border-col:#ffffff;--front-aux-w:18mm;--front-aux-h:34mm;--front-output-w:72mm;--front-output-h:34mm;--rear-soca-w:70mm;--rear-soca-h:50mm;--rear-aux-w:85mm;--rear-aux-h:30mm;--rear-aux-gap:5mm;--rear-output-w:90mm;--rear-output-h:60mm;--top-size:18pt;--bottom-size:14pt;--top-align:center;--bottom-align:center;--top-v-align:center;--bottom-v-align:center;--top-font:Cochin,'Times New Roman',Times,serif;--bottom-font:Cochin,'Times New Roman',Times,serif;--top-weight:700;--bottom-weight:700;--top-transform:none;--bottom-transform:none;--top-text-align:center;--bottom-text-align:center;--app-font:Arial,Helvetica,sans-serif;--project-header-font:Arial,Helvetica,sans-serif;--project-subheader-font:Arial,Helvetica,sans-serif;--project-body-font:Arial,Helvetica,sans-serif}
 *{box-sizing:border-box}body{margin:0;font-family:var(--project-body-font);background:#f6f7f9;color:#111}h1{margin:0;font-size:28px;font-family:var(--project-header-font)}h2{font-family:var(--project-header-font)}h3,h4{font-family:var(--project-subheader-font)}h2,h3{margin:0 0 12px}button,input,select,textarea{font-style:inherit;font-variant-caps:inherit;font-weight:inherit;font-width:inherit;font-size:inherit;line-height:inherit;font-family:inherit;font-size-adjust:inherit;font-kerning:inherit;font-variant-alternates:inherit;font-variant-ligatures:inherit;font-variant-numeric:inherit;font-variant-east-asian:inherit;font-variant-position:inherit;font-variant-emoji:inherit;font-feature-settings:inherit;font-optical-sizing:inherit;font-variation-settings:inherit}.reportIssueBtn{border:2px solid #111;background:#fff;color:#111;border-radius:60px;padding:8px 8px;font-weight:900;text-decoration:none;white-space:nowrap}.reportIssueBtn:hover{background:#111;color:#fff}.btn{border:2px solid #000;background:rgb(217, 217, 217);border-radius:7px;padding:10px 12px;cursor:pointer}.btn:hover{background:#f7f9fc}.btn.primary{background:#00a61d;color:#fff;border:2px solid #000;font-weight:700}.btn.danger{color:#b42318}.btn.add{font-weight:800;font-size:14px;line-height:1;padding:8px;background:#00a61d;color:#fff;border:2px solid #000}.gear{font-size:24px;border:1px solid #d9dee7;background:#fff;border-radius:999px;width:44px;height:44px;cursor:pointer}.gear:hover{background:#f7f9fc}.tourLogoSlot{display:flex;align-items:center;justify-content:center;width:165px;min-width:0;max-width:100%}.tourLogo{display:block;max-width:160px;max-height:54px;object-fit:contain}.tourLogoExport{position:absolute;top:5mm;right:5mm;z-index:3}.tourLogoUploadPreview{border:1px dashed #cfd6e1;border-radius:8px;background:#fff;min-height:130px;display:flex;align-items:center;justify-content:center;padding:14px}.tourLogoUploadPreview img{max-width:260px;max-height:120px;object-fit:contain}.logoActions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}.menuButton{position:fixed;right:18px;top:18px;z-index:18;border:1px solid #d9dee7;background:#111;color:#fff;border-radius:999px;width:46px;height:46px;font-size:24px;font-weight:900;cursor:pointer;box-shadow:0 10px 28px rgba(16,24,40,.18)}.menuButton:hover{background:#2a2a2a}.actionSidebar{position:fixed;right:18px;top:74px;width:min(260px,calc(100vw - 36px));z-index:17;border:1px solid #dfe3ea;border-radius:10px;background:#fff;box-shadow:0 18px 48px rgba(16,24,40,.22);padding:12px;transform:translateX(calc(100% + 28px));transition:transform .18s ease}.actionMenuOpen .actionSidebar{transform:translateX(0)}.actionSidebar h2{font-size:15px;margin:0 0 10px}.actionSidebar .btn{width:100%;margin:0 0 8px;text-align:left;font-weight:800}
@@ -1129,12 +1129,12 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 </style>
 <style id="dynamicPrintPageStyle">@page{size:A4 landscape;margin:5mm}
 </style>
-<link rel="stylesheet" href="js/app-sidebar.css?v=60.1">
-<link rel="stylesheet" href="js/account-manager.css?v=60.1">
-<script src="js/patch-pdf-front-page.js?v=60.1"></script>
-<script src="js/loom-pdf.js?v=60.1"></script>
-<script src="js/loom-colours.js?v=60.1"></script>
-<script src="js/app-sidebar.js?v=60.1"></script>
+<link rel="stylesheet" href="js/app-sidebar.css?v=60.2">
+<link rel="stylesheet" href="js/account-manager.css?v=60.2">
+<script src="js/patch-pdf-front-page.js?v=60.2"></script>
+<script src="js/loom-pdf.js?v=60.2"></script>
+<script src="js/loom-colours.js?v=60.2"></script>
+<script src="js/app-sidebar.js?v=60.2"></script>
 </head>
 <body>
 <header class="topHeader"><div class="top"><div id="projectHeaderLogoSlot" class="topLogoGroup"></div><div class="topTitle"><h1 id="appTitle">Untitled Project</h1></div><div class="topActions"><div id="tourLogoSlot" class="tourLogoSlot"></div><div class="projectErrorsControl" id="projectErrorsControl" hidden><button type="button" class="reportIssueBtn" id="projectErrorsButton" aria-haspopup="menu" aria-expanded="false" aria-controls="projectErrorsMenu" onclick="toggleProjectErrorsMenu()">Errors<span id="projectErrorsBadge" class="projectErrorsBadge" hidden></span></button><div id="projectErrorsMenu" class="projectErrorsMenu" role="menu" hidden></div></div></div></div>
@@ -1213,27 +1213,27 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 <div id="positionPdfModal" class="modal hidden"><div class="modalCard" style="width:min(1200px,100%);"><div class="modalHead"><h2>Position Summary Export</h2><button class="close" onclick="closePositionSummaryPreview()">×</button></div><div class="exportControls"><div class="ctl"><label>Paper Size</label><select id="positionPdfPaperSize"><option value="A4">A4</option><option value="A3">A3</option><option value="A2">A2</option><option value="A1">A1</option><option value="A0">A0</option></select></div><div class="ctl"><label>Orientation</label><select id="positionPdfOrientation"><option value="landscape">Landscape</option><option value="portrait">Portrait</option></select></div><div class="ctl" data-pdf-preview-dpi-control><label>Export DPI</label><select data-pdf-preview-dpi onchange="updatePdfPreviewDpi(this)"><option value="150">150 DPI</option><option value="300" selected>300 DPI</option><option value="450">450 DPI</option></select></div><div class="ctl"><label>Zoom</label><div class="zoomControls"><button class="btn" type="button" data-position-pdf-zoom="fit">Fit</button><button class="btn" type="button" data-position-pdf-zoom="0.5">50%</button><button class="btn" type="button" data-position-pdf-zoom="0.75">75%</button><button class="btn" type="button" data-position-pdf-zoom="1">100%</button><button class="btn" type="button" data-position-pdf-zoom="1.25">125%</button></div></div><div class="ctl"><label>Layout</label><select id="positionPdfLayout" onchange="updatePositionSummaryLayout(this.value)"><option value="rectangles">Rectangles</option><option value="boxes">Boxes</option></select></div><div class="ctl"><label>Columns</label><input id="positionPdfColumns" type="number" min="1" max="8" value="2" onchange="updatePositionSummaryGrid()"></div><div class="ctl"><label>Rows</label><input id="positionPdfRows" type="number" min="1" max="12" value="6" onchange="updatePositionSummaryGrid()"></div><div class="ctl"><button class="btn primary" type="button" onclick="downloadPositionSummary()">Export to PDF</button></div><div class="ctl" data-pdf-logo-preview-controls></div><div class="hint" id="positionPdfInfo"></div></div><div class="pdfPageStage"><div id="positionPdfPages"></div></div></div></div>
 <aside id="distroSettingsModal" class="frontEditorPane hidden"><div class="frontEditorHead"><h2>Add Distro</h2><button class="close" type="button" onclick="closeDistroSettings()">×</button></div><div class="frontEditorBody"><div id="distroCards"></div></div></aside>
 <aside id="singleDistroSettingsModal" class="frontEditorPane hidden"><div class="frontEditorHead"><h2 id="singleDistroSettingsTitle">Distro Settings</h2><button class="close" onclick="closeSingleDistroSettings()">×</button></div><div id="singleDistroSettingsBody" class="frontEditorBody"></div></aside>
-<script src="js/distro-catalogue.js?v=60.1"></script>
-<script src="js/cable-catalogue.js?v=60.1"></script>
-<script src="js/truck-pack.js?v=60.1"></script>
-<script src="js/truck-pack-view.js?v=60.1"></script>
-<link rel="stylesheet" href="js/truck-pack.css?v=60.1">
-<script src="js/project-core.js?v=60.1"></script>
-<script src="js/account-project-store.js?v=60.1"></script>
-<script src="js/account-sync.js?v=60.1"></script>
-<script src="js/project-transfer.js?v=60.1"></script>
-<script src="js/account-workspace.js?v=60.1"></script>
-<script src="js/account-manager.js?v=60.1"></script>
+<script src="js/distro-catalogue.js?v=60.2"></script>
+<script src="js/cable-catalogue.js?v=60.2"></script>
+<script src="js/truck-pack.js?v=60.2"></script>
+<script src="js/truck-pack-view.js?v=60.2"></script>
+<link rel="stylesheet" href="js/truck-pack.css?v=60.2">
+<script src="js/project-core.js?v=60.2"></script>
+<script src="js/account-project-store.js?v=60.2"></script>
+<script src="js/account-sync.js?v=60.2"></script>
+<script src="js/project-transfer.js?v=60.2"></script>
+<script src="js/account-workspace.js?v=60.2"></script>
+<script src="js/account-manager.js?v=60.2"></script>
 
-<script src="js/archive.js?v=60.1"></script>
-<script src="js/ui-support.js?v=60.1" defer></script>
-<script src="js/patch-address-review.js?v=60.1" defer></script>
-<script src="js/patch-history.js?v=60.1"></script>
-<script src="js/pdf-filenames.js?v=60.1"></script>
-<script src="js/app-updates.js?v=60.1"></script>
+<script src="js/archive.js?v=60.2"></script>
+<script src="js/ui-support.js?v=60.2" defer></script>
+<script src="js/patch-address-review.js?v=60.2" defer></script>
+<script src="js/patch-history.js?v=60.2"></script>
+<script src="js/pdf-filenames.js?v=60.2"></script>
+<script src="js/app-updates.js?v=60.2"></script>
 <script>
 'use strict';
-const VERSION='60.1';
+const VERSION='60.2';
 const AUTOSAVE_DELAY=700;
 const BACKGROUND_VALIDATION_DELAY=180;
 const DEFAULT_FONT="Cochin,'Times New Roman',Times,serif";
@@ -1486,7 +1486,7 @@ function repoBasePath(){if(typeof document!=='undefined'&&document.querySelector
 function bundledAssetUrl(path){const source=String(path||'').trim();if(!source||/^(?:data:|blob:|https?:|file:)/i.test(source))return source;const clean=source.replace(/^\/+/,'');try{if(location.protocol==='http:'||location.protocol==='https:')return new URL(repoBasePath()+clean,location.origin).href;return new URL(clean,document.baseURI).href}catch{return source}}
 function jsonCandidateUrls(file){const clean=String(file||'').replace(/^\/+/,'');const name=clean.split('/').pop(),rel=clean.startsWith('json/')?clean:'json/'+clean;const urls=[new URL(clean,document.baseURI).href];if(location.protocol==='http:'||location.protocol==='https:'){const base=repoBasePath();urls.push(new URL(base+rel,location.origin).href,new URL(base+'json/'+name,location.origin).href,new URL(base+clean,location.origin).href);if(location.hostname.endsWith('github.io'))urls.push(new URL('/Lampy-Paperwork/'+rel,location.origin).href,new URL('/Lampy-Paperwork/'+name,location.origin).href)}urls.push(new URL(rel,document.baseURI).href,new URL('json/'+name,document.baseURI).href,new URL('../'+rel,document.baseURI).href,new URL('../../'+rel,document.baseURI).href,new URL(clean,document.baseURI).href);return [...new Set(urls)]}
 async function fetchJSONWithFallback(file){let lastError=null;for(const url of jsonCandidateUrls(file)){try{const res=await fetch(url,{cache:'no-cache'});if(!res.ok)throw new Error('HTTP '+res.status);return await res.json()}catch(e){lastError=e}}throw lastError||new Error('Could not load '+file)}
-function fallbackWelcomeMessage(){return {"title":"Welcome to Lampy Paperwork V60","paragraphs":["Create and manage your show paperwork in one browser workspace: Fixture Patch, Power, Control, Network, Rack Layout, Looms, Truck Pack and Labels.","V60 adds Account below Menu in the sidebar, a dedicated account page, email sign-in and sign-up, and private profile details. Manage your projects and templates in the account portal. Account details remain separate from project contacts. Sharing gig paperwork is planned for a future release.","V59 introduces the private account pilot: separate saved projects, offline project copies, reviewed imports, and personal defaults and templates. Existing projects only receive template changes when you review and apply them. Online account access is restricted during testing.","V58 opens Project Settings on Project Info, with an icon-and-name toolbar for switching settings pages. Project Owner details are now together on Project Info.","V57 adds Truck Pack: import case and truss inventory, choose preset or custom trailers, and arrange loads using independent 2D and 3D views. Packs, case details and truck details are saved with your project.","V56 uses stored fixture data and fixture images. Library GDTFs are no longer embedded in MVR exports; matching GDTFs imported with an MVR can be retained for export. Fixture Information shows the fixture image and mode/channel information.","New: page-specific Help. Look for the circled question mark above Menu at the bottom of the sidebar. Press it on any page for guidance about that page.","The walk-through is temporarily disabled. Use Help whenever you need guidance.","Open Lampy Paperwork at:","https://ailampy.com/paperwork/","Questions, feedback or support: info@ailampy.com","Lampy Paperwork remains under active development. Check your paperwork before use and download regular project-file backups."]}}
+function fallbackWelcomeMessage(){return {"title":"Welcome to Lampy Paperwork V60","paragraphs":["Create and manage your lighting, power, control, truck pack and label paperwork in one browser workspace.","V60 adds an account page for projects, templates and profile details. Public account registration is coming soon; you can continue using the app on this device.","For page-specific guidance, select the question mark above Menu in the sidebar.","Check your paperwork before use and download regular project backups.","https://ailampy.com/paperwork/","Questions or feedback: info@ailampy.com"]}}
 
 function welcomeParagraphMarkup(value){const text=String(value);if(text==='https://ailampy.com/paperwork/')return '<p><a href="https://ailampy.com/paperwork/" target="_blank" rel="noopener noreferrer">ailampy.com/paperwork/</a></p>';return '<p>'+escapeHtml(text).replace('info@ailampy.com','<a href="mailto:info@ailampy.com">info@ailampy.com</a>')+'</p>'}
 function welcomeHelpMarkup(){return '<section class="welcomeHelpCallout" aria-label="New page help"><span class="welcomeHelpArrow" aria-hidden="true">➜</span><button type="button" class="welcomeHelpButton" id="welcomeOpenHelp" aria-haspopup="dialog">'+LampySidebar.iconMarkup('help')+'<span>Open Help</span></button><p><strong>New: Help for every page</strong><br>Find this circled question mark above Menu at the bottom of the sidebar.</p></section>'}

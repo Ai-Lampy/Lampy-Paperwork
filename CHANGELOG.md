@@ -1,3 +1,9 @@
+## V60.2 — Home startup and shorter welcome
+
+- Shorten the welcome message to current essentials, Help, support and project backups. Remove historical release summaries and obsolete pilot information.
+- Keep the built-in fallback identical to the welcome JSON.
+- Open normal app loads on Home instead of automatically opening the account portal. Preserve explicit account links and the login page after logout.
+
 ## V60.1 — Account sign-out and registration notice
 
 - Return to the Lampy sign-in page after Cloudflare logout using a fixed public callback. Preserve local project copies and flush pending edits before signing out.

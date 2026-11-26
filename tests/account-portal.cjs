@@ -46,5 +46,21 @@ async function run(){
  await find(portal.panel,'Sign out').listeners.click();
  assert.equal(flushCount,2);assert.equal(destinations.length,1,'cancel preserves unsaved profile edits');
  console.log('PASS: account portal registration notice, sign-in link, logout save ordering, failed-save and cancellation guards.');
+
+ // Run real startup with enabled online accounts. Normal loads must not make
+ // authentication requests or cover Home with the portal; explicit routes do.
+ for(const query of ['', '?portal=signin', '?portal=details', '?account=device&project=saved']){
+  let pageURL='https://ailampy.com/paperwork/'+query,authCalls=0,opened=null;
+  const classes=new Set(),doc={body:new Element('body'),createElement:tag=>new Element(tag),querySelector:()=>new Element('div'),getElementById:()=>null,addEventListener(){}};
+  doc.body.classList={add:name=>classes.add(name),remove:name=>classes.delete(name),contains:name=>classes.has(name)};
+  const startup=vm.createContext({document:doc,URL,URLSearchParams,AbortSignal,navigator:{onLine:true},window:{addEventListener(){}},location:{get href(){return pageURL},get search(){return new URL(pageURL).search}},history:{replaceState:(_state,_title,url)=>{pageURL=url.href}},fetch:async()=>({ok:true,json:async()=>({enabled:true})}),LampyProjectStore:{open:async()=>({})},LampyAccountSync:{client:()=>({...api,session:async()=>{authCalls++;throw Error('Sign in required')}})},LampyAccountWorkspace:{create:()=>({state:()=>({active:null}),open:async(owner,id)=>{opened={owner,id}}})}});
+  vm.runInContext(source,startup);
+  await startup.LampyAccounts.setup({render(){}});
+  assert.equal(classes.has('accountPortalOpen'),query.includes('portal='),query||'Normal load stays on Home');
+  assert.equal(authCalls,query==='?portal=details'?1:0);
+  if(query.includes('account='))assert.deepEqual(opened,{owner:'device',id:'saved'},'saved project links still open');
+  if(!query){await startup.LampyAccounts.showAccount();assert.equal(authCalls,1);assert(classes.has('accountPortalOpen'),'Account navigation still opens sign-in');}
+ }
+ console.log('PASS: normal startup keeps Home, explicit account/logout links open the portal, and saved project links remain intact.');
 }
 run().catch(error=>{console.error(error);process.exitCode=1});
