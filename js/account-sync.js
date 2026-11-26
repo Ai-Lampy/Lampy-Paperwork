@@ -61,7 +61,11 @@
   }
   async function profile(){return (await request('profile')).json()}
   async function saveProfile(data,etag){return (await request('profile',{method:'PUT',headers:{'Content-Type':'application/json',...(etag?{'If-Match':etag}:{'If-None-Match':'*'})},body:JSON.stringify(data)})).json()}
-  return {session,list,manifest,download,upload,profile,saveProfile,loginURL:new URL('login',base).href,logoutURL:new URL('/cdn-cgi/access/logout',base).href};
+  // Access accepts returnTo only on its own application domains. The public
+  // callback redirects to the configured Lampy login page after session logout.
+  const logout=new URL('/cdn-cgi/access/logout',base);
+  logout.searchParams.set('returnTo',new URL('/signed-out',base).href);
+  return {session,list,manifest,download,upload,profile,saveProfile,loginURL:new URL('login',base).href,logoutURL:logout.href};
  }
  function coordinator({store,api,owner,onChange=()=>{}}){
   async function checkIdentity(){const data=await api.session();if(data.user.id!==owner)throw new AccountError('This device project belongs to a different signed-in account.',403);return data.user}

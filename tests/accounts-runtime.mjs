@@ -23,6 +23,10 @@ const mf=new Miniflare({rootPath:directory,modules:true,scriptPath:fileURLToPath
 }});
 try{
  const request=(route,options={})=>mf.dispatchFetch(origin+prefix+'/'+route,options);
+ const signedOut=await mf.dispatchFetch(origin+'/signed-out?returnTo=https://attacker.invalid/',{redirect:'manual'});
+ assert.equal(signedOut.status,303);
+ assert.equal(signedOut.headers.get('Location'),origin+'/paperwork/?portal=signin');
+ assert.equal(signedOut.headers.get('Cache-Control'),'no-store');
  assert.equal((await request('session')).status,401);
  assert.equal((await request('session',{headers:{'Cf-Access-Jwt-Assertion':await token({email:'someone@example.test'})}})).status,403);
  assert.equal((await request('session',{headers:{'Cf-Access-Jwt-Assertion':await token({exp:1})}})).status,401);

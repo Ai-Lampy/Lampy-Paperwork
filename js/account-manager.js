@@ -21,7 +21,7 @@
   document.title=title+' · Lampy Paperwork';
   if(!dialog){dialog=el('main','','accountManager');dialog.id='accountManager';dialog.hidden=true;document.querySelector('.appShell').before(dialog)}
   const header=el('div','','accountManagerHeader'),heading=el('h1',title);heading.id='accountManagerHeading';dialog.setAttribute('aria-labelledby',heading.id);
-  const brand=el('div','','accountBrand');brand.append(el('strong','Lampy Paperwork'),el('span','Account portal · V60'));
+  const brand=el('div','','accountBrand');brand.append(el('strong','Lampy Paperwork'),el('span','Account portal · V60.1'));
   const controls=toolbar();
   controls.append(action(current().active?'Back to project':'Continue on this device',()=>{if(bootError)throw Error('Choose a project or continue with the local project first.');if(profileDirty&&!confirm('Leave without saving your account details?'))return;profileDirty=false;hidePortal()}));
   if(user)controls.append(action('Sign out',async()=>{if(profileDirty&&!confirm('Leave without saving your account details?'))return;await workspace.flush();profileDirty=false;for(const timer of syncTimers.values())clearTimeout(timer);syncTimers.clear();user=null;location.assign(api.logoutURL)}));
@@ -44,8 +44,8 @@
   show('Sign in');const card=el('section','','accountWelcome');
   card.append(el('p','YOUR PAPERWORK, IN ONE PLACE','accountEyebrow'),el('h3','Ready for your next gig?'),el('p','Sign in to open your projects, save reusable templates and manage your account.'));
   const signIn=el('a','Sign in with email','btn primary');signIn.href=api.loginURL;
-  const signup=el('a','Create your account','btn');signup.href=api.loginURL;
-  card.append(toolbar(signIn,signup),el('p','New here? Verify your email, then complete your sign-up details.','accountNote'),el('p','Online account access is currently limited to the approved account. You can continue using the app on this device.','accountNote'));
+  const signup=action('Create your account',()=>alert('Accounts are coming soon.'));
+  card.append(toolbar(signIn,signup),el('p','Online account access is currently limited to the approved account. You can continue using the app on this device.','accountNote'));
   body.append(card);if(error)showError(error);
   body.append(action('Open projects saved on this device',()=>{libraryOwner='device';return manager()}));
  }

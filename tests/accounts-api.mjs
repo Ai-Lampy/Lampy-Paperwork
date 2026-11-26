@@ -48,6 +48,18 @@ assert.equal((await call('session',{auth:jwt.slice(0,-8)+'12345678'})).status,40
 assert.equal((await call('session',{headers:{Origin:'https://attacker.invalid'}})).status,403);
 const session=await (await call('session')).json();assert.equal(session.user.email,'owner@example.test');assert.equal(session.user.id.length,64);
 assert.equal((await call('login')).headers.get('Location'),env.APP_URL);
+// Logout callback is public but cannot redirect to a caller-selected site or
+// re-open an account project. Other API routes still require verified identity.
+const signedOutRequest=new Request(origin+'/signed-out?returnTo=https://attacker.invalid/&account=old&project=old');
+const signedOut=await handler(signedOutRequest,env);
+assert.equal(signedOut.status,303);
+assert.equal(signedOut.headers.get('Location'),origin+'/paperwork/?portal=signin');
+assert.equal(signedOut.headers.get('Cache-Control'),'no-store');
+assert.equal((await handler(new Request(origin+'/signed-out',{method:'POST'}),env)).status,405);
+assert.equal((await handler(new Request(origin+'/signed-out/'),env)).status,401);
+assert.equal((await handler(signedOutRequest,{...env,APP_URL:'https://attacker.invalid/'})).status,503);
+assert.equal((await handler(signedOutRequest,{...env,APP_URL:origin+'/paperwork/?account=old&project=old#details'})).headers.get('Location'),origin+'/paperwork/?portal=signin');
+assert.equal((await call('profile',{auth:null})).status,401);
 // Profiles are independent of project payloads and derive identity only from Access.
 const signup={schema:1,writeId:crypto.randomUUID(),name:'Account Tester',company:'Example Production',phone:'+44 0000',jobRole:'Lighting technician',county:'Test County',country:'United Kingdom',referral:'Colleague'};
 assert.equal((await (await call('profile')).json()).profile,null);
@@ -102,6 +114,10 @@ console.log('PASS: signed identity, owner isolation, origin/CSRF protection, bou
 
 // Exercise the actual browser transport, local repository and API together.
 const {default:Sync}=await import('../js/account-sync.js');
+const logout=new URL(Sync.client({baseURL:'https://paperwork-api.ailampy.com'+prefix+'/',validate:()=>{}}).logoutURL);
+assert.equal(logout.origin,'https://paperwork-api.ailampy.com');
+assert.equal(logout.pathname,'/cdn-cgi/access/logout');
+assert.equal(logout.searchParams.get('returnTo'),'https://paperwork-api.ailampy.com/signed-out');
 const {default:Store}=await import('../js/account-project-store.js');
 const {default:Core}=await import('../js/project-core.js');
 const {default:Transfer}=await import('../js/project-transfer.js');

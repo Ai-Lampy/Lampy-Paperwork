@@ -1,3 +1,8 @@
+## V60.1 — Account sign-out and registration notice
+
+- Return to the Lampy sign-in page after Cloudflare logout using a fixed public callback. Preserve local project copies and flush pending edits before signing out.
+- Show “Accounts are coming soon” when Create your account is pressed. Keep approved-account sign-in available.
+
 ## V60 — Account portal
 
 - Add Account below Menu in the sidebar. Open a normal account page with Projects, Defaults & Templates and Account Details.
