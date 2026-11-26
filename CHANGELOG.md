@@ -1,3 +1,11 @@
+## V60.3 — In-app email sign-in
+
+- Add a branded AI-Lampy and Lampy Paperwork sign-in page with in-app email/code entry and sign-out. Public account registration remains closed.
+- Keep signed-out Account navigation limited to sign-in; show Sign in/Account labels on sidebar hover.
+- Add restricted Better Auth/D1 email authentication while retaining existing R2 owner identities. Cloudflare setup is required before publishing this release.
+- Remove account promotion from the welcome message and its fallback.
+- Move the service worker source into js/sw.js. The Pages build still emits sw.js at the app root for offline scope.
+
 ## V60.2 — Home startup and shorter welcome
 
 - Shorten the welcome message to current essentials, Help, support and project backups. Remove historical release summaries and obsolete pilot information.

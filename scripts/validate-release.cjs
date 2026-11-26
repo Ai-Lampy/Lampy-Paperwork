@@ -6,7 +6,7 @@ function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.
 const version=html.match(/const VERSION='([^']+)'/)[1];assert(html.includes('<title>Lampy Paperwork V'+version+'</title>'));assert(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8').includes('V'+version));
 for(const match of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)){const src=match[1].match(/src="([^"]+)"/);new vm.Script(src?fs.readFileSync(path.join(root,src[1].split('?')[0]),'utf8'):match[2])}
 assert.equal(JSON.parse(fs.readFileSync(path.join(root,'js/app-version.json'),'utf8')).version,version,'Update metadata must match the app release');
-const workerSource=fs.readFileSync(path.join(root,'sw.js'),'utf8');
+const workerSource=fs.readFileSync(path.join(root,'js/sw.js'),'utf8');
 new vm.Script(workerSource);
 assert.equal(workerSource.match(/const VERSION='([^']+)'/)[1],version,'Offline worker must match the app release');
 const accountConfig=JSON.parse(fs.readFileSync(path.join(root,'js/account-config.json'),'utf8'));

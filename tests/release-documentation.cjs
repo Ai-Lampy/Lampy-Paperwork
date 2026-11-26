@@ -59,3 +59,5 @@ assert(actual.checklist.includes('Production Contacts'));assert(actual.checklist
 assert(!require('node:fs').existsSync(path.join(__dirname,'../info_txt/walkthrough.json')));
 assert(!actual.html.includes('info_txt/walkthrough.json'));
 assert(!actual.html.includes('function fallbackWalkthrough('));
+
+assert(!/account|sign.in|registration/i.test(JSON.stringify(actual.welcome)), 'Restricted accounts must not be promoted in the welcome message');

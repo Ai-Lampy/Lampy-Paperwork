@@ -16,7 +16,7 @@
     const limit=path.includes('/chunks/')?CHUNK_BYTES:2*1024*1024,reader=result.body?.getReader(),parts=[];let length=0;
     if(reader){try{while(true){const {done,value}=await reader.read();if(done)break;length+=value.byteLength;if(length>limit){await reader.cancel();throw new AccountError('The account response exceeds the supported size.')}parts.push(value)}}finally{reader.releaseLock()}}
     const bytes=new Uint8Array(length);let offset=0;for(const part of parts){bytes.set(part,offset);offset+=part.byteLength}
-    if(!result.ok){let message;try{message=JSON.parse(new TextDecoder().decode(bytes)).error}catch{}throw new AccountError(message||'The account service could not complete the request.',result.status)}
+    if(!result.ok){let message;try{{const data=JSON.parse(new TextDecoder().decode(bytes));message=typeof data.error==='string'?data.error:data.message}}catch{}throw new AccountError(message||'The account service could not complete the request.',result.status)}
     return new Response(bytes,{status:result.status,headers:result.headers});
    }catch(error){if(error instanceof AccountError)throw error;throw new AccountError('Online saving is unavailable. Your work remains on this device.')}finally{clearTimeout(timer)}
   }
@@ -61,11 +61,10 @@
   }
   async function profile(){return (await request('profile')).json()}
   async function saveProfile(data,etag){return (await request('profile',{method:'PUT',headers:{'Content-Type':'application/json',...(etag?{'If-Match':etag}:{'If-None-Match':'*'})},body:JSON.stringify(data)})).json()}
-  // Access accepts returnTo only on its own application domains. The public
-  // callback redirects to the configured Lampy login page after session logout.
-  const logout=new URL('/cdn-cgi/access/logout',base);
-  logout.searchParams.set('returnTo',new URL('/signed-out',base).href);
-  return {session,list,manifest,download,upload,profile,saveProfile,loginURL:new URL('login',base).href,logoutURL:logout.href};
+  async function authPost(route,data={}){return (await request('auth/'+route,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})).json()}
+  return {session,list,manifest,download,upload,profile,saveProfile,
+   sendSignInCode:email=>authPost('email-otp/send-verification-otp',{email,type:'sign-in'}),
+   signIn:(email,otp)=>authPost('sign-in/email-otp',{email,otp}),signOut:()=>authPost('sign-out')};
  }
  function coordinator({store,api,owner,onChange=()=>{}}){
   async function checkIdentity(){const data=await api.session();if(data.user.id!==owner)throw new AccountError('This device project belongs to a different signed-in account.',403);return data.user}

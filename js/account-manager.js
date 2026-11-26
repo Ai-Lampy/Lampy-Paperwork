@@ -21,33 +21,53 @@
   document.title=title+' · Lampy Paperwork';
   if(!dialog){dialog=el('main','','accountManager');dialog.id='accountManager';dialog.hidden=true;document.querySelector('.appShell').before(dialog)}
   const header=el('div','','accountManagerHeader'),heading=el('h1',title);heading.id='accountManagerHeading';dialog.setAttribute('aria-labelledby',heading.id);
-  const brand=el('div','','accountBrand');brand.append(el('strong','Lampy Paperwork'),el('span','Account portal · V60.2'));
+  const brand=el('div','','accountBrand');brand.append(el('strong','Lampy Paperwork'),el('span','Account portal · V60.3'));
   const controls=toolbar();
   controls.append(action(current().active?'Back to project':'Continue on this device',()=>{if(bootError)throw Error('Choose a project or continue with the local project first.');if(profileDirty&&!confirm('Leave without saving your account details?'))return;profileDirty=false;hidePortal()}));
-  if(user)controls.append(action('Sign out',async()=>{if(profileDirty&&!confirm('Leave without saving your account details?'))return;await workspace.flush();profileDirty=false;for(const timer of syncTimers.values())clearTimeout(timer);syncTimers.clear();user=null;location.assign(api.logoutURL)}));
+  if(user)controls.append(action('Sign out',async()=>{if(profileDirty&&!confirm('Leave without saving your account details?'))return;await workspace.flush();profileDirty=false;for(const timer of syncTimers.values())clearTimeout(timer);syncTimers.clear();await api.signOut();user=null;libraryOwner='device';onlineItems=[];const url=new URL(location.href);url.search='?portal=signin';url.hash='';history.replaceState(null,'',url);signInPage()}));
   header.append(brand,controls);
   const navigation=el('nav','','accountPortalNav');navigation.setAttribute('aria-label','Account portal');
   for(const [label,run,active] of [['Projects',()=>manager('project'),route==='projects'],['Defaults & Templates',()=>manager('template'),route==='templates'],['Account Details',()=>accountDetails(),route==='details']]){
-   if(!user&&label==='Account Details')continue;
+   if(route==='signin'||(!user&&label==='Account Details'))continue;
    const button=action(label,run);if(active)button.setAttribute('aria-current','page');navigation.append(button);
   }
-  if(!user){const signIn=action('Sign in',()=>signInPage());if(route==='signin')signIn.setAttribute('aria-current','page');navigation.append(signIn)}
+  if(!user&&route!=='signin'){const signIn=action('Sign in',()=>signInPage());if(route==='signin')signIn.setAttribute('aria-current','page');navigation.append(signIn)}
 
-  message=el('p','','accountError');message.setAttribute('role','alert');message.hidden=true;body=el('div','','accountManagerBody');body.append(heading);dialog.replaceChildren(header,navigation,message,body);dialog.hidden=false;heading.tabIndex=-1;heading.focus({preventScroll:true});root.LampySidebar?.refresh();
+  message=el('p','','accountError');message.setAttribute('role','alert');message.hidden=true;body=el('div','','accountManagerBody');body.append(heading);dialog.replaceChildren(header,...(route==='signin'?[]:[navigation]),message,body);dialog.hidden=false;heading.tabIndex=-1;heading.focus({preventScroll:true});root.LampySidebar?.refresh();
  }
  function hidePortal(){
   if(profileDirty&&!confirm('Leave without saving your account details?'))return false;
   profileDirty=false;if(dialog)dialog.hidden=true;document.body.classList.remove('accountPortalOpen');
   const url=new URL(location.href);url.searchParams.delete('portal');history.replaceState(null,'',url);bridge?.render();root.LampySidebar?.refresh();return true;
  }
+ function signInBrand(){
+  const brand=el('div','','accountSignInBrand'),ai=el('div','','accountAILampyBrand'),paperwork=el('div','','accountPaperworkBrand');
+  const aiLogo=el('img');aiLogo.src='images/branding/ai-lampy-logo.png';aiLogo.alt='AI-Lampy';aiLogo.width=260;
+  const appLogo=el('img');appLogo.src='images/branding/lampy-paperwork-logo.png';appLogo.alt='Lampy Paperwork';appLogo.width=330;
+  ai.append(aiLogo);paperwork.append(appLogo);brand.append(ai,paperwork);return brand;
+ }
  function signInPage(error=''){
-  show('Sign in');const card=el('section','','accountWelcome');
-  card.append(el('p','YOUR PAPERWORK, IN ONE PLACE','accountEyebrow'),el('h3','Ready for your next gig?'),el('p','Sign in to open your projects, save reusable templates and manage your account.'));
-  const signIn=el('a','Sign in with email','btn primary');signIn.href=api.loginURL;
-  const signup=action('Create your account',()=>alert('Accounts are coming soon.'));
-  card.append(toolbar(signIn,signup),el('p','Online account access is currently limited to the approved account. You can continue using the app on this device.','accountNote'));
+  show('Sign in');const card=el('section','','accountWelcome accountSignIn'),form=el('form','','accountSignInForm');
+  const email=input();email.type='email';email.name='email';email.autocomplete='username';email.required=true;email.maxLength=254;
+  const submit=el('button','Send sign-in code','btn primary');submit.type='submit';form.append(field('Email address',email),submit);
+  form.addEventListener('submit',async event=>{event.preventDefault();if(!form.reportValidity())return;submit.disabled=true;showError('');
+   try{await api.sendSignInCode(email.value.trim());signInCodePage(email.value.trim())}catch(error){showError(error.message)}finally{submit.disabled=false}
+  });
+  card.append(signInBrand(),el('p','Sign in to Lampy Paperwork.','accountSignInIntro'),form,
+   toolbar(action('Create your account',()=>alert('Accounts are coming soon.'))),
+   el('p','Account access is currently restricted.','accountNote'));
   body.append(card);if(error)showError(error);
-  body.append(action('Open projects saved on this device',()=>{libraryOwner='device';return manager()}));
+ }
+ function signInCodePage(email){
+  show('Sign in');const card=el('section','','accountWelcome accountSignIn'),form=el('form','','accountSignInForm'),code=input();
+  code.type='text';code.name='code';code.autocomplete='one-time-code';code.inputMode='numeric';code.pattern='[0-9]{6}';code.maxLength=6;code.required=true;
+  const submit=el('button','Sign in','btn primary');submit.type='submit';form.append(field('Six-digit sign-in code',code),submit);
+  form.addEventListener('submit',async event=>{event.preventDefault();if(!form.reportValidity())return;submit.disabled=true;showError('');
+   try{await api.signIn(email,code.value.trim());code.value='';await portalEntry()}catch(error){showError(error.status===401?'Email or sign-in code is incorrect.':error.message)}finally{submit.disabled=false}
+  });
+  card.append(signInBrand(),el('p','If '+email+' has an approved account, a code has been sent. Enter it below within 5 minutes.','accountSignInIntro'),form,
+   toolbar(action('Send a new code',async()=>{await api.sendSignInCode(email);code.value='';showError('');const notice=el('p','If this email has an approved account, a new code has been sent.','accountSuccess');card.querySelector('.accountSuccess')?.remove();card.append(notice)}),action('Use a different email',()=>signInPage())));
+  body.append(card);code.focus({preventScroll:true});
  }
  async function portalEntry(){
   if(profileDirty&&!confirm('Leave without saving your account details?'))return;profileDirty=false;
@@ -236,5 +256,5 @@
   if(registration.active)ready();else {const worker=registration.installing||registration.waiting;if(worker)worker.addEventListener('statechange',()=>{if(worker.state==='activated')ready();else if(worker.state==='redundant')setOfflineState('Offline app setup did not finish. Reconnect and reopen the app to retry.')})}
  }
  const opening=el('div','Opening Lampy Paperwork…','accountBootScreen');if(opening)document.body.append(opening);
- root.LampyAccounts={setup:async value=>{try{await setup(value)}finally{opening?.remove()}},showAccount:()=>portalEntry(),leavePortal:()=>!document.body.classList.contains('accountPortalOpen')||hidePortal(),show:()=>manager(),newProject:()=>newProjectForm(),importFile:async payload=>{const record=await workspace.createProject({owner:current().active?.owner||libraryOwner,name:projectName(payload),payload});bridge.render();scheduleSync(record)},get portalOpen(){return document.body.classList.contains('accountPortalOpen')},get active(){return current().active},get applying(){return current().applying},get enabled(){return !!workspace},markDirty:()=>workspace?.markDirty(),queue:payload=>workspace?.queue(payload),flush:()=>workspace?.flush(),hasUnsaved:()=>workspace?.hasUnsaved()||false,replace:payload=>workspace.replace(payload),metadata:()=>workspace?.metadata()||{},saveError:error=>workspace?.saveError(error),error:error=>{onlineError=error.message||String(error);updateStatus();if(dialog&&!dialog.hidden)showError(onlineError)}};
+ root.LampyAccounts={setup:async value=>{try{await setup(value)}finally{opening?.remove()}},showAccount:()=>portalEntry(),leavePortal:()=>!document.body.classList.contains('accountPortalOpen')||hidePortal(),show:()=>manager(),newProject:()=>newProjectForm(),importFile:async payload=>{const record=await workspace.createProject({owner:current().active?.owner||libraryOwner,name:projectName(payload),payload});bridge.render();scheduleSync(record)},get signedIn(){return !!user},get portalOpen(){return document.body.classList.contains('accountPortalOpen')},get active(){return current().active},get applying(){return current().applying},get enabled(){return !!workspace},markDirty:()=>workspace?.markDirty(),queue:payload=>workspace?.queue(payload),flush:()=>workspace?.flush(),hasUnsaved:()=>workspace?.hasUnsaved()||false,replace:payload=>workspace.replace(payload),metadata:()=>workspace?.metadata()||{},saveError:error=>workspace?.saveError(error),error:error=>{onlineError=error.message||String(error);updateStatus();if(dialog&&!dialog.hidden)showError(onlineError)}};
 })(globalThis);

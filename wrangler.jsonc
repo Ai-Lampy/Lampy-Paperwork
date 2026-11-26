@@ -5,7 +5,7 @@
   "compatibility_date": "2026-07-30",
   "workers_dev": false,
   "preview_urls": false,
-  "no_bundle": true,
+  "no_bundle": false,
   "find_additional_modules": false,
   "routes": [
     {
@@ -19,12 +19,40 @@
     "ALLOWED_EMAIL": "mitch@mandrewslighting.com",
     "ALLOWED_ORIGINS": "https://ailampy.com",
     "API_PREFIX": "/paperwork/account-api",
-    "APP_URL": "https://ailampy.com/paperwork/"
+    "APP_URL": "https://ailampy.com/paperwork/",
+    "AUTH_MODE": "email-code",
+    "AUTH_URL": "https://paperwork-api.ailampy.com",
+    "EMAIL_FROM": "accounts@ailampy.com"
   },
   "r2_buckets": [
     {
       "binding": "PROJECTS",
       "bucket_name": "lampy-paperwork-pilot-projects",
+      "remote": false
+    }
+  ],
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "minify": true,
+  "d1_databases": [
+    {
+      "binding": "AUTH_DB",
+      "database_name": "lampy-paperwork-accounts",
+      "database_id": "REPLACE_WITH_D1_DATABASE_ID",
+      "migrations_dir": "backend/migrations",
+      "remote": false
+    }
+  ],
+  "send_email": [
+    {
+      "name": "EMAIL",
+      "allowed_sender_addresses": [
+        "accounts@ailampy.com"
+      ],
+      "allowed_destination_addresses": [
+        "mitch@mandrewslighting.com"
+      ],
       "remote": false
     }
   ]

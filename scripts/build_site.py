@@ -14,7 +14,7 @@ def copy_runtime(source_root, destination):
         source = source_root / name
         target = destination / name
         if source.is_dir():
-            shutil.copytree(source, target, ignore=shutil.ignore_patterns('.DS_Store', '*.md'))
+            shutil.copytree(source, target, ignore=shutil.ignore_patterns('.DS_Store', '*.md', 'sw.js'))
         else:
             shutil.copy2(source, target)
 
@@ -24,6 +24,7 @@ def offline_manifest(destination, app_dir, shared_root):
     shell = app_dir / 'offline-shell.txt'
     shutil.copy2(app_dir / 'index.html', shell)
     assets = [shell]
+    assets += [shared_root / "images/branding" / name for name in ("ai-lampy-logo.png", "lampy-paperwork-logo.png")]
     assets += [p for folder in ('js', 'info_txt') for p in (app_dir / folder).rglob('*') if p.is_file()]
     # Catalogue summaries support offline editing. Large detailed fixture definitions
     # and images are cached when used, rather than downloading hundreds of MB at setup.
@@ -33,7 +34,7 @@ def offline_manifest(destination, app_dir, shared_root):
     version = json.loads((app_dir / 'js/app-version.json').read_text())['version']
     manifest = {'version':version, 'sharedBase':os.path.relpath(shared_root, app_dir) + '/', 'assets':entries}
     (app_dir / 'offline-manifest.json').write_text(json.dumps(manifest,separators=(',',':'))+'\n')
-    shutil.copy2(ROOT / 'sw.js', app_dir / 'sw.js')
+    shutil.copy2(ROOT / 'js' / 'sw.js', app_dir / 'sw.js')
 
 def build(destination):
     destination = pathlib.Path(destination).resolve()

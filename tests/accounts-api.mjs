@@ -114,10 +114,6 @@ console.log('PASS: signed identity, owner isolation, origin/CSRF protection, bou
 
 // Exercise the actual browser transport, local repository and API together.
 const {default:Sync}=await import('../js/account-sync.js');
-const logout=new URL(Sync.client({baseURL:'https://paperwork-api.ailampy.com'+prefix+'/',validate:()=>{}}).logoutURL);
-assert.equal(logout.origin,'https://paperwork-api.ailampy.com');
-assert.equal(logout.pathname,'/cdn-cgi/access/logout');
-assert.equal(logout.searchParams.get('returnTo'),'https://paperwork-api.ailampy.com/signed-out');
 const {default:Store}=await import('../js/account-project-store.js');
 const {default:Core}=await import('../js/project-core.js');
 const {default:Transfer}=await import('../js/project-transfer.js');

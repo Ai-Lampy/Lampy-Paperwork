@@ -6,10 +6,13 @@
   "scripts": {
     "test:accounts": "node tests/account-project-store.cjs && node tests/account-workspace.cjs && node tests/project-transfer.cjs && node tests/accounts-api.mjs && node tests/account-portal.cjs && node tests/offline-shell.cjs",
     "test": "node tests/display-regressions.cjs && node tests/release-regressions.cjs && node scripts/validate-release.cjs",
-    "test:accounts:runtime": "node tests/accounts-runtime.mjs"
+    "test:accounts:runtime": "node tests/accounts-runtime.mjs && node tests/email-auth-runtime.mjs"
   },
   "devDependencies": {
+    "better-auth": "1.7.28",
+    "esbuild": "0.28.2",
     "fake-indexeddb": "6.2.4",
-    "miniflare": "^4.20260730.0"
+    "miniflare": "^4.20260730.0",
+    "wrangler": "4.168.0"
   }
 }

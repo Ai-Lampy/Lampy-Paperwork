@@ -1,14 +1,15 @@
 // Run the unmodified Worker in workerd with Miniflare's real R2 binding.
 import assert from 'node:assert/strict';
-import {mkdtemp,rm} from 'node:fs/promises';
+import {mkdtemp,rm,realpath} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {Miniflare} from 'miniflare';
+import {buildWorker} from '../scripts/build-accounts-worker.mjs';
 import Sync from '../js/account-sync.js';
 import Core from '../js/project-core.js';
 import Transfer from '../js/project-transfer.js';
-const directory=await mkdtemp(path.join(tmpdir(),'lampy-worker-test-'));
+const directory=await realpath(await mkdtemp(path.join(tmpdir(),'lampy-worker-test-')));
 const issuer='https://runtime-test.cloudflareaccess.com',origin='https://lampy.example',prefix='/paperwork/account-api';
 const keys=await crypto.subtle.generateKey({name:'RSASSA-PKCS1-v1_5',modulusLength:2048,publicExponent:new Uint8Array([1,0,1]),hash:'SHA-256'},true,['sign','verify']);
 const jwk={...await crypto.subtle.exportKey('jwk',keys.publicKey),kid:'runtime-test',alg:'RS256'};
@@ -18,7 +19,8 @@ async function token(overrides={}){
  return unsigned+'.'+Buffer.from(await crypto.subtle.sign('RSASSA-PKCS1-v1_5',keys.privateKey,new TextEncoder().encode(unsigned))).toString('base64url');
 }
 const jwt=await token();
-const mf=new Miniflare({rootPath:directory,modules:true,scriptPath:fileURLToPath(new URL('../backend/accounts-worker.mjs',import.meta.url)),compatibilityDate:'2026-07-30',cf:false,r2Buckets:['PROJECTS'],bindings:{ACCESS_ISSUER:issuer,ACCESS_AUDIENCE:'accounts',ALLOWED_EMAIL:'owner@example.test',ALLOWED_ORIGINS:origin+',http://127.0.0.1:8790',API_PREFIX:prefix,APP_URL:origin+'/paperwork/'},outboundService:request=>{
+await buildWorker(path.join(directory,'worker.mjs'));
+const mf=new Miniflare({rootPath:directory,modulesRoot:directory,modules:true,scriptPath:path.join(directory,'worker.mjs'),compatibilityFlags:['nodejs_compat'],compatibilityDate:'2026-07-30',cf:false,r2Buckets:['PROJECTS'],bindings:{ACCESS_ISSUER:issuer,ACCESS_AUDIENCE:'accounts',ALLOWED_EMAIL:'owner@example.test',ALLOWED_ORIGINS:origin+',http://127.0.0.1:8790',API_PREFIX:prefix,APP_URL:origin+'/paperwork/'},outboundService:request=>{
  assert.equal(request.url,issuer+'/cdn-cgi/access/certs','Worker must only request its configured signing keys');return Response.json({keys:[jwk]});
 }});
 try{

@@ -116,7 +116,7 @@ assert.equal(declarations(compactPrefix+'.sheetTabMenuHost:has(>.sheetTab.active
 assert.equal(declarations(compactPrefix+'.sheetSubMenu,'+compactPrefix+'.sheetTabMenuHost.menuDismissed .sheetSubMenu').padding,'4px');
 assert.equal(declarations(compactPrefix+'.sheetSubMenu[hidden],'+compactPrefix+'.sheetTabMenuHost.menuDismissed .sheetSubMenu[hidden]').display,'none!important');
 assert.equal(declarations('.appNavigation .sheetTab.active')['border-bottom'],undefined);
-assert(source.includes("closest('[data-sheet-tab],.sheetSubMenu button');if(button)showFlyout(button)"));
+assert(source.includes("closest('[data-sheet-tab],.sheetSubMenu button,.appNavigationAccount');if(button)showFlyout(button)"));
 assert(source.includes(".filter(item=>item.getClientRects().length)"));
 for(const current of ['fixturePatch','network','home']){
  const visible=['fixturePatch','network'].filter(key=>sidebar.subPagesVisible(true,key===current,true));

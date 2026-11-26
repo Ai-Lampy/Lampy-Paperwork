@@ -1,6 +1,7 @@
+import {createEmailAuth} from './email-auth.mjs';
 /* Private account API. Project bytes are streamed in bounded, immutable chunks.
- * Access identity and conditional manifest writes protect every online save.
- * No website sessions, browser-supplied owner IDs or public storage buckets.
+ * Verified identities and conditional manifest writes protect every online save.
+ * Owner IDs never come from a browser field; R2 buckets remain private.
  */
 const CHUNK_BYTES=1024*1024, MAX_BYTES=64*1024*1024, MAX_CHUNKS=64;
 const ID=/^[a-zA-Z0-9_-]{1,100}$/, WRITE_ID=/^[a-f0-9-]{36}$/i, HASH=/^[a-f0-9]{64}$/;
@@ -73,9 +74,31 @@ export function createHandler({fetcher=globalThis.fetch}={}){return async functi
    destination.search='';destination.hash='';destination.searchParams.set('portal','signin');
    return new Response(null,{status:303,headers:{Location:destination.href,'Cache-Control':'no-store','Referrer-Policy':'no-referrer'}});
   }
-  if(request.method==='OPTIONS')return new Response(null,{status:204,headers:{...cors,'Access-Control-Allow-Methods':'GET, PUT, OPTIONS','Access-Control-Allow-Headers':'Content-Type, If-Match, If-None-Match, X-Lampy-Request','Access-Control-Max-Age':'600'}});
-  const user=await identity(request,env,fetcher);
+  if(request.method==='OPTIONS')return new Response(null,{status:204,headers:{...cors,'Access-Control-Allow-Methods':'GET, POST, PUT, OPTIONS','Access-Control-Allow-Headers':'Content-Type, If-Match, If-None-Match, X-Lampy-Request','Access-Control-Max-Age':'600'}});
   const prefix=env.API_PREFIX||'/paperwork/account-api';
+  let user;
+  if(env.AUTH_MODE==='email-code'){
+   const auth=createEmailAuth(env);
+   if(url.pathname.startsWith(prefix+'/auth/')){
+    const route=url.pathname.slice((prefix+'/auth/').length);
+    if(!['sign-in/email-otp','sign-out','email-otp/send-verification-otp'].includes(route)||request.method!=='POST')deny(404,'Not found.');
+    if(!origin||request.headers.get('X-Lampy-Request')!=='1')deny(403,'Missing request protection.');
+    if(!request.headers.get('Content-Type')?.startsWith('application/json'))deny(415,'Use JSON.');
+    const data=await readJSON(request,8192);
+    if(!data||typeof data!=='object'||Array.isArray(data))deny(400,'Invalid JSON.');
+    // Sign-in may only use the provisioned, approved identity.
+    if(route==='sign-in/email-otp'&&(typeof data.email!=='string'||data.email.toLowerCase()!==env.ALLOWED_EMAIL.toLowerCase()))deny(401,'Email or sign-in code is incorrect.');
+    if(route==='email-otp/send-verification-otp'&&data.type!=='sign-in')deny(400,'Only sign-in codes are supported.');
+    if('callbackURL' in data||'redirectTo' in data)deny(400,'Account redirects are not supported.');
+    const response=await auth.handler(new Request(request.url,{method:'POST',headers:request.headers,body:JSON.stringify(data)}));
+    const headers=new Headers(response.headers);for(const [key,value] of Object.entries(cors))headers.set(key,value);headers.set('Cache-Control','no-store');headers.set('Referrer-Policy','no-referrer');
+    return new Response(response.body,{status:response.status,headers});
+   }
+   const session=await auth.api.getSession({headers:request.headers});
+   if(!session||!session.user.emailVerified||!HASH.test(session.user.id)||session.user.email.toLowerCase()!==env.ALLOWED_EMAIL.toLowerCase())deny(401,'Sign in to your account.');
+   user={id:session.user.id,email:session.user.email};
+  }else if(!env.AUTH_MODE||env.AUTH_MODE==='access')user=await identity(request,env,fetcher);
+  else deny(503,'Online accounts are not configured.');
   if(!url.pathname.startsWith(prefix+'/'))deny(404,'Not found.');
   const path=url.pathname.slice(prefix.length+1).split('/');
   if(path.length===1&&path[0]==='session'&&request.method==='GET')return json({user,limits:{chunkBytes:CHUNK_BYTES,maxBytes:MAX_BYTES}},200,cors);

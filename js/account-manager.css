@@ -20,3 +20,18 @@
 .accountWelcome{max-width:680px;margin:24px auto 32px;padding:36px;background:#fff;border:1px solid #d8dce2;border-radius:12px}.accountWelcome h3{font-size:36px;line-height:1.15;letter-spacing:-1px;margin:14px 0}.accountWelcome p{line-height:1.6}.accountWelcome .accountToolbar{margin-top:28px}.accountEyebrow{font-size:11px;font-weight:700;letter-spacing:1.5px;color:#0056d6}
 .accountProfileForm{max-width:850px;padding:24px;background:#fff;border:1px solid #d8dce2;border-radius:10px;margin:24px 0}.accountProfileGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 24px}.accountProfileGrid .accountField{border:0;padding:0;display:flex;flex-direction:column;align-items:stretch;gap:8px;margin:0}.accountProfileGrid .accountField input{width:100%;max-width:none;box-sizing:border-box;min-height:42px}.accountProfileGrid input[readonly]{background:#f0f2f5;color:#596474}.accountProfileForm>.accountToolbar{margin-top:26px}.accountSuccess{color:#17613c;font-weight:600}
 @media(max-width:650px){.accountManagerHeader{padding:16px;gap:8px}.accountPortalNav{padding:10px 16px}.accountManagerBody{padding:22px 16px}.accountProfileGrid{grid-template-columns:1fr}.accountProfileForm,.accountWelcome{padding:20px}.accountWelcome h3{font-size:28px}.accountManager .accountError{margin:12px 16px}.accountRecord .accountToolbar{gap:6px}.accountRecord>.accountToolbar{flex:1 0 100%}}
+
+/* Branded in-app authentication, with no account navigation while signed out. */
+.accountSignIn{max-width:520px;padding:0;overflow:hidden}
+.accountSignInBrand{display:grid;grid-template-columns:minmax(0,1fr)}
+.accountAILampyBrand{background:#202225;padding:28px 32px;display:flex;justify-content:center}
+.accountPaperworkBrand{padding:26px 32px 8px;display:flex;justify-content:center;background:#fff}
+.accountSignInBrand img{max-width:100%;height:auto;object-fit:contain}
+.accountSignInIntro,.accountSignIn>h2,.accountSignIn>p{margin:18px 32px}
+.accountSignInForm{padding:8px 32px 16px;display:flex;flex-direction:column;gap:16px}
+.accountSignInForm .accountField{display:flex;flex-direction:column;align-items:stretch;gap:8px;margin:0}
+.accountSignInForm .accountField input{width:100%;max-width:none;min-height:44px;box-sizing:border-box}
+.accountSignIn>.accountToolbar{margin:4px 32px 18px}
+.accountSignIn>.btn{margin:0 32px 24px}
+.accountSignInForm>.btn{min-height:44px}
+@media(max-width:650px){.accountSignIn{padding:0}.accountSignInForm{padding:8px 20px 16px}.accountSignInIntro,.accountSignIn>h2,.accountSignIn>p{margin:18px 20px}.accountSignIn>.accountToolbar{margin:4px 20px 18px}}
