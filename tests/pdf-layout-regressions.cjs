@@ -21,8 +21,19 @@ let state=c.appendPatchPdfPage();const groups=[{height:70,items:[1,2]},{height:8
 assert.equal(pages.length,2);assert.equal(pages[0].blocks.length,2);assert.deepEqual(pages[1].blocks[0].rows,[4,5]);assert.equal(scaled,0);
 state=c.addPatchPdfGroup(state,{height:500,items:[6,7,8]}, {},{});assert.equal(pages.length,3);assert.deepEqual(pages[2].blocks[0].rows,[6,7,8]);assert.equal(scaled,1);
 assert(source('renderFixturePatchPdfPreview').includes('let patchState=null'));
-// Height fitting uses actual footer space and survives subsequent measurement refreshes.
+// Height fitting preserves full page width, column proportions and the same
+// geometry after repeated refreshes or a change in preview zoom.
 vm.runInContext(source('fitPatchPdfScaledGroup'),c);
-const wrap={style:{},scrollWidth:1000,scrollHeight:1000},slot={style:{},dataset:{patchPdfFitHeight:'true'},clientWidth:500,querySelector:()=>wrap,closest:()=>({querySelector:()=>({getBoundingClientRect:()=>({top:306})})}),getBoundingClientRect:()=>({top:100})};
-assert.equal(c.fitPatchPdfScaledGroup(slot),.2);assert.equal(slot.style.height,'200px');assert.equal(c.fitPatchPdfScaledGroup(slot),.2);
-console.log('PASS: whole fixture groups share pages, oversized groups fit above footers, and Power/Fan-Out export copies discard live scale wrappers.');
+const cols=[{style:{width:'400px'}},{style:{width:'600px'}}],table={style:{},querySelectorAll:()=>cols};
+const wrap={style:{},get scrollWidth(){return parseFloat(this.style.width)||1000},scrollHeight:1000,querySelectorAll:()=>[table]};
+let zoom=1;
+const slot={style:{},dataset:{patchPdfFitHeight:'true'},clientWidth:500,querySelector:()=>wrap,closest:()=>({offsetHeight:1000,getBoundingClientRect:()=>({height:1000*zoom}),querySelector:()=>({getBoundingClientRect:()=>({top:306*zoom})})}),getBoundingClientRect:()=>({top:100*zoom})};
+c.applyPatchTableColumnWidths=()=>{cols[0].style.width='400px';cols[1].style.width='600px'};c.fitPatchTableText=()=>{};
+for(const previewZoom of [1,.5,1.25,1]){
+ zoom=previewZoom;
+ assert.equal(c.fitPatchPdfScaledGroup(slot),.2);assert.equal(slot.style.height,'200px');
+ assert.equal(parseFloat(wrap.style.width)*Number(slot.dataset.patchPdfScale),500,'Scaled table fills the available width');
+ assert.equal(table.style.width,'100%');assert.deepEqual(cols.map(col=>col.style.width),['40%','60%']);
+}
+slot.dataset.patchPdfFitHeight='false';assert.equal(c.fitPatchPdfScaledGroup(slot),.5);assert.equal(parseFloat(wrap.style.width)*.5,500);
+console.log('PASS: whole fixture groups share pages; tall groups fill page width above footers at every preview zoom; Power/Fan-Out export copies discard live scale wrappers.');

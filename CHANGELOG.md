@@ -1,3 +1,9 @@
+## V60.4 — Welcome message cache refresh
+
+- Version the welcome-message request so an older active service worker cannot return previous release announcements after the page updates.
+- Use the current page’s short, account-free welcome fallback when offline during an update.
+- Keep Fixture Patch export tables at full page width when tall groups scale to fit above the footer. Preserve whole fixture groups, column proportions and consistent sizing across preview zoom levels.
+
 ## V60.3 — In-app email sign-in
 
 - Add a branded AI-Lampy and Lampy Paperwork sign-in page with in-app email/code entry and sign-out. Public account registration remains closed.

@@ -26,7 +26,7 @@ console.log('PASS: release documentation/fallback parity; stale docs, stale fall
 for(const phrase of ['Help above Menu','Home → Project Settings','Loom cards start collapsed','single-patch shortcut','JSON loading unavailable'])assert(actual.checklist.includes(phrase),`Missing V53 checklist case: ${phrase}`);
 assert(!actual.checklist.includes('1450 px page wrapper'));
 // Exercise the real load failures and normalisers without DOM/browser automation.
-const vm=require('node:vm'),context=vm.createContext({console:{warn(){}},WELCOME_MESSAGE_URL:'welcome',fetchJSONWithFallback:async()=>{throw Error('offline')}});
+const vm=require('node:vm'),context=vm.createContext({console:{warn(){}},VERSION:result.version,WELCOME_MESSAGE_URL:'welcome',fetchJSONWithFallback:async()=>{throw Error('offline')}});
 for(const name of ['fallbackWelcomeMessage','normaliseWelcomeMessage','loadWelcomeMessage']){
  const start=actual.html.search(new RegExp('(?:async )?function '+name+'\\('));assert(start>=0,name);
  const end=actual.html.indexOf('\n',start);vm.runInContext(actual.html.slice(start,end),context);
