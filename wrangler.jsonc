@@ -39,7 +39,7 @@
     {
       "binding": "AUTH_DB",
       "database_name": "lampy-paperwork-accounts",
-      "database_id": "REPLACE_WITH_D1_DATABASE_ID",
+      "database_id": "c533cc7c-2e28-4fa4-aa3b-49810da68765",
       "migrations_dir": "backend/migrations",
       "remote": false
     }
