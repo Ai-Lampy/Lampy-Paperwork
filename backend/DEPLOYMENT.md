@@ -184,11 +184,11 @@ Deployment record:
 - No browser testing, GitHub uploads or Pages deployment performed.
 
 
-## V61.4 — pending deployment: general notes and replies
+## V61.4 — deployed sharing Worker and migration
 
-Local implementation and tests are complete; this section is a procedure, not a deployment record. No V61.4 production changes have been made. Keep Workers Free, the existing Worker, D1/R2 bindings and Access rules.
+Migration 0003 and the V61.4 Worker went live on 28 November 2026 at 03:59 UTC. Worker version `ad490a08-c40f-4f35-89e1-19a493c4a7fd` serves 100% of traffic in deployment `6a70ecc4-db0a-462c-9f60-1326224a077a`. The database migration ledger, both added columns and the index were verified. Live checks passed for access controls, general and fixture notes, and viewer and owner replies. The disposable test share was revoked. The existing usage model and bindings were retained. Billing was not changed. The remaining release step is the manual Pages deployment.
 
-Deploy the migration and Worker **before** the V61.4 frontend. The Worker imports `js/patch-sharing-core.js`; deploy the bundle from the complete project folder, not an isolated source file pasted into Cloudflare.
+Steps 1–4 below record the completed Cloudflare procedure. To publish the frontend, use the manual Pages workflow in step 5. The Worker imports `js/patch-sharing-core.js`; deploy the bundle from the complete project folder, not an isolated source file pasted into Cloudflare.
 
 1. Open Terminal in the local project and check the account:
 
@@ -227,7 +227,7 @@ Deploy the migration and Worker **before** the V61.4 frontend. The Worker import
 
    Keep `wrangler.jsonc` unchanged. Retain the existing API-path Access bypass. Neither passwords nor account registration return in this update.
 
-5. Run the read-only HTTP checks under “Verify before publishing the frontend” above: missing capability **403**, retired account route **410**, CORS preflight **204**. Then upload the complete V61.4 source list and manually run the Pages workflow with version `61.4`. The workflow file itself has not changed.
+5. Run the read-only HTTP checks under “Verify before publishing the frontend” above: missing capability **403**, retired account route **410**, CORS preflight **204**. To publish V61.4, open **Deploy Lampy Paperwork → Run workflow**, select `main`, enter `61.4`, tick **Publish the selected Lampy Paperwork release to GitHub Pages**, and run the workflow.
 
 6. For existing viewer links, use **Share patch → Make current patch live** to include the patch name, logo visibility and current display settings. Existing notes are retained. Verify + Note, a fixture note, a viewer reply, an owner reply, and the owner unread count using a disposable share. Revoke that test share after checking.
 
