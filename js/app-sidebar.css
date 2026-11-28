@@ -96,5 +96,3 @@ body.hasAppNavigation>.topHeader>.top{padding-right:10px}
 .appNavigationHelp:focus-visible{outline:2px solid #fff;outline-offset:-2px}
 
 .appNavigationAccount{cursor:pointer}.appNavigationAccount[aria-current="page"]{background:#0060ff!important;color:#fff}
-.accountPortalOpen .appNavigation .sheetTab.active{background:transparent;border-color:transparent}
-.accountPortalOpen .appNavigation .sheetTabMenuHost:has(>.sheetTab.active){background:transparent;border-color:transparent}

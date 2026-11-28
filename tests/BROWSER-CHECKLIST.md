@@ -1,4 +1,4 @@
-# V60 browser release checks
+# V61 browser release checks
 
 **Use this checklist only when the user explicitly requests browser testing.** Interface changes, implementation requests and releases do not authorise browser testing. Static validation remains the default.
 
@@ -110,3 +110,16 @@ When explicitly requested, run against localhost and the built artifact. Use sep
 - Open Account Details in two tabs. Save one, then attempt a stale save in the other; retain its entered text and show a conflict.
 - Create/open a project through the portal, return using Account, and reopen the same project without changing its data.
 - Check the account page at desktop and narrow widths, including keyboard focus and no horizontal overflow.
+
+## V61 sharing and account removal
+
+- Home opens without sign-in or an Account sidebar button. Legacy `?portal=signin` links also open Home.
+- Create a share from a local project; save both viewer and private owner links. Verify project download contains neither token.
+- Open the viewer in a second window: no fixture editing, adds or removal; filters, Hero statistics, summaries and PDF remain available.
+- Name and job role are mandatory for notes. Each note has an attributed header and a light background.
+- Owner sees notes in the Notes column and an unread sidebar badge. Mark notes read clears only the acknowledged notes.
+- Ordinary saves do not change the shared snapshot. Explicit publication replaces it. Stale note submissions keep their draft and request a refresh.
+- Revoking the viewer link removes viewer access. Test invalid links and unavailable API without overwriting local work.
+- Use the private link on another browser, open the matching project and reconnect management explicitly.
+- Menu > Recover saved projects downloads earlier local project copies without sign-in or modifying the originals.
+- Reopen the owner project after using a viewer; fixture rows, other paperwork and settings are unchanged.

@@ -1,170 +1,94 @@
-# V60.3: in-app email-code sign-in
+# V61: replace accounts with Fixture Patch sharing
 
-Status: source and local tests only. No live authentication migration has been performed. Passwords have been deferred; no paid plan is required by this implementation and no billing change is authorised. Do not publish the V60.3 frontend until the Worker is configured below. Public app use stays available without an account; account registration stays closed.
+These are deployment instructions, not a record of a live deployment. Keep Workers Free. Do not change billing, delete databases, delete R2 objects, rename resources or recreate the Worker.
 
-The Cloudflare connection in this chat could not authenticate. These are the exact manual steps for the existing Worker, not a new deployment target. Its historical name and R2 bucket name remain unchanged to preserve stored projects.
+V61 removes sign-in, account pages, email-code authentication and cloud project sync. The replacement Worker serves only capability-protected patch sharing. Existing account API requests return 410; old account data remains stored and private. `/signed-out` redirects to the app Home URL.
 
-## 1. Retain the existing owner ID
+## Before replacing the Worker
 
-Keep **Workers Free**. Sign-in uses email codes and does not run password hashing. Local Worker tests pass, but live CPU limits and email delivery still need checking after setup. If the Free plan reports resource-limit errors during live verification, stop and review the implementation; do not upgrade billing automatically.
+1. Download any cloud-only projects you need through the current V60 app while its account service still works. V61 can recover project copies already stored in this browser, but cannot fetch cloud-only account projects after sign-in is retired.
+2. Keep the local rollback archive `outputs/backups/V60.5-before-V61.zip` and existing Cloudflare rollback records. Never upload those backups to GitHub.
+3. Keep the current R2 bucket and D1 database. The resource names include historical account/pilot wording; that is not an account feature and changing their names would risk pointing away from existing data.
 
-While the existing Cloudflare login still works, open `https://paperwork-api.ailampy.com/paperwork/account-api/session` in your signed-in browser. Record `user.id` (64 hexadecimal characters) and check `user.email` is `mitch@mandrewslighting.com`. This is an administrator migration step only; the new end-user login will stay in Lampy.
+## Deploy from Terminal
 
-In R2 → `lampy-paperwork-pilot-projects` → Objects, confirm the saved profile/projects are under `owners/<that ID>/`. Do not generate a new owner ID or move/delete R2 objects. Download a current project backup from Lampy before migration.
-
-## 2. Prepare the deployment tools and D1 database
-
-Open Terminal:
+Use Node 24 with npm/npx available. Run from the project folder:
 
 ```sh
 cd "/Users/mandrews/Documents/Lampy Paperwork"
 npx --yes pnpm@11.25.0 install --frozen-lockfile --ignore-scripts
+npx --yes pnpm@11.25.0 run test:sharing
 npx --yes pnpm@11.25.0 exec wrangler login
 npx --yes pnpm@11.25.0 exec wrangler whoami
 ```
 
-Confirm the selected account ID is `1c2c8d449b4c98fd53e5a474c213787d`.
-
-Create the authentication database once:
+Confirm account `1c2c8d449b4c98fd53e5a474c213787d`. Then inspect pending migrations:
 
 ```sh
-npx --yes pnpm@11.25.0 exec wrangler d1 create lampy-paperwork-accounts --location weur
+npx --yes pnpm@11.25.0 exec wrangler d1 migrations list AUTH_DB --remote
 ```
 
-Copy the returned database UUID into `wrangler.jsonc` → `d1_databases[0].database_id`, replacing `REPLACE_WITH_D1_DATABASE_ID`. If the database already exists, use its existing UUID instead of creating another one. Keep binding `AUTH_DB`, name `lampy-paperwork-accounts` and migrations directory `backend/migrations`.
-
-Apply the schema:
+Apply the additive `0002-patch-sharing.sql` migration. It creates only `patch_shares`, `patch_notes` and `patch_rate_limits` plus a notes index. Keep `0001-email-auth.sql` as migration history; do not remove its existing tables.
 
 ```sh
 npx --yes pnpm@11.25.0 exec wrangler d1 migrations apply AUTH_DB --remote
 ```
 
-Replace `EXISTING_OWNER_ID` with the exact ID from step 1, then run:
+Confirm `wrangler.jsonc` uses:
 
-```sh
-node scripts/provision-account.mjs EXISTING_OWNER_ID > /tmp/lampy-account-owner.sql
-npx --yes pnpm@11.25.0 exec wrangler d1 execute AUTH_DB --remote --file /tmp/lampy-account-owner.sql
-rm /tmp/lampy-account-owner.sql
-```
+- Worker `lampy-paperwork-v59-accounts` (existing resource).
+- Entry `backend/patch-sharing-worker.mjs`.
+- D1 binding `AUTH_DB`, database `lampy-paperwork-accounts`, ID `c533cc7c-2e28-4fa4-aa3b-49810da68765`.
+- `ALLOWED_ORIGINS=https://ailampy.com`.
+- `SHARE_PREFIX=/paperwork/account-api/shares`.
+- `APP_URL=https://ailampy.com/paperwork/`.
 
-This inserts only the approved, already verified account. It does not generate or print a sign-in code. If the INSERT reports an existing account, inspect the D1 `user` table and confirm the email and ID match; do not replace a different ID or overwrite existing account records.
-
-## 3. Enable email-code delivery on Workers Free
-
-In Cloudflare, open **Compute → Email Service → Email Sending → Onboard Domain**. Choose `ailampy.com`, review the proposed SPF/DKIM/bounce/DMARC records, and finish onboarding. Preserve existing mail delivery records and any existing DMARC policy. Wait until Cloudflare reports the domain ready. See [Email Sending setup](https://developers.cloudflare.com/email-service/get-started/send-emails/).
-
-Next go to **Compute → Email Service → Email Routing → Destination Addresses**. Add `mitch@mandrewslighting.com`, open the verification email and select **Verify email address**. Confirm it is marked verified. This is required on Workers Free. It does not require changing your normal incoming mail service or enabling new routing rules. [Cloudflare destination-address instructions](https://developers.cloudflare.com/email-service/configuration/destination-addresses/).
-
-The configured sender is `accounts@ailampy.com`. The `EMAIL` binding is restricted to that sender and the verified recipient `mitch@mandrewslighting.com`. The binding is already declared in `wrangler.jsonc`; do not enable remote email bindings for local development. Cloudflare says sends to verified destination addresses are free on any plan. Sign-in codes expire after five minutes, allow three attempts and can be used once. Public account creation remains disabled.
-
-## 4. Add the secret and deploy the Worker
-
-In **Workers & Pages → lampy-paperwork-v59-accounts → Settings → Variables and Secrets**, add a secret named `AUTH_SECRET` containing a new randomly generated value of at least 32 characters. Generate it in your password manager and enter it directly in Cloudflare; do not put it in source, chat or a command argument. Retain it in the password manager. Changing it later invalidates sessions.
-
-Before deploying, confirm `wrangler.jsonc` contains:
-
-- `compatibility_flags`: `["nodejs_compat"]`; compatibility date remains `2026-07-30`.
-- `AUTH_MODE`: `email-code`.
-- `AUTH_URL`: `https://paperwork-api.ailampy.com`.
-- `APP_URL`: `https://ailampy.com/paperwork/`.
-- `ALLOWED_ORIGINS`: `https://ailampy.com`.
-- `ALLOWED_EMAIL`: `mitch@mandrewslighting.com`.
-- `API_PREFIX`: `/paperwork/account-api`.
-- `EMAIL_FROM`: `accounts@ailampy.com`.
-- `AUTH_DB`: the actual D1 UUID from step 2.
-- `PROJECTS`: existing R2 bucket `lampy-paperwork-pilot-projects`.
-- Workers.dev and preview URLs remain disabled.
-
-Deploy through Wrangler, which bundles the authentication library. **Do not paste only accounts-worker.mjs into Cloudflare's editor**; it now imports email-auth.mjs and installed dependencies.
+No new secrets or email bindings are required. Existing unused authentication secrets can remain for rollback; the replacement Worker does not read them. Deploy the bundled Worker from source:
 
 ```sh
 npx --yes pnpm@11.25.0 exec wrangler deploy
 ```
 
-This updates the Worker only. It does not publish GitHub Pages. Keep the existing Access application in place until this succeeds. Then check the deployed Worker Settings show `AUTH_MODE=email-code`, the D1/R2/email bindings, and the `AUTH_SECRET` secret.
+This command publishes the Worker and retires the old account endpoints. Do it only when ready to release V61. Do not paste the unbundled source into the dashboard: it imports the snapshot allowlist from `js/patch-sharing-core.js`.
 
-## 5. Stop Cloudflare's login page intercepting the API
+## Cloudflare Access
 
-Only after step 4 succeeds, open **Zero Trust → Access → Applications → Add an application → Self-hosted**:
+Retain the existing `/paperwork/account-api/*` bypass and `/signed-out` exception. Sharing lives under that already-approved API path. Do not make the whole API hostname public or change any unrelated Access policy. The Worker checks random owner/viewer capabilities and permitted browser origins on every request. Viewers cannot use the owner management routes.
 
-- Name: `Lampy email API`.
-- Public hostname: `paperwork-api.ailampy.com`.
-- Path: `/paperwork/account-api/*`.
-- Add a policy named `Worker email authentication`.
-- Action: **Bypass**.
-- Include selector: **Everyone**.
-- Save the application.
+## Verify before publishing the frontend
 
-This more-specific path lets the Worker perform email-code/session authentication; it does not make stored project data public. Every storage request still checks a signed session and the approved email. Leave the existing whole-host Access application and exact `/signed-out` callback configuration intact. Do not add a whole-domain Bypass. See [path-scoped Bypass policies](https://developers.cloudflare.com/cloudflare-one/access-controls/policies/common-policies/) and [path precedence](https://developers.cloudflare.com/cloudflare-one/access-controls/policies/app-paths/).
-
-Verify without a session:
+These read-only requests should return JSON, not a Cloudflare sign-in page:
 
 ```sh
 curl -i https://paperwork-api.ailampy.com/paperwork/account-api/session
-curl -i https://paperwork-api.ailampy.com/paperwork/account-api/projects
+curl -i https://paperwork-api.ailampy.com/paperwork/account-api/shares/check
 ```
 
-Both must return **401 JSON**, not a Cloudflare redirect and not project data. If either returns data, restore the original Access protection before continuing. If they redirect, correct the path-specific application rather than weakening protection on other paths.
+Expected: account session **410**; share without a capability **403**. Verify preflight:
 
-## 6. Publish the frontend and verify sign-in
+```sh
+curl -i -X OPTIONS https://paperwork-api.ailampy.com/paperwork/account-api/shares/check \
+  -H 'Origin: https://ailampy.com' \
+  -H 'Access-Control-Request-Method: POST' \
+  -H 'Access-Control-Request-Headers: Content-Type,X-Lampy-Owner'
+```
 
-Upload the V60.3 files listed in the implementation report, including the changed `backend/` files and dependencies. Remove the old repository-root `sw.js`; upload `js/sw.js`. GitHub Actions emits the runtime root `sw.js` during its build. Run the existing manual Pages workflow.
+Expected: **204**, exact allowed origin and `X-Lampy-Owner`/`X-Lampy-Share` allowed. Do not change Access if these fail; inspect the response first.
 
-Open Lampy → sidebar **Sign in**. Enter `mitch@mandrewslighting.com` and select **Send sign-in code**. Enter the six-digit code in Lampy within five minutes. No Cloudflare page should appear. Confirm your existing projects/profile are present, then sign out. Confirm sign-out stays on the Lampy sign-in page, ordinary Home loading stays on Home, and Create your account shows the coming-soon notice. Check the Worker logs/metrics for resource-limit errors while testing on Workers Free.
+Upload the V61 files and deletions from the release manifest. Run the existing manual GitHub Pages workflow with version `61`. Uploading source alone does not publish the site.
 
-Browser testing, live email delivery and the live email-code session have not yet been verified. Do not call this migration complete until these checks pass.
+After publication, create a test share, save the private owner link, open the viewer in a separate window, add a test note and verify the owner notification. Edit the owner project and verify the viewer stays unchanged until **Make current patch live** is pressed. Verify revocation. These live checks have not been performed by the local implementation tests.
+
+## Sharing operation and limits
+
+- Viewer links are bearer links. Anyone receiving one can read the snapshot and add notes after entering a name and job role. Those names are self-declared.
+- Owner links are separate bearer capabilities. Keep them private and backed up. No account recovery exists. Owner tokens stay out of `.lampy` project files; the public project-sharing ID only associates local controls with the project.
+- Snapshots include only fixture fields, position colours, project title and measurement units. They exclude contacts, profiles, other paperwork, GDTF archives and account metadata.
+- Ordinary saves never publish. Each explicit publication replaces the snapshot and keeps notes, including notes for removed fixtures in the owner’s Viewer notes list.
+- Requests are limited to 1 MiB; normalized snapshots to 800,000 bytes and 5,000 fixtures. Notes are capped at 2,000 characters and fetched in pages of 250.
+- Initial anonymous-use bounds: 200 shares total, 10 creations per IP per hour, 100 globally per hour, 30 notes per share per minute, 10,000 notes per share and 50,000 notes globally. Limits reject excess work rather than increase billing. Monitor actual usage before adjusting them. Revocation retains records for note history; it does not reclaim a share slot.
+- Stay on the free plan. Local Worker/D1 tests do not prove live CPU/quota performance. Review usage after rollout without changing billing automatically.
 
 ## Rollback
 
-Remove or disable only the new `Lampy email API` path application first, restoring the existing Cloudflare Access protection. Restore the previous Worker version/configuration and the previous frontend release together. Keep D1 and R2 data intact. Existing local project copies remain available. The separate `backups/` folder was preserved; the obsolete `outputs/releases/V60` archive was removed with approval.
-
----
-
-## Historical deployment notes (superseded by V60.3 instructions above)
-
-# V60 account backend deployment
-
-V60 publishes the complete app at https://ailampy.com/paperwork/.
-GitHub Pages deployment is manual. The Worker is deployed separately.
-
-## V60.1 logout routing — required before publishing
-
-Completed on 26 November 2026: updated Worker deployed and the exact `/signed-out` Access override applied. Live HTTP checks confirmed the 303 return to Lampy and 302 sign-in protection on private API routes and adjacent callback paths. Worker bindings, compatibility date and owner-only Access policy were preserved. Browser sign-in/logout testing was not performed. Deployment record: `backups/V60.1-cloudflare-logout-deployment.json`; rollback snapshot: `backups/V60.1-cloudflare-before-logout.json`.
-
-The public Lampy domain is not an Access application, so Cloudflare rejects it as a direct logout `returnTo` destination. V60.1 uses:
-
-`paperwork-api.ailampy.com/cdn-cgi/access/logout` → `paperwork-api.ailampy.com/signed-out` → `https://ailampy.com/paperwork/?portal=signin`.
-
-1. Deploy the updated `backend/accounts-worker.mjs` to the existing Worker. Preserve all bindings and variables in `wrangler.jsonc`.
-2. On the existing Access application (ID `435ca1b2-2dd5-466e-98bb-4b2b51fda2f5`), retain public destination `paperwork-api.ailampy.com` and add the exact-path public override `{"path_pattern":"/signed-out","behavior":"public"}` to that destination's `overrides` array. Do not use a wildcard. Preserve all other settings, the application ID/audience, policy and allowed email. Do not create a replacement authentication application.
-3. Verify an unauthenticated GET to `/signed-out` returns 303 to the Lampy login page, while `/paperwork/account-api/session`, `/profile`, `/projects` and `/templates` remain protected.
-4. Upload V60.1 source and trigger GitHub Pages manually with release version `60.1`.
-5. When browser testing is authorised, sign in, sign out, confirm the Lampy sign-in page appears, and verify private API access requires sign-in again. Verify Create your account displays “Accounts are coming soon.”
-
-The callback accepts GET only, ignores caller-supplied destinations, and reads no account storage. It uses APP_URL with a fresh `portal=signin` query and no project identity. Every data route still checks a signed Access identity in the Worker as well as the Access policy.
-
-Rollback: remove that exact public override and restore the previous Worker/frontend sources. Do not change account data or storage. The source change does not itself update Cloudflare Access or deploy the Worker.
-
-## Required before publishing V60
-
-1. Open the existing account Worker in Cloudflare Workers & Pages.
-2. Replace its ES module entry-point code with the current local backend/accounts-worker.mjs and deploy.
-3. In Settings → Variables and Secrets, set APP_URL to https://ailampy.com/paperwork/ and deploy the setting.
-4. Preserve PROJECTS, the existing private R2 bucket, ACCESS_ISSUER, ACCESS_AUDIENCE, ALLOWED_EMAIL, ALLOWED_ORIGINS and API_PREFIX. Keep compatibility date 2026-07-30.
-5. Keep the custom domain paperwork-api.ailampy.com and the current Access policy. Sign-in remains restricted to mitch@mandrewslighting.com. Do not rename or delete account storage.
-6. In GitHub Actions, run Deploy Lampy Paperwork from main with release_version 60 and confirmation enabled.
-7. Verify the public version, login return URL, account details save/reload, project save/reopen and device-only use.
-
-The active Worker code and APP_URL are verified. The root wrangler.jsonc records these settings for future CLI deployments. Keep dashboard changes and this file in sync. Worker/R2 resource names are preserved; the website has no separate testing deployment.
-
-## Data and authentication
-
-Profiles use owners/<verified-id>/account/profile. Projects and templates remain under the same authenticated owner. The server derives identity from verified Cloudflare Access claims. Conditional writes and retry IDs protect against competing edits and interrupted responses. No public registration or paperwork sharing is enabled.
-
-Do not clear browser storage, change the Access issuer or recreate the R2 bucket during release. Keep downloaded .lampy backups and local recovery copies. Existing cloud identifiers are retained to preserve data.
-
-## Validation and limits
-
-The public build, account tests, Worker/R2 runtime tests and required release checks passed locally. Runtime tests use synthetic identity and temporary storage. This is not a live sign-in or Safari test. The V60 public release has not been deployed by this cleanup.
-
-See the root README.md for current app and release instructions. This deployment guide stays local.
+Restore the saved V60.5 source and its Wrangler configuration, reinstall its lockfile, redeploy its account Worker, then redeploy the matching static frontend using the manual workflow. Keep the additive sharing tables and old account data. Do not roll back by deleting data.

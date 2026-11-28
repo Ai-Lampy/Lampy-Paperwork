@@ -1,3 +1,11 @@
+## V61 — Shared Fixture Patch and local projects
+
+- Remove sign-in, account portal and cloud project synchronisation. Preserve local project import, export and autosave.
+- Add read-only recovery downloads for earlier projects stored in this browser.
+- Share a Fixture Patch snapshot using separate viewer and private owner-management links. Publish changes explicitly, or revoke viewer access.
+- Viewers can filter, export PDF, view summaries and add named, colour-highlighted notes. Owners receive unread-note notifications.
+- Preserve readable Fixture Patch PDF pagination across continuation pages.
+
 ## V60.5 — Readable Fixture Patch pagination
 
 - Start every fixture group on a new PDF page.

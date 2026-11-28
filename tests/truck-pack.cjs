@@ -968,7 +968,7 @@ console.log('PASS: editable-cell drag fill, visible-row filtering, typed values,
   for(const ruler of panel.markup.matchAll(/<g data-tp-ruler="([xyz])" data-internal-size="([^"]+)">([\s\S]*?)<\/g>/g)){const size=Number(ruler[2]),ticks=Array.from(ruler[3].matchAll(/data-tp-tick="([^"]+)"/g),m=>Number(m[1])),step=measurement==='imperial'?2438.4:2500,expected=[0];for(let i=1;i*step<size-T.EPS;i++)expected.push(i*step);expected.push(size);assert.equal(ticks.length,expected.length);ticks.forEach((tick,i)=>close(tick,expected[i]));assert(ruler[3].includes(T.formatLength(size,measurement)))}
  }}
  assert(fs.readFileSync(path.join(root,'js/truck-pack.css'),'utf8').includes('.tpSideDivider{stroke:#b9b9b9;stroke-width:1;opacity:.6;'));
- assert.equal(html.match(/const VERSION='([^']+)'/)[1],'60.5');
+ assert.equal(html.match(/const VERSION='([^']+)'/)[1],'61');
 }
 console.log('PASS: all-inventory W/L/H swaps, preview/Undo, atomic invalid-pack rejection, rear-facing tipped wheels, fixed ruler intervals, Front/Rear labels and side divider.');
 

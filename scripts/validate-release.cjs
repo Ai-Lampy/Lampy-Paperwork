@@ -9,9 +9,9 @@ assert.equal(JSON.parse(fs.readFileSync(path.join(root,'js/app-version.json'),'u
 const workerSource=fs.readFileSync(path.join(root,'js/sw.js'),'utf8');
 new vm.Script(workerSource);
 assert.equal(workerSource.match(/const VERSION='([^']+)'/)[1],version,'Offline worker must match the app release');
-const accountConfig=JSON.parse(fs.readFileSync(path.join(root,'js/account-config.json'),'utf8'));
-assert.equal(typeof accountConfig.enabled,'boolean','Account setup flag must be explicit');
-assert.equal(new URL(accountConfig.apiURL).protocol,'https:','The deployed account API must use HTTPS');
+assert(!/js\/account-/.test(html),'Retired account scripts must not load');
+const shareConfig=JSON.parse(fs.readFileSync(path.join(root,'js/patch-sharing-config.json'),'utf8'));
+assert.equal(new URL(shareConfig.apiURL).protocol,'https:');
 for(const match of html.matchAll(/<script src="js\/[^"]+\?v=([^"]+)"/g))assert.equal(match[1],version,'Script cache version must match release');
 let count=0;
 function validateFixtureManifest(manifest,catalogues){

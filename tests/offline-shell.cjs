@@ -3,7 +3,7 @@ const source=fs.readFileSync(require('node:path').join(__dirname,'../js/sw.js'),
 async function scenario(tampered=false,scope='https://example.test/paperwork/'){
  const shell='<!doctype html><h1>Offline project</h1>',handlers={},buckets=new Map();
  const digest=Buffer.from(await webcrypto.subtle.digest('SHA-256',Buffer.from(shell))).toString('hex');
- const manifest={version:'60.5',sharedBase:'./',assets:[{url:'offline-shell.txt',sha256:digest}]};
+ const manifest={version:'61',sharedBase:'./',assets:[{url:'offline-shell.txt',sha256:digest}]};
  let offline=false;
  const caches={async open(name){if(!buckets.has(name))buckets.set(name,new Map());const data=buckets.get(name);return {async match(key){return data.get(String(key))?.clone()},async put(key,response){data.set(String(key),response.clone())}}},async delete(name){return buckets.delete(name)},async keys(){return [...buckets.keys()]}};
  const self={registration:{scope},location:new URL(scope),clients:{claim:async()=>{}},addEventListener:(name,fn)=>handlers[name]=fn};
