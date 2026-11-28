@@ -9,7 +9,7 @@ on:
         required: true
         type: string
       confirm_deploy:
-        description: Publish V61.1 as the public Lampy Paperwork app
+        description: Publish V61.2 as the public Lampy Paperwork app
         required: true
         default: false
         type: boolean
