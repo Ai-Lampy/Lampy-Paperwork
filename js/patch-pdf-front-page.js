@@ -1,5 +1,6 @@
 /* Fixture Patch cover: summary, optional control details and committed notes. */
 function patchPdfControlData(){
+  if(globalThis.LampyPatchShare?.isViewer&&LampyPatchShare.snapshot?.control)return LampyPatchShare.snapshot.control;
   const data=normaliseControlNetwork(app.controlNetwork),value=v=>String(v??'').trim()||'—';
   const consoles=data.consoles.map(item=>{
     const ref=consoleRefForItem(item),device={source:'console',id:item.id,interfaces:ipDeviceInterfaces(item,'console')},ports=deviceConfigPortsFor(device).filter(port=>port.category==='network');

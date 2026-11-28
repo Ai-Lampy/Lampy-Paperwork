@@ -190,7 +190,7 @@ for(const space of [400,900,1800]){
  c.expandLivePatchColumns(widths,['fixId','fixture','mode','address'],settings,[34,220,160,70],space);
  assert.equal(widths[0],34);assert.equal(widths[3],70);assert(Math.abs(widths.reduce((a,b)=>a+b)-space)<.001);assert(widths[1]>widths[2]);
 }
-const wrapped=[100,100,70];c.expandLivePatchColumns(wrapped,['notes','position','address'],[{},{},{fixed:70}],[300,100,70],700);assert.deepEqual(wrapped,[530,100,70]);
+const wrapped=[100,100,70];c.expandLivePatchColumns(wrapped,['notes','position','address'],[{},{},{fixed:70}],[300,100,70],700);assert.deepEqual(wrapped,[100,530,70]);
 assert(source('applyPatchTableColumnWidths').includes("!table.closest('.exportPage,.pdfPageStage')"));
 assert(source('scheduleResponsiveSheetLayout').includes('applyPatchTableColumnWidths'));
 const payloadContext=vm.createContext({VERSION:'54',app:{labels:[],socaNames:[],socaMeta:[],distros:[],looms:[],fixturePatch:[],patchSheets:[],gdtfFiles:{},gdtfMatches:{},controlNetwork:{},collapsed:{soca:[],previews:[],distros:[]}},activePatchSheetId:'master',fixturePatchViewOptions:{columns:{mode:false},universeAddress:{enabled:true,separator:' . '}},syncPositionsFromPatch(){},normaliseGdtfFiles:x=>x,normaliseLooms:x=>x,ensureProjectInfo:()=>({}),normalisePatchSheets:x=>x,normaliseGdtfMatches:x=>x,normaliseControlNetwork:x=>x,normalisePatchViewOptions:x=>x});

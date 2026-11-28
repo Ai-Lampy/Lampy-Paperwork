@@ -4,7 +4,7 @@ import Core from '../js/patch-sharing-core.js';
 const test=await runtime();
 try{
  const owner=Core.token(),viewer=Core.token(),id='test-share',origin='https://lampy.example';
- const snapshot={title:'Lighting patch',fixtures:[{id:'fixture-1',fixture:'Wash',fixId:'1',mode:'Extended',channels:30,universe:1,address:1,notes:'Owner note'}],positions:[],secret:'private',profile:{email:'private@example.test'},gdtfFiles:{private:'bytes'}};
+ const snapshot={title:'Lighting patch',fixtures:[{id:'fixture-1',fixture:'Wash',fixId:'1',mode:'Extended',channels:30,universe:1,address:1,notes:'Owner note'}],positions:[],logos:{tour:{name:'Tour',dataUrl:'data:image/png;base64,AAAA'}},control:{consoles:[{protocols:['sACN','Art-Net'],cells:['Console Type','Main','Mode 3','2.3','10.0.0.1','2.0.0.1']}],npus:[{type:'NPU',quantity:2}],parameters:8192},summaryNotes:['Owner cover note'],revisionNotes:[{version:'1',date:'28 Nov',note:'Patch updated'}],presentation:{columns:{mode:false},titleFormat:{font:'Arial',fontSize:24}},secret:'private',profile:{email:'private@example.test'},gdtfFiles:{private:'bytes'}};
  const send=async(route='',method='GET',token=owner,data,viewerMode=false,extra={})=>test.mf.dispatchFetch(origin+'/paperwork/account-api/shares/'+id+route,{method,headers:{Origin:origin,...(token?{[viewerMode?'X-Lampy-Share':'X-Lampy-Owner']:token}:{}),...(data?{'Content-Type':'application/json'}:{}),...extra},body:data?JSON.stringify(data):undefined});
  const value=async(...args)=>{const response=await send(...args);const data=await response.json();assert(response.ok,JSON.stringify(data));return data};
  assert.equal((await send('','GET',null)).status,403);
@@ -13,7 +13,7 @@ try{
  assert.equal((await value('','POST',owner,{viewerToken:viewer,snapshot})).version,1,'creation retries keep the published snapshot');
  assert.equal((await send('','GET',Core.token())).status,404);
  assert.equal((await send('','GET',viewer,null,true,{Origin:'https://evil.test'})).status,403);
- let shared=await value('','GET',viewer,null,true);assert.equal(shared.snapshot.fixtures.length,1);assert(!('readSeq'in shared));
+ let shared=await value('','GET',viewer,null,true);assert.equal(shared.snapshot.fixtures.length,1);assert.equal(shared.snapshot.schema,2);assert.deepEqual(shared.snapshot.logos,snapshot.logos);assert.deepEqual(shared.snapshot.control,snapshot.control);assert.deepEqual(shared.snapshot.summaryNotes,snapshot.summaryNotes);assert.deepEqual(shared.snapshot.revisionNotes,snapshot.revisionNotes);assert.equal(shared.snapshot.presentation.columns.mode,false);assert(!('readSeq'in shared));
  assert.equal((await send('/snapshot','PUT',viewer,{version:1,snapshot},true)).status,403);
  assert.equal((await send('/revoke','POST',viewer,{},true)).status,403);
  const note={requestId:'note-1',fixtureId:'fixture-1',name:'Crew A',jobRole:'Lighting',body:'Check cable',version:1};

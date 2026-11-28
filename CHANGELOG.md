@@ -1,3 +1,13 @@
+## V61.2 — Shared patch layout and inline notes
+
+- Reuse the main Fixture Patch layout, formatting, control toolbar and statistics in shared viewers.
+- Open Fixture Summary and Position Summary in side panes without replacing the patch.
+- Enter viewer notes directly in Notes cells; send on Enter or blur, retain failed drafts and support Shift+Enter for new lines.
+- Measure Notes columns from individual note lines and names, without allocating spare table width to Notes.
+- Show AI-Lampy and all project logos in the viewer header; retain Lampy Paperwork branding in the footer.
+- Share compressed project logos, Console Info, cover notes and Fixture Patch revision notes, including PDF export data.
+- Existing links need “Make current patch live” after the updated sharing Worker is deployed to receive the new snapshot fields.
+
 ## V61.1 — Reliable sharing controls
 
 - Open Share patch immediately while its API request loads. Keep errors and retry controls inside the dialog.
