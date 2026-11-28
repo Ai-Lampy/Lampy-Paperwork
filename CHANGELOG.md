@@ -1,3 +1,12 @@
+## V61.3 — Viewer header, rows and PDF parity
+
+- Use the main app header grid, logo positions, title typography and responsive layout for shared viewers.
+- Close either summary side pane when the viewer clicks outside it.
+- Keep the inline Notes editor within the cell so empty editors do not increase Fixture Patch row height.
+- Preserve the owner's PDF paper, DPI, header/footer styling and content, cover choices, logo choices, project revision and selected filename structure through sharing.
+- Continue using the main app PDF preview and export functions. Only selected PDF output is shared; unrelated account/project data stays excluded.
+- The updated sharing Worker and Make current patch live are required to publish PDF settings to existing viewer links.
+
 ## V61.2 — Shared patch layout and inline notes
 
 - Reuse the main Fixture Patch layout, formatting, control toolbar and statistics in shared viewers.

@@ -79,9 +79,11 @@
  async function ownerNotes(){if(!connection)throw Error('Create a shared patch first.');await refresh();const d=dialog('Viewer notes'),list=el('div','','shareNoteList');if(!notes.length)list.append(el('p','No viewer notes yet.'));notes.forEach(note=>{list.append(el('strong',note.fixtureLabel),noteCard(note))});d.append(list,button('Mark notes read',async()=>{await request(connection,'read','POST',{seq:Math.max(0,...notes.map(n=>n.seq))});await refresh();d.close()}));}
  function toolbar(){const wrap=el('div','','shareActions');wrap.append(button('Share patch',ownerDialog),button('Viewer notes',ownerNotes));return wrap}
  function decorateOwner(){if(isViewer)return;const toolbarHost=document.querySelector('.fixturePatchToolbarActions');if(toolbarHost&&!toolbarHost.querySelector('[data-share-toolbar]')){const buttons=toolbar();buttons.dataset.shareToolbar='1';toolbarHost.append(buttons)}decorate()}
+ function closeSummary(){summaryPane?.remove();summaryPane=null;summaryKind=''}
+ function closeSummaryOnOutsideClick(event){if(summaryPane&&!summaryPane.contains(event.target))closeSummary()}
  function openSummary(kind){
   summaryKind=kind;if(!summaryPane){summaryPane=el('aside','','frontEditorPane fixtureSummaryPane shareSummaryPane');summaryPane.setAttribute('aria-label','Patch summary');document.body.append(summaryPane)}
-  summaryPane.replaceChildren();const head=el('div','','frontEditorHead'),body=el('div','','frontEditorBody');head.append(el('h2',kind==='fixtures'?'Fixture Summary':'Position Summary'),button('×',()=>{summaryPane.remove();summaryPane=null;summaryKind=''},'close'));summaryPane.append(head,body);
+  summaryPane.replaceChildren();const head=el('div','','frontEditorHead'),body=el('div','','frontEditorBody');head.append(el('h2',kind==='fixtures'?'Fixture Summary':'Position Summary'),button('×',closeSummary,'close'));summaryPane.append(head,body);
   body.innerHTML=kind==='fixtures'?bridge.fixtureSummary():bridge.positionSummary();body.querySelectorAll('[onclick]').forEach(n=>n.removeAttribute('onclick'));
   body.querySelectorAll('.homeFixtureInfoButton').forEach(n=>{const card=el('div','','homeFixtureInfoButton');card.innerHTML=n.innerHTML;card.querySelector('.homeDistroMeta:last-child')?.remove();n.replaceWith(card)});summaryPane.classList.add('open');
  }
@@ -112,7 +114,7 @@
   if(cell.querySelector('.shareNoteEntry'))return;
   const draft=drafts.get(id)||{body:'',requestId:crypto.randomUUID(),version:loadedVersion,error:'',sending:false,payload:null};drafts.set(id,draft);
   const field=el('textarea','','shareNoteEntry'),message=el('span','','shareNoteStatus');field.rows=1;field.maxLength=2000;field.value=draft.body;field.setAttribute('aria-label','Note for fixture '+id);field.title='Type a note. Enter sends; Shift+Enter adds a line.';message.setAttribute('role','status');
-  const resize=()=>{field.style.height='auto';field.style.height=Math.max(24,field.scrollHeight)+'px'},sync=()=>{field.value=draft.body;field.readOnly=draft.sending;message.textContent=draft.sending?'Sending…':draft.error;message.hidden=!message.textContent;resize()};
+  const resize=()=>{field.dataset.draft=String(!!draft.body)},sync=()=>{field.value=draft.body;field.readOnly=draft.sending;message.textContent=draft.sending?'Sending…':draft.error;message.hidden=!message.textContent;resize()};
   draft.sync=sync;
   field.onfocus=()=>{if(!viewerName.trim()||!viewerRole.trim()){showError(Error('Enter your name and job role above the patch before adding a note.'));header.querySelector(!viewerName.trim()?'[name=name]':'[name=role]').focus()}};
   field.oninput=()=>{draft.body=field.value;draft.error='';message.hidden=true;bridge.resizePatch?.();resize()};
@@ -127,7 +129,14 @@
   field.onblur=send;field.onkeydown=event=>{if(event.key==='Enter'&&!event.shiftKey&&!event.isComposing){event.preventDefault();send().then(()=>{if(!draft.error)field.blur()})}};
   cell.onclick=event=>{if(event.target!==field)field.focus()};cell.append(field,message);sync();
  }
- function renderHeaderLogos(snapshot){const host=header.querySelector('.shareHeaderLogos');host.replaceChildren();const brand=el('img');brand.src='images/branding/ai-lampy-logo.png';brand.alt='AI-Lampy';host.append(brand);for(const logo of Object.values(snapshot.logos||{})){const image=el('img');image.src=logo.dataUrl;image.alt=logo.name||'Project logo';host.append(image)}}
+ function buildViewerHeader(){
+  const node=el('header','','topHeader shareViewerHeader'),top=el('div','','top'),left=el('div','','topLogoGroup shareHeaderLogos'),title=el('div','','topTitle'),right=el('div','','topActions'),tour=el('div','','tourLogoSlot');
+  node.id='shareViewHeader';title.append(el('h1','Fixture Patch'));right.append(tour);top.append(left,title,right);node.append(top);return node;
+ }
+ function renderHeaderLogos(snapshot){
+  const left=header.querySelector('.shareHeaderLogos'),right=header.querySelector('.tourLogoSlot');left.replaceChildren();right.replaceChildren();
+  for(const key of ['vendor','secondary','tour']){const logo=snapshot.logos?.[key];if(!logo)continue;const image=el('img','',''+(key==='tour'?'tourLogo':'projectHeaderLogo'+(key==='vendor'?' topVendorLogo':'')));image.src=logo.dataUrl;image.alt=logo.name||'Project logo';(key==='tour'?right:left).append(image)}
+ }
  async function prepareSnapshot(){
   const raw=bridge.snapshot(),logos={};for(const [key,logo] of Object.entries(raw.logos||{})){const source=logo?.dataUrl||logo?.src;if(!source)continue;
    const url=new URL(source,location.href);if(url.protocol!=='data:'&&(url.origin!==location.origin||!url.pathname.includes('/images/')))throw Error('The '+key+' logo must be a project image or a bundled logo.');
@@ -137,7 +146,7 @@
  }
  async function setup(options){
   bridge=options;
-  if(isViewer){document.body.classList.add('shareViewerMode');const footerLink=document.querySelector('.appFooterBrandLink');if(footerLink){footerLink.removeAttribute('onclick');footerLink.href=location.href;footerLink.onclick=event=>{event.preventDefault();header?.scrollIntoView({behavior:'smooth'})}}header=el('header','','shareViewerHeader');header.id='shareViewHeader';header.append(el('div','','shareHeaderLogos'),el('h1','Fixture Patch'));
+  if(isViewer){document.body.classList.add('shareViewerMode');const footerLink=document.querySelector('.appFooterBrandLink');if(footerLink){footerLink.removeAttribute('onclick');footerLink.href=location.href;footerLink.onclick=event=>{event.preventDefault();header?.scrollIntoView({behavior:'smooth'})}}header=buildViewerHeader();document.addEventListener('click',closeSummaryOnOutsideClick,true);
    const identity=el('div','','shareIdentity');for(const [key,label] of [['name','Name'],['role','Job Role']]){const wrapper=el('label',label),input=el('input');input.name=key;input.maxLength=120;input.required=true;input.autocomplete=key==='name'?'name':'organization-title';input.oninput=()=>{if(key==='name')viewerName=input.value;else viewerRole=input.value};wrapper.append(input);identity.append(wrapper)}header.append(identity);document.body.prepend(header);status=el('div','','shareViewerStatus');header.after(status);await refreshViewer();let guided=false;try{guided=!!localStorage.getItem('lampy-share-guide:'+viewer?.id)}catch{}if(state&&!guided)guidance();
   }else{
    if(isOwnerLink){if(!match||!core.TOKEN.test(match[4]||''))throw Error('This owner-management link is incomplete. Use the complete private link saved when you created the share.');const offered={id:match[2],owner:match[3],viewer:match[4]},result=await request(offered);const d=dialog('Private patch management');d.append(el('p','Shared patch: '+result.snapshot.title+'. Open the matching project before linking these management controls to it. Your current project will not be replaced.'));

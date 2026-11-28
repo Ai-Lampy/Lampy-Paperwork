@@ -8,7 +8,7 @@ const html=fs.readFileSync('index.html','utf8'),sidebar=fs.readFileSync('js/app-
 console.log('PASS: snapshot privacy allowlist, IDs, required note identity, highlight colours and removal of account UI hooks.');
 
 // Snapshot data must preserve the owner's effective parameters and separate internal modes.
-const vm=require('node:vm'),context={LampyPatchShare:{isViewer:false},ensureProjectInfo:()=>({file:{projectName:'Show'},positions:[],projectSettings:{units:{measurement:'metric'}},fixtureNameDisplay:{patch:'full'}}),activePatchRows:()=>[{id:'a',fixture:'Fixture',mode:'Same display name',gdtfMode:'mode-a',channels:16},{id:'b',fixture:'Fixture',mode:'Same display name',gdtfMode:'mode-b',channels:16}],fixtureModeParameters:()=>12,fixturePatchViewOptions:{pdf:{}},projectLogo:()=>({}),selectedVendorLogo:()=>null,secondaryLogo:()=>({}),patchPdfControlData:()=>({}),patchPdfNoteItems:()=>[],patchPdfRevisionRows:()=>[]};
+const vm=require('node:vm'),context={LampyPatchShare:{isViewer:false},ensureProjectInfo:()=>({file:{projectName:'Show'},positions:[],projectSettings:{units:{measurement:'metric'}},fixtureNameDisplay:{patch:'full'}}),activePatchRows:()=>[{id:'a',fixture:'Fixture',mode:'Same display name',gdtfMode:'mode-a',channels:16},{id:'b',fixture:'Fixture',mode:'Same display name',gdtfMode:'mode-b',channels:16}],fixtureModeParameters:()=>12,fixturePatchViewOptions:{pdf:{}},projectLogo:()=>({}),selectedVendorLogo:()=>null,secondaryLogo:()=>({}),patchPdfControlData:()=>({}),patchPdfNoteItems:()=>[],patchPdfRevisionRows:()=>[],fixturePatchSharePdfSettings:()=>null};
 vm.createContext(context);vm.runInContext(html.match(/function fixturePatchShareSnapshot\(\)\{[^\n]+/)[0],context);
 const shared=Core.snapshot(context.fixturePatchShareSnapshot());
 assert.equal(shared.fixtures.reduce((n,row)=>n+row.parameters,0),24);
@@ -91,6 +91,7 @@ function inlineHarness(){
 ShareTestElement.prototype.replaceChildren=function(...items){this.children=[];this.append(...items)};
 ShareTestElement.prototype.prepend=function(...items){for(const item of items){item.parent=this}this.children.unshift(...items)};
 ShareTestElement.prototype.after=function(item){this.parent?.append(item)};
+ShareTestElement.prototype.contains=function(target){return this===target||this.children.some(child=>child.contains?.(target))};
 ShareTestElement.prototype.removeAttribute=function(key){delete this.attributes[key]};
 Object.defineProperty(ShareTestElement.prototype,'classList',{get(){return {add:(name)=>{if(!this.className.split(' ').includes(name))this.className+=' '+name},contains:name=>this.className.split(' ').includes(name)}}});
 const originalQuery=ShareTestElement.prototype.querySelectorAll;
@@ -98,7 +99,7 @@ ShareTestElement.prototype.querySelectorAll=function(selector){if(selector==='h1
 (async()=>{
  const body=new ShareTestElement('body'),sheet=new ShareTestElement('main');body.append(sheet);let renders=0,loaded;
  const data=Core.snapshot({title:'Shared show',fixtures:[{id:'one',fixture:'Wash'}],logos:{tour:{name:'Tour',dataUrl:'data:image/png;base64,AAAA'},vendor:{name:'Vendor',dataUrl:'data:image/png;base64,AAAA'},secondary:{name:'Personal',dataUrl:'data:image/png;base64,AAAA'}},summaryNotes:['Keep clear'],control:{consoles:[],npus:[],parameters:0}});
- const document={body,createElement:tag=>new ShareTestElement(tag),querySelector:s=>body.querySelector(s),querySelectorAll:s=>body.querySelectorAll(s),getElementById:id=>id==='sheet'?sheet:null};
+ const events={},document={body,addEventListener:(name,fn,capture)=>{events[name]=fn;assert.equal(capture,true)},createElement:tag=>new ShareTestElement(tag),querySelector:s=>body.querySelector(s),querySelectorAll:s=>body.querySelectorAll(s),getElementById:id=>id==='sheet'?sheet:null};
  const scope={document,location:{href:'https://lampy.example/#patch-view=share.'+'b'.repeat(64),hash:'#patch-view=share.'+'b'.repeat(64)},URL,AbortSignal,crypto:globalThis.crypto,localStorage:{getItem:()=> '1',setItem(){}},LampyShareCore:Core,setInterval(){},addEventListener(){},fetch:async url=>Response.json(String(url).endsWith('patch-sharing-config.json')?{apiURL:'https://api.example/shares/'}:{version:1,snapshot:data,notes:[],more:false})};scope.window=scope;
  vm.runInNewContext(sharingSource,scope);
  const make=(cls)=>{const node=new ShareTestElement('div');node.className=cls;return node};
@@ -106,7 +107,7 @@ ShareTestElement.prototype.querySelectorAll=function(selector){if(selector==='h1
  assert.equal(loaded.title,'Shared show');assert.equal(renders,1);const patch=sheet.querySelector('.fixturePatchView');assert(patch.querySelector('.fixturePatchControlBody'));assert(patch.querySelector('.fixturePatchStats'));
  const buttons=patch.querySelector('.fixturePatchToolbarLeft').children;await buttons[0].onclick();assert.equal(renders,1);assert.equal(sheet.querySelector('.fixturePatchView'),patch);assert(body.querySelector('.shareSummaryPane').text.includes('Fixture Summary'));
  await buttons[1].onclick();assert.equal(renders,1);assert(body.querySelector('.shareSummaryPane').text.includes('Position Summary'));
- const logos=body.querySelector('.shareHeaderLogos').children;assert.equal(logos.length,4);assert(!logos.some(logo=>String(logo.src).includes('lampy-paperwork-logo')));assert(patch.text.includes('Keep clear'));
+ const head=body.querySelector('.shareViewerHeader');assert(head.classList.contains('topHeader'));assert(head.querySelector('.topTitle'));assert(head.querySelector('.topActions'));const logos=[...head.querySelector('.shareHeaderLogos').children,...head.querySelector('.tourLogoSlot').children];assert.equal(logos.length,3);assert.equal(head.querySelector('.tourLogoSlot').children[0].alt,'Tour');events.click({target:body.querySelector('.shareSummaryPane').children[0]});assert(body.querySelector('.shareSummaryPane'));events.click({target:sheet});assert.equal(body.querySelector('.shareSummaryPane'),null);assert(!logos.some(logo=>String(logo.src).includes('lampy-paperwork-logo')));assert(patch.text.includes('Keep clear'));
  console.log('PASS: main patch renderer and controls retained, summaries open beside the patch, all header logos and shared notes displayed.');
 })().catch(error=>{console.error(error);process.exitCode=1});
 
@@ -119,3 +120,24 @@ ShareTestElement.prototype.querySelectorAll=function(selector){if(selector==='h1
  scope.bridge.snapshot=()=>({fixtures:[{id:'one'}],logos:{tour:{src:'https://external.test/logo.png'}}});await assert.rejects(scope.prepareSnapshot(),/project image or a bundled logo/);
  console.log('PASS: logos are bounded raster snapshots; unrelated remote logo URLs are rejected.');
 })().catch(error=>{console.error(error);process.exitCode=1});
+
+// Owner/viewer PDF chrome and saved output choices must round-trip through the server allowlist.
+const Filenames=require('../js/pdf-filenames.js');
+const pdfOwner={file:{projectName:'Test Show',version:'7',versionDate:'2026-11-28',projectOwner:'Owner',email:'private@example.test',includeOwnerDetailsInPdfFooters:false},production:{lightingVendor:'Test Vendor'},exportLogos:{tour:true,vendor:false,secondary:true},projectSettings:{pdf:{paper:'A3',orientation:'portrait',dpi:150,firstHeader:{title:{font:'Arial',size:20,bold:true,colour:'#112233'},subtitle:{font:'Arial',size:18,bold:true,colour:'#112233'}},laterHeader:{font:'Arial',size:7,bold:false,colour:'#111111',left:'{project}',centre:'{document}',right:'Version {version}'},footer:{left:'Page {page} of {pages}',centre:'{project} • Version {version}',right:'{owner}\n{email}',style:{font:'Arial',size:7,colour:'#111111'}},documentDefaults:{patch:{paper:'A3',orientation:'portrait',dpi:150,headerMainSize:20,headerSubSize:18}},fileNames:{parts:[{field:'version'},{field:'document'},{field:'vendor'}]}}}};
+let pdfProject=structuredClone(pdfOwner);
+const pdfContext={ensureProjectInfo:()=>pdfProject,LampyPdfFilenames:Filenames,fixturePatchViewOptions:{pdf:{showControl:false,showSummary:false,showRevisionNotes:false,showSummaryNotes:true,showUniverseTotal:false,headerMainSize:20,headerSubSize:18}},pdfLinkedTemplateValues:()=>({}),formatDisplayDate:x=>x,escapeHtml:value=>String(value??''),escapeAttr:value=>String(value??'')};
+vm.createContext(pdfContext);
+for(const name of ['fixturePatchSharePdfSettings','pdfTemplateValues','pdfPageFooterMarkup','pdfLaterPageHeaderMarkup'])vm.runInContext(html.match(new RegExp('function '+name+'\\([^\\n]+'))[0],pdfContext);
+vm.runInContext(html.slice(html.indexOf('function expandPdfTemplate('),html.indexOf('\nfunction ',html.indexOf('function expandPdfTemplate(')+1)),pdfContext);
+const ownerFooter=pdfContext.pdfPageFooterMarkup('Fixture Patch'),ownerHeader=pdfContext.pdfLaterPageHeaderMarkup('Fixture Patch');
+const published=Core.snapshot({fixtures:[{id:'fixture'}],pdfExport:pdfContext.fixturePatchSharePdfSettings()}).pdfExport;
+assert.equal(published.project.paper,'A3');assert.equal(published.project.orientation,'portrait');assert.equal(published.options.showControl,false);assert.equal(published.options.showSummary,false);assert.equal(published.logos.vendor,false);assert(!JSON.stringify(published).includes('private@example.test'),'Unselected private footer contact must not leak');assert.equal(published.project.footer.right,'');
+assert.deepEqual(Core.snapshot({fixtures:[{id:'fixture'}],pdfExport:published}).pdfExport,published);
+pdfProject={file:{projectName:'Test Show',version:published.version,versionDate:published.versionDate},projectSettings:{pdf:published.project},production:{}};
+assert.equal(pdfContext.pdfPageFooterMarkup('Fixture Patch'),ownerFooter);assert.equal(pdfContext.pdfLaterPageHeaderMarkup('Fixture Patch'),ownerHeader);
+assert.equal(Filenames.filename(published.project.fileNames,'patch',pdfProject,new Date(2026,10,28)),Filenames.filename(pdfOwner.projectSettings.pdf.fileNames,'patch',pdfOwner,new Date(2026,10,28)));
+const sharingCss=fs.readFileSync('js/patch-sharing.css','utf8');
+assert(sharingCss.includes('.topHeader:not(.shareViewerHeader)'));assert(!sharingCss.includes('.shareViewerHeader h1{'));assert(!sharingCss.includes('min-height:24px'));
+assert.match(sharingCss,/\.shareNoteEntry\{position:absolute;[^}]+height:100%;min-width:0;min-height:0/);
+assert(!sharingSource.includes("field.style.height=Math.max(24"));assert(html.includes('exportPatch:()=>openFixturePatchPdfPreview()'));
+console.log('PASS: owner/viewer PDF settings, chrome and filenames match; unselected contacts stay private; note input adds no normal-flow height.');
