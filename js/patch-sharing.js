@@ -7,16 +7,19 @@
  const viewer=isViewer&&match?{id:match[2],token:match[3]}:null;
  let registry={};try{const saved=JSON.parse(localStorage.getItem(KEY)||'{}');if(saved&&typeof saved==='object'&&!Array.isArray(saved))registry=saved}catch{}
  const el=(tag,text='',className='')=>{const node=document.createElement(tag);node.textContent=text;if(className)node.className=className;return node};
- function button(label,run,className='btn'){const node=el('button',label,className);node.type='button';node.onclick=async()=>{node.disabled=true;try{await run()}catch(error){showError(error)}finally{node.disabled=false}};return node}
- function showError(error){const dialog=document.querySelector('dialog.shareDialog[open]');let host=dialog?.querySelector('.shareError');if(!host){host=el('p','','shareError');(dialog||status||document.body).append(host)}host.textContent=error.message||String(error);host.setAttribute('role','alert')}
+ function button(label,run,className='btn'){const node=el('button',label,className);node.type='button';node.onclick=async()=>{node.disabled=true;try{await run()}catch(error){showError(error.name==='TimeoutError'||error.name==='AbortError'?Error('The sharing service took too long to respond. Try again.'):error instanceof TypeError?Error('Could not reach the sharing service. Check your connection and try again.'):error)}finally{node.disabled=false}};return node}
+ function showError(error){const hostDialog=document.querySelector('dialog.shareDialog[open]'),container=hostDialog||status||dialog('Patch sharing');let host=container.querySelector('.shareError');if(!host){host=el('p','','shareError');container.append(host)}host.textContent=error.message||String(error);host.setAttribute('role','alert')}
  function saveRegistry(){localStorage.setItem(KEY,JSON.stringify(registry))}
  function useProject(key){if(isViewer)return;projectKey=core.ID.test(key||'')?key:crypto.randomUUID();connection=registry[projectKey]||null;state=null;notes=[];if(bridge)refresh().catch(()=>{})}
  function link(kind,connection){const url=new URL(location.href);url.search='';url.hash='patch-'+kind+'='+connection.id+'.'+(kind==='owner'?connection.owner+'.'+connection.viewer:connection.viewer);return url.href}
+ const serviceUpdateMessage='Patch sharing is unavailable because the server still requires account sign-in. The Cloudflare sharing Worker needs updating. You do not need to sign in.';
  async function request(connection,action='',method='GET',data){
-  if(!base){const response=await fetch(API,{cache:'no-store'});if(!response.ok)throw Error('Could not load patch sharing configuration.');const config=await response.json();base=new URL(config.apiURL);if(base.protocol!=='https:'&&!['127.0.0.1','localhost'].includes(base.hostname))throw Error('Patch sharing requires HTTPS.')}
+  if(!base){const response=await fetch(API,{cache:'no-store',signal:AbortSignal.timeout(20000)});if(!response.ok)throw Error('Could not load patch sharing configuration.');const config=await response.json();base=new URL(config.apiURL);if(base.protocol!=='https:'&&!['127.0.0.1','localhost'].includes(base.hostname))throw Error('Patch sharing requires HTTPS.')}
   const token=connection.owner||connection.token;if(!core.TOKEN.test(token))throw Error('Invalid sharing link.');
   const response=await fetch(new URL(connection.id+(action.startsWith('?')?action:action?'/'+action:''),base),{method,credentials:'omit',cache:'no-store',headers:{[connection.owner?'X-Lampy-Owner':'X-Lampy-Share']:token,...(data?{'Content-Type':'application/json'}:{})},body:data?JSON.stringify(data):undefined,signal:AbortSignal.timeout(20000)});
-  const value=await response.json();if(!response.ok){const error=Error(value.error||'Patch sharing failed.');error.status=response.status;throw error}return value;
+  if(response.status===401||response.redirected){const error=Error(serviceUpdateMessage);error.status=response.status;throw error}
+  let value;try{value=await response.json()}catch{throw Error('The sharing service returned an unexpected response. Check the Cloudflare Worker and API-path configuration.')}
+  if(!response.ok){const error=Error(value.error||'Patch sharing failed.');error.status=response.status;throw error}return value;
  }
  async function readState(target,previous=[]){
   const merged=new Map(previous.map(note=>[note.seq,note]));let after=Math.max(0,...merged.keys()),result;
@@ -50,11 +53,18 @@
   const snapshot=core.snapshot(bridge.snapshot());
   // Save tokens before the request: retrying a lost response uses the same identity.
   if(!connection||state?.revoked){connection={id:crypto.randomUUID(),owner:core.token(),viewer:core.token()};registry[projectKey]=connection;saveRegistry();bridge.persist()}
-  state=await request(connection,'','POST',{viewerToken:connection.viewer,snapshot});notes=state.notes;await ownerDialog();
+  const current=connection,key=projectKey,result=await request(current,'','POST',{viewerToken:current.viewer,snapshot});
+  if(key!==projectKey||current!==connection)return;state=result;notes=state.notes;await ownerDialog();
  }
  async function ownerDialog(){
-  if(connection){try{await refresh()}catch(error){if(error.status!==404)throw error}}
-  const d=dialog('Share Fixture Patch');d.append(el('p','Viewers can filter the patch, export a PDF, view summaries and add notes. Fixture data stays read-only. Ordinary project edits do not change the shared snapshot.'));
+  const d=dialog('Share Fixture Patch'),current=connection,key=projectKey;
+  if(current){const loading=el('p','Loading shared patch…');loading.setAttribute('role','status');d.append(loading);
+   try{const result=await readState(current,notes);if(key!==projectKey||current!==connection||!d.open)return;state=result;notes=result.notes;decorate()}
+   catch(error){if(!d.open)return;if(key!==projectKey||current!==connection){d.close();return}if(error.status===404)state=null;else{const message=el('p',error.message||'Could not load sharing details.','shareError');message.setAttribute('role','alert');d.append(message,button('Try again',ownerDialog,'btn primary'));return}}
+   finally{loading.remove()}
+  }
+  if(key!==projectKey||current!==connection||!d.open){if(d.open)d.close();return}
+  d.append(el('p','Viewers can filter the patch, export a PDF, view summaries and add notes. Fixture data stays read-only. Ordinary project edits do not change the shared snapshot.'));
   if(!connection||!state){d.append(button('Create viewer link',create,'btn primary'));return}
   if(state.revoked){d.append(el('p','This viewer link is revoked.'),button('Create new viewer link',create,'btn primary'));return}
   linkField(d,'Viewer link — send this to your crew',link('view',connection));linkField(d,'Private owner-management link — keep this safe; do not send it to viewers',link('owner',connection));

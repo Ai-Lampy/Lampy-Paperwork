@@ -1,3 +1,9 @@
+## V61.1 — Reliable sharing controls
+
+- Open Share patch immediately while its API request loads. Keep errors and retry controls inside the dialog.
+- Explain an outdated account backend without asking the user to sign in. Preserve owner credentials when retrying.
+- Keep closed dialogs closed when a delayed request finishes.
+
 ## V61 — Shared Fixture Patch and local projects
 
 - Remove sign-in, account portal and cloud project synchronisation. Preserve local project import, export and autosave.
