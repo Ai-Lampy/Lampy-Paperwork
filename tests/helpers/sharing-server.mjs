@@ -10,7 +10,7 @@ export async function runtime(){
  const directory=await realpath(await mkdtemp(path.join(tmpdir(),'lampy-share-test-'))),script=path.join(directory,'worker.mjs');
  await build({entryPoints:[path.join(root,'backend/patch-sharing-worker.mjs')],outfile:script,bundle:true,format:'esm',platform:'neutral',target:'es2022'});
  const mf=new Miniflare({rootPath:directory,modulesRoot:directory,modules:true,scriptPath:script,compatibilityDate:'2026-07-30',cf:false,d1Databases:['AUTH_DB'],bindings:{ALLOWED_ORIGINS:'https://lampy.example,http://127.0.0.1:8790',APP_URL:'https://lampy.example/',SHARE_PREFIX:'/paperwork/account-api/shares'}});
- const db=await mf.getD1Database('AUTH_DB');await db.exec((await readFile(path.join(root,'backend/migrations/0002-patch-sharing.sql'),'utf8')).replace(/--[^\n]*/g,'').replace(/\s+/g,' '));
+ const db=await mf.getD1Database('AUTH_DB');for(const migration of ['0002-patch-sharing.sql','0003-patch-note-replies.sql'])await db.exec((await readFile(path.join(root,'backend/migrations',migration),'utf8')).replace(/--[^\n]*/g,'').replace(/\s+/g,' '));
  return {mf,db,async close(){await mf.dispose();await rm(directory,{recursive:true,force:true})}};
 }
 export async function serve(){

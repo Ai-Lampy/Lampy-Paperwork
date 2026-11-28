@@ -4,7 +4,7 @@ import Core from '../js/patch-sharing-core.js';
 const test=await runtime();
 try{
  const owner=Core.token(),viewer=Core.token(),id='test-share',origin='https://lampy.example';
- const snapshot={title:'Lighting patch',fixtures:[{id:'fixture-1',fixture:'Wash',fixId:'1',mode:'Extended',channels:30,universe:1,address:1,notes:'Owner note'}],positions:[],logos:{tour:{name:'Tour',dataUrl:'data:image/png;base64,AAAA'}},control:{consoles:[{protocols:['sACN','Art-Net'],cells:['Console Type','Main','Mode 3','2.3','10.0.0.1','2.0.0.1']}],npus:[{type:'NPU',quantity:2}],parameters:8192},summaryNotes:['Owner cover note'],revisionNotes:[{version:'1',date:'28 Nov',note:'Patch updated'}],presentation:{columns:{mode:false},titleFormat:{font:'Arial',fontSize:24}},pdfExport:{version:'7',versionDate:'2026-11-28',project:{paper:'A3',orientation:'portrait',dpi:150,footer:{left:'Page {page} of {pages}',right:'Frozen published footer'}},options:{showControl:false,showSummary:false},logos:{tour:true,vendor:false},filenameParts:[{field:'version'},{field:'document'},{field:'project'}]},secret:'private',profile:{email:'private@example.test'},gdtfFiles:{private:'bytes'}};
+ const snapshot={title:'Lighting patch',patchName:'Tour Patch',logoVisibility:{vendor:false,secondary:true},fixtures:[{id:'fixture-1',fixture:'Wash',fixId:'1',mode:'Extended',channels:30,universe:1,address:1,notes:'Owner note'}],positions:[],logos:{tour:{name:'Tour',dataUrl:'data:image/png;base64,AAAA'}},control:{consoles:[{protocols:['sACN','Art-Net'],cells:['Console Type','Main','Mode 3','2.3','10.0.0.1','2.0.0.1']}],npus:[{type:'NPU',quantity:2}],parameters:8192},summaryNotes:['Owner cover note'],revisionNotes:[{version:'1',date:'28 Nov',note:'Patch updated'}],presentation:{columns:{mode:false},titleFormat:{font:'Arial',fontSize:24}},pdfExport:{version:'7',versionDate:'2026-11-28',project:{paper:'A3',orientation:'portrait',dpi:150,footer:{left:'Page {page} of {pages}',right:'Frozen published footer'}},options:{showControl:false,showSummary:false},logos:{tour:true,vendor:false},filenameParts:[{field:'version'},{field:'document'},{field:'project'}]},secret:'private',profile:{email:'private@example.test'},gdtfFiles:{private:'bytes'}};
  const send=async(route='',method='GET',token=owner,data,viewerMode=false,extra={})=>test.mf.dispatchFetch(origin+'/paperwork/account-api/shares/'+id+route,{method,headers:{Origin:origin,...(token?{[viewerMode?'X-Lampy-Share':'X-Lampy-Owner']:token}:{}),...(data?{'Content-Type':'application/json'}:{}),...extra},body:data?JSON.stringify(data):undefined});
  const value=async(...args)=>{const response=await send(...args);const data=await response.json();assert(response.ok,JSON.stringify(data));return data};
  assert.equal((await send('','GET',null)).status,403);
@@ -13,7 +13,7 @@ try{
  assert.equal((await value('','POST',owner,{viewerToken:viewer,snapshot})).version,1,'creation retries keep the published snapshot');
  assert.equal((await send('','GET',Core.token())).status,404);
  assert.equal((await send('','GET',viewer,null,true,{Origin:'https://evil.test'})).status,403);
- let shared=await value('','GET',viewer,null,true);assert.equal(shared.snapshot.fixtures.length,1);assert.equal(shared.snapshot.schema,2);assert.deepEqual(shared.snapshot.logos,snapshot.logos);assert.deepEqual(shared.snapshot.control,snapshot.control);assert.deepEqual(shared.snapshot.summaryNotes,snapshot.summaryNotes);assert.deepEqual(shared.snapshot.revisionNotes,snapshot.revisionNotes);assert.equal(shared.snapshot.presentation.columns.mode,false);assert.deepEqual(shared.snapshot.pdfExport,Core.snapshot(snapshot).pdfExport);assert.equal(shared.snapshot.pdfExport.options.showControl,false);assert(!('readSeq'in shared));
+ let shared=await value('','GET',viewer,null,true);assert.equal(shared.snapshot.fixtures.length,1);assert.equal(shared.snapshot.schema,2);assert.equal(shared.snapshot.patchName,'Tour Patch');assert.deepEqual(shared.snapshot.logoVisibility,snapshot.logoVisibility);assert.deepEqual(shared.snapshot.logos,snapshot.logos);assert.deepEqual(shared.snapshot.control,snapshot.control);assert.deepEqual(shared.snapshot.summaryNotes,snapshot.summaryNotes);assert.deepEqual(shared.snapshot.revisionNotes,snapshot.revisionNotes);assert.equal(shared.snapshot.presentation.columns.mode,false);assert.deepEqual(shared.snapshot.pdfExport,Core.snapshot(snapshot).pdfExport);assert.equal(shared.snapshot.pdfExport.options.showControl,false);assert(!('readSeq'in shared));
  assert.equal((await send('/snapshot','PUT',viewer,{version:1,snapshot},true)).status,403);
  assert.equal((await send('/revoke','POST',viewer,{},true)).status,403);
  const note={requestId:'note-1',fixtureId:'fixture-1',name:'Crew A',jobRole:'Lighting',body:'Check cable',version:1};
@@ -22,20 +22,33 @@ try{
  const first=await value('/notes','POST',viewer,note,true);assert.equal((await value('/notes','POST',viewer,note,true)).seq,first.seq);
  assert.equal((await send('/notes','POST',viewer,{...note,body:'Changed'},true)).status,409);
  const concurrent=await Promise.all(Array.from({length:4},(_,n)=>value('/notes','POST',viewer,{...note,requestId:'note-'+(n+2),name:'Crew '+n},true)));assert.equal(new Set(concurrent.map(n=>n.seq)).size,4);
- const ownerState=await value();assert.equal(ownerState.notes.length,5);assert.equal(ownerState.readSeq,0);
+ const general=await value('/notes','POST',viewer,{...note,requestId:'general',scope:'patch',fixtureId:'',body:'General patch instruction'},true);assert.equal(general.scope,'patch');assert.equal(general.fixtureLabel,'General patch note');
+ const reply=await value('/notes','POST',viewer,{...note,requestId:'viewer-reply',parentSeq:first.seq,body:'Viewer comment',authorType:'owner'},true);assert.equal(reply.parentSeq,first.seq);assert.equal(reply.authorType,'viewer');
+ const ownerReply=await value('/notes','POST',owner,{...note,requestId:'owner-reply',parentSeq:first.seq,body:'Owner comment'});assert.equal(ownerReply.authorType,'owner');assert.equal((await value('/notes','POST',owner,{...note,requestId:'owner-reply',parentSeq:first.seq,body:'Owner comment'})).seq,ownerReply.seq);
+ assert.equal((await send('/notes','POST',viewer,{...note,requestId:'bad-parent',parentSeq:999999},true)).status,400);
+ assert.equal((await send('/notes','POST',viewer,{...note,requestId:'nested',parentSeq:reply.seq},true)).status,400);
+ assert.equal((await send('/notes','POST',viewer,{...note,requestId:'wrong-scope',parentSeq:general.seq},true)).status,400);
+ assert.equal((await send('/notes','POST',viewer,{...note,requestId:'owner-reply',parentSeq:first.seq,body:'Owner comment'},true)).status,409);
+ // Parent IDs from another share must never create cross-share threads.
+ await test.db.prepare('INSERT INTO patch_shares(id,owner_hash,viewer_hash,snapshot,created_at,updated_at) VALUES(?,?,?,?,?,?)').bind('other-share','owner','viewer',JSON.stringify(Core.snapshot(snapshot)),Date.now(),Date.now()).run();
+ const foreign=await test.db.prepare('INSERT INTO patch_notes(share_id,request_id,fixture_id,fixture_label,name,job_role,body,version,created_at) VALUES(?,?,?,?,?,?,?,?,?) RETURNING seq').bind('other-share','foreign-note','fixture-1','Other fixture','Other crew','LX','Private to another share',1,Date.now()).first();
+ assert.equal((await send('/notes','POST',viewer,{...note,requestId:'cross-share',parentSeq:foreign.seq},true)).status,400);
+ const ownerState=await value();assert.equal(ownerState.notes.length,8);assert.equal(ownerState.readSeq,0);
  await value('/read','POST',owner,{seq:first.seq});assert.equal((await value()).readSeq,first.seq);
  assert.equal((await send('/snapshot','PUT',owner,{version:99,snapshot})).status,409);
  await value('/snapshot','PUT',owner,{version:1,snapshot:{...snapshot,title:'New publication'}});
- shared=await value('','GET',viewer,null,true);assert.equal(shared.version,2);assert.equal(shared.snapshot.title,'New publication');assert.equal(shared.notes.length,5);
+ shared=await value('','GET',viewer,null,true);assert.equal(shared.version,2);assert.equal(shared.snapshot.title,'New publication');assert.equal(shared.notes.length,8);
  assert.equal((await send('/notes','POST',viewer,{...note,requestId:'stale'},true)).status,409);
  assert.equal((await send('/notes','POST',owner,{...note,requestId:'owner-note',version:2})).status,403);
+ assert.equal((await send('/notes','POST',viewer,{...note,requestId:'stale-general',scope:'patch',fixtureId:''},true)).status,409);
+ assert.equal((await send('/notes','POST',viewer,{...note,requestId:'stale-reply',parentSeq:first.seq},true)).status,409);
  // Large histories are bounded and resumable rather than returned in one response.
  await test.db.batch(Array.from({length:251},(_,n)=>test.db.prepare('INSERT INTO patch_notes(share_id,request_id,fixture_id,fixture_label,name,job_role,body,version,created_at) VALUES(?,?,?,?,?,?,?,?,?)').bind(id,'page-'+n,'fixture-1','1 · Wash','Crew','Lighting','Paged note',2,Date.now())));
  const firstPage=await value();assert.equal(firstPage.notes.length,250);assert.equal(firstPage.more,true);
- const next=await value('?after='+firstPage.notes.at(-1).seq);assert.equal(next.notes.length,6);assert.equal(next.more,false);
+ const next=await value('?after='+firstPage.notes.at(-1).seq);assert.equal(next.notes.length,9);assert.equal(next.more,false);
  await value('/revoke','POST',owner,{});assert.equal((await send('','GET',viewer,null,true)).status,410);assert.equal((await send('/notes','POST',viewer,{...note,version:2},true)).status,410);assert.equal((await value()).revoked,true);
  // Previous account tables/objects have no route in the replacement Worker.
  assert.equal((await test.mf.dispatchFetch(origin+'/paperwork/account-api/projects/private')).status,410);
  const options=await send('','OPTIONS',null);assert(options.headers.get('Access-Control-Allow-Headers').includes('X-Lampy-Share'));
- console.log('PASS: real Worker/D1 sharing, capability isolation, snapshot publication, immutable/idempotent notes, concurrent writers, notification cursors, revocation and retired account routes.');
+ console.log('PASS: general notes, viewer/owner replies, server attribution, invalid/nested parent rejection; real Worker/D1 sharing, capability isolation, snapshot publication, immutable/idempotent notes, concurrent writers, notification cursors, revocation and retired account routes.');
 }finally{await test.close()}

@@ -1,3 +1,17 @@
+## V61.4 — Shared app header and viewer introduction
+
+- Keep the actual app header in the shared viewer, including its white background, logo dividers, page title and responsive title fitting.
+- Preserve the shared patch name and project logo visibility. Reuse bounded original logo images without repeated lossy compression.
+- Ask for name and job role in the opening guidance dialog; remember them for this viewer session and remove the fields from the page.
+- Apply the main app responsive table layout to shared patch rows and preserve group-heading geometry without exposing editing controls.
+- Size Type and Mode to their text within each fixture group. Let Notes grow for that group’s notes without widening unrelated tables.
+- Keep Fix ID text at 16 pt in every row, including shared viewers and PDF previews; skip individual ID font shrinking.
+- Add Copy buttons below both sharing links and show unread notes as a red number badge floating over the unchanged sidebar Patch icon.
+- Add a floating + Note button with a compact composer for general patch notes. Keep drafts when the composer closes.
+- Show Reply on note hover or keyboard focus. Thread viewer and owner comments beneath the original note with name, job role and highlight colour. Include viewer replies in unread notifications.
+- Add migration 0003-patch-note-replies.sql before deploying the updated sharing Worker. Existing notes and account data remain intact.
+- Existing links need Make current patch live after the updated sharing Worker is deployed to receive the patch name and logo visibility.
+
 ## V61.3 — Viewer header, rows and PDF parity
 
 - Use the main app header grid, logo positions, title typography and responsive layout for shared viewers.

@@ -14,7 +14,7 @@ async function rate(db,key,limit,period=60000){
  const result=await db.prepare('INSERT INTO patch_rate_limits(key,window,count) VALUES(?,?,1) ON CONFLICT(key) DO UPDATE SET window=excluded.window,count=CASE WHEN window=excluded.window THEN count+1 ELSE 1 END RETURNING count').bind(key,now).first();
  if(result.count>limit)fail(429,'Too many requests. Try again shortly.');
 }
-function publicNote(row){return {seq:row.seq,fixtureId:row.fixture_id,fixtureLabel:row.fixture_label,name:row.name,jobRole:row.job_role,body:row.body,version:row.version,createdAt:row.created_at}}
+function publicNote(row){return {seq:row.seq,scope:row.fixture_id===''?'patch':'fixture',parentSeq:row.parent_seq??null,authorType:row.author_type||'viewer',fixtureId:row.fixture_id,fixtureLabel:row.fixture_label,name:row.name,jobRole:row.job_role,body:row.body,version:row.version,createdAt:row.created_at}}
 export default {async fetch(request,env){
  const headers={'Content-Type':'application/json','Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer'};
  try{
@@ -52,14 +52,19 @@ export default {async fetch(request,env){
    return new Response(JSON.stringify({id,version:share.version,revoked:!!share.revoked,readSeq:owner?share.read_seq:undefined,snapshot:JSON.parse(share.snapshot),more:notes.results.length>250,notes:notes.results.slice(0,250).map(publicNote)}),{headers});
   }
   if(request.method==='POST'&&parts[1]==='notes'){
-   if(!viewer||owner)fail(403,'Use the viewer link to add notes.');
    const input=Core.note(await body(request));
+   if(owner&&!input.parentSeq)fail(403,'Use the viewer link to add notes.');
+   if(share.revoked)fail(410,'This sharing link has been revoked.');
+   const authorType=owner?'owner':'viewer';
    const prior=await db.prepare('SELECT * FROM patch_notes WHERE share_id=? AND request_id=?').bind(id,input.requestId).first();
-   if(prior){if(prior.fixture_id!==input.fixtureId||prior.body!==input.body||prior.name!==input.name||prior.job_role!==input.jobRole||prior.version!==input.version)fail(409,'This note request has already been used.');return new Response(JSON.stringify(publicNote(prior)),{headers})}
+   if(prior){if(prior.fixture_id!==input.fixtureId||(prior.parent_seq??null)!==(input.parentSeq??null)||(prior.author_type||'viewer')!==authorType||prior.body!==input.body||prior.name!==input.name||prior.job_role!==input.jobRole||prior.version!==input.version)fail(409,'This note request has already been used.');return new Response(JSON.stringify(publicNote(prior)),{headers})}
    if(input.version!==share.version)fail(409,'The owner published a new patch. Refresh before sending your note.');
-   const fixture=JSON.parse(share.snapshot).fixtures.find(row=>row.id===input.fixtureId);if(!fixture)fail(400,'Fixture is not in this shared patch.');
+   const parent=input.parentSeq?await db.prepare('SELECT * FROM patch_notes WHERE share_id=? AND seq=?').bind(id,input.parentSeq).first():null;
+   if(input.parentSeq&&(!parent||parent.parent_seq||parent.fixture_id!==input.fixtureId))fail(400,'Reply to an original note in this shared patch.');
+   const fixture=input.scope==='patch'?null:JSON.parse(share.snapshot).fixtures.find(row=>row.id===input.fixtureId);if(!parent&&input.scope!=='patch'&&!fixture)fail(400,'Fixture is not in this shared patch.');
+   const label=parent?.fixture_label||(input.scope==='patch'?'General patch note':fixture.fixId+' · '+fixture.fixture);
    await rate(db,'notes:'+id,30);
-   const result=await db.prepare('INSERT OR IGNORE INTO patch_notes(share_id,request_id,fixture_id,fixture_label,name,job_role,body,version,created_at) SELECT ?,?,?,?,?,?,?,?,? WHERE EXISTS(SELECT 1 FROM patch_shares WHERE id=? AND version=? AND revoked=0) AND (SELECT COUNT(*) FROM patch_notes WHERE share_id=?)<10000 AND (SELECT COUNT(*) FROM patch_notes)<50000').bind(id,input.requestId,input.fixtureId,fixture.fixId+' · '+fixture.fixture,input.name,input.jobRole,input.body,input.version,now,id,input.version,id).run();
+   const result=await db.prepare('INSERT OR IGNORE INTO patch_notes(share_id,request_id,fixture_id,fixture_label,name,job_role,body,version,created_at,parent_seq,author_type) SELECT ?,?,?,?,?,?,?,?,?,?,? WHERE EXISTS(SELECT 1 FROM patch_shares WHERE id=? AND version=? AND revoked=0) AND (SELECT COUNT(*) FROM patch_notes WHERE share_id=?)<10000 AND (SELECT COUNT(*) FROM patch_notes)<50000').bind(id,input.requestId,input.fixtureId,label,input.name,input.jobRole,input.body,input.version,now,input.parentSeq??null,authorType,id,input.version,id).run();
    if(!result.meta.changes)fail(409,'Patch changed or the note limit was reached. Refresh and try again.');
    const saved=await db.prepare('SELECT * FROM patch_notes WHERE share_id=? AND request_id=?').bind(id,input.requestId).first();return new Response(JSON.stringify(publicNote(saved)),{status:201,headers});
   }

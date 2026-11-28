@@ -183,14 +183,20 @@ const universe=source('renderUniverseDetailView');
 assert(!universe.includes('universeDetailToolbar'));assert(!universe.includes('fixturePatchSubTabsMarkup'));
 assert(universe.includes('universeCountStat'));assert(universe.includes('moveSelectedUniverse()'));assert(universe.includes('moveActiveUniverse()'));
 console.log('PASS: global Home centring, shared Fan Out name mode, and full-footprint hover/focus.');
-// Live width allocation fills spare space without widening fixed columns or changing PDF widths.
+// Each live fixture table measures its own Type, Mode and Notes; only other columns absorb spare space.
 vm.runInContext(source('expandLivePatchColumns'),c);
-for(const space of [400,900,1800]){
- const widths=[34,100,100,70],settings=[{fixed:34},{},{},{fixed:70}];
- c.expandLivePatchColumns(widths,['fixId','fixture','mode','address'],settings,[34,220,160,70],space);
- assert.equal(widths[0],34);assert.equal(widths[3],70);assert(Math.abs(widths.reduce((a,b)=>a+b)-space)<.001);assert(widths[1]>widths[2]);
-}
-const wrapped=[100,100,70];c.expandLivePatchColumns(wrapped,['notes','position','address'],[{},{},{fixed:70}],[300,100,70],700);assert.deepEqual(wrapped,[100,530,70]);
+const settings=[{fixed:45},{min:80,max:220},{min:90,max:280},{min:90,max:260},{min:90,max:300},{fixed:110}];
+const keys=['fixId','fixture','mode','location','notes','colour1'];
+const short=[45,100,110,150,90,110];c.expandLivePatchColumns(short,keys,settings,[45,100,110,150,65,110],1400);
+assert.equal(short[1],100);assert.equal(short[2],110);assert.equal(short[4],90);assert.equal(short.reduce((a,b)=>a+b),1400);
+const noted=[45,100,110,150,300,110];c.expandLivePatchColumns(noted,keys,settings,[45,100,110,150,700,110],1400);
+assert.equal(noted[1],100);assert.equal(noted[2],110);assert.equal(noted[4],700);assert.equal(noted.reduce((a,b)=>a+b),1400);
+const other=[45,180,240,180,90,110];c.expandLivePatchColumns(other,keys,settings,[45,180,240,180,65,110],1400);
+assert.equal(other[1],180);assert.equal(other[2],240);assert.equal(other[4],90,'Notes in one fixture group must not widen another group');
+const long=[45,220,280,260,300,110];c.expandLivePatchColumns(long,keys,settings,[45,800,900,500,4000,110],1400);
+assert.equal(long[1],220);assert.equal(long[2],280);assert.equal(long[4],485);assert.equal(long.reduce((a,b)=>a+b),1400);
+const narrow=[45,220,280,260,90,110];c.expandLivePatchColumns(narrow,keys,settings,[45,220,280,260,90,110],700);
+assert(Math.abs(narrow.reduce((a,b)=>a+b)-700)<.001);assert.equal(narrow[0],45);assert.equal(narrow[5],110);
 assert(source('applyPatchTableColumnWidths').includes("!table.closest('.exportPage,.pdfPageStage')"));
 assert(source('scheduleResponsiveSheetLayout').includes('applyPatchTableColumnWidths'));
 const payloadContext=vm.createContext({VERSION:'54',app:{labels:[],socaNames:[],socaMeta:[],distros:[],looms:[],fixturePatch:[],patchSheets:[],gdtfFiles:{},gdtfMatches:{},controlNetwork:{},collapsed:{soca:[],previews:[],distros:[]}},activePatchSheetId:'master',fixturePatchViewOptions:{columns:{mode:false},universeAddress:{enabled:true,separator:' . '}},syncPositionsFromPatch(){},normaliseGdtfFiles:x=>x,normaliseLooms:x=>x,ensureProjectInfo:()=>({}),normalisePatchSheets:x=>x,normaliseGdtfMatches:x=>x,normaliseControlNetwork:x=>x,normalisePatchViewOptions:x=>x});
