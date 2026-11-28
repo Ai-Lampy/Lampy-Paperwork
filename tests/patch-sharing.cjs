@@ -99,8 +99,8 @@ ShareTestElement.prototype.querySelectorAll=function(selector){if(selector==='h1
 (async()=>{
  const body=new ShareTestElement('body'),sheet=new ShareTestElement('main');body.append(sheet);const existingHeader=new ShareTestElement('header');existingHeader.className='topHeader';body.append(existingHeader);let renders=0,headerRenders=0,loaded;
  const data=Core.snapshot({title:'Shared show',fixtures:[{id:'one',fixture:'Wash'}],logos:{tour:{name:'Tour',dataUrl:'data:image/png;base64,AAAA'},vendor:{name:'Vendor',dataUrl:'data:image/png;base64,AAAA'},secondary:{name:'Personal',dataUrl:'data:image/png;base64,AAAA'}},summaryNotes:['Keep clear'],control:{consoles:[],npus:[],parameters:0}});
- const events={},document={body,addEventListener:(name,fn,capture)=>{events[name]=fn;assert.equal(capture,true)},createElement:tag=>new ShareTestElement(tag),querySelector:s=>body.querySelector(s),querySelectorAll:s=>body.querySelectorAll(s),getElementById:id=>id==='sheet'?sheet:null};
- const scope={document,location:{href:'https://lampy.example/#patch-view=share.'+'b'.repeat(64),hash:'#patch-view=share.'+'b'.repeat(64)},URL,AbortSignal,crypto:globalThis.crypto,sessionStorage:{getItem:()=>JSON.stringify({name:'Crew',role:'Lighting'}),setItem(){}},localStorage:{getItem:()=> '1',setItem(){}},LampyShareCore:Core,setInterval(){},addEventListener(){},fetch:async url=>Response.json(String(url).endsWith('patch-sharing-config.json')?{apiURL:'https://api.example/shares/'}:{version:1,snapshot:data,notes:[],more:false})};scope.window=scope;
+ let publishedVersion=1;const publishedNotes=[];const events={},document={body,addEventListener:(name,fn,capture)=>{events[name]=fn;assert.equal(capture,true)},createElement:tag=>new ShareTestElement(tag),querySelector:s=>body.querySelector(s),querySelectorAll:s=>body.querySelectorAll(s),getElementById:id=>id==='sheet'?sheet:null};
+ const scope={document,location:{href:'https://lampy.example/#patch-view=share.'+'b'.repeat(64),hash:'#patch-view=share.'+'b'.repeat(64)},URL,AbortSignal,crypto:globalThis.crypto,sessionStorage:{getItem:()=>JSON.stringify({name:'Crew',role:'Lighting'}),setItem(){}},localStorage:{getItem:()=> '1',setItem(){}},LampyShareCore:Core,setInterval(){},addEventListener(){},fetch:async url=>Response.json(String(url).endsWith('patch-sharing-config.json')?{apiURL:'https://api.example/shares/'}:{version:publishedVersion,snapshot:data,notes:publishedNotes,more:false})};scope.window=scope;
  vm.runInNewContext(sharingSource,scope);
  const make=(cls)=>{const node=new ShareTestElement('div');node.className=cls;return node};
  await scope.LampyPatchShare.setup({load:value=>loaded=value,renderHeader:()=>{headerRenders++},renderPatch:()=>{renders++;const patch=make('fixturePatchView'),toolbar=make('fixturePatchToolbar');toolbar.append(make('fixturePatchToolbarLeft'),make('fixturePatchStats'),make('fixturePatchToolbarRight'));patch.append(toolbar,make('fixturePatchControlBody'),make('fixturePatchPage'));sheet.append(patch)},fixtureSummary:()=>'<div>Fixture summary</div>',positionSummary:()=>'<div>Position summary</div>',controlMarkup:()=>'<table>Console Info</table>',exportPatch(){}});
@@ -108,6 +108,20 @@ ShareTestElement.prototype.querySelectorAll=function(selector){if(selector==='h1
  const buttons=patch.querySelector('.fixturePatchToolbarLeft').children;await buttons[0].onclick();assert.equal(renders,1);assert.equal(sheet.querySelector('.fixturePatchView'),patch);assert(body.querySelector('.shareSummaryPane').text.includes('Fixture Summary'));
  await buttons[1].onclick();assert.equal(renders,1);assert(body.querySelector('.shareSummaryPane').text.includes('Position Summary'));
  const head=body.querySelector('.shareViewerHeader');assert.equal(head,existingHeader,'Keep the actual app header, not a second copy');assert.equal(headerRenders,1);assert(!head.querySelector('.shareIdentity'));assert(body.classList.contains('hasAppNavigation'));events.click({target:body.querySelector('.shareSummaryPane').children[0]});assert(body.querySelector('.shareSummaryPane'));events.click({target:sheet});assert.equal(body.querySelector('.shareSummaryPane'),null);assert(patch.text.includes('Keep clear'));
+ assert(!patch.querySelector('.shareNotesPaneButton'));
+ publishedNotes.push({seq:1,scope:'patch',fixtureId:'',name:'Alex',jobRole:'LX',body:'General check',createdAt:Date.UTC(2026,10,28,12)});
+ await scope.LampyPatchShare.refresh();
+ const notesButton=patch.querySelector('.shareNotesPaneButton');
+ assert.equal(patch.querySelector('.fixturePatchToolbarLeft').children[2],notesButton);
+ await notesButton.onclick();
+ assert(body.querySelector('.shareSummaryPane').text.includes('28/11/26'));
+ assert(body.querySelector('.shareSummaryPane').text.includes('General check'));
+ publishedVersion=2;
+ await scope.LampyPatchShare.refresh();
+ const notice=body.querySelector('.sharePatchUpdateNotice');
+ assert(!notice.hidden && notice.classList.contains('appUpdateNotice'));
+ await notice.children[1].onclick();
+ assert(notice.hidden);assert.equal(renders,2);
  console.log('PASS: main patch renderer and controls retained, summaries open beside the patch, all header logos and shared notes displayed.');
 })().catch(error=>{console.error(error);process.exitCode=1});
 
@@ -192,7 +206,16 @@ console.log('PASS: unread count sits inside the existing icon anchor; zero unrea
  scope.loadedVersion=4;const newer=new ShareTestElement('section');scope.noteComposer(newer,{done(){}});assert.equal(scope.generalDraft.version,4,'An empty reused composer takes the latest snapshot version');
  const parent={seq:8,fixtureId:'fixture-1',scope:'fixture',name:'First crew'},replyHost=new ShareTestElement('dialog');const replyField=scope.noteComposer(replyHost,{parent,done:()=>closed++});replyField.value='Reply content';replyField.oninput();await replyHost.children[0].onsubmit({preventDefault(){}});const payload=requests.at(-1);assert.equal(payload.parentSeq,8);assert.equal(payload.fixtureId,'fixture-1');assert.equal(payload.body,'Reply content');assert.equal(payload.name,'Crew');assert.equal(payload.version,4);
  scope.isViewer=false;scope.connection={id:'share',owner:'private'};scope.bridge.ownerIdentity=()=>({name:'Owner',role:''});const ownerHost=new ShareTestElement('dialog');scope.noteComposer(ownerHost,{parent,done(){}});const identityFields=ownerHost.children[0].children[0].children.map(n=>n.children[0]);assert.equal(identityFields.length,2);assert.equal(identityFields[0].value,'Owner');assert.equal(identityFields[1].required,true);
- const threading={notes:[{...parent,body:'Original',jobRole:'Crew'},{seq:9,parentSeq:8,fixtureId:'fixture-1',name:'Second',jobRole:'Crew',body:'Reply',authorType:'viewer'}],isViewer:true,state:{},connection:null,core:Core,el:scope.el,button:(text,run,cls)=>{const n=scope.el('button',text,cls);n.onclick=run;return n},replyDialog(){}};vm.createContext(threading);vm.runInContext(sharingSource.slice(sharingSource.indexOf(' function noteCard('),sharingSource.indexOf(' function generalNotes(')),threading);const card=threading.noteCard(threading.notes[0]);assert.equal(card.querySelectorAll('.shareReplyButton').length,1);assert.equal(card.querySelectorAll('.shareNoteReply').length,1);assert(threading.noteText('fixture-1').includes('Reply — Second'));
+ const threading={collapsedNotes:new Set(),notes:[{...parent,body:'Original',jobRole:'Crew'},{seq:9,parentSeq:8,fixtureId:'fixture-1',name:'Second',jobRole:'Crew',body:'Reply',authorType:'viewer'}],isViewer:true,state:{},connection:null,core:Core,el:scope.el,button:(text,run,cls)=>{const n=scope.el('button',text,cls);n.onclick=run;return n},replyDialog(){}};vm.createContext(threading);vm.runInContext(sharingSource.slice(sharingSource.indexOf(' function noteCard('),sharingSource.indexOf(' function generalNotes(')),threading);const card=threading.noteCard(threading.notes[0]);assert.equal(card.querySelectorAll('.shareReplyButton').length,1);assert.equal(card.querySelectorAll('.shareNoteReply').length,1);assert(threading.noteText('fixture-1').includes('Reply — Second'));
+ const comment=threading.notes[1];
+ comment.authorType='owner';comment.createdAt=Date.UTC(2026,10,28,12);
+ const ownerCard=threading.noteCard(comment,false);
+ assert(ownerCard.text.includes('28/11/26'));assert(!ownerCard.text.includes(' · Owner'));
+ threading.document={querySelectorAll:()=>[ownerCard]};threading.bridge={};
+ const toggle=ownerCard.querySelector('.shareCollapseButton');
+ await toggle.onclick();assert.equal(toggle.textContent,'Show');assert.equal(toggle.attributes['aria-expanded'],'false');
+ assert.equal(threading.noteCard(comment,false).dataset.collapsed,'true');
+ await toggle.onclick();assert.equal(ownerCard.dataset.collapsed,'false');
  console.log('PASS: general note and reply composer identity, parent linkage, failed-draft retention, idempotent retry, refreshed versions and threaded rendering.');
 })().catch(error=>{console.error(error);process.exitCode=1});
 

@@ -1,3 +1,9 @@
+## V61.5 — Patch columns and viewer notes
+
+- Size Type, Mode and Position to each group’s content when Notes is visible. Share spare space between those columns when Notes is hidden.
+- Centre fixture note bubbles and add short dates and individual Hide/Show controls. Owner replies use the same author header as viewer replies.
+- Open general notes from the viewer toolbar, soften the floating + Note button to 85% opacity and use the release notice layout for published patch updates.
+
 ## V61.4 — Shared app header and viewer introduction
 
 - Keep the actual app header in the shared viewer, including its white background, logo dividers, page title and responsive title fitting.

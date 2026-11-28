@@ -4,6 +4,8 @@
  const core=root.LampyShareCore,match=location.hash.match(/^#patch-(view|owner)=([a-zA-Z0-9_-]{1,100})\.([a-f0-9]{64})(?:\.([a-f0-9]{64}))?$/),isViewer=location.hash.startsWith('#patch-view='),isOwnerLink=location.hash.startsWith('#patch-owner=');
  const API=new URL('./js/patch-sharing-config.json',location.href),KEY='lampy-patch-share-owners-v1';
  let bridge,base,projectKey='',connection=null,state=null,polling=false,loadedVersion=0,notes=[],viewerError='',viewerPending=false,header,status,viewerName='',viewerRole='';
+ const collapsedNotes=new Set();
+ let patchUpdateNotice;
  const drafts=new Map(),replyDrafts=new Map();let summaryPane=null,summaryKind='',generalDock=null,generalPopup=null,generalAnchor=null,generalDraft=null;
  const viewer=isViewer&&match?{id:match[2],token:match[3]}:null;
  let registry={};try{const saved=JSON.parse(localStorage.getItem(KEY)||'{}');if(saved&&typeof saved==='object'&&!Array.isArray(saved))registry=saved}catch{}
@@ -32,15 +34,54 @@
   throw Error('Too many notes to load. Please try again.');
  }
  function noteCard(note,withReplies=true){
-  const card=el('div','','shareNote'+(note.parentSeq?' shareNoteReply':''));card.style.background=core.colour(note.seq);card.append(el('strong',note.name+' · '+note.jobRole+(note.authorType==='owner'?' · Owner':'')),el('span',note.body));
-  if(!note.parentSeq&&!state?.revoked&&(isViewer||connection?.owner)){const reply=button('Reply',()=>replyDialog(note),'shareReplyButton');reply.setAttribute('aria-label','Reply to note from '+note.name);card.append(reply)}
+  const card=el('div','','shareNote'+(note.parentSeq?' shareNoteReply':''));
+  card.dataset.noteSeq=String(note.seq);
+  card.style.background=core.colour(note.seq);
+  const header=el('strong',note.name+' · '+note.jobRole);
+  const date=noteDate(note);
+  if(date)header.append(el('time',' · '+date,'shareNoteDate'));
+  const controls=el('div','','shareNoteControls');
+  const toggle=button('Hide',()=>{
+   if(collapsedNotes.has(note.seq))collapsedNotes.delete(note.seq);
+   else collapsedNotes.add(note.seq);
+   document.querySelectorAll('.shareNote[data-note-seq="'+note.seq+'"]').forEach(node=>setNoteCollapsed(node,collapsedNotes.has(note.seq)));
+   bridge?.resizePatch?.();
+  },'shareCollapseButton');
+  if(!note.parentSeq&&!state?.revoked&&(isViewer||connection?.owner)){
+   const reply=button('Reply',()=>replyDialog(note),'shareReplyButton');
+   reply.setAttribute('aria-label','Reply to note from '+note.name);
+   controls.append(reply);
+  }
+  controls.append(toggle);
+  card.append(header,el('span',note.body,'shareNoteBody'),controls);
+  setNoteCollapsed(card,collapsedNotes.has(note.seq));
   if(withReplies){const replies=notes.filter(item=>item.parentSeq===note.seq);if(replies.length){const thread=el('div','','shareReplies');replies.forEach(item=>thread.append(noteCard(item,false)));card.append(thread)}}return card;
  }
+ function noteDate(note){
+  if(!note.createdAt)return '';
+  const date=new Date(note.createdAt);
+  return Number.isFinite(date.getTime())?date.toLocaleDateString('en-GB',{day:'2-digit',month:'2-digit',year:'2-digit'}):'';
+ }
+ function setNoteCollapsed(card,collapsed){
+  card.dataset.collapsed=String(collapsed);
+  const toggle=card.querySelector('.shareCollapseButton');
+  toggle.textContent=collapsed?'Show':'Hide';
+  toggle.setAttribute('aria-expanded',String(!collapsed));
+ }
  function notesFor(id){return notes.filter(note=>note.fixtureId===id&&!note.parentSeq)}
- function noteText(id){return notes.filter(note=>note.fixtureId===id).map(note=>(note.parentSeq?'Reply — ':'')+note.name+' ('+note.jobRole+'): '+note.body).join('\n')}
+ function noteText(id){return notes.filter(note=>note.fixtureId===id).map(note=>(note.parentSeq?'Reply — ':'')+note.name+' ('+note.jobRole+(noteDate(note)?' · '+noteDate(note):'')+'): '+note.body).join('\n')}
  function noteMarkup(id){const host=el('div');notesFor(id).forEach(note=>host.append(noteCard(note)));return host.innerHTML}
  function generalNotes(){return notes.filter(note=>(note.scope==='patch'||note.fixtureId==='')&&!note.parentSeq)}
- function renderGeneralNotes(scope=document){const patch=scope.querySelector?.('.fixturePatchView');if(!patch)return;let section=patch.querySelector('.shareGeneralNotes');const items=generalNotes();if(!items.length){section?.remove();return}if(!section){section=el('section','','shareGeneralNotes');patch.append(section)}section.replaceChildren(el('h2','General patch notes'));items.forEach(note=>section.append(noteCard(note)))}
+ function renderGeneralNotes(scope=document){const patch=scope.querySelector?.('.fixturePatchView');if(!patch)return;const items=generalNotes();
+  if(isViewer){
+   const toolbar=patch.querySelector('.fixturePatchToolbarLeft');
+   const existing=toolbar?.querySelector('.shareNotesPaneButton');
+   if(items.length&&!existing)toolbar?.append(button('Notes',()=>openSummary('notes'),'btn shareNotesPaneButton'));
+   if(!items.length)existing?.remove();
+   if(summaryKind==='notes'&&summaryPane)openSummary('notes');
+   return;
+  }
+  let section=patch.querySelector('.shareGeneralNotes');if(!items.length){section?.remove();return}if(!section){section=el('section','','shareGeneralNotes');patch.append(section)}section.replaceChildren(el('h2','General patch notes'));items.forEach(note=>section.append(noteCard(note)))}
  function allDrafts(){return [...drafts.values(),...replyDrafts.values(),generalDraft].filter(Boolean)}
  function newNoteDraft(){return {body:'',requestId:crypto.randomUUID(),version:isViewer?loadedVersion:state?.version,error:'',sending:false,payload:null}}
  function noteIdentity(){if(isViewer)return {name:viewerName,role:viewerRole};try{const saved=JSON.parse(sessionStorage.getItem('lampy-share-identity:'+connection?.id)||'null');if(saved)return saved}catch{}return bridge.ownerIdentity?.()||{name:'',role:''}}
@@ -128,7 +169,9 @@
  function closeSummaryOnOutsideClick(event){if(summaryPane&&!summaryPane.contains(event.target))closeSummary()}
  function openSummary(kind){
   summaryKind=kind;if(!summaryPane){summaryPane=el('aside','','frontEditorPane fixtureSummaryPane shareSummaryPane');summaryPane.setAttribute('aria-label','Patch summary');document.body.append(summaryPane)}
-  summaryPane.replaceChildren();const head=el('div','','frontEditorHead'),body=el('div','','frontEditorBody');head.append(el('h2',kind==='fixtures'?'Fixture Summary':'Position Summary'),button('×',closeSummary,'close'));summaryPane.append(head,body);
+  summaryPane.replaceChildren();const head=el('div','','frontEditorHead'),body=el('div','','frontEditorBody');head.append(el('h2',kind==='notes'?'Notes':kind==='fixtures'?'Fixture Summary':'Position Summary'),button('×',closeSummary,'close'));summaryPane.append(head,body);
+  if(kind==='notes'){summaryPane.setAttribute('aria-label','General patch notes');generalNotes().forEach(note=>body.append(noteCard(note)));summaryPane.classList.add('open');return}
+  summaryPane.setAttribute('aria-label','Patch summary');
   body.innerHTML=kind==='fixtures'?bridge.fixtureSummary():bridge.positionSummary();body.querySelectorAll('[onclick]').forEach(n=>n.removeAttribute('onclick'));
   body.querySelectorAll('.homeFixtureInfoButton').forEach(n=>{const card=el('div','','homeFixtureInfoButton');card.innerHTML=n.innerHTML;card.querySelector('.homeDistroMeta:last-child')?.remove();n.replaceWith(card)});summaryPane.classList.add('open');
  }
@@ -152,7 +195,7 @@
  }
  function updateViewerStatus(){
   if(!status)return;status.replaceChildren();if(viewerError)status.append(el('p',viewerError,'shareError'));
-  if(viewerPending)status.append(el('span','The owner published a new patch. '),button('Load updated patch (keep drafts)',async()=>{if(allDrafts().some(d=>d.sending))throw Error('Wait for your note to finish sending.');await refreshViewer(true)}));
+  patchUpdateNotice.hidden=!state||!viewerPending;
   const ids=new Set(state?.snapshot.fixtures.map(row=>row.id)||[]);for(const [id,draft] of drafts){if(draft.body.trim()&&!ids.has(id)){const box=el('div','','shareOrphanDraft'),field=el('textarea');field.readOnly=true;field.value=draft.body;field.setAttribute('aria-label','Unsent note for removed fixture');box.append(el('p','A fixture was removed from the updated patch. Copy your unsent note before dismissing it.'),field,button('Dismiss draft',()=>{drafts.delete(id);updateViewerStatus()}));status.append(box)}}
  }
  async function refreshViewer(force=false){
@@ -193,6 +236,16 @@
  async function setup(options){
   bridge=options;
   if(isViewer){document.body.classList.add('shareViewerMode');document.body.classList.add('hasAppNavigation');const footerLink=document.querySelector('.appFooterBrandLink');if(footerLink){footerLink.removeAttribute('onclick');footerLink.href=location.href;footerLink.onclick=event=>{event.preventDefault();header?.scrollIntoView({behavior:'smooth'})}}header=document.querySelector('.topHeader');header.id='shareViewHeader';header.classList.add('shareViewerHeader');window.addEventListener('scroll',positionGeneralNote,true);window.addEventListener('resize',positionGeneralNote);document.addEventListener('click',closeSummaryOnOutsideClick,true);
+   patchUpdateNotice=el('aside','','appUpdateNotice sharePatchUpdateNotice');
+   patchUpdateNotice.setAttribute('aria-label','Shared patch update');
+   patchUpdateNotice.hidden=true;
+   const updateMessage=el('span','A new Fixture Patch is available.','updateMessage');
+   updateMessage.setAttribute('role','status');
+   patchUpdateNotice.append(updateMessage,button('Load updated patch',async()=>{
+    if(allDrafts().some(draft=>draft.sending))throw Error('Wait for your note to finish sending.');
+    await refreshViewer(true);
+   },'btn primary'),el('small','Keeps your unsent notes.'));
+   document.body.prepend(patchUpdateNotice);
    status=el('div','','shareViewerStatus');header.after(status);try{const identity=JSON.parse(sessionStorage.getItem('lampy-share-identity:'+viewer?.id)||'{}');viewerName=typeof identity.name==='string'?identity.name.slice(0,120):'';viewerRole=typeof identity.role==='string'?identity.role.slice(0,120):''}catch{}await refreshViewer();if(state&&(!viewerName.trim()||!viewerRole.trim()))guidance();
   }else{
    if(isOwnerLink){if(!match||!core.TOKEN.test(match[4]||''))throw Error('This owner-management link is incomplete. Use the complete private link saved when you created the share.');const offered={id:match[2],owner:match[3],viewer:match[4]},result=await request(offered);const d=dialog('Private patch management');d.append(el('p','Shared patch: '+result.snapshot.title+'. Open the matching project before linking these management controls to it. Your current project will not be replaced.'));
