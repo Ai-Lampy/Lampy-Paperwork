@@ -9,7 +9,7 @@ on:
         required: true
         type: string
       confirm_deploy:
-        description: Publish V60 as the public Lampy Paperwork app
+        description: Publish V61 as the public Lampy Paperwork app
         required: true
         default: false
         type: boolean
@@ -62,8 +62,7 @@ jobs:
       - name: Check release
         run: |
           npx --yes pnpm@11.25.0 install --frozen-lockfile --ignore-scripts
-          npx --yes pnpm@11.25.0 run test:accounts
-          npx --yes pnpm@11.25.0 run test:accounts:runtime
+          npx --yes pnpm@11.25.0 run test:sharing
           node tests/display-regressions.cjs
           node tests/release-regressions.cjs
           node scripts/validate-release.cjs
